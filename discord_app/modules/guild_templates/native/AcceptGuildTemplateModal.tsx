@@ -1,12 +1,12 @@
-// === Module 12142: AcceptGuildTemplateModal ===
+// === Module 12084: AcceptGuildTemplateModal ===
 
-// Module 12142 (AcceptGuildTemplateModal)
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12155 */;
+// Module 12084 (AcceptGuildTemplateModal)
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12097 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7933 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7932 */;
 
 require = fn;
 function ConnectedAcceptGuildTemplate(code) {
@@ -20,11 +20,11 @@ function ConnectedAcceptGuildTemplate(code) {
   items = [GuildTemplateStore];
   const stateFromStores = code(504).useStateFromStores(items, () => GuildTemplateStore.getGuildTemplate(code));
   let obj = code(504);
-  [name, dependencyMap] = noop.useState(name(6558).getGuildNameSuggestion());
+  [name, dependencyMap] = noop.useState(name(6560).getGuildNameSuggestion());
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(12143)(stateFromStores);
+  stateFromStores(12085)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -38,7 +38,7 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   };
-  const obj2 = name(6558);
+  const obj2 = name(6560);
   obj4.chooseIcon = first1(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -50,7 +50,7 @@ function ConnectedAcceptGuildTemplate(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ function ConnectedAcceptGuildTemplate(code) {
             closure_129_5(base64);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -99,7 +99,7 @@ function ConnectedAcceptGuildTemplate(code) {
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(12144), {
+  obj3.children = jsx(stateFromStores(12086), {
     code,
     guildTemplate: stateFromStores,
     name,
@@ -111,12 +111,12 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   });
-  return jsx(code(6898).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
+  return jsx(code(6897).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
 }
-const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1071).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
-let obj2 = { container: { flex: 1, marginTop: fn(5346).NAV_BAR_HEIGHT } };
+const createStyles = fn(4794);
+let obj2 = { container: { flex: 1, marginTop: fn(5348).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
 const size = fn(2);
@@ -141,5 +141,5 @@ export default function AcceptGuildTemplateModal(code) {
     obj2[ACCEPT_GUILD_TEMPLATE] = obj3;
     return obj2;
   }, items);
-  return jsx(code(6973).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
+  return jsx(code(6972).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
 };

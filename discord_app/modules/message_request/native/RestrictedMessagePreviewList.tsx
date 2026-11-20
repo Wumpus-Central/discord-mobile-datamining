@@ -1,15 +1,15 @@
-// === Module 19075: RestrictedMessagePreviewList ===
+// === Module 18894: RestrictedMessagePreviewList ===
 
-// Module 19075 (RestrictedMessagePreviewList)
+// Module 18894 (RestrictedMessagePreviewList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import DateUtils from "DateUtils" /* 4614 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 7563 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
-import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 19078 */;
+import util from "util" /* 1112 */;
+import DateUtils from "DateUtils" /* 4616 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 7562 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
+import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 18897 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5843 */;
+import MessageStore from "MessageStore" /* 5845 */;
 
 const require = globalThis.__r;
 
@@ -46,11 +46,11 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
-const createStyles = fn(4792);
-let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(19076).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
-let size = { position: "absolute", top: 0, left: 0, width: fn(19076).RESTRICTED_CONTENT_INSET, height: fn(19076).RESTRICTED_AVATAR_SIZE };
+const createStyles = fn(4794);
+let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(18895).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
+let size = { position: "absolute", top: 0, left: 0, width: fn(18895).RESTRICTED_CONTENT_INSET, height: fn(18895).RESTRICTED_AVATAR_SIZE };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(19076).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(18895).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 obj2.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

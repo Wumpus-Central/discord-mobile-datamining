@@ -1,11 +1,11 @@
-// === Module 11222: useComputeEmojiPickerFunctions ===
+// === Module 11164: useComputeEmojiPickerFunctions ===
 
-// Module 11222 (useComputeEmojiPickerFunctions)
+// Module 11164 (useComputeEmojiPickerFunctions)
 import applyDefault from "apply" /* 12 */;
-import FunctionUtils from "FunctionUtils" /* 2161 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
+import FunctionUtils from "FunctionUtils" /* 2159 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4740 */;
 import EmojiPickerUtils from "EmojiPickerUtils" /* 8947 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 11223 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 11165 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -191,7 +191,7 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6455);
+const EmojiPickerConstants = fn(6457);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: closure_6 } = EmojiPickerConstants);
 const constants3 = fn(8946).EmojiPickerRenderingDataType;
 const size = fn(2);

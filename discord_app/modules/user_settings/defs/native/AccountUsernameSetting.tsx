@@ -1,23 +1,23 @@
-// === Module 15914: AccountUsernameSetting ===
+// === Module 15878: AccountUsernameSetting ===
 
-// Module 15914 (AccountUsernameSetting)
+// Module 15878 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12318 */;
+import util from "util" /* 1112 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12288 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8593).MobileUserSettings.ACCOUNT,
+  parent: fn(8592).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
@@ -39,7 +39,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   },
   screen: {
-    route: fn(1072).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
+    route: fn(1071).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
     getComponent() {
       return require("UserSettingsChangeUsername").default;
     }

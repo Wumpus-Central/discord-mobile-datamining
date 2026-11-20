@@ -1,18 +1,18 @@
 // === Module 8961: useGetDismissibleContent ===
 
 // Module 8961 (useGetDismissibleContent)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4624 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4626 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4626 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4628 */;
 import DismissibleContentAvailability from "DismissibleContentAvailability" /* 8964 */;
 import markScopedDismissibleContentAsDismissed from "markScopedDismissibleContentAsDismissed" /* 8965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4628 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4633 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4630 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4635 */;
 
 const require = globalThis.__r;
 
@@ -167,8 +167,8 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
   closure_130_7 = tmp13;
   let result = null != content;
   if (result) {
-    result = tmp(4626).isDismissibleContentBlockedByOverlay(content, first, tmp13);
-    const tmpResult9 = tmp(4626);
+    result = tmp(4628).isDismissibleContentBlockedByOverlay(content, first, tmp13);
+    const tmpResult9 = tmp(4628);
   }
   const tmpResult8 = require("OverlayTrackingUtils");
   const items5 = [DismissibleContentFrameworkStore];
@@ -240,9 +240,9 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     }, items7)
   };
 }
-const removeCandidateContent = fn(4633).removeCandidateContent;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const removeCandidateContent = fn(4635).removeCandidateContent;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useGetDismissibleContent.tsx");

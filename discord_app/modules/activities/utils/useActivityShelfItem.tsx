@@ -1,21 +1,21 @@
-// === Module 12835: useActivityShelfItem ===
+// === Module 12805: useActivityShelfItem ===
 
-// Module 12835 (useActivityShelfItem)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import Server from "Server" /* 2119 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4713 */;
-import getPlatformDefault from "getPlatform" /* 5443 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6540 */;
+// Module 12805 (useActivityShelfItem)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import Server from "Server" /* 2117 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
+import getPlatformDefault from "getPlatform" /* 5445 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6542 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6745 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10564 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10713 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10714 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10772 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12836 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12837 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10506 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10655 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10656 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10714 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12806 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12807 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
 
 require = fn;
 function useActivityAction(applicationId) {
@@ -97,7 +97,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -147,7 +147,7 @@ function useOnActivityItemSelected(arg0) {
               }
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp22) {
           dependencyMap = tmp;
@@ -167,7 +167,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp24) {
           dependencyMap = tmp;
           throw tmp24;
@@ -252,8 +252,8 @@ function useOnActivityItemSelected(arg0) {
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2145).STAFF_RELEASE_PHASES;
-const ApplicationFlags = fn(1072).ApplicationFlags;
+const STAFF_RELEASE_PHASES = fn(2143).STAFF_RELEASE_PHASES;
+const ApplicationFlags = fn(1071).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");

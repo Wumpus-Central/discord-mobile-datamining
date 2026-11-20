@@ -1,6 +1,6 @@
-// === Module 12048: handleMessagesTapGameMention ===
+// === Module 11990: handleMessagesTapGameMention ===
 
-// Module 12048 (handleMessagesTapGameMention)
+// Module 11990 (handleMessagesTapGameMention)
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9649 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
 import size from "module_2" /* 2 */;

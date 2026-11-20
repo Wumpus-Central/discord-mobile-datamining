@@ -1,17 +1,17 @@
-// === Module 16996: AppIconRows ===
+// === Module 16820: AppIconRows ===
 
-// Module 16996 (AppIconRows)
+// Module 16820 (AppIconRows)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import AppIconTypes from "AppIconTypes" /* 4818 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4820 */;
-import AppIconUtils from "AppIconUtils" /* 13958 */;
-import AppIconRowDefault from "AppIconRow" /* 16997 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16998 */;
+import util from "util" /* 1112 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
+import AppIconTypes from "AppIconTypes" /* 4820 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4822 */;
+import AppIconUtils from "AppIconUtils" /* 13927 */;
+import AppIconRowDefault from "AppIconRow" /* 16821 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16822 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function BackwardsCompatibleAppIconRows(arg0) {
@@ -33,8 +33,8 @@ function BackwardsCompatibleAppIconRows(arg0) {
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
     const obj2 = { title: merged.title, accessibilityRole: "radiogroup", accessibilityLabel: null, hasIcons: true, children: null };
-    const intl = merged(1113).intl;
-    obj2.accessibilityLabel = intl.string(merged(1113).t.N4YDao);
+    const intl = merged(1112).intl;
+    obj2.accessibilityLabel = intl.string(merged(1112).t.N4YDao);
     obj2.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
@@ -44,7 +44,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(7229).TableRowGroup, obj2);
+    obj.children = closure_8(merged(7228).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }
@@ -52,7 +52,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");

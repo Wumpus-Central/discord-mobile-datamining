@@ -1,14 +1,14 @@
-// === Module 12005: useGroupDMNitroUpsellAction ===
+// === Module 11947: useGroupDMNitroUpsellAction ===
 
-// Module 12005 (useGroupDMNitroUpsellAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11998 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 12004 */;
+// Module 11947 (useGroupDMNitroUpsellAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11940 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/useGroupDMNitroUpsellAction.tsx");

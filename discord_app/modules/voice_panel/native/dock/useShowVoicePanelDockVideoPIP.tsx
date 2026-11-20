@@ -1,9 +1,9 @@
-// === Module 19375: useShowVoicePanelDockVideoPIP ===
+// === Module 19195: useShowVoicePanelDockVideoPIP ===
 
-// Module 19375 (useShowVoicePanelDockVideoPIP)
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore" /* 19374 */;
+// Module 19195 (useShowVoicePanelDockVideoPIP)
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore" /* 19194 */;
 
 const require = globalThis.__r;
 

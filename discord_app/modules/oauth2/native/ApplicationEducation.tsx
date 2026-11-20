@@ -1,16 +1,16 @@
-// === Module 14626: ApplicationEducation ===
+// === Module 14594: ApplicationEducation ===
 
-// Module 14626 (ApplicationEducation)
+// Module 14594 (ApplicationEducation)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FriendsIcon from "FriendsIcon" /* 5477 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FriendsIcon from "FriendsIcon" /* 5479 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 6891 */;
-import GameControllerIcon from "GameControllerIcon" /* 6921 */;
-import SettingsIcon from "SettingsIcon" /* 10309 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14627 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14629 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 6890 */;
+import GameControllerIcon from "GameControllerIcon" /* 6920 */;
+import SettingsIcon from "SettingsIcon" /* 10251 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14595 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,10 +28,10 @@ function ApplicationEducationEntry(children) {
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
-const MAX_FRIENDS = fn(1072).MAX_FRIENDS;
+const MAX_FRIENDS = fn(1071).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 20, height: 20, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;

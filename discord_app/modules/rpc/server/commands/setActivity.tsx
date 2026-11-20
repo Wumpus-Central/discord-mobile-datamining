@@ -1,24 +1,24 @@
-// === Module 15627: setActivity ===
+// === Module 15591: setActivity ===
 
-// Module 15627 (setActivity)
+// Module 15591 (setActivity)
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 const require = fn;
 let closure_3 = ["buttons"];
-let Constants = fn(6233);
+let Constants = fn(6235);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1072);
-({ AnalyticEvents: closure_10, RPCCommands, RPCErrors: closure_11 } = Constants);
-let closure_12 = ["1402418171662569542"];
+Constants = fn(1071);
+({ ActivityPartyPrivacy: closure_10, AnalyticEvents: closure_11, RPCCommands, RPCErrors: closure_12 } = Constants);
+let closure_13 = ["1402418171662569542"];
 let items = [, , ];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15593);
+const CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [fn(6794).OAuth2Scopes.RPC, fn(6794).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
@@ -29,159 +29,173 @@ obj3.handler = function handler(isSocketConnected) {
   ({ pid: importDefault, activity: dependencyMap } = args);
   isSocketConnected = isSocketConnected.isSocketConnected;
   return (async () => {
-    if (c15 === 2) {
-      c15 = 3;
+    if (c18 === 2) {
+      c18 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp14 === 3) {
+    } else if (tmp11 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
-      try {
-        c15 = 2;
-        if (0 === c14) {
+      while (true) {
+        c18 = 2;
+        let tmp12 = c17;
+        if (0 === c17) {
           if (arg0 === 1) {
-            c15 = 3;
+            c18 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c15 = 3;
-            const obj3 = { value, done: true };
+            c18 = 3;
+            let obj3 = { value, done: true };
             return obj3;
           } else {
-            constants = tmp15;
-            closure_138_0 = undefined;
-            closure_138_1 = undefined;
-            closure_138_2 = undefined;
-            closure_138_3 = undefined;
-            closure_138_4 = undefined;
-            closure_138_5 = undefined;
-            closure_138_6 = undefined;
-            closure_138_7 = undefined;
-            closure_138_8 = undefined;
-            closure_138_9 = undefined;
-            closure_138_10 = undefined;
-            closure_138_11 = undefined;
-            const scopes3 = require.authorization.scopes;
-            const hasItem = scopes3.has(_undefined(name[7]).OAuth2Scopes.RPC);
+            closure_141_0 = undefined;
+            closure_141_1 = undefined;
+            closure_141_2 = undefined;
+            closure_141_3 = undefined;
+            closure_141_4 = undefined;
+            closure_141_5 = undefined;
+            closure_141_6 = undefined;
+            closure_141_7 = undefined;
+            closure_141_8 = undefined;
+            closure_141_9 = undefined;
+            closure_141_10 = undefined;
+            closure_141_11 = undefined;
+            closure_141_12 = undefined;
+            closure_141_13 = undefined;
+            closure_141_14 = undefined;
+            closure_141_15 = undefined;
+            closure_141_16 = undefined;
+            closure_141_17 = undefined;
+            let scopes3 = require.authorization.scopes;
+            let tmp281 = _undefined;
+            let hasItem = scopes3.has(_undefined(name[7]).OAuth2Scopes.RPC);
             let tmp40 = !hasItem;
             if (!hasItem) {
-              const scopes = require.authorization.scopes;
-              tmp40 = !scopes.has(tmp246(name[7]).OAuth2Scopes.RPC_ACTIVITIES_WRITE);
+              let scopes = require.authorization.scopes;
+              tmp40 = !scopes.has(tmp281(name[7]).OAuth2Scopes.RPC_ACTIVITIES_WRITE);
             }
             if (tmp40) {
-              const scopes2 = require.authorization.scopes;
+              let scopes2 = require.authorization.scopes;
               tmp40 = !scopes2.has(details);
             }
             let result = null;
             if (tmp40) {
-              result = tmp246(name[8]).validateEmbeddedAppFrameOnAnySurface(require);
-              const tmp246Result = tmp246(name[8]);
+              let tmp281Result = tmp281(name[8]);
+              result = tmp281Result.validateEmbeddedAppFrameOnAnySurface(require);
             }
-            if (c13.includes(require.transport)) {
+            if (tmp4.includes(require.transport)) {
               if (null == pid) {
                 if (state.IPC === require.transport) {
-                  const obj4 = { errorCode: tmp6.INVALID_COMMAND };
-                  const tmp226 = new result1(name[9])(obj4, "nonzero pid required");
-                  throw tmp226;
+                  let obj4 = { errorCode: null };
+                  obj4.errorCode = items3.INVALID_COMMAND;
+                  let tmp262 = new.target;
+                  let tmp263 = new.target;
+                  let str6 = "nonzero pid required";
+                  let tmp265 = new result1(name[9])(obj4, "nonzero pid required");
+                  throw tmp265;
                 }
               }
-              const id = require.application.id;
+              let id = require.application.id;
               _undefined = id;
               if (id == null) {
                 _undefined = undefined;
               }
-              closure_138_0 = _undefined;
+              let tmp62 = _undefined;
+              closure_141_0 = _undefined;
               if (null == dependencyMap) {
-                const obj5 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: require.id, pid, applicationId: tmp62, activity: dependencyMap };
-                result1(name[10]).dispatch(obj5);
-                c15 = 3;
+                let obj22 = result1(name[10]);
+                let obj5 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: require.id, pid, applicationId: tmp62, activity: dependencyMap };
+                let dispatchResult = obj22.dispatch(obj5);
+                c18 = 3;
                 return { value: null, done: true };
               } else {
                 result1 = result;
                 if (result == null) {
                   result1 = null;
                   if (require.transport === state.POST_MESSAGE) {
-                    result1 = tmp246(name[8]).tryValidateEmbeddedAppFrame(require);
-                    const tmp246Result4 = tmp246(name[8]);
+                    let tmp281Result4 = tmp281(name[8]);
+                    result1 = tmp281Result4.tryValidateEmbeddedAppFrame(require);
                   }
                 }
-                const obj6 = {};
-                const tmp72 = result1(name[11])(result1);
+                let obj6 = {};
+                let tmp72 = result1(name[11])(result1);
                 if (null != tmp72) {
                   obj6.channel_id = tmp72;
                 }
-                const buttons = dependencyMap.buttons;
-                const tmp75 = c5(dependencyMap, PLAYING);
-                const obj7 = {};
-                const merged = Object.assign(tmp75);
+                let buttons = dependencyMap.buttons;
+                closure_141_1 = buttons;
+                let tmp75 = c5(dependencyMap, PLAYING);
+                let obj7 = {};
+                let merged = Object.assign(tmp75);
                 name = tmp75.name;
                 if (name == null) {
                   name = require.application.name;
                 }
                 obj7.name = name;
-                const type = tmp75.type;
+                let type = tmp75.type;
                 PLAYING = type;
                 if (type == null) {
-                  PLAYING = tmp246(name[12]).ActivityTypes.PLAYING;
+                  PLAYING = tmp281(name[12]).ActivityTypes.PLAYING;
                 }
                 obj7.type = PLAYING;
-                closure_138_1 = obj7;
+                closure_141_2 = obj7;
                 obj7.application_id = tmp62;
-                const ActivityGamePlatforms = tmp246(name[13]).ActivityGamePlatforms;
-                if (require.transport === state.POST_MESSAGE) {
-                  let DESKTOP = ActivityGamePlatforms.EMBEDDED;
-                } else {
-                  DESKTOP = ActivityGamePlatforms.DESKTOP;
-                }
-                obj7.platform = DESKTOP;
+                let tmp85 = require.transport === state.POST_MESSAGE;
+                let ActivityGamePlatforms = tmp281(name[13]).ActivityGamePlatforms;
+                obj7.platform = tmp85 ? ActivityGamePlatforms.EMBEDDED : ActivityGamePlatforms.DESKTOP;
                 let _undefined2 = tmp62;
                 if (tmp62 == null) {
                   _undefined2 = undefined;
                 }
-                const application = items1.getApplication(_undefined2);
-                const instance = obj7.instance;
+                let application = items1.getApplication(_undefined2);
+                let instance = obj7.instance;
                 c5 = instance;
                 if (instance == null) {
                   c5 = false;
                 }
-                const party = obj7.party;
+                let tmp90 = c5;
+                closure_141_3 = c5;
+                let party = obj7.party;
                 let privacy;
                 if (party != null) {
                   privacy = party.privacy;
                 }
-                closure_138_2 = privacy;
-                delete tmp11[tmp7];
+                closure_141_4 = privacy;
+                delete tmp8[tmp5];
                 if (obj7.party != null) {
-                  delete tmp12[tmp8];
+                  delete tmp7[tmp6];
                 }
-                const tmp246Result5 = tmp246(name[14]);
+                let tmp281Result5 = tmp281(name[14]);
                 let isFrameAppResult = null != application;
                 if (isFrameAppResult) {
-                  isFrameAppResult = tmp246(name[15]).isFrameApp(application);
-                  const tmp246Result6 = tmp246(name[15]);
+                  let tmp281Result6 = tmp281(name[15]);
+                  isFrameAppResult = tmp281Result6.isFrameApp(application);
                 }
                 if (isFrameAppResult) {
                   isFrameAppResult = tmp85;
                 }
-                const activityFlags = tmp246Result5.computeActivityFlags(obj7, tmp90, tmp85, isFrameAppResult, privacy);
+                let activityFlags = tmp281Result5.computeActivityFlags(obj7, tmp90, tmp85, isFrameAppResult, privacy);
                 if (activityFlags > 0) {
                   obj7.flags = activityFlags;
                 }
-                const assets = obj7.assets;
-                closure_138_3 = assets;
-                const party2 = obj7.party;
-                closure_138_4 = party2;
-                const secrets = obj7.secrets;
-                closure_138_5 = secrets;
-                const timestamps = obj7.timestamps;
+                let assets = obj7.assets;
+                closure_141_5 = assets;
+                let party2 = obj7.party;
+                closure_141_6 = party2;
+                let secrets = obj7.secrets;
+                closure_141_7 = secrets;
+                let timestamps = obj7.timestamps;
+                closure_141_8 = timestamps;
                 if (null != secrets) {
-                  const values = result1(name[16]).values(secrets);
-                  const found = values.filter((item) => {
+                  let obj27 = result1(name[16]);
+                  let values = obj27.values(secrets);
+                  let found = values.filter((item) => {
                     let tmp = null != item;
                     if (tmp) {
                       tmp = "" !== item;
@@ -189,25 +203,36 @@ obj3.handler = function handler(isSocketConnected) {
                     return tmp;
                   });
                   if (null != party2) {
+                    let obj9 = result1(name[16]);
                     items = [party2.id];
                     if (obj9.intersection(found, items).length > 0) {
-                      const obj8 = { errorCode: tmp6.INVALID_ACTIVITY_SECRET };
-                      const tmp213 = new result1(name[9])(obj8, "secrets cannot match the party id");
-                      throw tmp213;
+                      let obj8 = { errorCode: null };
+                      obj8.errorCode = items3.INVALID_ACTIVITY_SECRET;
+                      let tmp249 = new.target;
+                      let tmp250 = new.target;
+                      let str5 = "secrets cannot match the party id";
+                      let tmp252 = new result1(name[9])(obj8, "secrets cannot match the party id");
+                      throw tmp252;
                     }
-                    obj9 = result1(name[16]);
                   }
-                  const obj27 = result1(name[16]);
+                  let obj10 = result1(name[16]);
                   if (obj10.uniq(found).length < found.length) {
-                    const obj12 = { errorCode: tmp6.INVALID_ACTIVITY_SECRET };
-                    const tmp205 = new result1(name[9])(obj12, "secrets must be unique");
-                    throw tmp205;
+                    let obj12 = { errorCode: null };
+                    obj12.errorCode = items3.INVALID_ACTIVITY_SECRET;
+                    let tmp241 = new.target;
+                    let tmp242 = new.target;
+                    let str4 = "secrets must be unique";
+                    let tmp244 = new result1(name[9])(obj12, "secrets must be unique");
+                    throw tmp244;
                   } else if (null != buttons) {
-                    const obj13 = { errorCode: tmp6.INVALID_ACTIVITY_SECRET };
-                    const tmp197 = new result1(name[9])(obj13, "secrets cannot currently be sent with buttons");
-                    throw tmp197;
+                    let obj13 = { errorCode: null };
+                    obj13.errorCode = items3.INVALID_ACTIVITY_SECRET;
+                    let tmp233 = new.target;
+                    let tmp234 = new.target;
+                    let str3 = "secrets cannot currently be sent with buttons";
+                    let tmp236 = new result1(name[9])(obj13, "secrets cannot currently be sent with buttons");
+                    throw tmp236;
                   }
-                  obj10 = result1(name[16]);
                 }
                 if (null != buttons) {
                   obj6.button_urls = buttons.map((url) => url.url);
@@ -217,9 +242,9 @@ obj3.handler = function handler(isSocketConnected) {
                 if (null != timestamps) {
                   items1 = ["start", "end"];
                   closure_6 = items1[Symbol.iterator]();
-                  const nextResult = closure_6.next();
+                  let nextResult = closure_6.next();
                   while (closure_6 !== undefined) {
-                    c13 = 1;
+                    c16 = 1;
                     let str21 = timestamps[nextResult];
                     let tmp109 = null != str21;
                     if (tmp109) {
@@ -231,140 +256,217 @@ obj3.handler = function handler(isSocketConnected) {
                       let _Math = Math;
                       timestamps[nextResult] = Math.floor(str21 * result1(name[17]).Millis.SECOND);
                     }
-                    c13 = 0;
+                    c16 = 0;
                     continue;
                   }
                 }
                 if (null != assets) {
                   if (null == tmp62) {
-                    const obj15 = { errorCode: tmp6.INVALID_COMMAND };
-                    const tmp189 = new result1(name[9])(obj15, "No application.");
-                    throw tmp189;
+                    let obj15 = { errorCode: null };
+                    obj15.errorCode = items3.INVALID_COMMAND;
+                    let tmp225 = new.target;
+                    let tmp226 = new.target;
+                    let str2 = "No application.";
+                    let tmp228 = new result1(name[9])(obj15, "No application.");
+                    throw tmp228;
                   } else {
-                    const items2 = [, , ];
-                    ({ large_image: arr3[0], small_image: arr3[1], invite_cover_image: arr3[2] } = assets);
-                    c14 = 2;
-                    c15 = 1;
-                    const obj17 = { value: _undefined(name[18]).fetchAssetIds(tmp62, items2), done: false };
+                    let obj16 = _undefined(name[18]);
+                    let items2 = [, , ];
+                    ({ large_image: arr4[0], small_image: arr4[1], invite_cover_image: arr4[2] } = assets);
+                    c17 = 2;
+                    c18 = 1;
+                    let obj17 = { value: obj16.fetchAssetIds(tmp62, items2), done: false };
                     return obj17;
                   }
                 }
               }
             } else {
-              const obj18 = { errorCode: tmp6.INVALID_COMMAND };
-              const _HermesInternal = HermesInternal;
-              const tmp502 = new result1(name[9])(obj18, "command not available from \"" + require.transport + "\" transport");
+              let obj18 = { errorCode: null };
+              obj18.errorCode = items3.INVALID_COMMAND;
+              let _HermesInternal = HermesInternal;
+              let tmp50 = result1(name[9]);
+              let tmp53 = new.target;
+              let tmp54 = new.target;
+              let tmp502 = new tmp50(obj18, "command not available from \"" + require.transport + "\" transport");
               throw tmp502;
             }
           }
-        } else if (1 === tmp15) {
-          c13 = 0;
+        } else if (1 === tmp12) {
+          c16 = 0;
           closure_6.return();
-          throw tmp228;
-        } else if (arg0 === 1) {
-          c15 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c15 = 3;
-          const obj = { value, done: true };
-          return obj;
+          throw closure_1_15;
+        } else if (2 === tmp12) {
+          if (arg0 === 1) {
+            c18 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c18 = 3;
+            let obj = { value, done: true };
+            return obj;
+          } else {
+            closure_141_9 = value;
+            closure_141_10 = _undefined2(closure_141_9, 3);
+            closure_141_11 = closure_141_10[0];
+            closure_141_12 = closure_141_10[1];
+            closure_141_13 = closure_141_10[2];
+            if (null != closure_141_11) {
+              closure_141_5.large_image = closure_141_11;
+            } else {
+              delete tmp7[tmp];
+            }
+            if (null != closure_141_12) {
+              closure_141_5.small_image = closure_141_12;
+            } else {
+              delete tmp7[tmp2];
+            }
+            if (null != closure_141_13) {
+              closure_141_5.invite_cover_image = closure_141_13;
+            } else {
+              delete tmp7[tmp3];
+            }
+          }
         } else {
-          closure_138_6 = value;
-          closure_138_7 = _undefined2(closure_138_6, 3);
-          closure_138_8 = closure_138_7[0];
-          closure_138_9 = closure_138_7[1];
-          closure_138_10 = closure_138_7[2];
-          if (null != closure_138_8) {
-            closure_138_3.large_image = closure_138_8;
-          } else {
-            delete tmp10[tmp3];
-          }
-          if (null != closure_138_9) {
-            closure_138_3.small_image = closure_138_9;
-          } else {
-            delete tmp10[tmp4];
-          }
-          if (null != closure_138_10) {
-            closure_138_3.invite_cover_image = closure_138_10;
-          } else {
-            delete tmp10[tmp5];
-          }
+          c16 = 0;
+          closure_11.return();
+          throw closure_1_15;
         }
-        if (closure_139_3()) {
-          const obj19 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: closure_139_0.id, pid: closure_139_1, applicationId: closure_138_0, activity: closure_138_1, partyPrivacy: closure_138_2 };
-          result1(name[10]).dispatch(obj19);
-          const obj20 = { application_id: closure_139_0.application.id, type: closure_138_1.type, name: closure_138_1.name, status_display_type: closure_138_1.status_display_type, details: null, state: null, has_urls: null };
-          details = closure_138_1.details;
+        if (closure_142_3()) {
+          let obj11 = result1(name[10]);
+          let obj19 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: closure_142_0.id, pid: closure_142_1, applicationId: null, activity: null, partyPrivacy: null };
+          obj19.applicationId = closure_141_0;
+          obj19.activity = closure_141_2;
+          obj19.partyPrivacy = closure_141_4;
+          let dispatchResult1 = obj11.dispatch(obj19);
+          let obj20 = { application_id: closure_142_0.application.id, type: null, name: null, status_display_type: null, details: null, state: null, large_text: null, small_text: null, button_1_label: null, button_2_label: null, party_privacy: null, instance: null, has_urls: null };
+          obj20.type = closure_141_2.type;
+          obj20.name = closure_141_2.name;
+          obj20.status_display_type = closure_141_2.status_display_type;
+          details = closure_141_2.details;
           if (details == null) {
             details = "";
           }
           obj20.details = details;
-          state = closure_138_1.state;
+          state = closure_141_2.state;
           if (state == null) {
             state = "";
           }
           obj20.state = state;
-          let tmp135 = null != closure_138_1.state_url;
-          if (!tmp135) {
-            tmp135 = null != closure_138_1.details_url;
+          let large_text;
+          if (closure_141_5 != null) {
+            large_text = closure_141_5.large_text;
           }
-          if (!tmp135) {
-            const assets2 = closure_138_1.assets;
+          obj20.large_text = large_text;
+          let small_text;
+          if (closure_141_5 != null) {
+            small_text = closure_141_5.small_text;
+          }
+          obj20.small_text = small_text;
+          let label;
+          if (closure_141_1 != null) {
+            let first = closure_141_1[0];
+            if (first != null) {
+              label = first.label;
+            }
+          }
+          obj20.button_1_label = label;
+          let label1;
+          if (closure_141_1 != null) {
+            let tmp142 = closure_141_1[1];
+            if (tmp142 != null) {
+              label1 = tmp142.label;
+            }
+          }
+          obj20.button_2_label = label1;
+          let tmp145;
+          if (null != closure_141_6) {
+            let PRIVATE = closure_141_4;
+            if (closure_141_4 == null) {
+              PRIVATE = PRIVATE.PRIVATE;
+            }
+            tmp145 = PRIVATE;
+          }
+          obj20.party_privacy = tmp145;
+          obj20.instance = closure_141_3;
+          let tmp153 = null != closure_141_2.state_url;
+          if (!tmp153) {
+            tmp153 = null != closure_141_2.details_url;
+          }
+          if (!tmp153) {
+            let assets2 = closure_141_2.assets;
             let large_url;
             if (assets2 != null) {
               large_url = assets2.large_url;
             }
-            tmp135 = null != large_url;
+            tmp153 = null != large_url;
           }
-          if (!tmp135) {
-            const assets3 = closure_138_1.assets;
+          if (!tmp153) {
+            let assets3 = closure_141_2.assets;
             let small_url;
             if (assets3 != null) {
               small_url = assets3.small_url;
             }
-            tmp135 = null != small_url;
+            tmp153 = null != small_url;
           }
-          obj20.has_urls = tmp135;
-          closure_138_11 = obj20;
-          if (null != closure_138_5) {
-            closure_138_11.has_match_secret = null != closure_138_5.match;
-            closure_138_11.has_join_secret = null != closure_138_5.join;
-          }
-          if (null != closure_138_3) {
-            let tmp156 = null != closure_138_3.large_image;
-            if (!tmp156) {
-              tmp156 = null != closure_138_3.small_image;
+          obj20.has_urls = tmp153;
+          closure_141_14 = obj20;
+          items3 = ["start", "end"];
+          closure_11 = items3[Symbol.iterator]();
+          while (closure_11 !== undefined) {
+            c16 = 2;
+            closure_141_15 = tmp166;
+            let tmp169;
+            if (closure_141_8 != null) {
+              tmp169 = tmp289[closure_141_15];
             }
-            if (!tmp156) {
-              tmp156 = null != closure_138_3.invite_cover_image;
-            }
-            closure_138_11.has_images = tmp156;
-          }
-          if (null != closure_138_4) {
-            let tmp166;
-            if (null != closure_138_4.size) {
-              if (closure_138_4.size[1] > 0) {
-                tmp166 = closure_138_4.size[1];
+            closure_141_16 = tmp169;
+            if (null != closure_141_16) {
+              let _Date2 = Date;
+              let tmp174 = new.target;
+              let tmp175 = new.target;
+              let date = new Date(closure_141_16);
+              closure_141_17 = date;
+              let _Number = Number;
+              if (!Number.isNaN(closure_141_17.getTime())) {
+                closure_141_14[closure_141_15] = closure_141_17.toISOString();
               }
             }
-            closure_138_11.party_max = tmp166;
-            closure_138_11.party_id = closure_138_4.id;
+            c16 = 0;
+            continue;
           }
-          const obj11 = result1(name[10]);
-          result1(name[19]).track(constants.ACTIVITY_UPDATED, closure_138_11);
-          c15 = 3;
-          const obj21 = { value: closure_138_1, done: true };
+          if (null != closure_141_7) {
+            closure_141_14.has_match_secret = null != closure_141_7.match;
+            closure_141_14.has_join_secret = null != closure_141_7.join;
+          }
+          if (null != closure_141_5) {
+            let tmp195 = null != closure_141_5.large_image;
+            let tmp193 = closure_141_14;
+            if (!tmp195) {
+              tmp195 = null != closure_141_5.small_image;
+            }
+            if (!tmp195) {
+              tmp195 = null != closure_141_5.invite_cover_image;
+            }
+            tmp193.has_images = tmp195;
+          }
+          if (null != closure_141_6) {
+            let tmp205;
+            let tmp203 = closure_141_14;
+            if (null != closure_141_6.size) {
+              if (closure_141_6.size[1] > 0) {
+                tmp205 = closure_141_6.size[1];
+              }
+            }
+            tmp203.party_max = tmp205;
+            closure_141_14.party_id = closure_141_6.id;
+          }
+          let obj14 = result1(name[19]);
+          let trackResult = obj14.track(closure_11.ACTIVITY_UPDATED, closure_141_14);
+          c18 = 3;
+          let obj21 = { value: closure_141_2, done: true };
           return obj21;
         } else {
-          c15 = 3;
+          c18 = 3;
           return { value: null, done: true };
-        }
-      } catch (tmp228) {
-        if (tmp9 === c13) {
-          c15 = tmp2;
-          throw tmp228;
-        } else {
-          c14 = tmp;
         }
       }
     }

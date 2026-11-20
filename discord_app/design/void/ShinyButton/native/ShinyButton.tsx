@@ -1,18 +1,18 @@
-// === Module 15293: ShinyButton/ShinyButton ===
+// === Module 15257: ShinyButton/ShinyButton ===
 
-// Module 15293 (ShinyButton/ShinyButton)
-import Button_ButtonDefault from "Button/Button" /* 1190 */;
-import _modDef1655 from "module_1655" /* 1655 */;
+// Module 15257 (ShinyButton/ShinyButton)
+import Button_ButtonDefault from "Button/Button" /* 1189 */;
+import _modDef1653 from "module_1653" /* 1653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let AppState = fn(17).AppState;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { shinyButton: { overflow: "hidden" }, shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, shine: null, shineInner: { width: 16, height: "100%", backgroundColor: "rgba(255,255,255,0.1)" } };
 let size = { width: 56, height: "500%", transform: null, backgroundColor: "rgba(255,255,255,0.1)", top: "-100%", alignItems: "center" };
 let items = [{ rotate: "30deg" }];
@@ -55,7 +55,7 @@ export default function ShinyButton(disabled) {
     };
   }, []);
   const tmp5 = _slicedToArray(noop.useState("active" === AppState.currentState), 2);
-  let items1 = [c9, tmp3[0], 100, require("module_1655").withRepeat, require("module_1655").withSequence, require("timing/timing").withTiming, require("module_1655").withDelay, 750, 2000];
+  let items1 = [c9, tmp3[0], 100, require("module_1653").withRepeat, require("module_1653").withSequence, require("timing/timing").withTiming, require("module_1653").withDelay, 750, 2000];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -103,9 +103,9 @@ export default function ShinyButton(disabled) {
   ShinyButtonTsx1.__closure = items2;
   ShinyButtonTsx1.__workletHash = 1149292223259;
   ShinyButtonTsx1.__initData = tmp7;
-  closure_10 = require("module_1655").useAnimatedStyle(ShinyButtonTsx1);
+  closure_10 = require("module_1653").useAnimatedStyle(ShinyButtonTsx1);
   let obj3 = {};
-  let obj2 = require("module_1655");
+  let obj2 = require("module_1653");
   const merged1 = Object.assign(merged);
   const items3 = [disabled.style, tmp2.shinyButton];
   obj3.style = items3;
@@ -130,9 +130,9 @@ export default function ShinyButton(disabled) {
               const obj3 = { style: null };
               const items2 = [_undefined4.shineInner, c4];
               obj3.style = items2;
-              obj2.children = jsx(_modDef1655.View, { style: null });
-              obj.children = jsx(_modDef1655.View, { style: null, children: null });
-              tmp = jsx(_modDef1655.View, { onLayout: handleLayout, style: null, children: null });
+              obj2.children = jsx(_modDef1653.View, { style: null });
+              obj.children = jsx(_modDef1653.View, { style: null, children: null });
+              tmp = jsx(_modDef1653.View, { onLayout: handleLayout, style: null, children: null });
             }
           }
         }

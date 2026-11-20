@@ -1,11 +1,11 @@
-// === Module 14914: NoticeStore ===
+// === Module 14878: NoticeStore ===
 
-// Module 14914 (NoticeStore)
+// Module 14878 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef2169 from "module_2169" /* 2169 */;
-import UserOfferStore from "UserOfferStore" /* 8687 */;
+import _modDef2167 from "module_2167" /* 2167 */;
+import UserOfferStore from "UserOfferStore" /* 8727 */;
 
 require = fn;
 function clearDismissUntil(arg0) {
@@ -21,10 +21,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = _modDef2169(value);
+        tmp4 = _modDef2167(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(_modDef2169());
+        return tmp4.isAfter(_modDef2167());
       }
     }
     let tmp6 = null != tmp11;
@@ -71,8 +71,8 @@ function updateNotice() {
     continue;
   }
 }
-const PremiumSubscriptionSKUs = fn(1390).PremiumSubscriptionSKUs;
-const NoticeTypes = fn(1072).NoticeTypes;
+const PremiumSubscriptionSKUs = fn(1388).PremiumSubscriptionSKUs;
+const NoticeTypes = fn(1071).NoticeTypes;
 let c6 = null;
 let items = [, ];
 ({ PREMIUM_TIER_2_TRIAL_ENDING: arr[0], PREMIUM_TIER_0_TRIAL_ENDING: arr[1] } = NoticeTypes);

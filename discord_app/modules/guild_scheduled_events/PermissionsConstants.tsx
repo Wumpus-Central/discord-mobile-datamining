@@ -1,10 +1,10 @@
-// === Module 7513: PermissionsConstants ===
+// === Module 7512: PermissionsConstants ===
 
-// Module 7513 (PermissionsConstants)
-import Constants from "Constants" /* 1072 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4649 */;
+// Module 7512 (PermissionsConstants)
+import Constants from "Constants" /* 1071 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4651 */;
 import "BigFlagUtils";
-import BigFlagUtils from "BigFlagUtils" /* 1084 */;
+import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

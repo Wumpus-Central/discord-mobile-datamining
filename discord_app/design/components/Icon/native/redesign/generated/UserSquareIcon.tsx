@@ -2,7 +2,7 @@
 
 // Module 9371 (UserSquareIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9372 from "module_9372" /* 9372 */;
 import noop from "module_19" /* 19 */;
 

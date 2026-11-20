@@ -1,8 +1,8 @@
-// === Module 16500: openOrbsArcadeRewardsCollectedModal ===
+// === Module 16322: openOrbsArcadeRewardsCollectedModal ===
 
-// Module 16500 (openOrbsArcadeRewardsCollectedModal)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+// Module 16322 (openOrbsArcadeRewardsCollectedModal)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

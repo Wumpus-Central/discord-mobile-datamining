@@ -1,15 +1,15 @@
-// === Module 7626: useCanRing ===
+// === Module 7625: useCanRing ===
 
-// Module 7626 (useCanRing)
+// Module 7625 (useCanRing)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6506 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import CallStore from "CallStore" /* 6508 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelTypesSets = fn(1072).ChannelTypesSets;
+const ChannelTypesSets = fn(1071).ChannelTypesSets;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 

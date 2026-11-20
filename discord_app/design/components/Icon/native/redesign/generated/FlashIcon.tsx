@@ -1,9 +1,9 @@
-// === Module 14377: FlashIcon ===
+// === Module 14345: FlashIcon ===
 
-// Module 14377 (FlashIcon)
+// Module 14345 (FlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod14378 from "module_14378" /* 14378 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod14346 from "module_14346" /* 14346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14378, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

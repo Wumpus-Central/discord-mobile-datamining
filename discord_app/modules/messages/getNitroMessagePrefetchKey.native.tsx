@@ -1,8 +1,8 @@
-// === Module 8461: getNitroMessagePrefetchKey ===
+// === Module 8460: getNitroMessagePrefetchKey ===
 
-// Module 8461 (getNitroMessagePrefetchKey)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import NitroFetchExperiment from "NitroFetchExperiment" /* 8462 */;
+// Module 8460 (getNitroMessagePrefetchKey)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import NitroFetchExperiment from "NitroFetchExperiment" /* 8461 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getNitroMessagePrefetchKey.native.tsx");

@@ -1,23 +1,23 @@
-// === Module 11709: useSafeAreaInsetsSharedValue ===
+// === Module 11651: useSafeAreaInsetsSharedValue ===
 
-// Module 11709 (useSafeAreaInsetsSharedValue)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import AppEntryKey from "AppEntryKey" /* 1643 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 10754 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11692 */;
-import module_1655_mod from "module_1655" /* 1655 */;
-import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1630 */;
+// Module 11651 (useSafeAreaInsetsSharedValue)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
+import AppEntryKey from "AppEntryKey" /* 1641 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 10696 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11634 */;
+import module_1653_mod from "module_1653" /* 1653 */;
+import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 let obj = { main: null, share: null };
-let module_1655 = module_1655_mod;
+let module_1653 = module_1653_mod;
 let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj.main = module_1655.makeMutable({});
-let module_1655 = module_1655_mod;
+obj.main = module_1653.makeMutable({});
+let module_1653 = module_1653_mod;
 let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj.share = module_1655.makeMutable({});
+obj.share = module_1653.makeMutable({});
 function _loop(iter) {
   closure_0 = iter;
   subscribeToSafeAreaInsetsDefault((arg0) => {

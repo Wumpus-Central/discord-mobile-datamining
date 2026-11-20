@@ -1,22 +1,22 @@
-// === Module 16502: OrbsArcadePlayButton ===
+// === Module 16324: OrbsArcadePlayButton ===
 
-// Module 16502 (OrbsArcadePlayButton)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import ButtonConstants from "ButtonConstants" /* 5396 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 16488 */;
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 16505 */;
+// Module 16324 (OrbsArcadePlayButton)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import ButtonConstants from "ButtonConstants" /* 5398 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 16310 */;
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 16327 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9834 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16478 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9836 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16300 */;
 
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
   const size = count.size;
   const tmp = closure_9();
   closure_1 = tmp;
-  const intl = size(1113).intl;
-  const formatResult = intl.format(size(1113).t.oSWYca, {
+  const intl = size(1112).intl;
+  const formatResult = intl.format(size(1112).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
       return jsx(size(8838).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
@@ -38,9 +38,9 @@ function OrbsArcadePaidPlayLabel(count) {
   })}</View>;
 }
 const View = fn(17).View;
-const QuestHomeSection = fn(9834).QuestHomeSection;
+const QuestHomeSection = fn(9836).QuestHomeSection;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ paidPlayLabel: { flexDirection: "row", alignItems: "center" }, paidPlayText: { flexShrink: 1 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadePlayButton.tsx");

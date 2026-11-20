@@ -1,7 +1,7 @@
-// === Module 15215: WGCDirtyRegionsAllExperiment ===
+// === Module 15179: WGCDirtyRegionsAllExperiment ===
 
-// Module 15215 (WGCDirtyRegionsAllExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15179 (WGCDirtyRegionsAllExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-wgc-dirty-regions-all", kind: "user", defaultConfig: { enabled: false }, variations: null };

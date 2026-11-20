@@ -1,11 +1,11 @@
-// === Module 12113: SpotifyUtils ===
+// === Module 12055: SpotifyUtils ===
 
-// Module 12113 (SpotifyUtils)
-import DurationsDefault from "Durations" /* 1089 */;
+// Module 12055 (SpotifyUtils)
+import DurationsDefault from "Durations" /* 1088 */;
 import SpotifyActionCreators from "SpotifyActionCreators" /* 6779 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 12114 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 12056 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
 import SpotifyProtocolStore from "SpotifyProtocolStore" /* 6780 */;
 import SpotifyStore from "SpotifyStore" /* 6777 */;
 
@@ -30,7 +30,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -111,7 +111,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
 };
 const SpotifyConstants = fn(6778);
 ({ SPOTIFY_APP_PROTOCOL: metroImportDefault, SpotifyResourceTypes: closure_8, getSpotifyResourceType: closure_9 } = SpotifyConstants);
-const PlatformTypes = fn(1072).PlatformTypes;
+const PlatformTypes = fn(1071).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");

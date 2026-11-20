@@ -1,12 +1,12 @@
 // === Module 9132: OrbsRewardBackground ===
 
 // Module 9132 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 5479 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import _modDef9133 from "module_9133" /* 9133 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
 
 const _modDef9164 = tmp15(9164);
 const require = fn;
@@ -58,7 +58,7 @@ export function OrbsRewardBackground(arg0) {
   const children = [closure_7(FastImageDefault, obj4), ];
   let tmp14Result = !stateFromStores;
   if (!stateFromStores) {
-    tmp14Result = stateFromStores1 === onReady(1092).AppStates.ACTIVE;
+    tmp14Result = stateFromStores1 === onReady(1091).AppStates.ACTIVE;
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };

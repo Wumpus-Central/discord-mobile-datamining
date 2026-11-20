@@ -1,8 +1,8 @@
-// === Module 1115: intl/util ===
+// === Module 1114: intl/util ===
 
-// Module 1115 (intl/util)
-import _mod1152 from "module_1152" /* 1152 */;
-import _Parser from "_Parser" /* 1175 */;
+// Module 1114 (intl/util)
+import _mod1151 from "module_1151" /* 1151 */;
+import _Parser from "_Parser" /* 1174 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,12 +13,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export function getAvailableLocales() {
-  _require = require("module_1116").default;
-  const found = require("module_1174").filter((enabled) => enabled.enabled);
+  _require = require("module_1115").default;
+  const found = require("module_1173").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1152;
+    const obj2 = _mod1151;
     obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
@@ -37,10 +37,10 @@ export function getAvailableLocales() {
   });
 }
 export function getLanguages() {
-  return require("module_1174");
+  return require("module_1173");
 }
 export function getNormalizedLocale(Language, arg1) {
-  const found = require("module_1174").filter((enabled) => enabled.enabled);
+  const found = require("module_1173").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
@@ -71,11 +71,11 @@ export function getNormalizedLocale(Language, arg1) {
       }
     }
   }
-  const arr = require("module_1174");
+  const arr = require("module_1173");
 }
 export function parseRuntimeIcuAsIntlMessage(header, currentLocale) {
   const parsed = _Parser.parse(header, { ignoreTag: true });
-  const internalIntlMessage = new _mod1152.InternalIntlMessage(parsed, currentLocale);
+  const internalIntlMessage = new _mod1151.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 }
 export function useSyncMessages(arg0, withFormattersResult) {

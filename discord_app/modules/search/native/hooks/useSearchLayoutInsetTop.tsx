@@ -1,7 +1,7 @@
-// === Module 19043: useSearchLayoutInsetTop ===
+// === Module 18862: useSearchLayoutInsetTop ===
 
-// Module 19043 (useSearchLayoutInsetTop)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+// Module 18862 (useSearchLayoutInsetTop)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchLayoutInsetTop.tsx");

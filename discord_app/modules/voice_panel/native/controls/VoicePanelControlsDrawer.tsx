@@ -1,14 +1,14 @@
-// === Module 19425: VoicePanelControlsDrawer ===
+// === Module 19245: VoicePanelControlsDrawer ===
 
-// Module 19425 (VoicePanelControlsDrawer)
+// Module 19245 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import Suspender from "Suspender" /* 5770 */;
-import useRefValueDefault from "useRefValue" /* 6899 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13043 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19426 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19438 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import Suspender from "Suspender" /* 5772 */;
+import useRefValueDefault from "useRefValue" /* 6898 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13013 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19246 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19258 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11688);
+const VoicePanelConstants = fn(11630);
 ({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function LazyContentFreezer(shown) {
@@ -112,8 +112,8 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   VoicePanelControlsDrawerTsx1.__closure = items1;
   VoicePanelControlsDrawerTsx1.__workletHash = 12678028952961;
   VoicePanelControlsDrawerTsx1.__initData = tmp11;
-  const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelControlsDrawerTsx1);
-  const obj2 = require("module_1655");
+  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelControlsDrawerTsx1);
+  const obj2 = require("module_1653");
   const items2 = [closure_15, wrapperSpecs, mode];
   _require = undefined;
   importDefault = undefined;
@@ -130,7 +130,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   VoicePanelControlsDrawerTsx2.__closure = items3;
   VoicePanelControlsDrawerTsx2.__workletHash = 7594507638980;
   VoicePanelControlsDrawerTsx2.__initData = tmp20;
-  const items4 = [closure_16, require("cheapWorkletShallowEqual").cheapWorkletArrayShallowEqual, closure_8, require("module_1708").scheduleOnRN, tmp7];
+  const items4 = [closure_16, require("cheapWorkletShallowEqual").cheapWorkletArrayShallowEqual, closure_8, require("module_1706").scheduleOnRN, tmp7];
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -169,7 +169,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   VoicePanelControlsDrawerTsx3.__closure = items5;
   VoicePanelControlsDrawerTsx3.__workletHash = 8293489565998;
   VoicePanelControlsDrawerTsx3.__initData = tmp23;
-  const animatedReaction = require("module_1655").useAnimatedReaction(VoicePanelControlsDrawerTsx2, VoicePanelControlsDrawerTsx3);
+  const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelControlsDrawerTsx2, VoicePanelControlsDrawerTsx3);
   const items6 = [openTab];
   const items7 = [gestureSpecs];
   const callback = obj.useCallback((isVisible) => React6(VoicePanelVoiceControlsDefault, { isVisible, openTab }), items6);
@@ -177,11 +177,11 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   const obj3 = { style: null, children: null };
   const items8 = [tmp4.drawer, animatedStyle];
   obj3.style = items8;
-  const tmp10Result = require("module_1655");
+  const tmp10Result = require("module_1653");
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19422), obj4);
+    tmp32 = closure_9(tmp(19242), obj4);
   }
   const items9 = [tmp32, , , ];
   let tmp36 = !tmp6;
@@ -200,6 +200,6 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   }
   items9[3] = closure_9(closure_12, { shown: tmp38, renderContent: callback1 });
   obj3.children = items9;
-  return closure_10(_modDef1655.View, obj3);
+  return closure_10(_modDef1653.View, obj3);
 });
 export const LazyContentFreezer = memoResult;

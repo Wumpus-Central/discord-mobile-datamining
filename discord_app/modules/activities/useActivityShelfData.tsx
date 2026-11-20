@@ -1,12 +1,12 @@
-// === Module 12818: useActivityShelfData ===
+// === Module 12788: useActivityShelfData ===
 
-// Module 12818 (useActivityShelfData)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
+// Module 12788 (useActivityShelfData)
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
-import TestModeStore from "TestModeStore" /* 5434 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
+import UserStore from "UserStore" /* 1386 */;
+import TestModeStore from "TestModeStore" /* 5436 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
 
 const require = globalThis.__r;
 
@@ -78,8 +78,8 @@ export function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(5443);
-      return supported_platforms.includes(tmp(guildId(1380).getOS()));
+      const tmp = stateFromStores(5445);
+      return supported_platforms.includes(tmp(guildId(1378).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

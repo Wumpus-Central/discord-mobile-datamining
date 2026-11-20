@@ -1,17 +1,17 @@
-// === Module 18089: ForLaterOpenActionButton ===
+// === Module 17916: ForLaterOpenActionButton ===
 
-// Module 18089 (ForLaterOpenActionButton)
+// Module 17916 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5001 */;
-import useToken from "useToken" /* 5356 */;
-import ButtonHooks from "ButtonHooks" /* 5397 */;
-import ClockIcon from "ClockIcon" /* 5501 */;
+import useThemeDefault from "useTheme" /* 5003 */;
+import useToken from "useToken" /* 5358 */;
+import ButtonHooks from "ButtonHooks" /* 5399 */;
+import ClockIcon from "ClockIcon" /* 5503 */;
 import ClipViewDefault from "ClipView" /* 8903 */;
-import showForLaterModal from "showForLaterModal" /* 11617 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11618 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 11630 */;
+import showForLaterModal from "showForLaterModal" /* 11559 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11560 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11572 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11622 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11564 */;
 
 require = fn;
 function BadgedIcon(arg0) {
@@ -51,10 +51,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const point = { shape: fn(8903).CutoutShape.Circle, x: fn(13684).ICON_SIZE.sm - 7, y: fn(13684).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(4792);
+const point = { shape: fn(8903).CutoutShape.Circle, x: fn(13655).ICON_SIZE.sm - 7, y: fn(13655).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(4794);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(13684).ICON_SIZE.sm, height: fn(13684).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(13655).ICON_SIZE.sm, height: fn(13655).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;
@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export default function ForLaterActionButton(ref) {
   const type = ref.type;
   const onOpen = ref.onOpen;
-  const tmp3 = type === type(11618).SavedMessageSortTypes.REMINDER;
+  const tmp3 = type === type(11560).SavedMessageSortTypes.REMINDER;
   dependencyMap = tmp3;
   items = [SavedMessagesStore];
   const items1 = [tmp3];
@@ -81,18 +81,18 @@ export default function ForLaterActionButton(ref) {
     onOpen();
     showForLaterModal.showForLaterModal(type);
   }, items2);
-  const intl = type(1113).intl;
-  const t = type(1113).t;
+  const intl = type(1112).intl;
+  const t = type(1112).t;
   const stringResult = intl.string(tmp3 ? t.aUXxzT : t["2pAkDA"]);
   let combined = stringResult;
   if (stateFromStores > 0) {
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     const obj2 = { count: stateFromStores };
     const _HermesInternal = HermesInternal;
-    combined = "" + stringResult + ", " + intl2.formatToPlainString(tmp(1113).t.yBmFPA, obj2);
+    combined = "" + stringResult + ", " + intl2.formatToPlainString(tmp(1112).t.yBmFPA, obj2);
   }
   const obj3 = { ref: ref.ref, children: null };
   const obj = type(504);
-  obj3.children = closure_6(type(7472).IconButton, { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, { type, showRedDot: stateFromStores > 0 }), onPress: callback, accessibilityLabel: combined, maxFontSizeMultiplier: 2 });
+  obj3.children = closure_6(type(7471).IconButton, { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, { type, showRedDot: stateFromStores > 0 }), onPress: callback, accessibilityLabel: combined, maxFontSizeMultiplier: 2 });
   return closure_6(View, obj3);
 };

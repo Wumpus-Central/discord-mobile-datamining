@@ -1,17 +1,17 @@
-// === Module 10265: UserProfileApplicationWidgetHeroImage ===
+// === Module 10205: UserProfileApplicationWidgetHeroImage ===
 
-// Module 10265 (UserProfileApplicationWidgetHeroImage)
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import _modDef7016 from "module_7016" /* 7016 */;
+// Module 10205 (UserProfileApplicationWidgetHeroImage)
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import _modDef7015 from "module_7015" /* 7015 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const HorizontalGradient = fn(1072).HorizontalGradient;
+const HorizontalGradient = fn(1071).HorizontalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({ mask: { flex: 1, flexDirection: "row" }, gradient: { width: 130 }, remainder: { flex: 1, backgroundColor: "black" }, imageClip: { width: "100%", height: "100%", overflow: "hidden" }, image: { position: "absolute", top: 0, right: 0, width: "100%" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetHeroImage.tsx");
@@ -79,7 +79,7 @@ export default function UserProfileApplicationWidgetHeroImage(arg0) {
   const items1 = [tmp.image, ];
   const obj3 = { start: HorizontalGradient.START, end: HorizontalGradient.END, colors, style: tmp.gradient };
   const obj4 = { style: tmp.remainder };
-  const tmp12 = _modDef7016;
+  const tmp12 = _modDef7015;
   if (str == null) {
     str = "100%";
   }

@@ -1,15 +1,15 @@
-// === Module 10295: InAppReportsIgnoreUserElement ===
+// === Module 10237: InAppReportsIgnoreUserElement ===
 
-// Module 10295 (InAppReportsIgnoreUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
+// Module 10237 (InAppReportsIgnoreUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7620 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");

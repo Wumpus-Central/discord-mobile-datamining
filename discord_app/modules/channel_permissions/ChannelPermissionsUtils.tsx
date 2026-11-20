@@ -1,22 +1,22 @@
-// === Module 7615: ChannelPermissionsUtils ===
+// === Module 7614: ChannelPermissionsUtils ===
 
-// Module 7615 (ChannelPermissionsUtils)
+// Module 7614 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import util from "util" /* 1113 */;
-import Server from "Server" /* 2119 */;
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import GuildRecord from "GuildRecord" /* 4659 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4702 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import ChannelUtils from "ChannelUtils" /* 5827 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 6385 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 7616 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4699 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import UserStore from "UserStore" /* 1388 */;
-import Constants from "Constants" /* 1072 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import util from "util" /* 1112 */;
+import Server from "Server" /* 2117 */;
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import GuildRecord from "GuildRecord" /* 4661 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 4704 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import ChannelUtils from "ChannelUtils" /* 5829 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 6387 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 7615 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4701 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import UserStore from "UserStore" /* 1386 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -320,8 +320,8 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1113).intl;
-      stringResult = intl.string(tmp4(1113).t["gnsna/"]);
+      const intl = tmp4(1112).intl;
+      stringResult = intl.string(tmp4(1112).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     items = [obj];
@@ -381,8 +381,8 @@ export function getExistingRolesRowWithPermissionDisabled(guild, sortedGuildRole
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1113).intl;
-      stringResult = intl.string(tmp4(1113).t["gnsna/"]);
+      const intl = tmp4(1112).intl;
+      stringResult = intl.string(tmp4(1112).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     items = [obj];
@@ -645,22 +645,22 @@ export function isPrivateTextChannel(type) {
   }
   return hasItem;
 }
-export function canCreatePrivateChannel(first1, canResult, canResult1) {
+export function canCreatePrivateChannel(GUILD_APP, canResult, PermissionStore) {
   let tmp2 = canResult;
-  if (first1 !== constants2.GUILD_TEXT) {
+  if (GUILD_APP !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
-    if (first1 !== constants2.GUILD_ANNOUNCEMENT) {
+    if (GUILD_APP !== constants2.GUILD_ANNOUNCEMENT) {
       tmp2 = canResult;
-      if (first1 !== constants2.GUILD_APP) {
-        const tmp4 = isGuildVocalChannelType(first1);
+      if (GUILD_APP !== constants2.GUILD_APP) {
+        const tmp4 = isGuildVocalChannelType(GUILD_APP);
         let tmp5 = !tmp4;
         if (!tmp4) {
-          tmp5 = first1 !== constants2.GUILD_CATEGORY;
+          tmp5 = GUILD_APP !== constants2.GUILD_CATEGORY;
         }
         if (!tmp5) {
           let tmp6 = canResult;
           if (canResult) {
-            tmp6 = canResult1;
+            tmp6 = PermissionStore;
           }
           tmp5 = tmp6;
         }

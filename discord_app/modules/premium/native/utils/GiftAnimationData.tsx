@@ -1,8 +1,8 @@
 // === Module 9497: GiftAnimationData ===
 
 // Module 9497 (GiftAnimationData)
-import PremiumConstants from "PremiumConstants" /* 1390 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8721 */;
+import PremiumConstants from "PremiumConstants" /* 1388 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8761 */;
 import _mod9498 from "module_9498" /* 9498 */;
 import _mod9499 from "module_9499" /* 9499 */;
 import _mod9500 from "module_9500" /* 9500 */;

@@ -1,13 +1,13 @@
-// === Module 14407: VoicePanelStreamPreview ===
+// === Module 14375: VoicePanelStreamPreview ===
 
-// Module 14407 (VoicePanelStreamPreview)
+// Module 14375 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 575 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11022 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10964 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import module_1655_mod from "module_1655" /* 1655 */;
+import module_1653_mod from "module_1653" /* 1653 */;
 
 const require = globalThis.__r;
 
@@ -16,12 +16,12 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let module_1655 = module_1655_mod;
-let closure_9 = module_1655.createAnimatedComponent(Pressable);
-let module_1655 = module_1655_mod;
-let closure_10 = module_1655.createAnimatedComponent(fn(5390).Button);
+let module_1653 = module_1653_mod;
+let closure_9 = module_1653.createAnimatedComponent(Pressable);
+let module_1653 = module_1653_mod;
+let closure_10 = module_1653.createAnimatedComponent(fn(5392).Button);
 let closure_11 = { duration: 200 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.roundedCard = size;
@@ -95,7 +95,7 @@ export function VoicePanelStreamPreview(stream) {
   VoicePanelStreamPreviewTsx1.__initData = tmp10;
   const obj3 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
   let tmp17 = disabled;
-  const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelStreamPreviewTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelStreamPreviewTsx1);
   if (!disabled) {
     tmp17 = stateFromStores;
   }
@@ -107,8 +107,8 @@ export function VoicePanelStreamPreview(stream) {
     const obj6 = { uri: previewUrl };
     obj5.source = obj6;
     obj5.style = absoluteFill.absoluteFill;
-    obj4.children = closure_7(tmp2(5479), obj5);
-    tmp18 = closure_7(tmp2(1655).View, obj4);
+    obj4.children = closure_7(tmp2(5481), obj5);
+    tmp18 = closure_7(tmp2(1653).View, obj4);
   }
   const items4 = [tmp18, ];
   const obj7 = { layout, children: null };
@@ -116,20 +116,20 @@ export function VoicePanelStreamPreview(stream) {
   if (stateFromStores) {
     const obj9 = { style: tmp.ownStreamTextContainer, children: null };
     const obj10 = { variant: "body-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
-    const intl2 = tmp8(1113).intl;
-    obj10.children = intl2.string(tmp8(1113).t["ro/HN8"]);
-    obj9.children = closure_7(tmp8(5383).Text, obj10);
+    const intl2 = tmp8(1112).intl;
+    obj10.children = intl2.string(tmp8(1112).t["ro/HN8"]);
+    obj9.children = closure_7(tmp8(5385).Text, obj10);
     let tmp21Result = closure_7(closure_4, obj9);
   } else {
     const obj11 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
-    const intl = tmp8(1113).intl;
-    obj11.text = intl.string(tmp8(1113).t["7Xq/nV"]);
+    const intl = tmp8(1112).intl;
+    obj11.text = intl.string(tmp8(1112).t["7Xq/nV"]);
     obj11.onPress = onPress;
     tmp21Result = closure_7(closure_10, obj11);
   }
   obj8.children = tmp21Result;
-  obj7.children = closure_7(module_1655.View, obj8);
-  items4[1] = closure_7(module_1655.View, obj7);
+  obj7.children = closure_7(module_1653.View, obj8);
+  items4[1] = closure_7(module_1653.View, obj7);
   obj3.children = items4;
   return closure_8(closure_9, obj3);
 }

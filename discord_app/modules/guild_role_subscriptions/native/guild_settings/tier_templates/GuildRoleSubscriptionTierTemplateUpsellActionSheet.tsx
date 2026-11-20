@@ -1,28 +1,28 @@
-// === Module 17817: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 17644: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 17817 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 17644 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8031 */;
+import util from "util" /* 1112 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5022 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildSettingsSections: metroImportDefault, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { container: { padding: nativeDefault.space.PX_16, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null };
 let obj3 = { padding: nativeDefault.space.PX_16, justifyContent: "center" };
 obj2.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };

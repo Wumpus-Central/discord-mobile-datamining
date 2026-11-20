@@ -1,10 +1,10 @@
-// === Module 5003: ReanimatedConstants ===
+// === Module 5005: ReanimatedConstants ===
 
-// Module 5003 (ReanimatedConstants)
-import _mod1655 from "module_1655" /* 1655 */;
+// Module 5005 (ReanimatedConstants)
+import _mod1653 from "module_1653" /* 1653 */;
 import size from "module_2" /* 2 */;
 
-const obj = { duration: 1, reduceMotion: _mod1655.ReduceMotion.Always };
+const obj = { duration: 1, reduceMotion: _mod1653.ReduceMotion.Always };
 const obj2 = {};
 const merged = Object.assign(obj);
 obj2.reduceMotion = undefined;

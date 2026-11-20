@@ -1,11 +1,11 @@
-// === Module 11264: getEmojiPopoutMessage ===
+// === Module 11206: getEmojiPopoutMessage ===
 
-// Module 11264 (getEmojiPopoutMessage)
-import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import _modDef4344 from "module_4344" /* 4344 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 7204 */;
+// Module 11206 (getEmojiPopoutMessage)
+import Constants from "Constants" /* 1071 */;
+import util from "util" /* 1112 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import _modDef4346 from "module_4346" /* 4346 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 7203 */;
 import size from "module_2" /* 2 */;
 
 const EmojiSourceDataTypes = ExpressionSourceRecord.EmojiSourceDataTypes;
@@ -20,7 +20,7 @@ export function getEmojiPopoutData(sourceType) {
     const obj2 = { type: obj.UNAVAILABLE, text: null, description: null, emojiDescription: null, analyticsType: null };
     const intl11 = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj2.emojiDescription = intl11.format(_modDef4344["/jdd/7"], obj3);
+    obj2.emojiDescription = intl11.format(_modDef4346["/jdd/7"], obj3);
     obj2.analyticsType = constants.NITRO_EMOJI_PACK;
     return obj2;
   } else {
@@ -47,8 +47,8 @@ export function getEmojiPopoutData(sourceType) {
           if (isPremium2) {
             if (isDiscoverable2) {
               const obj5 = { type: obj.JOIN_GUILD, text: null, description: null };
-              const intl10 = tmp7(1113).intl;
-              obj5.text = intl10.string(tmp7(1113).t.riu2R5);
+              const intl10 = tmp7(1112).intl;
+              obj5.text = intl10.string(tmp7(1112).t.riu2R5);
               let obj7 = obj5;
             }
             const obj6 = {};
@@ -59,8 +59,8 @@ export function getEmojiPopoutData(sourceType) {
           }
           if (!isPremium2) {
             obj7 = { type: obj.GET_PREMIUM, text: null, description: null };
-            const intl9 = tmp7(1113).intl;
-            obj7.text = intl9.string(tmp7(1113).t["gl/XHJ"]);
+            const intl9 = tmp7(1112).intl;
+            obj7.text = intl9.string(tmp7(1112).t["gl/XHJ"]);
           }
           const obj8 = { type: obj.UNAVAILABLE, text: null, description: null };
           obj7 = obj8;

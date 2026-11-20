@@ -1,17 +1,17 @@
-// === Module 17153: ClipboardCopyInput ===
+// === Module 16977: ClipboardCopyInput ===
 
-// Module 17153 (ClipboardCopyInput)
+// Module 16977 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
@@ -44,7 +44,7 @@ export default function ClipboardCopyInput(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -113,7 +113,7 @@ export default function ClipboardCopyInput(arg0) {
               }
             }
             v3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp31) {
           v3 = tmp;

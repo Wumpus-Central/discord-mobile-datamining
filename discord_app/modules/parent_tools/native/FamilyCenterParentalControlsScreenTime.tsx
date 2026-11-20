@@ -1,12 +1,12 @@
-// === Module 16151: FamilyCenterParentalControlsScreenTime ===
+// === Module 16115: FamilyCenterParentalControlsScreenTime ===
 
-// Module 16151 (FamilyCenterParentalControlsScreenTime)
+// Module 16115 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Constants from "Constants" /* 1072 */;
-import _modDef2723 from "module_2723" /* 2723 */;
+import Constants from "Constants" /* 1071 */;
+import _modDef2725 from "module_2725" /* 2725 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4792 */;
+import createStyles from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,19 +17,19 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(11042).getScheduleRuleDateRange(rule);
-  let obj = rule(11042);
-  const obj2 = rule(11042);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(11042).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
-  const intl = rule(1113).intl;
+  const scheduleRuleDateRange = rule(10984).getScheduleRuleDateRange(rule);
+  let obj = rule(10984);
+  const obj2 = rule(10984);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10984).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const intl = rule(1112).intl;
   const string = intl.string;
-  const tmp4 = _modDef2723;
+  const tmp4 = _modDef2725;
   if (rule.enabled) {
     let stringResult = string(tmp4["8vDHRq"]);
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(5383).Text, { variant: "body-sm/medium", color: "text-subtle", children: stringResult });
+  obj3.trailing = closure_5(rule(5385).Text, { variant: "body-sm/medium", color: "text-subtle", children: stringResult });
   obj3.arrow = !readOnly;
   let fn;
   if (!readOnly) {
@@ -41,7 +41,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(6926).TableRow, obj3);
+  return closure_5(rule(6925).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;
@@ -83,7 +83,7 @@ export default function FamilyCenterParentalControlsScreenTime(readOnly) {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.header, children: null };
     const intl = tmp2(tmp3[8]).intl;
-    obj4.children = intl.string(require("module_2723")["72CmJd"]);
+    obj4.children = intl.string(require("module_2725")["72CmJd"]);
     items = [closure_5(tmp2(tmp3[7]).Text, obj4), ];
     const obj5 = { hasIcons: false, children: sortRulesByStartTimeResult.map((rule) => hasOwnProperty(ScheduleRuleRow, { rule, teenId: id, navigation, readOnly: flag }, rule.ruleId)) };
     items[1] = closure_5(tmp2(tmp3[12]).TableRowGroup, obj5);

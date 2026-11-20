@@ -1,8 +1,8 @@
-// === Module 10561: closeVoicePanels ===
+// === Module 10503: closeVoicePanels ===
 
-// Module 10561 (closeVoicePanels)
-import Constants from "Constants" /* 1072 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+// Module 10503 (closeVoicePanels)
+import Constants from "Constants" /* 1071 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import size from "module_2" /* 2 */;
 
 const ComponentActions = Constants.ComponentActions;

@@ -1,8 +1,8 @@
-// === Module 10709: mediaEngineContextFromParticipantType ===
+// === Module 10651: mediaEngineContextFromParticipantType ===
 
-// Module 10709 (mediaEngineContextFromParticipantType)
-import CallConstants from "CallConstants" /* 5442 */;
-import Constants from "Constants" /* 5537 */;
+// Module 10651 (mediaEngineContextFromParticipantType)
+import CallConstants from "CallConstants" /* 5444 */;
+import Constants from "Constants" /* 5539 */;
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = CallConstants.ParticipantTypes;

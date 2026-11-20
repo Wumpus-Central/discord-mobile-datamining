@@ -1,14 +1,14 @@
-// === Module 2068: parse ===
+// === Module 2066: parse ===
 
-// Module 2068 (parse)
-import _modDef2031 from "module_2031" /* 2031 */;
-import _modDef2070 from "module_2070" /* 2070 */;
-import markdownRules from "markdownRules" /* 2071 */;
-import i18n_updateRules from "i18n/updateRules" /* 2072 */;
+// Module 2066 (parse)
+import _modDef2029 from "module_2029" /* 2029 */;
+import _modDef2068 from "module_2068" /* 2068 */;
+import markdownRules from "markdownRules" /* 2069 */;
+import i18n_updateRules from "i18n/updateRules" /* 2070 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const Constants = fn(2069);
+const Constants = fn(2067);
 ({ FORMAT_RE: closure_6, MARKDOWN_RE: metroImportDefault, UNSAFE_RE: closure_8, UNSAFE_RE_ALL: closure_9 } = Constants);
 class FormattedMessage {
   constructor(arg0, arg1, arg2) {
@@ -27,14 +27,14 @@ class FormattedMessage {
   }
 }
 const prototype = FormattedMessage.prototype;
-prototype["format"] = function format(arg0) {
+prototype["format"] = function format(_2d) {
   const self = this;
   if (this.hasMarkdown) {
-    const tmp2 = _slicedToArray(self.getContext(arg0), 2);
+    const tmp2 = _slicedToArray(self.getContext(_2d), 2);
     const first = tmp2[0];
     const intlMessage2 = self.intlMessage;
     const formatResult = intlMessage2.format(first);
-    if (typeof f123555 === "function") {
+    if (typeof f121515 === "function") {
       const hasItem = formatResult.includes("\n\n");
       let text = formatResult;
       if (hasItem) {
@@ -49,12 +49,12 @@ prototype["format"] = function format(arg0) {
     }
   } else {
     const intlMessage = self.intlMessage;
-    return intlMessage.format(arg0);
+    return intlMessage.format(_2d);
   }
 };
-prototype["astFormat"] = function astFormat(arg0) {
-  const tmp = _slicedToArray(this.getContext(arg0), 2);
-  if (typeof f123556 === "function") {
+prototype["astFormat"] = function astFormat(_2d) {
+  const tmp = _slicedToArray(this.getContext(_2d), 2);
+  if (typeof f121516 === "function") {
     const obj = { inline: false, context: tmp[0], unsafeContext: tmp[1] };
     return closure_132_0(tmp2 + "\n\n", obj);
   } else {
@@ -65,12 +65,12 @@ prototype["plainFormat"] = function plainFormat(arg0) {
   const intlMessage = this.intlMessage;
   return intlMessage.format(arg0);
 };
-prototype["getContext"] = function getContext(arg0) {
+prototype["getContext"] = function getContext(_2d) {
   const obj = {};
   if (regex3.test(this.message)) {
     let num = 0;
     const _Object = Object;
-    const entries = Object.entries(arg0);
+    const entries = Object.entries(_2d);
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
       let tmp9 = _slicedToArray(tmp6, 2);
@@ -81,12 +81,12 @@ prototype["getContext"] = function getContext(arg0) {
         let sum = num + 1;
         num = sum;
         obj[sum] = tmp12;
-        arg0[tmp10] = sum;
+        _2d[tmp10] = sum;
       }
       continue;
     }
   }
-  items = [arg0, obj];
+  items = [_2d, obj];
   return items;
 };
 const size = fn(2);
@@ -95,10 +95,10 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/pa
 export { FormattedMessage };
 export function setUpdateRules(fn) {
   const rules = markdownRules.rules;
-  _modDef2070.parserFor(fn(rules));
-  const obj2 = _modDef2070;
-  closure_1 = obj2.reactFor(_modDef2070.ruleOutput(rules, "react"));
-  f123555 = (arr, context, unsafeContext) => {
+  _modDef2068.parserFor(fn(rules));
+  const obj2 = _modDef2068;
+  closure_1 = obj2.reactFor(_modDef2068.ruleOutput(rules, "react"));
+  f121515 = (arr, context, unsafeContext) => {
     const hasItem = arr.includes("\n\n");
     let text = arr;
     if (hasItem) {
@@ -108,19 +108,19 @@ export function setUpdateRules(fn) {
     }
     return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
   };
-  closure_0 = _modDef2070.parserFor(markdownRules.rules);
-  f123556 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+  closure_0 = _modDef2068.parserFor(markdownRules.rules);
+  f121516 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
 }
 export function getMessage(str, arg1) {
   if (null == str) {
     return "";
   } else {
-    if (null == f123555) {
+    if (null == f121515) {
       const rules = markdownRules.rules;
-      _modDef2070.parserFor(i18n_updateRules.default(rules));
-      const obj2 = _modDef2070;
-      closure_1 = obj2.reactFor(_modDef2070.ruleOutput(rules, "react"));
-      f123555 = (arr, context, unsafeContext) => {
+      _modDef2068.parserFor(i18n_updateRules.default(rules));
+      const obj2 = _modDef2068;
+      closure_1 = obj2.reactFor(_modDef2068.ruleOutput(rules, "react"));
+      f121515 = (arr, context, unsafeContext) => {
         const hasItem = arr.includes("\n\n");
         let text = arr;
         if (hasItem) {
@@ -130,8 +130,8 @@ export function getMessage(str, arg1) {
         }
         return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
       };
-      closure_0 = _modDef2070.parserFor(markdownRules.rules);
-      f123556 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      closure_0 = _modDef2068.parserFor(markdownRules.rules);
+      f121516 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
     }
     const str2 = "".replace(/^\n+|\n+$/g, "");
     const isMatch = regex.test(str2);
@@ -145,7 +145,7 @@ export function getMessage(str, arg1) {
         const obj5 = Object.create(FormattedMessage.prototype);
         obj5.message = replaced;
         obj5.hasMarkdown = isMatch1;
-        const tmp15 = new _modDef2031(obj5.message, arg1);
+        const tmp15 = new _modDef2029(obj5.message, arg1);
         obj5.intlMessage = tmp15;
         let tmp5 = obj5;
       } else {

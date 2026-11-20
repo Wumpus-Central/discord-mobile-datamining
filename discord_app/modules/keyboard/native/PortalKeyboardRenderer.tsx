@@ -1,14 +1,14 @@
-// === Module 18454: PortalKeyboardRenderer ===
+// === Module 18279: PortalKeyboardRenderer ===
 
-// Module 18454 (PortalKeyboardRenderer)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import native from "native" /* 4853 */;
-import useKeyboardType from "useKeyboardType" /* 4979 */;
-import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 4980 */;
-import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 18455 */;
+// Module 18279 (PortalKeyboardRenderer)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import native from "native" /* 4855 */;
+import useKeyboardType from "useKeyboardType" /* 4981 */;
+import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 4982 */;
+import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 18280 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1496 */;
 
 require = fn;
 function transitionGroupGetItemKey(id) {
@@ -48,18 +48,18 @@ export function PortalKeyboardRenderer(portal) {
   const layoutEffect = noop.useLayoutEffect(() => PortalKeyboardUIStore3.registerPortalKeyboardRenderer(id), items);
   const layoutEffect1 = noop.useLayoutEffect(() => {
     closure_0 = closure_4(function onKeyboardStoreChange() {
-      const PortalKeyboardUIStore = closure_0(4980).PortalKeyboardUIStore;
+      const PortalKeyboardUIStore = closure_0(4982).PortalKeyboardUIStore;
       field = PortalKeyboardUIStore.getField("keyboard");
-      closure_0(4979);
+      closure_0(4981);
       if (tmp6) {
-        const result = closure_0(4980).closePortalKeyboardIfUnhandled();
-        const tmpResult = closure_0(4980);
+        const result = closure_0(4982).closePortalKeyboardIfUnhandled();
+        const tmpResult = closure_0(4982);
       }
       tmp6 = null != field && tmp5 !== field.type;
     });
     return () => {
       closure_0();
-      const result = id(4980).closePortalKeyboardIfUnhandled();
+      const result = id(4982).closePortalKeyboardIfUnhandled();
     };
   }, []);
   const layoutEffect2 = noop.useLayoutEffect(() => {
@@ -99,9 +99,9 @@ export function PortalKeyboardRenderer(portal) {
     obj = rootNavigationRef(dependencyMap[6]);
     tmp = rootNavigationRef;
   }, []);
-  let PortalKeyboardUIStore = id(4980).PortalKeyboardUIStore;
+  let PortalKeyboardUIStore = id(4982).PortalKeyboardUIStore;
   let field = PortalKeyboardUIStore.useField("keyboard");
-  const PortalKeyboardUIStore2 = id(4980).PortalKeyboardUIStore;
+  const PortalKeyboardUIStore2 = id(4982).PortalKeyboardUIStore;
   const field1 = PortalKeyboardUIStore2.useField("renderers");
   let tmp8 = 0 === field1.length;
   if (!tmp8) {
@@ -119,13 +119,13 @@ export function PortalKeyboardRenderer(portal) {
     }
     tmp3 = closure_6;
   }, items1);
-  const tmp11 = jsx(id(4853).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
+  const tmp11 = jsx(id(4855).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
   if (flag) {
     const obj3 = { children: tmp11 };
-    let tmp10Result = jsx(tmp5(4983).PortalKeyboard, { children: tmp11 });
+    let tmp10Result = jsx(tmp5(4985).PortalKeyboard, { children: tmp11 });
   } else {
     const obj4 = { value: true, children: tmp11 };
-    tmp10Result = jsx(tmp5(11250).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
+    tmp10Result = jsx(tmp5(11192).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
   }
   return tmp10Result;
 }

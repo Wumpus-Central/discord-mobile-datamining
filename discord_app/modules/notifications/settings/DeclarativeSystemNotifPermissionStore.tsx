@@ -1,10 +1,10 @@
-// === Module 17469: DeclarativeSystemNotifPermissionStore ===
+// === Module 17296: DeclarativeSystemNotifPermissionStore ===
 
-// Module 17469 (DeclarativeSystemNotifPermissionStore)
+// Module 17296 (DeclarativeSystemNotifPermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17470 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17471 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17297 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17298 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

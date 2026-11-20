@@ -1,26 +1,26 @@
-// === Module 19426: VoicePanelVoiceControls ===
+// === Module 19246: VoicePanelVoiceControls ===
 
-// Module 19426 (VoicePanelVoiceControls)
+// Module 19246 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10647 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10793 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10903 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10932 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 14790 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19301 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19421 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19427 */;
-import StreamVolumeMovedNoticeDefault from "StreamVolumeMovedNotice" /* 19437 */;
+import util from "util" /* 1112 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10589 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10735 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10845 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10874 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 14749 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19121 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19241 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19247 */;
+import StreamVolumeMovedNoticeDefault from "StreamVolumeMovedNotice" /* 19257 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import module_1655 from "module_1655" /* 1655 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import module_1653 from "module_1653" /* 1653 */;
 
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
@@ -29,16 +29,16 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11686).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11628).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 obj.blurRegion = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_8 = createStyles.createStyles(obj);
-let closure_9 = module_1655.createAnimatedComponent(fn(17).ScrollView);
+let closure_9 = module_1653.createAnimatedComponent(fn(17).ScrollView);
 let closure_10 = noop.memo(function ListItems(arg0) {
   ({ channel, openTab } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
@@ -164,7 +164,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj2 = require("initialize");
-  const sharedValue = require("module_1655").useSharedValue(false);
+  const sharedValue = require("module_1653").useSharedValue(false);
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -180,7 +180,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   VoicePanelVoiceControlsTsx1.__initData = tmp7;
   const items3 = [sharedValue];
   const callback = scrollerRef.useCallback(VoicePanelVoiceControlsTsx1, items3);
-  const obj3 = require("module_1655");
+  const obj3 = require("module_1653");
   const animatedScrollLock = require("useAnimatedScrollLock").useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
   gestureRef = animatedScrollLock.gestureRef;
   scrollerRef = animatedScrollLock.scrollerRef;

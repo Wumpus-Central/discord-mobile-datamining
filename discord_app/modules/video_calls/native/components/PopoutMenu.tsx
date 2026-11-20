@@ -1,22 +1,22 @@
-// === Module 10650: PopoutMenu ===
+// === Module 10592: PopoutMenu ===
 
-// Module 10650 (PopoutMenu)
+// Module 10592 (PopoutMenu)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import Patterns from "Patterns" /* 5010 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import FormRowDefault from "FormRow" /* 7384 */;
-import Form from "Form" /* 7590 */;
+import native from "native" /* 1186 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import Patterns from "Patterns" /* 5012 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import FormRowDefault from "FormRow" /* 7383 */;
+import Form from "Form" /* 7589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const _modDef1655 = tmp2(1655);
+const _modDef1653 = tmp2(1653);
 require = fn;
 function PopoutMenuRow(onClose) {
   ({ icon, onClick } = onClose);
@@ -42,7 +42,7 @@ function PopoutMenuRow(onClose) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_11 = { code: "(function PopoutMenuTsx1(finished){let[scheduleOnRN,handleClose]=this.__closure;if(finished){scheduleOnRN(handleClose);}})" };
@@ -146,7 +146,7 @@ export default function PopoutMenu(onClose) {
     }
   }, items4);
   let tmp = closure_9();
-  const items5 = [first2, require("timing/timing").withTiming, tmp4[0] > 0 && !first, require("native").STANDARD_EASING, 250, ref2, require("module_1708").scheduleOnRN, callback, 8];
+  const items5 = [first2, require("timing/timing").withTiming, tmp4[0] > 0 && !first, require("native").STANDARD_EASING, 250, ref2, require("module_1706").scheduleOnRN, callback, 8];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -206,7 +206,7 @@ export default function PopoutMenu(onClose) {
   PopoutMenuTsx2.__closure = items6;
   PopoutMenuTsx2.__workletHash = 5794060579369;
   PopoutMenuTsx2.__initData = tmp22;
-  const animatedStyle = require("module_1655").useAnimatedStyle(PopoutMenuTsx2);
+  const animatedStyle = require("module_1653").useAnimatedStyle(PopoutMenuTsx2);
   onClose = obj.useCallback(() => _undefined3(true), []);
   const items7 = [onOpen];
   callback1 = obj.useCallback(() => {
@@ -221,7 +221,7 @@ export default function PopoutMenu(onClose) {
     const obj3 = { gesture: tmp33, children: null };
     const obj4 = { ref: ref1, children: trigger };
     obj3.children = c6(c5, obj4);
-    const items8 = [c6(tmp21(5052).GestureDetector, obj3), ];
+    const items8 = [c6(tmp21(5054).GestureDetector, obj3), ];
     let tmp35Result = null;
     if (first1) {
       const obj5 = { ref: ref2, style: null, onLayout: null, children: null };
@@ -241,7 +241,7 @@ export default function PopoutMenu(onClose) {
       const items10 = [tmp37Result, , ];
       let tmp37Result2 = null;
       if (null != title) {
-        tmp37Result2 = tmp37(tmp21(7590).FormDivider, {});
+        tmp37Result2 = tmp37(tmp21(7589).FormDivider, {});
       }
       items10[1] = tmp37Result2;
       items10[2] = rows.map((item, index) => {
@@ -251,7 +251,7 @@ export default function PopoutMenu(onClose) {
         return timestampProducer(PopoutMenuRow, obj, index);
       });
       obj5.children = items10;
-      tmp35Result = tmp35(_modDef1655.View, obj5);
+      tmp35Result = tmp35(_modDef1653.View, obj5);
     }
     const obj7 = { children: null };
     items8[1] = tmp35Result;

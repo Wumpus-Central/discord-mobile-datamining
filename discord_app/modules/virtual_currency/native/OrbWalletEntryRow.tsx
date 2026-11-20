@@ -1,13 +1,13 @@
-// === Module 17182: OrbWalletEntryRow ===
+// === Module 17006: OrbWalletEntryRow ===
 
-// Module 17182 (OrbWalletEntryRow)
+// Module 17006 (OrbWalletEntryRow)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef2323 from "module_2323" /* 2323 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import Card from "Card" /* 6928 */;
-import Badge from "Badge" /* 6942 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7446 */;
+import util from "util" /* 1112 */;
+import _modDef2325 from "module_2325" /* 2325 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import Card from "Card" /* 6927 */;
+import Badge from "Badge" /* 6941 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7445 */;
 import OrbsIcon from "OrbsIcon" /* 8838 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function OrbWalletEntryBadge(notificationType) {
     const obj = { type: null, variant: "primary" };
     const obj2 = { text: null };
     const intl = util.intl;
-    obj2.text = intl.string(_modDef2323.WmfVjs);
+    obj2.text = intl.string(_modDef2325.WmfVjs);
     obj.type = obj2;
     return hasOwnProperty(Badge.Badge, obj);
   } else {
@@ -28,10 +28,10 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(14932).ClientUnreadNotificationType;
+const constants = fn(14896).ClientUnreadNotificationType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 }, balance: null, balanceText: null, trailing: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 };
 obj2.balance = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

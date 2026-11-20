@@ -1,6 +1,6 @@
-// === Module 1084: BigFlagUtils ===
+// === Module 1083: BigFlagUtils ===
 
-// Module 1084 (BigFlagUtils)
+// Module 1083 (BigFlagUtils)
 import IntegerDefault from "Integer" /* 14 */;
 import _slicedToArray from "module_32" /* 32 */;
 

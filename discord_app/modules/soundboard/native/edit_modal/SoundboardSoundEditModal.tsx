@@ -1,11 +1,11 @@
-// === Module 19859: SoundboardSoundEditModal ===
+// === Module 19677: SoundboardSoundEditModal ===
 
-// Module 19859 (SoundboardSoundEditModal)
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import useMountEffectDefault from "useMountEffect" /* 5353 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+// Module 19677 (SoundboardSoundEditModal)
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import useMountEffectDefault from "useMountEffect" /* 5355 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ class SoundboardSoundEditModal {
     return jsx(closure_0(analyticsSource[9]).Navigator, obj);
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, ModalAnimation } = Constants);
 const jsx = fn(21).jsx;
 const timestampProducer = { ROOT: "ROOT" };

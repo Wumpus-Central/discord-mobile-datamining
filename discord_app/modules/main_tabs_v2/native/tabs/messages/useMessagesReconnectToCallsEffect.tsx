@@ -1,11 +1,11 @@
-// === Module 17617: useMessagesReconnectToCallsEffect ===
+// === Module 17444: useMessagesReconnectToCallsEffect ===
 
-// Module 17617 (useMessagesReconnectToCallsEffect)
+// Module 17444 (useMessagesReconnectToCallsEffect)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6723 */;
 
 const size = fn(2);

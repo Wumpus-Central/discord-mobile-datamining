@@ -1,7 +1,7 @@
 // === Module 9433: NitroCoinSpotIllustration ===
 
 // Module 9433 (NitroCoinSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7238 */;
+import assetHelpers from "assetHelpers" /* 7237 */;
 import _modDef9434 from "module_9434" /* 9434 */;
 import _modDef9435 from "module_9435" /* 9435 */;
 import _modDef9436 from "module_9436" /* 9436 */;

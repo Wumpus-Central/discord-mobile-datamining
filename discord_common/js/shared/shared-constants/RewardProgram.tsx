@@ -1,6 +1,6 @@
-// === Module 14922: RewardProgram ===
+// === Module 14886: RewardProgram ===
 
-// Module 14922 (RewardProgram)
+// Module 14886 (RewardProgram)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/RewardProgram.tsx");

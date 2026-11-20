@@ -1,11 +1,11 @@
-// === Module 6434: LegacyTokens ===
+// === Module 6436: LegacyTokens ===
 
-// Module 6434 (LegacyTokens)
+// Module 6436 (LegacyTokens)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 4789 */;
-import shared from "shared" /* 4799 */;
-import createStyles_mod from "createStyles" /* 4792 */;
+import ColorUtils from "ColorUtils" /* 4791 */;
+import shared from "shared" /* 4801 */;
+import createStyles_mod from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const Platform = _mod17.Platform;

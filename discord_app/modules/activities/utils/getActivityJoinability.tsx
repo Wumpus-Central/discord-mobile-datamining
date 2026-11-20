@@ -1,18 +1,18 @@
-// === Module 14404: getActivityJoinability ===
+// === Module 14372: getActivityJoinability ===
 
-// Module 14404 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
-import hasFlagDefault from "hasFlag" /* 7942 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10601 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 10611 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 10715 */;
-import getPartySize from "getPartySize" /* 12117 */;
-import isPartyFull from "isPartyFull" /* 12119 */;
-import getIsInParty from "getIsInParty" /* 12120 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12124 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14239 */;
-import Constants from "Constants" /* 1072 */;
+// Module 14372 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
+import hasFlagDefault from "hasFlag" /* 7941 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10543 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 10553 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 10657 */;
+import getPartySize from "getPartySize" /* 12059 */;
+import isPartyFull from "isPartyFull" /* 12061 */;
+import getIsInParty from "getIsInParty" /* 12062 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12066 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14209 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);

@@ -1,19 +1,19 @@
-// === Module 14937: ActivityTrackingStore ===
+// === Module 14901: ActivityTrackingStore ===
 
-// Module 14937 (ActivityTrackingStore)
+// Module 14901 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6325 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11879 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6327 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11821 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DetectableGameStore from "DetectableGameStore" /* 2159 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import DetectableGameStore from "DetectableGameStore" /* 2157 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2161 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 
 require = fn;
 function stopActivity(applicationId) {
@@ -69,7 +69,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4636).Interval();
+    const interval = new tmp3(4638).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);
@@ -129,7 +129,7 @@ function handleLogout() {
   c16 = false;
   tmp2 = keys[Symbol.iterator]();
 }
-const Distributors = fn(1072).Distributors;
+const Distributors = fn(1071).Distributors;
 const ActivityTrackingStore = "ActivityTrackingStore";
 let closure_12 = 30 * DurationsDefault.Millis.MINUTE;
 let closure_13 = 5 * DurationsDefault.Millis.MINUTE;

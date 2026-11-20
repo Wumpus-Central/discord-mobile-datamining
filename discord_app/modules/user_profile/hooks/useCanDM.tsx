@@ -1,12 +1,12 @@
-// === Module 12685: useCanDM ===
+// === Module 12655: useCanDM ===
 
-// Module 12685 (useCanDM)
-import UserSettings from "UserSettings" /* 4617 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8241 */;
-import LurkingStore from "LurkingStore" /* 4725 */;
+// Module 12655 (useCanDM)
+import UserSettings from "UserSettings" /* 4619 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8240 */;
+import LurkingStore from "LurkingStore" /* 4727 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = globalThis.__r;
 

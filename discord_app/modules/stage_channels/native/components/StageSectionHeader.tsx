@@ -1,22 +1,22 @@
-// === Module 11013: StageSectionHeader ===
+// === Module 10955: StageSectionHeader ===
 
-// Module 11013 (StageSectionHeader)
+// Module 10955 (StageSectionHeader)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import _modDef7397 from "module_7397" /* 7397 */;
+import native from "native" /* 1186 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import _modDef7396 from "module_7396" /* 7396 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, audience: null };
 let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.audience = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: nativeDefault.radii.xs };
@@ -54,7 +54,7 @@ export default function StageSectionHeader(children) {
   StageSectionHeaderTsx1.__initData = tmp4;
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(StageSectionHeaderTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(StageSectionHeaderTsx1);
   const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   const items2 = [label, " \u2014 ", count];
   obj4.children = items2;
@@ -67,8 +67,8 @@ export default function StageSectionHeader(children) {
   items3[1] = tmp8Result;
   const obj6 = { style: tmp.collapseButton, children: null };
   const obj7 = { style: animatedStyle, children: null };
-  obj7.children = timestampProducer(native.Icon, { source: _modDef7397, style: tmp.collapseIcon });
-  obj6.children = timestampProducer(_modDef1655.View, obj7);
+  obj7.children = timestampProducer(native.Icon, { source: _modDef7396, style: tmp.collapseIcon });
+  obj6.children = timestampProducer(_modDef1653.View, obj7);
   items3[2] = timestampProducer(React4, obj6);
   obj3.children = items3;
   obj2.children = hasOwnProperty(React3, obj3);

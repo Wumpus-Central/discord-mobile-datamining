@@ -1,7 +1,7 @@
-// === Module 8367: VideoFrameRateValidationExperiment ===
+// === Module 8366: VideoFrameRateValidationExperiment ===
 
-// Module 8367 (VideoFrameRateValidationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8366 (VideoFrameRateValidationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2025-10-video-frame-rate-validation", kind: "user", defaultConfig: { enableFrameRateValidation: false }, variations: { 0: { enableFrameRateValidation: false }, 1: { enableFrameRateValidation: true } } });

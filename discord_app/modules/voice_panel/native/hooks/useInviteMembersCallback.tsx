@@ -1,13 +1,13 @@
-// === Module 18034: useInviteMembersCallback ===
+// === Module 17861: useInviteMembersCallback ===
 
-// Module 18034 (useInviteMembersCallback)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7932 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11997 */;
+// Module 17861 (useInviteMembersCallback)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7931 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11939 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsPages: hasOwnProperty, InstantInviteSources: closure_6 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useInviteMembersCallback.tsx");

@@ -2,7 +2,7 @@
 
 // Module 9461 (OneDayFractionalNitroExperiment)
 import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 9462 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-one-day-fractional-nitro", kind: "user", defaultConfig: false, variations: { 1: true } });

@@ -1,7 +1,7 @@
-// === Module 5834: MediaFormatParamUtils ===
+// === Module 5836: MediaFormatParamUtils ===
 
-// Module 5834 (MediaFormatParamUtils)
-import URLUtilsDefault from "URLUtils" /* 1381 */;
+// Module 5836 (MediaFormatParamUtils)
+import URLUtilsDefault from "URLUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/media/MediaFormatParamUtils.tsx");

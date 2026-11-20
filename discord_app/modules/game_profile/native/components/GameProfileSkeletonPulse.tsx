@@ -1,19 +1,19 @@
-// === Module 9755: GameProfileSkeletonPulse ===
+// === Module 9756: GameProfileSkeletonPulse ===
 
-// Module 9755 (GameProfileSkeletonPulse)
+// Module 9756 (GameProfileSkeletonPulse)
 import initialize from "initialize" /* 504 */;
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
 let c4 = 1300;
-const Easing = fn(1655).Easing;
-const module_1655 = fn(1655);
-let closure_5 = module_1655.makeMutable(0);
+const Easing = fn(1653).Easing;
+const module_1653 = fn(1653);
+let closure_5 = module_1653.makeMutable(0);
 let c6 = 0;
 let c7 = false;
-let items = [{ code: "(function getPulseOpacity_GameProfileSkeletonPulseTsx1(phase,phaseOffset){let[MIN_OPACITY,MAX_OPACITY,DEFAULT_TIMING_EASING]=this.__closure;const shiftedPhase=(phase+phaseOffset)%1;const cyclePhase=shiftedPhase<0?shiftedPhase+1:shiftedPhase;const pulseProgress=cyclePhase<0.5?cyclePhase*2:(1-cyclePhase)*2;return MIN_OPACITY+(MAX_OPACITY-MIN_OPACITY)*DEFAULT_TIMING_EASING(pulseProgress);})" }, 0.05, 0.1, Easing.inOut(fn(1655).Easing.quad)];
+let items = [{ code: "(function getPulseOpacity_GameProfileSkeletonPulseTsx1(phase,phaseOffset){let[MIN_OPACITY,MAX_OPACITY,DEFAULT_TIMING_EASING]=this.__closure;const shiftedPhase=(phase+phaseOffset)%1;const cyclePhase=shiftedPhase<0?shiftedPhase+1:shiftedPhase;const pulseProgress=cyclePhase<0.5?cyclePhase*2:(1-cyclePhase)*2;return MIN_OPACITY+(MAX_OPACITY-MIN_OPACITY)*DEFAULT_TIMING_EASING(pulseProgress);})" }, 0.05, 0.1, Easing.inOut(fn(1653).Easing.quad)];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;
@@ -128,5 +128,5 @@ export function useSkeletonPulseStyle(animationDelayMs) {
   GameProfileSkeletonPulseTsx2.__closure = items3;
   GameProfileSkeletonPulseTsx2.__workletHash = 9470986050093;
   GameProfileSkeletonPulseTsx2.__initData = tmp4;
-  return _mod1655.useAnimatedStyle(GameProfileSkeletonPulseTsx2);
+  return _mod1653.useAnimatedStyle(GameProfileSkeletonPulseTsx2);
 }

@@ -1,7 +1,7 @@
-// === Module 9825: MapleSyrupExperiments ===
+// === Module 9827: MapleSyrupExperiments ===
 
-// Module 9825 (MapleSyrupExperiments)
-import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
+// Module 9827 (MapleSyrupExperiments)
+import ApexExperiment_mod from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 let ApexExperiment = ApexExperiment_mod;

@@ -1,7 +1,7 @@
-// === Module 19215: useUserTileBackground ===
+// === Module 19034: useUserTileBackground ===
 
-// Module 19215 (useUserTileBackground)
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8088 */;
+// Module 19034 (useUserTileBackground)
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8087 */;
 import DominantColorUtils from "DominantColorUtils" /* 8916 */;
 import size from "module_2" /* 2 */;
 

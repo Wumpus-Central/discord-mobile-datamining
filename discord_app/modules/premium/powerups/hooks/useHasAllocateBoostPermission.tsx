@@ -1,13 +1,13 @@
-// === Module 13312: useHasAllocateBoostPermission ===
+// === Module 13282: useHasAllocateBoostPermission ===
 
-// Module 13312 (useHasAllocateBoostPermission)
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 13282 (useHasAllocateBoostPermission)
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
 

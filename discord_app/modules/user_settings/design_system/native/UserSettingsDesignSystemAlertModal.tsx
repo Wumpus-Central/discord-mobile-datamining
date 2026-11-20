@@ -1,9 +1,9 @@
-// === Module 17269: UserSettingsDesignSystemAlertModal ===
+// === Module 17096: UserSettingsDesignSystemAlertModal ===
 
-// Module 17269 (UserSettingsDesignSystemAlertModal)
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import useAlertStore from "useAlertStore" /* 5741 */;
-import AlertModal from "AlertModal" /* 5745 */;
+// Module 17096 (UserSettingsDesignSystemAlertModal)
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import useAlertStore from "useAlertStore" /* 5743 */;
+import AlertModal from "AlertModal" /* 5747 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function DemoModal() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -49,7 +49,7 @@ function DemoModal() {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c0 = tmp;
@@ -68,7 +68,7 @@ function openDemoModal() {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");

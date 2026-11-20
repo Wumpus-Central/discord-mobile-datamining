@@ -1,11 +1,11 @@
-// === Module 20128: VoicePanelManager ===
+// === Module 19948: VoicePanelManager ===
 
-// Module 20128 (VoicePanelManager)
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10793 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import VoicePanelStore from "VoicePanelStore" /* 6374 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+// Module 19948 (VoicePanelManager)
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10735 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import VoicePanelStore from "VoicePanelStore" /* 6376 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
 const prototype = function VoicePanelManager() {

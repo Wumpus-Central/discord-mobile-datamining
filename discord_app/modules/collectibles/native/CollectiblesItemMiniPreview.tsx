@@ -2,8 +2,8 @@
 
 // Module 8925 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 575 */;
-import utils from "utils" /* 2111 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import utils from "utils" /* 2109 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import ProfileEffectDefault from "ProfileEffect" /* 8893 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8900 */;
 import NameplateDefault from "Nameplate" /* 8908 */;
@@ -13,15 +13,15 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7961).isAvatarDecorationRecord;
-const isNameplateRecord = fn(2112).isNameplateRecord;
-const isProfileEffectRecord = fn(7962).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7963).isProfileFrameRecord;
-let closure_8 = fn(8055).PROFILE_FRAME_ASPECT_RATIO;
+const isAvatarDecorationRecord = fn(7960).isAvatarDecorationRecord;
+const isNameplateRecord = fn(2110).isNameplateRecord;
+const isProfileEffectRecord = fn(7961).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7962).isProfileFrameRecord;
+let closure_8 = fn(8054).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;

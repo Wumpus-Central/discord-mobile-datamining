@@ -1,20 +1,20 @@
-// === Module 7902: GuildEventsNoContent ===
+// === Module 7901: GuildEventsNoContent ===
 
-// Module 7902 (GuildEventsNoContent)
+// Module 7901 (GuildEventsNoContent)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import TextStyles from "TextStyles" /* 6286 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import TextStyles from "TextStyles" /* 6288 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const Constants = fn(1083);
+const GuildSettingsSections = fn(1071).GuildSettingsSections;
+const Constants = fn(1082);
 ({ Permissions: closure_6, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_80 }, title: null, subtitle: null };
 let obj4 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24, { marginBottom: 8 }));
@@ -34,24 +34,24 @@ export default function GuildEventsNoContent(guild) {
   let stateFromStores = guild(504).useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_ROLES, guild), items1);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = guild(1113).intl;
-  obj3.children = intl.string(guild(1113).t["WgZ+3D"]);
-  const items2 = [closure_7(guild(5383).Text, obj3), , ];
+  const intl = guild(1112).intl;
+  obj3.children = intl.string(guild(1112).t["WgZ+3D"]);
+  const items2 = [closure_7(guild(5385).Text, obj3), , ];
   const obj4 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
-  const intl2 = guild(1113).intl;
-  obj4.children = intl2.string(guild(1113).t["v/S/PG"]);
-  items2[1] = closure_7(guild(5383).Text, obj4);
+  const intl2 = guild(1112).intl;
+  obj4.children = intl2.string(guild(1112).t["v/S/PG"]);
+  items2[1] = closure_7(guild(5385).Text, obj4);
   if (stateFromStores) {
     const obj5 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
-    const intl3 = tmp2(1113).intl;
+    const intl3 = tmp2(1112).intl;
     const obj6 = {
       onClick() {
           onClose();
           GuildSettingsActionCreatorsDefault.open(guild.id, GuildSettingsSections.ROLES);
         }
     };
-    obj5.children = intl3.format(tmp2(1113).t["K+DH2o"], obj6);
-    stateFromStores = closure_7(tmp2(5383).Text, obj5);
+    obj5.children = intl3.format(tmp2(1112).t["K+DH2o"], obj6);
+    stateFromStores = closure_7(tmp2(5385).Text, obj5);
   }
   items2[2] = stateFromStores;
   obj2.children = items2;

@@ -1,18 +1,18 @@
-// === Module 15886: ProfileCustomizationProfileSelector ===
+// === Module 15850: ProfileCustomizationProfileSelector ===
 
-// Module 15886 (ProfileCustomizationProfileSelector)
+// Module 15850 (ProfileCustomizationProfileSelector)
 import nativeDefault from "native" /* 575 */;
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5744 */;
-import GuildIconDefault from "GuildIcon" /* 7203 */;
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5746 */;
+import GuildIconDefault from "GuildIcon" /* 7202 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(15887).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_4 = fn(15851).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,13 +27,13 @@ export default function ProfileCustomizationProfileSelector(guild) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp3(1113).intl;
-    name = intl.string(tmp3(1113).t["2p07FR"]);
+    const intl = tmp3(1112).intl;
+    name = intl.string(tmp3(1112).t["2p07FR"]);
   }
   const obj2 = { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityLabel: null, accessibilityHint: null, onPress: null };
   if (null != guild) {
-    const obj3 = { guild, size: tmp3(7203).GuildIconSizes.XSMALL };
-    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7203).GuildIconSizes.XSMALL });
+    const obj3 = { guild, size: tmp3(7202).GuildIconSizes.XSMALL };
+    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7202).GuildIconSizes.XSMALL });
     let tmp8 = importDefault;
   } else {
     const obj4 = { size: "md", color: nativeDefault.colors.ICON_DEFAULT };
@@ -41,20 +41,20 @@ export default function ProfileCustomizationProfileSelector(guild) {
     tmp8 = importDefault;
   }
   obj2.icon = tmpResult;
-  obj2.trailing = jsx(guild(12707).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
-  const intl2 = tmp3(1113).intl;
+  obj2.trailing = jsx(guild(12677).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
+  const intl2 = tmp3(1112).intl;
   let name1;
   if (guild != null) {
     name1 = guild.name;
   }
   if (name1 == null) {
-    const intl3 = tmp3(1113).intl;
-    name1 = intl3.string(tmp3(1113).t["2p07FR"]);
+    const intl3 = tmp3(1112).intl;
+    name1 = intl3.string(tmp3(1112).t["2p07FR"]);
   }
   const obj6 = { hasIcons: true, children: null };
-  obj2.accessibilityLabel = intl2.formatToPlainString(guild(1113).t.u9XiCz, { profileName: name1 });
-  const intl4 = tmp3(1113).intl;
-  obj2.accessibilityHint = intl4.string(guild(1113).t["5h07Mp"]);
+  obj2.accessibilityLabel = intl2.formatToPlainString(guild(1112).t.u9XiCz, { profileName: name1 });
+  const intl4 = tmp3(1112).intl;
+  obj2.accessibilityHint = intl4.string(guild(1112).t["5h07Mp"]);
   obj2.onPress = function handlePress() {
     markAccessibilityFocusDefault();
     closure_1_1(() => {
@@ -68,7 +68,7 @@ export default function ProfileCustomizationProfileSelector(guild) {
       require("ActionSheetActionCreators").openLazy(guild(paths[15])(paths[14], paths.paths), closure_2_4, { selectedGuildId: id, onSelectMainProfile, onSelectGuild });
     });
   };
-  obj6.children = jsx(guild(6926).TableRow, { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityLabel: null, accessibilityHint: null, onPress: null });
-  obj.children = jsx(guild(7229).TableRowGroup, { hasIcons: true, children: null });
+  obj6.children = jsx(guild(6925).TableRow, { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityLabel: null, accessibilityHint: null, onPress: null });
+  obj.children = jsx(guild(7228).TableRowGroup, { hasIcons: true, children: null });
   return <View style={closure_6().container}>{null}</View>;
 };

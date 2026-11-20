@@ -1,16 +1,16 @@
-// === Module 14592: InstantInviteFriendsList ===
+// === Module 14560: InstantInviteFriendsList ===
 
-// Module 14592 (InstantInviteFriendsList)
+// Module 14560 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import RootNavigationRef from "RootNavigationRef" /* 4969 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import Pressables from "Pressables" /* 6911 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 13565 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import RootNavigationRef from "RootNavigationRef" /* 4971 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import Pressables from "Pressables" /* 6910 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 13535 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6286 */;
+import TextStyles_mod from "TextStyles" /* 6288 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -51,10 +51,10 @@ function FriendsEmptyComponent() {
   obj.children = items;
   return timestampProducer(hasOwnProperty, obj);
 }
-const Fonts = fn(1072).Fonts;
+const Fonts = fn(1071).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

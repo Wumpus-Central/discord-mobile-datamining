@@ -1,13 +1,13 @@
-// === Module 16970: UserSettingsHighlightNotifications ===
+// === Module 16794: UserSettingsHighlightNotifications ===
 
-// Module 16970 (UserSettingsHighlightNotifications)
-import GuildIconDefault from "GuildIcon" /* 7203 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7361 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7366 */;
+// Module 16794 (UserSettingsHighlightNotifications)
+import GuildIconDefault from "GuildIcon" /* 7202 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7360 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7365 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
 function Row(guildId) {
@@ -35,12 +35,12 @@ function Row(guildId) {
     }
     let obj2 = { guild };
     const obj3 = { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd };
-    return jsx(tmp2(7437).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
+    return jsx(tmp2(7436).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
   }
   let obj = guildId(504);
   tmp2 = guildId;
 }
-const HighlightSettings = fn(1072).HighlightSettings;
+const HighlightSettings = fn(1071).HighlightSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
@@ -52,7 +52,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(7590).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(7589).Form, { children: tmp3 });
   }
   return tmp4;
 };

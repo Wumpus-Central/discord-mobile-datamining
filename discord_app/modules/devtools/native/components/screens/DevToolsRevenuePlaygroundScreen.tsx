@@ -1,28 +1,28 @@
-// === Module 17167: DevToolsRevenuePlaygroundScreen ===
+// === Module 16991: DevToolsRevenuePlaygroundScreen ===
 
-// Module 17167 (DevToolsRevenuePlaygroundScreen)
+// Module 16991 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowArrow from "TableRowArrow" /* 6939 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7432 */;
-import TableSwitchRow from "TableSwitchRow" /* 7437 */;
+import native from "native" /* 1186 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowArrow from "TableRowArrow" /* 6938 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7431 */;
+import TableSwitchRow from "TableSwitchRow" /* 7436 */;
 import IAPUtils from "IAPUtils" /* 9167 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12158 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12100 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8718 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserStore from "UserStore" /* 1388 */;
-import DevSettingsStore from "DevSettingsStore" /* 5386 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8758 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserStore from "UserStore" /* 1386 */;
+import DevSettingsStore from "DevSettingsStore" /* 5388 */;
 
 require = fn;
 function describeServerError(status) {
@@ -196,7 +196,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -289,7 +289,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -651,7 +651,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(8699).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(8739).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -665,13 +665,13 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17168, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16992, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(6926).TableRow, obj2), ];
+  items = [closure_17(premiumTrialOffer(6925).TableRow, obj2), ];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6926).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6925).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -684,12 +684,12 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17168, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16992, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(7229).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(7228).TableRowGroup, obj3);
 }
 function PremiumToggles() {
   items = [DevSettingsStore];
@@ -702,7 +702,7 @@ function PremiumToggles() {
     hasIcons: false,
     children: stateFromStores.map((item) => {
       [tmp, tmp2, ] = item;
-      return closure_17(closure_0(7437).TableSwitchRow, {
+      return closure_17(closure_0(7436).TableSwitchRow, {
         label: tmp3,
         subLabel: tmp,
         value: tmp2,
@@ -808,15 +808,15 @@ function GuildTagBadges() {
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(5386).DevSettingsCategory;
-const PremiumConstants = fn(1390);
+const DevSettingsCategory = fn(5388).DevSettingsCategory;
+const PremiumConstants = fn(1388);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 let items = [{ label: "None", value: null }, { label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }, { label: "4", value: 4 }, { label: "5", value: 5 }, { label: "10", value: 10 }, { label: "25", value: 25 }];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };

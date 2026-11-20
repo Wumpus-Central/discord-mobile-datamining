@@ -1,7 +1,7 @@
-// === Module 14884: DebugExperiment ===
+// === Module 14848: DebugExperiment ===
 
-// Module 14884 (DebugExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 14848 (DebugExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-debug-experiment", kind: "user", defaultConfig: {}, variations: null };

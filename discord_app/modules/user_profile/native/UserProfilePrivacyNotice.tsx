@@ -1,17 +1,17 @@
-// === Module 14508: UserProfilePrivacyNotice ===
+// === Module 14476: UserProfilePrivacyNotice ===
 
-// Module 14508 (UserProfilePrivacyNotice)
+// Module 14476 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5496 */;
-import Pressables from "Pressables" /* 6911 */;
-import XSmallIcon from "XSmallIcon" /* 7032 */;
+import util from "util" /* 1112 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5498 */;
+import Pressables from "Pressables" /* 6910 */;
+import XSmallIcon from "XSmallIcon" /* 7031 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 8960 */;
-import useUserIsTeen from "useUserIsTeen" /* 10069 */;
+import useUserIsTeen from "useUserIsTeen" /* 10072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,11 +19,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const UserSettingsSections = fn(1071).UserSettingsSections;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

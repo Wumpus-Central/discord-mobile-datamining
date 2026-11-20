@@ -1,9 +1,9 @@
-// === Module 14474: AddWidgetButtonConfig ===
+// === Module 14442: AddWidgetButtonConfig ===
 
-// Module 14474 (AddWidgetButtonConfig)
-import util from "util" /* 1113 */;
-import SampleGameWidgetData from "SampleGameWidgetData" /* 14475 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+// Module 14442 (AddWidgetButtonConfig)
+import util from "util" /* 1112 */;
+import SampleGameWidgetData from "SampleGameWidgetData" /* 14443 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 require = fn;
 const WIDGET_TITLES_BY_TYPE = fn(6840).WIDGET_TITLES_BY_TYPE;

@@ -1,16 +1,16 @@
-// === Module 18812: SearchListCard ===
+// === Module 18636: SearchListCard ===
 
-// Module 18812 (SearchListCard)
+// Module 18636 (SearchListCard)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useChannelNameDefault from "useChannelName" /* 5408 */;
-import Card from "Card" /* 6928 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7517 */;
-import ForumIcon from "ForumIcon" /* 7570 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10001 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useChannelNameDefault from "useChannelName" /* 5410 */;
+import Card from "Card" /* 6927 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7516 */;
+import ForumIcon from "ForumIcon" /* 7569 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ class SearchListGuildChannel {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.container = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

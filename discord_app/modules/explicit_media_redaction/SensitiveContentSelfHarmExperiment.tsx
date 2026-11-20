@@ -1,7 +1,7 @@
-// === Module 8107: SensitiveContentSelfHarmExperiment ===
+// === Module 8106: SensitiveContentSelfHarmExperiment ===
 
-// Module 8107 (SensitiveContentSelfHarmExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8106 (SensitiveContentSelfHarmExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-09-sensitive-content-self-harm", kind: "user", defaultConfig: { enabled: false }, variations: null };

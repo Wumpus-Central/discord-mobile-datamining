@@ -2,15 +2,15 @@
 
 // Module 8845 (CollectiblesSequencedOfferPromotionUtils)
 import StorefrontTypes from "StorefrontTypes" /* 6735 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8807 */;
 import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8843 */;
 import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8846 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8807 */;
 import size from "module_2" /* 2 */;
 
 function isSequencedOfferRewardAvailable(rewardStatus) {
   let tmp = null != rewardStatus;
   if (tmp) {
-    tmp = null != closure_2(rewardStatus);
+    tmp = null != React3(rewardStatus);
   }
   if (tmp) {
     let tmp5 = rewardStatus.rewardStatus !== StorefrontTypes.StorefrontPromotionRewardEligibilityStatus.CONSUMED;
@@ -39,7 +39,7 @@ function isSequencedOfferRewardAvailable(rewardStatus) {
   }
   return tmp;
 }
-let closure_2 = StorefrontPromotionRecord.getCollectiblesCollectionSequencedOffer;
+({ doesStorefrontPromotionCoverSku: c2, getCollectiblesCollectionSequencedOffer: c3 } = StorefrontPromotionRecord);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesSequencedOfferPromotionUtils.tsx");
 
 export function isOrbsBackPromotion(rewardConfig) {
@@ -56,30 +56,24 @@ export function isOrbsBackPromotion(rewardConfig) {
   return actionType === StorefrontTypes.StorefrontPromotionActionType.NON_COMMERCE_ORBS_BACK;
 }
 export { isSequencedOfferRewardAvailable };
-export function getSequencedOfferPromotionForCollectiblesProduct(skuId, appliesToAllSkus) {
+export function getSequencedOfferPromotionForCollectiblesProduct(skuId, includeBundles) {
   if (timestamp === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }
   if (!obj.isBundleProduct(skuId)) {
-    if (appliesToAllSkus.appliesToAllSkus) {
-      let tmp8 = null;
-      if (tmp3Result.isStorefrontPromotionActive(appliesToAllSkus, timestamp)) {
-        tmp8 = null;
-        if (isSequencedOfferRewardAvailable(appliesToAllSkus)) {
-          tmp8 = appliesToAllSkus;
+    let tmp7 = null;
+    if (React2(includeBundles, skuId.skuId)) {
+      tmp7 = null;
+      if (tmp3Result.isStorefrontPromotionActive(includeBundles, timestamp)) {
+        tmp7 = null;
+        if (isSequencedOfferRewardAvailable(includeBundles)) {
+          tmp7 = includeBundles;
         }
       }
       tmp3Result = CollectiblesPromoPriceUtils;
-    } else {
-      const skuIds = appliesToAllSkus.skuIds;
-      let hasItem;
-      if (skuIds != null) {
-        hasItem = skuIds.includes(skuId.skuId);
-      }
-      tmp8 = null;
     }
-    let tmp5 = tmp8;
+    let tmp5 = tmp7;
   } else {
     tmp5 = null;
   }

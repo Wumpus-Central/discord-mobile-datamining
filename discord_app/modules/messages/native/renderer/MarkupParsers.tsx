@@ -1,15 +1,16 @@
-// === Module 8733: MarkupParsers ===
+// === Module 8671: MarkupParsers ===
 
-// Module 8733 (MarkupParsers)
-import Constants from "Constants" /* 1072 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5516 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8117 */;
-import NativeMarkdownExperiment from "NativeMarkdownExperiment" /* 8734 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8738 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 8754 */;
-import priv from "priv" /* 1456 */;
+// Module 8671 (MarkupParsers)
+import Constants from "Constants" /* 1071 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5518 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8116 */;
+import markup_MarkupParser from "markup/MarkupParser" /* 8606 */;
+import NativeMarkdownExperiment from "NativeMarkdownExperiment" /* 8672 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8676 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8692 */;
+import priv from "priv" /* 1454 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;
@@ -17,12 +18,14 @@ let obj = { max: Infinity, maxAge: 15 * DurationsDefault.Millis.MINUTE, updateAg
 let closure_4 = new priv(obj);
 const tmp2 = new priv(obj);
 let closure_5 = new priv(obj);
+const tmp3 = new priv(obj);
+let closure_6 = new priv(obj);
 let obj2 = {};
 let merged = Object.assign(obj);
 obj2.updateAgeOnGet = false;
 const importDefaultResult1 = new priv(obj2);
-const tmp3 = new priv(obj);
-let closure_7 = new priv(obj);
+let tmp4 = new priv(obj);
+let closure_8 = new priv(obj);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
 export function parseEmbedTitleMarkup(rawName, channelId) {
@@ -46,6 +49,30 @@ export function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
     value = result;
   }
   return value;
+}
+export function parsePollMarkup(text, arg1) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  if (null != text) {
+    const _HermesInternal = HermesInternal;
+    const combined = "" + text + "-" + flag;
+    value = closure_6.get(combined);
+    if (null == value) {
+      const parsePollToASTResult = MarkupUtilsDefault.parsePollToAST(text, true);
+      if (!flag) {
+        markup_MarkupParser.walkAst(parsePollToASTResult, (type) => {
+          if ("timestamp" === type.type) {
+            type.interactive = false;
+          }
+        });
+      }
+      const result = closure_6.set(combined, parsePollToASTResult);
+      value = parsePollToASTResult;
+    }
+    return value;
+  }
 }
 export function parseEmbedDescriptionMarkup(arg0) {
   ({ description, channelId, isField, replaceMap, showListsAndHeaders } = arg0);
@@ -97,7 +124,7 @@ export function parseMessageMarkup(message, message2, forceHideSimpleEmbedConten
     flag4 = false;
   }
   result = NativeMarkdownExperiment.isNativeMarkdownEnabled({ location: "parseMessageMarkup" });
-  value = closure_7.get(message);
+  value = closure_8.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
       if (value.nativeMarkdownEnabled === result) {
@@ -124,7 +151,7 @@ export function parseMessageMarkup(message, message2, forceHideSimpleEmbedConten
       obj3.previewLinkTarget = flag4;
       obj4.content = obj5.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(message.content, false, obj3);
       obj4.nativeMarkdownEnabled = result;
-      const result1 = closure_7.set(message, obj4);
+      const result1 = closure_8.set(message, obj4);
       return obj4;
     }
   }
@@ -155,6 +182,6 @@ export function parseMessageMarkup(message, message2, forceHideSimpleEmbedConten
   })(message, obj6, result));
   obj7.isInlineReplyPreview = flag;
   obj7.nativeMarkdownEnabled = result;
-  result2 = closure_7.set(message, obj7);
+  result2 = closure_8.set(message, obj7);
   return obj7;
 }

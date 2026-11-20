@@ -1,14 +1,14 @@
-// === Module 12267: GuildAntiRaidActionCreators ===
+// === Module 12239: GuildAntiRaidActionCreators ===
 
-// Module 12267 (GuildAntiRaidActionCreators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import _modDef2169 from "module_2169" /* 2169 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11056 */;
+// Module 12239 (GuildAntiRaidActionCreators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import _modDef2167 from "module_2167" /* 2167 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10998 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -27,7 +27,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -71,7 +71,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -91,9 +91,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef2169();
-    toISOStringResult = _modDef2169().add(tmp8, "hours").toISOString();
-    _modDef2169().add(tmp8, "hours");
+    _modDef2167();
+    toISOStringResult = _modDef2167().add(tmp8, "hours").toISOString();
+    _modDef2167().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -137,7 +137,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -186,8 +186,8 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8645).DEFAULT_LOCKDOWN_DURATION;
-const Constants = fn(1072);
+const DEFAULT_LOCKDOWN_DURATION = fn(8644).DEFAULT_LOCKDOWN_DURATION;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");

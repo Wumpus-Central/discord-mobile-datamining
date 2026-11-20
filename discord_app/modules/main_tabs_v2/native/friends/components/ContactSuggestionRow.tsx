@@ -1,14 +1,14 @@
-// === Module 18922: ContactSuggestionRow ===
+// === Module 18746: ContactSuggestionRow ===
 
-// Module 18922 (ContactSuggestionRow)
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17612 */;
+// Module 18746 (ContactSuggestionRow)
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17439 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, InstantInviteSources: closure_6, RelationshipTypes: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 let closure_9 = { ADD: "add" };

@@ -1,13 +1,13 @@
-// === Module 17912: GuildsBarFolderMenuItems ===
+// === Module 17739: GuildsBarFolderMenuItems ===
 
-// Module 17912 (GuildsBarFolderMenuItems)
+// Module 17739 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticsSections = fn(1072).AnalyticsSections;
+const AnalyticsSections = fn(1071).AnalyticsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 
@@ -28,7 +28,7 @@ export function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ export function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -115,7 +115,7 @@ export function getGuildFolderMenuItems(id) {
           } else {
             const result = value.showGuildsBarFolderModal(closure_128_0);
             c2 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

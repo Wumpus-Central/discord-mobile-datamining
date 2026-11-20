@@ -1,8 +1,8 @@
-// === Module 10091: useProfileSortedGames ===
+// === Module 10094: useProfileSortedGames ===
 
-// Module 10091 (useProfileSortedGames)
+// Module 10094 (useProfileSortedGames)
 import applyDefault from "apply" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

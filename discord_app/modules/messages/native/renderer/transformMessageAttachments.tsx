@@ -1,21 +1,21 @@
-// === Module 14181: transformMessageAttachments ===
+// === Module 14150: transformMessageAttachments ===
 
-// Module 14181 (transformMessageAttachments)
-import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5832 */;
-import MediaFormatParamUtils from "MediaFormatParamUtils" /* 5834 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8116 */;
-import noConflictDefault from "noConflict" /* 8352 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8551 */;
+// Module 14150 (transformMessageAttachments)
+import Constants from "Constants" /* 1071 */;
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5834 */;
+import MediaFormatParamUtils from "MediaFormatParamUtils" /* 5836 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8115 */;
+import noConflictDefault from "noConflict" /* 8351 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8550 */;
 import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8775 */;
 import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8776 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 9932 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 9983 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 10345 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 11968 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 9935 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 9986 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 10287 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 11910 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;

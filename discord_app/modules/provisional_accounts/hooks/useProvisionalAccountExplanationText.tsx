@@ -1,13 +1,13 @@
-// === Module 13449: useProvisionalAccountExplanationText ===
+// === Module 13419: useProvisionalAccountExplanationText ===
 
-// Module 13449 (useProvisionalAccountExplanationText)
-import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 13450 */;
+// Module 13419 (useProvisionalAccountExplanationText)
+import util from "util" /* 1112 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 13420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");
 

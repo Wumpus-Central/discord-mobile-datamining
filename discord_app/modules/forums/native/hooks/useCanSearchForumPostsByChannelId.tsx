@@ -1,13 +1,13 @@
-// === Module 11817: useCanSearchForumPostsByChannelId ===
+// === Module 11759: useCanSearchForumPostsByChannelId ===
 
-// Module 11817 (useCanSearchForumPostsByChannelId)
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 11759 (useCanSearchForumPostsByChannelId)
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
 

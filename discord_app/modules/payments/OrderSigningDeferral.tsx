@@ -28,7 +28,7 @@ let closure_5 = async function _performSigningDeferralAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,14 +87,14 @@ let closure_5 = async function _performSigningDeferralAction(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp21) {
       c1 = tmp;
       throw tmp21;
     }
   }
 };
-const OrderStatus = fn(5509).OrderStatus;
+const OrderStatus = fn(5511).OrderStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/OrderSigningDeferral.tsx");
 

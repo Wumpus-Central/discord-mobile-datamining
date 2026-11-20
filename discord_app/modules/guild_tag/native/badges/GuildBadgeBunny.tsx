@@ -1,9 +1,9 @@
-// === Module 15068: GuildBadgeBunny ===
+// === Module 15032: GuildBadgeBunny ===
 
-// Module 15068 (GuildBadgeBunny)
-import v1 from "v1" /* 1269 */;
-import inlineStyles from "inlineStyles" /* 7746 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15046 */;
+// Module 15032 (GuildBadgeBunny)
+import v1 from "v1" /* 1268 */;
+import inlineStyles from "inlineStyles" /* 7745 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

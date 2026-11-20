@@ -1,16 +1,16 @@
-// === Module 11185: ForumTagHooks ===
+// === Module 11127: ForumTagHooks ===
 
-// Module 11185 (ForumTagHooks)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import ReportToModUtils from "ReportToModUtils" /* 11186 */;
+// Module 11127 (ForumTagHooks)
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import ReportToModUtils from "ReportToModUtils" /* 11128 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 let closure_6 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/ForumTagHooks.tsx");

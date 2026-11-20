@@ -1,6 +1,6 @@
-// === Module 15595: SKUTypes ===
+// === Module 15559: SKUTypes ===
 
-// Module 15595 (SKUTypes)
+// Module 15559 (SKUTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { SKU_CREATE_CHOICES: new Set([2, 3, 5]), GIFTABLE: null, BUNDLES: null, SUBSCRIPTIONS: null };

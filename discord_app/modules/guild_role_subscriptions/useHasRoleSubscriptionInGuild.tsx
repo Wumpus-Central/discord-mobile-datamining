@@ -2,9 +2,9 @@
 
 // Module 6753 (useHasRoleSubscriptionInGuild)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildRoleStore from "GuildRoleStore" /* 4698 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildRoleStore from "GuildRoleStore" /* 4700 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
   }
   return false;
 }
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 16592: VideoQuestModalHeader ===
+// === Module 16415: VideoQuestModalHeader ===
 
-// Module 16592 (VideoQuestModalHeader)
+// Module 16415 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 575 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8308 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8307 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useVideoQuestUIStore = fn(8287).useVideoQuestUIStore;
+const useVideoQuestUIStore = fn(8286).useVideoQuestUIStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { videoContentHeaderWrapper: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }, videoContentHeading: { flexDirection: "column", flexShrink: 1, gap: nativeDefault.space.PX_4 }, textShadow: null };
 let obj3 = { flexDirection: "column", flexShrink: 1, gap: nativeDefault.space.PX_4 };
 obj2.textShadow = { margin: -15, padding: 15, textShadowColor: nativeDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
@@ -28,9 +28,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(16567).useVideoQuestModalContext().quest;
-  let obj = quest(16567);
-  const questTaskDetails = quest(9836).useQuestTaskDetails(quest);
+  quest = quest(16390).useVideoQuestModalContext().quest;
+  let obj = quest(16390);
+  const questTaskDetails = quest(9838).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
     if (tmp == null) {
@@ -40,15 +40,15 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     }
     const time = QuestTaskUtils.parseMinutesAndSecondsFromSeconds(tmp.duration - tmp.timestampSec);
     return QuestTaskUtils.formatWatchTaskTime(time.minutes, time.seconds);
-  }, quest(4707).shallow);
+  }, quest(4709).shallow);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(10553).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
-    const tmp3Result = tmp3(10553);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(10495).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const tmp3Result = tmp3(10495);
   }
   const obj3 = { style: null, children: null };
   items = [tmp2.videoContentHeaderWrapper, style];
@@ -59,9 +59,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     textShadow2 = tmp2.textShadow;
   }
   const obj5 = { variant: "heading-sm/semibold", color: "text-overlay-light", style: textShadow2, children: null };
-  const intl = tmp3(1113).intl;
-  obj5.children = intl.formatToPlainString(quest(1113).t.EQa7os, { questName: quest.config.messages.questName });
-  const items1 = [closure_5(quest(5383).Text, obj5), ];
+  const intl = tmp3(1112).intl;
+  obj5.children = intl.formatToPlainString(quest(1112).t.EQa7os, { questName: quest.config.messages.questName });
+  const items1 = [closure_5(quest(5385).Text, obj5), ];
   const obj7 = { variant: "heading-xs/semibold", color: "text-overlay-light", accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel, style: null, children: null };
   if (textShadow) {
     textShadow = tmp2.textShadow;
@@ -75,9 +75,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     }
   }
   obj7.children = gamePublisher;
-  items1[1] = closure_5(quest(5383).Text, obj7);
+  items1[1] = closure_5(quest(5385).Text, obj7);
   obj4.children = items1;
-  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16588), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16411), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;
   return closure_6(View, obj3);
 };

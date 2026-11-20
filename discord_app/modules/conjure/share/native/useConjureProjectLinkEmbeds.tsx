@@ -1,25 +1,25 @@
-// === Module 11907: useConjureProjectLinkEmbeds ===
+// === Module 11849: useConjureProjectLinkEmbeds ===
 
-// Module 11907 (useConjureProjectLinkEmbeds)
-import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11909 */;
-import conjureSharedProjectHome from "conjureSharedProjectHome" /* 11912 */;
-import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 11914 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 11915 */;
+// Module 11849 (useConjureProjectLinkEmbeds)
+import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11851 */;
+import conjureSharedProjectHome from "conjureSharedProjectHome" /* 11854 */;
+import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 11856 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11857 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import UserStore from "UserStore" /* 1388 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11908 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import UserStore from "UserStore" /* 1386 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11850 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelLoader = fn(4641).ChannelLoader;
+const ChannelLoader = fn(4643).ChannelLoader;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/useConjureProjectLinkEmbeds.tsx");
 

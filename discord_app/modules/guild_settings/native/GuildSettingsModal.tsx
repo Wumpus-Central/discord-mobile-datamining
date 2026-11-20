@@ -1,15 +1,15 @@
-// === Module 19749: GuildSettingsModal ===
+// === Module 19567: GuildSettingsModal ===
 
-// Module 19749 (GuildSettingsModal)
-import util from "util" /* 1113 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17712 */;
+// Module 19567 (GuildSettingsModal)
+import util from "util" /* 1112 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17539 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 7876 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 7875 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ function close() {
   GuildSettingsModalChannelsActionCreatorsDefault.terminate();
   GuildSettingsActionCreatorsDefault.close();
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildSettingsSections: metroImportDefault, WebhookTypes: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 17985: GuildsBarDragPreview ===
+// === Module 17812: GuildsBarDragPreview ===
 
-// Module 17985 (GuildsBarDragPreview)
+// Module 17812 (GuildsBarDragPreview)
 import nativeDefault from "native" /* 575 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import _mod4707 from "module_4707" /* 4707 */;
-import native from "native" /* 4853 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import _mod4709 from "module_4709" /* 4709 */;
+import native from "native" /* 4855 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17910 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17737 */;
 
 require = fn;
 function PreviewItem(overState) {
@@ -39,8 +39,8 @@ function PreviewItem(overState) {
   GuildsBarDragPreviewTsx1.__closure = items1;
   GuildsBarDragPreviewTsx1.__workletHash = 1882650321947;
   GuildsBarDragPreviewTsx1.__initData = tmp5;
-  const derivedValue = require("module_1655").useDerivedValue(GuildsBarDragPreviewTsx1);
-  const obj2 = require("module_1655");
+  const derivedValue = require("module_1653").useDerivedValue(GuildsBarDragPreviewTsx1);
+  const obj2 = require("module_1653");
   const items2 = [closure_12, scrollPosition, windowSize, listInsets, dragRegion, draggedHeight];
   _require = undefined;
   importDefault = undefined;
@@ -72,9 +72,9 @@ function PreviewItem(overState) {
   GuildsBarDragPreviewTsx2.__closure = items3;
   GuildsBarDragPreviewTsx2.__workletHash = 14975465511473;
   GuildsBarDragPreviewTsx2.__initData = tmp10;
-  const derivedValue1 = require("module_1655").useDerivedValue(GuildsBarDragPreviewTsx2);
-  const tmp2Result = require("module_1655");
-  const items4 = [closure_14, dropPosition, scrollPosition, gestureState, draggedHeight, derivedValue, derivedValue1, windowSize, require("spring/spring").withSpring, c10, closure_13, require("module_1708").scheduleOnRN, dropComplete];
+  const derivedValue1 = require("module_1653").useDerivedValue(GuildsBarDragPreviewTsx2);
+  const tmp2Result = require("module_1653");
+  const items4 = [closure_14, dropPosition, scrollPosition, gestureState, draggedHeight, derivedValue, derivedValue1, windowSize, require("spring/spring").withSpring, c10, closure_13, require("module_1706").scheduleOnRN, dropComplete];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -163,11 +163,11 @@ function PreviewItem(overState) {
   GuildsBarDragPreviewTsx4.__workletHash = 1941615705344;
   GuildsBarDragPreviewTsx4.__initData = tmp17;
   const items6 = [overState, overNode];
-  const animatedStyle = require("module_1655").useAnimatedStyle(GuildsBarDragPreviewTsx4);
+  const animatedStyle = require("module_1653").useAnimatedStyle(GuildsBarDragPreviewTsx4);
   const memo = noop.useMemo(() => {
     if ("convert-after" === c1) {
       if (null != c0) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Path", name: "Array", color: "analyticsLocations", expanded: "some", children: "Array" };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Path", name: "Array", color: "ao", expanded: "nm", children: "r" };
         items = [tmp2];
         element.children = items;
         return element;
@@ -190,7 +190,7 @@ function PreviewItem(overState) {
   obj4.items = items8;
   obj4.getItemKey = getItemPreviewKey;
   obj3.children = jsx(require("native").TransitionGroup, obj4);
-  return jsx(_modDef1655.View, obj3);
+  return jsx(_modDef1653.View, obj3);
 }
 function getItemPreviewKey(id) {
   return "" + id.id;
@@ -211,14 +211,14 @@ function AnimatedItemPreview(cleanUp) {
   if (transitionState === require("native").TransitionStates.ENTERED) {
     num = 0;
   }
-  const sharedValue = require("module_1655").useSharedValue(num);
+  const sharedValue = require("module_1653").useSharedValue(num);
   importDefault = sharedValue;
   if (isHomeDrawerEnabled) {
     isHomeDrawerEnabled = !tmp9;
   }
-  let obj3 = require("module_1655");
+  let obj3 = require("module_1653");
   const tmp8 = GuildsNodeType;
-  items = [closure_19, node.type === GuildsNodeType.FOLDER, sharedValue, require("spring/spring").withSpring, closure_10, closure_18, transitionState, require("native").TransitionStates, require("module_1708").scheduleOnRN, cleanUp.cleanUp];
+  items = [closure_19, node.type === GuildsNodeType.FOLDER, sharedValue, require("spring/spring").withSpring, closure_10, closure_18, transitionState, require("native").TransitionStates, require("module_1706").scheduleOnRN, cleanUp.cleanUp];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -339,7 +339,7 @@ function AnimatedItemPreview(cleanUp) {
   GuildsBarDragPreviewTsx6.__closure = items1;
   GuildsBarDragPreviewTsx6.__workletHash = 9452285169812;
   GuildsBarDragPreviewTsx6.__initData = tmp10;
-  const animatedStyle = require("module_1655").useAnimatedStyle(GuildsBarDragPreviewTsx6);
+  const animatedStyle = require("module_1653").useAnimatedStyle(GuildsBarDragPreviewTsx6);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (c0 === native.TransitionStates.YEETED) {
@@ -359,26 +359,26 @@ function AnimatedItemPreview(cleanUp) {
     let obj5 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(17918), obj5);
+    let tmp22Result = tmp22(tmp4(17745), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(4853).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(4855).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(17938), obj6);
-    const tmp4Result = tmp4(17938);
+    tmp22Result = tmp22(tmp4(17765), obj6);
+    const tmp4Result = tmp4(17765);
   }
   obj4.children = tmp22Result;
-  return jsx(_modDef1655.View, obj4);
+  return jsx(_modDef1653.View, obj4);
 }
-let GuildsNodeType = fn(6429).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17907).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6431).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17734).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -422,7 +422,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "/assets/images/platforms", dragRegion: 24, windowSize: 24, dropComplete: null, listInsets: "e3f87032d39c6463934b80bdbb1aa83c" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "/assets/images/platforms", dragRegion: 255, windowSize: 255, dropComplete: null, listInsets: "97cdba3c0b32d79e6f8d3cdafd7b4530" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -441,7 +441,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4707.shallow);
+  }, _mod4709.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

@@ -1,14 +1,14 @@
-// === Module 18049: SecureFramesCallVerificationBottomSheet ===
+// === Module 17876: SecureFramesCallVerificationBottomSheet ===
 
-// Module 18049 (SecureFramesCallVerificationBottomSheet)
+// Module 17876 (SecureFramesCallVerificationBottomSheet)
 import SecureFramesTracking from "SecureFramesTracking" /* 9590 */;
 import showShareActionSheet from "showShareActionSheet" /* 9598 */;
 import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9612 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 
 require = fn;
-const AnalyticsSections = fn(1072).AnalyticsSections;
+const AnalyticsSections = fn(1071).AnalyticsSections;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
@@ -32,14 +32,14 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1113).intl;
-  obj2.title = intl.string(channelId(1113).t.cTQI5t);
-  const intl2 = channelId(1113).intl;
-  obj2.subtitle = intl2.string(channelId(1113).t["MPp7+C"]);
-  const intl3 = channelId(1113).intl;
+  const intl = channelId(1112).intl;
+  obj2.title = intl.string(channelId(1112).t.cTQI5t);
+  const intl2 = channelId(1112).intl;
+  obj2.subtitle = intl2.string(channelId(1112).t["MPp7+C"]);
+  const intl3 = channelId(1112).intl;
   const obj3 = { helpArticle: null };
   obj3.helpArticle = channelId(9587).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1113).t.wKxADe, obj3);
+  obj2.footer = intl3.format(channelId(1112).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

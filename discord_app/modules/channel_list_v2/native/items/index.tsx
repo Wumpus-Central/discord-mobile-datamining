@@ -1,9 +1,9 @@
-// === Module 17674: CategoryChannel ===
+// === Module 17501: CategoryChannel ===
 
-// Module 17674 (CategoryChannel)
-import RedesignCategory from "RedesignCategory" /* 17675 */;
-import ThreadChannelDefault from "ThreadChannel" /* 17682 */;
-import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 17698 */;
+// Module 17501 (CategoryChannel)
+import RedesignCategory from "RedesignCategory" /* 17502 */;
+import ThreadChannelDefault from "ThreadChannel" /* 17509 */;
+import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 17525 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");

@@ -1,7 +1,7 @@
-// === Module 18805: getScaledChannelRowHeight ===
+// === Module 18629: getScaledChannelRowHeight ===
 
-// Module 18805 (getScaledChannelRowHeight)
-import getLayoutStylesDefault from "getLayoutStyles" /* 18803 */;
+// Module 18629 (getScaledChannelRowHeight)
+import getLayoutStylesDefault from "getLayoutStyles" /* 18627 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/getScaledChannelRowHeight.tsx");

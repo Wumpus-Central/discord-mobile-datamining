@@ -3,8 +3,8 @@
 // Module 9607 (useIsSecureFramesKeyInconsistent)
 import SecureFramesUtils from "SecureFramesUtils" /* 9587 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
 
 require = fn;
 const size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 16430: BountiesModalEndCard ===
+// === Module 16252: BountiesModalEndCard ===
 
-// Module 16430 (BountiesModalEndCard)
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import timingPresets from "timingPresets" /* 5005 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
+// Module 16252 (BountiesModalEndCard)
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import timingPresets from "timingPresets" /* 5007 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4792 */;
+import createStyles from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
@@ -31,7 +31,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = closure_7();
-  _mod1655;
+  _mod1653;
   items = [closure_8, timing_timing.withTiming, visible, timingPresets.timingStandard];
   c0 = undefined;
   c1 = undefined;
@@ -73,7 +73,7 @@ export default function BountiesModalEndCard(visible) {
       }
     }
     obj.children = items3;
-    visible = timestampProducer(_modDef1655.View, obj);
+    visible = timestampProducer(_modDef1653.View, obj);
   }
   return visible;
 };

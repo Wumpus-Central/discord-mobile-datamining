@@ -1,10 +1,10 @@
-// === Module 19095: BurstReactionAnimationContainer ===
+// === Module 18914: BurstReactionAnimationContainer ===
 
-// Module 19095 (BurstReactionAnimationContainer)
+// Module 18914 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 4853 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11550 */;
+import native from "native" /* 4855 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11492 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ function BurstReactionAnimationContainerInner() {
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       _undefined4.current = true;
-      const result = handleEffectReceived(5008).triggerHapticFeedback(c1(5009).IMPACT_HEAVY);
+      const result = handleEffectReceived(5010).triggerHapticFeedback(c1(5011).IMPACT_HEAVY);
     }
     const subscription = _undefined2(_undefined3[10]).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -32,7 +32,7 @@ function BurstReactionAnimationContainerInner() {
     first1,
     require("timing/timing").withTiming,
     closure_12,
-    require("module_1708").scheduleOnRN,
+    require("module_1706").scheduleOnRN,
     function handleComponentFinish() {
       if (false === _undefined4.current) {
         _undefined3(null);
@@ -101,7 +101,7 @@ function BurstReactionAnimationContainerInner() {
   BurstReactionAnimationContainerTsx2.__closure = items1;
   BurstReactionAnimationContainerTsx2.__workletHash = 8115368107310;
   BurstReactionAnimationContainerTsx2.__initData = tmp8;
-  closure_6 = require("module_1655").useAnimatedStyle(BurstReactionAnimationContainerTsx2);
+  closure_6 = require("module_1653").useAnimatedStyle(BurstReactionAnimationContainerTsx2);
   let tmp15 = null;
   if (null != first) {
     let obj2 = { contentTypes: null, children: null };
@@ -163,15 +163,15 @@ function BurstReactionAnimationContainerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(4750).BACKDROP_OPACITY;
+obj3.opacity = fn(4752).BACKDROP_OPACITY;
 obj2.background = obj3;
 const obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);

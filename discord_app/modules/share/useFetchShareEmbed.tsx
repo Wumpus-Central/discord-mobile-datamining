@@ -1,6 +1,6 @@
-// === Module 15027: useFetchShareEmbed ===
+// === Module 14991: useFetchShareEmbed ===
 
-// Module 15027 (useFetchShareEmbed)
+// Module 14991 (useFetchShareEmbed)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export default function useFetchShareEmbed(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -61,7 +61,7 @@ export default function useFetchShareEmbed(arg0) {
                   items = [current];
                   c4 = 3;
                   c5 = 1;
-                  const obj10 = { value: current(12321).unfurlEmbedUrl(items), done: false };
+                  const obj10 = { value: current(12291).unfurlEmbedUrl(items), done: false };
                   return obj10;
                 } else {
                   c5 = 3;
@@ -78,7 +78,7 @@ export default function useFetchShareEmbed(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
-                current(1263).batchUpdates(() => {
+                current(1262).batchUpdates(() => {
                   c3(true);
                   if (ref.current === closure_1_0) {
                     closure_2(false);
@@ -91,18 +91,18 @@ export default function useFetchShareEmbed(arg0) {
                 closure_128_1 = value;
                 if (ref.current !== closure_128_0) {
                   c3 = 0;
-                  current(1263).batchUpdates(() => {
+                  current(1262).batchUpdates(() => {
                     c3(true);
                     if (ref.current === closure_1_0) {
                       closure_2(false);
                     }
                   });
                   c5 = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 } else if (0 === closure_128_1.embeds.length) {
                   tmp4(undefined);
                   c3 = 0;
-                  current(1263).batchUpdates(() => {
+                  current(1262).batchUpdates(() => {
                     c3(true);
                     if (ref.current === closure_1_0) {
                       closure_2(false);
@@ -118,16 +118,16 @@ export default function useFetchShareEmbed(arg0) {
                 }
               }
               c3 = 0;
-              current(1263).batchUpdates(() => {
+              current(1262).batchUpdates(() => {
                 c3(true);
                 if (ref.current === closure_1_0) {
                   closure_2(false);
                 }
               });
-              const obj7 = current(1263);
+              const obj7 = current(1262);
             }
             c3 = 0;
-            current(1263).batchUpdates(() => {
+            current(1262).batchUpdates(() => {
               c3(true);
               if (ref.current === closure_1_0) {
                 closure_2(false);
@@ -157,7 +157,7 @@ export default function useFetchShareEmbed(arg0) {
     };
     if (null != closure_0) {
       if ("" !== str) {
-        const match = str.match(timeout(1381).URL_REGEX);
+        const match = str.match(timeout(1379).URL_REGEX);
         let atResult;
         if (match != null) {
           atResult = match.at(0);

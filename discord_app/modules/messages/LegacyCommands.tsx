@@ -1,19 +1,19 @@
-// === Module 12773: LegacyCommands ===
+// === Module 12743: LegacyCommands ===
 
-// Module 12773 (LegacyCommands)
-import UserSettings from "UserSettings" /* 4617 */;
-import ReactionUtils from "ReactionUtils" /* 4736 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8131 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8339 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 10388 */;
+// Module 12743 (LegacyCommands)
+import UserSettings from "UserSettings" /* 4619 */;
+import ReactionUtils from "ReactionUtils" /* 4738 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8130 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8338 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 10330 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import t_mod from "module_2070" /* 2070 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import t_mod from "module_2068" /* 2068 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: metroImportDefault, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
 const COMMANDS = {

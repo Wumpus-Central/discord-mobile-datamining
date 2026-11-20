@@ -1,15 +1,15 @@
-// === Module 8321: ClipAnalyticsUtils ===
+// === Module 8320: ClipAnalyticsUtils ===
 
-// Module 8321 (ClipAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import _modDef5623 from "module_5623" /* 5623 */;
-import VideoQualityStats from "VideoQualityStats" /* 5725 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5716 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
-import ClipsStore from "ClipsStore" /* 2139 */;
+// Module 8320 (ClipAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import _modDef5625 from "module_5625" /* 5625 */;
+import VideoQualityStats from "VideoQualityStats" /* 5727 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5718 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
+import ClipsStore from "ClipsStore" /* 2137 */;
 
 require = fn;
 function getClipSignalTypes(arg0) {
@@ -139,9 +139,9 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(8322);
+const ClipsConstants = fn(8321);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
@@ -274,7 +274,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef5623(isFavorite, tmp)) {
+    if (!_modDef5625(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -282,7 +282,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef5623(name, tmp5)) {
+    if (!_modDef5625(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -302,7 +302,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef5623(start1, start)) {
+    if (!_modDef5625(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -318,7 +318,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef5623(end1, end)) {
+    if (!_modDef5625(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -334,7 +334,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef5623(applicationAudio1, applicationAudio)) {
+    if (!_modDef5625(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -350,7 +350,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef5623(voiceAudio1, voiceAudio)) {
+    if (!_modDef5625(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -366,7 +366,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef5623(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5625(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -388,7 +388,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef5623(preset1, preset)) {
+    if (!_modDef5625(preset1, preset)) {
       tmp31 = preset1;
     }
   }

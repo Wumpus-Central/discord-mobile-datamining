@@ -1,7 +1,7 @@
 // === Module 6827: loadEmbeddedAppCSPForLaunch ===
 
 // Module 6827 (loadEmbeddedAppCSPForLaunch)
-import getURLForApplication from "getURLForApplication" /* 5433 */;
+import getURLForApplication from "getURLForApplication" /* 5435 */;
 import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 6829 */;
 import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 6830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -21,7 +21,7 @@ let closure_5 = async function _loadEmbeddedAppCSPForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,15 +1,15 @@
-// === Module 18310: ConjureSettingsSheet ===
+// === Module 18155: ConjureSettingsSheet ===
 
-// Module 18310 (ConjureSettingsSheet)
+// Module 18155 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5006 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5008 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureConnectionStore from "ConjureConnectionStore" /* 6848 */;
 import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 6858 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6502 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -210,7 +210,7 @@ class ConjureSettingsSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -495,14 +495,14 @@ function SettingsTabStrip(tabs) {
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6500);
+let ConjureProjectStore = fn(6502);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
-let obj = { project: _modDef4089.W0eQfN, app: _modDef4089.lFaJYF, secrets: _modDef4089.vDpCPU, model: _modDef4089.Rs3qc9, linked: _modDef4089.fBEHdq, experimental: _modDef4089["0Pe9uw"] };
-const createStyles = fn(4792);
+let obj = { project: _modDef4091.W0eQfN, app: _modDef4091.lFaJYF, secrets: _modDef4091.vDpCPU, model: _modDef4091.Rs3qc9, linked: _modDef4091.fBEHdq, experimental: _modDef4091["0Pe9uw"] };
+const createStyles = fn(4794);
 let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
 const value = createStyles.createStyles(obj3);
 const size = fn(2);

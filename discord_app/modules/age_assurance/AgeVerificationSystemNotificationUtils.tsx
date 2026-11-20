@@ -1,12 +1,12 @@
-// === Module 12364: AgeVerificationSystemNotificationUtils ===
+// === Module 12334: AgeVerificationSystemNotificationUtils ===
 
-// Module 12364 (AgeVerificationSystemNotificationUtils)
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7715 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11840 */;
-import MessageStore from "MessageStore" /* 5843 */;
+// Module 12334 (AgeVerificationSystemNotificationUtils)
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7714 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11782 */;
+import MessageStore from "MessageStore" /* 5845 */;
 
 require = fn;
-const MessageEmbedTypes = fn(1072).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1071).MessageEmbedTypes;
 const obj = { CTAS: "ctas", CONTENT_TYPE: "content_type" };
 let obj2 = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", REQUEST_MANUAL_REVIEW: "request_manual_review" };
 const obj3 = { VERIFIED_ADULT: "verified_adult", VERIFIED_TEEN: "verified_teen", ERROR: "error", FAE_FAILED: "fae_failed", ID_FAILED: "id_failed", UNDERAGE: "underage", MANUAL_REVIEW_SUBMITTED: "manual_review_submitted", TNS_SET_UNCONFIRMED: "tns_set_unconfirmed", TNS_SET_UNCONFIRMED_FRAUD: "tns_set_unconfirmed_fraud" };

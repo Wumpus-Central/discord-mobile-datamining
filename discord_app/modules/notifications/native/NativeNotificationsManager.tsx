@@ -1,16 +1,16 @@
-// === Module 20136: NativeNotificationsManager ===
+// === Module 19956: NativeNotificationsManager ===
 
-// Module 20136 (NativeNotificationsManager)
+// Module 19956 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import PushNotificationDefault from "PushNotification" /* 10799 */;
-import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10802 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import PushNotificationDefault from "PushNotification" /* 10741 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6543 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_6 = new LoggerDefault("NativeNotificationsManager");
 const prototype = function NativeNotificationsManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -35,7 +35,7 @@ const prototype = function NativeNotificationsManager() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const _Map = Map;
                   const map = new Map();

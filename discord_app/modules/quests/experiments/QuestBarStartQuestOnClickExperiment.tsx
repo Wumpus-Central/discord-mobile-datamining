@@ -1,7 +1,7 @@
-// === Module 16643: QuestBarStartQuestOnClickExperiment ===
+// === Module 16466: QuestBarStartQuestOnClickExperiment ===
 
-// Module 16643 (QuestBarStartQuestOnClickExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 16466 (QuestBarStartQuestOnClickExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-11-quest-bar-start-quest-on-click", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

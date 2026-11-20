@@ -1,12 +1,12 @@
 // === Module 9621: useGetGameForAppId ===
 
 // Module 9621 (useGetGameForAppId)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6745 */;
 import useGame from "useGame" /* 8933 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import GameStore from "GameStore" /* 2141 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import GameStore from "GameStore" /* 2139 */;
 
 const require = globalThis.__r;
 

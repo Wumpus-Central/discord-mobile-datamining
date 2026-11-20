@@ -4,15 +4,15 @@
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import Badge from "Badge" /* 6942 */;
+import Badge from "Badge" /* 6941 */;
 import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 8883 */;
-import createStyles from "createStyles" /* 4792 */;
+import createStyles from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 const obj = { label: null };
-const rect = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, zIndex: 1, alignItems: "flex-start" };
+const rect = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, width: "75%", zIndex: 1, alignItems: "flex-start" };
 obj.label = rect;
 let closure_4 = createStyles.createStyles(obj);
 let result = size.fileFinishedImporting("modules/wishlists/native/WishlistShopUnpublishLabel.tsx");

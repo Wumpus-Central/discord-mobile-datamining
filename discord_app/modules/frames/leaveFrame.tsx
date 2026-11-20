@@ -2,8 +2,8 @@
 
 // Module 6834 (leaveFrame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import FramesStore from "FramesStore" /* 6502 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import FramesStore from "FramesStore" /* 6504 */;
 
 require = fn;
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 13677: useConjureWandStatus ===
+// === Module 13648: useConjureWandStatus ===
 
-// Module 13677 (useConjureWandStatus)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import useMountEffectDefault from "useMountEffect" /* 5353 */;
+// Module 13648 (useConjureWandStatus)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import useMountEffectDefault from "useMountEffect" /* 5355 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
-import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 13678 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 13649 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 require = fn;
 const size = fn(2);
@@ -31,11 +31,11 @@ export default function useConjureWandStatus() {
   }
   obj.hasBadge = hasUnread;
   const intl = util.intl;
-  items = [intl.string(_modDef4089.uk6jhJ), , , ];
+  items = [intl.string(_modDef4091.uk6jhJ), , , ];
   let stringResult = null;
   if ("working" === kind) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef4089["Y8pS+n"]);
+    stringResult = intl2.string(_modDef4091["Y8pS+n"]);
   }
   items[1] = stringResult;
   let kind1;
@@ -45,7 +45,7 @@ export default function useConjureWandStatus() {
   let stringResult1 = null;
   if ("needs_input" === kind1) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef4089.hfIuc7);
+    stringResult1 = intl3.string(_modDef4091.hfIuc7);
   }
   items[2] = stringResult1;
   let kind2;
@@ -55,7 +55,7 @@ export default function useConjureWandStatus() {
   let stringResult2 = null;
   if ("unread" === kind2) {
     const intl4 = util.intl;
-    stringResult2 = intl4.string(_modDef4089["6XGnHJ"]);
+    stringResult2 = intl4.string(_modDef4091["6XGnHJ"]);
   }
   items[3] = stringResult2;
   const found = items.filter((item) => null != item);

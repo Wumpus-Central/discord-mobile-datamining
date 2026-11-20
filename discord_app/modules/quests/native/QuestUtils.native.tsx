@@ -1,41 +1,41 @@
-// === Module 9833: QuestUtils ===
+// === Module 9835: QuestUtils ===
 
-// Module 9833 (QuestUtils)
+// Module 9835 (QuestUtils)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Link from "Link" /* 1503 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
-import RootNavigationRef from "RootNavigationRef" /* 4969 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import useAlertStore from "useAlertStore" /* 5741 */;
-import AlertModal from "AlertModal" /* 5745 */;
-import QuestTypes from "QuestTypes" /* 6440 */;
-import GameControllerIcon from "GameControllerIcon" /* 6921 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
-import getQuestLogger from "getQuestLogger" /* 8293 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8306 */;
-import QuestActionCreators from "QuestActionCreators" /* 9837 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9855 */;
-import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 13668 */;
-import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 13673 */;
-import CloudIcon from "CloudIcon" /* 13674 */;
+import util from "util" /* 1112 */;
+import Link from "Link" /* 1501 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4970 */;
+import RootNavigationRef from "RootNavigationRef" /* 4971 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import useAlertStore from "useAlertStore" /* 5743 */;
+import AlertModal from "AlertModal" /* 5747 */;
+import QuestTypes from "QuestTypes" /* 6442 */;
+import GameControllerIcon from "GameControllerIcon" /* 6920 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
+import getQuestLogger from "getQuestLogger" /* 8292 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8305 */;
+import QuestActionCreators from "QuestActionCreators" /* 9839 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9857 */;
+import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 13639 */;
+import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 13644 */;
+import CloudIcon from "CloudIcon" /* 13645 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9834 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9836 */;
 
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13661, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13632, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13661, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13632, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -61,7 +61,7 @@ let closure_15 = async function _handleRewardClaim(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -239,16 +239,16 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
     }
   }
 };
-const QuestConstants = fn(6437);
+const QuestConstants = fn(6439);
 ({ QuestsExperimentLocations: hasOwnProperty, QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6, QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: metroImportDefault, QuestVariants: closure_8 } = QuestConstants);
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9835, dependencyMap.paths), metroImportDefault, { questId: questId.questId });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9837, dependencyMap.paths), metroImportDefault, { questId: questId.questId });
 }
 export { viewReward };
 export function handleRewardClaimThenView() {

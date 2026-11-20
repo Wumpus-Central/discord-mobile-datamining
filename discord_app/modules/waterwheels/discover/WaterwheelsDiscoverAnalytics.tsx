@@ -1,9 +1,9 @@
-// === Module 17860: WaterwheelsDiscoverAnalytics ===
+// === Module 17687: WaterwheelsDiscoverAnalytics ===
 
-// Module 17860 (WaterwheelsDiscoverAnalytics)
-import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9928 */;
+// Module 17687 (WaterwheelsDiscoverAnalytics)
+import Constants from "Constants" /* 1071 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9931 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

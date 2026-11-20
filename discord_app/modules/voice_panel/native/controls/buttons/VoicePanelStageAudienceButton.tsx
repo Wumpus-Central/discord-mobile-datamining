@@ -1,22 +1,22 @@
-// === Module 19418: VoicePanelStageAudienceButton ===
+// === Module 19238: VoicePanelStageAudienceButton ===
 
-// Module 19418 (VoicePanelStageAudienceButton)
-import _modDef4219 from "module_4219" /* 4219 */;
-import NativeViewDefault from "NativeView" /* 7205 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19400 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 19408 */;
-import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 19419 */;
+// Module 19238 (VoicePanelStageAudienceButton)
+import _modDef4221 from "module_4221" /* 4221 */;
+import NativeViewDefault from "NativeView" /* 7204 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19220 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 19228 */;
+import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 19239 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const BadgeConstants = fn(1189);
+const BadgeConstants = fn(1188);
 ({ BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const result = BADGE_SIZE / 2;
 const cutoutRadius = result + BADGE_PADDING;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }, badge: { position: "absolute", zIndex: 1, top: 0, right: 0 } });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStageAudienceButton.tsx");
@@ -25,13 +25,13 @@ export default function StageAudienceButton(props) {
   props = props.props;
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(19399).useVoicePanelButtonStyles(props.wrapperSpecs);
-  const obj = channelId(19399);
-  const canModerateRequestToSpeak = channelId(6411).useCanModerateRequestToSpeak(channelId);
-  const obj2 = channelId(6411);
+  const voicePanelButtonStyles = channelId(19219).useVoicePanelButtonStyles(props.wrapperSpecs);
+  const obj = channelId(19219);
+  const canModerateRequestToSpeak = channelId(6413).useCanModerateRequestToSpeak(channelId);
+  const obj2 = channelId(6413);
   let num = 0;
   if (canModerateRequestToSpeak) {
-    num = obj3.useStageParticipantsCount(channelId, channelId(6416).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
+    num = obj3.useStageParticipantsCount(channelId, channelId(6418).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
   }
   const element = {
     onPress() {
@@ -41,25 +41,25 @@ export default function StageAudienceButton(props) {
     accessibilityLabel: null,
     children: null
   };
-  obj3 = channelId(6422);
-  const intl = tmp4(1113).intl;
+  obj3 = channelId(6424);
+  const intl = tmp4(1112).intl;
   if (num > 0) {
     const obj4 = { count: num };
-    let formatToPlainStringResult = intl.formatToPlainString(_modDef4219.IQmRBE, obj4);
+    let formatToPlainStringResult = intl.formatToPlainString(_modDef4221.IQmRBE, obj4);
   } else {
-    formatToPlainStringResult = intl.string(_modDef4219.Ds8IST);
+    formatToPlainStringResult = intl.string(_modDef4221.Ds8IST);
   }
   element.accessibilityLabel = formatToPlainStringResult;
   items = [closure_4(CircleWithCutoutDefault, { fill: voicePanelButtonStyles.iconBg.backgroundColor, circleRadius: props.width / 2, cutoutRadius, enableCutout: num > 0, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius, scaleToPixelDensity: true }), , ];
   const obj6 = { style: tmp3.iconContainer, children: null };
   const obj5 = { fill: voicePanelButtonStyles.iconBg.backgroundColor, circleRadius: props.width / 2, cutoutRadius, enableCutout: num > 0, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius, scaleToPixelDensity: true };
   const tmpResult = VoicePanelAnimatedButtonWrapperDefault;
-  obj6.children = closure_4(channelId(6919).GroupIcon, { color: voicePanelButtonStyles.iconFill.color });
+  obj6.children = closure_4(channelId(6918).GroupIcon, { color: voicePanelButtonStyles.iconFill.color });
   items[1] = closure_4(NativeViewDefault, obj6);
   const obj8 = { style: tmp3.badge, pointerEvents: "none", children: null };
   const obj7 = { color: voicePanelButtonStyles.iconFill.color };
   const tmpResult3 = NativeViewDefault;
-  obj8.children = closure_4(channelId(1187).Badge, { value: num, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" });
+  obj8.children = closure_4(channelId(1186).Badge, { value: num, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" });
   items[2] = closure_4(NativeViewDefault, obj8);
   element.children = items;
   return closure_5(tmpResult, element);

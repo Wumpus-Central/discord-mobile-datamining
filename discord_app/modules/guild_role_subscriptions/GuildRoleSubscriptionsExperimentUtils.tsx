@@ -1,12 +1,12 @@
-// === Module 15021: GuildRoleSubscriptionsExperimentUtils ===
+// === Module 14985: GuildRoleSubscriptionsExperimentUtils ===
 
-// Module 15021 (GuildRoleSubscriptionsExperimentUtils)
-import GuildStore from "GuildStore" /* 4663 */;
+// Module 14985 (GuildRoleSubscriptionsExperimentUtils)
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 let items = [, , ];
 ({ ROLE_SUBSCRIPTIONS_ENABLED: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_PROVISIONAL: arr[2] } = GuildFeatures);
 const size = fn(2);

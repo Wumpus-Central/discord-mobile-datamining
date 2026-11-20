@@ -1,13 +1,13 @@
-// === Module 7367: GuildMemberActionCreators ===
+// === Module 7366: GuildMemberActionCreators ===
 
-// Module 7367 (GuildMemberActionCreators)
+// Module 7366 (GuildMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import ImpersonateActionCreators from "ImpersonateActionCreators" /* 7174 */;
-import ImpersonateStore from "ImpersonateStore" /* 4697 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 7173 */;
+import ImpersonateStore from "ImpersonateStore" /* 4699 */;
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 

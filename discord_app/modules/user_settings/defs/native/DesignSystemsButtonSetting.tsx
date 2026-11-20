@@ -1,9 +1,9 @@
-// === Module 17253: DesignSystemsButtonSetting ===
+// === Module 17080: DesignSystemsButtonSetting ===
 
-// Module 17253 (DesignSystemsButtonSetting)
-import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 8593 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
+// Module 17080 (DesignSystemsButtonSetting)
+import Constants from "Constants" /* 1071 */;
+import SettingsConstants from "SettingsConstants" /* 8592 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

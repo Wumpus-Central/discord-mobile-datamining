@@ -1,9 +1,9 @@
-// === Module 18960: useProfileCoachmarkPosition ===
+// === Module 18784: useProfileCoachmarkPosition ===
 
-// Module 18960 (useProfileCoachmarkPosition)
+// Module 18784 (useProfileCoachmarkPosition)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

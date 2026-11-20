@@ -1,19 +1,19 @@
-// === Module 11739: MoreTipsModal ===
+// === Module 11681: MoreTipsModal ===
 
-// Module 11739 (MoreTipsModal)
+// Module 11681 (MoreTipsModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6244 */;
-import MetricEvents from "MetricEvents" /* 6249 */;
-import HeaderActionButton from "HeaderActionButton" /* 6910 */;
-import _modDef6913 from "module_6913" /* 6913 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11734 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11740 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11746 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6246 */;
+import MetricEvents from "MetricEvents" /* 6251 */;
+import HeaderActionButton from "HeaderActionButton" /* 6909 */;
+import _modDef6912 from "module_6912" /* 6912 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11676 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11682 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11688 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11722 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11664 */;
 
 require = fn;
 function MoreTipsModalScreen(learnMore) {
@@ -46,10 +46,10 @@ function MoreTipsModalScreen(learnMore) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -89,7 +89,7 @@ export default function MoreTipsModal(headerStyle) {
             onPress() {
               return warningId(senderId[12]).popWithKey(channelId);
             },
-            source: _modDef6913,
+            source: _modDef6912,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

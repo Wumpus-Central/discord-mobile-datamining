@@ -1,12 +1,12 @@
-// === Module 19010: useGuildEligibleForStageChannels ===
+// === Module 18448: useGuildEligibleForStageChannels ===
 
-// Module 19010 (useGuildEligibleForStageChannels)
-import GuildStore from "GuildStore" /* 4663 */;
+// Module 18448 (useGuildEligibleForStageChannels)
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
 

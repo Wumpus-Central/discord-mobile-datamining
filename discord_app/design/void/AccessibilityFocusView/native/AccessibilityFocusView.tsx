@@ -1,7 +1,7 @@
-// === Module 15323: AccessibilityFocusView ===
+// === Module 15287: AccessibilityFocusView ===
 
-// Module 15323 (AccessibilityFocusView)
-import AccessibilityFocusNativeComponentDefault from "AccessibilityFocusNativeComponent" /* 15324 */;
+// Module 15287 (AccessibilityFocusView)
+import AccessibilityFocusNativeComponentDefault from "AccessibilityFocusNativeComponent" /* 15288 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

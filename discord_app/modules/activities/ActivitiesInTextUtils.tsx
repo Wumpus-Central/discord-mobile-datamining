@@ -1,9 +1,9 @@
-// === Module 7347: ActivitiesInTextUtils ===
+// === Module 7346: ActivitiesInTextUtils ===
 
-// Module 7347 (ActivitiesInTextUtils)
-import ChannelTypes from "ChannelTypes" /* 1093 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 7346 (ActivitiesInTextUtils)
+import ChannelTypes from "ChannelTypes" /* 1092 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 

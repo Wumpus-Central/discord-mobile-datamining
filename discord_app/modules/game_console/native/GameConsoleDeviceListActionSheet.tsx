@@ -1,19 +1,19 @@
-// === Module 10965: GameConsoleDeviceListActionSheet ===
+// === Module 10907: GameConsoleDeviceListActionSheet ===
 
-// Module 10965 (GameConsoleDeviceListActionSheet)
+// Module 10907 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6898 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10956 */;
-import _modDef10966 from "module_10966" /* 10966 */;
-import _modDef10967 from "module_10967" /* 10967 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10898 */;
+import _modDef10908 from "module_10908" /* 10908 */;
+import _modDef10909 from "module_10909" /* 10909 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5534 */;
+import GameConsoleStore from "GameConsoleStore" /* 5536 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef10966 };
+  const obj2 = { style: tmp.deviceIcon, source: _modDef10908 };
   items = [closure_1_11(FastImageDefault, obj2), closure_1_11(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "body-md/semibold", children: children.name })];
   obj.children = items;
   return application_id(metroImportDefault, obj);
@@ -43,7 +43,7 @@ function DeviceOption(children) {
 function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef10967, style: tmp.emptyArt };
+  const obj2 = { source: _modDef10909, style: tmp.emptyArt };
   items = [closure_1_11(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -58,10 +58,10 @@ function EmptyState() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const ComponentActions = fn(1072).ComponentActions;
+const ComponentActions = fn(1071).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { padding: 16, justifyContent: "center", paddingBottom: 90 }, loading: { minHeight: 56 }, footerContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 }, radioItem: null, deviceIcon: null, deviceOption: null, deviceText: null, emptyContainer: null, emptyArt: null, emptyHeader: null, emptyBody: null, infoBox: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
 obj2.radioItem = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xs, padding: 16 };
@@ -95,7 +95,7 @@ export default function GameConsoleListActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -113,7 +113,7 @@ export default function GameConsoleListActionSheet(arg0) {
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(10958).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(10900).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -124,11 +124,11 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(5006).hideActionSheet();
-          const ComponentDispatch = tmp4(1108).ComponentDispatch;
+          v1(5008).hideActionSheet();
+          const ComponentDispatch = tmp4(1107).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         dependencyMap = tmp;

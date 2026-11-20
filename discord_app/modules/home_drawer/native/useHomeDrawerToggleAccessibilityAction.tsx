@@ -1,7 +1,7 @@
-// === Module 17921: useHomeDrawerToggleAccessibilityAction ===
+// === Module 17748: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 17921 (useHomeDrawerToggleAccessibilityAction)
-import util from "util" /* 1113 */;
+// Module 17748 (useHomeDrawerToggleAccessibilityAction)
+import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,18 +27,18 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
         name,
         label: stringResult,
         action() {
-            closure_0(4968).setHomeDrawerState(!dependencyMap);
-            const intl = closure_0(1113).intl;
+            closure_0(4970).setHomeDrawerState(!dependencyMap);
+            const intl = closure_0(1112).intl;
             const string = intl.string;
-            const t = closure_0(1113).t;
+            const t = closure_0(1112).t;
             if (dependencyMap) {
               let stringResult = string(t["0s/g+O"]);
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(4801).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(4803).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(4968);
+            const obj = closure_0(4970);
           }
       };
       return obj;

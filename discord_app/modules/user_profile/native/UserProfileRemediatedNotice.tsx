@@ -1,19 +1,19 @@
-// === Module 14544: UserProfileRemediatedNotice ===
+// === Module 14512: UserProfileRemediatedNotice ===
 
-// Module 14544 (UserProfileRemediatedNotice)
+// Module 14512 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8078 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7620 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8077 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 require = fn;
 const View = fn(17).View;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,18 +32,18 @@ export default function RemediatedUserNotice(user) {
     obj2.style = items1;
     if (isBlocked) {
       const obj3 = { variant: "body-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-      const intl = tmp4(1113).intl;
-      obj3.children = intl.string(tmp4(1113).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(5383).Text, obj3);
+      const intl = tmp4(1112).intl;
+      obj3.children = intl.string(tmp4(1112).t["oC/fU6"]);
+      isBlocked = closure_6(tmp4(5385).Text, obj3);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
       const obj4 = { children: null };
       const obj5 = { variant: "body-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-      const intl2 = tmp4(1113).intl;
-      obj5.children = intl2.string(tmp4(1113).t.HXz5An);
-      const items3 = [closure_6(tmp4(5383).Text, obj5), closure_6(tmp4(5383).Text, { variant: "body-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
-      const intl3 = tmp4(1113).intl;
+      const intl2 = tmp4(1112).intl;
+      obj5.children = intl2.string(tmp4(1112).t.HXz5An);
+      const items3 = [closure_6(tmp4(5385).Text, obj5), closure_6(tmp4(5385).Text, { variant: "body-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      const intl3 = tmp4(1112).intl;
       const obj6 = {
         unignoreHook(children) {
               return timestampProducer(Text_Text.Text, {
@@ -57,7 +57,7 @@ export default function RemediatedUserNotice(user) {
               });
             }
       };
-      items3[2] = intl3.format(tmp4(1113).t.PrtAqy, obj6);
+      items3[2] = intl3.format(tmp4(1112).t.PrtAqy, obj6);
       obj4.children = items3;
       isIgnored = closure_8(closure_7, obj4);
     }

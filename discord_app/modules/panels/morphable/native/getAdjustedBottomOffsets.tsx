@@ -1,7 +1,7 @@
-// === Module 19223: getAdjustedBottomOffsets ===
+// === Module 19042: getAdjustedBottomOffsets ===
 
-// Module 19223 (getAdjustedBottomOffsets)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
+// Module 19042 (getAdjustedBottomOffsets)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getAdjustedBottomOffsets_getAdjustedBottomOffsetsTsx1({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeAreaBottom,keyboardHeight:keyboardHeight}){let[IS_ANDROID]=this.__closure;let bottomOffset=screenBottomOffset;if(keyboardHeight>0){bottomOffset+=(IS_ANDROID?0:keyboardHeight)-safeAreaBottom;}return{bottomOffset:bottomOffset};})" }, ];

@@ -1,12 +1,12 @@
-// === Module 17433: DoubleTapEmojiSetting ===
+// === Module 17260: DoubleTapEmojiSetting ===
 
-// Module 17433 (DoubleTapEmojiSetting)
+// Module 17260 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import EmojiDefault from "Emoji" /* 7377 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8587 */;
+import util from "util" /* 1112 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import EmojiDefault from "Emoji" /* 7376 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,20 +29,20 @@ function SettingsEmoji(emoji) {
   obj3.textEmojiStyle = tmp.textEmoji;
   return jsx(EmojiDefault, { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null });
 }
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const EmojiIntention = fn(1391).EmojiIntention;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const EmojiIntention = fn(1389).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8593).MobileUserSettings.CHAT,
+  parent: fn(8592).MobileUserSettings.CHAT,
   useTrailing: function useDoubleTapEmojiSettingTrailing() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.useSetting();
@@ -74,7 +74,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -111,7 +111,7 @@ const pressable = SettingBuilders.createPressable({
             const obj17 = { emoji: closure_129_0 };
             const result = closure_0(tmp5[15]).showDoubleTapEmojiUpdatedToast(obj17);
             constants = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           constants = tmp;

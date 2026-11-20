@@ -3,15 +3,15 @@
 // Module 6806 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
 import conjureChatTurns from "conjureChatTurns" /* 6807 */;
 import conjureStepTimeline from "conjureStepTimeline" /* 6808 */;
 import conjureChatHistory from "conjureChatHistory" /* 6809 */;
 import conjureAgentReaction from "conjureAgentReaction" /* 6810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -1266,7 +1266,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef4089.lmiuFX);
+                obj2.message = intl.string(_modDef4091.lmiuFX);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp7 = obj;

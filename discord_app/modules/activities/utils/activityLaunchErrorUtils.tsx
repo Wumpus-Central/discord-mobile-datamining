@@ -1,16 +1,16 @@
-// === Module 10565: activityLaunchErrorUtils ===
+// === Module 10507: activityLaunchErrorUtils ===
 
-// Module 10565 (activityLaunchErrorUtils)
-import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 5851 */;
+// Module 10507 (activityLaunchErrorUtils)
+import util from "util" /* 1112 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 5853 */;
 import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 6831 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10567 */;
-import InteractionUtils from "InteractionUtils" /* 10568 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10509 */;
+import InteractionUtils from "InteractionUtils" /* 10510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10566 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5435 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 10508 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5437 */;
 
 require = fn;
 let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
@@ -24,7 +24,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -162,8 +162,8 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5435).DevShelfFetchState;
-const AbortCodes = fn(1072).AbortCodes;
+const DevShelfFetchState = fn(5437).DevShelfFetchState;
+const AbortCodes = fn(1071).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };
 const size = fn(2);

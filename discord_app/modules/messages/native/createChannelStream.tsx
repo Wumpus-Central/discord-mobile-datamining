@@ -1,20 +1,20 @@
-// === Module 12721: createChannelStream ===
+// === Module 12691: createChannelStream ===
 
-// Module 12721 (createChannelStream)
+// Module 12691 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnlinkedGamePlayerPlaceholders from "UnlinkedGamePlayerPlaceholders" /* 8578 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 12722 */;
-import tryInjectMessage from "tryInjectMessage" /* 12723 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11842 */;
-import EditMessageStore from "EditMessageStore" /* 8262 */;
-import UploadStore from "UploadStore" /* 8412 */;
+import UnlinkedGamePlayerPlaceholders from "UnlinkedGamePlayerPlaceholders" /* 8577 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 12692 */;
+import tryInjectMessage from "tryInjectMessage" /* 12693 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11784 */;
+import EditMessageStore from "EditMessageStore" /* 8261 */;
+import UploadStore from "UploadStore" /* 8411 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8551);
+const RowGeneratorConstants = fn(8550);
 ({ Changeset: closure_6, LoadingType: metroImportDefault, RowType: closure_8, SeparatorType: closure_9 } = RowGeneratorConstants);
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/createChannelStream.tsx");
 

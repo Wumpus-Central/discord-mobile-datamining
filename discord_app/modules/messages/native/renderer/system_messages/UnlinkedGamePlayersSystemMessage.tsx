@@ -1,28 +1,28 @@
-// === Module 8577: UnlinkedGamePlayersSystemMessage ===
+// === Module 8576: UnlinkedGamePlayersSystemMessage ===
 
-// Module 8577 (UnlinkedGamePlayersSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8579 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8581 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8583 */;
+// Module 8576 (UnlinkedGamePlayersSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8578 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8580 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8582 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageTypes = fn(1072).MessageTypes;
+const MessageTypes = fn(1071).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UnlinkedGamePlayersSystemMessage.tsx");
 
 export function createUnlinkedGamePlayersSystemMessage(roleStyle, unlinkedGamePlayerPlaceholders) {
   roleStyle = roleStyle.roleStyle;
-  const firstMessagePerAuthor = roleStyle(8578).getFirstMessagePerAuthor(unlinkedGamePlayerPlaceholders);
+  const firstMessagePerAuthor = roleStyle(8577).getFirstMessagePerAuthor(unlinkedGamePlayerPlaceholders);
   const mapped = firstMessagePerAuthor.map((message) => {
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     const obj2 = { name: messageAuthorWithProcessedColor.nick, onClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
     return obj2;
   });
-  const obj = roleStyle(8578);
+  const obj = roleStyle(8577);
   [tmp4, tmp5] = mapped;
   if (mapped.length <= 1) {
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     let name;
     if (tmp4 != null) {
       name = tmp4.name;
@@ -34,20 +34,20 @@ export function createUnlinkedGamePlayersSystemMessage(roleStyle, unlinkedGamePl
     }
     obj3.aOnClick = onClick;
     obj3.count = unlinkedGamePlayerPlaceholders.length;
-    let formatToPartsResult = intl2.formatToParts(tmp(1113).t.DbQxMP, obj3);
-  } else if (mapped.length <= tmp(8578).MAX_NAMED_PLAYERS) {
-    const intl = tmp(1113).intl;
+    let formatToPartsResult = intl2.formatToParts(tmp(1112).t.DbQxMP, obj3);
+  } else if (mapped.length <= tmp(8577).MAX_NAMED_PLAYERS) {
+    const intl = tmp(1112).intl;
     ({ name: obj2.a, onClick: obj2.aOnClick } = tmp4);
     ({ name: obj2.b, onClick: obj2.bOnClick } = tmp5);
-    formatToPartsResult = intl.formatToParts(tmp(1113).t.Me666b, { a: null, aOnClick: null, b: null, bOnClick: null });
+    formatToPartsResult = intl.formatToParts(tmp(1112).t.Me666b, { a: null, aOnClick: null, b: null, bOnClick: null });
     const obj4 = { a: null, aOnClick: null, b: null, bOnClick: null };
   } else {
-    const intl3 = tmp(1113).intl;
+    const intl3 = tmp(1112).intl;
     const obj9 = { a: null, aOnClick: null, b: null, bOnClick: null, count: null };
     ({ name: obj5.a, onClick: obj5.aOnClick } = tmp4);
     ({ name: obj5.b, onClick: obj5.bOnClick } = tmp5);
-    obj9.count = mapped.length - tmp(8578).MAX_NAMED_PLAYERS;
-    formatToPartsResult = intl3.formatToParts(tmp(1113).t.Mb0AX6, obj9);
+    obj9.count = mapped.length - tmp(8577).MAX_NAMED_PLAYERS;
+    formatToPartsResult = intl3.formatToParts(tmp(1112).t.Mb0AX6, obj9);
   }
   const obj10 = { content: formatToPartsResult };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));

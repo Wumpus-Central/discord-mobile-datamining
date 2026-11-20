@@ -1,6 +1,6 @@
-// === Module 6433: GuildsTree ===
+// === Module 6435: GuildsTree ===
 
-// Module 6433 (GuildsTree)
+// Module 6435 (GuildsTree)
 import apply from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
@@ -105,21 +105,21 @@ prototype["moveInto"] = function moveInto(node, c0) {
   self.version = self.version + 1;
   return self;
 };
-prototype["addNode"] = function addNode(type) {
+prototype["addNode"] = function addNode(guildNode) {
   const self = this;
-  let root = c0;
-  if (c0 === undefined) {
+  let root = element;
+  if (element === undefined) {
     root = self.root;
   }
   if (flag === undefined) {
     flag = true;
   }
-  _modDef38(type.type !== obj.ROOT, "[GUILDS TREE] Tried adding another root node into the tree");
-  _modDef38(null != type.id, "[GUILDS TREE] Tried adding a node without an id");
-  _modDef38(null == self.nodes[type.id], "[GUILDS TREE] Tried adding a node that already exists (" + type.id + ")");
-  self.nodes[type.id] = type;
+  _modDef38(guildNode.type !== obj.ROOT, "[GUILDS TREE] Tried adding another root node into the tree");
+  _modDef38(null != guildNode.id, "[GUILDS TREE] Tried adding a node without an id");
+  _modDef38(null == self.nodes[guildNode.id], "[GUILDS TREE] Tried adding a node that already exists (" + guildNode.id + ")");
+  self.nodes[guildNode.id] = guildNode;
   self.version = self.version + 1;
-  return self.moveInto(type, root, flag);
+  return self.moveInto(guildNode, root, flag);
 };
 prototype["removeNode"] = function removeNode(id) {
   _modDef38(id !== this.root, "[GUILDS TREE] Tried removing the root node from the tree");
@@ -178,8 +178,8 @@ prototype["convertToFolder"] = function convertToFolder(node) {
 prototype["allNodes"] = function allNodes() {
   return Object.values(this.nodes);
 };
-prototype["getNode"] = function getNode(arg0) {
-  return this.nodes[arg0];
+prototype["getNode"] = function getNode(targetId) {
+  return this.nodes[targetId];
 };
 prototype["getRoots"] = function getRoots() {
   return this.root.children;
@@ -231,7 +231,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(/* F125239 */ function() { ... });
+                    let mapped = children.map(/* F123208 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;

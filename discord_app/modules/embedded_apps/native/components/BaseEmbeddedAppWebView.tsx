@@ -1,17 +1,17 @@
-// === Module 10750: BaseEmbeddedAppWebView ===
+// === Module 10692: BaseEmbeddedAppWebView ===
 
-// Module 10750 (BaseEmbeddedAppWebView)
+// Module 10692 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import URLUtilsDefault from "URLUtils" /* 1381 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5739 */;
-import WebView from "WebView" /* 7700 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10751 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import URLUtilsDefault from "URLUtils" /* 1379 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
+import WebView from "WebView" /* 7699 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5435 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5437 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -299,7 +299,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -464,9 +464,9 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
   }
   return tmp46;
 }
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 const size = fn(2);

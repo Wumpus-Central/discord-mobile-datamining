@@ -1,22 +1,22 @@
-// === Module 18144: ItemDetailsActionSheet ===
+// === Module 17971: ItemDetailsActionSheet ===
 
-// Module 18144 (ItemDetailsActionSheet)
+// Module 17971 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import useChannelNameDefault from "useChannelName" /* 5408 */;
-import TableRow from "TableRow" /* 6926 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6978 */;
-import GuildIcon from "GuildIcon" /* 7203 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import ActionSheet from "ActionSheet" /* 7434 */;
-import ICYMIUtils from "ICYMIUtils" /* 9919 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11613 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18145 */;
+import native from "native" /* 1186 */;
+import useChannelNameDefault from "useChannelName" /* 5410 */;
+import TableRow from "TableRow" /* 6925 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6977 */;
+import GuildIcon from "GuildIcon" /* 7202 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import ActionSheet from "ActionSheet" /* 7433 */;
+import ICYMIUtils from "ICYMIUtils" /* 9922 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11555 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17972 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import ICYMIStore from "ICYMIStore" /* 9910 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import ICYMIStore from "ICYMIStore" /* 9913 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

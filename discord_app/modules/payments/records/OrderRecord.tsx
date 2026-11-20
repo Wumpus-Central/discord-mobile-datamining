@@ -1,12 +1,12 @@
 // === Module 8993: OrderRecord ===
 
 // Module 8993 (OrderRecord)
-import Record from "Record" /* 1408 */;
+import Record from "Record" /* 1406 */;
 import CheckoutContextRecord from "CheckoutContextRecord" /* 8994 */;
 import SubscriptionFacetRecord from "SubscriptionFacetRecord" /* 8995 */;
 
-const BaseInvoiceRecord = fn(2182).BaseInvoiceRecord;
-const PaymentGateways = fn(1083).PaymentGateways;
+const BaseInvoiceRecord = fn(2180).BaseInvoiceRecord;
+const PaymentGateways = fn(1082).PaymentGateways;
 let BillingFacetRecord;
 class BillingFacetRecord extends tmp2 {
   constructor(arg0) {

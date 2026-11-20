@@ -1,13 +1,13 @@
-// === Module 8711: VoiceSessionUtils ===
+// === Module 8751: VoiceSessionUtils ===
 
-// Module 8711 (VoiceSessionUtils)
-import useMessageAuthor from "useMessageAuthor" /* 6220 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8600 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8712 */;
+// Module 8751 (VoiceSessionUtils)
+import useMessageAuthor from "useMessageAuthor" /* 6222 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8599 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8752 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -101,11 +101,11 @@ export function getVoiceSessionMessageContent(channel_id) {
     return obj;
   });
   if (null == tmp2) {
-    const intl = tmp3(1113).intl;
+    const intl = tmp3(1112).intl;
     const obj2 = { username: messageAuthor.nick, usernameOnClick: tmp3(12).identity };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1113).t.HzBfIN, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1112).t.HzBfIN, obj2);
   } else {
-    const intl2 = tmp3(1113).intl;
+    const intl2 = tmp3(1112).intl;
     const obj3 = { userCount: mapped.length + 1, username: messageAuthor.nick, usernameOnClick: tmp3(12).identity, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
     const first = mapped[0];
     let nick;
@@ -122,7 +122,7 @@ export function getVoiceSessionMessageContent(channel_id) {
     obj3.username3OnClick = tmp3(12).identity;
     obj3.otherCount = mapped.length - 1;
     obj3.duration = tmp2;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1113).t.atbXuX, obj3);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1112).t.atbXuX, obj3);
   }
   return formatToPlainStringResult;
 }

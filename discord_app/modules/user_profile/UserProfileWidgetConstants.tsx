@@ -1,8 +1,8 @@
 // === Module 6840: UserProfileWidgetConstants ===
 
 // Module 6840 (UserProfileWidgetConstants)
-import util from "util" /* 1113 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import util from "util" /* 1112 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 require = fn;
 const items = [fn(6838).WidgetType.CLIPS_GALLERY, fn(6838).WidgetType.APPLICATION, fn(6838).WidgetType.FAVORITE_GAMES, fn(6838).WidgetType.PLAYED_GAMES, fn(6838).WidgetType.CURRENT_GAMES, fn(6838).WidgetType.WANT_TO_PLAY_GAMES];

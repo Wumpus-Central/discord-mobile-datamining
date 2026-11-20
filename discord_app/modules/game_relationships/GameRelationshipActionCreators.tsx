@@ -1,10 +1,10 @@
-// === Module 10129: GameRelationshipActionCreators ===
+// === Module 10132: GameRelationshipActionCreators ===
 
-// Module 10129 (GameRelationshipActionCreators)
-import util from "util" /* 1113 */;
-import shared from "shared" /* 4799 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5739 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6228 */;
+// Module 10132 (GameRelationshipActionCreators)
+import util from "util" /* 1112 */;
+import shared from "shared" /* 4801 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -42,7 +42,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -116,9 +116,9 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4799).AccessibilityAnnouncer;
-      const intl = closure_1_0(1113).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t.zRf8cO));
+      const AccessibilityAnnouncer = closure_1_0(4801).AccessibilityAnnouncer;
+      const intl = closure_1_0(1112).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1112).t.zRf8cO));
     }
   });
   await "HermesInternal";
@@ -131,9 +131,9 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4799).AccessibilityAnnouncer;
-      const intl = closure_1_0(1113).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t.XMf21q));
+      const AccessibilityAnnouncer = closure_1_0(4801).AccessibilityAnnouncer;
+      const intl = closure_1_0(1112).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1112).t.XMf21q));
     }
   });
   await "HermesInternal";
@@ -141,7 +141,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
   ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
   return "Path";
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_4, RelationshipTypes: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipActionCreators.tsx");
@@ -162,7 +162,7 @@ export default {
 
     }
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1285).HTTP;
+    const HTTP = onSuccess(1284).HTTP;
     const request = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
@@ -170,14 +170,14 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(6228).APIError(error);
+      const aPIError = new onSuccess(6230).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
-      const intl = onSuccess(1113).intl;
-      obj.title = intl.string(onSuccess(1113).t["328j/I"]);
+      const intl = onSuccess(1112).intl;
+      obj.title = intl.string(onSuccess(1112).t["328j/I"]);
       if (null == anyErrorMessage) {
-        const intl2 = onSuccess(1113).intl;
-        anyErrorMessage = intl2.string(onSuccess(1113).t.fEptJP);
+        const intl2 = onSuccess(1112).intl;
+        anyErrorMessage = intl2.string(onSuccess(1112).t.fEptJP);
       }
       obj.body = anyErrorMessage;
       AlertActionCreatorsDefault.show(obj);

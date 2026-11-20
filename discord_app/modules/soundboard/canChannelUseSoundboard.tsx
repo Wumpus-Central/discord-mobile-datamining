@@ -1,14 +1,14 @@
-// === Module 10929: canChannelUseSoundboard ===
+// === Module 10871: canChannelUseSoundboard ===
 
-// Module 10929 (canChannelUseSoundboard)
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+// Module 10871 (canChannelUseSoundboard)
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");

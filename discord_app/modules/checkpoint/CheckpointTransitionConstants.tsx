@@ -1,6 +1,6 @@
-// === Module 12423: CheckpointTransitionConstants ===
+// === Module 12393: CheckpointTransitionConstants ===
 
-// Module 12423 (CheckpointTransitionConstants)
+// Module 12393 (CheckpointTransitionConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { delay: 0, duration: 350 };
@@ -25,3 +25,6 @@ export const CHECKPOINT_CHARACTER_EXIT_ZOOM_DURATION_MS = 750;
 export const CHECKPOINT_CHARACTER_EXIT_TEXTURE_TIMEOUT_MS = 2000;
 export const CHECKPOINT_STAT_COUNT_UP_DURATION = 500;
 export const CHECKPOINT_CHARACTER_MOUNT_DELAY = sum;
+export const CHECKPOINT_COMPOSITE_REVEAL_DURATION_MS = 150;
+export const CHECKPOINT_COMPOSITE_REVEAL_EASING = [0, 0, 0.58, 1];
+export const CHECKPOINT_COMPOSITE_LOAD_DEADLINE_MS = 5000;

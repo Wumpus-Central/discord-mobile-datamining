@@ -1,9 +1,9 @@
-// === Module 16590: QuestGameLogotype ===
+// === Module 16413: QuestGameLogotype ===
 
-// Module 16590 (QuestGameLogotype)
+// Module 16413 (QuestGameLogotype)
 import nativeDefault from "native" /* 575 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,9 +14,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const obj = {};
-const merged = Object.assign(fn(5394).springSlow);
+const merged = Object.assign(fn(5396).springSlow);
 obj.overshootClamping = true;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function QuestGameLogotypeTsx1(){let[withSpring,logoDimensionStyles,SPRING_CONFIG]=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};})" };
@@ -94,7 +94,7 @@ export default noop.memo(function QuestGameLogotype(assetUrl) {
   QuestGameLogotypeTsx1.__workletHash = 2309549072991;
   QuestGameLogotypeTsx1.__initData = tmp8;
   const items4 = [assetUrl];
-  const animatedStyle = require("module_1655").useAnimatedStyle(QuestGameLogotypeTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(QuestGameLogotypeTsx1);
   const memo1 = obj.useMemo(() => _undefined.endsWith(".svg"), items4);
   const obj3 = { style: null, children: null };
   const items5 = [animatedStyle, assetUrl.style];
@@ -116,5 +116,5 @@ export default noop.memo(function QuestGameLogotype(assetUrl) {
     tmp14Result = jsx(FastImageDefault, { source: null, style: null, onError: null });
   }
   obj3.children = tmp14Result;
-  return jsx(_modDef1655.View, { style: null, children: null });
+  return jsx(_modDef1653.View, { style: null, children: null });
 });

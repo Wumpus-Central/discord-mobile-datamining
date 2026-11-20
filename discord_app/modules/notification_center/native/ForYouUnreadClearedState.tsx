@@ -1,18 +1,18 @@
-// === Module 18128: ForYouUnreadClearedState ===
+// === Module 17955: ForYouUnreadClearedState ===
 
-// Module 18128 (ForYouUnreadClearedState)
+// Module 17955 (ForYouUnreadClearedState)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import _modDef11575 from "module_11575" /* 11575 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import _modDef11517 from "module_11517" /* 11517 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" }, imageContainer: null, icon: null, headerText: null };
 let size = { width: 48, height: 48, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: nativeDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
 obj2.imageContainer = size;
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef11575, style: tmp.icon, color: tmp.icon.color }), ];
+  items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef11517, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
   const obj5 = { color: "mobile-text-heading-primary", variant: "body-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;

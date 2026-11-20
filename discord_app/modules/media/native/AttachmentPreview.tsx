@@ -1,27 +1,27 @@
-// === Module 11131: AttachmentPreview ===
+// === Module 11073: AttachmentPreview ===
 
-// Module 11131 (AttachmentPreview)
+// Module 11073 (AttachmentPreview)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import FileUtils from "FileUtils" /* 8351 */;
+import native from "native" /* 1186 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import FileUtils from "FileUtils" /* 8350 */;
 import common_Video from "common/Video" /* 9134 */;
-import _modDef11132 from "module_11132" /* 11132 */;
-import _modDef11133 from "module_11133" /* 11133 */;
-import _modDef11134 from "module_11134" /* 11134 */;
-import _modDef11135 from "module_11135" /* 11135 */;
-import _modDef11136 from "module_11136" /* 11136 */;
-import _modDef11137 from "module_11137" /* 11137 */;
-import _modDef11138 from "module_11138" /* 11138 */;
-import _modDef11139 from "module_11139" /* 11139 */;
-import _modDef11140 from "module_11140" /* 11140 */;
-import _modDef11141 from "module_11141" /* 11141 */;
-import _modDef11142 from "module_11142" /* 11142 */;
-import _modDef11143 from "module_11143" /* 11143 */;
-import _modDef11144 from "module_11144" /* 11144 */;
-import _modDef11145 from "module_11145" /* 11145 */;
+import _modDef11074 from "module_11074" /* 11074 */;
+import _modDef11075 from "module_11075" /* 11075 */;
+import _modDef11076 from "module_11076" /* 11076 */;
+import _modDef11077 from "module_11077" /* 11077 */;
+import _modDef11078 from "module_11078" /* 11078 */;
+import _modDef11079 from "module_11079" /* 11079 */;
+import _modDef11080 from "module_11080" /* 11080 */;
+import _modDef11081 from "module_11081" /* 11081 */;
+import _modDef11082 from "module_11082" /* 11082 */;
+import _modDef11083 from "module_11083" /* 11083 */;
+import _modDef11084 from "module_11084" /* 11084 */;
+import _modDef11085 from "module_11085" /* 11085 */;
+import _modDef11086 from "module_11086" /* 11086 */;
+import _modDef11087 from "module_11087" /* 11087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ class AttachmentIcon {
       }
       let tmp2 = obj4[obj.classifyFileName(obj, str)];
       if (tmp2 == null) {
-        tmp2 = _modDef11143;
+        tmp2 = _modDef11085;
       }
       return tmp2;
     }, items);
@@ -91,10 +91,10 @@ function DefaultAttachmentPreview(fileName) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { fileInfoAttachmentPreviewFile: { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: nativeDefault.space.PX_8 }, attachmentFileIcon: { height: 32, width: 24 }, attachmentFileName: { paddingRight: 4, paddingLeft: 4, maxWidth: 136 }, videoIcon: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" } };
 const metroImportDefault = createStyles.createStyles(obj);
-let obj4 = { archive: _modDef11132, acrobat: _modDef11133, ae: _modDef11134, ai: _modDef11135, audio: _modDef11136, code: _modDef11137, document: _modDef11138, image: _modDef11139, photoshop: _modDef11140, sketch: _modDef11141, spreadsheet: _modDef11142, unknown: _modDef11143, video: _modDef11144, webcode: _modDef11145 };
+let obj4 = { archive: _modDef11074, acrobat: _modDef11075, ae: _modDef11076, ai: _modDef11077, audio: _modDef11078, code: _modDef11079, document: _modDef11080, image: _modDef11081, photoshop: _modDef11082, sketch: _modDef11083, spreadsheet: _modDef11084, unknown: _modDef11085, video: _modDef11086, webcode: _modDef11087 };
 let closure_12 = noop.memo(function ImageThumbnail(borderRadius) {
   ({ uri, width, height, style, fileName } = borderRadius);
   const size = { uri, width, height };

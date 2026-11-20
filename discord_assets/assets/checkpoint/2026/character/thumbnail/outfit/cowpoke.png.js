@@ -1,6 +1,6 @@
-// === Module 5967: ? ===
+// === Module 5969: ? ===
 
-// Module 5967
+// Module 5969
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/cowpoke.png.js");

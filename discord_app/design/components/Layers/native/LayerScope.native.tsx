@@ -1,8 +1,8 @@
-// === Module 5370: LayerScope ===
+// === Module 5372: LayerScope ===
 
-// Module 5370 (LayerScope)
-import useInitialValueDefault from "useInitialValue" /* 5371 */;
-import LayerContext from "LayerContext" /* 5372 */;
+// Module 5372 (LayerScope)
+import useInitialValueDefault from "useInitialValue" /* 5373 */;
+import LayerContext from "LayerContext" /* 5374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(5372).LayerContext);
+  const context = noop.useContext(zIndex(5374).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   items = [context];
@@ -40,7 +40,7 @@ function Layer(zIndex) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

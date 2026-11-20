@@ -1,11 +1,11 @@
-// === Module 7245: ConfirmEmailChangeStart ===
+// === Module 7244: ConfirmEmailChangeStart ===
 
-// Module 7245 (ConfirmEmailChangeStart)
-import Text_Text from "Text/Text" /* 5383 */;
+// Module 7244 (ConfirmEmailChangeStart)
+import Text_Text from "Text/Text" /* 5385 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
@@ -32,26 +32,26 @@ export default function ConfirmEmailChangeStart() {
   if (null == stateFromStores) {
     return null;
   } else {
-    const intl = tmp2(1113).intl;
+    const intl = tmp2(1112).intl;
     let obj3 = { oldEmail: stateFromStores.email };
     let obj4 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj5 = { style: tmp.container, children: null };
     let obj6 = { style: tmp.image, source: null };
-    const formatResult = intl.format(tmp2(1113).t.oMFSgi, obj3);
-    obj6.source = navigation(7247);
-    const items1 = [closure_9(navigation(5479), obj6), , , ];
+    const formatResult = intl.format(tmp2(1112).t.oMFSgi, obj3);
+    obj6.source = navigation(7246);
+    const items1 = [closure_9(navigation(5481), obj6), , , ];
     let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl2 = tmp2(1113).intl;
-    obj7.children = intl2.string(tmp2(1113).t.dQ71Wa);
-    items1[1] = closure_9(tmp2(5383).Text, obj7);
+    const intl2 = tmp2(1112).intl;
+    obj7.children = intl2.string(tmp2(1112).t.dQ71Wa);
+    items1[1] = closure_9(tmp2(5385).Text, obj7);
     items1[2] = formatResult.map((children, index) => React6(Text_Text.Text, { style: body.body, variant: "body-sm/medium", color: "text-default", children }, index));
     let obj8 = { style: tmp.button, children: null };
     const obj9 = { text: null, onPress: null, loading: null, grow: true };
-    const intl3 = tmp2(1113).intl;
-    obj9.text = intl3.string(tmp2(1113).t.rXV81H);
+    const intl3 = tmp2(1112).intl;
+    obj9.text = intl3.string(tmp2(1112).t.rXV81H);
     obj9.onPress = tmp7;
     obj9.loading = tmp6[0];
-    obj8.children = closure_9(tmp2(5390).Button, obj9);
+    obj8.children = closure_9(tmp2(5392).Button, obj9);
     items1[3] = closure_9(closure_6, obj8);
     obj5.children = items1;
     obj4.children = closure_10(closure_6, obj5);

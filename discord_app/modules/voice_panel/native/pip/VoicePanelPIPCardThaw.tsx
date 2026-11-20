@@ -1,8 +1,8 @@
-// === Module 11696: VoicePanelPIPCardThaw ===
+// === Module 11638: VoicePanelPIPCardThaw ===
 
-// Module 11696 (VoicePanelPIPCardThaw)
-import _mod1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
+// Module 11638 (VoicePanelPIPCardThaw)
+import _mod1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -108,7 +108,7 @@ export function usePIPCardThaw(cardThaw, arg1) {
       tmp = !closure_1;
     }
     if (tmp) {
-      items = [closure_3, pipCardSize, scale, width, height, 10, _mod1708.scheduleOnRN, finish];
+      items = [closure_3, pipCardSize, scale, width, height, 10, _mod1706.scheduleOnRN, finish];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;
@@ -129,7 +129,7 @@ export function usePIPCardThaw(cardThaw, arg1) {
       VoicePanelPIPCardThawTsx1.__closure = items1;
       VoicePanelPIPCardThawTsx1.__workletHash = 6411568076857;
       VoicePanelPIPCardThawTsx1.__initData = tmp12;
-      _mod1708.scheduleOnUI(VoicePanelPIPCardThawTsx1);
+      _mod1706.scheduleOnUI(VoicePanelPIPCardThawTsx1);
     }
   }, items2);
   const items3 = [finish];

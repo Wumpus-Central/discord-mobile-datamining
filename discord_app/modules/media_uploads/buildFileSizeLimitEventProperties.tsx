@@ -1,6 +1,6 @@
-// === Module 10395: buildFileSizeLimitEventProperties ===
+// === Module 10337: buildFileSizeLimitEventProperties ===
 
-// Module 10395 (buildFileSizeLimitEventProperties)
+// Module 10337 (buildFileSizeLimitEventProperties)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");

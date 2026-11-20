@@ -1,7 +1,7 @@
-// === Module 16155: RestrictedScheduleActionCreators ===
+// === Module 16119: RestrictedScheduleActionCreators ===
 
-// Module 16155 (RestrictedScheduleActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 16119 (RestrictedScheduleActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
         const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
         closure_131_1(closure_131_2[3]).dispatch(obj7);
         c5 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c5 = tmp;
@@ -94,7 +94,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleActionCreators.tsx");
 

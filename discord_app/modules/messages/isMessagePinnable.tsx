@@ -1,12 +1,12 @@
-// === Module 12064: isMessagePinnable ===
+// === Module 12006: isMessagePinnable ===
 
-// Module 12064 (isMessagePinnable)
-import isSystemMessageDefault from "isSystemMessage" /* 6545 */;
+// Module 12006 (isMessagePinnable)
+import isSystemMessageDefault from "isSystemMessage" /* 6547 */;
 import ThreadHooks from "ThreadHooks" /* 6774 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isMessagePinnable.tsx");

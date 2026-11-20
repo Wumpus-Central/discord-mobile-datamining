@@ -1,14 +1,14 @@
-// === Module 18377: ConjureModelSettingsSheet ===
+// === Module 18211: ConjureModelSettingsSheet ===
 
-// Module 18377 (ConjureModelSettingsSheet)
+// Module 18211 (ConjureModelSettingsSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 6875 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import ActionSheet from "ActionSheet" /* 7434 */;
-import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 18378 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 18379 */;
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 6874 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
+import ActionSheet from "ActionSheet" /* 7433 */;
+import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 18212 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 18213 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureConnectionStore from "ConjureConnectionStore" /* 6848 */;
@@ -53,17 +53,17 @@ function ModelSettingsPicker(projectId) {
   [tmp4, tmp5] = useConjureModelSettingsDraftDefault(projectId.tierSettings, callback);
   const obj2 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
   const items3 = [closure_8(ConjureEffortPickerDefault, { settings: tmp4, tiers: modelSettings.tiers, choices: modelSettings.choices, disabled: tmp, onChange: tmp5 }), ];
-  const intl = projectId(1113).intl;
+  const intl = projectId(1112).intl;
   const string = intl.string;
-  const tmp8 = _modDef4089;
+  const tmp8 = _modDef4091;
   if (tmp) {
     let stringResult = string(tmp8.GxpdUR);
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5383).Text, { variant: "body-xs/normal", color: "text-muted", children: stringResult });
+  items3[1] = closure_8(projectId(5385).Text, { variant: "body-xs/normal", color: "text-muted", children: stringResult });
   obj2.children = items3;
-  return closure_9(projectId(5808).Stack, obj2);
+  return closure_9(projectId(5810).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -75,7 +75,7 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef4089["3E7Yc0"]);
+  obj2.title = intl.string(_modDef4091["3E7Yc0"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

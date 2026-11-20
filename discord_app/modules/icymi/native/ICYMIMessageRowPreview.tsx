@@ -1,12 +1,12 @@
-// === Module 18182: ICYMIMessageRowPreview ===
+// === Module 18009: ICYMIMessageRowPreview ===
 
-// Module 18182 (ICYMIMessageRowPreview)
-import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import createStyles from "createStyles" /* 4792 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5453 */;
-import RowGeneratorDefault from "RowGenerator" /* 8550 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 9976 */;
+// Module 18009 (ICYMIMessageRowPreview)
+import util from "util" /* 1112 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import createStyles from "createStyles" /* 4794 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5455 */;
+import RowGeneratorDefault from "RowGenerator" /* 8549 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 9979 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
   if (str === undefined) {
     str = "none";
   }
-  const tmp = messageOptions(5001)();
+  const tmp = messageOptions(5003)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(575).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
@@ -33,7 +33,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return setting2(messageOptions(9977), {
+  return setting2(messageOptions(9980), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -52,7 +52,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     maxHeight
   });
 }
-const MessageEmbedTypes = fn(1072).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1071).MessageEmbedTypes;
 const jsx = fn(21).jsx;
 const memoResult = noop.memo(function MediaOnlyRowPreview(message) {
   message = message.message;
@@ -161,11 +161,11 @@ export const MessageRowPreview = noop.memo(function MessageRowPreview(message) {
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(5406)(message);
+  const tmp3 = merged(5408)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(8552).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8551).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

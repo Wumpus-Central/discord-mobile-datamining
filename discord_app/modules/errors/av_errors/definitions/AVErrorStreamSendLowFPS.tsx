@@ -1,18 +1,18 @@
-// === Module 20168: AVErrorStreamSendLowFPS ===
+// === Module 19988: AVErrorStreamSendLowFPS ===
 
-// Module 20168 (AVErrorStreamSendLowFPS)
-import DurationsDefault from "Durations" /* 1089 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5715 */;
-import AVError from "AVError" /* 5722 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
-import AVErrorContext from "AVErrorContext" /* 20162 */;
-import AVErrorUtils from "AVErrorUtils" /* 20165 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
+// Module 19988 (AVErrorStreamSendLowFPS)
+import DurationsDefault from "Durations" /* 1088 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5717 */;
+import AVError from "AVError" /* 5724 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
+import AVErrorContext from "AVErrorContext" /* 19982 */;
+import AVErrorUtils from "AVErrorUtils" /* 19985 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
 
 require = fn;
-const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
+const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
 let closure_6 = 20 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");

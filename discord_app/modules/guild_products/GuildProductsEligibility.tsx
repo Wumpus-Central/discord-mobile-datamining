@@ -1,12 +1,12 @@
 // === Module 6759: GuildProductsEligibility ===
 
 // Module 6759 (GuildProductsEligibility)
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
 

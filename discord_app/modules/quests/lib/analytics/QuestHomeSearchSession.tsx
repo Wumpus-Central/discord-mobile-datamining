@@ -1,8 +1,8 @@
-// === Module 8317: QuestHomeSearchSession ===
+// === Module 8316: QuestHomeSearchSession ===
 
-// Module 8317 (QuestHomeSearchSession)
-import v1 from "v1" /* 1269 */;
-import SessionUtils from "SessionUtils" /* 8146 */;
+// Module 8316 (QuestHomeSearchSession)
+import v1 from "v1" /* 1268 */;
+import SessionUtils from "SessionUtils" /* 8145 */;
 import size from "module_2" /* 2 */;
 
 let c2 = null;

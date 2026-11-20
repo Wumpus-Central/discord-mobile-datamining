@@ -1,10 +1,10 @@
 // === Module 9286: PremiumMarketingButtonActions ===
 
 // Module 9286 (PremiumMarketingButtonActions)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
-import ProductIds from "ProductIds" /* 8051 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7954 */;
+import ProductIds from "ProductIds" /* 8050 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 8990 */;
 import cta_button from "cta_button" /* 9032 */;
 import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 9287 */;
@@ -15,8 +15,8 @@ import PromotionsStore from "PromotionsStore" /* 9023 */;
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1390).PremiumTypes;
-const Constants = fn(1072);
+const PremiumTypes = fn(1388).PremiumTypes;
+const Constants = fn(1071);
 ({ AnalyticsSections: hasOwnProperty, AnalyticsObjects: closure_6, AnalyticsObjectTypes: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx");

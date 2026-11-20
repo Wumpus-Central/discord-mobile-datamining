@@ -1,12 +1,12 @@
-// === Module 11889: computeGlobalSpoilerDisplay ===
+// === Module 11831: computeGlobalSpoilerDisplay ===
 
-// Module 11889 (computeGlobalSpoilerDisplay)
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 11831 (computeGlobalSpoilerDisplay)
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Permissions: c3, SpoilerRenderSetting: closure_4 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/computeGlobalSpoilerDisplay.tsx");

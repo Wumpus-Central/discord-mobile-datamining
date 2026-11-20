@@ -1,7 +1,7 @@
-// === Module 15596: discord_common/helpers ===
+// === Module 15560: discord_common/helpers ===
 
-// Module 15596 (discord_common/helpers)
-import Constants from "Constants" /* 1083 */;
+// Module 15560 (discord_common/helpers)
+import Constants from "Constants" /* 1082 */;
 import size from "module_2" /* 2 */;
 
 ({ RPCCommands, RPCEvents } = Constants);

@@ -1,12 +1,12 @@
-// === Module 19281: useIsVoicePanelParticipantFocusable ===
+// === Module 19101: useIsVoicePanelParticipantFocusable ===
 
-// Module 19281 (useIsVoicePanelParticipantFocusable)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import participantHasVideo from "participantHasVideo" /* 10677 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+// Module 19101 (useIsVoicePanelParticipantFocusable)
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import participantHasVideo from "participantHasVideo" /* 10619 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ function isVoicePanelParticipantFocusable(c0, c1, id2) {
     }
   }
 }
-const CallConstants = fn(5442);
+const CallConstants = fn(5444);
 ({ isActivityParticipant: closure_6, isStreamParticipant: metroImportDefault, isUserParticipant: closure_8 } = CallConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");

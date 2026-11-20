@@ -1,6 +1,6 @@
-// === Module 15112: GuildActionSheetTypes ===
+// === Module 15076: GuildActionSheetTypes ===
 
-// Module 15112 (GuildActionSheetTypes)
+// Module 15076 (GuildActionSheetTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetTypes.tsx");

@@ -3,7 +3,7 @@
 // Module 9297
 import initialize from "initialize" /* 504 */;
 import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 9298 */;
-import DevSettingsStore from "DevSettingsStore" /* 5386 */;
+import DevSettingsStore from "DevSettingsStore" /* 5388 */;
 
 require = fn;
 const size = fn(2);

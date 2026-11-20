@@ -1,17 +1,17 @@
-// === Module 20067: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 19887: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 20067 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 19887 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
-import BottomSheetModal from "BottomSheetModal" /* 5024 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 20068 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5022 */;
+import BottomSheetModal from "BottomSheetModal" /* 5026 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 }, cancel: { alignSelf: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

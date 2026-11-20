@@ -3,9 +3,9 @@
 // Module 6805 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActivityTypes from "ActivityTypes" /* 5531 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6536 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActivityTypes from "ActivityTypes" /* 5533 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6538 */;
 import conjureServerProject from "conjureServerProject" /* 6719 */;
 import conjureChatTurns from "conjureChatTurns" /* 6807 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 6813 */;
@@ -13,12 +13,12 @@ import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6524 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import IdleStore from "IdleStore" /* 6526 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 import ConjureChatStore from "ConjureChatStore" /* 6806 */;
 import ConjurePagesStore from "ConjurePagesStore" /* 6812 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -77,7 +77,7 @@ function updateActivity(withGracePeriod) {
         let selectedProjectId = null;
         if (null != guildId) {
           selectedProjectId = null;
-          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
+          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE_PROJECT) {
             selectedProjectId = ConjureProjectStore.getSelectedProjectId(guildId);
           }
         }
@@ -303,7 +303,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F91221 */ function() { ... });
+                      let found = prop.filter(/* F89596 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -314,7 +314,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F91222 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F89597 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);
@@ -352,7 +352,7 @@ let closure_22 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -467,7 +467,7 @@ let closure_23 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -534,7 +534,7 @@ let closure_23 = async function _resumeRunningProjects() {
   }
 };
 let closure_2 = ["party"];
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
 let c14 = 300000;
 let c15 = null;
 let c16 = null;

@@ -1,8 +1,8 @@
-// === Module 9891: AppStoreOverlayMediaSize ===
+// === Module 9894: AppStoreOverlayMediaSize ===
 
-// Module 9891 (AppStoreOverlayMediaSize)
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2157 */;
+// Module 9894 (AppStoreOverlayMediaSize)
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,15 +1,15 @@
 // === Module 8989: PremiumPlanPurchasedStore ===
 
 // Module 8989 (PremiumPlanPurchasedStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 8990 */;
-import ActionSheetStore from "ActionSheetStore" /* 5007 */;
+import ActionSheetStore from "ActionSheetStore" /* 5009 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
@@ -20,7 +20,7 @@ export const usePremiumPlanPurchasedStore = obj3;
 export function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1263).batchUpdates(() => {
+  productId(1262).batchUpdates(() => {
     obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
   });
   if (onPaymentStart != null) {

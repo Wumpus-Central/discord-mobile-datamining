@@ -1,10 +1,10 @@
-// === Module 16040: useExplicitContentSettingsOrDefault ===
+// === Module 16004: useExplicitContentSettingsOrDefault ===
 
-// Module 16040 (useExplicitContentSettingsOrDefault)
+// Module 16004 (useExplicitContentSettingsOrDefault)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8112 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8114 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8111 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8113 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
 require = fn;
 const size = fn(2);

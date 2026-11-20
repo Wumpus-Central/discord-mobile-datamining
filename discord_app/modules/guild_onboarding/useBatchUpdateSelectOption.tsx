@@ -1,19 +1,19 @@
-// === Module 11934: useBatchUpdateSelectOption ===
+// === Module 11876: useBatchUpdateSelectOption ===
 
-// Module 11934 (useBatchUpdateSelectOption)
+// Module 11876 (useBatchUpdateSelectOption)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7355 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11935 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7354 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11877 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7352 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7351 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(1082).ChannelNotificationSettingsFlags;
+let closure_6 = fn(1081).ChannelNotificationSettingsFlags;
 let closure_7 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
@@ -125,14 +125,14 @@ export default function useBatchUpdateSelectOption(guildId) {
         const merged = Object.assign(items1.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-          obj.flags = closure_0(1406).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+          obj.flags = closure_0(1404).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
           acc[item] = obj;
           return acc;
         }, {}));
         const merged1 = Object.assign(differenceResult3.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-          obj.flags = closure_0(1406).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+          obj.flags = closure_0(1404).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
           acc[item] = obj;
           return acc;
         }, {}));

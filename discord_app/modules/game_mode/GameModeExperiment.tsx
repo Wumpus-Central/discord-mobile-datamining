@@ -1,7 +1,7 @@
-// === Module 4796: GameModeExperiment ===
+// === Module 4798: GameModeExperiment ===
 
-// Module 4796 (GameModeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 4798 (GameModeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-game-mode", kind: "user", defaultConfig: { enabled: false }, variations: null };

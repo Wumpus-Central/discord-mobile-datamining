@@ -1,9 +1,9 @@
-// === Module 13997: PremiumTier2LogoSmall ===
+// === Module 13966: PremiumTier2LogoSmall ===
 
-// Module 13997 (PremiumTier2LogoSmall)
+// Module 13966 (PremiumTier2LogoSmall)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5356 */;
-import inlineStyles from "inlineStyles" /* 7746 */;
+import useToken from "useToken" /* 5358 */;
+import inlineStyles from "inlineStyles" /* 7745 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

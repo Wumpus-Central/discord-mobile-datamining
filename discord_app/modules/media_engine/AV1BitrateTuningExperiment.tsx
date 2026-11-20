@@ -1,7 +1,7 @@
-// === Module 5685: AV1BitrateTuningExperiment ===
+// === Module 5687: AV1BitrateTuningExperiment ===
 
-// Module 5685 (AV1BitrateTuningExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5687 (AV1BitrateTuningExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-05-av1-bitrate-tuning", kind: "user", defaultConfig: { bitrate: 3500000 }, variations: null };

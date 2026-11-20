@@ -1,6 +1,6 @@
-// === Module 7093: CrunchyrollConnectionConstants ===
+// === Module 7092: CrunchyrollConnectionConstants ===
 
-// Module 7093 (CrunchyrollConnectionConstants)
+// Module 7092 (CrunchyrollConnectionConstants)
 import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
 import size from "module_2" /* 2 */;
 

@@ -2,17 +2,17 @@
 
 // Module 9646 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import FlagUtilsAll from "FlagUtils" /* 1406 */;
-import utils from "utils" /* 5421 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import FlagUtilsAll from "FlagUtils" /* 1404 */;
+import utils from "utils" /* 5423 */;
 import GameFlags from "GameFlags" /* 9647 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2141 */;
+import GameStore from "GameStore" /* 2139 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const RejectionReason = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled", Obscured: "obscured" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx");
@@ -71,13 +71,13 @@ export default function useShouldOpenGameProfileModal(applicationId) {
         }
         tmp19Result = utils;
       }
-      track = track(1256).track;
+      track = track(1255).track;
       GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
       obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const trackResult = track(1256);
+      const trackResult = track(1255);
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId2.gameId };

@@ -1,14 +1,14 @@
-// === Module 13512: SkipHeaderButton ===
+// === Module 13482: SkipHeaderButton ===
 
-// Module 13512 (SkipHeaderButton)
+// Module 13482 (SkipHeaderButton)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import HeaderShared from "HeaderShared" /* 8442 */;
+import util from "util" /* 1112 */;
+import HeaderShared from "HeaderShared" /* 8441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, insideNavigatorButton: { paddingRight: 16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

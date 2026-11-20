@@ -1,16 +1,16 @@
-// === Module 8094: HeaderAvatar ===
+// === Module 8093: HeaderAvatar ===
 
-// Module 8094 (HeaderAvatar)
+// Module 8093 (HeaderAvatar)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -21,7 +21,7 @@ export default function HeaderAvatar(animate) {
   ({ pendingAvatarSrc, style, onPress, size } = animate);
   ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
   if (size === undefined) {
-    size = guildId(1187).AvatarSizes.XXLARGE;
+    size = guildId(1186).AvatarSizes.XXLARGE;
   }
   let flag = animate.animate;
   if (flag === undefined) {
@@ -50,7 +50,7 @@ export default function HeaderAvatar(animate) {
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(8095);
+  const tmp10 = id(8094);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -65,25 +65,25 @@ export default function HeaderAvatar(animate) {
   obj6.guildId = guildId;
   let obj7 = { isMobileOnline, isVROnline, size, status: null, statusStyle: null, streaming: null, animate: null, avatarDecoration: null };
   let tmp14 = null;
-  const obj5 = guildId(8012);
+  const obj5 = guildId(8011);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(8096)(activities);
+  obj7.streaming = tmp9(8095)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj7.animate = flag;
-  obj7.avatarDecoration = tmp10(guildId(8012).getProfilePreviewValue(obj6));
+  obj7.avatarDecoration = tmp10(guildId(8011).getProfilePreviewValue(obj6));
   if (null != onPress) {
     const obj8 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(8084);
+      obj = obj(8083);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -92,14 +92,14 @@ export default function HeaderAvatar(animate) {
       obj10 = { user, guildId };
       const merged2 = Object.assign(obj7);
     }
-    obj8.children = jsx(obj(1187).Avatar, obj10);
-    jsx(obj(6911).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
+    obj8.children = jsx(obj(1186).Avatar, obj10);
+    jsx(obj(6910).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
   } else {
     const obj11 = { ref, style, accessibilityRole: "image", accessible: true };
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(8084);
+      const objResult = obj(8083);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;
@@ -107,8 +107,8 @@ export default function HeaderAvatar(animate) {
       obj13 = { user, guildId };
       const merged5 = Object.assign(obj7);
     }
-    obj11.children = jsx(obj(1187).Avatar, obj13);
+    obj11.children = jsx(obj(1186).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = tmp10(guildId(8012).getProfilePreviewValue(obj6));
+  const tmp10Result = tmp10(guildId(8011).getProfilePreviewValue(obj6));
 };

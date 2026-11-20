@@ -2,7 +2,7 @@
 
 // Module 9698 (CirclePlayIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9699 from "module_9699" /* 9699 */;
 import _mod9700 from "module_9700" /* 9700 */;
 import noop from "module_19" /* 19 */;

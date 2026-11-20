@@ -1,10 +1,10 @@
-// === Module 9805: GameDetectionReportModal ===
+// === Module 9807: GameDetectionReportModal ===
 
-// Module 9805 (GameDetectionReportModal)
+// Module 9807 (GameDetectionReportModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Navigator from "Navigator" /* 6973 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+import util from "util" /* 1112 */;
+import Navigator from "Navigator" /* 6972 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -124,7 +124,7 @@ function ReportContent(applicationId) {
           }, 100);
         },
       hasIcons: null,
-      children: "35620300000000"
+      children: "35620400000000"
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;
@@ -229,7 +229,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

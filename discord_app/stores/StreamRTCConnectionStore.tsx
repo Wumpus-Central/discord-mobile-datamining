@@ -1,28 +1,28 @@
-// === Module 6275: StreamRTCConnectionStore ===
+// === Module 6277: StreamRTCConnectionStore ===
 
-// Module 6275 (StreamRTCConnectionStore)
+// Module 6277 (StreamRTCConnectionStore)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5558 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 6278 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
-import canSpectateDefault from "canSpectate" /* 6320 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7940 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5560 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 6280 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
+import canSpectateDefault from "canSpectate" /* 6322 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7939 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6276).StreamTypes;
+const StreamTypes = fn(6278).StreamTypes;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -296,7 +296,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "r" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
         const item = applyDefault.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);

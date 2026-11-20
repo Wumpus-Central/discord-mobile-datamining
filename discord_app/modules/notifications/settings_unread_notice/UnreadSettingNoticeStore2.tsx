@@ -1,17 +1,17 @@
-// === Module 11786: UnreadSettingNoticeStore2 ===
+// === Module 11728: UnreadSettingNoticeStore2 ===
 
-// Module 11786 (UnreadSettingNoticeStore2)
+// Module 11728 (UnreadSettingNoticeStore2)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 11787 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 11729 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
 function startInterval() {
@@ -122,9 +122,9 @@ function shouldTrackChannel(channelId) {
     return false;
   }
 }
-const UserNotificationSettings = fn(1072).UserNotificationSettings;
-const UnreadSetting = fn(6432).UnreadSetting;
-const constants = fn(1082).ChannelNotificationSettingsFlags;
+const UserNotificationSettings = fn(1071).UserNotificationSettings;
+const UnreadSetting = fn(6434).UnreadSetting;
+const constants = fn(1081).ChannelNotificationSettingsFlags;
 let items = [{ timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE }, , , ];
 let obj = { timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE };
 items[1] = { timeSinceJoin: DurationsDefault.Millis.DAY, sends: 2, viewTime: 2 * DurationsDefault.Millis.MINUTE };

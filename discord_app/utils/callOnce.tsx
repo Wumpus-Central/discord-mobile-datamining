@@ -1,6 +1,6 @@
-// === Module 8250: callOnce ===
+// === Module 8249: callOnce ===
 
-// Module 8250 (callOnce)
+// Module 8249 (callOnce)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/callOnce.tsx");

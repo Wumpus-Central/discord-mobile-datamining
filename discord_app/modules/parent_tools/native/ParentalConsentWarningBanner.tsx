@@ -1,12 +1,12 @@
-// === Module 19199: ParentalConsentWarningBanner ===
+// === Module 19018: ParentalConsentWarningBanner ===
 
-// Module 19199 (ParentalConsentWarningBanner)
+// Module 19018 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import tinycolorDefault from "tinycolor" /* 7966 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8218 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import tinycolorDefault from "tinycolor" /* 7965 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8217 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,14 +15,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(8217).FamilyCenterSubPages;
-const Constants = fn(1072);
+const FamilyCenterSubPages = fn(8216).FamilyCenterSubPages;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + nativeDefault.space.PX_16;
 const locations = [0.5875, 1];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { strip: null, pressable: null, label: null, link: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.strip = rect;

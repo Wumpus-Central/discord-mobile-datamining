@@ -4,7 +4,7 @@
 import PriceUtils from "PriceUtils" /* 6737 */;
 import addDefault from "add" /* 6739 */;
 import _slicedToArray from "module_32" /* 32 */;
-import Record from "Record" /* 1408 */;
+import Record from "Record" /* 1406 */;
 
 require = fn;
 let AvailablePlanRecord;

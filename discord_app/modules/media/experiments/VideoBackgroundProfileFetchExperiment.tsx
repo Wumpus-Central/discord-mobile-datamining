@@ -1,7 +1,7 @@
-// === Module 8089: VideoBackgroundProfileFetchExperiment ===
+// === Module 8088: VideoBackgroundProfileFetchExperiment ===
 
-// Module 8089 (VideoBackgroundProfileFetchExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8088 (VideoBackgroundProfileFetchExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-09-video-background-profile-fetch", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

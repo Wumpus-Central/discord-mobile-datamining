@@ -1,6 +1,6 @@
-// === Module 12117: getPartySize ===
+// === Module 12059: getPartySize ===
 
-// Module 12117 (getPartySize)
+// Module 12059 (getPartySize)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);

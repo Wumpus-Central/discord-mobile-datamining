@@ -1,19 +1,19 @@
-// === Module 13495: ContactSyncUtils ===
+// === Module 13465: ContactSyncUtils ===
 
-// Module 13495 (ContactSyncUtils)
+// Module 13465 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6311 */;
-import ContactSyncManager from "ContactSyncManager" /* 13496 */;
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6313 */;
+import ContactSyncManager from "ContactSyncManager" /* 13466 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6568 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6570 */;
 
 require = fn;
 let closure_18 = async function _uploadContacts(arg0) {
@@ -27,7 +27,7 @@ let closure_18 = async function _uploadContacts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,11 +99,11 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(13494);
+const ContactSyncPersistedStore = fn(13464);
 ({ useContactSyncStore: closure_6, clearDismissState: metroImportDefault, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(13493);
+const ContactSyncConstants = fn(13463);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: closure_10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);
 const error = new Error("No contact permissions");
 const error1 = new Error("No phone number");

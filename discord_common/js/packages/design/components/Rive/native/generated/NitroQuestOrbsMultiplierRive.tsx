@@ -1,8 +1,8 @@
-// === Module 4943: NitroQuestOrbsMultiplierRive ===
+// === Module 4945: NitroQuestOrbsMultiplierRive ===
 
-// Module 4943 (NitroQuestOrbsMultiplierRive)
-import BaseRive from "BaseRive" /* 4861 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4914 */;
+// Module 4945 (NitroQuestOrbsMultiplierRive)
+import BaseRive from "BaseRive" /* 4863 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4916 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

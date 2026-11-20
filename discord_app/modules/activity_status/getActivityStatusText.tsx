@@ -1,15 +1,15 @@
-// === Module 13428: getActivityStatusText ===
+// === Module 13398: getActivityStatusText ===
 
-// Module 13428 (getActivityStatusText)
-import util from "util" /* 1113 */;
-import ActivityTypes from "ActivityTypes" /* 5531 */;
+// Module 13398 (getActivityStatusText)
+import util from "util" /* 1112 */;
+import ActivityTypes from "ActivityTypes" /* 5533 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 6813 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7941 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7940 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8879 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 13429 */;
-import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 13430 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13431 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 13432 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 13399 */;
+import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 13400 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13401 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 13402 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");

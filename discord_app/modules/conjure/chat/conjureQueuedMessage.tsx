@@ -1,6 +1,6 @@
-// === Module 18468: conjureQueuedMessage ===
+// === Module 18293: conjureQueuedMessage ===
 
-// Module 18468 (conjureQueuedMessage)
+// Module 18293 (conjureQueuedMessage)
 import conjureChatConnection from "conjureChatConnection" /* 6865 */;
 import size from "module_2" /* 2 */;
 

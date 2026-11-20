@@ -1,13 +1,13 @@
-// === Module 18334: useConjureProjectServerChange ===
+// === Module 18165: useConjureProjectServerChange ===
 
-// Module 18334 (useConjureProjectServerChange)
+// Module 18165 (useConjureProjectServerChange)
 import conjureServerProject from "conjureServerProject" /* 6719 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
-import conjureChangeRows from "conjureChangeRows" /* 18336 */;
+import conjureChangeRows from "conjureChangeRows" /* 18167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 
@@ -95,7 +95,7 @@ export default function useConjureProjectServerChange(id) {
     closure_1_7(arg0);
     closure_10(null);
   }, []);
-  const items7 = [str, found, conjureRemoveTarget, moving, id];
+  const items7 = [str, found, conjureRemoveTarget, moving, stateFromStores, id];
   const tmp5Result5 = _slicedToArray(target.useState(false), 2);
   return {
     appName: str,
@@ -117,7 +117,7 @@ export default function useConjureProjectServerChange(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -144,15 +144,15 @@ export default function useConjureProjectServerChange(id) {
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj6 = { value: id(tmp36[7]).setConjureProjectServer(id, found.id), done: false };
+                const obj6 = { value: id(tmp50[7]).setConjureProjectServer(id, found.id), done: false };
                 return obj6;
               }
             }
           } else if (1 === tmp7) {
             c3 = 0;
             let message;
-            if (tmp36 != null) {
-              const body = tmp36.body;
+            if (tmp50 != null) {
+              const body = tmp50.body;
               if (body != null) {
                 message = body.message;
               }
@@ -161,12 +161,12 @@ export default function useConjureProjectServerChange(id) {
             if (typeof closure_128_0 === "string") {
               let stringResult = closure_128_0;
             } else {
-              const intl2 = id(tmp36[10]).intl;
-              const tmp59 = tmp3(tmp36[11]);
+              const intl2 = id(tmp50[10]).intl;
+              const tmp68 = tmp3(tmp50[11]);
               if (closure_129_2) {
-                let qDjkvv = tmp59.mdrXGt;
+                let qDjkvv = tmp68.mdrXGt;
               } else {
-                qDjkvv = tmp59.qDjkvv;
+                qDjkvv = tmp68.qDjkvv;
               }
               stringResult = intl2.string(qDjkvv);
             }
@@ -185,8 +185,15 @@ export default function useConjureProjectServerChange(id) {
           } else {
             c3 = 0;
             closure_129_9(false);
-            const intl = id(tmp36[10]).intl;
-            let obj = tmp3(tmp36[11]);
+            let tmp9 = null == closure_129_1;
+            if (!tmp9) {
+              tmp9 = closure_129_2;
+            }
+            if (!tmp9) {
+              tmp3(tmp50[12])(closure_129_1, "added");
+            }
+            const intl = id(tmp50[10]).intl;
+            let obj = tmp3(tmp50[11]);
             if (closure_129_2) {
               let yHhjsi = obj["B+Xtjy"];
             } else {
@@ -196,10 +203,10 @@ export default function useConjureProjectServerChange(id) {
             intl.formatToPlainString(yHhjsi, obj);
             c5 = 3;
           }
-        } catch (tmp36) {
+        } catch (tmp50) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp36;
+            throw tmp50;
           } else {
             c4 = tmp;
           }

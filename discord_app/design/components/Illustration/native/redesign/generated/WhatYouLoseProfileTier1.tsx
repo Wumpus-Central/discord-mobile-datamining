@@ -1,9 +1,9 @@
 // === Module 9228: WhatYouLoseProfileTier1 ===
 
 // Module 9228 (WhatYouLoseProfileTier1)
-import shared from "shared" /* 4799 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import _mod7667 from "module_7667" /* 7667 */;
+import shared from "shared" /* 4801 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import _mod7666 from "module_7666" /* 7666 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx");
 
 export function getWhatYouLoseProfileTier1Source(theme) {
-  return _mod7667.getIllustrationSource(theme, {
+  return _mod7666.getIllustrationSource(theme, {
     dark() {
       return require("module_9229");
     },
@@ -28,7 +28,7 @@ export function getWhatYouLoseProfileTier1Source(theme) {
 }
 export function useWhatYouLoseProfileTier1Source() {
   const obj = shared;
-  return _mod7667.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7666.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
       return require("module_9229");
     },
@@ -42,7 +42,7 @@ export function useWhatYouLoseProfileTier1Source() {
 }
 export function WhatYouLoseProfileTier1(arg0) {
   const obj = shared;
-  const illustrationSource = _mod7667.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7666.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
       return require("module_9229");
     },

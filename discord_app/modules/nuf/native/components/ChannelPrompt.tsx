@@ -1,21 +1,21 @@
-// === Module 13609: ChannelPrompt ===
+// === Module 13579: ChannelPrompt ===
 
-// Module 13609 (ChannelPrompt)
-import util from "util" /* 1113 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+// Module 13579 (ChannelPrompt)
+import util from "util" /* 1112 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4722 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
-let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(5346).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
+const createStyles = fn(4794);
+let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(5348).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");

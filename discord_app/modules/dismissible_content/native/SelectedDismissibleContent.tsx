@@ -1,6 +1,6 @@
-// === Module 11550: SelectedDismissibleContent ===
+// === Module 11492: SelectedDismissibleContent ===
 
-// Module 11550 (SelectedDismissibleContent)
+// Module 11492 (SelectedDismissibleContent)
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 8960 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

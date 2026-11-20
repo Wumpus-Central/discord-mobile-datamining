@@ -1,13 +1,13 @@
-// === Module 13205: EmojiSuggestionBarLarge ===
+// === Module 13175: EmojiSuggestionBarLarge ===
 
-// Module 13205 (EmojiSuggestionBarLarge)
+// Module 13175 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 575 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 4853 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7478 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 11237 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 11256 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13206 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import native from "native" /* 4855 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7477 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 11179 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 11198 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,11 +49,11 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
   EmojiSuggestionBarLargeTsx1.__closure = items1;
   EmojiSuggestionBarLargeTsx1.__workletHash = 10647028871878;
   EmojiSuggestionBarLargeTsx1.__initData = tmp10;
-  const animatedStyle = require("module_1655").useAnimatedStyle(EmojiSuggestionBarLargeTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(EmojiSuggestionBarLargeTsx1);
   let obj2 = { style: null, children: null };
   const items2 = [tmp7.containerLargeWrapper, animatedStyle];
   obj2.style = items2;
-  const tmp8Result2 = require("module_1655");
+  const tmp8Result2 = require("module_1653");
   obj2.children = <c4 style={tmp7.containerLarge} ref={ref} onLayout={onLayout}>{Array.from({ length }, (arg0, index) => {
     if (null == _undefined[index]) {
       const obj = { style: emptySlot.emptySlot };
@@ -74,7 +74,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       return jsx(EmojiSuggestionBarUtils.EmojiEntranceAnimation, { index, reducedMotion, children: null }, EmojiSuggestionBarUtils.getEmojiEntranceKey(tmp, index));
     }
   })}</c4>;
-  return jsx(_modDef1655.View, { style: null, children: null });
+  return jsx(_modDef1653.View, { style: null, children: null });
 }
 function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -86,7 +86,7 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
 const View = fn(17).View;
 const IMAGE_SIZE = fn(8946).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";

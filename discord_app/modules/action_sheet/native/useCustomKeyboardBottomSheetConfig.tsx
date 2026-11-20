@@ -1,11 +1,11 @@
-// === Module 12857: useCustomKeyboardBottomSheetConfig ===
+// === Module 12827: useCustomKeyboardBottomSheetConfig ===
 
-// Module 12857 (useCustomKeyboardBottomSheetConfig)
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 2023 */;
-import useKeyboardType from "useKeyboardType" /* 4979 */;
+// Module 12827 (useCustomKeyboardBottomSheetConfig)
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 2021 */;
+import useKeyboardType from "useKeyboardType" /* 4981 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 const require = globalThis.__r;
 

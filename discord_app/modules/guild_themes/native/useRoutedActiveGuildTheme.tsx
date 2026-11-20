@@ -1,10 +1,10 @@
-// === Module 4967: useRoutedActiveGuildTheme ===
+// === Module 4969: useRoutedActiveGuildTheme ===
 
-// Module 4967 (useRoutedActiveGuildTheme)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
-import RootNavigationRef from "RootNavigationRef" /* 4969 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4994 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 4995 */;
+// Module 4969 (useRoutedActiveGuildTheme)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4970 */;
+import RootNavigationRef from "RootNavigationRef" /* 4971 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4996 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 4997 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -147,7 +147,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const ME = fn(1072).ME;
+const ME = fn(1071).ME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
 

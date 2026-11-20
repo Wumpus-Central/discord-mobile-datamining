@@ -1,23 +1,23 @@
-// === Module 7887: EditGuildEventDetails ===
+// === Module 7886: EditGuildEventDetails ===
 
-// Module 7887 (EditGuildEventDetails)
-import util from "util" /* 1113 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import _modDef2169 from "module_2169" /* 2169 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 7455 */;
-import ScheduleUtils from "ScheduleUtils" /* 7456 */;
+// Module 7886 (EditGuildEventDetails)
+import util from "util" /* 1112 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2018 */;
+import _modDef2167 from "module_2167" /* 2167 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 7454 */;
+import ScheduleUtils from "ScheduleUtils" /* 7455 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(6512).isGuildScheduledEventActive;
-let constants = fn(4647).GuildScheduledEventEntityTypes;
+let closure_6 = fn(6514).isGuildScheduledEventActive;
+let constants = fn(4649).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
@@ -37,28 +37,28 @@ export default function EditGuildEventDetails(guildEvent) {
   const recurrenceRule = guildEvent.recurrenceRule;
   items = [scheduledStartTime];
   ({ name, entityType } = guildEvent);
-  memo = memo.useMemo(() => _modDef2169(scheduledStartTime), items);
+  memo = memo.useMemo(() => _modDef2167(scheduledStartTime), items);
   const items1 = [scheduledEndTime, scheduledStartTime];
   const memo1 = memo.useMemo(() => {
     if (null != scheduledEndTime) {
-      let addResult = _modDef2169(tmp);
+      let addResult = _modDef2167(tmp);
     } else {
-      addResult = _modDef2169(scheduledStartTime).add(1, "hour");
-      const obj = _modDef2169(scheduledStartTime);
+      addResult = _modDef2167(scheduledStartTime).add(1, "hour");
+      const obj = _modDef2167(scheduledStartTime);
     }
     return addResult;
   }, items1);
   const tmp = c11();
-  [c6, c7] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef2169(scheduledStartTime), recurrenceRule)), 2);
+  [c6, c7] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef2167(scheduledStartTime), recurrenceRule)), 2);
   const memo2 = memo.useMemo(() => onChange(scheduledEndTime[6])(), []);
   const items2 = [memo];
   const memo3 = memo.useMemo(() => onChange(scheduledEndTime[6])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"), []);
-  const memo4 = memo.useMemo(() => _modDef2169(memo).add(15, "minutes"), items2);
+  const memo4 = memo.useMemo(() => _modDef2167(memo).add(15, "minutes"), items2);
   const memo5 = memo.useMemo(() => onChange(scheduledEndTime[6])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
   let ref = memo.useRef(null);
   const tmp10 = c6(guildEvent.initialGuildEvent);
   closure_9 = tmp10;
-  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef2169(scheduledStartTime), recurrenceRule)), 2);
+  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef2167(scheduledStartTime), recurrenceRule)), 2);
   [tmp12, c10] = recurrenceRule(memo.useState(null), 2);
   let stringResult = null;
   if (null != scheduledEndTime) {
@@ -105,19 +105,19 @@ export default function EditGuildEventDetails(guildEvent) {
         scheduledEndTime = guildEvent.scheduledEndTime;
         if (0 === guildEvent.name.length) {
           const _Error2 = Error;
-          const intl2 = guildEvent(1113).intl;
-          const error = new Error(intl2.string(guildEvent(1113).t.GoV0uR));
+          const intl2 = guildEvent(1112).intl;
+          const error = new Error(intl2.string(guildEvent(1112).t.GoV0uR));
           throw error;
         } else if (null != scheduledEndTime) {
-          const obj = onChange(2169)(scheduledEndTime);
-          const startOfResult = onChange(2169)(scheduledEndTime).startOf("minute");
+          const obj = onChange(2167)(scheduledEndTime);
+          const startOfResult = onChange(2167)(scheduledEndTime).startOf("minute");
           if (!startOfResult.isAfter(obj3.startOf("minute"))) {
             const _Error = Error;
-            const intl = guildEvent(1113).intl;
-            const error1 = new Error(intl.string(guildEvent(1113).t.LpjF4K));
+            const intl = guildEvent(1112).intl;
+            const error1 = new Error(intl.string(guildEvent(1112).t.LpjF4K));
             throw error1;
           }
-          obj3 = onChange(2169)(tmp);
+          obj3 = onChange(2167)(tmp);
         }
       })(guildEvent);
       navigation.navigate(EditGuildEventUtils.EditGuildEventScreens.PREVIEW);
@@ -160,18 +160,18 @@ export default function EditGuildEventDetails(guildEvent) {
         const intl = util.intl;
         return _undefined2(intl.string(util.t.nKIaRG));
       } else {
-        const startOfResult = _modDef2169(arg0).startOf("minute");
+        const startOfResult = _modDef2167(arg0).startOf("minute");
         const obj2 = { scheduledStartTime: startOfResult.toISOString() };
         let isBeforeResult = null != scheduledEndTime;
         if (isBeforeResult) {
-          const obj4 = _modDef2169(tmp4);
-          isBeforeResult = _modDef2169(tmp4).startOf("minute").isBefore(startOfResult);
-          const startOfResult1 = _modDef2169(tmp4).startOf("minute");
+          const obj4 = _modDef2167(tmp4);
+          isBeforeResult = _modDef2167(tmp4).startOf("minute").isBefore(startOfResult);
+          const startOfResult1 = _modDef2167(tmp4).startOf("minute");
         }
         if (isBeforeResult) {
-          const obj6 = _modDef2169(startOfResult);
-          obj2.scheduledEndTime = _modDef2169(startOfResult).add(1, "hour").toISOString();
-          const addResult = _modDef2169(startOfResult).add(1, "hour");
+          const obj6 = _modDef2167(startOfResult);
+          obj2.scheduledEndTime = _modDef2167(startOfResult).add(1, "hour").toISOString();
+          const addResult = _modDef2167(startOfResult).add(1, "hour");
         }
         let tmp9 = null != arg0;
         if (tmp9) {
@@ -182,7 +182,7 @@ export default function EditGuildEventDetails(guildEvent) {
         }
         _undefined2(null);
         onChange(obj2);
-        const obj = _modDef2169(arg0);
+        const obj = _modDef2167(arg0);
       }
     },
     disabled: tmp10,
@@ -202,8 +202,8 @@ export default function EditGuildEventDetails(guildEvent) {
       date: memo1,
       onChange: function handleChangeEventEndTime(arg0) {
           const obj = { scheduledEndTime: null };
-          const obj2 = _modDef2169(arg0);
-          obj.scheduledEndTime = _modDef2169(arg0).startOf("minute").toISOString();
+          const obj2 = _modDef2167(arg0);
+          obj.scheduledEndTime = _modDef2167(arg0).startOf("minute").toISOString();
           _undefined2(null);
           onChange(obj);
         },

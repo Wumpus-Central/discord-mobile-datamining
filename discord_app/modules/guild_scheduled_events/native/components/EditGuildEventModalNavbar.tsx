@@ -1,13 +1,13 @@
-// === Module 7476: EditGuildEventModalNavbar ===
+// === Module 7475: EditGuildEventModalNavbar ===
 
-// Module 7476 (EditGuildEventModalNavbar)
-import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6898 */;
-import HeaderActionButton from "HeaderActionButton" /* 6910 */;
-import _modDef6913 from "module_6913" /* 6913 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 7455 */;
+// Module 7475 (EditGuildEventModalNavbar)
+import util from "util" /* 1112 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
+import HeaderActionButton from "HeaderActionButton" /* 6909 */;
+import _modDef6912 from "module_6912" /* 6912 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 7454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28 }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
@@ -45,7 +45,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj5.onPress = screen.onClose;
-  obj5.source = _modDef6913;
+  obj5.source = _modDef6912;
   obj5.style = tmp.rightButton;
   obj4.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
   items1[2] = hasOwnProperty(View, obj4);

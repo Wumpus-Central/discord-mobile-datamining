@@ -1,12 +1,12 @@
-// === Module 5526: useGuildIdForChannelRoute ===
+// === Module 5528: useGuildIdForChannelRoute ===
 
-// Module 5526 (useGuildIdForChannelRoute)
+// Module 5528 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
-import FavoriteStore from "FavoriteStore" /* 4644 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import FavoriteStore from "FavoriteStore" /* 4646 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 require = fn;
-const FAVORITES = fn(1072).FAVORITES;
+const FAVORITES = fn(1071).FAVORITES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 

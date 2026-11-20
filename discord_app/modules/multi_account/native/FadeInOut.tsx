@@ -1,6 +1,6 @@
-// === Module 18005: FadeInOut ===
+// === Module 17832: FadeInOut ===
 
-// Module 18005 (FadeInOut)
+// Module 17832 (FadeInOut)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,8 +17,8 @@ export default function FadeInOut(duration) {
   let ref1;
   noop = undefined;
   ({ children, style, ref } = duration);
-  const sharedValue = require("module_1655").useSharedValue(0);
-  let obj = require("module_1655");
+  const sharedValue = require("module_1653").useSharedValue(0);
+  let obj = require("module_1653");
   const tmp = ref1;
   items = [closure_5, sharedValue];
   _require = undefined;
@@ -33,7 +33,7 @@ export default function FadeInOut(duration) {
   FadeInOutTsx1.__closure = items1;
   FadeInOutTsx1.__workletHash = 15661759270347;
   FadeInOutTsx1.__initData = tmp3;
-  const animatedStyle = require("module_1655").useAnimatedStyle(FadeInOutTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(FadeInOutTsx1);
   ref1 = noop.useRef(null);
   const items2 = [ref1];
   noop = noop.useCallback(() => {

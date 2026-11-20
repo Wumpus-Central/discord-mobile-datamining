@@ -1,7 +1,7 @@
-// === Module 18731: useConjureDebugAgentState ===
+// === Module 18555: useConjureDebugAgentState ===
 
-// Module 18731 (useConjureDebugAgentState)
-import conjureDebugConnection from "conjureDebugConnection" /* 6869 */;
+// Module 18555 (useConjureDebugAgentState)
+import conjureDebugConnection from "conjureDebugConnection" /* 6868 */;
 import noop from "module_19" /* 19 */;
 import ConjureChatStore from "ConjureChatStore" /* 6806 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 6849 */;

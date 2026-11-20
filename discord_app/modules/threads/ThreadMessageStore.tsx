@@ -1,18 +1,18 @@
-// === Module 8347: ThreadMessageStore ===
+// === Module 8346: ThreadMessageStore ===
 
-// Module 8347 (ThreadMessageStore)
+// Module 8346 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 1072 */;
-import ThreadConstants from "ThreadConstants" /* 1112 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5845 */;
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import MessageRecord from "MessageRecord" /* 4735 */;
-import UserRecord from "UserRecord" /* 1407 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
+import Constants from "Constants" /* 1071 */;
+import ThreadConstants from "ThreadConstants" /* 1111 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import MessageRecord from "MessageRecord" /* 4737 */;
+import UserRecord from "UserRecord" /* 1405 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
 import size from "module_2" /* 2 */;
 
 function updateState(type, fn) {

@@ -1,15 +1,15 @@
-// === Module 7169: MemberVerificationActionCreators ===
+// === Module 7168: MemberVerificationActionCreators ===
 
-// Module 7169 (MemberVerificationActionCreators)
+// Module 7168 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5512 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5514 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4697 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import InviteStore from "InviteStore" /* 5511 */;
-import UserStore from "UserStore" /* 1388 */;
+import ImpersonateStore from "ImpersonateStore" /* 4699 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import InviteStore from "InviteStore" /* 5513 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 let closure_10 = async function _fetchVerificationForm() {
@@ -70,7 +70,7 @@ let closure_11 = async function _updateVerificationForm(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ let closure_11 = async function _updateVerificationForm(arg0) {
           obj7.form = obj8;
           closure_133_1(closure_133_2[8]).dispatch(obj7);
           c7 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp6) {
         c7 = tmp;
@@ -136,7 +136,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
           obj7.form = obj8;
           closure_131_1(closure_131_2[8]).dispatch(obj7);
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp6) {
         c5 = tmp;
@@ -202,7 +202,7 @@ let closure_13 = async function _enableVerificationForm(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ let closure_13 = async function _enableVerificationForm(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -255,7 +255,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -296,7 +296,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           const obj7 = { memberOptions: { isPending: false } };
           const result = closure_133_0(closure_133_2[10]).updateImpersonatedData(closure_132_0, obj7);
           c9 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } else {
           c7 = 1;
           const HTTP = closure_133_0(closure_133_2[6]).HTTP;
@@ -387,7 +387,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationActionCreators.tsx");

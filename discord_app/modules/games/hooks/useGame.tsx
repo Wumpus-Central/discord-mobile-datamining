@@ -1,15 +1,15 @@
 // === Module 8933: useGame ===
 
 // Module 8933 (useGame)
-import DurationsDefault from "Durations" /* 1089 */;
+import DurationsDefault from "Durations" /* 1088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2141 */;
+import GameStore from "GameStore" /* 2139 */;
 
 const require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1072).QueryIds.GAME,
+  getQueryId: fn(1071).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(nextResult) {
     if (null == nextResult) {

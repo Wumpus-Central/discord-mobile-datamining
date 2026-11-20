@@ -1,11 +1,11 @@
-// === Module 14265: ChannelOverflowMenu ===
+// === Module 14235: ChannelOverflowMenu ===
 
-// Module 14265 (ChannelOverflowMenu)
-import util from "util" /* 1113 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 6903 */;
-import ContextMenu from "ContextMenu" /* 8539 */;
-import IconActionButtonDefault from "IconActionButton" /* 14266 */;
-import useAppChannelOverflowMenuItemsDefault from "useAppChannelOverflowMenuItems" /* 14267 */;
+// Module 14235 (ChannelOverflowMenu)
+import util from "util" /* 1112 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 6902 */;
+import ContextMenu from "ContextMenu" /* 8538 */;
+import IconActionButtonDefault from "IconActionButton" /* 14236 */;
+import useAppChannelOverflowMenuItemsDefault from "useAppChannelOverflowMenuItems" /* 14237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function ChannelOverflowMenuButton(items) {
 function AppChannelOverflowMenu(channel) {
   return <ChannelOverflowMenuButton items={useAppChannelOverflowMenuItemsDefault(channel.channel)} />;
 }
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelOverflowMenu.tsx");

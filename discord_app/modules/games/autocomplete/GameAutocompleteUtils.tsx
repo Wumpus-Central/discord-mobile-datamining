@@ -1,6 +1,6 @@
-// === Module 8768: GameAutocompleteUtils ===
+// === Module 8706: GameAutocompleteUtils ===
 
-// Module 8768 (GameAutocompleteUtils)
+// Module 8706 (GameAutocompleteUtils)
 import GameWidgetLimits from "GameWidgetLimits" /* 6841 */;
 import size from "module_2" /* 2 */;
 

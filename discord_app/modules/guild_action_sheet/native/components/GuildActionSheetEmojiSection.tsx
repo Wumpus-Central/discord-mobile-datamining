@@ -1,28 +1,28 @@
-// === Module 15118: GuildActionSheetEmojiSection ===
+// === Module 15082: GuildActionSheetEmojiSection ===
 
-// Module 15118 (GuildActionSheetEmojiSection)
+// Module 15082 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 575 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5009 */;
-import ToastUtils from "ToastUtils" /* 5473 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10397 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5011 */;
+import ToastUtils from "ToastUtils" /* 5475 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
-import UserStore from "UserStore" /* 1388 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ UpsellTypes: closure_9, AnalyticsSections: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.dotSeparator = size;

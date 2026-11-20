@@ -1,11 +1,11 @@
-// === Module 6512: GuildScheduledEventStore ===
+// === Module 6514: GuildScheduledEventStore ===
 
-// Module 6512 (GuildScheduledEventStore)
+// Module 6514 (GuildScheduledEventStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
 
 function scheduledEventSort(status) {
   ({ id, scheduled_start_time } = status);
@@ -168,7 +168,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(4647);
+const GuildScheduledEventsConstants = fn(4649);
 ({ GuildScheduledEventStatus: closure_4, GuildScheduledEventStatusDone: hasOwnProperty, GuildScheduledEventUserResponses: closure_6 } = GuildScheduledEventsConstants);
 const StaticGuildEventIndexes = {
   EVENT: "event",
@@ -193,7 +193,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   }
 };
-const secondaryIndexMap = new fn(4719).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4721).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   items = [guild_id];
   if (null != entity_id) {

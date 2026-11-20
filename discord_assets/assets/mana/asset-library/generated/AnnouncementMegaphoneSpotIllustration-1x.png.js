@@ -1,6 +1,6 @@
-// === Module 20005: ? ===
+// === Module 19825: ? ===
 
-// Module 20005
+// Module 19825
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-1x.png.js");

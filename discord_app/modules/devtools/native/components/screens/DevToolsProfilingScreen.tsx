@@ -1,13 +1,13 @@
-// === Module 17134: DevToolsProfilingScreen ===
+// === Module 16958: DevToolsProfilingScreen ===
 
-// Module 17134 (DevToolsProfilingScreen)
+// Module 16958 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import ComponentProfiler from "ComponentProfiler" /* 11116 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 17135 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import ComponentProfiler from "ComponentProfiler" /* 11058 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 16959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,14 +18,14 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
 obj3.padding = 16;
 obj2.container = obj3;
-obj2.monospace = { fontFamily: fn(1072).Fonts.CODE_BOLD };
+obj2.monospace = { fontFamily: fn(1071).Fonts.CODE_BOLD };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx");

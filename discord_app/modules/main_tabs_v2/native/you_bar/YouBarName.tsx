@@ -1,21 +1,21 @@
-// === Module 18015: YouBarName ===
+// === Module 17842: YouBarName ===
 
-// Module 18015 (YouBarName)
+// Module 17842 (YouBarName)
 import nativeDefault from "native" /* 575 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9334 */;
 import GuildTagDefault from "GuildTag" /* 9623 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12707 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13419 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 13420 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 18016 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12677 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13389 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 13390 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17843 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 require = fn;
 function Username(userId) {
@@ -29,7 +29,7 @@ function Username(userId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 }, statusEmoji: { width: 16, height: 16 }, usernameRow: { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 }, username: { flexShrink: 1 }, guildTag: { marginLeft: 2, flexShrink: 0 }, statusText: { flexShrink: 1 } };
 let closure_14 = createStyles.createStyles(obj);
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_4 };
@@ -65,7 +65,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(13417), obj6);
+    let tmp9Result = closure_11(stateFromStores(13387), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -74,18 +74,18 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(13435), obj7);
+      tmp11Result2 = closure_11(stateFromStores(13405), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(4848).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(4848);
+      humanizeStatusResult = tmp2(4850).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(4850);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5383).Text, obj8);
+    items3[1] = closure_11(tmp2(5385).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

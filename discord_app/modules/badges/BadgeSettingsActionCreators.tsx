@@ -1,6 +1,6 @@
-// === Module 15769: BadgeSettingsActionCreators ===
+// === Module 15733: BadgeSettingsActionCreators ===
 
-// Module 15769 (BadgeSettingsActionCreators)
+// Module 15733 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 

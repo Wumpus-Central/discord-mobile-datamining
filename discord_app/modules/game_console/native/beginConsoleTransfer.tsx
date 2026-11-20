@@ -1,8 +1,8 @@
-// === Module 10955: beginConsoleTransfer ===
+// === Module 10897: beginConsoleTransfer ===
 
-// Module 10955 (beginConsoleTransfer)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10956 */;
-import transferToXboxDefault from "transferToXbox" /* 10969 */;
+// Module 10897 (beginConsoleTransfer)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10898 */;
+import transferToXboxDefault from "transferToXbox" /* 10911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp35) {
       c5 = tmp;
       throw tmp35;
@@ -90,7 +90,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
   }
 };
 const items = [, ];
-({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1072).PlatformTypes);
+({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1071).PlatformTypes);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");

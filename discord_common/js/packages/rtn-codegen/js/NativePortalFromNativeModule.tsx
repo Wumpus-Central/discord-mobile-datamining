@@ -1,6 +1,6 @@
-// === Module 9905: NativePortalFromNativeModule ===
+// === Module 9908: NativePortalFromNativeModule ===
 
-// Module 9905 (NativePortalFromNativeModule)
+// Module 9908 (NativePortalFromNativeModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

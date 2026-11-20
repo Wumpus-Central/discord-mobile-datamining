@@ -1,11 +1,35 @@
-// === Module 18292: conjurePreviewTargets ===
+// === Module 18116: conjurePreviewTargets ===
 
-// Module 18292 (conjurePreviewTargets)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 18287 */;
+// Module 18116 (conjurePreviewTargets)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 12175 */;
+import slugConjureChannelNameDefault from "slugConjureChannelName" /* 18117 */;
 import size from "module_2" /* 2 */;
 
+function getPreviewTargetLabel(string) {
+  const mode = string.mode;
+  if ("frame" === mode) {
+    if (null == string.appChannel) {
+      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface);
+    } else {
+      const intl4 = util.intl;
+      const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface), channel: string.appChannel };
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4091["6xVl+N"], obj);
+    }
+    return previewFrameSurfaceLabel;
+  } else if ("widget" === mode) {
+    const intl3 = util.intl;
+    return intl3.string(_modDef4091.y5GiL1);
+  } else if ("overlay" === mode) {
+    const intl2 = util.intl;
+    return intl2.string(_modDef4091["2940LX"]);
+  } else if ("bot" === mode) {
+    const intl = util.intl;
+    return intl.string(_modDef4091.tjpaGN);
+  }
+}
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
 
 export function previewTargets(modes, frameSurfaceOptions) {
@@ -61,26 +85,25 @@ export function activePreviewTarget(activeMode, frameSurface) {
     const obj = { mode: activeMode, surface: frameSurface, appChannel: tmp };
   }
 }
-export function getPreviewTargetLabel(string) {
-  const mode = string.mode;
-  if ("frame" === mode) {
-    if (null == string.appChannel) {
-      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface);
-    } else {
-      const intl4 = util.intl;
-      const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface), channel: string.appChannel };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4089["6xVl+N"], obj);
-    }
-    return previewFrameSurfaceLabel;
-  } else if ("widget" === mode) {
-    const intl3 = util.intl;
-    return intl3.string(_modDef4089.y5GiL1);
-  } else if ("overlay" === mode) {
-    const intl2 = util.intl;
-    return intl2.string(_modDef4089["2940LX"]);
-  } else if ("bot" === mode) {
+export { getPreviewTargetLabel };
+export function getPreviewTabLabel(mode, arg1) {
+  if ("bot" === mode.mode) {
     const intl = util.intl;
-    return intl.string(_modDef4089.tjpaGN);
+    return intl.string(_modDef4091.gThNz6);
+  } else {
+    if ("frame" === mode.mode) {
+      if (mode.surface === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL) {
+        let appChannel = mode.appChannel;
+        if (appChannel == null) {
+          appChannel = slugConjureChannelNameDefault(arg1);
+        }
+        if ("" !== appChannel) {
+          const _HermesInternal = HermesInternal;
+          return "#" + appChannel;
+        }
+      }
+    }
+    return getPreviewTargetLabel(mode);
   }
 }
 export function selectPreviewTarget(mode, fn, fn2, fn3) {

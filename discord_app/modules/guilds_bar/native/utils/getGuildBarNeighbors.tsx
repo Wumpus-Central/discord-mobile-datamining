@@ -1,16 +1,16 @@
-// === Module 17959: getGuildBarNeighbors ===
+// === Module 17786: getGuildBarNeighbors ===
 
-// Module 17959 (getGuildBarNeighbors)
-import GuildsTree from "GuildsTree" /* 6433 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
+// Module 17786 (getGuildBarNeighbors)
+import GuildsTree from "GuildsTree" /* 6435 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
 
-export default function getGuildBarNeighbors(arg0) {
+export default function getGuildBarNeighbors(targetId) {
   const guildsTree = SortedGuildStore.getGuildsTree();
-  const node = guildsTree.getNode(arg0);
+  const node = guildsTree.getNode(targetId);
   if (null != node) {
     if (node.type === GuildsTree.GuildsNodeType.GUILD) {
       if (null != node.parentId) {

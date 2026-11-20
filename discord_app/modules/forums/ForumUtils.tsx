@@ -1,11 +1,11 @@
-// === Module 8386: ForumUtils ===
+// === Module 8385: ForumUtils ===
 
-// Module 8386 (ForumUtils)
-import util from "util" /* 1113 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4650 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
+// Module 8385 (ForumUtils)
+import util from "util" /* 1112 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 4652 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
 
 require = fn;
 function getCreationDefaultFormatter() {
@@ -14,8 +14,8 @@ function getCreationDefaultFormatter() {
   time.month = intl.string(util.t["nBNJ/L"]);
   return time;
 }
-const ForumTimestampFormats = fn(8387).ForumTimestampFormats;
-const ChannelFlags = fn(4648).ChannelFlags;
+const ForumTimestampFormats = fn(8386).ForumTimestampFormats;
+const ChannelFlags = fn(4650).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");
 

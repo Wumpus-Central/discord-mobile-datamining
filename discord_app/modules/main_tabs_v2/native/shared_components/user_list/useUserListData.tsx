@@ -3,20 +3,20 @@
 // Module 9528 (useUserListData)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1113 */;
-import GuildUtilsDefault from "GuildUtils" /* 6558 */;
-import UserSearchItemsDefault from "UserSearchItems" /* 8240 */;
-import UserSearchUtils from "UserSearchUtils" /* 8242 */;
+import util from "util" /* 1112 */;
+import GuildUtilsDefault from "GuildUtils" /* 6560 */;
+import UserSearchItemsDefault from "UserSearchItems" /* 8239 */;
+import UserSearchUtils from "UserSearchUtils" /* 8241 */;
 import UserSearchManagerDefault from "UserSearchManager" /* 9529 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 8243 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8241 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import UserRecord from "UserRecord" /* 1407 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 8242 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8240 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import UserRecord from "UserRecord" /* 1405 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -228,7 +228,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   HermesBuiltin.arraySpread(items9, 8);
   return items10;
 }
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 let items = [, , , ];
 ({ FRIEND: arr[0], SUGGESTION: arr[1], PENDING_INCOMING: arr[2], PENDING_OUTGOING: arr[3] } = RelationshipTypes);
 const set = new Set(items);

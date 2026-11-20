@@ -1,9 +1,9 @@
-// === Module 10549: IosAttributionImpressionRegistry ===
+// === Module 10491: IosAttributionImpressionRegistry ===
 
-// Module 10549 (IosAttributionImpressionRegistry)
+// Module 10491 (IosAttributionImpressionRegistry)
 import LoggerDefault from "Logger" /* 3 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 10547 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 10551 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 10489 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 10493 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -83,7 +83,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
             const result = closure_130_0(closure_130_1[4]).trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.NO_FRAMEWORK, closure_129_2);
             closure_130_7(closure_129_0, closure_129_3);
             c4 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else {
             const obj8 = { metadataSealed: closure_129_1, impressionId: closure_129_0, specs: null, signal: null };
             items = [closure_129_4];
@@ -181,7 +181,7 @@ let closure_10 = async function _getImpressionToken(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -252,7 +252,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -307,7 +307,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -337,9 +337,9 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   return iter;
 };
 let obj = {};
-let obj2 = { viewThroughSpec: { kind: fn(10550).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
-obj[fn(10550).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
-let obj3 = { kind: fn(10550).IosAttributionFramework.AD_ATTRIBUTION_KIT };
+let obj2 = { viewThroughSpec: { kind: fn(10492).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
+obj[fn(10492).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
+let obj3 = { kind: fn(10492).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);

@@ -1,15 +1,15 @@
 // === Module 9449: useOrderSigning ===
 
 // Module 9449 (useOrderSigning)
-import BillingUtils from "BillingUtils" /* 4605 */;
-import BillingErrorDefault from "BillingError" /* 6230 */;
+import BillingUtils from "BillingUtils" /* 4607 */;
+import BillingErrorDefault from "BillingError" /* 6232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: closure_6 } = noop);
-const OrderStatus = fn(5509).OrderStatus;
+const OrderStatus = fn(5511).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
@@ -70,7 +70,7 @@ export function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

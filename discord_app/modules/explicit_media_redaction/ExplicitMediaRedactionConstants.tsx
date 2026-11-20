@@ -1,7 +1,7 @@
-// === Module 8108: ExplicitMediaRedactionConstants ===
+// === Module 8107: ExplicitMediaRedactionConstants ===
 
-// Module 8108 (ExplicitMediaRedactionConstants)
-import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
+// Module 8107 (ExplicitMediaRedactionConstants)
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1093 */;
 import size from "module_2" /* 2 */;
 
 const items = [MessageEmbedTypes.MessageEmbedTypes.IMAGE, MessageEmbedTypes.MessageEmbedTypes.VIDEO, MessageEmbedTypes.MessageEmbedTypes.GIFV];

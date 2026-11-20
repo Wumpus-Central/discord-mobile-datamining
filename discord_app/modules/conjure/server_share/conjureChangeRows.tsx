@@ -1,9 +1,9 @@
-// === Module 18336: conjureChangeRows ===
+// === Module 18167: conjureChangeRows ===
 
-// Module 18336 (conjureChangeRows)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6501 */;
+// Module 18167 (conjureChangeRows)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
 import size from "module_2" /* 2 */;
 
 function conjureLeaveServerRows(canRemoveBot) {
@@ -11,7 +11,7 @@ function conjureLeaveServerRows(canRemoveBot) {
     return [];
   } else {
     const intl = util.intl;
-    const tmp5 = _modDef4089;
+    const tmp5 = _modDef4091;
     if (canRemoveBot.canRemoveBot) {
       let PDLHwR = tmp5["cU/7df"];
       let tmp = importDefault;
@@ -30,7 +30,7 @@ function conjureLeaveServerRows(canRemoveBot) {
       const obj3 = { key: "channels", text: null };
       const intl2 = util.intl;
       const obj4 = { channels: listFormat.format(channelNames.map((item) => "#" + item)) };
-      obj3.text = intl2.formatToPlainString(tmp(4089).DbZ8af, obj4);
+      obj3.text = intl2.formatToPlainString(tmp(4091).DbZ8af, obj4);
       items.push(obj3);
       const formatResult = listFormat.format(channelNames.map((item) => "#" + item));
     }
@@ -42,11 +42,11 @@ const result = size.fileFinishedImporting("modules/conjure/server_share/conjureC
 export function conjureShareRows(stateFromStores, name) {
   const obj = { key: "bots", text: null };
   const intl = util.intl;
-  obj.text = intl.string(_modDef4089.eSpjGV);
+  obj.text = intl.string(_modDef4091.eSpjGV);
   items = [obj, ];
   const obj2 = { key: "location", text: null };
   const intl2 = util.intl;
-  obj2.text = intl2.formatToPlainString(_modDef4089.c3xGbr, { server: name });
+  obj2.text = intl2.formatToPlainString(_modDef4091.c3xGbr, { server: name });
   items[1] = obj2;
   let prop;
   if (stateFromStores != null) {
@@ -67,7 +67,7 @@ export function conjureShareRows(stateFromStores, name) {
   if (!usesPreviewAppResult) {
     const obj4 = { key: "test_app", text: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef4089["+5f47F"]);
+    obj4.text = intl3.string(_modDef4091["+5f47F"]);
     items.push(obj4);
   }
   let supported_surfaces;
@@ -89,35 +89,35 @@ export function conjureShareRows(stateFromStores, name) {
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET)) {
     const obj5 = { key: "profile_widget", text: null };
     const intl4 = util.intl;
-    obj5.text = intl4.string(_modDef4089.u6ckHo);
+    obj5.text = intl4.string(_modDef4091.u6ckHo);
     items.push(obj5);
   }
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.OVERLAY)) {
     const obj6 = { key: "overlay", text: null };
     const intl5 = util.intl;
-    obj6.text = intl5.string(_modDef4089.UZHlmt);
+    obj6.text = intl5.string(_modDef4091.UZHlmt);
     items.push(obj6);
   }
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD)) {
     const obj7 = { key: "automod", text: null };
     const intl6 = util.intl;
-    obj7.text = intl6.string(_modDef4089.IPtiUf);
+    obj7.text = intl6.string(_modDef4091.IPtiUf);
     items.push(obj7);
   }
   const obj8 = { key: "collaboration", text: null };
   const intl7 = util.intl;
-  obj8.text = intl7.string(_modDef4089["s3/5nF"]);
+  obj8.text = intl7.string(_modDef4091["s3/5nF"]);
   items.push(obj8);
   return items;
 }
 export function conjureMoveRows(stateFromStores, target, name) {
   const obj = { key: "server", text: null };
   const intl = util.intl;
-  obj.text = intl.formatToPlainString(_modDef4089.YFZDXO, { server: name });
+  obj.text = intl.formatToPlainString(_modDef4091.YFZDXO, { server: name });
   items = [obj, ...conjureLeaveServerRows(target)];
   const obj3 = { key: "settings", text: null };
   const intl2 = util.intl;
-  obj3.text = intl2.string(_modDef4089.F058cu);
+  obj3.text = intl2.string(_modDef4091.F058cu);
   items[tmp4] = obj3;
   const prop = stateFromStores.collaborator_role_ids;
   let num;
@@ -130,7 +130,7 @@ export function conjureMoveRows(stateFromStores, target, name) {
   if (num > 0) {
     const obj4 = { key: "collaboration", text: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef4089.SDpkkt);
+    obj4.text = intl3.string(_modDef4091.SDpkkt);
     items.push(obj4);
   }
   return items;
@@ -144,7 +144,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (usesPreviewAppResult) {
     const obj2 = { key: "test_app", text: null };
     const intl = util.intl;
-    obj2.text = intl.string(_modDef4089.jKXaUH);
+    obj2.text = intl.string(_modDef4091.jKXaUH);
     arr.push(obj2);
   }
   const supported_surfaces = preview_app_chosen.supported_surfaces;
@@ -155,7 +155,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (true === hasItem) {
     const obj3 = { key: "profile_widget", text: null };
     const intl2 = util.intl;
-    obj3.text = intl2.string(_modDef4089.HHZxrL);
+    obj3.text = intl2.string(_modDef4091.HHZxrL);
     arr.push(obj3);
   }
   const supported_surfaces2 = preview_app_chosen.supported_surfaces;
@@ -166,22 +166,22 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (true === hasItem1) {
     const obj4 = { key: "overlay", text: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef4089.rVTFDs);
+    obj4.text = intl3.string(_modDef4091.rVTFDs);
     arr.push(obj4);
   }
   if (tmpResult.isProjectGuildCollaborationEnabled(preview_app_chosen)) {
     const obj5 = { key: "collaboration", text: null };
     const intl4 = util.intl;
-    obj5.text = intl4.string(_modDef4089["+a1lOS"]);
+    obj5.text = intl4.string(_modDef4091["+a1lOS"]);
     arr.push(obj5);
   }
   const obj6 = { key: "only_you", text: null };
   const intl5 = util.intl;
-  obj6.text = intl5.string(_modDef4089.TrTx1Z);
+  obj6.text = intl5.string(_modDef4091.TrTx1Z);
   arr.push(obj6);
   const obj7 = { key: "location", text: null };
   const intl6 = util.intl;
-  obj7.text = intl6.string(_modDef4089["GC/COK"]);
+  obj7.text = intl6.string(_modDef4091["GC/COK"]);
   arr.push(obj7);
   return arr;
 }

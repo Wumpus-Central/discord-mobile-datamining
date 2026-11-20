@@ -1,10 +1,10 @@
-// === Module 17341: HeroBlockHeader ===
+// === Module 17168: HeroBlockHeader ===
 
-// Module 17341 (HeroBlockHeader)
+// Module 17168 (HeroBlockHeader)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import QuestContent from "QuestContent" /* 6442 */;
-import QuestUtils from "QuestUtils" /* 9833 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import QuestContent from "QuestContent" /* 6444 */;
+import QuestUtils from "QuestUtils" /* 9835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,12 +13,12 @@ function onTapEarnOrbs() {
   obj.openQuestHome({ mergeExistingRoutes: true, fromContent: QuestContent.QuestContent.ORBS_SHOP_HERO_CTA });
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, UserSettingsSections: hasOwnProperty, VerticalGradient: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const result = 0.75 * fn(9425).COLLECTIBLES_SHOP_CARD_WIDTH;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { heroBannerContainer: null, heroBannerImage: { width: "100%", height: "100%", resizeMode: "cover" }, orbsBackgroundGradient: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, fadeOutGradient: { position: "absolute", bottom: 0, height: "50%", width: "100%", zIndex: 1 }, heroInfoContainer: { display: "flex", justifyContent: "center", flex: 1, minWidth: "100%", maxHeight: 240, aspectRatio: 2.2 }, innerContainer: null, heroLogoContainer: null, heroLogo: null, heroViewAllIcon: null, orbsInnerContainer: null, orbsTitle: null };
 const rect = { position: "absolute", top: 0, left: 0, width: "100%", maxHeight: 240 + result, aspectRatio: 1.4883720930232558 };
 obj2.heroBannerContainer = rect;
@@ -37,21 +37,21 @@ const result1 = size.fileFinishedImporting("modules/collectibles/native/HeroBloc
 export default function HeroBlockHeader(heroBlock) {
   heroBlock = heroBlock.heroBlock;
   const category = heroBlock.category;
-  dependencyMap = heroBlock(1502).useNavigation();
-  let obj = heroBlock(1502);
+  dependencyMap = heroBlock(1500).useNavigation();
+  let obj = heroBlock(1500);
   const analyticsContext = heroBlock(8816).useCollectiblesAnalyticsContext();
   let obj2 = heroBlock(8816);
   const tmp5 = closure_10();
-  const tmp4 = category(5001)();
-  const token = heroBlock(5356).useToken(category(575).colors.BACKGROUND_BASE_LOW);
-  let obj3 = heroBlock(5356);
-  const obj4 = heroBlock(4789);
-  const obj5 = heroBlock(4789);
-  const hexToRgbaStringResult = obj4.hexToRgbaString(heroBlock(4789).hexWithOpacity(token, 0));
+  const tmp4 = category(5003)();
+  const token = heroBlock(5358).useToken(category(575).colors.BACKGROUND_BASE_LOW);
+  let obj3 = heroBlock(5358);
+  const obj4 = heroBlock(4791);
+  const obj5 = heroBlock(4791);
+  const hexToRgbaStringResult = obj4.hexToRgbaString(heroBlock(4791).hexWithOpacity(token, 0));
   const isOrbsExclusive = category.isOrbsExclusive;
-  const token1 = heroBlock(5356).useToken(category(575).colors.BACKGROUND_BASE_LOWEST);
-  const obj6 = heroBlock(5356);
-  let isEligibleForQuests = heroBlock(9828).getIsEligibleForQuests();
+  const token1 = heroBlock(5358).useToken(category(575).colors.BACKGROUND_BASE_LOWEST);
+  const obj6 = heroBlock(5358);
+  let isEligibleForQuests = heroBlock(9830).getIsEligibleForQuests();
   let heroBannerUrl = heroBlock.mobileHeroUrl;
   if (heroBannerUrl == null) {
     heroBannerUrl = heroBlock.heroBannerUrl;
@@ -68,20 +68,20 @@ export default function HeroBlockHeader(heroBlock) {
         const obj9 = { colors: ["rgba(39, 30, 173, 0.3)", "transparent"], start: null, end: null, style: null };
         ({ START: obj10.start, END: obj10.end } = closure_6);
         obj9.style = tmp5.orbsBackgroundGradient;
-        tmp16Result = closure_7(tmp3(5347), obj9);
+        tmp16Result = closure_7(tmp3(5349), obj9);
       }
       const obj11 = { children: null };
       items = [tmp16Result, , ];
       const obj12 = { style: tmp5.heroBannerImage, source: null };
       const obj13 = { uri: heroBannerUrl };
       obj12.source = obj13;
-      items[1] = closure_7(tmp3(5479), obj12);
+      items[1] = closure_7(tmp3(5481), obj12);
       const obj15 = { colors: null, start: null, end: null, style: null };
       const items1 = [hexToRgbaStringResult, token1];
       obj15.colors = items1;
       ({ START: obj14.start, END: obj14.end } = closure_6);
       obj15.style = tmp5.fadeOutGradient;
-      items[2] = closure_7(tmp3(5347), obj15);
+      items[2] = closure_7(tmp3(5349), obj15);
       obj11.children = items;
       tmp14Result = closure_9(closure_8, obj11);
     }
@@ -93,7 +93,7 @@ export default function HeroBlockHeader(heroBlock) {
       let tmp16Result4 = null != tmp10;
       if (tmp16Result4) {
         const obj18 = { variant: "display-md", color: "mobile-text-heading-primary", style: tmp5.orbsTitle, children: tmp10 };
-        tmp16Result4 = closure_7(tmp(5383).Text, obj18);
+        tmp16Result4 = closure_7(tmp(5385).Text, obj18);
       }
       const items3 = [tmp16Result4, ];
       let tmp16Result5 = null != tmp11;
@@ -102,7 +102,7 @@ export default function HeroBlockHeader(heroBlock) {
       }
       if (tmp16Result5) {
         const obj19 = { variant: "body-md/medium", children: tmp11 };
-        tmp16Result5 = closure_7(tmp(5383).Text, obj19);
+        tmp16Result5 = closure_7(tmp(5385).Text, obj19);
       }
       const obj20 = { children: null };
       items3[1] = tmp16Result5;
@@ -110,21 +110,21 @@ export default function HeroBlockHeader(heroBlock) {
       const items4 = [closure_9(tmp17, obj20), ];
       if (isEligibleForQuests) {
         const obj21 = { variant: "tertiary", shrink: true, grow: false, size: "sm", text: null, onPress: null };
-        const intl3 = tmp(1113).intl;
-        obj21.text = intl3.string(tmp(1113).t.ynollq);
+        const intl3 = tmp(1112).intl;
+        obj21.text = intl3.string(tmp(1112).t.ynollq);
         obj21.onPress = onTapEarnOrbs;
-        isEligibleForQuests = closure_7(tmp(5390).Button, obj21);
+        isEligibleForQuests = closure_7(tmp(5392).Button, obj21);
       }
       items4[1] = isEligibleForQuests;
       obj17.children = items4;
       let tmp14Result2 = closure_9(tmp17, obj17);
     } else {
       const obj22 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.6, androidRippleConfig: null, hitSlop: 8, onPress: null, children: null };
-      const intl = tmp(1113).intl;
+      const intl = tmp(1112).intl;
       const obj23 = { category: category.name };
-      obj22.accessibilityLabel = intl.formatToPlainString(tmp(1113).t.FNtLb3, obj23);
-      const intl2 = tmp(1113).intl;
-      obj22.accessibilityHint = intl2.string(tmp(1113).t.F8ma9x);
+      obj22.accessibilityLabel = intl.formatToPlainString(tmp(1112).t.FNtLb3, obj23);
+      const intl2 = tmp(1112).intl;
+      obj22.accessibilityHint = intl2.string(tmp(1112).t.F8ma9x);
       const obj24 = { radius: tmp3(575).radii.lg };
       obj22.androidRippleConfig = obj24;
       obj22.onPress = function onTapViewAll() {
@@ -159,15 +159,15 @@ export default function HeroBlockHeader(heroBlock) {
         const obj27 = { style: tmp5.heroLogo, source: null };
         const obj28 = { uri: heroLogoUrl };
         obj27.source = obj28;
-        obj26.children = closure_7(tmp3(5479), obj27);
+        obj26.children = closure_7(tmp3(5481), obj27);
         tmp16Result6 = closure_7(tmp17, obj26);
       }
       const items5 = [tmp16Result6, ];
-      const obj29 = { style: tmp5.heroViewAllIcon, children: closure_7(tmp(7446).ChevronSmallRightIcon, { size: "sm", color: "white" }) };
+      const obj29 = { style: tmp5.heroViewAllIcon, children: closure_7(tmp(7445).ChevronSmallRightIcon, { size: "sm", color: "white" }) };
       items5[1] = closure_7(tmp17, obj29);
       obj25.children = items5;
       obj22.children = closure_9(tmp17, obj25);
-      tmp14Result2 = closure_7(tmp(6911).PressableOpacity, obj22, category.storeListingId);
+      tmp14Result2 = closure_7(tmp(6910).PressableOpacity, obj22, category.storeListingId);
     }
     const obj50 = { children: null };
     obj16.children = tmp14Result2;
@@ -176,11 +176,11 @@ export default function HeroBlockHeader(heroBlock) {
     return closure_9(closure_8, obj50);
   } else {
     if (tmpResult.isThemeDark(tmp4)) {
-      let tmp3Result = tmp3(17342);
+      let tmp3Result = tmp3(17169);
     } else {
-      tmp3Result = tmp3(17343);
+      tmp3Result = tmp3(17170);
     }
-    tmpResult = tmp(4799);
+    tmpResult = tmp(4801);
   }
-  const obj7 = heroBlock(9828);
+  const obj7 = heroBlock(9830);
 };

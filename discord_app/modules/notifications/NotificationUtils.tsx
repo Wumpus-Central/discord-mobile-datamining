@@ -1,16 +1,16 @@
-// === Module 11097: notifications/NotificationUtils ===
+// === Module 11039: notifications/NotificationUtils ===
 
-// Module 11097 (notifications/NotificationUtils)
+// Module 11039 (notifications/NotificationUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import FlagUtilsAll from "FlagUtils" /* 1406 */;
-import MuteTimers from "MuteTimers" /* 4727 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import util from "util" /* 1112 */;
+import FlagUtilsAll from "FlagUtils" /* 1404 */;
+import MuteTimers from "MuteTimers" /* 4729 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
-const UserNotificationSettings = fn(1072).UserNotificationSettings;
-const UserSettingsConstants = fn(1082);
+const UserNotificationSettings = fn(1071).UserNotificationSettings;
+const UserSettingsConstants = fn(1081);
 ({ MuteUntilSeconds: closure_6, ChannelNotificationSettingsFlags: metroImportDefault } = UserSettingsConstants);
 let closure_8 = { ignoreMute: false, ignoreUnreadSetting: true, ignoreNotificationSetting: false };
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 9963: ChannelTabRoutes ===
+// === Module 9966: ChannelTabRoutes ===
 
-// Module 9963 (ChannelTabRoutes)
-import _mod1100 from "module_1100" /* 1100 */;
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import matchPathCompat from "matchPathCompat" /* 4830 */;
-import RouteUtils from "RouteUtils" /* 4843 */;
-import Constants from "Constants" /* 1072 */;
-import ChannelConstants from "ChannelConstants" /* 4648 */;
+// Module 9966 (ChannelTabRoutes)
+import _mod1099 from "module_1099" /* 1099 */;
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import matchPathCompat from "matchPathCompat" /* 4832 */;
+import RouteUtils from "RouteUtils" /* 4845 */;
+import Constants from "Constants" /* 1071 */;
+import ChannelConstants from "ChannelConstants" /* 4650 */;
 import size from "module_2" /* 2 */;
 
 function getRouteTabForLocation(location) {
@@ -47,7 +47,7 @@ function getRouteTabForLocation(location) {
       const _HermesInternal = HermesInternal;
       obj7.routePath = "" + pathname + search + str;
       const intl = util.intl;
-      obj7.routeLabel = intl.string(_modDef4089.uk6jhJ);
+      obj7.routeLabel = intl.string(_modDef4091.uk6jhJ);
       tmp5 = obj7;
     }
     obj = matchPathCompat;
@@ -90,7 +90,7 @@ export function getFriendsTabLocation() {
 }
 export { getRouteTabForLocation };
 export function getTabLocationForPath(path) {
-  const parsePathResult = _mod1100.parsePath(path);
+  const parsePathResult = _mod1099.parsePath(path);
   const pathname = parsePathResult.pathname;
   const tmp4 = getRouteTabForLocation({ pathname, search: parsePathResult.search, hash: parsePathResult.hash });
   if (null != tmp4) {

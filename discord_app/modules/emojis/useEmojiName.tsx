@@ -1,9 +1,9 @@
-// === Module 19861: useEmojiName ===
+// === Module 19679: useEmojiName ===
 
-// Module 19861 (useEmojiName)
+// Module 19679 (useEmojiName)
 import _modDef38 from "module_38" /* 38 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4740 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
 
 const require = fn;
 const size = fn(2);

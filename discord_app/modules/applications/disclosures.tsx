@@ -1,9 +1,9 @@
-// === Module 6888: disclosures ===
+// === Module 6887: disclosures ===
 
-// Module 6888 (disclosures)
-import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import applications from "applications" /* 6889 */;
+// Module 6887 (disclosures)
+import util from "util" /* 1112 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import applications from "applications" /* 6888 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -30,7 +30,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -73,11 +73,11 @@ let closure_5 = async function _ackDisclosures(arg0) {
     }
   })();
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(6889).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(6888).ApplicationDisclosureType;
 export function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

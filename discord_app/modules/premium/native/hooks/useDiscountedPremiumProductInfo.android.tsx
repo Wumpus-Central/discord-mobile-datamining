@@ -2,13 +2,13 @@
 
 // Module 9115 (useDiscountedPremiumProductInfo)
 import PriceUtils from "PriceUtils" /* 6737 */;
-import ProductIds from "ProductIds" /* 8051 */;
+import ProductIds from "ProductIds" /* 8050 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CurrencyCodes = fn(1083).CurrencyCodes;
+const CurrencyCodes = fn(1082).CurrencyCodes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
 

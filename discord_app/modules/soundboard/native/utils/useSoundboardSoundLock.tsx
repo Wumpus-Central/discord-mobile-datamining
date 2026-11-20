@@ -1,19 +1,19 @@
-// === Module 18075: useSoundboardSoundLock ===
+// === Module 17902: useSoundboardSoundLock ===
 
-// Module 18075 (useSoundboardSoundLock)
-import util from "util" /* 1113 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8426 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8428 */;
+// Module 17902 (useSoundboardSoundLock)
+import util from "util" /* 1112 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8425 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8427 */;
 import BoostGemIcon from "BoostGemIcon" /* 9250 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5842).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5844).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
@@ -40,11 +40,11 @@ export function useSoundboardSoundLock(sound, channel) {
     const obj4 = { isLocked: tmp4, lockedAccessibilityHint: undefined, onLockedPress: tmp8 };
     return obj4;
   } else if (tmp6) {
-    const intl2 = tmp(1113).intl;
-    BARTXV = tmp(1113).t.BARTXV;
+    const intl2 = tmp(1112).intl;
+    BARTXV = tmp(1112).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!sound.available) {
-    let intl = tmp(1113).intl;
-    stringResult = intl.string(tmp(1113).t.MDOXJR);
+    let intl = tmp(1112).intl;
+    stringResult = intl.string(tmp(1112).t.MDOXJR);
   }
 }

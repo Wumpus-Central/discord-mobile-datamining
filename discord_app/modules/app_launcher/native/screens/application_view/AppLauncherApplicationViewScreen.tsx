@@ -1,10 +1,10 @@
-// === Module 12902: AppLauncherApplicationViewScreen ===
+// === Module 12872: AppLauncherApplicationViewScreen ===
 
-// Module 12902 (AppLauncherApplicationViewScreen)
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import AppLauncherContext from "AppLauncherContext" /* 12044 */;
+// Module 12872 (AppLauncherApplicationViewScreen)
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import AppLauncherContext from "AppLauncherContext" /* 11986 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10374 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10316 */;
 
 const require = globalThis.__r;
 
@@ -47,11 +47,11 @@ function AppLauncherApplicationViewScreenInner(application) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1499);
 ({ AppLauncherRouteName: metroImportDefault, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
-const BuiltInSectionId = fn(5816).BuiltInSectionId;
+const BuiltInSectionId = fn(5818).BuiltInSectionId;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
@@ -91,7 +91,7 @@ export default function AppLauncherApplicationViewScreen(route) {
   }
   const tmpResult = require("useGetOrFetchApplications");
   items = [id, context, installOnDemand];
-  const sharedValue = require("module_1655").useSharedValue(0);
+  const sharedValue = require("module_1653").useSharedValue(0);
   const effect = navigation.useEffect(() => {
     let tmp2 = null != id;
     if (tmp2) {

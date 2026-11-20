@@ -1,12 +1,12 @@
-// === Module 13152: useIsHubForGuild ===
+// === Module 13122: useIsHubForGuild ===
 
-// Module 13152 (useIsHubForGuild)
-import GuildStore from "GuildStore" /* 4663 */;
+// Module 13122 (useIsHubForGuild)
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 

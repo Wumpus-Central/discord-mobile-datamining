@@ -4,12 +4,12 @@
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1349 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6311 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1347 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6313 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRecord from "UserRecord" /* 1407 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserRecord from "UserRecord" /* 1405 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ let closure_9 = async function _fetchProfile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -159,7 +159,7 @@ let closure_9 = async function _fetchProfile(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp91) {
       closure_5 = tmp91;
@@ -187,7 +187,7 @@ let closure_10 = async function _fetchMutualFriends() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ let closure_10 = async function _fetchMutualFriends() {
           closure_131_1(closure_131_2[7]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         closure_4 = tmp32;
@@ -258,8 +258,8 @@ let closure_10 = async function _fetchMutualFriends() {
     }
   })();
 };
-const Endpoints = fn(1072).Endpoints;
-const PSEUDO_GUILD_IDS = fn(1073).PSEUDO_GUILD_IDS;
+const Endpoints = fn(1071).Endpoints;
+const PSEUDO_GUILD_IDS = fn(1072).PSEUDO_GUILD_IDS;
 let closure_8 = new LoggerDefault("UserProfileModalActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActionCreators.tsx");

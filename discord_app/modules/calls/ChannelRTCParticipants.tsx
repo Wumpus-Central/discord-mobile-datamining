@@ -1,28 +1,28 @@
-// === Module 6508: ChannelRTCParticipants ===
+// === Module 6510: ChannelRTCParticipants ===
 
-// Module 6508 (ChannelRTCParticipants)
+// Module 6510 (ChannelRTCParticipants)
 import apply from "apply" /* 12 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 5419 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 5420 */;
-import ActivityTypes from "ActivityTypes" /* 5531 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 6419 */;
-import useIsSpeaking from "useIsSpeaking" /* 6509 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6510 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import FramesStore from "FramesStore" /* 6502 */;
-import SoundboardStore from "SoundboardStore" /* 5840 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6415 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 5421 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 5422 */;
+import ActivityTypes from "ActivityTypes" /* 5533 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 6421 */;
+import useIsSpeaking from "useIsSpeaking" /* 6511 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6512 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import FramesStore from "FramesStore" /* 6504 */;
+import SoundboardStore from "SoundboardStore" /* 5842 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6417 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6506 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import SpeakingStore from "SpeakingStore" /* 6414 */;
-import UserStore from "UserStore" /* 1388 */;
-import VideoStreamStore from "VideoStreamStore" /* 6507 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import CallStore from "CallStore" /* 6508 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import SpeakingStore from "SpeakingStore" /* 6416 */;
+import UserStore from "UserStore" /* 1386 */;
+import VideoStreamStore from "VideoStreamStore" /* 6509 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 require = fn;
 function sortKey(type) {
@@ -64,12 +64,12 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5442);
+const CallConstants = fn(5444);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
-const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6503);
+const ChannelTypes = fn(1071).ChannelTypes;
+const FramesConstants = fn(6505);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-const Constants = fn(5537);
+const Constants = fn(5539);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = { VIDEO: "VIDEO", STREAM: "STREAM", FILTERED: "FILTERED", SPEAKING: "SPEAKING", ACTIVITY: "ACTIVITY", NOT_POPPED_OUT: "NOT_POPPED_OUT", STAGE_SPEAKER: "STAGE_SPEAKER" };
@@ -250,11 +250,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f90650) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f89025) {
   const self = this;
-  const userId = f90650;
+  const userId = f89025;
   let flag;
-  if (this.participants[f90650] != null) {
+  if (this.participants[f89025] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -296,10 +296,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f906
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f90656, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f89031, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f90656] != null) {
+  if (this.participants[f89031] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

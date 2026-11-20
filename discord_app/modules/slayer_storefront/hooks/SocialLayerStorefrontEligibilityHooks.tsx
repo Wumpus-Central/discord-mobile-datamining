@@ -5,10 +5,10 @@ import initialize from "initialize" /* 504 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8876 */;
 import noop from "module_19" /* 19 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8874 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6730 */;
 
 const require = globalThis.__r;

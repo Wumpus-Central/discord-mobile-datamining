@@ -1,13 +1,13 @@
-// === Module 18361: conjureGamePickerOptions ===
+// === Module 18195: conjureGamePickerOptions ===
 
-// Module 18361 (conjureGamePickerOptions)
+// Module 18195 (conjureGamePickerOptions)
 import initialize from "initialize" /* 504 */;
-import _mod6559 from "module_6559" /* 6559 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12128 */;
-import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 18345 */;
+import _mod6561 from "module_6561" /* 6561 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12070 */;
+import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 18179 */;
 import noop from "module_19" /* 19 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
-import DetectableGameStore from "DetectableGameStore" /* 2159 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
+import DetectableGameStore from "DetectableGameStore" /* 2157 */;
 
 require = fn;
 const keys = ["label", "description"];
@@ -76,8 +76,8 @@ export function conjureGamePickerOptions(allOptions, query, runningIds, first1) 
     items = [];
     HermesBuiltin.arraySpread(allOptions, 0);
     const obj2 = { keys };
-    found = _mod6559.matchSorter(items, query, obj2).slice(0, 50);
-    const matchSorterResult = _mod6559.matchSorter(items, query, obj2);
+    found = _mod6561.matchSorter(items, query, obj2).slice(0, 50);
+    const matchSorterResult = _mod6561.matchSorter(items, query, obj2);
   }
   new Set(found.map((value) => value.value));
   const found1 = first1.filter((item) => !set1.has(item));

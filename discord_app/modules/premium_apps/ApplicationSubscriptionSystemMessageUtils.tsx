@@ -1,7 +1,7 @@
-// === Module 8613: ApplicationSubscriptionSystemMessageUtils ===
+// === Module 8612: ApplicationSubscriptionSystemMessageUtils ===
 
-// Module 8613 (ApplicationSubscriptionSystemMessageUtils)
-import util from "util" /* 1113 */;
+// Module 8612 (ApplicationSubscriptionSystemMessageUtils)
+import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");

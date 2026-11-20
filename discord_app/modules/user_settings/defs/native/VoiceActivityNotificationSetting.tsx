@@ -1,13 +1,13 @@
-// === Module 16978: VoiceActivityNotificationSetting ===
+// === Module 16802: VoiceActivityNotificationSetting ===
 
-// Module 16978 (VoiceActivityNotificationSetting)
-import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import NotificationConstants from "NotificationConstants" /* 4737 */;
-import SettingsConstants from "SettingsConstants" /* 8593 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
+// Module 16802 (VoiceActivityNotificationSetting)
+import Constants from "Constants" /* 1071 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import NotificationConstants from "NotificationConstants" /* 4739 */;
+import SettingsConstants from "SettingsConstants" /* 8592 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

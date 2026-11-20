@@ -1,20 +1,20 @@
-// === Module 17344: HeroBlockOrbsArcadeHeader ===
+// === Module 17171: HeroBlockOrbsArcadeHeader ===
 
-// Module 17344 (HeroBlockOrbsArcadeHeader)
+// Module 17171 (HeroBlockOrbsArcadeHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import shared from "shared" /* 4799 */;
-import native from "native" /* 4853 */;
-import useThemeDefault from "useTheme" /* 5001 */;
-import useToken from "useToken" /* 5356 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import QuestContent from "QuestContent" /* 6442 */;
-import inlineStyles from "inlineStyles" /* 7746 */;
-import QuestUtils from "QuestUtils" /* 9833 */;
-import _modDef17345 from "module_17345" /* 17345 */;
+import shared from "shared" /* 4801 */;
+import native from "native" /* 4855 */;
+import useThemeDefault from "useTheme" /* 5003 */;
+import useToken from "useToken" /* 5358 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import QuestContent from "QuestContent" /* 6444 */;
+import inlineStyles from "inlineStyles" /* 7745 */;
+import QuestUtils from "QuestUtils" /* 9835 */;
+import _modDef17172 from "module_17172" /* 17172 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -219,7 +219,7 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
   const obj22 = { source: null, style: null, accessible: false };
   const obj23 = { uri: null };
   const tmp2Result2 = require("useFontScale");
-  obj23.uri = require("module_17346");
+  obj23.uri = require("module_17173");
   obj22.source = obj23;
   obj22.style = tmp.image;
   tmp25Result = closure_10(require("FastImage"), obj22);
@@ -227,19 +227,19 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestHomeSection = fn(9834).QuestHomeSection;
-const Constants = fn(1072);
+const QuestHomeSection = fn(9836).QuestHomeSection;
+const Constants = fn(1071);
 ({ ThemeTypes: closure_8, VerticalGradient: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = 289;
 const PX_16 = nativeDefault.space.PX_16;
-const AssetUtils = fn(9850);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef17345);
+const AssetUtils = fn(9852);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef17172);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj4 = { header: { justifyContent: "flex-end" }, art: null, artFrame: null, image: null, video: null, gradient: null, glow: null, glowWithBleed: null, bleedFade: null, content: null, contentWithPadding: null, productsTitle: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

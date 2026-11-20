@@ -1,20 +1,20 @@
-// === Module 10000: DestinationFailedAlertModal ===
+// === Module 10003: DestinationFailedAlertModal ===
 
-// Module 10000 (DestinationFailedAlertModal)
+// Module 10003 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useChannelNameDefault from "useChannelName" /* 5408 */;
-import AlertModal from "AlertModal" /* 5745 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10001 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useChannelNameDefault from "useChannelName" /* 5410 */;
+import AlertModal from "AlertModal" /* 5747 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10004 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function FailedGroupDMRow(channel) {
@@ -49,15 +49,15 @@ function FailedUserRow(user) {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1187).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1186).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1187).Avatar, obj4), ];
+    const items2 = [closure_10(tmp2(1186).Avatar, obj4), ];
     const obj5 = { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5383).Text, obj5);
+    items2[1] = closure_10(tmp2(5385).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(10002).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10002).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5383).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(10005).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10005).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5385).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }
@@ -118,10 +118,10 @@ function FailedDestinationRow(destination) {
   return tmp3;
 }
 const View = fn(17).View;
-const StatusTypes = fn(1083).StatusTypes;
+const StatusTypes = fn(1082).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 }, row: null, label: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 };
 obj2.row = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, height: 40, marginHorizontal: nativeDefault.space.PX_16 };

@@ -1,12 +1,12 @@
-// === Module 10774: useIsStreamFocused ===
+// === Module 10716: useIsStreamFocused ===
 
-// Module 10774 (useIsStreamFocused)
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
+// Module 10716 (useIsStreamFocused)
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isStreamParticipant = fn(5442).isStreamParticipant;
+const isStreamParticipant = fn(5444).isStreamParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 

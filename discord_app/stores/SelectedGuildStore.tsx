@@ -1,15 +1,15 @@
-// === Module 4825: SelectedGuildStore ===
+// === Module 4827: SelectedGuildStore ===
 
-// Module 4825 (SelectedGuildStore)
+// Module 4827 (SelectedGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import router_utils from "router_utils" /* 1099 */;
-import matchPathCompat from "matchPathCompat" /* 4830 */;
-import RouteUtils from "RouteUtils" /* 4843 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4826 */;
+import router_utils from "router_utils" /* 1098 */;
+import matchPathCompat from "matchPathCompat" /* 4832 */;
+import RouteUtils from "RouteUtils" /* 4845 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4828 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4829 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4831 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -52,7 +52,7 @@ function handleConnectionOpen() {
     prop[tmp19] = Date.now();
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ME: closure_6, MOBILE_GUILD_UPSELL_LIST: metroImportDefault, Routes: closure_8, WATERWHEELS: closure_9 } = Constants);
 let c10 = null;
 let c11 = null;

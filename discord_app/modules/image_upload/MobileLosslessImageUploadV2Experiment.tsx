@@ -1,7 +1,7 @@
-// === Module 8369: MobileLosslessImageUploadV2Experiment ===
+// === Module 8368: MobileLosslessImageUploadV2Experiment ===
 
-// Module 8369 (MobileLosslessImageUploadV2Experiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8368 (MobileLosslessImageUploadV2Experiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-12-mobile-lossless-image-upload-v2", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,25 +1,25 @@
-// === Module 14293: ChatLoadingIndicator ===
+// === Module 14261: ChatLoadingIndicator ===
 
-// Module 14293 (ChatLoadingIndicator)
+// Module 14261 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
-import Pressables from "Pressables" /* 6911 */;
+import util from "util" /* 1112 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
+import Pressables from "Pressables" /* 6910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserStore from "UserStore" /* 1388 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserStore from "UserStore" /* 1386 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function openLoadingIndicatorDebugBody() {
@@ -55,10 +55,10 @@ function openLoadingIndicatorDebugBody() {
   }
 }
 const View = fn(17).View;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.pulse = size;
@@ -237,7 +237,7 @@ export function ChannelHeaderLoadingIndicator() {
     }
     return isStaffResult;
   });
-  const items2 = [closure_19, stateFromStores, _mod1655.withRepeat, _mod1655.withSequence, timing_timing.withTiming, _mod1655.Easing];
+  const items2 = [closure_19, stateFromStores, _mod1653.withRepeat, _mod1653.withSequence, timing_timing.withTiming, _mod1653.Easing];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -289,11 +289,11 @@ export function ChannelHeaderLoadingIndicator() {
   ChatLoadingIndicatorTsx1.__workletHash = 6182376502575;
   ChatLoadingIndicatorTsx1.__initData = tmp6;
   let obj4 = { style: tmp.container, children: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(ChatLoadingIndicatorTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ChatLoadingIndicatorTsx1);
   const obj5 = { style: null };
   const items4 = [tmp.pulse, animatedStyle];
   obj5.style = items4;
-  const items5 = [state(_modDef1655.View, obj5), ];
+  const items5 = [state(_modDef1653.View, obj5), ];
   const obj6 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.JwIJMV);

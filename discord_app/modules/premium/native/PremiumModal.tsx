@@ -1,14 +1,14 @@
 // === Module 8980: PremiumModal ===
 
 // Module 8980 (PremiumModal)
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
 import UserSettingsPremiumDefault from "UserSettingsPremium" /* 8981 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14059 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14075 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14028 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumModal.tsx");

@@ -1,21 +1,21 @@
-// === Module 9839: captureAdUserAction ===
+// === Module 9841: captureAdUserAction ===
 
-// Module 9839 (captureAdUserAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import v1 from "v1" /* 1269 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import AdCreativeType from "AdCreativeType" /* 6444 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8258 */;
-import QuestDataUtils from "QuestDataUtils" /* 8281 */;
-import getQuestLogger from "getQuestLogger" /* 8293 */;
-import AnalyticsActions from "AnalyticsActions" /* 8302 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
-import AdDataUtils from "AdDataUtils" /* 8312 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 8317 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 9840 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9842 */;
+// Module 9841 (captureAdUserAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import v1 from "v1" /* 1268 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import AdCreativeType from "AdCreativeType" /* 6446 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8257 */;
+import QuestDataUtils from "QuestDataUtils" /* 8280 */;
+import getQuestLogger from "getQuestLogger" /* 8292 */;
+import AnalyticsActions from "AnalyticsActions" /* 8301 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
+import AdDataUtils from "AdDataUtils" /* 8311 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 8316 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 9842 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 8285 */;
+import QuestStore from "QuestStore" /* 8284 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -39,7 +39,7 @@ let closure_7 = async function _emitClickEventWithCreative(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -212,7 +212,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -231,7 +231,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -352,7 +352,7 @@ let closure_11 = async function _handleViewInternalSurfaceImpressionAction(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -430,7 +430,7 @@ function reportCaptureAdUserActionError(arg0) {
   const questLogger = getQuestLogger.getQuestLogger();
   questLogger.error("captureAdUserAction failed to report an ad user action", arg0);
 }
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 

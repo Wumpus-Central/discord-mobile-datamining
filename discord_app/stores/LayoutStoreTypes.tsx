@@ -1,6 +1,6 @@
-// === Module 14876: LayoutStoreTypes ===
+// === Module 14838: LayoutStoreTypes ===
 
-// Module 14876 (LayoutStoreTypes)
+// Module 14838 (LayoutStoreTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("stores/LayoutStoreTypes.tsx");

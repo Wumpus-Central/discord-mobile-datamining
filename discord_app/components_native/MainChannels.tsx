@@ -1,29 +1,29 @@
-// === Module 17584: MainChannels ===
+// === Module 17411: MainChannels ===
 
-// Module 17584 (MainChannels)
+// Module 17411 (MainChannels)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import useChatLayoutDefault from "useChatLayout" /* 4971 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4974 */;
-import LayerScope from "LayerScope" /* 5370 */;
-import useRefValueDefault from "useRefValue" /* 6899 */;
-import StartupProfiler from "StartupProfiler" /* 11916 */;
-import useAppFrameDefault from "useAppFrame" /* 17562 */;
-import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 17571 */;
-import getJankScreenName from "getJankScreenName" /* 17573 */;
-import JankSlidingSurfaceReporterDefault from "JankSlidingSurfaceReporter" /* 17576 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 17587 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 17588 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 17589 */;
-import messages_MessagesDefault from "messages/Messages" /* 17590 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17591 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 17672 */;
-import HomePanelContent from "HomePanelContent" /* 17906 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 17987 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import useChatLayoutDefault from "useChatLayout" /* 4973 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4976 */;
+import LayerScope from "LayerScope" /* 5372 */;
+import useRefValueDefault from "useRefValue" /* 6898 */;
+import StartupProfiler from "StartupProfiler" /* 11858 */;
+import useAppFrameDefault from "useAppFrame" /* 17389 */;
+import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 17398 */;
+import getJankScreenName from "getJankScreenName" /* 17400 */;
+import JankSlidingSurfaceReporterDefault from "JankSlidingSurfaceReporter" /* 17403 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 17414 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 17415 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 17416 */;
+import messages_MessagesDefault from "messages/Messages" /* 17417 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17418 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 17499 */;
+import HomePanelContent from "HomePanelContent" /* 17733 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 17814 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17585 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17412 */;
 
 const StartupProfilerDefault = StartupProfiler;
 
@@ -98,7 +98,7 @@ function LeftPanelContent(panelStyles) {
     const items7 = [memo, panelStyles];
     obj7.style = items7;
     obj7.children = tmp15Result;
-    tmp16Result2 = closure_1_11(_modDef1655.View, obj7);
+    tmp16Result2 = closure_1_11(_modDef1653.View, obj7);
   }
   items6[1] = tmp16Result2;
   obj5.children = application_id(LayerScope.LayerScope, { children: items6 });
@@ -133,12 +133,12 @@ function LeftPanelHomeDrawerContainer() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ DM_WIDTH: closure_8, ME: closure_9 } = Constants);
-const HOME_DRAWER_SCREEN = fn(17574).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(17401).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_14 = createStyles.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {

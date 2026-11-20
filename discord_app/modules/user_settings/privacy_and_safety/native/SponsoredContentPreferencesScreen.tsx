@@ -1,14 +1,14 @@
-// === Module 17403: SponsoredContentPreferencesScreen ===
+// === Module 17230: SponsoredContentPreferencesScreen ===
 
-// Module 17403 (SponsoredContentPreferencesScreen)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
-import SettingLayoutDefault from "SettingLayout" /* 15898 */;
+// Module 17230 (SponsoredContentPreferencesScreen)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
+import SettingLayoutDefault from "SettingLayout" /* 15862 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8593).MobileUserSettings;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const MobileUserSettings = fn(8592).MobileUserSettings;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx");
@@ -17,17 +17,17 @@ export default function SponsoredContentPreferencesScreen() {
   const obj = { settings: null, subLabel: null };
   items = [MobileUserSettings.USE_DATA_FOR_QUESTS_SPONSORED_CONTENT];
   obj.settings = items;
-  const intl = items1(1113).intl;
+  const intl = items1(1112).intl;
   const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
-  obj.subLabel = intl.format(items1(1113).t.cf9mvV, obj2);
+  obj.subLabel = intl.format(items1(1112).t.cf9mvV, obj2);
   items1 = [obj, , ];
   const obj4 = { settings: null, subLabel: null };
   const items2 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT];
   obj4.settings = items2;
-  const intl2 = items1(1113).intl;
+  const intl2 = items1(1112).intl;
   const obj5 = { helpdeskArticle: null };
   obj5.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
-  obj4.subLabel = intl2.format(items1(1113).t["2QFDU/"], obj5);
+  obj4.subLabel = intl2.format(items1(1112).t["2QFDU/"], obj5);
   items1[1] = obj4;
   const obj7 = { settings: null };
   const items3 = [MobileUserSettings.MANAGE_SPONSORED_CONTENT];

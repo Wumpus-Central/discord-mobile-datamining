@@ -1,14 +1,14 @@
-// === Module 13033: useChatInputFloatingWidth ===
+// === Module 13003: useChatInputFloatingWidth ===
 
-// Module 13033 (useChatInputFloatingWidth)
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
+// Module 13003 (useChatInputFloatingWidth)
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_3 = fn(12735).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(12705).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = { code: "(function useChatInputFloatingWidthTsx1(){let[collapsedWidth,expandedWidth,progress]=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
@@ -27,13 +27,13 @@ export default function useChatInputFloatingWidth(expanded) {
   if (expanded) {
     num2 = 1;
   }
-  const sharedValue = require("module_1655").useSharedValue(num2);
+  const sharedValue = require("module_1653").useSharedValue(num2);
   noop = sharedValue;
   items = [expanded, num, sharedValue];
   const effect = noop.useEffect(() => {
     if (c0) {
       if (c1 > 0) {
-        const obj2 = _mod1655;
+        const obj2 = _mod1653;
         const result = _undefined.set(obj2.withDelay(tmp2, timing_timing.withTiming(1, closure_3, "respect-motion-settings")));
       }
     }
@@ -43,7 +43,7 @@ export default function useChatInputFloatingWidth(expanded) {
     }
     const result1 = _undefined.set(timing_timing.withTiming(num2, closure_3, "respect-motion-settings"));
   }, items);
-  let obj = require("module_1655");
+  let obj = require("module_1653");
   const items1 = [closure_4, collapsedWidth, expandedWidth, sharedValue];
   _require = undefined;
   dependencyMap = undefined;
@@ -59,6 +59,6 @@ export default function useChatInputFloatingWidth(expanded) {
   useChatInputFloatingWidthTsx1.__closure = items2;
   useChatInputFloatingWidthTsx1.__workletHash = 7676837604130;
   useChatInputFloatingWidthTsx1.__initData = tmp5;
-  const tmpResult = require("module_1655");
-  return { animatedStyle: require("module_1655").useAnimatedStyle(useChatInputFloatingWidthTsx1) };
+  const tmpResult = require("module_1653");
+  return { animatedStyle: require("module_1653").useAnimatedStyle(useChatInputFloatingWidthTsx1) };
 };

@@ -1,10 +1,10 @@
-// === Module 6549: ThreadNotificationSettings ===
+// === Module 6551: ThreadNotificationSettings ===
 
-// Module 6549 (ThreadNotificationSettings)
-import FlagUtils from "FlagUtils" /* 1406 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
+// Module 6551 (ThreadNotificationSettings)
+import FlagUtils from "FlagUtils" /* 1404 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4728 */;
 
 const require = globalThis.__r;
 
@@ -57,8 +57,8 @@ function computeThreadNotificationSetting(channel) {
     obj6 = FlagUtils;
   }
 }
-const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
-const UserNotificationSettings = fn(1072).UserNotificationSettings;
+const ThreadMemberFlags = fn(1111).ThreadMemberFlags;
+const UserNotificationSettings = fn(1071).UserNotificationSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
 

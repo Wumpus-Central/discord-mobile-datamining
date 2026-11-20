@@ -1,6 +1,6 @@
-// === Module 5915: ? ===
+// === Module 5917: ? ===
 
-// Module 5915
+// Module 5917
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/base/red.png.js");

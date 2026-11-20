@@ -1,15 +1,15 @@
-// === Module 13730: useOnConnectToConsole ===
+// === Module 13699: useOnConnectToConsole ===
 
-// Module 13730 (useOnConnectToConsole)
-import dismissible_content from "dismissible_content" /* 4625 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4824 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 6907 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7074 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 10955 */;
+// Module 13699 (useOnConnectToConsole)
+import dismissible_content from "dismissible_content" /* 4627 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4826 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 6906 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7073 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 10897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");

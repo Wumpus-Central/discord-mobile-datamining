@@ -1,8 +1,8 @@
 // === Module 9533: makeUserListPillData ===
 
 // Module 9533 (makeUserListPillData)
-import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
+import native from "native" /* 1186 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

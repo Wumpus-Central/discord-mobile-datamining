@@ -1,19 +1,19 @@
-// === Module 8594: canReplyToMessage ===
+// === Module 8593: canReplyToMessage ===
 
-// Module 8594 (canReplyToMessage)
-import MessageTypes from "MessageTypes" /* 1088 */;
+// Module 8593 (canReplyToMessage)
+import MessageTypes from "MessageTypes" /* 1087 */;
 import ThreadHooks from "ThreadHooks" /* 6774 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8595 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8594 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import UserStore from "UserStore" /* 1388 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageFlags: hasOwnProperty, MessageStates: closure_6 } = Constants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
 

@@ -1,20 +1,20 @@
-// === Module 4816: ClientThemesBackgroundStore ===
+// === Module 4818: ClientThemesBackgroundStore ===
 
-// Module 4816 (ClientThemesBackgroundStore)
+// Module 4818 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4824 */;
-import UserUtils from "UserUtils" /* 4848 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4852 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import UserStore from "UserStore" /* 1388 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4826 */;
+import UserUtils from "UserUtils" /* 4850 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4854 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function getAppliedHexagonCampaignPreset() {
@@ -175,10 +175,10 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4645).isGuildTextChannelType;
-const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(4817).HexagonCampaignPerk;
-const SystemThemeState = fn(1195).SystemThemeState;
+const isGuildTextChannelType = fn(4647).isGuildTextChannelType;
+const dependencyMap = fn(1239).BACKGROUND_GRADIENT_PRESETS_MAP;
+const HexagonCampaignPerk = fn(4819).HexagonCampaignPerk;
+const SystemThemeState = fn(1194).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
 let c17 = false;

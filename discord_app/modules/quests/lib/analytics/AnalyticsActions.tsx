@@ -1,20 +1,20 @@
-// === Module 8302: AnalyticsActions ===
+// === Module 8301: AnalyticsActions ===
 
-// Module 8302 (AnalyticsActions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
-import QuestTypes from "QuestTypes" /* 6440 */;
-import AdCreativeType from "AdCreativeType" /* 6444 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8136 */;
-import QuestDataUtils from "QuestDataUtils" /* 8281 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8305 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8306 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8308 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
+// Module 8301 (AnalyticsActions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
+import QuestTypes from "QuestTypes" /* 6442 */;
+import AdCreativeType from "AdCreativeType" /* 6446 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8135 */;
+import QuestDataUtils from "QuestDataUtils" /* 8280 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8304 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8305 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8307 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8303 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1362 */;
-import QuestStore from "QuestStore" /* 8285 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8302 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1360 */;
+import QuestStore from "QuestStore" /* 8284 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
@@ -180,7 +180,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -327,7 +327,7 @@ let closure_15 = async function _trackAdContentClicked() {
   ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
   return "Path";
 };
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const items = [, , ];
 ({ QUEST_CONTENT_VIEWED: arr[0], QUEST_CONTENT_ENGAGED_VIEWED: arr[1], QUEST_CONTENT_CLICKED: arr[2] } = AnalyticEvents);
 let set = new Set(items);

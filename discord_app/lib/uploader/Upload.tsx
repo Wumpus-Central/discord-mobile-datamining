@@ -1,62 +1,63 @@
-// === Module 8350: Upload ===
+// === Module 8349: Upload ===
 
-// Module 8350 (Upload)
+// Module 8349 (Upload)
 import applyDefault from "apply" /* 12 */;
 import _mod568 from "module_568" /* 568 */;
-import v1 from "v1" /* 1269 */;
-import UploadUtils from "UploadUtils" /* 8323 */;
-import UploadPlatform from "UploadPlatform" /* 8326 */;
-import FileUtilsAll from "FileUtils" /* 8351 */;
+import v1 from "v1" /* 1268 */;
+import UploadUtils from "UploadUtils" /* 8322 */;
+import UploadPlatform from "UploadPlatform" /* 8325 */;
+import FileUtilsAll from "FileUtils" /* 8350 */;
 import size from "module_2" /* 2 */;
 
 const EventEmitter = _mod568.EventEmitter;
 class Upload extends EventEmitter {
   constructor(arg0) {
-    tmp4 = new Upload(tmp3, tmp2, tmp);
-    tmp4.allowOptimization = true;
-    tmp4.item = global;
-    tmp5 = closure_0;
-    tmp6 = closure_3;
+    tmp5 = new Upload(tmp4, tmp3, tmp2, tmp);
+    tmp5.isPreparing = false;
+    tmp5.allowOptimization = true;
+    tmp5.item = global;
+    tmp6 = closure_0;
+    tmp7 = closure_3;
     if (global.platform === closure_0(closure_3[1]).UploadPlatform.REACT_NATIVE) {
       uri = global.id;
-      tmp9 = null;
+      tmp10 = null;
       if (uri == null) {
         uri = global.uri;
       }
-      tmp4.id = uri;
-      tmp5Result = tmp5(tmp6[2]);
+      tmp5.id = uri;
+      tmp6Result = tmp6(tmp7[2]);
       obj1 = { uri: null, overrideFilename: null, overrideType: null };
       ({ uri: obj4.uri, filename: obj4.overrideFilename, mimeType: obj4.overrideType } = global);
-      file = tmp5Result.getFile(obj1);
-      ({ filename: tmp4.filename, isImage: tmp4.isImage, isVideo: tmp4.isVideo, type: tmp4.mimeType } = file);
-      ({ origin: tmp4.origin, durationSecs: tmp4.durationSecs, waveform: tmp4.waveform } = global);
+      file = tmp6Result.getFile(obj1);
+      ({ filename: tmp5.filename, isImage: tmp5.isImage, isVideo: tmp5.isVideo, type: tmp5.mimeType } = file);
+      ({ origin: tmp5.origin, durationSecs: tmp5.durationSecs, waveform: tmp5.waveform } = global);
     } else {
       id = global.id;
-      tmp11 = null;
+      tmp12 = null;
       if (id == null) {
-        tmp7 = closure_1;
-        obj = closure_1(tmp6[3]);
+        tmp8 = closure_1;
+        obj = closure_1(tmp7[3]);
         str = "upload";
         id = obj.uniqueId("upload");
       }
-      tmp4.id = id;
-      tmp8 = closure_2;
-      obj2 = closure_2(tmp6[4]);
-      tmp4.classification = obj2.classifyFile(global.file);
+      tmp5.id = id;
+      tmp9 = closure_2;
+      obj2 = closure_2(tmp7[4]);
+      tmp5.classification = obj2.classifyFile(global.file);
       str2 = "image";
-      tmp4.isImage = "image" === tmp4.classification;
+      tmp5.isImage = "image" === tmp5.classification;
       str3 = "video";
-      tmp4.isVideo = "video" === tmp4.classification;
-      tmp4.filename = global.file.name;
-      tmp4.mimeType = global.file.type;
-      tmp4.origin = global.origin;
+      tmp5.isVideo = "video" === tmp5.classification;
+      tmp5.filename = global.file.name;
+      tmp5.mimeType = global.file.type;
+      tmp5.origin = global.origin;
     }
-    ({ isThumbnail: tmp4.isThumbnail, clip: tmp4.clip } = global);
-    tmp5Result1 = tmp5(tmp6[5]);
-    tmp4.uniqueId = tmp5Result1.v4();
-    tmp4.spoiler = false;
-    tmp4.description = null;
-    return tmp4;
+    ({ isThumbnail: tmp5.isThumbnail, clip: tmp5.clip } = global);
+    tmp6Result1 = tmp6(tmp7[5]);
+    tmp5.uniqueId = tmp6Result1.v4();
+    tmp5.spoiler = false;
+    tmp5.description = null;
+    return tmp5;
   }
 }
 const prototype = Upload.prototype;

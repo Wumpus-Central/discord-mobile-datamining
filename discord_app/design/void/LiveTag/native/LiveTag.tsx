@@ -1,18 +1,18 @@
-// === Module 15326: LiveTag ===
+// === Module 15290: LiveTag ===
 
-// Module 15326 (LiveTag)
+// Module 15290 (LiveTag)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: nativeDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND }, tagText: null };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;

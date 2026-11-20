@@ -2,7 +2,7 @@
 
 // Module 8885 (CheckmarkLargeBoldIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod8886 from "module_8886" /* 8886 */;
 import noop from "module_19" /* 19 */;
 

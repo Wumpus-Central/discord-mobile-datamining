@@ -1,11 +1,11 @@
-// === Module 11620: ForLaterModal ===
+// === Module 11562: ForLaterModal ===
 
-// Module 11620 (ForLaterModal)
+// Module 11562 (ForLaterModal)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import HeaderShared from "HeaderShared" /* 8442 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 11621 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import HeaderShared from "HeaderShared" /* 8441 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 11563 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -30,9 +30,9 @@ export default function ForLaterModal(type) {
   const tmp = closure_6();
   const intl = require("util").intl;
   if (type === require("SavedMessagesTypes").SavedMessageSortTypes.REMINDER) {
-    let aUXxzT = tmp4(1113).t.aUXxzT;
+    let aUXxzT = tmp4(1112).t.aUXxzT;
   } else {
-    aUXxzT = tmp4(1113).t["2pAkDA"];
+    aUXxzT = tmp4(1112).t["2pAkDA"];
   }
   const stringResult = intl.string(aUXxzT);
   _require = stringResult;
@@ -56,7 +56,7 @@ export default function ForLaterModal(type) {
   tmp4Result = require("PlatformUtils");
   obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  items = [closure_4(require("module_6983").Header, obj3), ];
+  items = [closure_4(require("module_6982").Header, obj3), ];
   const obj4 = { type, onClose: null };
   const tmp4Result2 = require("NavigatorHeader");
   obj4.onClose = ModalActionCreatorsDefault.pop;

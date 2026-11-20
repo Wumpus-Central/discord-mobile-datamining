@@ -1,12 +1,12 @@
-// === Module 6892: oauth2/actions ===
+// === Module 6891: oauth2/actions ===
 
-// Module 6892 (oauth2/actions)
-import utils_PathUtils from "utils/PathUtils" /* 1081 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6304 */;
+// Module 6891 (oauth2/actions)
+import utils_PathUtils from "utils/PathUtils" /* 1080 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6306 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 
 require = fn;
 function getLocationContextServer() {
@@ -48,7 +48,7 @@ let closure_9 = async function _authorize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -152,7 +152,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -237,7 +237,7 @@ let closure_11 = async function _startSamsungAuthorization() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -270,7 +270,7 @@ let closure_11 = async function _startSamsungAuthorization() {
           return obj;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c5 = tmp;
@@ -319,7 +319,7 @@ let closure_15 = async function _finishUserCodeTwoWayLinkError() {
     return value;
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_6, Endpoints: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/oauth2/actions.tsx");

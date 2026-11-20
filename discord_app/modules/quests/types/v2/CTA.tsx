@@ -1,6 +1,6 @@
-// === Module 8301: CTA ===
+// === Module 8300: CTA ===
 
-// Module 8301 (CTA)
+// Module 8300 (CTA)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");

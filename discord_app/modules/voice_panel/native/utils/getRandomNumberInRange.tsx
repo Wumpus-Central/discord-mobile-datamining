@@ -1,6 +1,6 @@
-// === Module 19332: getRandomNumberInRange ===
+// === Module 19152: getRandomNumberInRange ===
 
-// Module 19332 (getRandomNumberInRange)
+// Module 19152 (getRandomNumberInRange)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getRandomNumberInRange_getRandomNumberInRangeTsx1(min,max){return Math.random()*(max-min)+min;})" }];

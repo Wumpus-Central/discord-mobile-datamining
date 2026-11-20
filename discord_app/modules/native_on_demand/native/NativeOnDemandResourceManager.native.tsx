@@ -1,14 +1,14 @@
-// === Module 19638: NativeOnDemandResourceManager ===
+// === Module 19456: NativeOnDemandResourceManager ===
 
-// Module 19638 (NativeOnDemandResourceManager)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5688 */;
+// Module 19456 (NativeOnDemandResourceManager)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5690 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 let require = fn;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const prototype = function NativeOnDemandResourceManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -41,7 +41,7 @@ const prototype = function NativeOnDemandResourceManager() {
         const obj7 = { value, done: true };
         return obj7;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -69,8 +69,8 @@ const prototype = function NativeOnDemandResourceManager() {
                 if (modeOptions.getModeOptions().autoThreshold) {
                   const Storage = tmp5(510).Storage;
                   const result = Storage.set(constants2.RESTORE_AUTO_THRESHOLD_KEY, true);
-                  tmp2(5688).setMode(modeOptions.getMode(), { autoThreshold: false });
-                  const obj5 = tmp2(5688);
+                  tmp2(5690).setMode(modeOptions.getMode(), { autoThreshold: false });
+                  const obj5 = tmp2(5690);
                 }
                 if (state.getState() === constants.ACTIVE) {
                   applyArgumentsResult.hasFetchedKrisp = true;

@@ -1,13 +1,13 @@
 // === Module 9687: useGameProfileInvite ===
 
 // Module 9687 (useGameProfileInvite)
-import DurationsDefault from "Durations" /* 1089 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7143 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7142 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2141 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4643 */;
-import InviteStore from "InviteStore" /* 5511 */;
+import GameStore from "GameStore" /* 2139 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4645 */;
+import InviteStore from "InviteStore" /* 5513 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ function isUsableGameProfileInvite(state) {
   }
   return tmp;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ InviteStates: metroImportDefault, QueryIds } = Constants);
 const initialize = fn(504);
 const obj2 = {
@@ -85,7 +85,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;

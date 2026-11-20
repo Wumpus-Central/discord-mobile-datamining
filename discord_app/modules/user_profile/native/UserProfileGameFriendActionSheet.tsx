@@ -1,13 +1,13 @@
-// === Module 14435: UserProfileGameFriendActionSheet ===
+// === Module 14403: UserProfileGameFriendActionSheet ===
 
-// Module 14435 (UserProfileGameFriendActionSheet)
+// Module 14403 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 10124 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 10127 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 require = fn;
 function GameFriendApplicationRow(application) {
@@ -38,10 +38,10 @@ function GameFriendApplicationRow(application) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.gameIcon = size;
@@ -87,7 +87,7 @@ export default function UserProfileGameFriendActionSheet(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,7 +1,7 @@
-// === Module 13024: MobileMarkdownFormatMenuExperiment ===
+// === Module 12994: MobileMarkdownFormatMenuExperiment ===
 
-// Module 13024 (MobileMarkdownFormatMenuExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 12994 (MobileMarkdownFormatMenuExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-10-mobile-markdown-format-menu", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -4,7 +4,7 @@
 import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9620 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
 
 const require = globalThis.__r;

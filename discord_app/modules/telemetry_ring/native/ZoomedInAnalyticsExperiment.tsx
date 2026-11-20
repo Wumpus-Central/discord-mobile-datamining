@@ -1,7 +1,7 @@
-// === Module 2125: ZoomedInAnalyticsExperiment ===
+// === Module 2123: ZoomedInAnalyticsExperiment ===
 
-// Module 2125 (ZoomedInAnalyticsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 2123 (ZoomedInAnalyticsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2025-12-zoomed-analytics", defaultConfig: { enabled: false }, variations: null };

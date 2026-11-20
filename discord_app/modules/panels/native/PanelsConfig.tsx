@@ -1,7 +1,7 @@
-// === Module 17568: PanelsConfig ===
+// === Module 17395: PanelsConfig ===
 
-// Module 17568 (PanelsConfig)
-import native from "native" /* 1187 */;
+// Module 17395 (PanelsConfig)
+import native from "native" /* 1186 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function isTimingConfig_PanelsConfigTsx1(obj){return obj!=null&&obj.duration!=null;})" }];

@@ -1,8 +1,8 @@
-// === Module 11032: ModeratorStartStageHeader ===
+// === Module 10974: ModeratorStartStageHeader ===
 
-// Module 11032 (ModeratorStartStageHeader)
-import StageActionHeader from "StageActionHeader" /* 10988 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10995 */;
+// Module 10974 (ModeratorStartStageHeader)
+import StageActionHeader from "StageActionHeader" /* 10930 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10937 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

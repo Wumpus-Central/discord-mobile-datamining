@@ -1,20 +1,21 @@
-// === Module 15698: SoundboardManager ===
+// === Module 15662: SoundboardManager ===
 
-// Module 15698 (SoundboardManager)
+// Module 15662 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 6709 */;
-import SoundUtils from "SoundUtils" /* 10821 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 15700 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 15701 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 6711 */;
+import SoundUtils from "SoundUtils" /* 10763 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 15664 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 15665 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SoundboardStore from "SoundboardStore" /* 5840 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 15699 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SoundboardStore from "SoundboardStore" /* 5842 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 15663 */;
 
 require = fn;
 let map = new Map();
-let closure_8 = new LoggerDefault("SoundboardManagerNative");
+const weakSet = new WeakSet();
+let closure_9 = new LoggerDefault("SoundboardManagerNative");
 const prototype = function SoundboardManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -23,6 +24,17 @@ const prototype = function SoundboardManager() {
       stop.stop();
     });
     map = new Map();
+  };
+  applyArgumentsResult._stopSound = function _stopSound(soundId, userId) {
+    const combined = "" + userId + "-" + soundId;
+    value = map.get(combined);
+    if (null != value) {
+      value.stop();
+      set.add(value);
+      map.delete(combined);
+      const result = applyArgumentsResult(dependencyMap[6]).reportSoundFinishedPlaying(soundId, userId);
+      const obj2 = applyArgumentsResult(dependencyMap[6]);
+    }
   };
   applyArgumentsResult._playSound = function _playSound(soundId, arg1) {
     let num = arg1;
@@ -69,10 +81,14 @@ const prototype = function SoundboardManager() {
       closure_129_4 = value;
       c4 = 0;
     }
+    let tmp17 = closure_129_4;
     if (closure_129_4) {
+      tmp17 = !set2.has(closure_129_0);
+    }
+    if (tmp17) {
       set.delete(closure_129_1);
-      const result = applyArgumentsResult(tmp3[9]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
-      applyArgumentsResult(tmp3[9]);
+      const result = applyArgumentsResult(tmp3[6]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
+      applyArgumentsResult(tmp3[6]);
     }
     await "HermesInternal";
     ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
@@ -90,7 +106,7 @@ const prototype = function SoundboardManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp4 {
+class prototype extends tmp5 {
 }
 const prototype1 = new prototype();
 const size = fn(2);

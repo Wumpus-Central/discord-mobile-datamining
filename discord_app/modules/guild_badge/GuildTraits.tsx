@@ -1,8 +1,8 @@
 // === Module 9633: GuildTraits ===
 
 // Module 9633 (GuildTraits)
-import GuildRecordUtils from "GuildRecordUtils" /* 4655 */;
-import Constants from "Constants" /* 1072 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4657 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 ({ GuildFeatures: c2, BoostedGuildTiers: c3 } = Constants);

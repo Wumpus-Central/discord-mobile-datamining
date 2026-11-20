@@ -1,14 +1,14 @@
-// === Module 1495: utils/ImageUtils ===
+// === Module 1493: utils/ImageUtils ===
 
-// Module 1495 (utils/ImageUtils)
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1450 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1451 */;
-import _modDef1490 from "module_1490" /* 1490 */;
-import useWindowDimensions from "useWindowDimensions" /* 1496 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2025 */;
+// Module 1493 (utils/ImageUtils)
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1448 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1449 */;
+import _modDef1488 from "module_1488" /* 1488 */;
+import useWindowDimensions from "useWindowDimensions" /* 1494 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2022 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2023 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function getSrcWithWidthAndHeight(animated) {
   }
   [tmp4, tmp5] = src.split("?");
   const tmp3 = _slicedToArray(src.split("?"), 2);
-  const parsed = _modDef1490.parse(tmp5);
+  const parsed = _modDef1488.parse(tmp5);
   delete tmp2[tmp];
   items = [tmp4, parsed];
   [tmp10, tmp11] = items;
@@ -72,7 +72,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp9 = _slicedToArray(items, 2);
   let text = tmp10;
   if (!tmp6Result.isEmpty(tmp11)) {
-    _modDef1490;
+    _modDef1488;
     text = `${tmp10}?${obj6.stringify(tmp11)}`;
   }
   return text;
@@ -105,7 +105,7 @@ function getPaletteForAvatarMobile(automodAvatarURL) {
   return NativeImageManagerModuleDefault.getDominantColors(ensureAvatarSourceResult);
 }
 const PixelRatio = fn(17).PixelRatio;
-let closure_5 = fn(1072).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
+let closure_5 = fn(1071).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp2 = /\.(gif)$/i;
 const re6 = tmp2;
 let tmp3 = /\.(avif)$/i;

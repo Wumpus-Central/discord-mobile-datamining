@@ -1,11 +1,11 @@
-// === Module 6500: ConjureProjectStore ===
+// === Module 6502: ConjureProjectStore ===
 
-// Module 6500 (ConjureProjectStore)
+// Module 6502 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6501 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function isProjectOwner(project) {

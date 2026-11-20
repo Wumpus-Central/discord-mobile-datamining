@@ -2,7 +2,7 @@
 
 // Module 8921 (TagIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod8922 from "module_8922" /* 8922 */;
 import noop from "module_19" /* 19 */;
 

@@ -2,7 +2,7 @@
 
 // Module 9458 (PlusSmallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9459 from "module_9459" /* 9459 */;
 import noop from "module_19" /* 19 */;
 

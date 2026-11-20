@@ -1,13 +1,13 @@
-// === Module 14207: FriendInvite ===
+// === Module 14177: FriendInvite ===
 
-// Module 14207 (FriendInvite)
+// Module 14177 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import Constants from "Constants" /* 8319 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8561 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import util from "util" /* 1112 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import Constants from "Constants" /* 8318 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8560 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -56,14 +56,14 @@ export function createFriendInvite(inviter, arg1, id, theme) {
   }
   if (id1 === id) {
     ({ acceptLabelDisabledColor, acceptLabelDisabledBackgroundColor } = colors);
-    const intl3 = tmp5(1113).intl;
-    let stringResult = intl3.string(tmp5(1113).t.ib7Ng1);
+    const intl3 = tmp5(1112).intl;
+    let stringResult = intl3.string(tmp5(1112).t.ib7Ng1);
     let flag = false;
   } else {
     ({ acceptLabelGreenColor, acceptLabelGreenBackgroundColor } = colors);
-    const intl2 = tmp5(1113).intl;
+    const intl2 = tmp5(1112).intl;
     const string2 = intl2.string;
-    const t2 = tmp5(1113).t;
+    const t2 = tmp5(1112).t;
     if (isFriendResult) {
       stringResult = string2(t2.xhxnPn);
       flag = true;

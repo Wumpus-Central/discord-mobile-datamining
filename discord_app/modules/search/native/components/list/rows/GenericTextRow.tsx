@@ -1,15 +1,15 @@
-// === Module 18825: GenericTextRow ===
+// === Module 18649: GenericTextRow ===
 
-// Module 18825 (GenericTextRow)
-import Text_Text from "Text/Text" /* 5383 */;
-import SearchListRow from "SearchListRow" /* 18777 */;
+// Module 18649 (GenericTextRow)
+import Text_Text from "Text/Text" /* 5385 */;
+import SearchListRow from "SearchListRow" /* 18601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
@@ -33,7 +33,7 @@ export default noop.memo(function GenericTextRow(text) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ export default noop.memo(function GenericTextRow(text) {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;

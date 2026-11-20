@@ -1,12 +1,12 @@
-// === Module 10548: trackAppStoreOverlaySurfaceClicked ===
+// === Module 10490: trackAppStoreOverlaySurfaceClicked ===
 
-// Module 10548 (trackAppStoreOverlaySurfaceClicked)
-import QuestTypes from "QuestTypes" /* 6440 */;
-import AdCreativeType from "AdCreativeType" /* 6444 */;
-import AnalyticsActions from "AnalyticsActions" /* 8302 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
-import captureAdUserAction from "captureAdUserAction" /* 9839 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9842 */;
+// Module 10490 (trackAppStoreOverlaySurfaceClicked)
+import QuestTypes from "QuestTypes" /* 6442 */;
+import AdCreativeType from "AdCreativeType" /* 6446 */;
+import AnalyticsActions from "AnalyticsActions" /* 8301 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
+import captureAdUserAction from "captureAdUserAction" /* 9841 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9844 */;
 import size from "module_2" /* 2 */;
 
 function captureAppStoreOverlaySurfaceClick(overlaySurface, arg1, arg2) {

@@ -1,26 +1,26 @@
-// === Module 13043: VoicePanelChatView ===
+// === Module 13013: VoicePanelChatView ===
 
-// Module 13043 (VoicePanelChatView)
-import util from "util" /* 1113 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
+// Module 13013 (VoicePanelChatView)
+import util from "util" /* 1112 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9539 */;
-import _modDef10151 from "module_10151" /* 10151 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13041 */;
+import _modDef10154 from "module_10154" /* 10154 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13011 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11686).CONTROLS_DRAWER_HEADER_SIZE;
-const Constants = fn(1072);
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11628).CONTROLS_DRAWER_HEADER_SIZE;
+const Constants = fn(1071);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
 let closure_9 = { code: "(function VoicePanelChatViewTsx1(){let[windowDimensions]=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};})" };
 let closure_10 = noop.memo(function GradientHack() {
@@ -38,11 +38,11 @@ let closure_10 = noop.memo(function GradientHack() {
   VoicePanelChatViewTsx1.__closure = items1;
   VoicePanelChatViewTsx1.__workletHash = 6734453041358;
   VoicePanelChatViewTsx1.__initData = tmp4;
-  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelChatViewTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelChatViewTsx1);
   const obj2 = { style: null, children: timestampProducer(ThemedGradientDefault, { absolute: true }) };
   const items2 = [tmp3.gradientWrapper, animatedStyle];
   obj2.style = items2;
-  return timestampProducer(_modDef1655.View, obj2);
+  return timestampProducer(_modDef1653.View, obj2);
 });
 const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const callback = noop.useCallback(() => {
@@ -52,7 +52,7 @@ const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10151;
+  obj.icon = _modDef10154;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 });

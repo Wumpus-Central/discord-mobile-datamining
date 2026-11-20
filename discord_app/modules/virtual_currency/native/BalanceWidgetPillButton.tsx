@@ -1,8 +1,8 @@
 // === Module 9324: BalanceWidgetPillButton ===
 
 // Module 9324 (BalanceWidgetPillButton)
-import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
+import util from "util" /* 1112 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
 import _modDef8839 from "module_8839" /* 8839 */;
 import IndicatorDot from "IndicatorDot" /* 8887 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ class BalanceWidgetPillButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const timestampProducer = createStyles.createStyles({ notificationBadge: { position: "absolute", top: 0, end: 0 } });
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 15751: ProfileEditNitroSubLabel ===
+// === Module 15715: ProfileEditNitroSubLabel ===
 
-// Module 15751 (ProfileEditNitroSubLabel)
+// Module 15715 (ProfileEditNitroSubLabel)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8832 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, text: { flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

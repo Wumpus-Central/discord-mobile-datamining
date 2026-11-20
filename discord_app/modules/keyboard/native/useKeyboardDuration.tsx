@@ -1,8 +1,8 @@
-// === Module 6959: useKeyboardDuration ===
+// === Module 6958: useKeyboardDuration ===
 
-// Module 6959 (useKeyboardDuration)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1500 */;
+// Module 6958 (useKeyboardDuration)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1498 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");

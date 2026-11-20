@@ -1,17 +1,17 @@
-// === Module 14545: UserProfileContactButtons ===
+// === Module 14513: UserProfileContactButtons ===
 
-// Module 14545 (UserProfileContactButtons)
+// Module 14513 (UserProfileContactButtons)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 10124 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 12046 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 14286 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7620 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 10127 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11988 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 14254 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = globalThis.__r;
 
@@ -40,19 +40,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8016).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8015).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7401)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7400)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8016);
+  let obj = user(8015);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14436).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14436);
+  const gameFriendsForUser = user(14404).useGameFriendsForUser(user.id);
+  const tmp3Result = user(14404);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(4848).useName(user);
+  userDisplayName = tmp(4850).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -61,21 +61,21 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(14546).UserClockIcon;
+          let UserPlusIcon = tmp3(14514).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(5482).UserPlusIcon;
+          UserPlusIcon = tmp3(5484).UserPlusIcon;
         }
-        const intl = tmp3(1113).intl;
+        const intl = tmp3(1112).intl;
         const string = intl.string;
-        const t = tmp3(1113).t;
+        const t = tmp3(1112).t;
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let stringResult = string(t["fMm5q/"]);
         } else {
           stringResult = string(t["7815ae"]);
         }
-        const intl2 = tmp3(1113).intl;
+        const intl2 = tmp3(1112).intl;
         const string2 = intl2.string;
-        const t2 = tmp3(1113).t;
+        const t2 = tmp3(1112).t;
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let string2Result = string2(t2.H0Ql7N);
         } else {
@@ -111,10 +111,10 @@ function FriendRequestButton(user) {
   return null;
 }
 const View = fn(17).View;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, flexGrow: { flex: 1 }, iconButtonGroup: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.iconButtonGroup = { flexDirection: "row", gap: nativeDefault.space.PX_12 };

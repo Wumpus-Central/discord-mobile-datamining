@@ -1,18 +1,18 @@
-// === Module 8341: ArchivedThreadsStore ===
+// === Module 8340: ArchivedThreadsStore ===
 
-// Module 8341 (ArchivedThreadsStore)
+// Module 8340 (ArchivedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4650 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 4652 */;
-import Tracking from "Tracking" /* 8342 */;
-import ForumUtils from "ForumUtils" /* 8386 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 4652 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 4654 */;
+import Tracking from "Tracking" /* 8341 */;
+import ForumUtils from "ForumUtils" /* 8385 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4728 */;
 
 require = fn;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
@@ -106,14 +106,14 @@ function resortListState(value) {
     const tmp7Result = applyDefault(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(4650).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(4652).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(4645).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(4647).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

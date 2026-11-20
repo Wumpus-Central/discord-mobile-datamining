@@ -1,13 +1,13 @@
-// === Module 13039: useShowConvoStarterInDM ===
+// === Module 13009: useShowConvoStarterInDM ===
 
-// Module 13039 (useShowConvoStarterInDM)
+// Module 13009 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
-import ChannelConstants from "ChannelConstants" /* 4648 */;
-import MessageRequestStore from "MessageRequestStore" /* 6513 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
-import Constants from "Constants" /* 1072 */;
+import ChannelConstants from "ChannelConstants" /* 4650 */;
+import MessageRequestStore from "MessageRequestStore" /* 6515 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

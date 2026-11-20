@@ -1,6 +1,6 @@
-// === Module 9979: MessageViewNativeComponent ===
+// === Module 9982: MessageViewNativeComponent ===
 
-// Module 9979 (MessageViewNativeComponent)
+// Module 9982 (MessageViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

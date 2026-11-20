@@ -1,28 +1,28 @@
-// === Module 16168: UserSettingsAuthedApps ===
+// === Module 16132: UserSettingsAuthedApps ===
 
-// Module 16168 (UserSettingsAuthedApps)
+// Module 16132 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5496 */;
-import applications from "applications" /* 6889 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7292 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7296 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 7635 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 7647 */;
-import EmbedIcon from "EmbedIcon" /* 14636 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5498 */;
+import applications from "applications" /* 6888 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7291 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7295 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 7634 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 7646 */;
+import EmbedIcon from "EmbedIcon" /* 14604 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6704 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6706 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(6704).FetchState;
-const Constants = fn(1072);
+const FetchState = fn(6706).FetchState;
+const Constants = fn(1071);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { spinner: { padding: nativeDefault.space.PX_16 }, emptyText: null, headerDescription: null, appListHeader: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.emptyText = { marginTop: nativeDefault.space.PX_16 };
@@ -56,10 +56,10 @@ export function useAuthorizedApps() {
   const stateFromStoresObject = appAuthTokens(504).useStateFromStoresObject(items, () => ({ fetchState: authStore.getFetchState(), appAuthTokens: authStore.getNewestTokensForNonChildrenApplications() }));
   appAuthTokens = stateFromStoresObject.appAuthTokens;
   const obj = appAuthTokens(504);
-  const focusEffect = appAuthTokens(1503).useFocusEffect(noop.useCallback(() => closure_1(dependencyMap[13]).fetch(), []));
+  const focusEffect = appAuthTokens(1501).useFocusEffect(noop.useCallback(() => closure_1(dependencyMap[13]).fetch(), []));
   closure_1 = tmp3;
   const items1 = [appAuthTokens, stateFromStoresObject.fetchState !== FetchState.FETCHED];
-  const obj2 = appAuthTokens(1503);
+  const obj2 = appAuthTokens(1501);
   return {
     loading: stateFromStoresObject.fetchState !== FetchState.FETCHED,
     apps: noop.useMemo(() => {
@@ -104,7 +104,7 @@ export function AuthorizedAppsEmpty(loading) {
 export function AuthorizedAppRow(app) {
   app = app.app;
   ({ start, end } = app);
-  importDefault = app(1502).useNavigation();
+  importDefault = app(1500).useNavigation();
   const obj2 = {
     icon: closure_10(TableRowApplicationIconDefault, { application: app.application }),
     label: app.application.name,
@@ -118,5 +118,5 @@ export function AuthorizedAppRow(app) {
     start,
     end
   };
-  return closure_10(app(6926).TableRow, obj2);
+  return closure_10(app(6925).TableRow, obj2);
 }

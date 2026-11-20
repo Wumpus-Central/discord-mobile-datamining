@@ -1,7 +1,7 @@
-// === Module 8578: UnlinkedGamePlayerPlaceholders ===
+// === Module 8577: UnlinkedGamePlayerPlaceholders ===
 
-// Module 8578 (UnlinkedGamePlayerPlaceholders)
-import Constants from "Constants" /* 1072 */;
+// Module 8577 (UnlinkedGamePlayerPlaceholders)
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

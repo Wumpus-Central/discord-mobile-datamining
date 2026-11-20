@@ -1,22 +1,22 @@
-// === Module 19882: GuildSettingsModalSecurity ===
+// === Module 19702: GuildSettingsModalSecurity ===
 
-// Module 19882 (GuildSettingsModalSecurity)
+// Module 19702 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 7876 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 7875 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(4659).isGuildOwnerWithRequiredMfaLevel;
-const Constants = fn(1072);
+let closure_6 = fn(4661).isGuildOwnerWithRequiredMfaLevel;
+const Constants = fn(1071);
 ({ GuildFeatures: closure_10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { wrapper: { flexGrow: 1, justifyContent: "space-between", paddingTop: 99 }, center: { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, label: { textAlign: "center", marginBottom: 8 }, image: { width: 295, height: 142, marginHorizontal: 35 }, infoWrapper: { marginBottom: 40 }, button: { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -60,13 +60,13 @@ export default function GuildSettingsModalSecurity(guildId) {
     }
   }, items2);
   const obj5 = { style: tmp.label, variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1113).intl;
-  obj5.children = intl.string(guildId(1113).t.Wi9LEV);
-  const items4 = [closure_12(guildId(5383).Text, obj5), , ];
+  const intl = tmp2(1112).intl;
+  obj5.children = intl.string(guildId(1112).t.Wi9LEV);
+  const items4 = [closure_12(guildId(5385).Text, obj5), , ];
   const obj6 = { style: tmp.button, children: null };
-  const intl2 = tmp2(1113).intl;
+  const intl2 = tmp2(1112).intl;
   const string = intl2.string;
-  const t = tmp2(1113).t;
+  const t = tmp2(1112).t;
   if (stateFromStores1 === constants2.ELEVATED) {
     let stringResult = string(t["MP0Ho+"]);
   } else {
@@ -79,7 +79,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   obj7.variant = str;
   obj7.onPress = callback;
-  obj6.children = closure_12(guildId(5390).Button, obj7);
+  obj6.children = closure_12(guildId(5392).Button, obj7);
   items4[1] = closure_12(closure_4, obj6);
   let hasItem;
   if (stateFromStores != null) {
@@ -89,9 +89,9 @@ export default function GuildSettingsModalSecurity(guildId) {
   let tmp18Result = null;
   if (hasItem) {
     const obj8 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1113).intl;
-    obj8.children = intl3.string(tmp2(1113).t["KG1V/E"]);
-    tmp18Result = closure_12(tmp2(5383).Text, obj8);
+    const intl3 = tmp2(1112).intl;
+    obj8.children = intl3.string(tmp2(1112).t["KG1V/E"]);
+    tmp18Result = closure_12(tmp2(5385).Text, obj8);
   }
   const obj9 = { children: null };
   items4[2] = tmp18Result;
@@ -100,19 +100,19 @@ export default function GuildSettingsModalSecurity(guildId) {
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(15978);
+  obj11.source = stateFromStores(15942);
   obj11.style = tmp.image;
-  const items6 = [closure_12(stateFromStores(5479), obj11), ];
+  const items6 = [closure_12(stateFromStores(5481), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "body-sm/medium", color: "text-muted", children: null };
-  const intl4 = tmp2(1113).intl;
-  obj13.children = intl4.format(guildId(1113).t["FK0+iX"], {});
-  obj12.children = closure_12(guildId(5383).Text, obj13);
+  const intl4 = tmp2(1112).intl;
+  obj13.children = intl4.format(guildId(1112).t["FK0+iX"], {});
+  obj12.children = closure_12(guildId(5385).Text, obj13);
   items6[1] = closure_12(closure_4, obj12);
   obj10.children = items6;
   items5[1] = closure_13(closure_4, obj10);
   obj3.children = items5;
-  const items7 = [closure_13(closure_5, obj3), closure_12(guildId(5366).NavScrim, {})];
+  const items7 = [closure_13(closure_5, obj3), closure_12(guildId(5368).NavScrim, {})];
   obj9.children = items7;
   return closure_13(closure_14, obj9);
 };

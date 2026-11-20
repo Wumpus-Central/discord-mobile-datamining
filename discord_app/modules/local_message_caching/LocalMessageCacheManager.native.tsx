@@ -1,22 +1,22 @@
-// === Module 15711: LocalMessageCacheManager ===
+// === Module 15675: LocalMessageCacheManager ===
 
-// Module 15711 (LocalMessageCacheManager)
+// Module 15675 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import _modDef2169 from "module_2169" /* 2169 */;
-import DateUtils from "DateUtils" /* 4614 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8131 */;
-import createMessageDefault from "createMessage" /* 8327 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 12111 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import _modDef2167 from "module_2167" /* 2167 */;
+import DateUtils from "DateUtils" /* 4616 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8130 */;
+import createMessageDefault from "createMessage" /* 8326 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 12053 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4735 */;
+import MessageRecord from "MessageRecord" /* 4737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import LifecycleManager from "LifecycleManager" /* 2123 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import LifecycleManager from "LifecycleManager" /* 2121 */;
 
 require = fn;
 function _getKeyForFileId(id) {
@@ -44,8 +44,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = _modDef2169();
-    const tmp5 = _modDef2169(arg0);
+    const tmp4 = _modDef2167();
+    const tmp5 = _modDef2167(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
@@ -132,7 +132,7 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -261,10 +261,10 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const SendMessageOptionsStore = fn(12068);
-const Constants = fn(1072);
+const SendMessageOptionsStore = fn(12010);
+const Constants = fn(1071);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(15712);
+const MutexUtils = fn(15676);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -341,7 +341,7 @@ class LocalMessageCacheManager extends tmp5 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -388,7 +388,7 @@ class LocalMessageCacheManager extends tmp5 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+60" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -408,7 +408,7 @@ class LocalMessageCacheManager extends tmp5 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "HermesInternal", done: "+60" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -421,7 +421,7 @@ class LocalMessageCacheManager extends tmp5 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -663,7 +663,7 @@ class LocalMessageCacheManager extends tmp5 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -704,7 +704,7 @@ class LocalMessageCacheManager extends tmp5 {
               return obj;
             }
             c1 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -929,7 +929,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -980,12 +980,12 @@ prototype["_initialize"] = function _initialize() {
                 let obj4 = values(572);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6268);
+                let obj9 = values(6270);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

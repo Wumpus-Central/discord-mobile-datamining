@@ -1,7 +1,7 @@
-// === Module 19213: ExternalPipAutoEnterExperiment ===
+// === Module 19032: ExternalPipAutoEnterExperiment ===
 
-// Module 19213 (ExternalPipAutoEnterExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 19032 (ExternalPipAutoEnterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-android-seamless-pip", defaultConfig: { autoEnterEnabled: false }, variations: null };

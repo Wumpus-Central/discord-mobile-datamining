@@ -1,28 +1,28 @@
-// === Module 10587: PictureInPicture ===
+// === Module 10529: PictureInPicture ===
 
-// Module 10587 (PictureInPicture)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
-import spring_spring from "spring/spring" /* 5393 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10588 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 10591 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 10592 */;
-import useDraggablePip from "useDraggablePip" /* 10593 */;
+// Module 10529 (PictureInPicture)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
+import spring_spring from "spring/spring" /* 5395 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10530 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 10533 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 10534 */;
+import useDraggablePip from "useDraggablePip" /* 10535 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(10574).toggleFocus;
-const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
+const toggleFocus = fn(10516).toggleFocus;
+const PictureInPicturePositions = fn(1071).PictureInPicturePositions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -32,8 +32,8 @@ let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.alignItems = "baseline";
 obj.pipInnerContainer = obj4;
-const native = fn(1187);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1186);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1186).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 let closure_9 = createStyles.createStyles(obj);
 let items = [{ code: "(function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,overshootClamping:true,velocity:velocity};})" }];
 [tmp5] = items;
@@ -75,7 +75,7 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
   PictureInPictureTsx2.__closure = items1;
   PictureInPictureTsx2.__workletHash = 16667877031596;
   PictureInPictureTsx2.__initData = tmp9;
-  const animatedStyle = _mod1655.useAnimatedStyle(PictureInPictureTsx2);
+  const animatedStyle = _mod1653.useAnimatedStyle(PictureInPictureTsx2);
   const isViewingActivity = useIsViewingActivity.useIsViewingActivity({ channelId: channel.id });
   const obj5 = { channelId: channel.id };
   const tmp3Result = useIsViewingActivity;
@@ -115,7 +115,7 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
   }
   tmp3Result4 = PlatformUtils;
   items3[1] = elevationShadow;
-  obj8.children = jsx(_modDef1655.View, { style: items3, children: <hasOwnProperty>{children}</hasOwnProperty> });
+  obj8.children = jsx(_modDef1653.View, { style: items3, children: <hasOwnProperty>{children}</hasOwnProperty> });
   obj7.children = jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
   obj6.children = <hasOwnProperty ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
     if (null != ref.current) {
@@ -126,6 +126,6 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
       });
     }
   }}>{null}</hasOwnProperty>;
-  return jsx(_modDef1655.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1653.View, { style: null, pointerEvents: "box-none", children: null });
 });
 export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

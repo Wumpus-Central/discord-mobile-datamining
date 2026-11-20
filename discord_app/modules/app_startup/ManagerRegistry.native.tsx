@@ -1,8 +1,8 @@
-// === Module 19477: ManagerRegistry ===
+// === Module 19297: ManagerRegistry ===
 
-// Module 19477 (ManagerRegistry)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20225 */;
+// Module 19297 (ManagerRegistry)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20045 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -69,7 +69,6 @@ const obj = {
   CommunicationDisabledManager: null,
   ConjureBackgroundFramesManager: null,
   ConjureProjectReconnectManager: null,
-  ConjurePublishEvalManager: null,
   ConjureTurnNotificationManager: null,
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
@@ -290,12 +289,6 @@ obj.ConjureProjectReconnectManager = {
   actions: ["POST_CONNECTION_OPEN"],
   inlineRequire() {
     return require("ConjureProjectReconnectManager").default;
-  }
-};
-obj.ConjurePublishEvalManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONJURE_PUBLISH_EVAL_PENDING"],
-  inlineRequire() {
-    return require("ConjurePublishEvalManager").default;
   }
 };
 obj.ConjureTurnNotificationManager = {
@@ -888,7 +881,7 @@ obj.NativeNotificationsManager = {
   neverLoadBeforeConnectionOpen: true
 };
 obj.FriendOnlineTimerManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "CONNECTION_INTERRUPTED", "SELF_PRESENCE_STORE_UPDATE"],
+  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "CONNECTION_INTERRUPTED", "LOGOUT", "SELF_PRESENCE_STORE_UPDATE"],
   inlineRequire() {
     return require("FriendOnlineTimer").default;
   },

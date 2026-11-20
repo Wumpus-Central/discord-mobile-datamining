@@ -1,10 +1,10 @@
 // === Module 9479: LoginHandoffSource ===
 
 // Module 9479 (LoginHandoffSource)
-import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
-import ChannelConstants from "ChannelConstants" /* 4648 */;
-import LinkUtils from "LinkUtils" /* 5415 */;
-import UserSettingsURLUtils from "UserSettingsURLUtils" /* 6447 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1081 */;
+import ChannelConstants from "ChannelConstants" /* 4650 */;
+import LinkUtils from "LinkUtils" /* 5417 */;
+import UserSettingsURLUtils from "UserSettingsURLUtils" /* 6449 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

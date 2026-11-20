@@ -1,7 +1,7 @@
-// === Module 6886: scopes ===
+// === Module 6885: scopes ===
 
-// Module 6886 (scopes)
-import util from "util" /* 1113 */;
+// Module 6885 (scopes)
+import util from "util" /* 1112 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
 import size from "module_2" /* 2 */;
 

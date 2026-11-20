@@ -1,6 +1,6 @@
-// === Module 18303: ConjurePublishEvalStore ===
+// === Module 12194: ConjurePublishEvalStore ===
 
-// Module 18303 (ConjurePublishEvalStore)
+// Module 12194 (ConjurePublishEvalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

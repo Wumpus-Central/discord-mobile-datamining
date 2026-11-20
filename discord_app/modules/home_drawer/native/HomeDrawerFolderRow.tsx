@@ -1,15 +1,15 @@
-// === Module 17930: HomeDrawerFolderRow ===
+// === Module 17757: HomeDrawerFolderRow ===
 
-// Module 17930 (HomeDrawerFolderRow)
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10302 */;
+// Module 17757 (HomeDrawerFolderRow)
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10244 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6543 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -203,10 +203,10 @@ function Wrapper(folder) {
   const obj8 = { num: folder.guildIds.length };
 }
 const View = fn(17).View;
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(4974).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(4976).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

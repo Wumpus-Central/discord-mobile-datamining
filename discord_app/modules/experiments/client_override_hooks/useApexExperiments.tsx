@@ -1,11 +1,11 @@
-// === Module 11886: useApexExperiments ===
+// === Module 11828: useApexExperiments ===
 
-// Module 11886 (useApexExperiments)
-import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import ExperimentManager from "ExperimentManager" /* 5734 */;
-import experiment from "experiment" /* 8123 */;
+// Module 11828 (useApexExperiments)
+import apex_ApexTypes from "apex/ApexTypes" /* 1453 */;
+import ExperimentManager from "ExperimentManager" /* 5736 */;
+import experiment from "experiment" /* 8122 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 
 require = fn;
 function makeClientVariant(id) {

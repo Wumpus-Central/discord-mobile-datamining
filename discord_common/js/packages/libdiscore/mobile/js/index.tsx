@@ -1,9 +1,9 @@
-// === Module 1367: LIBDISCORE_JSI ===
+// === Module 1365: LIBDISCORE_JSI ===
 
-// Module 1367 (LIBDISCORE_JSI)
+// Module 1365 (LIBDISCORE_JSI)
 import _mod17 from "module_17" /* 17 */;
-import global_types from "global_types" /* 1368 */;
-import clock from "clock" /* 1369 */;
+import global_types from "global_types" /* 1366 */;
+import clock from "clock" /* 1367 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

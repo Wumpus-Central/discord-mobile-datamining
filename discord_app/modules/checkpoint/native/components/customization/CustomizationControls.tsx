@@ -1,9 +1,9 @@
-// === Module 12692: CustomizationControls ===
+// === Module 12662: CustomizationControls ===
 
-// Module 12692 (CustomizationControls)
+// Module 12662 (CustomizationControls)
 import jsxProd from "jsxProd" /* 21 */;
-import FinalizeTraitPickerDefault from "FinalizeTraitPicker" /* 12693 */;
-import TraitPickerDefault from "TraitPicker" /* 12696 */;
+import FinalizeTraitPickerDefault from "FinalizeTraitPicker" /* 12663 */;
+import TraitPickerDefault from "TraitPicker" /* 12666 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

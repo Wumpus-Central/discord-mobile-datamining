@@ -1,15 +1,15 @@
-// === Module 16656: QuestDockPlayableBody ===
+// === Module 16480: QuestDockPlayableBody ===
 
-// Module 16656 (QuestDockPlayableBody)
-import QuestTypes from "QuestTypes" /* 6440 */;
-import AdCreativeType from "AdCreativeType" /* 6444 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9875 */;
+// Module 16480 (QuestDockPlayableBody)
+import QuestTypes from "QuestTypes" /* 6442 */;
+import AdCreativeType from "AdCreativeType" /* 6446 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6437).QuestDockMode;
+const QuestDockMode = fn(6439).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");
@@ -30,19 +30,20 @@ export default noop.memo(function QuestDockPlayableBody() {
   const callback = noop.useCallback(analyticsLocations(function*() {
     closure_3 = tmp3;
     closure_4 = tmp19;
-    recordPlayableLaunchResult(9839).captureAdUserAction({ type: recordPlayableLaunchResult(9842).AdUserActionType.CLICK_INTERNAL, adCreativeType: recordPlayableLaunchResult(6444).AdCreativeType.PLAYABLE, adCreativeId: questDockPlayable.id, questContentCTA: recordPlayableLaunchResult(8311).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: recordPlayableLaunchResult(6440).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: recordPlayableLaunchResult(6440).QuestContent.QUEST_BAR_MOBILE, impressionId: getQuestImpressionId() });
-    recordPlayableLaunchResult = recordPlayableLaunchResult(16657).recordPlayableLaunch(questDockPlayable);
+    const tmp25 = getQuestImpressionId();
+    recordPlayableLaunchResult(9841).captureAdUserAction({ type: recordPlayableLaunchResult(9844).AdUserActionType.CLICK_INTERNAL, adCreativeType: recordPlayableLaunchResult(6446).AdCreativeType.PLAYABLE, adCreativeId: questDockPlayable.id, questContentCTA: recordPlayableLaunchResult(8310).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: recordPlayableLaunchResult(6442).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: recordPlayableLaunchResult(6442).QuestContent.QUEST_BAR_MOBILE, impressionId: tmp25 });
+    recordPlayableLaunchResult = recordPlayableLaunchResult(16481).recordPlayableLaunch(questDockPlayable, tmp25);
     closure_132_0 = recordPlayableLaunchResult;
     constants = 1;
     setRestingQuestDockMode(constants.COLLAPSED);
-    const tmp51 = recordPlayableLaunchResult(16657);
-    const completePlayableLaunch = tmp51.completePlayableLaunch;
-    yield completePlayableLaunch(12128).launch({ applicationId: questDockPlayable.applicationId, analyticsLocations });
+    const tmp52 = recordPlayableLaunchResult(16481);
+    const completePlayableLaunch = tmp52.completePlayableLaunch;
+    yield completePlayableLaunch(12070).launch({ applicationId: questDockPlayable.applicationId, analyticsLocations });
     if (1 === tmp7) {
       constants = 0;
-      const result = recordPlayableLaunchResult(16657).completePlayableLaunch(closure_132_0, false);
+      const result = recordPlayableLaunchResult(16481).completePlayableLaunch(closure_132_0, false);
       c7 = 3;
-      recordPlayableLaunchResult(16657);
+      recordPlayableLaunchResult(16481);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;

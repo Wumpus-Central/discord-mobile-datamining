@@ -1,21 +1,21 @@
-// === Module 12082: formatPollMessageChatData ===
+// === Module 12024: chat/formatPollMessageChatData ===
 
-// Module 12082 (formatPollMessageChatData)
-import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4711 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4730 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4742 */;
-import _mod6261 from "module_6261" /* 6261 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9765 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12085 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 12024 (chat/formatPollMessageChatData)
+import util from "util" /* 1112 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4713 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4732 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4740 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4744 */;
+import _mod6263 from "module_6263" /* 6263 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9766 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12027 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function reactionForId(reactions, combined) {
@@ -165,10 +165,10 @@ function computeBasicPollChatData(message, arg1, arg2) {
     return obj6;
   }
 }
-const getPollState = fn(11841).getPollState;
-const Constants = fn(1072);
+const getPollState = fn(11783).getPollState;
+const Constants = fn(1071);
 ({ MessageStates: closure_10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 let obj = { channelId: EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/chat/formatPollMessageChatData.tsx");
@@ -282,7 +282,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             tmp6 = flag;
           }
           let tmp7 = isExpired;
-          const match = _mod6261.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
+          const match = _mod6263.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
           obj = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults };
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
@@ -323,7 +323,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             obj2.shouldAnimateTransition = tmp20;
             const _Math = Math;
             obj2.votesPercentage = Math.round(100 * num2);
-            const match1 = _mod6261.match(layout_type);
+            const match1 = _mod6263.match(layout_type);
             obj2.votes = match1.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
               const intl = flag(layout_type[17]).intl;
               return intl.formatToPlainString(flag(layout_type[17]).t.XRkuof, { count: num });

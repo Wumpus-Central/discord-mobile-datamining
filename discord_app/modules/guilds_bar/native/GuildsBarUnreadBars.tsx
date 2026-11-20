@@ -1,14 +1,14 @@
-// === Module 17979: GuildsBarUnreadBars ===
+// === Module 17806: GuildsBarUnreadBars ===
 
-// Module 17979 (GuildsBarUnreadBars)
+// Module 17806 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
-import FastList from "FastList" /* 7330 */;
+import FastList from "FastList" /* 7329 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6543 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
 
 const require = globalThis.__r;
 
@@ -195,7 +195,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               let obj3 = { node: root, direction: -1, selectedGuildId };
               let tmp36 = checkNodeAndIterate(obj3);
               if (null != tmp36) {
-                let obj4 = { beforeItem: "Array", afterItem: 16 };
+                let obj4 = { beforeItem: "Array", afterItem: false };
                 let obj5 = { section: tmp36.section + tmp50.GUILDS, row: tmp36.item, mention: true };
                 obj4.afterItem = obj5;
                 let tmp37 = obj4;
@@ -204,7 +204,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "r" };
+            let obj6 = { beforeItem: null, afterItem: "Array" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -216,16 +216,16 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6429).GuildsNodeType;
-const GuildsBarConstants = fn(17907);
+const GuildsNodeType = fn(6431).GuildsNodeType;
+const GuildsBarConstants = fn(17734);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16532);
+const YouBarConstants = fn(16355);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "Array", afterItem: "Path" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
+let closure_17 = { beforeItem: "Array", afterItem: "analyticsLocations" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 let closure_20 = { code: "(function GuildsBarUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})" };
 let closure_21 = { code: "(function GuildsBarUnreadBarsTsx2(position,lastPosition){let[scheduleOnRN,debouncedUpdate]=this.__closure;if(position!==lastPosition){scheduleOnRN(debouncedUpdate);}})" };
 const size = fn(2);
@@ -299,7 +299,7 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
   GuildsBarUnreadBarsTsx1.__closure = items3;
   GuildsBarUnreadBarsTsx1.__workletHash = 8498913632251;
   GuildsBarUnreadBarsTsx1.__initData = tmp9;
-  const items4 = [closure_21, require("module_1708").scheduleOnRN, memo];
+  const items4 = [closure_21, require("module_1706").scheduleOnRN, memo];
   _require = undefined;
   top2 = undefined;
   [tmp11, tmp12, tmp13] = items4;
@@ -317,13 +317,13 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
   GuildsBarUnreadBarsTsx2.__closure = items5;
   GuildsBarUnreadBarsTsx2.__workletHash = 12582382943587;
   GuildsBarUnreadBarsTsx2.__initData = tmp11;
-  const animatedReaction = require("module_1655").useAnimatedReaction(GuildsBarUnreadBarsTsx1, GuildsBarUnreadBarsTsx2);
+  const animatedReaction = require("module_1653").useAnimatedReaction(GuildsBarUnreadBarsTsx1, GuildsBarUnreadBarsTsx2);
   mobileQuestDockHeight = undefined;
   youBarTotalHeight = undefined;
   const tmp15 = closure_15();
   _require = tmp15;
   top2 = tmp(tmp2[11])().top;
-  const obj2 = require("module_1655");
+  const obj2 = require("module_1653");
   mobileQuestDockHeight = require("QuestHooks").useMobileQuestDockHeight();
   const tmp8Result = require("QuestHooks");
   let num = 8;

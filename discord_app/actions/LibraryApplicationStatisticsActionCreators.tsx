@@ -1,10 +1,10 @@
-// === Module 14479: LibraryApplicationStatisticsActionCreators ===
+// === Module 14447: LibraryApplicationStatisticsActionCreators ===
 
-// Module 14479 (LibraryApplicationStatisticsActionCreators)
-import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 14447 (LibraryApplicationStatisticsActionCreators)
+import DurationsDefault from "Durations" /* 1088 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14478 */;
+import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14446 */;
 
 require = fn;
 let closure_7 = async function _fetchActivityStatistics() {
@@ -18,7 +18,7 @@ let closure_7 = async function _fetchActivityStatistics() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_7 = async function _fetchActivityStatistics() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_6 = 6 * DurationsDefault.Millis.HOUR;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/LibraryApplicationStatisticsActionCreators.tsx");

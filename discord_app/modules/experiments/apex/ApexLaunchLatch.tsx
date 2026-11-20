@@ -1,10 +1,10 @@
-// === Module 1387: ApexLaunchLatch ===
+// === Module 1385: ApexLaunchLatch ===
 
-// Module 1387 (ApexLaunchLatch)
+// Module 1385 (ApexLaunchLatch)
 import Storage2 from "Storage" /* 510 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
-import ApexLaunchLatchFlags from "ApexLaunchLatchFlags" /* 1252 */;
-import ApexUnitUtils from "ApexUnitUtils" /* 1253 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1250 */;
+import ApexLaunchLatchFlags from "ApexLaunchLatchFlags" /* 1251 */;
+import ApexUnitUtils from "ApexUnitUtils" /* 1252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -34,7 +34,7 @@ function mergeReceipt(receipt, applied2) {
   }
   return flag;
 }
-const WebAnalyticsEvents = fn(1083).WebAnalyticsEvents;
+const WebAnalyticsEvents = fn(1082).WebAnalyticsEvents;
 const apexLaunchLatch = "apexLaunchLatch";
 const logger = new fn(4).Logger("ApexLaunchLatch");
 class StorageLaunchLatchBackend {
@@ -753,7 +753,7 @@ prototype3["trackExposureSuppression"] = function trackExposureSuppression(exper
   }
 };
 
-export const SHADOW_LATCH_FLAGS = fn(1252).SHADOW_LATCH_FLAGS;
+export const SHADOW_LATCH_FLAGS = fn(1251).SHADOW_LATCH_FLAGS;
 export { StorageLaunchLatchBackend };
 export { ApexLaunchLatch };
 export { ApexLaunchLatchController };

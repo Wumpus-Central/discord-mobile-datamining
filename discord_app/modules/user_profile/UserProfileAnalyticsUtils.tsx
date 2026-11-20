@@ -1,20 +1,20 @@
-// === Module 8017: UserProfileAnalyticsUtils ===
+// === Module 8016: UserProfileAnalyticsUtils ===
 
-// Module 8017 (UserProfileAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
-import ActivityTypes from "ActivityTypes" /* 5531 */;
-import useDisplayProfile from "useDisplayProfile" /* 7953 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8026 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8018 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6704 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 8016 (UserProfileAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
+import ActivityTypes from "ActivityTypes" /* 5533 */;
+import useDisplayProfile from "useDisplayProfile" /* 7952 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8025 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8017 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6706 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 require = fn;
@@ -260,10 +260,10 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(6704).FetchState;
-const constants = fn(7950).TrackUserProfileProperties;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const StatusTypes = fn(1083).StatusTypes;
+const FetchState = fn(6706).FetchState;
+const constants = fn(7949).TrackUserProfileProperties;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const StatusTypes = fn(1082).StatusTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 

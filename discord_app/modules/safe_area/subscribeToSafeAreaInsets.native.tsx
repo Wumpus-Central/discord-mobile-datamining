@@ -1,8 +1,8 @@
-// === Module 10754: subscribeToSafeAreaInsets ===
+// === Module 10696: subscribeToSafeAreaInsets ===
 
-// Module 10754 (subscribeToSafeAreaInsets)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import SafeAreaStoreDefault from "SafeAreaStore" /* 1631 */;
+// Module 10696 (subscribeToSafeAreaInsets)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
+import SafeAreaStoreDefault from "SafeAreaStore" /* 1629 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");

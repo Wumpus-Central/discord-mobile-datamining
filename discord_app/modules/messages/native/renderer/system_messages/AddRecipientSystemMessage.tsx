@@ -1,13 +1,13 @@
-// === Module 8597: AddRecipientSystemMessage ===
+// === Module 8596: AddRecipientSystemMessage ===
 
-// Module 8597 (AddRecipientSystemMessage)
-import util from "util" /* 1113 */;
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8579 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8581 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8583 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 8596 (AddRecipientSystemMessage)
+import util from "util" /* 1112 */;
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8578 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8580 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8582 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import UserStore from "UserStore" /* 1386 */;
 import size from "module_2" /* 2 */;
 
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;

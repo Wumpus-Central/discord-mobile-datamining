@@ -1,13 +1,13 @@
-// === Module 12017: AppChannelPermissionUtils ===
+// === Module 11959: AppChannelPermissionUtils ===
 
-// Module 12017 (AppChannelPermissionUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4731 */;
+// Module 11959 (AppChannelPermissionUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4733 */;
 import useAppChannelApplication from "useAppChannelApplication" /* 6747 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/AppChannelPermissionUtils.tsx");
 

@@ -1,15 +1,15 @@
-// === Module 5525: transitionToChannel ===
+// === Module 5527: transitionToChannel ===
 
-// Module 5525 (transitionToChannel)
+// Module 5527 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
-import router_utils from "router_utils" /* 1099 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5526 */;
-import preloadChannelDefault from "preloadChannel" /* 5527 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import router_utils from "router_utils" /* 1098 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5528 */;
+import preloadChannelDefault from "preloadChannel" /* 5529 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 

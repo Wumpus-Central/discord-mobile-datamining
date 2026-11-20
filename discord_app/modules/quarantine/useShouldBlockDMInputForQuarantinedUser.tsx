@@ -1,12 +1,12 @@
-// === Module 13230: useShouldBlockDMInputForQuarantinedUser ===
+// === Module 13200: useShouldBlockDMInputForQuarantinedUser ===
 
-// Module 13230 (useShouldBlockDMInputForQuarantinedUser)
-import MessageStore from "MessageStore" /* 5843 */;
+// Module 13200 (useShouldBlockDMInputForQuarantinedUser)
+import MessageStore from "MessageStore" /* 5845 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const UserFlags = fn(1072).UserFlags;
+const UserFlags = fn(1071).UserFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
 

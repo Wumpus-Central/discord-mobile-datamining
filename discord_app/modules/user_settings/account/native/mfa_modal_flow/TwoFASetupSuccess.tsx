@@ -1,14 +1,14 @@
-// === Module 15977: TwoFASetupSuccess ===
+// === Module 15941: TwoFASetupSuccess ===
 
-// Module 15977 (TwoFASetupSuccess)
+// Module 15941 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 15967 */;
-import _mod15978 from "module_15978" /* 15978 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 15931 */;
+import _mod15942 from "module_15942" /* 15942 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
 let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -47,7 +47,7 @@ export default function TwoFASetupSuccess() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -79,10 +79,10 @@ export default function TwoFASetupSuccess() {
               return obj4;
             } else {
               c4 = 1;
-              const intl = setRegistering(1113).intl;
+              const intl = setRegistering(1112).intl;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: setRegistering(6312).finishRegisterWebAuthnCredential(intl.string(setRegistering(1113).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              const obj5 = { value: setRegistering(6314).finishRegisterWebAuthnCredential(intl.string(setRegistering(1112).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
               return obj5;
             }
           } else {
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(15966).close();
+              setError(15930).close();
               c4 = 0;
-              const obj = setError(15966);
+              const obj = setError(15930);
             }
             c4 = 0;
             c6 = 3;
@@ -134,7 +134,7 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod15978;
+  obj3.source = _mod15942;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
   let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };

@@ -1,7 +1,7 @@
-// === Module 12121: getIsAskToJoin ===
+// === Module 12063: getIsAskToJoin ===
 
-// Module 12121 (getIsAskToJoin)
-import Constants from "Constants" /* 1072 */;
+// Module 12063 (getIsAskToJoin)
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const ActivityActionTypes = Constants.ActivityActionTypes;

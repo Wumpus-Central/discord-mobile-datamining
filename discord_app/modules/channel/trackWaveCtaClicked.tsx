@@ -1,10 +1,10 @@
-// === Module 13038: trackWaveCtaClicked ===
+// === Module 13008: trackWaveCtaClicked ===
 
-// Module 13038 (trackWaveCtaClicked)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 13008 (trackWaveCtaClicked)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/trackWaveCtaClicked.tsx");
 

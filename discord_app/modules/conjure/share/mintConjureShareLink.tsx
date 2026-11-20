@@ -1,7 +1,7 @@
-// === Module 18437: mintConjureShareLink ===
+// === Module 18222: mintConjureShareLink ===
 
-// Module 18437 (mintConjureShareLink)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 18222 (mintConjureShareLink)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_4 = async function _mintConjureShareLink(arg0) {
     return value.body.ticket;
   })();
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/mintConjureShareLink.tsx");
 

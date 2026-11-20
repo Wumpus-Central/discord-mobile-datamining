@@ -1,16 +1,16 @@
-// === Module 17509: auth/register ===
+// === Module 17336: auth/register ===
 
-// Module 17509 (auth/register)
+// Module 17336 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import _modDef2169 from "module_2169" /* 2169 */;
-import APIErrorDefault from "APIError" /* 6229 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6242 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6311 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 17511 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 17512 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 17513 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import _modDef2167 from "module_2167" /* 2167 */;
+import APIErrorDefault from "APIError" /* 6231 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6244 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6313 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 17338 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 17339 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 17340 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -30,7 +30,7 @@ let closure_11 = async function _scorePassword() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ let closure_12 = async function _registerPhone(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ function registerFull(giftCodeSKUId) {
     let obj2 = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, obj2);
     const tmp4Result = AnalyticsUtilsDefault;
-    const diffResult = _modDef2169().diff(birthday, "years");
+    const diffResult = _modDef2167().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -225,7 +225,7 @@ function registerFull(giftCodeSKUId) {
       AnalyticsUtilsDefault.track(constants.USER_AGE_SUBMITTED, obj3);
       const tmp4Result3 = AnalyticsUtilsDefault;
     }
-    const obj11 = _modDef2169();
+    const obj11 = _modDef2167();
   }
   const request = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   const user = { fingerprint: AuthenticationStore.getFingerprint(), email, username, global_name: globalName, password, invite, consent, phone_token: phoneToken, date_of_birth: null, gift_code_sku_id: null, guild_template_code: null, promotional_email_opt_in: null };
@@ -278,10 +278,10 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(17510);
-const Constants = fn(1072);
+const ParentalConsentStore = fn(17337);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault, Endpoints: closure_8 } = Constants);
-const AgeGateConstants = fn(1097);
+const AgeGateConstants = fn(1096);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: closure_10 } = AgeGateConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/register.tsx");

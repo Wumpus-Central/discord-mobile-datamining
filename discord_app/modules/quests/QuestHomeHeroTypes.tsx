@@ -1,15 +1,34 @@
-// === Module 9867: QuestHomeHeroTypes ===
+// === Module 9869: QuestHomeHeroTypes ===
 
-// Module 9867 (QuestHomeHeroTypes)
-import AssetUtils from "AssetUtils" /* 9850 */;
-import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9868 */;
+// Module 9869 (QuestHomeHeroTypes)
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import QuestServerUtils from "QuestServerUtils" /* 8293 */;
+import AssetUtils from "AssetUtils" /* 9852 */;
+import QuestSeriesExperiment2 from "QuestSeriesExperiment" /* 9870 */;
+import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9871 */;
 import size from "module_2" /* 2 */;
 
+function questSeriesFromServer(quest_series) {
+  try {
+    const obj = { id: quest_series.reward_config_quest.id, preview: false, config: null, user_status: null, targeted_content: null };
+    ({ reward_config_quest: obj.config, reward_config_user_status: obj.user_status } = quest_series);
+    obj.targeted_content = [];
+    if (obj2.isQuestWithKnownConfigVersion(obj)) {
+      const obj3 = { rewardQuest: QuestServerUtils.questWithUserStatusFromServer(obj) };
+      return obj3;
+    }
+    obj2 = QuestServerUtils;
+  } catch (tmp8) {
+    const obj4 = { tags: { app_context: "quests" } };
+    SentryUtilsDefault.captureException(tmp8, obj4);
+  }
+}
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
 export function questHomeHeroFromServer(creative_content) {
   creative_content = creative_content.creative_content;
-  const obj = { id: creative_content.id, labelTitle: creative_content.label_title, labelSubtitle: creative_content.label_subtitle, heroImage: AssetUtils.resolveAdCreativeCdnUrl(creative_content.hero_image), heroVideo: null, sponsorImage: null, cta: null, questIds: null, questHomeEntrypoint: null, shelfImage: null, shelfVideo: null, features: null, startsAt: null, endsAt: null };
+  const QuestSeriesExperiment = QuestSeriesExperiment2.QuestSeriesExperiment;
+  const obj = { id: creative_content.id, labelTitle: creative_content.label_title, labelSubtitle: creative_content.label_subtitle, heroImage: AssetUtils.resolveAdCreativeCdnUrl(creative_content.hero_image), heroVideo: null, sponsorImage: null, cta: null, questIds: null, questHomeEntrypoint: null, shelfImage: null, shelfVideo: null, features: null, questSeries: null, startsAt: null, endsAt: null };
   obj.heroVideo = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.hero_video);
   obj.sponsorImage = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.sponsor_image);
   obj.cta = QuestHomeHeroCta.questHomeHeroCtaFromServer(creative_content.cta);
@@ -35,6 +54,13 @@ export function questHomeHeroFromServer(creative_content) {
     features = [];
   }
   obj.features = features;
+  let tmp4;
+  if (QuestSeriesExperiment.getConfig({ location: "quest_home_hero" }).enabled) {
+    if (null != creative_content.quest_series) {
+      tmp4 = questSeriesFromServer(creative_content.quest_series);
+    }
+  }
+  obj.questSeries = tmp4;
   ({ starts_at: obj.startsAt, ends_at: obj.endsAt } = creative_content);
   return obj;
 }

@@ -1,12 +1,12 @@
-// === Module 17900: useFavoritesGuildSuggestionCandidates ===
+// === Module 17727: useFavoritesGuildSuggestionCandidates ===
 
-// Module 17900 (useFavoritesGuildSuggestionCandidates)
-import sortByMatchScore from "sortByMatchScore" /* 9940 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9946 */;
+// Module 17727 (useFavoritesGuildSuggestionCandidates)
+import sortByMatchScore from "sortByMatchScore" /* 9943 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9949 */;
 import noop from "module_19" /* 19 */;
-import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 17901 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 17728 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(17765).NO_SUGGESTIONS;
-const isAllowedType = fn(9948).isAllowedType;
+const NO_SUGGESTIONS = fn(17592).NO_SUGGESTIONS;
+const isAllowedType = fn(9951).isAllowedType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 

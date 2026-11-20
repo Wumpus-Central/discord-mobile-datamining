@@ -1,15 +1,15 @@
-// === Module 17192: useCampaignDevTools ===
+// === Module 17016: useCampaignDevTools ===
 
-// Module 17192 (useCampaignDevTools)
+// Module 17016 (useCampaignDevTools)
 import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9073 */;
-import OverridePremiumTypeActions from "OverridePremiumTypeActions" /* 17162 */;
+import OverridePremiumTypeActions from "OverridePremiumTypeActions" /* 16986 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1389 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1387 */;
 import PromotionsStore from "PromotionsStore" /* 9023 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
-import UserStore from "UserStore" /* 1388 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function setCampaignNitro(value) {
@@ -21,7 +21,7 @@ function setCampaignNitro(value) {
   }
   const result = OverridePremiumTypeActions.updateClientPremiumTypeOverride(value, UserStore.getCurrentUser());
 }
-const prop = fn(1390).PREMIUM_TYPE_OVERRIDE_OPTIONS;
+const prop = fn(1388).PREMIUM_TYPE_OVERRIDE_OPTIONS;
 let items = [
   { id: "actual", value: "actual", label: "Use actual Nitro status" },
   ...prop.map((id) => {
@@ -48,7 +48,7 @@ let closure_13 = module_560.create((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ let closure_13 = module_560.create((arg0) => {
             closure_129_0({ campaignsLoading: false });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp43) {
         if (tmp5 === c3) {
@@ -151,7 +151,7 @@ export default function useCampaignDevTools() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ export default function useCampaignDevTools() {
   const items1 = [closure_7];
   const stateFromStoresArray = campaigns(504).useStateFromStoresArray(items1, () => closure_7.campaignOverrideRows);
   let obj3 = campaigns(504);
-  const tmp8 = reload(17193)(stateFromStores, stateFromStoresArray);
+  const tmp8 = reload(17017)(stateFromStores, stateFromStoresArray);
   const items2 = [locale];
   stateFromStores1 = campaigns(504).useStateFromStores(items2, () => locale.locale);
   let end_date;

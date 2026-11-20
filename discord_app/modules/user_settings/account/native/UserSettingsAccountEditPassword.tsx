@@ -1,37 +1,37 @@
-// === Module 15962: UserSettingsAccountEditPassword ===
+// === Module 15926: UserSettingsAccountEditPassword ===
 
-// Module 15962 (UserSettingsAccountEditPassword)
+// Module 15926 (UserSettingsAccountEditPassword)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import TextInput from "TextInput" /* 7102 */;
-import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7283 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7292 */;
-import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7293 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7298 */;
-import _modDef15963 from "module_15963" /* 15963 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import TextInput from "TextInput" /* 7101 */;
+import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7282 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7291 */;
+import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7292 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7297 */;
+import _modDef15927 from "module_15927" /* 15927 */;
 import noop from "module_19" /* 19 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4634 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 8076 */;
-import UserStore from "UserStore" /* 1388 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4636 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 8075 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const UserSettingsAccountUnverifiedHeaderDefault = UserSettingsAccountUnverifiedHeader;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const state = { newPassword: "channel_id", password: -1755557364 };
-const createStyles = fn(4792);
+const state = { newPassword: "channel_id", password: -1718927092 };
+const createStyles = fn(4794);
 let obj2 = { onePass: { width: 20, height: 20 }, unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 }, container: { padding: 16 }, header: { marginBottom: 20 }, requiredActionsSubtitle: { textAlign: "center", marginTop: 8 }, requiredActionsTitle: { flex: 1, textAlign: "center" }, image: { marginTop: 12, marginBottom: 16, alignSelf: "center" } };
 let closure_14 = createStyles.createLegacyClassComponentStyles(obj2);
 const Component = noop.Component;
@@ -149,7 +149,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef15963, style: tmp.image };
+    const obj4 = { source: _modDef15927, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -207,12 +207,12 @@ prototype["render"] = function render() {
   obj13.children = application_id(React4, obj);
   return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(4853).ThemeContext;
+EditPassword.contextType = fn(4855).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  const params = flag(7295).useSettingNavigationRoute().params;
+  const params = flag(7294).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -220,7 +220,7 @@ export default function EditPasswordWrapper() {
   if (flag == null) {
     flag = false;
   }
-  let obj = flag(7295);
+  let obj = flag(7294);
   items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
     const currentUser = UserStore.getCurrentUser();
@@ -260,7 +260,7 @@ export default function EditPasswordWrapper() {
     return obj2;
   });
   const tmpResult = flag(504);
-  const tmpResult2 = flag(1502);
+  const tmpResult2 = flag(1500);
   const merged = Object.assign(stateFromStoresObject);
-  return closure_11(EditPassword, { navigation: flag(1502).useNavigation() });
+  return closure_11(EditPassword, { navigation: flag(1500).useNavigation() });
 };

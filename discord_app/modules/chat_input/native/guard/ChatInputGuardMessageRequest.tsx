@@ -1,10 +1,10 @@
-// === Module 13235: ChatInputGuardMessageRequest ===
+// === Module 13205: ChatInputGuardMessageRequest ===
 
-// Module 13235 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 13243 */;
+// Module 13205 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 13213 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -26,7 +26,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         } else {
           channel(c2[10]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -76,7 +76,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -105,7 +105,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -113,14 +113,14 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       }
     }
   };
-  importDefault = channel(1502).useNavigation();
-  let obj = channel(1502);
-  const isMessageRequestRestrictedViewer = channel(13236).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(13236);
+  importDefault = channel(1500).useNavigation();
+  let obj = channel(1500);
+  const isMessageRequestRestrictedViewer = channel(13206).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(13206);
   items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(13237).useMessageRequestActions({
+  const messageRequestActions = channel(13207).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -147,7 +147,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(13237);
+  let obj4 = channel(13207);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
@@ -161,13 +161,13 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     }
   };
   const tmp7 = closure_5;
-  let intl = tmp(1113).intl;
-  obj6.message = intl.string(channel(1113).t["e/eQVB"]);
-  const intl2 = tmp(1113).intl;
-  const t = tmp(1113).t;
+  let intl = tmp(1112).intl;
+  obj6.message = intl.string(channel(1112).t["e/eQVB"]);
+  const intl2 = tmp(1112).intl;
+  const t = tmp(1112).t;
   obj6.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
-  const intl3 = tmp(1113).intl;
-  obj6.buttonPrimaryText = intl3.string(channel(1113).t.Kz8Pwr);
+  const intl3 = tmp(1112).intl;
+  obj6.buttonPrimaryText = intl3.string(channel(1112).t.Kz8Pwr);
   obj6.buttonPrimaryOnPress = function onAcceptClick(arg0) {
     const self = this;
     const apply = closure_4.apply;
@@ -186,8 +186,8 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     isAcceptLoading = isOptimisticAccepted;
   }
   obj6.buttonPrimaryLoading = isAcceptLoading;
-  const intl4 = tmp(1113).intl;
-  const t2 = tmp(1113).t;
+  const intl4 = tmp(1112).intl;
+  const t2 = tmp(1112).t;
   obj6.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
   obj6.buttonSecondaryOnPress = function onRejectClick(arg0) {
     const self = this;

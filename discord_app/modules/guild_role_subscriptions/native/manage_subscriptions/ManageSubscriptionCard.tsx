@@ -1,18 +1,18 @@
-// === Module 16674: ManageSubscriptionCard ===
+// === Module 16498: ManageSubscriptionCard ===
 
-// Module 16674 (ManageSubscriptionCard)
+// Module 16498 (ManageSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
-import router_utils from "router_utils" /* 1099 */;
-import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2174 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
-import Pressables from "Pressables" /* 6911 */;
-import GuildIconDefault from "GuildIcon" /* 7203 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12707 */;
-import FormSeparatorDefault from "FormSeparator" /* 16675 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16679 */;
+import router_utils from "router_utils" /* 1098 */;
+import util from "util" /* 1112 */;
+import PremiumUtils from "PremiumUtils" /* 2172 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
+import Pressables from "Pressables" /* 6910 */;
+import GuildIconDefault from "GuildIcon" /* 7202 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12677 */;
+import FormSeparatorDefault from "FormSeparator" /* 16499 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16503 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ function CardBody(isTrial) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -125,13 +125,13 @@ function CardBody(isTrial) {
             closure_128_0 = undefined;
             if (isTrial) {
               const obj5 = { body: null, confirmText: null, isDismissable: true };
-              const intl = tmp5(1113).intl;
-              obj5.body = intl.string(tmp5(1113).t.NL7DFi);
-              const intl2 = tmp5(1113).intl;
-              obj5.confirmText = intl2.string(tmp5(1113).t["NX+WJN"]);
-              tmp3(5740).show(obj5);
+              const intl = tmp5(1112).intl;
+              obj5.body = intl.string(tmp5(1112).t.NL7DFi);
+              const intl2 = tmp5(1112).intl;
+              obj5.confirmText = intl2.string(tmp5(1112).t["NX+WJN"]);
+              tmp3(5742).show(obj5);
               c5 = 3;
-              const obj6 = tmp3(5740);
+              const obj6 = tmp3(5742);
             } else {
               dependencyMap = 1;
               _slicedToArray(true);
@@ -144,7 +144,7 @@ function CardBody(isTrial) {
               } else {
                 c4 = 2;
                 c5 = 1;
-                const obj8 = { value: tmp38(6239).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
+                const obj8 = { value: tmp38(6241).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
                 return obj8;
               }
             }
@@ -330,12 +330,12 @@ function CardBody(isTrial) {
   return closure_12(View, obj2);
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Routes: closure_8, UserSettingsSections: closure_9 } = Constants);
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { padding: 0 }, cardContent: { padding: 16 }, resubscribeButtonContainer: { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, padding: 16 }, separator: { paddingHorizontal: 16 }, header: null, headerContent: null, headerTitlesContainer: null, expandIconExpanded: null, cardRow: null, paymentOverDueWarning: null, headerStatusContainer: null, headerStatusCancel: null, headerStatusTrial: null, headerStatusPastDue: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, padding: 16 };
 obj2.header = { borderRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
@@ -366,7 +366,7 @@ export default function ManageSubscriptionCard(subscription) {
   ({ listing, guild, expanded, subscriptionInfo, groupListing, handleToggleExpanded } = useManageSubscriptionCardDataDefault(subscription));
   const tmp3 = useManageSubscriptionCardDataDefault(subscription);
   const tmp4 = subscription;
-  importDefault = subscription(1502).useNavigation();
+  importDefault = subscription(1500).useNavigation();
   let tmp6Result = null;
   if (null != groupListing) {
     tmp6Result = null;
@@ -404,7 +404,7 @@ export default function ManageSubscriptionCard(subscription) {
         }
         items[1] = expanded;
         obj2.children = items;
-        tmp6Result = closure_12(tmp4(6928).Card, obj2);
+        tmp6Result = closure_12(tmp4(6927).Card, obj2);
       }
     }
   }

@@ -2,14 +2,14 @@
 
 // Module 6772 (GuildOfficialMessageUtils)
 import _modDef671 from "module_671" /* 671 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import ColorUtils from "ColorUtils" /* 4789 */;
-import shared from "shared" /* 4799 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6545 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
+import ColorUtils from "ColorUtils" /* 4791 */;
+import shared from "shared" /* 4801 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6547 */;
 import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6773 */;
 import ThreadHooks from "ThreadHooks" /* 6774 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
@@ -45,8 +45,8 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(4797).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
-const Constants = fn(1072);
+let closure_5 = fn(4799).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+const Constants = fn(1071);
 ({ ChannelTypes: closure_6, GuildFeatures: metroImportDefault, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessageUtils.tsx");
@@ -56,8 +56,8 @@ export function getAccessibleGuildOfficialTextColor(officialMessageColor, semant
   if (saturation === undefined) {
     num = 1;
   }
-  let tmp = arg3;
-  if (arg3 === undefined) {
+  let tmp = c4;
+  if (c4 === undefined) {
     tmp = closure_5;
   }
   const int2hexResult = utils_ColorUtils.int2hex(officialMessageColor);

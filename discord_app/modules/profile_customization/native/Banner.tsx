@@ -1,15 +1,15 @@
-// === Module 8091: Banner ===
+// === Module 8090: Banner ===
 
-// Module 8091 (Banner)
-import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+// Module 8090 (Banner)
+import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
+const BANNER_HEIGHT = fn(1071).BANNER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");

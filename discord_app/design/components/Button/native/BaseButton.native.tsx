@@ -1,27 +1,27 @@
-// === Module 5399: Button/BaseButton ===
+// === Module 5401: Button/BaseButton ===
 
-// Module 5399 (Button/BaseButton)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import native from "native" /* 4853 */;
-import ButtonHooks from "ButtonHooks" /* 5397 */;
+// Module 5401 (Button/BaseButton)
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import native from "native" /* 4855 */;
+import ButtonHooks from "ButtonHooks" /* 5399 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import module_1655_mod from "module_1655" /* 1655 */;
+import module_1653_mod from "module_1653" /* 1653 */;
 
 require = fn;
 let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-const ThemeTypes = fn(1072).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5400).IOS_POINTER_STYLE;
+const ThemeTypes = fn(1071).ThemeTypes;
+const IOS_POINTER_STYLE = fn(5402).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
-let module_1655 = module_1655_mod;
-let closure_9 = module_1655.createAnimatedComponent(Pressable);
-let module_1655 = module_1655_mod;
-let closure_10 = module_1655.createAnimatedComponent(TouchableOpacity);
+let module_1653 = module_1653_mod;
+let closure_9 = module_1653.createAnimatedComponent(Pressable);
+let module_1653 = module_1653_mod;
+let closure_10 = module_1653.createAnimatedComponent(TouchableOpacity);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 
@@ -54,7 +54,7 @@ export function BaseButton(disabled) {
   const tmp = closure_8();
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 16 };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

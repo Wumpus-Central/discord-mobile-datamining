@@ -1,14 +1,14 @@
-// === Module 10537: useMediaViewerClosePosition ===
+// === Module 10479: useMediaViewerClosePosition ===
 
-// Module 10537 (useMediaViewerClosePosition)
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 10530 */;
+// Module 10479 (useMediaViewerClosePosition)
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 10472 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 let closure_6 = { code: "(function useMediaViewerClosePositionTsx1(){let[index]=this.__closure;return index.get();})" };
 let closure_7 = { code: "(function useMediaViewerClosePositionTsx2(index){let[scheduleOnRN,setClosePosition]=this.__closure;scheduleOnRN(setClosePosition,index);})" };
 const size = fn(2);
@@ -59,7 +59,7 @@ export default function useMediaViewerClosePosition(index) {
   useMediaViewerClosePositionTsx1.__closure = items2;
   useMediaViewerClosePositionTsx1.__workletHash = 7521936949267;
   useMediaViewerClosePositionTsx1.__initData = tmp6;
-  const items3 = [closure_7, require("module_1708").scheduleOnRN, callback];
+  const items3 = [closure_7, require("module_1706").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp8, tmp9, tmp10] = items3;
@@ -70,7 +70,7 @@ export default function useMediaViewerClosePosition(index) {
   useMediaViewerClosePositionTsx2.__closure = items4;
   useMediaViewerClosePositionTsx2.__workletHash = 6277806213986;
   useMediaViewerClosePositionTsx2.__initData = tmp8;
-  const animatedReaction = require("module_1655").useAnimatedReaction(useMediaViewerClosePositionTsx1, useMediaViewerClosePositionTsx2);
+  const animatedReaction = require("module_1653").useAnimatedReaction(useMediaViewerClosePositionTsx1, useMediaViewerClosePositionTsx2);
   const items5 = [callback, index];
   const effect = noop.useEffect(() => {
     callback(_undefined.get());

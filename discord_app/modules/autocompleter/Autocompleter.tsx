@@ -1,20 +1,20 @@
-// === Module 9941: Autocompleter ===
+// === Module 9944: Autocompleter ===
 
-// Module 9941 (Autocompleter)
+// Module 9944 (Autocompleter)
 import applyDefault from "apply" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1381 */;
-import _modDef2070 from "module_2070" /* 2070 */;
-import StringUtils from "StringUtils" /* 2153 */;
-import findCodedLinks from "findCodedLinks" /* 5510 */;
-import CodedLink from "CodedLink" /* 5514 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6435 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6557 */;
-import GuildUtilsDefault from "GuildUtils" /* 6558 */;
+import URLUtilsDefault from "URLUtils" /* 1379 */;
+import _modDef2068 from "module_2068" /* 2068 */;
+import StringUtils from "StringUtils" /* 2151 */;
+import findCodedLinks from "findCodedLinks" /* 5512 */;
+import CodedLink from "CodedLink" /* 5516 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6437 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6559 */;
+import GuildUtilsDefault from "GuildUtils" /* 6560 */;
 import UserSearchManagerDefault from "UserSearchManager" /* 9529 */;
 import ThreadMemberListStore from "ThreadMemberListStore" /* 6775 */;
-import LinkRecord from "LinkRecord" /* 9942 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import LinkRecord from "LinkRecord" /* 9945 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
 
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4722).GUILD_VOCAL_CHANNELS_KEY;
-fn(6554).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4724).GUILD_VOCAL_CHANNELS_KEY;
+fn(6556).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -545,7 +545,7 @@ prototype["queryLink"] = function queryLink(query) {
       items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef2070.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef2068.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

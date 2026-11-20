@@ -1,16 +1,16 @@
-// === Module 17178: SimpleRequestOTPActionSheet ===
+// === Module 17002: SimpleRequestOTPActionSheet ===
 
-// Module 17178 (SimpleRequestOTPActionSheet)
+// Module 17002 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7968 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7954 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7967 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9088 */;
 import NativePaymentContext from "NativePaymentContext" /* 9488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
-import SKUStore from "SKUStore" /* 6553 */;
+import UserStore from "UserStore" /* 1386 */;
+import SKUStore from "SKUStore" /* 6555 */;
 
 require = fn;
 function GiftPurchaseSKUView(selectedSkuId) {
@@ -32,7 +32,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -113,7 +113,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
       }
     }
   };
-  const rect = first(1630)();
+  const rect = first(1628)();
   [first, dependencyMap] = noop.useState(false);
   const currentUser = memo1.getCurrentUser();
   _slicedToArray = noop.useRef({});
@@ -124,7 +124,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   items = [closure_8];
   const stateFromStores = selectedSkuId(504).useStateFromStores(items, () => SKUStore.get(selectedSkuId));
   let obj3 = selectedSkuId(504);
-  const fetchCollectiblesProduct = selectedSkuId(11856).useFetchCollectiblesProduct(selectedSkuId);
+  const fetchCollectiblesProduct = selectedSkuId(11798).useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
   let isFetching = fetchCollectiblesProduct.isFetching;
@@ -175,7 +175,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -265,9 +265,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(13824)(obj6);
+  closure_8 = tmp(13793)(obj6);
   const items5 = [product];
-  let obj4 = selectedSkuId(11856);
+  let obj4 = selectedSkuId(11798);
   const obj7 = { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } };
   [tmp16, tmp17] = tmp3(obj.useMemo(() => {
     if (null == c5) {
@@ -299,13 +299,13 @@ function GiftPurchaseSKUView(selectedSkuId) {
     }
   }
   items6[14] = str;
-  const items7 = [closure_11(selectedSkuId(5383).Text, { variant: "body-md/medium", color: "text-overlay-light", children: items6 }), , ];
+  const items7 = [closure_11(selectedSkuId(5385).Text, { variant: "body-md/medium", color: "text-overlay-light", children: items6 }), , ];
   let str4 = "Send Gift";
   if (isFetching) {
     str4 = "Loading...";
   }
   let obj9 = {
-    children: closure_12(selectedSkuId(5390).Button, {
+    children: closure_12(selectedSkuId(5392).Button, {
       variant: "primary",
       text: str4,
       onPress: function submitGiftPurchase() {
@@ -321,16 +321,16 @@ function GiftPurchaseSKUView(selectedSkuId) {
       disabled: isFetching
     })
   };
-  items7[1] = closure_12(selectedSkuId(6928).Card, obj9);
+  items7[1] = closure_12(selectedSkuId(6927).Card, obj9);
   const obj11 = { children: null };
   const obj12 = { variant: "body-md/medium", color: "text-overlay-light", children: null };
   const items8 = ["Select style: ", giftStyle];
   obj12.children = items8;
-  const items9 = [closure_11(selectedSkuId(5383).Text, obj12), closure_12(first(9495), {})];
+  const items9 = [closure_11(selectedSkuId(5385).Text, obj12), closure_12(first(9495), {})];
   obj11.children = items9;
-  items7[2] = closure_11(selectedSkuId(6928).Card, obj11);
+  items7[2] = closure_11(selectedSkuId(6927).Card, obj11);
   obj8.children = items7;
-  return closure_11(selectedSkuId(5808).Stack, obj8);
+  return closure_11(selectedSkuId(5810).Stack, obj8);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
@@ -357,7 +357,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         let tmp8 = closure_12;
       }
       const obj4 = { children: tmp6Result };
-      return tmp8(tmp(5020).BottomSheet, obj4);
+      return tmp8(tmp(5022).BottomSheet, obj4);
     }
   }
   tmp8 = closure_12;
@@ -376,8 +376,8 @@ function SimpleRequestOTPActionSheet(giftMessage) {
   const obj = require("v1");
 }
 const View = fn(17).View;
-let closure_9 = fn(1072).PriceSetAssignmentPurchaseTypes;
-const PremiumTypes = fn(1390).PremiumTypes;
+let closure_9 = fn(1071).PriceSetAssignmentPurchaseTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsxs: closure_11, jsx: closure_12 } = jsxProd);
 let closure_13 = new LoggerDefault("PaymentFlowTest.android");

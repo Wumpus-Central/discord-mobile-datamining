@@ -1,10 +1,10 @@
-// === Module 5000: useCustomThemeDisplaySettings ===
+// === Module 5002: useCustomThemeDisplaySettings ===
 
-// Module 5000 (useCustomThemeDisplaySettings)
+// Module 5002 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1237 */;
 
 require = fn;
 const size = fn(2);

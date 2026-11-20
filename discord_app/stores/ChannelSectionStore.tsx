@@ -1,23 +1,23 @@
-// === Module 6519: ChannelSectionStore ===
+// === Module 6521: ChannelSectionStore ===
 
-// Module 6519 (ChannelSectionStore)
+// Module 6521 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6521 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6522 */;
-import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6523 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ExperimentStore from "ExperimentStore" /* 5409 */;
-import SearchMessageStore from "SearchMessageStore" /* 6520 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import UserStore from "UserStore" /* 1388 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6523 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6524 */;
+import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6525 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ExperimentStore from "ExperimentStore" /* 5411 */;
+import SearchMessageStore from "SearchMessageStore" /* 6522 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function setIsFriendsOpen(arg0, trackClose) {
@@ -134,11 +134,11 @@ function handlePermissionsChange() {
   }
   return flag2;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(4648);
+const ChannelConstants = fn(4650);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 let c17 = false;
 let c18 = false;
 const isProfileOpen = true;

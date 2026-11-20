@@ -1,15 +1,15 @@
-// === Module 17321: CollectiblesShopScreen ===
+// === Module 17148: CollectiblesShopScreen ===
 
-// Module 17321 (CollectiblesShopScreen)
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7295 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 13962 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 17322 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 17323 */;
+// Module 17148 (CollectiblesShopScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7294 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 13931 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 17149 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 17150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(1074).CollectiblesMobileShopScreen;
+const constants = fn(1073).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");

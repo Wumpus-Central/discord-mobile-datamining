@@ -1,8 +1,8 @@
-// === Module 13477: WelcomeScreenActionCreators ===
+// === Module 13447: WelcomeScreenActionCreators ===
 
-// Module 13477 (WelcomeScreenActionCreators)
+// Module 13447 (WelcomeScreenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -42,7 +42,7 @@ let closure_6 = async function _saveWelcomeScreen(arg0) {
   }
   return value;
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 

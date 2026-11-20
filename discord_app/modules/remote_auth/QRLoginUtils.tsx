@@ -1,7 +1,7 @@
-// === Module 14972: QRLoginUtils ===
+// === Module 14936: QRLoginUtils ===
 
-// Module 14972 (QRLoginUtils)
-import URLUtilsDefault from "URLUtils" /* 1381 */;
+// Module 14936 (QRLoginUtils)
+import URLUtilsDefault from "URLUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /^\/ra\/([\w-]+)$/;

@@ -1,6 +1,6 @@
-// === Module 11840: FamilyCenterPendingConnectionStore ===
+// === Module 11782: FamilyCenterPendingConnectionStore ===
 
-// Module 11840 (FamilyCenterPendingConnectionStore)
+// Module 11782 (FamilyCenterPendingConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

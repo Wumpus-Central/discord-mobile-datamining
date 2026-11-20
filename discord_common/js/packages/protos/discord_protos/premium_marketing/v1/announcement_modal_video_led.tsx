@@ -1,7 +1,7 @@
 // === Module 9067: announcement_modal_video_led ===
 
 // Module 9067 (announcement_modal_video_led)
-import _mod1197 from "module_1197" /* 1197 */;
+import _mod1196 from "module_1196" /* 1196 */;
 import localized_string from "localized_string" /* 9030 */;
 import cta_button from "cta_button" /* 9032 */;
 import theme_aware_asset from "theme_aware_asset" /* 9034 */;
@@ -9,7 +9,7 @@ import announcement_modal_perk_card from "announcement_modal_perk_card" /* 9068 
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1197).MessageType;
+const MessageType = fn(1196).MessageType;
 class AnnouncementModalVideoLed$Type extends MessageType {
   constructor() {
     obj = {
@@ -44,7 +44,7 @@ class AnnouncementModalVideoLed$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return require("announcement_modal_perk_card").AnnouncementModalPerkCard;
+            return require("announcement_modal_perk_card").AnnouncementModalIconPerkCard;
           }
     };
     obj1 = { no: 5, name: "button", kind: "message", T: null };
@@ -75,10 +75,10 @@ const prototype = AnnouncementModalVideoLed$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { perkCards: [], termsUrl: "", title: "", body: "", legalese: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -97,28 +97,28 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
 prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writeUnknownFields) {
   if (asset.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(asset.asset, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(asset.asset, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
+    const joined = ThemeAwareAsset.internalBinaryWrite(asset.asset, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(asset.asset, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (asset.titleLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(asset.titleLocalized, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(asset.titleLocalized, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
+    const joined1 = LocalizedString.internalBinaryWrite(asset.titleLocalized, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(asset.titleLocalized, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (asset.bodyLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
-    const joined2 = LocalizedString2.internalBinaryWrite(asset.bodyLocalized, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(asset.bodyLocalized, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
+    const joined2 = LocalizedString2.internalBinaryWrite(asset.bodyLocalized, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(asset.bodyLocalized, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let num4 = 0;
   if (0 < asset.perkCards.length) {
     do {
-      let AnnouncementModalPerkCard = announcement_modal_perk_card.AnnouncementModalPerkCard;
-      let tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
-      let internalBinaryWriteResult3 = AnnouncementModalPerkCard.internalBinaryWrite(asset.perkCards[num4], tagResult3.fork(), writeUnknownFields);
+      let AnnouncementModalIconPerkCard = announcement_modal_perk_card.AnnouncementModalIconPerkCard;
+      let tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
+      let internalBinaryWriteResult3 = AnnouncementModalIconPerkCard.internalBinaryWrite(asset.perkCards[num4], tagResult3.fork(), writeUnknownFields);
       let joined3 = internalBinaryWriteResult3.join();
       num4 = num4 + 1;
       length = asset.perkCards.length;
@@ -126,36 +126,36 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writ
   }
   if (asset.button) {
     const CTAButton = cta_button.CTAButton;
-    const tagResult4 = tag.tag(5, _mod1197.WireType.LengthDelimited);
-    const joined4 = CTAButton.internalBinaryWrite(asset.button, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(asset.button, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1196.WireType.LengthDelimited);
+    const joined4 = CTAButton.internalBinaryWrite(asset.button, tag.tag(5, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(asset.button, tag.tag(5, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (asset.legaleseLocalized) {
     const LocalizedString3 = localized_string.LocalizedString;
-    const tagResult5 = tag.tag(6, _mod1197.WireType.LengthDelimited);
-    const joined5 = LocalizedString3.internalBinaryWrite(asset.legaleseLocalized, tag.tag(6, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = LocalizedString3.internalBinaryWrite(asset.legaleseLocalized, tag.tag(6, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult5 = tag.tag(6, _mod1196.WireType.LengthDelimited);
+    const joined5 = LocalizedString3.internalBinaryWrite(asset.legaleseLocalized, tag.tag(6, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult5 = LocalizedString3.internalBinaryWrite(asset.legaleseLocalized, tag.tag(6, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== asset.termsUrl) {
-    tag.tag(7, _mod1197.WireType.LengthDelimited).string(asset.termsUrl);
-    const tagResult6 = tag.tag(7, _mod1197.WireType.LengthDelimited);
+    tag.tag(7, _mod1196.WireType.LengthDelimited).string(asset.termsUrl);
+    const tagResult6 = tag.tag(7, _mod1196.WireType.LengthDelimited);
   }
   if ("" !== asset.title) {
-    tag.tag(8, _mod1197.WireType.LengthDelimited).string(asset.title);
-    const tagResult7 = tag.tag(8, _mod1197.WireType.LengthDelimited);
+    tag.tag(8, _mod1196.WireType.LengthDelimited).string(asset.title);
+    const tagResult7 = tag.tag(8, _mod1196.WireType.LengthDelimited);
   }
   if ("" !== asset.body) {
-    tag.tag(9, _mod1197.WireType.LengthDelimited).string(asset.body);
-    const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
+    tag.tag(9, _mod1196.WireType.LengthDelimited).string(asset.body);
+    const tagResult8 = tag.tag(9, _mod1196.WireType.LengthDelimited);
   }
   if ("" !== asset.legalese) {
-    tag.tag(10, _mod1197.WireType.LengthDelimited).string(asset.legalese);
-    const tagResult9 = tag.tag(10, _mod1197.WireType.LengthDelimited);
+    tag.tag(10, _mod1196.WireType.LengthDelimited).string(asset.legalese);
+    const tagResult9 = tag.tag(10, _mod1196.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, asset, tag);
@@ -193,7 +193,7 @@ let items = [
     kind: "message",
     repeat: 1,
     T() {
-      return require("announcement_modal_perk_card").AnnouncementModalPerkCard;
+      return require("announcement_modal_perk_card").AnnouncementModalIconPerkCard;
     }
   },
 ,

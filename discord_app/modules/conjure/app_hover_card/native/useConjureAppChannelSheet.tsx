@@ -1,9 +1,9 @@
-// === Module 13804: useConjureAppChannelSheet ===
+// === Module 13773: useConjureAppChannelSheet ===
 
-// Module 13804 (useConjureAppChannelSheet)
-import ConjureAppChannelSheetHeaderDefault from "ConjureAppChannelSheetHeader" /* 13808 */;
+// Module 13773 (useConjureAppChannelSheet)
+import ConjureAppChannelSheetHeaderDefault from "ConjureAppChannelSheetHeader" /* 13777 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

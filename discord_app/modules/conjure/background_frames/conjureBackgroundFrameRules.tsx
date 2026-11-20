@@ -1,18 +1,18 @@
-// === Module 15661: conjureBackgroundFrameRules ===
+// === Module 15625: conjureBackgroundFrameRules ===
 
-// Module 15661 (conjureBackgroundFrameRules)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
+// Module 15625 (conjureBackgroundFrameRules)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 6824 */;
 import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 6833 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15585 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import FramesStore from "FramesStore" /* 6502 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 15662 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14645 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15549 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import FramesStore from "FramesStore" /* 6504 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 15626 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14613 */;
 
 require = fn;
-const FrameIntent = fn(6503).FrameIntent;
+const FrameIntent = fn(6505).FrameIntent;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrameRules.tsx");
 

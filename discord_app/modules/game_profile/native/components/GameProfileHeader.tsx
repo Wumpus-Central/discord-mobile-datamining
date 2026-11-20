@@ -2,10 +2,10 @@
 
 // Module 9688 (GameProfileHeader)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import SKUUtils from "SKUUtils" /* 9689 */;
 import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9690 */;
 import GameCoverArt from "GameCoverArt" /* 9691 */;
@@ -13,7 +13,7 @@ import GameProfileRankPillDefault from "GameProfileRankPill" /* 9693 */;
 import _modDef9695 from "module_9695" /* 9695 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
@@ -22,7 +22,7 @@ const GameProfileConstants = fn(9686);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
@@ -50,7 +50,7 @@ const result = size.fileFinishedImporting("modules/game_profile/native/component
 export default function GameProfileHeader(arg0) {
   ({ game, scrollY, onHeightMeasured } = arg0);
   const tmp = closure_8();
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   items = [closure_9, ];
   if (scrollY == null) {
     scrollY = sharedValue;
@@ -68,7 +68,7 @@ export default function GameProfileHeader(arg0) {
   GameProfileHeaderTsx1.__workletHash = 14790445044571;
   GameProfileHeaderTsx1.__initData = tmp5;
   const genres = game.genres;
-  const animatedStyle = _mod1655.useAnimatedStyle(GameProfileHeaderTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(GameProfileHeaderTsx1);
   const mapped = genres.map(SKUUtils.getGenreText);
   const joined = mapped.join(", ");
   const l30Rank = game.l30Rank;
@@ -100,7 +100,7 @@ export default function GameProfileHeader(arg0) {
   obj7.colors = items5;
   items4[1] = timestampProducer(LinearGradientDefault, obj7);
   obj4.children = items4;
-  const items6 = [metroImportDefault(_modDef1655.View, obj4), ];
+  const items6 = [metroImportDefault(_modDef1653.View, obj4), ];
   const obj8 = { style: tmp.headerContent, children: null };
   const obj9 = { style: tmp.shadowContainer, children: null };
   const obj10 = { game, imageSize: 114, size: null, style: null };

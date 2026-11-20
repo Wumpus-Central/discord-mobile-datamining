@@ -1,7 +1,7 @@
-// === Module 5656: BrowserTransceiverPaddingRemovalExperiment ===
+// === Module 5658: BrowserTransceiverPaddingRemovalExperiment ===
 
-// Module 5656 (BrowserTransceiverPaddingRemovalExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5658 (BrowserTransceiverPaddingRemovalExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-browser-transceiver-padding-removal", kind: "user", defaultConfig: { enabled: false }, variations: null };

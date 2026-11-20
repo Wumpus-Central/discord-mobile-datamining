@@ -1,28 +1,28 @@
-// === Module 14987: RemoteAuthModal ===
+// === Module 14951: RemoteAuthModal ===
 
-// Module 14987 (RemoteAuthModal)
+// Module 14951 (RemoteAuthModal)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import ButtonGroup from "ButtonGroup" /* 6424 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6901 */;
-import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7195 */;
-import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 13577 */;
-import _modDef14986 from "module_14986" /* 14986 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14988 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14992 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import ButtonGroup from "ButtonGroup" /* 6426 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6900 */;
+import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7194 */;
+import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 13547 */;
+import _modDef14950 from "module_14950" /* 14950 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14952 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = tmp8(1655);
+const _modDef1653 = tmp8(1653);
 require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
@@ -68,7 +68,7 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     tmp12 = closure_7;
     tmp14 = closure_7(RemoteAuthNotFound, {});
   }
-  return tmp12(_modDef1655.View, { style: tmp.step, entering, exiting, children: tmp14 }, tmp4);
+  return tmp12(_modDef1653.View, { style: tmp.step, entering, exiting, children: tmp14 }, tmp4);
 }
 function RemoteAuthLogin(arg0) {
   ({ handshakeToken: require, setAuthStep: importDefault } = arg0);
@@ -180,10 +180,10 @@ function RemoteAuthLoading() {
   return metroImportDefault(View, { style: closure_10().loadingContainer, children: metroImportDefault(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) });
 }
 const View = fn(17).View;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 }, mainImage: { marginTop: 16, marginBottom: 32 }, warningCaption: { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 }, caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 }, mainCard: null, step: null, buttonGroup: null, loadingContainer: null };
 let obj3 = { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
 obj2.mainCard = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: nativeDefault.radii.sm, padding: 16, shadowColor: nativeDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
@@ -202,15 +202,15 @@ export default function RemoteAuth(arg0) {
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef14986;
+  obj2.source = _modDef14950;
   items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { skipEntering: true, children: null };
   const obj5 = { style: tmp.mainCard, layout: useEaseInEaseOutLayoutAnimationsDefault().layout, children: null };
   const merged = Object.assign(arg0);
   obj5.children = metroImportDefault(RemoteAuthBody, {});
-  obj4.children = metroImportDefault(_modDef1655.View, obj5);
-  obj3.children = metroImportDefault(_mod1655.LayoutAnimationConfig, obj4);
+  obj4.children = metroImportDefault(_modDef1653.View, obj5);
+  obj3.children = metroImportDefault(_mod1653.LayoutAnimationConfig, obj4);
   items[2] = metroImportDefault(View, obj3);
   obj.children = items;
   return React5(View, obj);

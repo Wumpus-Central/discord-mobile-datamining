@@ -1,20 +1,20 @@
-// === Module 11814: PinotMemberNoticeBar ===
+// === Module 11756: PinotMemberNoticeBar ===
 
-// Module 11814 (PinotMemberNoticeBar)
+// Module 11756 (PinotMemberNoticeBar)
 import nativeDefault from "native" /* 575 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import PinotAnalytics from "PinotAnalytics" /* 11804 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import PinotAnalytics from "PinotAnalytics" /* 11746 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { underlay: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, bar: null, text: null, link: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.bar = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderTopWidth: 1, borderBottomWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
@@ -42,23 +42,23 @@ export function PinotMemberNoticeBar(channel) {
   let obj = { style: tmp.underlay, children: null };
   let obj2 = { style: tmp.bar, children: null };
   let obj3 = { variant: "body-sm/normal", color: "text-default", style: tmp.text, children: null };
-  const intl = channel(1113).intl;
-  obj3.children = intl.format(onDismiss(3407).Jry6Gr, {
+  const intl = channel(1112).intl;
+  obj3.children = intl.format(onDismiss(3409).Jry6Gr, {
     learnMoreHook(children, arg1) {
       return timestampProducer(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", style: link.link, accessibilityRole: "link", onPress: handleLearnMore, children }, arg1);
     }
   });
-  const items1 = [closure_6(channel(5383).Text, obj3), ];
+  const items1 = [closure_6(channel(5385).Text, obj3), ];
   const obj5 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
-  const intl2 = channel(1113).intl;
-  obj5.accessibilityLabel = intl2.string(channel(1113).t.WAI6xu);
+  const intl2 = channel(1112).intl;
+  obj5.accessibilityLabel = intl2.string(channel(1112).t.WAI6xu);
   obj5.hitSlop = hitSlop;
   obj5.onPress = function handleDismiss() {
     const result = PinotAnalytics.trackPinotNoticeAction({ noticeType: "member_channel", channel }, "dismiss");
     onDismiss();
   };
-  obj5.children = closure_6(channel(7032).XSmallIcon, { size: "sm", color: "icon-muted" });
-  items1[1] = closure_6(channel(6911).PressableOpacity, obj5);
+  obj5.children = closure_6(channel(7031).XSmallIcon, { size: "sm", color: "icon-muted" });
+  items1[1] = closure_6(channel(6910).PressableOpacity, obj5);
   obj2.children = items1;
   obj.children = closure_7(View, obj2);
   return closure_6(View, obj);

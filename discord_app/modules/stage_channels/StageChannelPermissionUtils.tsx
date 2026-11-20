@@ -1,21 +1,21 @@
-// === Module 6411: StageChannelPermissionUtils ===
+// === Module 6413: StageChannelPermissionUtils ===
 
-// Module 6411 (StageChannelPermissionUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4649 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
-import LurkingStore from "LurkingStore" /* 4725 */;
+// Module 6413 (StageChannelPermissionUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4651 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
+import LurkingStore from "LurkingStore" /* 4727 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import StageInstanceStore from "StageInstanceStore" /* 4646 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import StageInstanceStore from "StageInstanceStore" /* 4648 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4659).isGuildOwner;
-const Constants = fn(1072);
+const isGuildOwner = fn(4661).isGuildOwner;
+const Constants = fn(1071);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");

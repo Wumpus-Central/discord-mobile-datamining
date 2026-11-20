@@ -1,14 +1,14 @@
-// === Module 18083: useIsConnectedToVoiceChannel ===
+// === Module 17910: useIsConnectedToVoiceChannel ===
 
-// Module 18083 (useIsConnectedToVoiceChannel)
+// Module 17910 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RTCConnectionStates = fn(1072).RTCConnectionStates;
+const RTCConnectionStates = fn(1071).RTCConnectionStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
 

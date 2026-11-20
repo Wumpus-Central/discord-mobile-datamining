@@ -1,12 +1,12 @@
-// === Module 8617: NativeLottieView ===
+// === Module 8616: NativeLottieView ===
 
-// Module 8617 (NativeLottieView)
+// Module 8616 (NativeLottieView)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8618 */;
+import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8617 */;
 import noop_mod from "module_19" /* 19 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 
 let noop = noop_mod;

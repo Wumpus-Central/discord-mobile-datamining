@@ -1,9 +1,9 @@
-// === Module 10632: installApplicationOnDemandIfNeeded ===
+// === Module 10574: installApplicationOnDemandIfNeeded ===
 
-// Module 10632 (installApplicationOnDemandIfNeeded)
+// Module 10574 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2143 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationRecord from "ApplicationRecord" /* 2141 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 const require = fn;
 let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
@@ -17,7 +17,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -104,9 +104,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(4977).dismissKeyboard();
-          let obj = closure_1_0(4977);
-          closure_1_0(10633).openOAuth2Modal({
+          closure_1_0(4979).dismissKeyboard();
+          let obj = closure_1_0(4979);
+          closure_1_0(10575).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,
@@ -135,7 +135,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 

@@ -1,13 +1,13 @@
 // === Module 9070: nitro_home_section_header ===
 
 // Module 9070 (nitro_home_section_header)
-import _mod1197 from "module_1197" /* 1197 */;
+import _mod1196 from "module_1196" /* 1196 */;
 import localized_string from "localized_string" /* 9030 */;
 import help_article from "help_article" /* 9031 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1197).MessageType;
+const MessageType = fn(1196).MessageType;
 class NitroHomeSectionHeader$Type extends MessageType {
   constructor() {
     obj = {
@@ -46,10 +46,10 @@ const prototype = NitroHomeSectionHeader$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { header: "", subheader: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -94,7 +94,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -107,34 +107,34 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(headerLocalized, tag, writeUnknownFields) {
   if (headerLocalized.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(headerLocalized.headerLocalized, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(headerLocalized.headerLocalized, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(headerLocalized.headerLocalized, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(headerLocalized.headerLocalized, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== headerLocalized.header) {
-    tag.tag(2, _mod1197.WireType.LengthDelimited).string(headerLocalized.header);
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
+    tag.tag(2, _mod1196.WireType.LengthDelimited).string(headerLocalized.header);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
   }
   if (headerLocalized.subheaderLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(headerLocalized.subheaderLocalized, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(headerLocalized.subheaderLocalized, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
+    const joined1 = LocalizedString2.internalBinaryWrite(headerLocalized.subheaderLocalized, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(headerLocalized.subheaderLocalized, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== headerLocalized.subheader) {
-    tag.tag(4, _mod1197.WireType.LengthDelimited).string(headerLocalized.subheader);
-    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
+    tag.tag(4, _mod1196.WireType.LengthDelimited).string(headerLocalized.subheader);
+    const tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
   }
   if (headerLocalized.helpArticle) {
     const HelpArticle = help_article.HelpArticle;
-    const tagResult4 = tag.tag(5, _mod1197.WireType.LengthDelimited);
-    const joined2 = HelpArticle.internalBinaryWrite(headerLocalized.helpArticle, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = HelpArticle.internalBinaryWrite(headerLocalized.helpArticle, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1196.WireType.LengthDelimited);
+    const joined2 = HelpArticle.internalBinaryWrite(headerLocalized.helpArticle, tag.tag(5, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = HelpArticle.internalBinaryWrite(headerLocalized.helpArticle, tag.tag(5, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, headerLocalized, tag);

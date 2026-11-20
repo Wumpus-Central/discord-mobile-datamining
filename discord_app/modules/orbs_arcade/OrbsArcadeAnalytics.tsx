@@ -1,11 +1,11 @@
-// === Module 16488: OrbsArcadeAnalytics ===
+// === Module 16310: OrbsArcadeAnalytics ===
 
-// Module 16488 (OrbsArcadeAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+// Module 16310 (OrbsArcadeAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9309 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16478 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16300 */;
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/OrbsArcadeAnalytics.tsx");
 

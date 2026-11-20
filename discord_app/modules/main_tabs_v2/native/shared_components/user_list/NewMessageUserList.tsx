@@ -1,17 +1,17 @@
-// === Module 13137: NewMessageUserList ===
+// === Module 13107: NewMessageUserList ===
 
-// Module 13137 (NewMessageUserList)
+// Module 13107 (NewMessageUserList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6556 */;
+import util from "util" /* 1112 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6558 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function matchGroupDMRecipients(trimmed1, recipients) {
@@ -99,7 +99,7 @@ const UserRowModes = fn(9526).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -234,8 +234,8 @@ export default function NewMessageUserList(selectedUserIds) {
       obj2.title = intl.string(util.t.qGlQrW);
       obj2.items = _undefined2.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = closure_6.findIndex((title) => {
-        const intl = selectedUserIds(1113).intl;
-        return title.title === intl.string(selectedUserIds(1113).t.y29JXs);
+        const intl = selectedUserIds(1112).intl;
+        return title.title === intl.string(selectedUserIds(1112).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         items = [];

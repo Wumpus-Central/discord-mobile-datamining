@@ -1,41 +1,41 @@
-// === Module 10988: StageActionHeader ===
+// === Module 10930: StageActionHeader ===
 
-// Module 10988 (StageActionHeader)
+// Module 10930 (StageActionHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _modDef4219 from "module_4219" /* 4219 */;
-import NavigatorConstants from "NavigatorConstants" /* 5346 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useChannelNameDefault from "useChannelName" /* 5408 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6373 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6376 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6416 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6422 */;
-import _modDef7500 from "module_7500" /* 7500 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7932 */;
-import StatusBarDefault from "StatusBar" /* 10539 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 10833 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10849 */;
-import _modDef10989 from "module_10989" /* 10989 */;
-import _modDef10990 from "module_10990" /* 10990 */;
-import _modDef10991 from "module_10991" /* 10991 */;
-import _modDef10992 from "module_10992" /* 10992 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10995 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10996 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _modDef4221 from "module_4221" /* 4221 */;
+import NavigatorConstants from "NavigatorConstants" /* 5348 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useChannelNameDefault from "useChannelName" /* 5410 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6375 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6378 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6418 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6424 */;
+import _modDef7499 from "module_7499" /* 7499 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7931 */;
+import StatusBarDefault from "StatusBar" /* 10481 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 10775 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10791 */;
+import _modDef10931 from "module_10931" /* 10931 */;
+import _modDef10932 from "module_10932" /* 10932 */;
+import _modDef10933 from "module_10933" /* 10933 */;
+import _modDef10934 from "module_10934" /* 10934 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10937 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10938 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6543 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import StageInstanceStore from "StageInstanceStore" /* 4646 */;
-import StageMusicStore from "StageMusicStore" /* 10818 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import StageInstanceStore from "StageInstanceStore" /* 4648 */;
+import StageMusicStore from "StageMusicStore" /* 10760 */;
 
 require = fn;
 function HideStageChannelCallIcon(channel) {
@@ -45,9 +45,9 @@ function HideStageChannelCallIcon(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   let obj = channel(504);
-  obj2.source = _modDef10989;
-  const intl = channel(1113).intl;
-  obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
+  obj2.source = _modDef10931;
+  const intl = channel(1112).intl;
+  obj2.accessibilityLabel = intl.string(channel(1112).t.cpT0Cq);
   obj2.onPress = function handleClose() {
     const obj = AnalyticsUtilsDefault;
     const obj2 = { video_layout: "pop out" };
@@ -59,7 +59,7 @@ function HideStageChannelCallIcon(channel) {
     const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
   };
   obj2.containerStyle = tmp.iconBackground;
-  obj2.children = closure_13(channel(1187).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj2.children = closure_13(channel(1186).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return closure_13(ChannelCallNavigatorIconDefault, obj2);
 }
 function StageParticipantCounts(channelId) {
@@ -68,10 +68,10 @@ function StageParticipantCounts(channelId) {
   const actualStageSpeakerCount = StageChannelParticipantStoreHooks.useActualStageSpeakerCount(channelId);
   const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(channelId, StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE);
   const intl = util.intl;
-  const obj3 = { style: tmp.counts, pointerEvents: "none", accessible: true, accessibilityLabel: intl.formatToPlainString(_modDef4219.TdMGe4, { speakerCount: actualStageSpeakerCount, audienceCount: stageParticipantsCount }), children: null };
-  items = [state(native.Icon, { source: _modDef10990, size: native.Icon.Sizes.SMALL, style: tmp.icon }), state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }), , ];
-  const obj4 = { source: _modDef10990, size: native.Icon.Sizes.SMALL, style: tmp.icon };
-  items[2] = state(native.Icon, { source: _modDef10991, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  const obj3 = { style: tmp.counts, pointerEvents: "none", accessible: true, accessibilityLabel: intl.formatToPlainString(_modDef4221.TdMGe4, { speakerCount: actualStageSpeakerCount, audienceCount: stageParticipantsCount }), children: null };
+  items = [state(native.Icon, { source: _modDef10932, size: native.Icon.Sizes.SMALL, style: tmp.icon }), state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }), , ];
+  const obj4 = { source: _modDef10932, size: native.Icon.Sizes.SMALL, style: tmp.icon };
+  items[2] = state(native.Icon, { source: _modDef10933, size: native.Icon.Sizes.SMALL, style: tmp.icon });
   items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
   obj3.children = items;
   return gesture(React4, obj3);
@@ -306,15 +306,15 @@ class MusicMuteButton {
 }
 get_ActivityIndicator = fn(17);
 ({ I18nManager: c3, View: closure_4 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, nativeDefault.unsafe_rawColors.BLACK];
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj = { content: { marginStart: nativeDefault.space.PX_12, flex: 1, flexDirection: "row", alignItems: "center", alignSelf: "stretch" }, leftTitleContainer: { flex: 1, minWidth: 0, alignSelf: "stretch", justifyContent: "center", overflow: "hidden" }, iconBackground: null, settingsButton: null, stageInfo: null, stageInfoTopic: null, counts: null, icon: null };
 let obj4 = { backgroundColor: null };
-const ColorUtils = fn(4789);
+const ColorUtils = fn(4791);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
 let obj3 = { marginStart: nativeDefault.space.PX_12, flex: 1, flexDirection: "row", alignItems: "center", alignSelf: "stretch" };
@@ -327,7 +327,7 @@ obj.counts = { flexDirection: "row", alignItems: "center", flexShrink: 0, margin
 let obj8 = { flexDirection: "row", alignItems: "center", flexShrink: 0, marginEnd: nativeDefault.space.PX_8 };
 obj.icon = { marginStart: nativeDefault.space.PX_8, marginEnd: nativeDefault.space.PX_4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
 const value = createStyles.createStyles(obj);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_17 = createStyles.createStyles((arg0, arg1) => {
   const space = nativeDefault.space;
   if (arg0) {

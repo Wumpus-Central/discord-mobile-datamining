@@ -1,11 +1,11 @@
-// === Module 4608: BraintreeStore ===
+// === Module 4610: BraintreeStore ===
 
-// Module 4608 (BraintreeStore)
+// Module 4610 (BraintreeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import Constants from "Constants" /* 1072 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import Constants from "Constants" /* 1071 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: closure_6 } = Constants);

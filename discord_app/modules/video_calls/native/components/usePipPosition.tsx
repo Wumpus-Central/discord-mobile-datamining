@@ -1,6 +1,6 @@
-// === Module 10586: usePipPosition ===
+// === Module 10528: usePipPosition ===
 
-// Module 10586 (usePipPosition)
+// Module 10528 (usePipPosition)
 import Storage2 from "Storage" /* 510 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/u
 export default function usePipPosition() {
   const tmp = _slicedToArray(noop.useState(() => {
     const Storage = closure_0(510).Storage;
-    return Storage.get(CameraPreviewPosition, closure_0(10587).DEFAULT_PIP_POSITION);
+    return Storage.get(CameraPreviewPosition, closure_0(10529).DEFAULT_PIP_POSITION);
   }), 2);
   closure_0 = tmp[1];
   items = [

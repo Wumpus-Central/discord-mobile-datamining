@@ -1,12 +1,12 @@
 // === Module 8815: useTrackPdpClick ===
 
 // Module 8815 (useTrackPdpClick)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7968 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
 

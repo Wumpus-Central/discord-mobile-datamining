@@ -1,6 +1,6 @@
-// === Module 14646: ConjureGameCapturesStore ===
+// === Module 14614: ConjureGameCapturesStore ===
 
-// Module 14646 (ConjureGameCapturesStore)
+// Module 14614 (ConjureGameCapturesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

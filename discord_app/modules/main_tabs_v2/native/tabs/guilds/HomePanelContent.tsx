@@ -1,19 +1,19 @@
-// === Module 17906: HomePanelContent ===
+// === Module 17733: HomePanelContent ===
 
-// Module 17906 (HomePanelContent)
+// Module 17733 (HomePanelContent)
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5802 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5804 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9539 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 9970 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17591 */;
-import GuildsBarDefault from "GuildsBar" /* 17908 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 9973 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17418 */;
+import GuildsBarDefault from "GuildsBar" /* 17735 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17585 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17412 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function ContentMaskGradient(offsetX) {
@@ -39,12 +39,12 @@ function ContentMaskGradient(offsetX) {
   HomePanelContentTsx1.__closure = items1;
   HomePanelContentTsx1.__workletHash = 2135715759940;
   HomePanelContentTsx1.__initData = tmp3;
-  const animatedStyle = _mod1655.useAnimatedStyle(HomePanelContentTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(HomePanelContentTsx1);
   const obj3 = { pointerEvents: "none", style: null, children: null };
   const items2 = [absoluteFill.absoluteFill, animatedStyle];
   obj3.style = items2;
   obj3.children = React6(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true, componentStyles: { height: useWindowDimensionsDefault({ ignoreKeyboard: true }).height } });
-  return React6(_modDef1655.View, obj3);
+  return React6(_modDef1653.View, obj3);
 }
 function HomeDrawerPanelContent() {
   const tmp2 = closure_11();
@@ -64,7 +64,7 @@ function HomeDrawerPanelContent() {
   const obj6 = require("useToken");
   const token1 = require("useToken").useToken(nativeDefault.colors.PANEL_BG);
   const obj7 = require("useToken");
-  items = [closure_14, isClientThemeOrCustomThemeActive, tmp9, require("module_1655").interpolateColor, panelTranslateX, token, token1];
+  items = [closure_14, isClientThemeOrCustomThemeActive, tmp9, require("module_1653").interpolateColor, panelTranslateX, token, token1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -99,7 +99,7 @@ function HomeDrawerPanelContent() {
   HomePanelContentTsx2.__closure = items1;
   HomePanelContentTsx2.__workletHash = 7998740320749;
   HomePanelContentTsx2.__initData = tmp14;
-  const animatedStyle = require("module_1655").useAnimatedStyle(HomePanelContentTsx2);
+  const animatedStyle = require("module_1653").useAnimatedStyle(HomePanelContentTsx2);
   obj3.useRef(false);
   let items2 = [drawerOpen];
   const effect = obj3.useEffect(() => {
@@ -114,8 +114,8 @@ function HomeDrawerPanelContent() {
     }
     obj = utils_PlatformUtils;
   }, items2);
-  const obj8 = require("module_1655");
-  const items3 = [closure_15, require("module_1655").interpolate, panelTranslateX, require("useHomeDrawerGesture").INITIAL_OPEN_WIDTH, require("module_1655").Extrapolation, isClientThemeOrCustomThemeActive, require("module_1655").interpolateColor, tmp9, token, token1];
+  const obj8 = require("module_1653");
+  const items3 = [closure_15, require("module_1653").interpolate, panelTranslateX, require("useHomeDrawerGesture").INITIAL_OPEN_WIDTH, require("module_1653").Extrapolation, isClientThemeOrCustomThemeActive, require("module_1653").interpolateColor, tmp9, token, token1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -157,7 +157,7 @@ function HomeDrawerPanelContent() {
   HomePanelContentTsx3.__closure = items4;
   HomePanelContentTsx3.__workletHash = 9398673657751;
   HomePanelContentTsx3.__initData = tmp23;
-  const animatedStyle1 = require("module_1655").useAnimatedStyle(HomePanelContentTsx3);
+  const animatedStyle1 = require("module_1653").useAnimatedStyle(HomePanelContentTsx3);
   const obj9 = { style: null, children: null };
   const items5 = [tmp2.container, animatedStyle];
   obj9.style = items5;
@@ -174,23 +174,23 @@ function HomeDrawerPanelContent() {
     tmp34Result = closure_9(ContentMaskGradient, obj12);
   }
   obj11.children = tmp34Result;
-  items7[1] = closure_9(_modDef1655.View, obj11);
+  items7[1] = closure_9(_modDef1653.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(17986), {});
+    tmp34Result2 = closure_9(tmp11(17813), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
-  obj9.children = closure_10(_modDef1655.View, obj10);
-  return closure_9(_modDef1655.View, obj9);
+  obj9.children = closure_10(_modDef1653.View, obj10);
+  return closure_9(_modDef1653.View, obj9);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DM_WIDTH = fn(1072).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(17907).GUILD_LIST_WIDTH;
+const DM_WIDTH = fn(1071).DM_WIDTH;
+const GUILD_LIST_WIDTH = fn(17734).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault: { flex: 1, width }, contentMask: { position: "absolute", top: 0, bottom: 0, right: 0, overflow: "hidden" } };
   return obj;

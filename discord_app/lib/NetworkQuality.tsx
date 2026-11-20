@@ -1,11 +1,11 @@
-// === Module 5672: NetworkQuality ===
+// === Module 5674: NetworkQuality ===
 
-// Module 5672 (NetworkQuality)
-import TimeUtils from "TimeUtils" /* 5541 */;
-import NetworkStore from "NetworkStore" /* 5673 */;
+// Module 5674 (NetworkQuality)
+import TimeUtils from "TimeUtils" /* 5543 */;
+import NetworkStore from "NetworkStore" /* 5675 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ NetworkConnectionTypes: c3, NetworkConnectionSpeeds: closure_4 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/NetworkQuality.tsx");

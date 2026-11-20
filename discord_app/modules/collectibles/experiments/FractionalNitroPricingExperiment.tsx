@@ -1,8 +1,8 @@
 // === Module 9463: FractionalNitroPricingExperiment ===
 
 // Module 9463 (FractionalNitroPricingExperiment)
-import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1074 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-fractional-nitro-pricing", kind: "user", defaultConfig: null, variations: { 0: null, 1: 2800, 2: 4200 } });

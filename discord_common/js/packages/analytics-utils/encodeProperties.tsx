@@ -1,6 +1,6 @@
-// === Module 1348: encodeProperties ===
+// === Module 1346: encodeProperties ===
 
-// Module 1348 (encodeProperties)
+// Module 1346 (encodeProperties)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/encodeProperties.tsx");

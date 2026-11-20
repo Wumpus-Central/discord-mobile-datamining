@@ -1,9 +1,9 @@
-// === Module 18759: useSearchSuggestionsGesture ===
+// === Module 18583: useSearchSuggestionsGesture ===
 
-// Module 18759 (useSearchSuggestionsGesture)
-import _mod1655 from "module_1655" /* 1655 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13107 */;
+// Module 18583 (useSearchSuggestionsGesture)
+import _mod1653 from "module_1653" /* 1653 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13077 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -49,13 +49,13 @@ export function useSearchSuggestionsContext() {
 }
 export function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   _require = channelDetailsSearchContext;
-  const sharedValue = require("module_1655").useSharedValue(false);
-  const obj = require("module_1655");
-  sharedValue1 = require("module_1655").useSharedValue(false);
-  const obj2 = require("module_1655");
-  const animatedRef = require("module_1655").useAnimatedRef();
-  const obj3 = require("module_1655");
-  const animatedRef1 = require("module_1655").useAnimatedRef();
+  const sharedValue = require("module_1653").useSharedValue(false);
+  const obj = require("module_1653");
+  sharedValue1 = require("module_1653").useSharedValue(false);
+  const obj2 = require("module_1653");
+  const animatedRef = require("module_1653").useAnimatedRef();
+  const obj3 = require("module_1653");
+  const animatedRef1 = require("module_1653").useAnimatedRef();
   items = [sharedValue];
   const callback = animatedRef.useCallback((arg0, arg1) => {
     if (arg0 !== arg1) {
@@ -68,7 +68,7 @@ export function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   const memo = animatedRef.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const ManualResult = Gesture.Manual();
-    items = [closure_7, sharedValue1, _mod1655.measure, animatedRef1, animatedRef, measureRelativeTo, containsPoint, sharedValue];
+    items = [closure_7, sharedValue1, _mod1653.measure, animatedRef1, animatedRef, measureRelativeTo, containsPoint, sharedValue];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;

@@ -1,7 +1,7 @@
-// === Module 10047: MediaViewerEntranceJankExperiment ===
+// === Module 10050: MediaViewerEntranceJankExperiment ===
 
-// Module 10047 (MediaViewerEntranceJankExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 10050 (MediaViewerEntranceJankExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-media-viewer-entrance-jank", kind: "user", defaultConfig: { enabled: false }, variations: null };

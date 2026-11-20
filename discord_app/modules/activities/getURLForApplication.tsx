@@ -1,10 +1,10 @@
-// === Module 5433: getURLForApplication ===
+// === Module 5435: getURLForApplication ===
 
-// Module 5433 (getURLForApplication)
-import URLUtilsDefault from "URLUtils" /* 1381 */;
+// Module 5435 (getURLForApplication)
+import URLUtilsDefault from "URLUtils" /* 1379 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TestModeStore from "TestModeStore" /* 5434 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5435 */;
+import TestModeStore from "TestModeStore" /* 5436 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5437 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");

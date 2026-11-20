@@ -1,18 +1,18 @@
-// === Module 8339: ReactionActionCreators ===
+// === Module 8338: ReactionActionCreators ===
 
-// Module 8339 (ReactionActionCreators)
+// Module 8338 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import util from "util" /* 1113 */;
-import EmojiUtils from "EmojiUtils" /* 4742 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5374 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5739 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8340 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
+import util from "util" /* 1112 */;
+import EmojiUtils from "EmojiUtils" /* 4744 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5376 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8339 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -108,7 +108,7 @@ let closure_15 = async function _getReactors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -218,7 +218,7 @@ let closure_17 = async function _addReaction(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -282,7 +282,7 @@ let closure_17 = async function _addReaction(arg0) {
               obj5.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
               closure_134_1(closure_134_2[6]).show(obj5);
               c8 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           }
           c7 = 2;
@@ -455,7 +455,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
             closure_2_12(error, () => closure_2_18(closure_1_0, closure_1_1, { isRetry: true }), { isRetry });
           });
           c6 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c6 = tmp;
@@ -536,7 +536,7 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -619,7 +619,7 @@ let closure_23 = async function _removeReaction(arg0) {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -742,7 +742,7 @@ let closure_23 = async function _removeReaction(arg0) {
                 obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -786,11 +786,11 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4799).AccessibilityAnnouncer;
-                  intl = channelId(1113).intl;
+                  const AccessibilityAnnouncer = channelId(4801).AccessibilityAnnouncer;
+                  intl = channelId(1112).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };
-                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1113).t["tD9+b+"], obj6));
+                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1112).t["tD9+b+"], obj6));
                   }
                 }
                 const obj7 = { name: tmp2.name };
@@ -841,7 +841,7 @@ let closure_25 = async function _getOptimisticEmojiColors(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -899,7 +899,7 @@ function hasUserAlreadyReacted(arg0, arg1, arg2, arg3) {
   }
   return result;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, ComponentActions: closure_9, Endpoints: closure_10 } = Constants);
 const ReactionLocations = { MESSAGE: "Message", FORUM_TOOLBAR: "Forum Toolbar", MOBILE_MEDIA_VIEWER: "Mobile Media Viewer", MESSAGE_HOVER_BAR: "Message Hover Bar", MESSAGE_INLINE_BUTTON: "Message Inline Button", MESSAGE_CONTEXT_MENU: "Message Context Menu", MESSAGE_REACTION_PICKER: "Message Reaction Picker", MESSAGE_SHORTCUT: "Message Shortcut", DOUBLE_TAP: "Double Tap", IN_APP_NOTIFICATION: "In App Notification" };
 const size = fn(2);

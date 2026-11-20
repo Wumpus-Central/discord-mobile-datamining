@@ -1,17 +1,17 @@
-// === Module 14430: UserProfileEditNote ===
+// === Module 14398: UserProfileEditNote ===
 
-// Module 14430 (UserProfileEditNote)
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import NoteActionCreatorsDefault from "NoteActionCreators" /* 14431 */;
+// Module 14398 (UserProfileEditNote)
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import NoteActionCreatorsDefault from "NoteActionCreators" /* 14399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-const NOTE_MAX_LENGTH = fn(1072).NOTE_MAX_LENGTH;
+const NOTE_MAX_LENGTH = fn(1071).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
@@ -65,7 +65,7 @@ export default function UserProfileEditNote(userId) {
         if (closure_5 == null) {
           str = "";
         }
-        closure_1_1(14106)({
+        closure_1_1(14075)({
           location: "UserProfileEditNote",
           hasUnsavedChanges: str !== closure_6,
           onReset() {

@@ -1,16 +1,16 @@
-// === Module 17340: HeroBlock ===
+// === Module 17167: HeroBlock ===
 
-// Module 17340 (HeroBlock)
+// Module 17167 (HeroBlock)
 import nativeDefault from "native" /* 575 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8816 */;
 import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 9425 */;
-import SkeletonCardDefault from "SkeletonCard" /* 9773 */;
-import OrbsArcadeExperiment2 from "OrbsArcadeExperiment" /* 16483 */;
-import HeroBlockHeaderDefault from "HeroBlockHeader" /* 17341 */;
-import HeroBlockOrbsArcadeHeaderDefault from "HeroBlockOrbsArcadeHeader" /* 17344 */;
-import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 17359 */;
+import SkeletonCardDefault from "SkeletonCard" /* 9775 */;
+import OrbsArcadeExperiment2 from "OrbsArcadeExperiment" /* 16306 */;
+import HeroBlockHeaderDefault from "HeroBlockHeader" /* 17168 */;
+import HeroBlockOrbsArcadeHeaderDefault from "HeroBlockOrbsArcadeHeader" /* 17171 */;
+import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 17186 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7955 */;
 
 require = fn;
 function SkeletonLoading(accessibilityLabel) {
@@ -40,10 +40,10 @@ function OrbsExclusiveHeroHeader(heroBlock) {
   return tmp2Result;
 }
 const View = fn(17).View;
-const constants = fn(1074).CollectiblesMobileShopScreen;
+const constants = fn(1073).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { heroContainer: { width: "100%" }, productCardsContainer: { zIndex: 1 }, skeletonContainer: { flexDirection: "row", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

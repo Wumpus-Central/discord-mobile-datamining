@@ -1,9 +1,9 @@
-// === Module 11851: useGiftCodeErrorMessage ===
+// === Module 11793: useGiftCodeErrorMessage ===
 
-// Module 11851 (useGiftCodeErrorMessage)
+// Module 11793 (useGiftCodeErrorMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7971 */;
-import GiftCodeStore from "GiftCodeStore" /* 11843 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7970 */;
+import GiftCodeStore from "GiftCodeStore" /* 11785 */;
 
 const require = globalThis.__r;
 
@@ -65,8 +65,8 @@ export default function useGiftCodeErrorMessage(arg0, id) {
     intl.string(tmp(ilcBeX[5]).t.mdLtb5);
   } else if (null != tmp4) {
     if (!result) {
-      tmp(ilcBeX[7]).getGiftCodeRedeemError(tmp4);
-      const tmpResult4 = tmp(ilcBeX[7]);
+      tmp(ilcBeX[6]).getGiftCodeRedeemError(tmp4);
+      const tmpResult4 = tmp(ilcBeX[6]);
     }
   }
 };

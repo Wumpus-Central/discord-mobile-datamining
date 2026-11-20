@@ -1,10 +1,10 @@
 // === Module 8798: openProductDetailsActionSheet ===
 
 // Module 8798 (openProductDetailsActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7967 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7954 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7966 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop Product Preview";

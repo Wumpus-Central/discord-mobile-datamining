@@ -1,12 +1,12 @@
-// === Module 7228: TableRadioGroup ===
+// === Module 7227: TableRadioGroup ===
 
-// Module 7228 (TableRadioGroup)
+// Module 7227 (TableRadioGroup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let jsx = fn(21).jsx;
-const context = noop.createContext({ selectedValue: null, onSelect: fn(1072).NOOP });
+const context = noop.createContext({ selectedValue: null, onSelect: fn(1071).NOOP });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
 
@@ -48,7 +48,7 @@ export function TableRadioGroup(arg0) {
       return selectedValue;
     }
   }), items);
-  jsx = obj.useContext(onChange(7101).RedesignCompatContext);
+  jsx = obj.useContext(onChange(7100).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   onSelect = obj.useCallback((arg0) => {
     if (!closure_1) {
@@ -69,6 +69,6 @@ export function TableRadioGroup(arg0) {
     }
     tmp4 = type;
   });
-  obj2.children = jsx(onChange(7229).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
+  obj2.children = jsx(onChange(7228).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
   return <onSelect.Provider value={noop.useMemo(() => ({ selectedValue, onSelect }), items2)}>{null}</onSelect.Provider>;
 }

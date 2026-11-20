@@ -1,8 +1,8 @@
-// === Module 14272: restartFrames ===
+// === Module 14240: restartFrames ===
 
-// Module 14272 (restartFrames)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10560 */;
-import FramesStore from "FramesStore" /* 6502 */;
+// Module 14240 (restartFrames)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10502 */;
+import FramesStore from "FramesStore" /* 6504 */;
 
 function restartFrame(frame) {
   if (tmp) {
@@ -13,7 +13,7 @@ function restartFrame(frame) {
   }
   tmp = isLaunched(frame) && !frame.data.proxyTicketRefreshing;
 }
-const isLaunched = fn(6503).isLaunched;
+const isLaunched = fn(6505).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 

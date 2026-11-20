@@ -1,9 +1,9 @@
-// === Module 18348: conjureSettingsSaved ===
+// === Module 18182: conjureSettingsSaved ===
 
-// Module 18348 (conjureSettingsSaved)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import conjureSettingsConnection from "conjureSettingsConnection" /* 14664 */;
+// Module 18182 (conjureSettingsSaved)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import conjureSettingsConnection from "conjureSettingsConnection" /* 14623 */;
 import ConjureChatStore from "ConjureChatStore" /* 6806 */;
 
 require = fn;
@@ -20,5 +20,5 @@ export function settleProjectSettingsSave(arg0, notifyAgent) {
     }
   }
   const intl = util.intl;
-  sendUserMessage(arg0, intl.string(_modDef4089["08bsJL"]));
+  sendUserMessage(arg0, intl.string(_modDef4091["08bsJL"]));
 }

@@ -1,19 +1,19 @@
-// === Module 14552: useMobileInviteSuggestions ===
+// === Module 14520: useMobileInviteSuggestions ===
 
-// Module 14552 (useMobileInviteSuggestions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+// Module 14520 (useMobileInviteSuggestions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13099 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5536 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13069 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5538 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const NOOP_NULL = fn(1083).NOOP_NULL;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const NOOP_NULL = fn(1082).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
 

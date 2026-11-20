@@ -1,12 +1,12 @@
-// === Module 17677: useFavoritesGuildCategoryLongPress ===
+// === Module 17504: useFavoritesGuildCategoryLongPress ===
 
-// Module 17677 (useFavoritesGuildCategoryLongPress)
-import util from "util" /* 1113 */;
-import FavoritesUtils from "FavoritesUtils" /* 4666 */;
+// Module 17504 (useFavoritesGuildCategoryLongPress)
+import util from "util" /* 1112 */;
+import FavoritesUtils from "FavoritesUtils" /* 4668 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
 

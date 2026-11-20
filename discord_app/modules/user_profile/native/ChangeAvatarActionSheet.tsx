@@ -1,30 +1,30 @@
-// === Module 15850: ChangeAvatarActionSheet ===
+// === Module 15814: ChangeAvatarActionSheet ===
 
-// Module 15850 (ChangeAvatarActionSheet)
+// Module 15814 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7401 */;
-import ActionSheet from "ActionSheet" /* 7434 */;
-import Form from "Form" /* 7590 */;
+import util from "util" /* 1112 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7400 */;
+import ActionSheet from "ActionSheet" /* 7433 */;
+import Form from "Form" /* 7589 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8832 */;
-import ProfileEditSheetNitroUpdatesExperiment from "ProfileEditSheetNitroUpdatesExperiment" /* 15748 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15750 */;
-import ProfileEditNitroSubLabelDefault from "ProfileEditNitroSubLabel" /* 15751 */;
-import ProfileEditNitroUpsellRowDefault from "ProfileEditNitroUpsellRow" /* 15752 */;
+import ProfileEditSheetNitroUpdatesExperiment from "ProfileEditSheetNitroUpdatesExperiment" /* 15712 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15714 */;
+import ProfileEditNitroSubLabelDefault from "ProfileEditNitroSubLabel" /* 15715 */;
+import ProfileEditNitroUpsellRowDefault from "ProfileEditNitroUpsellRow" /* 15716 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsObjects = fn(1072).AnalyticsObjects;
+const AnalyticsObjects = fn(1071).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 const obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };

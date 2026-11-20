@@ -1,16 +1,16 @@
-// === Module 11902: socialLayerStorefrontEmbedPrice ===
+// === Module 11844: socialLayerStorefrontEmbedPrice ===
 
-// Module 11902 (socialLayerStorefrontEmbedPrice)
-import IAPStoreDefault from "IAPStore" /* 8691 */;
+// Module 11844 (socialLayerStorefrontEmbedPrice)
+import IAPStoreDefault from "IAPStore" /* 8731 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 9090 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SKUStore from "SKUStore" /* 6553 */;
+import SKUStore from "SKUStore" /* 6555 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(1072).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1071).PriceSetAssignmentPurchaseTypes;
 let items = [SKUStore, IAPStoreDefault];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/socialLayerStorefrontEmbedPrice.android.tsx");

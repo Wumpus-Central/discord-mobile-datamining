@@ -1,15 +1,15 @@
-// === Module 12220: ConjureAppSheetIcon ===
+// === Module 12162: ConjureAppSheetIcon ===
 
-// Module 12220 (ConjureAppSheetIcon)
+// Module 12162 (ConjureAppSheetIcon)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11809 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11751 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles((borderRadius) => {
   const obj = { icon: null };
   const size = { width: 48, height: 48, borderRadius, overflow: "hidden" };

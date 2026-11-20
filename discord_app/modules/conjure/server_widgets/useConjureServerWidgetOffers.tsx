@@ -1,16 +1,16 @@
-// === Module 14462: useConjureServerWidgetOffers ===
+// === Module 14430: useConjureServerWidgetOffers ===
 
-// Module 14462 (useConjureServerWidgetOffers)
+// Module 14430 (useConjureServerWidgetOffers)
 import BackoffDefault from "Backoff" /* 559 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6842 */;
-import ConjureServerWidgetActionCreators from "ConjureServerWidgetActionCreators" /* 14463 */;
-import useAddableWidgets from "useAddableWidgets" /* 14465 */;
+import ConjureServerWidgetActionCreators from "ConjureServerWidgetActionCreators" /* 14431 */;
+import useAddableWidgets from "useAddableWidgets" /* 14433 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10272 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
-import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14461 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10212 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14429 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -175,7 +175,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
             closure_2 = dependencyMap[Symbol.iterator]();
             if (closure_2 === undefined) {
               c12 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else {
               c9 = 1;
               closure_136_3 = tmp33;
@@ -364,7 +364,7 @@ export default function useConjureServerWidgetOffers() {
       let arr2 = stateFromStores4[application_id];
       let found1;
       if (arr2 != null) {
-        found1 = arr2.find((status) => status.status === stateFromStores2(14464).ApplicationWidgetConfigStatus.PUBLISHED);
+        found1 = arr2.find((status) => status.status === stateFromStores2(14432).ApplicationWidgetConfigStatus.PUBLISHED);
       }
       let tmp6 = found1;
       let result = null != guild_id;

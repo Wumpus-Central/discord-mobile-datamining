@@ -1,14 +1,14 @@
-// === Module 13460: useChatPlaceholderAnimatedStyles ===
+// === Module 13430: useChatPlaceholderAnimatedStyles ===
 
-// Module 13460 (useChatPlaceholderAnimatedStyles)
+// Module 13430 (useChatPlaceholderAnimatedStyles)
 import initialize from "initialize" /* 504 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import timingPresets from "timingPresets" /* 5005 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import timingPresets from "timingPresets" /* 5007 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
-let obj = { duration: 1300, easing: fn(1187).STANDARD_EASING };
+let obj = { duration: 1300, easing: fn(1186).STANDARD_EASING };
 let closure_4 = { code: "(function useChatPlaceholderAnimatedStylesTsx1(){let[visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG]=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx");
@@ -18,7 +18,7 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
   obj = initialize;
   items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => _undefined.useReducedMotion);
-  const items1 = [_undefined3, visible, animated, stateFromStores, _mod1655.withRepeat, _mod1655.withSequence, timing_timing.withTiming, timingPresets.timingNone, obj];
+  const items1 = [_undefined3, visible, animated, stateFromStores, _mod1653.withRepeat, _mod1653.withSequence, timing_timing.withTiming, timingPresets.timingNone, obj];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -47,5 +47,5 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
   useChatPlaceholderAnimatedStylesTsx1.__closure = items2;
   useChatPlaceholderAnimatedStylesTsx1.__workletHash = 17414638142691;
   useChatPlaceholderAnimatedStylesTsx1.__initData = tmp2;
-  return _mod1655.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
+  return _mod1653.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
 };

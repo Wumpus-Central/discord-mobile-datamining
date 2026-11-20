@@ -1,22 +1,22 @@
-// === Module 16602: QuestBottomSheetConsoleConnect ===
+// === Module 16425: QuestBottomSheetConsoleConnect ===
 
-// Module 16602 (QuestBottomSheetConsoleConnect)
+// Module 16425 (QuestBottomSheetConsoleConnect)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import QuestTypes from "QuestTypes" /* 6440 */;
-import AdCreativeType from "AdCreativeType" /* 6444 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 6905 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
+import util from "util" /* 1112 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import QuestTypes from "QuestTypes" /* 6442 */;
+import AdCreativeType from "AdCreativeType" /* 6446 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 6904 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
 import XboxNeutralIcon from "XboxNeutralIcon" /* 9678 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 9784 */;
-import captureAdUserAction from "captureAdUserAction" /* 9839 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9842 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9875 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 9786 */;
+import captureAdUserAction from "captureAdUserAction" /* 9841 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9844 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -69,13 +69,13 @@ function ConsoleRow(onPress) {
   }
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ PlatformTypes: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { platformButtonsContainer: { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_16, justifyContent: "space-between" }, platformButton: { flex: 1, display: "flex", justifyContent: "center", alignItems: "center" } };
 const styles = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -85,13 +85,13 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16560, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, initialStep, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16383, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, initialStep, sourceQuestContent });
   }
-  const xboxAndPlaystationAccounts = quest(9836).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9836);
-  closure_4 = quest(9873).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9838).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9838);
+  closure_4 = quest(9876).useGetQuestImpressionId();
   items = [quest, xboxAndPlaystationAccounts];
-  let obj2 = quest(9873);
+  let obj2 = quest(9876);
   return closure_6(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(() => QuestPlatformUtils.supportedConsoles(quest).map((type) => {
       closure_0 = type;

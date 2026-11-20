@@ -1,38 +1,38 @@
-// === Module 16526: QuestDockHooks ===
+// === Module 16349: QuestDockHooks ===
 
-// Module 16526 (QuestDockHooks)
+// Module 16349 (QuestDockHooks)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import useToken from "useToken" /* 5356 */;
-import QuestTypes from "QuestTypes" /* 6440 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8451 */;
-import captureAdUserAction from "captureAdUserAction" /* 9839 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9842 */;
-import AssetUtils from "AssetUtils" /* 9850 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10594 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11709 */;
-import QuestDockUtils from "QuestDockUtils" /* 16528 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16530 */;
-import useYouBarMargins from "useYouBarMargins" /* 16531 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 16533 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16534 */;
-import AdCreativeUtils from "AdCreativeUtils" /* 16536 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import useToken from "useToken" /* 5358 */;
+import QuestTypes from "QuestTypes" /* 6442 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8450 */;
+import captureAdUserAction from "captureAdUserAction" /* 9841 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9844 */;
+import AssetUtils from "AssetUtils" /* 9852 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10536 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11651 */;
+import QuestDockUtils from "QuestDockUtils" /* 16351 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16353 */;
+import useYouBarMargins from "useYouBarMargins" /* 16354 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 16356 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16357 */;
+import AdCreativeUtils from "AdCreativeUtils" /* 16359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16527 */;
+import QuestDockStore from "QuestDockStore" /* 16350 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6437);
+const QuestConstants = fn(6439);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_6, QuestDockMode: metroImportDefault } = QuestConstants);
-const QuestDockConstants = fn(16529);
+const QuestDockConstants = fn(16352);
 ({ QUEST_DOCK_CLOSED_HEIGHT: closure_8, QUEST_DOCK_COLLAPSED_HEIGHT: closure_9, QUEST_DOCK_EXTERNAL_OFFSET_CLOSED: closure_10, QUEST_DOCK_EXTERNAL_OFFSET_COLLAPSED_WITH_YOU_BAR: closure_11, QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR: closure_12, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: map1 } = QuestDockConstants);
 let closure_14 = { code: "(function QuestDockHooksTsx1(){let[restingQuestDockMode,minExpandedContentHeight,windowDimensions,safeArea,youBarHorizontalMargin]=this.__closure;return{restingQuestDockMode:restingQuestDockMode.get(),minExpandedContentHeight:minExpandedContentHeight.get(),windowWidth:windowDimensions.get().width,windowHeight:windowDimensions.get().height,safeArea:safeArea.get(),youBarHorizontalMargin:youBarHorizontalMargin};})" };
 let closure_15 = { code: "(function QuestDockHooksTsx2(props,previous){let[cheapWorkletShallowEqual,QuestDockMode,scheduleOnRN,setRestingQuestDockMode,questDockWrapperSpecs,getQuestDockCollapsedWidth,youBarHorizontalMargin,QUEST_DOCK_COLLAPSED_HEIGHT,activeQuestDockMode,getQuestDockClosedWidth,QUEST_DOCK_CLOSED_HEIGHT,getQuestDockExpandedHeightLimits,youBarHeight,QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED,getQuestDockExpandedWidth]=this.__closure;var _previous$restingQues;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{restingQuestDockMode:restingQuestDockMode,minExpandedContentHeight:minExpandedContentHeight,windowWidth:windowWidth,windowHeight:windowHeight,safeArea:safeArea}=props;switch(restingQuestDockMode){case QuestDockMode.RESET_TO_PREVIOUS:if((previous===null||previous===void 0?void 0:previous.restingQuestDockMode)===QuestDockMode.RESET_TO_PREVIOUS)return;scheduleOnRN(setRestingQuestDockMode,(_previous$restingQues=previous===null||previous===void 0?void 0:previous.restingQuestDockMode)!==null&&_previous$restingQues!==void 0?_previous$restingQues:QuestDockMode.COLLAPSED);return;case QuestDockMode.COLLAPSED:questDockWrapperSpecs.set({...questDockWrapperSpecs.get(),x:0,y:0,width:getQuestDockCollapsedWidth(windowWidth,safeArea.left,safeArea.right,youBarHorizontalMargin),height:QUEST_DOCK_COLLAPSED_HEIGHT});activeQuestDockMode.set(QuestDockMode.COLLAPSED);break;case QuestDockMode.CLOSED:case QuestDockMode.SOFT_DISMISSED:questDockWrapperSpecs.set({...questDockWrapperSpecs.get(),x:0,y:0,width:getQuestDockClosedWidth(windowWidth,safeArea.left,safeArea.right,youBarHorizontalMargin),height:QUEST_DOCK_CLOSED_HEIGHT});activeQuestDockMode.set(restingQuestDockMode);break;case QuestDockMode.EXPANDED:const minContentHeight=minExpandedContentHeight;const{minHeight:minHeight,maxHeight:maxHeight}=getQuestDockExpandedHeightLimits(windowHeight,safeArea.top,minContentHeight);const heightMidpoint=(maxHeight+minHeight)/2;let height;if(questDockWrapperSpecs.get().height<=QUEST_DOCK_COLLAPSED_HEIGHT){height=maxHeight;}else if(previous!=null&&questDockWrapperSpecs.get().height===getQuestDockExpandedHeightLimits(previous.windowHeight,previous.safeArea.top,minContentHeight).maxHeight){height=maxHeight;}else if(questDockWrapperSpecs.get().height>=heightMidpoint){height=maxHeight;}else{height=maxHeight;}questDockWrapperSpecs.set({...questDockWrapperSpecs.get(),x:0,y:youBarHeight>0?youBarHeight:QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED,width:getQuestDockExpandedWidth(windowWidth,safeArea.left,safeArea.right),height:height});activeQuestDockMode.set(QuestDockMode.EXPANDED);break;}})" };
@@ -68,7 +68,7 @@ export function useQuestDockModeAnimatedReaction() {
   QuestDockHooksTsx1.__closure = items1;
   QuestDockHooksTsx1.__workletHash = 11315308449480;
   QuestDockHooksTsx1.__initData = tmp8;
-  const items2 = [closure_15, cheapWorkletShallowEqual.cheapWorkletShallowEqual, height, _mod1708.scheduleOnRN, setRestingQuestDockMode, questDockWrapperSpecs, QuestDockUtils.getQuestDockCollapsedWidth, youBarHorizontalMargin, React6, activeQuestDockMode, QuestDockUtils.getQuestDockClosedWidth, React5, QuestDockUtils.getQuestDockExpandedHeightLimits, youBarTotalHeight, state, QuestDockUtils.getQuestDockExpandedWidth];
+  const items2 = [closure_15, cheapWorkletShallowEqual.cheapWorkletShallowEqual, height, _mod1706.scheduleOnRN, setRestingQuestDockMode, questDockWrapperSpecs, QuestDockUtils.getQuestDockCollapsedWidth, youBarHorizontalMargin, React6, activeQuestDockMode, QuestDockUtils.getQuestDockClosedWidth, React5, QuestDockUtils.getQuestDockExpandedHeightLimits, youBarTotalHeight, state, QuestDockUtils.getQuestDockExpandedWidth];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -193,7 +193,7 @@ export function useQuestDockModeAnimatedReaction() {
   QuestDockHooksTsx2.__closure = items3;
   QuestDockHooksTsx2.__workletHash = 14570820956228;
   QuestDockHooksTsx2.__initData = tmp14;
-  const animatedReaction = _mod1655.useAnimatedReaction(QuestDockHooksTsx1, QuestDockHooksTsx2);
+  const animatedReaction = _mod1653.useAnimatedReaction(QuestDockHooksTsx1, QuestDockHooksTsx2);
 }
 export function useQuestDockExternalOffset() {
   items = [QuestDockStore];
@@ -225,14 +225,14 @@ export function useQuestDockExternalOffset() {
   }, items1);
 }
 export function useQuestDockDismissalReset() {
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16533).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16530).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16356).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16353).QuestDockGestureContext).activeQuestDockMode;
   items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = noop.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16528).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16528);
+      isSoftDismissedResult = setRestingQuestDockMode(16351).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(16351);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -240,14 +240,14 @@ export function useQuestDockDismissalReset() {
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16528).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16528);
+        isSoftDismissedResult = setRestingQuestDockMode(16351).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(16351);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
       }
     }
-    setRestingQuestDockMode = setInterval(maybeResetSoftDismissal, 5 * activeQuestDockMode(1089).Millis.MINUTE);
+    setRestingQuestDockMode = setInterval(maybeResetSoftDismissal, 5 * activeQuestDockMode(1088).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
@@ -266,7 +266,7 @@ export function useActionSheetPressHandler(questCreative) {
     obj2.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16537, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16360, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
   }, items);
 }
 export function useQuestDockExpandHandler(questDockCreative) {

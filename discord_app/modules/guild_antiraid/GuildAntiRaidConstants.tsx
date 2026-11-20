@@ -1,9 +1,9 @@
-// === Module 8645: GuildAntiRaidConstants ===
+// === Module 8644: GuildAntiRaidConstants ===
 
-// Module 8645 (GuildAntiRaidConstants)
-import Constants from "Constants" /* 1083 */;
-import util from "util" /* 1113 */;
-import BigFlagUtils from "BigFlagUtils" /* 1084 */;
+// Module 8644 (GuildAntiRaidConstants)
+import Constants from "Constants" /* 1082 */;
+import util from "util" /* 1112 */;
+import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

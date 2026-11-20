@@ -1,18 +1,18 @@
-// === Module 13082: useAvailableAndAddedGuilds ===
+// === Module 13052: useAvailableAndAddedGuilds ===
 
-// Module 13082 (useAvailableAndAddedGuilds)
+// Module 13052 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13076 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13046 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
 
@@ -56,7 +56,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           v3 = tmp;

@@ -1,25 +1,25 @@
-// === Module 7302: AddPhone ===
+// === Module 7301: AddPhone ===
 
-// Module 7302 (AddPhone)
+// Module 7301 (AddPhone)
 import nativeDefault from "native" /* 575 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7251 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4635 */;
-import UserStore from "UserStore" /* 1388 */;
+import PhoneStore from "PhoneStore" /* 7250 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4637 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const UserFlags = fn(1072).UserFlags;
-const NOOP_NULL = fn(1083).NOOP_NULL;
+const UserFlags = fn(1071).UserFlags;
+const NOOP_NULL = fn(1082).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -50,7 +50,7 @@ export default function AddPhone(reason) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

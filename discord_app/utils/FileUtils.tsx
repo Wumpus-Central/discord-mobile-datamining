@@ -1,14 +1,14 @@
-// === Module 8351: FileUtils ===
+// === Module 8350: FileUtils ===
 
-// Module 8351 (FileUtils)
+// Module 8350 (FileUtils)
 import applyDefault from "apply" /* 12 */;
-import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2174 */;
-import FileSizeUtils from "FileSizeUtils" /* 6234 */;
-import UploadUtils from "UploadUtils" /* 8323 */;
-import noConflictDefault from "noConflict" /* 8352 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
+import util from "util" /* 1112 */;
+import PremiumUtils from "PremiumUtils" /* 2172 */;
+import FileSizeUtils from "FileSizeUtils" /* 6236 */;
+import UploadUtils from "UploadUtils" /* 8322 */;
+import noConflictDefault from "noConflict" /* 8351 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -21,9 +21,9 @@ function getUploadFileSizeSum(arg0) {
   }
   return num;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures, MAX_ATTACHMENT_SIZE: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 const PremiumTypes = PremiumConstants.PremiumTypes;
 let items = [{ reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" }, { reType: /^image\/svg\+xml/, klass: "webcode" }, { reType: /^image\//, klass: "image" }, { reType: /^video\//, klass: "video" }, { reName: /\.pdf$/, klass: "acrobat" }, { reName: /\.ae/, klass: "ae" }, { reName: /\.sketch$/, klass: "sketch" }, { reName: /\.ai$/, klass: "ai" }, { reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/, klass: "archive" }, { reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|ts|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/, klass: "code" }, { reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/, klass: "document" }, { reName: /\.(?:xls|xlsx|numbers|csv)$/, klass: "spreadsheet" }, { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" }, { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" }];
 const items1 = [GuildFeatures.MAX_FILE_SIZE_100_MB, PremiumConstants.MAX_GUILD_FILE_SIZE_100_MB];

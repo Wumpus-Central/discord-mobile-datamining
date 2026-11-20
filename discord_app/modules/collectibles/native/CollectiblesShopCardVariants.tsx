@@ -2,7 +2,7 @@
 
 // Module 9456 (CollectiblesShopCardVariants)
 import nativeDefault from "native" /* 575 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7380 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7379 */;
 import useProductPurchaseState from "useProductPurchaseState" /* 8918 */;
 import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9457 */;
 import PlusSmallIcon from "PlusSmallIcon" /* 9458 */;
@@ -47,10 +47,10 @@ function VariantOverflowOption(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj = { variantsContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingStart: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = { marginStart: -nativeDefault.space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center" };
@@ -101,5 +101,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7967);
+  obj2 = defaultVariantIndex(7966);
 });

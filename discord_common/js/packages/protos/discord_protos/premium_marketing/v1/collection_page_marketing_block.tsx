@@ -1,14 +1,14 @@
 // === Module 9065: collection_page_marketing_block ===
 
 // Module 9065 (collection_page_marketing_block)
-import _mod1197 from "module_1197" /* 1197 */;
+import _mod1196 from "module_1196" /* 1196 */;
 import localized_string from "localized_string" /* 9030 */;
 import cta_button from "cta_button" /* 9032 */;
 import theme_aware_asset from "theme_aware_asset" /* 9034 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1197).MessageType;
+const MessageType = fn(1196).MessageType;
 class CollectionPageMarketingBlock$Type extends MessageType {
   constructor() {
     obj = {
@@ -46,10 +46,10 @@ const prototype = CollectionPageMarketingBlock$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { title: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -92,7 +92,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -105,30 +105,30 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(titleLocalized, tag, writeUnknownFields) {
   if (titleLocalized.titleLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(titleLocalized.titleLocalized, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(titleLocalized.titleLocalized, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(titleLocalized.titleLocalized, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(titleLocalized.titleLocalized, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== titleLocalized.title) {
-    tag.tag(2, _mod1197.WireType.LengthDelimited).string(titleLocalized.title);
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
+    tag.tag(2, _mod1196.WireType.LengthDelimited).string(titleLocalized.title);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
   }
   if (titleLocalized.art) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
-    const joined1 = ThemeAwareAsset.internalBinaryWrite(titleLocalized.art, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(titleLocalized.art, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
+    const joined1 = ThemeAwareAsset.internalBinaryWrite(titleLocalized.art, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(titleLocalized.art, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (titleLocalized.button) {
     const CTAButton = cta_button.CTAButton;
-    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
-    const joined2 = CTAButton.internalBinaryWrite(titleLocalized.button, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = CTAButton.internalBinaryWrite(titleLocalized.button, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
+    const joined2 = CTAButton.internalBinaryWrite(titleLocalized.button, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = CTAButton.internalBinaryWrite(titleLocalized.button, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, titleLocalized, tag);

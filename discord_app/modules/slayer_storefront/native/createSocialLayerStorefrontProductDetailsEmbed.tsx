@@ -1,29 +1,29 @@
-// === Module 14224: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 14194: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 14224 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 14194 (createSocialLayerStorefrontProductDetailsEmbed)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1113 */;
-import PremiumConstants from "PremiumConstants" /* 1390 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import _modDef3989 from "module_3989" /* 3989 */;
+import util from "util" /* 1112 */;
+import PremiumConstants from "PremiumConstants" /* 1388 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import _modDef3991 from "module_3991" /* 3991 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6728 */;
 import StorefrontUtils from "StorefrontUtils" /* 6733 */;
 import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6740 */;
-import Constants from "Constants" /* 8319 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8561 */;
+import Constants from "Constants" /* 8318 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8560 */;
 import _modDef8839 from "module_8839" /* 8839 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10351 */;
-import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11902 */;
-import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11904 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13402 */;
-import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14222 */;
-import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 14223 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10293 */;
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11844 */;
+import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11846 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13372 */;
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14192 */;
+import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 14193 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
 import WishlistStore from "WishlistStore" /* 8863 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1388 */;
-import SKUStore from "SKUStore" /* 6553 */;
+import UserStore from "UserStore" /* 1386 */;
+import SKUStore from "SKUStore" /* 6555 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -210,7 +210,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 if (result2) {
                   let stringResult = string(util.t.boqtTA);
                 } else {
-                  stringResult = string(_modDef3989.BKf0MM);
+                  stringResult = string(_modDef3991.BKf0MM);
                 }
                 obj6.acceptLabelText = stringResult;
                 let prop;

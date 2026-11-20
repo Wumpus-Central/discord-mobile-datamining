@@ -2,7 +2,7 @@
 
 // Module 9468 (WishlistBannerUtils)
 import _mod19 from "module_19" /* 19 */;
-import util from "util" /* 1113 */;
+import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

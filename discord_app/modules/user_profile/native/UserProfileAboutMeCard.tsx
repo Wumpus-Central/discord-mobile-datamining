@@ -1,25 +1,25 @@
-// === Module 14122: UserProfileAboutMeCard ===
+// === Module 14091: UserProfileAboutMeCard ===
 
-// Module 14122 (UserProfileAboutMeCard)
+// Module 14091 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ChatInputUtils from "ChatInputUtils" /* 4977 */;
-import useToken from "useToken" /* 5356 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 7136 */;
-import GuildIconDefault from "GuildIcon" /* 7203 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7444 */;
-import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 8016 */;
-import BioTextDefault from "BioText" /* 14123 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 14124 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 14126 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import ChatInputUtils from "ChatInputUtils" /* 4979 */;
+import useToken from "useToken" /* 5358 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7135 */;
+import GuildIconDefault from "GuildIcon" /* 7202 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7443 */;
+import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 8015 */;
+import BioTextDefault from "BioText" /* 14092 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 14093 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 14095 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 function Heading(children) {
@@ -127,36 +127,36 @@ function MemberJoinDates(userId) {
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(6950);
+  const obj4 = userId(6949);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(6950).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(6949).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
-  const intl = tmp4(1113).intl;
-  obj7.children = intl.string(userId(1113).t.a6XYD9);
+  const intl = tmp4(1112).intl;
+  obj7.children = intl.string(userId(1112).t.a6XYD9);
   const items3 = [closure_11(Heading, obj7), ];
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
   const obj9 = { themeType, icon: closure_11(userId(9484).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
-  const intl2 = tmp4(1113).intl;
-  obj9.accessibilityLabel = intl2.formatToPlainString(userId(1113).t["9t7w53"], { date: createdAtDate });
+  const intl2 = tmp4(1112).intl;
+  obj9.accessibilityLabel = intl2.formatToPlainString(userId(1112).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;
   const items5 = [closure_11(TextWithIcon, obj9), ];
   let tmp13Result = null != stateFromStores1 && null != createdAtDate1;
   if (tmp13Result) {
     const obj10 = { children: null };
     const obj11 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-    const items6 = [closure_11(tmp4(5383).Text, obj11), ];
+    const items6 = [closure_11(tmp4(5385).Text, obj11), ];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(7203).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(7202).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
-    const intl3 = tmp4(1113).intl;
+    const intl3 = tmp4(1112).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
-    obj12.accessibilityLabel = intl3.formatToPlainString(tmp4(1113).t.FdLNDK, obj14);
+    obj12.accessibilityLabel = intl3.formatToPlainString(tmp4(1112).t.FdLNDK, obj14);
     obj12.children = createdAtDate1;
     items6[1] = closure_11(TextWithIcon, obj12);
     obj10.children = items6;
@@ -289,15 +289,15 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7445);
+const Constants = fn(7444);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
-const Routes = fn(1072).Routes;
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const Routes = fn(1071).Routes;
+const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = { headingVariant: "body-sm/semibold", textVariant: "body-md/normal", headingSpacing: 8, rowGap: 24, columnGap: 6 };
 const dependencyMap = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "body-xs/semibold", textVariant: "body-sm/normal", headingSpacing: 4, rowGap: 12, columnGap: 3 } };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_16 = createStyles.createStyles({ card: { flexDirection: "column" }, textWithIcon: { flexDirection: "row", alignItems: "center" }, memberJoinDates: { flexDirection: "row", flexWrap: "wrap" }, slashCommands: { flex: 1, flexDirection: "row", flexWrap: "wrap", marginBottom: 12 }, policyLinks: { rowGap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCard.tsx");

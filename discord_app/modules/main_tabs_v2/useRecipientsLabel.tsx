@@ -1,10 +1,10 @@
-// === Module 13752: useRecipientsLabel ===
+// === Module 13721: useRecipientsLabel ===
 
-// Module 13752 (useRecipientsLabel)
-import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
+// Module 13721 (useRecipientsLabel)
+import util from "util" /* 1112 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 

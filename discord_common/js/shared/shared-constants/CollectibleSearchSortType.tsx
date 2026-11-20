@@ -1,6 +1,6 @@
-// === Module 1077: CollectibleSearchSortType ===
+// === Module 1076: CollectibleSearchSortType ===
 
-// Module 1077 (CollectibleSearchSortType)
+// Module 1076 (CollectibleSearchSortType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectibleSearchSortType.tsx");

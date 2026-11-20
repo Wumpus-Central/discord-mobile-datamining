@@ -1,6 +1,6 @@
-// === Module 6873: conjureLiveReloadConnection ===
+// === Module 6872: conjureLiveReloadConnection ===
 
-// Module 6873 (conjureLiveReloadConnection)
+// Module 6872 (conjureLiveReloadConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
 import size from "module_2" /* 2 */;

@@ -1,12 +1,12 @@
-// === Module 1381: URLUtils ===
+// === Module 1379: URLUtils ===
 
-// Module 1381 (URLUtils)
+// Module 1379 (URLUtils)
 import applyDefault from "apply" /* 12 */;
-import Constants from "Constants" /* 1072 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import URLUtilsDefault from "URLUtils" /* 1381 */;
-import UrlAll from "Url" /* 1383 */;
-import ip from "ip" /* 1382 */;
+import Constants from "Constants" /* 1071 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import URLUtilsDefault from "URLUtils" /* 1379 */;
+import UrlAll from "Url" /* 1381 */;
+import ip from "ip" /* 1380 */;
 import size from "module_2" /* 2 */;
 
 function isDiscordDirectAssetUrl(shareURI) {

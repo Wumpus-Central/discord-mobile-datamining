@@ -1,10 +1,10 @@
-// === Module 17948: TypingSubtitle ===
+// === Module 17775: TypingSubtitle ===
 
-// Module 17948 (TypingSubtitle)
-import Text_Text from "Text/Text" /* 5383 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7517 */;
-import TextIcon from "TextIcon" /* 7562 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 17947 */;
+// Module 17775 (TypingSubtitle)
+import Text_Text from "Text/Text" /* 5385 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7516 */;
+import TextIcon from "TextIcon" /* 7561 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 17774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

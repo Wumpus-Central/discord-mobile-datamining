@@ -1,13 +1,13 @@
-// === Module 8114: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 8113: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 8114 (SensitiveMediaGoreRedactionSettingsUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5454 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5462 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6290 */;
+// Module 8113 (SensitiveMediaGoreRedactionSettingsUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5456 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5464 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6292 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function resolveGoreSettingWithDefaults(isFriend) {
@@ -81,7 +81,7 @@ function resolveGoreSettingWithDefaults(isFriend) {
   BLUR2 = ExplicitContentRedaction.BLUR;
   obj = RegionalFeatureConfigUtils;
 }
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 7650: usePinotDiscoverableRowState ===
+// === Module 7649: usePinotDiscoverableRowState ===
 
-// Module 7650 (usePinotDiscoverableRowState)
-import PinotDiscoverable from "PinotDiscoverable" /* 7628 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 7649 (usePinotDiscoverableRowState)
+import PinotDiscoverable from "PinotDiscoverable" /* 7627 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ require = fn;
 function getPinotDiscoverableRowState(guild) {
   guild = guild.guild;
   ({ flags, isPrivate, canManageGuild } = guild);
-  const values = Object.values(guild(7651).PINOT_FEATURES);
+  const values = Object.values(guild(7650).PINOT_FEATURES);
   const reduced = values.reduce((acc, channelFlag) => {
     let tmp = acc;
     if (!obj.isPinotFeatureEnabled(guild, channelFlag)) {
@@ -21,7 +21,7 @@ function getPinotDiscoverableRowState(guild) {
   }, 0);
   if (!(reduced & PinotChannelFlags.SWP_CHANNEL_SUMMARIES_EXCLUDED)) {
     if (tmp7) {
-      let SUMMARIES = tmp(7628).PinotDiscoverableOption.ALL_CONTENT;
+      let SUMMARIES = tmp(7627).PinotDiscoverableOption.ALL_CONTENT;
     }
     if (0 === tmp4[SUMMARIES].length) {
       obj = { kind: "hidden" };
@@ -30,11 +30,11 @@ function getPinotDiscoverableRowState(guild) {
     } else {
       if (!((flags | reduced) & PinotChannelFlags.SWP_CHANNEL_SUMMARIES_EXCLUDED)) {
         if (tmp10) {
-          let SUMMARIES2 = tmp(7628).PinotDiscoverableOption.ALL_CONTENT;
+          let SUMMARIES2 = tmp(7627).PinotDiscoverableOption.ALL_CONTENT;
         }
         obj = { kind: "select", value: SUMMARIES2, options: arr2, serverFlags: reduced, readOnly: !canManageGuild };
       }
-      const PinotDiscoverableOption2 = tmp(7628).PinotDiscoverableOption;
+      const PinotDiscoverableOption2 = tmp(7627).PinotDiscoverableOption;
       if (!((flags | reduced) & PinotChannelFlags.SWP_CHANNEL_SUMMARIES_EXCLUDED)) {
         SUMMARIES2 = PinotDiscoverableOption2.SUMMARIES;
       } else {
@@ -43,23 +43,23 @@ function getPinotDiscoverableRowState(guild) {
     }
     return obj;
   }
-  const PinotDiscoverableOption = tmp(7628).PinotDiscoverableOption;
+  const PinotDiscoverableOption = tmp(7627).PinotDiscoverableOption;
   if (!(reduced & PinotChannelFlags.SWP_CHANNEL_SUMMARIES_EXCLUDED)) {
     SUMMARIES = PinotDiscoverableOption.SUMMARIES;
   } else {
     SUMMARIES = tmp7 ? PinotDiscoverableOption.MESSAGES : PinotDiscoverableOption.NONE;
   }
 }
-const PinotChannelFlags = fn(7629).PinotChannelFlags;
-const Permissions = fn(1072).Permissions;
+const PinotChannelFlags = fn(7628).PinotChannelFlags;
+const Permissions = fn(1071).Permissions;
 let obj = {};
-let items = [fn(7628).PinotDiscoverableOption.ALL_CONTENT, fn(7628).PinotDiscoverableOption.SUMMARIES, fn(7628).PinotDiscoverableOption.MESSAGES, fn(7628).PinotDiscoverableOption.NONE];
-obj[fn(7628).PinotDiscoverableOption.ALL_CONTENT] = items;
-let items1 = [fn(7628).PinotDiscoverableOption.SUMMARIES, fn(7628).PinotDiscoverableOption.NONE];
-obj[fn(7628).PinotDiscoverableOption.SUMMARIES] = items1;
-const items2 = [fn(7628).PinotDiscoverableOption.MESSAGES, fn(7628).PinotDiscoverableOption.NONE];
-obj[fn(7628).PinotDiscoverableOption.MESSAGES] = items2;
-obj[fn(7628).PinotDiscoverableOption.NONE] = [];
+let items = [fn(7627).PinotDiscoverableOption.ALL_CONTENT, fn(7627).PinotDiscoverableOption.SUMMARIES, fn(7627).PinotDiscoverableOption.MESSAGES, fn(7627).PinotDiscoverableOption.NONE];
+obj[fn(7627).PinotDiscoverableOption.ALL_CONTENT] = items;
+let items1 = [fn(7627).PinotDiscoverableOption.SUMMARIES, fn(7627).PinotDiscoverableOption.NONE];
+obj[fn(7627).PinotDiscoverableOption.SUMMARIES] = items1;
+const items2 = [fn(7627).PinotDiscoverableOption.MESSAGES, fn(7627).PinotDiscoverableOption.NONE];
+obj[fn(7627).PinotDiscoverableOption.MESSAGES] = items2;
+obj[fn(7627).PinotDiscoverableOption.NONE] = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/usePinotDiscoverableRowState.tsx");
 

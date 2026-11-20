@@ -1,6 +1,6 @@
-// === Module 4652: ThreadSearchTagSetting ===
+// === Module 4654: ThreadSearchTagSetting ===
 
-// Module 4652 (ThreadSearchTagSetting)
+// Module 4654 (ThreadSearchTagSetting)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["match_all", "match_some"]) };

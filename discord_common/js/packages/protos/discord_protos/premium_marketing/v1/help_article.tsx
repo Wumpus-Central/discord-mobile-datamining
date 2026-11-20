@@ -1,12 +1,12 @@
 // === Module 9031: help_article ===
 
 // Module 9031 (help_article)
-import _mod1197 from "module_1197" /* 1197 */;
+import _mod1196 from "module_1196" /* 1196 */;
 import localized_string from "localized_string" /* 9030 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1197).MessageType;
+const MessageType = fn(1196).MessageType;
 class HelpArticle$Type extends MessageType {
   constructor() {
     items = [, , ];
@@ -28,10 +28,10 @@ const prototype = HelpArticle$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { id: "", linkText: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -70,7 +70,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -82,23 +82,23 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
   if ("" !== id.id) {
-    tag.tag(1, _mod1197.WireType.LengthDelimited).string(id.id);
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
+    tag.tag(1, _mod1196.WireType.LengthDelimited).string(id.id);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
   }
   if ("" !== id.linkText) {
-    tag.tag(2, _mod1197.WireType.LengthDelimited).string(id.linkText);
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
+    tag.tag(2, _mod1196.WireType.LengthDelimited).string(id.linkText);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
   }
   if (id.linkTextLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, id, tag);

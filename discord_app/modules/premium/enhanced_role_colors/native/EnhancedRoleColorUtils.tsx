@@ -1,12 +1,12 @@
-// === Module 8580: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 8579: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 8580 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 8579 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef671 from "module_671" /* 671 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5821 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
 
 const useHasEnhancedRoleColorsDefault = useHasEnhancedRoleColors;
 
@@ -55,7 +55,7 @@ function processColorStrings(colorStrings) {
   }
 }
 const processColor = fn(17).processColor;
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx");
 

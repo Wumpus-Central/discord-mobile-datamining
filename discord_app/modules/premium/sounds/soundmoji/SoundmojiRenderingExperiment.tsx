@@ -1,7 +1,7 @@
-// === Module 12391: SoundmojiRenderingExperiment ===
+// === Module 12361: SoundmojiRenderingExperiment ===
 
-// Module 12391 (SoundmojiRenderingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 12361 (SoundmojiRenderingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-soundmoji-rendering", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,19 +1,19 @@
-// === Module 18845: PeopleScreen ===
+// === Module 18669: PeopleScreen ===
 
-// Module 18845 (PeopleScreen)
-import TrackingDefault from "Tracking" /* 13128 */;
+// Module 18669 (PeopleScreen)
+import TrackingDefault from "Tracking" /* 13098 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13136 */;
-import SearchQueryStore from "SearchQueryStore" /* 13121 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13106 */;
+import SearchQueryStore from "SearchQueryStore" /* 13091 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(8457);
+const SearchConstants = fn(8456);
 ({ SearchListItemTypes: closure_8, USER_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(8456).SearchResultContentEntityTypes;
+let closure_10 = fn(8455).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
@@ -69,7 +69,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -106,7 +106,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
             const result = closure_1(stateFromStores[13]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;

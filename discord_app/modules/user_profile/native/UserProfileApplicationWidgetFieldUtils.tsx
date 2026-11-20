@@ -1,25 +1,25 @@
-// === Module 10261: UserProfileApplicationWidgetFieldUtils ===
+// === Module 10201: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 10261 (UserProfileApplicationWidgetFieldUtils)
+// Module 10201 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useFontScale from "useFontScale" /* 5398 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useFontScale from "useFontScale" /* 5400 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileApplicationWidgetSkeletons = TextSkeleton(10262);
-const ApplicationWidgetMarkupUtils = TextSkeleton(10263);
+const UserProfileApplicationWidgetSkeletons = TextSkeleton(10202);
+const ApplicationWidgetMarkupUtils = TextSkeleton(10203);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = { fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, fieldIcon: { width: 16, height: 16 } };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_8 = createStyles.createStyles((paddingTop) => ({ text: { paddingTop, marginTop: -paddingTop } }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");

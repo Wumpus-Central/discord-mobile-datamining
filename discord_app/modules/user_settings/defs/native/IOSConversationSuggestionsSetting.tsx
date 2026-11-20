@@ -1,23 +1,23 @@
-// === Module 16064: IOSConversationSuggestionsSetting ===
+// === Module 16028: IOSConversationSuggestionsSetting ===
 
-// Module 16064 (IOSConversationSuggestionsSetting)
+// Module 16028 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import _mod4707 from "module_4707" /* 4707 */;
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import _mod4709 from "module_4709" /* 4709 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const identity = fn(1258);
+const identity = fn(1257);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8593).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8592).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = noop.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
@@ -26,13 +26,13 @@ const toggle = SettingBuilders.createToggle({
         isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
       });
     }, []);
-    return closure_4((isEnabled) => isEnabled.isEnabled, _mod4707.shallow);
+    return closure_4((isEnabled) => isEnabled.isEnabled, _mod4709.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
     result.then((result) => {
       closure_0 = result;
-      closure_0(1263).batchUpdates(() => state.setState({ isEnabled }));
+      closure_0(1262).batchUpdates(() => state.setState({ isEnabled }));
     }).catch((error) => {
       new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);
     });

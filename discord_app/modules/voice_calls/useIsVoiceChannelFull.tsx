@@ -1,15 +1,15 @@
-// === Module 10864: useIsVoiceChannelFull ===
+// === Module 10806: useIsVoiceChannelFull ===
 
-// Module 10864 (useIsVoiceChannelFull)
-import ChannelUtils from "ChannelUtils" /* 5827 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+// Module 10806 (useIsVoiceChannelFull)
+import ChannelUtils from "ChannelUtils" /* 5829 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/useIsVoiceChannelFull.tsx");
 

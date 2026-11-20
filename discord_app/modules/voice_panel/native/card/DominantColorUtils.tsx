@@ -2,7 +2,7 @@
 
 // Module 8916 (DominantColorUtils)
 import nativeDefault from "native" /* 575 */;
-import privDefault from "priv" /* 1456 */;
+import privDefault from "priv" /* 1454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -80,11 +80,11 @@ export function useDominantRGBFromImage(arg0) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(2025).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(2025);
+            let dominantColorsLocalAsset = ref(2023).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(2023);
           } else {
-            dominantColorsLocalAsset = ref(2025).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(2025);
+            dominantColorsLocalAsset = ref(2023).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(2023);
           }
           dominantColorsLocalAsset.then((result) => {
             const tmp = _slicedToArray(result[0], 3);
@@ -161,11 +161,11 @@ export function useDominantColorFromImage(avatarURI) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(2025).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(2025);
+            let dominantColorsLocalAsset = ref(2023).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(2023);
           } else {
-            dominantColorsLocalAsset = ref(2025).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(2025);
+            dominantColorsLocalAsset = ref(2023).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(2023);
           }
           dominantColorsLocalAsset.then((result) => {
             const tmp = _slicedToArray(result[0], 3);

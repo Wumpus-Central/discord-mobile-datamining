@@ -1,13 +1,13 @@
-// === Module 17373: ShelfBlock ===
+// === Module 17200: ShelfBlock ===
 
-// Module 17373 (ShelfBlock)
+// Module 17200 (ShelfBlock)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7954 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8816 */;
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9425 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7955 */;
 
 require = fn;
 function ListEdgeSpacer() {
@@ -17,11 +17,11 @@ function ListItemSeparator() {
   return React5(View, { style: closure_10().listItemSeparator });
 }
 const View = fn(17).View;
-let closure_6 = fn(1074).CollectiblesMobileShopScreen;
-const UserSettingsSections = fn(1072).UserSettingsSections;
+let closure_6 = fn(1073).CollectiblesMobileShopScreen;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, containerWithBackground: null, backgroundImage: null, header: null, headingWrapper: null, listEdgeSpacer: null, listItemSeparator: null };
 let obj3 = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.containerWithBackground = { marginTop: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, overflow: "hidden" };

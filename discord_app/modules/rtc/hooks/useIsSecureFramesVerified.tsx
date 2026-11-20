@@ -1,9 +1,9 @@
 // === Module 9568: useIsSecureFramesVerified ===
 
 // Module 9568 (useIsSecureFramesVerified)
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9569 */;
 import TransientKeyStore from "TransientKeyStore" /* 9570 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9571 */;

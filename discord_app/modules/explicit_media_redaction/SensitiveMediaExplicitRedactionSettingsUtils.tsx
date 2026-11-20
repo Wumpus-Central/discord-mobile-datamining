@@ -1,13 +1,13 @@
-// === Module 8112: SensitiveMediaExplicitRedactionSettingsUtils ===
+// === Module 8111: SensitiveMediaExplicitRedactionSettingsUtils ===
 
-// Module 8112 (SensitiveMediaExplicitRedactionSettingsUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5454 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5462 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6290 */;
-import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 8113 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 8111 (SensitiveMediaExplicitRedactionSettingsUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5456 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5464 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6292 */;
+import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 8112 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function resolveExplicitContentSettingWithDefaults(isFriend) {
@@ -83,46 +83,46 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
   const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
   const setting2 = ExplicitContentFilter2.getSetting();
 }
-const ExplicitContentFilterTypes = fn(4619).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(4621).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
-obj[DISABLED.valueOf()] = fn(1196).ExplicitContentRedaction.SHOW;
+obj[DISABLED.valueOf()] = fn(1195).ExplicitContentRedaction.SHOW;
 const NON_FRIENDS = ExplicitContentFilterTypes.NON_FRIENDS;
 const valueOfResult = DISABLED.valueOf();
-obj[NON_FRIENDS.valueOf()] = fn(1196).ExplicitContentRedaction.SHOW;
+obj[NON_FRIENDS.valueOf()] = fn(1195).ExplicitContentRedaction.SHOW;
 const FRIENDS_AND_NON_FRIENDS = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
 const valueOfResult12 = NON_FRIENDS.valueOf();
-obj[FRIENDS_AND_NON_FRIENDS.valueOf()] = fn(1196).ExplicitContentRedaction.BLOCK;
+obj[FRIENDS_AND_NON_FRIENDS.valueOf()] = fn(1195).ExplicitContentRedaction.BLOCK;
 let obj2 = {};
 const DISABLED2 = ExplicitContentFilterTypes.DISABLED;
 const valueOfResult13 = FRIENDS_AND_NON_FRIENDS.valueOf();
-obj2[DISABLED2.valueOf()] = fn(1196).ExplicitContentRedaction.SHOW;
+obj2[DISABLED2.valueOf()] = fn(1195).ExplicitContentRedaction.SHOW;
 const NON_FRIENDS2 = ExplicitContentFilterTypes.NON_FRIENDS;
 const valueOfResult14 = DISABLED2.valueOf();
-obj2[NON_FRIENDS2.valueOf()] = fn(1196).ExplicitContentRedaction.BLOCK;
+obj2[NON_FRIENDS2.valueOf()] = fn(1195).ExplicitContentRedaction.BLOCK;
 const FRIENDS_AND_NON_FRIENDS2 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
 const valueOfResult15 = NON_FRIENDS2.valueOf();
-obj2[FRIENDS_AND_NON_FRIENDS2.valueOf()] = fn(1196).ExplicitContentRedaction.BLOCK;
+obj2[FRIENDS_AND_NON_FRIENDS2.valueOf()] = fn(1195).ExplicitContentRedaction.BLOCK;
 let obj3 = {};
 const DISABLED3 = ExplicitContentFilterTypes.DISABLED;
 const valueOfResult16 = FRIENDS_AND_NON_FRIENDS2.valueOf();
-obj3[DISABLED3.valueOf()] = fn(1196).ExplicitContentRedaction.BLUR;
+obj3[DISABLED3.valueOf()] = fn(1195).ExplicitContentRedaction.BLUR;
 const NON_FRIENDS3 = ExplicitContentFilterTypes.NON_FRIENDS;
 const valueOfResult17 = DISABLED3.valueOf();
-obj3[NON_FRIENDS3.valueOf()] = fn(1196).ExplicitContentRedaction.BLUR;
+obj3[NON_FRIENDS3.valueOf()] = fn(1195).ExplicitContentRedaction.BLUR;
 const FRIENDS_AND_NON_FRIENDS3 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
 const valueOfResult18 = NON_FRIENDS3.valueOf();
-obj3[FRIENDS_AND_NON_FRIENDS3.valueOf()] = fn(1196).ExplicitContentRedaction.BLOCK;
+obj3[FRIENDS_AND_NON_FRIENDS3.valueOf()] = fn(1195).ExplicitContentRedaction.BLOCK;
 const obj4 = {};
 const DISABLED4 = ExplicitContentFilterTypes.DISABLED;
 const valueOfResult19 = FRIENDS_AND_NON_FRIENDS3.valueOf();
-obj4[DISABLED4.valueOf()] = fn(1196).ExplicitContentRedaction.BLUR;
+obj4[DISABLED4.valueOf()] = fn(1195).ExplicitContentRedaction.BLUR;
 const NON_FRIENDS4 = ExplicitContentFilterTypes.NON_FRIENDS;
 const valueOfResult20 = DISABLED4.valueOf();
-obj4[NON_FRIENDS4.valueOf()] = fn(1196).ExplicitContentRedaction.BLOCK;
+obj4[NON_FRIENDS4.valueOf()] = fn(1195).ExplicitContentRedaction.BLOCK;
 const FRIENDS_AND_NON_FRIENDS4 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
 const valueOfResult21 = NON_FRIENDS4.valueOf();
-obj4[FRIENDS_AND_NON_FRIENDS4.valueOf()] = fn(1196).ExplicitContentRedaction.BLOCK;
+obj4[FRIENDS_AND_NON_FRIENDS4.valueOf()] = fn(1195).ExplicitContentRedaction.BLOCK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx");
 

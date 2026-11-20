@@ -1,6 +1,6 @@
-// === Module 15636: subscriptions ===
+// === Module 15600: subscriptions ===
 
-// Module 15636 (subscriptions)
+// Module 15600 (subscriptions)
 import applyDefault from "apply" /* 12 */;
 import RPCErrorDefault from "RPCError" /* 6790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ function removePendingSubscription(arg0, arg1) {
     }
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const weakMap = new WeakMap();
 const size = fn(2);
@@ -39,7 +39,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

@@ -1,18 +1,18 @@
-// === Module 14558: InstantInviteEmptyState ===
+// === Module 14526: InstantInviteEmptyState ===
 
-// Module 14558 (InstantInviteEmptyState)
+// Module 14526 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 575 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 7130 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 7935 */;
-import _modDef14559 from "module_14559" /* 14559 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 7129 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 7934 */;
+import _modDef14527 from "module_14527" /* 14527 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 7934 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 7933 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { padding: 16 }, emptyStateContainer: { padding: 0, marginBottom: 16 }, emptyStateArt: { marginBottom: 16 }, emptyStateTitle: { marginBottom: 4 }, linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 }, inviteInput: { flexShrink: 1 }, expireCaption: { marginBottom: 16 }, settingsButton: null };
 let size = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs };
 obj2.settingsButton = size;
@@ -28,12 +28,12 @@ export default function InstantInviteEmptyState(link) {
   items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef14559, title: null, body: null };
-  const intl = stateFromStores(1113).intl;
-  obj3.title = intl.string(stateFromStores(1113).t.tQc0l8);
-  const intl2 = stateFromStores(1113).intl;
-  obj3.body = intl2.string(stateFromStores(1113).t.DXgdcD);
-  const items1 = [closure_5(stateFromStores(1187).RefreshEmptyState, obj3), , , ];
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef14527, title: null, body: null };
+  const intl = stateFromStores(1112).intl;
+  obj3.title = intl.string(stateFromStores(1112).t.tQc0l8);
+  const intl2 = stateFromStores(1112).intl;
+  obj3.body = intl2.string(stateFromStores(1112).t.DXgdcD);
+  const items1 = [closure_5(stateFromStores(1186).RefreshEmptyState, obj3), , , ];
   const obj4 = { style: tmp.linkContainer, children: null };
   const obj5 = { accessibilityRole: "button", onPress: onCopy, editable: false, value: null, style: null, forceAccessibleContainer: true, clearButtonVisibility: null };
   const obj = stateFromStores(504);
@@ -42,15 +42,15 @@ export default function InstantInviteEmptyState(link) {
   }
   obj5.value = str;
   obj5.style = tmp.inviteInput;
-  obj5.clearButtonVisibility = stateFromStores(1187).ClearButtonVisibility.NEVER;
+  obj5.clearButtonVisibility = stateFromStores(1186).ClearButtonVisibility.NEVER;
   const items2 = [closure_5(FreeFormTextInputDefault, obj5), ];
   const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-  const intl3 = tmp2(1113).intl;
-  obj6.accessibilityLabel = intl3.string(stateFromStores(1113).t["3D5yo/"]);
+  const intl3 = tmp2(1112).intl;
+  obj6.accessibilityLabel = intl3.string(stateFromStores(1112).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(10309).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(6911).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(10251).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(6910).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "body-xs/medium", color: "text-muted", children: null };
@@ -58,10 +58,10 @@ export default function InstantInviteEmptyState(link) {
     obj7.children = null;
     items1[2] = closure_5(tmp10, obj7);
     const obj8 = { text: null, onPress: null };
-    const intl5 = tmp2(1113).intl;
-    obj8.text = intl5.string(tmp2(1113).t.Ej3B3Y);
+    const intl5 = tmp2(1112).intl;
+    obj8.text = intl5.string(tmp2(1112).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = closure_5(tmp2(5390).Button, obj8);
+    items1[3] = closure_5(tmp2(5392).Button, obj8);
     obj2.children = items1;
     return closure_6(View, obj2);
   } else {
@@ -85,11 +85,11 @@ export default function InstantInviteEmptyState(link) {
       str5 = str6;
     }
     if (0 === stateFromStores.maxAge) {
-      let dqPWMN = tmp2(1113).t["99ISmn"];
+      let dqPWMN = tmp2(1112).t["99ISmn"];
     } else {
-      dqPWMN = tmp2(1113).t.dqPWMN;
+      dqPWMN = tmp2(1112).t.dqPWMN;
     }
-    const intl4 = tmp2(1113).intl;
+    const intl4 = tmp2(1112).intl;
     const obj9 = { maxAge: str3, maxUses: str5 };
     intl4.format(dqPWMN, obj9);
     const tmp8Result = InstantInviteUtilsDefault;

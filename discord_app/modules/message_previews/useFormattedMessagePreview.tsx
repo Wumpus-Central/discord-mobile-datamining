@@ -1,17 +1,17 @@
-// === Module 11050: useFormattedMessagePreview ===
+// === Module 10992: useFormattedMessagePreview ===
 
-// Module 11050 (useFormattedMessagePreview)
+// Module 10992 (useFormattedMessagePreview)
 import apply from "apply" /* 12 */;
-import MessageTypes from "MessageTypes" /* 1088 */;
-import util from "util" /* 1113 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5406 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6220 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8601 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8606 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8711 */;
+import MessageTypes from "MessageTypes" /* 1087 */;
+import util from "util" /* 1112 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5408 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6222 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8600 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8605 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8751 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -356,7 +356,7 @@ function formatMessagePreview(type, isBlocked) {
     flag = true;
   }
 }
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
 
@@ -394,8 +394,8 @@ export function useFormattedMessagePreview(message, channel) {
   if (message.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
-      const intl = tmp(1113).intl;
-      stringResult = intl.string(tmp(1113).t.LuZzxn);
+      const intl = tmp(1112).intl;
+      stringResult = intl.string(tmp(1112).t.LuZzxn);
     }
   }
   const obj2 = require("initialize");

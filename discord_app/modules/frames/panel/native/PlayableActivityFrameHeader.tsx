@@ -1,23 +1,23 @@
-// === Module 19263: PlayableActivityFrameHeader ===
+// === Module 19082: PlayableActivityFrameHeader ===
 
-// Module 19263 (PlayableActivityFrameHeader)
+// Module 19082 (PlayableActivityFrameHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import util from "util" /* 1112 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import leaveFrame from "leaveFrame" /* 6834 */;
-import XSmallIcon from "XSmallIcon" /* 7032 */;
-import IconButton from "IconButton" /* 7472 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 19243 */;
+import XSmallIcon from "XSmallIcon" /* 7031 */;
+import IconButton from "IconButton" /* 7471 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 19062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
-const orbAmount = fn(6437).PLAYABLE_REWARD_ORB_QUANTITY;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const orbAmount = fn(6439).PLAYABLE_REWARD_ORB_QUANTITY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { header: null, handleWrapper: null, handle: null, info: null, titleGroup: null, textShadow: null, subtitle: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_8 };
 obj2.header = rect;
@@ -38,9 +38,9 @@ export default function PlayableActivityFrameHeader(arg0) {
   ({ frameId: require, playable } = arg0);
   let setMode;
   const tmp = closure_9();
-  const tmp4 = setMode(19264)(playable.id);
+  const tmp4 = setMode(19083)(playable.id);
   let isClaimed = tmp4.isClaimed;
-  const context = noop.useContext(setMode(19258));
+  const context = noop.useContext(setMode(19077));
   setMode = context.setMode;
   ({ wrapperOffset, pipState } = context);
   const obj2 = { gesture: ActivityPanelHeader.useBaseActivityPanelHeaderContent({ landscape: false, setMode, wrapperOffset, pipState }).gesture, children: null };
@@ -48,12 +48,12 @@ export default function PlayableActivityFrameHeader(arg0) {
   const obj4 = { style: tmp.handleWrapper, pointerEvents: "none", children: closure_7(View, { style: tmp.handle }) };
   items = [closure_7(View, obj4), , ];
   const obj6 = { style: tmp.info, children: null };
-  const items1 = [closure_7(setMode(16417), { isCompleted: isClaimed, totalSeconds: playable.rewardTimerSeconds, remainingSeconds: tmp4.remainingSeconds }), ];
+  const items1 = [closure_7(setMode(16239), { isCompleted: isClaimed, totalSeconds: playable.rewardTimerSeconds, remainingSeconds: tmp4.remainingSeconds }), ];
   const obj8 = { style: tmp.titleGroup, children: null };
   const obj9 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 1.25, style: tmp.textShadow, children: null };
   if (isClaimed) {
     const intl = util.intl;
-    let productName = intl.string(tmp2(4540)["08Kgg0"]);
+    let productName = intl.string(tmp2(4542)["08Kgg0"]);
   } else {
     productName = playable.productName;
   }
@@ -66,7 +66,7 @@ export default function PlayableActivityFrameHeader(arg0) {
     obj10.style = items3;
     const intl2 = util.intl;
     const obj11 = { orbAmount };
-    obj10.children = intl2.formatToPlainString(tmp2(4540).Hshnic, obj11);
+    obj10.children = intl2.formatToPlainString(tmp2(4542).Hshnic, obj11);
     isClaimed = closure_7(Text_Text.Text, obj10);
   }
   items2[1] = isClaimed;

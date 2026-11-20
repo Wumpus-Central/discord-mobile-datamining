@@ -1,9 +1,9 @@
 // === Module 9311: DeviceOrientation ===
 
 // Module 9311 (DeviceOrientation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import DeviceUtils from "DeviceUtils" /* 4749 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import DeviceUtils from "DeviceUtils" /* 4751 */;
 import noop from "module_19" /* 19 */;
 import get_ActivityIndicator_mod from "module_9312" /* 9312 */;
 

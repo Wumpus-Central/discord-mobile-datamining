@@ -1,11 +1,11 @@
-// === Module 8710: VoiceSessionSystemMessage ===
+// === Module 8750: VoiceSessionSystemMessage ===
 
-// Module 8710 (VoiceSessionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8579 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8581 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8583 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8600 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 8750 (VoiceSessionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8578 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8580 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8582 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8599 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 const require = globalThis.__r;
 
@@ -25,13 +25,13 @@ export function createVoiceSessionSystemMessage(message) {
     return obj;
   });
   if (null == tmp3) {
-    const intl = tmp4(1113).intl;
+    const intl = tmp4(1112).intl;
     const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
     const obj4 = { message, author: messageAuthorWithProcessedColor, roleStyle };
     obj3.usernameOnClick = formatUsernameOnClickDefault(obj4);
-    let formatToPartsResult = intl.formatToParts(tmp4(1113).t.HzBfIN, obj3);
+    let formatToPartsResult = intl.formatToParts(tmp4(1112).t.HzBfIN, obj3);
   } else {
-    const intl2 = tmp4(1113).intl;
+    const intl2 = tmp4(1112).intl;
     const obj5 = { userCount: mapped.length + 1, username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
     const obj6 = { message, author: messageAuthorWithProcessedColor, roleStyle };
     obj5.usernameOnClick = formatUsernameOnClickDefault(obj6);
@@ -60,7 +60,7 @@ export function createVoiceSessionSystemMessage(message) {
     obj5.username3OnClick = tmp10;
     obj5.otherCount = mapped.length - 1;
     obj5.duration = tmp3;
-    formatToPartsResult = intl2.formatToParts(tmp4(1113).t.atbXuX, obj5);
+    formatToPartsResult = intl2.formatToParts(tmp4(1112).t.atbXuX, obj5);
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };

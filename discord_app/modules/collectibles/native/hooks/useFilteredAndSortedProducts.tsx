@@ -1,11 +1,11 @@
-// === Module 16443: useFilteredAndSortedProducts ===
+// === Module 16265: useFilteredAndSortedProducts ===
 
-// Module 16443 (useFilteredAndSortedProducts)
+// Module 16265 (useFilteredAndSortedProducts)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
-let closure_5 = fn(1074).CollectiblesMobileShopScreen;
+let closure_5 = fn(1073).CollectiblesMobileShopScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
 

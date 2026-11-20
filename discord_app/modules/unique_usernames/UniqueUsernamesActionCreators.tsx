@@ -1,11 +1,11 @@
-// === Module 15920: UniqueUsernamesActionCreators ===
+// === Module 15884: UniqueUsernamesActionCreators ===
 
-// Module 15920 (UniqueUsernamesActionCreators)
+// Module 15884 (UniqueUsernamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, Endpoints: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesActionCreators.tsx");
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -94,14 +94,14 @@ export default {
               closure_129_2 = undefined;
               const tmp83 = (function validate(arr) {
                 if (false === obj.test(arr)) {
-                  const intl3 = _undefined(1113).intl;
-                  let stringResult = intl3.string(_undefined(1113).t.z7c4bP);
+                  const intl3 = _undefined(1112).intl;
+                  let stringResult = intl3.string(_undefined(1112).t.z7c4bP);
                 } else if (arr.includes("..")) {
-                  const intl2 = _undefined(1113).intl;
-                  stringResult = intl2.string(_undefined(1113).t["C7G+gr"]);
+                  const intl2 = _undefined(1112).intl;
+                  stringResult = intl2.string(_undefined(1112).t["C7G+gr"]);
                 } else if (arr.length < 2) {
-                  const intl = _undefined(1113).intl;
-                  stringResult = intl.formatToPlainString(_undefined(1113).t.IpijXA, { maxNum: 32, minNum: 2 });
+                  const intl = _undefined(1112).intl;
+                  stringResult = intl.formatToPlainString(_undefined(1112).t.IpijXA, { maxNum: 32, minNum: 2 });
                 }
                 return stringResult;
               })(_undefined);

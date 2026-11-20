@@ -1,11 +1,9 @@
-// === Module 5857: CheckpointUtils ===
+// === Module 5859: CheckpointUtils ===
 
-// Module 5857 (CheckpointUtils)
-import util from "util" /* 1113 */;
-import TimeUtils from "TimeUtils" /* 5541 */;
-import getTimestampString from "getTimestampString" /* 5858 */;
-import _modDef5859 from "module_5859" /* 5859 */;
-import _modDef5860 from "module_5860" /* 5860 */;
+// Module 5859 (CheckpointUtils)
+import util from "util" /* 1112 */;
+import TimeUtils from "TimeUtils" /* 5543 */;
+import getTimestampString from "getTimestampString" /* 5860 */;
 import _modDef5861 from "module_5861" /* 5861 */;
 import _modDef5862 from "module_5862" /* 5862 */;
 import _modDef5863 from "module_5863" /* 5863 */;
@@ -14,6 +12,8 @@ import _modDef5865 from "module_5865" /* 5865 */;
 import _modDef5866 from "module_5866" /* 5866 */;
 import _modDef5867 from "module_5867" /* 5867 */;
 import _modDef5868 from "module_5868" /* 5868 */;
+import _modDef5869 from "module_5869" /* 5869 */;
+import _modDef5870 from "module_5870" /* 5870 */;
 import size from "module_2" /* 2 */;
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -61,25 +61,25 @@ export function getAccessibleVoiceDurationString(rounded) {
 }
 export function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef5859;
-  } else if (1 === cardId) {
-    return _modDef5860;
-  } else if (2 === cardId) {
     return _modDef5861;
-  } else if (3 === cardId) {
+  } else if (1 === cardId) {
     return _modDef5862;
-  } else if (4 === cardId) {
+  } else if (2 === cardId) {
     return _modDef5863;
-  } else if (5 === cardId) {
+  } else if (3 === cardId) {
     return _modDef5864;
-  } else if (6 === cardId) {
+  } else if (4 === cardId) {
     return _modDef5865;
-  } else if (7 === cardId) {
+  } else if (5 === cardId) {
     return _modDef5866;
-  } else if (8 === cardId) {
+  } else if (6 === cardId) {
     return _modDef5867;
-  } else {
+  } else if (7 === cardId) {
     return _modDef5868;
+  } else if (8 === cardId) {
+    return _modDef5869;
+  } else {
+    return _modDef5870;
   }
 }
 export function getCheckpointPowerBarUnits(checkpointData) {

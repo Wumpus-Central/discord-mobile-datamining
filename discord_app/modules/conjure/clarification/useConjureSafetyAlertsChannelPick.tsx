@@ -1,19 +1,19 @@
-// === Module 18640: useConjureSafetyAlertsChannelPick ===
+// === Module 18467: useConjureSafetyAlertsChannelPick ===
 
-// Module 18640 (useConjureSafetyAlertsChannelPick)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6390 */;
+// Module 18467 (useConjureSafetyAlertsChannelPick)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6392 */;
 import ConjureUtils from "ConjureUtils" /* 6746 */;
 import conjureAppInServer from "conjureAppInServer" /* 6836 */;
-import ConjureClarification from "ConjureClarification" /* 18470 */;
+import ConjureClarification from "ConjureClarification" /* 18295 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4722 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
-import BigFlagUtils from "BigFlagUtils" /* 1084 */;
+import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 let closure_9 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/useConjureSafetyAlertsChannelPick.tsx");

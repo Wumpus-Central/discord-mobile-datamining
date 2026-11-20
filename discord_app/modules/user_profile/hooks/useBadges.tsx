@@ -1,11 +1,11 @@
-// === Module 8079: useBadges ===
+// === Module 8078: useBadges ===
 
-// Module 8079 (useBadges)
+// Module 8078 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import StreamerModeStore from "StreamerModeStore" /* 4849 */;
-import UserStore from "UserStore" /* 1388 */;
+import util from "util" /* 1112 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import StreamerModeStore from "StreamerModeStore" /* 4851 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const legacy_username = "legacy_username";

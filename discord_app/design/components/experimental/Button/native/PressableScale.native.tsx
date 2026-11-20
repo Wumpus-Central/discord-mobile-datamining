@@ -1,17 +1,17 @@
-// === Module 7486: PressableScale ===
+// === Module 7485: PressableScale ===
 
-// Module 7486 (PressableScale)
-import _mod1655 from "module_1655" /* 1655 */;
-import ButtonHooks from "ButtonHooks" /* 5397 */;
+// Module 7485 (PressableScale)
+import _mod1653 from "module_1653" /* 1653 */;
+import ButtonHooks from "ButtonHooks" /* 5399 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const module_1655 = _mod1655;
+const module_1653 = _mod1653;
 
 require = fn;
 let closure_2 = ["style"];
 const jsx = fn(21).jsx;
-let closure_5 = module_1655.createAnimatedComponent(fn(17).Pressable);
+let closure_5 = module_1653.createAnimatedComponent(fn(17).Pressable);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
 
@@ -22,7 +22,7 @@ export function PressableScale(scaleAmountInPx) {
   }
   ({ onPressIn, onPressOut, ref } = scaleAmountInPx);
   const merged = Object.assign(scaleAmountInPx, Object.assign({ style: 0, scaleAmountInPx: 0, onLayout: 0, onPressIn: 0, onPressOut: 0, ref: 0 }));
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
   const obj3 = {};
   const merged1 = Object.assign(_objectWithoutProperties(buttonPressAnimationProps, closure_2));

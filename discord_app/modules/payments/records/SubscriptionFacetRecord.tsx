@@ -1,7 +1,7 @@
 // === Module 8995: SubscriptionFacetRecord ===
 
 // Module 8995 (SubscriptionFacetRecord)
-import Record from "Record" /* 1408 */;
+import Record from "Record" /* 1406 */;
 
 const prototype = function SubscriptionFacetRecord(subscriptionId) {
   const tmp = new prototype(new.target, new.target);

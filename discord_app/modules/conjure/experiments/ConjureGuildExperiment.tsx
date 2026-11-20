@@ -1,8 +1,8 @@
-// === Module 6536: ConjureGuildExperiment ===
+// === Module 6538: ConjureGuildExperiment ===
 
-// Module 6536 (ConjureGuildExperiment)
-import ConjureUserExperiment from "ConjureUserExperiment" /* 6537 */;
-import GuildStore from "GuildStore" /* 4663 */;
+// Module 6538 (ConjureGuildExperiment)
+import ConjureUserExperiment from "ConjureUserExperiment" /* 6539 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
@@ -64,8 +64,8 @@ function hasConjureGuildWithoutExposure(ConjureProjectReconnectManager) {
   }
   return false;
 }
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1452);
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
+const ApexExperiment = fn(1450);
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false, requiresUserExperiment: false }, variations: { 0: { enabled: false, requiresUserExperiment: false }, 1: { enabled: true, requiresUserExperiment: false }, 2: { enabled: true, requiresUserExperiment: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/experiments/ConjureGuildExperiment.tsx");

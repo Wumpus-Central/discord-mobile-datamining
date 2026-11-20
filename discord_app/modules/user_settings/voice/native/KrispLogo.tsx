@@ -1,17 +1,17 @@
-// === Module 10937: KrispLogo ===
+// === Module 10879: KrispLogo ===
 
-// Module 10937 (KrispLogo)
+// Module 10879 (KrispLogo)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import shared from "shared" /* 4799 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import _modDef10938 from "module_10938" /* 10938 */;
-import _modDef10939 from "module_10939" /* 10939 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import shared from "shared" /* 4801 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import _modDef10880 from "module_10880" /* 10880 */;
+import _modDef10881 from "module_10881" /* 10881 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
 
 require = fn;
 function handleKrispLinkPressed() {
@@ -27,7 +27,7 @@ function handleKrispLinkPressed() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, AnalyticsPages: metroImportDefault, AnalyticsSections: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -39,10 +39,10 @@ export default function KrispLogo() {
   items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef10938;
+    let tmp4Result = _modDef10880;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef10939;
+    tmp4Result = _modDef10881;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -50,7 +50,7 @@ export default function KrispLogo() {
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [refs(tmp6(5479), obj4), ];
+  const items1 = [refs(tmp6(5481), obj4), ];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);

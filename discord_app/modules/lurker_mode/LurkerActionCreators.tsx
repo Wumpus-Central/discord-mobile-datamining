@@ -1,10 +1,10 @@
-// === Module 7162: LurkerActionCreators ===
+// === Module 7161: LurkerActionCreators ===
 
-// Module 7162 (LurkerActionCreators)
+// Module 7161 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import LurkingStore from "LurkingStore" /* 4725 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import LurkingStore from "LurkingStore" /* 4727 */;
 
 const require = fn;
 function stopLurkingAll() {
@@ -31,7 +31,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ let closure_8 = async function _stopLurkingAll() {
                                 _null = null;
                               }
                               closure_130_1 = _null;
-                              const HTTP = closure_0(1285).HTTP;
+                              const HTTP = closure_0(1284).HTTP;
                               const request = { url: closure_2_6.GUILD_LEAVE(closure_0), body: { lurking: true }, oldFormErrors: true, rejectWithError: true };
                               yield HTTP.del(request);
                               if (1 === tmp8) {
@@ -110,7 +110,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;
@@ -151,7 +151,7 @@ let closure_9 = async function _stopLurking() {
   closure_129_0 = tmp19;
   return "Path";
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 

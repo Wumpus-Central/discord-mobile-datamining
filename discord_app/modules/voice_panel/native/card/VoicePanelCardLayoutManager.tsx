@@ -1,12 +1,12 @@
-// === Module 11690: VoicePanelCardLayoutManager ===
+// === Module 11632: VoicePanelCardLayoutManager ===
 
-// Module 11690 (VoicePanelCardLayoutManager)
+// Module 11632 (VoicePanelCardLayoutManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11692 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
 
 const require = globalThis.__r;
 
@@ -21,12 +21,12 @@ function getTargetCardSize(windowWidth) {
   return Math.max(React5, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11688);
+const VoicePanelConstants = fn(11630);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: closure_10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11691);
+const VoicePanelCardConstants = fn(11633);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5442).ParticipantTypes;
+const ParticipantTypes = fn(5444).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
 let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };
@@ -769,7 +769,7 @@ export function useCardLayoutCoordsSubscription(id, layoutManager) {
     cardCoords = closure_15;
   }
   const merged = Object.assign(cardCoords);
-  sharedValue = require("module_1655").useSharedValue({});
+  sharedValue = require("module_1653").useSharedValue({});
   items = [id, layoutManager, sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     let cardCoords = layoutManager.getCardCoords(closure_0);
@@ -788,7 +788,7 @@ export function useCardLayoutCoordsSubscription(id, layoutManager) {
 export function useTargetDimensionsSubscription(participantId, layoutManager) {
   _require = participantId;
   const merged = Object.assign(layoutManager.getTargetDimensions(participantId));
-  sharedValue = require("module_1655").useSharedValue({});
+  sharedValue = require("module_1653").useSharedValue({});
   items = [participantId, layoutManager, sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     let targetDimensions = layoutManager.getTargetDimensions(closure_0);

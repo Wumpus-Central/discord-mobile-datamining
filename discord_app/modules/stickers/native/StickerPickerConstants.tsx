@@ -1,8 +1,8 @@
-// === Module 11209: StickerPickerConstants ===
+// === Module 11151: StickerPickerConstants ===
 
-// Module 11209 (StickerPickerConstants)
-import StickersTypes from "StickersTypes" /* 6266 */;
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1228 */;
+// Module 11151 (StickerPickerConstants)
+import StickersTypes from "StickersTypes" /* 6268 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1227 */;
 import size from "module_2" /* 2 */;
 
 const PADDING_VERTICAL = ExpressionPickerConstants.PADDING_VERTICAL;

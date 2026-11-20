@@ -1,8 +1,8 @@
-// === Module 9829: useConjureEntryPointPlacement ===
+// === Module 9831: useConjureEntryPointPlacement ===
 
-// Module 9829 (useConjureEntryPointPlacement)
-import ConjureMobileExperimentDefault from "ConjureMobileExperiment" /* 9831 */;
-import ConjureYouBarPinStore from "ConjureYouBarPinStore" /* 9830 */;
+// Module 9831 (useConjureEntryPointPlacement)
+import ConjureMobileExperimentDefault from "ConjureMobileExperiment" /* 9833 */;
+import ConjureYouBarPinStore from "ConjureYouBarPinStore" /* 9832 */;
 
 const require = globalThis.__r;
 

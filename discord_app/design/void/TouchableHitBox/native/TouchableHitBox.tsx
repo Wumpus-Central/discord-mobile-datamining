@@ -1,15 +1,15 @@
-// === Module 7923: TouchableHitBox ===
+// === Module 7922: TouchableHitBox ===
 
-// Module 7923 (TouchableHitBox)
+// Module 7922 (TouchableHitBox)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import Pressables from "Pressables" /* 6911 */;
+import native from "native" /* 1186 */;
+import Pressables from "Pressables" /* 6910 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { button: { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: nativeDefault.radii.sm }, buttonText: { lineHeight: 24, margin: 10, maxWidth: 60, fontSize: 16 }, buttonIcon: { margin: 10 }, buttonSpinner: { margin: 12 }, buttonDisabled: { opacity: 0.6 } };
 let closure_4 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
@@ -90,7 +90,7 @@ TouchableHitBox.prototype["render"] = function render() {
   obj6.children = tmp8Result;
   return jsx(Pressables.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: null, disabled: null, children: null });
 };
-TouchableHitBox.contextType = fn(4853).ThemeContext;
+TouchableHitBox.contextType = fn(4855).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {
 

@@ -2,23 +2,23 @@
 
 // Module 8956 (BurstReactionToggle)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import spring_spring from "spring/spring" /* 5393 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import spring_spring from "spring/spring" /* 5395 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let obj = { duration: 100, easing: null };
-const Easing = fn(1655).Easing;
-obj.easing = Easing.out(fn(1655).Easing.quad);
+const Easing = fn(1653).Easing;
+obj.easing = Easing.out(fn(1653).Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
 let closure_10 = { code: "(function BurstReactionToggleTsx1(){let[reducedMotion,targetBackgroundColor,backgroundColor,rotation]=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};})" };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = { container: null };
 let size = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
 obj3.container = size;
@@ -62,12 +62,12 @@ export default function BurstReactionToggle(arg0) {
   }
   closure_129_1 = num;
   const obj3 = require("useToken");
-  const sharedValue = require("module_1655").useSharedValue(str);
+  const sharedValue = require("module_1653").useSharedValue(str);
   closure_129_2 = sharedValue;
-  const tmp9Result = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(num);
+  const tmp9Result = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(num);
   closure_129_3 = sharedValue1;
-  const tmp9Result3 = require("module_1655");
+  const tmp9Result3 = require("module_1653");
   const items1 = [closure_10, stateFromStores, str, sharedValue, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -101,7 +101,7 @@ export default function BurstReactionToggle(arg0) {
   BurstReactionToggleTsx1.__workletHash = 1303974688188;
   BurstReactionToggleTsx1.__initData = tmp13;
   const items3 = [sharedValue, str, sharedValue1, num];
-  const animatedStyle = require("module_1655").useAnimatedStyle(BurstReactionToggleTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(BurstReactionToggleTsx1);
   const effect = obj.useEffect(() => {
     obj = timing_timing;
     const result = _undefined3.set(obj.withTiming(c0, obj));
@@ -118,9 +118,9 @@ export default function BurstReactionToggle(arg0) {
     accessibilityState: null,
     children: null
   };
-  const intl = tmp9(1113).intl;
+  const intl = tmp9(1112).intl;
   const string = intl.string;
-  const t = tmp9(1113).t;
+  const t = tmp9(1112).t;
   if (isActive) {
     let stringResult = string(t["5cRA/b"]);
   } else {
@@ -131,7 +131,7 @@ export default function BurstReactionToggle(arg0) {
   const obj5 = { style: null, ref, children: jsx(require("SuperReactionIcon").SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
   const items4 = [tmp.container, animatedStyle];
   obj5.style = items4;
-  obj4.children = jsx(tmp7(1655).View, { style: null, ref, children: jsx(require("SuperReactionIcon").SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) });
+  obj4.children = jsx(tmp7(1653).View, { style: null, ref, children: jsx(require("SuperReactionIcon").SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) });
   return <Pressable onPress={function handleOnPress() {
     _undefined2(ContentDismissActionType.AUTO);
     _undefined();

@@ -1,18 +1,18 @@
-// === Module 12181: GameOrganizationJoinOutcomeModal ===
+// === Module 12123: GameOrganizationJoinOutcomeModal ===
 
-// Module 12181 (GameOrganizationJoinOutcomeModal)
+// Module 12123 (GameOrganizationJoinOutcomeModal)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import ModalScreen from "ModalScreen" /* 7692 */;
-import ModalContent from "ModalContent" /* 7694 */;
-import ModalFooter from "ModalFooter" /* 12178 */;
-import useGameOrganizationJoinOutcomeDefault from "useGameOrganizationJoinOutcome" /* 12182 */;
-import HighFiveSpotIllustration from "HighFiveSpotIllustration" /* 12183 */;
-import GameOrganizationJoinOutcomeChecklistDefault from "GameOrganizationJoinOutcomeChecklist" /* 12187 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import ModalScreen from "ModalScreen" /* 7691 */;
+import ModalContent from "ModalContent" /* 7693 */;
+import ModalFooter from "ModalFooter" /* 12120 */;
+import useGameOrganizationJoinOutcomeDefault from "useGameOrganizationJoinOutcome" /* 12124 */;
+import HighFiveSpotIllustration from "HighFiveSpotIllustration" /* 12125 */;
+import GameOrganizationJoinOutcomeChecklistDefault from "GameOrganizationJoinOutcomeChecklist" /* 12129 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,11 +47,11 @@ function GameOrganizationJoinOutcomeScreen(arg0) {
   return timestampProducer(ModalScreen.ModalScreen, obj6);
 }
 const View = fn(17).View;
-let closure_4 = fn(11834).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
+let closure_4 = fn(11776).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const constants = { OUTCOME: "OUTCOME" };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ graphic: { alignItems: "center" }, text: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinOutcomeModal.tsx");
@@ -61,7 +61,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
   const result = code.result;
   importDefault = result;
   items = [code, result];
-  const navigatorScreens = code(6973).useNavigatorScreens(() => {
+  const navigatorScreens = code(6972).useNavigatorScreens(() => {
     const obj = {};
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(closeGameOrganizationJoinOutcomeModal),
@@ -75,5 +75,5 @@ export default function GameOrganizationJoinOutcomeModal(code) {
     obj[constants.OUTCOME] = obj2;
     return obj;
   }, items);
-  return closure_5(code(11981).Modal, { screens: navigatorScreens, initialRouteName: constants.OUTCOME, gradientColor: "purple" });
+  return closure_5(code(11923).Modal, { screens: navigatorScreens, initialRouteName: constants.OUTCOME, gradientColor: "purple" });
 };

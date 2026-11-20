@@ -6,21 +6,21 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Timers from "Timers" /* 4636 */;
-import useIsSpeaking from "useIsSpeaking" /* 6509 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import Timers from "Timers" /* 4638 */;
+import useIsSpeaking from "useIsSpeaking" /* 6511 */;
 import SpotifyActionCreators from "SpotifyActionCreators" /* 6779 */;
 import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 6797 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 6798 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6568 */;
-import IdleStore from "IdleStore" /* 6524 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
-import SpeakingStore from "SpeakingStore" /* 6414 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
-import Platforms from "Platforms" /* 6570 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6570 */;
+import IdleStore from "IdleStore" /* 6526 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
+import SpeakingStore from "SpeakingStore" /* 6416 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
+import Platforms from "Platforms" /* 6572 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -56,7 +56,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4636).Interval();
+    const interval = new obj(4638).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -486,7 +486,7 @@ function updatePlayerState(accountId, arg1, device) {
 }
 const SpotifyConstants = fn(6778);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 const PlatformTypes = Constants.PlatformTypes;
 ({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = Constants);
 const user = Platforms.get(PlatformTypes.SPOTIFY);
@@ -503,11 +503,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4636).Timeout();
-const timeout1 = new fn(4636).Timeout();
-const timeout2 = new fn(4636).Timeout();
-const timeout3 = new fn(4636).Timeout();
-const timeout4 = new fn(4636).Timeout();
+const timeout = new fn(4638).Timeout();
+const timeout1 = new fn(4638).Timeout();
+const timeout2 = new fn(4638).Timeout();
+const timeout3 = new fn(4638).Timeout();
+const timeout4 = new fn(4638).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -1170,7 +1170,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6509);
+        obj9 = device(6511);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1211,8 +1211,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
               obj7.author_ids = artists.map((id) => id.id);
               const artists1 = tmp10.artists;
               obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1256).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1256);
+              tmp25(1255).track(constants4.ACTIVITY_UPDATED, obj7);
+              const tmp25Result2 = tmp25(1255);
             }
           } else {
             tmp55 = flag;

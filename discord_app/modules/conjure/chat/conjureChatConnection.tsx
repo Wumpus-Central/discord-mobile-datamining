@@ -2,8 +2,8 @@
 
 // Module 6865 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
 import conjureAgentReaction from "conjureAgentReaction" /* 6810 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
@@ -102,7 +102,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef4089["913RMa"]);
+      const stringResult = intl.string(_modDef4091["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -191,7 +191,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef4089["0+RUWx"]);
+      const stringResult = intl.string(_modDef4091["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;

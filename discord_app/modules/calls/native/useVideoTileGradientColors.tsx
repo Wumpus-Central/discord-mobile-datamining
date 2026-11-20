@@ -1,8 +1,8 @@
-// === Module 8090: useVideoTileGradientColors ===
+// === Module 8089: useVideoTileGradientColors ===
 
-// Module 8090 (useVideoTileGradientColors)
-import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8063 */;
+// Module 8089 (useVideoTileGradientColors)
+import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const ThemeTypes = fn(1072).ThemeTypes;
+const ThemeTypes = fn(1071).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 5698: applyBackgroundOption ===
+// === Module 5700: applyBackgroundOption ===
 
-// Module 5698 (applyBackgroundOption)
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5558 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5701 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5703 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5706 */;
-import getFilterImageDefault from "getFilterImage" /* 5711 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5712 */;
+// Module 5700 (applyBackgroundOption)
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5560 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5703 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5705 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5708 */;
+import getFilterImageDefault from "getFilterImage" /* 5713 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5714 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1388 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5699 */;
+import UserStore from "UserStore" /* 1386 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 5701 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -54,7 +54,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -79,11 +79,11 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
             if (null == asset) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
               c9 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else if (asset === closure_2_7) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR);
               c9 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else {
               if (typeof asset !== "string") {
                 if (typeof asset !== "number") {
@@ -252,9 +252,9 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(5700);
+const VideoBackgroundConstants = fn(5702);
 ({ BACKGROUND_REPLACEMENT_SIZE: closure_6, BLUR_BACKGROUND_OPTION: metroImportDefault } = VideoBackgroundConstants);
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
 

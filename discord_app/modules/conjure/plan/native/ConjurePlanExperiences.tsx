@@ -1,16 +1,18 @@
-// === Module 18620: ConjurePlanExperiences ===
+// === Module 18445: ConjurePlanExperiences ===
 
-// Module 18620 (ConjurePlanExperiences)
+// Module 18445 (ConjurePlanExperiences)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import AppsIcon2 from "AppsIcon" /* 7585 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 18606 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 18614 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 18623 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 18624 */;
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import AppsIcon2 from "AppsIcon" /* 7584 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 18430 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 18438 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 18446 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 18452 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function InfoBlock(children) {
@@ -78,8 +80,9 @@ function CommandList(commands) {
     })
   });
 }
-function ExperienceBlocks(showsRequirements) {
-  ({ proposal, experience } = showsRequirements);
+function ExperienceBlocks(arg0) {
+  ({ proposal, experience } = arg0);
+  ({ showsRequirements, guild } = arg0);
   const tmp = closure_8();
   if ("frame" === experience.kind) {
     const result = conjurePlanExperienceSurfaces.conjurePlanExperiencePlacement(proposal, experience);
@@ -91,7 +94,7 @@ function ExperienceBlocks(showsRequirements) {
         const obj2 = { channels: true, caption: null, children: null };
         const intl2 = util.intl;
         const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef4089.w8F5sy, obj4);
+        obj2.caption = intl2.formatToPlainString(_modDef4091.w8F5sy, obj4);
         const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
         obj5.children = channels.map((description) => {
@@ -106,7 +109,7 @@ function ExperienceBlocks(showsRequirements) {
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
         const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef4089.MY6UGJ);
+        obj6.caption = intl3.string(_modDef4091.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -134,10 +137,10 @@ function ExperienceBlocks(showsRequirements) {
       items2 = items3;
     }
     let arr5 = items2;
-    if (showsRequirements.showsRequirements) {
+    if (showsRequirements) {
       const items4 = [];
       const arraySpreadResult = HermesBuiltin.arraySpread(items2, 0);
-      const result2 = conjurePlanExperienceSections.conjurePlanRequirementGroups(proposal);
+      const result2 = conjurePlanExperienceSections.conjurePlanRequirementGroups(proposal, guild);
       HermesBuiltin.arraySpread(result2.map((caption) => {
         obj = { caption: caption.caption, children: closure_1_5(Chips, { labels: caption.labels }) };
         return closure_1_5(InfoBlock, obj, caption.key);
@@ -167,61 +170,65 @@ function Bullets(arg0) {
   });
 }
 function ComponentSection(arg0) {
-  ({ experience, bullets, preview, commandNames } = arg0);
-  ({ proposal, showsRequirements } = arg0);
+  ({ experience, inServer, bullets, preview, commandNames } = arg0);
+  ({ proposal, showsRequirements, guild } = arg0);
   const tmp = closure_8();
   obj = conjurePlanExperienceSections;
-  const result = obj.conjurePlanExperienceIsApp(experience);
-  if (result) {
+  if (obj.conjurePlanExperienceIsApp(experience)) {
     let AppsIcon = AppsIcon2.AppsIcon;
   } else {
     AppsIcon = obj[experience.kind];
   }
+  const result = conjurePlanExperienceSections.conjurePlanExperienceKindNote(experience, inServer);
   const obj2 = { style: tmp.component, children: null };
   const obj3 = { style: tmp.componentHeader, children: null };
-  const obj4 = { style: tmp.iconBox, children: hasOwnProperty(AppsIcon, { size: "xs", color: nativeDefault.colors.ICON_STRONG }) };
+  const obj4 = { style: tmp.iconBox, children: null };
+  const tmp2Result = conjurePlanExperienceSections;
+  obj4.children = hasOwnProperty(AppsIcon, { size: "xs", color: nativeDefault.colors.ICON_STRONG });
   items = [hasOwnProperty(View, obj4), ];
-  const intl = util.intl;
-  if (result) {
-    let BM4Ymz = _modDef4089.BM4Ymz;
-  } else {
-    BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
-  }
+  const obj6 = { variant: "body-md/medium", color: "text-strong", accessibilityRole: "header", children: null };
   const obj5 = { size: "xs", color: nativeDefault.colors.ICON_STRONG };
-  items[1] = hasOwnProperty(Text_Text.Text, { variant: "body-md/medium", color: "text-strong", accessibilityRole: "header", children: intl.string(BM4Ymz) });
+  obj6.children = conjurePlanExperienceSections.conjurePlanExperienceKindLabel(experience, inServer);
+  items[1] = hasOwnProperty(Text_Text.Text, obj6);
   obj3.children = items;
-  const items1 = [timestampProducer(View, obj3), , , ];
+  const items1 = [timestampProducer(View, obj3), , , , ];
   let tmp8Result = null;
-  if (null != preview) {
-    const obj7 = { style: tmp.preview, children: preview };
-    tmp8Result = hasOwnProperty(View, obj7);
+  if (null != result) {
+    const obj7 = { variant: "body-sm/normal", color: "text-muted", children: result };
+    tmp8Result = hasOwnProperty(Text_Text.Text, obj7);
   }
   items1[1] = tmp8Result;
+  let tmp8Result3 = null;
+  if (null != preview) {
+    const obj8 = { style: tmp.preview, children: preview };
+    tmp8Result3 = hasOwnProperty(View, obj8);
+  }
+  items1[2] = tmp8Result3;
   if ("automod" === experience.kind) {
     if (1 === bullets.length) {
-      const obj8 = { variant: "body-md/normal", color: "text-default", children: null };
-      const obj9 = { text: bullets[0], commandNames, size: "body-md" };
-      obj8.children = hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, obj9);
-      let tmp8Result2 = hasOwnProperty(Text_Text.Text, obj8);
+      const obj9 = { variant: "body-md/normal", color: "text-default", children: null };
+      const obj10 = { text: bullets[0], commandNames, size: "body-md" };
+      obj9.children = hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, obj10);
+      let tmp8Result4 = hasOwnProperty(Text_Text.Text, obj9);
     }
-    items1[2] = tmp8Result2;
-    const obj10 = { proposal, experience, showsRequirements };
-    items1[3] = hasOwnProperty(ExperienceBlocks, obj10);
+    items1[3] = tmp8Result4;
+    const obj11 = { proposal, experience, showsRequirements, guild };
+    items1[4] = hasOwnProperty(ExperienceBlocks, obj11);
     obj2.children = items1;
     return timestampProducer(View, obj2);
   }
-  tmp8Result2 = null;
+  tmp8Result4 = null;
   if (bullets.length > 0) {
-    const obj11 = { bullets, commandNames };
-    tmp8Result2 = hasOwnProperty(Bullets, obj11);
+    const obj12 = { bullets, commandNames };
+    tmp8Result4 = hasOwnProperty(Bullets, obj12);
   }
-  const obj6 = { variant: "body-md/medium", color: "text-strong", accessibilityRole: "header", children: intl.string(BM4Ymz) };
+  const tmp2Result2 = conjurePlanExperienceSections;
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { frame: fn(6921).GameControllerIcon, overlay_widget: fn(18621).WindowTopIcon, user_widget: fn(12960).UserCircleIcon, bot: fn(12108).RobotIcon, commands: fn(12108).RobotIcon, automod: fn(10010).ShieldIcon };
-const createStyles = fn(4792);
+let obj = { frame: fn(6920).GameControllerIcon, overlay_widget: fn(18144).WindowTopIcon, user_widget: fn(12930).UserCircleIcon, bot: fn(12050).RobotIcon, commands: fn(12050).RobotIcon, automod: fn(10013).ShieldIcon };
+const createStyles = fn(4794);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.divider = { marginVertical: nativeDefault.space.PX_24, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -243,7 +250,7 @@ let obj10 = { gap: nativeDefault.space.PX_24, marginTop: nativeDefault.space.PX_
 obj3.infoBlock = { gap: nativeDefault.space.PX_8 };
 let obj11 = { gap: nativeDefault.space.PX_8 };
 obj3.channelsBlock = { gap: nativeDefault.space.PX_12 };
-const obj12 = { gap: nativeDefault.space.PX_12 };
+let obj12 = { gap: nativeDefault.space.PX_12 };
 obj3.infoRows = { gap: nativeDefault.space.PX_8 };
 const obj13 = { gap: nativeDefault.space.PX_8 };
 obj3.infoRow = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 };
@@ -257,34 +264,34 @@ let closure_8 = createStyles.createStyles(obj3);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanExperiences.tsx");
 
-export default function ConjurePlanExperiences(proposal) {
-  proposal = proposal.proposal;
-  ({ renderPreview: importDefault, commandNames } = proposal);
-  closure_4 = undefined;
-  ({ appName, intro } = proposal);
+export default function ConjurePlanExperiences(arg0) {
+  ({ inServer: require, guild: importDefault, proposal } = arg0);
+  ({ renderPreview: noop, commandNames } = arg0);
+  closure_6 = undefined;
+  ({ appName, intro } = arg0);
   const tmp = closure_8();
   const divider = tmp;
   let experiences = proposal.experiences;
   if (experiences == null) {
     experiences = [];
   }
-  const result = proposal(commandNames[15]).conjurePlanDisplayedSections(experiences, commandNames);
-  obj = proposal(commandNames[15]);
-  closure_4 = proposal(commandNames[15]).conjurePlanRequirementsSectionId(result);
+  const result = require("conjurePlanExperienceSections").conjurePlanDisplayedSections(experiences, commandNames);
+  obj = require("conjurePlanExperienceSections");
+  closure_6 = require("conjurePlanExperienceSections").conjurePlanRequirementsSectionId(result);
   const obj2 = { children: null };
   const obj3 = { style: tmp.intro, children: null };
-  items = [closure_5(proposal(commandNames[10]).Heading, { variant: "heading-lg/semibold", color: "text-strong", children: appName }), intro];
+  items = [divider(require("Text/Text").Heading, { variant: "heading-lg/semibold", color: "text-strong", children: appName }), intro];
   obj3.children = items;
   const items1 = [
-    closure_6(closure_4, obj3),
+    closure_6(commandNames, obj3),
     result.map((bullets) => {
       const experience = bullets.experience;
       obj = { children: null };
-      items = [hasOwnProperty(View, { style: divider.divider }), hasOwnProperty(ComponentSection, { experience, bullets: bullets.bullets, preview: importDefault(experience), proposal, commandNames, showsRequirements: experience.id === closure_4 })];
+      items = [hasOwnProperty(View, { style: divider.divider }), hasOwnProperty(ComponentSection, { experience, inServer, bullets: bullets.bullets, preview: closure_1_3(experience), proposal, commandNames, showsRequirements: experience.id === closure_6, guild })];
       obj.children = items;
       return timestampProducer(noop.Fragment, obj, experience.id);
     })
   ];
   obj2.children = items1;
-  return closure_6(closure_4, obj2);
+  return closure_6(commandNames, obj2);
 };

@@ -1,12 +1,12 @@
-// === Module 14409: useUserProfileActivity ===
+// === Module 14377: useUserProfileActivity ===
 
-// Module 14409 (useUserProfileActivity)
+// Module 14377 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 5537 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14410 */;
+import Constants from "Constants" /* 5539 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14378 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8874 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

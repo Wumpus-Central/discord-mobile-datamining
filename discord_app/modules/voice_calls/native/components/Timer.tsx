@@ -1,8 +1,8 @@
-// === Module 14795: Timer ===
+// === Module 14754: Timer ===
 
-// Module 14795 (Timer)
+// Module 14754 (Timer)
 import applyDefault from "apply" /* 12 */;
-import native from "native" /* 1187 */;
+import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

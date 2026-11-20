@@ -1,24 +1,24 @@
-// === Module 18032: useVoicePanelDockContextMenuItems ===
+// === Module 17859: useVoicePanelDockContextMenuItems ===
 
-// Module 18032 (useVoicePanelDockContextMenuItems)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import util from "util" /* 1113 */;
-import _modDef3275 from "module_3275" /* 3275 */;
-import UserPlusIcon from "UserPlusIcon" /* 5482 */;
-import ChatIcon from "ChatIcon" /* 7553 */;
-import SettingsIcon from "SettingsIcon" /* 10309 */;
-import VideoIcon2 from "VideoIcon" /* 11064 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14420 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18038 */;
-import MobilePhoneXIcon from "MobilePhoneXIcon" /* 18039 */;
-import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 18041 */;
-import ActivitiesIcon from "ActivitiesIcon" /* 18043 */;
+// Module 17859 (useVoicePanelDockContextMenuItems)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
+import util from "util" /* 1112 */;
+import _modDef3277 from "module_3277" /* 3277 */;
+import UserPlusIcon from "UserPlusIcon" /* 5484 */;
+import ChatIcon from "ChatIcon" /* 7552 */;
+import SettingsIcon from "SettingsIcon" /* 10251 */;
+import VideoIcon2 from "VideoIcon" /* 11006 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14388 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17865 */;
+import MobilePhoneXIcon from "MobilePhoneXIcon" /* 17866 */;
+import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 17868 */;
+import ActivitiesIcon from "ActivitiesIcon" /* 17870 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ComponentActions = fn(1072).ComponentActions;
+const ComponentActions = fn(1071).ComponentActions;
 const VoicePanelDockContextMenu = "VoicePanelDockContextMenu";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockContextMenuItems.tsx");
@@ -127,7 +127,7 @@ export default function useVoicePanelDockContextMenuItems(id, arg1) {
         let onPress2 = closure_7;
         const intl2 = util.intl;
         const string = intl2.string;
-        const tmp23 = _modDef3275;
+        const tmp23 = _modDef3277;
         if (closure_7.isVideoEnabled) {
           let stringResult = string(tmp23.q0eP6a);
         } else {

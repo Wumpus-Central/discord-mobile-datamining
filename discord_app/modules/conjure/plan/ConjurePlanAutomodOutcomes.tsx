@@ -1,10 +1,10 @@
-// === Module 18627: ConjurePlanAutomodOutcomes ===
+// === Module 18455: ConjurePlanAutomodOutcomes ===
 
-// Module 18627 (ConjurePlanAutomodOutcomes)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 4706 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5516 */;
+// Module 18455 (ConjurePlanAutomodOutcomes)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 4708 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5518 */;
 import size from "module_2" /* 2 */;
 
 const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;
@@ -17,28 +17,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089.Vi4cjL);
+      return intl.string(_modDef4091.Vi4cjL);
     },
     blockedStyle: false
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089.YdnZ8q);
+      return intl.string(_modDef4091.YdnZ8q);
     },
     blockedStyle: true
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089.QGrx9O);
+      return intl.string(_modDef4091.QGrx9O);
     },
     blockedStyle: true
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089.RGzFNK);
+      return intl.string(_modDef4091.RGzFNK);
     },
     blockedStyle: false
   }
@@ -47,21 +47,21 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089.YdnZ8q);
+      return intl.string(_modDef4091.YdnZ8q);
     },
     tone: "red"
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089["8ockl9"]);
+      return intl.string(_modDef4091["8ockl9"]);
     },
     tone: "blurple"
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef4089.RGzFNK);
+      return intl.string(_modDef4091.RGzFNK);
     },
     tone: "green"
   }
@@ -87,26 +87,26 @@ export function planAutomodReasonText(example) {
         const obj2 = { duration: tmp3 };
         formatToPlainStringResult = intl.formatToPlainString(util.t["3LYql6"], obj2);
       } else if (timeout_seconds % c6 === 0) {
-        const intl6 = EmoBD2(1113).intl;
-        EmoBD2 = EmoBD2(1113).t.EmoBD2;
+        const intl6 = EmoBD2(1112).intl;
+        EmoBD2 = EmoBD2(1112).t.EmoBD2;
         obj = { weeks: timeout_seconds / tmp8 };
         let formatToPlainStringResult1 = intl6.formatToPlainString(EmoBD2, obj);
       } else if (timeout_seconds % 86400 === 0) {
-        const intl5 = EmoBD2(1113).intl;
+        const intl5 = EmoBD2(1112).intl;
         const obj3 = { days: timeout_seconds / 86400 };
-        formatToPlainStringResult1 = intl5.formatToPlainString(EmoBD2(1113).t["k2UNz+"], obj3);
+        formatToPlainStringResult1 = intl5.formatToPlainString(EmoBD2(1112).t["k2UNz+"], obj3);
       } else if (timeout_seconds % 3600 === 0) {
-        const intl4 = EmoBD2(1113).intl;
+        const intl4 = EmoBD2(1112).intl;
         const obj4 = { hours: timeout_seconds / 3600 };
-        formatToPlainStringResult1 = intl4.formatToPlainString(EmoBD2(1113).t.xCjYxK, obj4);
+        formatToPlainStringResult1 = intl4.formatToPlainString(EmoBD2(1112).t.xCjYxK, obj4);
       } else if (timeout_seconds % 60 === 0) {
-        const intl3 = EmoBD2(1113).intl;
+        const intl3 = EmoBD2(1112).intl;
         const obj5 = { mins: timeout_seconds / 60 };
-        formatToPlainStringResult1 = intl3.formatToPlainString(EmoBD2(1113).t.opVZ9q, obj5);
+        formatToPlainStringResult1 = intl3.formatToPlainString(EmoBD2(1112).t.opVZ9q, obj5);
       } else {
-        const intl2 = EmoBD2(1113).intl;
+        const intl2 = EmoBD2(1112).intl;
         const obj6 = { secs: timeout_seconds };
-        formatToPlainStringResult1 = intl2.formatToPlainString(EmoBD2(1113).t["4zv/jq"], obj6);
+        formatToPlainStringResult1 = intl2.formatToPlainString(EmoBD2(1112).t["4zv/jq"], obj6);
       }
     }
   }

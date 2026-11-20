@@ -1,21 +1,21 @@
-// === Module 14160: HeadlessCollectiblesPurchaseFlow ===
+// === Module 14129: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 14160 (HeadlessCollectiblesPurchaseFlow)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+// Module 14129 (HeadlessCollectiblesPurchaseFlow)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2184 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
 import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8798 */;
 import ACOMExperiments from "ACOMExperiments" /* 8801 */;
 import useProductPurchaseState from "useProductPurchaseState" /* 8918 */;
 import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 9126 */;
 import NativePaymentContext from "NativePaymentContext" /* 9488 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 13819 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 14161 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 13788 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 14130 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1083).PaymentGateways;
+const application_id = fn(1071).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1082).PaymentGateways;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx");

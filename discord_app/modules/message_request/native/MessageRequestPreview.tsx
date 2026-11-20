@@ -1,18 +1,18 @@
-// === Module 19055: MessageRequestPreview ===
+// === Module 18874: MessageRequestPreview ===
 
-// Module 19055 (MessageRequestPreview)
+// Module 18874 (MessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import TextStyles_mod from "TextStyles" /* 6286 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import TextStyles_mod from "TextStyles" /* 6288 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Fonts, AnalyticEvents: closure_6, MessageFlags: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { systemContent: null, messageContent: null };
 let obj3 = { fontStyle: "italic" };
 let TextStyles = TextStyles_mod;
@@ -31,10 +31,10 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(13398).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(13368).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(13398);
+  let obj = channel(13368);
   items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
@@ -61,8 +61,8 @@ export default noop.memo(function MessageRequestPreview(channel) {
     }
   }, items2);
   if (error) {
-    const intl9 = tmp2(1113).intl;
-    let stringResult = intl9.string(tmp2(1113).t.BZHld2);
+    const intl9 = tmp2(1112).intl;
+    let stringResult = intl9.string(tmp2(1112).t.BZHld2);
     let flag = false;
   } else {
     stringResult = null;
@@ -70,15 +70,15 @@ export default noop.memo(function MessageRequestPreview(channel) {
     if (loaded) {
       if (null != message) {
         if (isBlocked) {
-          const intl8 = tmp2(1113).intl;
-          stringResult = intl8.string(tmp2(1113).t["WPe+xL"]);
+          const intl8 = tmp2(1112).intl;
+          stringResult = intl8.string(tmp2(1112).t["WPe+xL"]);
           flag = false;
         }
       }
       if (null != message) {
         if (isIgnored) {
-          const intl7 = tmp2(1113).intl;
-          stringResult = intl7.string(tmp2(1113).t.uxrh1O);
+          const intl7 = tmp2(1112).intl;
+          stringResult = intl7.string(tmp2(1112).t.uxrh1O);
           flag = false;
         }
       }
@@ -88,31 +88,31 @@ export default noop.memo(function MessageRequestPreview(channel) {
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(8117)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(8116)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
             stringResult = content1;
           }
-          const intl6 = tmp2(1113).intl;
-          stringResult = intl6.string(tmp2(1113).t["262oPB"]);
+          const intl6 = tmp2(1112).intl;
+          stringResult = intl6.string(tmp2(1112).t["262oPB"]);
           flag = false;
         }
       }
       if (null != message) {
         if (tmp2Result.getMessageStickers(message).length > 0) {
-          const intl5 = tmp2(1113).intl;
-          let stringResult1 = intl5.string(tmp2(1113).t["zuI+by"]);
+          const intl5 = tmp2(1112).intl;
+          let stringResult1 = intl5.string(tmp2(1112).t["zuI+by"]);
         } else if (null != message.interaction) {
-          const intl4 = tmp2(1113).intl;
-          stringResult1 = intl4.string(tmp2(1113).t["2v7kfl"]);
+          const intl4 = tmp2(1112).intl;
+          stringResult1 = intl4.string(tmp2(1112).t["2v7kfl"]);
         } else if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
-          const intl3 = tmp2(1113).intl;
-          stringResult1 = intl3.string(tmp2(1113).t["6bhHrc"]);
+          const intl3 = tmp2(1112).intl;
+          stringResult1 = intl3.string(tmp2(1112).t["6bhHrc"]);
         } else {
-          const intl2 = tmp2(1113).intl;
+          const intl2 = tmp2(1112).intl;
           const string = intl2.string;
-          const t = tmp2(1113).t;
+          const t = tmp2(1112).t;
           if (hasFlagResult) {
             stringResult1 = string(t.Xxm5i3);
           } else {
@@ -122,14 +122,14 @@ export default noop.memo(function MessageRequestPreview(channel) {
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(6265);
+        tmp2Result = tmp2(6267);
       } else {
-        const intl = tmp2(1113).intl;
-        stringResult = intl.string(tmp2(1113).t["0KfDxM"]);
+        const intl = tmp2(1112).intl;
+        stringResult = intl.string(tmp2(1112).t["0KfDxM"]);
         flag = false;
       }
     }
   }
-  let obj3 = { style: channel.style, children: jsx(channel(1187).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={channel.style}>{jsx(channel(1187).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  let obj3 = { style: channel.style, children: jsx(channel(1186).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
+  return <View style={channel.style}>{jsx(channel(1186).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });

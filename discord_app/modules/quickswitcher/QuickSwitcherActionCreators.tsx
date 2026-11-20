@@ -1,34 +1,34 @@
-// === Module 9960: QuickSwitcherActionCreators ===
+// === Module 9963: QuickSwitcherActionCreators ===
 
-// Module 9960 (QuickSwitcherActionCreators)
+// Module 9963 (QuickSwitcherActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import transitionToChannel from "transitionToChannel" /* 5525 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6408 */;
-import transitionToGuild from "transitionToGuild" /* 6714 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import transitionToChannel from "transitionToChannel" /* 5527 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6410 */;
+import transitionToGuild from "transitionToGuild" /* 6716 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 6748 */;
-import ValidationUtilsDefault from "ValidationUtils" /* 7141 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7143 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
+import ValidationUtilsDefault from "ValidationUtils" /* 7140 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7142 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7954 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9649 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
-import sortByMatchScore from "sortByMatchScore" /* 9940 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 9963 */;
-import ChannelTabsActionCreators from "ChannelTabsActionCreators" /* 9964 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 9965 */;
-import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 9966 */;
-import showChannelTabLimitToast from "showChannelTabLimitToast" /* 9967 */;
+import sortByMatchScore from "sortByMatchScore" /* 9943 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 9966 */;
+import ChannelTabsActionCreators from "ChannelTabsActionCreators" /* 9967 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 9968 */;
+import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 9969 */;
+import showChannelTabLimitToast from "showChannelTabLimitToast" /* 9970 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 9961 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9939 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 9964 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2161 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9942 */;
 
 const require = globalThis.__r;
 
@@ -319,7 +319,7 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -357,7 +357,7 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
           const obj = closure_130_1(closure_130_2[16]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c4 = tmp;
@@ -365,20 +365,20 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6436).InAppNavigationType;
-const ChannelRecordBase = fn(4645).ChannelRecordBase;
-const Constants = fn(1072);
+const InAppNavigationType = fn(6438).InAppNavigationType;
+const ChannelRecordBase = fn(4647).ChannelRecordBase;
+const Constants = fn(1071);
 ({ Layers, ME: map1, AppContext: closure_14, AnalyticEvents: closure_15, AnalyticsLocations: closure_16, AnalyticsPages: closure_17, Routes: closure_18 } = Constants);
-const isStaticChannelRoute = fn(4648).isStaticChannelRoute;
-const CollectibleShopTab = fn(1074).CollectibleShopTab;
+const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
+const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let obj = {};
-obj[fn(9940).AutocompleterQuerySymbols.USER] = fn(9940).AutocompleterResultTypes.USER;
-obj[fn(9940).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9940).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(9940).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9940).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(9940).AutocompleterQuerySymbols.GUILD] = fn(9940).AutocompleterResultTypes.GUILD;
-obj[fn(9940).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9940).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(9943).AutocompleterQuerySymbols.USER] = fn(9943).AutocompleterResultTypes.USER;
+obj[fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9943).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9943).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(9943).AutocompleterQuerySymbols.GUILD] = fn(9943).AutocompleterResultTypes.GUILD;
+obj[fn(9943).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9943).AutocompleterResultTypes.GAME_PROFILE;
 let closure_21 = Object.freeze(obj);
-const regExp = new RegExp("^" + fn(9940).AutocompleterQuerySymbols.USER + "|" + fn(9940).AutocompleterQuerySymbols.TEXT_CHANNEL + "|" + fn(9940).AutocompleterQuerySymbols.VOICE_CHANNEL + "|\\" + fn(9940).AutocompleterQuerySymbols.GUILD + "|\\" + fn(9940).AutocompleterQuerySymbols.GAME_PROFILE);
+const regExp = new RegExp("^" + fn(9943).AutocompleterQuerySymbols.USER + "|" + fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL + "|" + fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL + "|\\" + fn(9943).AutocompleterQuerySymbols.GUILD + "|\\" + fn(9943).AutocompleterQuerySymbols.GAME_PROFILE);
 let items = [, , ];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
 const set = new Set(items);
@@ -476,7 +476,7 @@ export function switchToResultInNewTab(type) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -496,7 +496,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7618).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -508,11 +508,11 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9964);
+                      const obj = tmp5(9967);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp21) {
                     c3 = tmp;
@@ -533,7 +533,7 @@ export function switchToResultInNewTab(type) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -553,7 +553,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7618).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -565,11 +565,11 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9964);
+                      const obj = tmp5(9967);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp21) {
                     c3 = tmp;

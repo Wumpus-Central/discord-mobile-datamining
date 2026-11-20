@@ -1,20 +1,20 @@
 // === Module 9591: SecureFramesPlatformUtils ===
 
 // Module 9591 (SecureFramesPlatformUtils)
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 6748 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 
 require = fn;
 const SecureFramesConstants = fn(9588);
 ({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: hasOwnProperty, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: metroImportDefault } = SecureFramesConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ME: closure_8, Routes: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");

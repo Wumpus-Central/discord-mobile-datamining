@@ -2,7 +2,7 @@
 
 // Module 8833 (DiceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod8834 from "module_8834" /* 8834 */;
 import noop from "module_19" /* 19 */;
 

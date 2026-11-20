@@ -1,20 +1,20 @@
-// === Module 18011: YouBarNameplate ===
+// === Module 17838: YouBarNameplate ===
 
-// Module 18011 (YouBarNameplate)
+// Module 17838 (YouBarNameplate)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5356 */;
-import spring_spring from "spring/spring" /* 5393 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import useToken from "useToken" /* 5358 */;
+import spring_spring from "spring/spring" /* 5395 */;
 import NameplateDefault from "Nameplate" /* 8908 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16620 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16443 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(16532).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(16355).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 let closure_6 = { code: "(function YouBarNameplateTsx1(){let[withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG]=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};})" };
 const size = fn(2);
@@ -51,7 +51,7 @@ export default noop.memo(function YouBarNameplate(arg0) {
   YouBarNameplateTsx1.__closure = items2;
   YouBarNameplateTsx1.__workletHash = 1217151381395;
   YouBarNameplateTsx1.__initData = tmp6;
-  const animatedStyle = _mod1655.useAnimatedStyle(YouBarNameplateTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(YouBarNameplateTsx1);
   const rect = { position: "absolute", top: 0, left: avatarSize, right: -1, bottom: 0, borderTopRightRadius: null, borderTopLeftRadius: 0, borderBottomRightRadius: null, borderBottomLeftRadius: 0, overflow: "hidden", width: null };
   let num = 0;
   if (!isQuestRendered) {
@@ -70,5 +70,5 @@ export default noop.memo(function YouBarNameplate(arg0) {
   }
   obj5.animate = str;
   obj4.children = jsx(NameplateDefault, { nameplate, isFocused: true, animate: null });
-  return jsx(_modDef1655.View, { style: null, pointerEvents: "none", children: null });
+  return jsx(_modDef1653.View, { style: null, pointerEvents: "none", children: null });
 });

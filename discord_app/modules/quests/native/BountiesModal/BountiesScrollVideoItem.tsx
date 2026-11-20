@@ -1,15 +1,15 @@
-// === Module 16383: BountiesScrollVideoItem ===
+// === Module 16205: BountiesScrollVideoItem ===
 
-// Module 16383 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 6442 */;
-import AdCreativeType from "AdCreativeType" /* 6444 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13666 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16384 */;
+// Module 16205 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 6444 */;
+import AdCreativeType from "AdCreativeType" /* 6446 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13637 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9309 */;
-import BountyStore from "BountyStore" /* 8284 */;
+import BountyStore from "BountyStore" /* 8283 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -124,7 +124,7 @@ function BountiesScrollVideoItemInner(bounty) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -179,7 +179,7 @@ function BountiesScrollVideoItemInner(bounty) {
             });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -278,7 +278,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6437).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6439).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -310,10 +310,10 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(13666).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(13637).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(6444).AdCreativeType.BOUNTY,
-    questContent: bounty(6442).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(6446).AdCreativeType.BOUNTY,
+    questContent: bounty(6444).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

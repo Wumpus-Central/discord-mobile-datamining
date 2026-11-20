@@ -1,22 +1,22 @@
-// === Module 16006: WebAuthnNameStep ===
+// === Module 15970: WebAuthnNameStep ===
 
-// Module 16006 (WebAuthnNameStep)
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7295 */;
-import Form from "Form" /* 7590 */;
+// Module 15970 (WebAuthnNameStep)
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7294 */;
+import Form from "Form" /* 7589 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ margin: { margin: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
@@ -33,7 +33,7 @@ export default function WebAuthnNameStep() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ export default function WebAuthnNameStep() {
           v3(tmp32[10]).open("WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", obj8);
           const replaced = closure_128_2.replace(constants.WEBAUTHN_SUCCESS);
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp5 === c3) {

@@ -1,14 +1,14 @@
-// === Module 18309: useCanShareConjureProject ===
+// === Module 18154: useCanShareConjureProject ===
 
-// Module 18309 (useCanShareConjureProject)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 6867 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+// Module 18154 (useCanShareConjureProject)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 12190 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6860 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6500).isProjectOwner;
+const isProjectOwner = fn(6502).isProjectOwner;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useCanShareConjureProject.tsx");
 
@@ -27,16 +27,8 @@ export default function useCanShareConjureProject(arg0) {
     if (tmp4) {
       tmp4 = isProjectOwner(project);
     }
-    let tmp6 = null != project && null != publishState;
-    if (!tmp6) {
-      const obj2 = { canShare: tmp6, firstShare: null };
-      if (tmp6) {
-        tmp6 = tmp4;
-      }
-      if (tmp6) {
-        tmp6 = "user" === project.install_scope;
-      }
-      obj2.firstShare = tmp6;
+    if (!(null != project && null != publishState)) {
+      const obj2 = { canShare: tmp6 };
       return obj2;
     } else if (tmp4) {
       let isConjureLiveResult = "nothing_built" !== publishState;

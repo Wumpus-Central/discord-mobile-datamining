@@ -1,14 +1,14 @@
-// === Module 14757: getPreviousSafeRouteForNsfwReturn ===
+// === Module 14716: getPreviousSafeRouteForNsfwReturn ===
 
-// Module 14757 (getPreviousSafeRouteForNsfwReturn)
-import AgeGateUtils from "AgeGateUtils" /* 6298 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6318 */;
-import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6532 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildChannelStore from "GuildChannelStore" /* 4722 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import Constants from "Constants" /* 1072 */;
+// Module 14716 (getPreviousSafeRouteForNsfwReturn)
+import AgeGateUtils from "AgeGateUtils" /* 6300 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6320 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6534 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 let NavigationHistoryStore = NavigationHistoryStore_mod;

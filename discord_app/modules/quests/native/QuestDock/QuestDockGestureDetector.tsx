@@ -1,12 +1,12 @@
-// === Module 16621: QuestDockGestureDetector ===
+// === Module 16444: QuestDockGestureDetector ===
 
-// Module 16621 (QuestDockGestureDetector)
-import _mod1708 from "module_1708" /* 1708 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11709 */;
-import QuestDockUtils from "QuestDockUtils" /* 16528 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16618 */;
+// Module 16444 (QuestDockGestureDetector)
+import _mod1706 from "module_1706" /* 1706 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11651 */;
+import QuestDockUtils from "QuestDockUtils" /* 16351 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,13 +30,13 @@ function useQuestDockSwipeGesture() {
   const isVisibleToUser = noop.useContext(QuestDockVisibilityContextDefault).isVisibleToUser;
   const obj2 = require("QuestDockHooks");
   let point = { absoluteX: 0, absoluteY: 0, x: 0, y: 0, height: 0, isDrawer: restingQuestDockMode.get() === minExpandedContentHeight.EXPANDED, active: false };
-  const sharedValue = require("module_1655").useSharedValue(point);
-  let obj3 = require("module_1655");
+  const sharedValue = require("module_1653").useSharedValue(point);
+  let obj3 = require("module_1653");
   const tmp8 = minExpandedContentHeight;
-  const sharedValue1 = require("module_1655").useSharedValue(0);
-  let obj5 = require("module_1655");
-  const sharedValue2 = require("module_1655").useSharedValue(isVisibleToUser);
-  const obj6 = require("module_1655");
+  const sharedValue1 = require("module_1653").useSharedValue(0);
+  let obj5 = require("module_1653");
+  const sharedValue2 = require("module_1653").useSharedValue(isVisibleToUser);
+  const obj6 = require("module_1653");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   let obj7 = require("useYouBarTotalHeight");
   const youBarHorizontalMargin = require("useYouBarMargins").useYouBarHorizontalMargin();
@@ -176,7 +176,7 @@ function useQuestDockSwipeGesture() {
     QuestDockGestureDetectorTsx2.__workletHash = 3431492154013;
     QuestDockGestureDetectorTsx2.__initData = tmp14;
     const onTouchesDownResult = result.onTouchesDown(QuestDockGestureDetectorTsx1);
-    const items4 = [closure_20, sharedValue, minExpandedContentHeight, c2, QuestDockMode, closure_2_16, refs, c1, youBarTotalHeight, QuestDockUtils.getQuestDockExpandedWidth, c3, _undefined6, closure_2_11, timestampProducer, colors, QuestDockUtils.getQuestDockClosedWidth, youBarHorizontalMargin, hasOwnProperty, gesture, questDockOffset, _mod1708.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, metroImportDefault, QuestDockUtils.getQuestDockCollapsedWidth];
+    const items4 = [closure_20, sharedValue, minExpandedContentHeight, c2, QuestDockMode, closure_2_16, refs, c1, youBarTotalHeight, QuestDockUtils.getQuestDockExpandedWidth, c3, _undefined6, closure_2_11, timestampProducer, colors, QuestDockUtils.getQuestDockClosedWidth, youBarHorizontalMargin, hasOwnProperty, gesture, questDockOffset, _mod1706.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, metroImportDefault, QuestDockUtils.getQuestDockCollapsedWidth];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -387,7 +387,7 @@ function useQuestDockSwipeGesture() {
     QuestDockGestureDetectorTsx3.__workletHash = 16327529222102;
     QuestDockGestureDetectorTsx3.__initData = tmp25;
     const onTouchesMoveResult = result.onTouchesDown(QuestDockGestureDetectorTsx1).onTouchesMove(QuestDockGestureDetectorTsx2);
-    const items6 = [constants, application_id, restingQuestDockMode, QuestDockMode, sharedValue, closure_2_11, _mod1708.scheduleOnRN, c0, setRestingQuestDockMode];
+    const items6 = [constants, application_id, restingQuestDockMode, QuestDockMode, sharedValue, closure_2_11, _mod1706.scheduleOnRN, c0, setRestingQuestDockMode];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -481,7 +481,7 @@ function useQuestDockSwipeGesture() {
   QuestDockGestureDetectorTsx5.__closure = items3;
   QuestDockGestureDetectorTsx5.__workletHash = 4342354480469;
   QuestDockGestureDetectorTsx5.__initData = tmp16;
-  let items4 = [closure_23, tmp8, require("module_1708").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes];
+  let items4 = [closure_23, tmp8, require("module_1706").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -522,11 +522,11 @@ function useQuestDockSwipeGesture() {
   QuestDockGestureDetectorTsx6.__closure = items5;
   QuestDockGestureDetectorTsx6.__workletHash = 6602612210534;
   QuestDockGestureDetectorTsx6.__initData = tmp19;
-  const animatedReaction = require("module_1655").useAnimatedReaction(QuestDockGestureDetectorTsx5, QuestDockGestureDetectorTsx6);
+  const animatedReaction = require("module_1653").useAnimatedReaction(QuestDockGestureDetectorTsx5, QuestDockGestureDetectorTsx6);
   return memo;
 }
-const QuestDockMode = fn(6437).QuestDockMode;
-const QuestDockConstants = fn(16529);
+const QuestDockMode = fn(6439).QuestDockMode;
+const QuestDockConstants = fn(16352);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty, QUEST_DOCK_CLOSED_HEIGHT: closure_6, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: metroImportDefault, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_8, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: closure_9, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: closure_10, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_11, QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY: closure_12, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_14, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_15, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: closure_16 } = QuestDockConstants);
 const jsx = fn(21).jsx;
 let closure_18 = { code: "(function QuestDockGestureDetectorTsx1(event){let[touchMoveCount,initialGestureOffset,questDockWrapperSpecs,restingQuestDockMode,QuestDockMode]=this.__closure;touchMoveCount.set(0);initialGestureOffset.set({absoluteX:event.changedTouches[0].absoluteX,absoluteY:event.changedTouches[0].absoluteY,x:questDockWrapperSpecs.get().x,y:questDockWrapperSpecs.get().y,height:questDockWrapperSpecs.get().height,isDrawer:restingQuestDockMode.get()===QuestDockMode.EXPANDED,active:false});})" };

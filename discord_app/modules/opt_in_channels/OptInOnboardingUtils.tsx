@@ -1,15 +1,15 @@
-// === Module 11935: OptInOnboardingUtils ===
+// === Module 11877: OptInOnboardingUtils ===
 
-// Module 11935 (OptInOnboardingUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import isOptInEnabled from "isOptInEnabled" /* 6542 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7355 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7360 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4722 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+// Module 11877 (OptInOnboardingUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import isOptInEnabled from "isOptInEnabled" /* 6544 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7354 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7359 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4724 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
 function optIntoAllChannelsForExistingMember(id, arg1) {
@@ -43,10 +43,10 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-let GuildChannelStore = fn(4722);
+let GuildChannelStore = fn(4724);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 

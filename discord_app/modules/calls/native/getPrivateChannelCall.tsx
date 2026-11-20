@@ -2,12 +2,12 @@
 
 // Module 9542 (getPrivateChannelCall)
 import CallsUtils from "CallsUtils" /* 9543 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NOOP_NULL = fn(1072).NOOP_NULL;
+const NOOP_NULL = fn(1071).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 

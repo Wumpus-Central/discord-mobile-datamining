@@ -1,14 +1,14 @@
-// === Module 5689: SpatialAudioStore ===
+// === Module 5691: SpatialAudioStore ===
 
-// Module 5689 (SpatialAudioStore)
+// Module 5691 (SpatialAudioStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5691 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5693 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
@@ -92,10 +92,10 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const SpatialAudioConstants = fn(5690);
+const SpatialAudioConstants = fn(5692);
 const DEFAULT_SPATIAL_AUDIO_OPTIONS = SpatialAudioConstants.DEFAULT_SPATIAL_AUDIO_OPTIONS;
 ({ MIN_POSITIONING_SPATIAL_AUDIO_VERSION: metroImportDefault, SpatialAudioOverrideSource } = SpatialAudioConstants);
-const Constants = fn(5537);
+const Constants = fn(5539);
 ({ Features: closure_9, MediaEngineContextTypes: closure_10, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
@@ -119,7 +119,7 @@ prototype["initialize"] = function initialize(enabled) {
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   let mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5558).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
+  mediaEngine.on(self(5560).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
     const result = setSpatialAudioEnabled.setSpatialAudioEnabled(closure_1_15.isSpatial);
     isSpatial = closure_1_15.isSpatial;
     if (isSpatial) {
@@ -127,7 +127,7 @@ prototype["initialize"] = function initialize(enabled) {
     }
     const result1 = setSpatialAudioEnabled.setSpatialAudioActive(isSpatial);
   });
-  mediaEngine.on(self(5558).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5560).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

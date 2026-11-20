@@ -1,10 +1,10 @@
-// === Module 13080: GuildDirectoryActionCreators ===
+// === Module 13050: GuildDirectoryActionCreators ===
 
-// Module 13080 (GuildDirectoryActionCreators)
+// Module 13050 (GuildDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6311 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6313 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 13067 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 13037 */;
 import "debounce";
 import debounce_mod from "debounce" /* 551 */;
 
@@ -73,8 +73,8 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(13069).DirectoryEntryCategories;
-let Endpoints = fn(1072).Endpoints;
+const DirectoryEntryCategories = fn(13039).DirectoryEntryCategories;
+let Endpoints = fn(1071).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
   c6 = 0;
@@ -84,7 +84,7 @@ asyncGeneratorStep(async (arg0, category_id) => {
     closure_3 = tmp3;
     closure_130_0 = closure_0;
     category_id(572).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = closure_0(1285).HTTP;
+    const HTTP = closure_0(1284).HTTP;
     const request = { url: c6.DIRECTORY_CHANNEL_ENTRIES(closure_0), query: { category_id }, rejectWithError: true };
     await HTTP.get(request);
     if (1 === tmp7) {
@@ -149,7 +149,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
               c5 = 1;
               const obj6 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId, query };
               query(572).dispatch(obj6);
-              const HTTP = channelId(1285).HTTP;
+              const HTTP = channelId(1284).HTTP;
               const request = { url: c6.DIRECTORY_ENTRIES_SEARCH(channelId), query: null, rejectWithError: true };
               const obj8 = { query };
               request.query = obj8;
@@ -246,9 +246,9 @@ export function addDirectoryGuildEntry() {
 export function removeDirectoryGuildEntry(channelId, guildId) {
   const obj2 = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   const obj = TrackedHTTPUtilsDefault;
-  obj2.trackedActionData = { event: closure_0(1264).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
+  obj2.trackedActionData = { event: closure_0(1263).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
   obj.delete(obj2);
-  const obj3 = { event: closure_0(1264).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
+  const obj3 = { event: closure_0(1263).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 }
 export const searchDirectoryEntries = debounce(function() {

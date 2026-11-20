@@ -1,15 +1,15 @@
-// === Module 17934: HomeDrawerDirectMessagesRow ===
+// === Module 17761: HomeDrawerDirectMessagesRow ===
 
-// Module 17934 (HomeDrawerDirectMessagesRow)
+// Module 17761 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4974 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 17931 */;
+import util from "util" /* 1112 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4976 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 17758 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 require = fn;
 function HomeDrawerDMsRow() {
@@ -41,10 +41,10 @@ function HomeDrawerDMsRow() {
   return metroImportDefault(HomeDrawerShared.HomeDrawerSharedItem, obj6);
 }
 const View = fn(17).View;
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj2.onlineDot = size;

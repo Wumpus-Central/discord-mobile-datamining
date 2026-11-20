@@ -1,9 +1,9 @@
-// === Module 8333: ForegroundServiceManager ===
+// === Module 8332: ForegroundServiceManager ===
 
-// Module 8333 (ForegroundServiceManager)
+// Module 8332 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8334 */;
-import LifecycleManager from "LifecycleManager" /* 2123 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8333 */;
+import LifecycleManager from "LifecycleManager" /* 2121 */;
 import size from "module_2" /* 2 */;
 
 let obj = importDefault;
@@ -73,7 +73,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const result = serviceNotifications.set(arg0, usesGateway);
       self.handleChange();
     }
-    tmp16 = obj(1345);
+    tmp16 = obj(1343);
   }
 };
 prototype["removeServiceHandler"] = function removeServiceHandler(arg0) {

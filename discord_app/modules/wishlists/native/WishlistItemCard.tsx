@@ -1,12 +1,12 @@
-// === Module 13843: WishlistItemCard ===
+// === Module 13812: WishlistItemCard ===
 
-// Module 13843 (WishlistItemCard)
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 13844 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 13846 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 13847 */;
+// Module 13812 (WishlistItemCard)
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 13813 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 13815 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 13816 */;
 import noop from "module_19" /* 19 */;
 
-const SKUProductLines = fn(1072).SKUProductLines;
+const SKUProductLines = fn(1071).SKUProductLines;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCard.tsx");

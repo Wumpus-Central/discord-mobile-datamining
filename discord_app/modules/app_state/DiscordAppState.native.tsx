@@ -1,8 +1,8 @@
-// === Module 6530: DiscordAppState ===
+// === Module 6532: DiscordAppState ===
 
-// Module 6530 (DiscordAppState)
+// Module 6532 (DiscordAppState)
 import initialize from "initialize" /* 504 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
 
 require = fn;
 const size = fn(2);

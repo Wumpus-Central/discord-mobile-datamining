@@ -1,16 +1,16 @@
-// === Module 11626: useBookmarksPagination ===
+// === Module 11568: useBookmarksPagination ===
 
-// Module 11626 (useBookmarksPagination)
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11618 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 11625 */;
+// Module 11568 (useBookmarksPagination)
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11560 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11567 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11622 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11564 */;
 
 require = fn;
 function loadMoreBookmarks() {
   const bookmarks = SavedMessagesActions.fetchBookmarks({ loadMore: true });
 }
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/useBookmarksPagination.tsx");
 

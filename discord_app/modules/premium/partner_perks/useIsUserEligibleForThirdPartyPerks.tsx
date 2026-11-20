@@ -2,10 +2,10 @@
 
 // Module 9257 (useIsUserEligibleForThirdPartyPerks)
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
 import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 9258 */;
-import UserStore from "UserStore" /* 1388 */;
-import SubscriptionStore from "SubscriptionStore" /* 2179 */;
+import UserStore from "UserStore" /* 1386 */;
+import SubscriptionStore from "SubscriptionStore" /* 2177 */;
 
 require = fn;
 const size = fn(2);

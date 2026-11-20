@@ -1,13 +1,13 @@
-// === Module 13150: GuildInvitesDisabledUtils ===
+// === Module 13120: GuildInvitesDisabledUtils ===
 
-// Module 13150 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11039 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 13120 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10981 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");

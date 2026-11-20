@@ -1,9 +1,9 @@
-// === Module 17312: DesignSystemDragHandleSetting ===
+// === Module 17139: DesignSystemDragHandleSetting ===
 
-// Module 17312 (DesignSystemDragHandleSetting)
-import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 8593 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
+// Module 17139 (DesignSystemDragHandleSetting)
+import Constants from "Constants" /* 1071 */;
+import SettingsConstants from "SettingsConstants" /* 8592 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

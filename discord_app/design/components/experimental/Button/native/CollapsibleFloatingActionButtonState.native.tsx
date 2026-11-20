@@ -1,7 +1,7 @@
-// === Module 7489: CollapsibleFloatingActionButtonState ===
+// === Module 7488: CollapsibleFloatingActionButtonState ===
 
-// Module 7489 (CollapsibleFloatingActionButtonState)
-import _mod1655 from "module_1655" /* 1655 */;
+// Module 7488 (CollapsibleFloatingActionButtonState)
+import _mod1653 from "module_1653" /* 1653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
 
 export function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: _mod1655.useSharedValue(0) };
+  const obj = { collapseText: _mod1653.useSharedValue(0) };
   return obj;
 }
 export function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState) {
@@ -19,7 +19,7 @@ export function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActi
   if (UNDETERMINED === undefined) {
     num = 0;
   }
-  const sharedValue = _mod1655.useSharedValue(num);
+  const sharedValue = _mod1653.useSharedValue(num);
   items = [_undefined2, num, sharedValue, 10, collapseText, 10];
   c0 = undefined;
   c1 = undefined;

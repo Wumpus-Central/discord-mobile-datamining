@@ -1,13 +1,13 @@
-// === Module 16494: OrbsArcadeRewardPreview ===
+// === Module 16316: OrbsArcadeRewardPreview ===
 
-// Module 16494 (OrbsArcadeRewardPreview)
+// Module 16316 (OrbsArcadeRewardPreview)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2108 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2106 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 8900 */;
 import _modDef8901 from "module_8901" /* 8901 */;
 import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9433 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16479 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ function CollectibleRewardPreview(size) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { container: { width, height: width, alignItems: "center", justifyContent: "center" }, avatar: null, decoration: null };
   const size = { width: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, height: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, borderRadius: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

@@ -1,6 +1,6 @@
-// === Module 20116: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 19936: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 20116 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 19936 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CurrencyCodes = fn(1083).CurrencyCodes;
+const CurrencyCodes = fn(1082).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_10 };

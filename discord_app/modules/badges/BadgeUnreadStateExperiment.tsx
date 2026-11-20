@@ -1,11 +1,11 @@
-// === Module 13841: BadgeUnreadStateExperiment ===
+// === Module 13810: BadgeUnreadStateExperiment ===
 
-// Module 13841 (BadgeUnreadStateExperiment)
+// Module 13810 (BadgeUnreadStateExperiment)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1450);
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-10-badges-unread-state", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeUnreadStateExperiment.tsx");

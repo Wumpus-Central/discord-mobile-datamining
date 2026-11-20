@@ -1,10 +1,10 @@
-// === Module 14198: CustomActivityLinkUtils ===
+// === Module 14168: CustomActivityLinkUtils ===
 
-// Module 14198 (CustomActivityLinkUtils)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14201 */;
+// Module 14168 (CustomActivityLinkUtils)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14171 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14199 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14169 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -28,7 +28,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -117,7 +117,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -216,7 +216,7 @@ let closure_10 = async function _loadCustomActivityLink() {
   }
   return Promise.reject("appId or linkId null");
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");

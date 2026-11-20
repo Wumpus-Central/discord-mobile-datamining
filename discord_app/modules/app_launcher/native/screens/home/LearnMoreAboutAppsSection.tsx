@@ -1,22 +1,22 @@
-// === Module 12872: LearnMoreAboutAppsSection ===
+// === Module 12842: LearnMoreAboutAppsSection ===
 
-// Module 12872 (LearnMoreAboutAppsSection)
+// Module 12842 (LearnMoreAboutAppsSection)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import Pressables from "Pressables" /* 6911 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10614 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12873 */;
+import util from "util" /* 1112 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import Pressables from "Pressables" /* 6910 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10556 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12843 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 }, body: { textAlign: "center" }, divider: null, linkButton: null };
 const obj3 = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
 obj2.divider = { height: nativeDefault.space.PX_16 };

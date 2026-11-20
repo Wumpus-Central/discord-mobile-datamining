@@ -2,7 +2,7 @@
 
 // Module 8838 (OrbsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod8839 from "module_8839" /* 8839 */;
 import noop from "module_19" /* 19 */;
 

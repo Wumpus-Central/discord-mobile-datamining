@@ -1,14 +1,14 @@
-// === Module 16789: getSettingsOverrideReason ===
+// === Module 16613: getSettingsOverrideReason ===
 
-// Module 16789 (getSettingsOverrideReason)
-import util from "util" /* 1113 */;
-import _modDef4250 from "module_4250" /* 4250 */;
-import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4618 */;
+// Module 16613 (getSettingsOverrideReason)
+import util from "util" /* 1112 */;
+import _modDef4252 from "module_4252" /* 4252 */;
+import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4620 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(1082).SettingsOverrideReasonKeys;
+const constants = fn(1081).SettingsOverrideReasonKeys;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
 
@@ -21,7 +21,7 @@ export default function getSettingsOverrideReason(arg0) {
     return intl2.string(util.t["2ExvRu"]);
   } else if (constants.GAME_MODE === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef4250.VGcdxP);
+    return intl.string(_modDef4252.VGcdxP);
   }
 };
 export function useSettingsOverrideReason(arg0) {
@@ -37,7 +37,7 @@ export function useSettingsOverrideReason(arg0) {
       formatResult = intl.string(util.t["2ExvRu"]);
     } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
       const intl3 = util.intl;
-      formatResult = intl3.string(_modDef4250.VGcdxP);
+      formatResult = intl3.string(_modDef4252.VGcdxP);
     }
     return formatResult;
   });

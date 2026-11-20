@@ -3,10 +3,10 @@
 // Module 8889 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import utils from "utils" /* 2111 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import native from "native" /* 1186 */;
+import utils from "utils" /* 2109 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8891 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8900 */;
 import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8907 */;
@@ -170,7 +170,7 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

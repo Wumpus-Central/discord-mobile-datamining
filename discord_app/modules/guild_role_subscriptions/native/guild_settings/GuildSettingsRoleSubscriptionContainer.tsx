@@ -1,13 +1,13 @@
-// === Module 20065: GuildSettingsRoleSubscriptionContainer ===
+// === Module 19885: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 20065 (GuildSettingsRoleSubscriptionContainer)
-import ErrorBlockDefault from "ErrorBlock" /* 12993 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16671 */;
-import WarningNoticeDefault from "WarningNotice" /* 19990 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 20040 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20057 */;
+// Module 19885 (GuildSettingsRoleSubscriptionContainer)
+import ErrorBlockDefault from "ErrorBlock" /* 12963 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16495 */;
+import WarningNoticeDefault from "WarningNotice" /* 19810 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 19860 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19877 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 function ApplicationRejectedNotice(guildId) {
@@ -34,30 +34,30 @@ function ApplicationRejectedNotice(guildId) {
     tmp14 = closure_7(WarningNoticeDefault, obj3);
   } else if (tmp13) {
     const obj4 = { notice: null };
-    const intl3 = tmp2(1113).intl;
-    obj4.notice = intl3.string(tmp2(1113).t.MyJpJT);
+    const intl3 = tmp2(1112).intl;
+    obj4.notice = intl3.string(tmp2(1112).t.MyJpJT);
     tmp14 = closure_7(WarningNoticeDefault, obj4);
     const tmp9Result5 = WarningNoticeDefault;
   } else if (null != reapplyNoticeText) {
     const obj5 = { notice: reapplyNoticeText, ctaLabel: null, onClick: null, submitting: null };
-    const intl2 = tmp2(1113).intl;
-    obj5.ctaLabel = intl2.string(tmp2(1113).t["YKw/NQ"]);
+    const intl2 = tmp2(1112).intl;
+    obj5.ctaLabel = intl2.string(tmp2(1112).t["YKw/NQ"]);
     obj5.onClick = tmp12;
     obj5.submitting = tmp11;
     tmp14 = closure_7(WarningNoticeDefault, obj5);
     const tmp9Result6 = WarningNoticeDefault;
   } else if (true === hasItem1) {
     const obj6 = { notice: null };
-    const intl = tmp2(1113).intl;
-    obj6.notice = intl.string(tmp2(1113).t.e2g9sW);
+    const intl = tmp2(1112).intl;
+    obj6.notice = intl.string(tmp2(1112).t.e2g9sW);
     tmp14 = closure_7(WarningNoticeDefault, obj6);
     const tmp9Result7 = WarningNoticeDefault;
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj7 = { notice: null };
-      const intl4 = tmp2(1113).intl;
-      obj7.notice = intl4.string(tmp2(1113).t.rxI9sl);
+      const intl4 = tmp2(1112).intl;
+      obj7.notice = intl4.string(tmp2(1112).t.rxI9sl);
       tmp14 = closure_7(WarningNoticeDefault, obj7);
       const tmp9Result8 = WarningNoticeDefault;
     }
@@ -86,10 +86,10 @@ function GuildSettingsRoleSubscription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");

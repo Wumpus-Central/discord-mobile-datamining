@@ -1,25 +1,25 @@
-// === Module 12746: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 12716: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 12746 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 12716 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4624 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const UserSettingsSections = fn(1071).UserSettingsSections;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = { launch: null, new_presets: null };
-let items = [fn(1401).TypingSuggestion.UNSPECIFIED, fn(1401).TypingSuggestion.YAPPING, fn(1401).TypingSuggestion.OVERSHARING];
+let items = [fn(1399).TypingSuggestion.UNSPECIFIED, fn(1399).TypingSuggestion.YAPPING, fn(1399).TypingSuggestion.OVERSHARING];
 obj.launch = items;
-let items1 = [fn(1401).TypingSuggestion.CHIRPING, fn(1401).TypingSuggestion.KEYSMASHING, fn(1401).TypingSuggestion.PURRING];
+let items1 = [fn(1399).TypingSuggestion.CHIRPING, fn(1399).TypingSuggestion.KEYSMASHING, fn(1399).TypingSuggestion.PURRING];
 obj.new_presets = items1;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles(() => {
   obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
   const obj2 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };

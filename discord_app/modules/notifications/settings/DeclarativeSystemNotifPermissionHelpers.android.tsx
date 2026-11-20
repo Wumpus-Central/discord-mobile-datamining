@@ -1,16 +1,16 @@
-// === Module 17470: DeclarativeSystemNotifPermissionHelpers ===
+// === Module 17297: DeclarativeSystemNotifPermissionHelpers ===
 
-// Module 17470 (DeclarativeSystemNotifPermissionHelpers)
+// Module 17297 (DeclarativeSystemNotifPermissionHelpers)
 import _mod17 from "module_17" /* 17 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
-import DeviceUtils from "DeviceUtils" /* 4749 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7252 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15569 */;
-import NotifSettings from "NotifSettings" /* 15570 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1377 */;
+import DeviceUtils from "DeviceUtils" /* 4751 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7251 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15533 */;
+import NotifSettings from "NotifSettings" /* 15534 */;
 import size from "module_2" /* 2 */;
 
 function refreshSystemNotifPermissions() {
-  const tmp = settings(15576);
+  const tmp = settings(15540);
   let androidNotifChannelStates;
   if (tmp != null) {
     const getAndroidNotifChannelStates = tmp.getAndroidNotifChannelStates;
@@ -36,9 +36,9 @@ function refreshSystemNotifPermissions() {
       }
       continue;
     }
-    settings = androidNotifChannelStates(15573).getAssignedNotifSettingsAndMappings().settings;
+    settings = androidNotifChannelStates(15537).getAssignedNotifSettingsAndMappings().settings;
     const _Map = Map;
-    const obj2 = androidNotifChannelStates(15573);
+    const obj2 = androidNotifChannelStates(15537);
     const _Object = Object;
     const entries = Object.entries(obj);
     let found = entries.filter((item) => {

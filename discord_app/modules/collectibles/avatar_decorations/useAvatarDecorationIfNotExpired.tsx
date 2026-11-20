@@ -1,13 +1,13 @@
-// === Module 8095: useAvatarDecorationIfNotExpired ===
+// === Module 8094: useAvatarDecorationIfNotExpired ===
 
-// Module 8095 (useAvatarDecorationIfNotExpired)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2106 */;
-import Timers from "Timers" /* 4636 */;
+// Module 8094 (useAvatarDecorationIfNotExpired)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2104 */;
+import Timers from "Timers" /* 4638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MAX_TIMEOUT_MS = fn(1072).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1071).MAX_TIMEOUT_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
 

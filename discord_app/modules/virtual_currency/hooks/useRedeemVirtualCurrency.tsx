@@ -1,7 +1,7 @@
 // === Module 9448: useRedeemVirtualCurrency ===
 
 // Module 9448 (useRedeemVirtualCurrency)
-import util from "util" /* 1113 */;
+import util from "util" /* 1112 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -57,7 +57,7 @@ export function useRedeemVirtualCurrency(onSignFailure) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -1,11 +1,11 @@
 // === Module 9035: tab_gradient_colors ===
 
 // Module 9035 (tab_gradient_colors)
-import _mod1197 from "module_1197" /* 1197 */;
+import _mod1196 from "module_1196" /* 1196 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1197).MessageType;
+const MessageType = fn(1196).MessageType;
 class PaletteColor$Type extends MessageType {
   constructor() {
     items = [, ];
@@ -19,10 +19,10 @@ const prototype = PaletteColor$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { paletteColor: "", opacity: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -58,7 +58,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -70,17 +70,17 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(paletteColor, tag, writeUnknownFields) {
   if ("" !== paletteColor.paletteColor) {
-    tag.tag(1, _mod1197.WireType.LengthDelimited).string(paletteColor.paletteColor);
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
+    tag.tag(1, _mod1196.WireType.LengthDelimited).string(paletteColor.paletteColor);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
   }
   if (0 !== paletteColor.opacity) {
-    tag.tag(2, _mod1197.WireType.Bit32).float(paletteColor.opacity);
-    const tagResult1 = tag.tag(2, _mod1197.WireType.Bit32);
+    tag.tag(2, _mod1196.WireType.Bit32).float(paletteColor.opacity);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.Bit32);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, paletteColor, tag);
@@ -89,7 +89,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(paletteColor, ta
 };
 let items = [{ no: 1, name: "palette_color", kind: "scalar", T: 9 }, { no: 2, name: "opacity", kind: "scalar", T: 2 }];
 const object = new Object("discord_protos.premium_marketing.v1.PaletteColor", items, tmp3, tmp2, "create", "internalBinaryRead", tmp, "internalBinaryWrite");
-const MessageType2 = fn(1197).MessageType;
+const MessageType2 = fn(1196).MessageType;
 class ThemedPaletteColor$Type extends MessageType2 {
   constructor() {
     obj = {
@@ -134,10 +134,10 @@ const prototype2 = ThemedPaletteColor$Type.prototype;
 prototype2["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -177,7 +177,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -189,29 +189,29 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype2["internalBinaryWrite"] = function internalBinaryWrite(light, tag, writeUnknownFields) {
   if (light.light) {
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-    const joined = object.internalBinaryWrite(light.light, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = object.internalBinaryWrite(light.light, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
+    const joined = object.internalBinaryWrite(light.light, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = object.internalBinaryWrite(light.light, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (light.ash) {
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-    const joined1 = object.internalBinaryWrite(light.ash, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = object.internalBinaryWrite(light.ash, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
+    const joined1 = object.internalBinaryWrite(light.ash, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = object.internalBinaryWrite(light.ash, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (light.dark) {
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
-    const joined2 = object.internalBinaryWrite(light.dark, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = object.internalBinaryWrite(light.dark, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
+    const joined2 = object.internalBinaryWrite(light.dark, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = object.internalBinaryWrite(light.dark, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (light.onyx) {
-    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
-    const joined3 = object.internalBinaryWrite(light.onyx, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = object.internalBinaryWrite(light.onyx, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
+    const joined3 = object.internalBinaryWrite(light.onyx, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = object.internalBinaryWrite(light.onyx, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, light, tag);
@@ -254,7 +254,7 @@ const items1 = [
 ];
 let tmp4 = new tmp("discord_protos.premium_marketing.v1.ThemedPaletteColor", items1, tmp3, ThemedPaletteColor$Type, "create", "internalBinaryRead", tmp, "internalBinaryWrite", items1, undefined, fn, dependencyMap, object);
 let closure_4 = tmp4;
-const MessageType3 = fn(1197).MessageType;
+const MessageType3 = fn(1196).MessageType;
 class TabGradientColors$Type extends MessageType3 {
   constructor() {
     obj = {
@@ -291,10 +291,10 @@ const prototype3 = TabGradientColors$Type.prototype;
 prototype3["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -332,7 +332,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -344,24 +344,24 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(center, tag, writeUnknownFields) {
   if (center.center) {
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-    const joined = closure_4.internalBinaryWrite(center.center, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = closure_4.internalBinaryWrite(center.center, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
+    const joined = closure_4.internalBinaryWrite(center.center, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = closure_4.internalBinaryWrite(center.center, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (center.innerRing) {
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-    const joined1 = closure_4.internalBinaryWrite(center.innerRing, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = closure_4.internalBinaryWrite(center.innerRing, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
+    const joined1 = closure_4.internalBinaryWrite(center.innerRing, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = closure_4.internalBinaryWrite(center.innerRing, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (center.outerRing) {
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
-    const joined2 = closure_4.internalBinaryWrite(center.outerRing, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = closure_4.internalBinaryWrite(center.outerRing, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
+    const joined2 = closure_4.internalBinaryWrite(center.outerRing, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = closure_4.internalBinaryWrite(center.outerRing, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, center, tag);

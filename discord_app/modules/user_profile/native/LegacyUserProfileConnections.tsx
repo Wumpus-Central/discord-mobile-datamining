@@ -1,19 +1,19 @@
-// === Module 11955: LegacyUserProfileConnections ===
+// === Module 11897: LegacyUserProfileConnections ===
 
-// Module 11955 (LegacyUserProfileConnections)
+// Module 11897 (LegacyUserProfileConnections)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import ToastUtils from "ToastUtils" /* 5473 */;
-import PlatformsDefault from "Platforms" /* 6570 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 7136 */;
-import ClipboardUtils from "ClipboardUtils" /* 7426 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import ToastUtils from "ToastUtils" /* 5475 */;
+import PlatformsDefault from "Platforms" /* 6572 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7135 */;
+import ClipboardUtils from "ClipboardUtils" /* 7425 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
-import UserRecord from "UserRecord" /* 1407 */;
-import StreamerModeStore from "StreamerModeStore" /* 4849 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
+import UserRecord from "UserRecord" /* 1405 */;
+import StreamerModeStore from "StreamerModeStore" /* 4851 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 const require = globalThis.__r;
@@ -213,10 +213,10 @@ class ConnectedUserAccount {
             href: tmp,
             trusted: account.type !== constants.DOMAIN,
             onConfirm() {
-                account(5529).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, { platform_type: type.type, other_user_id });
-                const obj = account(5529);
+                account(5531).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, { platform_type: type.type, other_user_id });
+                const obj = account(5531);
                 const obj2 = { platform_type: type.type, other_user_id };
-                userId(5471).openURL(platformUserUrl);
+                userId(5473).openURL(platformUserUrl);
               }
           };
           MaskedLinkUtils.handleClick(obj2);
@@ -386,14 +386,14 @@ class ConnectedApplicationUserRoleAccount {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, PlatformTypes: closure_11, ThemeTypes: closure_12 } = Constants);
-const MetadataFields = fn(6906).MetadataFields;
+const MetadataFields = fn(6905).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4792);
-let obj = { connectedAccountContainer: { paddingHorizontal: 10, paddingVertical: fn(1191).FORM_ROW_VERTICAL_PADDING / 2 }, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
-let obj3 = { paddingHorizontal: 10, paddingVertical: fn(1191).FORM_ROW_VERTICAL_PADDING / 2 };
+const createStyles = fn(4794);
+let obj = { connectedAccountContainer: { paddingHorizontal: 10, paddingVertical: fn(1190).FORM_ROW_VERTICAL_PADDING / 2 }, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
+let obj3 = { paddingHorizontal: 10, paddingVertical: fn(1190).FORM_ROW_VERTICAL_PADDING / 2 };
 obj.connectedAccountNameText = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.connectedAccountNameCreatedAtText = { color: nativeDefault.colors.TEXT_SUBTLE };
@@ -460,8 +460,8 @@ export default function LegacyUserProfileConnections(user) {
   }, items3);
   closure_129_0 = undefined;
   const obj2 = user(504);
-  const theme = user(4853).useThemeContext().theme;
-  const tmpResult = user(4853);
+  const theme = user(4855).useThemeContext().theme;
+  const tmpResult = user(4855);
   const items4 = [LocaleStore];
   closure_129_2 = user(504).useStateFromStores(items4, () => LocaleStore.locale);
   const mapped = memo.map((applicationRoleConnection, index) => {
@@ -471,12 +471,12 @@ export default function LegacyUserProfileConnections(user) {
   const id = user.id;
   closure_130_1 = undefined;
   const tmpResult5 = user(504);
-  const theme2 = user(4853).useThemeContext().theme;
-  const tmpResult6 = user(4853);
+  const theme2 = user(4855).useThemeContext().theme;
+  const tmpResult6 = user(4855);
   const items5 = [LocaleStore];
   closure_130_3 = user(504).useStateFromStores(items5, () => LocaleStore.locale);
   const tmpResult7 = user(504);
-  closure_130_4 = user(8177).usePlatformAllowed({ forUserProfile: true });
+  closure_130_4 = user(8176).usePlatformAllowed({ forUserProfile: true });
   const found = memo1.filter((type) => {
     value = PlatformsDefault.get(type.type);
     let tmp2 = null != value;
@@ -495,22 +495,22 @@ export default function LegacyUserProfileConnections(user) {
       }
       if (tmp10) {
         const obj4 = { title: null, showContainer: true, children: null };
-        const intl = tmp(1113).intl;
-        obj4.title = intl.string(tmp(1113).t.PHjkRE);
+        const intl = tmp(1112).intl;
+        obj4.title = intl.string(tmp(1112).t.PHjkRE);
         obj4.children = mapped;
-        tmp10 = closure_14(stateFromStores(11963), obj4);
-        const tmp13 = stateFromStores(11963);
+        tmp10 = closure_14(stateFromStores(11905), obj4);
+        const tmp13 = stateFromStores(11905);
       }
       const obj5 = { children: null };
       const items6 = [tmp10, ];
       const obj6 = { title: null, showContainer: true, children: null };
-      const intl2 = tmp(1113).intl;
-      obj6.title = intl2.string(tmp(1113).t["3fe7U5"]);
+      const intl2 = tmp(1112).intl;
+      obj6.title = intl2.string(tmp(1112).t["3fe7U5"]);
       obj6.children = tmp8;
-      items6[1] = closure_14(stateFromStores(11963), obj6);
+      items6[1] = closure_14(stateFromStores(11905), obj6);
       obj5.children = items6;
       tmp17Result = closure_15(closure_16, obj5);
-      const tmp16 = stateFromStores(11963);
+      const tmp16 = stateFromStores(11905);
     }
   }
   return tmp17Result;

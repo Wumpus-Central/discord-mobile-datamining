@@ -1,18 +1,18 @@
-// === Module 12695: TraitOptionItem ===
+// === Module 12665: TraitOptionItem ===
 
-// Module 12695 (TraitOptionItem)
+// Module 12665 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4854 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5849 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5894 */;
-import inlineStyles from "inlineStyles" /* 7746 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4856 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5851 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5896 */;
+import inlineStyles from "inlineStyles" /* 7745 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8832 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 5848 */;
+import CheckpointConstants from "CheckpointConstants" /* 5850 */;
 import jsxProd from "jsxProd" /* 21 */;
-import CheckpointCustomizationUtils_mod from "CheckpointCustomizationUtils" /* 6215 */;
-import createStyles from "createStyles" /* 4792 */;
+import CheckpointCustomizationUtils_mod from "CheckpointCustomizationUtils" /* 6217 */;
+import createStyles from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;

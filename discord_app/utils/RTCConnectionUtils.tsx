@@ -1,8 +1,8 @@
-// === Module 11000: RTCConnectionUtils ===
+// === Module 10942: RTCConnectionUtils ===
 
-// Module 11000 (RTCConnectionUtils)
-import util from "util" /* 1113 */;
-import Constants from "Constants" /* 1072 */;
+// Module 10942 (RTCConnectionUtils)
+import util from "util" /* 1112 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 ({ RTCConnectionStates: c2, ConnectionStatus: c3 } = Constants);

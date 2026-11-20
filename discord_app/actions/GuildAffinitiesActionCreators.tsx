@@ -1,9 +1,9 @@
-// === Module 9912: GuildAffinitiesActionCreators ===
+// === Module 9915: GuildAffinitiesActionCreators ===
 
-// Module 9912 (GuildAffinitiesActionCreators)
+// Module 9915 (GuildAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 1072 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+import Constants from "Constants" /* 1071 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

@@ -1,12 +1,12 @@
-// === Module 16765: SettingsAppearanceLightModeThemePickerScreen ===
+// === Module 16589: SettingsAppearanceLightModeThemePickerScreen ===
 
-// Module 16765 (SettingsAppearanceLightModeThemePickerScreen)
-import util from "util" /* 1113 */;
-import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 16726 */;
+// Module 16589 (SettingsAppearanceLightModeThemePickerScreen)
+import util from "util" /* 1112 */;
+import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 16550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SystemTheme = fn(1195).SystemTheme;
+const SystemTheme = fn(1194).SystemTheme;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");

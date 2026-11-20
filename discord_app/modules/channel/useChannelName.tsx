@@ -1,13 +1,13 @@
-// === Module 5408: useChannelName ===
+// === Module 5410: useChannelName ===
 
-// Module 5408 (useChannelName)
-import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
+// Module 5410 (useChannelName)
+import util from "util" /* 1112 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5409 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import ExperimentStore from "ExperimentStore" /* 5411 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -75,9 +75,9 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
         if (mapped2.length > 0) {
           let joined = mapped2.join(", ");
         } else {
-          const intl2 = tmp25(1113).intl;
+          const intl2 = tmp25(1112).intl;
           const obj = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
-          joined = intl2.formatToPlainString(tmp25(1113).t["9Uk8PF"], obj);
+          joined = intl2.formatToPlainString(tmp25(1112).t["9Uk8PF"], obj);
         }
       }
     } else {
@@ -150,7 +150,7 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
     }
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useChannelName.tsx");
@@ -184,9 +184,9 @@ export function computeDefaultGroupDmNameFromUserIds(arr, getUser, arg2) {
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1113).intl;
+    const intl = tmp(1112).intl;
     const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
-    joined = intl.formatToPlainString(tmp(1113).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1112).t["9Uk8PF"], obj);
   }
   return joined;
 }
@@ -205,9 +205,9 @@ export function computeDefaultGroupDmName(recipients, getUser, arg2) {
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1113).intl;
+    const intl = tmp(1112).intl;
     const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
-    joined = intl.formatToPlainString(tmp(1113).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1112).t["9Uk8PF"], obj);
   }
   return joined;
 }

@@ -1,8 +1,8 @@
-// === Module 11921: ChannelLatestMessageLoadingStatsManager ===
+// === Module 11863: ChannelLatestMessageLoadingStatsManager ===
 
-// Module 11921 (ChannelLatestMessageLoadingStatsManager)
-import Constants from "Constants" /* 1072 */;
-import Clickstream from "Clickstream" /* 8140 */;
+// Module 11863 (ChannelLatestMessageLoadingStatsManager)
+import Constants from "Constants" /* 1071 */;
+import Clickstream from "Clickstream" /* 8139 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

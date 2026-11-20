@@ -2,7 +2,7 @@
 
 // Module 9678 (XboxNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9679 from "module_9679" /* 9679 */;
 import noop from "module_19" /* 19 */;
 

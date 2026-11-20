@@ -1,9 +1,9 @@
-// === Module 19451: updateRules ===
+// === Module 19271: updateRules ===
 
-// Module 19451 (updateRules)
-import native from "native" /* 1187 */;
-import _modDef2070 from "module_2070" /* 2070 */;
-import LinkingDefault from "Linking" /* 5471 */;
+// Module 19271 (updateRules)
+import native from "native" /* 1186 */;
+import _modDef2068 from "module_2068" /* 2068 */;
+import LinkingDefault from "Linking" /* 5473 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef2070.sanitizeUrl(node.target));
+        return obj.openURL(_modDef2068.sanitizeUrl(node.target));
       };
     }
     obj1 = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };
@@ -52,7 +52,7 @@ class I18nLink {
   }
 }
 const jsx = fn(21).jsx;
-let paragraph = { strong: { fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
+let paragraph = { strong: { fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
 const size = fn(2);
 const result = size.fileFinishedImporting("i18n/native/updateRules.tsx");
 

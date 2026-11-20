@@ -1,11 +1,11 @@
-// === Module 14397: UserProfileActivityVoiceChannelUsers ===
+// === Module 14365: UserProfileActivityVoiceChannelUsers ===
 
-// Module 14397 (UserProfileActivityVoiceChannelUsers)
-import util from "util" /* 1113 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 13410 */;
+// Module 14365 (UserProfileActivityVoiceChannelUsers)
+import util from "util" /* 1112 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 13380 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
 
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 
@@ -14,18 +14,18 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  const avatarDecoration = user(6510).useAvatarDecoration(user, channel.guild_id);
-  const obj = user(6510);
+  const avatarDecoration = user(6512).useAvatarDecoration(user, channel.guild_id);
+  const obj = user(6512);
   items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   const obj3 = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(504);
   obj3.label = NicknameUtilsDefault.getName(channel.guild_id, channel.id, user);
-  obj3.icon = jsx(user(1187).Avatar, { user, avatarDecoration, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  obj3.icon = jsx(user(1186).Avatar, { user, avatarDecoration, size: user(1186).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj3.start = start;
   obj3.end = end;
-  return jsx(user(6926).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+  return jsx(user(6925).TableRow, { onPress, label: null, icon: null, start: null, end: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

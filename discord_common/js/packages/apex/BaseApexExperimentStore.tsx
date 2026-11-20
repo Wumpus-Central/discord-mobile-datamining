@@ -1,10 +1,10 @@
-// === Module 1247: BaseApexExperimentStore ===
+// === Module 1246: BaseApexExperimentStore ===
 
-// Module 1247 (BaseApexExperimentStore)
+// Module 1246 (BaseApexExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import ApexTypes from "ApexTypes" /* 1249 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
+import ApexTypes from "ApexTypes" /* 1248 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -49,7 +49,7 @@ function getHash(arg0) {
   }
   return tmp2;
 }
-const WebAnalyticsEvents = fn(1083).WebAnalyticsEvents;
+const WebAnalyticsEvents = fn(1082).WebAnalyticsEvents;
 const logger = new fn(4).Logger("ApexExperimentStore");
 let tmp3 = typeof window === "undefined";
 if (typeof window !== "undefined") {
@@ -62,9 +62,9 @@ if (typeof window !== "undefined") {
   tmp3 = tmp4;
 }
 if (!tmp3) {
-  fn(1248);
+  fn(1247);
 }
-let items = [fn(1249).UnitType.User, fn(1249).UnitType.Installation];
+let items = [fn(1248).UnitType.User, fn(1248).UnitType.Installation];
 let closure_10 = {};
 let clientOverrides = {};
 const dependencyMap2 = {};

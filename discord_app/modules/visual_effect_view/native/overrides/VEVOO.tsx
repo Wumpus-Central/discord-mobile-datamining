@@ -1,21 +1,21 @@
-// === Module 17485: VEVOO ===
+// === Module 17312: VEVOO ===
 
-// Module 17485 (VEVOO)
+// Module 17312 (VEVOO)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5393 */;
-import springPresets from "springPresets" /* 5394 */;
-import XSmallIcon from "XSmallIcon" /* 7032 */;
-import Form from "Form" /* 7590 */;
-import ActionButtonDefault from "ActionButton" /* 13732 */;
-import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 17486 */;
-import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 17488 */;
-import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 17489 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import spring_spring from "spring/spring" /* 5395 */;
+import springPresets from "springPresets" /* 5396 */;
+import XSmallIcon from "XSmallIcon" /* 7031 */;
+import Form from "Form" /* 7589 */;
+import ActionButtonDefault from "ActionButton" /* 13701 */;
+import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 17313 */;
+import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 17315 */;
+import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 17316 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5386 */;
+import DevSettingsStore from "DevSettingsStore" /* 5388 */;
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function VisualEffectViewOverrideOverlay_(arg0) {
@@ -39,7 +39,7 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   VEVOOTsx1.__closure = items1;
   VEVOOTsx1.__workletHash = 4442371406619;
   VEVOOTsx1.__initData = tmp5;
-  const animatedStyle = _mod1655.useAnimatedStyle(VEVOOTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(VEVOOTsx1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.wrapper, animatedStyle];
   obj2.style = items2;
@@ -54,15 +54,15 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   obj5.onPress = onClose;
   items4[1] = timestampProducer(ActionButtonDefault, obj5);
   obj2.children = items4;
-  return metroImportDefault(_modDef1655.View, obj2);
+  return metroImportDefault(_modDef1653.View, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 const styles = createStyles.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
 let size = { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_660, borderRadius: nativeDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

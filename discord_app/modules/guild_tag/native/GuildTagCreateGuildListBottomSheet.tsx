@@ -1,15 +1,15 @@
-// === Module 13725: GuildTagCreateGuildListBottomSheet ===
+// === Module 13694: GuildTagCreateGuildListBottomSheet ===
 
-// Module 13725 (GuildTagCreateGuildListBottomSheet)
-import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import ActionSheet from "ActionSheet" /* 7434 */;
-import Powerups from "Powerups" /* 7882 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13278 */;
+// Module 13694 (GuildTagCreateGuildListBottomSheet)
+import util from "util" /* 1112 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
+import ActionSheet from "ActionSheet" /* 7433 */;
+import Powerups from "Powerups" /* 7881 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13248 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5413 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5415 */;
 
 require = fn;
 function GuildRow(guild) {
@@ -20,15 +20,15 @@ function GuildRow(guild) {
   let obj2 = { label: guild.name, subLabel: null, icon: null, arrow: true, onPress: null };
   let formatToPlainStringResult = null;
   if (null != stateFromStores) {
-    const intl = tmp(1113).intl;
+    const intl = tmp(1112).intl;
     const obj3 = { count: stateFromStores };
-    formatToPlainStringResult = intl.formatToPlainString(tmp(1113).t.zRl6XR, obj3);
+    formatToPlainStringResult = intl.formatToPlainString(tmp(1112).t.zRl6XR, obj3);
   }
   obj2.subLabel = formatToPlainStringResult;
   const obj4 = { guild, size: null };
   let obj = guild(504);
-  obj4.size = guild(7203).GuildIconSizes.SMALL_32;
-  obj2.icon = closure_4(analyticsLocation(7203), obj4);
+  obj4.size = guild(7202).GuildIconSizes.SMALL_32;
+  obj2.icon = closure_4(analyticsLocation(7202), obj4);
   obj2.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = { guildId: guild.id, autoOpenPerkId: null, analyticsLocation: null };
@@ -36,7 +36,7 @@ function GuildRow(guild) {
     obj2.analyticsLocation = analyticsLocation;
     openGuildPowerupsModalDefault(obj2);
   };
-  return closure_4(guild(6926).TableRow, obj2);
+  return closure_4(guild(6925).TableRow, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);

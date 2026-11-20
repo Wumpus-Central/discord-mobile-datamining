@@ -1,15 +1,15 @@
-// === Module 9920: ICYMIActionCreators ===
+// === Module 9923: ICYMIActionCreators ===
 
-// Module 9920 (ICYMIActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import DiscoverRequestState from "DiscoverRequestState" /* 9917 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9918 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 9923 */;
+// Module 9923 (ICYMIActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import DiscoverRequestState from "DiscoverRequestState" /* 9920 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9921 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 9926 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9921 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9924 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -150,7 +150,7 @@ function fetchDiscoverDehydrated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -304,7 +304,7 @@ function fetchDiscoverDehydrated(arg0) {
                   const obj4 = dependencyMap(572);
                 }
                 c9 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (arg0 === 1) {
@@ -379,9 +379,9 @@ function fetchDiscoverDehydrated(arg0) {
               c8 = 5;
               c9 = 1;
               const obj21 = {
-                value: closure_0(9922).withDiscoverRequestDeadline(closure_133_10, () => {
-                            const HTTP = closure_0(1285).HTTP;
-                            const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: dependencyMap.toString(), rejectWithError: false, failImmediatelyWhenRateLimited: true, signal, timeout: { deadline: closure_0(9922).DISCOVER_REQUEST_DEADLINE_MS } };
+                value: closure_0(9925).withDiscoverRequestDeadline(closure_133_10, () => {
+                            const HTTP = closure_0(1284).HTTP;
+                            const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: dependencyMap.toString(), rejectWithError: false, failImmediatelyWhenRateLimited: true, signal, timeout: { deadline: closure_0(9925).DISCOVER_REQUEST_DEADLINE_MS } };
                             return HTTP.get(request);
                           }),
                 done: false
@@ -414,7 +414,7 @@ function fetchDiscoverDehydrated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -596,7 +596,7 @@ function fetchDiscoverDehydrated(arg0) {
   notifyDiscoverRequestListeners();
   return tmp6;
 }
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_8 = Promise.resolve();
 let c9 = null;
 let c10 = 0;
@@ -756,7 +756,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -841,7 +841,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -911,7 +911,7 @@ export default {
                 if (tmp36Result.getWaterwheelsDiscoverEnabled("fetchDehydrated")) {
                   if (tmp64.isDiscoverBackground) {
                     constants = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                   constants = 3;
                   const obj10 = { value: fetchDiscoverDehydrated(tmp64), done: true };
@@ -997,7 +997,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1027,7 +1027,7 @@ export default {
                 }
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -1073,7 +1073,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1133,7 +1133,7 @@ export default {
             }
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
           c5 = 3;
         } catch (tmp26) {
@@ -1169,7 +1169,7 @@ export default {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1263,7 +1263,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1337,7 +1337,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1411,7 +1411,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

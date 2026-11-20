@@ -7,17 +7,17 @@ import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import _mod17 from "module_17" /* 17 */;
 import KvCacheVersionConstants from "KvCacheVersionConstants" /* 499 */;
 import QosToken from "QosToken" /* 500 */;
-import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1264 */;
-import isCacheEnabled from "isCacheEnabled" /* 8232 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8334 */;
-import GatewayCapabilities from "GatewayCapabilities" /* 14843 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15347 */;
+import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1263 */;
+import isCacheEnabled from "isCacheEnabled" /* 8231 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8333 */;
+import GatewayCapabilities from "GatewayCapabilities" /* 14807 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15311 */;
 import checkEnv from "checkEnv" /* 16 */;
 import size from "module_2" /* 2 */;
 
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    let obj = obj3(14825);
+    let obj = obj3(14789);
     constants = obj.getConstants();
     let flag;
     if (constants != null) {
@@ -37,14 +37,14 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp7}`);
     const _Date = Date;
     closure_0 = Date.now();
-    const tmp9 = obj3(14812)(combined);
+    const tmp9 = obj3(14776)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp9._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj2.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp9._socketId);
     } else {
-      const tmp3Result = tmp3(14825);
+      const tmp3Result = tmp3(14789);
       if (flag) {
         const result = tmp3Result.enableZstdStreamSupport(parsed);
       } else {
@@ -133,10 +133,6 @@ export function identifyWebSocket() {
           if (prop == null) {
             prop = null;
           }
-          let flag = measureResult.useChannelObfuscation;
-          if (flag == null) {
-            flag = false;
-          }
           const qosTokenFromDerivedData = QosToken.buildQosTokenFromDerivedData(derivedQosData, true);
           logger.info("prepareIdentify: app state: ", AppState.currentState, "qosTokenPresent: ", qosTokenFromDerivedData.length > 0);
           const d = { token, properties: null, capabilities: null, client_state: null, qos_token: null };
@@ -153,14 +149,13 @@ export function identifyWebSocket() {
           }
           const merged1 = Object.assign(obj7);
           d.properties = obj3;
-          const obj8 = { useChannelObfuscation: flag };
-          d.capabilities = GatewayCapabilities.getClientCapabilities(obj8);
-          const obj9 = { guild_versions: {} };
-          d.client_state = obj9;
+          d.capabilities = GatewayCapabilities.getClientCapabilities();
+          const obj8 = { guild_versions: {} };
+          d.client_state = obj8;
           d.qos_token = qosTokenFromDerivedData;
           const _JSON = JSON;
-          const obj10 = { op: 2, d };
-          const json = JSON.stringify(obj10);
+          const obj9 = { op: 2, d };
+          const json = JSON.stringify(obj9);
           const tmpResult2 = NativeFastConnectModuleDefault;
           let str1;
           if (measureResult.userId != null) {

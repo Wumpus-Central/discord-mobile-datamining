@@ -1,20 +1,20 @@
-// === Module 17744: ChannelsUnreadBars ===
+// === Module 17571: ChannelsUnreadBars ===
 
-// Module 17744 (ChannelsUnreadBars)
+// Module 17571 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5009 */;
-import useFontScale from "useFontScale" /* 5398 */;
-import FastList from "FastList" /* 7330 */;
-import ChannelListState from "ChannelListState" /* 8202 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5011 */;
+import useFontScale from "useFontScale" /* 5400 */;
+import FastList from "FastList" /* 7329 */;
+import ChannelListState from "ChannelListState" /* 8201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6543 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4728 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 const require = globalThis.__r;
 
@@ -202,11 +202,11 @@ function findNearestUnreadItem(c0, c1, headerHeight, youBarTotalHeight) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(5521).getScaledChannelRowHeight;
-const UnreadSetting = fn(6432).UnreadSetting;
+const getScaledChannelRowHeight = fn(5523).getScaledChannelRowHeight;
+const UnreadSetting = fn(6434).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_16 = createStyles.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 const constants = { MENTION: "mention", UNREAD: "unread" };
 let closure_18 = { beforeItem: null, afterItem: null };
@@ -290,7 +290,7 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
   ChannelsUnreadBarsTsx1.__closure = items3;
   ChannelsUnreadBarsTsx1.__workletHash = 16683573593754;
   ChannelsUnreadBarsTsx1.__initData = tmp8;
-  const items4 = [closure_23, require("module_1708").scheduleOnRN, memo];
+  const items4 = [closure_23, require("module_1706").scheduleOnRN, memo];
   _require = undefined;
   importDefault = undefined;
   [tmp10, tmp11, tmp12] = items4;
@@ -308,7 +308,7 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
   ChannelsUnreadBarsTsx2.__closure = items5;
   ChannelsUnreadBarsTsx2.__workletHash = 10887635959554;
   ChannelsUnreadBarsTsx2.__initData = tmp10;
-  const animatedReaction = require("module_1655").useAnimatedReaction(ChannelsUnreadBarsTsx1, ChannelsUnreadBarsTsx2);
+  const animatedReaction = require("module_1653").useAnimatedReaction(ChannelsUnreadBarsTsx1, ChannelsUnreadBarsTsx2);
   const tmp14 = closure_16();
   wrapper = tmp14;
   const tmp16 = require("useChannelListSpecs")(fastList.guild);
@@ -352,7 +352,7 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
     }
     str = str3;
   }
-  let obj3 = require("module_1655");
+  let obj3 = require("module_1653");
   const items7 = [youBarTotalHeight];
   stateFromStores = require("initialize").useStateFromStores(items7, () => youBarTotalHeight.useReducedMotion);
   const items8 = [beforeItem, stateFromStores, fastList];

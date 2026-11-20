@@ -1,6 +1,6 @@
-// === Module 6017: ? ===
+// === Module 6019: ? ===
 
-// Module 6017
+// Module 6019
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/athlete_blocked.png.js");

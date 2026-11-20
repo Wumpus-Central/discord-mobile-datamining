@@ -1,7 +1,7 @@
-// === Module 8368: ImageEncodingLadder ===
+// === Module 8367: ImageEncodingLadder ===
 
-// Module 8368 (ImageEncodingLadder)
-import Constants from "Constants" /* 1072 */;
+// Module 8367 (ImageEncodingLadder)
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 function getAdaptiveImageCompressionQuality(size, ADAPTIVE_COMPRESSION_CONFIG) {

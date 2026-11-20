@@ -2,7 +2,7 @@
 
 // Module 8983 (premium/ProductIds)
 import AppleProductIds from "AppleProductIds" /* 8984 */;
-import PremiumConstants from "PremiumConstants" /* 1390 */;
+import PremiumConstants from "PremiumConstants" /* 1388 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = PremiumConstants);

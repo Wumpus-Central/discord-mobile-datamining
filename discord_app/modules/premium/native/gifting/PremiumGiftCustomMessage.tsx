@@ -2,8 +2,8 @@
 
 // Module 9524 (PremiumGiftCustomMessage)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import TextArea from "TextArea" /* 7342 */;
+import util from "util" /* 1112 */;
+import TextArea from "TextArea" /* 7341 */;
 import NativeGiftContext from "NativeGiftContext" /* 9348 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,9 +40,9 @@ class GiftCustomMessage {
   }
 }
 const View = fn(17).View;
-const React4 = fn(1390).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const React4 = fn(1388).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 const timestampProducer = createStyles.createStyles(obj);
 const obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };

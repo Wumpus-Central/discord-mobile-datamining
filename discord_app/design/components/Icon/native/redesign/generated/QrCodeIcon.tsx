@@ -1,9 +1,9 @@
-// === Module 16097: QrCodeIcon ===
+// === Module 16061: QrCodeIcon ===
 
-// Module 16097 (QrCodeIcon)
+// Module 16061 (QrCodeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod14563 from "module_14563" /* 14563 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod14531 from "module_14531" /* 14531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function QrCodeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14563, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14531, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

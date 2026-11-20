@@ -1,17 +1,17 @@
-// === Module 11750: StrangerDangerWarningBanner ===
+// === Module 11692: StrangerDangerWarningBanner ===
 
-// Module 11750 (StrangerDangerWarningBanner)
+// Module 11692 (StrangerDangerWarningBanner)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11734 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11735 */;
-import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 11754 */;
+import util from "util" /* 1112 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11676 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11677 */;
+import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 11696 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 require = fn;
 class StrangerDangerWarningBanner {
@@ -75,11 +75,11 @@ class StrangerDangerWarningBanner {
         };
         obj2.onIgnore = function onIgnore() {
           closure_1_4();
-          const obj = channelId(11734);
-          obj.trackCtaEvent({ channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(11734).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM });
+          const obj = channelId(11676);
+          obj.trackCtaEvent({ channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(11676).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM });
         };
         obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj.openLazy(asyncRequireImpl(11752, dependencyMap.paths), closure_9, obj2);
+        obj.openLazy(asyncRequireImpl(11694, dependencyMap.paths), closure_9, obj2);
       };
     }, items5);
     closure_6 = callback2;
@@ -99,7 +99,7 @@ class StrangerDangerWarningBanner {
       const obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(11739, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11681, dependencyMap.paths);
       obj2.safetyTips = metroImportDefault().map((children, index) => closure_1_10(channelId(senderId[20]).Text, { variant: "body-sm/medium", children }, index));
       const obj3 = { channelId, warningId, senderId, onBlockPressed: null };
       const arr = metroImportDefault();
@@ -126,13 +126,13 @@ class StrangerDangerWarningBanner {
     return tmp8(tmp9, obj1);
   }
 }
-const SafetyWarningTypes = fn(11722).SafetyWarningTypes;
-const Constants = fn(11720);
+const SafetyWarningTypes = fn(11664).SafetyWarningTypes;
+const Constants = fn(11662);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: closure_6, getStrangerDangerSafetyTips: metroImportDefault } = Constants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_9 = fn(11751).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+let closure_9 = fn(11693).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -3,8 +3,8 @@
 // Module 9618 (useIsEmptyRTCConnection)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
 
 const require = globalThis.__r;
 

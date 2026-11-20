@@ -1,21 +1,21 @@
-// === Module 12049: PublicGuildAnnouncementProfile ===
+// === Module 11991: PublicGuildAnnouncementProfile ===
 
-// Module 12049 (PublicGuildAnnouncementProfile)
+// Module 11991 (PublicGuildAnnouncementProfile)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8664 */;
-import _modDef12050 from "module_12050" /* 12050 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5022 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8663 */;
+import _modDef11992 from "module_11992" /* 11992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -35,7 +35,7 @@ export default function PublicGuildAnnouncementProfile() {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef12050, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11992, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

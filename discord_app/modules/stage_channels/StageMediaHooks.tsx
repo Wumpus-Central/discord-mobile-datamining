@@ -1,10 +1,10 @@
-// === Module 6412: StageMediaHooks ===
+// === Module 6414: StageMediaHooks ===
 
-// Module 6412 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 6416 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6413 */;
+// Module 6414 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 6418 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6415 */;
 
 const require = globalThis.__r;
 

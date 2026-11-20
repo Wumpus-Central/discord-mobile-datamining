@@ -1,11 +1,11 @@
-// === Module 12652: CheckpointCharacterUnavailableScreen ===
+// === Module 12622: CheckpointCharacterUnavailableScreen ===
 
-// Module 12652 (CheckpointCharacterUnavailableScreen)
-import util from "util" /* 1113 */;
-import _modDef3339 from "module_3339" /* 3339 */;
-import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen" /* 12416 */;
-import CheckpointTextDefault from "CheckpointText" /* 12418 */;
-import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12630 */;
+// Module 12622 (CheckpointCharacterUnavailableScreen)
+import util from "util" /* 1112 */;
+import _modDef3341 from "module_3341" /* 3341 */;
+import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen" /* 12386 */;
+import CheckpointTextDefault from "CheckpointText" /* 12388 */;
+import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12600 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -16,14 +16,14 @@ export default function CheckpointCharacterUnavailableScreen() {
   const tmp3 = useCheckpointHasUserStatsDefault();
   const tmp5 = CheckpointUnavailableScreenDefault;
   const intl = util.intl;
-  const tmp9 = _modDef3339;
+  const tmp9 = _modDef3341;
   const tmp7 = CheckpointTextDefault;
   const children = [React3(tmp7, { isStepHeading: true, variant: "heading-lg/medium", children: intl.string(tmp3 ? tmp9.vcRnnQ : tmp9.crKDpM) }), ];
   let tmp6Result = !tmp3;
   if (!tmp3) {
     const obj2 = { variant: "heading-lg/medium", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(_modDef3339["2GRr6H"]);
+    obj2.children = intl2.string(_modDef3341["2GRr6H"]);
     tmp6Result = React3(CheckpointTextDefault, obj2);
     const tmpResult = CheckpointTextDefault;
   }

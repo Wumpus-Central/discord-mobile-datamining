@@ -1,7 +1,7 @@
-// === Module 7721: AgeVerificationMethodsV2 ===
+// === Module 7720: AgeVerificationMethodsV2 ===
 
-// Module 7721 (AgeVerificationMethodsV2)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 7720 (AgeVerificationMethodsV2)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -69,7 +69,7 @@ let closure_7 = async function _fetchAgeVerificationMethodsV2SuspendedUser() {
   await HTTP.post(request);
   return _require(value.body);
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
 

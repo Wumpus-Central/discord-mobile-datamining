@@ -1,21 +1,21 @@
-// === Module 11645: ForLaterIntro ===
+// === Module 11587: ForLaterIntro ===
 
-// Module 11645 (ForLaterIntro)
+// Module 11587 (ForLaterIntro)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 5021 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import ClockIcon from "ClockIcon" /* 5501 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7446 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11618 */;
-import BookmarkIcon from "BookmarkIcon" /* 11630 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11646 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11650 */;
-import _modDef11654 from "module_11654" /* 11654 */;
+import util from "util" /* 1112 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 5023 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import ClockIcon from "ClockIcon" /* 5503 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7445 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11560 */;
+import BookmarkIcon from "BookmarkIcon" /* 11572 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11588 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11592 */;
+import _modDef11596 from "module_11596" /* 11596 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4792 */;
+import createStyles from "createStyles" /* 4794 */;
 import size_mod from "module_2" /* 2 */;
 
 function IntroDemo(isReminder) {
@@ -24,7 +24,7 @@ function IntroDemo(isReminder) {
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11654 };
+  const obj4 = { uri: _modDef11596 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   items = [hasOwnProperty(FastImageDefault, obj3), ];

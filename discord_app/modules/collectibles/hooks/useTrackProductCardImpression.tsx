@@ -1,15 +1,15 @@
-// === Module 17348: useTrackProductCardImpression ===
+// === Module 17175: useTrackProductCardImpression ===
 
-// Module 17348 (useTrackProductCardImpression)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7968 */;
+// Module 17175 (useTrackProductCardImpression)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7967 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7955 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
 

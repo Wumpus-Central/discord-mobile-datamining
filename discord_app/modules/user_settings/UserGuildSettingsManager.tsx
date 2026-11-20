@@ -1,12 +1,12 @@
-// === Module 7363: UserGuildSettingsManager ===
+// === Module 7362: UserGuildSettingsManager ===
 
-// Module 7363 (UserGuildSettingsManager)
-import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 7362 (UserGuildSettingsManager)
+import DurationsDefault from "Durations" /* 1088 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7364 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7363 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -42,7 +42,7 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c3 = tmp;
@@ -135,7 +135,7 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ function handleUserGuildSettingsFullUpdate() {
   const obj = {};
   const merged = Object.assign(CategoryCollapseStore.getCollapsedCategories());
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: hasOwnProperty, FAVORITES: closure_6, ME: metroImportDefault } = Constants);
 let actions = {};
 let closure_9 = 0;

@@ -1,6 +1,6 @@
-// === Module 1358: NativeClientInfoModule ===
+// === Module 1356: NativeClientInfoModule ===
 
-// Module 1358 (NativeClientInfoModule)
+// Module 1356 (NativeClientInfoModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

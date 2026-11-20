@@ -1,15 +1,15 @@
-// === Module 10940: VideoBackgroundOptionsRadioGroup ===
+// === Module 10882: VideoBackgroundOptionsRadioGroup ===
 
-// Module 10940 (VideoBackgroundOptionsRadioGroup)
-import applyBackgroundOption from "applyBackgroundOption" /* 5698 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5701 */;
-import VideoBackgroundOptions from "VideoBackgroundOptions" /* 10941 */;
+// Module 10882 (VideoBackgroundOptionsRadioGroup)
+import applyBackgroundOption from "applyBackgroundOption" /* 5700 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5703 */;
+import VideoBackgroundOptions from "VideoBackgroundOptions" /* 10883 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/native/VideoBackgroundOptionsRadioGroup.tsx");

@@ -1,14 +1,14 @@
-// === Module 8568: GuildSpaceSystemMessageUtils ===
+// === Module 8567: GuildSpaceSystemMessageUtils ===
 
-// Module 8568 (GuildSpaceSystemMessageUtils)
-import util from "util" /* 1113 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4712 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8569 */;
-import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8570 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8571 */;
-import MessageRecord from "MessageRecord" /* 4735 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 8567 (GuildSpaceSystemMessageUtils)
+import util from "util" /* 1112 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4714 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8568 */;
+import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8569 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8570 */;
+import MessageRecord from "MessageRecord" /* 4737 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const size = fn(2);

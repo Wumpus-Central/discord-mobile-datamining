@@ -3,14 +3,14 @@
 // Module 8830 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Gradients = fn(8831).Gradients;
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,8 +39,8 @@ export default function PremiumFeaturesBackground(opacity) {
   items = [closure_6().cardContainer, style];
   obj.style = items;
   const tmp2 = closure_6();
-  obj.start = num(1092).HorizontalGradient.START;
-  obj.end = num(1092).HorizontalGradient.END;
+  obj.start = num(1091).HorizontalGradient.START;
+  obj.end = num(1091).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: null, colors: mapped, start: null, end: null });

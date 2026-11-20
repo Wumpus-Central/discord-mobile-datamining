@@ -1,14 +1,14 @@
-// === Module 20101: components/StepsIndicator ===
+// === Module 19921: components/StepsIndicator ===
 
-// Module 20101 (components/StepsIndicator)
+// Module 19921 (components/StepsIndicator)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function StepNode(isCurrent) {
@@ -21,13 +21,13 @@ function StepNode(isCurrent) {
   if (isCurrent) {
     num = 1;
   }
-  const sharedValue = _mod1655.useSharedValue(num);
+  const sharedValue = _mod1653.useSharedValue(num);
   c1 = sharedValue;
   let num2 = 180;
   if (useReducedMotion) {
     num2 = 0;
   }
-  items = [closure_8, _mod1655.interpolate, sharedValue, timing_timing.withTiming, num2, _mod1655.Easing];
+  items = [closure_8, _mod1653.interpolate, sharedValue, timing_timing.withTiming, num2, _mod1653.Easing];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -56,7 +56,7 @@ function StepNode(isCurrent) {
   StepsIndicatorTsx1.__workletHash = 3353878627962;
   StepsIndicatorTsx1.__initData = tmp5;
   const items2 = [sharedValue, isCurrent];
-  const animatedStyle = _mod1655.useAnimatedStyle(StepsIndicatorTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(StepsIndicatorTsx1);
   const effect = noop.useEffect(() => {
     let num = 0;
     if (c0) {
@@ -76,14 +76,14 @@ function StepNode(isCurrent) {
       isCurrent = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "interactive-text-active", children: label });
     }
     obj2.children = isCurrent;
-    return jsx(_modDef1655.View, { style: null, children: null });
+    return jsx(_modDef1653.View, { style: null, children: null });
   }
   filledNode = tmp.filledNode;
-  const tmp2Result = _mod1655;
+  const tmp2Result = _mod1653;
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" }, emptyNode: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
 obj2.emptyNode = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };

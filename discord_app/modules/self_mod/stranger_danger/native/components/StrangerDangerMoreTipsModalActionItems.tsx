@@ -1,20 +1,20 @@
-// === Module 11754: StrangerDangerMoreTipsModalActionItems ===
+// === Module 11696: StrangerDangerMoreTipsModalActionItems ===
 
-// Module 11754 (StrangerDangerMoreTipsModalActionItems)
-import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 7116 */;
-import EyeIcon from "EyeIcon" /* 7118 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
-import DenyIcon from "DenyIcon" /* 8548 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11734 */;
+// Module 11696 (StrangerDangerMoreTipsModalActionItems)
+import util from "util" /* 1112 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 7115 */;
+import EyeIcon from "EyeIcon" /* 7117 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7620 */;
+import DenyIcon from "DenyIcon" /* 8547 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11676 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11722).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11664).SafetyWarningTypes;
 let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");

@@ -1,9 +1,9 @@
-// === Module 9784: PlaystationNeutralIcon ===
+// === Module 9786: PlaystationNeutralIcon ===
 
-// Module 9784 (PlaystationNeutralIcon)
+// Module 9786 (PlaystationNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod9785 from "module_9785" /* 9785 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod9787 from "module_9787" /* 9787 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PlaystationNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9785, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9787, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

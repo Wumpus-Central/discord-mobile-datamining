@@ -1,7 +1,7 @@
 // === Module 9632: GuildBadgeConstants ===
 
 // Module 9632 (GuildBadgeConstants)
-import util from "util" /* 1113 */;
+import util from "util" /* 1112 */;
 import GuildTraits from "GuildTraits" /* 9633 */;
 import BadgeCategory from "BadgeCategory" /* 9634 */;
 import size from "module_2" /* 2 */;

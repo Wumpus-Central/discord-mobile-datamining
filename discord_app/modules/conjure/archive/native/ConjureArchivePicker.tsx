@@ -1,11 +1,11 @@
-// === Module 18418: ConjureArchivePicker ===
+// === Module 18262: ConjureArchivePicker ===
 
-// Module 18418 (ConjureArchivePicker)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import FilePickerUtils from "FilePickerUtils" /* 11119 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18328 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18355 */;
+// Module 18262 (ConjureArchivePicker)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import FilePickerUtils from "FilePickerUtils" /* 11061 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18149 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -51,7 +51,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp14) {
       c6 = tmp;
@@ -120,7 +120,7 @@ export function describeConjureArchiveRejection(bytes) {
     const obj2 = { size: null };
     const tmpResult = ConjureAttachmentTypes;
     obj2.size = tmpResult.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4089.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4091.ThxcOX, obj2);
     const tmpResult2 = ConjureAttachmentTypes;
   }
   return formatToPlainStringResult;

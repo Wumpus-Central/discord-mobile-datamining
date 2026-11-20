@@ -1,10 +1,10 @@
-// === Module 8158: isReadableChannel ===
+// === Module 8157: isReadableChannel ===
 
-// Module 8158 (isReadableChannel)
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import Constants from "Constants" /* 1072 */;
+// Module 8157 (isReadableChannel)
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

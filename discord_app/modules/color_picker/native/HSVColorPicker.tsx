@@ -1,16 +1,16 @@
-// === Module 15757: HSVColorPicker ===
+// === Module 15721: HSVColorPicker ===
 
-// Module 15757 (HSVColorPicker)
-import _mod1655 from "module_1655" /* 1655 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 15758 */;
-import HuePickerDefault from "HuePicker" /* 15759 */;
+// Module 15721 (HSVColorPicker)
+import _mod1653 from "module_1653" /* 1653 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 15722 */;
+import HuePickerDefault from "HuePicker" /* 15723 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
@@ -19,10 +19,10 @@ export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
   const tmp = closure_6();
-  const sharedValue = _mod1655.useSharedValue(0);
-  const sharedValue1 = _mod1655.useSharedValue(1);
+  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue1 = _mod1653.useSharedValue(1);
   const obj4 = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = _mod1655.useSharedValue(1);
+  const sharedValue2 = _mod1653.useSharedValue(1);
   let tmp11 = hue;
   if (hue == null) {
     tmp11 = sharedValue;

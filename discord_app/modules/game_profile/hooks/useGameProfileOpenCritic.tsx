@@ -1,7 +1,7 @@
 // === Module 9710: useGameProfileOpenCritic ===
 
 // Module 9710 (useGameProfileOpenCritic)
-import util from "util" /* 1113 */;
+import util from "util" /* 1112 */;
 import OpenCriticTier from "OpenCriticTier" /* 9711 */;
 import _modDef9712 from "module_9712" /* 9712 */;
 import _modDef9713 from "module_9713" /* 9713 */;

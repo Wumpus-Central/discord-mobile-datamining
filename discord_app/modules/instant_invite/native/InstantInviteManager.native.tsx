@@ -1,8 +1,8 @@
-// === Module 19608: InstantInviteManager ===
+// === Module 19426: InstantInviteManager ===
 
-// Module 19608 (InstantInviteManager)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+// Module 19426 (InstantInviteManager)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 let require = fn;
 const prototype = function InstantInviteManager() {
@@ -15,8 +15,8 @@ const prototype = function InstantInviteManager() {
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
     const obj2 = { text: null };
-    const intl = applyArgumentsResult(1113).intl;
-    obj2.text = intl.string(applyArgumentsResult(1113).t["N/9OFy"]);
+    const intl = applyArgumentsResult(1112).intl;
+    obj2.text = intl.string(applyArgumentsResult(1112).t["N/9OFy"]);
     ToastActionCreatorsDefault.open("GROUP_DM_ADD_ERROR", obj2);
   };
   return applyArgumentsResult;

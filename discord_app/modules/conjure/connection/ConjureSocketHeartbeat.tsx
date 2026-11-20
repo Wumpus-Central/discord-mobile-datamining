@@ -1,6 +1,6 @@
-// === Module 14672: ConjureSocketHeartbeat ===
+// === Module 14631: ConjureSocketHeartbeat ===
 
-// Module 14672 (ConjureSocketHeartbeat)
+// Module 14631 (ConjureSocketHeartbeat)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureSocketHeartbeat.tsx");

@@ -1,9 +1,9 @@
-// === Module 17009: UploadIntlDataSetting ===
+// === Module 16833: UploadIntlDataSetting ===
 
-// Module 17009 (UploadIntlDataSetting)
-import AssetJsonUtils from "AssetJsonUtils" /* 1117 */;
-import _mod1151 from "module_1151" /* 1151 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
+// Module 16833 (UploadIntlDataSetting)
+import AssetJsonUtils from "AssetJsonUtils" /* 1116 */;
+import _mod1150 from "module_1150" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_10 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -43,7 +43,7 @@ let closure_10 = async function _serializeIntlData() {
           c3 = 1;
           c4 = 2;
           c5 = 1;
-          const obj4 = { value: AssetJsonUtils.loadJsonAsset(_mod1151), done: false };
+          const obj4 = { value: AssetJsonUtils.loadJsonAsset(_mod1150), done: false };
           return obj4;
         }
       } else if (1 === tmp7) {
@@ -69,8 +69,8 @@ let closure_10 = async function _serializeIntlData() {
         const keys = Object.keys(closure_129_0(closure_129_3[9]).t);
         const merged = Object.assign(Object.fromEntries(keys.map((item) => {
           items = [item, ];
-          const intl = closure_1_0(1113).intl;
-          items[1] = intl.reserialize(closure_1_0(1113).t[item]);
+          const intl = closure_1_0(1112).intl;
+          items[1] = intl.reserialize(closure_1_0(1112).t[item]);
           return items;
         })));
         obj8.messagesFromIntl = obj9;
@@ -131,7 +131,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           closure_128_1 = undefined;
           closure_128_2 = undefined;
           (function onUploadIntlDataRequestStart() {
-            closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           if (obj11.isIOS()) {
             let ANDROID_APP = constants.IOS_APP;
@@ -177,7 +177,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       } else if (1 === tmp9) {
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         throw closure_2;
@@ -188,7 +188,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           closure_129_1(closure_129_3[12]).open("USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", obj4);
           c3 = 0;
           (function onUploadIntlDataRequestFinish() {
-            closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           c5 = 3;
@@ -200,7 +200,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           } else if (arg0 === 2) {
             c3 = 0;
             (function onUploadIntlDataRequestFinish() {
-              closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
               const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
             })();
             c5 = 3;
@@ -227,7 +227,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
         }
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         c5 = 3;
@@ -248,18 +248,18 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
   }
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ DebugLogCategory: closure_6, Endpoints: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(17010).FileUpIcon,
+  IconComponent: fn(16834).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -270,7 +270,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16057).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16021).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

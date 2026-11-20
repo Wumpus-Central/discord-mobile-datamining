@@ -1,24 +1,24 @@
-// === Module 19769: GuildSettingsAutoModeration ===
+// === Module 19587: GuildSettingsAutoModeration ===
 
-// Module 19769 (GuildSettingsAutoModeration)
+// Module 19587 (GuildSettingsAutoModeration)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19774 */;
+import util from "util" /* 1112 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19592 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(19770);
+const AutomodStore = fn(19588);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(19772).useAutomodEditingRuleState;
-const Constants = fn(1072);
+let closure_6 = fn(19590).useAutomodEditingRuleState;
+const Constants = fn(1071);
 ({ GuildSettingsSections: metroImportDefault, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, loading: null };
 let obj3 = { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 obj2.loading = { paddingVertical: nativeDefault.space.PX_24 };

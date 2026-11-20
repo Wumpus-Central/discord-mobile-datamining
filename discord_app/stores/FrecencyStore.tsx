@@ -1,15 +1,15 @@
-// === Module 6552: FrecencyStore ===
+// === Module 6554: FrecencyStore ===
 
-// Module 6552 (FrecencyStore)
+// Module 6554 (FrecencyStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5549 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import FrecencyDefault from "Frecency" /* 5551 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);
@@ -79,8 +79,8 @@ function initFrecency() {
     }), global.pendingUsages);
   }
 }
-const ID_REGEX = fn(1072).ID_REGEX;
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const ID_REGEX = fn(1071).ID_REGEX;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
 let closure_9 = new FrecencyDefault({
   computeBonus() {
     return 100;

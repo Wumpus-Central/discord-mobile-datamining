@@ -1,7 +1,7 @@
-// === Module 9774: useGameProfileShopCollection ===
+// === Module 9776: useGameProfileShopCollection ===
 
-// Module 9774 (useGameProfileShopCollection)
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9769 */;
+// Module 9776 (useGameProfileShopCollection)
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9771 */;
 import noop from "module_19" /* 19 */;
 import GameProfileStore from "GameProfileStore" /* 9651 */;
 import size from "module_2" /* 2 */;

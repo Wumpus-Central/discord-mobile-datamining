@@ -1,11 +1,11 @@
-// === Module 4809: ThemeContext ===
+// === Module 4811: ThemeContext ===
 
-// Module 4809 (ThemeContext)
+// Module 4811 (ThemeContext)
 import noop from "module_19" /* 19 */;
 
 const jsxProd = fn(21);
 ({ Fragment: closure_1, jsx: c2 } = jsxProd);
-let obj = { theme: fn(1083).ThemeTypes.LIGHT, primaryColor: null, secondaryColor: null, gradient: null, flags: 0, contrast: 1, saturation: 1, density: "compact", disableAdaptiveTheme: false, reduceAdaptiveTheme: false };
+let obj = { theme: fn(1082).ThemeTypes.LIGHT, primaryColor: null, secondaryColor: null, gradient: null, flags: 0, contrast: 1, saturation: 1, density: "compact", disableAdaptiveTheme: false, reduceAdaptiveTheme: false };
 const obj2 = {};
 let json = JSON.stringify(obj);
 let merged = Object.assign(obj);

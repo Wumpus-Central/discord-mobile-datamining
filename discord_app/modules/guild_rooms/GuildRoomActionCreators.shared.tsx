@@ -1,16 +1,16 @@
-// === Module 6339: _guildRoomConnect ===
+// === Module 6341: _guildRoomConnect ===
 
-// Module 6339 (_guildRoomConnect)
+// Module 6341 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 6341 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 6342 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 6361 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 6371 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 6343 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 6344 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 6363 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 6373 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 6340 */;
+import GuildRoomStore from "GuildRoomStore" /* 6342 */;
 
 require = fn;
 let closure_8 = async function _guildRoomConnect(arg0) {
@@ -24,7 +24,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -151,7 +151,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
           }
           c11 = 0;
           c13 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         c11 = 1;
@@ -177,7 +177,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -328,7 +328,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
           }
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp81) {
         closure_5 = tmp81;
@@ -419,7 +419,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -473,7 +473,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
           }
           c7 = 0;
           c9 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         closure_6 = tmp27;
@@ -498,7 +498,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -536,7 +536,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
           const obj = closure_132_0(closure_132_2[8]);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c6 = tmp;
@@ -567,7 +567,7 @@ let closure_18 = async function _fetchGuildRoom(arg0) {
   }
   return value;
 };
-let Endpoints = fn(1072).Endpoints;
+let Endpoints = fn(1071).Endpoints;
 let closure_7 = { x: 0, y: 0 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.shared.tsx");

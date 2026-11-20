@@ -1,10 +1,10 @@
-// === Module 17007: SupportUtils ===
+// === Module 16831: SupportUtils ===
 
-// Module 17007 (SupportUtils)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import LinkingDefault from "Linking" /* 5471 */;
+// Module 16831 (SupportUtils)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import LinkingDefault from "Linking" /* 5473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
 
 const require = fn;
 let closure_6 = async function _emailSupport() {
@@ -18,7 +18,7 @@ let closure_6 = async function _emailSupport() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_6 = async function _emailSupport() {
       } else {
         openURL(value);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp11) {
       c3 = tmp;

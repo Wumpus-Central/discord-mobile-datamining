@@ -1,7 +1,7 @@
-// === Module 10804: getStageSpeakInviteBlockedUsersText ===
+// === Module 10746: getStageSpeakInviteBlockedUsersText ===
 
-// Module 10804 (getStageSpeakInviteBlockedUsersText)
-import util from "util" /* 1113 */;
+// Module 10746 (getStageSpeakInviteBlockedUsersText)
+import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/native/getStageSpeakInviteBlockedUsersText.tsx");

@@ -1,33 +1,34 @@
-// === Module 20137: FriendOnlineTimer ===
+// === Module 19957: FriendOnlineTimer ===
 
-// Module 20137 (FriendOnlineTimer)
-import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import UserSettings from "UserSettings" /* 4617 */;
+// Module 19957 (FriendOnlineTimer)
+import DurationsDefault from "Durations" /* 1088 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import UserSettings from "UserSettings" /* 4619 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
-import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 20138 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 19958 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
-let closure_9 = async function _reportSessionMeaningfullyOnline() {
+let closure_10 = async function _reportSessionMeaningfullyOnline() {
   closure_1 = tmp3;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: constants.USER_MEANINGFULLY_ONLINE, rejectWithError: true });
   if (1 === tmp7) {
     c3 = 0;
     closure_128_0 = closure_2;
-    if (closure_128_0 instanceof closure_129_0(closure_129_2[6]).HTTPResponseError) {
+    if (closure_128_0 instanceof closure_129_0(closure_129_2[7]).HTTPResponseError) {
       if (429 === closure_128_0.status) {
         const obj8 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
         const _Date = Date;
         obj8.timestampMs = Date.now();
-        closure_129_1(closure_129_2[8]).dispatch(obj8);
+        closure_129_1(closure_129_2[9]).dispatch(obj8);
         c5 = 3;
-        closure_129_1(closure_129_2[8]);
+        closure_129_1(closure_129_2[9]);
       }
     }
-    closure_129_1(closure_129_2[7]).captureException(closure_128_0, { tags: { app_context: "session_timer" } });
+    closure_129_1(closure_129_2[8]).captureException(closure_128_0, { tags: { app_context: "session_timer" } });
     c5 = 3;
     return { value: undefined, done: true };
   } else if (arg0 === 1) {
@@ -38,9 +39,9 @@ let closure_9 = async function _reportSessionMeaningfullyOnline() {
   }
   return value;
 };
-const Endpoints = fn(1072).Endpoints;
-const StatusTypes = fn(1083).StatusTypes;
-let closure_8 = 5 * DurationsDefault.Millis.MINUTE;
+const Endpoints = fn(1071).Endpoints;
+const StatusTypes = fn(1082).StatusTypes;
+let closure_9 = 5 * DurationsDefault.Millis.MINUTE;
 class FriendOnlineTimerManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -59,38 +60,47 @@ class FriendOnlineTimerManager extends tmp2 {
       CONNECTION_INTERRUPTED() {
             return applyArgumentsResult.clear();
           },
+      LOGOUT() {
+            return applyArgumentsResult.clear();
+          },
       SELF_PRESENCE_STORE_UPDATE() {
             return applyArgumentsResult.start();
           }
     };
     applyArgumentsResult.start = function start() {
-      const NotifyFriendsOnComeOnline = UserSettings.NotifyFriendsOnComeOnline;
-      let setting = NotifyFriendsOnComeOnline.getSetting();
-      if (setting) {
-        setting = FriendOnlineTimerStore.isCooldownElapsed();
+      let isAuthenticatedResult = AuthenticationStore.isAuthenticated();
+      if (isAuthenticatedResult) {
+        const NotifyFriendsOnComeOnline = UserSettings.NotifyFriendsOnComeOnline;
+        isAuthenticatedResult = NotifyFriendsOnComeOnline.getSetting();
       }
-      if (setting) {
-        setting = null == applyArgumentsResult.timerId;
+      if (isAuthenticatedResult) {
+        isAuthenticatedResult = FriendOnlineTimerStore.isCooldownElapsed();
       }
-      if (setting) {
+      if (isAuthenticatedResult) {
+        isAuthenticatedResult = null == applyArgumentsResult.timerId;
+      }
+      if (isAuthenticatedResult) {
         items = [, ];
         ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
-        setting = items.includes(SelfPresenceStore.getStatus());
+        isAuthenticatedResult = items.includes(SelfPresenceStore.getStatus());
       }
-      if (setting) {
+      if (isAuthenticatedResult) {
         const _setTimeout = setTimeout;
         applyArgumentsResult.timerId = setTimeout(() => {
           closure_1_0.timerId = null;
-          items = [, ];
-          ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
-          let hasItem = items.includes(status.getStatus());
-          if (hasItem) {
-            hasItem = cooldownElapsed.isCooldownElapsed();
+          let isAuthenticatedResult = authenticated.isAuthenticated();
+          if (isAuthenticatedResult) {
+            items = [, ];
+            ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
+            isAuthenticatedResult = items.includes(status.getStatus());
           }
-          if (hasItem) {
+          if (isAuthenticatedResult) {
+            isAuthenticatedResult = cooldownElapsed.isCooldownElapsed();
+          }
+          if (isAuthenticatedResult) {
             (function reportSessionMeaningfullyOnline() {
               const self = this;
-              const apply = closure_1_9.apply;
+              const apply = closure_1_10.apply;
               if (typeof apply === "unknown") {
                 applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -99,7 +109,7 @@ class FriendOnlineTimerManager extends tmp2 {
               return applyArgumentsResult;
             })();
           }
-        }, closure_8);
+        }, closure_9);
       }
     };
     applyArgumentsResult.clear = function clear() {

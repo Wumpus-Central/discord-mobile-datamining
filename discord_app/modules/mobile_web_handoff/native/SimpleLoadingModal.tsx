@@ -1,7 +1,7 @@
 // === Module 9476: SimpleLoadingModal ===
 
 // Module 9476 (SimpleLoadingModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

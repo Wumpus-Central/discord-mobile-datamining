@@ -1,24 +1,24 @@
-// === Module 19113: GiftingPromotionCoachmark ===
+// === Module 18932: GiftingPromotionCoachmark ===
 
-// Module 19113 (GiftingPromotionCoachmark)
+// Module 18932 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import usePreviousDefault from "usePrevious" /* 6296 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import usePreviousDefault from "usePrevious" /* 6298 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 9345 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 import PromotionsStore from "PromotionsStore" /* 9023 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsSections: metroImportDefault, AnalyticsObjects: closure_8, AnalyticsPages: closure_9 } = Constants);
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_16 }, textContainer: null, text: null, countdownBadge: null, imageShared: null };
 let obj3 = { alignItems: "center", padding: nativeDefault.space.PX_16 };
 obj2.textContainer = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
@@ -100,7 +100,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj5.source = obj6;
       obj5.style = tmp.imageShared;
       obj5.enableAnimation = !stateFromStores;
-      tmp19Result = closure_11(tmp11(5479), obj5);
+      tmp19Result = closure_11(tmp11(5481), obj5);
     }
     const items4 = [tmp19Result, , , ];
     if (enabled) {
@@ -113,21 +113,21 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     items4[1] = enabled;
     const obj8 = { style: tmp.textContainer, children: null };
     const obj9 = { style: tmp.text, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: coachmarkComponent.header };
-    const items5 = [closure_11(markAsDismissed(5383).Heading, obj9), ];
+    const items5 = [closure_11(markAsDismissed(5385).Heading, obj9), ];
     const obj10 = { style: tmp.text, variant: "body-md/normal", color: "text-default", children: coachmarkComponent.body };
-    items5[1] = closure_11(markAsDismissed(5383).Text, obj10);
+    items5[1] = closure_11(markAsDismissed(5385).Text, obj10);
     obj8.children = items5;
     items4[2] = closure_12(closure_4, obj8);
     const obj11 = { grow: true, icon: null, text: null, onPress: null };
     const obj12 = { size: "sm", color: tmp11(575).colors.WHITE };
-    obj11.icon = closure_11(markAsDismissed(12376).GiftIcon, obj12);
-    const intl = markAsDismissed(1113).intl;
-    obj11.text = intl.string(markAsDismissed(1113).t.Ve9Ge6);
+    obj11.icon = closure_11(markAsDismissed(12346).GiftIcon, obj12);
+    const intl = markAsDismissed(1112).intl;
+    obj11.text = intl.string(markAsDismissed(1112).t.Ve9Ge6);
     obj11.onPress = tmp17;
-    items4[3] = closure_11(markAsDismissed(5390).Button, obj11);
+    items4[3] = closure_11(markAsDismissed(5392).Button, obj11);
     obj4.children = items4;
     obj3.children = closure_12(closure_4, obj4);
-    tmp19Result2 = closure_11(markAsDismissed(5020).BottomSheet, obj3);
+    tmp19Result2 = closure_11(markAsDismissed(5022).BottomSheet, obj3);
   }
   return tmp19Result2;
 };

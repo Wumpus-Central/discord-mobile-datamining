@@ -1,8 +1,8 @@
-// === Module 8419: logMessageSendFailure ===
+// === Module 8418: logMessageSendFailure ===
 
-// Module 8419 (logMessageSendFailure)
-import Constants from "Constants" /* 1072 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+// Module 8418 (logMessageSendFailure)
+import Constants from "Constants" /* 1071 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

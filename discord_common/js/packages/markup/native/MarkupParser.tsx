@@ -1,8 +1,8 @@
-// === Module 5518: MarkupParser ===
+// === Module 5520: MarkupParser ===
 
-// Module 5518 (MarkupParser)
-import _modDef2070 from "module_2070" /* 2070 */;
-import MarkupASTUtils from "MarkupASTUtils" /* 5519 */;
+// Module 5520 (MarkupParser)
+import _modDef2068 from "module_2068" /* 2068 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 5521 */;
 import size from "module_2" /* 2 */;
 
 function saferParse(fn, arg1, inline, arg3, arg4) {
@@ -37,7 +37,7 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/markup/na
 
 export default {
   astParserFor(importDefaultResultResult) {
-    closure_0 = _modDef2070.parserFor(importDefaultResultResult);
+    closure_0 = _modDef2068.parserFor(importDefaultResultResult);
     return (arg0) => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -65,9 +65,9 @@ export default {
     };
   },
   reactParserFor(rules) {
-    closure_0 = _modDef2070.parserFor(rules);
-    let obj2 = _modDef2070;
-    importDefault = obj2.reactFor(_modDef2070.ruleOutput(rules, "react"));
+    closure_0 = _modDef2068.parserFor(rules);
+    let obj2 = _modDef2068;
+    importDefault = obj2.reactFor(_modDef2068.ruleOutput(rules, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

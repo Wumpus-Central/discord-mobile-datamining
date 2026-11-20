@@ -1,22 +1,22 @@
-// === Module 19907: RoleIconActionSheet ===
+// === Module 19727: RoleIconActionSheet ===
 
-// Module 19907 (RoleIconActionSheet)
+// Module 19727 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import ActionSheet from "ActionSheet" /* 7434 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19904 */;
+import util from "util" /* 1112 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
+import ActionSheet from "ActionSheet" /* 7433 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19724 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19890 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19710 */;
 
 require = fn;
-const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
-const EmojiIntention = fn(1391).EmojiIntention;
+const UPLOAD_SMALL_SIZE = fn(1071).UPLOAD_SMALL_SIZE;
+const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = ["image/png", "image/jpeg"];
@@ -36,7 +36,7 @@ export default function RoleIconActionSheet(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ export default function RoleIconActionSheet(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -178,27 +178,27 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(19904).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(19904);
+                  closure_0(19724).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(19724);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(19904);
+                const tmp22 = closure_0(19724);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(19908).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(19728).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
           } else {
             if (1 === tmp7) {
               c6 = 0;
-              const intl = closure_0(1113).intl;
-              closure_0(5473).presentError(intl.string(closure_0(1113).t.R0RpRX));
-              const obj2 = closure_0(5473);
+              const intl = closure_0(1112).intl;
+              closure_0(5475).presentError(intl.string(closure_0(1112).t.R0RpRX));
+              const obj2 = closure_0(5475);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;

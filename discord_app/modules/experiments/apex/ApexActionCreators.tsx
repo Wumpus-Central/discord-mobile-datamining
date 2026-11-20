@@ -1,13 +1,13 @@
-// === Module 11887: ApexActionCreators ===
+// === Module 11829: ApexActionCreators ===
 
-// Module 11887 (ApexActionCreators)
+// Module 11829 (ApexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import experiment from "experiment" /* 8123 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import apex_ApexTypes from "apex/ApexTypes" /* 1453 */;
+import experiment from "experiment" /* 8122 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 
 require = fn;
 let closure_8 = async function _fetchApexExperimentsMetadata() {
@@ -57,7 +57,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -146,7 +146,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -214,8 +214,8 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
                 const obj = closure_1(572);
               }
               const obj3 = closure_1(572);
-              obj3.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: request(1455).INSTALLATION_UNIT_ID, request, experiments });
-              const obj4 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: request(1455).INSTALLATION_UNIT_ID, request, experiments };
+              obj3.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: request(1453).INSTALLATION_UNIT_ID, request, experiments });
+              const obj4 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: request(1453).INSTALLATION_UNIT_ID, request, experiments };
             });
           } else {
             const obj11 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID, request: closure_129_0 };
@@ -242,7 +242,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
   }
 };
 let closure_3 = ["installation"];
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
 

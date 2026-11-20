@@ -1,12 +1,12 @@
-// === Module 19234: useHandleOAuthNavigation ===
+// === Module 19053: useHandleOAuthNavigation ===
 
-// Module 19234 (useHandleOAuthNavigation)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+// Module 19053 (useHandleOAuthNavigation)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ComponentActions = fn(1072).ComponentActions;
-let closure_5 = fn(10634).OAUTH2_AUTHORIZE_MODAL_KEY;
+const ComponentActions = fn(1071).ComponentActions;
+let closure_5 = fn(10576).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 
@@ -23,7 +23,7 @@ export default function useHandleOAuthNavigation() {
       };
       obj2.pushLazy(showOAuth2Modal(paths[5])(paths[4], paths.paths), obj3, closure_1_5);
     }
-    let ComponentDispatch = showOAuth2Modal(1108).ComponentDispatch;
+    let ComponentDispatch = showOAuth2Modal(1107).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     return () => {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;

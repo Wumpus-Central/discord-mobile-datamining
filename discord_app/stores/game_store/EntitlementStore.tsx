@@ -1,16 +1,16 @@
-// === Module 8001: EntitlementStore ===
+// === Module 8000: EntitlementStore ===
 
-// Module 8001 (EntitlementStore)
+// Module 8000 (EntitlementStore)
 import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
-import EntitlementTypes from "EntitlementTypes" /* 2173 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8002 */;
-import EntitlementSourceTypes from "EntitlementSourceTypes" /* 8003 */;
-import EntitlementRecord from "EntitlementRecord" /* 2166 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
-import SKUStore from "SKUStore" /* 6553 */;
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1074 */;
+import EntitlementTypes from "EntitlementTypes" /* 2171 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8001 */;
+import EntitlementSourceTypes from "EntitlementSourceTypes" /* 8002 */;
+import EntitlementRecord from "EntitlementRecord" /* 2164 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2161 */;
+import SKUStore from "SKUStore" /* 6555 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -49,7 +49,7 @@ function handlePurchaseSuccess(arg0) {
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
 }
-let closure_6 = fn(1390).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_6 = fn(1388).PREMIUM_SUBSCRIPTION_APPLICATION;
 const dependencyMap = {};
 let closure_8 = {};
 const dependencyMap2 = {};

@@ -1,8 +1,8 @@
-// === Module 11811: conjureDefaultAppIcon ===
+// === Module 11753: conjureDefaultAppIcon ===
 
-// Module 11811 (conjureDefaultAppIcon)
+// Module 11753 (conjureDefaultAppIcon)
 import _modDef671 from "module_671" /* 671 */;
-import ColorUtils from "ColorUtils" /* 4789 */;
+import ColorUtils from "ColorUtils" /* 4791 */;
 import rawDefault from "raw" /* 9343 */;
 import GuildProfileConstants from "GuildProfileConstants" /* 9626 */;
 import size from "module_2" /* 2 */;

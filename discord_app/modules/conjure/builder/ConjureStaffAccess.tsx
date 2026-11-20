@@ -1,14 +1,14 @@
-// === Module 18710: ConjureStaffAccess ===
+// === Module 18534: ConjureStaffAccess ===
 
-// Module 18710 (ConjureStaffAccess)
+// Module 18534 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
-import GuildChannelStore from "GuildChannelStore" /* 4722 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 let c7 = "conjuring-help";
 let c8 = "https://i.dis.gd/conjuring-access";
 const size = fn(2);

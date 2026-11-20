@@ -3,8 +3,8 @@
 // Module 9556 (VoiceStateIconUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 9557 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 const require = globalThis.__r;
 

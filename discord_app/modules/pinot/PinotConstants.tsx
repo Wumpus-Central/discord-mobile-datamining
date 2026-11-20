@@ -1,6 +1,6 @@
-// === Module 7629: PinotConstants ===
+// === Module 7628: PinotConstants ===
 
-// Module 7629 (PinotConstants)
+// Module 7628 (PinotConstants)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ SWP_CHANNEL_SUMMARIES_DISABLED: "SWP_CHANNEL_SUMMARIES_DISABLED", SWP_CHANNEL_MESSAGES_DISABLED: "SWP_CHANNEL_MESSAGES_DISABLED" });

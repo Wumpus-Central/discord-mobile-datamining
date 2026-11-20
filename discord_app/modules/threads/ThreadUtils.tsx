@@ -1,18 +1,18 @@
-// === Module 8399: ThreadUtils ===
+// === Module 8398: ThreadUtils ===
 
-// Module 8399 (ThreadUtils)
+// Module 8398 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import _modDef2169 from "module_2169" /* 2169 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7361 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 8173 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8388 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import _modDef2167 from "module_2167" /* 2167 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7360 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 8172 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8387 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4728 */;
 
 const require = globalThis.__r;
 
@@ -24,8 +24,8 @@ function getAccessibilityLabelFormatter() {
   return time;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
-const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
-const Constants = fn(1072);
+const ThreadMemberFlags = fn(1111).ThreadMemberFlags;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, UserNotificationSettings: closure_10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadUtils.tsx");
@@ -127,8 +127,8 @@ export function useLastMessageTimestamp(thread) {
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef2169(createTimestamp).valueOf();
-    const obj3 = _modDef2169(createTimestamp);
+    valueOfResult = _modDef2167(createTimestamp).valueOf();
+    const obj3 = _modDef2167(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

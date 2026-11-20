@@ -2,9 +2,9 @@
 
 // Module 9614 (SecureFramesUserVerificationBottomSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
+import util from "util" /* 1112 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
 import UserActionCreators from "UserActionCreators" /* 6835 */;
 import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8885 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9587 */;
@@ -12,18 +12,18 @@ import SecureFramesTracking from "SecureFramesTracking" /* 9590 */;
 import XLargeBoldIcon from "XLargeBoldIcon" /* 9616 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import UserStore from "UserStore" /* 1388 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const SecureFramesConstants = fn(9588);
 ({ AnalyticsSecureFramesUserVerification: closure_9, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
-const AnalyticsLocations = fn(1072).AnalyticsLocations;
+const AnalyticsLocations = fn(1071).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
 obj2.iconContainer = size;

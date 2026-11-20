@@ -1,18 +1,18 @@
-// === Module 17027: LogoutSetting ===
+// === Module 16851: LogoutSetting ===
 
-// Module 17027 (LogoutSetting)
+// Module 16851 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
-import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import util from "util" /* 1113 */;
-import useAlertStore from "useAlertStore" /* 5741 */;
-import AlertModal from "AlertModal" /* 5745 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6304 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6408 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7292 */;
-import DoorExitIcon from "DoorExitIcon" /* 10306 */;
-import PushNotificationDefault from "PushNotification" /* 10799 */;
+import ConstantsIOS from "ConstantsIOS" /* 1091 */;
+import util from "util" /* 1112 */;
+import useAlertStore from "useAlertStore" /* 5743 */;
+import AlertModal from "AlertModal" /* 5747 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6306 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6410 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7291 */;
+import DoorExitIcon from "DoorExitIcon" /* 10248 */;
+import PushNotificationDefault from "PushNotification" /* 10741 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
 import size from "module_2" /* 2 */;
 
 function handleLogout() {

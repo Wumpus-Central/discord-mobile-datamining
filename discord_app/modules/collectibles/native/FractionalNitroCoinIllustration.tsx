@@ -6,7 +6,7 @@ import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EXTERNAL_PRODUCT_SKU_IDS = fn(1074).EXTERNAL_PRODUCT_SKU_IDS;
+const EXTERNAL_PRODUCT_SKU_IDS = fn(1073).EXTERNAL_PRODUCT_SKU_IDS;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");

@@ -1,7 +1,7 @@
-// === Module 18779: useCanShowNoSearchResults ===
+// === Module 18603: useCanShowNoSearchResults ===
 
-// Module 18779 (useCanShowNoSearchResults)
-import SearchQueryStore from "SearchQueryStore" /* 13121 */;
+// Module 18603 (useCanShowNoSearchResults)
+import SearchQueryStore from "SearchQueryStore" /* 13091 */;
 
 const require = globalThis.__r;
 

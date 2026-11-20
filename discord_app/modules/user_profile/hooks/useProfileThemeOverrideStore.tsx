@@ -1,10 +1,10 @@
-// === Module 8062: useProfileThemeOverrideStore ===
+// === Module 8061: useProfileThemeOverrideStore ===
 
-// Module 8062 (useProfileThemeOverrideStore)
-import Constants from "Constants" /* 1072 */;
-import shared from "shared" /* 4799 */;
-import useThemeDefault from "useTheme" /* 5001 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8063 */;
+// Module 8061 (useProfileThemeOverrideStore)
+import Constants from "Constants" /* 1071 */;
+import shared from "shared" /* 4801 */;
+import useThemeDefault from "useTheme" /* 5003 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8062 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

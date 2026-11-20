@@ -1,12 +1,12 @@
-// === Module 9815: useGameProfileCommunitiesLocaleFilter ===
+// === Module 9817: useGameProfileCommunitiesLocaleFilter ===
 
-// Module 9815 (useGameProfileCommunitiesLocaleFilter)
+// Module 9817 (useGameProfileCommunitiesLocaleFilter)
 import applyDefault from "apply" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(9816).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9818).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleFilter.tsx");
 

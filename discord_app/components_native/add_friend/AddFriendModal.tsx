@@ -1,17 +1,17 @@
-// === Module 14977: AddFriendModal ===
+// === Module 14941: AddFriendModal ===
 
-// Module 14977 (AddFriendModal)
+// Module 14941 (AddFriendModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13495 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13465 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
-import TextStyles from "TextStyles" /* 6286 */;
+import UserStore from "UserStore" /* 1386 */;
+import TextStyles from "TextStyles" /* 6288 */;
 
 const require = globalThis.__r;
 
@@ -107,12 +107,12 @@ function AddFriendModalScene(onSkip) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(13493).ContactPermissions;
+const ContactPermissions = fn(13463).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
 let obj3 = {};
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

@@ -1,25 +1,25 @@
-// === Module 7621: RelationshipActionCreators ===
+// === Module 7620: RelationshipActionCreators ===
 
-// Module 7621 (RelationshipActionCreators)
+// Module 7620 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import shared from "shared" /* 4799 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5739 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6362 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 6369 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6388 */;
-import SafetyToastsUtils from "SafetyToastsUtils" /* 6389 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6393 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7175 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7623 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7624 */;
-import FriendsUtils from "FriendsUtils" /* 7625 */;
+import util from "util" /* 1112 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import shared from "shared" /* 4801 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6364 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 6371 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6390 */;
+import SafetyToastsUtils from "SafetyToastsUtils" /* 6391 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6395 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7174 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7622 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7623 */;
+import FriendsUtils from "FriendsUtils" /* 7624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
@@ -98,10 +98,10 @@ function fireFriendRequestSurveyAction(arg0) {
     QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.FRIEND_REQUEST_SENT);
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
-const ClearFriendRequestFilters = fn(7622).ClearFriendRequestFilters;
-const SafetyToastType = fn(6383).SafetyToastType;
+const ClearFriendRequestFilters = fn(7621).ClearFriendRequestFilters;
+const SafetyToastType = fn(6385).SafetyToastType;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(arg0) {
@@ -120,7 +120,7 @@ let obj2 = {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -167,7 +167,7 @@ let obj2 = {
             }
             closure_128_0 = NONE;
             dependencyMap = 1;
-            HTTP = closure_0(1285).HTTP;
+            HTTP = closure_0(1284).HTTP;
             const request = { url: closure_1_8.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
             const obj6 = { username: merged, discriminator: null, note: null };
             const _parseInt = parseInt;
@@ -177,11 +177,11 @@ let obj2 = {
             request.body = obj6;
             request.context = context;
             const tmp41 = v2(_require.split("#"), 2);
-            request.rejectWithError = closure_0(1285).rejectWithMigratedError();
+            request.rejectWithError = closure_0(1284).rejectWithMigratedError();
             HTTP.post(request);
             v2 = 2;
             c5 = 1;
-            const obj5 = closure_0(1285);
+            const obj5 = closure_0(1284);
           }
         } catch (tmp30) {
           closure_2 = tmp30;
@@ -205,14 +205,14 @@ let obj2 = {
     }
     dependencyMap = UserStore.getUser(userId);
     const relationshipType = RelationshipStore.getRelationshipType(userId);
-    const HTTP = type(1285).HTTP;
+    const HTTP = type(1284).HTTP;
     const request = { url: closure_8.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     body = { type, from_friend_suggestion: fromFriendSuggestion, confirm_stranger_request: confirmStrangerRequest };
     const merged = Object.assign(captchaPayload.captchaPayload);
     request.body = body;
     request.context = context;
-    request.rejectWithError = type(1285).rejectWithMigratedError();
-    let obj3 = type(1285);
+    request.rejectWithError = type(1284).rejectWithMigratedError();
+    let obj3 = type(1284);
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
       if (type === constants2.BLOCKED) {
@@ -283,9 +283,9 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(4799).AccessibilityAnnouncer;
-      const intl = closure_0(1113).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.n6Jo3E));
+      const AccessibilityAnnouncer = closure_0(4801).AccessibilityAnnouncer;
+      const intl = closure_0(1112).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1112).t.n6Jo3E));
     });
   },
   updateRelationship(userId, c0) {
@@ -348,10 +348,10 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(6388).showFailedToast();
-      const AccessibilityAnnouncer = userId(4799).AccessibilityAnnouncer;
-      const intl = userId(1113).intl;
-      AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
+      channelId(6390).showFailedToast();
+      const AccessibilityAnnouncer = userId(4801).AccessibilityAnnouncer;
+      const intl = userId(1112).intl;
+      AccessibilityAnnouncer.announce(intl.string(userId(1112).t.n6Jo3E));
     });
   },
   unignoreUser(id, UserProfileRemediatedNotice, channelId) {
@@ -368,10 +368,10 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(6388).showFailedToast();
-      const AccessibilityAnnouncer = userId(4799).AccessibilityAnnouncer;
-      const intl = userId(1113).intl;
-      AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
+      channelId(6390).showFailedToast();
+      const AccessibilityAnnouncer = userId(4801).AccessibilityAnnouncer;
+      const intl = userId(1112).intl;
+      AccessibilityAnnouncer.announce(intl.string(userId(1112).t.n6Jo3E));
     });
   }
 };

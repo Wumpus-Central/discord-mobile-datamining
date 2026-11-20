@@ -1,13 +1,13 @@
-// === Module 7906: useGuildEventRecurrences ===
+// === Module 7905: useGuildEventRecurrences ===
 
-// Module 7906 (useGuildEventRecurrences)
+// Module 7905 (useGuildEventRecurrences)
 import applyDefault from "apply" /* 12 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7453 */;
-import ScheduleUtils from "ScheduleUtils" /* 7456 */;
-import usePrevValueDefault from "usePrevValue" /* 7907 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7452 */;
+import ScheduleUtils from "ScheduleUtils" /* 7455 */;
+import usePrevValueDefault from "usePrevValue" /* 7906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6512 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6514 */;
 
 const require = globalThis.__r;
 
@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(7456);
+      const tmpResult = tmp(7455);
       let _Date = Date;
-      let rRule = tmp(7456).getRRule(byWeekday);
+      let rRule = tmp(7455).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(7456);
+      const tmpResult2 = tmp(7455);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -56,8 +56,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
       if (null != closure_1) {
         const mapped = first.map((getTime) => {
           const time = getTime.getTime();
-          const rounded = Math.floor(time / closure_1_1(1089).Millis.SECOND);
-          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1089).Millis.SECOND);
+          const rounded = Math.floor(time / closure_1_1(1088).Millis.SECOND);
+          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1088).Millis.SECOND);
         });
         const guildEventUserCounts = GuildScheduledEventManagerDefault.getGuildEventUserCounts(tmp, closure_0, mapped);
       }

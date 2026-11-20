@@ -1,6 +1,6 @@
-// === Module 8408: Queue ===
+// === Module 8407: Queue ===
 
-// Module 8408 (Queue)
+// Module 8407 (Queue)
 import LoggerDefault from "Logger" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 

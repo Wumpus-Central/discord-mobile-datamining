@@ -1,6 +1,6 @@
-// === Module 8004: EntitlementActionCreators ===
+// === Module 8003: EntitlementActionCreators ===
 
-// Module 8004 (EntitlementActionCreators)
+// Module 8003 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -23,7 +23,7 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -139,7 +139,7 @@ let closure_6 = async function _fetchGiftableEntitlements() {
   }
   return value;
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/EntitlementActionCreators.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 15664: isConjureAppChannelFrame ===
+// === Module 15628: isConjureAppChannelFrame ===
 
-// Module 15664 (isConjureAppChannelFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6511 */;
+// Module 15628 (isConjureAppChannelFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6513 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 6824 */;
 import size from "module_2" /* 2 */;
 

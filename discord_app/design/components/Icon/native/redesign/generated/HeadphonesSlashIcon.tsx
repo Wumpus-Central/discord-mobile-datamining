@@ -2,7 +2,7 @@
 
 // Module 9560 (HeadphonesSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9561 from "module_9561" /* 9561 */;
 import noop from "module_19" /* 19 */;
 

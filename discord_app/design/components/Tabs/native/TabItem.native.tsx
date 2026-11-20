@@ -1,15 +1,15 @@
-// === Module 13442: TabItem ===
+// === Module 13412: TabItem ===
 
-// Module 13442 (TabItem)
+// Module 13412 (TabItem)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import spring_spring from "spring/spring" /* 5393 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import spring_spring from "spring/spring" /* 5395 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const module_1655 = _mod1655;
+const module_1653 = _mod1653;
 
 require = fn;
 function useAnimatedTextStyle(arg0) {
@@ -48,17 +48,17 @@ function useAnimatedTextStyle(arg0) {
   TabItemNativeTsx1.__closure = items1;
   TabItemNativeTsx1.__workletHash = 3107632073840;
   TabItemNativeTsx1.__initData = tmp2;
-  return _mod1655.useAnimatedStyle(TabItemNativeTsx1);
+  return _mod1653.useAnimatedStyle(TabItemNativeTsx1);
 }
 function TabItemCount(arg0) {
   ({ count, index, activeIndex, pressed, variant } = arg0);
   const tmp = closure_10();
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = _undefined.set(1);
   }, items);
-  const items1 = [closure_15, spring_spring.withSpring, sharedValue, closure_9, _mod1655.interpolate];
+  const items1 = [closure_15, spring_spring.withSpring, sharedValue, closure_9, _mod1653.interpolate];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -78,28 +78,28 @@ function TabItemCount(arg0) {
   TabItemNativeTsx2.__closure = items2;
   TabItemNativeTsx2.__workletHash = 15126685663834;
   TabItemNativeTsx2.__initData = tmp6;
-  const animatedStyle = _mod1655.useAnimatedStyle(TabItemNativeTsx2);
+  const animatedStyle = _mod1653.useAnimatedStyle(TabItemNativeTsx2);
   const obj3 = { style: null, children: hasOwnProperty(Text_Text.Text, { animated: true, variant: "body-sm/medium", style: useAnimatedTextStyle({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
   const items3 = [tmp.count, animatedStyle];
   obj3.style = items3;
-  return hasOwnProperty(module_1655.View, obj3);
+  return hasOwnProperty(module_1653.View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let closure_7 = module_1655.createAnimatedComponent(Pressable);
+let closure_7 = module_1653.createAnimatedComponent(Pressable);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_9 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 }, indicatorDot: null };
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj.indicatorDot = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_10 = createStyles.createStyles(obj);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj4 = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_11 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj5 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
 let closure_13 = { code: "(function TabItemNativeTsx1(){let[colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG]=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};})" };
@@ -132,9 +132,9 @@ export function TabItem(arg0) {
   TabItemNativeTsx3.__workletHash = 5168414867841;
   TabItemNativeTsx3.__initData = tmp5;
   let num = 0;
-  const animatedProps = require("module_1655").useAnimatedProps(TabItemNativeTsx3);
+  const animatedProps = require("module_1653").useAnimatedProps(TabItemNativeTsx3);
   const items2 = [tmp2.item, ];
-  let obj = require("module_1655");
+  let obj = require("module_1653");
   if (grow) {
     num = 1;
   }
@@ -142,7 +142,7 @@ export function TabItem(arg0) {
   items2[1] = { flexGrow: num };
   const merged1 = Object.assign(merged);
   obj2.onLayout = function handleLayout(nativeEvent) {
-    _mod1708.scheduleOnUI(c1, c0, nativeEvent.nativeEvent.layout);
+    _mod1706.scheduleOnUI(c1, c0, nativeEvent.nativeEvent.layout);
   };
   obj2.accessibilityRole = "tab";
   const tmp9 = useAnimatedTextStyle({ index, activeIndex, pressed, variant });
@@ -150,9 +150,9 @@ export function TabItem(arg0) {
   const tmp3Result = require("getTabItemA11yName");
   let formatToPlainStringResult;
   if (tmp3Result2.isAndroid()) {
-    const intl = tmp3(1113).intl;
+    const intl = tmp3(1112).intl;
     const obj3 = { position: index + 1, tabCount: itemCount };
-    formatToPlainStringResult = intl.formatToPlainString(tmp3(1113).t["4EsQA1"], obj3);
+    formatToPlainStringResult = intl.formatToPlainString(tmp3(1112).t["4EsQA1"], obj3);
   }
   obj2.accessibilityHint = formatToPlainStringResult;
   obj2.animatedProps = animatedProps;

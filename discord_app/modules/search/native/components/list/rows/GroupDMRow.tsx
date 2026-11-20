@@ -1,12 +1,12 @@
-// === Module 18793: rows/GroupDMRow ===
+// === Module 18617: rows/GroupDMRow ===
 
-// Module 18793 (rows/GroupDMRow)
-import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useChannelNameDefault from "useChannelName" /* 5408 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10001 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 13752 */;
-import SearchListRow from "SearchListRow" /* 18777 */;
+// Module 18617 (rows/GroupDMRow)
+import native from "native" /* 1186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useChannelNameDefault from "useChannelName" /* 5410 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10004 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 13721 */;
+import SearchListRow from "SearchListRow" /* 18601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

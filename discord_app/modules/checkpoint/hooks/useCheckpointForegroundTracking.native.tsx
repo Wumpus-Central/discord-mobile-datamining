@@ -1,12 +1,12 @@
-// === Module 12413: useCheckpointForegroundTracking ===
+// === Module 12383: useCheckpointForegroundTracking ===
 
-// Module 12413 (useCheckpointForegroundTracking)
-import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12399 */;
+// Module 12383 (useCheckpointForegroundTracking)
+import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12369 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
 
 const require = fn;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useCheckpointForegroundTracking.native.tsx");
 

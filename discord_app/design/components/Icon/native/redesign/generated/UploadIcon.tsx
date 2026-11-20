@@ -2,7 +2,7 @@
 
 // Module 9367 (UploadIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9368 from "module_9368" /* 9368 */;
 import noop from "module_19" /* 19 */;
 

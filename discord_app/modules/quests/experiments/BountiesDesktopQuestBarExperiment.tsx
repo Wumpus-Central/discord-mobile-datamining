@@ -1,7 +1,7 @@
-// === Module 9846: BountiesDesktopQuestBarExperiment ===
+// === Module 9848: BountiesDesktopQuestBarExperiment ===
 
-// Module 9846 (BountiesDesktopQuestBarExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 9848 (BountiesDesktopQuestBarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-bounties-desktop-quest-bar", kind: "user", defaultConfig: { enabled: false }, variations: null };

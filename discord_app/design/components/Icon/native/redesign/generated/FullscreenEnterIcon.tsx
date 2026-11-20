@@ -1,9 +1,9 @@
-// === Module 16409: FullscreenEnterIcon ===
+// === Module 16231: FullscreenEnterIcon ===
 
-// Module 16409 (FullscreenEnterIcon)
+// Module 16231 (FullscreenEnterIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod16410 from "module_16410" /* 16410 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod16232 from "module_16232" /* 16232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FullscreenEnterIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16410, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16232, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

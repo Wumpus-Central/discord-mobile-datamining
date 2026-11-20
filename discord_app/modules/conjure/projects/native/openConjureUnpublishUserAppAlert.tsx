@@ -1,11 +1,11 @@
-// === Module 18420: openConjureUnpublishUserAppAlert ===
+// === Module 18174: openConjureUnpublishUserAppAlert ===
 
-// Module 18420 (openConjureUnpublishUserAppAlert)
-import useAlertStore from "useAlertStore" /* 5741 */;
+// Module 18174 (openConjureUnpublishUserAppAlert)
+import useAlertStore from "useAlertStore" /* 5743 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 require = fn;
 function ConjureUnpublishUserAppAlert(project) {
@@ -23,7 +23,7 @@ function ConjureUnpublishUserAppAlert(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -41,7 +41,7 @@ function ConjureUnpublishUserAppAlert(project) {
             importDefault(null);
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp2(12293).unpublishUserApp(id.id), done: false };
+            const obj4 = { value: tmp2(12188).unpublishLiveApp(project), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -53,15 +53,15 @@ function ConjureUnpublishUserAppAlert(project) {
           return obj6;
         } else if (value) {
           const obj7 = { text: null, variant: "success" };
-          const intl2 = tmp2(1113).intl;
+          const intl2 = tmp2(1112).intl;
           const obj8 = { app: closure_129_2 };
-          obj7.text = intl2.formatToPlainString(tmp5(4089).b8LN7N, obj8);
-          tmp5(5474).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
+          obj7.text = intl2.formatToPlainString(tmp5(4091).b8LN7N, obj8);
+          tmp5(5476).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } else {
-          const intl = tmp2(1113).intl;
-          closure_128_0 = intl.string(tmp5(4089)["rE/0SD"]);
+          const intl = tmp2(1112).intl;
+          closure_128_0 = intl.string(tmp5(4091)["rE/0SD"]);
           closure_129_1(closure_128_0);
           const _Error = Error;
           const error = new Error(closure_128_0);
@@ -91,9 +91,14 @@ function ConjureUnpublishUserAppAlert(project) {
   }, items1);
   let obj2 = { title: null, content: null, extraContent: null, actions: null };
   let intl = project(stateFromStores[7]).intl;
-  obj2.title = intl.formatToPlainString(require("module_4089").m8KWic, { app: stateFromStores });
+  obj2.title = intl.formatToPlainString(require("module_4091").m8KWic, { app: stateFromStores });
   let intl2 = project(stateFromStores[7]).intl;
-  obj2.content = intl2.string(require("module_4089").wve4kB);
+  if ("guild" === project.install_scope) {
+    let wve4kB = tmp7(tmp4[8])["6upWvS"];
+  } else {
+    wve4kB = tmp7(tmp4[8]).wve4kB;
+  }
+  obj2.content = intl2.string(wve4kB);
   let tmp6Result;
   if (null != tmp2) {
     let obj3 = { variant: "body-sm/medium", color: "text-feedback-critical", children: tmp2 };
@@ -103,7 +108,7 @@ function ConjureUnpublishUserAppAlert(project) {
   let obj4 = { children: null };
   const obj5 = { variant: "destructive", text: null, onPress: null };
   const intl3 = tmp3(tmp4[7]).intl;
-  obj5.text = intl3.string(require("module_4089").GqcQyH);
+  obj5.text = intl3.string(require("module_4091").GqcQyH);
   obj5.onPress = function submit() {
     const self = this;
     const apply = closure_3.apply;

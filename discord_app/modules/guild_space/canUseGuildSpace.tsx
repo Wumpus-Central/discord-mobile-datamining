@@ -2,13 +2,13 @@
 
 // Module 6725 (canUseGuildSpace)
 import GuildSpaceTypes from "GuildSpaceTypes" /* 6726 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
 

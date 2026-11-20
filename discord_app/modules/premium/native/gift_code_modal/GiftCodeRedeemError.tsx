@@ -1,16 +1,16 @@
-// === Module 11866: GiftCodeRedeemError ===
+// === Module 11808: GiftCodeRedeemError ===
 
-// Module 11866 (GiftCodeRedeemError)
+// Module 11808 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Link from "Link" /* 1503 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6898 */;
-import _modDef11867 from "module_11867" /* 11867 */;
-import _modDef11868 from "module_11868" /* 11868 */;
+import util from "util" /* 1112 */;
+import Link from "Link" /* 1501 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
+import _modDef11809 from "module_11809" /* 11809 */;
+import _modDef11810 from "module_11810" /* 11810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 }, header: { marginTop: 32, textAlign: "center" }, message: { marginTop: 8, textAlign: "center" }, footer: { paddingHorizontal: 24 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,9 +30,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef11867;
+    let tmp8Result = _modDef11809;
   } else {
-    tmp8Result = _modDef11868;
+    tmp8Result = _modDef11810;
   }
   items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), , ];
   const obj4 = { variant: "heading-xl/semibold", style: tmp.header, children: null };

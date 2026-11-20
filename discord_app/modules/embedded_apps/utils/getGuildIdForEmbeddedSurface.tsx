@@ -1,7 +1,7 @@
 // === Module 6795: getGuildIdForEmbeddedSurface ===
 
 // Module 6795 (getGuildIdForEmbeddedSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx");

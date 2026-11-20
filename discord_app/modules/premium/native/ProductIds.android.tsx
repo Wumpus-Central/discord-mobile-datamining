@@ -1,8 +1,8 @@
-// === Module 8051: ProductIds ===
+// === Module 8050: ProductIds ===
 
-// Module 8051 (ProductIds)
-import PremiumConstants from "PremiumConstants" /* 1390 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+// Module 8050 (ProductIds)
+import PremiumConstants from "PremiumConstants" /* 1388 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = PremiumConstants);

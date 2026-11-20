@@ -1,9 +1,9 @@
-// === Module 15848: useOpenChangeAvatarActionSheet ===
+// === Module 15812: useOpenChangeAvatarActionSheet ===
 
-// Module 15848 (useOpenChangeAvatarActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8012 */;
+// Module 15812 (useOpenChangeAvatarActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,7 +64,7 @@ export default function useOpenChangeAvatarActionSheet(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(15850, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(15814, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj2.analyticsLocations = analyticsLocations;
     obj.openLazy(tmp3, "Change Avatar", obj2);

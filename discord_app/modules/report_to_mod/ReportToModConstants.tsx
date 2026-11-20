@@ -1,8 +1,8 @@
-// === Module 11187: ReportToModConstants ===
+// === Module 11129: ReportToModConstants ===
 
-// Module 11187 (ReportToModConstants)
-import Constants from "Constants" /* 1072 */;
-import BigFlagUtils from "BigFlagUtils" /* 1084 */;
+// Module 11129 (ReportToModConstants)
+import Constants from "Constants" /* 1071 */;
+import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

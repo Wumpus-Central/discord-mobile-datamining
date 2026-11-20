@@ -1,8 +1,8 @@
-// === Module 1230: getSystemTheme ===
+// === Module 1229: getSystemTheme ===
 
-// Module 1230 (getSystemTheme)
+// Module 1229 (getSystemTheme)
 import _mod17 from "module_17" /* 17 */;
-import ThemeConstants from "ThemeConstants" /* 1195 */;
+import ThemeConstants from "ThemeConstants" /* 1194 */;
 import size from "module_2" /* 2 */;
 
 const Appearance = _mod17.Appearance;

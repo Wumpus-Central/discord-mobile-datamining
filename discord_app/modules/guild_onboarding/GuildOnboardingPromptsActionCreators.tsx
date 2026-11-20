@@ -1,14 +1,14 @@
-// === Module 7351: GuildOnboardingPromptsActionCreators ===
+// === Module 7350: GuildOnboardingPromptsActionCreators ===
 
-// Module 7351 (GuildOnboardingPromptsActionCreators)
+// Module 7350 (GuildOnboardingPromptsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7352 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7351 */;
 
 require = fn;
 function fetchOnboardingPrompts(guildId) {
@@ -39,7 +39,7 @@ let closure_14 = async function _maybeFetchOnboardingPrompts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -144,10 +144,10 @@ function _trackOnboardingDirectJoin(guildId) {
   obj5.in_onboarding = true;
   obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
 }
-let closure_8 = fn(6701).serverApiResponseToClientState;
-const Constants = fn(1072);
+let closure_8 = fn(6703).serverApiResponseToClientState;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, Endpoints: closure_10, GuildFeatures: closure_11 } = Constants);
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
 let c16 = -2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");

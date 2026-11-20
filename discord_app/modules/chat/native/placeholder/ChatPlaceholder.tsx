@@ -1,23 +1,23 @@
-// === Module 13459: ChatPlaceholder ===
+// === Module 13429: ChatPlaceholder ===
 
-// Module 13459 (ChatPlaceholder)
+// Module 13429 (ChatPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
-import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 6958 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13460 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13461 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13462 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
+import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 6957 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13430 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13431 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13432 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(10320).useChatInputContainerHeight;
+let closure_4 = fn(10262).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { placeholder: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -55,7 +55,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
   ChatPlaceholderTsx1.__workletHash = 13868441581206;
   ChatPlaceholderTsx1.__initData = tmp8;
   _require = undefined;
-  const animatedStyle = require("module_1655").useAnimatedStyle(ChatPlaceholderTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(ChatPlaceholderTsx1);
   _require = callback.useRef([]);
   callback = callback.useCallback((arg0) => {
     let tmp2 = ref.current[arg0];
@@ -69,7 +69,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
     return tmp2;
   }, []);
   const items2 = [height, sum, tmp2, callback];
-  let obj = require("module_1655");
+  let obj = require("module_1653");
   const memo = callback.useMemo(() => {
     let diff;
     items = [];
@@ -89,5 +89,5 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
   const obj2 = { style: null, pointerEvents: "none", children: memo };
   const items3 = [tmp.placeholder, animatedStyle, useChatPlaceholderAnimatedStylesDefault({ visible: true, animated: true })];
   obj2.style = items3;
-  return jsx(_modDef1655.View, { style: null, pointerEvents: "none", children: memo });
+  return jsx(_modDef1653.View, { style: null, pointerEvents: "none", children: memo });
 });

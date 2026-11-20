@@ -1,6 +1,6 @@
-// === Module 18940: profileModalTransition ===
+// === Module 18764: profileModalTransition ===
 
-// Module 18940 (profileModalTransition)
+// Module 18764 (profileModalTransition)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/profileModalTransition.tsx");
 
 export function useReportProfileModalTransition() {
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1500).useNavigation();
   items = [navigation];
   const effect = noop.useEffect(() => {
     function leave() {

@@ -1,8 +1,8 @@
-// === Module 12173: GameOrganizationJoinModalConstants ===
+// === Module 12115: GameOrganizationJoinModalConstants ===
 
-// Module 12173 (GameOrganizationJoinModalConstants)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11834 */;
+// Module 12115 (GameOrganizationJoinModalConstants)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11776 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = GameOrganizationInviteConstants.GAME_ORGANIZATION_JOIN_MODAL_KEY;

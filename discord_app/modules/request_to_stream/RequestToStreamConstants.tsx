@@ -1,7 +1,7 @@
-// === Module 14393: RequestToStreamConstants ===
+// === Module 14361: RequestToStreamConstants ===
 
-// Module 14393 (RequestToStreamConstants)
-import DurationsDefault from "Durations" /* 1089 */;
+// Module 14361 (RequestToStreamConstants)
+import DurationsDefault from "Durations" /* 1088 */;
 
 const result = 10 * DurationsDefault.Millis.MINUTE;
 const result1 = 30 * DurationsDefault.Millis.SECOND;

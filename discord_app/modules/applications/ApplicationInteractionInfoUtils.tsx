@@ -1,8 +1,8 @@
-// === Module 10483: ApplicationInteractionInfoUtils ===
+// === Module 10425: ApplicationInteractionInfoUtils ===
 
-// Module 10483 (ApplicationInteractionInfoUtils)
-import Server from "Server" /* 2119 */;
-import InteractionTypes from "InteractionTypes" /* 5852 */;
+// Module 10425 (ApplicationInteractionInfoUtils)
+import Server from "Server" /* 2117 */;
+import InteractionTypes from "InteractionTypes" /* 5854 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");

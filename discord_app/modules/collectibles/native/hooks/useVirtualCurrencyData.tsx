@@ -1,7 +1,7 @@
 // === Module 9445: useVirtualCurrencyData ===
 
 // Module 9445 (useVirtualCurrencyData)
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7967 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7966 */;
 import _mod9446 from "module_9446" /* 9446 */;
 import noop from "module_19" /* 19 */;
 

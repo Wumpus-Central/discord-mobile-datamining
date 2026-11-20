@@ -1,8 +1,8 @@
 // === Module 9708: GameProfileReviewUtils ===
 
 // Module 9708 (GameProfileReviewUtils)
-import util from "util" /* 1113 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2162 */;
+import util from "util" /* 1112 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2160 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
 import SteamReleaseStatus from "SteamReleaseStatus" /* 9661 */;
 import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9709 */;

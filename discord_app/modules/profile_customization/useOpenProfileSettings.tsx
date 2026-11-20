@@ -2,13 +2,13 @@
 
 // Module 9304 (useOpenProfileSettings)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 1072 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
+import Constants from "Constants" /* 1071 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1081 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9307 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9305 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8013 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8012 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;

@@ -1,16 +1,16 @@
-// === Module 11971: SuspiciousDownloadActionSheet ===
+// === Module 11913: SuspiciousDownloadActionSheet ===
 
-// Module 11971 (SuspiciousDownloadActionSheet)
+// Module 11913 (SuspiciousDownloadActionSheet)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import openURLDefault from "openURL" /* 5467 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import openURLDefault from "openURL" /* 5469 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { padding: nativeDefault.space.PX_12 }, title: { textAlign: "center" }, body: { textAlign: "center" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,36 +24,36 @@ export default function SuspiciousDownloadActionSheet(href) {
   items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items;
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(7234).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [closure_3(href(7233).TrafficConeSpotIllustration, {}), , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = href(1113).intl;
-  obj4.children = intl.string(href(1113).t.XtDo9Z);
-  items1[1] = closure_3(href(5383).Text, obj4);
+  const intl = href(1112).intl;
+  obj4.children = intl.string(href(1112).t.XtDo9Z);
+  items1[1] = closure_3(href(5385).Text, obj4);
   const obj5 = { style: tmp.body, variant: "body-md/medium", children: null };
-  const intl2 = href(1113).intl;
-  obj5.children = intl2.string(href(1113).t.L9yFko);
-  items1[2] = closure_3(href(5383).Text, obj5);
+  const intl2 = href(1112).intl;
+  obj5.children = intl2.string(href(1112).t.L9yFko);
+  items1[2] = closure_3(href(5385).Text, obj5);
   obj3.children = items1;
-  const items2 = [closure_4(href(5808).Stack, obj3), ];
+  const items2 = [closure_4(href(5810).Stack, obj3), ];
   const obj6 = { spacing: 8, children: null };
   const obj7 = { text: null, onPress: null };
-  const intl3 = href(1113).intl;
-  obj7.text = intl3.string(href(1113).t.j7Vi2i);
+  const intl3 = href(1112).intl;
+  obj7.text = intl3.string(href(1112).t.j7Vi2i);
   obj7.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  const items3 = [closure_3(href(5390).Button, obj7), ];
+  const items3 = [closure_3(href(5392).Button, obj7), ];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
-  const intl4 = href(1113).intl;
-  obj8.text = intl4.string(href(1113).t["/bHu89"]);
+  const intl4 = href(1112).intl;
+  obj8.text = intl4.string(href(1112).t["/bHu89"]);
   obj8.onPress = function handleContinue() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openURLDefault(href, true);
   };
-  items3[1] = closure_3(href(5390).Button, obj8);
+  items3[1] = closure_3(href(5392).Button, obj8);
   obj6.children = items3;
-  items2[1] = closure_4(href(5808).Stack, obj6);
+  items2[1] = closure_4(href(5810).Stack, obj6);
   obj2.children = items2;
-  obj.children = closure_4(href(5808).Stack, obj2);
-  return closure_3(href(5020).BottomSheet, obj);
+  obj.children = closure_4(href(5810).Stack, obj2);
+  return closure_3(href(5022).BottomSheet, obj);
 };

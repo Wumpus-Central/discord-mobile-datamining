@@ -2,8 +2,8 @@
 
 // Module 9635 (GuildBadgeV2)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import shared from "shared" /* 4799 */;
+import native from "native" /* 1186 */;
+import shared from "shared" /* 4801 */;
 import GuildTraits from "GuildTraits" /* 9633 */;
 import BadgeCategory from "BadgeCategory" /* 9634 */;
 import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 9636 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");

@@ -1,20 +1,20 @@
-// === Module 16466: restoreHexagonCampaignPerks ===
+// === Module 16288: restoreHexagonCampaignPerks ===
 
-// Module 16466 (restoreHexagonCampaignPerks)
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4820 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4851 */;
-import AppIconUtils from "AppIconUtils" /* 13958 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 15766 */;
-import getAppliedHexagonCampaignPerks from "getAppliedHexagonCampaignPerks" /* 16460 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16461 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16462 */;
-import saveHexagonCampaignDisplayNameStyles from "saveHexagonCampaignDisplayNameStyles" /* 16465 */;
+// Module 16288 (restoreHexagonCampaignPerks)
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4822 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4853 */;
+import AppIconUtils from "AppIconUtils" /* 13927 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 15730 */;
+import getAppliedHexagonCampaignPerks from "getAppliedHexagonCampaignPerks" /* 16282 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16283 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16284 */;
+import saveHexagonCampaignDisplayNameStyles from "saveHexagonCampaignDisplayNameStyles" /* 16287 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
-import UserStore from "UserStore" /* 1388 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15549 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
+import UserStore from "UserStore" /* 1386 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15513 */;
 
 require = fn;
 function restoreHexagonCampaignPerk(CLIENT_THEME, arg1) {
@@ -93,7 +93,7 @@ let closure_12 = async function _restoreExpiredHexagonCampaignPerks() {
   const _Boolean = Boolean;
   return value.every(Boolean);
 };
-const HexagonCampaignConstants = fn(4817);
+const HexagonCampaignConstants = fn(4819);
 ({ DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/restoreHexagonCampaignPerks.tsx");

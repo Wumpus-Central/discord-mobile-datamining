@@ -1,13 +1,13 @@
-// === Module 7924: LiveStageNotificationsUtils ===
+// === Module 7923: LiveStageNotificationsUtils ===
 
-// Module 7924 (LiveStageNotificationsUtils)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5413 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 7923 (LiveStageNotificationsUtils)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5415 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
 

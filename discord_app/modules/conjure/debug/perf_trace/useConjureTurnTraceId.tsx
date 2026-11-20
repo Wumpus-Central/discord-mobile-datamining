@@ -1,6 +1,6 @@
-// === Module 18528: useConjureTurnTraceId ===
+// === Module 18352: useConjureTurnTraceId ===
 
-// Module 18528 (useConjureTurnTraceId)
+// Module 18352 (useConjureTurnTraceId)
 import ConjureDebugStore from "ConjureDebugStore" /* 6849 */;
 
 const require = globalThis.__r;

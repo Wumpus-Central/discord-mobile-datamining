@@ -1,6 +1,6 @@
-// === Module 17391: useSecureFramesUserVerifiedKeys ===
+// === Module 17218: useSecureFramesUserVerifiedKeys ===
 
-// Module 17391 (useSecureFramesUserVerifiedKeys)
+// Module 17218 (useSecureFramesUserVerifiedKeys)
 import applyDefault from "apply" /* 12 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9571 */;
 

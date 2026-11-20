@@ -1,29 +1,29 @@
-// === Module 19397: useControlsButtons ===
+// === Module 19217: useControlsButtons ===
 
-// Module 19397 (useControlsButtons)
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10605 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19301 */;
-import VoicePanelMicButton from "VoicePanelMicButton" /* 19398 */;
-import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19401 */;
-import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19407 */;
-import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19409 */;
-import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19411 */;
-import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19412 */;
-import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19413 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19416 */;
-import VoicePanelRaiseHandButtonDefault from "VoicePanelRaiseHandButton" /* 19417 */;
-import VoicePanelStageAudienceButtonDefault from "VoicePanelStageAudienceButton" /* 19418 */;
-import VoicePanelLeaveStageButtonDefault from "VoicePanelLeaveStageButton" /* 19420 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19421 */;
+// Module 19217 (useControlsButtons)
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10547 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19121 */;
+import VoicePanelMicButton from "VoicePanelMicButton" /* 19218 */;
+import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19221 */;
+import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19227 */;
+import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19229 */;
+import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19231 */;
+import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19232 */;
+import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19233 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19236 */;
+import VoicePanelRaiseHandButtonDefault from "VoicePanelRaiseHandButton" /* 19237 */;
+import VoicePanelStageAudienceButtonDefault from "VoicePanelStageAudienceButton" /* 19238 */;
+import VoicePanelLeaveStageButtonDefault from "VoicePanelLeaveStageButton" /* 19240 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19241 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
-const useStateFromSharedValueDefault = tmp(10536);
+const useStateFromSharedValueDefault = tmp(10478);
 require = fn;
 function getButtons(c1, stateFromStores, c2, memo) {
   if (c1) {
@@ -113,9 +113,9 @@ function getButtons(c1, stateFromStores, c2, memo) {
     arr2 = items1;
   }
 }
-const VoicePanelControlsConstants = fn(11686);
+const VoicePanelControlsConstants = fn(11628);
 ({ CONTROLS_BUTTON_SIZE_LARGE: closure_6, CONTROLS_BUTTON_SIZE_NORMAL: metroImportDefault } = VoicePanelControlsConstants);
-const InputModes = fn(1072).InputModes;
+const InputModes = fn(1071).InputModes;
 const jsx = fn(21).jsx;
 const redux = {
   mic(key, arg1) {
@@ -222,7 +222,7 @@ export default function useControlsButtons() {
   useControlsButtonsTsx1.__closure = items5;
   useControlsButtonsTsx1.__workletHash = 5736026634823;
   useControlsButtonsTsx1.__initData = tmp13;
-  const derivedValue = require("module_1655").useDerivedValue(useControlsButtonsTsx1);
+  const derivedValue = require("module_1653").useDerivedValue(useControlsButtonsTsx1);
   const tmp18 = useStateFromSharedValueDefault(derivedValue);
   constants = tmp18;
   const items6 = [tmp4, stateFromStores, tmp18, treatment, memo];

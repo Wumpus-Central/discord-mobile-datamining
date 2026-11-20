@@ -1,13 +1,13 @@
-// === Module 11914: loadConjureSharedProject ===
+// === Module 11856: loadConjureSharedProject ===
 
-// Module 11914 (loadConjureSharedProject)
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6538 */;
+// Module 11856 (loadConjureSharedProject)
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6540 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
 import conjureProjectLink from "conjureProjectLink" /* 8779 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11908 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11850 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_11 = async function _load(arg0, arg1, arg2) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -190,7 +190,7 @@ let closure_12 = async function _resolveStatus(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -346,7 +346,7 @@ let closure_12 = async function _resolveStatus(arg0) {
 function dispatchStatus(linkCode, status) {
   Dispatcher.dispatch({ type: "CONJURE_SHARED_PROJECT_STATUS", linkCode, status });
 }
-const AbortCodes = fn(1072).AbortCodes;
+const AbortCodes = fn(1071).AbortCodes;
 const subscription = Dispatcher.subscribe("LOGOUT", resetSessionLoads);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/loadConjureSharedProject.tsx");

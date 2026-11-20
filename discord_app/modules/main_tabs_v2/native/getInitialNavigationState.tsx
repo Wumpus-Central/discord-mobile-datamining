@@ -1,16 +1,16 @@
-// === Module 4970: getInitialNavigationState ===
+// === Module 4972: getInitialNavigationState ===
 
-// Module 4970 (getInitialNavigationState)
+// Module 4972 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
-import router_utils from "router_utils" /* 1099 */;
-import matchPathCompat from "matchPathCompat" /* 4830 */;
-import RouteUtils from "RouteUtils" /* 4843 */;
-import useChatLayout from "useChatLayout" /* 4971 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4974 */;
+import router_utils from "router_utils" /* 1098 */;
+import matchPathCompat from "matchPathCompat" /* 4832 */;
+import RouteUtils from "RouteUtils" /* 4845 */;
+import useChatLayout from "useChatLayout" /* 4973 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4829 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4831 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 
 require = fn;
 function getInitialGuildState(guildId, channelId, flag) {
@@ -145,7 +145,7 @@ function computeInitialNavigationStateWithoutLogging() {
     return items3;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ME: closure_6, Routes: metroImportDefault } = Constants);
 const logger = new LoggerDefault("getInitialNavigationState");
 const size = fn(2);

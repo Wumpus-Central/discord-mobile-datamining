@@ -1,26 +1,26 @@
-// === Module 19398: VoicePanelMicButton ===
+// === Module 19218: VoicePanelMicButton ===
 
-// Module 19398 (VoicePanelMicButton)
+// Module 19218 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
 import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9562 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10810 */;
-import useMuteStates from "useMuteStates" /* 10923 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 10947 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10948 */;
-import useDeafStates from "useDeafStates" /* 10979 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10752 */;
+import useMuteStates from "useMuteStates" /* 10865 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 10889 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10890 */;
+import useDeafStates from "useDeafStates" /* 10921 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5534 */;
-import ImpersonateStore from "ImpersonateStore" /* 4697 */;
+import GameConsoleStore from "GameConsoleStore" /* 5536 */;
+import ImpersonateStore from "ImpersonateStore" /* 4699 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import UserStore from "UserStore" /* 1386 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_17 = createStyles.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
 let closure_18 = { code: "(function VoicePanelMicButtonTsx1(event,manager){let[State,scheduleOnRN,handleDragStart]=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();scheduleOnRN(handleDragStart);})" };
 let closure_19 = { code: "(function VoicePanelMicButtonTsx2(){let[scheduleOnRN,handlePTTEnd]=this.__closure;scheduleOnRN(handlePTTEnd);})" };
@@ -51,12 +51,12 @@ export function PTTButton(arg0) {
   closure_129_0 = channelId;
   closure_129_1 = noop.useRef(null);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  items = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1, onPressIn];
+  items = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1, onPressIn, UserStore];
   let items1 = [channelId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(mute);
     if (null != channel) {
-      const obj = { channel, authenticationStore: AuthenticationStore, voiceStateStore: VoiceStateStore, mediaEngineStore: MediaEngineStore, permissionStore: PermissionStore, impersonateStore: ImpersonateStore };
+      const obj = { channel, AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore };
       let muteStates = useMuteStates.getMuteStates(obj);
     } else {
       muteStates = { selfMute: false, suppress: false, mute: false };
@@ -110,7 +110,7 @@ export function PTTButton(arg0) {
     onPress2 = tmp9;
   }
   const obj3 = require("initialize");
-  sharedValue = require("module_1655").useSharedValue(false);
+  sharedValue = require("module_1653").useSharedValue(false);
   const tmp11 = onPress2(sharedValue[19])();
   _slicedToArray = tmp11;
   noop = obj.useRef({ active: false, dragging: false });
@@ -157,7 +157,7 @@ export function PTTButton(arg0) {
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    items = [closure_18, LegacyBaseButton.State, _mod1708.scheduleOnRN, callback3];
+    items = [closure_18, LegacyBaseButton.State, _mod1706.scheduleOnRN, callback3];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -179,7 +179,7 @@ export function PTTButton(arg0) {
     VoicePanelMicButtonTsx1.__workletHash = 6924573797989;
     VoicePanelMicButtonTsx1.__initData = tmp3;
     const manualActivationResult = Gesture.Pan().manualActivation(true);
-    const items2 = [closure_19, _mod1708.scheduleOnRN, callback1];
+    const items2 = [closure_19, _mod1706.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -196,7 +196,7 @@ export function PTTButton(arg0) {
     return Gesture.Pan().manualActivation(true).onTouchesMove(VoicePanelMicButtonTsx1).onFinalize(VoicePanelMicButtonTsx2);
   }, items8);
   const effect = obj.useEffect(() => () => callback1(), items9);
-  const tmp6Result = require("module_1655");
+  const tmp6Result = require("module_1653");
   const voicePanelButtonStyles = require("VoicePanelStyles").useVoicePanelButtonStyles(wrapperSpecs);
   const obj4 = { gesture: memo, children: null };
   const element = { onPressIn, onPressOut: callback2, props, pressed: sharedValue, accessibilityLabel: null, style: null, children: null };
@@ -230,12 +230,12 @@ export function MicButton(arg0) {
   const channelId = noop.useContext(dominantMuteState(voicePanelButtonStyles[17])).channelId;
   closure_129_0 = channelId;
   closure_129_1 = noop.useRef(null);
-  items = [ChannelStore, AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore, GameConsoleStore];
+  items = [ChannelStore, AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore, GameConsoleStore, UserStore];
   const items1 = [channelId];
   const stateFromStoresObject = mute(voicePanelButtonStyles[13]).useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(mute);
     if (null != channel) {
-      const obj = { channel, authenticationStore: AuthenticationStore, voiceStateStore: VoiceStateStore, mediaEngineStore: MediaEngineStore, permissionStore: PermissionStore, impersonateStore: ImpersonateStore };
+      const obj = { channel, AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore };
       let muteStates = useMuteStates.getMuteStates(obj);
     } else {
       muteStates = { selfMute: false, suppress: false, mute: false };

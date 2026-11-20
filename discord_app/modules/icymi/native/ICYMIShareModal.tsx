@@ -1,18 +1,18 @@
-// === Module 18188: ICYMIShareModal ===
+// === Module 18015: ICYMIShareModal ===
 
-// Module 18188 (ICYMIShareModal)
+// Module 18015 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import ShareEventUtils from "ShareEventUtils" /* 7471 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 9973 */;
-import ShareChatInputDefault from "ShareChatInput" /* 9995 */;
+import util from "util" /* 1112 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import ShareEventUtils from "ShareEventUtils" /* 7470 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 9976 */;
+import ShareChatInputDefault from "ShareChatInput" /* 9998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ class ICYMIShareModal {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ class ICYMIShareModal {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -161,7 +161,7 @@ class ICYMIShareModal {
                       return obj;
                     }
                     c1 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   } catch (tmp17) {
                     c1 = tmp;
                     throw tmp17;
@@ -181,7 +181,7 @@ class ICYMIShareModal {
             })());
             tmp3(tmp2[19]).pop();
             c4 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           c4 = tmp;
@@ -241,12 +241,12 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const AbortCodes = fn(1072).AbortCodes;
+const AbortCodes = fn(1071).AbortCodes;
 const UserRowModes = fn(9526).UserRowModes;
-const MessageSendLocation = fn(4797).MessageSendLocation;
+const MessageSendLocation = fn(4799).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { footer: { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -284,7 +284,7 @@ export function GameShareModal(content) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18189).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18016).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {
@@ -316,9 +316,9 @@ export function GameShareModal(content) {
             tmp12 = closure_129_1.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
           }
           closure_129_0 = tmp12;
-          const intl = entry(1113).intl;
+          const intl = entry(1112).intl;
           const string = intl.string;
-          let t = entry(1113).t;
+          let t = entry(1112).t;
           if (closure_129_0) {
             let stringResult = string(t.BC5vfD);
           } else {

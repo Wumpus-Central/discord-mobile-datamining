@@ -1,23 +1,23 @@
-// === Module 15823: usePremiumTryItOutPresetShuffle ===
+// === Module 15787: usePremiumTryItOutPresetShuffle ===
 
-// Module 15823 (usePremiumTryItOutPresetShuffle)
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import shared from "shared" /* 4799 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7291 */;
+// Module 15787 (usePremiumTryItOutPresetShuffle)
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import shared from "shared" /* 4801 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7290 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8790 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 15749 */;
-import TryItOutPresets from "TryItOutPresets" /* 15824 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 15713 */;
+import TryItOutPresets from "TryItOutPresets" /* 15788 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8013 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8012 */;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
 
 export default function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5001)();
+  const tmp = callback(5003)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   require = isThemeLightResult;
   items = [isThemeLightResult];
@@ -26,7 +26,7 @@ export default function usePremiumTryItOutPresetShuffle() {
     const obj2 = { banner: null, themeColors: null, displayNameStyles: null, lastPreset: null };
     const obj3 = UserProfileActionCreators;
     const obj5 = ProfilePendingImageUtils;
-    obj2.banner = obj5.createPendingImage({ assetOrigin: ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET, imageUri: tryItOutPresetConfig.getBannerSrc(false), staticImageUri: tryItOutPresetConfig.getBannerSrc(true), description: tryItOutPresetConfig.getBannerAltText(), originalAsset: "fileFinishedImporting" });
+    obj2.banner = obj5.createPendingImage({ assetOrigin: ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET, imageUri: tryItOutPresetConfig.getBannerSrc(false), staticImageUri: tryItOutPresetConfig.getBannerSrc(true), description: tryItOutPresetConfig.getBannerAltText(), originalAsset: "fill" });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;
     obj2.displayNameStyles = tryItOutPresetConfig.displayNameStyles;

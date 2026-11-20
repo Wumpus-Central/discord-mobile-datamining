@@ -1,11 +1,11 @@
 // === Module 9287: navigateToSocialLayerStorefront ===
 
 // Module 9287 (navigateToSocialLayerStorefront)
-import router_utils from "router_utils" /* 1099 */;
+import router_utils from "router_utils" /* 1098 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6728 */;
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9288 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildStore from "GuildStore" /* 4665 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6730 */;
 
 require = fn;
@@ -30,7 +30,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (2 === tmp5) {
@@ -139,7 +139,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_6, Routes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");

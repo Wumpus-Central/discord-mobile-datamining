@@ -1,9 +1,9 @@
-// === Module 18094: NotificationCenterPermissionNudge ===
+// === Module 17921: NotificationCenterPermissionNudge ===
 
-// Module 18094 (NotificationCenterPermissionNudge)
+// Module 17921 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16944 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16768 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -16,29 +16,29 @@ function NotificationCenterBannerImpl(onDismiss) {
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   }, []);
   let obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconContainer, children: closure_14(onDismiss(10302).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }) };
+  const obj2 = { style: tmp.iconContainer, children: closure_14(onDismiss(10244).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }) };
   items = [closure_14(View, obj2), , ];
   const obj4 = { style: tmp.contentContainer, children: null };
   const obj5 = { variant: "body-md/semibold", color: "text-default", children: null };
-  const intl = onDismiss(1113).intl;
-  obj5.children = intl.string(onDismiss(1113).t.G6YBna);
-  const items1 = [closure_14(onDismiss(5383).Text, obj5), , ];
+  const intl = onDismiss(1112).intl;
+  obj5.children = intl.string(onDismiss(1112).t.G6YBna);
+  const items1 = [closure_14(onDismiss(5385).Text, obj5), , ];
   const obj6 = { variant: "body-md/medium", color: "text-muted", style: null, children: null };
   const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
   obj6.style = { marginTop: nativeDefault.space.PX_4 };
-  const intl2 = onDismiss(1113).intl;
-  obj6.children = intl2.string(onDismiss(1113).t["9CoPDE"]);
-  items1[1] = closure_14(onDismiss(5383).Text, obj6);
+  const intl2 = onDismiss(1112).intl;
+  obj6.children = intl2.string(onDismiss(1112).t["9CoPDE"]);
+  items1[1] = closure_14(onDismiss(5385).Text, obj6);
   const obj8 = { style: tmp.ctaButton, children: null };
   const obj9 = { variant: "primary", size: "md", text: null, onPress: null };
-  const intl3 = onDismiss(1113).intl;
-  obj9.text = intl3.string(onDismiss(1113).t.a4bgO0);
+  const intl3 = onDismiss(1112).intl;
+  obj9.text = intl3.string(onDismiss(1112).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(13191).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-    const obj = onDismiss(13191);
+    const pushNotificationPermission = onDismiss(13161).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+    const obj = onDismiss(13161);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   };
-  obj8.children = closure_14(onDismiss(5390).Button, obj9);
+  obj8.children = closure_14(onDismiss(5392).Button, obj9);
   items1[2] = closure_14(View, obj8);
   obj4.children = items1;
   items[1] = closure_15(View, obj4);
@@ -52,24 +52,24 @@ function NotificationCenterBannerImpl(onDismiss) {
     accessibilityLabel: null,
     children: null
   };
-  const intl4 = onDismiss(1113).intl;
-  obj10.accessibilityLabel = intl4.string(onDismiss(1113).t.WAI6xu);
-  obj10.children = closure_14(onDismiss(7032).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = closure_14(onDismiss(6911).PressableHighlight, obj10);
+  const intl4 = onDismiss(1112).intl;
+  obj10.accessibilityLabel = intl4.string(onDismiss(1112).t.WAI6xu);
+  obj10.children = closure_14(onDismiss(7031).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = closure_14(onDismiss(6910).PressableHighlight, obj10);
   obj.children = items;
   return closure_15(View, obj);
 }
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, NOOP: closure_8 } = Constants);
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
-const NotificationPermissionConstants = fn(13190);
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const NotificationPermissionConstants = fn(13160);
 ({ EventActionType: closure_10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flexDirection: "row", paddingLeft: 24, paddingRight: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, gap: 16 }, contentContainer: { flex: 1 }, iconContainer: null, ctaButton: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
 obj2.iconContainer = size;
@@ -87,7 +87,7 @@ export default function NotificationCenterPermissionNudge() {
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
     if (canSeePushNotificationNudge) {
-      prop = tmp2(4625).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
+      prop = tmp2(4627).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
   const tmp5 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);

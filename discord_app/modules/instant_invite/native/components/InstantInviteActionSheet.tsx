@@ -1,20 +1,20 @@
-// === Module 7945: InstantInviteActionSheet ===
+// === Module 7944: InstantInviteActionSheet ===
 
-// Module 7945 (InstantInviteActionSheet)
+// Module 7944 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5512 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7932 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 7946 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 13102 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5514 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7931 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 7945 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 13072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4646 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 7934 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import StageInstanceStore from "StageInstanceStore" /* 4648 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 7933 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 require = fn;
 function Loading() {
@@ -33,10 +33,10 @@ function Loading() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;

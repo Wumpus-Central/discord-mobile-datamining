@@ -1,16 +1,16 @@
-// === Module 10308: InAppReportsSettingsUpsellsElement ===
+// === Module 10250: InAppReportsSettingsUpsellsElement ===
 
-// Module 10308 (InAppReportsSettingsUpsellsElement)
+// Module 10250 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5353 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 10057 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 10296 */;
-import SettingsIcon from "SettingsIcon" /* 10309 */;
+import useMountEffectDefault from "useMountEffect" /* 5355 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 10060 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 10238 */;
+import SettingsIcon from "SettingsIcon" /* 10251 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 function SettingsUpsellsTableRow(arg0) {
@@ -36,11 +36,11 @@ function SettingsUpsellsTableRow(arg0) {
   return closure_9(InAppReportsUpsellsTableRowDefault, obj);
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, settingsContainer: null, goToSettingsText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };

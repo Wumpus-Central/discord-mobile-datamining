@@ -1,10 +1,10 @@
 // === Module 8908: Nameplate ===
 
 // Module 8908 (Nameplate)
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
 function NameplateInner(isFocused) {
@@ -46,22 +46,22 @@ function NameplateInner(isFocused) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
   let obj = require("initialize");
-  const tmp6 = sharedValue(5001)();
+  const tmp6 = sharedValue(5003)();
   let num = 1;
   if (flag6) {
     num = 0;
   }
-  sharedValue = require("module_1655").useSharedValue(num);
+  sharedValue = require("module_1653").useSharedValue(num);
   const items1 = [sharedValue, flag6];
   const effect = noop.useEffect(() => {
     if (c0) {
       const obj2 = { duration: 100, easing: null };
-      const Easing = _mod1655.Easing;
-      obj2.easing = Easing.in(_mod1655.Easing.ease);
+      const Easing = _mod1653.Easing;
+      obj2.easing = Easing.in(_mod1653.Easing.ease);
       const result = sharedValue.set(timing_timing.withTiming(1, obj2));
     }
   }, items1);
-  let obj2 = require("module_1655");
+  let obj2 = require("module_1653");
   const items2 = [closure_8, sharedValue];
   _require = undefined;
   [tmp9, tmp10] = items2;
@@ -75,8 +75,8 @@ function NameplateInner(isFocused) {
   NameplateTsx1.__closure = items3;
   NameplateTsx1.__workletHash = 2118555458479;
   NameplateTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1655").useAnimatedStyle(NameplateTsx1);
-  const tmpResult = require("module_1655");
+  const animatedStyle = require("module_1653").useAnimatedStyle(NameplateTsx1);
+  const tmpResult = require("module_1653");
   const backgroundGradientColors = require("utils").getBackgroundGradientColors(nameplate.palette, tmp6);
   const tmpResult3 = require("utils");
   const nameplateAssets = require("NameplateUtils").getNameplateAssets(nameplate);
@@ -110,16 +110,16 @@ function NameplateInner(isFocused) {
     const items5 = [, ];
     ({ left: arr6[0], right: arr6[1] } = backgroundGradientColors);
     obj4.colors = items5;
-    tmp17Result = closure_5(tmp5(5347), obj4);
-    const tmp5Result = tmp5(5347);
+    tmp17Result = closure_5(tmp5(5349), obj4);
+    const tmp5Result = tmp5(5349);
   }
-  const items6 = [tmp17Result, closure_5(sharedValue(5479), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image", enableAnimation: tmp14 })];
+  const items6 = [tmp17Result, closure_5(sharedValue(5481), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image", enableAnimation: tmp14 })];
   obj3.children = items6;
-  return closure_6(sharedValue(1655).View, obj3);
+  return closure_6(sharedValue(1653).View, obj3);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = { container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 }, gradient: null, img: null };
   let num = 1;

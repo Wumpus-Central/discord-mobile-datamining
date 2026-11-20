@@ -1,14 +1,14 @@
-// === Module 9777: StorefrontCollectionActionCreators ===
+// === Module 9779: StorefrontCollectionActionCreators ===
 
-// Module 9777 (StorefrontCollectionActionCreators)
+// Module 9779 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StoreUtils from "StoreUtils" /* 6238 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8052 */;
-import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8053 */;
+import StoreUtils from "StoreUtils" /* 6240 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8051 */;
+import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8052 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
 import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8849 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7973 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7972 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -22,7 +22,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -241,7 +241,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -350,7 +350,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionPageFetchedAt <= closure_130_19) {
                         c7 = 3;
-                        return { value: "HermesInternal", done: "+60" };
+                        return { value: "HermesInternal", done: null };
                       }
                     }
                   }
@@ -450,7 +450,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -502,7 +502,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionsAfterFetchedAt <= TWELVE_HOURS_MS) {
                         c6 = 3;
-                        return { value: "HermesInternal", done: "+60" };
+                        return { value: "HermesInternal", done: null };
                       }
                     }
                   }
@@ -571,7 +571,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -653,7 +653,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
                       }
                     }
                     c6 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 }
                 c4 = 1;
@@ -725,7 +725,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 

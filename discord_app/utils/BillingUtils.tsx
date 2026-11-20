@@ -1,10 +1,10 @@
-// === Module 4605: BillingUtils ===
+// === Module 4607: BillingUtils ===
 
-// Module 4605 (BillingUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import BraintreeUtils from "BraintreeUtils" /* 4607 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4613 */;
+// Module 4607 (BillingUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import BraintreeUtils from "BraintreeUtils" /* 4609 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4615 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,8 +70,8 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const StripeErrorTypes = fn(4606).StripeErrorTypes;
-const PaymentGateways = fn(1083).PaymentGateways;
+const StripeErrorTypes = fn(4608).StripeErrorTypes;
+const PaymentGateways = fn(1082).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 

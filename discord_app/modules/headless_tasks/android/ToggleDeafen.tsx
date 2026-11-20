@@ -1,10 +1,10 @@
-// === Module 20267: ToggleDeafen ===
+// === Module 20087: ToggleDeafen ===
 
-// Module 20267 (ToggleDeafen)
-import VoiceActionUtils from "VoiceActionUtils" /* 10947 */;
-import useDeafStates from "useDeafStates" /* 10979 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 20264 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 20087 (ToggleDeafen)
+import VoiceActionUtils from "VoiceActionUtils" /* 10889 */;
+import useDeafStates from "useDeafStates" /* 10921 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 20084 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 const size = fn(2);

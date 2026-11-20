@@ -3,11 +3,11 @@
 // Module 9277 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import Constants from "Constants" /* 1072 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import Constants from "Constants" /* 1071 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 9278 */;
-import createStyles from "createStyles" /* 4792 */;
+import createStyles from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const HorizontalGradient = Constants.HorizontalGradient;

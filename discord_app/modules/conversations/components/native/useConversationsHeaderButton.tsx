@@ -1,17 +1,17 @@
-// === Module 8509: useConversationsHeaderButton ===
+// === Module 8508: useConversationsHeaderButton ===
 
-// Module 8509 (useConversationsHeaderButton)
-import util from "util" /* 1113 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 8512 */;
-import PaperIcon from "PaperIcon" /* 8516 */;
+// Module 8508 (useConversationsHeaderButton)
+import util from "util" /* 1112 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 8511 */;
+import PaperIcon from "PaperIcon" /* 8515 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8221 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8220 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(5416);
+const ConversationConstants = fn(5418);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: closure_6, MOBILE_PREVIEW_MESSAGE_COUNT: metroImportDefault } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
@@ -47,7 +47,7 @@ export function useConversationsHeaderButton(channel) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

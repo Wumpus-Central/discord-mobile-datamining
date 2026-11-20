@@ -1,8 +1,8 @@
-// === Module 5549: Frecency ===
+// === Module 5551: Frecency ===
 
-// Module 5549 (Frecency)
+// Module 5551 (Frecency)
 import applyDefault from "apply" /* 12 */;
-import _modDef2169 from "module_2169" /* 2169 */;
+import _modDef2167 from "module_2167" /* 2167 */;
 import size from "module_2" /* 2 */;
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
@@ -187,7 +187,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 };
 prototype["compute"] = function compute() {
   const self = this;
-  dependencyMap = _modDef2169();
+  dependencyMap = _modDef2167();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     const _Object = Object;
@@ -204,7 +204,7 @@ prototype["compute"] = function compute() {
         if (arg1 >= self.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef2169(arg0), "days"));
+          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef2167(arg0), "days"));
         }
       });
       if (recentUses.score > 0) {

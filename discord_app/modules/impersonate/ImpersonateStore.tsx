@@ -1,18 +1,18 @@
-// === Module 4697: ImpersonateStore ===
+// === Module 4699: ImpersonateStore ===
 
-// Module 4697 (ImpersonateStore)
+// Module 4699 (ImpersonateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtilsAll from "FlagUtils" /* 1406 */;
-import FunctionUtils from "FunctionUtils" /* 2161 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 4703 */;
-import GuildRoleStore from "GuildRoleStore" /* 4698 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import FlagUtilsAll from "FlagUtils" /* 1404 */;
+import FunctionUtils from "FunctionUtils" /* 2159 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 4705 */;
+import GuildRoleStore from "GuildRoleStore" /* 4700 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
-const GuildSettingsSections = fn(1072).GuildSettingsSections;
-let closure_7 = fn(1082).ChannelNotificationSettingsFlags;
+const GuildSettingsSections = fn(1071).GuildSettingsSections;
+let closure_7 = fn(1081).ChannelNotificationSettingsFlags;
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {
@@ -191,7 +191,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp6.type === overrides(4703).ImpersonateType.NEW_MEMBER) {
+          if (tmp6.type === overrides(4705).ImpersonateType.NEW_MEMBER) {
             optInChannels = tmp6.optInChannels;
             if (optInChannels == null) {
               const _Set = Set;
@@ -271,7 +271,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
         }
         let tmp3 = null != flags;
         if (tmp3) {
-          tmp3 = tmp2.type === guildId(4703).ImpersonateType.NEW_MEMBER;
+          tmp3 = tmp2.type === guildId(4705).ImpersonateType.NEW_MEMBER;
         }
         flag = true;
         if (tmp3) {

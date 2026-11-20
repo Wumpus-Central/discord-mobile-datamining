@@ -1,20 +1,20 @@
-// === Module 15339: ? ===
+// === Module 15303: ? ===
 
-// Module 15339
-import AssetJsonUtils from "AssetJsonUtils" /* 1117 */;
-import _mod15340 from "module_15340" /* 15340 */;
-import module_1152_mod from "module_1152" /* 1152 */;
+// Module 15303
+import AssetJsonUtils from "AssetJsonUtils" /* 1116 */;
+import _mod15304 from "module_15304" /* 15304 */;
+import module_1151_mod from "module_1151" /* 1151 */;
 import size from "module_2" /* 2 */;
 
-let module_1152 = module_1152_mod;
-const loader = module_1152.createLoader({
+let module_1151 = module_1151_mod;
+const loader = module_1151.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15340);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15304);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1152 = module_1152_mod;
-const messagesProxy = module_1152.makeMessagesProxy(loader);
+let module_1151 = module_1151_mod;
+const messagesProxy = module_1151.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("intl/messages/untranslated.messages.js");
 
 export default messagesProxy;

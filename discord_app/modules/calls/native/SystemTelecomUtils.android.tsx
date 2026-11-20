@@ -1,10 +1,10 @@
-// === Module 15566: SystemTelecomUtils ===
+// === Module 15530: SystemTelecomUtils ===
 
-// Module 15566 (SystemTelecomUtils)
-import NativeSystemTelecomModuleDefault from "NativeSystemTelecomModule" /* 15564 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 15530 (SystemTelecomUtils)
+import NativeSystemTelecomModuleDefault from "NativeSystemTelecomModule" /* 15528 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/SystemTelecomUtils.android.tsx");
 

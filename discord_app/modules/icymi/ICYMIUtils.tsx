@@ -1,19 +1,19 @@
-// === Module 9919: ICYMIUtils ===
+// === Module 9922: ICYMIUtils ===
 
-// Module 9919 (ICYMIUtils)
-import util from "util" /* 1113 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5845 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7893 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8502 */;
-import ICYMITypes from "ICYMITypes" /* 9914 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9920 */;
-import generateHydrationId from "generateHydrationId" /* 9924 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 9925 */;
+// Module 9922 (ICYMIUtils)
+import util from "util" /* 1112 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7892 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8501 */;
+import ICYMITypes from "ICYMITypes" /* 9917 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9923 */;
+import generateHydrationId from "generateHydrationId" /* 9927 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 9928 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6512 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 9915 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6514 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 9918 */;
 
 require = fn;
 let closure_12 = async function _hydrateItems(arg0) {
@@ -27,7 +27,7 @@ let closure_12 = async function _hydrateItems(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -47,10 +47,10 @@ let closure_12 = async function _hydrateItems(arg0) {
             let obj2 = ICYMIActionCreatorsDefault;
             const hydratedAttempt = obj2.loadHydratedAttempt(generateHydrationId.generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(9914).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(9917).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(9914).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(9917).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -86,7 +86,7 @@ let closure_12 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(9914).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(9917).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj7 = { messageItems: null, activityItems: null };
@@ -109,15 +109,15 @@ let closure_12 = async function _hydrateItems(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp17) {
       c4 = tmp;
       throw tmp17;
     }
   }
 };
-const ThreadChannelRecord = fn(4645).ThreadChannelRecord;
-const Constants = fn(1072);
+const ThreadChannelRecord = fn(4647).ThreadChannelRecord;
+const Constants = fn(1071);
 ({ ChannelTypes: closure_9, GuildNSFWContentLevel: closure_10 } = Constants);
 const ICYMICustomScore = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
 const size = fn(2);

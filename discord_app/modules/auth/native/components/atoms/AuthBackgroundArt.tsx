@@ -1,8 +1,8 @@
-// === Module 7195: AuthBackgroundArt ===
+// === Module 7194: AuthBackgroundArt ===
 
-// Module 7195 (AuthBackgroundArt)
-import timing_timing from "timing/timing" /* 5002 */;
-import timingPresets from "timingPresets" /* 5005 */;
+// Module 7194 (AuthBackgroundArt)
+import timing_timing from "timing/timing" /* 5004 */;
+import timingPresets from "timingPresets" /* 5007 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,13 +24,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthBackgroundArt.tsx");
 
 export default noop.memo(function AuthBackgroundArt() {
-  const tmp3 = sharedValue(7196)();
+  const tmp3 = sharedValue(7195)();
   _require = tmp3;
   let num = 0;
   if ("square" === tmp3) {
     num = 1;
   }
-  sharedValue = require("module_1655").useSharedValue(num);
+  sharedValue = require("module_1653").useSharedValue(num);
   items = [tmp3, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 0;
@@ -39,7 +39,7 @@ export default noop.memo(function AuthBackgroundArt() {
     }
     const result = sharedValue.set(timing_timing.withTiming(num, timingPresets.timingStandard));
   }, items);
-  let obj = require("module_1655");
+  let obj = require("module_1653");
   const items1 = [closure_9, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -54,19 +54,19 @@ export default noop.memo(function AuthBackgroundArt() {
   AuthBackgroundArtTsx1.__workletHash = 5771106652293;
   AuthBackgroundArtTsx1.__initData = tmp7;
   const obj2 = { style: container.container, pointerEvents: "none", accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  const animatedStyle = require("module_1655").useAnimatedStyle(AuthBackgroundArtTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(AuthBackgroundArtTsx1);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmp4Result = require("module_1655");
-  obj3.backgroundImageSource = sharedValue(7200);
-  const items3 = [closure_6(sharedValue(7197), obj3), ];
+  const tmp4Result = require("module_1653");
+  obj3.backgroundImageSource = sharedValue(7199);
+  const items3 = [closure_6(sharedValue(7196), obj3), ];
   const obj4 = { style: null, children: null };
   const items4 = [StyleSheet.absoluteFill, animatedStyle];
   obj4.style = items4;
   const obj5 = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmpResult = sharedValue(7197);
-  obj5.backgroundImageSource = sharedValue(7201);
-  obj4.children = closure_6(sharedValue(7197), obj5);
-  items3[1] = closure_6(sharedValue(1655).View, obj4);
+  const tmpResult = sharedValue(7196);
+  obj5.backgroundImageSource = sharedValue(7200);
+  obj4.children = closure_6(sharedValue(7196), obj5);
+  items3[1] = closure_6(sharedValue(1653).View, obj4);
   obj2.children = items3;
   return closure_7(View, obj2);
 });

@@ -1,27 +1,27 @@
-// === Module 18029: VoicePanelDockGlow ===
+// === Module 17856: VoicePanelDockGlow ===
 
-// Module 18029 (VoicePanelDockGlow)
+// Module 17856 (VoicePanelDockGlow)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import ColorUtils from "ColorUtils" /* 4789 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import inlineStyles from "inlineStyles" /* 7746 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10536 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 13218 */;
-import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13219 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13221 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import ColorUtils from "ColorUtils" /* 4791 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import inlineStyles from "inlineStyles" /* 7745 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10478 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 13188 */;
+import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13189 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13191 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(11706).getDockInset;
+const getDockInset = fn(11648).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [[0, 1], [0.18, 0.89], [0.36, 0.63], [0.52, 0.4], [0.66, 0.23], [0.78, 0.12], [0.88, 0.05], [0.95, 0.02], [1, 0]];
@@ -71,7 +71,7 @@ export function VoicePanelDockGlow(micLive) {
   const tmp4 = useStateFromSharedValueDefault(dockHeight);
   const context1 = noop.useContext(VoicePanelStateContextDefault);
   ({ dockMinimizeProgress, dockPressProgress, dockPressed, isDockConnected, wrapperOffset } = context1);
-  const sharedValue = _mod1655.useSharedValue(1);
+  const sharedValue = _mod1653.useSharedValue(1);
   items = [closure_13, dockPressed];
   c0 = undefined;
   [tmp8, tmp9] = items;
@@ -109,9 +109,9 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx2.__closure = items3;
   VoicePanelDockGlowTsx2.__workletHash = 16677252752401;
   VoicePanelDockGlowTsx2.__initData = tmp11;
-  const animatedReaction = _mod1655.useAnimatedReaction(VoicePanelDockGlowTsx1, VoicePanelDockGlowTsx2);
-  const sharedValue1 = _mod1655.useSharedValue(0);
-  const tmp6Result = _mod1655;
+  const animatedReaction = _mod1653.useAnimatedReaction(VoicePanelDockGlowTsx1, VoicePanelDockGlowTsx2);
+  const sharedValue1 = _mod1653.useSharedValue(0);
+  const tmp6Result = _mod1653;
   const items4 = [closure_15, isDockConnected, wrapperOffset, dockMinimizeProgress, dockPressProgress];
   c0 = undefined;
   c1 = undefined;
@@ -174,8 +174,8 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx4.__closure = items7;
   VoicePanelDockGlowTsx4.__workletHash = 9180121447929;
   VoicePanelDockGlowTsx4.__initData = tmp22;
-  const animatedReaction1 = _mod1655.useAnimatedReaction(VoicePanelDockGlowTsx3, VoicePanelDockGlowTsx4);
-  const tmp6Result5 = _mod1655;
+  const animatedReaction1 = _mod1653.useAnimatedReaction(VoicePanelDockGlowTsx3, VoicePanelDockGlowTsx4);
+  const tmp6Result5 = _mod1653;
   const voicePanelDockGlowLevelProps = useVoicePanelDockLevelProps.useVoicePanelDockGlowLevelProps();
   const tmp6Result6 = useVoicePanelDockLevelProps;
   [tmp30, c0] = noop.useState(0);
@@ -203,8 +203,8 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx5.__closure = items9;
   VoicePanelDockGlowTsx5.__workletHash = 11149034218573;
   VoicePanelDockGlowTsx5.__initData = tmp32;
-  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelDockGlowTsx5);
-  const tmp6Result7 = _mod1655;
+  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelDockGlowTsx5);
+  const tmp6Result7 = _mod1653;
   const items10 = [closure_19, sharedValue1, sharedValue, micLive];
   c0 = undefined;
   c1 = undefined;
@@ -234,7 +234,7 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx7.__closure = items13;
   VoicePanelDockGlowTsx7.__workletHash = 12895478017097;
   VoicePanelDockGlowTsx7.__initData = tmp43;
-  const animatedReaction2 = _mod1655.useAnimatedReaction(VoicePanelDockGlowTsx6, VoicePanelDockGlowTsx7);
+  const animatedReaction2 = _mod1653.useAnimatedReaction(VoicePanelDockGlowTsx6, VoicePanelDockGlowTsx7);
   let tmp46 = null;
   if (tmp4 > 0) {
     const obj4 = { style: null, pointerEvents: "none", onLayout: null, children: null };
@@ -251,7 +251,7 @@ export function VoicePanelDockGlow(micLive) {
     const obj7 = { dockHeight: tmp4 };
     obj6.children = metroImportDefault(closure_17, obj7, tmp30);
     obj4.children = metroImportDefault(LiveVoiceLevelViewDefault, obj6);
-    tmp46 = metroImportDefault(_modDef1655.View, obj4);
+    tmp46 = metroImportDefault(_modDef1653.View, obj4);
     const tmpResult = LiveVoiceLevelViewDefault;
   }
   return tmp46;
@@ -312,16 +312,16 @@ export function VoicePanelDockBottomLine(micLive) {
   VoicePanelDockGlowTsx8.__closure = items2;
   VoicePanelDockGlowTsx8.__workletHash = 559055664937;
   VoicePanelDockGlowTsx8.__initData = tmp7;
-  const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelDockGlowTsx8);
+  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelDockGlowTsx8);
   const obj4 = { style: null, pointerEvents: "none", children: null };
   const items3 = [closure_12.bottomLine, animatedStyle];
   obj4.style = items3;
   const obj5 = { style: StyleSheet.absoluteFill };
-  const obj3 = require("module_1655");
+  const obj3 = require("module_1653");
   const merged = Object.assign(voicePanelDockGlowLevelProps);
   obj5.minOpacity = 0.16;
   obj5.maxOpacity = 0.4;
   obj5.children = c7(LinearGradientDefault, { style: StyleSheet.absoluteFill, colors: memo, locations: [0, 0.5, 1], start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } });
   obj4.children = c7(LiveVoiceLevelViewDefault, obj5);
-  return c7(_modDef1655.View, obj4);
+  return c7(_modDef1653.View, obj4);
 }

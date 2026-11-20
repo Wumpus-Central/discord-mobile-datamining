@@ -1,24 +1,25 @@
-// === Module 18294: useConjureNativePublishButton ===
+// === Module 18119: useConjureNativePublishButton ===
 
-// Module 18294 (useConjureNativePublishButton)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 14658 */;
-import ConjureSafetyHoldSheetDefault from "ConjureSafetyHoldSheet" /* 18295 */;
-import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 18297 */;
-import useConjurePublishButtonDefault from "useConjurePublishButton" /* 18298 */;
-import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+// Module 18119 (useConjureNativePublishButton)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 12185 */;
+import ConjureSafetyHoldSheetDefault from "ConjureSafetyHoldSheet" /* 18120 */;
+import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 18122 */;
+import useConjurePublishButtonDefault from "useConjurePublishButton" /* 18123 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 
-require = fn;
+const require = fn;
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
   showSafetyHold: ConjureSafetyHoldSheetDefault,
   promptPublishDestination: ConjurePublishDestinationSheetDefault,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });
+  },
+  showConfirmation(intl) {
+    return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_SUCCEEDED", { text: intl, variant: "success" });
   }
 };
 const size = fn(2);
@@ -48,14 +49,5 @@ export default function useConjureNativePublishButton(arg0, arg1) {
   if (integrationStatusChecked) {
     isLoading = obj2.useApplication(previewAppId).isLoading;
   }
-  const tmp3Result = useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
-  importDefault = tmp3Result;
-  const items2 = [tmp3Result.confirmation];
-  const effect = noop.useEffect(() => {
-    if (null != confirmation.confirmation) {
-      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp.confirmation, "polite");
-    }
-  }, items2);
-  return tmp3Result;
+  return useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
 };

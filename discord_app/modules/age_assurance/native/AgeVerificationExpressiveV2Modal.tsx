@@ -1,14 +1,14 @@
-// === Module 7726: AgeVerificationExpressiveV2Modal ===
+// === Module 7725: AgeVerificationExpressiveV2Modal ===
 
-// Module 7726 (AgeVerificationExpressiveV2Modal)
+// Module 7725 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 575 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6290 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6293 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7674 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7709 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7710 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6292 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6295 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7673 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7708 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7709 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -61,7 +61,7 @@ function MethodsScreen(onClose) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -383,11 +383,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6292).TRUSTED_PROVIDERS_URL;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const TRUSTED_PROVIDERS_URL = fn(6294).TRUSTED_PROVIDERS_URL;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: null, emptyContainer: null, footer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 obj2.loadingContainer = { marginTop: nativeDefault.space.PX_24 };

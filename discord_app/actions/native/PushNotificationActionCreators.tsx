@@ -1,16 +1,16 @@
-// === Module 13192: PushNotificationActionCreators ===
+// === Module 13162: PushNotificationActionCreators ===
 
-// Module 13192 (PushNotificationActionCreators)
+// Module 13162 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TokenManagerAll from "TokenManager" /* 1098 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6311 */;
+import TokenManagerAll from "TokenManager" /* 1097 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6313 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 13193 */;
+import MultiAccountStore from "MultiAccountStore" /* 13163 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -40,7 +40,7 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,10 +114,10 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
     }
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ DEVICE_TOKEN: metroImportDefault, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(13194).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6307);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(13164).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6309);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
 const size = fn(2);
@@ -190,15 +190,15 @@ export default {
           closure_128_1 = value;
           if (closure_128_1.length >= 1) {
             if (null != closure_128_1[0]) {
-              const HTTP = tmp2(1285).HTTP;
+              const HTTP = tmp2(1284).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
                 let tmp9 = closure_1_12;
               } else {
                 tmp9 = closure_1_13();
               }
-              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1255).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
-              let isAndroidResult = tmp2(1380).isAndroid();
+              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1254).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
+              let isAndroidResult = tmp2(1378).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
@@ -218,8 +218,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(13197).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(13197);
+          const result = v2(13167).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(13167);
         }
       }
       return value;

@@ -1,7 +1,7 @@
-// === Module 5681: ScreenShareDtxExperiment ===
+// === Module 5683: ScreenShareDtxExperiment ===
 
-// Module 5681 (ScreenShareDtxExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5683 (ScreenShareDtxExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2026-11-screen-share-dtx", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

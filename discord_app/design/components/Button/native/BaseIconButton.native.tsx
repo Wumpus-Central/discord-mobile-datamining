@@ -1,19 +1,19 @@
-// === Module 6931: BaseIconButton ===
+// === Module 6930: BaseIconButton ===
 
-// Module 6931 (BaseIconButton)
-import _mod1655 from "module_1655" /* 1655 */;
-import IconDefault from "Icon" /* 5392 */;
-import ButtonConstants from "ButtonConstants" /* 5396 */;
-import ButtonHooks from "ButtonHooks" /* 5397 */;
-import Button_BaseButton from "Button/BaseButton" /* 5399 */;
-import ButtonPill from "ButtonPill" /* 5401 */;
+// Module 6930 (BaseIconButton)
+import _mod1653 from "module_1653" /* 1653 */;
+import IconDefault from "Icon" /* 5394 */;
+import ButtonConstants from "ButtonConstants" /* 5398 */;
+import ButtonHooks from "ButtonHooks" /* 5399 */;
+import Button_BaseButton from "Button/BaseButton" /* 5401 */;
+import ButtonPill from "ButtonPill" /* 5403 */;
 import noop from "module_19" /* 19 */;
 
-const module_1655 = _mod1655;
+const module_1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
@@ -33,7 +33,7 @@ let closure_4 = createStyles.createStyles((arg0, arg1) => {
   obj5.pill = {};
   return obj5;
 });
-const Icon = module_1655.createAnimatedComponent(IconDefault);
+const Icon = module_1653.createAnimatedComponent(IconDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 
@@ -56,7 +56,7 @@ export function BaseIconButton(ref) {
     num = scaleAmountInPx;
   }
   const tmp4 = closure_4(str, DEFAULT_BUTTON_SIZE);
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   const iconTintStyles = ButtonHooks.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;

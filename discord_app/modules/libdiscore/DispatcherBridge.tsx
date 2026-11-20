@@ -1,19 +1,19 @@
-// === Module 20255: DispatcherBridge ===
+// === Module 20075: DispatcherBridge ===
 
-// Module 20255 (DispatcherBridge)
+// Module 20075 (DispatcherBridge)
 import LoggerDefault from "Logger" /* 3 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 4667 */;
-import DevSettingsStore from "DevSettingsStore" /* 5386 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6453 */;
-import GuildStickersStore from "GuildStickersStore" /* 6494 */;
-import NoteStore from "NoteStore" /* 14427 */;
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 4669 */;
+import DevSettingsStore from "DevSettingsStore" /* 5388 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6455 */;
+import GuildStickersStore from "GuildStickersStore" /* 6496 */;
+import NoteStore from "NoteStore" /* 14395 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoleStore from "GuildRoleStore" /* 4698 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildRoleStore from "GuildRoleStore" /* 4700 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const timestampProducer = new LoggerDefault("DispatcherBridge");
 let items = [NoteStore, GuildStore, GuildRoleStore, RawGuildEmojiStore, GuildStickersStore];
 let closure_7 = {

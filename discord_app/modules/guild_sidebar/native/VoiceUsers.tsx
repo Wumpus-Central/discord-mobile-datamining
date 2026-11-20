@@ -1,15 +1,15 @@
-// === Module 17690: VoiceUsers ===
+// === Module 17517: VoiceUsers ===
 
-// Module 17690 (VoiceUsers)
+// Module 17517 (VoiceUsers)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5522 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8452 */;
-import ChannelListLayout from "ChannelListLayout" /* 11068 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13329 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5524 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8451 */;
+import ChannelListLayout from "ChannelListLayout" /* 11010 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13299 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
 
 require = fn;
 function AudienceItem(arg0) {
@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "body-sm/medium";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles((arg0) => {
   colors = nativeDefault.colors;
   if (arg0) {
@@ -60,7 +60,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(8452)());
+  const tmp3 = closure_11(channel(8451)());
   const obj = user(9557);
   const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9557).useLocalSelfMuteDeaf());
   const obj2 = user(9557);
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(17691), obj7, user.id);
+  obj4.children = closure_6(tmp(17518), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

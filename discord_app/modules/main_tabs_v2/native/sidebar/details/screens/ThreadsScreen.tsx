@@ -1,12 +1,12 @@
-// === Module 18865: ThreadsScreen ===
+// === Module 18689: ThreadsScreen ===
 
-// Module 18865 (ThreadsScreen)
+// Module 18689 (ThreadsScreen)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11584 */;
-import ThreadListDefault from "ThreadList" /* 18866 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11526 */;
+import ThreadListDefault from "ThreadList" /* 18690 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 function ThreadsScreen(channel) {
@@ -41,10 +41,10 @@ function ThreadsScreen(channel) {
   return <View style={null}>{null}</View>;
 }
 const View = fn(17).View;
-const SearchTypes = fn(1072).SearchTypes;
-let closure_7 = fn(1112).OpenThreadAnalyticsLocations;
+const SearchTypes = fn(1071).SearchTypes;
+let closure_7 = fn(1111).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -69,8 +69,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
 
 export default noop.memo(function ConnectedThreadsScreen() {
-  channelId = channelId(1503).useRoute().params.channelId;
-  const obj = channelId(1503);
+  channelId = channelId(1501).useRoute().params.channelId;
+  const obj = channelId(1501);
   items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp3 = null;

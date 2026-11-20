@@ -1,10 +1,10 @@
-// === Module 16601: QuestBottomSheetTaskSelect ===
+// === Module 16424: QuestBottomSheetTaskSelect ===
 
-// Module 16601 (QuestBottomSheetTaskSelect)
+// Module 16424 (QuestBottomSheetTaskSelect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const QuestTaskPlatform = fn(6437).QuestTaskPlatform;
+const QuestTaskPlatform = fn(6439).QuestTaskPlatform;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const size = fn(2);
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   const obj = { hasIcons: true, children: null };
-  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9782).ScreenIcon, {}), label: null, onPress: null };
-  const intl = onTaskSelect(1113).intl;
-  obj2.label = intl.string(onTaskSelect(1113).t["QXc01+"]);
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9784).ScreenIcon, {}), label: null, onPress: null };
+  const intl = onTaskSelect(1112).intl;
+  obj2.label = intl.string(onTaskSelect(1112).t["QXc01+"]);
   obj2.onPress = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
@@ -23,10 +23,10 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items = [closure_3(onTaskSelect(6926).TableRow, obj2), ];
-  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(6921).GameControllerIcon, {}), label: null, onPress: null };
-  const intl2 = onTaskSelect(1113).intl;
-  obj3.label = intl2.string(onTaskSelect(1113).t["8lAfuB"]);
+  items = [closure_3(onTaskSelect(6925).TableRow, obj2), ];
+  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(6920).GameControllerIcon, {}), label: null, onPress: null };
+  const intl2 = onTaskSelect(1112).intl;
+  obj3.label = intl2.string(onTaskSelect(1112).t["8lAfuB"]);
   obj3.onPress = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
@@ -34,7 +34,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = closure_3(onTaskSelect(6926).TableRow, obj3);
+  items[1] = closure_3(onTaskSelect(6925).TableRow, obj3);
   obj.children = items;
-  return closure_4(onTaskSelect(7229).TableRowGroup, obj);
+  return closure_4(onTaskSelect(7228).TableRowGroup, obj);
 };

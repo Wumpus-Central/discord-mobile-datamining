@@ -1,9 +1,9 @@
-// === Module 5484: UserPlatformIcon ===
+// === Module 5486: UserPlatformIcon ===
 
-// Module 5484 (UserPlatformIcon)
+// Module 5486 (UserPlatformIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod5485 from "module_5485" /* 5485 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod5487 from "module_5487" /* 5487 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UserPlatformIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5485, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5487, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

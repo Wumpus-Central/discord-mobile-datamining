@@ -1,22 +1,22 @@
-// === Module 13766: DetailedGuildIdentityUserRow ===
+// === Module 13735: DetailedGuildIdentityUserRow ===
 
-// Module 13766 (DetailedGuildIdentityUserRow)
+// Module 13735 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import TableRow from "TableRow" /* 6926 */;
-import Form from "Form" /* 7590 */;
-import DiscordTagDefault from "DiscordTag" /* 10324 */;
+import native from "native" /* 1186 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import TableRow from "TableRow" /* 6925 */;
+import Form from "Form" /* 7589 */;
+import DiscordTagDefault from "DiscordTag" /* 10266 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: { marginRight: nativeDefault.space.PX_4 }, mainTag: null };
 let obj3 = { marginRight: nativeDefault.space.PX_4 };
 obj.mainTag = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };

@@ -1,19 +1,19 @@
-// === Module 15923: AccountEmailSetting ===
+// === Module 15887: AccountEmailSetting ===
 
-// Module 15923 (AccountEmailSetting)
+// Module 15887 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7223 */;
-import UserStore from "UserStore" /* 1388 */;
+import util from "util" /* 1112 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7222 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
   },
-  parent: fn(8593).MobileUserSettings.ACCOUNT,
+  parent: fn(8592).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () => {

@@ -1,14 +1,14 @@
-// === Module 19949: SafetyCheckScreen ===
+// === Module 19769: SafetyCheckScreen ===
 
-// Module 19949 (SafetyCheckScreen)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
+// Module 19769 (SafetyCheckScreen)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 7876 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 7875 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ VerificationLevels: metroImportDefault, GuildExplicitContentFilterTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

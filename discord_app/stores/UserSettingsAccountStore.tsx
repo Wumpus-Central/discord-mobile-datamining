@@ -1,15 +1,15 @@
-// === Module 8076: UserSettingsAccountStore ===
+// === Module 8075: UserSettingsAccountStore ===
 
-// Module 8076 (UserSettingsAccountStore)
+// Module 8075 (UserSettingsAccountStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 function handleFormClose() {
   OPEN = FormStates.CLOSED;
   closure_3 = {};
 }
-const FormStates = fn(1072).FormStates;
+const FormStates = fn(1071).FormStates;
 let OPEN = FormStates.CLOSED;
 let closure_3 = {};
 let obj = null;

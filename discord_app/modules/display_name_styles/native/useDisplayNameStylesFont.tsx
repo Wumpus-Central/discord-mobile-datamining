@@ -1,8 +1,8 @@
 // === Module 9336: useDisplayNameStylesFont ===
 
 // Module 9336 (useDisplayNameStylesFont)
-import DisplayNameFont from "DisplayNameFont" /* 1398 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6222 */;
+import DisplayNameFont from "DisplayNameFont" /* 1396 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6224 */;
 import useDisplayNameFontsAvailable from "useDisplayNameFontsAvailable" /* 9337 */;
 import size from "module_2" /* 2 */;
 

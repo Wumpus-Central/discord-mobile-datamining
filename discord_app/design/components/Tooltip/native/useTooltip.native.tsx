@@ -2,7 +2,7 @@
 
 // Module 8822 (useTooltip)
 import LoggerDefault from "Logger" /* 3 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import AnimatedTooltip from "AnimatedTooltip" /* 8823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -34,7 +34,7 @@ export function useTooltip(ref, memo) {
   closure_129_0 = ref;
   closure_129_1 = ref;
   closure_129_2 = callback;
-  const tmp8 = context(1496)();
+  const tmp8 = context(1494)();
   closure_129_3 = tmp8;
   closure_129_4 = noop.useRef(tmp8);
   const context1 = noop.useContext(require("LayerContext").LayerContext);

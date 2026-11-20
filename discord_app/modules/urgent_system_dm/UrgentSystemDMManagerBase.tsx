@@ -1,11 +1,11 @@
-// === Module 19730: UrgentSystemDMManagerBase ===
+// === Module 19548: UrgentSystemDMManagerBase ===
 
-// Module 19730 (UrgentSystemDMManagerBase)
+// Module 19548 (UrgentSystemDMManagerBase)
 import UserActionCreatorsAll from "UserActionCreators" /* 6835 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserStore from "UserStore" /* 1388 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserStore from "UserStore" /* 1386 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 function maybeShowUrgentMessageModal(handleShowUrgentMessageAlert) {
   const currentUser = UserStore.getCurrentUser();
@@ -50,8 +50,8 @@ function maybeClearUrgentMessage(channelId) {
     UserActionCreatorsAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
   }
 }
-const SYSTEM_USER = fn(19731).SYSTEM_USER;
-const UserFlags = fn(1072).UserFlags;
+const SYSTEM_USER = fn(19549).SYSTEM_USER;
+const UserFlags = fn(1071).UserFlags;
 let c7 = false;
 const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAlert) {
   const tmp2 = new prototype(tmp, new.target);

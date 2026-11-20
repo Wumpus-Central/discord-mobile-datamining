@@ -1,16 +1,16 @@
-// === Module 11991: useInvitableGameOrganizations ===
+// === Module 11933: useInvitableGameOrganizations ===
 
-// Module 11991 (useInvitableGameOrganizations)
-import DurationsDefault from "Durations" /* 1089 */;
-import useCanInviteGuildIdsDefault from "useCanInviteGuildIds" /* 11988 */;
-import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11993 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11994 */;
+// Module 11933 (useInvitableGameOrganizations)
+import DurationsDefault from "Durations" /* 1088 */;
+import useCanInviteGuildIdsDefault from "useCanInviteGuildIds" /* 11930 */;
+import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11935 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InvitableGameOrganizationStore from "InvitableGameOrganizationStore" /* 11992 */;
+import InvitableGameOrganizationStore from "InvitableGameOrganizationStore" /* 11934 */;
 
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1072).QueryIds.INVITABLE_GAME_ORGANIZATIONS,
+  getQueryId: fn(1071).QueryIds.INVITABLE_GAME_ORGANIZATIONS,
   staleAfter: DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   retryConfig: { retryableErrors: isRetryableFetchErrorDefault },
@@ -30,7 +30,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;

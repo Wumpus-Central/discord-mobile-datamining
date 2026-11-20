@@ -1,12 +1,12 @@
-// === Module 17036: UserSettingsDebugLogs ===
+// === Module 16860: UserSettingsDebugLogs ===
 
-// Module 17036 (UserSettingsDebugLogs)
+// Module 16860 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 17037 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 16861 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,18 +17,18 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, searchWrap: null, searchField: null, shareButton: null, list: null, log: null, code: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.searchField = { flex: 1 };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7123).InputHeights.MD, width: fn(7123).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7122).InputHeights.MD, width: fn(7122).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
-obj2.code = { fontFamily: fn(1072).Fonts.CODE_BOLD };
+obj2.code = { fontFamily: fn(1071).Fonts.CODE_BOLD };
 let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");
@@ -150,7 +150,7 @@ export default function UserSettingsDebugLogs() {
   obj8.data = tmp4Result4[0];
   obj8.renderItem = callback1;
   obj8.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_7371").FlashList, obj8);
+  items4[1] = closure_8(require("module_7370").FlashList, obj8);
   obj2.children = items4;
   return first1(memo, obj2);
 };

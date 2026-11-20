@@ -1,25 +1,25 @@
-// === Module 19014: ChannelSettingsIntegrationsOverview ===
+// === Module 18833: ChannelSettingsIntegrationsOverview ===
 
-// Module 19014 (ChannelSettingsIntegrationsOverview)
+// Module 18833 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import Form from "Form" /* 7590 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 7635 */;
-import WebhookIcon from "WebhookIcon" /* 18885 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 19015 */;
+import util from "util" /* 1112 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import Form from "Form" /* 7589 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 7634 */;
+import WebhookIcon from "WebhookIcon" /* 18709 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 18834 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = channel(1502).useNavigation();
-  const obj = channel(1502);
+  importDefault = channel(1500).useNavigation();
+  const obj = channel(1500);
   const linkedLobby = channel.linkedLobby;
   application_id = undefined;
   if (linkedLobby != null) {
@@ -29,24 +29,24 @@ function LinkedLobbyFormSection(channel) {
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
-    const intl = tmp(1113).intl;
-    obj3.title = intl.string(tmp(1113).t.oAvIAg);
+    const intl = tmp(1112).intl;
+    obj3.title = intl.string(tmp(1112).t.oAvIAg);
     const obj4 = { label: getOrFetchApplication.name, icon: null, arrow: true, onPress: null };
     const obj5 = { application: getOrFetchApplication };
     obj4.icon = closure_6(TableRowApplicationIconDefault, obj5);
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(6926).TableRow, obj4);
-    tmp5 = closure_6(tmp(7229).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6925).TableRow, obj4);
+    tmp5 = closure_6(tmp(7228).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(4645).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
+fn(4647).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+const ChannelSettingsSections = fn(1071).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

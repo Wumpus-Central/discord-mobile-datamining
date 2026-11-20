@@ -3,8 +3,8 @@
 // Module 6804 (FirstPartyRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef1345 from "module_1345" /* 1345 */;
-import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 14675 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 14634 */;
 import ConjureRichPresenceStore from "ConjureRichPresenceStore" /* 6805 */;
 
 function updateActivities() {
@@ -17,7 +17,7 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = _modDef1345(items, items);
+  const tmp6 = _modDef1343(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;

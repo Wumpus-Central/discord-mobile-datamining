@@ -1,8 +1,8 @@
-// === Module 10136: UserProfileConfirmRemoveWidget ===
+// === Module 10139: UserProfileConfirmRemoveWidget ===
 
-// Module 10136 (UserProfileConfirmRemoveWidget)
-import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5745 */;
+// Module 10139 (UserProfileConfirmRemoveWidget)
+import util from "util" /* 1112 */;
+import AlertModal from "AlertModal" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

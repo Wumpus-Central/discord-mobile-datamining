@@ -1,9 +1,9 @@
-// === Module 18332: ConjureDownstreamUpdatesSwitch ===
+// === Module 18163: ConjureDownstreamUpdatesSwitch ===
 
-// Module 18332 (ConjureDownstreamUpdatesSwitch)
+// Module 18163 (ConjureDownstreamUpdatesSwitch)
 import nativeDefault from "native" /* 575 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import conjureManagedCopyConnection from "conjureManagedCopyConnection" /* 6874 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import conjureManagedCopyConnection from "conjureManagedCopyConnection" /* 6873 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/conjure/managed_copy/native/C
 export default function ConjureDownstreamUpdatesSwitch(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_8();
-  const conjureDownstreamUpdates = projectId(18324).useConjureDownstreamUpdates(projectId);
+  const conjureDownstreamUpdates = projectId(18132).useConjureDownstreamUpdates(projectId);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
   [][0] = projectId;
@@ -29,20 +29,20 @@ export default function ConjureDownstreamUpdatesSwitch(projectId) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { hasIcons: false, children: null };
     const obj5 = { label: null, subLabel: null, value: null, disabled: null, onValueChange: null };
-    const intl = tmp2(1113).intl;
-    obj5.label = intl.string(_modDef4089["Nf+zrD"]);
-    const intl2 = tmp2(1113).intl;
-    obj5.subLabel = intl2.string(_modDef4089.heoCNf);
+    const intl = tmp2(1112).intl;
+    obj5.label = intl.string(_modDef4091["Nf+zrD"]);
+    const intl2 = tmp2(1112).intl;
+    obj5.subLabel = intl2.string(_modDef4091.heoCNf);
     ({ enabled: obj4.value, pending: obj4.disabled } = conjureDownstreamUpdates);
     obj5.onValueChange = tmp6;
-    obj3.children = closure_6(tmp2(7437).TableSwitchRow, obj5);
-    items = [closure_6(tmp2(7229).TableRowGroup, obj3), ];
+    obj3.children = closure_6(tmp2(7436).TableSwitchRow, obj5);
+    items = [closure_6(tmp2(7228).TableRowGroup, obj3), ];
     if (tmp5[0]) {
       const obj6 = { accessibilityRole: "alert", children: null };
       const obj11 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
-      const intl3 = tmp2(1113).intl;
-      obj11.children = intl3.string(tmp11(4089)["UU+oef"]);
-      obj6.children = closure_6(tmp2(5383).Text, obj11);
+      const intl3 = tmp2(1112).intl;
+      obj11.children = intl3.string(tmp11(4091)["UU+oef"]);
+      obj6.children = closure_6(tmp2(5385).Text, obj11);
       let tmp10Result = closure_6(View, obj6);
     } else {
       tmp10Result = null;

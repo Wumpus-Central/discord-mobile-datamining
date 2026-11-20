@@ -1,6 +1,6 @@
-// === Module 6874: conjureManagedCopyConnection ===
+// === Module 6873: conjureManagedCopyConnection ===
 
-// Module 6874 (conjureManagedCopyConnection)
+// Module 6873 (conjureManagedCopyConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
 import size from "module_2" /* 2 */;

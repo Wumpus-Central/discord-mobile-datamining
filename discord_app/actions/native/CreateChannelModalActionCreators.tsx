@@ -1,10 +1,10 @@
-// === Module 7627: CreateChannelModalActionCreators ===
+// === Module 7626: CreateChannelModalActionCreators ===
 
-// Module 7627 (CreateChannelModalActionCreators)
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import transitionToChannel from "transitionToChannel" /* 5525 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 7626 (CreateChannelModalActionCreators)
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import transitionToChannel from "transitionToChannel" /* 5527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 import size from "module_2" /* 2 */;
 
 const isGuildReadableType = ChannelRecord.isGuildReadableType;
@@ -35,8 +35,8 @@ export default {
             }
           }
       };
-      obj2.pushLazy(self(2121)(7589, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp9 = self(2121)(7589, dependencyMap.paths);
+      obj2.pushLazy(self(2119)(7588, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      const tmp9 = self(2119)(7588, dependencyMap.paths);
     }
   },
   close() {

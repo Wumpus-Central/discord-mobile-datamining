@@ -1,10 +1,10 @@
-// === Module 15640: userProfile ===
+// === Module 15604: userProfile ===
 
-// Module 15640 (userProfile)
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 7948 */;
+// Module 15604 (userProfile)
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 7947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5007 */;
-import UserStore from "UserStore" /* 1388 */;
+import ActionSheetStore from "ActionSheetStore" /* 5009 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const size = fn(2);
@@ -27,7 +27,7 @@ export function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ export function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, channelId: closure_128_1, onClose: closure_128_3 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(7948)(obj8), done: false };
+          const obj9 = { value: v2(7947)(obj8), done: false };
           return obj9;
         }
       } catch (tmp29) {

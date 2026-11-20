@@ -1,18 +1,18 @@
-// === Module 7492: ActionSheetDragHandle ===
+// === Module 7491: ActionSheetDragHandle ===
 
-// Module 7492 (ActionSheetDragHandle)
+// Module 7491 (ActionSheetDragHandle)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef1655 from "module_1655" /* 1655 */;
+import util from "util" /* 1112 */;
+import _modDef1653 from "module_1653" /* 1653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: c3, View: closure_4 } = get_ActivityIndicator);
-const ActionSheetDragHandleConstants = fn(7482);
+const ActionSheetDragHandleConstants = fn(7481);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = ActionSheetDragHandleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { height: DRAG_HANDLE_HEIGHT }, containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING }, bar: null };
 let size = { backgroundColor: nativeDefault.colors.ICON_MUTED, borderRadius: nativeDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
 obj.bar = size;
@@ -41,7 +41,7 @@ export const ActionSheetDragHandle = noop.memo(function DragHandle(accessibility
     const obj3 = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj3.style = items1;
-    let tmp4Result = jsx(_modDef1655.View, { style: null });
+    let tmp4Result = jsx(_modDef1653.View, { style: null });
   } else {
     const obj4 = { style: tmp3.bar };
     tmp4Result = <React4 style={tmp3.bar} />;

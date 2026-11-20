@@ -1,8 +1,8 @@
-// === Module 18368: useConjurePublishSchedule ===
+// === Module 18202: useConjurePublishSchedule ===
 
-// Module 18368 (useConjurePublishSchedule)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
+// Module 18202 (useConjurePublishSchedule)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
         }).catch(() => {
           if (ref.current.value === sum) {
             const intl = util.intl;
-            closure_2_8(intl.string(_modDef4089.n25haz));
+            closure_2_8(intl.string(_modDef4091.n25haz));
             closure_4(false);
           }
         });
@@ -96,7 +96,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -166,7 +166,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                   closure_129_7(false);
                 }
                 c5 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               } else {
                 closure_129_3(closure_128_1);
                 const intl = tmp6(tmp80[6]).intl;

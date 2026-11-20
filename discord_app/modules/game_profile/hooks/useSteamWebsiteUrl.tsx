@@ -2,12 +2,12 @@
 
 // Module 9660 (useSteamWebsiteUrl)
 import SteamReleaseStatus from "SteamReleaseStatus" /* 9661 */;
-import GameStore from "GameStore" /* 2141 */;
+import GameStore from "GameStore" /* 2139 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Distributors = fn(1072).Distributors;
+const Distributors = fn(1071).Distributors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
 
@@ -37,8 +37,8 @@ export function useSteamWebsiteUrl(id) {
         const found1 = thirdPartySkus.filter((distributor) => {
           let tmp = distributor.distributor === constants.STEAM;
           if (tmp) {
-            tmp = !id(2153).isNullOrEmpty(distributor.id);
-            const obj = id(2153);
+            tmp = !id(2151).isNullOrEmpty(distributor.id);
+            const obj = id(2151);
           }
           return tmp;
         });

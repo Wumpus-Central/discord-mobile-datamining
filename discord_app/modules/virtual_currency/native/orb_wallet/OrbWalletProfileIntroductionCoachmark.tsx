@@ -1,12 +1,12 @@
-// === Module 18964: OrbWalletProfileIntroductionCoachmark ===
+// === Module 18788: OrbWalletProfileIntroductionCoachmark ===
 
-// Module 18964 (OrbWalletProfileIntroductionCoachmark)
-import util from "util" /* 1113 */;
-import _modDef18965 from "module_18965" /* 18965 */;
+// Module 18788 (OrbWalletProfileIntroductionCoachmark)
+import util from "util" /* 1112 */;
+import _modDef18789 from "module_18789" /* 18789 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletProfileIntroductionCoachmark.tsx");
 
@@ -22,7 +22,7 @@ export default function OrbWalletProfileIntroductionCoachmark(visible) {
     const intl2 = util.intl;
     obj.description = intl2.string(util.t.YKJw4W);
     obj.visible = visible;
-    const obj2 = { type: "image", src: { uri: _modDef18965 }, aspectRatio: "16/9" };
+    const obj2 = { type: "image", src: { uri: _modDef18789 }, aspectRatio: "16/9" };
     obj.graphic = obj2;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);

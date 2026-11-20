@@ -1,16 +1,16 @@
-// === Module 7421: GuildOnboardingCompleted ===
+// === Module 7420: GuildOnboardingCompleted ===
 
-// Module 7421 (GuildOnboardingCompleted)
+// Module 7420 (GuildOnboardingCompleted)
 import nativeDefault from "native" /* 575 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7374 */;
-import UserProfileRolesCard from "UserProfileRolesCard" /* 7423 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7373 */;
+import UserProfileRolesCard from "UserProfileRolesCard" /* 7422 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import GuildRoleStore from "GuildRoleStore" /* 4698 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7352 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import GuildRoleStore from "GuildRoleStore" /* 4700 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7351 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, backgroundImage: { position: "absolute", width: "100%", height: "100%" }, title: {}, subtitle: { marginTop: 16 }, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.card = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -77,9 +77,9 @@ export default function GuildOnboardingCompleted(guildId) {
   if (null != stateFromStores1) {
     let obj6 = { id: null, splash: null, size: null };
     ({ id: obj7.id, splash: obj7.splash } = stateFromStores1);
-    obj6.size = 400 * tmp7(2024)();
-    guildSplashURL = tmp7(1414).getGuildSplashURL(obj6);
-    const tmp7Result = tmp7(1414);
+    obj6.size = 400 * tmp7(2022)();
+    guildSplashURL = tmp7(1412).getGuildSplashURL(obj6);
+    const tmp7Result = tmp7(1412);
   }
   let obj5 = require("useProfileThemeValues");
   const items2 = [allSelectedRoleIds];
@@ -149,8 +149,8 @@ export default function GuildOnboardingCompleted(guildId) {
   const tmp2Result6 = require("useIsScreenReaderEnabled");
   const items9 = [c5];
   const stateFromStores2 = require("initialize").useStateFromStores(items9, () => _undefined5.useReducedMotion);
-  require("module_1655");
-  const items10 = [closure_13, require("module_1655").withSequence, require("timing/timing").withTiming, require("module_1655").withDelay, 400, require("module_1655").Easing, stateFromStores2];
+  require("module_1653");
+  const items10 = [closure_13, require("module_1653").withSequence, require("timing/timing").withTiming, require("module_1653").withDelay, 400, require("module_1653").Easing, stateFromStores2];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -207,12 +207,12 @@ export default function GuildOnboardingCompleted(guildId) {
         const obj10 = { uri: guildSplashURL };
         obj9.source = obj10;
         obj9.style = tmp.backgroundImage;
-        tmp27 = isScreenReaderEnabled(tmp7(5479), obj9);
+        tmp27 = isScreenReaderEnabled(tmp7(5481), obj9);
       }
       const items12 = [tmp27, ];
       const items13 = [tmp.container, ];
       let prop = null;
-      const SafeAreaPaddingView = tmp2(6898).SafeAreaPaddingView;
+      const SafeAreaPaddingView = tmp2(6897).SafeAreaPaddingView;
       if (null == guildSplashURL) {
         prop = tmp.containerWithoutSplash;
       }
@@ -226,29 +226,29 @@ export default function GuildOnboardingCompleted(guildId) {
         str2 = "mobile-text-heading-primary";
       }
       obj12.color = str2;
-      const intl = tmp2(1113).intl;
-      obj12.children = intl.string(tmp2(1113).t.PFWIYe);
-      const items14 = [isScreenReaderEnabled(tmp2(5383).Text, obj12), , , ];
+      const intl = tmp2(1112).intl;
+      obj12.children = intl.string(tmp2(1112).t.PFWIYe);
+      const items14 = [isScreenReaderEnabled(tmp2(5385).Text, obj12), , , ];
       const obj13 = { style: tmp.subtitle, accessibilityRole: "header", variant: "body-md/medium", color: null, children: null };
       if (null == guildSplashURL) {
         str = "text-muted";
       }
       obj13.color = str;
-      const intl2 = tmp2(1113).intl;
-      obj13.children = intl2.string(tmp2(1113).t.og4NNr);
-      items14[1] = isScreenReaderEnabled(tmp2(5383).Text, obj13);
+      const intl2 = tmp2(1112).intl;
+      obj13.children = intl2.string(tmp2(1112).t.og4NNr);
+      items14[1] = isScreenReaderEnabled(tmp2(5385).Text, obj13);
       const obj14 = { style: tmp.card, children: null };
-      const obj15 = { size: tmp2(1187).AvatarSizes.XXLARGE, user: stateFromStores, guildId, animate: false };
-      const items15 = [isScreenReaderEnabled(tmp2(1187).Avatar, obj15), , , , ];
+      const obj15 = { size: tmp2(1186).AvatarSizes.XXLARGE, user: stateFromStores, guildId, animate: false };
+      const items15 = [isScreenReaderEnabled(tmp2(1186).Avatar, obj15), , , , ];
       const obj16 = { style: tmp.username, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stateFromStores.username };
-      items15[1] = isScreenReaderEnabled(tmp2(5383).Text, obj16);
+      items15[1] = isScreenReaderEnabled(tmp2(5385).Text, obj16);
       let tmp28Result = null;
       if (numSharedRoleMembers > 0) {
         const obj17 = { style: tmp.rolesHeader, variant: "body-sm/normal", color: "text-muted", children: null };
-        const intl3 = tmp2(1113).intl;
+        const intl3 = tmp2(1112).intl;
         const obj18 = { numSharedRoleMembers };
-        obj17.children = intl3.format(tmp2(1113).t.l1Jc1n, obj18);
-        tmp28Result = tmp28(tmp2(5383).Text, obj17);
+        obj17.children = intl3.format(tmp2(1112).t.l1Jc1n, obj18);
+        tmp28Result = tmp28(tmp2(5385).Text, obj17);
       }
       items15[2] = tmp28Result;
       const obj19 = { style: tmp.roles, children: null };
@@ -268,7 +268,7 @@ export default function GuildOnboardingCompleted(guildId) {
         const obj21 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", children: null };
         const _HermesInternal = HermesInternal;
         obj21.children = "+" + diff;
-        obj20.children = tmp28(tmp2(5383).Text, obj21);
+        obj20.children = tmp28(tmp2(5385).Text, obj21);
         tmp28Result3 = tmp28(tmp39, obj20);
       }
       items16[1] = tmp28Result3;
@@ -277,38 +277,38 @@ export default function GuildOnboardingCompleted(guildId) {
       const obj22 = { style: null, children: null };
       const items18 = [tmp.animation, tmp25];
       obj22.style = items18;
-      const obj23 = { guild: stateFromStores1, size: tmp2(7203).GuildIconSizes.LARGE };
-      const items19 = [isScreenReaderEnabled(tmp7(7203), obj23), , ];
+      const obj23 = { guild: stateFromStores1, size: tmp2(7202).GuildIconSizes.LARGE };
+      const items19 = [isScreenReaderEnabled(tmp7(7202), obj23), , ];
       const obj24 = { style: tmp.animationText, children: null };
       const obj25 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", children: null };
-      const intl4 = tmp2(1113).intl;
+      const intl4 = tmp2(1112).intl;
       const obj26 = { guildName: stateFromStores1.name };
-      obj25.children = intl4.format(tmp2(1113).t.FXREhf, obj26);
-      const items20 = [isScreenReaderEnabled(tmp2(5383).Text, obj25), ];
+      obj25.children = intl4.format(tmp2(1112).t.FXREhf, obj26);
+      const items20 = [isScreenReaderEnabled(tmp2(5385).Text, obj25), ];
       const obj27 = { variant: "body-xs/normal", color: "text-muted", children: null };
-      const tmp7Result3 = tmp7(7203);
+      const tmp7Result3 = tmp7(7202);
       const _HermesInternal2 = HermesInternal;
-      obj27.children = "" + tmp7(2169)().format("LL");
-      items20[1] = isScreenReaderEnabled(tmp2(5383).Text, obj27);
+      obj27.children = "" + tmp7(2167)().format("LL");
+      items20[1] = isScreenReaderEnabled(tmp2(5385).Text, obj27);
       obj24.children = items20;
       items19[1] = ref(c4, obj24);
       const obj28 = { source: null, style: null };
-      const obj32 = tmp7(2169)();
-      obj28.source = tmp7(7448);
+      const obj32 = tmp7(2167)();
+      obj28.source = tmp7(7447);
       obj28.style = tmp.wave;
-      items19[2] = isScreenReaderEnabled(tmp7(5479), obj28);
+      items19[2] = isScreenReaderEnabled(tmp7(5481), obj28);
       obj22.children = items19;
-      items15[4] = ref(tmp7(1655).View, obj22);
+      items15[4] = ref(tmp7(1653).View, obj22);
       obj14.children = items15;
       items14[2] = ref(c4, obj14);
       let tmp28Result4 = null;
       if (isScreenReaderEnabled) {
         const obj29 = { style: tmp.getStartedButton, children: null };
         const obj30 = { variant: "primary", size: "md", grow: true, text: null, onPress: null };
-        const intl5 = tmp2(1113).intl;
-        obj30.text = intl5.string(tmp2(1113).t.LhlgY9);
+        const intl5 = tmp2(1112).intl;
+        obj30.text = intl5.string(tmp2(1112).t.LhlgY9);
         obj30.onPress = onClose;
-        obj29.children = tmp28(tmp2(5390).Button, obj30);
+        obj29.children = tmp28(tmp2(5392).Button, obj30);
         tmp28Result4 = tmp28(tmp39, obj29);
       }
       const obj31 = { children: null };

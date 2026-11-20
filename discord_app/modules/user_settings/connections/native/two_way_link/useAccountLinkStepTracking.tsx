@@ -1,10 +1,10 @@
-// === Module 6972: useAccountLinkStepTracking ===
+// === Module 6971: useAccountLinkStepTracking ===
 
-// Module 6972 (useAccountLinkStepTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+// Module 6971 (useAccountLinkStepTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx");
 

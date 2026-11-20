@@ -1,21 +1,21 @@
-// === Module 2180: SubscriptionRecord ===
+// === Module 2178: SubscriptionRecord ===
 
-// Module 2180 (SubscriptionRecord)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import PremiumSubscription from "PremiumSubscription" /* 2185 */;
-import Record from "Record" /* 1408 */;
-import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 2181 */;
-import InvoiceRecord from "InvoiceRecord" /* 2182 */;
+// Module 2178 (SubscriptionRecord)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
+import PremiumSubscription from "PremiumSubscription" /* 2183 */;
+import Record from "Record" /* 1406 */;
+import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 2179 */;
+import InvoiceRecord from "InvoiceRecord" /* 2180 */;
 
 require = fn;
 function createSubscriptionItemFromServer(id) {
   return { id: id.id, planId: id.plan_id, quantity: id.quantity };
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ PaymentGateways: hasOwnProperty, SubscriptionStatusTypes: closure_6, SubscriptionStatusTypesSets: metroImportDefault, SubscriptionTypes: closure_8 } = Constants);
-const BillingConstants = fn(2184);
+const BillingConstants = fn(2182);
 ({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: closure_10 } = BillingConstants);
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {
@@ -135,9 +135,13 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   const gift_subscription = id.gift_subscription;
   let tmp24 = gift_subscription;
   if (null != gift_subscription) {
-    ({ id: obj5.id, status: obj5.status, recipient_user_id: obj5.recipientUserId, initial_gift_code: obj5.initialGiftCode, initial_entitlement_id: obj5.initialEntitlementId } = gift_subscription);
-    tmp24 = { id: null, status: null, recipientUserId: null, initialGiftCode: null, initialEntitlementId: null };
-    const obj9 = { id: null, status: null, recipientUserId: null, initialGiftCode: null, initialEntitlementId: null };
+    const obj9 = { id: null, status: null, recipientUserId: null, acceptanceExpiresAt: null, initialGiftCode: null, initialEntitlementId: null };
+    ({ id: obj5.id, status: obj5.status, recipient_user_id: obj5.recipientUserId } = gift_subscription);
+    const _Date5 = Date;
+    const date7 = new Date(gift_subscription.acceptance_expires_at);
+    obj9.acceptanceExpiresAt = date7;
+    ({ initial_gift_code: obj5.initialGiftCode, initial_entitlement_id: obj5.initialEntitlementId } = gift_subscription);
+    tmp24 = obj9;
   }
   obj.giftSubscription = tmp24;
   return new SubscriptionRecord(obj);

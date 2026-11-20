@@ -1,13 +1,13 @@
-// === Module 18983: useVoiceChannelApp ===
+// === Module 18807: useVoiceChannelApp ===
 
-// Module 18983 (useVoiceChannelApp)
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 18807 (useVoiceChannelApp)
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceChannelApp.tsx");

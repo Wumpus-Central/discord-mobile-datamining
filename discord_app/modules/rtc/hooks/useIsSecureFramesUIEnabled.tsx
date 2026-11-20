@@ -1,8 +1,8 @@
 // === Module 9615: useIsSecureFramesUIEnabled ===
 
 // Module 9615 (useIsSecureFramesUIEnabled)
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 
 const require = fn;
 let closure_4 = fn(9588).END_TO_END_ENCRYPTION_DISABLED;

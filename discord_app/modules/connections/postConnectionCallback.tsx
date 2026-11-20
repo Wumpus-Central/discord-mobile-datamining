@@ -1,8 +1,8 @@
-// === Module 6700: postConnectionCallback ===
+// === Module 6702: postConnectionCallback ===
 
-// Module 6700 (postConnectionCallback)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import Constants from "Constants" /* 1072 */;
+// Module 6702 (postConnectionCallback)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: c2, FRIEND_SYNC_PLATFORM_TYPES: c3 } = Constants);

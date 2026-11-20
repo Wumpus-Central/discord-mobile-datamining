@@ -1,7 +1,7 @@
-// === Module 13865: NitroHomeBadgeDirectoryExperiment ===
+// === Module 13834: NitroHomeBadgeDirectoryExperiment ===
 
-// Module 13865 (NitroHomeBadgeDirectoryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 13834 (NitroHomeBadgeDirectoryExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-nitro-home-badge-directory", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

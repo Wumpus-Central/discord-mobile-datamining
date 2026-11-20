@@ -1,16 +1,16 @@
-// === Module 18441: ConjureShareSheet ===
+// === Module 18218: ConjureShareSheet ===
 
-// Module 18441 (ConjureShareSheet)
+// Module 18218 (ConjureShareSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import ActionSheet from "ActionSheet" /* 7434 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13698 */;
-import useConjureSharingModeDefault from "useConjureSharingMode" /* 18319 */;
-import ConjureShareAccessDefault from "ConjureShareAccess" /* 18434 */;
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
+import ActionSheet from "ActionSheet" /* 7433 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13667 */;
+import useConjureSharingModeDefault from "useConjureSharingMode" /* 18135 */;
+import ConjureShareAccessDefault from "ConjureShareAccess" /* 18219 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjureShareSheet = "ConjureShareSheet";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { header: { alignItems: "center", gap: nativeDefault.space.PX_12 }, body: null };
 let obj3 = { alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_16 };
@@ -49,9 +49,9 @@ export default function ConjureShareSheet(projectId) {
     str = "";
   }
   const obj3 = { header: null, children: null };
-  const obj4 = { title: intl.formatToPlainString(_modDef4089.pgxjO4, { app: str }), subtitle: null };
+  const obj4 = { title: intl.formatToPlainString(_modDef4091.pgxjO4, { app: str }), subtitle: null };
   const intl2 = util.intl;
-  obj4.subtitle = intl2.string(_modDef4089.mbybxl);
+  obj4.subtitle = intl2.string(_modDef4091.mbybxl);
   items[1] = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
   obj.children = items;
   obj3.header = hasOwnProperty(View, obj);

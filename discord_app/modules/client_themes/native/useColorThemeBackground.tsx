@@ -1,12 +1,12 @@
-// === Module 4964: useColorThemeBackground ===
+// === Module 4966: useColorThemeBackground ===
 
-// Module 4964 (useColorThemeBackground)
-import util from "util" /* 1113 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import GuildThemePresets from "GuildThemePresets" /* 4965 */;
+// Module 4966 (useColorThemeBackground)
+import util from "util" /* 1112 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
+import GuildThemePresets from "GuildThemePresets" /* 4967 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4816 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4818 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(4967)();
+  const tmp = stateFromStores(4969)();
   _require = tmp;
   items = [ThemeStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);

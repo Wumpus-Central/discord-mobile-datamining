@@ -1,13 +1,13 @@
-// === Module 8724: EphemeralIndication ===
+// === Module 8764: EphemeralIndication ===
 
-// Module 8724 (EphemeralIndication)
-import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8725 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8556 */;
+// Module 8764 (EphemeralIndication)
+import util from "util" /* 1112 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8765 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8555 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ HelpdeskArticles: closure_4, MessageFlags: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");

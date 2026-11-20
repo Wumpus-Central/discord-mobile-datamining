@@ -1,23 +1,23 @@
-// === Module 16761: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 16585: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 16761 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 16585 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8827 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8979 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10443 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10385 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import module_1655 from "module_1655" /* 1655 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import module_1653 from "module_1653" /* 1653 */;
 
 require = fn;
 function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   let analyticsLocations;
   const tmp = closure_16();
-  items = [closure_17, theme.theme, closure_9, c4, analyticsLocations(5393).withSpring, analyticsLocations(5394).springStandard];
+  items = [closure_17, theme.theme, closure_9, c4, analyticsLocations(5395).withSpring, analyticsLocations(5396).springStandard];
   analyticsLocations = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -40,8 +40,8 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   SettingsAppearanceChannelListPreviewNitroUpsellTsx4.__closure = items1;
   SettingsAppearanceChannelListPreviewNitroUpsellTsx4.__workletHash = 15416580407479;
   SettingsAppearanceChannelListPreviewNitroUpsellTsx4.__initData = tmp4;
-  const animatedStyle = analyticsLocations(1655).useAnimatedStyle(SettingsAppearanceChannelListPreviewNitroUpsellTsx4);
-  let obj = analyticsLocations(1655);
+  const animatedStyle = analyticsLocations(1653).useAnimatedStyle(SettingsAppearanceChannelListPreviewNitroUpsellTsx4);
+  let obj = analyticsLocations(1653);
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.CLIENT_THEMES_EDITOR).analyticsLocations;
   const items2 = [analyticsLocations];
   const obj2 = { style: tmp.nitroUpsell, children: null };
@@ -51,24 +51,24 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   }, items2);
   const items3 = [closure_10(LinearGradient, { style: animatedStyle, importantForAccessibility: "no-hide-descendants", colors }), ];
   const obj4 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
-  const intl = tmp2(1113).intl;
-  obj4.text = intl.string(analyticsLocations(1113).t.pj0XBN);
-  obj4.icon = closure_10(analyticsLocations(1187).NitroWheel, { style: tmp.nitroWheelIcon });
+  const intl = tmp2(1112).intl;
+  obj4.text = intl.string(analyticsLocations(1112).t.pj0XBN);
+  obj4.icon = closure_10(analyticsLocations(1186).NitroWheel, { style: tmp.nitroWheelIcon });
   obj4.onPress = callback;
-  items3[1] = closure_10(analyticsLocations(5390).Button, obj4);
+  items3[1] = closure_10(analyticsLocations(5392).Button, obj4);
   obj2.children = items3;
   return closure_11(View, obj2);
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsPages: metroImportDefault, AnalyticsSections: closure_8, ThemeTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const LinearGradient = module_1655.createAnimatedComponent(LinearGradientDefault);
+const LinearGradient = module_1653.createAnimatedComponent(LinearGradientDefault);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-let items = [{ code: "(function animationEntering_SettingsAppearanceChannelListPreviewNitroUpsellTsx1(visible){let[withSpring,springStandard]=this.__closure;return{opacity:withSpring(visible,springStandard)};})" }, fn(5393).withSpring, fn(5394).springStandard];
+let items = [{ code: "(function animationEntering_SettingsAppearanceChannelListPreviewNitroUpsellTsx1(visible){let[withSpring,springStandard]=this.__closure;return{opacity:withSpring(visible,springStandard)};})" }, fn(5395).withSpring, fn(5396).springStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -79,7 +79,7 @@ let items1 = [tmp6, tmp7];
 animationEntering.__closure = items1;
 animationEntering.__workletHash = 2802270631824;
 animationEntering.__initData = tmp5;
-let items2 = [{ code: "(function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3(visible,cleanUp){let[withSpring,springStandard,_worklet_1236385840160_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3([_worklet_1236385840160_init_data,cleanUp]){const SettingsAppearanceChannelListPreviewNitroUpsellTsx2=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__closure=[cleanUp];SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__workletHash=1236385840160;SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__initData=_worklet_1236385840160_init_data;return SettingsAppearanceChannelListPreviewNitroUpsellTsx2;}([_worklet_1236385840160_init_data,cleanUp]))};})" }, fn(5393).withSpring, fn(5394).springStandard, { code: "(function SettingsAppearanceChannelListPreviewNitroUpsellTsx2(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
+let items2 = [{ code: "(function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3(visible,cleanUp){let[withSpring,springStandard,_worklet_1236385840160_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3([_worklet_1236385840160_init_data,cleanUp]){const SettingsAppearanceChannelListPreviewNitroUpsellTsx2=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__closure=[cleanUp];SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__workletHash=1236385840160;SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__initData=_worklet_1236385840160_init_data;return SettingsAppearanceChannelListPreviewNitroUpsellTsx2;}([_worklet_1236385840160_init_data,cleanUp]))};})" }, fn(5395).withSpring, fn(5396).springStandard, { code: "(function SettingsAppearanceChannelListPreviewNitroUpsellTsx2(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
 let closure_130_0;
 let closure_130_1;
 let closure_130_2;
@@ -108,7 +108,7 @@ let items3 = [tmp9, tmp10, tmp11];
 animationExiting.__closure = items3;
 animationExiting.__workletHash = 2573458161713;
 animationExiting.__initData = tmp8;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { nitroUpsell: null, nitroWheelIcon: null };
 let obj2 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -139,7 +139,7 @@ export default noop.memo(function SettingsAppearanceChannelListPreviewNitroUpsel
       tmpResult = closure_1_10(SettingsAppearanceChannelListPreviewNitroUpsellComponent, obj2);
     }
     obj.children = tmpResult;
-    return closure_1_10(module_1655.View, obj);
+    return closure_1_10(module_1653.View, obj);
   }, []);
   let obj2 = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };
   let tmp5;

@@ -1,6 +1,6 @@
-// === Module 14653: conjureWorkerFetch ===
+// === Module 14619: conjureWorkerFetch ===
 
-// Module 14653 (conjureWorkerFetch)
+// Module 14619 (conjureWorkerFetch)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_3 = async function _fetchConjureWorker(arg0) {
       let obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

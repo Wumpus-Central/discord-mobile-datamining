@@ -1,7 +1,7 @@
 // === Module 6843: UserProfileClipsGalleryWidgetTypes ===
 
 // Module 6843 (UserProfileClipsGalleryWidgetTypes)
-import _modDef1345 from "module_1345" /* 1345 */;
+import _modDef1343 from "module_1343" /* 1343 */;
 import WidgetType from "WidgetType" /* 6838 */;
 import size from "module_2" /* 2 */;
 
@@ -65,7 +65,7 @@ prototype["isEqual"] = function isEqual(getUploadedClips) {
   if (tmp) {
     const self = this;
     const uploadedClips = this.getUploadedClips();
-    tmp = _modDef1345(uploadedClips, getUploadedClips.getUploadedClips());
+    tmp = _modDef1343(uploadedClips, getUploadedClips.getUploadedClips());
   }
   return tmp;
 };

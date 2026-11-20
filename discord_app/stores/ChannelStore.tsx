@@ -1,22 +1,22 @@
-// === Module 4641: ChannelStore ===
+// === Module 4643: ChannelStore ===
 
-// Module 4641 (ChannelStore)
+// Module 4643 (ChannelStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4670 */;
-import ChannelReaderDefault from "ChannelReader" /* 4691 */;
-import deserializeChannels from "deserializeChannels" /* 4692 */;
-import isChangelogUserDefault from "isChangelogUser" /* 4693 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4672 */;
+import ChannelReaderDefault from "ChannelReader" /* 4693 */;
+import deserializeChannels from "deserializeChannels" /* 4694 */;
+import isChangelogUserDefault from "isChangelogUser" /* 4695 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4642 */;
-import FavoriteStore from "FavoriteStore" /* 4644 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4644 */;
+import FavoriteStore from "FavoriteStore" /* 4646 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const deserializeChannelsDefault = deserializeChannels;
 
@@ -41,7 +41,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               closure_18.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = result;
-              tmp4(4692)(arr);
+              tmp4(4694)(arr);
               if (Full !== tmp2.Basic) {
                 closure_35 = closure_35 + 1;
               }
@@ -497,10 +497,10 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(4645);
+const ChannelRecord = fn(4647);
 ({ createChannelRecordFromServer: metroImportDefault, isPrivate: closure_8, GUILD_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: closure_10, ALL_CHANNEL_TYPES: closure_11, castChannelRecord: closure_12 } = ChannelRecord);
-const ChannelTypes = fn(1072).ChannelTypes;
-const ChannelFlags = fn(4648).ChannelFlags;
+const ChannelTypes = fn(1071).ChannelTypes;
+const ChannelFlags = fn(4650).ChannelFlags;
 let closure_18 = new LoggerDefault("ChannelStore");
 let closure_19 = {};
 let dependencyMap2 = {};
@@ -540,7 +540,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1255).isNotNullish);
+  found = items.filter(found(1254).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -550,7 +550,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_32;
-      return tmp(4690).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async () => {
+      return tmp(4692).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async () => {
         if (c7 === 2) {
           c7 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -561,7 +561,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
@@ -599,7 +599,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                     return obj2;
                   }
                 });
-                found = mapped.filter(closure_0(1255).isNotNullish);
+                found = mapped.filter(closure_0(1254).isNotNullish);
                 closure_130_0 = found;
                 c5 = 1;
                 let _Promise = Promise;

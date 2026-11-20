@@ -1,12 +1,12 @@
-// === Module 17773: NewMemberActionsProgress ===
+// === Module 17600: NewMemberActionsProgress ===
 
-// Module 17773 (NewMemberActionsProgress)
+// Module 17600 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6563 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8392 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6565 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8391 */;
 
 const require = fn;
 function ProgressBar(percent) {
@@ -22,11 +22,11 @@ function ProgressBar(percent) {
   return refs(View, obj);
 }
 const View = fn(17).View;
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };

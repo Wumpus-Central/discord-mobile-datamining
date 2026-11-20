@@ -1,10 +1,10 @@
-// === Module 4618: UserSettingsOverridesStore ===
+// === Module 4620: UserSettingsOverridesStore ===
 
-// Module 4618 (UserSettingsOverridesStore)
+// Module 4620 (UserSettingsOverridesStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
 require = fn;
 function updateExistingSettings() {

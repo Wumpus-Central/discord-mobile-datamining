@@ -1,15 +1,15 @@
-// === Module 7960: CollectiblesItemRecord ===
+// === Module 7959: CollectiblesItemRecord ===
 
-// Module 7960 (CollectiblesItemRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7961 */;
-import NameplateRecord from "NameplateRecord" /* 2112 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7962 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7963 */;
-import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7964 */;
+// Module 7959 (CollectiblesItemRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7960 */;
+import NameplateRecord from "NameplateRecord" /* 2110 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7961 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7962 */;
+import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7963 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ SKUProductLines: metroImportDefault, SKUTypes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");

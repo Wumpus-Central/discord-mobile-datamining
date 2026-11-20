@@ -1,14 +1,14 @@
-// === Module 11096: MutedUntilText ===
+// === Module 11038: MutedUntilText ===
 
-// Module 11096 (MutedUntilText)
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
+// Module 11038 (MutedUntilText)
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const MuteSettingType = { SERVER: 0, [0]: "SERVER", CHANNEL: 1, [1]: "CHANNEL", DM: 2, [2]: "DM", CATEGORY: 3, [3]: "CATEGORY" };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles({ formHintText: { lineHeight: 18, marginBottom: 8, marginTop: 8, paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
@@ -34,16 +34,16 @@ export default function MutedUntilText(arg0) {
         return null;
       }
       const obj2 = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null };
-      const intl5 = tmp15(1113).intl;
+      const intl5 = tmp15(1112).intl;
       const obj3 = { endTime: null, endTimeHook: null };
       const _Date = Date;
       const date = new Date(muteConfig.end_time);
-      obj3.endTime = date.toLocaleString(tmp15(1113).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+      obj3.endTime = date.toLocaleString(tmp15(1112).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
       obj3.endTimeHook = function endTimeHook(children) {
         return jsx(Text_Text.Text, { variant: "body-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(5383).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null });
+      return jsx(tmp15(5385).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null });
     }
   }
   if (obj.SERVER === type) {
@@ -66,6 +66,6 @@ export default function MutedUntilText(arg0) {
     return null;
   }
   obj = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(5383).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult });
+  return jsx(tmp3(5385).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult });
 };
 export { MuteSettingType };

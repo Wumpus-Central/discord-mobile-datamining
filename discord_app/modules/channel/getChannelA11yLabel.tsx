@@ -1,16 +1,16 @@
-// === Module 7890: getChannelA11yLabel ===
+// === Module 7889: getChannelA11yLabel ===
 
-// Module 7890 (getChannelA11yLabel)
-import util from "util" /* 1113 */;
-import UserUtils from "UserUtils" /* 4848 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6702 */;
-import utils from "utils" /* 7891 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 7889 (getChannelA11yLabel)
+import util from "util" /* 1112 */;
+import UserUtils from "UserUtils" /* 4850 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6704 */;
+import utils from "utils" /* 7890 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: hasOwnProperty, StatusTypes: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");

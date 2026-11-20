@@ -1,7 +1,7 @@
-// === Module 17882: InterestCoverTitle ===
+// === Module 17709: InterestCoverTitle ===
 
-// Module 17882 (InterestCoverTitle)
-import Text_Text from "Text/Text" /* 5383 */;
+// Module 17709 (InterestCoverTitle)
+import Text_Text from "Text/Text" /* 5385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,7 +53,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 0.75;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles((width, scale, height, paddingBottom) => {
   const obj = { container: { width, alignItems: "center", justifyContent: "center" }, lines: { height, paddingBottom, justifyContent: "center" }, scaled: null, measure: { position: "absolute", opacity: 0, width: 10000 }, line: { textAlign: "center" } };
   const obj3 = { width: width / scale, transform: null };

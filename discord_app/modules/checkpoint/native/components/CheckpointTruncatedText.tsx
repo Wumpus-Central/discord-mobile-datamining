@@ -1,8 +1,8 @@
-// === Module 12669: CheckpointTruncatedText ===
+// === Module 12639: CheckpointTruncatedText ===
 
-// Module 12669 (CheckpointTruncatedText)
-import Text_Text from "Text/Text" /* 5383 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
+// Module 12639 (CheckpointTruncatedText)
+import Text_Text from "Text/Text" /* 5385 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

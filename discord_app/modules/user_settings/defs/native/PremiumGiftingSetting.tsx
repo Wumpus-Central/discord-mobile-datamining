@@ -1,24 +1,24 @@
-// === Module 16207: PremiumGiftingSetting ===
+// === Module 16171: PremiumGiftingSetting ===
 
-// Module 16207 (PremiumGiftingSetting)
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
+// Module 16171 (PremiumGiftingSetting)
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2184 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 8985 */;
 import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9192 */;
-import PromotionsHooks from "PromotionsHooks" /* 9824 */;
+import PromotionsHooks from "PromotionsHooks" /* 9826 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(12376).GiftIcon,
+  IconComponent: fn(12346).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
@@ -38,7 +38,7 @@ const route = SettingBuilders.createRoute({
     return jsx(native.Badge, { value: unseenOutboundPromotions.length });
   },
   screen: {
-    route: fn(1072).UserSettingsSections.PREMIUM_GIFTING,
+    route: fn(1071).UserSettingsSections.PREMIUM_GIFTING,
     getComponent() {
       return require("UserSettingsPremiumGifting").default;
     }

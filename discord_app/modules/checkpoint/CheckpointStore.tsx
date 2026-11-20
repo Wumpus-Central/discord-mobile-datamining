@@ -1,14 +1,14 @@
-// === Module 12400: CheckpointStore ===
+// === Module 12370: CheckpointStore ===
 
-// Module 12400 (CheckpointStore)
+// Module 12370 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5892 */;
-import CheckpointTrait from "CheckpointTrait" /* 5893 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6217 */;
-import CheckpointFlows from "CheckpointFlows" /* 12402 */;
-import UserStore from "UserStore" /* 1388 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5894 */;
+import CheckpointTrait from "CheckpointTrait" /* 5895 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6219 */;
+import CheckpointFlows from "CheckpointFlows" /* 12372 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 let obj = { INIT: 0, [0]: "INIT", FETCHING: 1, [1]: "FETCHING", SUCCESS: 2, [2]: "SUCCESS", ERROR: 3, [3]: "ERROR" };

@@ -1,25 +1,25 @@
-// === Module 17213: TakeActionScreen ===
+// === Module 17037: TakeActionScreen ===
 
-// Module 17213 (TakeActionScreen)
+// Module 17037 (TakeActionScreen)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5471 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6388 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11734 */;
+import LinkingDefault from "Linking" /* 5473 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6390 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7620 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11720);
+const Constants = fn(11662);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: closure_10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 }, helplineGroup: null, textCenter: null };
 let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
 obj2.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
@@ -76,7 +76,7 @@ export default function TakeActionButtons(senderId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,15 +94,15 @@ export default function TakeActionButtons(senderId) {
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(10053).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(10056).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { text: null, variant: "success" };
-                        const intl = closure_0(1113).intl;
-                        obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                        c1(5474).open(closure_2_13, obj2);
+                        const intl = closure_0(1112).intl;
+                        obj2.text = intl.string(closure_0(1112).t.gn2c6X);
+                        c1(5476).open(closure_2_13, obj2);
                       }, () => {
-                        const intl = closure_1_0(1113).intl;
-                        closure_1_0(5473).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                        const intl = closure_1_0(1112).intl;
+                        closure_1_0(5475).presentFailedToast(intl.string(closure_1_0(1112).t["0YV04/"]));
                       }),
               done: false
             };
@@ -115,9 +115,9 @@ export default function TakeActionButtons(senderId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_5(false);
-          const result = v1(6388).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(11734).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(6388);
+          const result = v1(6390).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(11676).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          const obj = v1(6390);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

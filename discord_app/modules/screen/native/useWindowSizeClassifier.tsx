@@ -1,7 +1,7 @@
-// === Module 4972: useWindowSizeClassifier ===
+// === Module 4974: useWindowSizeClassifier ===
 
-// Module 4972 (useWindowSizeClassifier)
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4973 */;
+// Module 4974 (useWindowSizeClassifier)
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4975 */;
 import size from "module_2" /* 2 */;
 
 const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;

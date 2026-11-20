@@ -1,13 +1,13 @@
-// === Module 12922: useIsPrimaryEntryPointDisabled ===
+// === Module 12892: useIsPrimaryEntryPointDisabled ===
 
-// Module 12922 (useIsPrimaryEntryPointDisabled)
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import getPlatformDefault from "getPlatform" /* 5443 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 7347 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10647 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12835 */;
-import ApplicationRecord from "ApplicationRecord" /* 2143 */;
+// Module 12892 (useIsPrimaryEntryPointDisabled)
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import getPlatformDefault from "getPlatform" /* 5445 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 7346 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10589 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12805 */;
+import ApplicationRecord from "ApplicationRecord" /* 2141 */;
 
 require = fn;
 const size = fn(2);

@@ -1,24 +1,24 @@
-// === Module 6544: RecentMentionsStore ===
+// === Module 6546: RecentMentionsStore ===
 
-// Module 6544 (RecentMentionsStore)
+// Module 6546 (RecentMentionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TimeUtils from "TimeUtils" /* 5541 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5845 */;
-import isMessageMentioned from "isMessageMentioned" /* 6225 */;
-import AgeGateUtils from "AgeGateUtils" /* 6298 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6545 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 6546 */;
-import MessageRecord from "MessageRecord" /* 4735 */;
+import TimeUtils from "TimeUtils" /* 5543 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
+import isMessageMentioned from "isMessageMentioned" /* 6227 */;
+import AgeGateUtils from "AgeGateUtils" /* 6300 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6547 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 6548 */;
+import MessageRecord from "MessageRecord" /* 4737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
 
@@ -292,7 +292,7 @@ function handleDeleteChannel(channel) {
     });
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 const RecentMentionsFilters = Constants.RecentMentionsFilters;
 ({ ChannelTypes: map1, MessageTypesSets: closure_14, UserNotificationSettings: closure_15, ChannelTypesSets: closure_16 } = Constants);
 const recentMentionFilterSettings = "recentMentionFilterSettings";

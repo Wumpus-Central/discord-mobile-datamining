@@ -1,8 +1,8 @@
-// === Module 12908: AppDetailsOverflowMenu ===
+// === Module 12878: AppDetailsOverflowMenu ===
 
-// Module 12908 (AppDetailsOverflowMenu)
-import ToastUtils from "ToastUtils" /* 5473 */;
-import ClipboardUtils from "ClipboardUtils" /* 7426 */;
+// Module 12878 (AppDetailsOverflowMenu)
+import ToastUtils from "ToastUtils" /* 5475 */;
+import ClipboardUtils from "ClipboardUtils" /* 7425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,34 +13,34 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/a
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;
   const onAddAppMenuClick = application.onAddAppMenuClick;
-  dependencyMap = application(10612).getInstallAppProps(application);
-  let obj = application(10612);
-  const tmp3 = onAddAppMenuClick(12909);
-  let tmp3Result = tmp3(application(10612).getInstallableApplication(application));
+  dependencyMap = application(10554).getInstallAppProps(application);
+  let obj = application(10554);
+  const tmp3 = onAddAppMenuClick(12879);
+  let tmp3Result = tmp3(application(10554).getInstallableApplication(application));
   if (tmp3Result) {
     tmp3Result = null != onAddAppMenuClick;
   }
   items = [];
   if (tmp3Result) {
     const obj3 = { label: null, action: null, IconComponent: null };
-    let intl = tmp(1113).intl;
-    obj3.label = intl.string(tmp(1113).t.NgXl3C);
+    let intl = tmp(1112).intl;
+    obj3.label = intl.string(tmp(1112).t.NgXl3C);
     obj3.action = function action() {
       return onAddAppMenuClick({ installAppProps });
     };
-    obj3.IconComponent = tmp(12910).CirclePlusIcon;
+    obj3.IconComponent = tmp(12880).CirclePlusIcon;
     items.push(obj3);
   }
-  const DeveloperMode = tmp(4617).DeveloperMode;
+  const DeveloperMode = tmp(4619).DeveloperMode;
   if (DeveloperMode.getSetting()) {
     const obj4 = { label: null, action: null, IconComponent: null };
-    const intl2 = tmp(1113).intl;
-    obj4.label = intl2.string(tmp(1113).t["+NP/b2"]);
+    const intl2 = tmp(1112).intl;
+    obj4.label = intl2.string(tmp(1112).t["+NP/b2"]);
     obj4.action = function action() {
       ClipboardUtils.copy(application.id);
       ToastUtils.presentIdCopied();
     };
-    obj4.IconComponent = tmp(10316).IdIcon;
+    obj4.IconComponent = tmp(10258).IdIcon;
     items.push(obj4);
   }
   let tmp8 = null;
@@ -57,7 +57,7 @@ export default function AppDetailsOverflowMenu(application) {
           return jsx(application(installAppProps[11]).IconButton, { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: onAddAppMenuClick(installAppProps[12]) });
         }
     };
-    tmp8 = jsx(tmp(8539).ContextMenu, {
+    tmp8 = jsx(tmp(8538).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));

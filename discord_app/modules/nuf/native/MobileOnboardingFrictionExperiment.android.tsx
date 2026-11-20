@@ -1,16 +1,16 @@
-// === Module 17558: MobileOnboardingFrictionExperiment ===
+// === Module 17385: MobileOnboardingFrictionExperiment ===
 
-// Module 17558 (MobileOnboardingFrictionExperiment)
+// Module 17385 (MobileOnboardingFrictionExperiment)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import MobileOnboardingFrictionShared from "MobileOnboardingFrictionShared" /* 17559 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 17510 */;
-import UserStore from "UserStore" /* 1388 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
+import MobileOnboardingFrictionShared from "MobileOnboardingFrictionShared" /* 17386 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 17337 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-let closure_5 = 30 * fn(5541).MS_PER_MINUTE;
-const ApexExperiment = fn(1452);
-let obj2 = { name: "2026-10-android-mobile-onboarding-friction-negative-test", kind: "user", defaultConfig: fn(17559).CONTROL, variations: { 0: fn(17559).CONTROL, 1: fn(17559).LOW_FRICTION_V1 } };
+let closure_5 = 30 * fn(5543).MS_PER_MINUTE;
+const ApexExperiment = fn(1450);
+let obj2 = { name: "2026-10-android-mobile-onboarding-friction-negative-test", kind: "user", defaultConfig: fn(17386).CONTROL, variations: { 0: fn(17386).CONTROL, 1: fn(17386).LOW_FRICTION_V1 } };
 let closure_6 = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/MobileOnboardingFrictionExperiment.android.tsx");

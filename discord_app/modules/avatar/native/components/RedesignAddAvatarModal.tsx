@@ -1,22 +1,22 @@
-// === Module 19662: RedesignAddAvatarModal ===
+// === Module 19480: RedesignAddAvatarModal ===
 
-// Module 19662 (RedesignAddAvatarModal)
+// Module 19480 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 575 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19640 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19458 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8013 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8012 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1071).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -46,7 +46,7 @@ export default function RedesignAddAvatarModal(route) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8355).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8354).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -83,7 +83,7 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(15749);
+              const obj = tmp2(15713);
               obj11.description = tmp2(8792).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8792);
@@ -96,10 +96,10 @@ export default function RedesignAddAvatarModal(route) {
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8012).announcePendingAvatarChange(str);
+            const result = tmp2(8011).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8012);
+            const obj6 = tmp2(8011);
           }
           closure_129_1(true);
         }

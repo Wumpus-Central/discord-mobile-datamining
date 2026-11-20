@@ -1,16 +1,16 @@
-// === Module 20227: handleIncomingURL ===
+// === Module 20047: handleIncomingURL ===
 
-// Module 20227 (handleIncomingURL)
+// Module 20047 (handleIncomingURL)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6373 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8149 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 14974 */;
-import DeepLinkTypes from "DeepLinkTypes" /* 20226 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6375 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8148 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 14938 */;
+import DeepLinkTypes from "DeepLinkTypes" /* 20046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
 
 require = fn;
 let closure_11 = async function _handleIncomingURL(arg0) {
@@ -29,7 +29,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -145,17 +145,17 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     }
                   }
                   c8 = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const parts = url.split("voice/");
                   if (2 !== parts.length) {
                     c8 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     const parts1 = parts[1].split("/");
                     if (0 === parts1.length) {
                       c8 = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     } else if ("user" !== parts1[0]) {
                       if ("invite" === parts1[0]) {
                         const obj15 = { payload: null, isAppStartupNavigation: null };
@@ -321,7 +321,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
     }
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AppStates: metroImportDefault, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
 let closure_10 = new LoggerDefault("index.native.tsx");
 const size = fn(2);

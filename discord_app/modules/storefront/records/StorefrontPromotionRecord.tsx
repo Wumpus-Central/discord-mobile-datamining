@@ -6,7 +6,7 @@ import CollectiblesPromotionIcon from "CollectiblesPromotionIcon" /* 8809 */;
 import CollectiblesPromotionBlockTarget from "CollectiblesPromotionBlockTarget" /* 8810 */;
 import CollectiblesPromotionBlockStyle2 from "CollectiblesPromotionBlockStyle" /* 8811 */;
 import CollectiblesPromotionCountdownUnit from "CollectiblesPromotionCountdownUnit" /* 8812 */;
-import Record from "Record" /* 1408 */;
+import Record from "Record" /* 1406 */;
 
 require = fn;
 function isEnumValue(CollectiblesPromotionBlockStyle, countdown_unit) {
@@ -584,4 +584,20 @@ export function getCollectiblesCollectionSequencedOffer(tenantMetadata) {
     tmp3 = collectibles;
   }
   return tmp3;
+}
+export function doesStorefrontPromotionCoverSku(appliesToAllSkus, arg1) {
+  appliesToAllSkus = appliesToAllSkus.appliesToAllSkus;
+  if (!appliesToAllSkus) {
+    let tmp3 = null != arg1;
+    if (tmp3) {
+      const skuIds = appliesToAllSkus.skuIds;
+      let hasItem;
+      if (skuIds != null) {
+        hasItem = skuIds.includes(arg1);
+      }
+      tmp3 = true === hasItem;
+    }
+    appliesToAllSkus = tmp3;
+  }
+  return appliesToAllSkus;
 }

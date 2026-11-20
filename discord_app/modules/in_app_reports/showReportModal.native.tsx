@@ -1,7 +1,7 @@
-// === Module 10055: showReportModal ===
+// === Module 10058: showReportModal ===
 
-// Module 10055 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+// Module 10058 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

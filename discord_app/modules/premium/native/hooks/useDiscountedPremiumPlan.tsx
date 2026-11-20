@@ -2,7 +2,7 @@
 
 // Module 9116 (useDiscountedPremiumPlan)
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 8691 */;
+import IAPStore from "IAPStore" /* 8731 */;
 
 const require = globalThis.__r;
 

@@ -1,24 +1,24 @@
-// === Module 18882: AutocompleteScreen ===
+// === Module 18706: AutocompleteScreen ===
 
-// Module 18882 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13107 */;
-import TrackingDefault from "Tracking" /* 13128 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13132 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18884 */;
+// Module 18706 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13077 */;
+import TrackingDefault from "Tracking" /* 13098 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13102 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18708 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18883 */;
-import SearchQueryStore from "SearchQueryStore" /* 13121 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18707 */;
+import SearchQueryStore from "SearchQueryStore" /* 13091 */;
 
 require = fn;
-const SearchConstants = fn(8457);
+const SearchConstants = fn(8456);
 ({ SearchListItemTypes: closure_10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 let closure_16 = [];

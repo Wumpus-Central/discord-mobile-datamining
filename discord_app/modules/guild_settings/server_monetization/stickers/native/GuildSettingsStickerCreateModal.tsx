@@ -1,9 +1,9 @@
-// === Module 19845: GuildSettingsStickerCreateModal ===
+// === Module 19663: GuildSettingsStickerCreateModal ===
 
-// Module 19845 (GuildSettingsStickerCreateModal)
-import util from "util" /* 1113 */;
-import Link from "Link" /* 1503 */;
-import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 19846 */;
+// Module 19663 (GuildSettingsStickerCreateModal)
+import util from "util" /* 1112 */;
+import Link from "Link" /* 1501 */;
+import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 19664 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,10 +15,10 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(10472)());
-  const tmp2 = stickerId(10472)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(10414)());
+  const tmp2 = stickerId(10414)();
   const isFocused = Link.useIsFocused();
-  stickerId(5803)(() => {
+  stickerId(5805)(() => {
     onFinish(true);
     return true;
   }, isFocused);
@@ -29,7 +29,7 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   } else {
     tdhW5b = util.t["3DzNjU"];
   }
-  const tmp7 = stickerId(10475);
+  const tmp7 = stickerId(10417);
   return tmp6(tmp7, {
     screenKey: "guild-settings-sticker-create",
     title: intl.string(tdhW5b),

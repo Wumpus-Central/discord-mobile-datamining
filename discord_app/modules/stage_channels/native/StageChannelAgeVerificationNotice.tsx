@@ -1,9 +1,9 @@
-// === Module 7904: StageChannelAgeVerificationNotice ===
+// === Module 7903: StageChannelAgeVerificationNotice ===
 
-// Module 7904 (StageChannelAgeVerificationNotice)
+// Module 7903 (StageChannelAgeVerificationNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6381 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,10 +12,10 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   let contentText = closure_8();
   let Text = onConfirmPress;
   let tmp = dependencyMap;
-  const isVerifiedTeen = onConfirmPress(6290).useIsVerifiedTeen();
-  const intl = onConfirmPress(1113).intl;
+  const isVerifiedTeen = onConfirmPress(6292).useIsVerifiedTeen();
+  const intl = onConfirmPress(1112).intl;
   const format = intl.format;
-  const t = onConfirmPress(1113).t;
+  const t = onConfirmPress(1112).t;
   if (isVerifiedTeen) {
     const obj2 = {
       hook(children) {
@@ -24,8 +24,8 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
             color: "text-default",
             style: contentText.linkText,
             onPress() {
-              const tmp = contentText(5467);
-              tmp(contentText(2188).getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
+              const tmp = contentText(5469);
+              tmp(contentText(2186).getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
               if (onConfirmPress != null) {
                 onConfirmPress();
               }
@@ -43,8 +43,8 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
             color: "text-default",
             style: contentText.linkText,
             onPress() {
-              const obj = contentText(7674);
-              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(6293).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
+              const obj = contentText(7673);
+              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(6295).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
               if (closure_1_0 != null) {
                 closure_1_0();
               }
@@ -58,13 +58,13 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   if (onConfirmPress.noBackground) {
     const obj4 = { style: contentText.noticeContainer, children: null };
     if (isVerifiedTeen) {
-      let WarningIcon = Text(5496).CircleInformationIcon;
+      let WarningIcon = Text(5498).CircleInformationIcon;
     } else {
-      WarningIcon = Text(7644).WarningIcon;
+      WarningIcon = Text(7643).WarningIcon;
     }
     const obj5 = { size: "refresh_sm", color: contentText(575).colors.TEXT_DEFAULT, style: contentText.icon };
     items = [closure_5(WarningIcon, obj5), ];
-    Text = Text(5383).Text;
+    Text = Text(5385).Text;
     const obj6 = { variant: "body-sm/medium", color: "text-subtle", style: null, children: null };
     contentText = contentText.contentText;
     obj6.style = contentText;
@@ -79,15 +79,15 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
       str = "info";
     }
     obj7 = { type: str, message: formatResult, role: "none" };
-    return closure_5(Text(7643).InlineNotice, obj7);
+    return closure_5(Text(7642).InlineNotice, obj7);
   }
-  let obj = onConfirmPress(6290);
+  let obj = onConfirmPress(6292);
 }
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, containerWithDivider: null, divider: null, noticeContainer: null, icon: null, linkText: null, contentText: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16 };
 obj2.containerWithDivider = { paddingVertical: nativeDefault.space.PX_16 };

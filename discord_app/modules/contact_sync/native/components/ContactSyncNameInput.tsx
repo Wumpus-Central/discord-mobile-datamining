@@ -1,10 +1,10 @@
-// === Module 13513: ContactSyncNameInput ===
+// === Module 13483: ContactSyncNameInput ===
 
-// Module 13513 (ContactSyncNameInput)
+// Module 13483 (ContactSyncNameInput)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13510 */;
+import util from "util" /* 1112 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 13480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { flex: { flex: 1 }, content: { flex: 1, padding: 16, paddingBottom: 0 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center", marginBottom: 16 }, input: { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg }, formSubtitle: { lineHeight: 16 }, button: null, error: null };
 let obj3 = { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg };
 obj2.button = { flexGrow: 0, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
@@ -48,38 +48,38 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   obj.style = items;
   const obj2 = { style: tmp.flex, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp9(1113).intl;
+  const intl2 = tmp9(1112).intl;
   const string2 = intl2.string;
-  const t2 = tmp9(1113).t;
+  const t2 = tmp9(1112).t;
   if (null != onRemoveName) {
     let string2Result = string2(t2["/OywGQ"]);
   } else {
     string2Result = string2(t2["sO+NI5"]);
   }
   obj3.children = string2Result;
-  const items1 = [timestampProducer(tmp9(5383).Text, obj3), , , , ];
+  const items1 = [timestampProducer(tmp9(5385).Text, obj3), , , , ];
   const obj4 = { style: tmp.subtitle, variant: "body-sm/medium", color: "text-default", children: null };
-  const intl3 = tmp9(1113).intl;
+  const intl3 = tmp9(1112).intl;
   const string3 = intl3.string;
-  const t3 = tmp9(1113).t;
+  const t3 = tmp9(1112).t;
   if (null != onRemoveName) {
     let string3Result = string3(t3["xCHh/t"]);
   } else {
     string3Result = string3(t3.xI496M);
   }
   obj4.children = string3Result;
-  items1[1] = timestampProducer(tmp9(5383).Text, obj4);
+  items1[1] = timestampProducer(tmp9(5385).Text, obj4);
   const obj5 = { variant: "body-sm/medium", color: "interactive-text-default", children: null };
-  const intl4 = tmp9(1113).intl;
-  obj5.children = intl4.string(tmp9(1113).t["42/D2U"]);
-  items1[2] = timestampProducer(tmp9(5383).Text, obj5);
-  items1[3] = timestampProducer(tmp9(1187).InputView, { value, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(1187).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
+  const intl4 = tmp9(1112).intl;
+  obj5.children = intl4.string(tmp9(1112).t["42/D2U"]);
+  items1[2] = timestampProducer(tmp9(5385).Text, obj5);
+  items1[3] = timestampProducer(tmp9(1186).InputView, { value, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(1186).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
   let tmp12Result = null;
   if (flag) {
     const obj7 = { style: tmp.formSubtitle, variant: "body-xs/medium", color: "text-default", children: null };
-    const intl5 = tmp9(1113).intl;
-    obj7.children = intl5.string(tmp9(1113).t.bCQt9K);
-    tmp12Result = timestampProducer(tmp9(5383).Text, obj7);
+    const intl5 = tmp9(1112).intl;
+    obj7.children = intl5.string(tmp9(1112).t.bCQt9K);
+    tmp12Result = timestampProducer(tmp9(5385).Text, obj7);
   }
   items1[4] = tmp12Result;
   obj2.children = items1;
@@ -88,7 +88,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   if (null != onRemoveName) {
     str = "md";
   }
-  items2[1] = timestampProducer(tmp9(5390).Button, {
+  items2[1] = timestampProducer(tmp9(5392).Button, {
     variant: "primary",
     size: str,
     text: stringResult,
@@ -102,8 +102,8 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   if (null != onRemoveName) {
     const obj9 = { style: tmp.button, children: null };
     const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl6 = tmp9(1113).intl;
-    obj10.text = intl6.string(tmp9(1113).t["91RssO"]);
+    const intl6 = tmp9(1112).intl;
+    obj10.text = intl6.string(tmp9(1112).t["91RssO"]);
     obj10.onPress = function onPress() {
       let tmp;
       if (onRemoveName != null) {
@@ -111,7 +111,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
       }
       return tmp;
     };
-    obj9.children = timestampProducer(tmp9(5390).Button, obj10);
+    obj9.children = timestampProducer(tmp9(5392).Button, obj10);
     tmp12Result2 = timestampProducer(View, obj9);
   }
   items2[2] = tmp12Result2;

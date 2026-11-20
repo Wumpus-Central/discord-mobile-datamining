@@ -1,11 +1,11 @@
-// === Module 13016: ChatInputActionButtonTransitionItem ===
+// === Module 12986: ChatInputActionButtonTransitionItem ===
 
-// Module 13016 (ChatInputActionButtonTransitionItem)
-import _modDef1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 4853 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13017 */;
+// Module 12986 (ChatInputActionButtonTransitionItem)
+import _modDef1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import native from "native" /* 4855 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12987 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,12 +19,12 @@ function FadeTransitionItem(state) {
   if (tmp3) {
     num = 0;
   }
-  sharedValue = require("module_1655").useSharedValue(num);
+  sharedValue = require("module_1653").useSharedValue(num);
   items = [state, sharedValue, cleanup];
   const effect = noop.useEffect(() => {
     if (c0 === native.TransitionStates.YEETED) {
       const tmpResult = timing_timing;
-      items = [closure_7, _mod1708.scheduleOnRN, cleanup];
+      items = [closure_7, _mod1706.scheduleOnRN, cleanup];
       c0 = undefined;
       c1 = undefined;
       [tmp11, tmp12, tmp13] = items;
@@ -48,7 +48,7 @@ function FadeTransitionItem(state) {
       const tmpResult2 = timing_timing;
     }
   }, items);
-  const obj = require("module_1655");
+  const obj = require("module_1653");
   let items1 = [closure_8, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items1;
@@ -62,7 +62,7 @@ function FadeTransitionItem(state) {
   ChatInputActionButtonTransitionItemTsx2.__closure = items2;
   ChatInputActionButtonTransitionItemTsx2.__workletHash = 10652693384285;
   ChatInputActionButtonTransitionItemTsx2.__initData = tmp6;
-  const animatedStyle = require("module_1655").useAnimatedStyle(ChatInputActionButtonTransitionItemTsx2);
+  const animatedStyle = require("module_1653").useAnimatedStyle(ChatInputActionButtonTransitionItemTsx2);
   const obj2 = { style: null };
   const items3 = [closure_6.transitionItem, animatedStyle];
   obj2.style = items3;
@@ -100,10 +100,10 @@ function BounceTransitionItem(state) {
   obj3.importantForAccessibility = str2;
   const merged = Object.assign(obj3);
   obj2.children = children;
-  return jsx(_modDef1655.View, { style: null });
+  return jsx(_modDef1653.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12735).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12705).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "(function ChatInputActionButtonTransitionItemTsx1(finished){let[scheduleOnRN,cleanup]=this.__closure;if(finished===true){scheduleOnRN(cleanup);}})" };

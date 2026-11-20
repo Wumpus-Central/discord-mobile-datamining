@@ -1,6 +1,6 @@
-// === Module 1380: PlatformUtils ===
+// === Module 1378: PlatformUtils ===
 
-// Module 1380 (PlatformUtils)
+// Module 1378 (PlatformUtils)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

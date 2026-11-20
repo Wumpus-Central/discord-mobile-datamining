@@ -1,11 +1,11 @@
-// === Module 17865: InterestGuildActions ===
+// === Module 17692: InterestGuildActions ===
 
-// Module 17865 (InterestGuildActions)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4828 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6390 */;
+// Module 17692 (InterestGuildActions)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4830 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6392 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4826 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4643 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4828 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4645 */;
 
 require = fn;
 let closure_8 = async function _joinInterestGuild(arg0) {
@@ -19,7 +19,7 @@ let closure_8 = async function _joinInterestGuild(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ let closure_8 = async function _joinInterestGuild(arg0) {
     }
   }
 };
-const JoinGuildSources = fn(1072).JoinGuildSources;
+const JoinGuildSources = fn(1071).JoinGuildSources;
 const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildActions.tsx");

@@ -1,12 +1,12 @@
-// === Module 17327: useShopAllCatalogPages ===
+// === Module 17154: useShopAllCatalogPages ===
 
-// Module 17327 (useShopAllCatalogPages)
+// Module 17154 (useShopAllCatalogPages)
 import initializeDefault from "initialize" /* 504 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9777 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9779 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8849 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7957 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7956 */;
 
 require = fn;
 function getCategoryForCollection(id) {
@@ -18,7 +18,7 @@ function getCategoryForCollection(id) {
   }
   return value;
 }
-let closure_7 = fn(1072).COLLECTIBLES_APPLICATION_ID;
+let closure_7 = fn(1071).COLLECTIBLES_APPLICATION_ID;
 const weakMap = new WeakMap();
 const weakSet = new WeakSet();
 const size = fn(2);

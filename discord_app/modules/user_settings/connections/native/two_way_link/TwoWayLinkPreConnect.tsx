@@ -1,10 +1,10 @@
-// === Module 6948: TwoWayLinkPreConnect ===
+// === Module 6947: TwoWayLinkPreConnect ===
 
-// Module 6948 (TwoWayLinkPreConnect)
+// Module 6947 (TwoWayLinkPreConnect)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6949 */;
-import TwoWayLinkType from "TwoWayLinkType" /* 6952 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6948 */;
+import TwoWayLinkType from "TwoWayLinkType" /* 6951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -15,11 +15,11 @@ let closure_12 = async function _fetchAuthorizeURL() {
   return value.body.url;
 };
 const View = fn(17).View;
-const WebBrowserType = fn(1072).WebBrowserType;
+const WebBrowserType = fn(1071).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
@@ -59,7 +59,7 @@ export function TwoWayLinkPreConnect(platformType) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -105,7 +105,7 @@ export function TwoWayLinkPreConnect(platformType) {
             return obj5;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -120,7 +120,7 @@ export function TwoWayLinkPreConnect(platformType) {
           c3 = 0;
           if (!closure_129_6.current) {
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else {
             let tmp12 = tmp3(tmp42[11]);
             let getCallbackParamsFromURL = tmp12.openURL;

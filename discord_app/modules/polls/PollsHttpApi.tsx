@@ -1,6 +1,6 @@
-// === Module 12091: PollsHttpApi ===
+// === Module 12033: PollsHttpApi ===
 
-// Module 12091 (PollsHttpApi)
+// Module 12033 (PollsHttpApi)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -74,7 +74,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp21) {
       closure_3 = tmp21;
@@ -98,7 +98,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp28) {
       closure_3 = tmp28;
@@ -167,7 +167,7 @@ let closure_5 = async function _endPollEarly(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
 

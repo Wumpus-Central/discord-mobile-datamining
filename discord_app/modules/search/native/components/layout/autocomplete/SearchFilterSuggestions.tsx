@@ -1,11 +1,11 @@
-// === Module 18764: SearchFilterSuggestions ===
+// === Module 18588: SearchFilterSuggestions ===
 
-// Module 18764 (SearchFilterSuggestions)
+// Module 18588 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 4853 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13107 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 18765 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import native from "native" /* 4855 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13077 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 18589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,9 +44,9 @@ function AnimatedEnterExitContainer(state) {
   state = state.state;
   _require = state;
   ({ children, cleanUp } = state);
-  const sharedValue = require("module_1655").useSharedValue(0);
-  const obj = require("module_1655");
-  items = [closure_12, require("spring/spring").withSpring, sharedValue, require("springPresets").springStandard, closure_11, state, require("native").TransitionStates, require("module_1708").scheduleOnRN, cleanUp];
+  const sharedValue = require("module_1653").useSharedValue(0);
+  const obj = require("module_1653");
+  items = [closure_12, require("spring/spring").withSpring, sharedValue, require("springPresets").springStandard, closure_11, state, require("native").TransitionStates, require("module_1706").scheduleOnRN, cleanUp];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -115,7 +115,7 @@ function AnimatedEnterExitContainer(state) {
   SearchFilterSuggestionsTsx2.__workletHash = 16725655687152;
   SearchFilterSuggestionsTsx2.__initData = tmp3;
   let items2 = [sharedValue, state];
-  const style = require("module_1655").useAnimatedStyle(SearchFilterSuggestionsTsx2);
+  const style = require("module_1653").useAnimatedStyle(SearchFilterSuggestionsTsx2);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (c0 === native.TransitionStates.YEETED) {
@@ -123,12 +123,12 @@ function AnimatedEnterExitContainer(state) {
     }
     const result = _undefined.set(num);
   }, items2);
-  return jsx(_modDef1655.View, { style, children });
+  return jsx(_modDef1653.View, { style, children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(8456).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(8455).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
@@ -205,7 +205,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   SearchFilterSuggestionsTsx3.__closure = items2;
   SearchFilterSuggestionsTsx3.__workletHash = 6265244900562;
   SearchFilterSuggestionsTsx3.__initData = tmp10;
-  const items3 = [closure_16, require("module_1708").scheduleOnRN, tmp6[1], closure_14];
+  const items3 = [closure_16, require("module_1706").scheduleOnRN, tmp6[1], closure_14];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -225,7 +225,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   SearchFilterSuggestionsTsx4.__closure = items4;
   SearchFilterSuggestionsTsx4.__workletHash = 4953846866307;
   SearchFilterSuggestionsTsx4.__initData = tmp12;
-  const animatedReaction = require("module_1655").useAnimatedReaction(SearchFilterSuggestionsTsx3, SearchFilterSuggestionsTsx4);
+  const animatedReaction = require("module_1653").useAnimatedReaction(SearchFilterSuggestionsTsx3, SearchFilterSuggestionsTsx4);
   const items5 = [first, suggestionsMounted];
   const effect1 = obj3.useEffect(() => {
     const result = suggestionsMounted.set(first.length > 0);

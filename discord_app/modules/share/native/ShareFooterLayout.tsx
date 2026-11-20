@@ -1,21 +1,21 @@
-// === Module 9974: ShareFooterLayout ===
+// === Module 9977: ShareFooterLayout ===
 
-// Module 9974 (ShareFooterLayout)
+// Module 9977 (ShareFooterLayout)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import spring_spring from "spring/spring" /* 5393 */;
-import springPresets from "springPresets" /* 5394 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import spring_spring from "spring/spring" /* 5395 */;
+import springPresets from "springPresets" /* 5396 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { footer: { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, footerSeparator: null, warningWrapper: null, chatRow: null };
 let obj3 = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.footerSeparator = { marginHorizontal: -nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -47,7 +47,7 @@ export default function ShareFooterLayout(arg0) {
   ShareFooterLayoutTsx1.__closure = items1;
   ShareFooterLayoutTsx1.__workletHash = 16457312043220;
   ShareFooterLayoutTsx1.__initData = tmp6;
-  const animatedStyle = _mod1655.useAnimatedStyle(ShareFooterLayoutTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ShareFooterLayoutTsx1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.footer, animatedStyle];
   obj2.style = items2;
@@ -75,5 +75,5 @@ export default function ShareFooterLayout(arg0) {
   obj5.children = items6;
   items4[1] = timestampProducer(View, obj5);
   obj2.children = items4;
-  return timestampProducer(_modDef1655.View, obj2);
+  return timestampProducer(_modDef1653.View, obj2);
 };

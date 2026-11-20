@@ -1,16 +1,16 @@
-// === Module 18705: ConjureTemplateWizard ===
+// === Module 18529: ConjureTemplateWizard ===
 
-// Module 18705 (ConjureTemplateWizard)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
+// Module 18529 (ConjureTemplateWizard)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
 import ConjureUtils from "ConjureUtils" /* 6746 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 18706 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 18530 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 function conjureTemplateStartMessage(templateName) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4089["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef4091["/qSx7+"], { templateName, locale: util.intl.currentLocale });
 }
 let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
   closure_0 = arg0;
@@ -28,7 +28,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -196,9 +196,9 @@ export function conjureWizardServerCopy(stateFromStores1) {
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4089.vcxYIA);
+    obj.title = intl.string(_modDef4091.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef4089.auUHPZ);
+    obj.hint = intl2.string(_modDef4091.auUHPZ);
     server = obj;
   }
   return server;

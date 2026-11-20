@@ -1,7 +1,7 @@
 // === Module 8909: NameplateUtils ===
 
 // Module 8909 (NameplateUtils)
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2108 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2106 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");

@@ -1,28 +1,28 @@
-// === Module 17692: VoiceUserItem ===
+// === Module 17519: VoiceUserItem ===
 
-// Module 17692 (VoiceUserItem)
+// Module 17519 (VoiceUserItem)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5522 */;
+import native from "native" /* 1186 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5524 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = "body-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1187).AvatarSizes.XSMALL_20;
-const createStyles = fn(4792);
+const XSMALL_20 = fn(1186).AvatarSizes.XSMALL_20;
+const createStyles = fn(4794);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11068);
+const ChannelListLayout = fn(11010);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

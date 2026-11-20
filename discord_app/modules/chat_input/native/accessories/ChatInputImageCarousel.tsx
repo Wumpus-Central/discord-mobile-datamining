@@ -1,13 +1,13 @@
-// === Module 13004: ChatInputImageCarousel ===
+// === Module 12974: ChatInputImageCarousel ===
 
-// Module 13004 (ChatInputImageCarousel)
+// Module 12974 (ChatInputImageCarousel)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8398 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8348 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8397 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8347 */;
 
 const require = fn;
-const DraftType = fn(8196).DraftType;
-let closure_6 = fn(10320).useChatShowingAutoComplete;
+const DraftType = fn(8195).DraftType;
+let closure_6 = fn(10262).useChatShowingAutoComplete;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
@@ -36,7 +36,7 @@ export default noop.memo(function ChatInputImageCarousel(canUpload) {
   let tmp4 = null;
   if (null != stateFromStores) {
     const obj2 = { attachments: stateFromStores, channelId };
-    tmp4 = jsx(channelId(11554), { attachments: stateFromStores, channelId });
+    tmp4 = jsx(channelId(11496), { attachments: stateFromStores, channelId });
   }
   return tmp4;
 });

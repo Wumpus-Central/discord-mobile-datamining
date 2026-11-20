@@ -1,15 +1,15 @@
-// === Module 18374: ConjureLinkedAppConnector ===
+// === Module 18208: ConjureLinkedAppConnector ===
 
-// Module 18374 (ConjureLinkedAppConnector)
+// Module 18208 (ConjureLinkedAppConnector)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import timingPresets from "timingPresets" /* 5005 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import timingPresets from "timingPresets" /* 5007 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const PX_40 = nativeDefault.space.PX_40;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_6 = nativeDefault.space.PX_6;
 let closure_8 = PX_40 - PX_6;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { connector: { width: PX_40, height: PX_12, flexShrink: 0 }, line: null, headStart: null, headEnd: null, packet: null };
 const rect = { position: "absolute", left: 0, right: 0, top: PX_12 / 2, height: 2 * StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.line = rect;
@@ -42,7 +42,7 @@ export default function ConjureLinkedAppConnector(flow) {
   items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = require("initialize");
-  const sharedValue = require("module_1655").useSharedValue(0);
+  const sharedValue = require("module_1653").useSharedValue(0);
   const items1 = [flow, sharedValue, stateFromStores];
   const effect = noop.useEffect(() => {
     let tmp2 = null == c0;
@@ -52,11 +52,11 @@ export default function ConjureLinkedAppConnector(flow) {
     if (!tmp2) {
       const result = _undefined2.set(0);
       if ("both" === c0) {
-        const obj = _mod1655;
+        const obj = _mod1653;
         const withTimingResult = timing_timing.withTiming(1, timingPresets.timingSlow);
         let withSequenceResult = obj.withSequence(withTimingResult, timing_timing.withTiming(0, timingPresets.timingSlow));
       } else {
-        const obj4 = _mod1655;
+        const obj4 = _mod1653;
         const withTimingResult1 = timing_timing.withTiming(1, timingPresets.timingSlow);
         const withTimingResult2 = timing_timing.withTiming(0, timingPresets.timingNone);
         withSequenceResult = obj4.withSequence(withTimingResult1, withTimingResult2, timing_timing.withTiming(1, timingPresets.timingSlow));
@@ -64,8 +64,8 @@ export default function ConjureLinkedAppConnector(flow) {
       const result1 = _undefined2.set(withSequenceResult);
     }
   }, items1);
-  let obj2 = require("module_1655");
-  const items2 = [closure_10, sharedValue, flow, require("module_1655").interpolate, closure_8];
+  let obj2 = require("module_1653");
+  const items2 = [closure_10, sharedValue, flow, require("module_1653").interpolate, closure_8];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -92,12 +92,12 @@ export default function ConjureLinkedAppConnector(flow) {
   ConjureLinkedAppConnectorTsx1.__workletHash = 358024267550;
   ConjureLinkedAppConnectorTsx1.__initData = tmp7;
   let obj4 = { style: tmp.connector, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  const animatedStyle = require("module_1655").useAnimatedStyle(ConjureLinkedAppConnectorTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(ConjureLinkedAppConnectorTsx1);
   const items4 = [closure_6(closure_4, { style: tmp.line }), , , ];
   if ("gets" === flow) {
     let obj6 = { style: tmp.headStart, children: null };
     let obj7 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj6.children = closure_6(tmp2(18375).ChevronSmallLeftIcon, obj7);
+    obj6.children = closure_6(tmp2(18209).ChevronSmallLeftIcon, obj7);
     let tmp15Result = closure_6(closure_4, obj6);
   } else {
     tmp15Result = null;
@@ -106,7 +106,7 @@ export default function ConjureLinkedAppConnector(flow) {
   if ("sends" === flow) {
     const obj8 = { style: tmp.headEnd, children: null };
     const obj9 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj8.children = closure_6(tmp2(7446).ChevronSmallRightIcon, obj9);
+    obj8.children = closure_6(tmp2(7445).ChevronSmallRightIcon, obj9);
     let tmp15Result3 = closure_6(closure_4, obj8);
   } else {
     tmp15Result3 = null;
@@ -119,7 +119,7 @@ export default function ConjureLinkedAppConnector(flow) {
       const obj10 = { style: null };
       const items5 = [tmp.packet, animatedStyle];
       obj10.style = items5;
-      tmp15Result4 = closure_6(_modDef1655.View, obj10);
+      tmp15Result4 = closure_6(_modDef1653.View, obj10);
     }
   }
   items4[3] = tmp15Result4;

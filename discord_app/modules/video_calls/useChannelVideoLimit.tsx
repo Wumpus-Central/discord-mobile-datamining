@@ -1,13 +1,13 @@
 // === Module 9546: useChannelVideoLimit ===
 
 // Module 9546 (useChannelVideoLimit)
-import GuildStore from "GuildStore" /* 4663 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5536 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5538 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/useChannelVideoLimit.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 14491: UserProfileActivityTab ===
+// === Module 14459: UserProfileActivityTab ===
 
-// Module 14491 (UserProfileActivityTab)
+// Module 14459 (UserProfileActivityTab)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 14496 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 14464 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,8 +48,8 @@ function RecentActivityIntroText() {
         accessibilityRole: "link",
         onPress() {
           const obj2 = { href: null };
-          const obj = learnMore(7136);
-          obj2.href = closure_1_1(2188).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+          const obj = learnMore(7135);
+          obj2.href = closure_1_1(2186).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
           return obj.handleClick(obj2);
         },
         children
@@ -58,10 +58,10 @@ function RecentActivityIntroText() {
   });
 }
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, sectionHeading: null, introText: null, learnMore: null, loading: null, loadingRow: null, loadingThumbnail: null, loadingLine: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.sectionHeading = { marginBottom: -nativeDefault.space.PX_8 };
@@ -84,13 +84,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14492)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14460)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(14495);
+        const tmp7 = user(14463);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -103,17 +103,17 @@ export default function UserProfileActivityTab(user) {
   }
   if (hasCurrentActivity) {
     const obj3 = { heading: null, children: null };
-    const intl = user(1113).intl;
-    obj3.heading = intl.string(user(1113).t.J6STd9);
+    const intl = user(1112).intl;
+    obj3.heading = intl.string(user(1112).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(14358), obj4);
+    obj3.children = closure_5(cardStyle(14326), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
   items = [hasCurrentActivity, ];
   if (hasRecentActivity) {
     const obj5 = { heading: null, introText: null, children: null };
-    const intl2 = user(1113).intl;
-    obj5.heading = intl2.string(user(1113).t.jzgEoL);
+    const intl2 = user(1112).intl;
+    obj5.heading = intl2.string(user(1112).t.jzgEoL);
     let tmp15Result;
     if (isCurrentUser) {
       tmp15Result = closure_5(RecentActivityIntroText, {});
@@ -125,5 +125,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(14492)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(14460)({ userId: user.id, currentUserId: currentUser.id, guildId });
 };

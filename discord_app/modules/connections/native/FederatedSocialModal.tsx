@@ -1,7 +1,7 @@
-// === Module 7134: FederatedSocialModal ===
+// === Module 7133: FederatedSocialModal ===
 
-// Module 7134 (FederatedSocialModal)
-import PlatformsDefault from "Platforms" /* 6570 */;
+// Module 7133 (FederatedSocialModal)
+import PlatformsDefault from "Platforms" /* 6572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -145,10 +145,10 @@ function FederatedSocialModalScreen(onClose) {
   obj4.children = items;
   return closure_8(require("common/SafeAreaView").SafeAreaPaddingView, obj4);
 }
-const WebBrowserType = fn(1072).WebBrowserType;
+const WebBrowserType = fn(1071).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");

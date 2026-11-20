@@ -1,15 +1,15 @@
-// === Module 20146: MessageSendFailureNotificationManager ===
+// === Module 19966: MessageSendFailureNotificationManager ===
 
-// Module 20146 (MessageSendFailureNotificationManager)
-import util from "util" /* 1113 */;
-import PushNotificationDefault from "PushNotification" /* 10799 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11051 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11053 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import UserStore from "UserStore" /* 1388 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+// Module 19966 (MessageSendFailureNotificationManager)
+import util from "util" /* 1112 */;
+import PushNotificationDefault from "PushNotification" /* 10741 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10993 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10995 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import UserStore from "UserStore" /* 1386 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -74,9 +74,9 @@ function handleMessageCreate(message) {
     }, 3000);
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ InAppNotificationTypes: metroImportDefault, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(6880).LocalNotificationTypes;
+const LocalNotificationTypes = fn(6879).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

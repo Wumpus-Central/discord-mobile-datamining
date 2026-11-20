@@ -6,7 +6,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 const require = globalThis.__r;
 
 const require = fn;
-const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
+const SubscriptionStatusTypes = fn(1071).SubscriptionStatusTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
 
@@ -28,7 +28,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(2174);
+    const tmp2Result = tmp2(2172);
     const billingInformationString = tmp2Result.getBillingInformationString(subscription, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     if (tmp2Result2.isIOS()) {
@@ -38,7 +38,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
         if (subscription.status === SubscriptionStatusTypes.ACTIVE) {
           formatResult = billingInformationString;
           if (!appleSubscriptionOwnership.isMismatch()) {
-            const intl = tmp2(1113).intl;
+            const intl = tmp2(1112).intl;
             let obj3 = { renewalDate: subscriptionPeriodStart.subscriptionPeriodStart, onSubscriptionManagementClick: null };
             _require = asyncGeneratorStep(async () => {
               if (v3 === 2) {
@@ -51,7 +51,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -79,7 +79,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
                     return obj;
                   } else {
                     v3 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   v3 = tmp;
@@ -97,7 +97,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
               }
               return applyArgumentsResult;
             };
-            formatResult = intl.format(tmp2(1113).t.gknRR3, obj3);
+            formatResult = intl.format(tmp2(1112).t.gknRR3, obj3);
           }
         }
       }

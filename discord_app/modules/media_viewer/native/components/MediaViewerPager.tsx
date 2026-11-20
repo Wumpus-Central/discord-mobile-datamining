@@ -1,10 +1,10 @@
-// === Module 10541: MediaViewerPager ===
+// === Module 10483: MediaViewerPager ===
 
-// Module 10541 (MediaViewerPager)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8099 */;
-import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 10532 */;
+// Module 10483 (MediaViewerPager)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8098 */;
+import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 10474 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -65,12 +65,12 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   ref = obj.useRef(null);
   ref1 = obj.useRef(undefined);
   const tmp14 = require("getMediaViewerStateForScreen")(windowWidth, windowHeight, sources[first]);
-  sharedValue = require("module_1655").useSharedValue(false);
-  const tmp7Result = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(1);
+  sharedValue = require("module_1653").useSharedValue(false);
+  const tmp7Result = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(1);
   overlayEnabled = panGestureConfig.overlayEnabled;
   ({ isInteracting, isClosing } = panGestureConfig);
-  const tmp7Result5 = require("module_1655");
+  const tmp7Result5 = require("module_1653");
   items = [originLayout, sharedValue1, isClosing];
   _require = undefined;
   importDefault = undefined;
@@ -89,8 +89,8 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   MediaViewerPagerTsx1.__closure = items1;
   MediaViewerPagerTsx1.__workletHash = 2156756597178;
   MediaViewerPagerTsx1.__initData = tmp19;
-  const derivedValue = require("module_1655").useDerivedValue(MediaViewerPagerTsx1);
-  const tmp7Result6 = require("module_1655");
+  const derivedValue = require("module_1653").useDerivedValue(MediaViewerPagerTsx1);
+  const tmp7Result6 = require("module_1653");
   const mediaViewerPanGesture = require("useMediaViewerPanGesture").useMediaViewerPanGesture(panGestureConfig, derivedValue);
   const panGestureGeneratorResult = mediaViewerPanGesture.panGestureGenerator(0);
   c19 = panGestureGeneratorResult;
@@ -232,11 +232,11 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   MediaViewerPagerTsx4.__closure = items11;
   MediaViewerPagerTsx4.__workletHash = 3436017293841;
   MediaViewerPagerTsx4.__initData = tmp34;
-  const animatedReaction = require("module_1655").useAnimatedReaction(MediaViewerPagerTsx3, MediaViewerPagerTsx4);
+  const animatedReaction = require("module_1653").useAnimatedReaction(MediaViewerPagerTsx3, MediaViewerPagerTsx4);
   const items12 = [entranceAnimationDriver, originLayout, panGestureConfig, renderMedia, sources, useItemVisible, windowWidth, windowHeight];
   const callback5 = obj.useCallback((index) => jsx(MediaViewerItemPresenterDefault, { useItemVisible, index, source: sources[index], originLayout, renderMedia, windowWidth, windowHeight, entranceAnimationDriver, panGestureConfig }), items12);
   const obj4 = { ref, zoomScale: sharedValue1, onCreateGesture: callback, gestureEnabled: !mediaItemHasSpoiler, contentWidth: width, contentHeight: height, maximumZoomScale, children: null };
-  const tmp7Result8 = require("module_1655");
+  const tmp7Result8 = require("module_1653");
   const obj5 = {};
   const tmp10Result = require("ZoomLayoutGesture");
   const merged = Object.assign(onScrollWorklets);

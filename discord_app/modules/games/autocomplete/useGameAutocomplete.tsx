@@ -1,15 +1,15 @@
-// === Module 9806: useGameAutocomplete ===
+// === Module 9808: useGameAutocomplete ===
 
-// Module 9806 (useGameAutocomplete)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8768 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 9807 */;
-import GameSearchSession from "GameSearchSession" /* 9808 */;
+// Module 9808 (useGameAutocomplete)
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8706 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 9809 */;
+import GameSearchSession from "GameSearchSession" /* 9810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8767 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8705 */;
 
 require = fn;
-const QueryIds = fn(1072).QueryIds;
+const QueryIds = fn(1071).QueryIds;
 const initialize = fn(504);
 const obj2 = {
   getQueryId(name, arg1) {
@@ -28,7 +28,7 @@ const obj2 = {
   getIsLoading(arg0, arg1) {
     return GameAutocompleteStore.isFetching(arg0, arg1);
   },
-  retryConfig: { retryableErrors: fn(8768).isRetryableGameSearchError },
+  retryConfig: { retryableErrors: fn(8706).isRetryableGameSearchError },
   staleAfter: 3600,
   failureStaleAfter: 60
 };

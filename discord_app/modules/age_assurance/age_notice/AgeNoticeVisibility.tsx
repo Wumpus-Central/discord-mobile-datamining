@@ -1,10 +1,10 @@
-// === Module 15927: AgeNoticeVisibility ===
+// === Module 15891: AgeNoticeVisibility ===
 
-// Module 15927 (AgeNoticeVisibility)
-import Server from "Server" /* 2119 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5454 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6295 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 15891 (AgeNoticeVisibility)
+import Server from "Server" /* 2117 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5456 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6297 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const size = fn(2);

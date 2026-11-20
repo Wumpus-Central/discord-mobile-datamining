@@ -1,10 +1,10 @@
-// === Module 10001: GroupDMAvatar ===
+// === Module 10004: GroupDMAvatar ===
 
-// Module 10001 (GroupDMAvatar)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
+// Module 10004 (GroupDMAvatar)
+import GlobalUtils from "GlobalUtils" /* 1254 */;
 import ClipView from "ClipView" /* 8903 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 class FacepileGroupDMAvatar {
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "body-xs/medium" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "absolute" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -90,15 +90,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {};
-obj[fn(1187).AvatarSizes.LARGE_48] = fn(1187).AvatarSizes.SMALL;
-obj[fn(1187).AvatarSizes.XLARGE] = fn(1187).AvatarSizes.NORMAL;
-obj[fn(1187).AvatarSizes.XXLARGE] = fn(1187).AvatarSizes.LARGE;
-obj[fn(1187).AvatarSizes.PROFILE] = fn(1187).AvatarSizes.XXLARGE;
-obj[fn(1187).AvatarSizes.REFRESH_MEDIUM_32] = fn(1187).AvatarSizes.XSMALL_20;
-obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
-obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
-obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
-const createStyles = fn(4792);
+obj[fn(1186).AvatarSizes.LARGE_48] = fn(1186).AvatarSizes.SMALL;
+obj[fn(1186).AvatarSizes.XLARGE] = fn(1186).AvatarSizes.NORMAL;
+obj[fn(1186).AvatarSizes.XXLARGE] = fn(1186).AvatarSizes.LARGE;
+obj[fn(1186).AvatarSizes.PROFILE] = fn(1186).AvatarSizes.XXLARGE;
+obj[fn(1186).AvatarSizes.REFRESH_MEDIUM_32] = fn(1186).AvatarSizes.XSMALL_20;
+obj[fn(1186).AvatarSizes.XSMALL] = fn(1186).AvatarSizes.SIZE_16;
+obj[fn(1186).AvatarSizes.SIZE_16] = fn(1186).AvatarSizes.XXSMALL_10;
+obj[fn(1186).AvatarSizes.NORMAL] = fn(1186).AvatarSizes.XSMALL;
+const createStyles = fn(4794);
 const React5 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
@@ -119,7 +119,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
     }
     return tmp5;
   }
-  tmp5 = closure_5(channel(1187).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
+  tmp5 = closure_5(channel(1186).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
   obj = channel(504);
 };
 export { FacepileGroupDMAvatar };

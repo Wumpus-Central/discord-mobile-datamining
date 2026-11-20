@@ -1,11 +1,11 @@
-// === Module 8097: openUserProfileAvatarMediaViewer ===
+// === Module 8096: openUserProfileAvatarMediaViewer ===
 
-// Module 8097 (openUserProfileAvatarMediaViewer)
-import openMediaModal from "openMediaModal" /* 8098 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+// Module 8096 (openUserProfileAvatarMediaViewer)
+import openMediaModal from "openMediaModal" /* 8097 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
-const AVATAR_MAX_SIZE = fn(1072).AVATAR_MAX_SIZE;
+const AVATAR_MAX_SIZE = fn(1071).AVATAR_MAX_SIZE;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 13802: useAppChannelRunningApp ===
+// === Module 13771: useAppChannelRunningApp ===
 
-// Module 13802 (useAppChannelRunningApp)
-import FramesStore from "FramesStore" /* 6502 */;
+// Module 13771 (useAppChannelRunningApp)
+import FramesStore from "FramesStore" /* 6504 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6503);
+const ChannelTypes = fn(1071).ChannelTypes;
+const FramesConstants = fn(6505);
 ({ asLaunched: hasOwnProperty, getFrameSurfaceForChannel: closure_6 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");
@@ -36,7 +36,7 @@ export default function useAppChannelRunningApp(arg0) {
     return tmp4;
   }, items1);
   let obj = require("initialize");
-  let tmp4 = stateFromStores(13803)(stateFromStores);
+  let tmp4 = stateFromStores(13772)(stateFromStores);
   const items2 = [FramesStore];
   const items3 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {
@@ -61,8 +61,8 @@ export default function useAppChannelRunningApp(arg0) {
   let stringResult = null;
   ({ audible, userMuted } = stateFromStoresObject);
   if (tmp4) {
-    const intl = tmp(1113).intl;
-    stringResult = intl.string(tmp(1113).t["1yCkJY"]);
+    const intl = tmp(1112).intl;
+    stringResult = intl.string(tmp(1112).t["1yCkJY"]);
   }
   obj3.runningLabel = stringResult;
   obj3.audible = audible;

@@ -1,35 +1,35 @@
-// === Module 15692: EmbeddedActivitiesManager ===
+// === Module 15656: EmbeddedActivitiesManager ===
 
-// Module 15692 (EmbeddedActivitiesManager)
+// Module 15656 (EmbeddedActivitiesManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import v1 from "v1" /* 1269 */;
-import StringUtils from "StringUtils" /* 2153 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4713 */;
-import getURLForApplication from "getURLForApplication" /* 5433 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5439 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5729 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 10379 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10560 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10610 */;
-import tryLaunchAsFrame from "tryLaunchAsFrame" /* 10624 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 10628 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 10640 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15602 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import v1 from "v1" /* 1268 */;
+import StringUtils from "StringUtils" /* 2151 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
+import getURLForApplication from "getURLForApplication" /* 5435 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5441 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5731 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 10321 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10502 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10552 */;
+import tryLaunchAsFrame from "tryLaunchAsFrame" /* 10566 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 10570 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 10582 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15566 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserStore from "UserStore" /* 1388 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15603 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import LifecycleManager from "LifecycleManager" /* 2123 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserStore from "UserStore" /* 1386 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15567 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import LifecycleManager from "LifecycleManager" /* 2121 */;
 
 require = fn;
 function clearAwaitingAnalyticsContextImmediate(arg0, arg1) {
@@ -346,8 +346,8 @@ function handleOpenEmbeddedActivity(applicationId) {
   }
   obj3 = tryLaunchAsFrame;
 }
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4645).GUILD_VOCAL_CHANNEL_TYPES;
-const Constants = fn(1072);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4647).GUILD_VOCAL_CHANNEL_TYPES;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, RPCCloseCodes: closure_15, Endpoints: closure_16, RTCConnectionStates: closure_17, ComponentActions: closure_18 } = Constants);
 let closure_19 = {};
 let c25;
@@ -365,7 +365,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       const iter = values[Symbol.iterator]();
       while (iter !== undefined) {
         ({ location: _location, applicationId } = nextResult);
-        let obj2 = applyArgumentsResult(4713);
+        let obj2 = applyArgumentsResult(4715);
         let embeddedActivityLocationChannelId = obj2.getEmbeddedActivityLocationChannelId(_location);
         let tmp8 = embeddedActivityLocationChannelId;
         let tmp9 = null != embeddedActivityLocationChannelId;
@@ -408,11 +408,11 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleActivityLaunchSuccess = function handleActivityLaunchSuccess(arg0) {
       ({ applicationId: closure_0, nonce: closure_1 } = arg0);
       const timerId = setTimeout(() => {
-        const tmp6 = applyArgumentsResult(15602).awaitingAnalyticsContext[closure_0];
+        const tmp6 = applyArgumentsResult(15566).awaitingAnalyticsContext[closure_0];
         let tmp7;
         if (null != tmp6) {
           if (tmp6.nonce === nonce) {
-            const awaitingAnalyticsContext = applyArgumentsResult(15602).awaitingAnalyticsContext;
+            const awaitingAnalyticsContext = applyArgumentsResult(15566).awaitingAnalyticsContext;
             delete tmp[tmp2];
             tmp7 = tmp6;
           }
@@ -479,10 +479,10 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleActivityLaunchCancel = function handleActivityLaunchCancel(arg0) {
       ({ nonce, applicationId } = arg0);
-      const tmp5 = applyArgumentsResult(15602).awaitingAnalyticsContext[applicationId];
+      const tmp5 = applyArgumentsResult(15566).awaitingAnalyticsContext[applicationId];
       if (null != tmp5) {
         if (tmp5.nonce === nonce) {
-          const awaitingAnalyticsContext = applyArgumentsResult(15602).awaitingAnalyticsContext;
+          const awaitingAnalyticsContext = applyArgumentsResult(15566).awaitingAnalyticsContext;
           delete tmp[tmp2];
         }
       }
@@ -546,7 +546,7 @@ class EmbeddedActivitiesManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -608,7 +608,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     if (getChannel !== closure_131_1) {
                       c5 = 2;
                       set = 1;
-                      const obj6 = { value: getChannel(6538).fetchApplication(closure_131_1), done: false };
+                      const obj6 = { value: getChannel(6540).fetchApplication(closure_131_1), done: false };
                       return obj6;
                     }
                   } else {
@@ -628,11 +628,11 @@ class EmbeddedActivitiesManager extends tmp3 {
               } else {
                 closure_131_7 = value;
                 if (!obj26.getIsActivitiesEnabledForCurrentPlatform()) {
-                  const intl = applyArgumentsResult(1113).intl;
-                  getChannel(10572)(intl.string(applyArgumentsResult(1113).t.UXoQTp));
-                  const tmp48 = getChannel(10572);
+                  const intl = applyArgumentsResult(1112).intl;
+                  getChannel(10514)(intl.string(applyArgumentsResult(1112).t.UXoQTp));
+                  const tmp48 = getChannel(10514);
                 }
-                obj26 = applyArgumentsResult(10601);
+                obj26 = applyArgumentsResult(10543);
               }
             } else {
               if (3 === getChannel) {
@@ -648,11 +648,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj10 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(10640)(obj10)) {
+                  if (null == getChannel(10582)(obj10)) {
                     const obj12 = { guildId: closure_131_8, force: true };
                     c5 = 4;
                     set = 1;
-                    const obj13 = { value: applyArgumentsResult(10603).fetchShelf(obj12), done: false };
+                    const obj13 = { value: applyArgumentsResult(10545).fetchShelf(obj12), done: false };
                     return obj13;
                   }
                 }
@@ -667,7 +667,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 } else {
                   closure_131_12 = value;
                   const obj17 = { applicationId: closure_131_1, activityConfigs: closure_131_12.activityConfigs, applications: closure_131_12.applications };
-                  getChannel(10640)(obj17);
+                  getChannel(10582)(obj17);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -707,13 +707,13 @@ class EmbeddedActivitiesManager extends tmp3 {
                 obj19.inviterUserId = closure_131_4;
                 c5 = 6;
                 set = 1;
-                const obj21 = { value: applyArgumentsResult(10720).maybeJoinEmbeddedActivity(obj19), done: false };
+                const obj21 = { value: applyArgumentsResult(10662).maybeJoinEmbeddedActivity(obj19), done: false };
                 return obj21;
               } else {
                 const obj22 = { applicationId: closure_131_1, channelId: closure_131_0, analyticsLocations: closure_131_2, commandOrigin: closure_131_3, inviterUserId: closure_131_4 };
                 c5 = 5;
                 set = 1;
-                const obj23 = { value: getChannel(12128).launch(obj22), done: false };
+                const obj23 = { value: getChannel(12070).launch(obj22), done: false };
                 return obj23;
               }
             }
@@ -734,14 +734,14 @@ class EmbeddedActivitiesManager extends tmp3 {
               const obj24 = { guildId: closure_131_8 };
               c5 = 3;
               set = 1;
-              const obj25 = { value: applyArgumentsResult(10603).fetchShelf(obj24), done: false };
+              const obj25 = { value: applyArgumentsResult(10545).fetchShelf(obj24), done: false };
               return obj25;
             } else {
-              const intl2 = applyArgumentsResult(1113).intl;
-              getChannel(10572)(intl2.string(applyArgumentsResult(1113).t.uGDCcw));
-              const tmp64 = getChannel(10572);
+              const intl2 = applyArgumentsResult(1112).intl;
+              getChannel(10514)(intl2.string(applyArgumentsResult(1112).t.uGDCcw));
+              const tmp64 = getChannel(10514);
             }
-            tmp58 = getChannel(10716);
+            tmp58 = getChannel(10658);
           }
         } catch (tmp93) {
           set = tmp;
@@ -781,14 +781,14 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
-      if (null == applyArgumentsResult(15602).awaitingAnalyticsContext[data.applicationId]) {
-        if (data.interactionType === applyArgumentsResult(5852).InteractionTypes.APPLICATION_COMMAND) {
+      if (null == applyArgumentsResult(15566).awaitingAnalyticsContext[data.applicationId]) {
+        if (data.interactionType === applyArgumentsResult(5854).InteractionTypes.APPLICATION_COMMAND) {
           items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp3 = items;
-        } else if (data.interactionType === applyArgumentsResult(5852).InteractionTypes.MESSAGE_COMPONENT) {
+        } else if (data.interactionType === applyArgumentsResult(5854).InteractionTypes.MESSAGE_COMPONENT) {
           const items1 = [AnalyticsLocationDefault.INTERACTION_MESSAGE_COMPONENT];
           tmp3 = items1;
-        } else if (data.interactionType === applyArgumentsResult(5852).InteractionTypes.MODAL_SUBMIT) {
+        } else if (data.interactionType === applyArgumentsResult(5854).InteractionTypes.MODAL_SUBMIT) {
           const items2 = [AnalyticsLocationDefault.INTERACTION_MODAL_SUBMIT];
           tmp3 = items2;
         }
@@ -801,7 +801,7 @@ class EmbeddedActivitiesManager extends tmp3 {
         }
         if (flag) {
           const obj2 = { nonce: nonce2, locations, source };
-          applyArgumentsResult(15602).awaitingAnalyticsContext[applicationId] = obj2;
+          applyArgumentsResult(15566).awaitingAnalyticsContext[applicationId] = obj2;
           flag = true;
         }
         if (flag) {
@@ -813,7 +813,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       nonce = nonce.nonce;
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
-          const tmp6 = applyArgumentsResult(15602).awaitingAnalyticsContext[tmp3];
+          const tmp6 = applyArgumentsResult(15566).awaitingAnalyticsContext[tmp3];
           if (null != tmp6) {
             tmp6.interactionId = tmp;
           }
@@ -828,11 +828,11 @@ class EmbeddedActivitiesManager extends tmp3 {
           closure_0 = tmp4;
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const tmp6 = applyArgumentsResult(15602).awaitingAnalyticsContext[closure_0];
+            const tmp6 = applyArgumentsResult(15566).awaitingAnalyticsContext[closure_0];
             let tmp7;
             if (null != tmp6) {
               if (tmp6.nonce === nonce) {
-                const awaitingAnalyticsContext = applyArgumentsResult(15602).awaitingAnalyticsContext;
+                const awaitingAnalyticsContext = applyArgumentsResult(15566).awaitingAnalyticsContext;
                 delete tmp[tmp2];
                 tmp7 = tmp6;
               }
@@ -847,10 +847,10 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
           delete tmp3[tmp4];
-          const tmp9 = applyArgumentsResult(15602).awaitingAnalyticsContext[tmp6];
+          const tmp9 = applyArgumentsResult(15566).awaitingAnalyticsContext[tmp6];
           if (null != tmp9) {
             if (tmp9.nonce === nonce) {
-              const awaitingAnalyticsContext = applyArgumentsResult(15602).awaitingAnalyticsContext;
+              const awaitingAnalyticsContext = applyArgumentsResult(15566).awaitingAnalyticsContext;
               delete tmp[tmp2];
             }
           }

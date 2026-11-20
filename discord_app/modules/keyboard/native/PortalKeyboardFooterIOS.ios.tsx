@@ -1,23 +1,23 @@
-// === Module 11211: PortalKeyboardFooterIOS ===
+// === Module 11153: PortalKeyboardFooterIOS ===
 
-// Module 11211 (PortalKeyboardFooterIOS)
+// Module 11153 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 575 */;
-import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1644 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import useKeyboardType from "useKeyboardType" /* 4979 */;
-import Portal from "Portal" /* 4984 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
+import ConstantsIOS from "ConstantsIOS" /* 1091 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1642 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import useKeyboardType from "useKeyboardType" /* 4981 */;
+import Portal from "Portal" /* 4986 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5022 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { keyboardStickyFooter: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, flex: 1, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.keyboardStickyFooter = rect;
@@ -44,7 +44,7 @@ export default function PortalKeyboardFooterIOS(portalHostName) {
   const reanimatedKeyboardAnimation = KeyboardChatScrollView.useReanimatedKeyboardAnimation();
   ({ height, progress } = reanimatedKeyboardAnimation);
   const keyboardTypeSharedValue = useKeyboardType.useKeyboardTypeSharedValue();
-  items = [_undefined4, _mod1655.interpolate, progress, useSafeAreaInsetsDefault().bottom, flag, keyboardTypeSharedValue, KeyboardTypes.KeyboardTypes, portalHostName.animatedSheetIndex, height, ConstantsIOS.EXPRESSION_FOOTER_HEIGHT];
+  items = [_undefined4, _mod1653.interpolate, progress, useSafeAreaInsetsDefault().bottom, flag, keyboardTypeSharedValue, KeyboardTypes.KeyboardTypes, portalHostName.animatedSheetIndex, height, ConstantsIOS.EXPRESSION_FOOTER_HEIGHT];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -94,7 +94,7 @@ export default function PortalKeyboardFooterIOS(portalHostName) {
   PortalKeyboardFooterIOSIosTsx1.__closure = items1;
   PortalKeyboardFooterIOSIosTsx1.__workletHash = 5822849225954;
   PortalKeyboardFooterIOSIosTsx1.__initData = tmp8;
-  animatedStyle = _mod1655.useAnimatedStyle(PortalKeyboardFooterIOSIosTsx1);
+  animatedStyle = _mod1653.useAnimatedStyle(PortalKeyboardFooterIOSIosTsx1);
   let items2 = [animatedStyle, tmp, flag2, bottomSheetContainerStyle];
   const memo = noop.useMemo(() => {
     items = [_undefined.keyboardStickyFooter, animatedStyle, ];
@@ -105,5 +105,5 @@ export default function PortalKeyboardFooterIOS(portalHostName) {
     items[2] = tmp;
     return items;
   }, items2);
-  return jsx(_modDef1655.View, { style: memo, children: jsx(Portal.PortalHost, { name: str }) });
+  return jsx(_modDef1653.View, { style: memo, children: jsx(Portal.PortalHost, { name: str }) });
 };

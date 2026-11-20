@@ -1,16 +1,16 @@
-// === Module 13049: GuildOnboardingHomeActionCreators ===
+// === Module 13019: GuildOnboardingHomeActionCreators ===
 
-// Module 13049 (GuildOnboardingHomeActionCreators)
+// Module 13019 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import transitionToChannel from "transitionToChannel" /* 5525 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import transitionToChannel from "transitionToChannel" /* 5527 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4697 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6563 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8392 */;
+import ImpersonateStore from "ImpersonateStore" /* 4699 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6565 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8391 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings() {
@@ -47,7 +47,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -142,7 +142,7 @@ let closure_12 = async function _clearNewMemberActions() {
     return value;
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");

@@ -1,10 +1,10 @@
-// === Module 8009: useAvatarColor ===
+// === Module 8008: useAvatarColor ===
 
-// Module 8009 (useAvatarColor)
+// Module 8008 (useAvatarColor)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ let closure_9 = async function _maybeFetchColors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -51,7 +51,7 @@ let closure_9 = async function _maybeFetchColors(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -79,7 +79,7 @@ let closure_11 = async function _fetchColors(arg0) {
       obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -218,11 +218,11 @@ export default function useAvatarColor(uri, arg1) {
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        const obj = flag(7966)({ r: tmp, g: tmp2, b: tmp3 });
-        ({ h, s, l } = flag(7966)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+        const obj = flag(7965)({ r: tmp, g: tmp2, b: tmp3 });
+        ({ h, s, l } = flag(7965)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
         const obj2 = { h, s: s * stateFromStores, l };
-        const toHslResult = flag(7966)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-        return flag(7966)({ h, s: s * stateFromStores, l }).toHexString();
+        const toHslResult = flag(7965)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+        return flag(7965)({ h, s: s * stateFromStores, l }).toHexString();
       });
     }
     return mapped;
@@ -296,11 +296,11 @@ export function useAvatarColors(pendingAvatarSrc, PRIMARY_530, arg2) {
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        const obj = flag(7966)({ r: tmp, g: tmp2, b: tmp3 });
-        ({ h, s, l } = flag(7966)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+        const obj = flag(7965)({ r: tmp, g: tmp2, b: tmp3 });
+        ({ h, s, l } = flag(7965)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
         const obj2 = { h, s: s * stateFromStores, l };
-        const toHslResult = flag(7966)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-        return flag(7966)({ h, s: s * stateFromStores, l }).toHexString();
+        const toHslResult = flag(7965)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+        return flag(7965)({ h, s: s * stateFromStores, l }).toHexString();
       });
     }
     return mapped;

@@ -1,6 +1,6 @@
-// === Module 6967: ? ===
+// === Module 6966: ? ===
 
-// Module 6967
+// Module 6966
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/connections/console_setup_confirmation.png.js");

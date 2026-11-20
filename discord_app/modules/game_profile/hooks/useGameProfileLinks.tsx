@@ -1,7 +1,7 @@
-// === Module 9788: useGameProfileLinks ===
+// === Module 9790: useGameProfileLinks ===
 
-// Module 9788 (useGameProfileLinks)
-import GlobalUtils from "GlobalUtils" /* 1255 */;
+// Module 9790 (useGameProfileLinks)
+import GlobalUtils from "GlobalUtils" /* 1254 */;
 import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9709 */;
 import noop from "module_19" /* 19 */;
 

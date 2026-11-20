@@ -3,7 +3,7 @@
 // Module 9295 (useFetchCollectiblesProductCategory)
 import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 9296 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7955 */;
 
 const require = globalThis.__r;
 

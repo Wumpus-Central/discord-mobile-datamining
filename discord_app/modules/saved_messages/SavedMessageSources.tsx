@@ -1,6 +1,6 @@
-// === Module 11638: SavedMessageSources ===
+// === Module 11580: SavedMessageSources ===
 
-// Module 11638 (SavedMessageSources)
+// Module 11580 (SavedMessageSources)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageSources.tsx");

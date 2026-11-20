@@ -1,14 +1,14 @@
-// === Module 7899: UpcomingEventNoticesStore ===
+// === Module 7898: UpcomingEventNoticesStore ===
 
-// Module 7899 (UpcomingEventNoticesStore)
+// Module 7898 (UpcomingEventNoticesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 7900 */;
+import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 7899 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6512 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6514 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4647);
+const GuildScheduledEventsConstants = fn(4649);
 ({ GuildScheduledEventStatus: closure_4, UpcomingGuildEventNoticeTypes: hasOwnProperty } = GuildScheduledEventsConstants);
 let upcomingEventSeenTimestamps = {};
 const PersistedStore = initializeDefault.PersistedStore;

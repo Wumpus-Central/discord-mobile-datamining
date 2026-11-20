@@ -1,19 +1,19 @@
-// === Module 8195: ApplicationCommandUtils ===
+// === Module 8194: ApplicationCommandUtils ===
 
-// Module 8195 (ApplicationCommandUtils)
+// Module 8194 (ApplicationCommandUtils)
 import applyDefault from "apply" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
-import Constants2 from "Constants" /* 1083 */;
-import Server from "Server" /* 2119 */;
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5444 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
-import DraftStore from "DraftStore" /* 8196 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8198 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5816 */;
-import Constants from "Constants" /* 1072 */;
-import BigFlagUtils from "BigFlagUtils" /* 1084 */;
+import Constants2 from "Constants" /* 1082 */;
+import Server from "Server" /* 2117 */;
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5446 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
+import DraftStore from "DraftStore" /* 8195 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8197 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5818 */;
+import Constants from "Constants" /* 1071 */;
+import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
 
 function buildCommand(arg0) {
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F126535 */ function() { ... });
+                      mapped = choices.map(/* F124504 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F94051 */ function() { ... });
+                      mapped1 = options.map(/* F92424 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);

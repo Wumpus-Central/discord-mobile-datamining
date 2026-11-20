@@ -1,7 +1,7 @@
 // === Module 9692: useGameArtwork ===
 
 // Module 9692 (useGameArtwork)
-import getGameMediaRefURL from "getGameMediaRefURL" /* 2152 */;
+import getGameMediaRefURL from "getGameMediaRefURL" /* 2150 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

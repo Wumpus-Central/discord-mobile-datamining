@@ -1,17 +1,17 @@
-// === Module 16214: OrbWalletActionSheet ===
+// === Module 16178: OrbWalletActionSheet ===
 
-// Module 16214 (OrbWalletActionSheet)
+// Module 16178 (OrbWalletActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import _modDef2323 from "module_2323" /* 2323 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 14934 */;
-import OrbWalletCards from "OrbWalletCards" /* 16220 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import _modDef2325 from "module_2325" /* 2325 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 14898 */;
+import OrbWalletCards from "OrbWalletCards" /* 16184 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
-import OrbChallengesStore from "OrbChallengesStore" /* 14932 */;
+import UserStore from "UserStore" /* 1386 */;
+import OrbChallengesStore from "OrbChallengesStore" /* 14896 */;
 
 require = fn;
 function StatefulOrbChallengesCard(reopenWallet) {
@@ -42,7 +42,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
     if (null != orbChallengesDisplayError) {
       if (orbChallengesDisplayError.errorType === orbChallengesDisplayError.CLAIM_CHALLENGE) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef2323.FYb5rH);
+        let stringResult = intl3.string(_modDef2325.FYb5rH);
       } else {
         const intl2 = util.intl;
         const obj2 = {
@@ -59,7 +59,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
                 });
               }
         };
-        stringResult = intl2.format(_modDef2323.ggLzeg, obj2);
+        stringResult = intl2.format(_modDef2325.ggLzeg, obj2);
       }
       const obj3 = { type: "warning", message: stringResult, role: "status" };
     } else {
@@ -103,7 +103,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
   }), items4);
   const obj6 = { title: null, isLoading: null, inlineNoticeProps: null, challenges: null, onClaim: null };
   let intl = reopenWallet(orbWalletAnalyticsPage[15]).intl;
-  obj6.title = intl.string(require("module_2323").H6Ny8N);
+  obj6.title = intl.string(require("module_2325").H6Ny8N);
   obj6.isLoading = !fetchOrbChallenges.hasFetchedChallenges;
   obj6.inlineNoticeProps = memo;
   obj6.challenges = memo1;
@@ -117,6 +117,8 @@ function OrbWalletContent(reopenWallet) {
   isPremiumSubscriber = undefined;
   let ref;
   let obj = balance(isPremiumSubscriber[25]);
+  const tmp2 = balance;
+  const tmp3 = isPremiumSubscriber;
   isPremiumSubscriber = balance(isPremiumSubscriber[21]).useIsPremiumSubscriber(PremiumTypes.TIER_2);
   const analyticsLocations = analyticsPage(isPremiumSubscriber[11])().analyticsLocations;
   let obj2 = balance(isPremiumSubscriber[21]);
@@ -142,31 +144,43 @@ function OrbWalletContent(reopenWallet) {
       obj.track(AnalyticEvents.ORB_WALLET_VIEWED, obj2);
     }
   }, items1);
+  let obj3 = balance(isPremiumSubscriber[13]);
+  const orbWalletPrimaryCard = balance(isPremiumSubscriber[23]).useOrbWalletPrimaryCard(balance);
   const effect1 = analyticsLocations.useEffect(() => {
     const result = balance(isPremiumSubscriber[18]).ackOrbChallengesUnread();
   }, []);
-  const obj4 = { style: tmp.container, children: null };
-  const obj5 = { style: tmp.section, children: null };
-  const items2 = [closure_11(balance(isPremiumSubscriber[20]).OrbBalanceHeader, { orbBalance: balance }), closure_11(balance(isPremiumSubscriber[23]).OrbWalletPrimaryCard, { orbBalance: balance })];
-  obj5.children = items2;
-  const items3 = [closure_12(challengesForOrbWallet, obj5), , , ];
-  let obj3 = balance(isPremiumSubscriber[13]);
-  items3[1] = closure_11(challengesForOrbWallet, { style: tmp.section, children: closure_11(StatefulOrbChallengesCard, { reopenWallet: reopenWallet.reopenWallet }) });
-  items3[2] = closure_11(challengesForOrbWallet, { style: tmp.divider });
-  const obj6 = { style: tmp.section, children: closure_11(StatefulOrbChallengesCard, { reopenWallet: reopenWallet.reopenWallet }) };
-  const obj7 = { style: tmp.divider };
-  items3[3] = closure_11(challengesForOrbWallet, { style: tmp.section, children: closure_11(balance(isPremiumSubscriber[20]).OrbWalletFooter, {}) });
-  obj4.children = items3;
-  return closure_12(challengesForOrbWallet, obj4);
+  const obj5 = { style: tmp.container, children: null };
+  const obj6 = { style: tmp.section, children: null };
+  const obj4 = balance(isPremiumSubscriber[23]);
+  const items2 = [closure_11(balance(isPremiumSubscriber[20]).OrbBalanceHeader, { orbBalance: balance, hideNitroUpsell: orbWalletPrimaryCard.visibleCardType === balance(isPremiumSubscriber[23]).OrbWalletPrimaryCardType.NITRO_UPSELL }), ];
+  const merged = Object.assign(orbWalletPrimaryCard);
+  items2[1] = closure_11(balance(isPremiumSubscriber[23]).OrbWalletPrimaryCard, {});
+  obj6.children = items2;
+  const items3 = [closure_12(challengesForOrbWallet, obj6), , , , ];
+  let tmp11Result = null == orbWalletPrimaryCard.visibleCardType;
+  if (tmp11Result) {
+    const obj9 = { style: tmp.divider };
+    tmp11Result = closure_11(tmp10, obj9);
+  }
+  items3[1] = tmp11Result;
+  const obj7 = { orbBalance: balance, hideNitroUpsell: orbWalletPrimaryCard.visibleCardType === balance(isPremiumSubscriber[23]).OrbWalletPrimaryCardType.NITRO_UPSELL };
+  const obj8 = {};
+  items3[2] = closure_11(challengesForOrbWallet, { style: tmp.section, children: closure_11(StatefulOrbChallengesCard, { reopenWallet: reopenWallet.reopenWallet }) });
+  items3[3] = closure_11(challengesForOrbWallet, { style: tmp.divider });
+  const obj10 = { style: tmp.section, children: closure_11(StatefulOrbChallengesCard, { reopenWallet: reopenWallet.reopenWallet }) };
+  const obj11 = { style: tmp.divider };
+  items3[4] = closure_11(challengesForOrbWallet, { style: tmp.section, children: closure_11(tmp2(tmp3[20]).OrbWalletFooter, {}) });
+  obj5.children = items3;
+  return closure_12(challengesForOrbWallet, obj5);
 }
 const View = fn(17).View;
-let closure_7 = fn(14932).OrbChallengesDisplayErrorType;
-let closure_8 = fn(16212).ORB_WALLET_ACTION_SHEET_KEY;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const PremiumTypes = fn(1390).PremiumTypes;
+let closure_7 = fn(14896).OrbChallengesDisplayErrorType;
+let closure_8 = fn(16176).ORB_WALLET_ACTION_SHEET_KEY;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const PremiumTypes = fn(1388).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, section: null, tryAgainLink: null, divider: null };
 let obj3 = { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

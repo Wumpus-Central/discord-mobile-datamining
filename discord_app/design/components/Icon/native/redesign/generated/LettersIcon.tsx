@@ -1,9 +1,9 @@
-// === Module 17137: LettersIcon ===
+// === Module 16961: LettersIcon ===
 
-// Module 17137 (LettersIcon)
+// Module 16961 (LettersIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod17138 from "module_17138" /* 17138 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod16962 from "module_16962" /* 16962 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function LettersIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17138, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16962, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,22 +1,22 @@
-// === Module 17856: WaterwheelsPostCard ===
+// === Module 17683: WaterwheelsPostCard ===
 
-// Module 17856 (WaterwheelsPostCard)
+// Module 17683 (WaterwheelsPostCard)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import themes from "themes" /* 4814 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import LinkIcon from "LinkIcon" /* 5488 */;
-import PlatformsDefault from "Platforms" /* 6570 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9928 */;
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import themes from "themes" /* 4816 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import LinkIcon from "LinkIcon" /* 5490 */;
+import PlatformsDefault from "Platforms" /* 6572 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: { gap: nativeDefault.space.PX_12 }, standardContent: null, header: null, copy: null, icon: null, fallback: null, media: null, postAction: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.standardContent = { gap: nativeDefault.space.PX_8 };

@@ -1,9 +1,9 @@
-// === Module 4995: GuildThemeResolver ===
+// === Module 4997: GuildThemeResolver ===
 
-// Module 4995 (GuildThemeResolver)
+// Module 4997 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
-import GuildThemePresets from "GuildThemePresets" /* 4965 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 4996 */;
+import GuildThemePresets from "GuildThemePresets" /* 4967 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 4998 */;
 
 require = fn;
 const size = fn(2);

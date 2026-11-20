@@ -1,13 +1,13 @@
-// === Module 8683: ReferralTrialActionCreators ===
+// === Module 8723: ReferralTrialActionCreators ===
 
-// Module 8683 (ReferralTrialActionCreators)
+// Module 8723 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8684 */;
-import UserRecord from "UserRecord" /* 1407 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8724 */;
+import UserRecord from "UserRecord" /* 1405 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -274,7 +274,7 @@ let closure_17 = async function _resolveReferralTrialOffer() {
   closure_131_1(closure_131_2[8]).dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer });
   return { userTrialOffer: closure_130_2 };
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AbortCodes: metroImportDefault, Endpoints: closure_8 } = Constants);
 const CreateReferralStatus = { SUCCESS: 1, [1]: "SUCCESS", FAIL: 2, [2]: "FAIL" };
 class EligibleUserCache {

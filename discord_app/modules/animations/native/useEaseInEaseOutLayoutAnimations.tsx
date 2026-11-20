@@ -1,15 +1,15 @@
-// === Module 13577: useEaseInEaseOutLayoutAnimations ===
+// === Module 13547: useEaseInEaseOutLayoutAnimations ===
 
-// Module 13577 (useEaseInEaseOutLayoutAnimations)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import _mod1655 from "module_1655" /* 1655 */;
+// Module 13547 (useEaseInEaseOutLayoutAnimations)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import _mod1653 from "module_1653" /* 1653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
-const Easing = fn(1655).Easing;
-let closure_5 = Easing.inOut(fn(1655).Easing.ease);
+const Easing = fn(1653).Easing;
+let closure_5 = Easing.inOut(fn(1653).Easing.ease);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/animations/native/useEaseInEaseOutLayoutAnimations.tsx");
 
@@ -19,19 +19,19 @@ export default function useEaseInEaseOutLayoutAnimations() {
   const items1 = [stateFromStores];
   return noop.useMemo(() => {
     if (obj.isAndroid()) {
-      return { entering: "ip", exiting: "isArray", layout: "isArray" };
+      return { entering: "disabled", exiting: "isArray", layout: "isArray" };
     } else {
-      const ReduceMotion = _mod1655.ReduceMotion;
+      const ReduceMotion = _mod1653.ReduceMotion;
       const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj2 = { entering: null, exiting: null, layout: null };
-      const FadeIn = _mod1655.FadeIn;
+      const FadeIn = _mod1653.FadeIn;
       const durationResult = FadeIn.duration(300);
       obj2.entering = FadeIn.duration(300).easing(closure_5).reduceMotion(tmp4);
-      const FadeOut = _mod1655.FadeOut;
+      const FadeOut = _mod1653.FadeOut;
       const easingResult = FadeIn.duration(300).easing(closure_5);
       const durationResult1 = FadeOut.duration(300);
       obj2.exiting = FadeOut.duration(300).easing(closure_5).reduceMotion(tmp4);
-      const LinearTransition = _mod1655.LinearTransition;
+      const LinearTransition = _mod1653.LinearTransition;
       const easingResult1 = FadeOut.duration(300).easing(closure_5);
       const durationResult2 = LinearTransition.duration(300);
       obj2.layout = LinearTransition.duration(300).easing(closure_5).reduceMotion(tmp4);
@@ -52,19 +52,19 @@ export function useTriggeredLayoutTransition() {
   if (tmp3) {
     layout = noop.useMemo(() => {
       if (obj.isAndroid()) {
-        return { entering: "ip", exiting: "isArray", layout: "isArray" };
+        return { entering: "disabled", exiting: "isArray", layout: "isArray" };
       } else {
-        const ReduceMotion = _mod1655.ReduceMotion;
+        const ReduceMotion = _mod1653.ReduceMotion;
         const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
         const obj2 = { entering: null, exiting: null, layout: null };
-        const FadeIn = _mod1655.FadeIn;
+        const FadeIn = _mod1653.FadeIn;
         const durationResult = FadeIn.duration(300);
         obj2.entering = FadeIn.duration(300).easing(closure_5).reduceMotion(tmp4);
-        const FadeOut = _mod1655.FadeOut;
+        const FadeOut = _mod1653.FadeOut;
         const easingResult = FadeIn.duration(300).easing(closure_5);
         const durationResult1 = FadeOut.duration(300);
         obj2.exiting = FadeOut.duration(300).easing(closure_5).reduceMotion(tmp4);
-        const LinearTransition = _mod1655.LinearTransition;
+        const LinearTransition = _mod1653.LinearTransition;
         const easingResult1 = FadeOut.duration(300).easing(closure_5);
         const durationResult2 = LinearTransition.duration(300);
         obj2.layout = LinearTransition.duration(300).easing(closure_5).reduceMotion(tmp4);

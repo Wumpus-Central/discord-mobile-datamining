@@ -2,7 +2,7 @@
 
 // Module 9369 (ReactionIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9370 from "module_9370" /* 9370 */;
 import noop from "module_19" /* 19 */;
 

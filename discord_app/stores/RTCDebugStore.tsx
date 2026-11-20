@@ -1,12 +1,12 @@
-// === Module 5556: RTCDebugStore ===
+// === Module 5558: RTCDebugStore ===
 
-// Module 5556 (RTCDebugStore)
+// Module 5558 (RTCDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5557 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5559 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import UserStore from "UserStore" /* 1388 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
 function updateStats(arr, arg1) {
@@ -78,10 +78,10 @@ function updateStats(arr, arg1) {
   }
   return obj2;
 }
-const Constants = fn(5537);
+const Constants = fn(5539);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
-let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1072).RTCDebugSections.TRANSPORT + ":" + 0;
+let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1071).RTCDebugSections.TRANSPORT + ":" + 0;
 let section = combined;
 let closure_12 = {};
 const map = new Map();
@@ -312,7 +312,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(5558).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(5560).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             const obj2 = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
             if (arg3 == null) {

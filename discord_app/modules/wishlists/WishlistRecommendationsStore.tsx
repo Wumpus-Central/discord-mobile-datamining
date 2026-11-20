@@ -3,7 +3,7 @@
 // Module 9465 (WishlistRecommendationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === LocaleStore.locale) {

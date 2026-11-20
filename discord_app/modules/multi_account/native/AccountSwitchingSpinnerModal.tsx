@@ -1,10 +1,10 @@
-// === Module 19634: AccountSwitchingSpinnerModal ===
+// === Module 19452: AccountSwitchingSpinnerModal ===
 
-// Module 19634 (AccountSwitchingSpinnerModal)
+// Module 19452 (AccountSwitchingSpinnerModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6901 */;
-import useAppFrameDefault from "useAppFrame" /* 17562 */;
+import util from "util" /* 1112 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6900 */;
+import useAppFrameDefault from "useAppFrame" /* 17389 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class AccountSwitchingSpinnerModal {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const hasOwnProperty = createStyles.createStyles((arg0) => {
   let prop;
   if (arg0) {
@@ -27,7 +27,7 @@ const hasOwnProperty = createStyles.createStyles((arg0) => {
   }
   return { switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: prop } };
 });
-AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1092).ModalAnimation.FADE, closable: false };
+AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1091).ModalAnimation.FADE, closable: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 

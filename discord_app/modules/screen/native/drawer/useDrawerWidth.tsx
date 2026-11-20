@@ -1,13 +1,13 @@
-// === Module 11892: useDrawerWidth ===
+// === Module 11834: useDrawerWidth ===
 
-// Module 11892 (useDrawerWidth)
-import useChatLayoutDefault from "useChatLayout" /* 4971 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4973 */;
-import useFoldSeamDefault from "useFoldSeam" /* 11893 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+// Module 11834 (useDrawerWidth)
+import useChatLayoutDefault from "useChatLayout" /* 4973 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4975 */;
+import useFoldSeamDefault from "useFoldSeam" /* 11835 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 const DM_WIDTH = Constants.DM_WIDTH;
 ({ MOBILE_GUILD_UPSELL_LIST: hasOwnProperty, WATERWHEELS: closure_6 } = Constants);
 const sum = 260 + DM_WIDTH;

@@ -1,11 +1,11 @@
-// === Module 20038: useHighlightedCreatorGuildDetails ===
+// === Module 19858: useHighlightedCreatorGuildDetails ===
 
-// Module 20038 (useHighlightedCreatorGuildDetails)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 20039 */;
+// Module 19858 (useHighlightedCreatorGuildDetails)
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 19859 */;
 import noop from "module_19" /* 19 */;
 
-const MarketingURLs = fn(1072).MarketingURLs;
+const MarketingURLs = fn(1071).MarketingURLs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 

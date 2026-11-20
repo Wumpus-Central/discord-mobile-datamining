@@ -1,27 +1,27 @@
-// === Module 8349: CloudUpload ===
+// === Module 8348: CloudUpload ===
 
-// Module 8349 (CloudUpload)
+// Module 8348 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import InlineUploaderDefault from "InlineUploader" /* 7284 */;
-import UploadPlatform from "UploadPlatform" /* 8326 */;
-import Upload2 from "Upload" /* 8350 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8353 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import InlineUploaderDefault from "InlineUploader" /* 7283 */;
+import UploadPlatform from "UploadPlatform" /* 8325 */;
+import Upload2 from "Upload" /* 8349 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8352 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 5386 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import NetworkStore from "NetworkStore" /* 5673 */;
+import DevSettingsStore from "DevSettingsStore" /* 5388 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
+import NetworkStore from "NetworkStore" /* 5675 */;
 
 const Upload = Upload2;
 
 require = fn;
 let closure_3 = ["Content-Range"];
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AbortCodes: closure_10, AnalyticEvents: closure_11 } = Constants);
 const logger = new LoggerDefault("CloudUpload.tsx");
 const set = new Set([429]);
@@ -407,7 +407,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
   closure_0 = responseUrl;
   const self = this;
   return (async () => {
-    const obj4 = { url, headers: { "Content-Range": "bytes */*" }, rejectWithError: true, retries: 0, timeout: { deadline: 30 * v1(1089).Millis.SECOND }, signal: self._abortController.signal };
+    const obj4 = { url, headers: { "Content-Range": "bytes */*" }, rejectWithError: true, retries: 0, timeout: { deadline: 30 * v1(1088).Millis.SECOND }, signal: self._abortController.signal };
     const _uploadHttpClient = self._uploadHttpClient;
     _uploadHttpClient.doUpload(obj4);
     await _uploadHttpClient.doUpload(obj4).then((status) => {
@@ -419,7 +419,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
       }
       currentSize = v1.currentSize;
     }).catch((error) => {
-      if (error instanceof c0(1285).HTTPResponseError) {
+      if (error instanceof c0(1284).HTTPResponseError) {
         if (308 === error.status) {
           let str = error.headers.range;
           if (str == null) {
@@ -452,7 +452,7 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -548,7 +548,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -591,7 +591,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -725,7 +725,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       return obj;
                     } else {
                       c6 = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     }
                     c3 = 0;
                     c6 = 3;
@@ -869,7 +869,7 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -941,7 +941,7 @@ prototype["upload"] = function upload() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -985,7 +985,7 @@ prototype["upload"] = function upload() {
                   let tmp151 = null;
                   if (closure_133_0.allowOptimization) {
                     tmp151 = null;
-                    if (closure_133_0.item.platform === v0(8326).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(8325).UploadPlatform.WEB) {
                       tmp151 = null;
                       if (true !== closure_133_0.item.imageConversionEvaluated) {
                         tmp151 = null;
@@ -997,17 +997,17 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(8374);
+                            obj16 = v0(8373);
                           }
                           tmp151 = str;
-                          obj15 = v0(8374);
+                          obj15 = v0(8373);
                         }
                       }
                     }
                   }
                   closure_132_1 = tmp151;
                   if (null != closure_132_1) {
-                    if (closure_133_0.item.platform === v0(8326).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(8325).UploadPlatform.WEB) {
                       if (null != closure_133_0.item.file) {
                         let tmp195 = null != closure_133_0.mimeType;
                         if (tmp195) {
@@ -1029,11 +1029,11 @@ prototype["upload"] = function upload() {
                           return obj7;
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(8374).heicMimeType(closure_133_0.item.file);
-                            const obj20 = v0(8374);
+                            let heicMimeTypeResult = v0(8373).heicMimeType(closure_133_0.item.file);
+                            const obj20 = v0(8373);
                           } else {
-                            heicMimeTypeResult = v0(8374).jxrMimeType(closure_133_0.item.file);
-                            const obj19 = v0(8374);
+                            heicMimeTypeResult = v0(8373).jxrMimeType(closure_133_0.item.file);
+                            const obj19 = v0(8373);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1044,7 +1044,7 @@ prototype["upload"] = function upload() {
                     closure_133_0.handleComplete(closure_133_0.id);
                   } else {
                     if (closure_133_0.allowOptimization) {
-                      if (closure_133_0.item.platform === v0(8326).UploadPlatform.WEB) {
+                      if (closure_133_0.item.platform === v0(8325).UploadPlatform.WEB) {
                         if (!closure_132_0) {
                           if (true !== closure_133_0.item.imageConversionEvaluated) {
                             c8 = 5;
@@ -1055,7 +1055,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(8375).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(8374).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1111,10 +1111,10 @@ prototype["upload"] = function upload() {
                   }
                   if (tmp119) {
                     closure_3 = closure_133_0;
-                    const obj10 = status(7285);
+                    const obj10 = status(7284);
                     c8 = 4;
                     c9 = 1;
-                    const obj14 = { value: status(7285).fromBlob(file).catch(() => null), done: false };
+                    const obj14 = { value: status(7284).fromBlob(file).catch(() => null), done: false };
                     return obj14;
                   } else {
                     closure_133_0.item.file = closure_132_3.convertedFile;
@@ -1170,7 +1170,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_5 = value;
-              uploadTarget = v0(8376).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(8375).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_5.filename) {
                 if ("" !== closure_132_5.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1252,8 +1252,8 @@ prototype["upload"] = function upload() {
               }
               const _HermesInternal2 = HermesInternal;
               logger.error("Requesting upload url failed with code " + dependencyMap + " for " + closure_133_0.id);
-              status(1242).captureException(closure_132_10);
-              const obj3 = status(1242);
+              status(1241).captureException(closure_132_10);
+              const obj3 = status(1241);
             }
             closure_133_0.handleError(closure_132_9);
             c9 = 3;
@@ -1337,7 +1337,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1393,7 +1393,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(8376);
+            obj16 = size(8375);
           }
         } else {
           if (1 === tmp5) {
@@ -1470,7 +1470,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(8323).getFileData(uri), done: false };
+                          const obj9 = { value: size(8322).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1546,7 +1546,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1582,7 +1582,7 @@ CloudUpload["tryConvertToJpeg"] = function tryConvertToJpeg(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1748,7 +1748,7 @@ prototype["delete"] = function delete() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1762,10 +1762,10 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(8376).getUploadTarget(self.item.target);
+            const uploadTarget = v3(8375).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
-            const HTTP = v3(1285).HTTP;
+            const HTTP = v3(1284).HTTP;
             c1 = 2;
             v3 = 1;
             const obj5 = { value: HTTP.del(deleteUploadURL), done: false };
@@ -1823,7 +1823,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

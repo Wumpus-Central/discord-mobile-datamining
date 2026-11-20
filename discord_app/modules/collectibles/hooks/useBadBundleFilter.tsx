@@ -1,11 +1,11 @@
-// === Module 16444: useBadBundleFilter ===
+// === Module 16266: useBadBundleFilter ===
 
-// Module 16444 (useBadBundleFilter)
+// Module 16266 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import UserStore from "UserStore" /* 1388 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7971 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import UserStore from "UserStore" /* 1386 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7970 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
@@ -29,11 +29,11 @@ export function useBadBundleFilter() {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7967).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(7966).getProductOrbPrice(obj3);
                 } else {
-                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7968).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(7968);
-                  let result = canUseShopDiscountsResult(7968).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7967).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(7967);
+                  let result = canUseShopDiscountsResult(7967).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;
@@ -56,10 +56,10 @@ export function useBadBundleFilter() {
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(7967);
+                tmpResult5 = canUseShopDiscountsResult(7966);
               }
             }
-            tmpResult = canUseShopDiscountsResult(7968);
+            tmpResult = canUseShopDiscountsResult(7967);
           }
           return true;
         });

@@ -1,11 +1,11 @@
-// === Module 14158: useCanGiftProduct ===
+// === Module 14127: useCanGiftProduct ===
 
-// Module 14158 (useCanGiftProduct)
-import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7967 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7968 */;
+// Module 14127 (useCanGiftProduct)
+import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2184 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7966 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7967 */;
 import useCurrentUser from "useCurrentUser" /* 8800 */;
 import size from "module_2" /* 2 */;
 

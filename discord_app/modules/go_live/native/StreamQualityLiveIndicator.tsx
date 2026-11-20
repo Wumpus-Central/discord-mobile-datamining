@@ -1,23 +1,23 @@
-// === Module 10673: StreamQualityLiveIndicator ===
+// === Module 10615: StreamQualityLiveIndicator ===
 
-// Module 10673 (StreamQualityLiveIndicator)
+// Module 10615 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8979 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10443 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10385 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const PremiumConstants = fn(1390);
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: metroImportDefault } = PremiumConstants);
-const ResolutionTypes = fn(5537).ResolutionTypes;
+const ResolutionTypes = fn(5539).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 }, liveTag: { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" }, qualityTag: null, qualityTagText: null, reducedQualityTagText: null, nitroWheel: null };
 let obj3 = { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" };
 obj2.qualityTag = { borderBottomLeftRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };
@@ -42,7 +42,7 @@ export default function StreamQualityLiveIndicator(arg0) {
   const ref = analyticsLocations.useRef(false);
   let obj2 = require("analytics");
   items = [closure_12, require("timing/timing").withTiming, analyticsLocations.useContext(require("RevealProvider").RevealContext).reveal, require("native").STANDARD_EASING];
-  const animatedStyle = require("module_1655").useAnimatedStyle((function StreamQualityLiveIndicatorTsx1Factory(items) {
+  const animatedStyle = require("module_1653").useAnimatedStyle((function StreamQualityLiveIndicatorTsx1Factory(items) {
     [tmp, tmp2, tmp3, tmp4] = items;
     class StreamQualityLiveIndicatorTsx1 {
       constructor() {
@@ -63,7 +63,7 @@ export default function StreamQualityLiveIndicator(arg0) {
     StreamQualityLiveIndicatorTsx1.__initData = tmp;
     return StreamQualityLiveIndicatorTsx1;
   })(items));
-  const obj3 = require("module_1655");
+  const obj3 = require("module_1653");
   const maxQuality = require("StreamQualityUtils").useMaxQuality(participant);
   try {
     const isPremiumFPSResult = tmp3(tmp4[14]).isPremiumFPS(maxQuality);

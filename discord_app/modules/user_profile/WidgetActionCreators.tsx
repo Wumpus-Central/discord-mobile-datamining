@@ -1,13 +1,13 @@
-// === Module 10096: WidgetActionCreators ===
+// === Module 10099: WidgetActionCreators ===
 
-// Module 10096 (WidgetActionCreators)
+// Module 10099 (WidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
 
@@ -28,7 +28,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ export default {
                 return obj7;
               } else {
                 constants = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp8) {
@@ -112,13 +112,13 @@ export default {
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return (async () => {
       closure_1 = tmp2;
-      const HTTP2 = closure_0(1285).HTTP;
+      const HTTP2 = closure_0(1284).HTTP;
       const request = { url: constants.USER_PROFILE_WIDGET_CLIP_UPLOAD, body: { file_size: closure_0.size }, rejectWithError: true };
       await HTTP2.post(request);
       const body = value.body;
       const upload_url = body.upload_url;
       const upload_filename = body.upload_filename;
-      const HTTP = closure_0(1285).HTTP;
+      const HTTP = closure_0(1284).HTTP;
       const request1 = {
         url: upload_url,
         body: closure_129_0,
@@ -153,7 +153,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -237,7 +237,7 @@ export default {
             closure_131_1(closure_131_2[3]).dispatch(obj11);
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp41) {
           closure_4 = tmp41;

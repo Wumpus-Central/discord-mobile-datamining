@@ -4,10 +4,10 @@
 import SecureFramesTracking from "SecureFramesTracking" /* 9590 */;
 import showShareActionSheet from "showShareActionSheet" /* 9598 */;
 import noop from "module_19" /* 19 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
 
 require = fn;
-const AnalyticsSections = fn(1072).AnalyticsSections;
+const AnalyticsSections = fn(1071).AnalyticsSections;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
@@ -32,15 +32,15 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1113).intl;
-  obj2.title = intl.string(channelId(1113).t.QogHld);
-  const intl2 = channelId(1113).intl;
-  obj2.subtitle = intl2.string(channelId(1113).t.qODBkW);
-  const intl3 = channelId(1113).intl;
+  const intl = channelId(1112).intl;
+  obj2.title = intl.string(channelId(1112).t.QogHld);
+  const intl2 = channelId(1112).intl;
+  obj2.subtitle = intl2.string(channelId(1112).t.qODBkW);
+  const intl3 = channelId(1112).intl;
   const obj3 = { helpArticle: null };
   const tmp3 = streamKey(9612);
   obj3.helpArticle = channelId(9587).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1113).t["H3+ktv"], obj3);
+  obj2.footer = intl3.format(channelId(1112).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

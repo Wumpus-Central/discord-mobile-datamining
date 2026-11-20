@@ -1,8 +1,8 @@
-// === Module 4927: CheckpointCharacterRive ===
+// === Module 4929: CheckpointCharacterRive ===
 
-// Module 4927 (CheckpointCharacterRive)
-import BaseRive from "BaseRive" /* 4861 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4914 */;
+// Module 4929 (CheckpointCharacterRive)
+import BaseRive from "BaseRive" /* 4863 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4916 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

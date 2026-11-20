@@ -1,11 +1,11 @@
-// === Module 9824: PromotionsHooks ===
+// === Module 9826: PromotionsHooks ===
 
-// Module 9824 (PromotionsHooks)
+// Module 9826 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9280 */;
 import PromotionUtils from "PromotionUtils" /* 9281 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 import PromotionsStore from "PromotionsStore" /* 9023 */;
 
 const require = globalThis.__r;
@@ -59,7 +59,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
     });
   }, items3);
 }
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
 

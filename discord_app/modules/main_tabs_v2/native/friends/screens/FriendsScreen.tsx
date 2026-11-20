@@ -1,19 +1,19 @@
-// === Module 18906: FriendsScreen ===
+// === Module 18730: FriendsScreen ===
 
-// Module 18906 (FriendsScreen)
+// Module 18730 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import SendMessageIcon from "SendMessageIcon" /* 5490 */;
-import TableRow from "TableRow" /* 6926 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
-import NoResultsDefault from "NoResults" /* 9971 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16550 */;
-import _modDef18126 from "module_18126" /* 18126 */;
+import util from "util" /* 1112 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import SendMessageIcon from "SendMessageIcon" /* 5492 */;
+import TableRow from "TableRow" /* 6925 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
+import NoResultsDefault from "NoResults" /* 9974 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16373 */;
+import _modDef17953 from "module_17953" /* 17953 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8241 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8240 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, flex: 1 }, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
 obj2.requestsButtonContainer = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18126, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef17953, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,20 +123,20 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18126 };
+      const obj8 = { source: _modDef17953 };
       obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
       obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;
       obj7.label = intl5.string(util.t.fyA115);
       if (incoming + outgoing > 0) {
-        const intl2 = v1IEawz(1113).intl;
-        v1IEawz = v1IEawz(1113).t["1IEawz"];
+        const intl2 = v1IEawz(1112).intl;
+        v1IEawz = v1IEawz(1112).t["1IEawz"];
         obj9 = { incoming, outgoing };
         let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj9);
       } else {
-        const intl = v1IEawz(1113).intl;
+        const intl = v1IEawz(1112).intl;
         const obj10 = { spam: tmp6 };
-        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1113).t.e6BtLq, obj10);
+        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1112).t.e6BtLq, obj10);
       }
       obj7.subLabel = formatToPlainStringResult;
       obj7.onPress = function onPress() {

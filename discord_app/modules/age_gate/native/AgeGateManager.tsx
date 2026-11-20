@@ -1,18 +1,18 @@
-// === Module 19481: AgeGateManager ===
+// === Module 19301: AgeGateManager ===
 
-// Module 19481 (AgeGateManager)
-import AgeGateUtils from "AgeGateUtils" /* 6298 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+// Module 19301 (AgeGateManager)
+import AgeGateUtils from "AgeGateUtils" /* 6300 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
-const AgeGateConstants = fn(1097);
+const AgeGateConstants = fn(1096);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: metroImportDefault, AgeGateSource: closure_8, AgeGateType: closure_9 } = AgeGateConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_10, GuildNSFWContentLevel: closure_11 } = Constants);
 class AgeGateManager extends tmp4 {
   constructor() {
@@ -44,8 +44,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6298).getAgeGateType(source);
-  let obj = source(6298);
+  importDefault = source(6300).getAgeGateType(source);
+  let obj = source(6300);
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -57,7 +57,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,11 +1,11 @@
 // === Module 9747: HTMLParserLinkUtils ===
 
 // Module 9747 (HTMLParserLinkUtils)
-import MarkupLinkRule2 from "MarkupLinkRule" /* 5818 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5819 */;
+import MarkupLinkRule2 from "MarkupLinkRule" /* 5820 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5821 */;
 import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9746 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import t from "module_2070" /* 2070 */;
+import t from "module_2068" /* 2068 */;
 
 const require = globalThis.__r;
 const MarkupLinkRuleDefault = MarkupLinkRule2;

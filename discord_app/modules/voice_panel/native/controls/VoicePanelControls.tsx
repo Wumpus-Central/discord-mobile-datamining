@@ -1,57 +1,57 @@
-// === Module 19385: VoicePanelControls ===
+// === Module 19205: VoicePanelControls ===
 
-// Module 19385 (VoicePanelControls)
+// Module 19205 (VoicePanelControls)
 import nativeDefault from "native" /* 575 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 4853 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import spring_spring from "spring/spring" /* 5393 */;
-import useRefValueDefault from "useRefValue" /* 6899 */;
-import native2 from "native" /* 7481 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 9970 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11693 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12811 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13044 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18038 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18083 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19274 */;
-import useControlsLockDefault from "useControlsLock" /* 19293 */;
-import VoicePanelAccessibilityViewDefault from "VoicePanelAccessibilityView" /* 19364 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 19386 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19388 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 19392 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19393 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19394 */;
-import useControlsButtonsDefault from "useControlsButtons" /* 19397 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19421 */;
-import useControlAccessoryHeightDefault from "useControlAccessoryHeight" /* 19423 */;
-import VoicePanelControlsDimOverlayDefault from "VoicePanelControlsDimOverlay" /* 19424 */;
-import VoicePanelControlsDrawerDefault from "VoicePanelControlsDrawer" /* 19425 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import native from "native" /* 4855 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import spring_spring from "spring/spring" /* 5395 */;
+import useRefValueDefault from "useRefValue" /* 6898 */;
+import native2 from "native" /* 7480 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 9973 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11635 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12781 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13014 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17865 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17910 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19094 */;
+import useControlsLockDefault from "useControlsLock" /* 19113 */;
+import VoicePanelAccessibilityViewDefault from "VoicePanelAccessibilityView" /* 19184 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 19206 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19208 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 19212 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19213 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19214 */;
+import useControlsButtonsDefault from "useControlsButtons" /* 19217 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19241 */;
+import useControlAccessoryHeightDefault from "useControlAccessoryHeight" /* 19243 */;
+import VoicePanelControlsDimOverlayDefault from "VoicePanelControlsDimOverlay" /* 19244 */;
+import VoicePanelControlsDrawerDefault from "VoicePanelControlsDrawer" /* 19245 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11688);
+const VoicePanelConstants = fn(11630);
 ({ UI_SHOW_HIDE_PHYSICS: metroImportDefault, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: closure_10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11691);
+const VoicePanelCardConstants = fn(11633);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11686);
+const VoicePanelControlsConstants = fn(11628);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -65,7 +65,7 @@ obj.actionSheetDragHandleWrapper = { position: "absolute", top: 0, left: 0, righ
 let closure_21 = createStyles.createStyles(obj);
 let c22 = 200;
 let c23 = 200;
-const MetaQuestUtils = fn(1627);
+const MetaQuestUtils = fn(1625);
 let closure_25 = noop.memo(function Handle(openTab) {
   const tmp = closure_21();
   const tmp2 = useDrawerToggleDefault(openTab.openTab);
@@ -208,7 +208,7 @@ let closure_39 = noop.memo(function VoicePanelButtonsInner(sharedTab) {
   VoicePanelControlsTsx12.__closure = items1;
   VoicePanelControlsTsx12.__workletHash = 5526761748144;
   VoicePanelControlsTsx12.__initData = tmp8;
-  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelControlsTsx12);
+  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelControlsTsx12);
   const effect = noop.useEffect(() => {
     c2.current = false;
   }, []);
@@ -216,8 +216,8 @@ let closure_39 = noop.memo(function VoicePanelButtonsInner(sharedTab) {
   let obj4 = { style: null, children: arr.map((props) => props.render(props.key, { props, openTab, wrapperSpecs })) };
   const items2 = [tmp5.buttonsWrapper, animatedStyle];
   obj4.style = items2;
-  obj3.children = collapsedCategories(_modDef1655.View, obj4);
-  return collapsedCategories(_mod1655.LayoutAnimationConfig, obj3);
+  obj3.children = collapsedCategories(_modDef1653.View, obj4);
+  return collapsedCategories(_mod1653.LayoutAnimationConfig, obj3);
 });
 let closure_40 = { code: "(function VoicePanelControlsTsx13(){let[wrapperSpecs,CALL_TILE_GUTTER,accessoryHeights]=this.__closure;return wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get();})" };
 let closure_41 = { code: "(function VoicePanelControlsTsx14(){let[dockJoinMorphOrigin]=this.__closure;return dockJoinMorphOrigin.get()!=null;})" };
@@ -248,12 +248,12 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   c3 = first;
   noop = tmp8[1];
   let obj = require("useIsScreenReaderEnabled");
-  const sharedValue = require("module_1655").useSharedValue(first);
+  const sharedValue = require("module_1653").useSharedValue(first);
   c5 = sharedValue;
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = drawerTransitionHeight.set(c3);
   });
-  let obj3 = require("module_1655");
+  let obj3 = require("module_1653");
   let tmp13 = useShowConnectedControlsDefault(channelId);
   let tmp12 = useIsConnectedToVoiceChannelDefault(channelId);
   const maybeFetchSoundboardSounds = require("SoundboardHooks").useMaybeFetchSoundboardSounds({ shouldFetch: tmp12 });
@@ -322,7 +322,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(18038).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(17865).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -332,7 +332,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(18038).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(17865).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }
@@ -351,7 +351,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const rect = require("useSafeAreaInsets").getSafeAreaInsets();
   let obj5 = require("useSafeAreaInsets");
   let size = { width: null, height: 0, x: 0, y: 0, drawerMode: false, hidden: false };
-  let obj6 = require("module_1655");
+  let obj6 = require("module_1653");
   let obj8 = require("VoicePanelControlsUtils");
   size.width = obj8.getControlsDefaultWidth(require("useWindowDimensions").getWindowDimensions().width, rect.left, rect.right);
   const sharedValue1 = obj6.useSharedValue(size);
@@ -371,10 +371,10 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx13.__closure = items4;
   VoicePanelControlsTsx13.__workletHash = 3098126671150;
   VoicePanelControlsTsx13.__initData = tmp20;
-  const derivedValue = require("module_1655").useDerivedValue(VoicePanelControlsTsx13);
-  let obj10 = require("module_1655");
-  const sharedValue2 = require("module_1655").useSharedValue(null);
-  const tmpResult = require("module_1655");
+  const derivedValue = require("module_1653").useDerivedValue(VoicePanelControlsTsx13);
+  let obj10 = require("module_1653");
+  const sharedValue2 = require("module_1653").useSharedValue(null);
+  const tmpResult = require("module_1653");
   let items5 = [closure_41, dockJoinMorphOrigin];
   _require = undefined;
   [tmp26, tmp27] = items5;
@@ -412,8 +412,8 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx15.__closure = items8;
   VoicePanelControlsTsx15.__workletHash = 5348461441179;
   VoicePanelControlsTsx15.__initData = tmp28;
-  const animatedReaction = require("module_1655").useAnimatedReaction(VoicePanelControlsTsx14, VoicePanelControlsTsx15);
-  const tmpResult16 = require("module_1655");
+  const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelControlsTsx14, VoicePanelControlsTsx15);
+  const tmpResult16 = require("module_1653");
   const token = require("useToken").useToken(tmp4(575).modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS);
   const tmpResult17 = require("useToken");
   let items9 = [closure_43, sharedValue2, token, roundToNearestPixelDefault, require("spring/spring").withSpring, useReducedMotion, derivedValue, c7, sharedValue1, c9, c10, c8, isDockEnabled, gestureState, isDockExpanding, require("VoicePanelSheetMorph").SHEET_MORPH_EXPANDING_PANEL_FADE, require("VoicePanelSheetMorph").SHEET_MORPH_DOCKING_PANEL_FADE, dockContentSwap, require("VoicePanelSheetMorph").getSheetMorphFadeProgress, dockMinimizeProgress];
@@ -565,14 +565,14 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx16.__closure = items10;
   VoicePanelControlsTsx16.__workletHash = 13552589010327;
   VoicePanelControlsTsx16.__initData = tmp33;
-  const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelControlsTsx16);
-  const tmpResult18 = require("module_1655");
+  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelControlsTsx16);
+  const tmpResult18 = require("module_1653");
   closure_129_0 = first;
   closure_129_1 = sharedValue;
   closure_129_2 = sharedValue1;
   closure_129_3 = callback;
   ({ hiddenProps, hiddenStyles } = useControlsHiddenPresentationDefault(mode, sharedValue1));
-  const context1 = obj2.useContext(tmp4(11687));
+  const context1 = obj2.useContext(tmp4(11629));
   const controlsSpecs2 = context1.controlsSpecs;
   closure_129_4 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -583,27 +583,27 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   closure_129_7 = safeArea;
   const tmp54 = useControlsHiddenPresentationDefault(mode, sharedValue1);
   let point = { absoluteX: 0, absoluteY: 0, x: 0, y: 0, height: 0, isDrawer: false, active: false, drawerTransitionHeight, interFloatingTransitionHeight };
-  const sharedValue3 = require("module_1655").useSharedValue(point);
+  const sharedValue3 = require("module_1653").useSharedValue(point);
   closure_129_8 = sharedValue3;
-  const tmpResult19 = require("module_1655");
-  const sharedValue4 = require("module_1655").useSharedValue(0);
+  const tmpResult19 = require("module_1653");
+  const sharedValue4 = require("module_1653").useSharedValue(0);
   closure_129_9 = sharedValue4;
-  const tmpResult20 = require("module_1655");
-  const sharedValue5 = require("module_1655").useSharedValue(false);
+  const tmpResult20 = require("module_1653");
+  const sharedValue5 = require("module_1653").useSharedValue(false);
   closure_129_10 = sharedValue5;
-  const tmpResult21 = require("module_1655");
-  const sharedValue6 = require("module_1655").useSharedValue(0);
+  const tmpResult21 = require("module_1653");
+  const sharedValue6 = require("module_1653").useSharedValue(0);
   closure_129_11 = sharedValue6;
   const ref = noop.useRef(undefined);
   closure_129_12 = ref;
-  const tmpResult22 = require("module_1655");
-  const sharedValue7 = require("module_1655").useSharedValue(false);
+  const tmpResult22 = require("module_1653");
+  const sharedValue7 = require("module_1653").useSharedValue(false);
   closure_129_13 = sharedValue7;
   let items11 = [ref, sharedValue5, sharedValue7, sharedValue6];
   const memo = obj2.useMemo(() => ({ gestureRef: _undefined10, scrollLocked, scrollOffsetValue: _undefined9, isDragScrolling }), items11);
   const tmp63 = useControlsLockDefault();
   closure_129_14 = tmp63;
-  const tmpResult23 = require("module_1655");
+  const tmpResult23 = require("module_1653");
   const token1 = require("useToken").useToken(tmp4(575).modules.mobile.VOICE_PANEL_GUTTER);
   closure_129_15 = token1;
   let items12 = [controlsSpecs2, tmp63, sharedValue3, sharedValue5, callback, safeArea, sharedValue7, sharedValue6, sharedValue, first, sharedValue4, windowDimensions, wrapperDimensions, sharedValue1, token1];
@@ -636,7 +636,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     VoicePanelControlsTsx1.__initData = tmp10;
     const tmp3 = c9;
     const withRefResult = result.withRef(c12);
-    const items2 = [closure_27, _mod1708.scheduleOnRN, c14];
+    const items2 = [closure_27, _mod1706.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     [tmp19, tmp20, tmp21] = items2;
@@ -651,7 +651,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     VoicePanelControlsTsx2.__workletHash = 13169296755053;
     VoicePanelControlsTsx2.__initData = tmp19;
     const onTouchesDownResult = result.withRef(c12).onTouchesDown(VoicePanelControlsTsx1);
-    const items4 = [closure_28, LegacyBaseButton.State, c8, c4, constants, tmp3, num, c10, c1, c11, 30, c2, c22, c23, c0, _mod1708.scheduleOnRN, c3, trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources, c13];
+    const items4 = [closure_28, LegacyBaseButton.State, c8, c4, constants, tmp3, num, c10, c1, c11, 30, c2, c22, c23, c0, _mod1706.scheduleOnRN, c3, trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources, c13];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -768,7 +768,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     VoicePanelControlsTsx3.__workletHash = 4250755132616;
     VoicePanelControlsTsx3.__initData = tmp24;
     const onStartResult = result.withRef(c12).onTouchesDown(VoicePanelControlsTsx1).onStart(VoicePanelControlsTsx2);
-    const items6 = [closure_29, c8, calculateVoicePanelHeaderSpecsDefault, c7, c15, c2, VoicePanelControlsUtils.getControlsDrawerOpenWidth, c5, c6, c4, _mod1708.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, VoicePanelControlsUtils.getControlsDefaultWidth];
+    const items6 = [closure_29, c8, calculateVoicePanelHeaderSpecsDefault, c7, c15, c2, VoicePanelControlsUtils.getControlsDrawerOpenWidth, c5, c6, c4, _mod1706.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, VoicePanelControlsUtils.getControlsDefaultWidth];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -869,7 +869,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     const tmp44 = c7;
     const tmp45 = c15;
     const tmp46 = c6;
-    const items8 = [closure_30, c13, c10, c8, _mod1708.scheduleOnRN, c14];
+    const items8 = [closure_30, c13, c10, c8, _mod1706.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -893,7 +893,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     VoicePanelControlsTsx5.__workletHash = 2432447436376;
     VoicePanelControlsTsx5.__initData = tmp61;
     const onChangeResult = result.withRef(c12).onTouchesDown(VoicePanelControlsTsx1).onStart(VoicePanelControlsTsx2).onTouchesMove(VoicePanelControlsTsx3).onChange(VoicePanelControlsTsx4);
-    const items10 = [closure_31, c2, tmp46, calculateVoicePanelHeaderSpecsDefault, tmp44, tmp45, c4, constants, c8, c13, c10, _mod1708.scheduleOnRN, c14];
+    const items10 = [closure_31, c2, tmp46, calculateVoicePanelHeaderSpecsDefault, tmp44, tmp45, c4, constants, c8, c13, c10, _mod1706.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -950,7 +950,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     VoicePanelControlsTsx6.__workletHash = 17280746684389;
     VoicePanelControlsTsx6.__initData = tmp67;
     const onTouchesCancelledResult = result.withRef(c12).onTouchesDown(VoicePanelControlsTsx1).onStart(VoicePanelControlsTsx2).onTouchesMove(VoicePanelControlsTsx3).onChange(VoicePanelControlsTsx4).onTouchesCancelled(VoicePanelControlsTsx5);
-    const items12 = [closure_32, c13, c10, _mod1708.scheduleOnRN, c14];
+    const items12 = [closure_32, c13, c10, _mod1706.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -983,7 +983,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx8.__closure = items14;
   VoicePanelControlsTsx8.__workletHash = 16418343056070;
   VoicePanelControlsTsx8.__initData = tmp66;
-  const items15 = [closure_34, require("module_1708").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes];
+  const items15 = [closure_34, require("module_1706").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -1003,11 +1003,11 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx9.__closure = items16;
   VoicePanelControlsTsx9.__workletHash = 1613558861571;
   VoicePanelControlsTsx9.__initData = tmp68;
-  const animatedReaction1 = require("module_1655").useAnimatedReaction(VoicePanelControlsTsx8, VoicePanelControlsTsx9);
-  const tmpResult25 = require("module_1655");
+  const animatedReaction1 = require("module_1653").useAnimatedReaction(VoicePanelControlsTsx8, VoicePanelControlsTsx9);
+  const tmpResult25 = require("module_1653");
   const isScreenReaderEnabled1 = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmpResult26 = require("useIsScreenReaderEnabled");
-  const context2 = obj2.useContext(tmp4(11687));
+  const context2 = obj2.useContext(tmp4(11629));
   ({ controlsSpecs: controlsSpecs3, windowDimensions: windowDimensions2, mode: mode2, setControlsMode: setControlsMode2, safeArea: safeArea2, connected } = context2);
   const tmp74 = useWindowDimensionsSharedValueDefault({ ignoreKeyboard: true });
   const items17 = [closure_35, connected, controlsSpecs3, mode2, windowDimensions2, tmp74, safeArea2];
@@ -1028,7 +1028,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx10.__closure = items18;
   VoicePanelControlsTsx10.__workletHash = 5812012898269;
   VoicePanelControlsTsx10.__initData = tmp76;
-  const items19 = [closure_36, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, c11, sharedValue1, c15, require("module_1708").scheduleOnRN, setControlsMode2, isScreenReaderEnabled1, c13, require("VoicePanelControlsUtils").getControlsDefaultWidth, require("VoicePanelControlUtils").getDrawerSpec, require("VoicePanelControlsUtils").getControlsDrawerOpenWidth];
+  const items19 = [closure_36, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, c11, sharedValue1, c15, require("module_1706").scheduleOnRN, setControlsMode2, isScreenReaderEnabled1, c13, require("VoicePanelControlsUtils").getControlsDefaultWidth, require("VoicePanelControlUtils").getDrawerSpec, require("VoicePanelControlsUtils").getControlsDrawerOpenWidth];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -1132,9 +1132,9 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx11.__closure = items20;
   VoicePanelControlsTsx11.__workletHash = 3913287750376;
   VoicePanelControlsTsx11.__initData = tmp84;
-  const animatedReaction2 = require("module_1655").useAnimatedReaction(VoicePanelControlsTsx10, VoicePanelControlsTsx11);
+  const animatedReaction2 = require("module_1653").useAnimatedReaction(VoicePanelControlsTsx10, VoicePanelControlsTsx11);
   const tmp83 = c15;
-  const tmpResult27 = require("module_1655");
+  const tmpResult27 = require("module_1653");
   [tmp98, tmp99] = c3(noop.useState(false), 2);
   const tmp7Result = c3(noop.useState(false), 2);
   const items21 = [closure_44, controlsSpecs];
@@ -1149,7 +1149,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx17.__closure = items22;
   VoicePanelControlsTsx17.__workletHash = 2590752982287;
   VoicePanelControlsTsx17.__initData = tmp100;
-  const items23 = [closure_45, isScreenReaderEnabled, tmp83, require("module_1708").scheduleOnRN, tmp99];
+  const items23 = [closure_45, isScreenReaderEnabled, tmp83, require("module_1706").scheduleOnRN, tmp99];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -1183,8 +1183,8 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx18.__closure = items24;
   VoicePanelControlsTsx18.__workletHash = 11440892714817;
   VoicePanelControlsTsx18.__initData = tmp102;
-  const animatedReaction3 = require("module_1655").useAnimatedReaction(VoicePanelControlsTsx17, VoicePanelControlsTsx18);
-  const tmpResult28 = require("module_1655");
+  const animatedReaction3 = require("module_1653").useAnimatedReaction(VoicePanelControlsTsx17, VoicePanelControlsTsx18);
+  const tmpResult28 = require("module_1653");
   [tmp109, tmp110] = c3(noop.useState(false), 2);
   const tmp7Result2 = c3(noop.useState(false), 2);
   const items25 = [closure_46, sharedValue1];
@@ -1199,7 +1199,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx19.__closure = items26;
   VoicePanelControlsTsx19.__workletHash = 16288224560950;
   VoicePanelControlsTsx19.__initData = tmp111;
-  const items27 = [closure_47, require("module_1708").scheduleOnRN, tmp110];
+  const items27 = [closure_47, require("module_1706").scheduleOnRN, tmp110];
   _require = undefined;
   importDefault = undefined;
   [tmp113, tmp114, tmp115] = items27;
@@ -1217,7 +1217,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx20.__closure = items28;
   VoicePanelControlsTsx20.__workletHash = 8307481518393;
   VoicePanelControlsTsx20.__initData = tmp113;
-  const animatedReaction4 = require("module_1655").useAnimatedReaction(VoicePanelControlsTsx19, VoicePanelControlsTsx20);
+  const animatedReaction4 = require("module_1653").useAnimatedReaction(VoicePanelControlsTsx19, VoicePanelControlsTsx20);
   const items29 = [setControlsMode];
   const id = obj2.useId();
   const callback1 = obj2.useCallback(() => {
@@ -1226,7 +1226,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const obj7 = { value: memo, children: null };
   const items30 = [c18(VoicePanelControlsDimOverlayDefault, { wrapperSpecs: sharedValue1 }), c18(closure_37, { channelId, wrapperSpecs: sharedValue1, controlsSpecs, accessoryHeights: tmp16, gestureState }), ];
   const obj11 = { nativeID: id, style: tmp6.accessibilityWrapper, accessibilityViewIsModal: tmp98, onAccessibilityEscape: callback1, pointerEvents: "box-none", children: null };
-  const tmpResult29 = require("module_1655");
+  const tmpResult29 = require("module_1653");
   let obj12 = { gesture: memo1, children: null };
   const items31 = [tmp6.wrapper, animatedStyle, ];
   let tmp122;
@@ -1254,7 +1254,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   }
   items33[2] = tmp120Result;
   obj13.children = items33;
-  obj12.children = closure_20(_modDef1655.View, obj13);
+  obj12.children = closure_20(_modDef1653.View, obj13);
   obj11.children = c18(require("LegacyBaseButton").GestureDetector, obj12);
   items30[2] = c18(tmp4Result, obj11);
   obj7.children = items30;

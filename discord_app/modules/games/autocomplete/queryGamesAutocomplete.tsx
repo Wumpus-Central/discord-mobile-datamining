@@ -1,10 +1,10 @@
-// === Module 9943: queryGamesAutocomplete ===
+// === Module 9946: queryGamesAutocomplete ===
 
-// Module 9943 (queryGamesAutocomplete)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8768 */;
-import useGameAutocomplete2 from "useGameAutocomplete" /* 9806 */;
-import GameSearchSession from "GameSearchSession" /* 9808 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8767 */;
+// Module 9946 (queryGamesAutocomplete)
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8706 */;
+import useGameAutocomplete2 from "useGameAutocomplete" /* 9808 */;
+import GameSearchSession from "GameSearchSession" /* 9810 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8705 */;
 import debounce from "debounce" /* 551 */;
 
 require = fn;
@@ -12,7 +12,7 @@ let closure_3 = debounce((arg0, arg1) => {
   const useGameAutocomplete = useGameAutocomplete2.useGameAutocomplete;
   items = [arg0, arg1];
   const many = useGameAutocomplete.fetchMany(items);
-}, fn(9806).GAME_AUTOCOMPLETE_DEBOUNCE_MS, { leading: true, maxWait: fn(9806).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS });
+}, fn(9808).GAME_AUTOCOMPLETE_DEBOUNCE_MS, { leading: true, maxWait: fn(9808).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 

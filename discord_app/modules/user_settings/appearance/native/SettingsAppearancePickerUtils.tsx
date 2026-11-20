@@ -1,13 +1,13 @@
-// === Module 16759: SettingsAppearancePickerUtils ===
+// === Module 16583: SettingsAppearancePickerUtils ===
 
-// Module 16759 (SettingsAppearancePickerUtils)
+// Module 16583 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 4789 */;
-import utils_ColorDefault from "utils/Color" /* 4790 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4998 */;
+import util from "util" /* 1112 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1229 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
+import ColorUtils from "ColorUtils" /* 4791 */;
+import utils_ColorDefault from "utils/Color" /* 4792 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5000 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -142,8 +142,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4790)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4790)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4792)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4792)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -167,7 +167,7 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   obj.colors = items;
   return obj;
 }
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx");
 
@@ -207,7 +207,7 @@ export function convertThemesToAnimatedThemes(c1) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5356).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5358).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

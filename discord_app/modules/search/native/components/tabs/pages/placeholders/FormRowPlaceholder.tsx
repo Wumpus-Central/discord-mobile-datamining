@@ -1,17 +1,17 @@
-// === Module 18818: FormRowPlaceholder ===
+// === Module 18642: FormRowPlaceholder ===
 
-// Module 18818 (FormRowPlaceholder)
+// Module 18642 (FormRowPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18787 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18611 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
-let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(8457).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
+const createStyles = fn(4794);
+let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(8456).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl, marginRight: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.avatar = size;
 obj2.innerContainer = { justifyContent: "center", flex: 1 };
@@ -35,5 +35,5 @@ export default function FormRowPlaceholderItem(style) {
   obj4.children = items2;
   items1[1] = hasOwnProperty(View, obj4);
   obj2.children = items1;
-  return hasOwnProperty(_modDef1655.View, obj2);
+  return hasOwnProperty(_modDef1653.View, obj2);
 };

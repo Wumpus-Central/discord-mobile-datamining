@@ -1,7 +1,7 @@
 // === Module 9701: useGameProfileMediaDimensions ===
 
 // Module 9701 (useGameProfileMediaDimensions)
-import privDefault from "priv" /* 1456 */;
+import privDefault from "priv" /* 1454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

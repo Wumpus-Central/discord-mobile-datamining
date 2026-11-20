@@ -1,12 +1,12 @@
-// === Module 9781: GameProfileDetails ===
+// === Module 9783: GameProfileDetails ===
 
-// Module 9781 (GameProfileDetails)
+// Module 9783 (GameProfileDetails)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Server from "Server" /* 2119 */;
-import DateUtilsAll from "DateUtils" /* 4614 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import LinkingDefault from "Linking" /* 5471 */;
+import util from "util" /* 1112 */;
+import Server from "Server" /* 2117 */;
+import DateUtilsAll from "DateUtils" /* 4616 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import LinkingDefault from "Linking" /* 5473 */;
 import SKUUtils from "SKUUtils" /* 9689 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,13 +34,13 @@ const IGDB_ATTRIBUTION_LINK = fn(9656).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(8877).PlatformType.DESKTOP] = fn(9782).ScreenIcon;
-obj.mobile = fn(7269).MobilePhoneIcon;
+obj[fn(8877).PlatformType.DESKTOP] = fn(9784).ScreenIcon;
+obj.mobile = fn(7268).MobilePhoneIcon;
 obj[fn(8877).PlatformType.XBOX] = fn(9678).XboxNeutralIcon;
-obj[fn(8877).PlatformType.PLAYSTATION] = fn(9784).PlaystationNeutralIcon;
-obj[fn(8877).PlatformType.NINTENDO] = fn(9786).NintendoSwitchNeutralIcon;
+obj[fn(8877).PlatformType.PLAYSTATION] = fn(9786).PlaystationNeutralIcon;
+obj[fn(8877).PlatformType.NINTENDO] = fn(9788).NintendoSwitchNeutralIcon;
 obj[fn(8877).PlatformType.ROBLOX] = fn(9668).RobloxNeutralIcon;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -131,7 +131,7 @@ export default function GameProfileDetails(game) {
               items.push(obj2);
             }
             if (length.length <= 0) {
-              const mapped3 = gameProfileLinks.map((item) => trackAction(9790)(item, trackAction(575).colors.ICON_SUBTLE));
+              const mapped3 = gameProfileLinks.map((item) => trackAction(9792)(item, trackAction(575).colors.ICON_SUBTLE));
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
                 const obj3 = { label: null, value: null };
@@ -169,7 +169,7 @@ export default function GameProfileDetails(game) {
               const obj8 = {
                 style: closure_2.platformsContainer,
                 children: length.map((item) => {
-                            obj = { size: "md", color: trackAction(575).colors.ICON_SUBTLE, accessibilityLabel: game(9789).getGameProfilePlatformText(item) };
+                            obj = { size: "md", color: trackAction(575).colors.ICON_SUBTLE, accessibilityLabel: game(9791).getGameProfilePlatformText(item) };
                             return closure_1_8(closure_1_10[item], obj, item);
                           })
               };

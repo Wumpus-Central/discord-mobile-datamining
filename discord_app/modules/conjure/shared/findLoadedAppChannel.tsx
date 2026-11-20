@@ -1,8 +1,8 @@
-// === Module 11913: findLoadedAppChannel ===
+// === Module 11855: findLoadedAppChannel ===
 
-// Module 11913 (findLoadedAppChannel)
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 11855 (findLoadedAppChannel)
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 function isViewableAppChannel(channel, arg1) {
   let canResult = null != channel;
@@ -17,7 +17,7 @@ function isViewableAppChannel(channel, arg1) {
   }
   return canResult;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: c2, Permissions: c3 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/findLoadedAppChannel.tsx");

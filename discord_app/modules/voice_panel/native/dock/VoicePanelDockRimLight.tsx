@@ -1,14 +1,14 @@
-// === Module 13218: VoicePanelDockRimLight ===
+// === Module 13188: VoicePanelDockRimLight ===
 
-// Module 13218 (VoicePanelDockRimLight)
-import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13219 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13221 */;
+// Module 13188 (VoicePanelDockRimLight)
+import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13189 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const module_1655 = fn(1655);
-const mutable = module_1655.makeMutable(0);
+const module_1653 = fn(1653);
+const mutable = module_1653.makeMutable(0);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockRimLight.tsx");
 

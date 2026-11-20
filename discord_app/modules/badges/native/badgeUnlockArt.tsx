@@ -1,7 +1,7 @@
-// === Module 13927: badgeUnlockArt ===
+// === Module 13896: badgeUnlockArt ===
 
-// Module 13927 (badgeUnlockArt)
-import BadgeDetailsUtils from "BadgeDetailsUtils" /* 13905 */;
+// Module 13896 (badgeUnlockArt)
+import BadgeDetailsUtils from "BadgeDetailsUtils" /* 13874 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/badges/native/badgeUnlockArt.tsx");

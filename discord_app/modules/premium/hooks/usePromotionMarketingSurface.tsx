@@ -3,7 +3,7 @@
 // Module 9279 (usePromotionMarketingSurface)
 import passesTrialOfferGateDefault from "passesTrialOfferGate" /* 9282 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 8687 */;
+import UserOfferStore from "UserOfferStore" /* 8727 */;
 import PromotionsStore from "PromotionsStore" /* 9023 */;
 
 const require = globalThis.__r;

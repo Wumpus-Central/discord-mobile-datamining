@@ -3,7 +3,7 @@
 // Module 9455 (ImprovedMobileShopLoadingExperiment)
 import noop from "module_19" /* 19 */;
 
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1450);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-improved-mobile-shop-loading", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const context = noop.createContext(false);
 const size = fn(2);

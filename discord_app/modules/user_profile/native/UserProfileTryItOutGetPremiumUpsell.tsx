@@ -1,14 +1,14 @@
-// === Module 15861: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 15825: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 15861 (UserProfileTryItOutGetPremiumUpsell)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
+// Module 15825 (UserProfileTryItOutGetPremiumUpsell)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8979 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10443 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15857 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10385 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15821 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -25,11 +25,11 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   }, items);
   const obj2 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", onButtonPress: null, onLayout: null };
   let obj = analyticsLocations(9006);
-  const intl = analyticsLocations(1113).intl;
-  obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
+  const intl = analyticsLocations(1112).intl;
+  obj2.text = intl.format(analyticsLocations(1112).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {
-    const intl2 = tmp(1113).intl;
-    nitroTrialCtaOverride = intl2.string(tmp(1113).t.pj0XBN);
+    const intl2 = tmp(1112).intl;
+    nitroTrialCtaOverride = intl2.string(tmp(1112).t.pj0XBN);
   }
   obj2.buttonText = nitroTrialCtaOverride;
   obj2.onButtonPress = callback;

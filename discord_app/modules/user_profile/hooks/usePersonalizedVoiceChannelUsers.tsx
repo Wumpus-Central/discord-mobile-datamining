@@ -1,15 +1,15 @@
-// === Module 14396: usePersonalizedVoiceChannelUsers ===
+// === Module 14364: usePersonalizedVoiceChannelUsers ===
 
-// Module 14396 (usePersonalizedVoiceChannelUsers)
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import ConsentStore from "ConsentStore" /* 6306 */;
-import UserStore from "UserStore" /* 1388 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5536 */;
+// Module 14364 (usePersonalizedVoiceChannelUsers)
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import ConsentStore from "ConsentStore" /* 6308 */;
+import UserStore from "UserStore" /* 1386 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5538 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Consents = fn(1072).Consents;
+const Consents = fn(1071).Consents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");
 

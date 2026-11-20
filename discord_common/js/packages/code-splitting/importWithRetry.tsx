@@ -1,6 +1,6 @@
-// === Module 4611: importWithRetry ===
+// === Module 4613: importWithRetry ===
 
-// Module 4611 (importWithRetry)
+// Module 4613 (importWithRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _importWithRetry(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

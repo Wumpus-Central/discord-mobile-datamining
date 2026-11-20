@@ -1,23 +1,23 @@
-// === Module 5391: BaseTextButton ===
+// === Module 5393: BaseTextButton ===
 
-// Module 5391 (BaseTextButton)
+// Module 5393 (BaseTextButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import IconDefault from "Icon" /* 5392 */;
-import spring_spring from "spring/spring" /* 5393 */;
-import springPresets from "springPresets" /* 5394 */;
-import ButtonHooks from "ButtonHooks" /* 5397 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import IconDefault from "Icon" /* 5394 */;
+import spring_spring from "spring/spring" /* 5395 */;
+import springPresets from "springPresets" /* 5396 */;
+import ButtonHooks from "ButtonHooks" /* 5399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const module_1655 = _mod1655;
+const module_1653 = _mod1653;
 
 require = fn;
 function CollapsingText(children) {
   const collapseText = children.collapseText;
   const tmp2 = closure_10();
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   items = [closure_14, sharedValue];
   c0 = undefined;
   [tmp6, tmp7] = items;
@@ -71,8 +71,8 @@ function CollapsingText(children) {
   BaseTextButtonNativeTsx2.__closure = items4;
   BaseTextButtonNativeTsx2.__workletHash = 16734752266738;
   BaseTextButtonNativeTsx2.__initData = tmp9;
-  const animatedStyle = _mod1655.useAnimatedStyle(BaseTextButtonNativeTsx2);
-  const tmp3Result = _mod1655;
+  const animatedStyle = _mod1653.useAnimatedStyle(BaseTextButtonNativeTsx2);
+  const tmp3Result = _mod1653;
   const items5 = [closure_17, collapseText, closure_10().textCollapsed, sharedValue];
   c0 = undefined;
   c1 = undefined;
@@ -97,11 +97,11 @@ function CollapsingText(children) {
   BaseTextButtonNativeTsx3.__closure = items6;
   BaseTextButtonNativeTsx3.__workletHash = 8150809859497;
   BaseTextButtonNativeTsx3.__initData = tmp15;
-  const animatedStyle1 = _mod1655.useAnimatedStyle(BaseTextButtonNativeTsx3);
-  const obj2 = { style: null, onLayout: callback, children: metroImportDefault(module_1655.View, { style: animatedStyle1, children: children.children }) };
+  const animatedStyle1 = _mod1653.useAnimatedStyle(BaseTextButtonNativeTsx3);
+  const obj2 = { style: null, onLayout: callback, children: metroImportDefault(module_1653.View, { style: animatedStyle1, children: children.children }) };
   const items7 = [tmp2.container, animatedStyle];
   obj2.style = items7;
-  return metroImportDefault(module_1655.View, obj2);
+  return metroImportDefault(module_1653.View, obj2);
 }
 function BaseTextButtonIcon(arg0) {
   ({ icon, size, iconPosition, iconOpticalOffsetMargin, style } = arg0);
@@ -371,7 +371,7 @@ get_ActivityIndicator = fn(17);
 ({ Text: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 const React6 = createStyles.createStyles((arg0, sm) => {
   const obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
   if (typeof getTextPlatformLineHeight === "function") {
@@ -394,17 +394,17 @@ const React6 = createStyles.createStyles((arg0, sm) => {
     throw new TypeError("Trying to call a non-function");
   }
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj = { entityWrapper: { borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" } };
 let closure_11 = createStyles.createStyles(obj);
-const Icon = module_1655.createAnimatedComponent(IconDefault);
+const Icon = module_1653.createAnimatedComponent(IconDefault);
 const state = noop.createContext("md");
 let closure_14 = { code: "(function BaseTextButtonNativeTsx1({nativeEvent:nativeEvent}){let[containerWidth]=this.__closure;if(containerWidth.get()!==0)return;const{width:width}=nativeEvent.layout;containerWidth.set(width);})" };
 let closure_16 = { code: "(function BaseTextButtonNativeTsx2(){let[containerWidth,withSpring,collapsed,SUBTLE_SPRING]=this.__closure;if(containerWidth.get()===0)return{};return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,'animate-always'),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,'animate-always')};})" };
 let closure_17 = { code: "(function BaseTextButtonNativeTsx3(){let[collapsed,textCollapsed,containerWidth]=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};})" };
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   if (0 === marginLeft) {
     const obj2 = { offset: {} };
@@ -425,14 +425,17 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   }
 });
 let obj6 = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(5396).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(5396).MINIMUM_HIT_AREA - fn(5396).SMALL_BUTTON_HEIGHT) / 2, 0);
-obj6.sm = { top: bound, left: "Array", right: "analyticsLocations", bottom: bound };
-const LARGE_BUTTON_HEIGHT2 = fn(5396).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(5396).MINIMUM_HIT_AREA - fn(5396).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-obj6.md = { top: bound1, left: "Array", right: "analyticsLocations", bottom: bound1 };
-const bound2 = Math.max((fn(5396).MINIMUM_HIT_AREA - fn(5396).LARGE_BUTTON_HEIGHT) / 2, 0);
-obj6.lg = { top: bound2, left: "Array", right: "analyticsLocations", bottom: bound2 };
+const LARGE_BUTTON_HEIGHT = fn(5398).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5398).MINIMUM_HIT_AREA - fn(5398).SMALL_BUTTON_HEIGHT) / 2, 0);
+const rect = { top: bound, left: "Array", right: "replace", bottom: bound };
+obj6.sm = rect;
+const LARGE_BUTTON_HEIGHT2 = fn(5398).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5398).MINIMUM_HIT_AREA - fn(5398).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const rect1 = { top: bound1, left: "Array", right: "replace", bottom: bound1 };
+obj6.md = rect1;
+const bound2 = Math.max((fn(5398).MINIMUM_HIT_AREA - fn(5398).LARGE_BUTTON_HEIGHT) / 2, 0);
+const rect2 = { top: bound2, left: "Array", right: "replace", bottom: bound2 };
+obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }

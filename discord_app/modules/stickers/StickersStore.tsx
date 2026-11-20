@@ -1,15 +1,15 @@
-// === Module 6493: StickersStore ===
+// === Module 6495: StickersStore ===
 
-// Module 6493 (StickersStore)
+// Module 6495 (StickersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4670 */;
-import TryLoad from "TryLoad" /* 4690 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4672 */;
+import TryLoad from "TryLoad" /* 4692 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import GuildStickersStore from "GuildStickersStore" /* 6494 */;
-import StickersPackStore from "StickersPackStore" /* 6495 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4645 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import GuildStickersStore from "GuildStickersStore" /* 6496 */;
+import StickersPackStore from "StickersPackStore" /* 6497 */;
 
 require = fn;
 function loadSavedGuildStickers() {
@@ -33,7 +33,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
               Loaded = tmp27.Loaded;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(6496).getAsync(closure_1_0))), done: false };
+              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(6498).getAsync(closure_1_0))), done: false };
               return obj6;
             }
           }

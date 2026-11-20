@@ -1,8 +1,8 @@
-// === Module 16663: GuildRoleSubscriptionsConstants ===
+// === Module 16487: GuildRoleSubscriptionsConstants ===
 
-// Module 16663 (GuildRoleSubscriptionsConstants)
-import Constants from "Constants" /* 1083 */;
-import PremiumConstants from "PremiumConstants" /* 1390 */;
+// Module 16487 (GuildRoleSubscriptionsConstants)
+import Constants from "Constants" /* 1082 */;
+import PremiumConstants from "PremiumConstants" /* 1388 */;
 import size from "module_2" /* 2 */;
 
 const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;

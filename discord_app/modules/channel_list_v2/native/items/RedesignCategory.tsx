@@ -1,22 +1,22 @@
-// === Module 17675: RedesignCategory ===
+// === Module 17502: RedesignCategory ===
 
-// Module 17675 (RedesignCategory)
+// Module 17502 (RedesignCategory)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import useChannelNameDefault from "useChannelName" /* 5408 */;
-import CircleXIcon from "CircleXIcon" /* 7112 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7360 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7432 */;
-import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11938 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13754 */;
-import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 13790 */;
-import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 17676 */;
-import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 17677 */;
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import useChannelNameDefault from "useChannelName" /* 5410 */;
+import CircleXIcon from "CircleXIcon" /* 7111 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7359 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7431 */;
+import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11880 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13723 */;
+import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 13759 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 17503 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 17504 */;
 import noop from "module_19" /* 19 */;
-import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 8205 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7364 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 8204 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7363 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
 function renderCategoryItem(muted) {
@@ -48,7 +48,7 @@ function renderCategoryItem(muted) {
       str = "text-muted";
     }
     const obj2 = { experimental_useNativeText: true, variant: "body-sm/semibold", color: str, lineClamp: 1, style: styles.categoryText, children: name };
-    tmp34Result = closure_12(trailingAction(5383).Text, obj2);
+    tmp34Result = closure_12(trailingAction(5385).Text, obj2);
   }
   let tmp3 = null;
   if (null != icon) {
@@ -60,7 +60,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(13617).PlusMediumIcon;
+    Icon = trailingAction(13587).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , , ];
@@ -107,7 +107,7 @@ function renderCategoryItem(muted) {
         obj7.onLongPress = onLongPress;
         obj7.style = items;
         obj7.children = tmp18Result;
-        let tmp28Result = closure_12(trailingAction(6911).PressableHighlight, obj7);
+        let tmp28Result = closure_12(trailingAction(6910).PressableHighlight, obj7);
       } else {
         const obj8 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = closure_12(View, obj8);
@@ -135,18 +135,18 @@ function renderCategoryItem(muted) {
     const obj11 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = closure_12(Icon, obj11);
     obj10.children = colors;
-    obj10 = closure_12(trailingAction(6911).PressableOpacity, obj10);
+    obj10 = closure_12(trailingAction(6910).PressableOpacity, obj10);
     obj9.children = obj10;
     closure_12(View, obj9);
   }
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(5521);
+const RedesignChannelListConstants = fn(5523);
 ({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: closure_9, CATEGORY_NAME_LINE_HEIGHT: closure_10, CATEGORY_VERTICAL_PADDING: closure_11 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const styles = createStyles.createStyles(() => {
   const obj = { categoryWrapper: { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical, paddingRight: 16 }, categoryText: null, noteWrapper: null, iconWrapperStyles: null, endAlignedWrapper: null };
   let num = 0;
@@ -234,7 +234,7 @@ export function CategoryChannel(channel) {
   if (null != tmp10) {
     obj4 = { variant: "body-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
     ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp10);
-    tmp13 = closure_12(tmp2(5383).Text, obj4);
+    tmp13 = closure_12(tmp2(5385).Text, obj4);
   }
   obj2.note = tmp13;
   obj2.trailingAction = useFavoritesGuildCategoryAddActionDefault(channel);
@@ -244,7 +244,7 @@ export function CategoryChannel(channel) {
   colors = nativeDefault.colors;
   const obj7 = {};
   const merged1 = Object.assign(merged);
-  obj7.icon = closure_12(channel(12707).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
+  obj7.icon = closure_12(channel(12677).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
   obj7.accessibilityState = { expanded: !collapsed2 };
   return renderCategoryItem(obj7);
 }
@@ -257,8 +257,8 @@ export function RecentlyActiveCategory(guildId) {
   const items1 = [guildId, stateFromStores];
   const obj2 = { name: null, collapsed: null, onPress: null, withMarginTop: null, styles: null };
   const callback = noop.useCallback(() => OptInChannelsActionCreators.setRecentlyActiveCollapsed(guildId, !stateFromStores), items1);
-  const intl = guildId(1113).intl;
-  obj2.name = intl.string(guildId(1113).t.uZyspD);
+  const intl = guildId(1112).intl;
+  obj2.name = intl.string(guildId(1112).t.uZyspD);
   obj2.collapsed = stateFromStores;
   obj2.onPress = callback;
   obj2.withMarginTop = guildId.withMarginTop;
@@ -268,7 +268,7 @@ export function RecentlyActiveCategory(guildId) {
   colors = stateFromStores(575).colors;
   obj3 = {};
   const merged1 = Object.assign(merged);
-  obj3.icon = closure_12(tmp2(12707).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : obj4 });
+  obj3.icon = closure_12(tmp2(12677).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : obj4 });
   obj3.accessibilityState = { expanded: !collapsed };
   return renderCategoryItem(obj3);
 }
@@ -290,8 +290,8 @@ export function SuggestedCategory(guildId) {
     obj2.options = items;
     const result = Sheet_showSimpleActionSheet.showSimpleActionSheet(obj2);
   }, items);
-  let intl = guildId(1113).intl;
-  obj.name = intl.string(guildId(1113).t.HbJ7eD);
+  let intl = guildId(1112).intl;
+  obj.name = intl.string(guildId(1112).t.HbJ7eD);
   obj.onPress = callback;
   obj.withMarginTop = guildId.withMarginTop;
   obj.styles = styles();

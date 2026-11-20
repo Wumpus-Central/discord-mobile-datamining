@@ -1,12 +1,12 @@
-// === Module 14255: SafetySystemNotificationEmbed ===
+// === Module 14225: SafetySystemNotificationEmbed ===
 
-// Module 14255 (SafetySystemNotificationEmbed)
+// Module 14225 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
-import Constants from "Constants" /* 1072 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7689 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8126 */;
-import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 14253 */;
-import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 14254 */;
+import Constants from "Constants" /* 1071 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7688 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8125 */;
+import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 14223 */;
+import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 14224 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -50,7 +50,7 @@ export function createSafetySystemNotificationEmbed(message) {
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7645 : 7524))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7644 : 7523))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             const tmp6Result7 = renderer_EmbedUtils;
             const tmp6Result8 = SafetyWarningAgeUtils;
             let num = parseMessageForPropsResult.timestamp;

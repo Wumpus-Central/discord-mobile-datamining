@@ -1,17 +1,17 @@
-// === Module 11260: useTrackOpenPopout ===
+// === Module 11202: useTrackOpenPopout ===
 
-// Module 11260 (useTrackOpenPopout)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import useMountEffectDefault from "useMountEffect" /* 5353 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+// Module 11202 (useTrackOpenPopout)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import useMountEffectDefault from "useMountEffect" /* 5355 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
 import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 8944 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 
 require = fn;
-const EmojiInteractionPoint = fn(1391).EmojiInteractionPoint;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const EmojiInteractionPoint = fn(1389).EmojiInteractionPoint;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 

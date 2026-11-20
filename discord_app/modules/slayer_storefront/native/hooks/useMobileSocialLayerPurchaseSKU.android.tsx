@@ -6,7 +6,7 @@ import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 9482 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(1072).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1071).PriceSetAssignmentPurchaseTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
 

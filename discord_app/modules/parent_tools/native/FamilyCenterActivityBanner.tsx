@@ -1,15 +1,15 @@
-// === Module 16090: FamilyCenterActivityBanner ===
+// === Module 16054: FamilyCenterActivityBanner ===
 
-// Module 16090 (FamilyCenterActivityBanner)
+// Module 16054 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef2723 from "module_2723" /* 2723 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import util from "util" /* 1112 */;
+import _modDef2725 from "module_2725" /* 2725 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import useUserLinks from "useUserLinks" /* 9016 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9017 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12371 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 16091 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12341 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 16055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,9 +33,9 @@ function FamilyCenterActivityBannerButton() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 }, art: null, header: null, description: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
 obj3.art = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
@@ -53,16 +53,16 @@ export default function FamilyCenterActivityBanner() {
   const intl = util.intl;
   const obj2 = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2723["T7GyW+"]), intl2.string(_modDef2723.goKE2b));
-  const stringResult = intl.string(_modDef2723["T7GyW+"]);
+  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2725["T7GyW+"]), intl2.string(_modDef2725.goKE2b));
+  const stringResult = intl.string(_modDef2725["T7GyW+"]);
   const intl3 = util.intl;
   const obj3 = useAgeSpecificText;
   const intl4 = util.intl;
   const obj4 = { style: tmp4.container, children: null };
-  const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2723.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2723.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
+  const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2725.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2725.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
-  const formatResult = intl3.format(_modDef2723.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 16098 : 16099);
+  const formatResult = intl3.format(_modDef2725.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
+  obj5.source = importDefault(tmp3 ? 16062 : 16063);
   obj5.style = tmp4.art;
   items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "body-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

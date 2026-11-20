@@ -1,11 +1,11 @@
-// === Module 9866: EarnedDecisionRoundtripTracker ===
+// === Module 9868: EarnedDecisionRoundtripTracker ===
 
-// Module 9866 (EarnedDecisionRoundtripTracker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import NetStats from "NetStats" /* 8134 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 8137 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8258 */;
-import NetworkStore from "NetworkStore" /* 5673 */;
+// Module 9868 (EarnedDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import NetStats from "NetStats" /* 8133 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 8136 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8257 */;
+import NetworkStore from "NetworkStore" /* 5675 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp) {
@@ -33,7 +33,7 @@ function trackRoundtrip(apiResponseTimestamp) {
     const tmp2Result = SessionForegroundUtils;
   }
 }
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 class EarnedDecisionRoundtripTracker {
   constructor() {
     merged = Object.assign({ pendingRequests: null });

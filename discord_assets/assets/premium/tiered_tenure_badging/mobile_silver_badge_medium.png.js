@@ -1,6 +1,6 @@
-// === Module 13878: ? ===
+// === Module 13847: ? ===
 
-// Module 13878
+// Module 13847
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_silver_badge_medium.png.js");

@@ -1,18 +1,18 @@
-// === Module 11091: InAppNotificationSettingsModal ===
+// === Module 11033: InAppNotificationSettingsModal ===
 
-// Module 11091 (InAppNotificationSettingsModal)
-import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import NavigatorHeader from "NavigatorHeader" /* 6976 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7361 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7366 */;
-import Form from "Form" /* 7590 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 11092 */;
+// Module 11033 (InAppNotificationSettingsModal)
+import util from "util" /* 1112 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import NavigatorHeader from "NavigatorHeader" /* 6975 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7360 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7365 */;
+import Form from "Form" /* 7589 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 11034 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function ConnectedInAppNotificationSettingsScreen(channel) {
@@ -32,8 +32,8 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
     })
   });
 }
-const isMultiUserDM = fn(4645).isMultiUserDM;
-const Constants = fn(1072);
+const isMultiUserDM = fn(4647).isMultiUserDM;
+const Constants = fn(1071);
 ({ ChannelTypes: closure_9, UserSettingsSections: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -140,15 +140,15 @@ export default noop.memo(function InAppNotificationSettingsModal(channelId) {
     const obj2 = {
       headerTitle() {
         const obj = { title: null, subtitle: null };
-        const intl = channelId(1113).intl;
-        obj.title = intl.string(channelId(1113).t.h850Ss);
+        const intl = channelId(1112).intl;
+        obj.title = intl.string(channelId(1112).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(5408);
+          const tmp3Result = channelId(5410);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(6976).NavigatorHeader, obj);
+        return closure_2_11(channelId(6975).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -158,5 +158,5 @@ export default noop.memo(function InAppNotificationSettingsModal(channelId) {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(6973).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(6972).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

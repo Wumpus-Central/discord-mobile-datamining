@@ -1,23 +1,23 @@
-// === Module 17866: WaterwheelsDiscoverCard ===
+// === Module 17693: WaterwheelsDiscoverCard ===
 
-// Module 17866 (WaterwheelsDiscoverCard)
+// Module 17693 (WaterwheelsDiscoverCard)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef2561 from "module_2561" /* 2561 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4655 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import GameControllerIcon from "GameControllerIcon" /* 6921 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7446 */;
+import util from "util" /* 1112 */;
+import _modDef2563 from "module_2563" /* 2563 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4657 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import GameControllerIcon from "GameControllerIcon" /* 6920 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7445 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 9635 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9928 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 17588 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17855 */;
-import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 17856 */;
-import selectDiscoverServerAction from "selectDiscoverServerAction" /* 17867 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9931 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 17415 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17682 */;
+import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 17683 */;
+import selectDiscoverServerAction from "selectDiscoverServerAction" /* 17694 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 function ServerIdentity(server) {
@@ -27,11 +27,11 @@ function ServerIdentity(server) {
     flag = false;
   }
   const onAction = server.onAction;
-  const fontScale = server(5398).useFontScale();
+  const fontScale = server(5400).useFontScale();
   const tmp4 = closure_16();
   const guildId = server.guildId;
   closure_129_0 = guildId;
-  let obj = server(5398);
+  let obj = server(5400);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = server(504).useStateFromStores(items, () => selectDiscoverServerAction.selectDiscoverServerAction(GuildStore.getGuild(guildId)), items1);
@@ -47,8 +47,8 @@ function ServerIdentity(server) {
     const obj3 = { id: null, name: null, icon: null, features: null };
     ({ guildId: obj5.id, name: obj5.name } = server);
     obj3.features = set;
-    result = tmp(4655).constructFromPartialGuildRecord(obj3);
-    const tmpResult = tmp(4655);
+    result = tmp(4657).constructFromPartialGuildRecord(obj3);
+    const tmpResult = tmp(4657);
   }
   const obj2 = server(504);
   if (null != server.iconUrl) {
@@ -62,9 +62,9 @@ function ServerIdentity(server) {
     obj4.style = items2;
     const obj6 = { uri: server.iconUrl };
     obj4.source = obj6;
-    let tmp14Result4 = closure_10(onAction(5479), obj4);
+    let tmp14Result4 = closure_10(onAction(5481), obj4);
     let tmp14 = closure_10;
-    const tmp19 = onAction(5479);
+    const tmp19 = onAction(5481);
   } else {
     tmp14 = closure_10;
     const items3 = [tmp4.icon, ];
@@ -80,7 +80,7 @@ function ServerIdentity(server) {
   const items4 = [tmp14Result4, ];
   const obj8 = { style: tmp4.identityCopy, children: null };
   const obj9 = { style: tmp4.nameRow, children: null };
-  const tmpResult2 = server(5383);
+  const tmpResult2 = server(5385);
   if (flag) {
     const obj10 = { variant: "body-sm/semibold", color: "text-strong", lineClamp: 1, style: tmp4.name, children: server.name };
     let tmp14Result = tmp14(tmpResult2.Text, obj10);
@@ -94,12 +94,12 @@ function ServerIdentity(server) {
     const obj12 = { guild: result, style: tmp4.badge };
     tmp14Result5 = tmp14(onAction(9635), obj12);
   }
-  const tmp25 = stateFromStores === server(9928).WaterwheelsActionType.OPEN_GUILD;
+  const tmp25 = stateFromStores === server(9931).WaterwheelsActionType.OPEN_GUILD;
   items5[1] = tmp14Result5;
   let tmp14Result6 = null;
   if (tmp25) {
     const obj13 = { size: "xxs", color: onAction(575).colors.ICON_MUTED };
-    tmp14Result6 = tmp14(tmp(7446).ChevronSmallRightIcon, obj13);
+    tmp14Result6 = tmp14(tmp(7445).ChevronSmallRightIcon, obj13);
   }
   items5[2] = tmp14Result6;
   obj9.children = items5;
@@ -108,9 +108,9 @@ function ServerIdentity(server) {
   const obj15 = { style: tmp4.metaItem, children: null };
   const items7 = [tmp14(closure_7, { style: tmp4.dot }), ];
   const obj17 = { variant: "body-xs/medium", color: "text-subtle", style: tmp4.metaText, children: null };
-  const intl = tmp(1113).intl;
-  obj17.children = intl.format(server(1113).t["LC+S+m"], { membersOnline: server.online });
-  items7[1] = tmp14(server(5383).Text, obj17);
+  const intl = tmp(1112).intl;
+  obj17.children = intl.format(server(1112).t["LC+S+m"], { membersOnline: server.online });
+  items7[1] = tmp14(server(5385).Text, obj17);
   obj15.children = items7;
   const items8 = [closure_11(closure_7, obj15), ];
   let tmp12Result = null;
@@ -122,10 +122,10 @@ function ServerIdentity(server) {
     obj20.style = items9;
     const items10 = [tmp14(closure_7, obj20), ];
     const obj21 = { variant: "body-xs/medium", color: "text-subtle", style: tmp4.metaText, children: null };
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     const obj22 = { count: server.members };
-    obj21.children = intl2.format(tmp(1113).t.zRl6XR, obj22);
-    items10[1] = tmp14(tmp(5383).Text, obj21);
+    obj21.children = intl2.format(tmp(1112).t.zRl6XR, obj22);
+    items10[1] = tmp14(tmp(5385).Text, obj21);
     obj19.children = items10;
     tmp12Result = closure_11(closure_7, obj19);
   }
@@ -250,7 +250,7 @@ function ServerRowCard(server) {
   const obj5 = { style: tmp.serverHeader, children: null };
   const obj6 = { style: tmp.serverIdentity, accessibilityRole: "button", accessibilityLabel: server.name, accessibilityHint: null, onPress: null, children: null };
   const intl = util.intl;
-  obj6.accessibilityHint = intl.string(_modDef2561.nkweXX);
+  obj6.accessibilityHint = intl.string(_modDef2563.nkweXX);
   obj6.onPress = openProfile;
   if (null != server.iconUrl) {
     const obj7 = { accessible: false, style: tmp.icon, source: null };
@@ -488,7 +488,7 @@ function WaterwheelsDiscoverCardContent(entry) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -496,7 +496,7 @@ const PX_12 = nativeDefault.space.PX_12;
 const PX_64 = nativeDefault.space.PX_64;
 const PX_16 = nativeDefault.space.PX_16;
 const colors = ["rgba(0,0,0,0.65)", "rgba(0,0,0,0.85)"];
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = { row: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, carouselSection: null, carouselHeader: null, carouselIconTile: null, carouselContent: null, serverRow: null, serverProfile: null, serverJoinTarget: null, serverHeader: null, serverIdentity: null, badge: null, identity: null, identityCompact: null, identityCopy: null, nameRow: null, name: null, icon: null, iconCompact: null, meta: null, serverOnline: null, metaItem: null, metaText: null, dot: null, serverDot: null, mutedDot: null, hero: null, heroBody: null, heroArt: null, heroImage: null, heroTop: null, heroTitle: null, heroRank: null, cover: null, heroCta: null, heroServer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.carouselSection = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
@@ -561,7 +561,7 @@ obj2.heroCta = { flexDirection: "row", alignItems: "center", justifyContent: "sp
 let obj24 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingTop: nativeDefault.space.PX_12 };
 obj2.heroServer = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_17 = createStyles.createStyles((arg0, arg1) => {
   let num = 180;
   if (arg1) {

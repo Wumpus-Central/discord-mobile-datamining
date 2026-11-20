@@ -1,20 +1,20 @@
-// === Module 17401: PinotMemberSetting ===
+// === Module 17228: PinotMemberSetting ===
 
-// Module 17401 (PinotMemberSetting)
+// Module 17228 (PinotMemberSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import _modDef3407 from "module_3407" /* 3407 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import InlineNotice from "InlineNotice" /* 7643 */;
-import PinotExperiment from "PinotExperiment" /* 7653 */;
-import SettingsConstants from "SettingsConstants" /* 8593 */;
-import PinotMemberSettingState from "PinotMemberSettingState" /* 11796 */;
+import Constants from "Constants" /* 1071 */;
+import util from "util" /* 1112 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import _modDef3409 from "module_3409" /* 3409 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import InlineNotice from "InlineNotice" /* 7642 */;
+import PinotExperiment from "PinotExperiment" /* 7652 */;
+import SettingsConstants from "SettingsConstants" /* 8592 */;
+import PinotMemberSettingState from "PinotMemberSettingState" /* 11738 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4792 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
+import createStyles from "createStyles" /* 4794 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
 import size from "module_2" /* 2 */;
 
 function PinotMemberSettingFooter() {
@@ -24,14 +24,14 @@ function PinotMemberSettingFooter() {
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj4.children = intl.format(_modDef3407.V0EPTo, { learnMoreURL: articleURL });
+  obj4.children = intl.format(_modDef3409.V0EPTo, { learnMoreURL: articleURL });
   items = [timestampProducer(Text_Text.Text, obj4), ];
   let tmp8Result = null;
   if (obj.usePinotMemberSettingState().locked) {
     const obj5 = { type: "info", message: null, role: "none" };
     const intl2 = util.intl;
     const obj6 = { learnMoreURL: articleURL };
-    obj5.message = intl2.format(_modDef3407.Z9bKIJ, obj6);
+    obj5.message = intl2.format(_modDef3409.Z9bKIJ, obj6);
     tmp8Result = timestampProducer(InlineNotice.InlineNotice, obj5);
   }
   items[1] = tmp8Result;
@@ -48,7 +48,7 @@ let closure_9 = createStyles.createStyles(obj);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3407.M33rl6);
+    return intl.string(_modDef3409.M33rl6);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {

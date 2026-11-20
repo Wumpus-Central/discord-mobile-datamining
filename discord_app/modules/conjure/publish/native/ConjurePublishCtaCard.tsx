@@ -1,15 +1,13 @@
-// === Module 18647: ConjurePublishCtaCard ===
+// === Module 18474: ConjurePublishCtaCard ===
 
-// Module 18647 (ConjurePublishCtaCard)
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 18299 */;
-import conjurePublishEval from "conjurePublishEval" /* 18301 */;
-import useConjureStartPublishDefault from "useConjureStartPublish" /* 18308 */;
-import conjurePublishCard from "conjurePublishCard" /* 18467 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 18648 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 18649 */;
+// Module 18474 (ConjurePublishCtaCard)
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 12176 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 18124 */;
+import conjurePublishCard from "conjurePublishCard" /* 18292 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 18475 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,39 +30,29 @@ const jsxProd = fn(21);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/native/ConjurePublishCtaCard.tsx");
 
-export default function ConjurePublishCtaCard(arg0) {
-  ({ projectId, turnId, cta } = arg0);
+export default function ConjurePublishCtaCard(projectId) {
+  projectId = projectId.projectId;
   const tmp3 = useConjurePublishActionDefault(projectId);
-  conjurePublishEval;
-  let tmp8Result4 = null;
+  let tmp6Result2 = null;
   if (null != tmp3) {
-    tmp8Result4 = null;
-    if (tmp4Result.isConjurePublishCtaVisible(tmp3, cta)) {
-      const obj = { projectId, publish: tmp3 };
-      items = [React3(PublishCta, obj), , ];
-      let tmp8Result = null;
+    tmp6Result2 = null;
+    if (obj.isConjurePublishCtaVisible(tmp3, projectId.cta)) {
+      const obj2 = { projectId, publish: tmp3 };
+      items = [React3(PublishCta, obj2), ];
+      let tmp6Result = null;
       if (null != tmp3.failure) {
-        const obj2 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };
-        tmp8Result = React3(Text_Text.Text, obj2);
-      }
-      items[1] = tmp8Result;
-      let tmp8Result3 = null;
-      if (null != turnId) {
-        tmp8Result3 = null;
-        if (!tmp6) {
-          const obj3 = { projectId, turnId, cta, status: tmp3.status, placement: "publish_card" };
-          tmp8Result3 = React3(ConjurePublishRatingDefault, obj3, turnId);
-        }
+        const obj3 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };
+        tmp6Result = React3(Text_Text.Text, obj3);
       }
       const obj4 = { children: null };
       const obj5 = { spacing: 12, children: null };
-      items[2] = tmp8Result3;
+      items[1] = tmp6Result;
       obj5.children = items;
       obj4.children = React4(Stack_Stack.Stack, obj5);
-      tmp8Result4 = React3(ConjureTipInlineCalloutDefault, obj4);
+      tmp6Result2 = React3(ConjureTipInlineCalloutDefault, obj4);
       const tmpResult = ConjureTipInlineCalloutDefault;
     }
-    tmp4Result = conjurePublishCard;
+    obj = conjurePublishCard;
   }
-  return tmp8Result4;
+  return tmp6Result2;
 };

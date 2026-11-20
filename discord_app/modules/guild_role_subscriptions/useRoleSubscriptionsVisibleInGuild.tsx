@@ -3,8 +3,8 @@
 // Module 6751 (useRoleSubscriptionsVisibleInGuild)
 import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6752 */;
 import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6753 */;
-import ImpersonateStore from "ImpersonateStore" /* 4697 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import ImpersonateStore from "ImpersonateStore" /* 4699 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
@@ -34,7 +34,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     return isViewingServerShopResult;
   }
 }
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 

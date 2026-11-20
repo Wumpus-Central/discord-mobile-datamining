@@ -1,7 +1,7 @@
-// === Module 10726: makeIframeId ===
+// === Module 10668: makeIframeId ===
 
-// Module 10726 (makeIframeId)
-import v1 from "v1" /* 1269 */;
+// Module 10668 (makeIframeId)
+import v1 from "v1" /* 1268 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/makeIframeId.tsx");

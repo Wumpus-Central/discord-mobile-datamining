@@ -2,13 +2,13 @@
 
 // Module 8862 (useWishlistHooks)
 import apply from "apply" /* 12 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7954 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7953 */;
 import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8870 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 import WishlistStore from "WishlistStore" /* 8863 */;
 
 const require = globalThis.__r;

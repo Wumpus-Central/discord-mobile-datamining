@@ -1,10 +1,10 @@
-// === Module 4848: UserUtils ===
+// === Module 4850: UserUtils ===
 
-// Module 4848 (UserUtils)
+// Module 4850 (UserUtils)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import StreamerModeStore from "StreamerModeStore" /* 4849 */;
-import UserStore from "UserStore" /* 1388 */;
+import util from "util" /* 1112 */;
+import StreamerModeStore from "StreamerModeStore" /* 4851 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function nameFromUser(primary1) {
@@ -283,7 +283,7 @@ function getUserIsStaff() {
   const currentUser = UserStore.getCurrentUser();
   return null != currentUser && currentUser.isStaff();
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ NON_USER_BOT_DISCRIMINATOR: closure_4, StatusTypes: hasOwnProperty } = Constants);
 let c6 = 86400000;
 let c7 = "???";

@@ -1,23 +1,23 @@
-// === Module 17806: DMChannel ===
+// === Module 17633: DMChannel ===
 
-// Module 17806 (DMChannel)
+// Module 17633 (DMChannel)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5525 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 7890 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13754 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 17601 */;
-import ChannelItemDefault from "ChannelItem" /* 17685 */;
+import transitionToChannel from "transitionToChannel" /* 5527 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 7889 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13723 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 17428 */;
+import ChannelItemDefault from "ChannelItem" /* 17512 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
-const UnreadSetting = fn(6432).UnreadSetting;
+const UnreadSetting = fn(6434).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
-let obj = { container: { marginVertical: fn(5521).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4794);
+let obj = { container: { marginVertical: fn(5523).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
-let obj3 = { marginVertical: fn(5521).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(5523).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 

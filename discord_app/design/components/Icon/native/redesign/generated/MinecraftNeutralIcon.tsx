@@ -2,7 +2,7 @@
 
 // Module 9674 (MinecraftNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9675 from "module_9675" /* 9675 */;
 import _mod9676 from "module_9676" /* 9676 */;
 import _mod9677 from "module_9677" /* 9677 */;

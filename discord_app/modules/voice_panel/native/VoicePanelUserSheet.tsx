@@ -1,15 +1,15 @@
-// === Module 19327: VoicePanelUserSheet ===
+// === Module 19147: VoicePanelUserSheet ===
 
-// Module 19327 (VoicePanelUserSheet)
+// Module 19147 (VoicePanelUserSheet)
 import nativeDefault from "native" /* 575 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
-import UserProfileActivity from "UserProfileActivity" /* 14358 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19326 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
+import UserProfileActivity from "UserProfileActivity" /* 14326 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19146 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function OverflowMenu(userId) {
@@ -127,10 +127,10 @@ function OverflowMenu(userId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { wrapper: { gap: 12, padding: 16 }, card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg }, header: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 16 }, user: { display: "flex", gap: 8, flexDirection: "row", alignItems: "center", flex: 1, minWidth: 0 }, avatar: null, username: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg };
 obj2.avatar = { maxWidth: 48, maxHeight: 48, borderRadius: nativeDefault.radii.round };
@@ -153,8 +153,8 @@ export default function VoicePanelUserSheet(userId) {
   const items2 = [UserStore];
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
-  const name = channelId(5822).useName(guildId, channelId, stateFromStores);
-  const live = userId(14409)(userId).live;
+  const name = channelId(5824).useName(guildId, channelId, stateFromStores);
+  const live = userId(14377)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -175,17 +175,17 @@ export default function VoicePanelUserSheet(userId) {
         const obj6 = { style: tmp.header, children: null };
         const obj7 = { style: tmp.user, children: null };
         if (null != avatarDecoration) {
-          const obj8 = { source: cachedSourceFromURI, size: channelId(1187).AvatarSizes.LARGE_48, avatarDecoration };
-          let tmp11Result = closure_10(channelId(1187).Avatar, obj8);
+          const obj8 = { source: cachedSourceFromURI, size: channelId(1186).AvatarSizes.LARGE_48, avatarDecoration };
+          let tmp11Result = closure_10(channelId(1186).Avatar, obj8);
         } else {
           const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 48, height: 48, style: tmp.avatar };
-          tmp11Result = closure_10(tmp7(5479), size);
-          const tmp7Result = tmp7(5479);
+          tmp11Result = closure_10(tmp7(5481), size);
+          const tmp7Result = tmp7(5481);
         }
         const obj9 = { children: null };
         const items4 = [tmp11Result, ];
         const obj10 = { variant: "body-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-        items4[1] = closure_10(channelId(5383).Text, obj10);
+        items4[1] = closure_10(channelId(5385).Text, obj10);
         obj7.children = items4;
         const items5 = [closure_11(stateFromStores2, obj7), ];
         const obj11 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
@@ -203,10 +203,10 @@ export default function VoicePanelUserSheet(userId) {
 
         ];
         const obj12 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
-        items6[2] = closure_10(tmp7(14412), obj12);
+        items6[2] = closure_10(tmp7(14380), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
-        return closure_10(channelId(5020).BottomSheet, obj9);
+        return closure_10(channelId(5022).BottomSheet, obj9);
       }
     }
   }

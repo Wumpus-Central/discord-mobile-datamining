@@ -1,9 +1,9 @@
 // === Module 6731: SocialLayerStorefrontConstants ===
 
 // Module 6731 (SocialLayerStorefrontConstants)
-import Constants from "Constants" /* 1072 */;
-import UserStoreConstants from "UserStoreConstants" /* 1405 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import Constants from "Constants" /* 1071 */;
+import UserStoreConstants from "UserStoreConstants" /* 1403 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

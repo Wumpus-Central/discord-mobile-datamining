@@ -1,7 +1,7 @@
 // === Module 9014: InvalidGooglePlayPurchase ===
 
 // Module 9014 (InvalidGooglePlayPurchase)
-import BillingError from "BillingError" /* 6230 */;
+import BillingError from "BillingError" /* 6232 */;
 
 const prototype = function InvalidGooglePlayPurchase() {
   return HermesBuiltin.applyArguments(new.target, new.target);

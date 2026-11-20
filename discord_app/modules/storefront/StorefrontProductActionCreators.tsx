@@ -1,12 +1,12 @@
-// === Module 8048: StorefrontProductActionCreators ===
+// === Module 8047: StorefrontProductActionCreators ===
 
-// Module 8048 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8052 */;
-import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8053 */;
+// Module 8047 (StorefrontProductActionCreators)
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8051 */;
+import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8052 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8049 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7975 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8048 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7974 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -179,8 +179,8 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
             closure_129_4 = closure_129_0.filter((item) => {
               let storefrontPricingKey = closure_1_3;
               if (closure_1_3 === undefined) {
-                storefrontPricingKey = closure_0(8053).getStorefrontPricingKey();
-                const obj = closure_0(8053);
+                storefrontPricingKey = closure_0(8052).getStorefrontPricingKey();
+                const obj = closure_0(8052);
               }
               let diff = globalThis;
               let flag = false;
@@ -193,9 +193,9 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
                     flag = true;
                     if (null != fetchedAtForSku) {
                       if ("error" === fetchStateForSku) {
-                        let TWELVE_HOURS_MS = closure_0(8052).ERROR_STALE_THRESHOLD_MS;
+                        let TWELVE_HOURS_MS = closure_0(8051).ERROR_STALE_THRESHOLD_MS;
                       } else {
-                        TWELVE_HOURS_MS = closure_0(8052).TWELVE_HOURS_MS;
+                        TWELVE_HOURS_MS = closure_0(8051).TWELVE_HOURS_MS;
                       }
                       const _Date = diff.Date;
                       diff = _Date.now() - fetchedAtForSku;
@@ -269,7 +269,7 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 

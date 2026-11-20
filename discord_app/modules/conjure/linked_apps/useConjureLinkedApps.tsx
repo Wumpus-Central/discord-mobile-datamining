@@ -1,10 +1,10 @@
-// === Module 18365: useConjureLinkedApps ===
+// === Module 18199: useConjureLinkedApps ===
 
-// Module 18365 (useConjureLinkedApps)
+// Module 18199 (useConjureLinkedApps)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 
@@ -78,7 +78,7 @@ export default function useConjureLinkedApps(projectId, arg1) {
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       }
       return value;
@@ -249,7 +249,7 @@ export default function useConjureLinkedApps(projectId, arg1) {
   if (name == null) {
     let intl = tmp27(tmp28[6]).intl;
     const obj5 = { projectId };
-    name = intl.formatToPlainString(require("module_4089").HHCa93, obj5);
+    name = intl.formatToPlainString(require("module_4091").HHCa93, obj5);
   }
   const obj8 = { name, project: null, live: null, hasPreview: null, callers: null, targets: null, projects: null, names: null, failed: null, saved: null, setBuild: null, remove: null };
   if (stateFromStores == null) {

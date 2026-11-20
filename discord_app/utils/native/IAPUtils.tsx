@@ -4,17 +4,17 @@
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import v1 from "v1" /* 1269 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
-import PlatformUtils2 from "PlatformUtils" /* 1380 */;
-import DeviceUtils from "DeviceUtils" /* 4749 */;
-import ProductIds from "ProductIds" /* 8051 */;
+import v1 from "v1" /* 1268 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1377 */;
+import PlatformUtils2 from "PlatformUtils" /* 1378 */;
+import DeviceUtils from "DeviceUtils" /* 4751 */;
+import ProductIds from "ProductIds" /* 8050 */;
 import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 9188 */;
 import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 9189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5386 */;
-import UserStore from "UserStore" /* 1388 */;
-import IAPStore from "IAPStore" /* 8691 */;
+import DevSettingsStore from "DevSettingsStore" /* 5388 */;
+import UserStore from "UserStore" /* 1386 */;
+import IAPStore from "IAPStore" /* 8731 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -425,7 +425,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -486,12 +486,12 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5456).convertToAlpha2;
-const Constants = fn(1072);
+const convertToAlpha2 = fn(5458).convertToAlpha2;
+const Constants = fn(1071);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
-const NAMESPACE_SNOWFLAKE_UUID = fn(1390).NAMESPACE_SNOWFLAKE_UUID;
+const NAMESPACE_SNOWFLAKE_UUID = fn(1388).NAMESPACE_SNOWFLAKE_UUID;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
-let PlatformUtils = fn(1380);
+let PlatformUtils = fn(1378);
 let _default = null;
 if (PlatformUtils.isIOS()) {
   _default = fn(9168).default;
@@ -572,17 +572,17 @@ let obj = {
     return applyArgumentsResult;
   }
 };
-PlatformUtils = fn(1380);
+PlatformUtils = fn(1378);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  let isIOSResult1 = fn(1380).isIOS();
+  let isIOSResult1 = fn(1378).isIOS();
   if (isIOSResult1) {
     let Identifier = ClientInfoUtilsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4749).getIsRunningOnSimulator();
-      let obj7 = fn(4749);
+      isRunningOnSimulator = fn(4751).getIsRunningOnSimulator();
+      let obj7 = fn(4751);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -592,7 +592,7 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj5 = fn(1380);
+  let obj5 = fn(1378);
 }
 if (PlatformUtils) {
   obj = fn(9190).default;

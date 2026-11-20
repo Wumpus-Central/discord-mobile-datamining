@@ -1,7 +1,7 @@
-// === Module 4660: ServerNSFWLevelExperiment ===
+// === Module 4662: ServerNSFWLevelExperiment ===
 
-// Module 4660 (ServerNSFWLevelExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 4662 (ServerNSFWLevelExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-09-server-nsfw-level", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,18 +1,18 @@
-// === Module 19895: action_sheet/AddMembersActionSheet ===
+// === Module 19715: action_sheet/AddMembersActionSheet ===
 
-// Module 19895 (action_sheet/AddMembersActionSheet)
+// Module 19715 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4854 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import RegexUtilsDefault from "RegexUtils" /* 5417 */;
-import GuildUtilsDefault from "GuildUtils" /* 6558 */;
-import FormCheckbox from "FormCheckbox" /* 7217 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7875 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 13766 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19894 */;
+import util from "util" /* 1112 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4856 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import RegexUtilsDefault from "RegexUtils" /* 5419 */;
+import GuildUtilsDefault from "GuildUtils" /* 6560 */;
+import FormCheckbox from "FormCheckbox" /* 7216 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 13735 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19714 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -214,10 +214,10 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19889).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(19709).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, inputContainer: null, tagAvatar: null, emptyStateText: null, addMembersDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.inputContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };

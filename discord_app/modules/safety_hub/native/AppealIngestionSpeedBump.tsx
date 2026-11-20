@@ -1,22 +1,22 @@
-// === Module 12344: AppealIngestionSpeedBump ===
+// === Module 12314: AppealIngestionSpeedBump ===
 
-// Module 12344 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12346 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12351 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12352 */;
+// Module 12314 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12316 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12321 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12322 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7716 */;
+import SafetyHubStore from "SafetyHubStore" /* 7715 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7690);
+const SafetyHubConstants = fn(7689);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -50,9 +50,9 @@ export default function AppealIngestionSpeedBump(arg0) {
   if (flagged_content == null) {
     flagged_content = [];
   }
-  const intl = tmp2(1113).intl;
+  const intl = tmp2(1112).intl;
   const tmp2Result = require("useEmitAppealIngestionEvent");
-  const intl2 = tmp2(1113).intl;
+  const intl2 = tmp2(1112).intl;
   const stringResult = intl.string(require("util").t["C5q+pW"]);
   const items1 = [closure_8(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(require("util").t.URt7VI) }), ];
   const obj3 = { style: tmp.container, children: null };
@@ -65,8 +65,8 @@ export default function AppealIngestionSpeedBump(arg0) {
   let tmp9Result3 = isCoppa;
   if (isCoppa) {
     const obj6 = { text: null, url: null, onPress: null };
-    const intl3 = tmp2(1113).intl;
-    obj6.text = intl3.string(tmp2(1113).t["gJs+kf"]);
+    const intl3 = tmp2(1112).intl;
+    obj6.text = intl3.string(tmp2(1112).t["gJs+kf"]);
     obj6.url = constants.AGE_VERIFICATION_LINK;
     obj6.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAgeVerificationLink);
@@ -77,8 +77,8 @@ export default function AppealIngestionSpeedBump(arg0) {
   items2[2] = tmp9Result3;
   if (isDeveloperClassification) {
     const obj7 = { text: null, url: null, onPress: null };
-    const intl4 = tmp2(1113).intl;
-    obj7.text = intl4.string(tmp2(1113).t.n9cZTH);
+    const intl4 = tmp2(1112).intl;
+    obj7.text = intl4.string(tmp2(1112).t.n9cZTH);
     obj7.url = constants.APP_APPEAL_LINK;
     obj7.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAppAppealLink);
@@ -90,8 +90,8 @@ export default function AppealIngestionSpeedBump(arg0) {
   let tmp9Result4 = !isCoppa;
   if (!isCoppa) {
     const obj8 = { text: null, url: null, onPress: null };
-    const intl5 = tmp2(1113).intl;
-    obj8.text = intl5.string(tmp2(1113).t["Vtyn/7"]);
+    const intl5 = tmp2(1112).intl;
+    obj8.text = intl5.string(tmp2(1112).t["Vtyn/7"]);
     obj8.url = str;
     obj8.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickLearnMoreLink);
@@ -102,9 +102,9 @@ export default function AppealIngestionSpeedBump(arg0) {
   items2[4] = tmp9Result4;
   if (isDsaEligible) {
     const obj9 = { variant: "body-xs/normal", children: null };
-    const intl6 = tmp2(1113).intl;
-    obj9.children = intl6.format(tmp2(1113).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5383).Text, obj9);
+    const intl6 = tmp2(1112).intl;
+    obj9.children = intl6.format(tmp2(1112).t.WMUgCX, {});
+    isDsaEligible = closure_8(tmp2(5385).Text, obj9);
   }
   const obj10 = { children: null };
   items2[5] = isDsaEligible;

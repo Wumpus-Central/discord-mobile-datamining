@@ -3,20 +3,20 @@
 // Module 9539 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import ColorUtils from "ColorUtils" /* 4789 */;
-import utils_ColorDefault from "utils/Color" /* 4790 */;
-import shared from "shared" /* 4799 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4962 */;
-import GuildThemePresets from "GuildThemePresets" /* 4965 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4967 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5000 */;
-import useThemeDefault from "useTheme" /* 5001 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import ColorUtils from "ColorUtils" /* 4791 */;
+import utils_ColorDefault from "utils/Color" /* 4792 */;
+import shared from "shared" /* 4801 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4964 */;
+import GuildThemePresets from "GuildThemePresets" /* 4967 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4969 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5002 */;
+import useThemeDefault from "useTheme" /* 5003 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4816 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4818 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -220,7 +220,7 @@ function CustomThemesGradient(arg0) {
   closure_129_2 = undefined;
   closure_129_3 = undefined;
   closure_129_0 = baseMix;
-  ({ width, height } = reduced(1496)());
+  ({ width, height } = reduced(1494)());
   if (mixAmount === undefined) {
     mixAmount = {};
   }
@@ -349,8 +349,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5347), obj);
-    const tmp2Result = reduced(5347);
+    tmp10Result = closure_6(reduced(5349), obj);
+    const tmp2Result = reduced(5349);
   }
   return tmp10Result;
 }
@@ -387,7 +387,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c10 = 0.5;

@@ -1,6 +1,6 @@
-// === Module 1078: CollectibleSearchSortDirection ===
+// === Module 1077: CollectibleSearchSortDirection ===
 
-// Module 1078 (CollectibleSearchSortDirection)
+// Module 1077 (CollectibleSearchSortDirection)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectibleSearchSortDirection.tsx");

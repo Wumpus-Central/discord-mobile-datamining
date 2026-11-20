@@ -1,7 +1,7 @@
-// === Module 7264: useWithPostLoginRouting ===
+// === Module 7263: useWithPostLoginRouting ===
 
-// Module 7264 (useWithPostLoginRouting)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6304 */;
+// Module 7263 (useWithPostLoginRouting)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6306 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ LoginStates: metroImportDefault, AuthStates: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
@@ -76,7 +76,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

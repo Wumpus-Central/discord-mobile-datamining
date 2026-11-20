@@ -1,8 +1,8 @@
-// === Module 8322: ClipsConstants ===
+// === Module 8321: ClipsConstants ===
 
-// Module 8322 (ClipsConstants)
+// Module 8321 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1089 */;
+import DurationsDefault from "Durations" /* 1088 */;
 
 let obj = {};
 let result = 30 * DurationsDefault.Millis.SECOND;

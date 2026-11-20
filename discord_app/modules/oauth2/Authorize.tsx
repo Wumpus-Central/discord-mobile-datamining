@@ -1,17 +1,17 @@
-// === Module 6885: Authorize ===
+// === Module 6884: Authorize ===
 
-// Module 6885 (Authorize)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
-import QueryStringUtils from "QueryStringUtils" /* 5513 */;
-import keysSorter from "keysSorter" /* 6449 */;
+// Module 6884 (Authorize)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
+import QueryStringUtils from "QueryStringUtils" /* 5515 */;
+import keysSorter from "keysSorter" /* 6451 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
-import scopes from "scopes" /* 6886 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import scopes from "scopes" /* 6885 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ EMPTY_NUX_SERVER: hasOwnProperty, FAVORITES: closure_6, ME: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/Authorize.tsx");

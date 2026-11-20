@@ -1,18 +1,18 @@
-// === Module 10970: getXboxURIForChannel ===
+// === Module 10912: getXboxURIForChannel ===
 
-// Module 10970 (getXboxURIForChannel)
-import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 10912 (getXboxURIForChannel)
+import util from "util" /* 1112 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const GameConsoleConstants = fn(6954);
+const GameConsoleConstants = fn(6953);
 ({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: metroImportDefault } = GameConsoleConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");

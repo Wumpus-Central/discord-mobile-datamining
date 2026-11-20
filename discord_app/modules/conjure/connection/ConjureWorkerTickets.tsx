@@ -1,7 +1,7 @@
 // === Module 6821: ConjureWorkerTickets ===
 
 // Module 6821 (ConjureWorkerTickets)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import conjureLocalDev from "conjureLocalDev" /* 6822 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -36,7 +36,7 @@ function workerTicket(ticket) {
   obj.baseUrl = url;
   return obj;
 }
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const map = new Map();
 let closure_5 = [];
 const size = fn(2);

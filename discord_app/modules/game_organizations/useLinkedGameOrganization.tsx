@@ -1,17 +1,17 @@
-// === Module 15091: useLinkedGameOrganization ===
+// === Module 15055: useLinkedGameOrganization ===
 
-// Module 15091 (useLinkedGameOrganization)
-import DurationsDefault from "Durations" /* 1089 */;
-import GameOrganizationActionCreators from "GameOrganizationActionCreators" /* 15092 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import GameOrganizationStore from "GameOrganizationStore" /* 15038 */;
+// Module 15055 (useLinkedGameOrganization)
+import DurationsDefault from "Durations" /* 1088 */;
+import GameOrganizationActionCreators from "GameOrganizationActionCreators" /* 15056 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import GameOrganizationStore from "GameOrganizationStore" /* 15002 */;
 
 require = fn;
 const result = 5 * DurationsDefault.Seconds.MINUTE;
 const result1 = 15 * DurationsDefault.Seconds.SECOND;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameOrganizationStore, {
-  getQueryId: fn(1072).QueryIds.GAME_ORGANIZATION,
+  getQueryId: fn(1071).QueryIds.GAME_ORGANIZATION,
   get(arg0) {
     return GameOrganizationStore.getGameOrganizationByGuildId(arg0);
   },

@@ -1,20 +1,20 @@
-// === Module 12805: ForumPostPlaceholder ===
+// === Module 12775: ForumPostPlaceholder ===
 
-// Module 12805 (ForumPostPlaceholder)
+// Module 12775 (ForumPostPlaceholder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import Card from "Card" /* 6928 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import Card from "Card" /* 6927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { postPlaceholder: { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = { code: "(function ForumPostPlaceholderTsx1(){let[reducedMotion,ROW_OPACITY_END,withDelay,INITIAL_DELAY_MS,withRepeat,withSequence,withTiming,timingConfig]=this.__closure;if(reducedMotion){return{opacity:ROW_OPACITY_END};}return{opacity:withDelay(INITIAL_DELAY_MS,withRepeat(withSequence(withTiming(ROW_OPACITY_END,timingConfig),withTiming(1,timingConfig)),-1,true))};})" };
@@ -30,10 +30,10 @@ export default noop.memo(function ForumPostPlaceholder() {
     closure_8,
     stateFromStores,
     0.55,
-    _mod1655.withDelay,
+    _mod1653.withDelay,
     1000,
-    _mod1655.withRepeat,
-    _mod1655.withSequence,
+    _mod1653.withRepeat,
+    _mod1653.withSequence,
     timing_timing.withTiming,
     _slicedToArray(noop.useState(() => {
       const obj = { timingConfig: null };
@@ -82,7 +82,7 @@ export default noop.memo(function ForumPostPlaceholder() {
   ForumPostPlaceholderTsx1.__closure = items2;
   ForumPostPlaceholderTsx1.__workletHash = 3389663500091;
   ForumPostPlaceholderTsx1.__initData = tmp5;
-  const animatedStyle = _mod1655.useAnimatedStyle(ForumPostPlaceholderTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ForumPostPlaceholderTsx1);
   const obj3 = { style: animatedStyle, pointerEvents: "none", children: jsx(Card.Card, { variant: "secondary", style: tmp.postPlaceholder }) };
-  return jsx(_modDef1655.View, { style: animatedStyle, pointerEvents: "none", children: jsx(Card.Card, { variant: "secondary", style: tmp.postPlaceholder }) });
+  return jsx(_modDef1653.View, { style: animatedStyle, pointerEvents: "none", children: jsx(Card.Card, { variant: "secondary", style: tmp.postPlaceholder }) });
 });

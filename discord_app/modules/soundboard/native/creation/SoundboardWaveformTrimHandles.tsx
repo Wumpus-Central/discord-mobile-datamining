@@ -1,26 +1,27 @@
-// === Module 19863: SoundboardWaveformTrimHandles ===
+// === Module 19683: SoundboardWaveformTrimHandles ===
 
-// Module 19863 (SoundboardWaveformTrimHandles)
+// Module 19683 (SoundboardWaveformTrimHandles)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = 0.05;
-let closure_9 = 1 / fn(19855).WAVEFORM_BAR_COUNT;
+let closure_9 = 1 / fn(19673).WAVEFORM_BAR_COUNT;
 let items = [{ name: "increment" }, { name: "decrement" }];
-const createStyles = fn(4792);
-let obj2 = { container: { position: "absolute", top: 0, left: 0 }, touchTarget: { position: "absolute", top: 0, bottom: 0, width: 44, alignItems: "center", justifyContent: "center" }, handle: null };
+const createStyles = fn(4794);
+let obj2 = { container: { position: "absolute", top: 0, left: 0 }, touchTarget: { position: "absolute", top: 0, bottom: 0, width: 44, alignItems: "center", justifyContent: "center" }, handle: null, disabled: null };
 let size = { width: 6, height: "100%", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.handle = size;
+obj2.disabled = { opacity: 0.5 };
 let closure_11 = createStyles.createStyles(obj2);
 let closure_12 = { code: "(function SoundboardWaveformTrimHandlesTsx1(){let[startGestureBeginRatio,startRatio,lastNotifiedStartRatio]=this.__closure;startGestureBeginRatio.set(startRatio.get());lastNotifiedStartRatio.set(startRatio.get());})" };
 let closure_13 = { code: "(function SoundboardWaveformTrimHandlesTsx2(event){let[startGestureBeginRatio,width,endRatio,MIN_RATIO_GAP,startRatio,lastNotifiedStartRatio,NOTIFY_STEP_RATIO,runOnJS,notify]=this.__closure;const next=Math.min(Math.max(startGestureBeginRatio.get()+event.translationX/width,0),endRatio.get()-MIN_RATIO_GAP);startRatio.set(next);if(Math.abs(next-lastNotifiedStartRatio.get())>=NOTIFY_STEP_RATIO){lastNotifiedStartRatio.set(next);runOnJS(notify)();}})" };
@@ -37,30 +38,37 @@ export default function SoundboardWaveformTrimHandles(height) {
   const width = height.width;
   _require = width;
   const startRatio = height.startRatio;
+  importDefault = startRatio;
   const endRatio = height.endRatio;
+  dependencyMap = endRatio;
   const onChange = height.onChange;
-  c8 = undefined;
+  let flag = height.disabled;
+  if (flag === undefined) {
+    flag = false;
+  }
+  c9 = undefined;
   const tmp = closure_11();
-  const sharedValue = require("module_1655").useSharedValue(0);
-  const obj = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(0);
-  const obj2 = require("module_1655");
-  const sharedValue2 = require("module_1655").useSharedValue(0);
-  const obj3 = require("module_1655");
-  const sharedValue3 = require("module_1655").useSharedValue(1);
-  const obj4 = require("module_1655");
+  const sharedValue = require("module_1653").useSharedValue(0);
+  const obj = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(0);
+  const obj2 = require("module_1653");
+  const sharedValue2 = require("module_1653").useSharedValue(0);
+  const obj3 = require("module_1653");
+  const sharedValue3 = require("module_1653").useSharedValue(1);
+  const obj4 = require("module_1653");
   const obj5 = { start: startRatio.get(), end: endRatio.get() };
-  [tmp9, c8] = onChange(sharedValue.useState({ start: startRatio.get(), end: endRatio.get() }), 2);
+  [tmp9, c9] = onChange(flag.useState({ start: startRatio.get(), end: endRatio.get() }), 2);
   items = [onChange, startRatio, endRatio];
-  const callback = sharedValue.useCallback(() => {
+  const accessibilityActions = flag.useCallback(() => {
     _undefined4({ start: _undefined2.get(), end: _undefined3.get() });
     value = _undefined2.get();
     onChange(value, _undefined3.get());
   }, items);
-  let items1 = [width, startRatio, endRatio, callback, sharedValue, sharedValue2];
-  let items2 = [width, startRatio, endRatio, callback, sharedValue1, sharedValue3];
-  const memo = sharedValue.useMemo(() => {
+  let items1 = [width, flag, startRatio, endRatio, accessibilityActions, sharedValue, sharedValue2];
+  let items2 = [width, flag, startRatio, endRatio, accessibilityActions, sharedValue1, sharedValue3];
+  const memo = flag.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
     items = [closure_12, sharedValue, c1, sharedValue2];
     c0 = undefined;
     c1 = undefined;
@@ -77,9 +85,9 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx1.__closure = items1;
     SoundboardWaveformTrimHandlesTsx1.__workletHash = 11006989108153;
     SoundboardWaveformTrimHandlesTsx1.__initData = tmp6;
-    const PanResult = Gesture.Pan();
+    const enabledResult = Gesture.Pan().enabled(!flag);
     const tmp4 = c1;
-    const items2 = [closure_13, sharedValue, c0, c2, c8, tmp4, sharedValue2, closure_9, _mod1655.runOnJS, callback];
+    const items2 = [closure_13, sharedValue, c0, c2, c8, tmp4, sharedValue2, closure_9, _mod1653.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -109,8 +117,8 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx2.__closure = items3;
     SoundboardWaveformTrimHandlesTsx2.__workletHash = 284697789328;
     SoundboardWaveformTrimHandlesTsx2.__initData = tmp11;
-    const onBeginResult = Gesture.Pan().onBegin(SoundboardWaveformTrimHandlesTsx1);
-    const items4 = [closure_14, _mod1655.runOnJS, callback];
+    const onBeginResult = Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx1);
+    const items4 = [closure_14, _mod1653.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp21, tmp22, tmp23] = items4;
@@ -124,10 +132,11 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx3.__closure = items5;
     SoundboardWaveformTrimHandlesTsx3.__workletHash = 17317174796525;
     SoundboardWaveformTrimHandlesTsx3.__initData = tmp21;
-    return Gesture.Pan().onBegin(SoundboardWaveformTrimHandlesTsx1).onUpdate(SoundboardWaveformTrimHandlesTsx2).onFinalize(SoundboardWaveformTrimHandlesTsx3);
+    return Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx1).onUpdate(SoundboardWaveformTrimHandlesTsx2).onFinalize(SoundboardWaveformTrimHandlesTsx3);
   }, items1);
-  const memo1 = sharedValue.useMemo(() => {
+  const memo1 = flag.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
     items = [closure_15, sharedValue1, c2, sharedValue3];
     c0 = undefined;
     c1 = undefined;
@@ -144,9 +153,9 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx4.__closure = items1;
     SoundboardWaveformTrimHandlesTsx4.__workletHash = 6600976471827;
     SoundboardWaveformTrimHandlesTsx4.__initData = tmp6;
-    const PanResult = Gesture.Pan();
+    const enabledResult = Gesture.Pan().enabled(!flag);
     const tmp4 = c2;
-    const items2 = [closure_16, sharedValue1, c0, c1, c8, tmp4, sharedValue3, closure_9, _mod1655.runOnJS, callback];
+    const items2 = [closure_16, sharedValue1, c0, c1, c8, tmp4, sharedValue3, closure_9, _mod1653.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -176,8 +185,8 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx5.__closure = items3;
     SoundboardWaveformTrimHandlesTsx5.__workletHash = 16740779483743;
     SoundboardWaveformTrimHandlesTsx5.__initData = tmp11;
-    const onBeginResult = Gesture.Pan().onBegin(SoundboardWaveformTrimHandlesTsx4);
-    const items4 = [closure_17, _mod1655.runOnJS, callback];
+    const onBeginResult = Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx4);
+    const items4 = [closure_17, _mod1653.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp21, tmp22, tmp23] = items4;
@@ -191,9 +200,9 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx6.__closure = items5;
     SoundboardWaveformTrimHandlesTsx6.__workletHash = 14476732501160;
     SoundboardWaveformTrimHandlesTsx6.__initData = tmp21;
-    return Gesture.Pan().onBegin(SoundboardWaveformTrimHandlesTsx4).onUpdate(SoundboardWaveformTrimHandlesTsx5).onFinalize(SoundboardWaveformTrimHandlesTsx6);
+    return Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx4).onUpdate(SoundboardWaveformTrimHandlesTsx5).onFinalize(SoundboardWaveformTrimHandlesTsx6);
   }, items2);
-  const tmp8 = onChange(sharedValue.useState({ start: startRatio.get(), end: endRatio.get() }), 2);
+  const tmp8 = onChange(flag.useState({ start: startRatio.get(), end: endRatio.get() }), 2);
   let items3 = [closure_18, startRatio, width, 44];
   _require = undefined;
   importDefault = undefined;
@@ -209,8 +218,8 @@ export default function SoundboardWaveformTrimHandles(height) {
   SoundboardWaveformTrimHandlesTsx7.__closure = items4;
   SoundboardWaveformTrimHandlesTsx7.__workletHash = 13043813667435;
   SoundboardWaveformTrimHandlesTsx7.__initData = tmp13;
-  const animatedStyle = require("module_1655").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx7);
-  const obj6 = require("module_1655");
+  const animatedStyle = require("module_1653").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx7);
+  const obj6 = require("module_1653");
   let items5 = [closure_19, endRatio, width, 44];
   _require = undefined;
   importDefault = undefined;
@@ -226,54 +235,73 @@ export default function SoundboardWaveformTrimHandles(height) {
   SoundboardWaveformTrimHandlesTsx8.__closure = items6;
   SoundboardWaveformTrimHandlesTsx8.__workletHash = 15443910628516;
   SoundboardWaveformTrimHandlesTsx8.__initData = tmp18;
-  const obj7 = { style: null, pointerEvents: "box-none", children: null };
-  const items7 = [tmp.container, { width, height: height.height }];
-  obj7.style = items7;
-  const animatedStyle1 = require("module_1655").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx8);
+  const items7 = [tmp.container, { width, height: height.height }, ];
+  let disabled = null;
+  const animatedStyle1 = require("module_1653").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx8);
+  if (flag) {
+    disabled = tmp.disabled;
+  }
+  const obj7 = { style: items7, pointerEvents: null, children: null };
+  items7[2] = disabled;
+  let str = "box-none";
+  if (flag) {
+    str = "none";
+  }
+  obj7.pointerEvents = str;
   const obj8 = { gesture: memo, children: null };
-  const obj9 = { style: null, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, accessibilityValue: null, accessibilityActions: null, onAccessibilityAction: null, children: null };
+  const obj9 = { style: null, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, accessibilityState: null, accessibilityValue: null, accessibilityActions: null, onAccessibilityAction: null, children: null };
   const items8 = [tmp.touchTarget, animatedStyle];
   obj9.style = items8;
-  const intl = tmp2(1113).intl;
+  const intl = tmp2(1112).intl;
   obj9.accessibilityLabel = intl.string(require("util").t["+BTvw8"]);
+  obj9.accessibilityState = { disabled: flag };
   const range = { min: 0, max: 100, now: Math.round(100 * tmp9.start) };
   obj9.accessibilityValue = range;
-  obj9.accessibilityActions = items;
+  obj9.accessibilityActions = accessibilityActions;
   obj9.onAccessibilityAction = function handleStartAccessibilityAction(nativeEvent) {
-    if ("increment" === nativeEvent.nativeEvent.actionName) {
-      let tmp2 = closure_9;
-    } else {
-      tmp2 = -closure_9;
+    if (!flag) {
+      if ("increment" === nativeEvent.nativeEvent.actionName) {
+        let tmp3 = closure_9;
+      } else {
+        tmp3 = -closure_9;
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      const bound = Math.max(_undefined2.get() + tmp3, 0);
+      const result = _undefined2.set(Math.min(bound, _undefined3.get() - c8));
+      callback();
     }
-    const bound = Math.max(_undefined2.get() + tmp2, 0);
-    const result = _undefined2.set(Math.min(bound, _undefined3.get() - c8));
-    callback();
   };
-  obj9.children = sharedValue2(sharedValue1, { style: tmp.handle });
-  obj8.children = sharedValue2(_modDef1655.View, obj9);
-  const items9 = [sharedValue2(require("LegacyBaseButton").GestureDetector, obj8), ];
+  obj9.children = sharedValue1(sharedValue, { style: tmp.handle });
+  obj8.children = sharedValue1(_modDef1653.View, obj9);
+  const items9 = [sharedValue1(require("LegacyBaseButton").GestureDetector, obj8), ];
   const obj11 = { gesture: memo1, children: null };
-  const obj12 = { style: null, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, accessibilityValue: null, accessibilityActions: null, onAccessibilityAction: null, children: null };
+  const obj12 = { style: null, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, accessibilityState: null, accessibilityValue: null, accessibilityActions: null, onAccessibilityAction: null, children: null };
   const items10 = [tmp.touchTarget, animatedStyle1];
   obj12.style = items10;
-  const intl2 = tmp2(1113).intl;
+  const intl2 = tmp2(1112).intl;
   obj12.accessibilityLabel = intl2.string(require("util").t.bBgBYo);
+  obj12.accessibilityState = { disabled: flag };
   const range1 = { min: 0, max: 100, now: Math.round(100 * tmp9.end) };
   obj12.accessibilityValue = range1;
-  obj12.accessibilityActions = items;
+  obj12.accessibilityActions = accessibilityActions;
   obj12.onAccessibilityAction = function handleEndAccessibilityAction(nativeEvent) {
-    if ("increment" === nativeEvent.nativeEvent.actionName) {
-      let tmp2 = closure_9;
-    } else {
-      tmp2 = -closure_9;
+    if (!flag) {
+      if ("increment" === nativeEvent.nativeEvent.actionName) {
+        let tmp3 = closure_9;
+      } else {
+        tmp3 = -closure_9;
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      const bound = Math.min(_undefined3.get() + tmp3, 1);
+      const result = _undefined3.set(Math.max(bound, _undefined2.get() + c8));
+      callback();
     }
-    const bound = Math.min(_undefined3.get() + tmp2, 1);
-    const result = _undefined3.set(Math.max(bound, _undefined2.get() + c8));
-    callback();
   };
-  obj12.children = sharedValue2(sharedValue1, { style: tmp.handle });
-  obj11.children = sharedValue2(_modDef1655.View, obj12);
-  items9[1] = sharedValue2(require("LegacyBaseButton").GestureDetector, obj11);
+  obj12.children = sharedValue1(sharedValue, { style: tmp.handle });
+  obj11.children = sharedValue1(_modDef1653.View, obj12);
+  items9[1] = sharedValue1(require("LegacyBaseButton").GestureDetector, obj11);
   obj7.children = items9;
-  return sharedValue3(sharedValue1, obj7);
+  return sharedValue2(sharedValue, obj7);
 };

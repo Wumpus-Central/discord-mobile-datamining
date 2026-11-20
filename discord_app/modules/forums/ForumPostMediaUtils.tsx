@@ -1,19 +1,19 @@
-// === Module 8502: ForumPostMediaUtils ===
+// === Module 8501: ForumPostMediaUtils ===
 
-// Module 8502 (ForumPostMediaUtils)
+// Module 8501 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import URLUtilsDefault from "URLUtils" /* 1381 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5832 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5847 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import URLUtilsDefault from "URLUtils" /* 1379 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5834 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5849 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8347 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import UserStore from "UserStore" /* 1388 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8346 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -204,7 +204,7 @@ function useForumPostEmbeds(embeds, flag) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1255).isNotNullish);
+          let found = mapped.filter(tmp(1254).isNotNullish);
         }
         return found;
       }
@@ -384,7 +384,7 @@ function useForumPostMediaProperties(firstResult, flag) {
   HermesBuiltin.arraySpread(items1, tmp3);
   return items;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageAttachmentFlags: closure_8, MessageEmbedMediaFlags: closure_9 } = Constants);
 const ForumPostMediaTypes = { EMBED: "embed", ATTACHMENT: "attachment", COMPONENT: "component" };
 let size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 7874: ManualReviewActionCreators ===
+// === Module 7873: ManualReviewActionCreators ===
 
-// Module 7874 (ManualReviewActionCreators)
+// Module 7873 (ManualReviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7689 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7688 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -32,7 +32,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -153,8 +153,8 @@ let closure_14 = async function _handleManualReviewCta() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
-const SafetyToastType = fn(6383).SafetyToastType;
+const Endpoints = fn(1071).Endpoints;
+const SafetyToastType = fn(6385).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

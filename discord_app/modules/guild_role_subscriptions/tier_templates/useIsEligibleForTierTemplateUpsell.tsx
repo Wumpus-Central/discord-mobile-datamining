@@ -1,12 +1,12 @@
-// === Module 17820: useIsEligibleForTierTemplateUpsell ===
+// === Module 17647: useIsEligibleForTierTemplateUpsell ===
 
-// Module 17820 (useIsEligibleForTierTemplateUpsell)
-import GuildStore from "GuildStore" /* 4663 */;
+// Module 17647 (useIsEligibleForTierTemplateUpsell)
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
 

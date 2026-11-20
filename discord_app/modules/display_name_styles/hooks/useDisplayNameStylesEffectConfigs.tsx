@@ -1,22 +1,22 @@
 // === Module 9340: useDisplayNameStylesEffectConfigs ===
 
 // Module 9340 (useDisplayNameStylesEffectConfigs)
-import util from "util" /* 1113 */;
-import DisplayNameFont from "DisplayNameFont" /* 1398 */;
-import _modDef3147 from "module_3147" /* 3147 */;
+import util from "util" /* 1112 */;
+import DisplayNameFont from "DisplayNameFont" /* 1396 */;
+import _modDef3149 from "module_3149" /* 3149 */;
 import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9341 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DISPLAY_NAME_STYLES_EFFECT_NAMES = {};
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.SOLID] = _modDef3147.OpWJ3f;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.GRADIENT] = _modDef3147["i9e/u1"];
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.NEON] = _modDef3147.x68b1F;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.TOON] = _modDef3147.otpeeM;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.POP] = _modDef3147.cjQOKb;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.GUMMY] = _modDef3147.x9Gtie;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1399).DisplayNameEffect.PRISM] = _modDef3147["/M7psm"];
-let closure_5 = { [fn(1399).DisplayNameEffect.SOLID]: 3, [fn(1399).DisplayNameEffect.GRADIENT]: 2.5, [fn(1399).DisplayNameEffect.GLOW]: 2.5, [fn(1399).DisplayNameEffect.PRISM]: 2.5, [fn(1399).DisplayNameEffect.NEON]: 3, [fn(1399).DisplayNameEffect.TOON]: 3, [fn(1399).DisplayNameEffect.POP]: 3, [fn(1399).DisplayNameEffect.GUMMY]: 3 };
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.SOLID] = _modDef3149.OpWJ3f;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.GRADIENT] = _modDef3149["i9e/u1"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.NEON] = _modDef3149.x68b1F;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.TOON] = _modDef3149.otpeeM;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.POP] = _modDef3149.cjQOKb;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.GUMMY] = _modDef3149.x9Gtie;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1397).DisplayNameEffect.PRISM] = _modDef3149["/M7psm"];
+let closure_5 = { [fn(1397).DisplayNameEffect.SOLID]: 3, [fn(1397).DisplayNameEffect.GRADIENT]: 2.5, [fn(1397).DisplayNameEffect.GLOW]: 2.5, [fn(1397).DisplayNameEffect.PRISM]: 2.5, [fn(1397).DisplayNameEffect.NEON]: 3, [fn(1397).DisplayNameEffect.TOON]: 3, [fn(1397).DisplayNameEffect.POP]: 3, [fn(1397).DisplayNameEffect.GUMMY]: 3 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx");
 
@@ -29,7 +29,7 @@ export function useDisplayNameStylesEffectConfig(effectId) {
     const intl = util.intl;
     let OpWJ3f = obj[effectId];
     if (OpWJ3f == null) {
-      OpWJ3f = _modDef3147.OpWJ3f;
+      OpWJ3f = _modDef3149.OpWJ3f;
     }
     obj = { name: intl.string(OpWJ3f), defaultColors: colors, previewStyles: { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId, colors }, minContrastRatio: null };
     let num = closure_5[effectId];

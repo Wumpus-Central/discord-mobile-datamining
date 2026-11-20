@@ -1,17 +1,17 @@
-// === Module 19790: MentionSpamTriggerFields ===
+// === Module 19608: MentionSpamTriggerFields ===
 
-// Module 19790 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19773 */;
+// Module 19608 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12309);
+const Constants = fn(12279);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ limitField: { width: 52 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/native/components/MentionSpamTriggerFields.tsx");
@@ -22,26 +22,26 @@ export default function MentionSpamTriggerFields(rule) {
   noop = undefined;
   ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
   const tmp = closure_9();
-  let hasMentionRaidLimitAccess = rule(19012).useHasMentionRaidLimitAccess(rule.guildId);
-  const intl = rule(1113).intl;
-  const stringResult = intl.string(rule(1113).t["s/26oQ"]);
-  let obj = rule(19012);
+  let hasMentionRaidLimitAccess = rule(18450).useHasMentionRaidLimitAccess(rule.guildId);
+  const intl = rule(1112).intl;
+  const stringResult = intl.string(rule(1112).t["s/26oQ"]);
+  let obj = rule(18450);
   [tmp7, c3] = noop.useState(true);
   let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
-  const intl2 = rule(1113).intl;
-  obj2.title = intl2.string(rule(1113).t.IGfuTa);
+  const intl2 = rule(1112).intl;
+  obj2.title = intl2.string(rule(1112).t.IGfuTa);
   let tmp9;
   if (!tmp7) {
     let obj3 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1113).intl;
+    const intl3 = tmp2(1112).intl;
     const obj4 = { minimum, maximum };
-    obj3.children = intl3.formatToPlainString(tmp2(1113).t["8Y5zsp"], obj4);
-    tmp9 = closure_7(tmp2(5383).Text, obj3);
+    obj3.children = intl3.formatToPlainString(tmp2(1112).t["8Y5zsp"], obj4);
+    tmp9 = closure_7(tmp2(5385).Text, obj3);
   }
   obj2.helperText = tmp9;
   const obj5 = { label: stringResult, subLabel: null, trailing: null };
-  const intl4 = tmp2(1113).intl;
-  obj5.subLabel = intl4.string(rule(1113).t["8uW4/N"]);
+  const intl4 = tmp2(1112).intl;
+  obj5.subLabel = intl4.string(rule(1112).t["8uW4/N"]);
   const obj6 = { style: tmp.limitField, children: null };
   const obj7 = {
     keyboardType: "number-pad",
@@ -76,15 +76,15 @@ export default function MentionSpamTriggerFields(rule) {
     status: "error",
     accessibilityLabel: stringResult
   };
-  obj6.children = closure_7(rule(7109).TextField, obj7);
+  obj6.children = closure_7(rule(7108).TextField, obj7);
   obj5.trailing = closure_7(View, obj6);
-  items = [closure_7(rule(6926).TableRow, obj5), ];
+  items = [closure_7(rule(6925).TableRow, obj5), ];
   if (hasMentionRaidLimitAccess) {
     const obj8 = { label: null, subLabel: null, checked: null, onPress: null };
-    const intl5 = tmp2(1113).intl;
-    obj8.label = intl5.string(tmp2(1113).t.XnuC9g);
-    const intl6 = tmp2(1113).intl;
-    obj8.subLabel = intl6.string(tmp2(1113).t.EDBe5m);
+    const intl5 = tmp2(1112).intl;
+    obj8.label = intl5.string(tmp2(1112).t.XnuC9g);
+    const intl6 = tmp2(1112).intl;
+    obj8.subLabel = intl6.string(tmp2(1112).t.EDBe5m);
     obj8.checked = mentionRaidProtectionEnabled;
     obj8.onPress = function onPress(mentionRaidProtectionEnabled) {
       const obj = {};
@@ -95,9 +95,9 @@ export default function MentionSpamTriggerFields(rule) {
       obj.triggerMetadata = obj2;
       return dependencyMap(obj);
     };
-    hasMentionRaidLimitAccess = closure_7(tmp2(7216).TableCheckboxRow, obj8);
+    hasMentionRaidLimitAccess = closure_7(tmp2(7215).TableCheckboxRow, obj8);
   }
   items[1] = hasMentionRaidLimitAccess;
   obj2.children = items;
-  return closure_8(rule(7229).TableRowGroup, obj2);
+  return closure_8(rule(7228).TableRowGroup, obj2);
 };

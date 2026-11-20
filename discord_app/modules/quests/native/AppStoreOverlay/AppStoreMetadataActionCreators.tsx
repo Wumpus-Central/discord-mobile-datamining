@@ -1,9 +1,9 @@
-// === Module 9879: AppStoreMetadataActionCreators ===
+// === Module 9882: AppStoreMetadataActionCreators ===
 
-// Module 9879 (AppStoreMetadataActionCreators)
-import DurationsDefault from "Durations" /* 1089 */;
+// Module 9882 (AppStoreMetadataActionCreators)
+import DurationsDefault from "Durations" /* 1088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const require = fn;
@@ -17,7 +17,7 @@ function clearRetryState(arg0) {
   map2.delete(arg0);
   map3.delete(arg0);
 }
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_5 = 10 * DurationsDefault.Millis.SECOND;
 let closure_6 = 5 * DurationsDefault.Millis.MINUTE;
 const map = new Map();
@@ -65,7 +65,7 @@ export function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

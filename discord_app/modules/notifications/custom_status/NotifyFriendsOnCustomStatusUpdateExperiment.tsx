@@ -1,7 +1,7 @@
-// === Module 17457: NotifyFriendsOnCustomStatusUpdateExperiment ===
+// === Module 17284: NotifyFriendsOnCustomStatusUpdateExperiment ===
 
-// Module 17457 (NotifyFriendsOnCustomStatusUpdateExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 17284 (NotifyFriendsOnCustomStatusUpdateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-11-notify-friends-on-custom-status-update", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

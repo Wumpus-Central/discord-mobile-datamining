@@ -1,6 +1,6 @@
-// === Module 11827: ChatOverlayConstants ===
+// === Module 11769: ChatOverlayConstants ===
 
-// Module 11827 (ChatOverlayConstants)
+// Module 11769 (ChatOverlayConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/ChatOverlayConstants.tsx");

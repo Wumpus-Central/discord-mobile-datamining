@@ -1,18 +1,18 @@
-// === Module 16497: OrbsArcadeRewardStatusLabel ===
+// === Module 16319: OrbsArcadeRewardStatusLabel ===
 
-// Module 16497 (OrbsArcadeRewardStatusLabel)
+// Module 16319 (OrbsArcadeRewardStatusLabel)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import LockIcon from "LockIcon" /* 7576 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16479 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import LockIcon from "LockIcon" /* 7575 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ statusLabel: { flexDirection: "row", alignItems: "center", gap: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardStatusLabel.tsx");

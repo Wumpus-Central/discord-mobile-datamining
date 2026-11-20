@@ -1,16 +1,16 @@
-// === Module 19279: useVoicePanelDockMorphState ===
+// === Module 19099: useVoicePanelDockMorphState ===
 
-// Module 19279 (useVoicePanelDockMorphState)
-import spring_spring from "spring/spring" /* 5393 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11713 */;
-import useIsDockCoveredByActivityDefault from "useIsDockCoveredByActivity" /* 19280 */;
+// Module 19099 (useVoicePanelDockMorphState)
+import spring_spring from "spring/spring" /* 5395 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11655 */;
+import useIsDockCoveredByActivityDefault from "useIsDockCoveredByActivity" /* 19100 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11688).VoicePanelModes;
-const VoicePanelDockConstants = fn(11706);
+const VoicePanelModes = fn(11630).VoicePanelModes;
+const VoicePanelDockConstants = fn(11648);
 ({ DOCK_PRESS_PHYSICS: hasOwnProperty, getVoicePanelDockHeight: closure_6 } = VoicePanelDockConstants);
 let closure_7 = { code: "(function useVoicePanelDockMorphStateTsx1(){let[isDockEnabled,getVoicePanelDockHeight,safeArea]=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;})" };
 let closure_8 = { code: "(function useVoicePanelDockMorphStateTsx2(){let[mode]=this.__closure;return mode.get();})" };
@@ -45,11 +45,11 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoic
 export default function useVoicePanelDockMorphState(arg0) {
   ({ isDockEnabled, mode, connected, safeArea, wrapperDimensions } = arg0);
   ({ mountsMinimized, wrapperOffset } = arg0);
-  let sharedValue = require("module_1655").useSharedValue({ gestureActive: false, x: 0, y: 0 });
+  let sharedValue = require("module_1653").useSharedValue({ gestureActive: false, x: 0, y: 0 });
   if (isDockEnabled) {
     sharedValue = wrapperOffset;
   }
-  let obj = require("module_1655");
+  let obj = require("module_1653");
   items = [c7, isDockEnabled, c6, safeArea];
   _require = undefined;
   [tmp4, tmp5, tmp6, tmp7] = items;
@@ -64,10 +64,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx1.__closure = items1;
   useVoicePanelDockMorphStateTsx1.__workletHash = 16574063931371;
   useVoicePanelDockMorphStateTsx1.__initData = tmp4;
-  const derivedValue = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx1);
-  const tmpResult = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(null);
-  const tmpResult32 = require("module_1655");
+  const derivedValue = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx1);
+  const tmpResult = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(null);
+  const tmpResult32 = require("module_1653");
   const items2 = [c8, mode];
   [tmp10, tmp11] = items2;
   function useVoicePanelDockMorphStateTsx2() {
@@ -93,10 +93,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx3.__closure = items5;
   useVoicePanelDockMorphStateTsx3.__workletHash = 11294143921957;
   useVoicePanelDockMorphStateTsx3.__initData = tmp12;
-  const animatedReaction = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx2, useVoicePanelDockMorphStateTsx3);
-  const tmpResult33 = require("module_1655");
-  const sharedValue2 = require("module_1655").useSharedValue(false);
-  const tmpResult34 = require("module_1655");
+  const animatedReaction = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx2, useVoicePanelDockMorphStateTsx3);
+  const tmpResult33 = require("module_1653");
+  const sharedValue2 = require("module_1653").useSharedValue(false);
+  const tmpResult34 = require("module_1653");
   const items6 = [c10, mode];
   [tmp16, tmp17] = items6;
   function useVoicePanelDockMorphStateTsx4() {
@@ -122,10 +122,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx5.__closure = items9;
   useVoicePanelDockMorphStateTsx5.__workletHash = 16449264979544;
   useVoicePanelDockMorphStateTsx5.__initData = tmp19;
-  const animatedReaction1 = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx4, useVoicePanelDockMorphStateTsx5);
-  const tmpResult35 = require("module_1655");
-  const sharedValue3 = require("module_1655").useSharedValue(false);
-  const tmpResult36 = require("module_1655");
+  const animatedReaction1 = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx4, useVoicePanelDockMorphStateTsx5);
+  const tmpResult35 = require("module_1653");
+  const sharedValue3 = require("module_1653").useSharedValue(false);
+  const tmpResult36 = require("module_1653");
   const items10 = [closure_12, connected, mode];
   [tmp24, tmp25, tmp26] = items10;
   function useVoicePanelDockMorphStateTsx6() {
@@ -151,8 +151,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx7.__closure = items13;
   useVoicePanelDockMorphStateTsx7.__workletHash = 10331916200307;
   useVoicePanelDockMorphStateTsx7.__initData = tmp27;
-  const animatedReaction2 = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx6, useVoicePanelDockMorphStateTsx7);
-  const tmpResult37 = require("module_1655");
+  const animatedReaction2 = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx6, useVoicePanelDockMorphStateTsx7);
+  const tmpResult37 = require("module_1653");
   const items14 = [closure_14, isDockEnabled, mode, c4, sharedValue3, connected];
   _require = undefined;
   c4 = undefined;
@@ -170,8 +170,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx8.__closure = items15;
   useVoicePanelDockMorphStateTsx8.__workletHash = 484957089417;
   useVoicePanelDockMorphStateTsx8.__initData = tmp31;
-  const derivedValue1 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx8);
-  const tmpResult38 = require("module_1655");
+  const derivedValue1 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx8);
+  const tmpResult38 = require("module_1653");
   const items16 = [closure_15, mode, c4, sharedValue2, sharedValue1];
   _require = undefined;
   noop = undefined;
@@ -199,8 +199,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx9.__closure = items17;
   useVoicePanelDockMorphStateTsx9.__workletHash = 11998655504610;
   useVoicePanelDockMorphStateTsx9.__initData = tmp38;
-  const derivedValue2 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx9);
-  const tmpResult39 = require("module_1655");
+  const derivedValue2 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx9);
+  const tmpResult39 = require("module_1653");
   const items18 = [closure_16, derivedValue2];
   _require = undefined;
   [tmp44, tmp45] = items18;
@@ -211,10 +211,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx10.__closure = items19;
   useVoicePanelDockMorphStateTsx10.__workletHash = 9313360300259;
   useVoicePanelDockMorphStateTsx10.__initData = tmp44;
-  const derivedValue3 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx10);
+  const derivedValue3 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx10);
   _require = undefined;
-  const tmpResult40 = require("module_1655");
-  const sharedValue4 = require("module_1655").useSharedValue(1);
+  const tmpResult40 = require("module_1653");
+  const sharedValue4 = require("module_1653").useSharedValue(1);
   _require = sharedValue4;
   noop.useRef(false);
   noop.useRef(false);
@@ -235,9 +235,9 @@ export default function useVoicePanelDockMorphState(arg0) {
       const result = _undefined.set(spring_spring.withSpring(1, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
     }
   }, items21);
-  const tmpResult41 = require("module_1655");
-  const sharedValue5 = require("module_1655").useSharedValue(false);
-  const tmpResult42 = require("module_1655");
+  const tmpResult41 = require("module_1653");
+  const sharedValue5 = require("module_1653").useSharedValue(false);
+  const tmpResult42 = require("module_1653");
   const items22 = [closure_17, sharedValue5, sharedValue, mode, c4];
   _require = undefined;
   [tmp51, tmp52, tmp53, tmp54, tmp55] = items22;
@@ -256,8 +256,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx11.__closure = items23;
   useVoicePanelDockMorphStateTsx11.__workletHash = 2842369107004;
   useVoicePanelDockMorphStateTsx11.__initData = tmp51;
-  const derivedValue4 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx11);
-  const tmpResult43 = require("module_1655");
+  const derivedValue4 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx11);
+  const tmpResult43 = require("module_1653");
   const items24 = [closure_18, require("spring/spring").withSpring, derivedValue4, c5];
   _require = undefined;
   [tmp57, tmp58, tmp59, tmp60] = items24;
@@ -272,8 +272,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx12.__closure = items25;
   useVoicePanelDockMorphStateTsx12.__workletHash = 4055713938309;
   useVoicePanelDockMorphStateTsx12.__initData = tmp57;
-  const derivedValue5 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx12);
-  const tmpResult44 = require("module_1655");
+  const derivedValue5 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx12);
+  const tmpResult44 = require("module_1653");
   const items26 = [closure_19, require("spring/spring").withSpring, mode, c4, derivedValue1, require("VoicePanelSheetMorph").DOCK_SPACE_SPRING_CONFIG];
   _require = undefined;
   c4 = undefined;
@@ -292,8 +292,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx13.__closure = items27;
   useVoicePanelDockMorphStateTsx13.__workletHash = 11884228837973;
   useVoicePanelDockMorphStateTsx13.__initData = tmp62;
-  const derivedValue6 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx13);
-  const tmpResult45 = require("module_1655");
+  const derivedValue6 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx13);
+  const tmpResult45 = require("module_1653");
   const tmp69 = useIsDockCoveredByActivityDefault();
   const items28 = [closure_20, require("spring/spring").withSpring, tmp69, derivedValue2, require("VoicePanelSheetMorph").DOCK_SPACE_SPRING_CONFIG];
   _require = undefined;
@@ -312,11 +312,11 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx14.__closure = items29;
   useVoicePanelDockMorphStateTsx14.__workletHash = 15444941422787;
   useVoicePanelDockMorphStateTsx14.__initData = tmp70;
-  const derivedValue7 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx14);
-  const tmpResult46 = require("module_1655");
-  const sharedValue6 = require("module_1655").useSharedValue(mountsMinimized);
-  const tmpResult47 = require("module_1655");
-  const items30 = [closure_21, derivedValue1, sharedValue, mode, c4, wrapperDimensions, derivedValue, require("module_1655").clamp, derivedValue2, sharedValue6, require("spring/spring").withSpring, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS];
+  const derivedValue7 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx14);
+  const tmpResult46 = require("module_1653");
+  const sharedValue6 = require("module_1653").useSharedValue(mountsMinimized);
+  const tmpResult47 = require("module_1653");
+  const items30 = [closure_21, derivedValue1, sharedValue, mode, c4, wrapperDimensions, derivedValue, require("module_1653").clamp, derivedValue2, sharedValue6, require("spring/spring").withSpring, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS];
   _require = undefined;
   c4 = undefined;
   c10 = undefined;
@@ -348,8 +348,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx15.__closure = items31;
   useVoicePanelDockMorphStateTsx15.__workletHash = 16670830062611;
   useVoicePanelDockMorphStateTsx15.__initData = tmp77;
-  const derivedValue8 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx15);
-  const tmpResult48 = require("module_1655");
+  const derivedValue8 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx15);
+  const tmpResult48 = require("module_1653");
   const items32 = [closure_22, sharedValue6, derivedValue8, derivedValue2];
   [tmp90, tmp91, tmp92, tmp93] = items32;
   function useVoicePanelDockMorphStateTsx16() {
@@ -376,10 +376,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx17.__closure = items35;
   useVoicePanelDockMorphStateTsx17.__workletHash = 14577082908322;
   useVoicePanelDockMorphStateTsx17.__initData = tmp94;
-  const animatedReaction3 = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx16, useVoicePanelDockMorphStateTsx17);
-  const tmpResult49 = require("module_1655");
-  const sharedValue7 = require("module_1655").useSharedValue(null);
-  const tmpResult50 = require("module_1655");
+  const animatedReaction3 = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx16, useVoicePanelDockMorphStateTsx17);
+  const tmpResult49 = require("module_1653");
+  const sharedValue7 = require("module_1653").useSharedValue(null);
+  const tmpResult50 = require("module_1653");
   const items36 = [closure_24, sharedValue7, connected, derivedValue8, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS, sharedValue, mode, c4];
   c4 = undefined;
   [tmp98, tmp99, tmp100, tmp101, tmp102, tmp103, tmp104, tmp105] = items36;
@@ -416,10 +416,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx19.__closure = items39;
   useVoicePanelDockMorphStateTsx19.__workletHash = 11308110243690;
   useVoicePanelDockMorphStateTsx19.__initData = tmp106;
-  const animatedReaction4 = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx18, useVoicePanelDockMorphStateTsx19);
-  const tmpResult51 = require("module_1655");
-  const sharedValue8 = require("module_1655").useSharedValue(0);
-  const tmpResult52 = require("module_1655");
+  const animatedReaction4 = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx18, useVoicePanelDockMorphStateTsx19);
+  const tmpResult51 = require("module_1653");
+  const sharedValue8 = require("module_1653").useSharedValue(0);
+  const tmpResult52 = require("module_1653");
   const items40 = [closure_26, sharedValue, mode, c4, derivedValue3, derivedValue8, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS];
   _require = undefined;
   [tmp110, tmp111, tmp112, tmp113, tmp114, tmp115, tmp116] = items40;
@@ -467,12 +467,12 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx21.__closure = items43;
   useVoicePanelDockMorphStateTsx21.__workletHash = 9767573494832;
   useVoicePanelDockMorphStateTsx21.__initData = tmp117;
-  const animatedReaction5 = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx20, useVoicePanelDockMorphStateTsx21);
-  const tmpResult53 = require("module_1655");
-  const sharedValue9 = require("module_1655").useSharedValue(false);
-  const tmpResult54 = require("module_1655");
-  const sharedValue10 = require("module_1655").useSharedValue(false);
-  const tmpResult55 = require("module_1655");
+  const animatedReaction5 = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx20, useVoicePanelDockMorphStateTsx21);
+  const tmpResult53 = require("module_1653");
+  const sharedValue9 = require("module_1653").useSharedValue(false);
+  const tmpResult54 = require("module_1653");
+  const sharedValue10 = require("module_1653").useSharedValue(false);
+  const tmpResult55 = require("module_1653");
   const items44 = [closure_28, derivedValue1, sharedValue9, sharedValue, sharedValue10, derivedValue2, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS, derivedValue8, derivedValue5, sharedValue8, sharedValue7];
   _require = undefined;
   c7 = undefined;
@@ -510,10 +510,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx22.__closure = items45;
   useVoicePanelDockMorphStateTsx22.__workletHash = 14048220308711;
   useVoicePanelDockMorphStateTsx22.__initData = tmp124;
-  const derivedValue9 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx22);
-  const tmpResult56 = require("module_1655");
-  const sharedValue11 = require("module_1655").useSharedValue(0);
-  const tmpResult57 = require("module_1655");
+  const derivedValue9 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx22);
+  const tmpResult56 = require("module_1653");
+  const sharedValue11 = require("module_1653").useSharedValue(0);
+  const tmpResult57 = require("module_1653");
   const items46 = [closure_29, safeArea];
   _require = undefined;
   [tmp137, tmp138] = items46;
@@ -524,8 +524,8 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx23.__closure = items47;
   useVoicePanelDockMorphStateTsx23.__workletHash = 6282712608507;
   useVoicePanelDockMorphStateTsx23.__initData = tmp137;
-  const derivedValue10 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx23);
-  const tmpResult58 = require("module_1655");
+  const derivedValue10 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx23);
+  const tmpResult58 = require("module_1653");
   const items48 = [closure_30, sharedValue11, derivedValue10, wrapperDimensions];
   _require = undefined;
   [tmp140, tmp141, tmp142, tmp143] = items48;
@@ -543,10 +543,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx24.__closure = items49;
   useVoicePanelDockMorphStateTsx24.__workletHash = 11175662872542;
   useVoicePanelDockMorphStateTsx24.__initData = tmp140;
-  const derivedValue11 = require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx24);
-  const tmpResult59 = require("module_1655");
-  const sharedValue12 = require("module_1655").useSharedValue(wrapperDimensions.get().drawerWidth);
-  const tmpResult60 = require("module_1655");
+  const derivedValue11 = require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx24);
+  const tmpResult59 = require("module_1653");
+  const sharedValue12 = require("module_1653").useSharedValue(wrapperDimensions.get().drawerWidth);
+  const tmpResult60 = require("module_1653");
   const items50 = [closure_31, isDockEnabled, wrapperDimensions, derivedValue11, sharedValue7, derivedValue8, derivedValue2, sharedValue8];
   _require = undefined;
   c5 = undefined;
@@ -620,9 +620,9 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx26.__closure = items53;
   useVoicePanelDockMorphStateTsx26.__workletHash = 5086911464732;
   useVoicePanelDockMorphStateTsx26.__initData = tmp154;
-  const animatedReaction6 = require("module_1655").useAnimatedReaction(useVoicePanelDockMorphStateTsx25, useVoicePanelDockMorphStateTsx26);
-  const tmpResult61 = require("module_1655");
-  const items54 = [closure_33, wrapperDimensions, derivedValue10, derivedValue11, require("module_1655").clamp, sharedValue12];
+  const animatedReaction6 = require("module_1653").useAnimatedReaction(useVoicePanelDockMorphStateTsx25, useVoicePanelDockMorphStateTsx26);
+  const tmpResult61 = require("module_1653");
+  const items54 = [closure_33, wrapperDimensions, derivedValue10, derivedValue11, require("module_1653").clamp, sharedValue12];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -650,6 +650,6 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx27.__closure = items55;
   useVoicePanelDockMorphStateTsx27.__workletHash = 1534026483273;
   useVoicePanelDockMorphStateTsx27.__initData = tmp159;
-  const tmpResult62 = require("module_1655");
-  return { beginDockEntry: callback, committedMode: sharedValue1, dockContentSwap: sharedValue8, dockEntryProgress: sharedValue4, dockHeight: derivedValue, dockJoinMorphOrigin: sharedValue7, dockMinimizeProgress: derivedValue8, dockPressProgress: derivedValue5, dockPressed: sharedValue5, dockRestLeft: derivedValue10, dockRestWidth: derivedValue11, dockSlotWidth: sharedValue11, dockSheetLeft: require("module_1655").useDerivedValue(useVoicePanelDockMorphStateTsx27), dockSheetWidth: sharedValue12, dockTouched: sharedValue9, isDockInLayout: derivedValue9, isDockSlotEmpty: sharedValue10, handleDockSheetLayout: callback1, dockActivityHideProgress: derivedValue7, isDockConnected: derivedValue1, isDockExpanding: derivedValue3, sheetExitProgress: derivedValue6 };
+  const tmpResult62 = require("module_1653");
+  return { beginDockEntry: callback, committedMode: sharedValue1, dockContentSwap: sharedValue8, dockEntryProgress: sharedValue4, dockHeight: derivedValue, dockJoinMorphOrigin: sharedValue7, dockMinimizeProgress: derivedValue8, dockPressProgress: derivedValue5, dockPressed: sharedValue5, dockRestLeft: derivedValue10, dockRestWidth: derivedValue11, dockSlotWidth: sharedValue11, dockSheetLeft: require("module_1653").useDerivedValue(useVoicePanelDockMorphStateTsx27), dockSheetWidth: sharedValue12, dockTouched: sharedValue9, isDockInLayout: derivedValue9, isDockSlotEmpty: sharedValue10, handleDockSheetLayout: callback1, dockActivityHideProgress: derivedValue7, isDockConnected: derivedValue1, isDockExpanding: derivedValue3, sheetExitProgress: derivedValue6 };
 };

@@ -1,6 +1,6 @@
-// === Module 5407: ApplicationIntegrationType ===
+// === Module 5409: ApplicationIntegrationType ===
 
-// Module 5407 (ApplicationIntegrationType)
+// Module 5409 (ApplicationIntegrationType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx");

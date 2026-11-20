@@ -1,11 +1,11 @@
-// === Module 15113: GuildActionSheetGameProfileButton ===
+// === Module 15077: GuildActionSheetGameProfileButton ===
 
-// Module 15113 (GuildActionSheetGameProfileButton)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import _modDef6922 from "module_6922" /* 6922 */;
+// Module 15077 (GuildActionSheetGameProfileButton)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import _modDef6921 from "module_6921" /* 6921 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9645 */;
-import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15111 */;
-import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15112 */;
+import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15075 */;
+import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15076 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,14 +22,14 @@ function GameProfileButton(applicationId) {
   let tmp6 = null;
   if (null != tmp3Result) {
     const obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl = tmp4(1113).intl;
-    obj3.label = intl.string(tmp4(1113).t.f7aVGn);
-    obj3.icon = _modDef6922;
+    const intl = tmp4(1112).intl;
+    obj3.label = intl.string(tmp4(1112).t.f7aVGn);
+    obj3.icon = _modDef6921;
     obj3.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_1();
     };
-    tmp6 = jsx(tmp4(7472).IconButton, { variant: "secondary", label: null, icon: null, grow: true, onPress: null });
+    tmp6 = jsx(tmp4(7471).IconButton, { variant: "secondary", label: null, icon: null, grow: true, onPress: null });
   }
   return tmp6;
 }

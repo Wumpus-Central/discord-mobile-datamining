@@ -1,21 +1,21 @@
-// === Module 11286: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 11228: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 11286 (EmojiPickerCategoriesUnicodeShortcutItem)
-import util from "util" /* 1113 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import Pressables from "Pressables" /* 6911 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10594 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 11273 */;
+// Module 11228 (EmojiPickerCategoriesUnicodeShortcutItem)
+import util from "util" /* 1112 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import Pressables from "Pressables" /* 6910 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10536 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 11215 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj2.itemInner = size;
@@ -46,7 +46,7 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(category) {
   EmojiPickerCategoriesUnicodeShortcutItemTsx1.__closure = items1;
   EmojiPickerCategoriesUnicodeShortcutItemTsx1.__workletHash = 6335031605135;
   EmojiPickerCategoriesUnicodeShortcutItemTsx1.__initData = tmp5;
-  const items2 = [closure_10, cheapWorkletShallowEqual.cheapWorkletShallowEqual, categoryIndex, timestampProducer, first, _mod1708.scheduleOnRN, tmp[1]];
+  const items2 = [closure_10, cheapWorkletShallowEqual.cheapWorkletShallowEqual, categoryIndex, timestampProducer, first, _mod1706.scheduleOnRN, tmp[1]];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -79,7 +79,7 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(category) {
   EmojiPickerCategoriesUnicodeShortcutItemTsx2.__closure = items3;
   EmojiPickerCategoriesUnicodeShortcutItemTsx2.__workletHash = 7076312301625;
   EmojiPickerCategoriesUnicodeShortcutItemTsx2.__initData = tmp7;
-  const animatedReaction = _mod1655.useAnimatedReaction(EmojiPickerCategoriesUnicodeShortcutItemTsx1, EmojiPickerCategoriesUnicodeShortcutItemTsx2);
+  const animatedReaction = _mod1653.useAnimatedReaction(EmojiPickerCategoriesUnicodeShortcutItemTsx1, EmojiPickerCategoriesUnicodeShortcutItemTsx2);
   const items4 = [categoryIndex, category, onPress];
   let tmp17 = null;
   if (first) {

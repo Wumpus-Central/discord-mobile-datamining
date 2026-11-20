@@ -1,8 +1,8 @@
-// === Module 12728: NavigationTTIDefinition ===
+// === Module 12698: NavigationTTIDefinition ===
 
-// Module 12728 (NavigationTTIDefinition)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1349 */;
+// Module 12698 (NavigationTTIDefinition)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1347 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationTTIDefinition.tsx");

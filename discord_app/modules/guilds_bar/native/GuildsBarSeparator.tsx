@@ -1,14 +1,14 @@
-// === Module 17969: GuildsBarSeparator ===
+// === Module 17796: GuildsBarSeparator ===
 
-// Module 17969 (GuildsBarSeparator)
+// Module 17796 (GuildsBarSeparator)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5356 */;
-import NativeViewDefault from "NativeView" /* 7205 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17591 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import useToken from "useToken" /* 5358 */;
+import NativeViewDefault from "NativeView" /* 7204 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17418 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
@@ -35,14 +35,14 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   GuildsBarSeparatorTsx1.__closure = items1;
   GuildsBarSeparatorTsx1.__workletHash = 17321522248050;
   GuildsBarSeparatorTsx1.__initData = tmp5;
-  const animatedStyle = _mod1655.useAnimatedStyle(GuildsBarSeparatorTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(GuildsBarSeparatorTsx1);
   const obj4 = { style: null };
   const items2 = [tmp.separator, animatedStyle];
   obj4.style = items2;
-  return jsx(_modDef1655.View, { style: null });
+  return jsx(_modDef1653.View, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = { height: 1, width, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, transformOrigin: "0% 50%" };

@@ -1,6 +1,6 @@
-// === Module 6875: conjureModelSettingsConnection ===
+// === Module 6874: conjureModelSettingsConnection ===
 
-// Module 6875 (conjureModelSettingsConnection)
+// Module 6874 (conjureModelSettingsConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
 import size from "module_2" /* 2 */;

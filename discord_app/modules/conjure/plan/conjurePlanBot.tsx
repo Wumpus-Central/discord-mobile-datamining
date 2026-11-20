@@ -1,9 +1,9 @@
-// === Module 18619: conjurePlanBot ===
+// === Module 18443: conjurePlanBot ===
 
-// Module 18619 (conjurePlanBot)
-import Server from "Server" /* 2119 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6501 */;
-import conjurePlanTags from "conjurePlanTags" /* 18608 */;
+// Module 18443 (conjurePlanBot)
+import Server from "Server" /* 2117 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
+import conjurePlanTags from "conjurePlanTags" /* 18432 */;
 import size from "module_2" /* 2 */;
 
 function isAppCommand(type) {

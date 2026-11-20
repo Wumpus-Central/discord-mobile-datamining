@@ -1,7 +1,7 @@
-// === Module 6386: ForumPlatformUtils ===
+// === Module 6388: ForumPlatformUtils ===
 
-// Module 6386 (ForumPlatformUtils)
-import util from "util" /* 1113 */;
+// Module 6388 (ForumPlatformUtils)
+import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");

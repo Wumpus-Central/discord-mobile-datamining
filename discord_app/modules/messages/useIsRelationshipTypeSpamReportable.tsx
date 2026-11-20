@@ -1,12 +1,12 @@
-// === Module 13396: useIsRelationshipTypeSpamReportable ===
+// === Module 13366: useIsRelationshipTypeSpamReportable ===
 
-// Module 13396 (useIsRelationshipTypeSpamReportable)
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+// Module 13366 (useIsRelationshipTypeSpamReportable)
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useIsRelationshipTypeSpamReportable.tsx");
 

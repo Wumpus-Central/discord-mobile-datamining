@@ -1,7 +1,7 @@
-// === Module 7863: AppStoreAgeSignalActionCreators ===
+// === Module 7862: AppStoreAgeSignalActionCreators ===
 
-// Module 7863 (AppStoreAgeSignalActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 7862 (AppStoreAgeSignalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_6 = async function _requestAgeSignalChallenge() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ let closure_6 = async function _requestAgeSignalChallenge() {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c4 = tmp;
@@ -121,7 +121,7 @@ let closure_8 = async function _submitAgeSignal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -184,7 +184,7 @@ let closure_8 = async function _submitAgeSignal(arg0) {
           }
           const HTTP = closure_135_0(closure_135_1[2]).HTTP;
           const request = { url: closure_135_3.AGE_SIGNAL, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-          const obj5 = { platform: closure_134_0.platform, age_lower: closure_134_0.ageLower, age_upper: closure_134_0.ageUpper, google_age_signals_status: closure_134_0.googleAgeSignalsStatus, google_age_range_source: closure_134_0.googleAgeRangeSource, google_significant_change_status: closure_134_0.googleSignificantChangeStatus, apple_verified_method: closure_134_0.appleVerifiedMethod, is_cold_launch: closure_134_2, integrity_token: closure_134_1, attest_key_id: null, attest_assertion: null, source: null };
+          const obj5 = { platform: closure_134_0.platform, age_lower: closure_134_0.ageLower, age_upper: closure_134_0.ageUpper, google_age_signals_status: closure_134_0.googleAgeSignalsStatus, google_age_range_source: closure_134_0.googleAgeRangeSource, google_significant_change_status: closure_134_0.googleSignificantChangeStatus, google_install_id: closure_134_0.googleInstallId, apple_verified_method: closure_134_0.appleVerifiedMethod, is_cold_launch: closure_134_2, integrity_token: closure_134_1, attest_key_id: null, attest_assertion: null, source: null };
           let keyId;
           if (closure_134_4 != null) {
             keyId = closure_134_4.keyId;
@@ -220,7 +220,7 @@ let closure_8 = async function _submitAgeSignal(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_5 = { result: "skipped", reason: null };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");

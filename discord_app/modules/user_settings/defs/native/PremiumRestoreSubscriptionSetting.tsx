@@ -1,16 +1,16 @@
-// === Module 16701: PremiumRestoreSubscriptionSetting ===
+// === Module 16525: PremiumRestoreSubscriptionSetting ===
 
-// Module 16701 (PremiumRestoreSubscriptionSetting)
+// Module 16525 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
 import BillingActionCreatorsDefault from "BillingActionCreators" /* 8987 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

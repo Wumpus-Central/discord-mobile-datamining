@@ -1,6 +1,6 @@
-// === Module 16803: DisplayNameStylesColorPickerConstants ===
+// === Module 16627: DisplayNameStylesColorPickerConstants ===
 
-// Module 16803 (DisplayNameStylesColorPickerConstants)
+// Module 16627 (DisplayNameStylesColorPickerConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorPickerConstants.tsx");

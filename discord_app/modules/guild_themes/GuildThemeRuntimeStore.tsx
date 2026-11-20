@@ -1,14 +1,14 @@
-// === Module 8211: GuildThemeRuntimeStore ===
+// === Module 8210: GuildThemeRuntimeStore ===
 
-// Module 8211 (GuildThemeRuntimeStore)
+// Module 8210 (GuildThemeRuntimeStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 4662 */;
-import Powerups from "Powerups" /* 7882 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 8212 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 4664 */;
+import Powerups from "Powerups" /* 7881 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8211 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 require = fn;
 function snapshotSelectedGuildId(guildId) {
@@ -87,7 +87,7 @@ function handleSavedGuildTheme(guildId) {
   }
   return tmp;
 }
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 let c6 = null;
 let c7 = null;
 const Store = initializeDefault.Store;

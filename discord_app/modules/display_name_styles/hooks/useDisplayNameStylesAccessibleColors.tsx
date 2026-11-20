@@ -1,9 +1,9 @@
 // === Module 9339: useDisplayNameStylesAccessibleColors ===
 
 // Module 9339 (useDisplayNameStylesAccessibleColors)
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1396 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1394 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
 const size = fn(2);

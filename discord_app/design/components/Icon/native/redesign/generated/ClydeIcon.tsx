@@ -2,7 +2,7 @@
 
 // Module 9484 (ClydeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9485 from "module_9485" /* 9485 */;
 import noop from "module_19" /* 19 */;
 

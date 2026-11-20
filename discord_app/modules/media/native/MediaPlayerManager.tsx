@@ -1,26 +1,26 @@
-// === Module 15696: MediaPlayerManager ===
+// === Module 15660: MediaPlayerManager ===
 
-// Module 15696 (MediaPlayerManager)
+// Module 15660 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 1072 */;
-import Constants2 from "Constants" /* 1083 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import RootNavigationRef from "RootNavigationRef" /* 4969 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5418 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8131 */;
+import Constants from "Constants" /* 1071 */;
+import Constants2 from "Constants" /* 1082 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import RootNavigationRef from "RootNavigationRef" /* 4971 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5420 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8130 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import VoicePanelStore from "VoicePanelStore" /* 6374 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15697 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import VoicePanelStore from "VoicePanelStore" /* 6376 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15661 */;
 import module_560 from "module_560" /* 560 */;
-import LifecycleManager from "LifecycleManager" /* 2123 */;
+import LifecycleManager from "LifecycleManager" /* 2121 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -36,17 +36,17 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "Promise",
-    canAccessMedia: "ip",
+    canAccessMedia: "disabled",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: "angle",
+    showPip: "fist_tone3",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "ruler"
+    currentlyDisplayedChannelId: "+237"
   };
   return obj;
 });
@@ -117,7 +117,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(1263).batchUpdates(() => {
+  self(1262).batchUpdates(() => {
     const activeMediaPlayerSource = obj.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -173,7 +173,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(1263).batchUpdates(() => {
+  self(1262).batchUpdates(() => {
     self.pauseCurrentPlayer();
     obj.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -277,7 +277,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(1263).batchUpdates(() => {
+  source(1262).batchUpdates(() => {
     let id;
     state = obj.getState();
     if (source != null) {
@@ -286,7 +286,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: "__didCreateRequest" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "nextElementSibling" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

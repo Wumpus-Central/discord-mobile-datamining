@@ -1,27 +1,27 @@
-// === Module 19382: VoicePanelSecondaryPIPContent ===
+// === Module 19202: VoicePanelSecondaryPIPContent ===
 
-// Module 19382 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 9970 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
+// Module 19202 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 9973 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import FramesStore from "FramesStore" /* 6502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import FramesStore from "FramesStore" /* 6504 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 const require = globalThis.__r;
 
-const _modDef1655 = tmp(1655);
-const isVoiceEmbeddedActivityDefault = tmp(5439);
-const EmbeddedActivityViewDefault = tmp(10721);
-const FrameRenderTargetDefault = tmp(18450);
-const getActivityContainerPIPStylesSpecDefault = tmp(19239);
+const _modDef1653 = tmp(1653);
+const isVoiceEmbeddedActivityDefault = tmp(5441);
+const EmbeddedActivityViewDefault = tmp(10663);
+const FrameRenderTargetDefault = tmp(18275);
+const getActivityContainerPIPStylesSpecDefault = tmp(19058);
 const require = fn;
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
-const FramesConstants = fn(6503);
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const FramesConstants = fn(6505);
 ({ asLaunched: closure_8, FrameLayoutModes: closure_9, getPipOrientationLockStateForFrame: closure_10 } = FramesConstants);
-const ActivityLayoutMode = fn(10712).ActivityLayoutMode;
+const ActivityLayoutMode = fn(10654).ActivityLayoutMode;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_13 = createStyles.createStyles({ activityContainer: { flex: 1 }, wrapper: { position: "absolute", left: "50%", top: "50%" } });
 let closure_14 = { code: "(function VoicePanelSecondaryPIPContentTsx1(){let[pipState,roundToNearestPixel]=this.__closure;const scale=pipState.scale.get();const width=pipState.width*scale;const height=pipState.height*scale;return{width:width,height:height,marginLeft:roundToNearestPixel(width/2)*-1,marginTop:roundToNearestPixel(height/2)*-1};})" };
 let closure_15 = { code: "(function VoicePanelSecondaryPIPContentTsx2(){let[pipState,getActivityContainerPipStylesSpec,activePipOrientationLockState,windowDimensions]=this.__closure;const scale=pipState.scale.get();const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width*scale,pipHeight:pipState.height*scale,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};})" };
@@ -97,7 +97,7 @@ export default function VoicePanelSecondaryPIPContent() {
   VoicePanelSecondaryPIPContentTsx1.__workletHash = 16590500926098;
   VoicePanelSecondaryPIPContentTsx1.__initData = tmp8;
   let tmp12 = null != connectedEmbeddedActivity;
-  const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelSecondaryPIPContentTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelSecondaryPIPContentTsx1);
   if (tmp12) {
     tmp12 = !isVoiceEmbeddedActivityDefault(connectedEmbeddedActivityChannelId);
   }
@@ -111,7 +111,7 @@ export default function VoicePanelSecondaryPIPContent() {
   if (tmp14) {
     pipOrientationLockState = framePipOrientationLockState;
   }
-  const obj6 = require("module_1655");
+  const obj6 = require("module_1653");
   const items5 = [closure_15, pIPState, getActivityContainerPIPStylesSpecDefault, pipOrientationLockState, noop.useContext(VoicePanelStateContextDefault).windowDimensions];
   _require = undefined;
   importDefault = undefined;
@@ -143,7 +143,7 @@ export default function VoicePanelSecondaryPIPContent() {
   VoicePanelSecondaryPIPContentTsx2.__closure = items6;
   VoicePanelSecondaryPIPContentTsx2.__workletHash = 3337225503971;
   VoicePanelSecondaryPIPContentTsx2.__initData = tmp16;
-  const animatedStyle1 = require("module_1655").useAnimatedStyle(VoicePanelSecondaryPIPContentTsx2);
+  const animatedStyle1 = require("module_1653").useAnimatedStyle(VoicePanelSecondaryPIPContentTsx2);
   if (!tmp12) {
     if (!tmp14) {
       return null;
@@ -161,11 +161,11 @@ export default function VoicePanelSecondaryPIPContent() {
     obj8.children = tmp23Result;
     obj8 = <tmp24 {...obj8} />;
     obj7.children = obj8;
-    jsx(_modDef1655.View, obj7);
+    jsx(_modDef1653.View, obj7);
   }
   const obj10 = { frameId: mainFrameId, level: require("FrameStackLevel").FrameStackLevel.AboveAppContent, presentation: null };
   obj = { layoutMode: constants.PIP };
   obj10.presentation = obj;
   tmp23Result = <tmp frameId={mainFrameId} level={require("FrameStackLevel").FrameStackLevel.AboveAppContent} presentation={null} />;
-  const tmp2Result = require("module_1655");
+  const tmp2Result = require("module_1653");
 };

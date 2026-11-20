@@ -1,6 +1,6 @@
-// === Module 19904: GuildSettingsRolesActionCreators ===
+// === Module 19724: GuildSettingsRolesActionCreators ===
 
-// Module 19904 (GuildSettingsRolesActionCreators)
+// Module 19724 (GuildSettingsRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -109,7 +109,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -210,7 +210,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             ComponentDispatch.dispatch(closure_144_4.EMPHASIZE_NOTICE);
             if (!closure_145_5.throwErr) {
               c21 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else {
               throw closure_145_15;
             }
@@ -639,7 +639,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
   iter.next();
   return iter;
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ComponentActions: closure_4, DEFAULT_ROLE_COLOR: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");

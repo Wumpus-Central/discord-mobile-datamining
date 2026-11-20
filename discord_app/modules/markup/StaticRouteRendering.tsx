@@ -1,7 +1,7 @@
-// === Module 5823: StaticRouteRendering ===
+// === Module 5825: StaticRouteRendering ===
 
-// Module 5823 (StaticRouteRendering)
-import util from "util" /* 1113 */;
+// Module 5825 (StaticRouteRendering)
+import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");

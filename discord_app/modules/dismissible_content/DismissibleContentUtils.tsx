@@ -1,21 +1,21 @@
-// === Module 4626: DismissibleContentUtils ===
+// === Module 4628: DismissibleContentUtils ===
 
-// Module 4626 (DismissibleContentUtils)
+// Module 4628 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4629 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 4632 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4639 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4846 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5451 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5452 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4624 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4631 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4634 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4641 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4848 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5453 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4628 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4630 */;
 
 const require = globalThis.__r;
 
@@ -71,7 +71,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -147,7 +147,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       } else {
         closure_132_20(closure_131_0, closure_131_1);
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -205,7 +205,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -242,7 +242,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         } else {
           closure_132_20(closure_131_0, closure_131_1);
           c6 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         c6 = tmp;
@@ -262,7 +262,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -296,7 +296,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       } else {
         closure_131_20(closure_130_0, closure_130_1);
         c5 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp19) {
       c5 = tmp;
@@ -439,13 +439,13 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4627).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4633);
+const DCFEventTypes = fn(4629).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4635);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: closure_10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(4625).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(4625).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION, fn(4625).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT];
+let items = [fn(4627).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(4627).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION, fn(4627).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -567,7 +567,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

@@ -1,15 +1,15 @@
-// === Module 7935: InstantInviteUtils ===
+// === Module 7934: InstantInviteUtils ===
 
-// Module 7935 (InstantInviteUtils)
-import util from "util" /* 1113 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6435 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7148 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 7934 (InstantInviteUtils)
+import util from "util" /* 1112 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6437 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7147 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6723 */;
 
 const require = globalThis.__r;
@@ -92,14 +92,14 @@ function addDmUsers(arg0) {
     continue;
   }
 }
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-const dependencyMap = { [fn(7936).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(7936).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(7936).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(7936).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(7936).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(7936).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(7936).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(7936).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(7936).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(7936).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
-let items = [fn(7936).INVITE_OPTIONS_14_DAYS, fn(7936).INVITE_OPTIONS_30_DAYS, fn(7936).INVITE_OPTIONS_60_DAYS];
+const dependencyMap = { [fn(7935).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(7935).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(7935).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(7935).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(7935).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(7935).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(7935).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(7935).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(7935).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(7935).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let items = [fn(7935).INVITE_OPTIONS_14_DAYS, fn(7935).INVITE_OPTIONS_30_DAYS, fn(7935).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -135,25 +135,25 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(7936).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(7936).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(7936).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(7936).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(7936).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(7936).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(7936).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(7936).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(7936).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(7936).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(7936).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(7936).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(7936).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(7936).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(7936).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(7936).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(7936).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(7936).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(7936).INVITE_OPTIONS_100_TIMES
+  getMaxUsesOptions: fn(7935).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(7935).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(7935).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(7935).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(7935).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(7935).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(7935).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(7935).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(7935).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(7935).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(7935).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(7935).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(7935).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(7935).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(7935).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(7935).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(7935).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(7935).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(7935).INVITE_OPTIONS_100_TIMES
 };
 export { RowTypes };
 export function generateRowsForQuery(arg0) {
@@ -287,7 +287,7 @@ export function generateRowsForQuery(arg0) {
       _require = undefined;
       importDefault = undefined;
       ({ rows: c0, counts: c1, query: query4, inviteTargetType: inviteTargetType2 } = obj10);
-      if (inviteTargetType2 === tmp39(7148).InviteTargetTypes.EMBEDDED_APPLICATION) {
+      if (inviteTargetType2 === tmp39(7147).InviteTargetTypes.EMBEDDED_APPLICATION) {
         const obj12 = { query: query4, limit: 3, guildId: "channel_id" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };

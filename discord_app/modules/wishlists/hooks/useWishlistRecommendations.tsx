@@ -2,9 +2,9 @@
 
 // Module 9464 (useWishlistRecommendations)
 import apply from "apply" /* 12 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7954 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7953 */;
 import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8870 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

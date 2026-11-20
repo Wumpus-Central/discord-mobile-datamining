@@ -1,7 +1,7 @@
 // === Module 9376: useShouldShowGiftingPromotionDeco ===
 
 // Module 9376 (useShouldShowGiftingPromotionDeco)
-import PremiumConstants from "PremiumConstants" /* 1390 */;
+import PremiumConstants from "PremiumConstants" /* 1388 */;
 import NativeGiftContext from "NativeGiftContext" /* 9348 */;
 import size from "module_2" /* 2 */;
 

@@ -2,9 +2,9 @@
 
 // Module 9555 (VoiceStateIcons)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import inlineStyles from "inlineStyles" /* 7746 */;
+import native from "native" /* 1186 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import inlineStyles from "inlineStyles" /* 7745 */;
 import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9556 */;
 import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9558 */;
 import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9560 */;
@@ -45,7 +45,7 @@ function VideoDisabledSvgIcon(size) {
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { redTint: { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }, defaultTint: null, noTint: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj.defaultTint = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

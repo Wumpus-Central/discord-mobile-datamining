@@ -1,8 +1,8 @@
 // === Module 9717: useGameProfileReviewDisplayData ===
 
 // Module 9717 (useGameProfileReviewDisplayData)
-import util from "util" /* 1113 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2162 */;
+import util from "util" /* 1112 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2160 */;
 import SteamReleaseStatus from "SteamReleaseStatus" /* 9661 */;
 import calculateSteamReviewScoreDescription from "calculateSteamReviewScoreDescription" /* 9707 */;
 import GameProfileReviewUtils from "GameProfileReviewUtils" /* 9708 */;

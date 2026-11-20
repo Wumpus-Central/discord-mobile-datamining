@@ -1,16 +1,16 @@
-// === Module 17734: useGuildPowerupsBoostAction ===
+// === Module 17561: useGuildPowerupsBoostAction ===
 
-// Module 17734 (useGuildPowerupsBoostAction)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 13337 */;
+// Module 17561 (useGuildPowerupsBoostAction)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 13307 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 8625 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 8624 */;
 
 const require = fn;
-const GuildPowerupsConstants = fn(8213);
+const GuildPowerupsConstants = fn(8212);
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsBoostAction.tsx");
@@ -36,7 +36,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 if (!handleMobileWebRedirectCheckout.hasFetched) {
                   items = [tmp2(8987).init(), ];
                   let obj2 = tmp2(8987);
-                  items[1] = tmp3(8627).fetchGuildBoostSlots();
+                  items[1] = tmp3(8626).fetchGuildBoostSlots();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj8 = { value: Promise.all(items), done: false };
@@ -84,9 +84,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
           PERK = constants.PERK;
         }
         closure_128_0 = PERK;
-        availableGuildBoostSlots = tmp3(8624).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
+        availableGuildBoostSlots = tmp3(8623).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
         if (availableGuildBoostSlots.length >= closure_129_2) {
-          tmp15 = tmp3(6425);
+          tmp15 = tmp3(6427);
           const obj9 = { guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2), guildId: closure_129_0, intent: closure_128_0 };
           tmp15.openTransferModal(obj9);
         } else if (!closure_129_4) {
@@ -107,10 +107,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             }
             const obj = guildId(dependencyMap[9]);
           };
-          const result = tmp3(13338).launchGuildBoostFlowOrAlert(obj10);
-          const obj6 = tmp3(13338);
+          const result = tmp3(13308).launchGuildBoostFlowOrAlert(obj10);
+          const obj6 = tmp3(13308);
         }
-        const obj5 = tmp3(8624);
+        const obj5 = tmp3(8623);
       } catch (tmp50) {
         c3 = tmp;
         throw tmp50;

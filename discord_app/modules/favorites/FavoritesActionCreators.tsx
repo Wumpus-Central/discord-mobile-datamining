@@ -1,28 +1,28 @@
-// === Module 11157: FavoritesActionCreators ===
+// === Module 11099: FavoritesActionCreators ===
 
-// Module 11157 (FavoritesActionCreators)
+// Module 11099 (FavoritesActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import router_utils from "router_utils" /* 1099 */;
-import util from "util" /* 1113 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import wrappers from "wrappers" /* 1227 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import FavoritesUtils from "FavoritesUtils" /* 4666 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5451 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5739 */;
-import FavoritesHooks from "FavoritesHooks" /* 11158 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 11160 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 11168 */;
+import router_utils from "router_utils" /* 1098 */;
+import util from "util" /* 1112 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import wrappers from "wrappers" /* 1226 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4624 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import FavoritesUtils from "FavoritesUtils" /* 4668 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5453 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
+import FavoritesHooks from "FavoritesHooks" /* 11100 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 11102 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 11110 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
-import FavoriteStore from "FavoriteStore" /* 4644 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import FavoriteStore from "FavoriteStore" /* 4646 */;
 
 const require = globalThis.__r;
 
@@ -262,7 +262,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -325,7 +325,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                               const nextResult = iter.next();
                               while (iter !== undefined) {
                                 let tmp7 = nextResult;
-                                let tmp11 = closure_2_29(favoriteChannels.favoriteChannels, closure_0(1196).FavoriteChannelType.REFERENCE_ORIGINAL);
+                                let tmp11 = closure_2_29(favoriteChannels.favoriteChannels, closure_0(1195).FavoriteChannelType.REFERENCE_ORIGINAL);
                                 if (null != tmp11) {
                                   if (!closure_1_3) {
                                     let tmp56 = closure_2_30(tmp11);
@@ -345,7 +345,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                                         tmp16 = closure_2_33(favoriteChannels.favoriteChannels, closure_1_1.categoryName);
                                       }
                                       tmp4 = tmp16;
-                                      let tmp8Result = closure_2_29(favoriteChannels.favoriteChannels, closure_0(1196).FavoriteChannelType.REFERENCE_ORIGINAL);
+                                      let tmp8Result = closure_2_29(favoriteChannels.favoriteChannels, closure_0(1195).FavoriteChannelType.REFERENCE_ORIGINAL);
                                       if (null != tmp8Result) {
                                         if (!closure_1_3) {
                                           let tmp26 = closure_2_30(tmp22);
@@ -357,11 +357,11 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                                   }
                                   channel = channel.getChannel(tmp7);
                                   let tmp31 = channel;
-                                  let FavoriteChannel = closure_0(1196).FavoriteChannel;
-                                  let obj = { nickname: "", type: closure_0(1196).FavoriteChannelType.REFERENCE_ORIGINAL, channelType: null, position: null, parentId: null };
+                                  let FavoriteChannel = closure_0(1195).FavoriteChannel;
+                                  let obj = { nickname: "", type: closure_0(1195).FavoriteChannelType.REFERENCE_ORIGINAL, channelType: null, position: null, parentId: null };
                                   let obj6;
                                   if (null != channel) {
-                                    let UInt32Value = closure_0(1227).UInt32Value;
+                                    let UInt32Value = closure_0(1226).UInt32Value;
                                     let obj2 = { value: null };
                                     obj2.value = tmp31.type;
                                     obj6 = UInt32Value.create(obj2);
@@ -373,7 +373,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                                   let tmp43 = closure_2_26(favoriteChannels.favoriteChannels);
                                   let tmp46 = closure_2_27(favoriteChannels.favoriteChannels, tmp7);
                                   flag = true;
-                                  let obj3 = closure_0(11168);
+                                  let obj3 = closure_0(11110);
                                   let type;
                                   if (tmp31 != null) {
                                     type = tmp31.type;
@@ -391,9 +391,9 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                                   flag = !closure_1_3;
                                 }
                                 if (flag) {
-                                  let BoolValue = closure_0(1227).BoolValue;
+                                  let BoolValue = closure_0(1226).BoolValue;
                                   favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                                  let obj4 = closure_0(11168);
+                                  let obj4 = closure_0(11110);
                                   let str = "auto";
                                   let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                                 }
@@ -531,7 +531,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -549,7 +549,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
           let _Set = Set;
           const obj4 = {
             update(favoriteChannels) {
-                      const favoritesCleanupCandidates = favoriteChannels(11170).getFavoritesCleanupCandidates(favoriteChannels);
+                      const favoritesCleanupCandidates = favoriteChannels(11112).getFavoritesCleanupCandidates(favoriteChannels);
                       const found = favoritesCleanupCandidates.filter((id) => {
                         let hasItem = set.has(id.id);
                         if (hasItem) {
@@ -567,12 +567,12 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
                           favoriteChannels = arg0.favoriteChannels;
                           let id = item10015.id;
                           delete tmp2[tmp];
-                          let obj2 = favoriteChannels(11168);
+                          let obj2 = favoriteChannels(11110);
                           let result = obj2.trackFavoritesGuildRemoveFromFavorites(item10015.type, closure_1_28(arg0.favoriteChannels));
                           continue;
                         }
                       }
-                      const obj = favoriteChannels(11170);
+                      const obj = favoriteChannels(11112);
                     }
           };
           c3 = 1;
@@ -589,7 +589,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -611,7 +611,7 @@ let closure_44 = async function _pruneInactiveFavoriteThreads() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -693,7 +693,7 @@ let closure_44 = async function _pruneInactiveFavoriteThreads() {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp27) {
       c3 = tmp;
       throw tmp27;
@@ -711,7 +711,7 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -741,10 +741,10 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                             const obj2 = { limit: tmp5, canUpsell: false };
                             let tmp6 = obj2;
                           } else {
-                            const favoritesLimits = closure_0(11158).getFavoritesLimits();
+                            const favoritesLimits = closure_0(11100).getFavoritesLimits();
                             ({ favoriteLimit, canUpsellFavoriteLimit } = favoritesLimits);
                             tmp6 = null;
-                            if (closure_0(1196).FavoriteChannelType.CATEGORY !== closure_0(1196).FavoriteChannelType.CATEGORY) {
+                            if (closure_0(1195).FavoriteChannelType.CATEGORY !== closure_0(1195).FavoriteChannelType.CATEGORY) {
                               tmp6 = null;
                               if (tmp4Result.filter(favoriteChannels, (type) => type.type !== closure_1_0(dependencyMap[15]).FavoriteChannelType.CATEGORY).length >= favoriteLimit) {
                                 const obj3 = { limit: favoriteLimit, canUpsell: canUpsellFavoriteLimit };
@@ -752,21 +752,21 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                               }
                               tmp4Result = closure_1(12);
                             }
-                            const tmpResult = closure_0(11158);
+                            const tmpResult = closure_0(11100);
                           }
                           if (null != tmp6) {
                             const limit = tmp6.limit;
                             if (tmp6.canUpsell) {
-                              closure_1(11160)(limit);
+                              closure_1(11102)(limit);
                             } else {
                               const obj4 = { title: null, body: null };
-                              const intl = closure_0(1113).intl;
-                              obj4.title = intl.string(closure_0(1113).t["+XYXtZ"]);
-                              const intl2 = closure_0(1113).intl;
+                              const intl = closure_0(1112).intl;
+                              obj4.title = intl.string(closure_0(1112).t["+XYXtZ"]);
+                              const intl2 = closure_0(1112).intl;
                               const obj5 = { count: limit };
-                              obj4.body = intl2.formatToPlainString(closure_0(1113).t.JaIyFi, obj5);
-                              closure_1(5739).show(obj4);
-                              const tmp4Result2 = closure_1(5739);
+                              obj4.body = intl2.formatToPlainString(closure_0(1112).t.JaIyFi, obj5);
+                              closure_1(5741).show(obj4);
+                              const tmp4Result2 = closure_1(5741);
                             }
                             return false;
                           } else {
@@ -825,7 +825,7 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -893,20 +893,20 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp16) {
       c2 = tmp;
       throw tmp16;
     }
   }
 };
-const resetFatigueCooldown = fn(4633).resetFatigueCooldown;
-const THREAD_CHANNEL_TYPES = fn(4645).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(4654);
+const resetFatigueCooldown = fn(4635).resetFatigueCooldown;
+const THREAD_CHANNEL_TYPES = fn(4647).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(4656);
 ({ FAVORITES_AUTO_ADD_THREADS_NEVER: map1, FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_14, FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_15, FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_16, FAVORITES_PRUNE_SCOPE_ALL: closure_17, FAVORITES_PRUNE_SCOPE_AUTO_ADDED: closure_18, FAVORITES_UNCATEGORIZED_PARENT_ID: closure_19, MAX_FAVORITE_CHANNELS: closure_20 } = FavoritesConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ NOOP: closure_21, Routes: closure_22 } = Constants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 let c42 = 0;
 let c43 = null;
 const size = fn(2);
@@ -1065,10 +1065,10 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
               const intl2 = util.intl;
               const obj2 = { count: tmp14.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp10(5739).show(obj);
-              const tmp10Result2 = tmp10(5739);
+              tmp10(5741).show(obj);
+              const tmp10Result2 = tmp10(5741);
             }
-            str = tmp10(11160)(CATEGORY);
+            str = tmp10(11102)(CATEGORY);
             obj5 = applyDefault;
           }
         }
@@ -1298,12 +1298,12 @@ export function setFavoritesGuildVisibilityFromSettings(value) {
   PreloadedUserSettingsActionCreators.updateAsync("favorites", update, batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION, onSaveFailed);
   let isFavoritesGuildIdResult = !value;
   if (!value) {
-    isFavoritesGuildIdResult = tmp(4666).isFavoritesGuildId(SelectedGuildStore.getGuildId());
-    const tmpResult = tmp(4666);
+    isFavoritesGuildIdResult = tmp(4668).isFavoritesGuildId(SelectedGuildStore.getGuildId());
+    const tmpResult = tmp(4668);
   }
   if (isFavoritesGuildIdResult) {
-    tmp(1099).transitionTo(closure_22.ME);
-    const tmpResult2 = tmp(1099);
+    tmp(1098).transitionTo(closure_22.ME);
+    const tmpResult2 = tmp(1098);
   }
   const tmp3 = batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION;
 }

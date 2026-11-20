@@ -1,17 +1,17 @@
-// === Module 18255: GuildOnboardingNewMemberActions ===
+// === Module 18082: GuildOnboardingNewMemberActions ===
 
-// Module 18255 (GuildOnboardingNewMemberActions)
+// Module 18082 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 575 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13049 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13019 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6563 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8392 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6565 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8391 */;
 
 require = fn;
 function MemberActionRow(icon) {
@@ -113,12 +113,12 @@ function MemberActionRow(icon) {
   return tmp12;
 }
 const View = fn(17).View;
-const Permissions = fn(1072).Permissions;
-const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
+const Permissions = fn(1071).Permissions;
+const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" }, channelNameContainer: { flex: 1, marginHorizontal: 8 }, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.xs };
 obj2.icon = size;

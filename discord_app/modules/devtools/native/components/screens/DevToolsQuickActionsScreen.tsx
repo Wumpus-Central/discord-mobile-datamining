@@ -1,31 +1,31 @@
-// === Module 17140: DevToolsQuickActionsScreen ===
+// === Module 16964: DevToolsQuickActionsScreen ===
 
-// Module 17140 (DevToolsQuickActionsScreen)
+// Module 16964 (DevToolsQuickActionsScreen)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import UserSettings from "UserSettings" /* 4617 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5705 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
-import NUFActionCreators from "NUFActionCreators" /* 13520 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13610 */;
-import requestReviewModalDefault from "requestReviewModal" /* 14892 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15560 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 17050 */;
-import OverridePremiumTypeActions from "OverridePremiumTypeActions" /* 17162 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import UserSettings from "UserSettings" /* 4619 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4624 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5707 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import NUFActionCreators from "NUFActionCreators" /* 13490 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13580 */;
+import requestReviewModalDefault from "requestReviewModal" /* 14856 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15524 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 16874 */;
+import OverridePremiumTypeActions from "OverridePremiumTypeActions" /* 16986 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import CheckpointStore from "CheckpointStore" /* 12400 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1389 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
-import ThemeStore from "ThemeStore" /* 1192 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import UserStore from "UserStore" /* 1388 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8303 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import CheckpointStore from "CheckpointStore" /* 12370 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1387 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
+import ThemeStore from "ThemeStore" /* 1191 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
+import UserStore from "UserStore" /* 1386 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8302 */;
 
 require = fn;
 function handleNewUserOnboarding() {
@@ -44,12 +44,12 @@ function handleReducedMotionChange(arg0) {
 }
 function launchPasskeyPromoSheet() {
   ModalActionCreatorsDefault.pop();
-  asyncRequireImpl(17157, dependencyMap.paths).then((result) => {
+  asyncRequireImpl(16981, dependencyMap.paths).then((result) => {
     result = result.default.openPasskeyUpsellPromoSheet();
   });
 }
 function showVibingWumpus() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11773, dependencyMap.paths), {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11715, dependencyMap.paths), {
     onClose() {
 
     }
@@ -65,7 +65,7 @@ function handleResetDoubleTapState() {
 }
 function launchTotpSetupSuccess() {
   ModalActionCreatorsDefault.pop();
-  items = [asyncRequireImpl(15966, dependencyMap.paths), asyncRequireImpl(15968, dependencyMap.paths)];
+  items = [asyncRequireImpl(15930, dependencyMap.paths), asyncRequireImpl(15932, dependencyMap.paths)];
   Promise.all(items).then((result) => {
     const iter = result[Symbol.iterator]();
     let nextResult;
@@ -108,7 +108,7 @@ let closure_36 = async function _handleShowAppRatingModal() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -147,7 +147,7 @@ let closure_36 = async function _handleShowAppRatingModal() {
         const obj = { text: str2, icon: closure_129_0(closure_129_2[36]).WrenchIcon };
         closure_129_1(closure_129_2[35]).open("DEV_APP_RATING_REQUEST", obj);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -157,22 +157,22 @@ let closure_36 = async function _handleShowAppRatingModal() {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const ThemeTypes = fn(1072).ThemeTypes;
-const NewUserTypes = fn(13521).NewUserTypes;
-const PremiumConstants = fn(1390);
+const ThemeTypes = fn(1071).ThemeTypes;
+const NewUserTypes = fn(13491).NewUserTypes;
+const PremiumConstants = fn(1388);
 ({ PREMIUM_TYPE_OVERRIDE_OPTIONS: closure_19, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_20 } = PremiumConstants);
-const VIBING_WUMPUS_MODAL_KEY = fn(11720).VIBING_WUMPUS_MODAL_KEY;
-const SystemThemeState = fn(1195).SystemThemeState;
+const VIBING_WUMPUS_MODAL_KEY = fn(11662).VIBING_WUMPUS_MODAL_KEY;
+const SystemThemeState = fn(1194).SystemThemeState;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
 let closure_26 = createStyles.createStyles(obj2);
 function launchMFA() {
   ModalActionCreatorsDefault.pop();
-  asyncRequireImpl(17141, dependencyMap.paths).then((openMFAModal) => {
+  asyncRequireImpl(16965, dependencyMap.paths).then((openMFAModal) => {
     const obj = { ticket: "ticket", methods: null };
     items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     obj.methods = items;
@@ -188,17 +188,17 @@ let result = size.fileFinishedImporting("modules/devtools/native/components/scre
 
 export default function DevToolsQuickActionsScreen() {
   const tmp = closure_26();
-  let isCheckpointEnabled = locale(6219).useIsCheckpointEnabled("DevToolsQuickActionsScreen");
-  let obj = locale(6219);
+  let isCheckpointEnabled = locale(6221).useIsCheckpointEnabled("DevToolsQuickActionsScreen");
+  let obj = locale(6221);
   items = [CheckpointStore];
   if (obj2.useStateFromStores(items, () => isFetching.isFetching)) {
     let KeyIcon = closure_6;
   } else {
-    KeyIcon = locale(7267).KeyIcon;
+    KeyIcon = locale(7266).KeyIcon;
   }
   const tmp5Result = closure_23(KeyIcon, {});
   obj2 = locale(504);
-  const tmp8 = showDevWidget(1630)();
+  const tmp8 = showDevWidget(1628)();
   const items1 = [ThemeStore, LocaleStore, UnsyncedUserSettingsStore, DevToolsSettingsStore];
   const stateFromStoresObject = locale(504).useStateFromStoresObject(items1, () => ({ theme: theme.theme, usingSystemTheme: useSystemTheme.useSystemTheme === constants.ON, locale: locale.locale, showDevWidget: showDevWidget.showDevWidget }));
   ({ usingSystemTheme, locale } = stateFromStoresObject);
@@ -206,19 +206,19 @@ export default function DevToolsQuickActionsScreen() {
   const tmp2Result = locale(504);
   const items2 = [UserStore];
   dependencyMap = locale(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
-  const tmp2Result6 = locale(504);
+  const tmp2Result7 = locale(504);
   const items3 = [OverridePremiumTypeStore];
   _slicedToArray = locale(504).useStateFromStores(items3, () => premiumTypeOverride.getPremiumTypeOverride());
-  const tmp2Result7 = locale(504);
+  const tmp2Result8 = locale(504);
   [tmp11, asyncGeneratorStep] = setting.useState(false);
-  let IgnoreProfileSpeedbumpDisabled = locale(4617).IgnoreProfileSpeedbumpDisabled;
+  let IgnoreProfileSpeedbumpDisabled = locale(4619).IgnoreProfileSpeedbumpDisabled;
   setting = IgnoreProfileSpeedbumpDisabled.useSetting();
   const tmp10 = _slicedToArray(setting.useState(false), 2);
   const items4 = [AccessibilityStore];
   [][0] = locale;
   const stateFromStores = locale(504).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
   if (tmp11) {
-    return closure_23(locale(17161).default, {});
+    return closure_23(locale(16985).default, {});
   } else {
     let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
     const items5 = [tmp.content, ];
@@ -233,80 +233,80 @@ export default function DevToolsQuickActionsScreen() {
           return DevToolsActionCreators.updateDevToolsSettings({ showDevWidget: !showDevWidget });
         }
     };
-    obj5.children = closure_23(locale(7437).TableSwitchRow, obj6);
-    const items6 = [closure_23(locale(7229).TableRowGroup, obj5), , , , , , , , , ];
+    obj5.children = closure_23(locale(7436).TableSwitchRow, obj6);
+    const items6 = [closure_23(locale(7228).TableRowGroup, obj5), , , , , , , , , ];
     let obj7 = { size: tmp7(575).space.PX_16 };
-    items6[1] = closure_23(locale(1187).Spacer, obj7);
+    items6[1] = closure_23(locale(1186).Spacer, obj7);
     let str = "Light Theme";
     if (usingSystemTheme) {
       str = "(using system theme)";
     }
     const obj8 = { title: "Appearance", hasIcons: true, children: null };
-    const obj9 = { label: str, disabled: usingSystemTheme, icon: closure_23(locale(16727).ThemeLightIcon, {}), value: locale(4799).isThemeLight(stateFromStoresObject.theme), onValueChange: handleThemeChange };
-    const items7 = [closure_23(locale(7437).TableSwitchRow, obj9), ];
-    const obj10 = { label: "Reduced Motion", icon: closure_23(locale(16786).AccessibilityIcon, {}), value: stateFromStores, onValueChange: handleReducedMotionChange };
-    items7[1] = closure_23(locale(7437).TableSwitchRow, obj10);
+    const obj9 = { label: str, disabled: usingSystemTheme, icon: closure_23(locale(16551).ThemeLightIcon, {}), value: locale(4801).isThemeLight(stateFromStoresObject.theme), onValueChange: handleThemeChange };
+    const items7 = [closure_23(locale(7436).TableSwitchRow, obj9), ];
+    const obj10 = { label: "Reduced Motion", icon: closure_23(locale(16610).AccessibilityIcon, {}), value: stateFromStores, onValueChange: handleReducedMotionChange };
+    items7[1] = closure_23(locale(7436).TableSwitchRow, obj10);
     obj8.children = items7;
-    items6[2] = closure_24(locale(7229).TableRowGroup, obj8);
+    items6[2] = closure_24(locale(7228).TableRowGroup, obj8);
     const obj11 = { size: tmp7(575).space.PX_16 };
-    items6[3] = closure_23(locale(1187).Spacer, obj11);
+    items6[3] = closure_23(locale(1186).Spacer, obj11);
     const obj12 = {
       title: "Override Client-Side Premium Type",
       hasIcons: true,
       children: closure_19.map((item) => {
           ({ label, value } = item);
           locale = value;
-          return closure_1_23(locale(7437).TableSwitchRow, {
+          return closure_1_23(locale(7436).TableSwitchRow, {
             onValueChange(arg0) {
               const result = OverridePremiumTypeActions.updateClientPremiumTypeOverride(arg0 ? value : dependencyMap, closure_2);
             },
             label,
-            icon: closure_1_23(locale(11180).PencilIcon, {}),
+            icon: closure_1_23(locale(11122).PencilIcon, {}),
             value: value === closure_3
           }, label);
         })
     };
-    items6[4] = closure_23(locale(7229).TableRowGroup, obj12);
+    items6[4] = closure_23(locale(7228).TableRowGroup, obj12);
     const obj13 = { size: tmp7(575).space.PX_16 };
-    items6[5] = closure_23(locale(1187).Spacer, obj13);
+    items6[5] = closure_23(locale(1186).Spacer, obj13);
     const obj14 = { title: null, hasIcons: true, children: null };
-    const intl = locale(1113).intl;
-    obj14.title = intl.string(locale(1113).t["Aojq+L"]);
+    const intl = locale(1112).intl;
+    obj14.title = intl.string(locale(1112).t["Aojq+L"]);
     let str2 = "Change to en-US";
     if ("en-US" === locale) {
       str2 = "Change to pt-BR";
     }
-    const obj15 = { label: str2, subLabel: "Toggle to a non-english locale for change log testing, etc.", onPress: tmp14, icon: closure_23(locale(9819).LanguageIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    const items8 = [closure_23(locale(6926).TableRow, obj15), , , , , , , , , , , , , , ];
-    const obj16 = { label: "Reset Double Tap Emoji State", subLabel: "Clears double tap emoji and resets dismissible content.", onPress: handleResetDoubleTapState, icon: closure_23(locale(7267).KeyIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    items8[1] = closure_23(locale(6926).TableRow, obj16);
+    const obj15 = { label: str2, subLabel: "Toggle to a non-english locale for change log testing, etc.", onPress: tmp14, icon: closure_23(locale(9821).LanguageIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    const items8 = [closure_23(locale(6925).TableRow, obj15), , , , , , , , , , , , , , ];
+    const obj16 = { label: "Reset Double Tap Emoji State", subLabel: "Clears double tap emoji and resets dismissible content.", onPress: handleResetDoubleTapState, icon: closure_23(locale(7266).KeyIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    items8[1] = closure_23(locale(6925).TableRow, obj16);
     const obj17 = { label: null, subLabel: "Dismisses dev tools when launching.", onPress: null, icon: null, trailing: null };
-    const intl2 = locale(1113).intl;
-    obj17.label = intl2.string(locale(1113).t.yoWDXU);
+    const intl2 = locale(1112).intl;
+    obj17.label = intl2.string(locale(1112).t.yoWDXU);
     obj17.onPress = handleNewUserOnboarding;
-    obj17.icon = closure_23(locale(17034).WrenchIcon, {});
-    obj17.trailing = closure_23(locale(6939).TableRowArrow, {});
-    items8[2] = closure_23(locale(6926).TableRow, obj17);
-    const obj18 = { label: "Launch MFA Challenge Modal", subLabel: "Dismisses dev tools when launching.", onPress: launchMFA, icon: closure_23(locale(7267).KeyIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    items8[3] = closure_23(locale(6926).TableRow, obj18);
-    const obj19 = { label: "Show Passkey Promo Sheet", subLabel: "Skips eligibility checks. Dismisses dev tools when launching.", onPress: launchPasskeyPromoSheet, icon: closure_23(locale(7267).KeyIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    items8[4] = closure_23(locale(6926).TableRow, obj19);
-    const obj20 = { label: "Show TOTP Setup Success", subLabel: "Dismisses dev tools when launching.", onPress: launchTotpSetupSuccess, icon: closure_23(locale(7267).KeyIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    items8[5] = closure_23(locale(6926).TableRow, obj20);
-    const obj21 = { label: "Launch Vibing Wumpus", subLabel: "Vibe with the one and only", onPress: showVibingWumpus, icon: closure_23(locale(7267).KeyIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    items8[6] = closure_23(locale(6926).TableRow, obj21);
+    obj17.icon = closure_23(locale(16858).WrenchIcon, {});
+    obj17.trailing = closure_23(locale(6938).TableRowArrow, {});
+    items8[2] = closure_23(locale(6925).TableRow, obj17);
+    const obj18 = { label: "Launch MFA Challenge Modal", subLabel: "Dismisses dev tools when launching.", onPress: launchMFA, icon: closure_23(locale(7266).KeyIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    items8[3] = closure_23(locale(6925).TableRow, obj18);
+    const obj19 = { label: "Show Passkey Promo Sheet", subLabel: "Skips eligibility checks. Dismisses dev tools when launching.", onPress: launchPasskeyPromoSheet, icon: closure_23(locale(7266).KeyIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    items8[4] = closure_23(locale(6925).TableRow, obj19);
+    const obj20 = { label: "Show TOTP Setup Success", subLabel: "Dismisses dev tools when launching.", onPress: launchTotpSetupSuccess, icon: closure_23(locale(7266).KeyIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    items8[5] = closure_23(locale(6925).TableRow, obj20);
+    const obj21 = { label: "Launch Vibing Wumpus", subLabel: "Vibe with the one and only", onPress: showVibingWumpus, icon: closure_23(locale(7266).KeyIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    items8[6] = closure_23(locale(6925).TableRow, obj21);
     let tmp5Result5 = isCheckpointEnabled;
     if (isCheckpointEnabled) {
       const obj22 = {
         label: "Launch Checkpoint",
         subLabel: "Look back at your year on Discord",
         onPress() {
-              return locale(12405).openCheckpoint("devtools");
+              return locale(12375).openCheckpoint("devtools");
             },
         icon: tmp5Result,
-        trailing: closure_23(locale(6939).TableRowArrow, {})
+        trailing: closure_23(locale(6938).TableRowArrow, {})
       };
-      tmp5Result5 = closure_23(locale(6926).TableRow, obj22);
+      tmp5Result5 = closure_23(locale(6925).TableRow, obj22);
     }
     items8[7] = tmp5Result5;
     let tmp5Result6 = isCheckpointEnabled;
@@ -324,7 +324,7 @@ export default function DevToolsQuickActionsScreen() {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -340,7 +340,7 @@ export default function DevToolsQuickActionsScreen() {
                     } else {
                       v1 = 1;
                       dependencyMap = 1;
-                      const obj6 = { value: tmp4(12408).resetCheckpoint(), done: false };
+                      const obj6 = { value: tmp4(12378).resetCheckpoint(), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -352,11 +352,11 @@ export default function DevToolsQuickActionsScreen() {
                     return obj7;
                   } else {
                     if (value) {
-                      v1(5474).open("CHECKPOINT_RESET", { text: "success" });
-                      const obj2 = v1(5474);
+                      v1(5476).open("CHECKPOINT_RESET", { text: "success" });
+                      const obj2 = v1(5476);
                     } else {
-                      tmp4(5473).presentError("error");
-                      const obj = tmp4(5473);
+                      tmp4(5475).presentError("error");
+                      const obj = tmp4(5475);
                     }
                     dependencyMap = 3;
                   }
@@ -366,10 +366,10 @@ export default function DevToolsQuickActionsScreen() {
                 }
               }
             }),
-        icon: closure_23(locale(7267).KeyIcon, {}),
-        trailing: closure_23(locale(6939).TableRowArrow, {})
+        icon: closure_23(locale(7266).KeyIcon, {}),
+        trailing: closure_23(locale(6938).TableRowArrow, {})
       };
-      tmp5Result6 = closure_23(locale(6926).TableRow, obj23);
+      tmp5Result6 = closure_23(locale(6925).TableRow, obj23);
     }
     items8[8] = tmp5Result6;
     let tmp5Result7 = isCheckpointEnabled;
@@ -378,12 +378,12 @@ export default function DevToolsQuickActionsScreen() {
         label: "Launch Checkpoint with fake data",
         subLabel: "Use mock stats in place of your own",
         onPress() {
-              return locale(12405).openCheckpoint("devtools", locale(14518).CheckpointMocks.FAKE_DATA);
+              return locale(12375).openCheckpoint("devtools", locale(14486).CheckpointMocks.FAKE_DATA);
             },
         icon: tmp5Result,
-        trailing: closure_23(locale(6939).TableRowArrow, {})
+        trailing: closure_23(locale(6938).TableRowArrow, {})
       };
-      tmp5Result7 = closure_23(locale(6926).TableRow, obj24);
+      tmp5Result7 = closure_23(locale(6925).TableRow, obj24);
     }
     items8[9] = tmp5Result7;
     let tmp5Result8 = isCheckpointEnabled;
@@ -392,12 +392,12 @@ export default function DevToolsQuickActionsScreen() {
         label: "Launch Checkpoint with No Personal Data",
         subLabel: "Use the no-shared-data flow with null stats",
         onPress() {
-              return locale(12405).openCheckpoint("devtools", locale(14518).CheckpointMocks.GLOBAL_STATS);
+              return locale(12375).openCheckpoint("devtools", locale(14486).CheckpointMocks.GLOBAL_STATS);
             },
         icon: tmp5Result,
-        trailing: closure_23(locale(6939).TableRowArrow, {})
+        trailing: closure_23(locale(6938).TableRowArrow, {})
       };
-      tmp5Result8 = closure_23(locale(6926).TableRow, obj25);
+      tmp5Result8 = closure_23(locale(6925).TableRow, obj25);
     }
     items8[10] = tmp5Result8;
     if (isCheckpointEnabled) {
@@ -405,78 +405,92 @@ export default function DevToolsQuickActionsScreen() {
         label: "Launch Checkpoint with Zero Data",
         subLabel: "Use mock stats with every stat at zero",
         onPress() {
-              return locale(12405).openCheckpoint("devtools", locale(14518).CheckpointMocks.ZERO_STATS);
+              return locale(12375).openCheckpoint("devtools", locale(14486).CheckpointMocks.ZERO_STATS);
             },
         icon: tmp5Result,
-        trailing: closure_23(locale(6939).TableRowArrow, {})
+        trailing: closure_23(locale(6938).TableRowArrow, {})
       };
-      isCheckpointEnabled = closure_23(locale(6926).TableRow, obj26);
+      isCheckpointEnabled = closure_23(locale(6925).TableRow, obj26);
     }
     items8[11] = isCheckpointEnabled;
-    const obj27 = { label: "Test captcha", onPress: locale(17163).showCaptchaTestModal, icon: closure_23(locale(7267).KeyIcon, {}), trailing: closure_23(locale(6939).TableRowArrow, {}) };
-    items8[12] = closure_23(locale(6926).TableRow, obj27);
+    const obj27 = { label: "Test captcha", onPress: locale(16987).showCaptchaTestModal, icon: closure_23(locale(7266).KeyIcon, {}), trailing: closure_23(locale(6938).TableRowArrow, {}) };
+    items8[12] = closure_23(locale(6925).TableRow, obj27);
     const obj28 = {
       label: "Ignored Profile Speedbump Suppression",
       subLabel: "Suppresses the speedbump for ignored profiles.",
-      icon: closure_23(locale(7116).EyeSlashIcon, {}),
+      icon: closure_23(locale(7115).EyeSlashIcon, {}),
       value: setting,
       onValueChange() {
           const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
           return IgnoreProfileSpeedbumpDisabled.updateSetting(!setting);
         }
     };
-    items8[13] = closure_23(locale(7437).TableSwitchRow, obj28);
-    const obj29 = { label: "Show App Rating Modal", subLabel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.", onPress: handleShowAppRatingModal, icon: closure_23(locale(17034).WrenchIcon, {}) };
-    items8[14] = closure_23(locale(6926).TableRow, obj29);
+    items8[13] = closure_23(locale(7436).TableSwitchRow, obj28);
+    const obj29 = { label: "Show App Rating Modal", subLabel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.", onPress: handleShowAppRatingModal, icon: closure_23(locale(16858).WrenchIcon, {}) };
+    items8[14] = closure_23(locale(6925).TableRow, obj29);
     obj14.children = items8;
-    items6[6] = closure_24(locale(7229).TableRowGroup, obj14);
+    items6[6] = closure_24(locale(7228).TableRowGroup, obj14);
     const obj30 = { size: tmp7(575).space.PX_16 };
-    items6[7] = closure_23(locale(1187).Spacer, obj30);
-    const obj31 = { title: "Crash Actions", hasIcons: true, children: null };
-    const obj32 = {
-      icon: closure_23(locale(17034).WrenchIcon, {}),
+    items6[7] = closure_23(locale(1186).Spacer, obj30);
+    const obj31 = {
+      icon: closure_23(locale(16858).WrenchIcon, {}),
       label: "Force Native Crash",
       onPress() {
-          return showDevWidget(1242).crash();
+          return showDevWidget(1241).crash();
         }
     };
-    const items9 = [closure_23(locale(6926).TableRow, obj32), , , , , ];
-    const obj33 = {
-      icon: closure_23(locale(17034).WrenchIcon, {}),
+    const items9 = [closure_23(locale(6925).TableRow, obj31), , , , , , ];
+    const tmp2Result10 = locale(4801);
+    let isIOSResult = locale(1378).isIOS();
+    if (isIOSResult) {
+      const obj32 = {
+        icon: closure_23(locale(16858).WrenchIcon, {}),
+        label: "Simulate App Hang",
+        subLabel: "Blocks the main thread forever. Background the app for 5+ seconds to let the system watchdog kill it.",
+        onPress() {
+              return showDevWidget(1241).hangMainThread();
+            }
+      };
+      isIOSResult = closure_23(locale(6925).TableRow, obj32);
+    }
+    const obj33 = { title: "Crash Actions", hasIcons: true, children: null };
+    items9[1] = isIOSResult;
+    const obj34 = {
+      icon: closure_23(locale(16858).WrenchIcon, {}),
       label: "Force JS Crash",
       onPress() {
           const error = new Error("Force JS Crash");
           throw error;
         }
     };
-    items9[1] = closure_23(locale(6926).TableRow, obj33);
-    const obj34 = {
-      icon: closure_23(locale(17034).WrenchIcon, {}),
+    items9[2] = closure_23(locale(6925).TableRow, obj34);
+    const obj35 = {
+      icon: closure_23(locale(16858).WrenchIcon, {}),
       label: "Force JS Boundary Crash",
       onPress() {
           asyncGeneratorStep(true);
         }
     };
-    items9[2] = closure_23(locale(6926).TableRow, obj34);
-    const obj35 = {
-      icon: closure_23(locale(17034).WrenchIcon, {}),
+    items9[3] = closure_23(locale(6925).TableRow, obj35);
+    const obj36 = {
+      icon: closure_23(locale(16858).WrenchIcon, {}),
       label: "Force libdiscore Crash",
       onPress() {
-          locale(1366).crash();
+          locale(1364).crash();
         }
     };
-    items9[3] = closure_23(locale(6926).TableRow, obj35);
-    const obj36 = {
-      icon: closure_23(locale(17034).WrenchIcon, {}),
+    items9[4] = closure_23(locale(6925).TableRow, obj36);
+    const obj37 = {
+      icon: closure_23(locale(16858).WrenchIcon, {}),
       label: "Force libdiscore Store Crash",
       subLabel: "Dispatches LIBDISCORE_SIMULATE_CRASH to NoteStore",
       onPress() {
           showDevWidget(572).dispatch({ type: "LIBDISCORE_SIMULATE_CRASH" });
         }
     };
-    items9[4] = closure_23(locale(6926).TableRow, obj36);
-    const obj37 = {
-      icon: closure_23(locale(17034).WrenchIcon, {}),
+    items9[5] = closure_23(locale(6925).TableRow, obj37);
+    const obj38 = {
+      icon: closure_23(locale(16858).WrenchIcon, {}),
       label: "Force libdiscore Store Error",
       subLabel: "Dispatches LIBDISCORE_SIMULATE_STORE_ERROR with socket reset",
       onPress() {
@@ -487,32 +501,32 @@ export default function DevToolsQuickActionsScreen() {
           });
         }
     };
-    items9[5] = closure_23(locale(6926).TableRow, obj37);
-    obj31.children = items9;
-    items6[8] = closure_24(locale(7229).TableRowGroup, obj31);
-    const tmp2Result9 = locale(4799);
-    let isIOSResult = locale(1380).isIOS();
-    if (isIOSResult) {
-      const obj38 = { children: null };
-      const obj39 = { size: tmp7(575).space.PX_16 };
-      const items10 = [closure_23(locale(1187).Spacer, obj39), ];
-      const obj40 = { title: "Memory Actions", hasIcons: true, children: null };
-      const obj41 = {
-        icon: closure_23(locale(17034).WrenchIcon, {}),
+    items9[6] = closure_23(locale(6925).TableRow, obj38);
+    obj33.children = items9;
+    items6[8] = closure_24(locale(7228).TableRowGroup, obj33);
+    const tmp2Result11 = locale(1378);
+    let isIOSResult1 = locale(1378).isIOS();
+    if (isIOSResult1) {
+      const obj39 = { children: null };
+      const obj40 = { size: tmp7(575).space.PX_16 };
+      const items10 = [closure_23(locale(1186).Spacer, obj40), ];
+      const obj41 = { title: "Memory Actions", hasIcons: true, children: null };
+      const obj42 = {
+        icon: closure_23(locale(16858).WrenchIcon, {}),
         label: "Trigger Memory Warning",
         subLabel: "Simulates a memory warning to test cache-eviction behavior (e.g. SDWebImage).",
         onPress() {
-              return showDevWidget(1242).triggerMemoryWarning();
+              return showDevWidget(1241).triggerMemoryWarning();
             }
       };
-      obj40.children = closure_23(locale(6926).TableRow, obj41);
-      items10[1] = closure_23(locale(7229).TableRowGroup, obj40);
-      obj38.children = items10;
-      isIOSResult = closure_24(closure_25, obj38);
+      obj41.children = closure_23(locale(6925).TableRow, obj42);
+      items10[1] = closure_23(locale(7228).TableRowGroup, obj41);
+      obj39.children = items10;
+      isIOSResult1 = closure_24(closure_25, obj39);
     }
-    items6[9] = isIOSResult;
+    items6[9] = isIOSResult1;
     obj3.children = items6;
     return closure_24(closure_7, obj3);
   }
-  const tmp2Result8 = locale(504);
+  const tmp2Result9 = locale(504);
 };

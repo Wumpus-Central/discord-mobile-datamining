@@ -1,7 +1,7 @@
 // === Module 9303: getCurrentUserProfile ===
 
 // Module 9303 (getCurrentUserProfile)
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 const size = fn(2);

@@ -1,22 +1,22 @@
-// === Module 5688: AudioActionCreators ===
+// === Module 5690: AudioActionCreators ===
 
-// Module 5688 (AudioActionCreators)
+// Module 5690 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5651 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5694 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 5698 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5715 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5653 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5696 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 5700 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5717 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SpatialAudioStore from "SpatialAudioStore" /* 5689 */;
-import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5692 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserStore from "UserStore" /* 1388 */;
+import SpatialAudioStore from "SpatialAudioStore" /* 5691 */;
+import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5694 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
@@ -54,10 +54,10 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
     AnalyticsUtilsDefault.track(constants2.MEDIA_DEVICE_CHANGED, obj);
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5693).SoundOutputChannel;
-const MediaEngineContextTypes = fn(5537).MediaEngineContextTypes;
+const SoundOutputChannel = fn(5695).SoundOutputChannel;
+const MediaEngineContextTypes = fn(5539).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_16 = debounceDefault((target_user_id, context, volume) => {
@@ -599,7 +599,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -617,7 +617,7 @@ export default {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: v1(5651)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
+              const obj4 = { value: v1(5653)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -631,7 +631,7 @@ export default {
             const obj6 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
             v1(572).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -680,7 +680,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -698,7 +698,7 @@ export default {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: v1(5651)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
+              const obj4 = { value: v1(5653)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -712,7 +712,7 @@ export default {
             const obj6 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
             v1(572).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

@@ -1,18 +1,18 @@
-// === Module 19325: StreamVolumeMovedHint ===
+// === Module 19145: StreamVolumeMovedHint ===
 
-// Module 19325 (StreamVolumeMovedHint)
+// Module 19145 (StreamVolumeMovedHint)
 import nativeDefault from "native" /* 575 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
 import noop from "module_19" /* 19 */;
-import StreamVolumeMovedStore from "StreamVolumeMovedStore" /* 14416 */;
+import StreamVolumeMovedStore from "StreamVolumeMovedStore" /* 14384 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(14416).clearStreamVolumeMovedHint;
+let closure_6 = fn(14384).clearStreamVolumeMovedHint;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: null, pill: null };
 const rect = { position: "absolute", top: 0, right: 0, bottom: 0, left: 0, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_8 };
 obj2.container = rect;
@@ -26,7 +26,7 @@ export default function StreamVolumeMovedHint(streamKey) {
   streamKey = streamKey.streamKey;
   _require = streamKey;
   const tmp = closure_8();
-  items = [closure_9, require("module_1655").interpolate, streamKey.longPressProgress, 0.9];
+  items = [closure_9, require("module_1653").interpolate, streamKey.longPressProgress, 0.9];
   _require = undefined;
   state = undefined;
   dependencyMap = undefined;
@@ -48,9 +48,9 @@ export default function StreamVolumeMovedHint(streamKey) {
   StreamVolumeMovedHintTsx1.__closure = items1;
   StreamVolumeMovedHintTsx1.__workletHash = 3187140271576;
   StreamVolumeMovedHintTsx1.__initData = tmp4;
-  const animatedStyle = require("module_1655").useAnimatedStyle(StreamVolumeMovedHintTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(StreamVolumeMovedHintTsx1);
   state = StreamVolumeMovedStore.useState((hintStreamKey) => hintStreamKey.hintStreamKey === c0);
-  const intl = tmp2(1113).intl;
+  const intl = tmp2(1112).intl;
   const stringResult = intl.string(require("util").t["6nKlgr"]);
   dependencyMap = stringResult;
   const items2 = [streamKey];
@@ -69,8 +69,8 @@ export default function StreamVolumeMovedHint(streamKey) {
     const items4 = [tmp.pill, animatedStyle];
     obj3.style = items4;
     const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult };
-    obj3.children = jsx(tmp2(5383).Text, { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult });
-    obj2.children = jsx(state(1655).View, { style: null, children: null });
+    obj3.children = jsx(tmp2(5385).Text, { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult });
+    obj2.children = jsx(state(1653).View, { style: null, children: null });
     tmp13 = <View style={tmp.container} pointerEvents="none">{null}</View>;
   }
   return tmp13;

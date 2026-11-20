@@ -1,21 +1,21 @@
-// === Module 6879: ConjurePlatformUtils ===
+// === Module 6878: ConjurePlatformUtils ===
 
-// Module 6879 (ConjurePlatformUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5407 */;
+// Module 6878 (ConjurePlatformUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5409 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 6824 */;
-import ApplicationUtils from "ApplicationUtils" /* 10633 */;
-import PushNotificationDefault from "PushNotification" /* 10799 */;
-import restartFrames from "restartFrames" /* 14272 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 14640 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 14642 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 14643 */;
+import ApplicationUtils from "ApplicationUtils" /* 10575 */;
+import PushNotificationDefault from "PushNotification" /* 10741 */;
+import restartFrames from "restartFrames" /* 14240 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 14608 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 14610 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 14611 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5007 */;
-import AppStateStore from "AppStateStore" /* 2120 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ActionSheetStore from "ActionSheetStore" /* 5009 */;
+import AppStateStore from "AppStateStore" /* 2118 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 
@@ -233,7 +233,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -387,7 +387,7 @@ let closure_19 = async function _inspectConjurePreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -466,7 +466,7 @@ let closure_20 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -633,14 +633,14 @@ let closure_20 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const isLaunched = fn(6503).isLaunched;
-const LocalNotificationTypes = fn(6880).LocalNotificationTypes;
+const isLaunched = fn(6505).isLaunched;
+const LocalNotificationTypes = fn(6879).LocalNotificationTypes;
 let items = [fn(6794).OAuth2Scopes.BOT, fn(6794).OAuth2Scopes.APPLICATIONS_COMMANDS];
 const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(14642);
+const conjurePreviewControlLease = fn(14610);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -743,7 +743,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(14650);
+const conjurePreviewOperationSurfaces = fn(14616);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -850,7 +850,7 @@ export default {
     obj.dismissOAuthModal = onClose;
     if (ActionSheetStore.isOpen()) {
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp16 = asyncRequireImpl(6881, dependencyMap.paths);
+      const tmp16 = asyncRequireImpl(6880, dependencyMap.paths);
       const obj2 = {};
       const merged = Object.assign(obj);
       obj2.sheetKey = ConjureAppInstallSheet;

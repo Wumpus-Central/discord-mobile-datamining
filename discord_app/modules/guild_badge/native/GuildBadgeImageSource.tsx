@@ -1,9 +1,9 @@
 // === Module 9639: GuildBadgeImageSource ===
 
 // Module 9639 (GuildBadgeImageSource)
-import shared from "shared" /* 4799 */;
+import shared from "shared" /* 4801 */;
+import _modDef7206 from "module_7206" /* 7206 */;
 import _modDef7207 from "module_7207" /* 7207 */;
-import _modDef7208 from "module_7208" /* 7208 */;
 import GuildTraits from "GuildTraits" /* 9633 */;
 import BadgeCategory from "BadgeCategory" /* 9634 */;
 import _modDef9640 from "module_9640" /* 9640 */;
@@ -13,17 +13,17 @@ import _modDef9643 from "module_9643" /* 9643 */;
 
 require = fn;
 const badgeVariants = {};
-badgeVariants[fn(9634).BadgeCategory.STAFF] = { imageSource: _modDef7207 };
-let obj2 = { imageSource: _modDef7207 };
-badgeVariants[fn(9634).BadgeCategory.PARTNERED] = { imageSource: _modDef7208 };
-const obj3 = { imageSource: _modDef7208 };
-badgeVariants[fn(9634).BadgeCategory.VERIFIED] = { imageSource: _modDef7207 };
-const obj4 = { imageSource: _modDef7207 };
+badgeVariants[fn(9634).BadgeCategory.STAFF] = { imageSource: _modDef7206 };
+let obj2 = { imageSource: _modDef7206 };
+badgeVariants[fn(9634).BadgeCategory.PARTNERED] = { imageSource: _modDef7207 };
+const obj3 = { imageSource: _modDef7207 };
+badgeVariants[fn(9634).BadgeCategory.VERIFIED] = { imageSource: _modDef7206 };
+const obj4 = { imageSource: _modDef7206 };
 badgeVariants[fn(9634).BadgeCategory.COMMUNITY] = { imageSource: _modDef9640, imageSourceLight: _modDef9641, premiumImageSource: _modDef9642 };
 const obj5 = { imageSource: _modDef9640, imageSourceLight: _modDef9641, premiumImageSource: _modDef9642 };
 badgeVariants[fn(9634).BadgeCategory.DISCOVERABLE] = { imageSource: _modDef9643 };
 const obj6 = { imageSource: _modDef9643 };
-badgeVariants[fn(9634).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef7207 };
+badgeVariants[fn(9634).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef7206 };
 badgeVariants[fn(9634).BadgeCategory.NONE] = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");

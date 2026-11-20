@@ -1,26 +1,26 @@
-// === Module 13051: MemberActionChatInputBanner ===
+// === Module 13021: MemberActionChatInputBanner ===
 
-// Module 13051 (MemberActionChatInputBanner)
+// Module 13021 (MemberActionChatInputBanner)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 6564 */;
-import Pressables from "Pressables" /* 6911 */;
-import _modDef12153 from "module_12153" /* 12153 */;
-import _modDef13050 from "module_13050" /* 13050 */;
-import MemberActionUtils from "MemberActionUtils" /* 13052 */;
-import _modDef13053 from "module_13053" /* 13053 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4740 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 6566 */;
+import Pressables from "Pressables" /* 6910 */;
+import _modDef12095 from "module_12095" /* 12095 */;
+import _modDef13020 from "module_13020" /* 13020 */;
+import MemberActionUtils from "MemberActionUtils" /* 13022 */;
+import _modDef13023 from "module_13023" /* 13023 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
 
 require = fn;
 function ActionChannelInfo(action) {
@@ -30,25 +30,25 @@ function ActionChannelInfo(action) {
   const obj = action(563);
   if (null == stateFromStores) {
     const obj2 = { variant: "footnote/normal", color: "text-default", children: null };
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     const obj3 = { channelName: null };
-    const intl3 = tmp(1113).intl;
-    obj3.channelName = intl3.string(tmp(1113).t.J90oLW);
-    obj2.children = intl2.format(tmp(1113).t.MkzlDL, obj3);
+    const intl3 = tmp(1112).intl;
+    obj3.channelName = intl3.string(tmp(1112).t.J90oLW);
+    obj2.children = intl2.format(tmp(1112).t.MkzlDL, obj3);
     let obj4 = obj2;
   } else {
     obj4 = { variant: "footnote/normal", color: "text-default", children: null };
-    const intl = tmp(1113).intl;
+    const intl = tmp(1112).intl;
     const obj5 = { channelName: tmp4 };
-    obj4.children = intl.format(tmp(1113).t.MkzlDL, obj5);
+    obj4.children = intl.format(tmp(1112).t.MkzlDL, obj5);
   }
-  return closure_12(action(5383).Text, obj4);
+  return closure_12(action(5385).Text, obj4);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
   let id;
   const tmp = closure_15();
-  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12153 }) };
+  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1186).Icon, { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12095 }) };
   const tmp6 = closure_12(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -57,7 +57,7 @@ function ChannelActionEmoji(emoji) {
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12153 };
+  const obj2 = { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12095 };
   items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(items, () => {
@@ -85,7 +85,7 @@ function ChannelActionEmoji(emoji) {
       tmp2Result = tmp6;
       if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
         const obj6 = { style: tmp.textEmoji, variant: "heading-lg/medium", children: name };
-        tmp2Result = closure_12(tmp3(5383).Text, obj6);
+        tmp2Result = closure_12(tmp3(5385).Text, obj6);
       }
       tmp5Result6 = UnicodeEmojisDefault;
     }
@@ -133,13 +133,13 @@ function MemberActionChatInputBanner(channel) {
   [first1, [][0]] = noop.useState(require("GuildOnboardingHomeTypes").CHANNEL_ACTION_BANNER_HEIGHT);
   closure_9 = tmp15;
   const tmp2Result = require("useStateFromStores");
-  sharedValue = require("module_1655").useSharedValue(0);
-  const tmp2Result5 = require("module_1655");
+  sharedValue = require("module_1653").useSharedValue(0);
+  const tmp2Result5 = require("module_1653");
   let num = 0;
   if (completed) {
     num = first1;
   }
-  sharedValue1 = require("module_1655").useSharedValue(num);
+  sharedValue1 = require("module_1653").useSharedValue(num);
   let items1 = [sharedValue, completed, tmp9, first];
   const effect = obj4.useEffect(() => {
     if (!c3) {
@@ -158,8 +158,8 @@ function MemberActionChatInputBanner(channel) {
     }
     const result1 = sharedValue1.set(0);
   }, items2);
-  const tmp2Result6 = require("module_1655");
-  const items3 = [closure_18, stateFromStores, sharedValue, require("module_1655").withDelay, completed, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
+  const tmp2Result6 = require("module_1653");
+  const items3 = [closure_18, stateFromStores, sharedValue, require("module_1653").withDelay, completed, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -196,9 +196,9 @@ function MemberActionChatInputBanner(channel) {
   MemberActionChatInputBannerTsx1.__closure = items4;
   MemberActionChatInputBannerTsx1.__workletHash = 16275727828088;
   MemberActionChatInputBannerTsx1.__initData = tmp20;
-  const animatedStyle = require("module_1655").useAnimatedStyle(MemberActionChatInputBannerTsx1);
-  const tmp2Result7 = require("module_1655");
-  const items5 = [closure_19, stateFromStores, sharedValue1, require("module_1655").withDelay, tmp9, completed, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
+  const animatedStyle = require("module_1653").useAnimatedStyle(MemberActionChatInputBannerTsx1);
+  const tmp2Result7 = require("module_1653");
+  const items5 = [closure_19, stateFromStores, sharedValue1, require("module_1653").withDelay, tmp9, completed, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -241,7 +241,7 @@ function MemberActionChatInputBanner(channel) {
   MemberActionChatInputBannerTsx2.__workletHash = 12940138330664;
   MemberActionChatInputBannerTsx2.__initData = tmp28;
   const items7 = [tmp10[1]];
-  const animatedStyle1 = require("module_1655").useAnimatedStyle(MemberActionChatInputBannerTsx2);
+  const animatedStyle1 = require("module_1653").useAnimatedStyle(MemberActionChatInputBannerTsx2);
   const callback = obj4.useCallback((nativeEvent) => {
     closure_7(nativeEvent.nativeEvent.layout.height);
   }, items7);
@@ -265,7 +265,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = state(View, obj3);
         let tmp6Result = c3;
         if (c3) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13053 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13023 };
           tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -282,7 +282,7 @@ function MemberActionChatInputBanner(channel) {
       const items9 = [tmp.animatedContainer, animatedStyle];
       obj5.style = items9;
       obj5.children = renderAction();
-      tmp45Result = closure_12(_modDef1655.View, obj5);
+      tmp45Result = closure_12(_modDef1653.View, obj5);
     }
     items8[1] = tmp45Result;
     let tmp43Result = null;
@@ -312,7 +312,7 @@ function MemberActionChatInputBanner(channel) {
             obj3.children = items1;
             items[1] = state(View, obj3);
             const obj7 = { style: _undefined.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13050 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13020 };
             obj7.children = application_id(native.Icon, obj8);
             items[2] = application_id(View, obj7);
             obj.children = items;
@@ -327,7 +327,7 @@ function MemberActionChatInputBanner(channel) {
         const items11 = [tmp.animatedContainer, animatedStyle1];
         obj8.style = items11;
         obj8.children = renderNextAction();
-        items10[1] = closure_12(_modDef1655.View, obj8);
+        items10[1] = closure_12(_modDef1653.View, obj8);
         obj6.children = items10;
         tmp43Result = closure_13(closure_14, obj6);
       }
@@ -337,14 +337,14 @@ function MemberActionChatInputBanner(channel) {
     obj9.children = items8;
     return closure_13(closure_14, obj9);
   }
-  const tmp2Result8 = require("module_1655");
+  const tmp2Result8 = require("module_1653");
 }
 const View = fn(17).View;
-const Routes = fn(1072).Routes;
-const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
+const Routes = fn(1071).Routes;
+const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { animatedContainer: { overflow: "hidden" }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 12, paddingVertical: 8 }, text: { flexGrow: 1, flexShrink: 1, marginLeft: 8 }, wrap: { flexShrink: 1, flexWrap: "wrap" }, emoji: { width: 24, height: 24 }, textEmoji: { width: 24, textAlign: "center" }, emojiPlaceholder: null, circle: null, icon: null };
 let size = { width: 24, height: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, display: "flex", alignItems: "center", justifyContent: "center" };
 obj.emojiPlaceholder = size;
@@ -357,8 +357,8 @@ let closure_18 = { code: "(function MemberActionChatInputBannerTsx1(){let[useRed
 let closure_19 = { code: "(function MemberActionChatInputBannerTsx2(){let[useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING]=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};})" };
 const memoResult = noop.memo(function MemberActionChatInputBannerGuarded(channel) {
   channel = channel.channel;
-  const canSeeOnboardingHome = channel(6562).useCanSeeOnboardingHome(channel.guild_id);
-  const obj = channel(6562);
+  const canSeeOnboardingHome = channel(6564).useCanSeeOnboardingHome(channel.guild_id);
+  const obj = channel(6564);
   items = [GuildMemberStore];
   const stateFromStores = channel(563).useStateFromStores(items, () => {
     const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);

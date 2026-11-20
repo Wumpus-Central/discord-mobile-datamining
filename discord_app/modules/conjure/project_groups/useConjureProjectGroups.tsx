@@ -1,12 +1,12 @@
-// === Module 13691: useConjureProjectGroups ===
+// === Module 13660: useConjureProjectGroups ===
 
-// Module 13691 (useConjureProjectGroups)
-import conjureProjectGroups from "conjureProjectGroups" /* 13692 */;
-import filterConjureProjectsByName from "filterConjureProjectsByName" /* 13693 */;
+// Module 13660 (useConjureProjectGroups)
+import conjureProjectGroups from "conjureProjectGroups" /* 13661 */;
+import filterConjureProjectsByName from "filterConjureProjectsByName" /* 13662 */;
 import noop from "module_19" /* 19 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
-import UserStore from "UserStore" /* 1388 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
+import UserStore from "UserStore" /* 1386 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 

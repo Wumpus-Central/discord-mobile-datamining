@@ -1,12 +1,12 @@
-// === Module 10329: useCanRemoveAllReactions ===
+// === Module 10271: useCanRemoveAllReactions ===
 
-// Module 10329 (useCanRemoveAllReactions)
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 10271 (useCanRemoveAllReactions)
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");
 

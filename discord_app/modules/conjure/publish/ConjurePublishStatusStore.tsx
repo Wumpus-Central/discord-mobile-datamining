@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 require = fn;
 const map = new Map();
@@ -29,8 +29,8 @@ prototype["getPublishStatus"] = function getPublishStatus(id) {
   }
   return value;
 };
-prototype["isProjectPublishing"] = function isProjectPublishing(arg0) {
-  return set.has(arg0);
+prototype["isProjectPublishing"] = function isProjectPublishing(projectId) {
+  return set.has(projectId);
 };
 prototype["getPublishApprovalUrl"] = function getPublishApprovalUrl(projectId) {
   value = map1.get(projectId);
@@ -64,6 +64,7 @@ prototype["isAppChannelPending"] = function isAppChannelPending(id) {
   return set1.has(id);
 };
 let closure_11 = [];
+let closure_12 = [];
 const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (0 === map.size) {
@@ -128,28 +129,32 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
     }
     return flag ? undefined : false;
   },
-  CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function handleProjectPublishStatusUpdate(publishedRevision) {
-    ({ projectId, publishState, surface, previewAppChannels, previewDevicePermissions } = publishedRevision);
+  CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function handleProjectPublishStatusUpdate(previewDevicePermissions) {
+    ({ projectId, publishState, surface, previewAppChannels, newAppChannels } = previewDevicePermissions);
+    if (newAppChannels === undefined) {
+      newAppChannels = closure_12;
+    }
+    previewDevicePermissions = previewDevicePermissions.previewDevicePermissions;
     if (previewDevicePermissions === undefined) {
       previewDevicePermissions = closure_11;
     }
-    publishedRevision = publishedRevision.publishedRevision;
+    let publishedRevision = previewDevicePermissions.publishedRevision;
     if (publishedRevision === undefined) {
       publishedRevision = null;
     }
-    let publishedAt = publishedRevision.publishedAt;
+    let publishedAt = previewDevicePermissions.publishedAt;
     if (publishedAt === undefined) {
       publishedAt = null;
     }
-    let flag = publishedRevision.publishing;
+    let flag = previewDevicePermissions.publishing;
     if (flag === undefined) {
       flag = false;
     }
-    ({ patchNotesSent, newUiUnpublished } = publishedRevision);
+    ({ patchNotesSent, newUiUnpublished } = previewDevicePermissions);
     if (newUiUnpublished === undefined) {
       newUiUnpublished = false;
     }
-    let flag2 = publishedRevision.safetyHold;
+    let flag2 = previewDevicePermissions.safetyHold;
     if (flag2 === undefined) {
       flag2 = false;
     }
@@ -198,39 +203,46 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
           }
           if (publishState1 === publishState) {
             if (value.surface === surface) {
-              if (obj3.areArraysShallowEqual(value.previewAppChannels, previewAppChannels)) {
-                let previewDevicePermissions2 = value.previewDevicePermissions;
-                if (previewDevicePermissions2 == null) {
-                  previewDevicePermissions2 = closure_11;
+              if (obj4.areArraysShallowEqual(value.previewAppChannels, previewAppChannels)) {
+                let newAppChannels2 = value.newAppChannels;
+                if (newAppChannels2 == null) {
+                  newAppChannels2 = closure_12;
                 }
-                if (tmp17Result.areArraysShallowEqual(previewDevicePermissions2, previewDevicePermissions)) {
-                  if (value.publishedRevision === publishedRevision) {
-                    if (value.publishedAt === publishedAt) {
-                      if (value.publishing === flag) {
-                        if (value.patchNotesSent === patchNotesSent) {
-                          if (value.newUiUnpublished === newUiUnpublished) {
-                            let flag3 = value.safetyHold;
-                            if (flag3 == null) {
-                              flag3 = false;
-                            }
-                            if (flag3 === flag2) {
-                              return false;
+                if (tmp17Result.areArraysShallowEqual(newAppChannels2, newAppChannels)) {
+                  let previewDevicePermissions2 = value.previewDevicePermissions;
+                  if (previewDevicePermissions2 == null) {
+                    previewDevicePermissions2 = closure_11;
+                  }
+                  if (tmp17Result2.areArraysShallowEqual(previewDevicePermissions2, previewDevicePermissions)) {
+                    if (value.publishedRevision === publishedRevision) {
+                      if (value.publishedAt === publishedAt) {
+                        if (value.publishing === flag) {
+                          if (value.patchNotesSent === patchNotesSent) {
+                            if (value.newUiUnpublished === newUiUnpublished) {
+                              let flag3 = value.safetyHold;
+                              if (flag3 == null) {
+                                flag3 = false;
+                              }
+                              if (flag3 === flag2) {
+                                return false;
+                              }
                             }
                           }
                         }
                       }
                     }
                   }
+                  tmp17Result2 = discord_common_shallowEqual;
                 }
                 tmp17Result = discord_common_shallowEqual;
               }
-              obj3 = discord_common_shallowEqual;
+              obj4 = discord_common_shallowEqual;
             }
           }
         }
       }
     }
-    const result = map.set(projectId, { publishState, surface, previewAppChannels, previewDevicePermissions, publishedRevision, publishedAt, publishing: flag, patchNotesSent, newUiUnpublished, safetyHold: flag2 });
+    const result = map.set(projectId, { publishState, surface, previewAppChannels, newAppChannels, previewDevicePermissions, publishedRevision, publishedAt, publishing: flag, patchNotesSent, newUiUnpublished, safetyHold: flag2 });
   },
   CONJURE_PROJECT_PUBLISH_START: function handleProjectPublishStart(projectId) {
     projectId = projectId.projectId;

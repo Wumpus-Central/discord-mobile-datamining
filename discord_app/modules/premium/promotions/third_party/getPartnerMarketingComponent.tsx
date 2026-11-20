@@ -3,7 +3,7 @@
 // Module 9259 (getPartnerMarketingComponent)
 import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9026 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 import PromotionsStore from "PromotionsStore" /* 9023 */;
 
 const require = globalThis.__r;

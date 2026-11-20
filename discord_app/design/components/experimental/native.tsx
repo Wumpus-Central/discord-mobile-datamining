@@ -1,17 +1,17 @@
-// === Module 7481: native ===
+// === Module 7480: native ===
 
-// Module 7481 (native)
-import AnimatedPressableHighlight from "AnimatedPressableHighlight" /* 6934 */;
-import ActionSheetDragHandleConstants from "ActionSheetDragHandleConstants" /* 7482 */;
-import TwinButtons from "TwinButtons" /* 7483 */;
-import Button_HeaderButton from "Button/HeaderButton" /* 7484 */;
-import InputButton from "InputButton" /* 7485 */;
-import PressableScale from "PressableScale" /* 7486 */;
-import CollapsibleFloatingActionButton from "CollapsibleFloatingActionButton" /* 7487 */;
-import CollapsibleFloatingActionButtonState from "CollapsibleFloatingActionButtonState" /* 7489 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 7490 */;
-import BackgroundBlurFill from "BackgroundBlurFill" /* 7491 */;
-import ActionSheetDragHandle from "ActionSheetDragHandle" /* 7492 */;
+// Module 7480 (native)
+import AnimatedPressableHighlight from "AnimatedPressableHighlight" /* 6933 */;
+import ActionSheetDragHandleConstants from "ActionSheetDragHandleConstants" /* 7481 */;
+import TwinButtons from "TwinButtons" /* 7482 */;
+import Button_HeaderButton from "Button/HeaderButton" /* 7483 */;
+import InputButton from "InputButton" /* 7484 */;
+import PressableScale from "PressableScale" /* 7485 */;
+import CollapsibleFloatingActionButton from "CollapsibleFloatingActionButton" /* 7486 */;
+import CollapsibleFloatingActionButtonState from "CollapsibleFloatingActionButtonState" /* 7488 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 7489 */;
+import BackgroundBlurFill from "BackgroundBlurFill" /* 7490 */;
+import ActionSheetDragHandle from "ActionSheetDragHandle" /* 7491 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/experimental/native.tsx");

@@ -2,7 +2,7 @@
 
 // Module 9636 (ExperimentalWebBadgeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9637 from "module_9637" /* 9637 */;
 import _mod9638 from "module_9638" /* 9638 */;
 import noop from "module_19" /* 19 */;

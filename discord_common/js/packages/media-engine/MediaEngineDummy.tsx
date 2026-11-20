@@ -1,9 +1,9 @@
-// === Module 5631: MediaEngineDummy ===
+// === Module 5633: MediaEngineDummy ===
 
-// Module 5631 (MediaEngineDummy)
-import MediaEngineEvent from "MediaEngineEvent" /* 5567 */;
-import Constants from "Constants" /* 5537 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5561 */;
+// Module 5633 (MediaEngineDummy)
+import MediaEngineEvent from "MediaEngineEvent" /* 5569 */;
+import Constants from "Constants" /* 5539 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5563 */;
 import size from "module_2" /* 2 */;
 
 function Video() {
@@ -53,6 +53,9 @@ prototype["getSpatialAudioVersion"] = function getSpatialAudioVersion() {
 };
 prototype["getSpatialAudioHrtfFiles"] = function getSpatialAudioHrtfFiles() {
   return { directory: null, files: [] };
+};
+prototype["getSpatialAudioStats"] = function getSpatialAudioStats() {
+  return Promise.resolve(null);
 };
 prototype["setInputVolume"] = function setInputVolume() {
 

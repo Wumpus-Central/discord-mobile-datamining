@@ -1,7 +1,7 @@
-// === Module 8045: ShopThisLookMobileExperiment ===
+// === Module 8044: ShopThisLookMobileExperiment ===
 
-// Module 8045 (ShopThisLookMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8044 (ShopThisLookMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-shop-this-look-mobile", kind: "user", defaultConfig: { shopThisLookMobileEnabled: false }, variations: { 0: { shopThisLookMobileEnabled: false }, 1: { shopThisLookMobileEnabled: true } } });

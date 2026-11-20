@@ -1,12 +1,12 @@
-// === Module 11197: usePressHorizontalAutocompleteItemHandler ===
+// === Module 11139: usePressHorizontalAutocompleteItemHandler ===
 
-// Module 11197 (usePressHorizontalAutocompleteItemHandler)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 11198 */;
+// Module 11139 (usePressHorizontalAutocompleteItemHandler)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 11140 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let items = [, , , ];
-({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = fn(1072).AutoCompleteResultTypes);
+({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = fn(1071).AutoCompleteResultTypes);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx");

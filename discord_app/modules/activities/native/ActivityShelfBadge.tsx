@@ -1,25 +1,25 @@
-// === Module 12863: ActivityShelfBadge ===
+// === Module 12833: ActivityShelfBadge ===
 
-// Module 12863 (ActivityShelfBadge)
+// Module 12833 (ActivityShelfBadge)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Server from "Server" /* 2119 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import util from "util" /* 1112 */;
+import Server from "Server" /* 2117 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = { position: "absolute", top: 4, right: 4, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
 obj2.badge = rect;
 obj2.newBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 let obj3 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 obj2.updatedBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
-const native = fn(1187);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1187).FOUR_DP_ELEVATION_SHADOW_PARAMS);
-obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1072).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
+const native = fn(1186);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1186).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1071).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/ActivityShelfBadge.tsx");

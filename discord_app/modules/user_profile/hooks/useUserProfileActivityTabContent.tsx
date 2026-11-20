@@ -1,18 +1,18 @@
-// === Module 14492: useUserProfileActivityTabContent ===
+// === Module 14460: useUserProfileActivityTabContent ===
 
-// Module 14492 (useUserProfileActivityTabContent)
+// Module 14460 (useUserProfileActivityTabContent)
 import LoggerDefault from "Logger" /* 3 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8876 */;
-import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 14493 */;
+import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 14461 */;
 import noop from "module_19" /* 19 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8874 */;
-import PresenceStore from "PresenceStore" /* 5530 */;
+import PresenceStore from "PresenceStore" /* 5532 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 require = fn;
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 let closure_10 = new LoggerDefault("useUserProfileActivityTabContent");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivityTabContent.tsx");

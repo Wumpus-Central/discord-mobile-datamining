@@ -1,15 +1,15 @@
-// === Module 7442: RoleIcon ===
+// === Module 7441: RoleIcon ===
 
-// Module 7442 (RoleIcon)
-import PlatformUtils2 from "PlatformUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+// Module 7441 (RoleIcon)
+import PlatformUtils2 from "PlatformUtils" /* 1378 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let c6 = 1.25;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");

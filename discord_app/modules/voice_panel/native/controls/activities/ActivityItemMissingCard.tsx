@@ -1,8 +1,8 @@
-// === Module 19341: ActivityItemMissingCard ===
+// === Module 19161: ActivityItemMissingCard ===
 
-// Module 19341 (ActivityItemMissingCard)
+// Module 19161 (ActivityItemMissingCard)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 7205 */;
+import NativeViewDefault from "NativeView" /* 7204 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ function ActivityItemEmptyCard(activity) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ function ActivityItemEmptyCard(activity) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         v3 = tmp;
@@ -77,7 +77,7 @@ function ActivityItemEmptyCard(activity) {
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { loadingActivity: null, disabledActivity: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj.loadingActivity = size;

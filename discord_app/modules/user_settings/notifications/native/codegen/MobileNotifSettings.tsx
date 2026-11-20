@@ -1,6 +1,6 @@
-// === Module 16949: MobileNotifSettings ===
+// === Module 16773: MobileNotifSettings ===
 
-// Module 16949 (MobileNotifSettings)
+// Module 16773 (MobileNotifSettings)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/notifications/native/codegen/MobileNotifSettings.tsx");

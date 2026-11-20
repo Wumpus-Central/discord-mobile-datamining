@@ -1,8 +1,8 @@
-// === Module 4683: GuildEntityDao ===
+// === Module 4685: GuildEntityDao ===
 
-// Module 4683 (GuildEntityDao)
-import Table from "Table" /* 4675 */;
-import TableId from "TableId" /* 4677 */;
+// Module 4685 (GuildEntityDao)
+import Table from "Table" /* 4677 */;
+import TableId from "TableId" /* 4679 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

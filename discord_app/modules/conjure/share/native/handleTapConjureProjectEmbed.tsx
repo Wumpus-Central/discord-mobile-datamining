@@ -1,12 +1,12 @@
-// === Module 12211: handleTapConjureProjectEmbed ===
+// === Module 12153: handleTapConjureProjectEmbed ===
 
-// Module 12211 (handleTapConjureProjectEmbed)
-import openFrameDefault from "openFrame" /* 10626 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11911 */;
-import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12212 */;
+// Module 12153 (handleTapConjureProjectEmbed)
+import openFrameDefault from "openFrame" /* 10568 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11853 */;
+import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12154 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11908 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11850 */;
 
 const require = fn;
 function runConjureSharedProjectCoverAction(applicationId, arg1, channelId) {
@@ -69,7 +69,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -86,8 +86,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
           closure_4 = tmp2;
           closure_132_0 = closure_1;
           closure_132_1 = closure_2;
-          closure_132_2 = closure_3;
-          closure_132_3 = undefined;
+          closure_132_2 = undefined;
           status = status.getStatus(closure_0, closure_1);
           let type;
           if (status != null) {
@@ -97,7 +96,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
           if ("ready" === type) {
             project = project.getProject(status.projectId);
           }
-          closure_132_3 = project;
+          closure_132_2 = project;
           if (null == project) {
             let result = null != project;
             if (result) {
@@ -120,25 +119,27 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
             }
             if (null != project) {
               if (result) {
-                c5 = 1;
-                c6 = 1;
-                const obj5 = { value: require("asyncRequireImpl")(paths[11], paths.paths), done: false };
-                return obj5;
+                if ("remix" === closure_3) {
+                  c5 = 1;
+                  c6 = 1;
+                  const obj5 = { value: require("asyncRequireImpl")(paths[11], paths.paths), done: false };
+                  return obj5;
+                }
               }
             }
             let type2;
             if (status != null) {
               type2 = status.type;
             }
-            let tmp28 = "no_access" !== type2;
-            if (tmp28) {
+            let tmp21 = "no_access" !== type2;
+            if (tmp21) {
               let type3;
               if (status != null) {
                 type3 = status.type;
               }
-              tmp28 = "expired" !== type3;
+              tmp21 = "expired" !== type3;
             }
-            if (tmp28) {
+            if (tmp21) {
               require("openConjureProjectAboutSheet")(closure_0, closure_2, closure_1);
             }
           }
@@ -148,23 +149,18 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
         c6 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        const guildId = closure_132_1.guildId;
-        let str = "remix";
-        if ("install" === closure_132_2) {
-          str = "copy";
-        }
-        value.default(closure_132_3, guildId, str, closure_132_0);
+        value.default(closure_132_2, closure_132_1.guildId, closure_132_0);
       }
       c6 = 3;
       const obj = { value, done: true };
       return obj;
-    } catch (tmp33) {
+    } catch (tmp28) {
       c6 = tmp;
-      throw tmp33;
+      throw tmp28;
     }
   }
 };
-const canRemixProject = fn(6500).canRemixProject;
+const canRemixProject = fn(6502).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

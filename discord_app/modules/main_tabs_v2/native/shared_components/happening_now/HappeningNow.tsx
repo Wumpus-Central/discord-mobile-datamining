@@ -1,24 +1,24 @@
-// === Module 17629: HappeningNow ===
+// === Module 17456: HappeningNow ===
 
-// Module 17629 (HappeningNow)
+// Module 17456 (HappeningNow)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11692 */;
-import HappeningNowAnalytics from "HappeningNowAnalytics" /* 17630 */;
-import happeningNowRankingUtils from "happeningNowRankingUtils" /* 17638 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 17640 */;
-import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 17641 */;
-import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 17643 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 17644 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 17656 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 17657 */;
-import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 17658 */;
-import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 17659 */;
-import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 17660 */;
-import HappeningNowActions from "HappeningNowActions" /* 17661 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11634 */;
+import HappeningNowAnalytics from "HappeningNowAnalytics" /* 17457 */;
+import happeningNowRankingUtils from "happeningNowRankingUtils" /* 17465 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 17467 */;
+import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 17468 */;
+import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 17470 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 17471 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 17483 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 17484 */;
+import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 17485 */;
+import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 17486 */;
+import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 17487 */;
+import HappeningNowActions from "HappeningNowActions" /* 17488 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -173,16 +173,16 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16754);
+const HappeningNowConstants = fn(16578);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: metroImportDefault, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(7331);
+const ReanimatedHelperTypes = fn(7330);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 } };
 let closure_13 = createStyles.createStyles(obj);
-const Gesture = fn(5052).Gesture;
+const Gesture = fn(5054).Gesture;
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
@@ -200,7 +200,7 @@ export default noop.memo(function HappeningNow(listRef) {
   let callback2;
   let tmp = closure_13();
   const isFocused1 = listRef(children[14]).useIsFocused();
-  const obj2 = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "<string:2798452737>", isFocused: isFocused1 };
+  const obj2 = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: 32426542487751060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, isFocused: isFocused1 };
   const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;

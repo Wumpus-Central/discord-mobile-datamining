@@ -1,9 +1,9 @@
-// === Module 6701: GuildOnboardingPromptsConstants ===
+// === Module 6703: GuildOnboardingPromptsConstants ===
 
-// Module 6701 (GuildOnboardingPromptsConstants)
-import util from "util" /* 1113 */;
-import _modDef1345 from "module_1345" /* 1345 */;
-import StringUtils from "StringUtils" /* 2153 */;
+// Module 6703 (GuildOnboardingPromptsConstants)
+import util from "util" /* 1112 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import StringUtils from "StringUtils" /* 2151 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -61,7 +61,7 @@ function validateOnboardingConnection(connection_type) {
 }
 let closure_3 = ["id"];
 let closure_4 = ["id"];
-const PlatformTypes = fn(1072).PlatformTypes;
+const PlatformTypes = fn(1071).PlatformTypes;
 const OnboardingPromptType = { MULTIPLE_CHOICE: 0, [0]: "MULTIPLE_CHOICE", DROPDOWN: 1, [1]: "DROPDOWN" };
 let obj2 = { APPLICATION: 0, [0]: "APPLICATION", PROVIDER_CONNECTED_ACCOUNT: 1, [1]: "PROVIDER_CONNECTED_ACCOUNT" };
 let items = [, , , , , , , ];
@@ -103,7 +103,7 @@ export function isDefaultPrompt(options) {
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = _objectWithoutProperties(obj, closure_3);
-    return _modDef1345(tmp7, _objectWithoutProperties(options, closure_4));
+    return _modDef1343(tmp7, _objectWithoutProperties(options, closure_4));
   }
 }
 export function getDefaultPrompt() {

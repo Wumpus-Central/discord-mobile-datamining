@@ -1,9 +1,9 @@
-// === Module 11320: StickerPackInformationPopout ===
+// === Module 11262: StickerPackInformationPopout ===
 
-// Module 11320 (StickerPackInformationPopout)
+// Module 11262 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { informationContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "90%", marginHorizontal: "5%", padding: 16, borderRadius: nativeDefault.radii.xs, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.25, shadowRadius: 5 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }, informationHeader: { lineHeight: 20 }, informationContentContainer: { flexDirection: "row" }, informationContent: { lineHeight: 20 }, informationContentDescription: { flex: 1, marginLeft: 5 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -26,8 +26,8 @@ export default function StickerPackInformationPopout(stickerPack) {
   items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
-    const intl = tmp2(1113).intl;
-    obj2.description = intl.string(tmp2(1113).t.W11rMa);
+    const intl = tmp2(1112).intl;
+    obj2.description = intl.string(tmp2(1112).t.W11rMa);
     items.push(obj2);
   }
   let obj3 = { style: null, children: null };
@@ -35,14 +35,14 @@ export default function StickerPackInformationPopout(stickerPack) {
   obj3.style = items1;
   const obj4 = { style: tmp.headerContainer, children: null };
   const obj5 = { style: tmp.informationHeader, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp2(1113).intl;
+  const intl2 = tmp2(1112).intl;
   obj5.children = intl2.format(require("util").t.XDm6yN, { stickerPackName: stickerPack.name });
   const items2 = [closure_3(require("Text/Text").Text, obj5), ];
   const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl3 = tmp2(1113).intl;
+  const intl3 = tmp2(1112).intl;
   obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
   const obj8 = { variant: "body-md/semibold", color: "text-brand", children: null };
-  const intl4 = tmp2(1113).intl;
+  const intl4 = tmp2(1112).intl;
   obj8.children = intl4.string(require("util").t.cpT0Cq);
   obj7.children = closure_3(require("Text/Text").Text, obj8);
   items2[1] = closure_3(require("Pressables").PressableOpacity, obj7);

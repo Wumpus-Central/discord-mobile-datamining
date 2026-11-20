@@ -1,7 +1,7 @@
-// === Module 4654: FavoritesConstants ===
+// === Module 4656: FavoritesConstants ===
 
-// Module 4654 (FavoritesConstants)
-import GuildRecordUtils from "GuildRecordUtils" /* 4655 */;
+// Module 4656 (FavoritesConstants)
+import GuildRecordUtils from "GuildRecordUtils" /* 4657 */;
 import size from "module_2" /* 2 */;
 
 const obj = { id: "373", name: "Favorites", description: "The place for all your favorite channels!", joinedAt: new Date(), maxMembers: 500000 };

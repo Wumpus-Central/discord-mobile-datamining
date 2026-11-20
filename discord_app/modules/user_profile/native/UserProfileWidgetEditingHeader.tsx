@@ -1,19 +1,19 @@
-// === Module 15868: UserProfileWidgetEditingHeader ===
+// === Module 15832: UserProfileWidgetEditingHeader ===
 
-// Module 15868 (UserProfileWidgetEditingHeader)
+// Module 15832 (UserProfileWidgetEditingHeader)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8017 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8016 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7950).TrackUserProfileEditActions;
+let closure_6 = fn(7949).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, heading: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,30 +27,30 @@ export default function UserProfileWidgetEditingHeader() {
   const ref = noop.useRef(null);
   const obj3 = { style: tmp.header, children: null };
   const obj4 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.heading, children: null };
-  const intl = stateFromStores(1113).intl;
-  obj4.children = intl.string(stateFromStores(1113).t.OYlggR);
-  const items1 = [closure_7(stateFromStores(5383).Heading, obj4), , ];
+  const intl = stateFromStores(1112).intl;
+  obj4.children = intl.string(stateFromStores(1112).t.OYlggR);
+  const items1 = [closure_7(stateFromStores(5385).Heading, obj4), , ];
   const obj5 = { size: "sm", variant: "secondary", icon: null, text: null, onPress: null };
-  let obj2 = stateFromStores(10288);
+  let obj2 = stateFromStores(10229);
   obj5.icon = closure_7(stateFromStores(9458).PlusSmallIcon, { size: "xs", color: ref(575).colors.ICON_DEFAULT });
-  const intl2 = stateFromStores(1113).intl;
-  obj5.text = intl2.string(stateFromStores(1113).t["lBG2s/"]);
+  const intl2 = stateFromStores(1112).intl;
+  obj5.text = intl2.string(stateFromStores(1112).t["lBG2s/"]);
   obj5.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: stateFromStores, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId: stateFromStores, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14486, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14454, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
-  items1[1] = closure_7(stateFromStores(5390).Button, obj5);
+  items1[1] = closure_7(stateFromStores(5392).Button, obj5);
   const obj7 = { ref, size: "sm", variant: "secondary", icon: null, accessibilityLabel: null, disabled: null, onPress: null };
   const obj6 = { size: "xs", color: ref(575).colors.ICON_DEFAULT };
-  obj7.icon = closure_7(stateFromStores(10105).ArrowsUpDownIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT });
-  const intl3 = stateFromStores(1113).intl;
-  obj7.accessibilityLabel = intl3.string(stateFromStores(1113).t.tm1WHd);
-  obj7.disabled = obj2.useDisplayableBoardWidgets(stateFromStores, true).length < 2;
+  obj7.icon = closure_7(stateFromStores(10108).ArrowsUpDownIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT });
+  const intl3 = stateFromStores(1112).intl;
+  obj7.accessibilityLabel = intl3.string(stateFromStores(1112).t.tm1WHd);
+  obj7.disabled = obj2.useBoardWidgets(stateFromStores).length < 2;
   obj7.onPress = function onPress() {
-    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15869, dependencyMap.paths), "UserProfileWidgetReorderActionSheet", { returnFocusRef: ref });
+    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15833, dependencyMap.paths), "UserProfileWidgetReorderActionSheet", { returnFocusRef: ref });
   };
-  items1[2] = closure_7(stateFromStores(7472).IconButton, obj7);
+  items1[2] = closure_7(stateFromStores(7471).IconButton, obj7);
   obj3.children = items1;
   return closure_8(View, obj3);
 };

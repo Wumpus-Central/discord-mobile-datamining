@@ -1,11 +1,11 @@
-// === Module 7514: useManageResourcePermissions ===
+// === Module 7513: useManageResourcePermissions ===
 
-// Module 7514 (useManageResourcePermissions)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+// Module 7513 (useManageResourcePermissions)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import UserStore from "UserStore" /* 1388 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -60,9 +60,9 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(7513);
+const PermissionsConstants = fn(7512);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: metroImportDefault, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 let closure_11 = {
   canCreateExpressions: false,
   canCreateGuildEvent: false,

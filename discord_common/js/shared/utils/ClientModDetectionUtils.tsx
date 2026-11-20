@@ -1,6 +1,6 @@
-// === Module 1354: ClientModDetectionUtils ===
+// === Module 1352: ClientModDetectionUtils ===
 
-// Module 1354 (ClientModDetectionUtils)
+// Module 1352 (ClientModDetectionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/ClientModDetectionUtils.tsx");

@@ -1,12 +1,12 @@
-// === Module 19921: GuildConfigGates ===
+// === Module 19741: GuildConfigGates ===
 
-// Module 19921 (GuildConfigGates)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 19741 (GuildConfigGates)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 19922 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 19742 */;
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0) {
@@ -40,7 +40,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

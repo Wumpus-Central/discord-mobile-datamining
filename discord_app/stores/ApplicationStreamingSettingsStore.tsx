@@ -1,10 +1,10 @@
-// === Module 5716: ApplicationStreamingSettingsStore ===
+// === Module 5718: ApplicationStreamingSettingsStore ===
 
-// Module 5716 (ApplicationStreamingSettingsStore)
+// Module 5718 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 5537 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5633 */;
+import Constants from "Constants" /* 5539 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5635 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;

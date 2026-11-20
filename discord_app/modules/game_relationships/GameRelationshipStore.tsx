@@ -1,9 +1,9 @@
-// === Module 8241: GameRelationshipStore ===
+// === Module 8240: GameRelationshipStore ===
 
-// Module 8241 (GameRelationshipStore)
+// Module 8240 (GameRelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 function recountRelationshipTypes() {
   c0 = 0;
@@ -36,7 +36,7 @@ function remove(arg0, arg1) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 function GAME_RELATIONSHIP_KEY(arg0, arg1) {
 
 }
@@ -49,7 +49,7 @@ function GameRelationshipIndexes_BY_USER_ID(arg0) {
 function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {
 
 }
-const secondaryIndexMap = new fn(4719).SecondaryIndexMap(function gameRelationshipsIndex(arg0) {
+const secondaryIndexMap = new fn(4721).SecondaryIndexMap(function gameRelationshipsIndex(arg0) {
   items = [];
   if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {
     const _HermesInternal = HermesInternal;

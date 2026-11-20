@@ -1,13 +1,13 @@
-// === Module 6251: BillingPaymentGatewayActionCreators ===
+// === Module 6253: BillingPaymentGatewayActionCreators ===
 
-// Module 6251 (BillingPaymentGatewayActionCreators)
+// Module 6253 (BillingPaymentGatewayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1113 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 6240 */;
-import _mod6252 from "module_6252" /* 6252 */;
-import StripeUtilsAll from "StripeUtils" /* 6254 */;
+import util from "util" /* 1112 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 6242 */;
+import _mod6254 from "module_6254" /* 6254 */;
+import StripeUtilsAll from "StripeUtils" /* 6256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -43,7 +43,7 @@ let closure_13 = async function _createCardToken(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ let closure_13 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod6252.CardNumberElement);
+                element = element.getElement(_mod6254.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError("Unable to load card elements from Stripe");
                 } else {
@@ -213,7 +213,7 @@ let closure_18 = async function _submitElementsForPaymentElement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -303,7 +303,7 @@ let closure_21 = async function _createStripePaymentMethodWithElements(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -407,7 +407,7 @@ let closure_23 = async function _createExpressCheckoutPaymentMethod(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -483,7 +483,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -627,7 +627,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
                 if (closure_135_24.has(closure_134_3)) {
                   current = closure_134_4.current;
                   if (null != current) {
-                    const obj8 = { setupIntent: current, error: "r" };
+                    const obj8 = { setupIntent: current, error: "Array" };
                     closure_134_10 = obj8;
                     error = closure_134_10.error;
                     if (!(function shouldRecreateSetupIntentForPaymentElement(code) {
@@ -652,9 +652,9 @@ let closure_25 = async function _confirmPaymentElementSource() {
                         if (dependencyMap === undefined) {
                           selectedElementType = null;
                         }
-                        const intl = closure_0(1113).intl;
-                        const defaultErrorMessage = intl.string(closure_0(1113).t.khEaRI);
-                        return closure_0(6240).dispatchConfirmationError(message, { captureException: true, defaultErrorMessage, selectedElementType, tags: { flow: "payment_elements" } });
+                        const intl = closure_0(1112).intl;
+                        const defaultErrorMessage = intl.string(closure_0(1112).t.khEaRI);
+                        return closure_0(6242).dispatchConfirmationError(message, { captureException: true, defaultErrorMessage, selectedElementType, tags: { flow: "payment_elements" } });
                       }).setupIntent;
                       closure_134_4.current = setupIntent;
                       payment_method = setupIntent.payment_method;
@@ -827,7 +827,7 @@ let closure_26 = async function _confirmCardPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1016,7 +1016,7 @@ let closure_29 = async function _createAdyenVaultablePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1188,7 +1188,7 @@ let closure_31 = async function _createStripePaymentSourceToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1385,9 +1385,9 @@ let closure_32 = async function _paymentIntentSucceeded() {
   }
   return true;
 };
-let Constants = fn(1072);
+let Constants = fn(1071);
 ({ Endpoints: hasOwnProperty, PaymentGateways: closure_6, VAULTABLE_PAYMENT_SOURCES: metroImportDefault } = Constants);
-Constants = fn(1083);
+Constants = fn(1082);
 ({ ADYEN_PAYMENT_SOURCES: closure_8, STRIPE_PAYMENT_SOURCES: closure_9, PaymentSourceTypes } = Constants);
 let closure_11 = new LoggerDefault("BillingPaymentGatewayActionCreators.tsx");
 let closure_19 = { hasCreatedPaymentMethod: false };

@@ -1,21 +1,21 @@
-// === Module 19162: useLaunchAccountLinkingCampaign ===
+// === Module 18981: useLaunchAccountLinkingCampaign ===
 
-// Module 19162 (useLaunchAccountLinkingCampaign)
-import useAuthorizationApp from "useAuthorizationApp" /* 7404 */;
+// Module 18981 (useLaunchAccountLinkingCampaign)
+import useAuthorizationApp from "useAuthorizationApp" /* 7403 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14906 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6704 */;
-import ConsentStore from "ConsentStore" /* 6306 */;
-import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 19141 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14870 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6706 */;
+import ConsentStore from "ConsentStore" /* 6308 */;
+import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 18960 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useEffect: closure_4, useState: hasOwnProperty } = noop);
-const FetchState = fn(6704).FetchState;
-const Consents = fn(1072).Consents;
+const FetchState = fn(6706).FetchState;
+const Consents = fn(1071).Consents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useLaunchAccountLinkingCampaign.tsx");
 

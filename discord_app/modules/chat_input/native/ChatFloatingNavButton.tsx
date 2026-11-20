@@ -1,20 +1,20 @@
-// === Module 13041: ChatFloatingNavButton ===
+// === Module 13011: ChatFloatingNavButton ===
 
-// Module 13041 (ChatFloatingNavButton)
+// Module 13011 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5356 */;
-import spring_spring from "spring/spring" /* 5393 */;
-import springPresets from "springPresets" /* 5394 */;
-import FastImageDefault from "FastImage" /* 5479 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import useToken from "useToken" /* 5358 */;
+import spring_spring from "spring/spring" /* 5395 */;
+import springPresets from "springPresets" /* 5396 */;
+import FastImageDefault from "FastImage" /* 5481 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { pill: null, icon: null };
 let size = { height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 obj2.pill = size;
@@ -28,11 +28,11 @@ let result = size.fileFinishedImporting("modules/chat_input/native/ChatFloatingN
 export default function ChatFloatingNavButton(arg0) {
   ({ accessibilityLabel, icon, onPress } = arg0);
   const tmp = closure_6();
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   const token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   const token2 = useToken.useToken(nativeDefault.colors.CHAT_INPUT_ICON_DEFAULT_TINT);
-  items = [closure_7, spring_spring.withSpring, _mod1655.interpolateColor, sharedValue, token, token1, springPresets.ON_PRESS_SPRING];
+  items = [closure_7, spring_spring.withSpring, _mod1653.interpolateColor, sharedValue, token, token1, springPresets.ON_PRESS_SPRING];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -55,7 +55,7 @@ export default function ChatFloatingNavButton(arg0) {
   ChatFloatingNavButtonTsx1.__workletHash = 13689460805797;
   ChatFloatingNavButtonTsx1.__initData = tmp8;
   const items2 = [sharedValue];
-  const animatedStyle = _mod1655.useAnimatedStyle(ChatFloatingNavButtonTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ChatFloatingNavButtonTsx1);
   const items3 = [sharedValue];
   const callback = noop.useCallback(() => {
     const result = _undefined.set(1);
@@ -77,7 +77,7 @@ export default function ChatFloatingNavButton(arg0) {
   const items5 = [tmp.icon, { tintColor: token2 }];
   obj8.style = items5;
   obj7.children = jsx(FastImageDefault, { source: icon, style: null });
-  obj6.children = jsx(_modDef1655.View, { style: null, children: null });
+  obj6.children = jsx(_modDef1653.View, { style: null, children: null });
   return <Pressable accessibilityRole="button" accessibilityLabel={accessibilityLabel} onPress={onPress} onPressIn={callback} onPressOut={noop.useCallback(() => {
     const result = _undefined.set(0);
   }, items3)}>{null}</Pressable>;

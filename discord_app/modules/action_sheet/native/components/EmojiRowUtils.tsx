@@ -1,8 +1,8 @@
-// === Module 12093: EmojiRowUtils ===
+// === Module 12035: EmojiRowUtils ===
 
-// Module 12093 (EmojiRowUtils)
-import FlagUtils from "FlagUtils" /* 1406 */;
-import Constants from "Constants" /* 1072 */;
+// Module 12035 (EmojiRowUtils)
+import FlagUtils from "FlagUtils" /* 1404 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 ({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);

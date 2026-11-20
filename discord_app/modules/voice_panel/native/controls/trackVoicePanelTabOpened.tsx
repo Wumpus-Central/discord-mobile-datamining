@@ -1,10 +1,10 @@
-// === Module 18038: trackVoicePanelTabOpened ===
+// === Module 17865: trackVoicePanelTabOpened ===
 
-// Module 18038 (trackVoicePanelTabOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
+// Module 17865 (trackVoicePanelTabOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 

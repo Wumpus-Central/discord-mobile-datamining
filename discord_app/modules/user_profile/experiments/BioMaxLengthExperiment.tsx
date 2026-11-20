@@ -1,8 +1,8 @@
-// === Module 8015: BioMaxLengthExperiment ===
+// === Module 8014: BioMaxLengthExperiment ===
 
-// Module 8015 (BioMaxLengthExperiment)
-import Constants from "Constants" /* 1072 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8014 (BioMaxLengthExperiment)
+import Constants from "Constants" /* 1071 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 ({ BIO_MAX_LENGTH, BIO_MAX_LENGTH_INCREASED } = Constants);

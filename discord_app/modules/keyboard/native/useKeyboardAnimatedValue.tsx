@@ -1,15 +1,15 @@
-// === Module 6958: useKeyboardAnimatedValue ===
+// === Module 6957: useKeyboardAnimatedValue ===
 
-// Module 6958 (useKeyboardAnimatedValue)
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6959 */;
+// Module 6957 (useKeyboardAnimatedValue)
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 6958 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Easing = fn(1655).Easing;
+const Easing = fn(1653).Easing;
 const bezierResult = Easing.bezier(0.2, 0, 0, 1);
 let c3 = bezierResult;
 const size = fn(2);
@@ -21,7 +21,7 @@ export default function useKeyboardAnimatedValue(UNDETERMINED) {
   if (arg1 === undefined) {
     flag = true;
   }
-  const sharedValue = require("module_1655").useSharedValue(UNDETERMINED);
+  const sharedValue = require("module_1653").useSharedValue(UNDETERMINED);
   items = [sharedValue, UNDETERMINED, flag];
   const effect = sharedValue.useEffect(() => {
     if (flag) {

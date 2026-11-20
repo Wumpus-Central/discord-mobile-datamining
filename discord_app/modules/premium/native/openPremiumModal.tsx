@@ -1,8 +1,8 @@
 // === Module 8979: openPremiumModal ===
 
 // Module 8979 (openPremiumModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/native/openPremiumModal.tsx");

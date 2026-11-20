@@ -1,6 +1,6 @@
-// === Module 14487: useStableAddableWidgets ===
+// === Module 14455: useStableAddableWidgets ===
 
-// Module 14487 (useStableAddableWidgets)
+// Module 14455 (useStableAddableWidgets)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,22 +1,22 @@
-// === Module 11983: GuildChannelUserList ===
+// === Module 11925: GuildChannelUserList ===
 
-// Module 11983 (GuildChannelUserList)
+// Module 11925 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
-import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import GuildUtilsDefault from "GuildUtils" /* 6558 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
-import sortByMatchScore from "sortByMatchScore" /* 9940 */;
+import util from "util" /* 1112 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import GuildUtilsDefault from "GuildUtils" /* 6560 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
+import sortByMatchScore from "sortByMatchScore" /* 9943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelMemberStore_mod from "ChannelMemberStore" /* 6800 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -25,7 +25,7 @@ const View = fn(17).View;
 let ChannelMemberStore = fn(6800);
 ({ EVERYONE_CHANNEL_ID: metroImportDefault, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ RelationshipTypes: closure_15, StatusTypes: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);

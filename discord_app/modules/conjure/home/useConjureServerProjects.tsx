@@ -1,27 +1,28 @@
-// === Module 18696: useConjureServerProjects ===
+// === Module 18520: useConjureServerProjects ===
 
-// Module 18696 (useConjureServerProjects)
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+// Module 18520 (useConjureServerProjects)
+import conjureServerProject from "conjureServerProject" /* 6719 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/home/useConjureServerProjects.tsx");
 
 export default function useConjureServerProjects(arg0) {
   _require = arg0;
-  const obj = { mine: null, shared: null, fetchState: null };
+  const obj = { participating: null, shared: null, fetchState: null };
   items = [arg0];
-  obj.mine = require("useConjureHomeOwnProjects").useConjureProjectsByActivity(() => {
-    const ownedProjects = ConjureProjectStore.getOwnedProjects();
-    return ownedProjects.filter((item) => closure_0(6719).conjureServerProjectGuildId(item) === closure_1_0);
+  obj.participating = require("useConjureHomeOwnProjects").useConjureProjectsByActivity(() => {
+    const conjureServerProjects = conjureServerProject.getConjureServerProjects(closure_0);
+    return conjureServerProjects.filter((item) => railProject.isRailProject(item));
   }, items);
   const obj2 = require("useConjureHomeOwnProjects");
   const items1 = [arg0];
   obj.shared = require("useConjureHomeOwnProjects").useConjureProjectsByActivity(() => {
-    const sharedProjects = ConjureProjectStore.getSharedProjects(closure_0);
-    return sharedProjects.filter((item) => closure_0(6719).conjureServerProjectGuildId(item) === closure_1_0);
+    const conjureServerProjects = conjureServerProject.getConjureServerProjects(closure_0);
+    return conjureServerProjects.filter((item) => !railProject.isRailProject(item));
   }, items1);
   const obj3 = require("useConjureHomeOwnProjects");
   const items2 = [ConjureProjectStore];

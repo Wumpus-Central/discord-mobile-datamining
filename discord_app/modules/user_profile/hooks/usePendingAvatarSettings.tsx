@@ -2,9 +2,9 @@
 
 // Module 8787 (usePendingAvatarSettings)
 import _mod19 from "module_19" /* 19 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8012 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8011 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8789 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8013 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8012 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;

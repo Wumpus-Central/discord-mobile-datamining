@@ -1,30 +1,66 @@
-// === Module 6274: PassTheControllerStore ===
+// === Module 6276: PassTheControllerStore ===
 
-// Module 6274 (PassTheControllerStore)
+// Module 6276 (PassTheControllerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5558 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
-import InputHostDefault from "InputHost" /* 14803 */;
-import InputGuestDefault from "InputGuest" /* 14806 */;
-import RunningGameStore from "RunningGameStore" /* 2140 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5560 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
+import InputEvent from "InputEvent" /* 14766 */;
+import InputHostDefault from "InputHost" /* 14767 */;
+import InputGuestDefault from "InputGuest" /* 14770 */;
+import RunningGameStore from "RunningGameStore" /* 2138 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
 
 require = fn;
 function handleControllerGrab(arg0) {
-  if (arg0 !== c15) {
-    c15 = arg0;
+  if (arg0 !== c17) {
+    c17 = arg0;
     passTheControllerStore.emitChange();
   }
 }
 function handleControllerDrop() {
-  if (null != c15) {
-    c15 = null;
+  if (null != c17) {
+    c17 = null;
     passTheControllerStore.emitChange();
   }
+}
+function stopHost(streamKey) {
+  streamKey = undefined;
+  if (_null2 != null) {
+    streamKey = _null2.streamKey;
+  }
+  let flag = streamKey === streamKey;
+  if (flag) {
+    const inputHost = _null2.inputHost;
+    inputHost.shutdown();
+    _null2 = null;
+    c17 = null;
+    let tmp5 = null != _null;
+    if (tmp5) {
+      tmp5 = null == _null2;
+    }
+    if (tmp5) {
+      tmp5 = null == c16;
+    }
+    if (tmp5) {
+      if (null != c14) {
+        _null.off(InputEvent.InputEvent.Disconnect, c14);
+      }
+      _null.close();
+      c14 = null;
+      _null = null;
+    }
+    const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
+    flag = true;
+    if (rTCConnection != null) {
+      const result = rTCConnection.setVideoEncoderLatencyProfile(constants4.DEFAULT);
+      flag = true;
+    }
+  }
+  return flag;
 }
 function stopGuest(streamKey) {
   streamKey = undefined;
@@ -44,28 +80,34 @@ function stopGuest(streamKey) {
     }
     let tmp10 = null != _null;
     if (tmp10) {
-      tmp10 = null == c13;
+      tmp10 = null == c15;
     }
     if (tmp10) {
       tmp10 = null == _null3;
     }
     flag = true;
     if (tmp10) {
+      if (null != c14) {
+        _null.off(InputEvent.InputEvent.Disconnect, c14);
+      }
       _null.close();
+      c14 = null;
       _null = null;
       flag = true;
     }
   }
   return flag;
 }
-let closure_7 = fn(14799).isPassTheControllerBlocked;
-const Constants = fn(1072);
+let closure_7 = fn(14758).isPassTheControllerBlocked;
+const Constants = fn(1071);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6276).StreamTypes;
-let c12 = null;
+const StreamTypes = fn(6278).StreamTypes;
+const constants4 = fn(5539).VideoEncoderLatencyProfile;
 let c13 = null;
 let c14 = null;
 let c15 = null;
+let c16 = null;
+let c17 = null;
 const set = new Set();
 const Store = initializeDefault.Store;
 class PassTheControllerStore extends Store {
@@ -109,7 +151,7 @@ prototype["getControllerHolderId"] = function getControllerHolderId(encodeStream
   }
   let tmp2 = null;
   if (streamKey === encodeStreamKeyResult) {
-    tmp2 = c15;
+    tmp2 = c17;
   }
   return tmp2;
 };
@@ -141,39 +183,35 @@ PassTheControllerStore.displayName = "PassTheControllerStore";
 const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
-    c15 = null;
+    c17 = null;
   },
   PASS_THE_CONTROLLER_UPDATE: function handlePassTheController(isHost) {
     ({ streamKey, host, active } = isHost);
     if (isHost.isHost) {
-      let connectResult = _null2;
-      let flag5 = _null2 == null;
       if (active) {
         let streamKey1;
-        if (!flag5) {
-          streamKey1 = connectResult.streamKey;
+        if (obj != null) {
+          streamKey1 = obj.streamKey;
         }
-        flag5 = false;
+        let flag5 = false;
         if (streamKey1 !== streamKey) {
-          connectResult = StreamRTCConnectionStore;
           const streamPid = StreamRTCConnectionStore.getStreamPid(streamKey);
           flag5 = false;
           if (null != streamPid) {
             flag5 = false;
             if (!closure_7(streamKey)) {
               if (null != inputConnection1) {
-                let tmp55 = inputConnection1;
+                let tmp50 = inputConnection1;
               } else {
-                connectResult = RTCConnectionStore;
                 const rTCConnection = RTCConnectionStore.getRTCConnection();
-                tmp55 = null;
+                tmp50 = null;
                 if (null != rTCConnection) {
-                  const inputConnection = new inputConnection1(14800).InputConnection(rTCConnection, AuthenticationStore.getId());
+                  const inputConnection = new inputConnection1(14759).InputConnection(rTCConnection, AuthenticationStore.getId());
                   closure_129_0 = inputConnection;
-                  inputConnection.on(inputConnection1(14801).InputEvent.Disconnect, () => {
-                    if (c12 === inputConnection1) {
-                      if (null != _null) {
-                        obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: _null.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };
+                  function h() {
+                    if (c13 === inputConnection1) {
+                      if (null != c15) {
+                        obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: c15.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };
                         DispatcherDefault.dispatch(obj2);
                       }
                       if (null != obj2) {
@@ -181,82 +219,61 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                         DispatcherDefault.dispatch(obj4);
                       }
                     }
-                  });
-                  connectResult = inputConnection.connect();
+                  }
+                  inputConnection.on(inputConnection1(14766).InputEvent.Disconnect, h);
+                  inputConnection.connect();
                   inputConnection1 = inputConnection;
-                  tmp55 = inputConnection;
+                  tmp50 = inputConnection;
                 }
               }
-              let flag7 = null != tmp55;
-              if (flag7) {
-                if (_null2 != null) {
-                  const inputHost2 = _null2.inputHost;
-                  inputHost2.shutdown();
+              let flag6 = null != tmp50;
+              if (flag6) {
+                if (obj != null) {
+                  const inputHost = obj.inputHost;
+                  inputHost.shutdown();
                 }
-                c15 = null;
-                let obj = { streamKey, inputHost: null };
-                const tmp59 = InputHostDefault;
-                let guildId = inputConnection1(6280).decodeStreamKey(streamKey).guildId;
+                c17 = null;
+                const rTCConnection1 = StreamRTCConnectionStore.getRTCConnection(streamKey);
+                if (rTCConnection1 != null) {
+                  const result = rTCConnection1.setVideoEncoderLatencyProfile(constants4.ULTRA_LOW);
+                }
+                obj = { streamKey, inputHost: null };
+                const tmp56 = InputHostDefault;
+                let guildId = inputConnection1(6282).decodeStreamKey(streamKey).guildId;
                 if (guildId == null) {
                   guildId = null;
                 }
-                const tmp592 = new tmp59(tmp55, streamPid, guildId, handleControllerGrab, handleControllerDrop);
-                connectResult = tmp592;
-                obj.inputHost = tmp592;
-                _null2 = obj;
-                flag7 = true;
-                const obj7 = inputConnection1(6280);
+                const tmp562 = new tmp56(tmp50, streamPid, guildId, handleControllerGrab, handleControllerDrop);
+                obj.inputHost = tmp562;
+                flag6 = true;
+                const obj8 = inputConnection1(6282);
               }
-              flag5 = flag7;
+              flag5 = flag6;
             }
           }
         }
-        let flag6 = flag5;
       } else {
-        let streamKey2;
-        if (!flag5) {
-          streamKey2 = connectResult.streamKey;
-        }
-        flag6 = streamKey2 === streamKey;
-        if (flag6) {
-          const inputHost = _null2.inputHost;
-          inputHost.shutdown();
-          _null2 = null;
-          c15 = null;
-          let tmp39 = null != inputConnection1;
-          if (tmp39) {
-            tmp39 = null == _null2;
-          }
-          if (tmp39) {
-            tmp39 = null == obj2;
-          }
-          flag6 = true;
-          if (tmp39) {
-            inputConnection1.close();
-            inputConnection1 = null;
-            flag6 = true;
-          }
-        }
+        const tmp35 = stopHost(streamKey);
       }
     } else {
       if (active) {
-        let streamKey3;
+        let streamKey2;
         if (obj2 != null) {
-          streamKey3 = obj2.streamKey;
+          streamKey2 = obj2.streamKey;
         }
         let flag2 = false;
-        if (streamKey3 !== streamKey) {
+        if (streamKey2 !== streamKey) {
           if (null != inputConnection1) {
-            let tmp14 = inputConnection1;
+            let tmp15 = inputConnection1;
           } else {
-            const rTCConnection1 = RTCConnectionStore.getRTCConnection();
-            tmp14 = null;
-            if (null != rTCConnection1) {
-              inputConnection1 = new inputConnection1(14800).InputConnection(rTCConnection1, AuthenticationStore.getId());
-              inputConnection1.on(inputConnection1(14801).InputEvent.Disconnect, () => {
-                if (c12 === inputConnection1) {
-                  if (null != _null) {
-                    obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: _null.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };
+            const rTCConnection2 = RTCConnectionStore.getRTCConnection();
+            tmp15 = null;
+            if (null != rTCConnection2) {
+              inputConnection1 = new inputConnection1(14759).InputConnection(rTCConnection2, AuthenticationStore.getId());
+              h = function h() {
+                if (c13 === inputConnection1) {
+                  if (null != c15) {
+                    obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: c15.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };
                     DispatcherDefault.dispatch(obj2);
                   }
                   if (null != obj2) {
@@ -264,29 +281,30 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                     DispatcherDefault.dispatch(obj4);
                   }
                 }
-              });
+              };
+              inputConnection1.on(inputConnection1(14766).InputEvent.Disconnect, h);
               inputConnection1.connect();
-              tmp14 = inputConnection1;
+              tmp15 = inputConnection1;
             }
           }
-          let flag3 = null != tmp14;
+          let flag3 = null != tmp15;
           if (flag3) {
             if (null != obj2) {
-              const rTCConnection2 = StreamRTCConnectionStore.getRTCConnection(obj2.streamKey);
-              if (rTCConnection2 != null) {
-                rTCConnection2.setAvSyncEnabled(obj2.inputGuest.host, true);
+              const rTCConnection3 = StreamRTCConnectionStore.getRTCConnection(obj2.streamKey);
+              if (rTCConnection3 != null) {
+                rTCConnection3.setAvSyncEnabled(obj2.inputGuest.host, true);
               }
               const inputGuest = obj2.inputGuest;
               inputGuest.shutdown();
               obj2 = null;
             }
-            const rTCConnection3 = StreamRTCConnectionStore.getRTCConnection(streamKey);
-            if (rTCConnection3 != null) {
-              rTCConnection3.setAvSyncEnabled(host, false);
+            const rTCConnection4 = StreamRTCConnectionStore.getRTCConnection(streamKey);
+            if (rTCConnection4 != null) {
+              rTCConnection4.setAvSyncEnabled(host, false);
             }
             obj2 = { streamKey, inputGuest: null };
-            const tmp31 = new InputGuestDefault(tmp14, host, streamKey);
-            obj2.inputGuest = tmp31;
+            const tmp32 = new InputGuestDefault(tmp15, host, streamKey);
+            obj2.inputGuest = tmp32;
             flag3 = true;
           }
           flag2 = flag3;
@@ -304,7 +322,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
       streamKey = _null2.streamKey;
     }
     if (streamKey === streamKey.streamKey) {
-      if (null != c15) {
+      if (null != c17) {
         const inputHost = _null2.inputHost;
         inputHost.takeBackController();
       }
@@ -323,37 +341,15 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
         if (!deleteResult) {
           deleteResult = stopGuest(streamKey2);
         }
-        let flag = deleteResult;
+        let tmp4 = deleteResult;
       }
-      return flag;
+      return tmp4;
     }
     streamKey = streamKey.streamKey;
-    let streamKey3;
-    if (_null2 != null) {
-      streamKey3 = _null2.streamKey;
-    }
-    flag = streamKey3 === streamKey;
-    if (flag) {
-      const inputHost = _null2.inputHost;
-      inputHost.shutdown();
-      _null2 = null;
-      c15 = null;
-      let tmp7 = null != _null;
-      if (tmp7) {
-        tmp7 = null == _null2;
-      }
-      if (tmp7) {
-        tmp7 = null == _null3;
-      }
-      flag = true;
-      if (tmp7) {
-        _null.close();
-        _null = null;
-        flag = true;
-      }
-    }
-    if (!flag) {
-      flag = stopGuest(streamKey);
+    const tmp3 = stopHost(streamKey);
+    tmp4 = tmp3;
+    if (!tmp3) {
+      tmp4 = stopGuest(streamKey);
     }
   },
   STREAM_START: function handleStreamStart(arg0) {
@@ -369,64 +365,17 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
       tmp3 = StreamRTCConnectionStore.getStreamPid(encodeStreamKeyResult) !== _null2.inputHost.pid;
     }
     if (tmp3) {
-      let streamKey1;
-      if (_null2 != null) {
-        streamKey1 = _null2.streamKey;
-      }
-      let flag = streamKey1 === encodeStreamKeyResult;
-      if (flag) {
-        const inputHost = _null2.inputHost;
-        inputHost.shutdown();
-        _null2 = null;
-        c15 = null;
-        let tmp10 = null != _null;
-        if (tmp10) {
-          tmp10 = null == _null2;
-        }
-        if (tmp10) {
-          tmp10 = null == c14;
-        }
-        flag = true;
-        if (tmp10) {
-          _null.close();
-          _null = null;
-          flag = true;
-        }
-      }
-      tmp3 = flag;
+      tmp3 = stopHost(encodeStreamKeyResult);
     }
     return tmp3;
   },
   STREAM_STOP: function handleStreamStop(streamKey) {
     streamKey = streamKey.streamKey;
-    let streamKey1;
-    if (_null2 != null) {
-      streamKey1 = _null2.streamKey;
+    let tmp = stopHost(streamKey);
+    if (!tmp) {
+      tmp = stopGuest(streamKey);
     }
-    let flag = streamKey1 === streamKey;
-    if (flag) {
-      const inputHost = _null2.inputHost;
-      inputHost.shutdown();
-      _null2 = null;
-      c15 = null;
-      let tmp5 = null != _null;
-      if (tmp5) {
-        tmp5 = null == _null2;
-      }
-      if (tmp5) {
-        tmp5 = null == c14;
-      }
-      flag = true;
-      if (tmp5) {
-        _null.close();
-        _null = null;
-        flag = true;
-      }
-    }
-    if (!flag) {
-      flag = stopGuest(streamKey);
-    }
-    return flag;
+    return tmp;
   },
   RTC_CONNECTION_FLAGS: function handleRTCConnectionFlags(guildId) {
     guildId = guildId.guildId;
@@ -452,7 +401,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
     if (tmp3) {
       let tmp6 = null != _null2;
       if (tmp6) {
-        tmp6 = userId === c15;
+        tmp6 = userId === c17;
       }
       if (tmp6) {
         const inputHost = _null2.inputHost;
@@ -486,6 +435,6 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
   }
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/pass_the_controller/PassTheControllerStore.tsx");
+let result = size.fileFinishedImporting("modules/pass_the_controller/PassTheControllerStore.tsx");
 
 export default passTheControllerStore;

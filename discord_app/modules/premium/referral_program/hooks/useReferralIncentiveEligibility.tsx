@@ -1,10 +1,10 @@
-// === Module 13940: useReferralIncentiveEligibility ===
+// === Module 13909: useReferralIncentiveEligibility ===
 
-// Module 13940 (useReferralIncentiveEligibility)
+// Module 13909 (useReferralIncentiveEligibility)
 import initialize from "initialize" /* 504 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8696 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13937 */;
-import SubscriptionStore from "SubscriptionStore" /* 2179 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8736 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13906 */;
+import SubscriptionStore from "SubscriptionStore" /* 2177 */;
 
 require = fn;
 const size = fn(2);

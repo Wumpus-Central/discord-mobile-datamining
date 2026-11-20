@@ -1,15 +1,15 @@
-// === Module 10072: InAppReportsTextElement ===
+// === Module 10075: InAppReportsTextElement ===
 
-// Module 10072 (InAppReportsTextElement)
-import Text_Text from "Text/Text" /* 5383 */;
-import CustomMarkupAll from "CustomMarkup" /* 5812 */;
+// Module 10075 (InAppReportsTextElement)
+import Text_Text from "Text/Text" /* 5385 */;
+import CustomMarkupAll from "CustomMarkup" /* 5814 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({ container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, body: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextElement.tsx");

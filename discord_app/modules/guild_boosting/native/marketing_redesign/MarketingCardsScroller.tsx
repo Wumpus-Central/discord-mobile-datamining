@@ -1,11 +1,11 @@
-// === Module 13364: MarketingCardsScroller ===
+// === Module 13334: MarketingCardsScroller ===
 
-// Module 13364 (MarketingCardsScroller)
+// Module 13334 (MarketingCardsScroller)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
+import util from "util" /* 1112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
 require = fn;
 const View = fn(17).View;
@@ -13,10 +13,10 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
 let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
-const ColorUtils = fn(4789);
+const ColorUtils = fn(4791);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];

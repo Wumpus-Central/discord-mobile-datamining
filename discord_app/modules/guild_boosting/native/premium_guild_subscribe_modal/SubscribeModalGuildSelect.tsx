@@ -1,25 +1,25 @@
-// === Module 6428: SubscribeModalGuildSelect ===
+// === Module 6430: SubscribeModalGuildSelect ===
 
-// Module 6428 (SubscribeModalGuildSelect)
+// Module 6430 (SubscribeModalGuildSelect)
 import nativeDefault from "native" /* 575 */;
-import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6425 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6435 */;
-import SearchBarNavDefault from "SearchBarNav" /* 13106 */;
+import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6427 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6437 */;
+import SearchBarNavDefault from "SearchBarNav" /* 13076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(6427).PremiumGuildSubscribeModalScenes;
-const GuildFeatures = fn(1072).GuildFeatures;
+let closure_9 = fn(6429).PremiumGuildSubscribeModalScenes;
+const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { safeArea: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 }, guildList: { padding: 16 }, guildOption: { flexDirection: "row", alignItems: "center", paddingVertical: 10 }, guildName: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 };
-obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6434).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6436).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx");
@@ -30,7 +30,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   first = undefined;
   const tmp = closure_13();
   dependencyMap = tmp;
-  _slicedToArray = guildBoostSlots(1502).useNavigation();
+  _slicedToArray = guildBoostSlots(1500).useNavigation();
   [first, obj4.onChange] = first.useState("");
   items = [guildBoostSlots];
   const memo = first.useMemo(() => {
@@ -58,7 +58,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
     }
     return set;
   }, items);
-  let obj = guildBoostSlots(1502);
+  let obj = guildBoostSlots(1500);
   const items1 = [GuildStore, SortedGuildStore];
   const items2 = [first, memo];
   const stateFromStoresArray = guildBoostSlots(504).useStateFromStoresArray(items1, () => {
@@ -104,12 +104,12 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   const obj3 = { top: true, style: tmp.safeArea, children: null };
   const obj4 = { placeholder: null, onChange: null, onClose: null };
   let obj2 = guildBoostSlots(504);
-  const intl = guildBoostSlots(1113).intl;
-  obj4.placeholder = intl.string(guildBoostSlots(1113).t.vf3ZTa);
+  const intl = guildBoostSlots(1112).intl;
+  obj4.placeholder = intl.string(guildBoostSlots(1112).t.vf3ZTa);
   obj4.onClose = BoostingActionCreatorsAll.closeApplyBoostModal;
   const items3 = [closure_11(SearchBarNavDefault, obj4), ];
   const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-  obj5.children = closure_11(guildBoostSlots(6898).SafeAreaPaddingView, {
+  obj5.children = closure_11(guildBoostSlots(6897).SafeAreaPaddingView, {
     bottom: true,
     children: stateFromStoresArray.map((guild) => {
       const obj = {
@@ -128,5 +128,5 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   });
   items3[1] = closure_11(memo, obj5);
   obj3.children = items3;
-  return closure_12(guildBoostSlots(6898).SafeAreaPaddingView, obj3);
+  return closure_12(guildBoostSlots(6897).SafeAreaPaddingView, obj3);
 };

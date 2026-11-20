@@ -1,8 +1,8 @@
-// === Module 18708: conjureAppSlotsLeftLabel ===
+// === Module 18532: conjureAppSlotsLeftLabel ===
 
-// Module 18708 (conjureAppSlotsLeftLabel)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
+// Module 18532 (conjureAppSlotsLeftLabel)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/create/conjureAppSlotsLeftLabel.tsx");
@@ -10,11 +10,11 @@ const result = size.fileFinishedImporting("modules/conjure/create/conjureAppSlot
 export function conjureAppSlotsLeftLabel(count) {
   if (0 === count) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef4089.s28pGG);
+    let stringResult = intl2.string(_modDef4091.s28pGG);
   } else {
     const intl = util.intl;
     const obj = { count };
-    stringResult = intl.formatToPlainString(_modDef4089.Wy5aK4, obj);
+    stringResult = intl.formatToPlainString(_modDef4091.Wy5aK4, obj);
   }
   return stringResult;
 }

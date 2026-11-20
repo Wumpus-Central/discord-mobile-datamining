@@ -1,16 +1,16 @@
-// === Module 8669: GuildReportFalseAlarmSystemMessage ===
+// === Module 8668: GuildReportFalseAlarmSystemMessage ===
 
-// Module 8669 (GuildReportFalseAlarmSystemMessage)
-import util from "util" /* 1113 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8572 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8579 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8581 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8583 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8662 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8663 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 8668 (GuildReportFalseAlarmSystemMessage)
+import util from "util" /* 1112 */;
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8571 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8578 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8580 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8582 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8661 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8662 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 const size = fn(2);

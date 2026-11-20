@@ -1,19 +1,19 @@
-// === Module 17829: useGuildActionRows ===
+// === Module 17656: useGuildActionRows ===
 
-// Module 17829 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 6565 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6706 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13151 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13312 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17787 */;
+// Module 17656 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 6567 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6708 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13121 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13282 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17614 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6563 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6565 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(8208).ChannelListGuildActionRow;
-const GuildFeatures = fn(1072).GuildFeatures;
+const ChannelListGuildActionRow = fn(8207).ChannelListGuildActionRow;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
 
@@ -65,7 +65,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(4625).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(4627).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

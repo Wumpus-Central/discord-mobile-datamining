@@ -1,12 +1,12 @@
-// === Module 16753: SettingsAppearanceActivityCardItem ===
+// === Module 16577: SettingsAppearanceActivityCardItem ===
 
-// Module 16753 (SettingsAppearanceActivityCardItem)
+// Module 16577 (SettingsAppearanceActivityCardItem)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
+import native from "native" /* 1186 */;
 import ClipView from "ClipView" /* 8903 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
-import module_1655 from "module_1655" /* 1655 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
+import module_1653 from "module_1653" /* 1653 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
@@ -14,12 +14,12 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16754);
+const HappeningNowConstants = fn(16578);
 ({ HAPPENING_NOW_BADGE_SIZE, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_CARD_HEIGHT, HAPPENING_NOW_CARD_MARGIN_RIGHT, HAPPENING_NOW_CARD_PADDING, HAPPENING_NOW_CARD_PADDING_RIGHT } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let closure_7 = module_1655.createAnimatedComponent(fn(1187).Icon);
-const createStyles = fn(4792);
+let closure_7 = module_1653.createAnimatedComponent(fn(1186).Icon);
+const createStyles = fn(4794);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" }, cardBadgeWrapper: { position: "absolute", top: 0, right: 0 }, cardImage: null, cardBadge: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageAsset: null, shiftedAvatar: null, userCounter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj.cardImage = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, position: "relative" };
@@ -33,7 +33,7 @@ const size2 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTE
 obj.cardImageAsset = size2;
 obj.shiftedAvatar = { marginLeft: -4 };
 let obj5 = { height: "100%", backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG, borderRadius: nativeDefault.radii.sm };
-obj.userCounter = { flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -4, height: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL_20], minWidth: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL_20], borderRadius: nativeDefault.radii.round, paddingHorizontal: 4, paddingTop: 1 };
+obj.userCounter = { flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -4, height: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.XSMALL_20], minWidth: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.XSMALL_20], borderRadius: nativeDefault.radii.round, paddingHorizontal: 4, paddingTop: 1 };
 let closure_8 = createStyles.createStyles(obj);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardItem.tsx");

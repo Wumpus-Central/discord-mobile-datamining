@@ -1,9 +1,9 @@
-// === Module 20052: GuildSettingsRoleSubscriptionsGroupEdit ===
+// === Module 19872: GuildSettingsRoleSubscriptionsGroupEdit ===
 
-// Module 20052 (GuildSettingsRoleSubscriptionsGroupEdit)
-import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 5473 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20065 */;
+// Module 19872 (GuildSettingsRoleSubscriptionsGroupEdit)
+import util from "util" /* 1112 */;
+import ToastUtils from "ToastUtils" /* 5475 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19885 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -88,7 +88,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -198,7 +198,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   return error(first1, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-const ApplicationTypes = fn(1365).ApplicationTypes;
+const ApplicationTypes = fn(1363).ApplicationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);

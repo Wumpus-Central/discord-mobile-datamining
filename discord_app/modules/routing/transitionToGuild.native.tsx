@@ -1,12 +1,12 @@
-// === Module 6714: transitionToGuild ===
+// === Module 6716: transitionToGuild ===
 
-// Module 6714 (transitionToGuild)
-import router_utils from "router_utils" /* 1099 */;
-import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6715 */;
+// Module 6716 (transitionToGuild)
+import router_utils from "router_utils" /* 1098 */;
+import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6717 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 

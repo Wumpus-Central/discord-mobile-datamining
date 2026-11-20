@@ -1,15 +1,15 @@
-// === Module 7888: EditGuildEventPreview ===
+// === Module 7887: EditGuildEventPreview ===
 
-// Module 7888 (EditGuildEventPreview)
+// Module 7887 (EditGuildEventPreview)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 7455 */;
-import ScheduleUtils from "ScheduleUtils" /* 7456 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 7894 */;
+import native from "native" /* 1186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 7454 */;
+import ScheduleUtils from "ScheduleUtils" /* 7455 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 7893 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 function PreviewBody(event) {
@@ -21,7 +21,7 @@ function PreviewBody(event) {
   items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(5408)(stateFromStores);
+  const tmp6 = channel_id(5410)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -35,21 +35,21 @@ function PreviewBody(event) {
   eventLocationIconSource = require("GuildEventUtils").getEventLocationIconSource(event, stateFromStores, true);
   let obj3 = { style: tmp.header, children: null };
   const obj4 = { style: tmp.headerTitle, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1113).intl;
+  const intl = tmp2(1112).intl;
   obj4.children = intl.string(require("util").t.yBsFE3);
   const items2 = [closure_6(require("Text/Text").Text, obj4), ];
   const obj5 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "body-sm/medium", color: "text-default", children: null };
   let formatToPlainStringResult;
   if (null != stateFromStores) {
-    const intl2 = tmp2(1113).intl;
+    const intl2 = tmp2(1112).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(7890)(obj7);
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1113).t.sxcQPE, obj6);
+    obj6.channelName = tmp5(7889)(obj7);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1112).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
   if (null != stateFromStores) {
-    const intl4 = tmp2(1113).intl;
+    const intl4 = tmp2(1112).intl;
     const obj8 = {
       channelName: tmp8,
       channelHook() {
@@ -80,10 +80,10 @@ function PreviewBody(event) {
           return metroImportDefault(noop.Fragment, obj3, str);
         }
     };
-    let formatResult = intl4.format(tmp2(1113).t.f55NX0, obj8);
+    let formatResult = intl4.format(tmp2(1112).t.f55NX0, obj8);
   } else {
-    const intl3 = tmp2(1113).intl;
-    formatResult = intl3.string(tmp2(1113).t.KDPFi9);
+    const intl3 = tmp2(1112).intl;
+    formatResult = intl3.string(tmp2(1112).t.KDPFi9);
   }
   obj5.children = formatResult;
   items2[1] = closure_6(require("Text/Text").Text, obj5);
@@ -93,13 +93,13 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" }, centered: { flexDirection: "column", alignItems: "center", justifyContent: "center" }, centerContainer: { flexGrow: 0, width: "100%" }, flex: { flex: 1, overflow: "visible" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
 let obj3 = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
 obj2.eventContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
 obj2.channelContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 14 };
 let obj5 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4, height: 14, transform: null };
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -109,7 +109,7 @@ obj5.transform = items;
 obj2.channelIcon = obj5;
 obj2.buttonContainer = { position: "absolute", bottom: 16, left: 0, right: 0 };
 let obj4 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
-obj2.error = { paddingBottom: 8, fontSize: 14, fontFamily: fn(1072).Fonts.PRIMARY_MEDIUM, color: nativeDefault.unsafe_rawColors.RED_400 };
+obj2.error = { paddingBottom: 8, fontSize: 14, fontFamily: fn(1071).Fonts.PRIMARY_MEDIUM, color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventPreview.tsx");

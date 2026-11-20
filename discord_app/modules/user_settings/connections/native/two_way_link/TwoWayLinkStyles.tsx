@@ -1,8 +1,8 @@
-// === Module 6925: TwoWayLinkStyles ===
+// === Module 6924: TwoWayLinkStyles ===
 
-// Module 6925 (TwoWayLinkStyles)
+// Module 6924 (TwoWayLinkStyles)
 import nativeDefault from "native" /* 575 */;
-import createStyles from "createStyles" /* 4792 */;
+import createStyles from "createStyles" /* 4794 */;
 import size from "module_2" /* 2 */;
 
 const obj = { container: { flex: 1, alignItems: "stretch", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, navHeader: null, content: null, title: null, body: null, bodyContent: null, footerContainer: null, footerButton: null };

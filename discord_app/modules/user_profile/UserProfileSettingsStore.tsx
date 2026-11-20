@@ -1,13 +1,13 @@
-// === Module 8013: UserProfileSettingsStore ===
+// === Module 8012: UserProfileSettingsStore ===
 
-// Module 8013 (UserProfileSettingsStore)
+// Module 8012 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RouteConstants from "RouteConstants" /* 1073 */;
-import FavoritesConstants from "FavoritesConstants" /* 4654 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8014 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8015 */;
-import Constants from "Constants" /* 1072 */;
+import RouteConstants from "RouteConstants" /* 1072 */;
+import FavoritesConstants from "FavoritesConstants" /* 4656 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8013 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8014 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 function handleFormOpen() {

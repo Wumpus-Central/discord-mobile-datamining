@@ -1,23 +1,23 @@
-// === Module 4724: PermissionStore ===
+// === Module 4726: PermissionStore ===
 
-// Module 4724 (PermissionStore)
+// Module 4726 (PermissionStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4655 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4732 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4733 */;
-import ImpersonateStore from "ImpersonateStore" /* 4697 */;
-import LurkingStore from "LurkingStore" /* 4725 */;
-import StageInstanceStore from "StageInstanceStore" /* 4646 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
-import UserRecord from "UserRecord" /* 1407 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4657 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4734 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4735 */;
+import ImpersonateStore from "ImpersonateStore" /* 4699 */;
+import LurkingStore from "LurkingStore" /* 4727 */;
+import StageInstanceStore from "StageInstanceStore" /* 4648 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4728 */;
+import UserRecord from "UserRecord" /* 1405 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function getUncachedChannelPermissions(id, arg1) {
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(4645);
+const ChannelRecord = fn(4647);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(4659);
+const GuildRecord = fn(4661);
 ({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
-const Permissions = fn(1072).Permissions;
-let closure_18 = fn(4728).MemberSafetyPagePermissions;
+const Permissions = fn(1071).Permissions;
+let closure_18 = fn(4730).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

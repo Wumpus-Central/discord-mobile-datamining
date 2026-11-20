@@ -1,15 +1,15 @@
-// === Module 9898: useMediaViewerSyncer ===
+// === Module 9901: useMediaViewerSyncer ===
 
-// Module 9898 (useMediaViewerSyncer)
-import _mod1655 from "module_1655" /* 1655 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8104 */;
+// Module 9901 (useMediaViewerSyncer)
+import _mod1653 from "module_1653" /* 1653 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(9899);
+const Constants = fn(9902);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: metroImportDefault, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "(function useMediaViewerSyncerTsx1(){let[thumbnailsScrolling,SCROLLING_DRAG,swipeSource]=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');})" };
 let closure_12 = { code: "(function useMediaViewerSyncerTsx2(){let[thumbnailsScrolling,SCROLLING_DRAG]=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);})" };
@@ -53,14 +53,14 @@ export function useMediaViewerSyncer(sources) {
   let memo;
   items = [initialIndex];
   memo = memo.useMemo(() => {
-    const obj = { selectedIndex: _mod1655.makeMutable(initialIndex), thumbnailsIndex: null, thumbnailsScrolling: null, thumbnailsAnimateTo: null, viewerPos: null, viewerScrolling: null, zoomed: null, swipeSource: null };
-    obj.thumbnailsIndex = _mod1655.makeMutable(initialIndex);
-    obj.thumbnailsScrolling = _mod1655.makeMutable(0);
-    obj.thumbnailsAnimateTo = _mod1655.makeMutable(-1);
-    obj.viewerPos = _mod1655.makeMutable(initialIndex);
-    obj.viewerScrolling = _mod1655.makeMutable(0);
-    obj.zoomed = _mod1655.makeMutable(false);
-    obj.swipeSource = _mod1655.makeMutable(undefined);
+    const obj = { selectedIndex: _mod1653.makeMutable(initialIndex), thumbnailsIndex: null, thumbnailsScrolling: null, thumbnailsAnimateTo: null, viewerPos: null, viewerScrolling: null, zoomed: null, swipeSource: null };
+    obj.thumbnailsIndex = _mod1653.makeMutable(initialIndex);
+    obj.thumbnailsScrolling = _mod1653.makeMutable(0);
+    obj.thumbnailsAnimateTo = _mod1653.makeMutable(-1);
+    obj.viewerPos = _mod1653.makeMutable(initialIndex);
+    obj.viewerScrolling = _mod1653.makeMutable(0);
+    obj.zoomed = _mod1653.makeMutable(false);
+    obj.swipeSource = _mod1653.makeMutable(undefined);
     return obj;
   }, items);
   let items1 = [sources, memo, onEndReached, onEndReachedThreshold];

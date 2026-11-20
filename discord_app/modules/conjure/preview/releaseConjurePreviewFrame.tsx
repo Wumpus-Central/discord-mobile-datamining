@@ -4,7 +4,7 @@
 import conjurePreviewSurface from "conjurePreviewSurface" /* 6824 */;
 import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 6833 */;
 import leaveFrame from "leaveFrame" /* 6834 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 
 require = fn;
 const size = fn(2);

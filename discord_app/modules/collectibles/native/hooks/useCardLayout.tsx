@@ -1,6 +1,6 @@
-// === Module 17363: useCardLayout ===
+// === Module 17190: useCardLayout ===
 
-// Module 17363 (useCardLayout)
+// Module 17190 (useCardLayout)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ export function useCardLayout() {
     }
     closure_0.current = nativeScrollRef;
   }, []);
-  [tmp3, dependencyMap] = noop.useState(() => ref(1496).getWindowDimensions().width);
+  [tmp3, dependencyMap] = noop.useState(() => ref(1494).getWindowDimensions().width);
   const layoutEffect = noop.useLayoutEffect(() => {
     const current = ref.current;
     if (current != null) {
@@ -98,7 +98,7 @@ export function useCardLayout() {
     const diff2 = tmp17 - 1;
     if (result3 + (bound + tmp15(9425).COLLECTIBLES_SHOP_CARD_GAP * diff2) > tmp3) {
       if (1 < tmp17) {
-        const obj3 = { columns: 1, cardWidth: "r", rowWidth: "channel_id", ref: callback, onLayout: callback1 };
+        const obj3 = { columns: 1, cardWidth: "r", rowWidth: "ao", ref: callback, onLayout: callback1 };
         let obj = obj3;
       }
       return obj;
@@ -109,5 +109,5 @@ export function useCardLayout() {
     obj.ref = callback;
     obj.onLayout = callback1;
   }
-  const tmp2 = _slicedToArray(noop.useState(() => ref(1496).getWindowDimensions().width), 2);
+  const tmp2 = _slicedToArray(noop.useState(() => ref(1494).getWindowDimensions().width), 2);
 }

@@ -1,14 +1,14 @@
-// === Module 18457: AppLauncherActionSheet ===
+// === Module 18282: AppLauncherActionSheet ===
 
-// Module 18457 (AppLauncherActionSheet)
-import _mod1655 from "module_1655" /* 1655 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 5351 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10614 */;
-import AppLauncherContext from "AppLauncherContext" /* 12044 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12045 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12859 */;
-import getAppDMApplication from "getAppDMApplication" /* 12978 */;
+// Module 18282 (AppLauncherActionSheet)
+import _mod1653 from "module_1653" /* 1653 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5022 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 5353 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10556 */;
+import AppLauncherContext from "AppLauncherContext" /* 11986 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11987 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12829 */;
+import getAppDMApplication from "getAppDMApplication" /* 12948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,8 +16,8 @@ require = fn;
 function AppLauncherActionSheet(arg0) {
   ({ chatInputRef: require, channel } = arg0);
   const ref = noop.useRef(null);
-  const sharedValue = _mod1655.useSharedValue(-1);
-  const sharedValue1 = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(-1);
+  const sharedValue1 = _mod1653.useSharedValue(0);
   const ref1 = noop.useRef(undefined);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const ref2 = noop.useRef(AppLauncherContext.AppLauncherKeyboardCloseReason.DISMISSED);
@@ -133,7 +133,7 @@ function AppLauncherActionSheet(arg0) {
   })} entrypoint={TEXT} keyboardCloseReasonRef={ref2} width={defaultAppLauncherWidth} overrideParams={null} />;
   return jsx(Sheet_BottomSheet.BottomSheet, { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null });
 }
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");

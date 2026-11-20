@@ -1,21 +1,21 @@
-// === Module 1500: KeyboardUIStore ===
+// === Module 1498: KeyboardUIStore ===
 
-// Module 1500 (KeyboardUIStore)
+// Module 1498 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1228 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1501 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1626 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ChatInputFocused from "ChatInputFocused" /* 1629 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1630 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1642 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1644 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 2019 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1380 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1227 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1499 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1624 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import ChatInputFocused from "ChatInputFocused" /* 1627 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1628 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1640 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1642 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 2017 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1378 */;
 import module_560 from "module_560" /* 560 */;
-import SafeAreaStore from "SafeAreaStore" /* 1631 */;
+import SafeAreaStore from "SafeAreaStore" /* 1629 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,33 +1,34 @@
-// === Module 18637: ConjureClarificationEntityPicker ===
+// === Module 18465: ConjureClarificationEntityPicker ===
 
-// Module 18637 (ConjureClarificationEntityPicker)
-import util from "util" /* 1113 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5006 */;
+// Module 18465 (ConjureClarificationEntityPicker)
+import util from "util" /* 1112 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5008 */;
 import ConjureUtils from "ConjureUtils" /* 6746 */;
-import TableRow from "TableRow" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11669 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 18364 */;
-import ConjureClarification from "ConjureClarification" /* 18470 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 18483 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 18638 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 18639 */;
+import TableRow from "TableRow" /* 6925 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11611 */;
+import ConjureServerPickerSheetDefault from "ConjureServerPickerSheet" /* 12172 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 18198 */;
+import ConjureClarification from "ConjureClarification" /* 18295 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 18308 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 18466 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4722 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 function ServerPicker(onChange) {
   ({ question: require, value } = onChange);
   importDefault = value;
   onChange = onChange.onChange;
+  let found;
   ({ disabled, fallback } = onChange);
   const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds("ConjureClarificationEntityPicker");
   if (0 === conjureEligibleGuilds.length) {
     return fallback;
   } else {
-    const found = conjureEligibleGuilds.find((id) => {
+    found = conjureEligibleGuilds.find((id) => {
       const first = value[0];
       id = undefined;
       if (first != null) {
@@ -45,7 +46,7 @@ function ServerPicker(onChange) {
       name = require("ConjureClarification").clarificationPickerPlaceholder("server", false);
       const tmpResult = require("ConjureClarification");
     }
-    const obj3 = { label: name, icon: null, arrow: true, disabled: null, onPress: null };
+    let obj3 = { label: name, icon: null, arrow: true, disabled: null, onPress: null };
     let tmp8Result;
     if (null != found) {
       const obj4 = { guild: found, size: require("GuildIcon").GuildIconSizes.SMALL_32 };
@@ -55,26 +56,25 @@ function ServerPicker(onChange) {
     obj3.icon = tmp8Result;
     obj3.disabled = disabled;
     obj3.onPress = function openSheet() {
-      const obj2 = {
-        content: jsx(ConjureClarificationServerSheetDefault, {
-          sheetKey: ConjureClarificationPickerSheet,
-          title: question.question,
-          guilds: conjureEligibleGuilds,
-          onPick(id) {
-            const name = id;
-            items = [id.id];
-            return closure_1_2(require("ConjureClarification").clarificationEntities("server", items, () => name.name, closure_1_1));
-          }
-        }),
-        key: ConjureClarificationPickerSheet,
-        stackingBehavior: "stack"
+      const obj2 = { sheetKey: ConjureClarificationPickerSheet, title: question.question, guilds: conjureEligibleGuilds, selectedGuildId: null, onPick: null };
+      let id;
+      const obj = ActionSheetActionCreators;
+      if (found != null) {
+        id = found.id;
+      }
+      obj2.selectedGuildId = id;
+      obj2.onPick = function onPick(id) {
+        const name = id;
+        items = [id.id];
+        return closure_1_2(require("ConjureClarification").clarificationEntities("server", items, () => name.name, closure_1_1));
       };
-      ActionSheetActionCreators.showActionSheet(obj2);
+      obj.showActionSheet({ content: jsx(ConjureServerPickerSheetDefault, { sheetKey: ConjureClarificationPickerSheet, title: question.question, guilds: conjureEligibleGuilds, selectedGuildId: null, onPick: null }), key: ConjureClarificationPickerSheet, stackingBehavior: "stack" });
+      const obj3 = { content: jsx(ConjureServerPickerSheetDefault, { sheetKey: ConjureClarificationPickerSheet, title: question.question, guilds: conjureEligibleGuilds, selectedGuildId: null, onPick: null }), key: ConjureClarificationPickerSheet, stackingBehavior: "stack" };
     };
     obj2.children = jsx(require("TableRow").TableRow, { label: name, icon: null, arrow: true, disabled: null, onPress: null });
     return jsx(require("TableRowGroup").TableRowGroup, { hasIcons: null != found, children: null });
   }
-  const obj = require("useConjureProjects");
+  let obj = require("useConjureProjects");
 }
 function ProjectPicker(arg0) {
   ({ question: require, value } = arg0);
@@ -207,7 +207,7 @@ function GuildEntityPicker(value) {
                                     let obj = { content: null, key: null, stackingBehavior: "stack" };
                                     obj4.selectedChannel = found;
                                     const intl = util.intl;
-                                    obj4.noChannelOptionLabel = intl.string(_modDef4089["jtBVV+"]);
+                                    obj4.noChannelOptionLabel = intl.string(_modDef4091["jtBVV+"]);
                                     obj4.onSelect = function onSelect(stateFromStores1) {
                                       if (null == stateFromStores1) {
                                         items = [];

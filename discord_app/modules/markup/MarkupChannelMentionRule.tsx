@@ -1,22 +1,22 @@
-// === Module 5825: MarkupChannelMentionRule ===
+// === Module 5827: MarkupChannelMentionRule ===
 
-// Module 5825 (MarkupChannelMentionRule)
-import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef2070 from "module_2070" /* 2070 */;
-import StringUtils from "StringUtils" /* 2153 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import LinkUtils from "LinkUtils" /* 5415 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5824 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5826 */;
-import ChannelUtils from "ChannelUtils" /* 5827 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 5836 */;
-import GatedChannelStore from "GatedChannelStore" /* 4696 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 5827 (MarkupChannelMentionRule)
+import util from "util" /* 1112 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import _modDef2068 from "module_2068" /* 2068 */;
+import StringUtils from "StringUtils" /* 2151 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import LinkUtils from "LinkUtils" /* 5417 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5826 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5828 */;
+import ChannelUtils from "ChannelUtils" /* 5829 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 5838 */;
+import GatedChannelStore from "GatedChannelStore" /* 4698 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function getChannel(id, arr) {
@@ -257,7 +257,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
     return obj57;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_9, ME: closure_10 } = Constants);
 let obj = {
   channelMention: {
@@ -326,7 +326,7 @@ let obj2 = {
   }
 };
 obj.channelOrMessageUrl = {
-  order: _modDef2070.defaultRules.url.order - 0.5,
+  order: _modDef2068.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -386,7 +386,7 @@ obj.channelOrMessageUrl = {
   }
 };
 let obj3 = {
-  order: _modDef2070.defaultRules.url.order - 0.5,
+  order: _modDef2068.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -446,7 +446,7 @@ let obj3 = {
   }
 };
 obj.mediaPostLink = {
-  order: _modDef2070.defaultRules.url.order - 0.5,
+  order: _modDef2068.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;

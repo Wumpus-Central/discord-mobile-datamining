@@ -4,7 +4,7 @@
 import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8904 */;
 import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8906 */;
 import noop from "module_19" /* 19 */;
-import module_1655 from "module_1655" /* 1655 */;
+import module_1653 from "module_1653" /* 1653 */;
 
 require = fn;
 function SolidCutout(arg0) {
@@ -45,7 +45,7 @@ let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.solidCutoutContainer = {};
 obj2.solidCutout = { position: "absolute" };
 const styles = StyleSheet.create(obj2);
-const ClipViewNativeComponent = module_1655.createAnimatedComponent(ClipViewNativeComponentDefault);
+const ClipViewNativeComponent = module_1653.createAnimatedComponent(ClipViewNativeComponentDefault);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 

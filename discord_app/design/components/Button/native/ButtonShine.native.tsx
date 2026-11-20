@@ -1,16 +1,16 @@
-// === Module 5402: ButtonShine ===
+// === Module 5404: ButtonShine ===
 
-// Module 5402 (ButtonShine)
+// Module 5404 (ButtonShine)
 import _modDef671 from "module_671" /* 671 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import createStyles from "createStyles" /* 4792 */;
-import shared from "shared" /* 4799 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import ButtonHooks from "ButtonHooks" /* 5397 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import createStyles from "createStyles" /* 4794 */;
+import shared from "shared" /* 4801 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import ButtonHooks from "ButtonHooks" /* 5399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function useShineEffectStyles(arg0, variant) {
@@ -18,7 +18,7 @@ function useShineEffectStyles(arg0, variant) {
   let obj2 = _modDef671(buttonTextColorStyles.color);
   const hexResult = _modDef671(buttonTextColorStyles.color).alpha(0.1).hex();
   const alphaResult = _modDef671(buttonTextColorStyles.color).alpha(0.1);
-  items = [_undefined3, arg0, 120, noop.useContext(shared.AccessibilityPreferencesContext).reducedMotion.enabled, 56, _mod1655.withRepeat, _mod1655.withSequence, timing_timing.withTiming, _mod1655.withDelay, 750, 2000];
+  items = [_undefined3, arg0, 120, noop.useContext(shared.AccessibilityPreferencesContext).reducedMotion.enabled, 56, _mod1653.withRepeat, _mod1653.withSequence, timing_timing.withTiming, _mod1653.withDelay, 750, 2000];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -82,7 +82,7 @@ function useShineEffectStyles(arg0, variant) {
   ButtonShineNativeTsx1.__workletHash = 2724629163487;
   ButtonShineNativeTsx1.__initData = tmp5;
   let obj3 = { shineStyles: null, shineAnimatedStyle: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(ButtonShineNativeTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ButtonShineNativeTsx1);
   let obj5 = { shineContainer: { width: "100%", height: "200%", position: "absolute", overflow: "hidden" }, shine: null, shineInner: { width: 16, height: "100%", backgroundColor: hexResult } };
   const size = { width: 56, height: "500%", transform: null, backgroundColor: hexResult, top: "-100%", alignItems: "center" };
   let items2 = [{ rotate: "30deg" }];
@@ -112,9 +112,9 @@ export function ButtonShine(variant) {
   };
   items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
   obj.style = items;
-  const obj2 = { style: shineStyles.shine, children: jsx(_modDef1655.View, { style: shineStyles.shineInner }) };
-  obj.children = jsx(_modDef1655.View, { style: shineStyles.shine, children: jsx(_modDef1655.View, { style: shineStyles.shineInner }) });
-  return jsx(_modDef1655.View, {
+  const obj2 = { style: shineStyles.shine, children: jsx(_modDef1653.View, { style: shineStyles.shineInner }) };
+  obj.children = jsx(_modDef1653.View, { style: shineStyles.shine, children: jsx(_modDef1653.View, { style: shineStyles.shineInner }) });
+  return jsx(_modDef1653.View, {
     onLayout(nativeEvent) {
       return closure_0(nativeEvent.nativeEvent.layout.width);
     },

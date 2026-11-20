@@ -1,24 +1,24 @@
-// === Module 10580: ChannelCallModal ===
+// === Module 10522: ChannelCallModal ===
 
-// Module 10580 (ChannelCallModal)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6373 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 10578 */;
-import RevealProvider from "RevealProvider" /* 10582 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 10583 */;
-import CameraPreviewDefault from "CameraPreview" /* 10584 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 10776 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 10777 */;
-import PanGestureAnimationsDefault from "PanGestureAnimations" /* 13645 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 13646 */;
-import useModalPanGestureDefault from "useModalPanGesture" /* 13656 */;
+// Module 10522 (ChannelCallModal)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4970 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6375 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 10520 */;
+import RevealProvider from "RevealProvider" /* 10524 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 10525 */;
+import CameraPreviewDefault from "CameraPreview" /* 10526 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 10718 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 10719 */;
+import PanGestureAnimationsDefault from "PanGestureAnimations" /* 13615 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 13616 */;
+import useModalPanGestureDefault from "useModalPanGesture" /* 13627 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 class ChannelCallCameraPreview {
@@ -56,10 +56,10 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(10574);
+const ChannelCallStore = fn(10516);
 ({ useChannelCallOrientationHandlers: metroImportDefault, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: closure_10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
-const VoiceChatDrawerState = fn(10575).VoiceChatDrawerState;
-const Constants = fn(10581);
+const VoiceChatDrawerState = fn(10517).VoiceChatDrawerState;
+const Constants = fn(10523);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -71,14 +71,14 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(10776).terminate();
-        const obj = closure_1_1(10776);
-        closure_1_1(10539).setHidden(false);
-        const obj2 = closure_1_1(10539);
+        closure_1_1(10718).terminate();
+        const obj = closure_1_1(10718);
+        closure_1_1(10481).setHidden(false);
+        const obj2 = closure_1_1(10481);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
-        obj3 = channel(4968);
+        obj3 = channel(4970);
       };
     }
   }, items);
@@ -121,11 +121,11 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   const ref3 = noop.useRef(undefined);
   noop = ref3;
   let obj = require("initialize");
-  const sharedValue = require("module_1655").useSharedValue(0);
+  const sharedValue = require("module_1653").useSharedValue(0);
   c5 = sharedValue;
-  const obj4 = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(0);
-  const obj5 = require("module_1655");
+  const obj4 = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(0);
+  const obj5 = require("module_1653");
   let items2 = [closure_21, state().voiceChatDrawerState];
   _require = undefined;
   [tmp9, tmp10] = items2;
@@ -138,15 +138,15 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx3.__closure = items3;
   ChannelCallModalTsx3.__workletHash = 15324156023248;
   ChannelCallModalTsx3.__initData = tmp9;
-  const derivedValue = require("module_1655").useDerivedValue(ChannelCallModalTsx3);
+  const derivedValue = require("module_1653").useDerivedValue(ChannelCallModalTsx3);
   const size = useWindowDimensionsDefault();
   width = size.width;
   const height = size.height;
-  const obj6 = require("module_1655");
-  const sharedValue2 = require("module_1655").useSharedValue(false);
+  const obj6 = require("module_1653");
+  const sharedValue2 = require("module_1653").useSharedValue(false);
   let result = 0.8 * height;
   const tmp15 = useIsActivityFocusedDefault(channelId);
-  const tmpResult = require("module_1655");
+  const tmpResult = require("module_1653");
   [tmp17, c7] = c3(noop.useState(false), 2);
   let tmp18 = !tmp15;
   if (!tmp15) {
@@ -184,9 +184,9 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
       ChannelCallModalTsx4.__closure = items1;
       ChannelCallModalTsx4.__workletHash = 17212390568465;
       ChannelCallModalTsx4.__initData = tmp9;
-      _mod1708.scheduleOnUI(ChannelCallModalTsx4);
-      _mod1708.scheduleOnRN(RouteManagerUtils.transitionToVoiceRoute, current.guildId, channelId);
-      const tmp3Result = _mod1708;
+      _mod1706.scheduleOnUI(ChannelCallModalTsx4);
+      _mod1706.scheduleOnRN(RouteManagerUtils.transitionToVoiceRoute, current.guildId, channelId);
+      const tmp3Result = _mod1706;
     }
   }, items4);
   const tmp16 = c3(noop.useState(false), 2);
@@ -235,7 +235,7 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx5.__closure = items6;
   ChannelCallModalTsx5.__workletHash = 604699116380;
   ChannelCallModalTsx5.__initData = tmp25;
-  const items7 = [closure_24, require("module_1708").scheduleOnRN, closure_10, channelId, VoiceChatDrawerState, require("RouteManagerUtils").transitionToVoiceRoute, guildId];
+  const items7 = [closure_24, require("module_1706").scheduleOnRN, closure_10, channelId, VoiceChatDrawerState, require("RouteManagerUtils").transitionToVoiceRoute, guildId];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -273,8 +273,8 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx6.__closure = items8;
   ChannelCallModalTsx6.__workletHash = 9630592184087;
   ChannelCallModalTsx6.__initData = tmp31;
-  const animatedReaction = require("module_1655").useAnimatedReaction(ChannelCallModalTsx5, ChannelCallModalTsx6);
-  const tmpResult5 = require("module_1655");
+  const animatedReaction = require("module_1653").useAnimatedReaction(ChannelCallModalTsx5, ChannelCallModalTsx6);
+  const tmpResult5 = require("module_1653");
   const items9 = [closure_25, derivedValue];
   _require = undefined;
   [tmp39, tmp40] = items9;
@@ -312,12 +312,12 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx8.__closure = items12;
   ChannelCallModalTsx8.__workletHash = 17096813907815;
   ChannelCallModalTsx8.__initData = tmp41;
-  const animatedReaction1 = require("module_1655").useAnimatedReaction(ChannelCallModalTsx7, ChannelCallModalTsx8);
+  const animatedReaction1 = require("module_1653").useAnimatedReaction(ChannelCallModalTsx7, ChannelCallModalTsx8);
   let tmp46 = !tmp17;
   if (!tmp17) {
     tmp46 = !tmp15;
   }
-  const tmpResult6 = require("module_1655");
+  const tmpResult6 = require("module_1653");
   const items13 = [closure_19, width];
   _require = undefined;
   [tmp47, tmp48] = items13;
@@ -333,8 +333,8 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx1.__workletHash = 14039317631813;
   ChannelCallModalTsx1.__initData = tmp47;
   const items15 = [closure_20, , ];
-  const derivedValue1 = require("module_1655").useDerivedValue(ChannelCallModalTsx1);
-  items15[1] = require("module_1708").scheduleOnRN;
+  const derivedValue1 = require("module_1653").useDerivedValue(ChannelCallModalTsx1);
+  items15[1] = require("module_1706").scheduleOnRN;
   items15[2] = require("ChatInputUtils").dismissKeyboard;
   _require = undefined;
   importDefault = undefined;
@@ -351,7 +351,7 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx2.__initData = tmp50;
   const callback = obj3.useCallback(ChannelCallModalTsx2, []);
   const obj7 = { lowerBounds: -width, upperBounds: 0, translate: sharedValue, vertical: false, snapPositions: derivedValue1, onStart: callback, isGestureInProgress: sharedValue2 };
-  const tmpResult7 = require("module_1655");
+  const tmpResult7 = require("module_1653");
   const obj13 = PanGestureAnimationsDefault({ lowerBounds: -width, upperBounds: 0, translate: sharedValue, vertical: false, snapPositions: derivedValue1, onStart: callback, isGestureInProgress: sharedValue2 });
   const items17 = [-closure_13, closure_13];
   const enabledResult = PanGestureAnimationsDefault({ lowerBounds: -width, upperBounds: 0, translate: sharedValue, vertical: false, snapPositions: derivedValue1, onStart: callback, isGestureInProgress: sharedValue2 }).enabled(tmp46);
@@ -367,7 +367,7 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
     const result = PrivateChannelCallUtils.maybeShowAgeGateModal(c0);
   }, items19);
   const withRefResult1 = useModalPanGestureDefault({ gestureEnabled: tmp18, height, maxTranslate: result, thresholdTranslate: 0.5 * height, translateY: sharedValue1 }).withRef(ref3);
-  const items20 = [closure_27, require("module_1655").interpolate, sharedValue1, result];
+  const items20 = [closure_27, require("module_1653").interpolate, sharedValue1, result];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -392,12 +392,12 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   ChannelCallModalTsx9.__workletHash = 7616891402023;
   ChannelCallModalTsx9.__initData = tmp57;
   const items22 = [ref2, ref3, ref, ref1, sharedValue, width, channelId];
-  const animatedStyle = require("module_1655").useAnimatedStyle(ChannelCallModalTsx9);
+  const animatedStyle = require("module_1653").useAnimatedStyle(ChannelCallModalTsx9);
   let tmp63 = null;
   if (null != stateFromStores) {
-    const obj9 = { value: tmp12Result(tmp12(7420).CHANNEL_CALL).analyticsLocations, children: null };
+    const obj9 = { value: tmp12Result(tmp12(7419).CHANNEL_CALL).analyticsLocations, children: null };
     const obj10 = { gesture: null, children: null };
-    const Gesture = tmp(5052).Gesture;
+    const Gesture = tmp(5054).Gesture;
     obj10.gesture = Gesture.Exclusive(withRefResult, result1);
     const obj11 = { style: animatedStyle, children: null };
     const obj12 = { value: tmp62, children: null };
@@ -406,14 +406,14 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
     const obj15 = { channel: stateFromStores };
     items23[1] = closure_15(ChannelCallCameraPreview, obj15);
     obj12.children = items23;
-    obj11.children = closure_16(tmp(10652).VoiceChatNavigationContext.Provider, obj12);
-    obj10.children = closure_15(tmp12(1655).View, obj11);
-    obj9.children = closure_15(tmp(5052).GestureDetector, obj10);
-    tmp63 = closure_15(tmp(7401).AnalyticsLocationProvider, obj9);
+    obj11.children = closure_16(tmp(10594).VoiceChatNavigationContext.Provider, obj12);
+    obj10.children = closure_15(tmp12(1653).View, obj11);
+    obj9.children = closure_15(tmp(5054).GestureDetector, obj10);
+    tmp63 = closure_15(tmp(7400).AnalyticsLocationProvider, obj9);
   }
   return tmp63;
 });
-ChannelCallModal.modalConfig = { animation: fn(1072).ModalAnimation.SLIDE_UP, shouldPersistUnderModals: true };
+ChannelCallModal.modalConfig = { animation: fn(1071).ModalAnimation.SLIDE_UP, shouldPersistUnderModals: true };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallModal.tsx");
 

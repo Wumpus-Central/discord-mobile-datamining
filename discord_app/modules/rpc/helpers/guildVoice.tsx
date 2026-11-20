@@ -1,15 +1,15 @@
-// === Module 15589: guildVoice ===
+// === Module 15553: guildVoice ===
 
-// Module 15589 (guildVoice)
+// Module 15553 (guildVoice)
 import RPCErrorDefault from "RPCError" /* 6790 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6233).RPC_EMBEDDED_APP_SCOPE;
-const Constants = fn(1072);
+const RPC_EMBEDDED_APP_SCOPE = fn(6235).RPC_EMBEDDED_APP_SCOPE;
+const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8, RPCErrors: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/guildVoice.tsx");

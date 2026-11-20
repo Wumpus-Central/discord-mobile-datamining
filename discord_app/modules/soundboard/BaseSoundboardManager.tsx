@@ -1,10 +1,10 @@
-// === Module 15699: BaseSoundboardManager ===
+// === Module 15663: BaseSoundboardManager ===
 
-// Module 15699 (BaseSoundboardManager)
+// Module 15663 (BaseSoundboardManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import LifecycleManager from "LifecycleManager" /* 2123 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import LifecycleManager from "LifecycleManager" /* 2121 */;
 
 class BaseSoundboardManager extends tmp2 {
   constructor() {
@@ -14,6 +14,9 @@ class BaseSoundboardManager extends tmp2 {
 
     };
     applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
+
+    };
+    applyArgumentsResult._stopSound = function _stopSound() {
 
     };
     applyArgumentsResult._handleToggleSelfDeafened = function _handleToggleSelfDeafened() {
@@ -33,6 +36,9 @@ class BaseSoundboardManager extends tmp2 {
       sound = sound.sound;
       return applyArgumentsResult._playSound(sound.soundId, sound.volume, AuthenticationStore.getId(), sound.channelId);
     };
+    applyArgumentsResult._handleSoundboardSoundStopLocally = function _handleSoundboardSoundStopLocally(soundId) {
+      applyArgumentsResult._stopSound(soundId.soundId, AuthenticationStore.getId());
+    };
     applyArgumentsResult._handleVoiceChannelSelect = function _handleVoiceChannelSelect() {
       applyArgumentsResult._stopAndClearSounds();
     };
@@ -43,12 +49,14 @@ const prototype = BaseSoundboardManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const subscription = DispatcherDefault.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
   const subscription1 = DispatcherDefault.subscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
-  const subscription2 = DispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
-  const subscription3 = DispatcherDefault.subscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
+  const subscription2 = DispatcherDefault.subscribe("GUILD_SOUNDBOARD_SOUND_STOP_LOCALLY", this._handleSoundboardSoundStopLocally);
+  const subscription3 = DispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
+  const subscription4 = DispatcherDefault.subscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
 };
 prototype["_terminate"] = function _terminate() {
   DispatcherDefault.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
   DispatcherDefault.unsubscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
+  DispatcherDefault.unsubscribe("GUILD_SOUNDBOARD_SOUND_STOP_LOCALLY", this._handleSoundboardSoundStopLocally);
   DispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
   DispatcherDefault.unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
 };

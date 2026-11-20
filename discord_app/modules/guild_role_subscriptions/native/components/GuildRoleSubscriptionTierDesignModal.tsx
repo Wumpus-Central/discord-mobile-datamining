@@ -1,13 +1,13 @@
-// === Module 20097: GuildRoleSubscriptionTierDesignModal ===
+// === Module 19917: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 20097 (GuildRoleSubscriptionTierDesignModal)
+// Module 19917 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import useToken from "useToken" /* 5356 */;
-import RoleIconUtils from "RoleIconUtils" /* 7425 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16683 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16695 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20064 */;
+import util from "util" /* 1112 */;
+import useToken from "useToken" /* 5358 */;
+import RoleIconUtils from "RoleIconUtils" /* 7424 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16507 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16519 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19884 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return refs(View, obj5);
 }
 function Content() {
-  const tmp3 = role(20062)();
+  const tmp3 = role(19882)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -65,37 +65,37 @@ function Content() {
   const items2 = [closure_9(MemberPreviews, { role }), , ];
   const obj7 = { children: null };
   const obj8 = { title: null };
-  const intl = tmp4(1113).intl;
+  const intl = tmp4(1112).intl;
   obj8.title = intl.string(require("util").t.sEr1zr);
   const items3 = [closure_9(require("TableRowGroup").TableRowGroupTitle, obj8), ];
   const obj9 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
   const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
-  const intl2 = tmp4(1113).intl;
+  const intl2 = tmp4(1112).intl;
   obj9.description = intl2.string(require("util").t.Glqj9m);
   obj9.image = tmp10;
   obj9.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj9.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj9.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "r" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
   };
   obj9.disabled = roleSubscriptionSettingsDisabled;
-  items3[1] = closure_9(role(20063), obj9);
+  items3[1] = closure_9(role(19883), obj9);
   obj7.children = items3;
   items2[1] = closure_10(View, obj7);
   const obj10 = { title: null, hasIcons: true, children: null };
-  const intl3 = tmp4(1113).intl;
+  const intl3 = tmp4(1112).intl;
   obj10.title = intl3.string(require("util").t["W7hH+z"]);
-  obj10.children = closure_9(role(20098), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  obj10.children = closure_9(role(19918), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   items2[2] = closure_9(require("TableRowGroup").TableRowGroup, obj10);
   obj6.children = items2;
   return closure_10(View, obj6);
 }
 const View = fn(17).View;
-const constants = fn(16663).GuildRoleSubscriptionsTierScenes;
-const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
+const constants = fn(16487).GuildRoleSubscriptionsTierScenes;
+const UPLOAD_SMALL_SIZE = fn(1071).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_26 }, member: null, memberLight: null, memberDark: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_26 };
 obj2.member = { padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };

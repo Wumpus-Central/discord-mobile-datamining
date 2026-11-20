@@ -1,13 +1,13 @@
-// === Module 6713: GuildDiscoveryUtils ===
+// === Module 6715: GuildDiscoveryUtils ===
 
-// Module 6713 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import _modDef1490 from "module_1490" /* 1490 */;
+// Module 6715 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import _modDef1488 from "module_1488" /* 1488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4725 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5413 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import LurkingStore from "LurkingStore" /* 4727 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5415 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -171,7 +171,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -193,7 +193,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1490.stringify(obj4);
+            request.query = _modDef1488.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };
@@ -251,7 +251,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -331,7 +331,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, SearchTypes: closure_8, Endpoints: closure_9, Routes: closure_10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/GuildDiscoveryUtils.tsx");

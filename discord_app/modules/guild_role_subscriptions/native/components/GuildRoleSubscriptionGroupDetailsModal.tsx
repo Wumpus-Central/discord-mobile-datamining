@@ -1,19 +1,19 @@
-// === Module 20060: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 19880: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 20060 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 19880 (GuildRoleSubscriptionGroupDetailsModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import TableRowGroup from "TableRowGroup" /* 7229 */;
-import TextArea from "TextArea" /* 7342 */;
-import FormSeparatorDefault from "FormSeparator" /* 16675 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20057 */;
-import FormStylesDefault from "FormStyles" /* 20062 */;
-import FormImagePicker from "FormImagePicker" /* 20063 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20064 */;
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import TableRowGroup from "TableRowGroup" /* 7228 */;
+import TextArea from "TextArea" /* 7341 */;
+import FormSeparatorDefault from "FormSeparator" /* 16499 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19877 */;
+import FormStylesDefault from "FormStyles" /* 19882 */;
+import FormImagePicker from "FormImagePicker" /* 19883 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19884 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20061 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19881 */;
 
 require = fn;
 class Content {
@@ -55,12 +55,12 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16663);
+const GuildRoleSubscriptionsConstants = fn(16487);
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } = GuildRoleSubscriptionsConstants);
-const UPLOAD_BANNER_SIZE = fn(1072).UPLOAD_BANNER_SIZE;
+const UPLOAD_BANNER_SIZE = fn(1071).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: nativeDefault.space.PX_16 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);

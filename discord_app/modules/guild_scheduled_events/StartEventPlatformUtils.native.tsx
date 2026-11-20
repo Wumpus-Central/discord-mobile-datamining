@@ -1,14 +1,14 @@
-// === Module 7914: StartEventPlatformUtils ===
+// === Module 7913: StartEventPlatformUtils ===
 
-// Module 7914 (StartEventPlatformUtils)
+// Module 7913 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
-import router_utils from "router_utils" /* 1099 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6408 */;
-import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 7161 */;
+import router_utils from "router_utils" /* 1098 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6410 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 7160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 require = fn;
 let closure_10 = async function _navigateToEvent(arg0) {
@@ -22,7 +22,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -120,8 +120,8 @@ let closure_10 = async function _navigateToEvent(arg0) {
     }
   }
 };
-let closure_8 = fn(4647).GuildScheduledEventEntityTypes;
-const Routes = fn(1072).Routes;
+let closure_8 = fn(4649).GuildScheduledEventEntityTypes;
+const Routes = fn(1071).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
 

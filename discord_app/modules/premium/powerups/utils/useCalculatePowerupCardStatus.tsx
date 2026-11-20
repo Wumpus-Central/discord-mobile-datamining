@@ -1,12 +1,12 @@
-// === Module 13318: useCalculatePowerupCardStatus ===
+// === Module 13288: useCalculatePowerupCardStatus ===
 
-// Module 13318 (useCalculatePowerupCardStatus)
-import util from "util" /* 1113 */;
-import _modDef2755 from "module_2755" /* 2755 */;
+// Module 13288 (useCalculatePowerupCardStatus)
+import util from "util" /* 1112 */;
+import _modDef2757 from "module_2757" /* 2757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PowerupActiveStatusType = fn(8213).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(8212).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 
@@ -43,12 +43,12 @@ export function useCalculatePowerupCardStatus(powerup, arg1, arg2) {
         }
         const obj4 = { type: "active", statusText: null };
         const obj5 = { perkName: title };
-        obj4.statusText = intl2.formatToPlainString(_modDef2755.WRRYUT, obj5);
+        obj4.statusText = intl2.formatToPlainString(_modDef2757.WRRYUT, obj5);
         tmp5 = obj4;
       } else if (tmp.type !== tmp4.INACTIVE) {
         const obj = { type: "active", statusText: null };
         const intl = util.intl;
-        obj.statusText = intl.string(_modDef2755.FFLkmx);
+        obj.statusText = intl.string(_modDef2757.FFLkmx);
         tmp5 = obj;
       }
     }

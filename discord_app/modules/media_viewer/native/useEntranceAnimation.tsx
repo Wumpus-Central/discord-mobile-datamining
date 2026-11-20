@@ -1,9 +1,9 @@
-// === Module 10531: useEntranceAnimation ===
+// === Module 10473: useEntranceAnimation ===
 
-// Module 10531 (useEntranceAnimation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5002 */;
+// Module 10473 (useEntranceAnimation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import timing_timing from "timing/timing" /* 5004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ function setUseEntranceAnimationState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj4.setState(closure_0));
 }
-let obj = { duration: 300, easing: fn(1187).STANDARD_EASING };
+let obj = { duration: 300, easing: fn(1186).STANDARD_EASING };
 const module_560 = fn(560);
 const obj4 = module_560.create(() => ({ isComplete: false }));
 let closure_7 = { code: "(function useEntranceAnimationTsx1(){let[scheduleOnRN,setUseEntranceAnimationState]=this.__closure;scheduleOnRN(setUseEntranceAnimationState,{isComplete:true});})" };
@@ -31,7 +31,7 @@ export function useEntranceAnimation(entranceAnimationDriver) {
   const handleLoadStart = noop.useCallback(() => {
     obj = ReactBatchUpdates;
     obj.batchUpdates(() => state.setState({ isComplete: false }));
-    items = [closure_7, _mod1708.scheduleOnRN, setUseEntranceAnimationState];
+    items = [closure_7, _mod1706.scheduleOnRN, setUseEntranceAnimationState];
     c0 = undefined;
     c1 = undefined;
     [tmp4, tmp5, tmp6] = items;
@@ -48,7 +48,7 @@ export function useEntranceAnimation(entranceAnimationDriver) {
     if (1 !== entranceAnimationDriver.get()) {
       ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
       const obj3 = timing_timing;
-      items = [closure_8, _mod1708.scheduleOnRN, setUseEntranceAnimationState, callback];
+      items = [closure_8, _mod1706.scheduleOnRN, setUseEntranceAnimationState, callback];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;

@@ -1,17 +1,16 @@
 // === Module 6866: ConjureAnalytics ===
 
 // Module 6866 (ConjureAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
 import ConjureUtils from "ConjureUtils" /* 6746 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 6867 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 require = fn;
-function projectFields(projectId) {
-  const project = ConjureProjectStore.getProject(projectId);
-  const obj = { project_id: projectId, project_name: null, application_id: null, preview_application_id: null, install_scope: null };
+function projectFields(project_id) {
+  const project = ConjureProjectStore.getProject(project_id);
+  const obj = { project_id, project_name: null, application_id: null, preview_application_id: null, install_scope: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -50,8 +49,8 @@ function projectFields(projectId) {
   obj.install_scope = install_scope;
   return obj;
 }
-function conjureLocation(projectId, isPreview) {
-  const project = ConjureProjectStore.getProject(projectId);
+function conjureLocation(project_id, isPreview) {
+  const project = ConjureProjectStore.getProject(project_id);
   if (isPreview) {
     let preview_guild_id;
     if (!tmp2) {
@@ -87,77 +86,8 @@ function conjureLocation(projectId, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-function ratingPromptFields(projectId) {
-  projectId = projectId.projectId;
-  const obj = {};
-  ({ turnId, publishReason, surface } = projectId);
-  const merged = Object.assign(projectFields(projectId));
-  const merged1 = Object.assign(conjureLocation(projectId, true));
-  obj.turn_id = turnId;
-  obj.publish_reason = publishReason;
-  obj.surface = surface;
-  let str = "android";
-  if (!obj2.isAndroid()) {
-    let str2 = "ios";
-    if (!tmp3Result.isIOS()) {
-      let str3 = "web";
-      if (tmp3Result3.isDesktop()) {
-        str3 = "desktop";
-      }
-      str2 = str3;
-      tmp3Result3 = PlatformUtils;
-    }
-    str = str2;
-    tmp3Result = PlatformUtils;
-  }
-  const obj3 = {};
-  obj.client_platform = str;
-  const merged2 = Object.assign(obj);
-  obj3.placement = projectId.placement;
-  const project = ConjureProjectStore.getProject(projectId.projectId);
-  let supported_surfaces;
-  if (project != null) {
-    supported_surfaces = project.supported_surfaces;
-  }
-  if (supported_surfaces == null) {
-    supported_surfaces = [];
-  }
-  items = [...supported_surfaces];
-  let prop;
-  if (project != null) {
-    prop = project.preview_supported_surfaces;
-  }
-  if (prop == null) {
-    prop = [];
-  }
-  HermesBuiltin.arraySpread(prop, tmp7);
-  const mapped = items.map((item) => closure_1_8[item]);
-  obj2 = PlatformUtils;
-  const items1 = [...new Set(mapped.filter((item) => null != item))];
-  obj3.project_kinds = items1.sort();
-  const publishState = projectId.publishState;
-  let tmp10 = null == publishState;
-  if (!tmp10) {
-    tmp10 = !ConjurePublishTypes.isConjureLive(publishState);
-    const tmp3Result4 = ConjurePublishTypes;
-  }
-  if (tmp10) {
-    const project1 = ConjureProjectStore.getProject(projectId.projectId);
-    let supported_surfaces1;
-    if (project1 != null) {
-      supported_surfaces1 = project1.supported_surfaces;
-    }
-    if (supported_surfaces1 == null) {
-      supported_surfaces1 = [];
-    }
-    tmp10 = 0 === supported_surfaces1.length;
-  }
-  obj3.is_new_project = tmp10;
-  return obj3;
-}
-const isProjectOwner = fn(6500).isProjectOwner;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_8 = { [fn(6501).ConjureSupportedSurface.APP_CHANNEL]: "app_channel", [fn(6501).ConjureSupportedSurface.VOICE_CHANNEL]: "voice_channel", [fn(6501).ConjureSupportedSurface.PROFILE_WIDGET]: "profile_widget", [fn(6501).ConjureSupportedSurface.AUTOMOD]: "automod", [fn(6501).ConjureSupportedSurface.BOT]: "bot", [fn(6501).ConjureSupportedSurface.APPLICATION_COMMANDS]: "application_commands", [fn(6501).ConjureSupportedSurface.OVERLAY]: "overlay", [fn(6501).ConjureSupportedSurface.ACTIVITY]: "activity" };
+const isProjectOwner = fn(6502).isProjectOwner;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 
@@ -289,47 +219,6 @@ export function trackConjurePublishActionClicked(project_id, arg1) {
   obj2.install_scope = installScope;
   obj2.action = action;
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_PUBLISH_ACTION_CLICKED, obj2);
-}
-export function trackConjureRatingViewed(turnId) {
-  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_RATING_VIEWED, ratingPromptFields(turnId));
-}
-export function trackConjureRatingSubmitted(rating) {
-  const obj2 = {};
-  const merged = Object.assign(ratingPromptFields(rating));
-  obj2.rating = rating.rating;
-  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_RATING_SUBMITTED, obj2);
-}
-export function trackConjureRatingFeedbackSubmitted(projectId, substr) {
-  projectId = projectId.projectId;
-  const obj2 = {};
-  ({ turnId, publishReason, surface } = projectId);
-  const merged = Object.assign(projectFields(projectId));
-  const merged1 = Object.assign(conjureLocation(projectId, true));
-  obj2.turn_id = turnId;
-  obj2.publish_reason = publishReason;
-  obj2.surface = surface;
-  const obj = AppAnalyticsUtils;
-  let str = "android";
-  if (!obj3.isAndroid()) {
-    let str2 = "ios";
-    if (!tmpResult.isIOS()) {
-      let str3 = "web";
-      if (tmpResult2.isDesktop()) {
-        str3 = "desktop";
-      }
-      str2 = str3;
-      tmpResult2 = PlatformUtils;
-    }
-    str = str2;
-    tmpResult = PlatformUtils;
-  }
-  const obj4 = {};
-  obj2.client_platform = str;
-  const merged2 = Object.assign(obj2);
-  obj4.rating = projectId.rating;
-  obj4.feedback_text = substr;
-  obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_FEEDBACK_SUBMITTED, obj4);
-  obj3 = PlatformUtils;
 }
 export function trackConjureBuilderOpened(project_id, entry_point) {
   const project = ConjureProjectStore.getProject(project_id);

@@ -1,21 +1,21 @@
-// === Module 16418: BountiesScrollEndCard ===
+// === Module 16240: BountiesScrollEndCard ===
 
-// Module 16418 (BountiesScrollEndCard)
+// Module 16240 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import timingPresets from "timingPresets" /* 5005 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import timingPresets from "timingPresets" /* 5007 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8827 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16378 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 16379 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 16419 */;
-import BountiesModalEndedCtaButtonsDefault from "BountiesModalEndedCtaButtons" /* 16421 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16200 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 16201 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 16241 */;
+import BountiesModalEndedCtaButtonsDefault from "BountiesModalEndedCtaButtons" /* 16243 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function BountiesScrollEndCardContent(arg0) {
@@ -51,7 +51,7 @@ function BountiesScrollEndCardContent(arg0) {
   BountiesScrollEndCardTsx3.__closure = items1;
   BountiesScrollEndCardTsx3.__workletHash = 11141440579356;
   BountiesScrollEndCardTsx3.__initData = tmp3;
-  const animatedStyle = _mod1655.useAnimatedStyle(BountiesScrollEndCardTsx3);
+  const animatedStyle = _mod1653.useAnimatedStyle(BountiesScrollEndCardTsx3);
   const obj2 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.container, opacityStyle];
   obj2.style = items2;
@@ -76,16 +76,16 @@ function BountiesScrollEndCardContent(arg0) {
   };
   items5[1] = React5(hasOwnProperty, obj7);
   obj5.children = items5;
-  items3[2] = React6(_modDef1655.View, obj5);
+  items3[2] = React6(_modDef1653.View, obj5);
   obj2.children = items3;
-  return React6(_modDef1655.View, obj2);
+  return React6(_modDef1653.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6439).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: null, backdropTint: null, backdropGradient: null, overlayContent: null, endedCtaButtonsContainer: null };
   const merged = Object.assign(React4.absoluteFillObject);
@@ -105,7 +105,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.endedCtaButtonsContainer = rect;
   return obj;
 });
-let items = [{ code: "(function BountiesScrollEndCardTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5002).withTiming, fn(5005).timingStandard];
+let items = [{ code: "(function BountiesScrollEndCardTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5004).withTiming, fn(5007).timingStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp4, tmp5, tmp6] = items;
@@ -119,7 +119,7 @@ let items1 = [tmp5, tmp6];
 BountiesScrollEndCardTsx1.__closure = items1;
 BountiesScrollEndCardTsx1.__workletHash = 17037395898182;
 BountiesScrollEndCardTsx1.__initData = tmp4;
-let items2 = [{ code: "(function BountiesScrollEndCardTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})" }, fn(5002).withTiming, fn(5005).timingStandard];
+let items2 = [{ code: "(function BountiesScrollEndCardTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})" }, fn(5004).withTiming, fn(5007).timingStandard];
 let closure_130_0;
 let closure_130_1;
 [tmp7, tmp8, tmp9] = items2;

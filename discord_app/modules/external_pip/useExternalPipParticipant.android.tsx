@@ -1,15 +1,15 @@
-// === Module 19217: useExternalPipParticipant ===
+// === Module 19036: useExternalPipParticipant ===
 
-// Module 19217 (useExternalPipParticipant)
-import participantHasVideo from "participantHasVideo" /* 10677 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19218 */;
+// Module 19036 (useExternalPipParticipant)
+import participantHasVideo from "participantHasVideo" /* 10619 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19037 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 14935 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 14899 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 
 require = fn;
 function getExternalPipSelectedParticipant(batchedStoreListener, selectedParticipantId1, speakerId) {
@@ -43,9 +43,9 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
     obj = closure_9;
   }
 }
-const ParticipantTypes = fn(5442).ParticipantTypes;
-const VoicePanelModes = fn(11688).VoicePanelModes;
-let closure_9 = { participantType: "Path", selectedParticipantId: "context", selectedParticipantSpeaking: 0, selectedParticipantStreamId: null, selectedParticipantUserId: -1 };
+const ParticipantTypes = fn(5444).ParticipantTypes;
+const VoicePanelModes = fn(11630).VoicePanelModes;
+let closure_9 = { participantType: "Path", selectedParticipantId: "text", selectedParticipantSpeaking: 0, selectedParticipantStreamId: null, selectedParticipantUserId: -1 };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");

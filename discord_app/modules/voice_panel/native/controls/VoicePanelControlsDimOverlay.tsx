@@ -1,16 +1,16 @@
-// === Module 19424: VoicePanelControlsDimOverlay ===
+// === Module 19244: VoicePanelControlsDimOverlay ===
 
-// Module 19424 (VoicePanelControlsDimOverlay)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
+// Module 19244 (VoicePanelControlsDimOverlay)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(15125).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(11688);
+let closure_4 = fn(15089).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(11630);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: closure_6 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11686).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11628).VoicePanelControlsModes;
 let jsx = fn(21).jsx;
 let closure_9 = { code: "(function VoicePanelControlsDimOverlayTsx1(){let[windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY]=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],'clamp');})" };
 let closure_10 = { code: "(function VoicePanelControlsDimOverlayTsx2(){let[overlayOpacity]=this.__closure;return overlayOpacity.get()>=0.35;})" };
@@ -24,7 +24,7 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   const setControlsMode = context.setControlsMode;
   _require = setControlsMode;
   ({ windowDimensions, controlsSpecs, safeArea, mode } = context);
-  items = [c9, windowDimensions, require("VoicePanelControlUtils").getDrawerSpec, safeArea, controlsSpecs, c7, mode, c6, require("module_1655").interpolate, wrapperSpecs.wrapperSpecs, c4];
+  items = [c9, windowDimensions, require("VoicePanelControlUtils").getDrawerSpec, safeArea, controlsSpecs, c7, mode, c6, require("module_1653").interpolate, wrapperSpecs.wrapperSpecs, c4];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -67,9 +67,9 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx1.__closure = items1;
   VoicePanelControlsDimOverlayTsx1.__workletHash = 15211606332422;
   VoicePanelControlsDimOverlayTsx1.__initData = tmp4;
-  const derivedValue = require("module_1655").useDerivedValue(VoicePanelControlsDimOverlayTsx1);
+  const derivedValue = require("module_1653").useDerivedValue(VoicePanelControlsDimOverlayTsx1);
   let obj = noop;
-  const obj2 = require("module_1655");
+  const obj2 = require("module_1653");
   const items2 = [closure_10, derivedValue];
   _require = undefined;
   [tmp16, tmp17] = items2;
@@ -82,8 +82,8 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx2.__closure = items3;
   VoicePanelControlsDimOverlayTsx2.__workletHash = 14055617662103;
   VoicePanelControlsDimOverlayTsx2.__initData = tmp16;
-  const derivedValue1 = require("module_1655").useDerivedValue(VoicePanelControlsDimOverlayTsx2);
-  const tmp3Result = require("module_1655");
+  const derivedValue1 = require("module_1653").useDerivedValue(VoicePanelControlsDimOverlayTsx2);
+  const tmp3Result = require("module_1653");
   const items4 = [closure_11, require("spring/spring").withSpring, derivedValue, c5, require("AccessibilityPreferencesSharedValue").accessibilityPreferencesSharedValue, derivedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -110,8 +110,8 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx3.__closure = items5;
   VoicePanelControlsDimOverlayTsx3.__workletHash = 6945037469681;
   VoicePanelControlsDimOverlayTsx3.__initData = tmp19;
-  const style = require("module_1655").useAnimatedStyle(VoicePanelControlsDimOverlayTsx3);
-  const tmp3Result3 = require("module_1655");
+  const style = require("module_1653").useAnimatedStyle(VoicePanelControlsDimOverlayTsx3);
+  const tmp3Result3 = require("module_1653");
   const items6 = [closure_12, derivedValue1];
   _require = undefined;
   [tmp26, tmp27] = items6;
@@ -129,7 +129,7 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx4.__workletHash = 10220341121843;
   VoicePanelControlsDimOverlayTsx4.__initData = tmp26;
   const items8 = [setControlsMode];
-  const animatedProps = require("module_1655").useAnimatedProps(VoicePanelControlsDimOverlayTsx4);
+  const animatedProps = require("module_1653").useAnimatedProps(VoicePanelControlsDimOverlayTsx4);
   const onDismiss = obj.useCallback(() => {
     _undefined({ mode: VoicePanelControlsModes.FLOATING_DEFAULT });
   }, items8);

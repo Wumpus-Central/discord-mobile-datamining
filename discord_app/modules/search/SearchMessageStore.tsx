@@ -1,14 +1,14 @@
-// === Module 6520: SearchMessageStore ===
+// === Module 6522: SearchMessageStore ===
 
-// Module 6520 (SearchMessageStore)
+// Module 6522 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ReactionUtils from "ReactionUtils" /* 4736 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5845 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6228 */;
+import ReactionUtils from "ReactionUtils" /* 4738 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6230 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 require = fn;
 function handleReaction(optimistic) {
@@ -47,7 +47,7 @@ function handleReaction(optimistic) {
   }
   obj = ReactionUtils;
 }
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 class SearchState {
   constructor() {
     merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });

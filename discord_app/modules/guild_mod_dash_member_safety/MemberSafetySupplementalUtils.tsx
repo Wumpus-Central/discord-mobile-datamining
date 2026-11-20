@@ -1,11 +1,11 @@
-// === Module 8176: MemberSafetySupplementalUtils ===
+// === Module 8175: MemberSafetySupplementalUtils ===
 
-// Module 8176 (MemberSafetySupplementalUtils)
-import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import shared from "shared" /* 4799 */;
-import PlatformsDefault from "Platforms" /* 6570 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 8177 */;
+// Module 8175 (MemberSafetySupplementalUtils)
+import util from "util" /* 1112 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import shared from "shared" /* 4801 */;
+import PlatformsDefault from "Platforms" /* 6572 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 8176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -36,7 +36,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_5 = {};
 let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
 const JoinSourceType = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };

@@ -1,16 +1,16 @@
 // === Module 9362: GiftingBadgesUtils ===
 
 // Module 9362 (GiftingBadgesUtils)
-import util from "util" /* 1113 */;
-import _modDef2819 from "module_2819" /* 2819 */;
-import BadgeId from "BadgeId" /* 7951 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8023 */;
+import util from "util" /* 1112 */;
+import _modDef2821 from "module_2821" /* 2821 */;
+import BadgeId from "BadgeId" /* 7950 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8022 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8018 */;
-import UserStore from "UserStore" /* 1388 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8017 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-let closure_5 = fn(8018).getSingleRequirementThreshold;
+let closure_5 = fn(8017).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -24,7 +24,7 @@ export function getGiftingBadgeAccessibilityLabel(name) {
     str = "";
   }
   const intl = util.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2819.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2821.qvx9E4, { count });
 }
 export function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = closure_5(currentTier);
@@ -80,8 +80,8 @@ export function useGiftingBadgeCoachmarkVariant(location) {
     return flag;
   });
   let obj = stateFromStores(504);
-  const result = stateFromStores(4824).useIsDismissibleContentDismissed_UNSAFE(stateFromStores(4625).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  let obj2 = stateFromStores(4824);
+  const result = stateFromStores(4826).useIsDismissibleContentDismissed_UNSAFE(stateFromStores(4627).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  let obj2 = stateFromStores(4826);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[9]).BadgeId.GIFTING));
   let tmp4 = !result;

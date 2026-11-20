@@ -1,10 +1,10 @@
-// === Module 11040: NotificationSettingsStore ===
+// === Module 10982: NotificationSettingsStore ===
 
-// Module 11040 (NotificationSettingsStore)
+// Module 10982 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import Constants from "Constants" /* 1072 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const DesktopNotificationTypes = Constants.DesktopNotificationTypes;

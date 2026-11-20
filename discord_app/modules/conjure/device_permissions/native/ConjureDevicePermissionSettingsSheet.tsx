@@ -1,9 +1,9 @@
-// === Module 14274: ConjureDevicePermissionSettingsSheet ===
+// === Module 14242: ConjureDevicePermissionSettingsSheet ===
 
-// Module 14274 (ConjureDevicePermissionSettingsSheet)
+// Module 14242 (ConjureDevicePermissionSettingsSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef4089 from "module_4089" /* 4089 */;
-import useConjureDevicePermissionSettingsDefault from "useConjureDevicePermissionSettings" /* 14275 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import useConjureDevicePermissionSettingsDefault from "useConjureDevicePermissionSettings" /* 14243 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -25,9 +25,9 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
   let obj = { startExpanded: true, header: null, children: null };
   const obj2 = { title: null, subtitle: null };
   let intl = require("util").intl;
-  obj2.title = intl.string(_modDef4089["7a+RNP"]);
+  obj2.title = intl.string(_modDef4091["7a+RNP"]);
   const intl2 = require("util").intl;
-  obj2.subtitle = intl2.formatToPlainString(_modDef4089.IJY15p, { app: appName });
+  obj2.subtitle = intl2.formatToPlainString(_modDef4091.IJY15p, { app: appName });
   obj.header = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: null, subtitle: null });
   const obj3 = { style: tmp.content, children: null };
   const tmp2 = useConjureDevicePermissionSettingsDefault(applicationId);
@@ -36,18 +36,18 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
     children: settings.map((permission) => {
       permission = permission.permission;
       const decision = permission.decision;
-      const obj = { label: _undefined(14271).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null };
+      const obj = { label: _undefined(12181).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null };
       let stringResult;
       if (null == decision) {
-        const intl = _undefined(1113).intl;
-        stringResult = intl.string(_modDef4089["wyav+H"]);
+        const intl = _undefined(1112).intl;
+        stringResult = intl.string(_modDef4091["wyav+H"]);
       }
       obj.subLabel = stringResult;
       obj.value = "granted" === decision;
       obj.onValueChange = function onValueChange(arg0) {
         return permission(permission, arg0);
       };
-      return jsx(_undefined(7437).TableSwitchRow, { label: _undefined(14271).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null }, permission);
+      return jsx(_undefined(7436).TableSwitchRow, { label: _undefined(12181).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null }, permission);
     })
   });
   obj.children = <View style={tmp.content}>{null}</View>;

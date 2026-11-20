@@ -1,9 +1,9 @@
-// === Module 18082: useAccessiblePTT ===
+// === Module 17909: useAccessiblePTT ===
 
-// Module 18082 (useAccessiblePTT)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5022 */;
-import useStableCallbackDefault from "useStableCallback" /* 7273 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18083 */;
+// Module 17909 (useAccessiblePTT)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5024 */;
+import useStableCallbackDefault from "useStableCallback" /* 7272 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

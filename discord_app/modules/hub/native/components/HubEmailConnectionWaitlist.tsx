@@ -1,6 +1,6 @@
-// === Module 13598: HubEmailConnectionWaitlist ===
+// === Module 13568: HubEmailConnectionWaitlist ===
 
-// Module 13598 (HubEmailConnectionWaitlist)
+// Module 13568 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,8 +8,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
-let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: { fontFamily: fn(1072).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, redesignButton: { paddingHorizontal: 16, width: "100%" } };
+const createStyles = fn(4794);
+let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: { fontFamily: fn(1071).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, redesignButton: { paddingHorizontal: 16, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
@@ -17,39 +17,39 @@ const result = size.fileFinishedImporting("modules/hub/native/components/HubEmai
 export default function HubEmailConnectionWaitlist(school) {
   const onClose = school.onClose;
   const tmp = closure_7();
-  const navigation = onClose(1502).useNavigation();
+  const navigation = onClose(1500).useNavigation();
   items = [navigation, onClose];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft() {
         const obj = { text: null, onPress: null };
-        const intl = onClose(1113).intl;
-        obj.text = intl.string(onClose(1113).t.cpT0Cq);
+        const intl = onClose(1112).intl;
+        obj.text = intl.string(onClose(1112).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(6910).HeaderActionButton, obj);
+        return closure_2_5(onClose(6909).HeaderActionButton, obj);
       }
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
-  let obj = onClose(1502);
-  obj3.source = navigation(13599);
+  let obj = onClose(1500);
+  obj3.source = navigation(13569);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(5479), obj3), , , ];
+  const items1 = [closure_5(navigation(5481), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
-  let intl = onClose(1113).intl;
-  obj4.children = intl.string(onClose(1113).t.OaloU5);
-  items1[1] = closure_5(onClose(1187).LegacyText, obj4);
+  let intl = onClose(1112).intl;
+  obj4.children = intl.string(onClose(1112).t.OaloU5);
+  items1[1] = closure_5(onClose(1186).LegacyText, obj4);
   const obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
-  const intl2 = onClose(1113).intl;
-  obj5.children = intl2.format(onClose(1113).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_5(onClose(5383).Text, obj5);
+  const intl2 = onClose(1112).intl;
+  obj5.children = intl2.format(onClose(1112).t.Rs7MXJ, { school: school.school });
+  items1[2] = closure_5(onClose(5385).Text, obj5);
   const obj6 = { style: tmp.redesignButton, children: null };
   const obj7 = { size: "lg", text: null, onPress: null };
-  const intl3 = onClose(1113).intl;
-  obj7.text = intl3.string(onClose(1113).t.i4jeWR);
+  const intl3 = onClose(1112).intl;
+  obj7.text = intl3.string(onClose(1112).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_5(onClose(5390).Button, obj7);
+  obj6.children = closure_5(onClose(5392).Button, obj7);
   items1[3] = closure_5(View, obj6);
   obj2.children = items1;
   return closure_6(View, obj2);

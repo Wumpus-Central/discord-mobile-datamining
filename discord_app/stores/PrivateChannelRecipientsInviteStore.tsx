@@ -1,20 +1,20 @@
-// === Module 14947: PrivateChannelRecipientsInviteStore ===
+// === Module 14911: PrivateChannelRecipientsInviteStore ===
 
-// Module 14947 (PrivateChannelRecipientsInviteStore)
+// Module 14911 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StringUtils from "StringUtils" /* 2153 */;
-import UserUtilsDefault from "UserUtils" /* 4848 */;
+import StringUtils from "StringUtils" /* 2151 */;
+import UserUtilsDefault from "UserUtils" /* 4850 */;
 import UserSearchManagerDefault from "UserSearchManager" /* 9529 */;
-import ExperimentStore from "ExperimentStore" /* 5409 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import ConsentStore from "ConsentStore" /* 6306 */;
-import FrecencyStore from "FrecencyStore" /* 6552 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import ExperimentStore from "ExperimentStore" /* 5411 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8023 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import ConsentStore from "ConsentStore" /* 6308 */;
+import FrecencyStore from "FrecencyStore" /* 6554 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function performQuery() {
@@ -219,8 +219,8 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(4645).PrivateChannelRecord;
-const Constants = fn(1072);
+const PrivateChannelRecord = fn(4647).PrivateChannelRecord;
+const Constants = fn(1071);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;
 let c16 = "";

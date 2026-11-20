@@ -1,20 +1,20 @@
-// === Module 15300: IconPill ===
+// === Module 15264: IconPill ===
 
-// Module 15300 (IconPill)
+// Module 15264 (IconPill)
 import nativeDefault from "native" /* 575 */;
-import IconDefault from "Icon" /* 5392 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 7605 */;
+import IconDefault from "Icon" /* 5394 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 7604 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { pillContainer: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, height: 20, paddingHorizontal: 8 }, pillIcon: null, pillText: null };
 let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, height: 20, paddingHorizontal: 8 };
 obj2.pillIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 let obj4 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
-obj2.pillText = { fontFamily: fn(1083).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18 };
+obj2.pillText = { fontFamily: fn(1082).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18 };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/IconPill/native/IconPill.tsx");

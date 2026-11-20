@@ -1,7 +1,7 @@
-// === Module 15701: getSoundboardSoundURL ===
+// === Module 15665: getSoundboardSoundURL ===
 
-// Module 15701 (getSoundboardSoundURL)
-import Constants from "Constants" /* 1072 */;
+// Module 15665 (getSoundboardSoundURL)
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

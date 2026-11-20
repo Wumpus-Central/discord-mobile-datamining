@@ -1,9 +1,9 @@
-// === Module 10140: UserProfileGameWidgetEmptyStatePrompt ===
+// === Module 10143: UserProfileGameWidgetEmptyStatePrompt ===
 
-// Module 10140 (UserProfileGameWidgetEmptyStatePrompt)
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import WidgetUtils from "WidgetUtils" /* 10094 */;
+// Module 10143 (UserProfileGameWidgetEmptyStatePrompt)
+import util from "util" /* 1112 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import WidgetUtils from "WidgetUtils" /* 10097 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

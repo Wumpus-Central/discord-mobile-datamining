@@ -1,7 +1,7 @@
-// === Module 10538: MediaViewerImprovementsExperiment ===
+// === Module 10480: MediaViewerImprovementsExperiment ===
 
-// Module 10538 (MediaViewerImprovementsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 10480 (MediaViewerImprovementsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-media-viewer-improvements", kind: "user", defaultConfig: { enabled: false }, variations: null };

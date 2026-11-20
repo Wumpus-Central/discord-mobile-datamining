@@ -2,7 +2,7 @@
 
 // Module 9136 (MediaPlaybackExperiment)
 import NativeMediaPlaybackModuleDefault from "NativeMediaPlaybackModule" /* 9137 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-10-mobile-media-playback", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

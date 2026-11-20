@@ -1,17 +1,17 @@
-// === Module 11022: useFetchStreamPreview ===
+// === Module 10964: useFetchStreamPreview ===
 
-// Module 11022 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 6335 */;
+// Module 10964 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 6337 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 6337 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 6339 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const BasicPermissions = fn(1083).BasicPermissions;
+const BasicPermissions = fn(1082).BasicPermissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 10048: useReactionPermissions ===
+// === Module 10051: useReactionPermissions ===
 
-// Module 10048 (useReactionPermissions)
+// Module 10051 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4725 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6410 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import LurkingStore from "LurkingStore" /* 4727 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6412 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 

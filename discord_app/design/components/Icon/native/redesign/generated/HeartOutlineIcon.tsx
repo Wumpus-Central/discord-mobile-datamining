@@ -2,7 +2,7 @@
 
 // Module 8854 (HeartOutlineIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod8855 from "module_8855" /* 8855 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 19141: AccountLinkingCampaignStore ===
+// === Module 18960: AccountLinkingCampaignStore ===
 
-// Module 19141 (AccountLinkingCampaignStore)
+// Module 18960 (AccountLinkingCampaignStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

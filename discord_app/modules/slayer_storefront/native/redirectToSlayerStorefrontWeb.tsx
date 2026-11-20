@@ -16,7 +16,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -105,7 +105,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
     }
   }
 };
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 let closure_5 = new LoggerDefault("redirectToSlayerStorefrontWeb");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/redirectToSlayerStorefrontWeb.tsx");

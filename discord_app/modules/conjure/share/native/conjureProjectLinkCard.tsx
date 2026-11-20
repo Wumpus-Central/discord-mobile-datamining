@@ -1,19 +1,19 @@
-// === Module 11909: conjureProjectLinkCard ===
+// === Module 11851: conjureProjectLinkCard ===
 
-// Module 11909 (conjureProjectLinkCard)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8579 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8580 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8582 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9831 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11910 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11911 */;
+// Module 11851 (conjureProjectLinkCard)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8578 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8579 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8581 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9833 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11852 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11853 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import UserStore from "UserStore" /* 1388 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11908 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import UserStore from "UserStore" /* 1386 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11850 */;
 
 require = fn;
 function readConjureProjectLinkCard(applicationId, ticket, memo2) {
@@ -109,7 +109,7 @@ function readConjureProjectLinkCard(applicationId, ticket, memo2) {
   return null;
 }
 let closure_3 = ["application"];
-const canRemixProject = fn(6500).canRemixProject;
+const canRemixProject = fn(6502).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/conjureProjectLinkCard.tsx");
 

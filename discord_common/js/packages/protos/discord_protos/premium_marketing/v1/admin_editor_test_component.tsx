@@ -1,7 +1,7 @@
 // === Module 9053: admin_editor_test_component ===
 
 // Module 9053 (admin_editor_test_component)
-import _mod1197 from "module_1197" /* 1197 */;
+import _mod1196 from "module_1196" /* 1196 */;
 import localized_string from "localized_string" /* 9030 */;
 import help_article from "help_article" /* 9031 */;
 import cta_button from "cta_button" /* 9032 */;
@@ -12,17 +12,17 @@ import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const AdminEditorTestSelectOption = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", FIRST: 1, [1]: "FIRST", SECOND: 2, [2]: "SECOND" };
-const MessageType = fn(1197).MessageType;
+const MessageType = fn(1196).MessageType;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "deprecated_field", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
       name: "localized_text_field",
       kind: "message",
       T() {
-            return localized_string.LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     items[2] = { no: 3, name: "plain_text_field", kind: "scalar", T: 9 };
@@ -31,7 +31,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "textarea_field",
       kind: "message",
       T() {
-            return localized_string.LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };
@@ -41,7 +41,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "themed_asset_field",
       kind: "message",
       T() {
-            return theme_aware_asset.ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[7] = {
@@ -49,7 +49,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "help_article_field",
       kind: "message",
       T() {
-            return help_article.HelpArticle;
+            return require("help_article").HelpArticle;
           }
     };
     items[8] = {
@@ -57,7 +57,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "cta_field",
       kind: "message",
       T() {
-            return cta_button.CTAButton;
+            return require("cta_button").CTAButton;
           }
     };
     items[9] = {
@@ -65,7 +65,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "gradient_field",
       kind: "message",
       T() {
-            return gradient.Gradient;
+            return require("gradient").Gradient;
           }
     };
     items[10] = {
@@ -87,20 +87,30 @@ class AdminEditorTestComponent$Type extends MessageType {
             return items;
           }
     };
-    obj = { no: 13, name: "list_field", kind: "message", repeat: 1, T: null };
+    items[12] = {
+      no: 13,
+      name: "list_field",
+      kind: "message",
+      repeat: 1,
+      T() {
+            return closure_1_4;
+          }
+    };
+    obj = { no: 14, name: "tab_gradient_colors_field", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_4;
+        return closure_1_0(closure_1_1[7]).TabGradientColors;
       }
     }
     obj.T = T;
-    items[12] = obj;
-    items[13] = {
-      no: 14,
-      name: "tab_gradient_colors_field",
+    items[13] = obj;
+    items[14] = { no: 15, name: "shown_when_checkbox_field", kind: "scalar", T: 8 };
+    items[15] = {
+      no: 16,
+      name: "shown_when_field",
       kind: "message",
       T() {
-            return tab_gradient_colors.TabGradientColors;
+            return require("tab_gradient_colors").TabGradientColors;
           }
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
@@ -109,12 +119,12 @@ class AdminEditorTestComponent$Type extends MessageType {
 }
 const prototype = AdminEditorTestComponent$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { deprecatedField: "", plainTextField: "", checkboxField: false, assetField: "", selectField: 0, multiSelectField: [], listField: [] };
+  const obj = { deprecatedField: "", plainTextField: "", checkboxField: false, assetField: "", selectField: 0, multiSelectField: [], listField: [], shownWhenCheckboxField: false };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -133,63 +143,63 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
 prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField, tag, writeUnknownFields) {
   let length2;
   if ("" !== deprecatedField.deprecatedField) {
-    tag.tag(1, _mod1197.WireType.LengthDelimited).string(deprecatedField.deprecatedField);
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
+    tag.tag(1, _mod1196.WireType.LengthDelimited).string(deprecatedField.deprecatedField);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
   }
   if (deprecatedField.localizedTextField) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== deprecatedField.plainTextField) {
-    tag.tag(3, _mod1197.WireType.LengthDelimited).string(deprecatedField.plainTextField);
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    tag.tag(3, _mod1196.WireType.LengthDelimited).string(deprecatedField.plainTextField);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
   }
   if (deprecatedField.textareaField) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
+    const joined1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (false !== deprecatedField.checkboxField) {
-    tag.tag(5, _mod1197.WireType.Varint).bool(deprecatedField.checkboxField);
-    const tagResult4 = tag.tag(5, _mod1197.WireType.Varint);
+    tag.tag(5, _mod1196.WireType.Varint).bool(deprecatedField.checkboxField);
+    const tagResult4 = tag.tag(5, _mod1196.WireType.Varint);
   }
   if ("" !== deprecatedField.assetField) {
-    tag.tag(6, _mod1197.WireType.LengthDelimited).string(deprecatedField.assetField);
-    const tagResult5 = tag.tag(6, _mod1197.WireType.LengthDelimited);
+    tag.tag(6, _mod1196.WireType.LengthDelimited).string(deprecatedField.assetField);
+    const tagResult5 = tag.tag(6, _mod1196.WireType.LengthDelimited);
   }
   if (deprecatedField.themedAssetField) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult6 = tag.tag(7, _mod1197.WireType.LengthDelimited);
-    const joined2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1196.WireType.LengthDelimited);
+    const joined2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (deprecatedField.helpArticleField) {
     const HelpArticle = help_article.HelpArticle;
-    const tagResult7 = tag.tag(8, _mod1197.WireType.LengthDelimited);
-    const joined3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult7 = tag.tag(8, _mod1196.WireType.LengthDelimited);
+    const joined3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (deprecatedField.ctaField) {
     const CTAButton = cta_button.CTAButton;
-    const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
-    const joined4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult8 = tag.tag(9, _mod1196.WireType.LengthDelimited);
+    const joined4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (deprecatedField.gradientField) {
     const Gradient = gradient.Gradient;
-    const tagResult9 = tag.tag(10, _mod1197.WireType.LengthDelimited);
-    const joined5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult9 = tag.tag(10, _mod1196.WireType.LengthDelimited);
+    const joined5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (0 !== deprecatedField.selectField) {
-    tag.tag(11, _mod1197.WireType.Varint).int32(deprecatedField.selectField);
-    const tagResult10 = tag.tag(11, _mod1197.WireType.Varint);
+    tag.tag(11, _mod1196.WireType.Varint).int32(deprecatedField.selectField);
+    const tagResult10 = tag.tag(11, _mod1196.WireType.Varint);
   }
   if (deprecatedField.multiSelectField.length) {
-    tag.tag(12, _mod1197.WireType.LengthDelimited).fork();
+    tag.tag(12, _mod1196.WireType.LengthDelimited).fork();
     let num14 = 0;
     if (0 < deprecatedField.multiSelectField.length) {
       do {
@@ -199,12 +209,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
       } while (num14 < length);
     }
     const joined6 = tag.join();
-    const tagResult11 = tag.tag(12, _mod1197.WireType.LengthDelimited);
+    const tagResult11 = tag.tag(12, _mod1196.WireType.LengthDelimited);
   }
   let num15 = 0;
   if (0 < deprecatedField.listField.length) {
     do {
-      let tagResult12 = tag.tag(13, _mod1197.WireType.LengthDelimited);
+      let tagResult12 = tag.tag(13, _mod1196.WireType.LengthDelimited);
       let internalBinaryWriteResult6 = closure_4.internalBinaryWrite(deprecatedField.listField[num15], tagResult12.fork(), writeUnknownFields);
       let joined7 = internalBinaryWriteResult6.join();
       num15 = num15 + 1;
@@ -213,14 +223,24 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
   }
   if (deprecatedField.tabGradientColorsField) {
     const TabGradientColors = tab_gradient_colors.TabGradientColors;
-    const tagResult13 = tag.tag(14, _mod1197.WireType.LengthDelimited);
-    const joined8 = TabGradientColors.internalBinaryWrite(deprecatedField.tabGradientColorsField, tag.tag(14, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult7 = TabGradientColors.internalBinaryWrite(deprecatedField.tabGradientColorsField, tag.tag(14, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult13 = tag.tag(14, _mod1196.WireType.LengthDelimited);
+    const joined8 = TabGradientColors.internalBinaryWrite(deprecatedField.tabGradientColorsField, tag.tag(14, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult7 = TabGradientColors.internalBinaryWrite(deprecatedField.tabGradientColorsField, tag.tag(14, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
+  if (false !== deprecatedField.shownWhenCheckboxField) {
+    tag.tag(15, _mod1196.WireType.Varint).bool(deprecatedField.shownWhenCheckboxField);
+    const tagResult14 = tag.tag(15, _mod1196.WireType.Varint);
+  }
+  if (deprecatedField.shownWhenField) {
+    const TabGradientColors2 = tab_gradient_colors.TabGradientColors;
+    const tagResult15 = tag.tag(16, _mod1196.WireType.LengthDelimited);
+    const joined9 = TabGradientColors2.internalBinaryWrite(deprecatedField.shownWhenField, tag.tag(16, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult8 = TabGradientColors2.internalBinaryWrite(deprecatedField.shownWhenField, tag.tag(16, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, deprecatedField, tag);
@@ -228,7 +248,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
   return tag;
 };
 const adminEditorTestComponentType = new AdminEditorTestComponent$Type();
-const MessageType2 = fn(1197).MessageType;
+const MessageType2 = fn(1196).MessageType;
 class AdminEditorTestListItem$Type extends MessageType2 {
   constructor() {
     obj = {
@@ -236,7 +256,7 @@ class AdminEditorTestListItem$Type extends MessageType2 {
       name: "text_localized",
       kind: "message",
       T() {
-            return localized_string.LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     items = [, , ];
@@ -246,7 +266,7 @@ class AdminEditorTestListItem$Type extends MessageType2 {
       name: "asset",
       kind: "message",
       T() {
-            return theme_aware_asset.ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[2] = { no: 3, name: "text", kind: "scalar", T: 9 };
@@ -258,10 +278,10 @@ const prototype2 = AdminEditorTestListItem$Type.prototype;
 prototype2["create"] = function create(partialSettings) {
   const obj = { text: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
+    const result = _mod1196.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1196;
   }
   return obj;
 };
@@ -301,7 +321,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
+              onRead = _mod1196.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -314,24 +334,24 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 prototype2["internalBinaryWrite"] = function internalBinaryWrite(textLocalized, tag, writeUnknownFields) {
   if (textLocalized.textLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(textLocalized.textLocalized, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(textLocalized.textLocalized, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(textLocalized.textLocalized, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(textLocalized.textLocalized, tag.tag(1, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (textLocalized.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-    const joined1 = ThemeAwareAsset.internalBinaryWrite(textLocalized.asset, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(textLocalized.asset, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
+    const joined1 = ThemeAwareAsset.internalBinaryWrite(textLocalized.asset, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(textLocalized.asset, tag.tag(2, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== textLocalized.text) {
-    tag.tag(3, _mod1197.WireType.LengthDelimited).string(textLocalized.text);
-    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    tag.tag(3, _mod1196.WireType.LengthDelimited).string(textLocalized.text);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+      onWrite = _mod1196.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, textLocalized, tag);
@@ -344,7 +364,7 @@ let items = [
     name: "text_localized",
     kind: "message",
     T() {
-      return localized_string.LocalizedString;
+      return require("localized_string").LocalizedString;
     }
   },
   {
@@ -352,7 +372,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return theme_aware_asset.ThemeAwareAsset;
+      return require("theme_aware_asset").ThemeAwareAsset;
     }
   },
   { no: 3, name: "text", kind: "scalar", T: 9 }

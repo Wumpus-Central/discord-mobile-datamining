@@ -1,14 +1,14 @@
-// === Module 8135: stores/AnalyticsTrackingStore ===
+// === Module 8134: stores/AnalyticsTrackingStore ===
 
-// Module 8135 (stores/AnalyticsTrackingStore)
+// Module 8134 (stores/AnalyticsTrackingStore)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1256 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8136 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1255 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8135 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const AnalyticsUtils = fn(1264);
+const AnalyticsUtils = fn(1263);
 const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {
@@ -34,7 +34,7 @@ const obj2 = {
       return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
     }
   },
-  TRACKING_URL: fn(1072).Endpoints.TRACK,
+  TRACKING_URL: fn(1071).Endpoints.TRACK,
   waitFor: null,
   getFingerprint: AuthenticationStore.getFingerprint,
   getSessionId() {
@@ -50,8 +50,8 @@ const obj2 = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(8147).requestSafeIdleCallback,
-  sendUnloadRequest: fn(8148).sendUnloadRequest
+  scheduleWhenIdle: fn(8146).requestSafeIdleCallback,
+  sendUnloadRequest: fn(8147).sendUnloadRequest
 };
 const items = [AuthenticationStore];
 obj2.waitFor = items;

@@ -1,7 +1,7 @@
-// === Module 12161: UserProfileEmbedRenderingMobileExperiment ===
+// === Module 12103: UserProfileEmbedRenderingMobileExperiment ===
 
-// Module 12161 (UserProfileEmbedRenderingMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 12103 (UserProfileEmbedRenderingMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-profile-embed-rendering-mobile", kind: "user", defaultConfig: { enabled: false }, variations: null };

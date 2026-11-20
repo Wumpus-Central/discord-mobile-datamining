@@ -1,9 +1,9 @@
-// === Module 7571: AtIcon ===
+// === Module 7570: AtIcon ===
 
-// Module 7571 (AtIcon)
+// Module 7570 (AtIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
-import _mod7523 from "module_7523" /* 7523 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
+import _mod7522 from "module_7522" /* 7522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AtIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7523, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7522, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

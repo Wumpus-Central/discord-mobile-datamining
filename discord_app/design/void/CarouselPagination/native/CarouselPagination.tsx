@@ -1,18 +1,18 @@
-// === Module 15332: CarouselPagination ===
+// === Module 15296: CarouselPagination ===
 
-// Module 15332 (CarouselPagination)
+// Module 15296 (CarouselPagination)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import Easing_Easing from "Easing/Easing" /* 15127 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import Easing_Easing from "Easing/Easing" /* 15091 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 }, dot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, marginHorizontal: 4, backgroundColor: nativeDefault.colors.ICON_STRONG };
 obj.dot = size;
@@ -41,8 +41,8 @@ let closure_8 = noop.memo(function Dot(active) {
   CarouselPaginationTsx1.__closure = items1;
   CarouselPaginationTsx1.__workletHash = 5504332160978;
   CarouselPaginationTsx1.__initData = tmp4;
-  const derivedValue = _mod1655.useDerivedValue(CarouselPaginationTsx1);
-  const items2 = [closure_7, _mod1655.interpolate, derivedValue, _mod1655.interpolateColor, tmp.dot.backgroundColor, nativeDefault.unsafe_rawColors.BRAND_500];
+  const derivedValue = _mod1653.useDerivedValue(CarouselPaginationTsx1);
+  const items2 = [closure_7, _mod1653.interpolate, derivedValue, _mod1653.interpolateColor, tmp.dot.backgroundColor, nativeDefault.unsafe_rawColors.BRAND_500];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -63,11 +63,11 @@ let closure_8 = noop.memo(function Dot(active) {
   CarouselPaginationTsx2.__closure = items3;
   CarouselPaginationTsx2.__workletHash = 9539116065290;
   CarouselPaginationTsx2.__initData = tmp10;
-  const animatedStyle = _mod1655.useAnimatedStyle(CarouselPaginationTsx2);
+  const animatedStyle = _mod1653.useAnimatedStyle(CarouselPaginationTsx2);
   const obj2 = { style: null };
   const items4 = [tmp.dot, animatedStyle];
   obj2.style = items4;
-  return jsx(_modDef1655.View, { style: null });
+  return jsx(_modDef1653.View, { style: null });
 });
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");

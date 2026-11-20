@@ -1,9 +1,9 @@
-// === Module 2136: VoiceEngine ===
+// === Module 2134: VoiceEngine ===
 
-// Module 2136 (VoiceEngine)
+// Module 2134 (VoiceEngine)
 import logger_Logger from "logger/Logger" /* 4 */;
 import _mod17 from "module_17" /* 17 */;
-import VoiceEngineModule from "VoiceEngineModule" /* 2137 */;
+import VoiceEngineModule from "VoiceEngineModule" /* 2135 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -137,15 +137,15 @@ class VoiceConnection {
         closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
-    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(arg0, arg1, arg2) {
+    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(image, arg1, arg2) {
       const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("prepareMLSCommitTransitionB64");
-      result(arg0, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
+      result(image, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
-    obj.processMLSWelcome = function processMLSWelcome(arg0, arg1, arg2) {
+    obj.processMLSWelcome = function processMLSWelcome(image, arg1, arg2) {
       const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("processMLSWelcomeB64");
-      result(arg0, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
+      result(image, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
     obj.setOnMLSFailureCallback = obj.callbackSetter("mls-failure-callback", (arg0) => {
       items = [, ];

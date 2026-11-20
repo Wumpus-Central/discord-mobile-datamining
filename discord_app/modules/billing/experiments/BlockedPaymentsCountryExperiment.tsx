@@ -1,7 +1,7 @@
 // === Module 8985: BlockedPaymentsCountryExperiment ===
 
 // Module 8985 (BlockedPaymentsCountryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };

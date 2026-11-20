@@ -1,15 +1,15 @@
 // === Module 9490: SocialLayerStorefrontGiftModal ===
 
 // Module 9490 (SocialLayerStorefrontGiftModal)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 9469 */;
-import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 13813 */;
-import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 13814 */;
+import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 13782 */;
+import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 13783 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6553 */;
+import SKUStore from "SKUStore" /* 6555 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, PaymentGateways: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);

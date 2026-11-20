@@ -1,14 +1,14 @@
 // === Module 9092: PremiumActivatedAlert ===
 
 // Module 9092 (PremiumActivatedAlert)
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import PremiumUtils from "PremiumUtils" /* 2174 */;
-import shared from "shared" /* 4799 */;
-import useThemeDefault from "useTheme" /* 5001 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import common_AlertDefault from "common/Alert" /* 5811 */;
-import _modDef8708 from "module_8708" /* 8708 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import PremiumUtils from "PremiumUtils" /* 2172 */;
+import shared from "shared" /* 4801 */;
+import useThemeDefault from "useTheme" /* 5003 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import common_AlertDefault from "common/Alert" /* 5813 */;
+import _modDef8748 from "module_8748" /* 8748 */;
 import _modDef9007 from "module_9007" /* 9007 */;
 import _modDef9008 from "module_9008" /* 9008 */;
 import _modDef9093 from "module_9093" /* 9093 */;
@@ -38,10 +38,10 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
+const SubscriptionStatusTypes = fn(1071).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = { alert: { overflow: "hidden", paddingBottom: 24 }, header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" }, headerBackground: null, headerImage: null, body: null, logoPlusPremiumGuild: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -51,9 +51,9 @@ obj2.headerBackground = obj3;
 obj2.headerImage = { position: "absolute", left: "50%" };
 obj2.body = { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" };
 obj2.logoPlusPremiumGuild = { marginTop: 3, width: 101, height: 19 };
-obj2.description = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: fn(6434).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+obj2.description = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: fn(6436).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_8 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.TIER_0 === arg0) {
     const obj2 = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
@@ -72,7 +72,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
     return obj;
   }
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_9 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.BUNDLE === arg0) {
     const obj2 = { animation: { borderRadius: 6 } };
@@ -166,7 +166,7 @@ export default function PremiumActivatedAlert(onClose) {
         }
       }
     }
-    tmp4Result17 = _modDef8708;
+    tmp4Result17 = _modDef8748;
   }
   items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result17, style: tmp9.logo });
   let tmp15Result = null;

@@ -1,26 +1,26 @@
-// === Module 13899: BadgeDetailsSheet ===
+// === Module 13868: BadgeDetailsSheet ===
 
-// Module 13899 (BadgeDetailsSheet)
+// Module 13868 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5496 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8023 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13898 */;
-import BadgeUtils from "BadgeUtils" /* 13901 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 13916 */;
-import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 13922 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5498 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8022 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13867 */;
+import BadgeUtils from "BadgeUtils" /* 13870 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 13885 */;
+import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 13891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import UserStore from "UserStore" /* 1388 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13900 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8018 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import UserStore from "UserStore" /* 1386 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13869 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8017 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function BadgeAccessoryLine(segments) {
@@ -66,14 +66,14 @@ function BadgeUnlockLabel(unlock) {
   BadgeDetailsSheetTsx1.__closure = items1;
   BadgeDetailsSheetTsx1.__workletHash = 3063648354188;
   BadgeDetailsSheetTsx1.__initData = tmp4;
-  const animatedStyle = _mod1655.useAnimatedStyle(BadgeDetailsSheetTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(BadgeDetailsSheetTsx1);
   const obj2 = { style: null, pointerEvents: "none", "aria-hidden": true, children: null };
   const items2 = [tmp.unlockLabel, animatedStyle];
   obj2.style = items2;
   const obj3 = { variant: "heading-lg/semibold", color: "text-strong", style: tmp.centeredText, children: null };
   obj3.children = BadgeUtils.getBadgeUnlockLabel(unlock.badge, unlock.previousTierKey);
   obj2.children = state(Text_Text.Text, obj3);
-  return state(_modDef1655.View, obj2);
+  return state(_modDef1653.View, obj2);
 }
 function BadgeDetailsSheetContent(badge) {
   badge = badge.badge;
@@ -114,8 +114,8 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx2.__closure = items3;
   BadgeDetailsSheetTsx2.__workletHash = 4967119618479;
   BadgeDetailsSheetTsx2.__initData = tmp10;
-  const animatedStyle = require("module_1655").useAnimatedStyle(BadgeDetailsSheetTsx2);
-  let obj3 = require("module_1655");
+  const animatedStyle = require("module_1653").useAnimatedStyle(BadgeDetailsSheetTsx2);
+  let obj3 = require("module_1653");
   const items4 = [closure_22, titleScale];
   _require = undefined;
   [tmp13, tmp14] = items4;
@@ -133,8 +133,8 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx3.__closure = items5;
   BadgeDetailsSheetTsx3.__workletHash = 10150135716089;
   BadgeDetailsSheetTsx3.__initData = tmp13;
-  const animatedStyle1 = require("module_1655").useAnimatedStyle(BadgeDetailsSheetTsx3);
-  const tmp2Result = require("module_1655");
+  const animatedStyle1 = require("module_1653").useAnimatedStyle(BadgeDetailsSheetTsx3);
+  const tmp2Result = require("module_1653");
   [tmp17, tmp18] = noop.useState(!startsHidden);
   const tmp16 = _slicedToArray(noop.useState(!startsHidden), 2);
   const items6 = [closure_23, contentOpacity];
@@ -149,7 +149,7 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx4.__closure = items7;
   BadgeDetailsSheetTsx4.__workletHash = 4791037630466;
   BadgeDetailsSheetTsx4.__initData = tmp19;
-  const items8 = [closure_24, require("module_1708").scheduleOnRN, tmp18];
+  const items8 = [closure_24, require("module_1706").scheduleOnRN, tmp18];
   _require = undefined;
   importDefault = undefined;
   [tmp21, tmp22, tmp23] = items8;
@@ -168,12 +168,12 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx5.__closure = items9;
   BadgeDetailsSheetTsx5.__workletHash = 2925858299866;
   BadgeDetailsSheetTsx5.__initData = tmp21;
-  const animatedReaction = require("module_1655").useAnimatedReaction(BadgeDetailsSheetTsx4, BadgeDetailsSheetTsx5);
+  const animatedReaction = require("module_1653").useAnimatedReaction(BadgeDetailsSheetTsx4, BadgeDetailsSheetTsx5);
   let obj4 = null;
   if (!tmp17) {
     obj4 = { pointerEvents: "none", "aria-hidden": true };
   }
-  const tmp2Result14 = require("module_1655");
+  const tmp2Result14 = require("module_1653");
   const displayTier = require("BadgeUtils").getDisplayTier(badge);
   const tmp2Result15 = require("BadgeUtils");
   const badgeArtUrls = require("BadgeDetailsUtils").getBadgeArtUrls(badge, displayTier, stateFromStores);
@@ -355,10 +355,10 @@ function BadgeDetailsSheetContent(badge) {
   obj25.style = items19;
   obj25.children = displayName;
   obj24.children = closure_13(require("Text/Text").Heading, obj25);
-  items17[1] = closure_13(require("module_1655").View, obj24);
+  items17[1] = closure_13(require("module_1653").View, obj24);
   items17[2] = closure_13(BadgeAccessoryLine, { segments: items10 });
   obj22.children = items17;
-  const items20 = [closure_14(require("module_1655").View, obj22), ];
+  const items20 = [closure_14(require("module_1653").View, obj22), ];
   let tmp33Result11 = null != unlock;
   if (tmp33Result11) {
     const obj26 = { unlock, opacity: unlockLabelOpacity };
@@ -467,7 +467,7 @@ function BadgeDetailsSheetContent(badge) {
   items24[3] = tmp49Result4;
   items24[4] = tmp33Result;
   obj33.children = items24;
-  obj32.children = closure_14(require("module_1655").View, obj33);
+  obj32.children = closure_14(require("module_1653").View, obj33);
   tmp33Result13 = closure_13(closure_6, obj32);
   const tmp2Result24 = require("badgeDetailsCtas");
 }
@@ -595,11 +595,11 @@ function BadgeDetailsPage(badgeId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
-const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_12 = fn(5021).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const UserSettingsSections = fn(1071).UserSettingsSections;
+let closure_12 = fn(5023).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: { flexGrow: 1 }, page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, header: null, newTag: null, graphic: null, graphicAnimated: null, identity: null, centeredText: null, eyebrow: null, title: null, identityArea: null, unlockLabel: null, uppercase: null, accessoryLine: null, accessoryDot: null, card: null, cardContent: null, descriptionGroup: null, divider: null, notice: null, noticeIcon: null, noticeText: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_8 };
@@ -754,7 +754,7 @@ export default function BadgeDetailsSheet(badgeId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -784,7 +784,7 @@ export default function BadgeDetailsSheet(badgeId) {
           } else {
             closure_1_6(true);
             c2 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c2 = tmp;

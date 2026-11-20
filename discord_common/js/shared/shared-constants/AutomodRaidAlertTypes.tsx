@@ -1,6 +1,6 @@
-// === Module 8643: AutomodRaidAlertTypes ===
+// === Module 8642: AutomodRaidAlertTypes ===
 
-// Module 8643 (AutomodRaidAlertTypes)
+// Module 8642 (AutomodRaidAlertTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx");

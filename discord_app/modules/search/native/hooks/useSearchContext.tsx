@@ -1,14 +1,14 @@
-// === Module 13063: useSearchContext ===
+// === Module 13033: useSearchContext ===
 
-// Module 13063 (useSearchContext)
+// Module 13033 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchTypes = fn(1072).SearchTypes;
+const SearchTypes = fn(1071).SearchTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
 

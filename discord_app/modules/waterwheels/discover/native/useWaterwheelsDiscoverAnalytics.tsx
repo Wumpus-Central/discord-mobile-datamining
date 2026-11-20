@@ -1,15 +1,15 @@
-// === Module 17858: useWaterwheelsDiscoverAnalytics ===
+// === Module 17685: useWaterwheelsDiscoverAnalytics ===
 
-// Module 17858 (useWaterwheelsDiscoverAnalytics)
+// Module 17685 (useWaterwheelsDiscoverAnalytics)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9928 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 17850 */;
-import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 17857 */;
-import WaterwheelsDiscoverAnalytics from "WaterwheelsDiscoverAnalytics" /* 17860 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9931 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 17677 */;
+import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 17684 */;
+import WaterwheelsDiscoverAnalytics from "WaterwheelsDiscoverAnalytics" /* 17687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function toAnalyticsItems(viewableItems) {
   return items;
 }
 const AppState = fn(17).AppState;
-const WATERWHEELS = fn(1072).WATERWHEELS;
+const WATERWHEELS = fn(1071).WATERWHEELS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/discover/native/useWaterwheelsDiscoverAnalytics.tsx");
 

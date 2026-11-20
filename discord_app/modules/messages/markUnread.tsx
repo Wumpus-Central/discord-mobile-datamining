@@ -1,14 +1,14 @@
-// === Module 11176: markUnread ===
+// === Module 11118: markUnread ===
 
-// Module 11176 (markUnread)
+// Module 11118 (markUnread)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8340 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8339 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import MessageStore from "MessageStore" /* 5843 */;
-import UserStore from "UserStore" /* 1388 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4728 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import MessageStore from "MessageStore" /* 5845 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
 let closure_11 = async function _markUnread(arg0) {
@@ -22,7 +22,7 @@ let closure_11 = async function _markUnread(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_11 = async function _markUnread(arg0) {
             const toArrayResult = messages.toArray();
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -123,8 +123,8 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(6498).shouldBadgeMessage;
-const Endpoints = fn(1072).Endpoints;
+const shouldBadgeMessage = fn(6500).shouldBadgeMessage;
+const Endpoints = fn(1071).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/markUnread.tsx");

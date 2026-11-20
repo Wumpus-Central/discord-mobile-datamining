@@ -1,22 +1,22 @@
-// === Module 13101: GuildDirectoryRow ===
+// === Module 13071: GuildDirectoryRow ===
 
-// Module 13101 (GuildDirectoryRow)
+// Module 13071 (GuildDirectoryRow)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import GuildIconDefault from "GuildIcon" /* 7203 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13077 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import GuildIconDefault from "GuildIcon" /* 7202 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13047 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
 
 const require = fn;
 const View = fn(17).View;
-const JoinGuildSources = fn(1072).JoinGuildSources;
+const JoinGuildSources = fn(1071).JoinGuildSources;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 }, guildInfoContainer: { flexDirection: "column", flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm, marginRight: 16 }, guildWrapper: { flex: 1 }, guildDescription: { flexShrink: 1, marginBottom: 8 }, memberInfo: { flexDirection: "row", alignItems: "center", marginBottom: 8 }, dotOnline: null, dotOffline: null, headerContainer: null, titleContainer: null, flex: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.dotOnline = size;
@@ -43,7 +43,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -113,7 +113,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
                 closure_129_3(false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else {
               let guildId;
               if (channel2 != null) {
@@ -130,7 +130,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
             closure_129_3(false);
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp67) {
         if (tmp5 === c3) {
@@ -152,17 +152,17 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   dependencyMap = noop.useRef(0);
   let obj = entry(504);
   const items1 = [entry.guildId];
-  const tmp5 = _slicedToArray(entry(7371).useRecyclingState(false, items1, () => {
+  const tmp5 = _slicedToArray(entry(7370).useRecyclingState(false, items1, () => {
     ref.current = ref.current + 1;
   }), 2);
   closure_3 = tmp5[1];
-  let obj2 = entry(7371);
+  let obj2 = entry(7370);
   const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: entry.guildId, icon: entry.icon, size: 40 });
-  const intl = tmp2(1113).intl;
-  let stringResult = intl.string(tmp2(1113).t.VJlc0S);
+  const intl = tmp2(1112).intl;
+  let stringResult = intl.string(tmp2(1112).t.VJlc0S);
   if (tmp4) {
-    const intl2 = tmp2(1113).intl;
-    stringResult = intl2.string(tmp2(1113).t.cqWE2Z);
+    const intl2 = tmp2(1112).intl;
+    stringResult = intl2.string(tmp2(1112).t.cqWE2Z);
   }
   const obj5 = { style: tmp.container, children: null };
   let obj6 = { style: tmp.guildWrapper, children: null };
@@ -172,13 +172,13 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   let result;
   let obj4 = { id: entry.guildId, icon: entry.icon, size: 40 };
   if (null == guildIconURL) {
-    result = tmp2(4655).fromGuildDirectoryEntry(entry);
-    const tmp2Result = tmp2(4655);
+    result = tmp2(4657).fromGuildDirectoryEntry(entry);
+    const tmp2Result = tmp2(4657);
   }
   obj9.guild = result;
   const items2 = [closure_10(GuildIconDefault, obj9), ];
   let obj10 = { style: tmp.guildInfoContainer, children: null };
-  const items3 = [closure_10(entry(5383).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
+  const items3 = [closure_10(entry(5385).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
   let obj11 = { style: tmp.memberInfo, children: null };
   let tmp10Result = null;
   if (null != approximatePresenceCount) {
@@ -186,10 +186,10 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const obj13 = { style: tmp.dotOnline };
     const items4 = [closure_10(View, obj13), ];
     const obj14 = { variant: "body-xs/medium", color: "text-default", children: null };
-    const intl3 = tmp2(1113).intl;
+    const intl3 = tmp2(1112).intl;
     const obj15 = { membersOnline: approximatePresenceCount };
-    obj14.children = intl3.format(tmp2(1113).t["LC+S+m"], obj15);
-    items4[1] = closure_10(tmp2(5383).Text, obj14);
+    obj14.children = intl3.format(tmp2(1112).t["LC+S+m"], obj15);
+    items4[1] = closure_10(tmp2(5385).Text, obj14);
     obj12.children = items4;
     tmp10Result = closure_12(closure_11, obj12);
   }
@@ -200,10 +200,10 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const obj17 = { style: tmp.dotOffline };
     const items6 = [closure_10(View, obj17), ];
     const obj18 = { variant: "body-xs/medium", color: "text-default", children: null };
-    const intl4 = tmp2(1113).intl;
+    const intl4 = tmp2(1112).intl;
     const obj19 = { count: approximateMemberCount };
-    obj18.children = intl4.format(tmp2(1113).t.zRl6XR, obj19);
-    items6[1] = closure_10(tmp2(5383).Text, obj18);
+    obj18.children = intl4.format(tmp2(1112).t.zRl6XR, obj19);
+    items6[1] = closure_10(tmp2(5385).Text, obj18);
     obj16.children = items6;
     tmp10Result2 = closure_12(closure_11, obj16);
   }
@@ -224,7 +224,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   if (tmp9Result) {
     const obj21 = { lineClamp: 3, style: tmp.guildDescription, variant: "body-sm/medium", color: "text-default", children: description };
-    tmp9Result = closure_10(tmp2(5383).Text, obj21);
+    tmp9Result = closure_10(tmp2(5385).Text, obj21);
   }
   items8[1] = tmp9Result;
   items8[2] = closure_10(View, { style: tmp.flex });
@@ -249,8 +249,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   obj23.variant = str2;
   obj23.text = stringResult;
-  items8[3] = closure_10(entry(5390).Button, obj23);
+  items8[3] = closure_10(entry(5392).Button, obj23);
   obj6.children = items8;
   obj5.children = closure_12(View, obj6);
-  return closure_10(entry(6928).Card, obj5);
+  return closure_10(entry(6927).Card, obj5);
 });

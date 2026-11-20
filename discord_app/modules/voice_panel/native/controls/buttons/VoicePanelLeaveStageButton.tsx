@@ -1,9 +1,9 @@
-// === Module 19420: VoicePanelLeaveStageButton ===
+// === Module 19240: VoicePanelLeaveStageButton ===
 
-// Module 19420 (VoicePanelLeaveStageButton)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6382 */;
+// Module 19240 (VoicePanelLeaveStageButton)
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6384 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -13,13 +13,13 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/controls/b
 export default function LeaveStageButton(arg0) {
   let stateFromStores;
   ({ props, wrapperSpecs } = arg0);
-  const channelId = noop.useContext(stateFromStores(11687)).channelId;
+  const channelId = noop.useContext(stateFromStores(11629)).channelId;
   items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
   const tmp = stateFromStores;
-  const voicePanelButtonStyles = channelId(19399).useVoicePanelButtonStyles(wrapperSpecs);
+  const voicePanelButtonStyles = channelId(19219).useVoicePanelButtonStyles(wrapperSpecs);
   let tmp6 = null;
   if (null != stateFromStores) {
     const element = {
@@ -31,12 +31,12 @@ export default function LeaveStageButton(arg0) {
       style: null,
       children: null
     };
-    const intl = tmp3(1113).intl;
-    element.accessibilityLabel = intl.string(tmp3(1113).t.ezLpY6);
+    const intl = tmp3(1112).intl;
+    element.accessibilityLabel = intl.string(tmp3(1112).t.ezLpY6);
     element.style = voicePanelButtonStyles.iconBg;
     const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-    element.children = jsx(tmp3(10837).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
-    tmp6 = jsx(tmp(19400), {
+    element.children = jsx(tmp3(10779).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
+    tmp6 = jsx(tmp(19220), {
       onPress() {
           return StageChannelActionCreators.audienceAckRequestToSpeak(stateFromStores, true);
         },
@@ -45,7 +45,7 @@ export default function LeaveStageButton(arg0) {
       style: null,
       children: null
     });
-    const tmpResult = tmp(19400);
+    const tmpResult = tmp(19220);
   }
   return tmp6;
 };

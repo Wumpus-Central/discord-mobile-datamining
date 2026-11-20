@@ -1,22 +1,22 @@
-// === Module 10612: AppLauncherUtils ===
+// === Module 10554: AppLauncherUtils ===
 
-// Module 10612 (AppLauncherUtils)
-import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import Server from "Server" /* 2119 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2151 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
-import getPlatformDefault from "getPlatform" /* 5443 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6540 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8195 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10614 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10622 */;
+// Module 10554 (AppLauncherUtils)
+import util from "util" /* 1112 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import Server from "Server" /* 2117 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2149 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
+import getPlatformDefault from "getPlatform" /* 5445 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6542 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8194 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10556 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10564 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10374 */;
-import ApplicationRecord from "ApplicationRecord" /* 2143 */;
-import AppLauncherStore from "AppLauncherStore" /* 10613 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10316 */;
+import ApplicationRecord from "ApplicationRecord" /* 2141 */;
+import AppLauncherStore from "AppLauncherStore" /* 10555 */;
 
 const require = globalThis.__r;
 
@@ -66,9 +66,9 @@ function getShelfBadgeTypeIfActive(application) {
   NONE = Server.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
-const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(5816).BuiltInSectionId;
-const MessageSendLocation = fn(4797).MessageSendLocation;
+const ApplicationFlags = fn(1071).ApplicationFlags;
+const BuiltInSectionId = fn(5818).BuiltInSectionId;
+const MessageSendLocation = fn(4799).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -169,7 +169,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -237,7 +237,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

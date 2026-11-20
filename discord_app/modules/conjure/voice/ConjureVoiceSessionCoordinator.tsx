@@ -1,24 +1,24 @@
-// === Module 15584: ConjureVoiceSessionCoordinator ===
+// === Module 15548: ConjureVoiceSessionCoordinator ===
 
-// Module 15584 (ConjureVoiceSessionCoordinator)
+// Module 15548 (ConjureVoiceSessionCoordinator)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5688 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5691 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6505 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5690 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5693 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6507 */;
 import RPCErrorDefault from "RPCError" /* 6790 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15586 */;
-import FramesStore from "FramesStore" /* 6502 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15550 */;
+import FramesStore from "FramesStore" /* 6504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import UserStore from "UserStore" /* 1386 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 let obj2 = fn;
-const RPCErrors = fn(1072).RPCErrors;
-const constants = fn(5690).SpatialAudioOverrideSource;
-const Constants = fn(5537);
+const RPCErrors = fn(1071).RPCErrors;
+const constants = fn(5692).SpatialAudioOverrideSource;
+const Constants = fn(5539);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 let closure_14 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -138,15 +138,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp41Result2 = tmp41(15585);
+            tmp41Result2 = tmp41(15549);
           }
-          tmp41Result = tmp41(15585);
+          tmp41Result = tmp41(15549);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(15585);
+        obj13 = handleFrameLifecycleChange(15549);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -166,7 +166,7 @@ prototype["start"] = function start(id) {
         }
         focusSequence = num;
       }
-      const obj3 = { id: handleFrameLifecycleChange(1269).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, acoustics: {}, focusSequence, backgrounded: !FramesStore.isFrameVisible(frameId), pooled: FramesStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
+      const obj3 = { id: handleFrameLifecycleChange(1268).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, acoustics: {}, focusSequence, backgrounded: !FramesStore.isFrameVisible(frameId), pooled: FramesStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
       const _Set = Set;
       const set = new Set();
       obj3.appliedUserIds = set;
@@ -186,7 +186,7 @@ prototype["start"] = function start(id) {
         const tmp34 = new RPCErrorDefault(obj5, "The voice connection is unavailable");
         throw tmp34;
       }
-      const obj7 = handleFrameLifecycleChange(1269);
+      const obj7 = handleFrameLifecycleChange(1268);
     }
   }
   const obj6 = { errorCode: RPCErrors.INVALID_CHANNEL };
@@ -217,16 +217,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15587);
+    obj2 = obj2(15551);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15587).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15551).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15587);
+      const tmp11Result = tmp11(15551);
     }
     tmp11 = obj2;
   } else {
@@ -353,7 +353,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15588).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15552).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

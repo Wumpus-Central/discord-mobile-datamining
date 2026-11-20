@@ -2,7 +2,7 @@
 
 // Module 8958 (SuperReactionIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod8959 from "module_8959" /* 8959 */;
 import noop from "module_19" /* 19 */;
 

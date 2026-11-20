@@ -1,25 +1,25 @@
-// === Module 19377: VoicePanelPIP ===
+// === Module 19197: VoicePanelPIP ===
 
-// Module 19377 (VoicePanelPIP)
-import util from "util" /* 1113 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4713 */;
-import native from "native" /* 4853 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import ExternalPipDefault from "ExternalPip" /* 5644 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10560 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10609 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11692 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11695 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11697 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19218 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19286 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19294 */;
+// Module 19197 (VoicePanelPIP)
+import util from "util" /* 1112 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
+import native from "native" /* 4855 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import ExternalPipDefault from "ExternalPip" /* 5646 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10502 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10551 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11634 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11637 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11639 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19037 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19106 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19114 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
-import FramesStore from "FramesStore" /* 6502 */;
-import VoicePanelStore from "VoicePanelStore" /* 6374 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import FramesStore from "FramesStore" /* 6504 */;
+import VoicePanelStore from "VoicePanelStore" /* 6376 */;
 
 require = fn;
 class VoicePanelPIPTiles {
@@ -471,7 +471,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F143474 */ function() { ... });
+          found = allTouches.filter(/* F141319 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);
@@ -495,7 +495,7 @@ class VoicePanelPIPTiles {
       VoicePanelPIPTsx8.__workletHash = 6786919878348;
       VoicePanelPIPTsx8.__initData = tmp14;
       const onTouchesDownResult = result.onTouchesDown(VoicePanelPIPTsx7);
-      const items4 = [closure_29, getTouchesCentroid, getTouchesSpread, closure_1_17, callback2, 8, closure_1_16, VoicePanelPIPUtils.clampPIPScale, c11, c7, c6, LegacyBaseButton.State, 10, VoicePanelPIPUtils.getClampedPIPPosition, c12, VoicePanelPIPUtils.getScaledPIPContainerHeight, c15, updateSharedValueIfChangedDefault, c13, _mod1708.scheduleOnRN, utils_triggerIOSHapticDefault];
+      const items4 = [closure_29, getTouchesCentroid, getTouchesSpread, closure_1_17, callback2, 8, closure_1_16, VoicePanelPIPUtils.clampPIPScale, c11, c7, c6, LegacyBaseButton.State, 10, VoicePanelPIPUtils.getClampedPIPPosition, c12, VoicePanelPIPUtils.getScaledPIPContainerHeight, c15, updateSharedValueIfChangedDefault, c13, _mod1706.scheduleOnRN, utils_triggerIOSHapticDefault];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;
@@ -630,7 +630,7 @@ class VoicePanelPIPTiles {
       VoicePanelPIPTsx9.__workletHash = 14940261768507;
       VoicePanelPIPTsx9.__initData = tmp23;
       const onTouchesUpResult = result.onTouchesDown(VoicePanelPIPTsx7).onTouchesUp(VoicePanelPIPTsx8);
-      const items6 = [closure_30, closure_1_17, closure_1_19, c15, updateSharedValueIfChangedDefault, c13, closure_22, _mod1708.scheduleOnRN, ExternalPipDefault.updateSourceTrackingView, callback2, VoicePanelPIPScaleCache.setVoicePanelPIPScaleCached, closure_1_16];
+      const items6 = [closure_30, closure_1_17, closure_1_19, c15, updateSharedValueIfChangedDefault, c13, closure_22, _mod1706.scheduleOnRN, ExternalPipDefault.updateSourceTrackingView, callback2, VoicePanelPIPScaleCache.setVoicePanelPIPScaleCached, closure_1_16];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;
@@ -704,7 +704,7 @@ class VoicePanelPIPTiles {
       const TapResult = Gesture2.Tap();
       const tmp3 = c1;
       const enabledResult = Gesture2.Tap().enabled(tmp4);
-      items = [closure_32, _mod1708.scheduleOnRN, c8];
+      items = [closure_32, _mod1706.scheduleOnRN, c8];
       c0 = undefined;
       c1 = undefined;
       [tmp7, tmp8, tmp9] = items;
@@ -724,7 +724,7 @@ class VoicePanelPIPTiles {
       const numberOfTapsResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).onStart(VoicePanelPIPTsx12).numberOfTaps(2);
       const TapResult1 = Gesture3.Tap();
       const enabledResult1 = Gesture3.Tap().enabled(true);
-      const items2 = [closure_33, tmp3, _mod1708.scheduleOnRN, c0, state, c9, constants, c4, VoicePanelControlsModes, c10, c5];
+      const items2 = [closure_33, tmp3, _mod1706.scheduleOnRN, c0, state, c9, constants, c4, VoicePanelControlsModes, c10, c5];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;
@@ -819,7 +819,7 @@ class VoicePanelPIPTiles {
     memo2 = obj.useMemo(() => {
       const Gesture = LegacyBaseButton.Gesture;
       const TapResult = Gesture.Tap();
-      items = [closure_34, _mod1708.scheduleOnRN, closure_1_22];
+      items = [closure_34, _mod1706.scheduleOnRN, closure_1_22];
       c0 = undefined;
       c1 = undefined;
       [tmp, tmp2, tmp3] = items;
@@ -1133,16 +1133,16 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11688);
+const VoicePanelConstants = fn(11630);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11686).VoicePanelControlsModes;
-const VoicePanelPIPConstants = fn(19219);
+const VoicePanelControlsModes = fn(11628).VoicePanelControlsModes;
+const VoicePanelPIPConstants = fn(19038);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_12, VoicePanelPIPModes: map1 } = VoicePanelPIPConstants);
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
-const isLaunched = fn(6503).isLaunched;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const isLaunched = fn(6505).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -1230,12 +1230,12 @@ function usePIPTileHandoff() {
 let closure_41 = noop.memo(function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const pipHandoff = noop.useContext(transitionCleanUp(11687)).pipHandoff;
-  const mode = transitionState(11697).usePIPState().mode;
-  const obj = transitionState(11697);
-  const pIPCardsSettled = transitionState(11695).usePIPCardsSettled(pipHandoff);
-  const obj2 = transitionState(11695);
-  const pIPPanelLayoutCommitted = transitionState(11695).usePIPPanelLayoutCommitted(pipHandoff);
+  const pipHandoff = noop.useContext(transitionCleanUp(11629)).pipHandoff;
+  const mode = transitionState(11639).usePIPState().mode;
+  const obj = transitionState(11639);
+  const pIPCardsSettled = transitionState(11637).usePIPCardsSettled(pipHandoff);
+  const obj2 = transitionState(11637);
+  const pIPPanelLayoutCommitted = transitionState(11637).usePIPPanelLayoutCommitted(pipHandoff);
   items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {

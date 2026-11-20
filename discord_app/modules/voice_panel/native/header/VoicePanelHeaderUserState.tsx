@@ -1,16 +1,16 @@
-// === Module 19304: VoicePanelHeaderUserState ===
+// === Module 19124: VoicePanelHeaderUserState ===
 
-// Module 19304 (VoicePanelHeaderUserState)
+// Module 19124 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 7205 */;
-import native from "native" /* 7481 */;
+import NativeViewDefault from "NativeView" /* 7204 */;
+import native from "native" /* 7480 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 9555 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
-import useStableParticipant from "useStableParticipant" /* 19303 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19305 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import useStableParticipant from "useStableParticipant" /* 19123 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19125 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import module_1655 from "module_1655" /* 1655 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import module_1653 from "module_1653" /* 1653 */;
 
 const require = globalThis.__r;
 const useStableParticipantDefault = useStableParticipant;
@@ -67,9 +67,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = module_1655.createAnimatedComponent(fn(7481).BackgroundBlurView);
+let closure_6 = module_1653.createAnimatedComponent(fn(7480).BackgroundBlurView);
 let closure_7 = { duration: 100 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;
@@ -100,7 +100,7 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     return id;
   });
   const tmp4 = useVoicePanelHeaderUserStateIcons(useStableParticipantDefault(stateFromStores, channelId, guildId), guildId);
-  require("module_1655");
+  require("module_1653");
   const items1 = [closure_10, require("timing/timing").withTiming, isHeaderHidden.isHeaderHidden, closure_7];
   _require = undefined;
   importDefault = undefined;

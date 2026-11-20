@@ -1,12 +1,12 @@
-// === Module 18984: useVoiceChannelAppOptions ===
+// === Module 18808: useVoiceChannelAppOptions ===
 
-// Module 18984 (useVoiceChannelAppOptions)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+// Module 18808 (useVoiceChannelAppOptions)
+import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import ConjureUtils from "ConjureUtils" /* 6746 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 

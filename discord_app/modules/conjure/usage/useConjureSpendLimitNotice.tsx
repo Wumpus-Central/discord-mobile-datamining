@@ -1,8 +1,8 @@
-// === Module 18465: useConjureSpendLimitNotice ===
+// === Module 18290: useConjureSpendLimitNotice ===
 
-// Module 18465 (useConjureSpendLimitNotice)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import _modDef4089 from "module_4089" /* 4089 */;
+// Module 18290 (useConjureSpendLimitNotice)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
+import _modDef4091 from "module_4091" /* 4091 */;
 import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 6863 */;
 
 const require = globalThis.__r;
@@ -27,13 +27,13 @@ export default function useConjureSpendLimitNotice(arg0) {
     if ("blocked" === stateFromStores.state) {
       const submitRequestURL = HelpdeskUtilsDefault.getSubmitRequestURL();
       if (null == formatResult) {
-        const intl2 = tmp(1113).intl;
+        const intl2 = tmp(1112).intl;
         const obj3 = { helpdeskURL: submitRequestURL };
-        let formatResult1 = intl2.format(_modDef4089["bw/n4C"], obj3);
+        let formatResult1 = intl2.format(_modDef4091["bw/n4C"], obj3);
       } else {
-        const intl = tmp(1113).intl;
+        const intl = tmp(1112).intl;
         const obj4 = { limit: formatResult, helpdeskURL: submitRequestURL };
-        formatResult1 = intl.format(_modDef4089.GYqJXH, obj4);
+        formatResult1 = intl.format(_modDef4091.GYqJXH, obj4);
       }
       const obj5 = { blocked: true, message: formatResult1 };
       return obj5;
@@ -45,9 +45,9 @@ export default function useConjureSpendLimitNotice(arg0) {
             const _Math2 = Math;
             const obj6 = { blocked: false, message: null };
             const bound = Math.min(99, Math.floor(stateFromStores.spentUsd / stateFromStores.limitUsd * 100));
-            const intl3 = tmp(1113).intl;
+            const intl3 = tmp(1112).intl;
             const obj7 = { percent: bound, limit: formatResult };
-            obj6.message = intl3.formatToPlainString(_modDef4089.GHgG2B, obj7);
+            obj6.message = intl3.formatToPlainString(_modDef4091.GHgG2B, obj7);
             return obj6;
           }
         }

@@ -1,9 +1,9 @@
-// === Module 17310: DesignSystemHapticsSetting ===
+// === Module 17137: DesignSystemHapticsSetting ===
 
-// Module 17310 (DesignSystemHapticsSetting)
-import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 8593 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
+// Module 17137 (DesignSystemHapticsSetting)
+import Constants from "Constants" /* 1071 */;
+import SettingsConstants from "SettingsConstants" /* 8592 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

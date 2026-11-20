@@ -1,9 +1,9 @@
-// === Module 8163: UserSettingsProto ===
+// === Module 8162: UserSettingsProto ===
 
-// Module 8163 (UserSettingsProto)
+// Module 8162 (UserSettingsProto)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import apply from "apply" /* 12 */;
 
@@ -33,7 +33,7 @@ class UserSettingsProto {
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           state = closure_1_3.computeState();
-          const result = closure_1_0(4670).userSettingsTransaction(database);
+          const result = closure_1_0(4672).userSettingsTransaction(database);
           for (const key10014 in state) {
             obj2 = { id: null, value: null };
             let _Number = Number;
@@ -50,10 +50,10 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
-          obj = closure_1_0(4670);
-          const result1 = closure_1_0(4670).nonGuildVersionsTransaction(database);
+          obj = closure_1_0(4672);
+          const result1 = closure_1_0(4672).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
-          const obj3 = closure_1_0(4670);
+          const obj3 = closure_1_0(4672);
         }, "handleUserSettingsProtoChange");
       }
     };
@@ -76,7 +76,7 @@ prototype["getAll"] = function getAll(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -168,7 +168,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       state = closure_1_3.computeState();
-      const result = closure_1_0(4670).userSettingsTransaction(database);
+      const result = closure_1_0(4672).userSettingsTransaction(database);
       for (const key10014 in state) {
         obj2 = { id: null, value: null };
         let _Number = Number;
@@ -185,10 +185,10 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
-      obj = closure_1_0(4670);
-      const result1 = closure_1_0(4670).nonGuildVersionsTransaction(database);
+      obj = closure_1_0(4672);
+      const result1 = closure_1_0(4672).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
-      const obj3 = closure_1_0(4670);
+      const obj3 = closure_1_0(4672);
     }, "handleUserSettingsProtoChange");
   }
 };

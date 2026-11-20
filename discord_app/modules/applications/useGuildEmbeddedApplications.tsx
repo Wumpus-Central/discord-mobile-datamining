@@ -1,16 +1,16 @@
-// === Module 7634: useGuildEmbeddedApplications ===
+// === Module 7633: useGuildEmbeddedApplications ===
 
-// Module 7634 (useGuildEmbeddedApplications)
-import DurationsDefault from "Durations" /* 1089 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6538 */;
+// Module 7633 (useGuildEmbeddedApplications)
+import DurationsDefault from "Durations" /* 1088 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6540 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 const require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1072).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
+  getQueryId: fn(1071).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
     const guildEmbeddedApplications = ApplicationStore.getGuildEmbeddedApplications(arg1, arg0);
@@ -42,7 +42,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;

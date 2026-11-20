@@ -1,14 +1,14 @@
-// === Module 17576: JankSlidingSurfaceReporter ===
+// === Module 17403: JankSlidingSurfaceReporter ===
 
-// Module 17576 (JankSlidingSurfaceReporter)
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17577 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17578 */;
+// Module 17403 (JankSlidingSurfaceReporter)
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17404 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17405 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const JankScreenConstants = fn(17574);
+const JankScreenConstants = fn(17401);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let closure_6 = { code: "(function JankSlidingSurfaceReporterNativeTsx1(){let[position]=this.__closure;return position.get();})" };
 let closure_7 = { code: "(function JankSlidingSurfaceReporterNativeTsx2(current){let[openAt,closedAt,OPEN_SETTLED,CLOSED_SETTLED,MOVING,lastState,scheduleOnRN,report,INTERACTION_NONE,INTERACTION_TRANSITION]=this.__closure;const openIsLower=openAt<closedAt;const atOpen=openIsLower?current<=openAt:current>=openAt;const atClosed=openIsLower?current>=closedAt:current<=closedAt;const state=atOpen?OPEN_SETTLED:atClosed?CLOSED_SETTLED:MOVING;const prevState=lastState.get();if(state===prevState)return;lastState.set(state);if(state===OPEN_SETTLED){scheduleOnRN(report,true,INTERACTION_NONE);}else if(state===CLOSED_SETTLED){scheduleOnRN(report,false,INTERACTION_NONE);}else if(prevState===OPEN_SETTLED){scheduleOnRN(report,false,INTERACTION_TRANSITION);}else if(prevState===CLOSED_SETTLED){scheduleOnRN(report,true,INTERACTION_TRANSITION);}})" };
@@ -41,8 +41,8 @@ export default function JankSlidingSurfaceReporter(resolveOpenName) {
     }
     obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
   }, []);
-  const sharedValue = require("module_1655").useSharedValue(0);
-  let obj = require("module_1655");
+  const sharedValue = require("module_1653").useSharedValue(0);
+  let obj = require("module_1653");
   const tmp3 = _require;
   const items1 = [c6, position];
   _require = undefined;
@@ -56,7 +56,7 @@ export default function JankSlidingSurfaceReporter(resolveOpenName) {
   JankSlidingSurfaceReporterNativeTsx1.__closure = items2;
   JankSlidingSurfaceReporterNativeTsx1.__workletHash = 2008471193072;
   JankSlidingSurfaceReporterNativeTsx1.__initData = tmp6;
-  const items3 = [c7, openAt, closedAt, 1, 2, 3, sharedValue, tmp3(1708).scheduleOnRN, callback, c4, c5];
+  const items3 = [c7, openAt, closedAt, 1, 2, 3, sharedValue, tmp3(1706).scheduleOnRN, callback, c4, c5];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -115,6 +115,6 @@ export default function JankSlidingSurfaceReporter(resolveOpenName) {
   JankSlidingSurfaceReporterNativeTsx2.__closure = items4;
   JankSlidingSurfaceReporterNativeTsx2.__workletHash = 17561289534023;
   JankSlidingSurfaceReporterNativeTsx2.__initData = tmp8;
-  const animatedReaction = require("module_1655").useAnimatedReaction(JankSlidingSurfaceReporterNativeTsx1, JankSlidingSurfaceReporterNativeTsx2);
+  const animatedReaction = require("module_1653").useAnimatedReaction(JankSlidingSurfaceReporterNativeTsx1, JankSlidingSurfaceReporterNativeTsx2);
   return null;
 };

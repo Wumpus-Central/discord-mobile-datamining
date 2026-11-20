@@ -1,16 +1,16 @@
-// === Module 20224: AccountLinkingCampaignManager ===
+// === Module 20044: AccountLinkingCampaignManager ===
 
-// Module 20224 (AccountLinkingCampaignManager)
+// Module 20044 (AccountLinkingCampaignManager)
 import BackoffDefault from "Backoff" /* 559 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14906 */;
-import ConsentStore from "ConsentStore" /* 6306 */;
-import UserStore from "UserStore" /* 1388 */;
-import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 19141 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14870 */;
+import ConsentStore from "ConsentStore" /* 6308 */;
+import UserStore from "UserStore" /* 1386 */;
+import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 18960 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 let require = fn;
-const Consents = fn(1072).Consents;
+const Consents = fn(1071).Consents;
 class AccountLinkingCampaignManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -52,7 +52,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -170,7 +170,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                         closure_131_0.pendingSession = null;
                       }
                       sessionGeneration = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     }
                     obj13 = _self(tmp8[8]);
                   }
@@ -206,7 +206,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                     closure_131_0.pendingSession = null;
                   }
                   sessionGeneration = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   c5 = 3;
                   currentUser = 5;
@@ -220,7 +220,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                   closure_131_0.pendingSession = null;
                 }
                 sessionGeneration = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (4 === tmp11) {
@@ -256,7 +256,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                 closure_131_0.pendingSession = null;
               }
               sessionGeneration = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (6 === tmp11) {
             c5 = 3;
@@ -288,7 +288,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                 closure_131_0.pendingSession = null;
               }
               sessionGeneration = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           }
           c5 = 0;

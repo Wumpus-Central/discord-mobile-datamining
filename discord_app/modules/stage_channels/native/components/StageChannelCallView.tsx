@@ -1,13 +1,13 @@
-// === Module 11001: StageChannelCallView ===
+// === Module 10943: StageChannelCallView ===
 
-// Module 11001 (StageChannelCallView)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import StatusBarDefault from "StatusBar" /* 10539 */;
-import FocusedControls from "FocusedControls" /* 10787 */;
-import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 11002 */;
-import StageChannelBackgroundDefault from "StageChannelBackground" /* 11003 */;
-import StageChannelCallListDefault from "StageChannelCallList" /* 11004 */;
+// Module 10943 (StageChannelCallView)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import StatusBarDefault from "StatusBar" /* 10481 */;
+import FocusedControls from "FocusedControls" /* 10729 */;
+import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 10944 */;
+import StageChannelBackgroundDefault from "StageChannelBackground" /* 10945 */;
+import StageChannelCallListDefault from "StageChannelCallList" /* 10946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,12 +19,12 @@ function StageChannelCallBackground(arg0) {
   const obj3 = { style: null, children };
   items = [tmp.container, stageActionBarAnimation];
   obj3.style = items;
-  obj2.children = React3(_modDef1655.View, obj3);
+  obj2.children = React3(_modDef1653.View, obj3);
   return React3(StageChannelBackgroundDefault, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");

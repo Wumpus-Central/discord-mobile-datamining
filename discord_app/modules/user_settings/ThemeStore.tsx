@@ -1,16 +1,16 @@
-// === Module 1192: ThemeStore ===
+// === Module 1191: ThemeStore ===
 
-// Module 1192 (ThemeStore)
+// Module 1191 (ThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import mapValuesDefault from "mapValues" /* 582 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
-import resolveThemeDefault from "resolveTheme" /* 1237 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 15291 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1229 */;
+import resolveThemeDefault from "resolveTheme" /* 1236 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4624 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 15255 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
 require = fn;
 function handleThemeChange() {
@@ -30,10 +30,10 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1195);
+const ThemeConstants = fn(1194);
 ({ SystemTheme: closure_6, THEME_PREFERENCES_MOBILE, THEME_PREFERENCES_WEB_REFRESH } = ThemeConstants);
-const UserSettingsDelay = fn(1082).UserSettingsDelay;
-const ThemeTypes = fn(1072).ThemeTypes;
+const UserSettingsDelay = fn(1081).UserSettingsDelay;
+const ThemeTypes = fn(1071).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };
 const UNSET = obj.UNSET;
 const set = new Set(Object.values(ThemeTypes));

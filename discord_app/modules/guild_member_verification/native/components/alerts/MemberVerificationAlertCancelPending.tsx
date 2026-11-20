@@ -1,7 +1,7 @@
-// === Module 6404: MemberVerificationAlertCancelPending ===
+// === Module 6406: MemberVerificationAlertCancelPending ===
 
-// Module 6404 (MemberVerificationAlertCancelPending)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6405 */;
+// Module 6406 (MemberVerificationAlertCancelPending)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6407 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,25 +23,25 @@ export default function MemberVerificationAlertCancelPending(guildId) {
   }, items);
   const obj = {};
   const merged1 = Object.assign(merged);
-  const intl = guildId(1113).intl;
-  obj.header = intl.string(guildId(1113).t.KYiN1Q);
+  const intl = guildId(1112).intl;
+  obj.header = intl.string(guildId(1112).t.KYiN1Q);
   if (subtitleText == null) {
-    const intl2 = tmp7(1113).intl;
-    subtitleText = intl2.string(tmp7(1113).t.nQHxqm);
+    const intl2 = tmp7(1112).intl;
+    subtitleText = intl2.string(tmp7(1112).t.nQHxqm);
   }
   obj.subtitle = subtitleText;
   if (confirmText == null) {
-    const intl3 = tmp7(1113).intl;
-    confirmText = intl3.string(tmp7(1113).t.OzHPde);
+    const intl3 = tmp7(1112).intl;
+    confirmText = intl3.string(tmp7(1112).t.OzHPde);
   }
   const obj2 = { children: null };
-  const items1 = [closure_4(guildId(5390).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_4(guildId(5392).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   const obj3 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = tmp7(1113).intl;
-  obj3.text = intl4.string(guildId(1113).t.bANR0R);
+  const intl4 = tmp7(1112).intl;
+  obj3.text = intl4.string(guildId(1112).t.bANR0R);
   obj3.onPress = onClose;
-  items1[1] = closure_4(guildId(5390).Button, obj3);
+  items1[1] = closure_4(guildId(5392).Button, obj3);
   obj2.children = items1;
   obj.buttons = closure_6(closure_5, obj2);
-  return closure_4(onClose(6401), obj);
+  return closure_4(onClose(6403), obj);
 };

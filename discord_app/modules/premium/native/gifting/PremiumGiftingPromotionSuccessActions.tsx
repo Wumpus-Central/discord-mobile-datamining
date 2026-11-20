@@ -1,6 +1,6 @@
-// === Module 13860: PremiumGiftingPromotionSuccessActions ===
+// === Module 13829: PremiumGiftingPromotionSuccessActions ===
 
-// Module 13860 (PremiumGiftingPromotionSuccessActions)
+// Module 13829 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 575 */;
 import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 9290 */;
 import PremiumGiftModal from "PremiumGiftModal" /* 9346 */;
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 }, promoDetails: null };
 let obj3 = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.promoDetails = { alignSelf: "stretch", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

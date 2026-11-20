@@ -1,7 +1,7 @@
 // === Module 8876: ContentInventoryTypes ===
 
 // Module 8876 (ContentInventoryTypes)
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7893 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7892 */;
 import PlatformType from "PlatformType" /* 8877 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 11193: ChatRestrictions ===
+// === Module 11135: ChatRestrictions ===
 
-// Module 11193 (ChatRestrictions)
-import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1113 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 11194 */;
+// Module 11135 (ChatRestrictions)
+import Constants from "Constants" /* 1071 */;
+import util from "util" /* 1112 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 11136 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;

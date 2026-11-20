@@ -1,7 +1,7 @@
-// === Module 11156: buildFavoritesSectionButtons ===
+// === Module 11098: buildFavoritesSectionButtons ===
 
-// Module 11156 (buildFavoritesSectionButtons)
-import _modDef3701 from "module_3701" /* 3701 */;
+// Module 11098 (buildFavoritesSectionButtons)
+import _modDef3703 from "module_3703" /* 3703 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_4 = async function _addChannelToFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_4 = async function _addChannelToFavorites(arg0) {
         obj.channelIds = items;
         value.addFavoriteChannels(obj);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -69,7 +69,7 @@ let closure_5 = async function _removeChannelFromFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_5 = async function _removeChannelFromFavorites(arg0) {
       } else {
         const result = value.removeFavoriteChannel(closure_129_0);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -117,9 +117,9 @@ export default function buildFavoritesSectionButtons(channelId) {
     return null;
   } else if (tmp) {
     const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-    const intl2 = channelId(1113).intl;
-    obj2.label = intl2.string(_modDef3701.TN4nAX);
-    obj2.IconComponent = channelId(9888).StarIcon;
+    const intl2 = channelId(1112).intl;
+    obj2.label = intl2.string(_modDef3703.TN4nAX);
+    obj2.IconComponent = channelId(9891).StarIcon;
     obj2.onPress = function onPress() {
       return (function removeChannelFromFavorites() {
         const self = this;
@@ -134,9 +134,9 @@ export default function buildFavoritesSectionButtons(channelId) {
     };
   } else if (!tmp2) {
     const obj = { label: null, IconComponent: null, onPress: null };
-    const intl = channelId(1113).intl;
-    obj.label = intl.string(_modDef3701.G9fGlP);
-    obj.IconComponent = channelId(9886).StarOutlineIcon;
+    const intl = channelId(1112).intl;
+    obj.label = intl.string(_modDef3703.G9fGlP);
+    obj.IconComponent = channelId(9889).StarOutlineIcon;
     obj.onPress = function onPress() {
       return (function addChannelToFavorites() {
         const self = this;

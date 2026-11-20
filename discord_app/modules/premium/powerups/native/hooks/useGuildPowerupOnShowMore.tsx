@@ -1,7 +1,7 @@
-// === Module 13367: useGuildPowerupOnShowMore ===
+// === Module 13337: useGuildPowerupOnShowMore ===
 
-// Module 13367 (useGuildPowerupOnShowMore)
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 13316 */;
+// Module 13337 (useGuildPowerupOnShowMore)
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 13286 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

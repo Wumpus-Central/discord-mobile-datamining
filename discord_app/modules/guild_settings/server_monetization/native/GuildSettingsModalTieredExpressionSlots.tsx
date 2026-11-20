@@ -1,12 +1,12 @@
-// === Module 19850: GuildSettingsModalTieredExpressionSlots ===
+// === Module 19668: GuildSettingsModalTieredExpressionSlots ===
 
-// Module 19850 (GuildSettingsModalTieredExpressionSlots)
+// Module 19668 (GuildSettingsModalTieredExpressionSlots)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(1072).AppliedGuildBoostsRequiredForBoostedGuildTier;
+let closure_3 = fn(1071).AppliedGuildBoostsRequiredForBoostedGuildTier;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

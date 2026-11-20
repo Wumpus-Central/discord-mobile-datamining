@@ -1,17 +1,17 @@
-// === Module 8695: ReferralProgramUtils ===
+// === Module 8735: ReferralProgramUtils ===
 
-// Module 8695 (ReferralProgramUtils)
+// Module 8735 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4626 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4824 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 8682 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import util from "util" /* 1112 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4628 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4826 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 8722 */;
 
 require = fn;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
@@ -77,8 +77,8 @@ export function markReferralProgramPopoverSeen(promotionId) {
   }
 }
 export function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = stateFromStores1(8696).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(8696);
+  let isEligibleSenderForReferralProgram = stateFromStores1(8736).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(8736);
   items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining());
   const obj2 = stateFromStores1(504);

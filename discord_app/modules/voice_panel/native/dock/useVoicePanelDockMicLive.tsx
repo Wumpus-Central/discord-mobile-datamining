@@ -1,9 +1,9 @@
-// === Module 18086: useVoicePanelDockMicLive ===
+// === Module 17913: useVoicePanelDockMicLive ===
 
-// Module 18086 (useVoicePanelDockMicLive)
-import timing_timing from "timing/timing" /* 5002 */;
+// Module 17913 (useVoicePanelDockMicLive)
+import timing_timing from "timing/timing" /* 5004 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ export default function useVoicePanelDockMicLive(arg0) {
   if (mute) {
     num = 0;
   }
-  sharedValue = require("module_1655").useSharedValue(num);
+  sharedValue = require("module_1653").useSharedValue(num);
   const items1 = [mute, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 1;

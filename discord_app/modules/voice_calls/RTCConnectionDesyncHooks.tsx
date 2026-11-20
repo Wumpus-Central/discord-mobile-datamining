@@ -1,18 +1,18 @@
-// === Module 17802: RTCConnectionDesyncHooks ===
+// === Module 17629: RTCConnectionDesyncHooks ===
 
-// Module 17802 (RTCConnectionDesyncHooks)
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17803 */;
+// Module 17629 (RTCConnectionDesyncHooks)
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 14948 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 14912 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RTCConnectionStates = fn(1072).RTCConnectionStates;
+const RTCConnectionStates = fn(1071).RTCConnectionStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/RTCConnectionDesyncHooks.tsx");
 

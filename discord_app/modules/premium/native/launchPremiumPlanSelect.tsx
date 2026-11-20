@@ -1,9 +1,9 @@
 // === Module 9237: launchPremiumPlanSelect ===
 
 // Module 9237 (launchPremiumPlanSelect)
-import Constants from "Constants" /* 1072 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7296 */;
+import Constants from "Constants" /* 1071 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7295 */;
 import PremiumModal from "PremiumModal" /* 8980 */;
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 9011 */;
 import size from "module_2" /* 2 */;
@@ -46,7 +46,7 @@ export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
     navigation.push(PREMIUM_PLAN_SELECT, obj);
   } else {
     const obj4 = { initialRoute: PREMIUM_PLAN_SELECT, analyticsLocation, analyticsLocations, predicate: wrappedPredicate, showCurrentPlan, isBoostPurchaseFlow: flag, planId, applicationId, guildId, onBack: tmp, onPaymentSuccess, onPaymentDismiss };
-    const obj3 = flag2(6308);
+    const obj3 = flag2(6310);
     obj3.pushLazy(asyncRequireImpl(8980, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
     const tmp7 = asyncRequireImpl(8980, dependencyMap.paths);
   }

@@ -1,11 +1,11 @@
-// === Module 13148: SuggestedSearchActionCreators ===
+// === Module 13118: SuggestedSearchActionCreators ===
 
-// Module 13148 (SuggestedSearchActionCreators)
+// Module 13118 (SuggestedSearchActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SmartSearchExperiments from "SmartSearchExperiments" /* 13147 */;
+import SmartSearchExperiments from "SmartSearchExperiments" /* 13117 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13108 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13078 */;
 
 require = fn;
 function canFetchSuggestedSearches(guildId) {
@@ -41,7 +41,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -205,16 +205,16 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
     }
   }
 };
-const SmartSearchConstants = fn(13109);
+const SmartSearchConstants = fn(13079);
 ({ SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty, SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS } = SmartSearchConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_6, NOOP: metroImportDefault } = Constants);
 let closure_8 = new BackoffDefault(SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS, true);
 const size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 17597: MessageRequestsButton ===
+// === Module 17424: MessageRequestsButton ===
 
-// Module 17597 (MessageRequestsButton)
+// Module 17424 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import IconButton from "IconButton" /* 7472 */;
-import IconActionButton from "IconActionButton" /* 14266 */;
-import _modDef14584 from "module_14584" /* 14584 */;
-import _mod17598 from "module_17598" /* 17598 */;
+import util from "util" /* 1112 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import IconButton from "IconButton" /* 7471 */;
+import IconActionButton from "IconActionButton" /* 14236 */;
+import _modDef14552 from "module_14552" /* 14552 */;
+import _mod17425 from "module_17425" /* 17425 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 6513 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6514 */;
+import MessageRequestStore from "MessageRequestStore" /* 6515 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6516 */;
 
 const IconActionButtonDefault = IconActionButton;
 
@@ -32,12 +32,12 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return metroImportDefault(_mod17598.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod17425.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
@@ -82,7 +82,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj3.children = items2;
     return React5(View, obj3);
   } else {
-    const obj6 = { source: _modDef14584, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef14552, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;

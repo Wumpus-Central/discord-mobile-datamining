@@ -1,9 +1,9 @@
-// === Module 11995: getInvitableGameOrganizationsFullState ===
+// === Module 11937: getInvitableGameOrganizationsFullState ===
 
-// Module 11995 (getInvitableGameOrganizationsFullState)
-import util from "util" /* 1113 */;
-import _modDef2557 from "module_2557" /* 2557 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 11996 */;
+// Module 11937 (getInvitableGameOrganizationsFullState)
+import util from "util" /* 1112 */;
+import _modDef2559 from "module_2559" /* 2559 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 11938 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export function getGameOrganizationFullSubLabel(data) {
     str = "other";
   }
   obj.displayNoun = str;
-  return intl.formatToPlainString(_modDef2557.xuM052, obj);
+  return intl.formatToPlainString(_modDef2559.xuM052, obj);
 }
 export function getInvitableGameOrganizationsFullSubLabel(kind) {
   kind = kind.kind;
@@ -57,10 +57,10 @@ export function getInvitableGameOrganizationsFullSubLabel(kind) {
         str2 = "other";
       }
       obj.displayNoun = str2;
-      return intl2.formatToPlainString(_modDef2557.xuM052, obj);
+      return intl2.formatToPlainString(_modDef2559.xuM052, obj);
     } else if ("all_full" === kind) {
       const intl = util.intl;
-      return intl.string(_modDef2557.bY80Jh);
+      return intl.string(_modDef2559.bY80Jh);
     }
   }
 }

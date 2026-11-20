@@ -1,7 +1,7 @@
-// === Module 16957: EmailTrackingNoticeExperiment ===
+// === Module 16781: EmailTrackingNoticeExperiment ===
 
-// Module 16957 (EmailTrackingNoticeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 16781 (EmailTrackingNoticeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-update-email-settings-copy-subtext", defaultConfig: { enabled: false }, variations: null };

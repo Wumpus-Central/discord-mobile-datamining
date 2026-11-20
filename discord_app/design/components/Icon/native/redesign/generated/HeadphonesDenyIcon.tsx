@@ -2,7 +2,7 @@
 
 // Module 9558 (HeadphonesDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9559 from "module_9559" /* 9559 */;
 import noop from "module_19" /* 19 */;
 

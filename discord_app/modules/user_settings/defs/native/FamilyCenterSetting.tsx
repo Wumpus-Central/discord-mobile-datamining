@@ -1,24 +1,24 @@
-// === Module 16079: FamilyCenterSetting ===
+// === Module 16043: FamilyCenterSetting ===
 
-// Module 16079 (FamilyCenterSetting)
+// Module 16043 (FamilyCenterSetting)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import _modDef2723 from "module_2723" /* 2723 */;
-import WarningIcon from "WarningIcon" /* 7644 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16080 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 16081 */;
+import util from "util" /* 1112 */;
+import _modDef2725 from "module_2725" /* 2725 */;
+import WarningIcon from "WarningIcon" /* 7643 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16044 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2723.RZqaJn);
+    return intl.string(_modDef2725.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(6919).GroupIcon,
+  IconComponent: fn(6918).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -37,7 +37,7 @@ const route = SettingBuilders.createRoute({
         if (daysRemaining >= 0) {
           const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = util.intl;
-          obj3.accessibilityLabel = intl.string(_modDef2723.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2725.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }
@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
     return tmp6;
   },
   screen: {
-    route: fn(1072).UserSettingsSections.FAMILY_CENTER,
+    route: fn(1071).UserSettingsSections.FAMILY_CENTER,
     getComponent() {
       return require("UserSettingsFamilyCenter").default;
     }

@@ -1,14 +1,14 @@
-// === Module 14979: AddFriendById ===
+// === Module 14943: AddFriendById ===
 
-// Module 14979 (AddFriendById)
+// Module 14943 (AddFriendById)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import ToastUtils from "ToastUtils" /* 5473 */;
-import TextField from "TextField" /* 7109 */;
-import FriendsUtils from "FriendsUtils" /* 7625 */;
+import util from "util" /* 1112 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import ToastUtils from "ToastUtils" /* 5475 */;
+import TextField from "TextField" /* 7108 */;
+import FriendsUtils from "FriendsUtils" /* 7624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,11 +22,11 @@ function ErrorMessage(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: closure_6 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ PLACEHOLDER_TAG: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, textInputContainer: { alignSelf: "stretch" }, placeholderText: null, inputAccessoryText: null, redesignInputAccessoryText: null, inputHeaderText: null, redesignGrow: null, errorStateText: null, friendMessageContainer: null, messageLabel: null, messageFooterText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
@@ -116,8 +116,8 @@ export default function _default(arg0) {
     const trimmed1 = first2.trim();
     if (trimmed.length <= 0) {
       let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
-      let intl = sourcePage(1113).intl;
-      obj2.message = intl.string(sourcePage(1113).t.mxnceg);
+      let intl = sourcePage(1112).intl;
+      obj2.message = intl.string(sourcePage(1112).t.mxnceg);
       closure_6(obj2);
     } else {
       const hasItem = trimmed.includes("#");
@@ -130,21 +130,21 @@ export default function _default(arg0) {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(7625).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(7624).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
       } else {
         let obj4 = { status: constants.LOADING };
         closure_6(obj4);
-        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7621).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7620).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(7621);
-        ref(7621).sendRequest(obj6).then(() => {
+        const obj5 = ref(7620);
+        ref(7620).sendRequest(obj6).then(() => {
           const obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -198,9 +198,9 @@ export default function _default(arg0) {
           }
           closure_6(obj3);
         });
-        const sendRequestResult = ref(7621).sendRequest(obj6);
+        const sendRequestResult = ref(7620).sendRequest(obj6);
       }
-      let obj = sourcePage(7625);
+      let obj = sourcePage(7624);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -209,8 +209,8 @@ export default function _default(arg0) {
   dependencyMap = noop.useRef("");
   let tmp2 = textState(noop.useState(() => {
     const obj = { validatedText: "", hint: null };
-    const intl = sourcePage(1113).intl;
-    obj.hint = intl.string(sourcePage(1113).t["6p7Mhh"]);
+    const intl = sourcePage(1112).intl;
+    obj.hint = intl.string(sourcePage(1112).t["6p7Mhh"]);
     return obj;
   }), 2);
   textState = tmp2[0];
@@ -309,9 +309,9 @@ export default function _default(arg0) {
   ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
   items6[2] = headerTextStyle;
   obj5.style = items6;
-  let intl = sourcePage(1113).intl;
-  obj5.children = intl.string(sourcePage(1113).t.Yi6Mpu);
-  const items7 = [closure_9(sourcePage(5383).Text, obj5), , ];
+  let intl = sourcePage(1112).intl;
+  obj5.children = intl.string(sourcePage(1112).t.Yi6Mpu);
+  const items7 = [closure_9(sourcePage(5385).Text, obj5), , ];
   let obj6 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: null };
   let str2;
   if (first1.field === constants3.MESSAGE) {
@@ -320,7 +320,7 @@ export default function _default(arg0) {
     }
   }
   obj6.status = str2;
-  items7[1] = closure_9(sourcePage(7342).TextArea, obj6);
+  items7[1] = closure_9(sourcePage(7341).TextArea, obj6);
   if (first1.status === constants2.ERROR) {
     if (first1.field === constants3.MESSAGE) {
       const obj7 = { errorMessage: first1.message };
@@ -335,19 +335,19 @@ export default function _default(arg0) {
     const obj9 = { style: tmp.redesignGrow };
     items8[1] = closure_9(tmp15, obj9);
     const obj10 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-    const intl3 = sourcePage(1113).intl;
-    obj10.text = intl3.string(sourcePage(1113).t["PMsq/b"]);
+    const intl3 = sourcePage(1112).intl;
+    obj10.text = intl3.string(sourcePage(1112).t["PMsq/b"]);
     obj10.disabled = str.trim().length <= 0;
     obj10.onPress = handleSubmitEditing;
     obj10.loading = first1.status === constants2.LOADING;
-    items8[2] = closure_9(sourcePage(5390).Button, obj10);
+    items8[2] = closure_9(sourcePage(5392).Button, obj10);
     obj8.children = items8;
     return closure_10(closure_11, obj8);
   }
   const obj11 = { style: tmp.messageFooterText, variant: "body-xs/medium", color: "text-muted", children: null };
-  let intl2 = sourcePage(1113).intl;
-  obj11.children = intl2.string(sourcePage(1113).t.UtfQNw);
-  tmp16Result = closure_9(sourcePage(5383).Text, obj11);
+  let intl2 = sourcePage(1112).intl;
+  obj11.children = intl2.string(sourcePage(1112).t.UtfQNw);
+  tmp16Result = closure_9(sourcePage(5385).Text, obj11);
   let obj = { status: constants2.NONE };
   let obj3 = {
     textState,

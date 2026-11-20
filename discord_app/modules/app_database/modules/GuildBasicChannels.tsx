@@ -1,23 +1,23 @@
-// === Module 8231: GuildBasicChannels ===
+// === Module 8230: GuildBasicChannels ===
 
-// Module 8231 (GuildBasicChannels)
+// Module 8230 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4670 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4711 */;
-import PermissionUtils from "PermissionUtils" /* 4729 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4733 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4672 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4713 */;
+import PermissionUtils from "PermissionUtils" /* 4731 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4735 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildRoleStore from "GuildRoleStore" /* 4698 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4642 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildRoleStore from "GuildRoleStore" /* 4700 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4644 */;
 
 require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -253,8 +253,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(4645).createChannelRecordFromServer;
-const ChannelLoader = fn(4641).ChannelLoader;
+let closure_7 = fn(4647).createChannelRecordFromServer;
+const ChannelLoader = fn(4643).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -314,9 +314,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(4670).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4670).basicChannels(closure_0);
-    items[1] = tmp3(4670).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(4672).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4672).basicChannels(closure_0);
+    items[1] = tmp3(4672).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -473,7 +473,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -520,7 +520,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "+60" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -578,7 +578,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "HermesInternal", done: "+60" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -638,7 +638,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c7 = 0;

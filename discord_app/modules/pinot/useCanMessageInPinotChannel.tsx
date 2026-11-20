@@ -1,12 +1,12 @@
-// === Module 11793: useCanMessageInPinotChannel ===
+// === Module 11735: useCanMessageInPinotChannel ===
 
-// Module 11793 (useCanMessageInPinotChannel)
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 11735 (useCanMessageInPinotChannel)
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/useCanMessageInPinotChannel.tsx");
 

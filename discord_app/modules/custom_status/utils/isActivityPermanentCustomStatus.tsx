@@ -1,7 +1,7 @@
-// === Module 17635: isActivityPermanentCustomStatus ===
+// === Module 17462: isActivityPermanentCustomStatus ===
 
-// Module 17635 (isActivityPermanentCustomStatus)
-import ActivityTypes from "ActivityTypes" /* 5531 */;
+// Module 17462 (isActivityPermanentCustomStatus)
+import ActivityTypes from "ActivityTypes" /* 5533 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityPermanentCustomStatus.tsx");

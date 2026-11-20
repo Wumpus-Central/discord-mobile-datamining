@@ -1,20 +1,20 @@
-// === Module 10917: UserSettingsVoiceOutputOptions ===
+// === Module 10859: UserSettingsVoiceOutputOptions ===
 
-// Module 10917 (UserSettingsVoiceOutputOptions)
+// Module 10859 (UserSettingsVoiceOutputOptions)
 import _modDef38 from "module_38" /* 38 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5688 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10918 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5690 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10860 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 const require = fn;
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(5537).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5539).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({ slider: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
@@ -51,11 +51,11 @@ export default function UserSettingsVoiceOutputOptions() {
     AudioActionCreatorsDefault.setLocalVolume(stateFromStores1.ownerId, arg0, MediaEngineContextTypes.STREAM);
   }, items3);
   const obj4 = { title: null, hasIcons: false, children: null };
-  const intl = stateFromStores1(1113).intl;
-  obj4.title = intl.string(stateFromStores1(1113).t.UXxPGB);
+  const intl = stateFromStores1(1112).intl;
+  obj4.title = intl.string(stateFromStores1(1112).t.UXxPGB);
   const obj5 = { label: null, subLabel: null };
-  const intl2 = stateFromStores1(1113).intl;
-  obj5.label = intl2.string(stateFromStores1(1113).t.xPHVBs);
+  const intl2 = stateFromStores1(1112).intl;
+  obj5.label = intl2.string(stateFromStores1(1112).t.xPHVBs);
   const obj6 = { style: tmp.slider, children: null };
   const obj7 = {
     style: tmp.slider,
@@ -66,26 +66,26 @@ export default function UserSettingsVoiceOutputOptions() {
     accessibilityLabel: null
   };
   const obj3 = stateFromStores1(504);
-  const intl3 = stateFromStores1(1113).intl;
-  obj7.accessibilityLabel = intl3.string(stateFromStores1(1113).t.xPHVBs);
+  const intl3 = stateFromStores1(1112).intl;
+  obj7.accessibilityLabel = intl3.string(stateFromStores1(1112).t.xPHVBs);
   obj6.children = closure_9(VolumeSliderDefault, obj7);
   obj5.subLabel = closure_9(View, obj6);
-  const items4 = [closure_9(stateFromStores1(6926).TableRow, obj5), ];
+  const items4 = [closure_9(stateFromStores1(6925).TableRow, obj5), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj8 = { label: null, subLabel: null };
-    const intl4 = tmp2(1113).intl;
-    obj8.label = intl4.string(tmp2(1113).t.pEAl4b);
+    const intl4 = tmp2(1112).intl;
+    obj8.label = intl4.string(tmp2(1112).t.pEAl4b);
     const obj9 = { style: tmp.slider, children: null };
     const obj10 = { value: stateFromStores2, onValueChange: callback, accessibilityLabel: null };
-    const intl5 = tmp2(1113).intl;
-    obj10.accessibilityLabel = intl5.string(tmp2(1113).t.pEAl4b);
+    const intl5 = tmp2(1112).intl;
+    obj10.accessibilityLabel = intl5.string(tmp2(1112).t.pEAl4b);
     obj9.children = closure_9(VolumeSliderDefault, obj10);
     obj8.subLabel = closure_9(View, obj9);
-    tmp9Result = closure_9(tmp2(6926).TableRow, obj8);
+    tmp9Result = closure_9(tmp2(6925).TableRow, obj8);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
   obj4.children = items4;
-  return closure_10(stateFromStores1(10900).UserSettingsTableRowGroup, obj4);
+  return closure_10(stateFromStores1(10842).UserSettingsTableRowGroup, obj4);
 };

@@ -1,7 +1,7 @@
-// === Module 18646: conjureSecretsRequests ===
+// === Module 18473: conjureSecretsRequests ===
 
-// Module 18646 (conjureSecretsRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 14653 */;
+// Module 18473 (conjureSecretsRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 14619 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_4 = async function _submitProjectSecrets(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ let closure_4 = async function _submitProjectSecrets(arg0) {
             throw new closure_131_3("secret request expired");
           } else if (closure_130_0.ok) {
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;

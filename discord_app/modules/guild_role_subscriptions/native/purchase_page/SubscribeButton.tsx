@@ -1,16 +1,16 @@
-// === Module 18241: SubscribeButton ===
+// === Module 18068: SubscribeButton ===
 
-// Module 18241 (SubscribeButton)
-import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
+// Module 18068 (SubscribeButton)
+import util from "util" /* 1112 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4717 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4719 */;
 
 require = fn;
 function emphasisHook(children) {
@@ -20,28 +20,28 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(16683);
+  let obj = changeToListingId(16507);
   const obj3 = { children: null };
-  const obj2 = activeListingId(2169)(activeSubscription.currentPeriodEnd);
+  const obj2 = activeListingId(2167)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
-  const intl = activeSubscription(1113).intl;
-  const formatResult = activeListingId(2169)(activeSubscription.currentPeriodEnd).format("MMMM Do");
-  obj4.children = intl.format(activeSubscription(1113).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(2169)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
-  items = [closure_12(activeSubscription(5383).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
+  const intl = activeSubscription(1112).intl;
+  const formatResult = activeListingId(2167)(activeSubscription.currentPeriodEnd).format("MMMM Do");
+  obj4.children = intl.format(activeSubscription(1112).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(2167)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
+  items = [closure_12(activeSubscription(5385).Text, obj4), closure_12(activeSubscription(1186).Spacer, { size: 16 }), ];
   const obj6 = { text: null, onPress: null };
-  const intl2 = activeSubscription(1113).intl;
-  obj6.text = intl2.string(activeSubscription(1113).t.SACegK);
+  const intl2 = activeSubscription(1112).intl;
+  obj6.text = intl2.string(activeSubscription(1112).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18242, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
+    obj.openLazy(asyncRequireImpl(18069, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  items[2] = closure_12(activeSubscription(18235).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(18062).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }
 const View = fn(17).View;
-const AnalyticsLocations = fn(1072).AnalyticsLocations;
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
+const AnalyticsLocations = fn(1071).AnalyticsLocations;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);
@@ -96,7 +96,7 @@ export default function SubscribeButton(listingId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ export default function SubscribeButton(listingId) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp22) {
         closure_2 = tmp22;

@@ -1,14 +1,14 @@
-// === Module 17043: DiskUsageManager ===
+// === Module 16867: DiskUsageManager ===
 
-// Module 17043 (DiskUsageManager)
+// Module 16867 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
-import NativeClientInfoModule from "NativeClientInfoModule" /* 1358 */;
-import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 8332 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 17044 */;
+import NativeClientInfoModule from "NativeClientInfoModule" /* 1356 */;
+import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 8331 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1388 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import UserStore from "UserStore" /* 1386 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
 
 require = fn;
 function isStable() {
@@ -35,7 +35,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -146,7 +146,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AppStates: closure_6, DebugLogCategory: metroImportDefault } = Constants);
 let closure_8 = new LoggerDefault("DiskUsageManager");
 class DiskUsageManager extends tmp4 {

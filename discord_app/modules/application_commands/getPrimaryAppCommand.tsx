@@ -1,14 +1,14 @@
-// === Module 10631: getPrimaryAppCommand ===
+// === Module 10573: getPrimaryAppCommand ===
 
-// Module 10631 (getPrimaryAppCommand)
-import Server from "Server" /* 2119 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5407 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 10378 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10382 */;
+// Module 10573 (getPrimaryAppCommand)
+import Server from "Server" /* 2117 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5409 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 10320 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10324 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 10374 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 10316 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -98,11 +98,11 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(10374);
+let ApplicationCommandIndexStore = fn(10316);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: closure_6 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(2119).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(2117).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
 

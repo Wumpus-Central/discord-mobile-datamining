@@ -1,24 +1,24 @@
-// === Module 10805: FocusedControlsBottomControls ===
+// === Module 10747: FocusedControlsBottomControls ===
 
-// Module 10805 (FocusedControlsBottomControls)
+// Module 10747 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 575 */;
-import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5002 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5355 */;
-import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 10597 */;
-import useCanShowTooltip from "useCanShowTooltip" /* 10806 */;
-import CallPTTButton from "CallPTTButton" /* 10809 */;
+import ConstantsIOS from "ConstantsIOS" /* 1091 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import timing_timing from "timing/timing" /* 5004 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5357 */;
+import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 10539 */;
+import useCanShowTooltip from "useCanShowTooltip" /* 10748 */;
+import CallPTTButton from "CallPTTButton" /* 10751 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6286 */;
+import TextStyles from "TextStyles" /* 6288 */;
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 const CallPTTButtonDefault = CallPTTButton;
 
 require = fn;
@@ -58,18 +58,18 @@ function FocusedControlsExpanded(availableHeight) {
   FocusedControlsBottomControlsTsx1.__initData = tmp7;
   const obj2 = { style: { height: availableHeight }, children: null };
   const obj3 = { scrollEnabled, children: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(FocusedControlsBottomControlsTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(FocusedControlsBottomControlsTsx1);
   const obj4 = { style: null, onLayout: callback, children: expandedControls };
   const items3 = [tmp.expandedControlsContainer, animatedStyle];
   obj4.style = items3;
-  obj3.children = state(_modDef1655.View, obj4);
+  obj3.children = state(_modDef1653.View, obj4);
   obj2.children = state(metroImportDefault, obj3);
   return state(width, obj2);
 }
 function FocusedControlsBottomDrawerTooltip(positionY) {
   const tmp = closure_17();
   const canShowTooltip = useCanShowTooltip.useCanShowTooltip(ConstantsIOS.TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  _mod1655;
+  _mod1653;
   items = [closure_22, positionY.positionY, 20];
   c0 = undefined;
   c1 = undefined;
@@ -92,7 +92,7 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     const intl = util.intl;
     obj5.label = intl.string(util.t.zYzy2i);
     obj2.children = state(native.Tooltip, obj5);
-    tmp10 = state(_modDef1655.View, obj2);
+    tmp10 = state(_modDef1653.View, obj2);
   }
   return tmp10;
 }
@@ -117,7 +117,7 @@ function FocusedControlsAboveActionBarView(arg0) {
   FocusedControlsBottomControlsTsx3.__initData = tmp4;
   const obj2 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   const obj3 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(FocusedControlsBottomControlsTsx3);
+  const animatedStyle = _mod1653.useAnimatedStyle(FocusedControlsBottomControlsTsx3);
   const items2 = [state(FocusedControlsBottomDrawerTooltip, { positionY }), state(ActionSheetHeaderBar.ActionSheetHeaderBar, {}), ];
   let tmp9Result = null != aboveActionBar;
   if (tmp9Result) {
@@ -125,7 +125,7 @@ function FocusedControlsAboveActionBarView(arg0) {
     const items3 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj4.style = items3;
     obj4.children = aboveActionBar;
-    tmp9Result = state(_modDef1655.View, obj4);
+    tmp9Result = state(_modDef1653.View, obj4);
   }
   items2[2] = tmp9Result;
   obj3.children = items2;
@@ -740,11 +740,11 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(10574);
+const ChannelCallStore = fn(10516);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(10575);
+const ChannelCallConstants = fn(10517);
 ({ BOX_MODE_THRESHOLD_WIDTH: closure_10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ComponentActions: closure_12, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -754,7 +754,7 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 obj2.bottomDrawerContainer = rect;
@@ -773,8 +773,8 @@ obj2.containerStyle = { paddingHorizontal: 8, paddingVertical: 4 };
 const merged1 = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.labelStyle = {};
 let closure_17 = createStyles.createStyles(obj2);
-let obj5 = { easing: fn(1187).STANDARD_EASING, duration: 250 };
-let obj6 = { easing: fn(1187).STANDARD_EASING, duration: 400 };
+let obj5 = { easing: fn(1186).STANDARD_EASING, duration: 250 };
+let obj6 = { easing: fn(1186).STANDARD_EASING, duration: 400 };
 let closure_20 = { code: "(function FocusedControlsBottomControlsTsx1(){let[positionY,EXPANDED_DRAWER_SHOW_POSITION]=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};})" };
 let closure_22 = { code: "(function FocusedControlsBottomControlsTsx2(){let[positionY,EXPANDED_DRAWER_SHOW_POSITION]=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};})" };
 let closure_24 = { code: "(function FocusedControlsBottomControlsTsx3(){let[offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY]=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};})" };

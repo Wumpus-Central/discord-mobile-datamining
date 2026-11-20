@@ -1,9 +1,9 @@
-// === Module 11291: gif_picker/GIFPickerUtils ===
+// === Module 11233: gif_picker/GIFPickerUtils ===
 
-// Module 11291 (gif_picker/GIFPickerUtils)
-import util from "util" /* 1113 */;
-import URLUtilsDefault from "URLUtils" /* 1381 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 8491 */;
+// Module 11233 (gif_picker/GIFPickerUtils)
+import util from "util" /* 1112 */;
+import URLUtilsDefault from "URLUtils" /* 1379 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 8490 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ function transformFavoriteGifUrl(assetURL, arg1) {
     return combined;
   }
 }
-fn(1072).GIFPickerResultTypes;
+fn(1071).GIFPickerResultTypes;
 const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re7 = /(tenor\.com)/;
 const re8 = /-(?:.(?!-))+$/;
@@ -60,9 +60,9 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtil
 
 export const GIF_HEADER_HEIGHT = 56;
 export function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10031).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10034).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10031);
+  let obj = sortedFavoriteGIFs(10034);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

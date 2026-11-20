@@ -1,10 +1,10 @@
-// === Module 15919: UniqueUsernamesStore ===
+// === Module 15883: UniqueUsernamesStore ===
 
-// Module 15919 (UniqueUsernamesStore)
+// Module 15883 (UniqueUsernamesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import privDefault from "priv" /* 1456 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import privDefault from "priv" /* 1454 */;
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: { migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "r" }, source: "Path", fetched: null } } };

@@ -1,9 +1,9 @@
-// === Module 18630: ConjureClarificationCard ===
+// === Module 18458: ConjureClarificationCard ===
 
-// Module 18630 (ConjureClarificationCard)
+// Module 18458 (ConjureClarificationCard)
 import nativeDefault from "native" /* 575 */;
-import ConjureClarification from "ConjureClarification" /* 18470 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 18632 */;
+import ConjureClarification from "ConjureClarification" /* 18295 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 18460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, optionHeader: null, footer: null, customField: null, actions: null, backAction: null, noImage: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.optionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

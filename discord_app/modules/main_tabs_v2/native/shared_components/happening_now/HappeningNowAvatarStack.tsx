@@ -1,26 +1,26 @@
-// === Module 17653: HappeningNowAvatarStack ===
+// === Module 17480: HappeningNowAvatarStack ===
 
-// Module 17653 (HappeningNowAvatarStack)
+// Module 17480 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import spring_spring from "spring/spring" /* 5393 */;
+import native from "native" /* 1186 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import spring_spring from "spring/spring" /* 5395 */;
 import ClipView from "ClipView" /* 8903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2189 */;
+import LocaleStore from "LocaleStore" /* 2187 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(14400).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(14368).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
@@ -78,12 +78,12 @@ export function HappeningNowAvatarStack(userLimit) {
   if (isTyping) {
     num4 = 1;
   }
-  sharedValue = require("module_1655").useSharedValue(num4);
-  let obj2 = require("module_1655");
+  sharedValue = require("module_1653").useSharedValue(num4);
+  let obj2 = require("module_1653");
   items = [c6];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => _undefined3.locale);
   const tmp6Result = require("useStateFromStores");
-  let items1 = [closure_12, require("module_1655").interpolate, sharedValue, 28];
+  let items1 = [closure_12, require("module_1653").interpolate, sharedValue, 28];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -102,13 +102,13 @@ export function HappeningNowAvatarStack(userLimit) {
   HappeningNowAvatarStackTsx1.__workletHash = 15788813600806;
   HappeningNowAvatarStackTsx1.__initData = tmp10;
   const items3 = [isTyping, sharedValue];
-  const animatedStyle = require("module_1655").useAnimatedStyle(HappeningNowAvatarStackTsx1);
+  const animatedStyle = require("module_1653").useAnimatedStyle(HappeningNowAvatarStackTsx1);
   const effect = obj.useEffect(() => {
     let num = 0;
     if (c1) {
       num = 1;
     }
-    items = [closure_13, _mod1708.scheduleOnRN, c7, c1];
+    items = [closure_13, _mod1706.scheduleOnRN, c7, c1];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -160,7 +160,7 @@ export function HappeningNowAvatarStack(userLimit) {
     obj2.children = tmp2Result;
     return React5(View, obj2, user.id);
   });
-  const tmp6Result5 = require("module_1655");
+  const tmp6Result5 = require("module_1653");
   const items4 = [closure_14, isStage, diff, mapped, require("native").AVATAR_SIZE_MAP, XSMALL_20, num3, require("spring/spring").withSpring, c10];
   _require = undefined;
   importDefault = undefined;
@@ -203,7 +203,7 @@ export function HappeningNowAvatarStack(userLimit) {
   HappeningNowAvatarStackTsx3.__closure = items5;
   HappeningNowAvatarStackTsx3.__workletHash = 14791568232776;
   HappeningNowAvatarStackTsx3.__initData = tmp18;
-  const animatedStyle1 = require("module_1655").useAnimatedStyle(HappeningNowAvatarStackTsx3);
+  const animatedStyle1 = require("module_1653").useAnimatedStyle(HappeningNowAvatarStackTsx3);
   let obj3 = { style: null, children: null };
   if (isStage) {
     const items6 = [tmp3.stageAvatarStack, style];
@@ -212,12 +212,12 @@ export function HappeningNowAvatarStack(userLimit) {
     const items7 = [tmp3.avatars, animatedStyle1];
     obj4.style = items7;
     obj4.children = mapped;
-    const items8 = [sharedValue(_modDef1655.View, obj4), ];
-    const obj5 = { color: "text-default", variant: "body-xs/semibold", children: tmp6(2027).humanizeValue(userCount, stateFromStores) };
-    items8[1] = sharedValue(tmp6(5383).Text, obj5);
+    const items8 = [sharedValue(_modDef1653.View, obj4), ];
+    const obj5 = { color: "text-default", variant: "body-xs/semibold", children: tmp6(2025).humanizeValue(userCount, stateFromStores) };
+    items8[1] = sharedValue(tmp6(5385).Text, obj5);
     obj3.children = items8;
     let tmp33 = obj3;
-    const tmp6Result7 = tmp6(2027);
+    const tmp6Result7 = tmp6(2025);
   } else {
     const items9 = [tmp3.avatarStack, style];
     obj3.style = items9;
@@ -230,15 +230,15 @@ export function HappeningNowAvatarStack(userLimit) {
     if (diff > 0) {
       const obj8 = { style: tmp3.userCounter, children: null };
       const obj9 = { color: "text-default", variant: "footnote/semibold", allowFontScaling: false, children: null };
-      const items12 = ["+", tmp6(2027).humanizeValue(diff, stateFromStores)];
+      const items12 = ["+", tmp6(2025).humanizeValue(diff, stateFromStores)];
       obj9.children = items12;
-      obj8.children = tmp28(tmp6(5383).Text, obj9);
+      obj8.children = tmp28(tmp6(5385).Text, obj9);
       tmp31Result = tmp31(tmp29, obj8);
-      const tmp6Result8 = tmp6(2027);
+      const tmp6Result8 = tmp6(2025);
     }
     items11[1] = tmp31Result;
     obj6.children = items11;
-    const items13 = [tmp28(_modDef1655.View, obj6), ];
+    const items13 = [tmp28(_modDef1653.View, obj6), ];
     if (!tmp31Result2) {
       tmp31Result2 = isTyping;
     }
@@ -247,8 +247,8 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(17654).TypingIndicator, obj11);
-      tmp31Result2 = tmp31(tmp30(1655).View, obj10);
+      obj10.children = tmp31(tmp6(17481).TypingIndicator, obj11);
+      tmp31Result2 = tmp31(tmp30(1653).View, obj10);
     }
     items13[1] = tmp31Result2;
     obj3.children = items13;

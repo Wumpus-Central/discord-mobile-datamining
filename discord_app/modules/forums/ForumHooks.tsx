@@ -1,41 +1,41 @@
-// === Module 8498: ForumHooks ===
+// === Module 8497: ForumHooks ===
 
-// Module 8498 (ForumHooks)
+// Module 8497 (ForumHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4650 */;
-import useMessageAuthor from "useMessageAuthor" /* 6220 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7357 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8117 */;
-import ForumUtils from "ForumUtils" /* 8386 */;
-import ThreadUtils from "ThreadUtils" /* 8399 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 4652 */;
+import useMessageAuthor from "useMessageAuthor" /* 6222 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7356 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8116 */;
+import ForumUtils from "ForumUtils" /* 8385 */;
+import ThreadUtils from "ThreadUtils" /* 8398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6497 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6518 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8347 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6417 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import ReadStateStore from "ReadStateStore" /* 6498 */;
-import UserStore from "UserStore" /* 1388 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 8499 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8343 */;
-import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 8500 */;
-import ForumSearchStore from "ForumSearchStore" /* 8344 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6499 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6520 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8346 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6419 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import ReadStateStore from "ReadStateStore" /* 6500 */;
+import UserStore from "UserStore" /* 1386 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 8498 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8342 */;
+import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 8499 */;
+import ForumSearchStore from "ForumSearchStore" /* 8343 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(8387).ForumTimestampFormats;
-const Constants = fn(1072);
+const ForumTimestampFormats = fn(8386).ForumTimestampFormats;
+const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_20, AnalyticsObjects: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(4648).ChannelFlags;
-let closure_25 = fn(1112).MAX_THREAD_UNREAD_MESSAGE_COUNT;
+const ChannelFlags = fn(4650).ChannelFlags;
+let closure_25 = fn(1111).MAX_THREAD_UNREAD_MESSAGE_COUNT;
 let closure_26 = { isNew: false, hasUnreads: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumHooks.tsx");
@@ -418,7 +418,7 @@ export function useForumPostMessageAuthor(message, thread) {
   items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(6220).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(6222).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

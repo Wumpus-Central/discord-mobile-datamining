@@ -1,18 +1,18 @@
-// === Module 17697: VoiceUserSummary ===
+// === Module 17524: VoiceUserSummary ===
 
-// Module 17697 (VoiceUserSummary)
-import native from "native" /* 1187 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8452 */;
+// Module 17524 (VoiceUserSummary)
+import native from "native" /* 1186 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8451 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let closure_6 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -2 });
-const createStyles = fn(4792);
+let closure_6 = Object.freeze({ direction: fn(1186).CutoutDirection.RIGHT, inset: -2 });
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
-let obj = { direction: fn(1187).CutoutDirection.RIGHT, inset: -2 };
+let obj = { direction: fn(1186).CutoutDirection.RIGHT, inset: -2 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserSummary.tsx");
 
@@ -25,18 +25,18 @@ export default noop.memo(function UserSummaryItem(guildId) {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8451).useClientThemesOverride()];
+  items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8450).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(7501).StageIcon;
+      let VoiceNormalIcon = tmp4(7500).StageIcon;
     }
     const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [closure_4(VoiceNormalIcon, obj3), ];
     const obj4 = { offsetAmount: -6, style: tmp.iconContainer, overflowStyle: null, overflowComponent: null, items: null, max: null, renderItem: null };
     const items2 = [tmp.overflow, transparentBorder];
     obj4.overflowStyle = items2;
-    obj4.overflowComponent = tmp4(1187).OverflowTextSmall;
+    obj4.overflowComponent = tmp4(1186).OverflowTextSmall;
     obj4.items = users;
     obj4.max = max;
     obj4.renderItem = function renderItem(user, arg1) {
@@ -48,11 +48,11 @@ export default noop.memo(function UserSummaryItem(guildId) {
       obj.cutout = tmp2;
       return React4(native.CutoutableAvatarImage, obj);
     };
-    items1[1] = closure_4(tmp4(1187).SummarizedIconRow, obj4);
+    items1[1] = closure_4(tmp4(1186).SummarizedIconRow, obj4);
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(6915).VoiceNormalIcon;
-  let obj = guildId(8451);
+  VoiceNormalIcon = tmp4(6914).VoiceNormalIcon;
+  let obj = guildId(8450);
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

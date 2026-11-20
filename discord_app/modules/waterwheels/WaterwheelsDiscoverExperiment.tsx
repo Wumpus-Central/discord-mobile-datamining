@@ -1,14 +1,14 @@
-// === Module 9918: WaterwheelsDiscoverExperiment ===
+// === Module 9921: WaterwheelsDiscoverExperiment ===
 
-// Module 9918 (WaterwheelsDiscoverExperiment)
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+// Module 9921 (WaterwheelsDiscoverExperiment)
+import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1450);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-11-waterwheels-discover", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/WaterwheelsDiscoverExperiment.tsx");

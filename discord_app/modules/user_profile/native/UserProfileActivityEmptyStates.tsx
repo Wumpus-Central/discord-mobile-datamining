@@ -1,14 +1,14 @@
-// === Module 14495: UserProfileActivityEmptyStates ===
+// === Module 14463: UserProfileActivityEmptyStates ===
 
-// Module 14495 (UserProfileActivityEmptyStates)
+// Module 14463 (UserProfileActivityEmptyStates)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
+import util from "util" /* 1112 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ function EmptyState(arg0) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [
@@ -94,7 +94,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -108,12 +108,12 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(5822).getName(guildId, channelId, user);
-  const intl = user(1113).intl;
-  let obj = name(5822);
+  name = name(5824).getName(guildId, channelId, user);
+  const intl = user(1112).intl;
+  let obj = name(5824);
   items = [user.id];
   let obj2 = {
-    heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
+    heading: intl.formatToPlainString(user(1112).t.sjSitP, { name }),
     bodyText: _slicedToArray(noop.useState(() => {
       let sampleResult = apply.sample(items);
       if (sampleResult == null) {
@@ -130,10 +130,10 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
   }, items);
   const obj4 = { size: "sm", variant: "secondary", text: null, onPress: null };
-  const intl2 = user(1113).intl;
-  obj4.text = intl2.string(user(1113).t["g33r/P"]);
+  const intl2 = user(1112).intl;
+  obj4.text = intl2.string(user(1112).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5390).Button, obj4);
+  obj3.children = closure_7(user(5392).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

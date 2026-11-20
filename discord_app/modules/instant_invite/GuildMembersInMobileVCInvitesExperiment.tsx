@@ -1,7 +1,7 @@
-// === Module 14553: GuildMembersInMobileVCInvitesExperiment ===
+// === Module 14521: GuildMembersInMobileVCInvitesExperiment ===
 
-// Module 14553 (GuildMembersInMobileVCInvitesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 14521 (GuildMembersInMobileVCInvitesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-guild-members-in-mobile-vc-invites", kind: "guild", defaultConfig: { enabled: false }, variations: null };

@@ -2,11 +2,11 @@
 
 // Module 9129 (premiumOrbsDeliveredModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
 import NitroOrbsDeliveredModalDefault from "NitroOrbsDeliveredModal" /* 9131 */;
 import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 9166 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 8001 */;
+import EntitlementStore from "EntitlementStore" /* 8000 */;
 
 const require = fn;
 function getCoinEntitlements() {
@@ -38,7 +38,7 @@ export function openOrbsModalIfDelivered() {
           return null;
         } else {
           for (const item10008 of tmp) {
-            if (item10008.type === closure_0(2173).EntitlementTypes.PURCHASE_REWARD) {
+            if (item10008.type === closure_0(2171).EntitlementTypes.PURCHASE_REWARD) {
               knownCoinEntitlementIds = arg0.knownCoinEntitlementIds;
               if (!knownCoinEntitlementIds.has(item10008.id)) {
                 obj = SnowflakeUtilsDefault;

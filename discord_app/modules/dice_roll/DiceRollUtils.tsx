@@ -1,7 +1,7 @@
-// === Module 13164: DiceRollUtils ===
+// === Module 13134: DiceRollUtils ===
 
-// Module 13164 (DiceRollUtils)
-import util from "util" /* 1113 */;
+// Module 13134 (DiceRollUtils)
+import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");

@@ -1,14 +1,14 @@
-// === Module 13071: useCanManageGuildDirectoryEntry ===
+// === Module 13041: useCanManageGuildDirectoryEntry ===
 
-// Module 13071 (useCanManageGuildDirectoryEntry)
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 13041 (useCanManageGuildDirectoryEntry)
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/useCanManageGuildDirectoryEntry.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 8036: FileManagerUtils ===
+// === Module 8035: FileManagerUtils ===
 
-// Module 8036 (FileManagerUtils)
+// Module 8035 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeFileModuleDefault from "NativeFileModule" /* 1149 */;
+import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -39,16 +39,16 @@ let closure_5 = async function _readFile(arg0) {
           const tmp41 = (function getBaseDirectory(arg0) {
             if ("shared" === arg0) {
               if (!obj.isAndroid()) {
-                return closure_1_1(1149).getConstants().SharedDirPath;
+                return closure_1_1(1148).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1380);
+              obj = closure_1_0(1378);
             }
             if ("cache" === arg0) {
-              let DocumentsDirPath = closure_1_1(1149).getConstants().CacheDirPath;
-              const obj4 = closure_1_1(1149);
+              let DocumentsDirPath = closure_1_1(1148).getConstants().CacheDirPath;
+              const obj4 = closure_1_1(1148);
             } else {
-              DocumentsDirPath = closure_1_1(1149).getConstants().DocumentsDirPath;
-              const obj3 = closure_1_1(1149);
+              DocumentsDirPath = closure_1_1(1148).getConstants().DocumentsDirPath;
+              const obj3 = closure_1_1(1148);
             }
           })(closure_0);
           closure_131_2 = tmp41;

@@ -1,25 +1,25 @@
-// === Module 18022: YouBarFloatingShade ===
+// === Module 17849: YouBarFloatingShade ===
 
-// Module 18022 (YouBarFloatingShade)
+// Module 17849 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4962 */;
-import useChatLayoutDefault from "useChatLayout" /* 4971 */;
-import LinearGradientDefault from "LinearGradient" /* 5347 */;
-import useToken from "useToken" /* 5356 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16534 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4964 */;
+import useChatLayoutDefault from "useChatLayout" /* 4973 */;
+import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import useToken from "useToken" /* 5358 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16357 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4816 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4818 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(16532).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(17907).GUILD_LIST_WIDTH;
+let closure_5 = fn(16355).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(17734).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");

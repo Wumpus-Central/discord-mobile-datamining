@@ -1,13 +1,13 @@
-// === Module 17869: WaterwheelsDiscoverNavigation ===
+// === Module 17696: WaterwheelsDiscoverNavigation ===
 
-// Module 17869 (WaterwheelsDiscoverNavigation)
-import transitionToGuild from "transitionToGuild" /* 6714 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9918 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17870 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+// Module 17696 (WaterwheelsDiscoverNavigation)
+import transitionToGuild from "transitionToGuild" /* 6716 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9921 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17697 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ME: closure_4, WATERWHEELS: hasOwnProperty } = Constants);
 const WaterwheelsDiscoverNavigation = "WaterwheelsDiscoverNavigation";
 const size = fn(2);

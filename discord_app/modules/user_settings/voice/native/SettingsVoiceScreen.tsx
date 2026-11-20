@@ -1,29 +1,29 @@
-// === Module 16705: SettingsVoiceScreen ===
+// === Module 16529: SettingsVoiceScreen ===
 
-// Module 16705 (SettingsVoiceScreen)
-import util from "util" /* 1113 */;
-import shared from "shared" /* 4799 */;
-import useThemeDefault from "useTheme" /* 5001 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import KrispLogo2 from "KrispLogo" /* 10937 */;
-import _modDef10938 from "module_10938" /* 10938 */;
-import _modDef10939 from "module_10939" /* 10939 */;
-import SettingBuilders from "SettingBuilders" /* 11875 */;
-import SettingLayoutDefault from "SettingLayout" /* 15898 */;
+// Module 16529 (SettingsVoiceScreen)
+import util from "util" /* 1112 */;
+import shared from "shared" /* 4801 */;
+import useThemeDefault from "useTheme" /* 5003 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import KrispLogo2 from "KrispLogo" /* 10879 */;
+import _modDef10880 from "module_10880" /* 10880 */;
+import _modDef10881 from "module_10881" /* 10881 */;
+import SettingBuilders from "SettingBuilders" /* 11817 */;
+import SettingLayoutDefault from "SettingLayout" /* 15862 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2188 */;
+import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2186 */;
 
 require = fn;
 function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef10938;
+    let tmp2Result = _modDef10880;
   } else {
-    tmp2Result = _modDef10939;
+    tmp2Result = _modDef10881;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -60,12 +60,12 @@ function SystemProcessingSubLabel() {
   return tmp3;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8593).MobileUserSettings;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const MobileUserSettings = fn(8592).MobileUserSettings;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let closure_11 = "" + HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_12 = createStyles.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");

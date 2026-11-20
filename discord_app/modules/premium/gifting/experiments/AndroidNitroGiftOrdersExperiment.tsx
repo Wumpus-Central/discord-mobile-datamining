@@ -1,7 +1,7 @@
 // === Module 9091: AndroidNitroGiftOrdersExperiment ===
 
 // Module 9091 (AndroidNitroGiftOrdersExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-android-nitro-gift-orders", kind: "user", defaultConfig: { enabled: false }, variations: null };

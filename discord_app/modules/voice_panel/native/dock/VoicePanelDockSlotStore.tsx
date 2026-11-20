@@ -1,8 +1,8 @@
-// === Module 13220: VoicePanelDockSlotStore ===
+// === Module 13190: VoicePanelDockSlotStore ===
 
-// Module 13220 (VoicePanelDockSlotStore)
+// Module 13190 (VoicePanelDockSlotStore)
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
 
 const require = globalThis.__r;
 

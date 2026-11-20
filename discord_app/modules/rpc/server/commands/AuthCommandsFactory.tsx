@@ -1,15 +1,15 @@
-// === Module 15655: AuthCommandsFactory ===
+// === Module 15619: AuthCommandsFactory ===
 
-// Module 15655 (AuthCommandsFactory)
+// Module 15619 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
-import DurationsDefault from "Durations" /* 1089 */;
+import DurationsDefault from "Durations" /* 1088 */;
 import RPCErrorDefault from "RPCError" /* 6790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ApplicationRecord from "ApplicationRecord" /* 2143 */;
-import UserStore from "UserStore" /* 1388 */;
-import LeakyBucket from "LeakyBucket" /* 10745 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ApplicationRecord from "ApplicationRecord" /* 2141 */;
+import UserStore from "UserStore" /* 1386 */;
+import LeakyBucket from "LeakyBucket" /* 10687 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -375,7 +375,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -504,9 +504,9 @@ let closure_20 = async function _authenticate(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6233);
+let Constants = fn(6235);
 ({ TransportTypes: closure_9, RPC_AUTHENTICATED_SCOPE: closure_10, RPC_PRIVATE_SCOPE: closure_11 } = Constants);
-Constants = fn(1072);
+Constants = fn(1071);
 ({ Endpoints: closure_12, RPCCommands: map1, RPCErrors: closure_14 } = Constants);
 const CachedTokens = "CachedTokens";
 const AUTHORIZE_PROMPT_THROTTLERS = { "1273616940451102832": null };
@@ -573,7 +573,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
-                      const parsed = closure_1(1490).parse(parts[parts.length - 1]);
+                      const parsed = closure_1(1488).parse(parts[parts.length - 1]);
                       if (null != parsed.error) {
                         const obj2 = { errorCode: constants3.OAUTH2_ERROR };
                         let str = parsed.error_description;
@@ -598,7 +598,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                         result = Storage.set(CachedTokens, obj3);
                         return authenticate(socket, parsed.access_token);
                       }
-                      const obj5 = closure_1(1490);
+                      const obj5 = closure_1(1488);
                     }
                   });
                 } else {
@@ -615,7 +615,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
-                  const parsed = closure_1(1490).parse(parts[parts.length - 1]);
+                  const parsed = closure_1(1488).parse(parts[parts.length - 1]);
                   if (null != parsed.error) {
                     const obj2 = { errorCode: constants3.OAUTH2_ERROR };
                     let str = parsed.error_description;
@@ -640,7 +640,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                     result = Storage.set(CachedTokens, obj3);
                     return authenticate(socket, parsed.access_token);
                   }
-                  const obj5 = closure_1(1490);
+                  const obj5 = closure_1(1488);
                 }
               });
               const promise = authorizeWithPrompt(obj3, socket, signal);
@@ -714,7 +714,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
-                      const parsed = closure_1(1490).parse(parts[parts.length - 1]);
+                      const parsed = closure_1(1488).parse(parts[parts.length - 1]);
                       if (null != parsed.error) {
                         const obj2 = { errorCode: constants3.OAUTH2_ERROR };
                         let str = parsed.error_description;
@@ -739,7 +739,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                         result = Storage.set(CachedTokens, obj3);
                         return authenticate(socket, parsed.access_token);
                       }
-                      const obj5 = closure_1(1490);
+                      const obj5 = closure_1(1488);
                     }
                   });
                 } else {
@@ -756,7 +756,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
-                  const parsed = closure_1(1490).parse(parts[parts.length - 1]);
+                  const parsed = closure_1(1488).parse(parts[parts.length - 1]);
                   if (null != parsed.error) {
                     const obj2 = { errorCode: constants3.OAUTH2_ERROR };
                     let str = parsed.error_description;
@@ -781,7 +781,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                     result = Storage.set(CachedTokens, obj3);
                     return authenticate(socket, parsed.access_token);
                   }
-                  const obj5 = closure_1(1490);
+                  const obj5 = closure_1(1488);
                 }
               });
               const promise = authorizeWithPrompt(obj3, socket, signal);

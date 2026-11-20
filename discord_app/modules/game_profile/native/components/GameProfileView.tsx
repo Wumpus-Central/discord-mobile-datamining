@@ -2,22 +2,22 @@
 
 // Module 9685 (GameProfileView)
 import nativeDefault from "native" /* 575 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7401 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7400 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
 import useGameProfileInvite from "useGameProfileInvite" /* 9687 */;
 import GameProfileHeaderDefault from "GameProfileHeader" /* 9688 */;
 import GameProfileMediaDefault from "GameProfileMedia" /* 9696 */;
 import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 9703 */;
 import GameProfileReviewsDefault from "GameProfileReviews" /* 9704 */;
 import GameProfileSummaryDefault from "GameProfileSummary" /* 9718 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 9752 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 9758 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 9761 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 9772 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 9778 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 9781 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 9803 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 9804 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 9753 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 9759 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 9762 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 9774 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 9780 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 9783 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 9805 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 9806 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -26,7 +26,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
 obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(9686).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };

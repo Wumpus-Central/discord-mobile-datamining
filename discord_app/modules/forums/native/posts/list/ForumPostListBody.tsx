@@ -1,21 +1,21 @@
-// === Module 12799: ForumPostListBody ===
+// === Module 12769: ForumPostListBody ===
 
-// Module 12799 (ForumPostListBody)
-import ForumPostUsername from "ForumPostUsername" /* 12782 */;
-import ForumPostMedia from "ForumPostMedia" /* 12786 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12791 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 12792 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 12793 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 12800 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 12801 */;
+// Module 12769 (ForumPostListBody)
+import ForumPostUsername from "ForumPostUsername" /* 12752 */;
+import ForumPostMedia from "ForumPostMedia" /* 12756 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12761 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 12762 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12763 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 12770 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 12771 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(8387).ForumTimestampFormats;
+const ForumTimestampFormats = fn(8386).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({ body: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, contentContainer: { flex: 1 }, thumbnailContainer: { marginLeft: 12 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 6 }, newTagContainer: { marginEnd: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");

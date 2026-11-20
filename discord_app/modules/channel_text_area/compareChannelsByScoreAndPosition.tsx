@@ -1,9 +1,9 @@
-// === Module 6707: compareChannelsByScoreAndPosition ===
+// === Module 6709: compareChannelsByScoreAndPosition ===
 
-// Module 6707 (compareChannelsByScoreAndPosition)
-import ChannelStore from "ChannelStore" /* 4641 */;
+// Module 6709 (compareChannelsByScoreAndPosition)
+import ChannelStore from "ChannelStore" /* 4643 */;
 
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 

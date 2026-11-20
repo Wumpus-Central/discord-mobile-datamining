@@ -1,14 +1,14 @@
-// === Module 11787: notficationSettingsChannelFlagUtils ===
+// === Module 11729: notficationSettingsChannelFlagUtils ===
 
-// Module 11787 (notficationSettingsChannelFlagUtils)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7361 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7366 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11093 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+// Module 11729 (notficationSettingsChannelFlagUtils)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7360 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7365 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11035 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 require = fn;
-const UnreadSetting = fn(6432).UnreadSetting;
-const constants = fn(1082).ChannelNotificationSettingsFlags;
+const UnreadSetting = fn(6434).UnreadSetting;
+const constants = fn(1081).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx");
 

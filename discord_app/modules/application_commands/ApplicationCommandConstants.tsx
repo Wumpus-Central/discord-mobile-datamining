@@ -1,8 +1,8 @@
-// === Module 5816: ApplicationCommandConstants ===
+// === Module 5818: ApplicationCommandConstants ===
 
-// Module 5816 (ApplicationCommandConstants)
-import util from "util" /* 1113 */;
-import Server from "Server" /* 2119 */;
+// Module 5818 (ApplicationCommandConstants)
+import util from "util" /* 1112 */;
+import Server from "Server" /* 2117 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];

@@ -2,13 +2,13 @@
 
 // Module 8861 (WishlistItemCardBase)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import native from "native" /* 4853 */;
-import useToken from "useToken" /* 5356 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import LockIcon from "LockIcon" /* 7576 */;
-import useUserProfileColors from "useUserProfileColors" /* 8072 */;
+import util from "util" /* 1112 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import native from "native" /* 4855 */;
+import useToken from "useToken" /* 5358 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import LockIcon from "LockIcon" /* 7575 */;
+import useUserProfileColors from "useUserProfileColors" /* 8071 */;
 import useWishlistHooks from "useWishlistHooks" /* 8862 */;
 import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 8883 */;
 import WishlistShopUnpublishLabelDefault from "WishlistShopUnpublishLabel" /* 8884 */;
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, newContentDot: null, lockBadge: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

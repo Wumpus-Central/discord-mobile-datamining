@@ -1,6 +1,6 @@
-// === Module 13337: useGuildBoostPurchaseHandler ===
+// === Module 13307: useGuildBoostPurchaseHandler ===
 
-// Module 13337 (useGuildBoostPurchaseHandler)
+// Module 13307 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_6 = new LoggerDefault("useGuildBoostPurchaseHandler");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
@@ -27,7 +27,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -77,9 +77,9 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6425).closeApplyBoostModal();
+          args(6427).closeApplyBoostModal();
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c4 = tmp;

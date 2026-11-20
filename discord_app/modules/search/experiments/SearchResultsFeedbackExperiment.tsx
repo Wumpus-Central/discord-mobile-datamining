@@ -1,7 +1,7 @@
-// === Module 19553: SearchResultsFeedbackExperiment ===
+// === Module 19371: SearchResultsFeedbackExperiment ===
 
-// Module 19553 (SearchResultsFeedbackExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 19371 (SearchResultsFeedbackExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-05-search-results-feedback", kind: "user", defaultConfig: { enabled: false }, variations: null };

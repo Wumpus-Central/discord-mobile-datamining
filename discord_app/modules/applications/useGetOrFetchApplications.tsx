@@ -3,15 +3,15 @@
 // Module 6745 (useGetOrFetchApplications)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6538 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6540 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 

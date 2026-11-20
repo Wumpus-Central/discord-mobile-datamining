@@ -1,11 +1,11 @@
-// === Module 14819: GatewaySocketAnalytics ===
+// === Module 14783: GatewaySocketAnalytics ===
 
-// Module 14819 (GatewaySocketAnalytics)
+// Module 14783 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 function prettyPrintTrace_(calls, arg1) {
   if (null == calls) {
@@ -49,7 +49,7 @@ function eachTraceCall(calls, fn) {
 let closure_2 = ["guilds", "merged_presences", "merged_members", "read_state", "private_channels", "user_guild_settings", "user_settings", "user_settings_proto", "experiments", "guild_experiments", "relationships", "users"];
 let closure_3 = ["features"];
 let closure_4 = ["threads", "guild_scheduled_events"];
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, ChannelTypes: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");

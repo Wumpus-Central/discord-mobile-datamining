@@ -1,21 +1,21 @@
-// === Module 7366: NotificationSettingsModalActionCreators ===
+// === Module 7365: NotificationSettingsModalActionCreators ===
 
-// Module 7366 (NotificationSettingsModalActionCreators)
+// Module 7365 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1113 */;
-import shared from "shared" /* 4799 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7361 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7363 */;
+import util from "util" /* 1112 */;
+import shared from "shared" /* 4801 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7360 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7362 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
-fn(4737).NotificationSettingsUpdateType;
-const constants = fn(1082).ChannelNotificationSettingsFlags;
+const Endpoints = fn(1071).Endpoints;
+fn(4739).NotificationSettingsUpdateType;
+const constants = fn(1081).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
 
@@ -135,7 +135,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -151,14 +151,14 @@ export default {
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
-              const setFlagResult = closure_0(1406).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
+              const setFlagResult = closure_0(1404).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
               closure_128_0 = setFlagResult;
-              const HTTP = closure_0(1285).HTTP;
+              const HTTP = closure_0(1284).HTTP;
               const request = { url: constants.ACCOUNT_NOTIFICATION_SETTINGS, body: null, rejectWithError: null };
               const obj5 = { flags: setFlagResult };
               request.body = obj5;
-              const obj10 = closure_0(1406);
-              request.rejectWithError = closure_0(1285).rejectWithMigratedError();
+              const obj10 = closure_0(1404);
+              request.rejectWithError = closure_0(1284).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj6 = { value: HTTP.patch(request), done: false };
@@ -190,7 +190,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c3 = tmp;

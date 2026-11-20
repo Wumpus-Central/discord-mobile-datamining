@@ -1,9 +1,9 @@
-// === Module 19655: SafetyFlowsLegacyRequiredActionsExperiment ===
+// === Module 19473: SafetyFlowsLegacyRequiredActionsExperiment ===
 
-// Module 19655 (SafetyFlowsLegacyRequiredActionsExperiment)
-import Constants from "Constants" /* 1072 */;
-import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 19656 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 19473 (SafetyFlowsLegacyRequiredActionsExperiment)
+import Constants from "Constants" /* 1071 */;
+import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 19474 */;
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 function config() {

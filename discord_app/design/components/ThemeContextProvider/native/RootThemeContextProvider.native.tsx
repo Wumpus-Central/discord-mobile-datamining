@@ -1,11 +1,11 @@
-// === Module 11034: ThemeContextProvider/RootThemeContextProvider ===
+// === Module 10976: ThemeContextProvider/RootThemeContextProvider ===
 
-// Module 11034 (ThemeContextProvider/RootThemeContextProvider)
-import native from "native" /* 4853 */;
+// Module 10976 (ThemeContextProvider/RootThemeContextProvider)
+import native from "native" /* 4855 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");
@@ -57,7 +57,7 @@ export function RootThemeContextProvider(children) {
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 }
 export function DisableCustomTheme(children) {
-  themeContext = themeContext(4853).useThemeContext();
+  themeContext = themeContext(4855).useThemeContext();
   items = [themeContext];
   const memo = noop.useMemo(() => {
     const obj2 = {};
@@ -67,5 +67,5 @@ export function DisableCustomTheme(children) {
     obj2.gradient = null;
     return native.createThemedContext(obj2);
   }, items);
-  return jsx(themeContext(4853).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4855).ThemeContext.Provider, { value: memo, children: children.children });
 }

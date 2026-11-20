@@ -1,14 +1,14 @@
-// === Module 16201: PremiumManageSubscriptionsSetting ===
+// === Module 16165: PremiumManageSubscriptionsSetting ===
 
-// Module 16201 (PremiumManageSubscriptionsSetting)
-import util from "util" /* 1113 */;
+// Module 16165 (PremiumManageSubscriptionsSetting)
+import util from "util" /* 1112 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 8985 */;
 import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9192 */;
-import MapleSyrupExperiments from "MapleSyrupExperiments" /* 9825 */;
+import MapleSyrupExperiments from "MapleSyrupExperiments" /* 9827 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const mapleSyrup2Treatment = MapleSyrupExperiments.useMapleSyrup2Treatment("useTitle");
@@ -25,7 +25,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(16202).SubscriptionIcon,
+  IconComponent: fn(16166).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
@@ -37,9 +37,9 @@ const route = SettingBuilders.createRoute({
       return flag;
     }, []);
   },
-  usePredicate: fn(2174).useHasPremiumSubscriptionToDisplay,
+  usePredicate: fn(2172).useHasPremiumSubscriptionToDisplay,
   screen: {
-    route: fn(1072).UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    route: fn(1071).UserSettingsSections.PREMIUM_MANAGE_PLAN,
     getComponent() {
       return require("PremiumManagePlanScreen").default;
     }

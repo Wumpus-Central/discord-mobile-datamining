@@ -1,6 +1,6 @@
-// === Module 6871: ConjureHostApproval ===
+// === Module 6870: ConjureHostApproval ===
 
-// Module 6871 (ConjureHostApproval)
+// Module 6870 (ConjureHostApproval)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
@@ -37,7 +37,7 @@ const hostAccessStore = new HostAccessStore(DispatcherDefault, {
     if (value == null) {
       value = closure_4;
     }
-    const f91407 = (id) => id.id;
+    const f89780 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {

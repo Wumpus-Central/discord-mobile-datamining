@@ -1,16 +1,16 @@
-// === Module 19739: NotificationSettingsModalStore ===
+// === Module 19557: NotificationSettingsModalStore ===
 
-// Module 19739 (NotificationSettingsModalStore)
+// Module 19557 (NotificationSettingsModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4645 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7359 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7358 */;
-import GuildChannelStore from "GuildChannelStore" /* 4722 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5413 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6431 */;
-import Constants from "Constants" /* 1072 */;
+import ChannelRecord from "ChannelRecord" /* 4647 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7358 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7357 */;
+import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5415 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ChannelRecord.isGuildSelectableChannelType;

@@ -1,15 +1,15 @@
-// === Module 13176: ApplicationSectionHeader ===
+// === Module 13146: ApplicationSectionHeader ===
 
-// Module 13176 (ApplicationSectionHeader)
+// Module 13146 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { applicationHeaderWrapper: { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 }, applicationIcon: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.sm, marginRight: 8 };
 obj2.applicationIcon = size;
@@ -34,7 +34,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(13001).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12971).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -45,14 +45,14 @@ export default function ApplicationSectionHeader(section) {
     name = section.name;
   }
   const obj3 = { style: tmp.applicationHeaderWrapper, accessibilityLabel: null, children: null };
-  const intl = tmp2(1113).intl;
-  obj3.accessibilityLabel = intl.formatToPlainString(section(1113).t["Ocw/sM"], { applicationName: name });
+  const intl = tmp2(1112).intl;
+  obj3.accessibilityLabel = intl.formatToPlainString(section(1112).t["Ocw/sM"], { applicationName: name });
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5479), obj4);
+    tmp9 = closure_5(guildId(5481), obj4);
   }
-  const items1 = [tmp9, closure_5(section(5383).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name })];
+  const items1 = [tmp9, closure_5(section(5385).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name })];
   obj3.children = items1;
   return closure_6(View, obj3);
 };

@@ -1,12 +1,12 @@
-// === Module 16052: ModerationUtils ===
+// === Module 16016: ModerationUtils ===
 
-// Module 16052 (ModerationUtils)
+// Module 16016 (ModerationUtils)
 import shims from "shims" /* 574 */;
-import util from "util" /* 1113 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import DMSafetyConstants from "DMSafetyConstants" /* 4619 */;
-import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 16053 */;
-import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1112 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
+import DMSafetyConstants from "DMSafetyConstants" /* 4621 */;
+import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 16017 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 function mapColorToHighlightColor(color) {

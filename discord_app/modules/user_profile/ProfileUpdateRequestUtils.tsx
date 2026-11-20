@@ -1,8 +1,8 @@
 // === Module 9302: ProfileUpdateRequestUtils ===
 
 // Module 9302 (ProfileUpdateRequestUtils)
-import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7291 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7290 */;
 import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 9303 */;
 import size from "module_2" /* 2 */;
 

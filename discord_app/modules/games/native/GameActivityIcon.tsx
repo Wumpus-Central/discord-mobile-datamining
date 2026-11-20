@@ -2,17 +2,17 @@
 
 // Module 9622 (GameActivityIcon)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import shared from "shared" /* 4799 */;
-import native from "native" /* 4853 */;
-import FastImageDefault from "FastImage" /* 5479 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 7858 */;
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import shared from "shared" /* 4801 */;
+import native from "native" /* 4855 */;
+import FastImageDefault from "FastImage" /* 5481 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.radii.xs };

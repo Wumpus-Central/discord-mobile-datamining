@@ -1,13 +1,13 @@
-// === Module 8589: canReactToMessage ===
+// === Module 8588: canReactToMessage ===
 
-// Module 8589 (canReactToMessage)
-import FlagUtils from "FlagUtils" /* 1406 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4711 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8590 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6410 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import UserStore from "UserStore" /* 1388 */;
+// Module 8588 (canReactToMessage)
+import FlagUtils from "FlagUtils" /* 1404 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4713 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8589 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6412 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -42,7 +42,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   return tmp6;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageStates: metroImportDefault, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");

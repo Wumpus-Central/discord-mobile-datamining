@@ -1,10 +1,10 @@
-// === Module 18628: ConjurePlanBotPreview ===
+// === Module 18456: ConjurePlanBotPreview ===
 
-// Module 18628 (ConjurePlanBotPreview)
+// Module 18456 (ConjurePlanBotPreview)
 import nativeDefault from "native" /* 575 */;
-import RowGeneratorDefault from "RowGenerator" /* 8550 */;
-import ChatItemDefault from "ChatItem" /* 9977 */;
-import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview" /* 18629 */;
+import RowGeneratorDefault from "RowGenerator" /* 8549 */;
+import ChatItemDefault from "ChatItem" /* 9980 */;
+import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview" /* 18457 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -32,12 +32,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 const obj3 = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
-obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(18508).MESSAGE_CONTENT_INSET, paddingRight: fn(18508).MESSAGE_EDGE_INSET };
+obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(18332).MESSAGE_CONTENT_INSET, paddingRight: fn(18332).MESSAGE_EDGE_INSET };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");

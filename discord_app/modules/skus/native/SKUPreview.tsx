@@ -2,10 +2,10 @@
 
 // Module 8860 (SKUPreview)
 import nativeDefault from "native" /* 575 */;
-import GlobalUtils from "GlobalUtils" /* 1255 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 4953 */;
-import useToken from "useToken" /* 5356 */;
+import GlobalUtils from "GlobalUtils" /* 1254 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
+import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 4955 */;
+import useToken from "useToken" /* 5358 */;
 import useShopProductItems from "useShopProductItems" /* 8793 */;
 import WishlistItemCardBase from "WishlistItemCardBase" /* 8861 */;
 import BundleSampleV2Default from "BundleSampleV2" /* 8889 */;
@@ -185,10 +185,10 @@ class PremiumSKUPreview {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(7960).transformSKUToCollectiblesItem;
-const SKUProductLines = fn(1072).SKUProductLines;
+let closure_5 = fn(7959).transformSKUToCollectiblesItem;
+const SKUProductLines = fn(1071).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const React5 = createStyles.createStyles((width, height) => {
   const obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
   size = { width: WishlistItemCardBase.DEFAULT_ITEM_SIZE, height: WishlistItemCardBase.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };

@@ -1,21 +1,21 @@
-// === Module 6394: QuarantineModeInfoAlert ===
+// === Module 6396: QuarantineModeInfoAlert ===
 
-// Module 6394 (QuarantineModeInfoAlert)
+// Module 6396 (QuarantineModeInfoAlert)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import common_AlertDefault from "common/Alert" /* 5811 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import common_AlertDefault from "common/Alert" /* 5813 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6286 */;
+import TextStyles from "TextStyles" /* 6288 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { header: null, text: null };
 let obj3 = {};
-const merged = Object.assign(TextStyles(fn(1072).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(TextStyles(fn(1071).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 obj3.textAlign = "center";
 obj3.marginVertical = 12;
 obj2.header = obj3;

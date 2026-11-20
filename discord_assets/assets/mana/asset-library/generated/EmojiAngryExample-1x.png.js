@@ -1,6 +1,6 @@
-// === Module 12748: ? ===
+// === Module 12718: ? ===
 
-// Module 12748
+// Module 12718
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiAngryExample-1x.png.js");

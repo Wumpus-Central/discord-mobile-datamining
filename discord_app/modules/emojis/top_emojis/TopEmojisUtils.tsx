@@ -2,9 +2,9 @@
 
 // Module 8949 (TopEmojisUtils)
 import TopEmojisActionCreators from "TopEmojisActionCreators" /* 8950 */;
-import UserStore from "UserStore" /* 1388 */;
-import EmojiStore from "EmojiStore" /* 6452 */;
-import TopEmojiStore from "TopEmojiStore" /* 6454 */;
+import UserStore from "UserStore" /* 1386 */;
+import EmojiStore from "EmojiStore" /* 6454 */;
+import TopEmojiStore from "TopEmojiStore" /* 6456 */;
 
 require = fn;
 const size = fn(2);

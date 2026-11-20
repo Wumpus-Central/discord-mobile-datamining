@@ -1,12 +1,12 @@
-// === Module 8053: getStorefrontNativeStoreQuery ===
+// === Module 8052: getStorefrontNativeStoreQuery ===
 
-// Module 8053 (getStorefrontNativeStoreQuery)
+// Module 8052 (getStorefrontNativeStoreQuery)
 import initialize from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8049 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8048 */;
 
 require = fn;
-const PaymentGateways = fn(1072).PaymentGateways;
+const PaymentGateways = fn(1071).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/getStorefrontNativeStoreQuery.tsx");
 

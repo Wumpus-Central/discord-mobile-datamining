@@ -1,15 +1,15 @@
-// === Module 7871: ManualReviewDecidedTeenAlertModal ===
+// === Module 7870: ManualReviewDecidedTeenAlertModal ===
 
-// Module 7871 (ManualReviewDecidedTeenAlertModal)
-import util from "util" /* 1113 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import _modDef3439 from "module_3439" /* 3439 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import AlertModal from "AlertModal" /* 5745 */;
+// Module 7870 (ManualReviewDecidedTeenAlertModal)
+import util from "util" /* 1112 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
+import _modDef3441 from "module_3441" /* 3441 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import AlertModal from "AlertModal" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6292).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6294).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -21,19 +21,19 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
       variant: "body-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7674);
-        const intl = closure_1_0(1113).intl;
-        return obj.openUrl(closure_1_1(2188).getArticleURL(intl.string(closure_1_1(3439).agiNYw)));
+        const obj = closure_1_1(7673);
+        const intl = closure_1_0(1112).intl;
+        return obj.openUrl(closure_1_1(2186).getArticleURL(intl.string(closure_1_1(3441).agiNYw)));
       },
       children
     }, key);
   }
   let obj = { title: null, content: null, actions: null, trackingProps: null };
   let intl = util.intl;
-  obj.title = intl.string(_modDef3439.AA3xYb);
+  obj.title = intl.string(_modDef3441.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp4 = _modDef3439;
+  const tmp4 = _modDef3441;
   if (teenAgeRange.decidedPassed) {
     if (teenAgeRange == null) {
       teenAgeRange = FALLBACK_TEEN_AGE_RANGE;

@@ -1,16 +1,16 @@
-// === Module 7416: ProviderConnectionCard ===
+// === Module 7415: ProviderConnectionCard ===
 
-// Module 7416 (ProviderConnectionCard)
-import native from "native" /* 1187 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import shared from "shared" /* 4799 */;
-import LinkIcon from "LinkIcon" /* 5488 */;
-import PlatformsDefault from "Platforms" /* 6570 */;
+// Module 7415 (ProviderConnectionCard)
+import native from "native" /* 1186 */;
+import AvatarUtils from "AvatarUtils" /* 1412 */;
+import shared from "shared" /* 4801 */;
+import LinkIcon from "LinkIcon" /* 5490 */;
+import PlatformsDefault from "Platforms" /* 6572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ProviderConnectionCard.tsx");
@@ -56,7 +56,7 @@ export default function ProviderConnectionCard(connection) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -71,8 +71,8 @@ export default function ProviderConnectionCard(connection) {
               return obj3;
             } else {
               const obj4 = {};
-              const obj5 = v3(1256);
-              const merged = Object.assign(provider_id(5529).collectGuildAnalyticsMetadata(guildId));
+              const obj5 = v3(1255);
+              const merged = Object.assign(provider_id(5531).collectGuildAnalyticsMetadata(guildId));
               obj4.connection_type = "provider";
               provider_id = connection.provider_id;
               if (provider_id == null) {
@@ -95,7 +95,7 @@ export default function ProviderConnectionCard(connection) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v3 = tmp;

@@ -1,9 +1,9 @@
-// === Module 17746: channel_list_v2/ChannelListUtils ===
+// === Module 17573: channel_list_v2/ChannelListUtils ===
 
-// Module 17746 (channel_list_v2/ChannelListUtils)
-import Constants from "Constants" /* 1072 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
-import ChannelListState from "ChannelListState" /* 8202 */;
+// Module 17573 (channel_list_v2/ChannelListUtils)
+import Constants from "Constants" /* 1071 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
+import ChannelListState from "ChannelListState" /* 8201 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

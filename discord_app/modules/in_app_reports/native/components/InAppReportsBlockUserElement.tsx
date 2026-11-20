@@ -1,16 +1,16 @@
-// === Module 10298: InAppReportsBlockUserElement ===
+// === Module 10240: InAppReportsBlockUserElement ===
 
-// Module 10298 (InAppReportsBlockUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6388 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
+// Module 10240 (InAppReportsBlockUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6390 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7620 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");

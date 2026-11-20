@@ -1,23 +1,23 @@
-// === Module 17909: useGuildsBarGesture ===
+// === Module 17736: useGuildsBarGesture ===
 
-// Module 17909 (useGuildsBarGesture)
+// Module 17736 (useGuildsBarGesture)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import shared from "shared" /* 4799 */;
-import HapticUtils from "HapticUtils" /* 5008 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5022 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
-import FastList from "FastList" /* 7330 */;
-import ContextMenuState from "ContextMenuState" /* 8541 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 9970 */;
+import util from "util" /* 1112 */;
+import SentryUtilsDefault from "SentryUtils" /* 1241 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import shared from "shared" /* 4801 */;
+import HapticUtils from "HapticUtils" /* 5010 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5024 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import FastList from "FastList" /* 7329 */;
+import ContextMenuState from "ContextMenuState" /* 8540 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 9973 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import SortedGuildStore from "SortedGuildStore" /* 6429 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17910 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import SortedGuildStore from "SortedGuildStore" /* 6431 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17737 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -244,7 +244,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "ip", positionPercentage: "pen_fountain" };
+    sectionItemFromPosition = { item: "disabled", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -276,18 +276,18 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6429).GuildsNodeType;
-const GuildsBarConstants = fn(17907);
+const GuildsNodeType = fn(6431).GuildsNodeType;
+const GuildsBarConstants = fn(17734);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
-let module_1655 = fn(1655);
-obj.pan = module_1655.makeMutable(-1);
-module_1655 = fn(1655);
-obj.itemMeasurements = module_1655.makeMutable([]);
-module_1655 = fn(1655);
-obj.activeIndex = module_1655.makeMutable(-1);
-let closure_15 = debounce(fn(5008).triggerHapticFeedback, 16);
+let module_1653 = fn(1653);
+obj.pan = module_1653.makeMutable(-1);
+module_1653 = fn(1653);
+obj.itemMeasurements = module_1653.makeMutable([]);
+module_1653 = fn(1653);
+obj.activeIndex = module_1653.makeMutable(-1);
+let closure_15 = debounce(fn(5010).triggerHapticFeedback, 16);
 let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -322,14 +322,14 @@ export default function useGuildsBarGesture() {
   let tmp = _require;
   const token = require("useToken").useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   let obj2 = require("useToken");
-  const scrollerRef = require("module_1655").useAnimatedRef();
+  const scrollerRef = require("module_1653").useAnimatedRef();
   const fastListRef = noop.useRef(null);
   noop = fastListRef;
-  let obj3 = require("module_1655");
-  const sharedValue = require("module_1655").useSharedValue(0);
-  let obj5 = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(0);
-  let tmp9 = frameCallback((gestureState) => ({ gestureState: gestureState.gestureState, scrollPosition: gestureState.scrollPosition, dragRegion: gestureState.dragRegion, windowSize: gestureState.windowSize, listInsets: gestureState.listInsets, dragDropInProgress: gestureState.dragDropInProgress }), require("module_4707").shallow);
+  let obj3 = require("module_1653");
+  const sharedValue = require("module_1653").useSharedValue(0);
+  let obj5 = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(0);
+  let tmp9 = frameCallback((gestureState) => ({ gestureState: gestureState.gestureState, scrollPosition: gestureState.scrollPosition, dragRegion: gestureState.dragRegion, windowSize: gestureState.windowSize, listInsets: gestureState.listInsets, dragDropInProgress: gestureState.dragDropInProgress }), require("module_4709").shallow);
   let gestureState = tmp9.gestureState;
   let scrollPosition = tmp9.scrollPosition;
   let dragRegion = tmp9.dragRegion;
@@ -351,7 +351,7 @@ export default function useGuildsBarGesture() {
       arr = Array.from(set);
     }
     return arr;
-  }, require("module_4707").shallow);
+  }, require("module_4709").shallow);
   const effect = noop.useEffect(() => {
     const current = _undefined5.current;
     scrollPosition = undefined;
@@ -395,8 +395,8 @@ export default function useGuildsBarGesture() {
     }
     tmp7 = num2 === range.min && num3 === range.max;
   });
-  let obj6 = require("module_1655");
-  items = [closure_23, gestureState, sharedValue1, 16.666666666666668, sharedValue, require("module_1655").scrollTo, scrollerRef, roundToNearestPixelDefault, scrollPosition];
+  let obj6 = require("module_1653");
+  items = [closure_23, gestureState, sharedValue1, 16.666666666666668, sharedValue, require("module_1653").scrollTo, scrollerRef, roundToNearestPixelDefault, scrollPosition];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -427,7 +427,7 @@ export default function useGuildsBarGesture() {
   useGuildsBarGestureTsx1.__closure = items1;
   useGuildsBarGestureTsx1.__workletHash = 2533042180415;
   useGuildsBarGestureTsx1.__initData = tmp12;
-  frameCallback = require("module_1655").useFrameCallback(useGuildsBarGestureTsx1, false);
+  frameCallback = require("module_1653").useFrameCallback(useGuildsBarGestureTsx1, false);
   let items2 = [sharedValue, sharedValue1, frameCallback];
   state = obj4.useCallback((event) => {
     const state1 = GuildsBarDnDStore.getState();
@@ -592,7 +592,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Path" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "analyticsLocations" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -774,10 +774,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(8541).ContextMenuStore;
+        const ContextMenuStore = tmp66(8540).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(8541).hideContextMenu();
-          const tmp66Result = tmp66(8541);
+          tmp66(8540).hideContextMenu();
+          const tmp66Result = tmp66(8540);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -814,9 +814,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(7330).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7329).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(7330).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7329).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";
@@ -952,7 +952,7 @@ export default function useGuildsBarGesture() {
         if (!isActive) {
           frameCallback.setActive(true);
         }
-        tmp66 = tmp66(1263);
+        tmp66 = tmp66(1262);
         batchUpdates = tmp66.batchUpdates;
         batchUpdates(() => {
           if (null != obj2) {
@@ -990,9 +990,9 @@ export default function useGuildsBarGesture() {
     }
     obj = { overSpecs, dragSpecs: obj2, windowSize, gestureState: gestureState.get() };
   }, items4);
-  let obj7 = require("module_1655");
+  let obj7 = require("module_1653");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(16533).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(16356).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [dragDropInProgress, dragRegion, gestureState, callback3, state, callback4, callback2, callback1, listInsets, scrollPosition, scrollerRef, windowSize, gesture];
   const onFastListScroll = obj4.useCallback(() => {
     const gestureState = GuildsBarDnDStore.getState().gestureState;
@@ -1004,7 +1004,7 @@ export default function useGuildsBarGesture() {
   const gesture1 = obj4.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const Gesture2 = LegacyBaseButton.Gesture;
-    items = [closure_24, scrollPosition, c7, dragRegion, _mod1708.scheduleOnRN, callback1];
+    items = [closure_24, scrollPosition, c7, dragRegion, _mod1706.scheduleOnRN, callback1];
     c3 = undefined;
     [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = items;
     function useGuildsBarGestureTsx2(changedTouches, fail) {
@@ -1047,7 +1047,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx3.__workletHash = 1106386279759;
     useGuildsBarGestureTsx3.__initData = tmp10;
     const onTouchesDownResult = Gesture2.LongPress().onTouchesDown(useGuildsBarGestureTsx2);
-    const items4 = [closure_26, c7, _mod1708.scheduleOnRN, callback2];
+    const items4 = [closure_26, c7, _mod1706.scheduleOnRN, callback2];
     [tmp12, tmp13, tmp14, tmp15] = items4;
     function useGuildsBarGestureTsx4(arg0) {
       ({ absoluteX, absoluteY } = arg0);
@@ -1060,7 +1060,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx4.__workletHash = 406167137139;
     useGuildsBarGestureTsx4.__initData = tmp12;
     const onTouchesMoveResult = Gesture2.LongPress().onTouchesDown(useGuildsBarGestureTsx2).onTouchesMove(useGuildsBarGestureTsx3);
-    const items6 = [closure_27, c7, _mod1708.scheduleOnRN, callback];
+    const items6 = [closure_27, c7, _mod1706.scheduleOnRN, callback];
     [tmp17, tmp18, tmp19, tmp20] = items6;
     function useGuildsBarGestureTsx5() {
       if ("cancel" === _undefined.get().mode) {
@@ -1072,7 +1072,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx5.__workletHash = 2590862377263;
     useGuildsBarGestureTsx5.__initData = tmp17;
     const onStartResult = Gesture2.LongPress().onTouchesDown(useGuildsBarGestureTsx2).onTouchesMove(useGuildsBarGestureTsx3).onStart(useGuildsBarGestureTsx4);
-    const items8 = [closure_28, c7, _mod1708.scheduleOnRN, callback];
+    const items8 = [closure_28, c7, _mod1706.scheduleOnRN, callback];
     c0 = undefined;
     [tmp21, tmp22, tmp23, tmp24] = items8;
     function useGuildsBarGestureTsx6() {
@@ -1094,7 +1094,7 @@ export default function useGuildsBarGesture() {
     const PanResult = Gesture3.Pan();
     let result = Gesture3.Pan().manualActivation(true).simultaneousWithExternalGesture(c3, c0);
     let result1 = result.shouldCancelWhenOutside(false);
-    const items10 = [closure_29, c7, dragDropInProgress, 10, _mod1708.scheduleOnRN, callback3, callback4];
+    const items10 = [closure_29, c7, dragDropInProgress, 10, _mod1706.scheduleOnRN, callback3, callback4];
     [tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34] = items10;
     function useGuildsBarGestureTsx7(arg0, activate) {
       const first = arg0.changedTouches[0];
@@ -1141,7 +1141,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx7.__workletHash = 11364152475385;
     useGuildsBarGestureTsx7.__initData = tmp28;
     const manualActivationResult = Gesture3.Pan().manualActivation(true);
-    const items12 = [closure_30, c7, listInsets, c12, windowSize, _mod1708.scheduleOnRN, callback4, callback3];
+    const items12 = [closure_30, c7, listInsets, c12, windowSize, _mod1706.scheduleOnRN, callback4, callback3];
     c3 = undefined;
     c4 = undefined;
     c5 = undefined;
@@ -1182,7 +1182,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx8.__workletHash = 17309616979285;
     useGuildsBarGestureTsx8.__initData = tmp35;
     const onTouchesMoveResult1 = result1.onTouchesMove(useGuildsBarGestureTsx7);
-    const items14 = [closure_31, c7, _mod1708.scheduleOnRN, callback];
+    const items14 = [closure_31, c7, _mod1706.scheduleOnRN, callback];
     c2 = undefined;
     [tmp43, tmp44, tmp45, tmp46] = items14;
     function useGuildsBarGestureTsx9() {
@@ -1199,7 +1199,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx9.__workletHash = 16673204581970;
     useGuildsBarGestureTsx9.__initData = tmp43;
     const onUpdateResult = result1.onTouchesMove(useGuildsBarGestureTsx7).onUpdate(useGuildsBarGestureTsx8);
-    const items16 = [closure_32, _mod1708.scheduleOnRN, callback];
+    const items16 = [closure_32, _mod1706.scheduleOnRN, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp47, tmp48, tmp49] = items16;

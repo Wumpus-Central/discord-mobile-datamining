@@ -1,11 +1,11 @@
-// === Module 6893: AuthorizedAppsActionCreators ===
+// === Module 6892: AuthorizedAppsActionCreators ===
 
-// Module 6893 (AuthorizedAppsActionCreators)
+// Module 6892 (AuthorizedAppsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import Timers from "Timers" /* 4636 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import Timers from "Timers" /* 4638 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6704 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6706 */;
 
 require = fn;
 function tokensToAppTokensMap(arg0, arr) {
@@ -53,7 +53,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -120,9 +120,9 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(6704).FetchState;
-const Endpoints = fn(1072).Endpoints;
-const batchInvocationManager = new fn(4636).BatchInvocationManager(fetchAuthorizedApps, {
+const FetchState = fn(6706).FetchState;
+const Endpoints = fn(1071).Endpoints;
+const batchInvocationManager = new fn(4638).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {
     return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },

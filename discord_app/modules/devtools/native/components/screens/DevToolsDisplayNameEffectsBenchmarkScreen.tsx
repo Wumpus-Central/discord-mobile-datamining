@@ -1,19 +1,19 @@
-// === Module 17221: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 17045: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 17221 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 17045 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1399 */;
-import _modDef3147 from "module_3147" /* 3147 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import Stack_Stack from "Stack/Stack" /* 5808 */;
+import util from "util" /* 1112 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1397 */;
+import _modDef3149 from "module_3149" /* 3149 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import Stack_Stack from "Stack/Stack" /* 5810 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9334 */;
 import types from "types" /* 9335 */;
 import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 9340 */;
 import _mod9344 from "module_9344" /* 9344 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function effectName(arg0) {
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef3147.OpWJ3f;
+    OpWJ3f = _modDef3149.OpWJ3f;
   }
   return intl.string(OpWJ3f);
 }
@@ -63,14 +63,14 @@ function BenchmarkRow(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EFFECT_ORDER = fn(1397).EFFECT_ORDER;
+const EFFECT_ORDER = fn(1395).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = EFFECT_ORDER.filter((item) => item !== DisplayNameEffect.DisplayNameEffect.PRISM);
 let closure_12 = [10, 50, 100, 200];
 let closure_13 = { overrideSettings: true };
 let items = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.container = { paddingVertical: nativeDefault.space.PX_16 };

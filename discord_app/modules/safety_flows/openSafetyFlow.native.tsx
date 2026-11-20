@@ -1,8 +1,8 @@
-// === Module 20191: openSafetyFlow ===
+// === Module 20011: openSafetyFlow ===
 
-// Module 20191 (openSafetyFlow)
+// Module 20011 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4635 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4637 */;
 
 const require = fn;
 let closure_6 = async function _openSafetyFlow() {
@@ -16,7 +16,7 @@ let closure_6 = async function _openSafetyFlow() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_6 = async function _openSafetyFlow() {
             } else {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             if (4 === tmp7) {
@@ -148,7 +148,7 @@ let closure_6 = async function _openSafetyFlow() {
               if (null == value) {
                 c5 = 0;
                 c7 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             }
             closure_130_2 = (function getInitialScreenForTask(task_type) {
@@ -173,7 +173,7 @@ let closure_6 = async function _openSafetyFlow() {
           }
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
         c7 = 3;
       }
@@ -188,7 +188,7 @@ let closure_6 = async function _openSafetyFlow() {
     }
   }
 };
-const UserRequiredActions = fn(1072).UserRequiredActions;
+const UserRequiredActions = fn(1071).UserRequiredActions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
 

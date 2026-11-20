@@ -1,19 +1,19 @@
-// === Module 18014: YouBarAvatar ===
+// === Module 17841: YouBarAvatar ===
 
-// Module 18014 (YouBarAvatar)
+// Module 17841 (YouBarAvatar)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import _mod1708 from "module_1708" /* 1708 */;
-import native2 from "native" /* 4853 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import native from "native" /* 1186 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import _mod1706 from "module_1706" /* 1706 */;
+import native2 from "native" /* 4855 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
 import ClipView from "ClipView" /* 8903 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -42,30 +42,30 @@ function YouBarAvatarLarge(transitionState) {
   if (tmp8) {
     num = 1;
   }
-  const sharedValue = require("module_1655").useSharedValue(num);
+  const sharedValue = require("module_1653").useSharedValue(num);
   c4 = sharedValue;
-  const obj3 = require("module_1655");
+  const obj3 = require("module_1653");
   let num2 = 1;
   if (!tmp8) {
     num2 = result;
   }
-  const sharedValue1 = require("module_1655").useSharedValue(num2);
+  const sharedValue1 = require("module_1653").useSharedValue(num2);
   noop = sharedValue1;
-  const tmp2Result = require("module_1655");
+  const tmp2Result = require("module_1653");
   if (tmp8) {
     let tmp11 = -closure_17;
   } else {
     tmp11 = -result1;
   }
-  const sharedValue2 = require("module_1655").useSharedValue(tmp11);
+  const sharedValue2 = require("module_1653").useSharedValue(tmp11);
   c6 = sharedValue2;
-  const tmp2Result13 = require("module_1655");
+  const tmp2Result13 = require("module_1653");
   if (tmp8) {
     let diff = -closure_17 - (height - closure_15) / 2;
   } else {
     diff = -result1;
   }
-  const sharedValue3 = require("module_1655").useSharedValue(diff);
+  const sharedValue3 = require("module_1653").useSharedValue(diff);
   let items2 = [transitionState, sharedValue, sharedValue1, sharedValue2, sharedValue3, result, result1];
   const effect = noop.useEffect(() => {
     const tmp = c0 === native2.TransitionStates.YEETED;
@@ -92,7 +92,7 @@ function YouBarAvatarLarge(transitionState) {
     }
     const result3 = _undefined8.set(diff);
   }, items2);
-  const tmp2Result14 = require("module_1655");
+  const tmp2Result14 = require("module_1653");
   const avatarDecoration = require("useAvatarDecoration").useAvatarDecoration(stateFromStores);
   const tmp2Result15 = require("useAvatarDecoration");
   const items3 = [c8];
@@ -115,7 +115,7 @@ function YouBarAvatarLarge(transitionState) {
     }
   }, items4);
   const tmp2Result16 = require("initialize");
-  const items5 = [closure_26, require("spring/spring").withSpring, sharedValue1, closure_18, sharedValue2, sharedValue3, sharedValue, closure_25, transitionState, require("native").TransitionStates, require("module_1708").scheduleOnRN, transitionState.cleanup];
+  const items5 = [closure_26, require("spring/spring").withSpring, sharedValue1, closure_18, sharedValue2, sharedValue3, sharedValue, closure_25, transitionState, require("native").TransitionStates, require("module_1706").scheduleOnRN, transitionState.cleanup];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -183,8 +183,8 @@ function YouBarAvatarLarge(transitionState) {
   YouBarAvatarTsx2.__closure = items6;
   YouBarAvatarTsx2.__workletHash = 7492548934333;
   YouBarAvatarTsx2.__initData = tmp22;
-  const animatedStyle = require("module_1655").useAnimatedStyle(YouBarAvatarTsx2);
-  const tmp2Result17 = require("module_1655");
+  const animatedStyle = require("module_1653").useAnimatedStyle(YouBarAvatarTsx2);
+  const tmp2Result17 = require("module_1653");
   const token = require("useToken").useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
   require("useToken");
   let tmp40Result = null;
@@ -207,7 +207,7 @@ function YouBarAvatarLarge(transitionState) {
     obj6.style = size2;
     obj5.children = closure_22(c6, obj6);
     const items8 = [closure_22(tmp35(8903), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "2026-05-av1-bitrate-tuning" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "RNSTabsScreenAndroid" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -216,7 +216,7 @@ function YouBarAvatarLarge(transitionState) {
     obj7.cutout = memo;
     let rect = { right: closure_14 - closure_19, bottom: closure_14 - closure_19 };
     obj7.statusStyle = rect;
-    items8[1] = closure_22(tmp2(1187).Avatar, obj7);
+    items8[1] = closure_22(tmp2(1186).Avatar, obj7);
     let mapped;
     const tmp35Result = tmp35(8903);
     const tmp44 = c6;
@@ -261,7 +261,7 @@ function YouBarAvatarLarge(transitionState) {
     }
     items8[3] = tmp41Result;
     obj4.children = items8;
-    tmp40Result = closure_23(tmp35(1655).View, obj4);
+    tmp40Result = closure_23(tmp35(1653).View, obj4);
     const tmp35Result3 = tmp35(8903);
   }
   return tmp40Result;
@@ -282,9 +282,9 @@ function YouBarAvatar(transitionState) {
   if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = require("module_1655").useSharedValue(num);
-  const obj4 = require("module_1655");
-  const items2 = [closure_29, require("spring/spring").withSpring, sharedValue, closure_18, closure_28, transitionState, require("native").TransitionStates, require("module_1708").scheduleOnRN, transitionState.cleanup];
+  const sharedValue = require("module_1653").useSharedValue(num);
+  const obj4 = require("module_1653");
+  const items2 = [closure_29, require("spring/spring").withSpring, sharedValue, closure_18, closure_28, transitionState, require("native").TransitionStates, require("module_1706").scheduleOnRN, transitionState.cleanup];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -344,7 +344,7 @@ function YouBarAvatar(transitionState) {
   YouBarAvatarTsx4.__workletHash = 11641235222673;
   YouBarAvatarTsx4.__initData = tmp6;
   const items4 = [sharedValue, transitionState];
-  const animatedStyle = require("module_1655").useAnimatedStyle(YouBarAvatarTsx4);
+  const animatedStyle = require("module_1653").useAnimatedStyle(YouBarAvatarTsx4);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (c0 === native2.TransitionStates.YEETED) {
@@ -355,7 +355,7 @@ function YouBarAvatar(transitionState) {
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = (tmp(1187).AVATAR_SIZE_MAP[size2] - tmp(1187).AVATAR_SIZE_MAP[closure_12]) / 2;
+    let result = (tmp(1186).AVATAR_SIZE_MAP[size2] - tmp(1186).AVATAR_SIZE_MAP[closure_12]) / 2;
     const obj5 = { style: null, children: null };
     const rect = { position: "absolute", top: -result, left: -result };
     const items5 = [rect, animatedStyle];
@@ -365,19 +365,19 @@ function YouBarAvatar(transitionState) {
       OFFLINE = StatusTypes.OFFLINE;
     }
     obj6.status = OFFLINE;
-    obj5.children = closure_22(tmp(1187).Avatar, obj6);
-    return closure_22(_modDef1655.View, obj5);
+    obj5.children = closure_22(tmp(1186).Avatar, obj6);
+    return closure_22(_modDef1653.View, obj5);
   }
-  const tmpResult = require("module_1655");
+  const tmpResult = require("module_1653");
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const YouBarConstants = fn(16532);
+const YouBarConstants = fn(16355);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -428,7 +428,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
   YouBarAvatarTsx5.__workletHash = 4651565273867;
   YouBarAvatarTsx5.__initData = tmp6;
   let items3 = [onPress];
-  const animatedStyle = require("module_1655").useAnimatedStyle(YouBarAvatarTsx5);
+  const animatedStyle = require("module_1653").useAnimatedStyle(YouBarAvatarTsx5);
   const callback = noop.useCallback(() => {
     if (c1 != null) {
       tmp();
@@ -446,7 +446,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -477,7 +477,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
           value.openUserSettings();
           closure_128_2(false);
           paths = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         paths = tmp;
@@ -489,7 +489,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
   const memo = noop.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const result = Gesture.LongPress().shouldCancelWhenOutside(false);
-    items = [closure_32, _mod1708.scheduleOnRN, c2];
+    items = [closure_32, _mod1706.scheduleOnRN, c2];
     c0 = undefined;
     c1 = undefined;
     [tmp4, tmp5, tmp6] = items;
@@ -504,7 +504,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     YouBarAvatarTsx6.__workletHash = 9336474323041;
     YouBarAvatarTsx6.__initData = tmp4;
     const LongPressResult = Gesture.LongPress();
-    const items2 = [closure_33, _mod1708.scheduleOnRN, callback1];
+    const items2 = [closure_33, _mod1706.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -519,7 +519,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     YouBarAvatarTsx7.__workletHash = 11759750447418;
     YouBarAvatarTsx7.__initData = tmp7;
     const onBeginResult = result.onBegin(YouBarAvatarTsx6);
-    const items4 = [closure_34, _mod1708.scheduleOnRN, c2];
+    const items4 = [closure_34, _mod1706.scheduleOnRN, c2];
     c0 = undefined;
     c1 = undefined;
     [tmp10, tmp11, tmp12] = items4;
@@ -552,7 +552,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
       children: null
     };
     const obj6 = { style: null, children: null };
-    size = { height: tmp(1187).AVATAR_SIZE_MAP[closure_12], width: tmp(1187).AVATAR_SIZE_MAP[closure_12], position: "relative" };
+    size = { height: tmp(1186).AVATAR_SIZE_MAP[closure_12], width: tmp(1186).AVATAR_SIZE_MAP[closure_12], position: "relative" };
     let items5 = [size, animatedStyle];
     obj6.style = items5;
     const obj7 = {
@@ -562,10 +562,10 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
         },
       renderItem: callback2
     };
-    obj6.children = closure_22(tmp(4853).TransitionGroup, obj7);
-    obj5.children = closure_22(_modDef1655.View, obj6);
+    obj6.children = closure_22(tmp(4855).TransitionGroup, obj7);
+    obj5.children = closure_22(_modDef1653.View, obj6);
     obj4.children = closure_22(closure_7, obj5);
-    tmp16 = closure_22(tmp(5052).GestureDetector, obj4);
+    tmp16 = closure_22(tmp(5054).GestureDetector, obj4);
   }
   return tmp16;
 });

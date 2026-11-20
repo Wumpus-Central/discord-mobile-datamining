@@ -1,8 +1,8 @@
-// === Module 8665: isCrosspost ===
+// === Module 8664: isCrosspost ===
 
-// Module 8665 (isCrosspost)
-import FlagUtils from "FlagUtils" /* 1406 */;
-import Constants from "Constants" /* 1072 */;
+// Module 8664 (isCrosspost)
+import FlagUtils from "FlagUtils" /* 1404 */;
+import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
 ({ MessageFlags: c2, MessageReferenceTypes: c3, MessageTypes: closure_4 } = Constants);

@@ -2,7 +2,7 @@
 
 // Module 9329 (CircleQuestionIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9330 from "module_9330" /* 9330 */;
 import _mod9331 from "module_9331" /* 9331 */;
 import noop from "module_19" /* 19 */;

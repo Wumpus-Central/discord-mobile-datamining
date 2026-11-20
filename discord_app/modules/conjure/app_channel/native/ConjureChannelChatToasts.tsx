@@ -1,13 +1,13 @@
-// === Module 18750: ConjureChannelChatToasts ===
+// === Module 18574: ConjureChannelChatToasts ===
 
-// Module 18750 (ConjureChannelChatToasts)
+// Module 18574 (ConjureChannelChatToasts)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import UserUtils from "UserUtils" /* 4848 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import Card from "Card" /* 6928 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18751 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import UserUtils from "UserUtils" /* 4850 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import Card from "Card" /* 6927 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18575 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };
 obj2.column = rect;

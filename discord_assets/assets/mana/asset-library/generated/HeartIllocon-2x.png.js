@@ -1,6 +1,6 @@
-// === Module 13537: ? ===
+// === Module 13507: ? ===
 
-// Module 13537
+// Module 13507
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeartIllocon-2x.png.js");

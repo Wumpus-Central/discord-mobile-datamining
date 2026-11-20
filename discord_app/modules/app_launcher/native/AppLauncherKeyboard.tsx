@@ -1,33 +1,33 @@
-// === Module 12813: AppLauncherKeyboard ===
+// === Module 12783: AppLauncherKeyboard ===
 
-// Module 12813 (AppLauncherKeyboard)
+// Module 12783 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1380 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import native from "native" /* 4853 */;
-import BottomSheetModal from "BottomSheetModal" /* 5024 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5802 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11711 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12815 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12824 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12825 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12856 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12859 */;
+import PlatformUtils from "PlatformUtils" /* 1378 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1498 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import native from "native" /* 4855 */;
+import BottomSheetModal from "BottomSheetModal" /* 5026 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5804 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11653 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12785 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12794 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12795 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12826 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12829 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12814).KEYBOARD_ANIMATION_CONFIG;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const KEYBOARD_ANIMATION_CONFIG = fn(12784).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, onboardingHeader: null, onboardingNavigatorContent: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj.onboardingHeader = { borderWidth: 2, borderBottomWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -65,9 +65,9 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   onboardingNavigatorContent = null != visibleContent;
   let obj3 = require("useIsScreenReaderEnabled");
   let obj4 = { channelId: context.channel.id };
-  const sharedValue = require("module_1655").useSharedValue(-1);
-  let obj5 = require("module_1655");
-  const sharedValue1 = require("module_1655").useSharedValue(0);
+  const sharedValue = require("module_1653").useSharedValue(-1);
+  let obj5 = require("module_1653");
+  const sharedValue1 = require("module_1653").useSharedValue(0);
   const ref2 = transitionState.useRef(null);
   items = [ref2];
   const callback = transitionState.useCallback(() => {
@@ -91,7 +91,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   const effect = transitionState.useEffect(() => {
     callback1(sharedValue.get(), onboardingNavigatorContent);
   }, items1);
-  let obj6 = require("module_1655");
+  let obj6 = require("module_1653");
   const items2 = [ref2, sharedValue];
   _require = undefined;
   [tmp16, tmp17] = items2;
@@ -104,7 +104,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   AppLauncherKeyboardTsx1.__closure = items3;
   AppLauncherKeyboardTsx1.__workletHash = 14642690748519;
   AppLauncherKeyboardTsx1.__initData = tmp16;
-  const items4 = [callback1, require("module_1708").scheduleOnRN, callback1, onboardingNavigatorContent];
+  const items4 = [callback1, require("module_1706").scheduleOnRN, callback1, onboardingNavigatorContent];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -124,7 +124,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   AppLauncherKeyboardTsx2.__closure = items5;
   AppLauncherKeyboardTsx2.__workletHash = 335137472657;
   AppLauncherKeyboardTsx2.__initData = tmp18;
-  const animatedReaction = require("module_1655").useAnimatedReaction(AppLauncherKeyboardTsx1, AppLauncherKeyboardTsx2);
+  const animatedReaction = require("module_1653").useAnimatedReaction(AppLauncherKeyboardTsx1, AppLauncherKeyboardTsx2);
   const items6 = [transitionState];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (transitionState === native.TransitionStates.YEETED) {
@@ -160,20 +160,20 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(12044).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(5024).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(12044).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(5024).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(12044).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(11986).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(5026).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(11986).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(5026).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(11986).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(5529).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(5531).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(5529);
+        const trackWithMetadataResult = trackWithMetadata(5531);
       }
     }
   }, items8);
@@ -211,10 +211,10 @@ export default noop.memo(function AppLauncherKeyboard(context) {
     obj3 = MetaQuestUtils;
   }, items9);
   const obj8 = { ref: ref2, animationConfigs, animatedIndex: sharedValue, animatedPosition: sharedValue1, chatInputRef, forceMaxHeight: null, enablePanDownToClose: null, onAnimate: null, onClose: null, transitionState: null, backdropComponent: null, disableHeaderRoundingAnimation: null, roundingViewStyle: null, headerStyle: null, isAppsKeyboard: true, rendersHandle: null, width: null, children: null };
-  let obj7 = require("module_1655");
+  let obj7 = require("module_1653");
   if (!isScreenReaderEnabled) {
-    isScreenReaderEnabled = tmp(1627).isMetaQuest();
-    const tmpResult = tmp(1627);
+    isScreenReaderEnabled = tmp(1625).isMetaQuest();
+    const tmpResult = tmp(1625);
   }
   obj8.forceMaxHeight = isScreenReaderEnabled;
   const tmp7Result = PortalKeyboardBottomSheetDefault;
@@ -225,7 +225,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   obj8.backdropComponent = callback2;
   let tmp29 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
-    tmp29 = entrypoint === tmp(10614).AppLauncherEntrypoint.VOICE;
+    tmp29 = entrypoint === tmp(10556).AppLauncherEntrypoint.VOICE;
   }
   obj8.disableHeaderRoundingAnimation = tmp29;
   let onboardingRoundingView = onboardingNavigatorContent;

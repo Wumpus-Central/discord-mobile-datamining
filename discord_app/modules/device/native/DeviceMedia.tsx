@@ -1,9 +1,9 @@
-// === Module 11567: DeviceMedia ===
+// === Module 11509: DeviceMedia ===
 
-// Module 11567 (DeviceMedia)
-import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 11568 */;
+// Module 11509 (DeviceMedia)
+import Constants from "Constants" /* 1071 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 11510 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -92,9 +92,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(11568)(obj2);
+          lastAssetIndex(11510)(obj2);
         }
-        obj = assets(1380);
+        obj = assets(1378);
       }
     }
   },
@@ -151,7 +151,7 @@ export default {
           obj2.num_assets = length;
           AnalyticsUtilsDefault.track(constants.MEDIA_PICKER_ASSETS_DEBUG, obj2);
         }
-        batchSize(1263).batchUpdates(() => {
+        batchSize(1262).batchUpdates(() => {
           const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
           let end_cursor;
           if (assets != null) {
@@ -174,7 +174,7 @@ export default {
           obj.hasReachedEnd = !num;
           state.setState(obj);
         });
-        const obj3 = batchSize(1263);
+        const obj3 = batchSize(1262);
       }
     });
   },

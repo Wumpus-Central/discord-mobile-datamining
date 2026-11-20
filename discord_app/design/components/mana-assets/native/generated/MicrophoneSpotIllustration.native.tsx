@@ -1,19 +1,19 @@
-// === Module 10811: MicrophoneSpotIllustration ===
+// === Module 10753: MicrophoneSpotIllustration ===
 
-// Module 10811 (MicrophoneSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7238 */;
-import _modDef10812 from "module_10812" /* 10812 */;
-import _modDef10813 from "module_10813" /* 10813 */;
-import _modDef10814 from "module_10814" /* 10814 */;
+// Module 10753 (MicrophoneSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7237 */;
+import _modDef10754 from "module_10754" /* 10754 */;
+import _modDef10755 from "module_10755" /* 10755 */;
+import _modDef10756 from "module_10756" /* 10756 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10812 }, 3: null };
-let obj2 = { uri: _modDef10812 };
-obj[2] = { uri: _modDef10813 };
-const obj3 = { uri: _modDef10813 };
-obj[3] = { uri: _modDef10814 };
+let obj = { 1: null, 2: { uri: _modDef10754 }, 3: null };
+let obj2 = { uri: _modDef10754 };
+obj[2] = { uri: _modDef10755 };
+const obj3 = { uri: _modDef10755 };
+obj[3] = { uri: _modDef10756 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MicrophoneSpotIllustration.native.tsx");
 

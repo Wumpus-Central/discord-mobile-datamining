@@ -1,7 +1,7 @@
 // === Module 9332: ProfileFrameUserPreview ===
 
 // Module 9332 (ProfileFrameUserPreview)
-import util from "util" /* 1113 */;
+import util from "util" /* 1112 */;
 import UserProfilePreviewDefault from "UserProfilePreview" /* 8928 */;
 import noop from "module_19" /* 19 */;
 

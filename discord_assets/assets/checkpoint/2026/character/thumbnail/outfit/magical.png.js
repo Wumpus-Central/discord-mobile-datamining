@@ -1,6 +1,6 @@
-// === Module 5983: ? ===
+// === Module 5985: ? ===
 
-// Module 5983
+// Module 5985
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/magical.png.js");

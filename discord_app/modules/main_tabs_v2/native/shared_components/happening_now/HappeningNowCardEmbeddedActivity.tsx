@@ -1,24 +1,24 @@
-// === Module 17656: HappeningNowCardEmbeddedActivity ===
+// === Module 17483: HappeningNowCardEmbeddedActivity ===
 
-// Module 17656 (HappeningNowCardEmbeddedActivity)
+// Module 17483 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16754);
+const HappeningNowConstants = fn(16578);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault } = HappeningNowConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
 let size = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.activityBackground = size;
@@ -103,12 +103,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(12135, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(12077, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(12135, dependencyMap.paths);
+    const promise = asyncRequireImpl(12077, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);
@@ -143,7 +143,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   HappeningNowCardEmbeddedActivityTsx1.__closure = items6;
   HappeningNowCardEmbeddedActivityTsx1.__workletHash = 14378880099274;
   HappeningNowCardEmbeddedActivityTsx1.__initData = tmp16;
-  const items7 = [closure_13, require("module_1708").scheduleOnRN, tmp8Result[1]];
+  const items7 = [closure_13, require("module_1706").scheduleOnRN, tmp8Result[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items7;
@@ -167,8 +167,8 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   HappeningNowCardEmbeddedActivityTsx2.__closure = items8;
   HappeningNowCardEmbeddedActivityTsx2.__workletHash = 1153066654263;
   HappeningNowCardEmbeddedActivityTsx2.__initData = tmp19;
-  const animatedReaction = require("module_1655").useAnimatedReaction(HappeningNowCardEmbeddedActivityTsx1, HappeningNowCardEmbeddedActivityTsx2);
-  const tmp2Result = require("module_1655");
+  const animatedReaction = require("module_1653").useAnimatedReaction(HappeningNowCardEmbeddedActivityTsx1, HappeningNowCardEmbeddedActivityTsx2);
+  const tmp2Result = require("module_1653");
   if (tmp8Result[0]) {
     const obj3 = { type: tmp2(tmp3[20]).ImpressionTypes.VIEW, name: tmp2(tmp3[20]).ImpressionNames.EMBEDDED_ACTIVITY_HAPPENING_NOW, properties: null };
     const obj5 = { user_id: userId, guild_id: guildId, application_id: null, activity_session_id: null };

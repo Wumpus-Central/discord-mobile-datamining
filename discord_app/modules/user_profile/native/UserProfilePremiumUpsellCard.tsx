@@ -1,14 +1,14 @@
-// === Module 15871: UserProfilePremiumUpsellCard ===
+// === Module 15835: UserProfilePremiumUpsellCard ===
 
-// Module 15871 (UserProfilePremiumUpsellCard)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7292 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+// Module 15835 (UserProfilePremiumUpsellCard)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7291 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8979 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10443 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15797 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10385 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,17 +19,17 @@ function UpsellCardLayout(arg0) {
 }
 function PreviewNitroCard(style) {
   let navigation;
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1500).useNavigation();
   items = [navigation];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
   const callback = noop.useCallback(() => {
     UserSettingsModalActionCreatorsDefault.setSection(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
     navigation.push(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
   }, items);
-  const intl = navigation(1113).intl;
-  obj2.ctaText = intl.string(navigation(1113).t.PxUx8e);
-  const intl2 = navigation(1113).intl;
-  obj2.description = intl2.string(navigation(1113).t.Tii53U);
+  const intl = navigation(1112).intl;
+  obj2.ctaText = intl.string(navigation(1112).t.PxUx8e);
+  const intl2 = navigation(1112).intl;
+  obj2.description = intl2.string(navigation(1112).t.Tii53U);
   obj2.onPress = callback;
   return <UpsellCardLayout style={style.style} ctaText={null} description={null} onPress={null} />;
 }
@@ -44,20 +44,20 @@ function GetNitroCard(style) {
     openPremiumModalDefault(obj);
   }, items);
   if (nitroTrialCtaOverride == null) {
-    const intl = tmp(1113).intl;
-    nitroTrialCtaOverride = intl.string(tmp(1113).t.pj0XBN);
+    const intl = tmp(1112).intl;
+    nitroTrialCtaOverride = intl.string(tmp(1112).t.pj0XBN);
   }
   obj2.ctaText = nitroTrialCtaOverride;
-  const intl2 = tmp(1113).intl;
-  obj2.description = intl2.string(analyticsLocations(1113).t.ZFR9LF);
+  const intl2 = tmp(1112).intl;
+  obj2.description = intl2.string(analyticsLocations(1112).t.ZFR9LF);
   obj2.onPress = callback;
   return <UpsellCardLayout style={style.style} ctaText={null} description={null} onPress={null} />;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

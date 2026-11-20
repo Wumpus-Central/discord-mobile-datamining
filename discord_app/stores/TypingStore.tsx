@@ -1,12 +1,12 @@
-// === Module 12739: TypingStore ===
+// === Module 12709: TypingStore ===
 
-// Module 12739 (TypingStore)
+// Module 12709 (TypingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+import DurationsDefault from "Durations" /* 1088 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 function handleTypingStart(arg0) {
@@ -106,8 +106,8 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-const SlowmodeType = fn(8269).SlowmodeType;
-const Endpoints = fn(1072).Endpoints;
+const SlowmodeType = fn(8268).SlowmodeType;
+const Endpoints = fn(1071).Endpoints;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};

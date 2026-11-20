@@ -1,6 +1,6 @@
-// === Module 6025: ? ===
+// === Module 6027: ? ===
 
-// Module 6025
+// Module 6027
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/cowpoke_onyx.png.js");

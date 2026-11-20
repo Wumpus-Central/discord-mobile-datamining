@@ -1,12 +1,12 @@
-// === Module 10857: useCanRaiseHand ===
+// === Module 10799: useCanRaiseHand ===
 
-// Module 10857 (useCanRaiseHand)
-import PermissionStore from "PermissionStore" /* 4724 */;
+// Module 10799 (useCanRaiseHand)
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCanRaiseHand.tsx");
 

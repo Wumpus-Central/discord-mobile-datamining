@@ -1,15 +1,15 @@
-// === Module 17563: MainTabsNavigatorPanel ===
+// === Module 17390: MainTabsNavigatorPanel ===
 
-// Module 17563 (MainTabsNavigatorPanel)
+// Module 17390 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 4969 */;
-import ChatInputUtils from "ChatInputUtils" /* 4977 */;
-import transitionToChannel from "transitionToChannel" /* 5525 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17564 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17565 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17570 */;
+import RootNavigationRef from "RootNavigationRef" /* 4971 */;
+import ChatInputUtils from "ChatInputUtils" /* 4979 */;
+import transitionToChannel from "transitionToChannel" /* 5527 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17391 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17392 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,12 +18,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -85,11 +85,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(17565);
+        obj = obj(17392);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4977).dismissKeyboard();
-        const objResult = obj(4977);
+        obj(4979).dismissKeyboard();
+        const objResult = obj(4979);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

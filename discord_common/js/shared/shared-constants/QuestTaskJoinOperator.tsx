@@ -1,6 +1,6 @@
-// === Module 8299: QuestTaskJoinOperator ===
+// === Module 8298: QuestTaskJoinOperator ===
 
-// Module 8299 (QuestTaskJoinOperator)
+// Module 8298 (QuestTaskJoinOperator)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx");

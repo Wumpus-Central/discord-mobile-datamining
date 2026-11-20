@@ -2,7 +2,7 @@
 
 // Module 9705 (GooglePlayNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5478 */;
+import BaseIconImage from "BaseIconImage" /* 5480 */;
 import _mod9706 from "module_9706" /* 9706 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,12 +1,12 @@
-// === Module 8663: getTagProperties ===
+// === Module 8662: getTagProperties ===
 
-// Module 8663 (getTagProperties)
+// Module 8662 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1113 */;
-import MessageConstants from "MessageConstants" /* 4797 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8664 */;
-import isCrosspostDefault from "isCrosspost" /* 8665 */;
-import _modDef8667 from "module_8667" /* 8667 */;
+import util from "util" /* 1112 */;
+import MessageConstants from "MessageConstants" /* 4799 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8663 */;
+import isCrosspostDefault from "isCrosspost" /* 8664 */;
+import _modDef8666 from "module_8666" /* 8666 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8667).uri;
+            uri = Image.resolveAssetSource(_modDef8666).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "id", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: 516140322584224300000000000000000000000000000000000000000000000000000000000000000000, opTagBackgroundColor: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000313322314273431 };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "dispatch", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: null, opTagBackgroundColor: "100% to 130% Scale" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

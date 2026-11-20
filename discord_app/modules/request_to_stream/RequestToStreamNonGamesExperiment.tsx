@@ -1,7 +1,7 @@
-// === Module 8410: RequestToStreamNonGamesExperiment ===
+// === Module 8409: RequestToStreamNonGamesExperiment ===
 
-// Module 8410 (RequestToStreamNonGamesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8409 (RequestToStreamNonGamesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-request-to-stream-non-games", kind: "guild", defaultConfig: { enabled: false }, variations: null };

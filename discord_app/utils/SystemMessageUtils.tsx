@@ -1,26 +1,26 @@
-// === Module 8606: SystemMessageUtils ===
+// === Module 8605: SystemMessageUtils ===
 
-// Module 8606 (SystemMessageUtils)
+// Module 8605 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5408 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5845 */;
-import useMessageAuthor from "useMessageAuthor" /* 6220 */;
-import GuildSpaceSystemMessageUtils from "GuildSpaceSystemMessageUtils" /* 8568 */;
-import markup_MarkupParser from "markup/MarkupParser" /* 8607 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8609 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8610 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8612 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8613 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8614 */;
+import util from "util" /* 1112 */;
+import useChannelName from "useChannelName" /* 5410 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
+import useMessageAuthor from "useMessageAuthor" /* 6222 */;
+import GuildSpaceSystemMessageUtils from "GuildSpaceSystemMessageUtils" /* 8567 */;
+import markup_MarkupParser from "markup/MarkupParser" /* 8606 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8608 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8609 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8611 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8612 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8613 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4735 */;
+import MessageRecord from "MessageRecord" /* 4737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ function getSystemMessageUserJoinMobile(id) {
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageEmbedTypes: closure_10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
 const size = fn(2);

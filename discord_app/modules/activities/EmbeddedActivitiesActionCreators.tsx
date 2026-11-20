@@ -1,26 +1,26 @@
-// === Module 10609: EmbeddedActivitiesActionCreators ===
+// === Module 10551: EmbeddedActivitiesActionCreators ===
 
-// Module 10609 (EmbeddedActivitiesActionCreators)
+// Module 10551 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1285 */;
-import dismissible_content from "dismissible_content" /* 4625 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4626 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4713 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6508 */;
+import HTTPUtils from "HTTPUtils" /* 1284 */;
+import dismissible_content from "dismissible_content" /* 4627 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4628 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6510 */;
 import createProxyTicket from "createProxyTicket" /* 6826 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 6336 */;
+import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 6338 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
-import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5440 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
+import UserStore from "UserStore" /* 1386 */;
+import VoiceStateStore from "VoiceStateStore" /* 5442 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
 
 require = fn;
 let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0) {
@@ -34,7 +34,7 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -289,9 +289,9 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2151).supportsEmbeddedSurface(application, closure_1_0(5436).EmbeddedSurfaceType.MAIN);
-                const obj = closure_1_0(2151);
-                const result1 = closure_1_0(7347).isActivityInTextSupportedForChannel(type);
+                const result = closure_1_0(2149).supportsEmbeddedSurface(application, closure_1_0(5438).EmbeddedSurfaceType.MAIN);
+                const obj = closure_1_0(2149);
+                const result1 = closure_1_0(7346).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -423,7 +423,7 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -584,33 +584,33 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
                         obj2.error_status = error_status;
                         obj2.error_reason_code = error_reason_code;
                         obj2.source = source;
-                        nonce(1256).track(constants.ACTIVITY_INTERACTION_CALLBACK_ERROR, obj2);
+                        nonce(1255).track(constants.ACTIVITY_INTERACTION_CALLBACK_ERROR, obj2);
                         if (null != error_code) {
                           if (null != error_message) {
                             if (null != error_status) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(6229)(obj3);
+                              const tmp21 = new nonce(6231)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(5851).ReasonCodes) {
-                            const tmp14 = new nonce(5851)(error_reason_code);
+                          if (error_reason_code in nonce(5853).ReasonCodes) {
+                            const tmp14 = new nonce(5853)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
-                        const obj = nonce(1256);
-                        const tmp3Result = nonce(5851);
-                        closure_1_1(new nonce(5851)(nonce(5851).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(5851)(nonce(5851).ReasonCodes.UNKNOWN);
+                        const obj = nonce(1255);
+                        const tmp3Result = nonce(5853);
+                        closure_1_1(new nonce(5853)(nonce(5853).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(5853)(nonce(5853).ReasonCodes.UNKNOWN);
                       }
                     };
                   }
                 };
-                nonce(10615)(obj);
+                nonce(10557)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -710,7 +710,7 @@ let closure_28 = async function _joinEmbeddedActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1009,7 +1009,7 @@ let closure_30 = async function _uploadImageAttachment(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1125,7 +1125,7 @@ let closure_33 = async function _validateTestMode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1191,7 +1191,7 @@ let closure_34 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1307,12 +1307,12 @@ let closure_34 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(10374).getOrFetchApplicationCommandIndexForTarget;
-let closure_16 = fn(2145).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
-const Constants = fn(1072);
+let closure_5 = fn(10316).getOrFetchApplicationCommandIndexForTarget;
+let closure_16 = fn(2143).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);
-const INSTALL_LESS_APP_IDS = fn(1365).INSTALL_LESS_APP_IDS;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const INSTALL_LESS_APP_IDS = fn(1363).INSTALL_LESS_APP_IDS;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 let closure_25 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_27 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER", CHANNEL_CONTENT_GATED: 10, [10]: "CHANNEL_CONTENT_GATED" };
 const size = fn(2);

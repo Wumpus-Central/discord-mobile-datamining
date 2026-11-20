@@ -1,18 +1,18 @@
 // === Module 6793: botScopedAccess ===
 
 // Module 6793 (botScopedAccess)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 6784 */;
 import RPCErrorDefault from "RPCError" /* 6790 */;
 import validateScopeDefault from "validateScope" /* 6792 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
 import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 6795 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
-import PermissionStore from "PermissionStore" /* 4724 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
+import PermissionStore from "PermissionStore" /* 4726 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_6, Permissions: metroImportDefault, RPCErrors: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");

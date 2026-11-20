@@ -1,6 +1,6 @@
-// === Module 6169: ? ===
+// === Module 6171: ? ===
 
-// Module 6169
+// Module 6171
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/pixel_wrench.png.js");

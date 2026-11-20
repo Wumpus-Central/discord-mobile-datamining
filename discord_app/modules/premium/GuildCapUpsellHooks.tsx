@@ -1,14 +1,14 @@
-// === Module 12239: GuildCapUpsellHooks ===
+// === Module 12211: GuildCapUpsellHooks ===
 
-// Module 12239 (GuildCapUpsellHooks)
+// Module 12211 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import HotspotStore2 from "HotspotStore" /* 7919 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
+import HotspotStore2 from "HotspotStore" /* 7918 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const MAX_USER_GUILDS = fn(1072).MAX_USER_GUILDS;
+const MAX_USER_GUILDS = fn(1071).MAX_USER_GUILDS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 8146: SessionUtils ===
+// === Module 8145: SessionUtils ===
 
-// Module 8146 (SessionUtils)
-import DurationsDefault from "Durations" /* 1089 */;
+// Module 8145 (SessionUtils)
+import DurationsDefault from "Durations" /* 1088 */;
 
 const result = 30 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);
@@ -9,8 +9,8 @@ const result1 = size.fileFinishedImporting("modules/analytics_sessions/SessionUt
 
 export const SESSION_IDLE_TIMEOUT_MILLIS = result;
 export const CLIENT_SESSION_STORAGE_VERSION = 1;
-export function isSessionExpired(lastUsedTimestamp) {
-  const sum = result + lastUsedTimestamp.lastUsedTimestamp;
+export function isSessionExpired(_cachedSession) {
+  const sum = result + _cachedSession.lastUsedTimestamp;
   return sum - Date.now() <= 0;
 }
 export function timestampOrZero(arg0) {

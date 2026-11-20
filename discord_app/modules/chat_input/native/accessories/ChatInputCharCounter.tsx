@@ -1,21 +1,21 @@
-// === Module 13216: ChatInputCharCounter ===
+// === Module 13186: ChatInputCharCounter ===
 
-// Module 13216 (ChatInputCharCounter)
+// Module 13186 (ChatInputCharCounter)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10397 */;
+import util from "util" /* 1112 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1388 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MAX_MESSAGE_LENGTH: closure_6, UpsellTypes: metroImportDefault } = Constants);
-const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_11 = createStyles.createStyles(obj);
 class ChatCounter {

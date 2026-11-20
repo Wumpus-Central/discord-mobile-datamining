@@ -1,20 +1,20 @@
-// === Module 18670: useConjureMentionCandidates ===
+// === Module 18495: useConjureMentionCandidates ===
 
-// Module 18670 (useConjureMentionCandidates)
-import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
-import GuildUtilsDefault from "GuildUtils" /* 6558 */;
-import conjureMentions from "conjureMentions" /* 18519 */;
+// Module 18495 (useConjureMentionCandidates)
+import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
+import GuildUtilsDefault from "GuildUtils" /* 6560 */;
+import conjureMentions from "conjureMentions" /* 18343 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4704 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import UserStore from "UserStore" /* 1388 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import UserStore from "UserStore" /* 1386 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureMentionCandidates.tsx");
 

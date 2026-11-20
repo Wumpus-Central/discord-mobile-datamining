@@ -1,7 +1,7 @@
-// === Module 8052: StorefrontCacheUtils ===
+// === Module 8051: StorefrontCacheUtils ===
 
-// Module 8052 (StorefrontCacheUtils)
-import DurationsDefault from "Durations" /* 1089 */;
+// Module 8051 (StorefrontCacheUtils)
+import DurationsDefault from "Durations" /* 1088 */;
 
 const result = 12 * DurationsDefault.Millis.HOUR;
 const result1 = 10 * DurationsDefault.Millis.MINUTE;

@@ -1,10 +1,10 @@
 // === Module 9020: openLinkedUsersChannel ===
 
 // Module 9020 (openLinkedUsersChannel)
-import transitionToChannel from "transitionToChannel" /* 5525 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
+import transitionToChannel from "transitionToChannel" /* 5527 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4641 */;
+import ChannelStore from "ChannelStore" /* 4643 */;
 
 require = fn;
 let closure_5 = async function _openLinkedUsersChannel(arg0) {

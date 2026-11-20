@@ -1,18 +1,18 @@
-// === Module 15895: SettingsAccountHeader ===
+// === Module 15859: SettingsAccountHeader ===
 
-// Module 15895 (SettingsAccountHeader)
+// Module 15859 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5390 */;
-import TableRow from "TableRow" /* 6926 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7223 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7298 */;
-import openUserSettings from "openUserSettings" /* 8075 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15896 */;
+import util from "util" /* 1112 */;
+import components_Button_Button from "components/Button/Button" /* 5392 */;
+import TableRow from "TableRow" /* 6925 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7222 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7297 */;
+import openUserSettings from "openUserSettings" /* 8074 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15860 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4734 */;
-import UserStore from "UserStore" /* 1388 */;
+import RelationshipStore from "RelationshipStore" /* 4736 */;
+import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function RestrictedAccountRedirect() {
@@ -26,11 +26,11 @@ function RestrictedAccountRedirect() {
   return React6(SafetySettingsNoticeDefault, obj);
 }
 const View = fn(17).View;
-const AnalyticsSections = fn(1072).AnalyticsSections;
-const SafetySettingsNoticeType = fn(6383).SafetySettingsNoticeType;
+const AnalyticsSections = fn(1071).AnalyticsSections;
+const SafetySettingsNoticeType = fn(6385).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 const obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };

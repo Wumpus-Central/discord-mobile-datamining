@@ -1,22 +1,22 @@
-// === Module 20118: GuildSettingsModalOfficialMessages ===
+// === Module 19938: GuildSettingsModalOfficialMessages ===
 
-// Module 20118 (GuildSettingsModalOfficialMessages)
+// Module 19938 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import _modDef1655 from "module_1655" /* 1655 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
-import Text_Text from "Text/Text" /* 5383 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import _modDef1653 from "module_1653" /* 1653 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
+import Text_Text from "Text/Text" /* 5385 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6772 */;
-import HeaderActionButton from "HeaderActionButton" /* 6910 */;
-import _modDef16742 from "module_16742" /* 16742 */;
+import HeaderActionButton from "HeaderActionButton" /* 6909 */;
+import _modDef16566 from "module_16566" /* 16566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4793 */;
-import GuildStore from "GuildStore" /* 4663 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 7876 */;
+import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import GuildStore from "GuildStore" /* 4665 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 7875 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(refs).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef671(selectedColor).alpha(refs).hex();
-  const items2 = [application_id(native.Avatar, { source: _modDef16742 }), ];
+  const items2 = [application_id(native.Avatar, { source: _modDef16566 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "body-md/semibold", lineClamp: 1, children: null };
@@ -67,24 +67,24 @@ function MessagePreview(theme) {
   items2[1] = state(hasOwnProperty, obj6);
   obj4.children = items2;
   obj2.children = state(hasOwnProperty, obj4);
-  return application_id(_modDef1655.View, obj2);
+  return application_id(_modDef1653.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const MessageConstants = fn(4797);
+const MessageConstants = fn(4799);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: closure_10 } = MessageConstants);
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = { container: { gap: nativeDefault.space.PX_8, height: "100%" }, segmentedControlContainer: null, trailingColorContainer: null, colorBlock: null, chatSection: null, chatContainer: null, chatContainerInner: null, chatContent: null, chatHeader: null, chatTimestamp: null };
 let obj3 = { gap: nativeDefault.space.PX_8, height: "100%" };
 obj2.segmentedControlContainer = { gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 obj2.trailingColorContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
 obj2.colorBlock = { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 };
 let obj4 = { gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
-obj2.chatSection = { paddingHorizontal: fn(6937).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj5 = { paddingHorizontal: fn(6937).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+obj2.chatSection = { paddingHorizontal: fn(6936).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj5 = { paddingHorizontal: fn(6936).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 obj2.chatContainer = { paddingVertical: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
 let obj6 = { paddingVertical: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
 obj2.chatContainerInner = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, gap: nativeDefault.space.PX_8 };
@@ -92,16 +92,16 @@ obj2.chatContent = { flex: 1 };
 obj2.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 obj2.chatTimestamp = { marginTop: -8 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj7 = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, gap: nativeDefault.space.PX_8 };
 let closure_15 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_16 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj11 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_17 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_DEFAULT });
-createStyles = fn(4792);
+createStyles = fn(4794);
 const obj13 = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_18 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED });
 let closure_19 = { code: "(function GuildSettingsModalOfficialMessagesTsx1(){let[activeIndex]=this.__closure;return activeIndex.get();})" };
@@ -181,7 +181,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       _undefined2(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(17916, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(17743, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp14 = require("useMeasuredLayout")();
   const width = tmp14.width;
@@ -228,7 +228,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   GuildSettingsModalOfficialMessagesTsx1.__closure = items7;
   GuildSettingsModalOfficialMessagesTsx1.__workletHash = 403406940357;
   GuildSettingsModalOfficialMessagesTsx1.__initData = tmp17;
-  const items8 = [closure_20, require("module_1708").scheduleOnRN, tmp8[1]];
+  const items8 = [closure_20, require("module_1706").scheduleOnRN, tmp8[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items8;
@@ -242,8 +242,8 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   GuildSettingsModalOfficialMessagesTsx2.__closure = items9;
   GuildSettingsModalOfficialMessagesTsx2.__workletHash = 12682943328745;
   GuildSettingsModalOfficialMessagesTsx2.__initData = tmp19;
-  const animatedReaction = require("module_1655").useAnimatedReaction(GuildSettingsModalOfficialMessagesTsx1, GuildSettingsModalOfficialMessagesTsx2);
-  const tmp2Result5 = require("module_1655");
+  const animatedReaction = require("module_1653").useAnimatedReaction(GuildSettingsModalOfficialMessagesTsx1, GuildSettingsModalOfficialMessagesTsx2);
+  const tmp2Result5 = require("module_1653");
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { label: null, onPress: null, arrow: true, trailing: null, subLabel: null };
   let intl = tmp2(tmp3[12]).intl;

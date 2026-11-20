@@ -1,7 +1,7 @@
-// === Module 7913: StageInstanceActionCreators ===
+// === Module 7912: StageInstanceActionCreators ===
 
-// Module 7913 (StageInstanceActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1285 */;
+// Module 7912 (StageInstanceActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -26,7 +26,7 @@ let closure_5 = async function _updateStageInstance(arg0) {
     return value.body;
   })();
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 

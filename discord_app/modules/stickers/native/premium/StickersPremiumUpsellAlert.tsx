@@ -1,18 +1,18 @@
-// === Module 11328: StickersPremiumUpsellAlert ===
+// === Module 11270: StickersPremiumUpsellAlert ===
 
-// Module 11328 (StickersPremiumUpsellAlert)
+// Module 11270 (StickersPremiumUpsellAlert)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import native from "native" /* 1187 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5383 */;
-import Pressables from "Pressables" /* 6911 */;
+import util from "util" /* 1112 */;
+import native from "native" /* 1186 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import Text_Text from "Text/Text" /* 5385 */;
+import Pressables from "Pressables" /* 6910 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8979 */;
-import _modDef11329 from "module_11329" /* 11329 */;
-import _modDef11330 from "module_11330" /* 11330 */;
-import _modDef11331 from "module_11331" /* 11331 */;
+import _modDef11271 from "module_11271" /* 11271 */;
+import _modDef11272 from "module_11272" /* 11272 */;
+import _modDef11273 from "module_11273" /* 11273 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 8691 */;
+import IAPStore from "IAPStore" /* 8731 */;
 
 require = fn;
 function PerkRow(perk) {
@@ -31,15 +31,15 @@ function PerkRow(perk) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, AnalyticsSections: closure_8, AnalyticsObjects: closure_9 } = Constants);
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ SubscriptionPlans: closure_10, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_11, PRICE_PLACEHOLDER: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef11329,
+    icon: _modDef11271,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -50,7 +50,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef11329,
+  icon: _modDef11271,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -58,31 +58,31 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef11330,
+  icon: _modDef11272,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef11330,
+  icon: _modDef11272,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef11331,
+  icon: _modDef11273,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef11331,
+  icon: _modDef11273,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -115,7 +115,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7401)().analyticsLocations;
+  analyticsLocations = tmp3(7400)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = util.intl;
   obj.cancelText = intl.string(util.t.f3Pet9);
@@ -136,15 +136,15 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.onCancel = onClose;
   items = [tmp.alert, ];
   let shortHeightAlert = null;
-  if (analyticsLocations(1496)().height <= 580) {
+  if (analyticsLocations(1494)().height <= 580) {
     shortHeightAlert = tmp.shortHeightAlert;
   }
   items[1] = shortHeightAlert;
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5811);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(6913) });
+  const tmp3Result = analyticsLocations(5813);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(6912) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2), ];
   const obj5 = {
@@ -155,10 +155,10 @@ export default function StickersPremiumUpsellAlert(arg0) {
     children: null
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(6913) };
-  obj6.source = analyticsLocations(11332);
+  const obj4 = { source: analyticsLocations(6912) };
+  obj6.source = analyticsLocations(11274);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(5479), obj6), , ];
+  const items2 = [closure_13(analyticsLocations(5481), obj6), , ];
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -167,7 +167,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(5479);
+  const tmp3Result2 = analyticsLocations(5481);
   items2[2] = closure_13(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_13(PerkRow, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj5.children = items2;
   obj8.children = closure_14(closure_4, obj5);

@@ -1,8 +1,8 @@
-// === Module 7942: hasFlag ===
+// === Module 7941: hasFlag ===
 
-// Module 7942 (hasFlag)
-import Constants from "Constants" /* 1072 */;
-import FlagUtils from "FlagUtils" /* 1406 */;
+// Module 7941 (hasFlag)
+import Constants from "Constants" /* 1071 */;
+import FlagUtils from "FlagUtils" /* 1404 */;
 import size from "module_2" /* 2 */;
 
 const ActivityFlags = Constants.ActivityFlags;

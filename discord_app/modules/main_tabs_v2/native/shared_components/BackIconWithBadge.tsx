@@ -1,14 +1,14 @@
-// === Module 15884: BackIconWithBadge ===
+// === Module 15848: BackIconWithBadge ===
 
-// Module 15884 (BackIconWithBadge)
+// Module 15848 (BackIconWithBadge)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6980 */;
-import XSmallIcon from "XSmallIcon" /* 7032 */;
+import native from "native" /* 1186 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6979 */;
+import XSmallIcon from "XSmallIcon" /* 7031 */;
 import ClipView from "ClipView" /* 8903 */;
-import XLargeIcon from "XLargeIcon" /* 10150 */;
+import XLargeIcon from "XLargeIcon" /* 10153 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6543 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -92,7 +92,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
