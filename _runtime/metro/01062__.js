@@ -1,27 +1,125 @@
 // === Module 1062: ? ===
 
 // Module 1062
-import _mod17 from "module_17" /* 17 */;
-import _getClientIntegration from "_getClientIntegration" /* 995 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const Appearance = _mod17.Appearance;
-const LightTheme = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff", foreground: "#2b2233", background: "#ffffff", border: "rgba(41, 35, 47, 0.13)", feedbackIcon: "rgba(54, 45, 89, 1)", sentryLogo: "rgba(54, 45, 89, 1)" };
-const obj2 = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff", foreground: "#ebe6ef", background: "#29232f", border: "rgba(235, 230, 239, 0.15)", feedbackIcon: "#ffffff", sentryLogo: "#ffffff" };
-
-export function getTheme() {
-  const obj = _getClientIntegration;
-  let colorScheme = obj.getColorScheme();
-  if ("system" === colorScheme) {
-    colorScheme = Appearance.getColorScheme();
+const FeedbackButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const merged = Object.assign({}, obj);
-  let merged1 = Object.assign(merged, _getClientIntegration.getFeedbackLightTheme());
-  const merged2 = Object.assign({}, obj2);
-  const tmpResult = _getClientIntegration;
-  if ("dark" === colorScheme) {
-    merged1 = Object.assign(merged2, tmpResult2.getFeedbackDarkTheme());
-  }
-  return merged1;
 }
-export { LightTheme };
-export const DarkTheme = obj2;
+get_ActivityIndicator = fn(17);
+({ Appearance: closure_6, Image: metroImportDefault, Text: closure_8, TouchableOpacity: closure_9 } = get_ActivityIndicator);
+class FeedbackButton {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, FeedbackButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_4;
+    obj = closure_4(FeedbackButton);
+    tmp3 = closure_3;
+    if (closure_10()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    obj2 = closure_0(closure_1[7]);
+    result = obj2.lazyLoadFeedbackIntegration();
+    return tmp3Result;
+  }
+}
+_inherits(FeedbackButton, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const self = this;
+    this._themeListener = timestampProducer.addChangeListener(() => {
+      self.forceUpdate();
+    });
+  }
+};
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this._themeListener) {
+        const _themeListener = this._themeListener;
+        _themeListener.remove();
+      }
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const theme = FeedbackButton(1061).getTheme();
+      const merged = Object.assign(Object.assign({}, FeedbackButton(1063).defaultButtonConfiguration), this.props);
+      const obj = FeedbackButton(1061);
+      const styles = this.props.styles;
+      let triggerButton;
+      const merged1 = Object.assign({}, FeedbackButton(1064).defaultButtonStyles(theme).triggerButton);
+      if (null !== styles) {
+        if (undefined !== styles) {
+          triggerButton = styles.triggerButton;
+        }
+      }
+      const merged2 = Object.assign(merged1, triggerButton);
+      const obj2 = FeedbackButton(1064);
+      const styles2 = self.props.styles;
+      let triggerText;
+      const merged3 = Object.assign({}, FeedbackButton(1064).defaultButtonStyles(theme).triggerText);
+      if (null !== styles2) {
+        if (undefined !== styles2) {
+          triggerText = styles2.triggerText;
+        }
+      }
+      const style = Object.assign(merged3, triggerText);
+      const tmpResult = FeedbackButton(1064);
+      const styles3 = self.props.styles;
+      let triggerIcon;
+      const merged5 = Object.assign({}, FeedbackButton(1064).defaultButtonStyles(theme).triggerIcon);
+      if (null !== styles3) {
+        if (undefined !== styles3) {
+          triggerIcon = styles3.triggerIcon;
+        }
+      }
+      const obj3 = { style: merged2, onPress: null, accessibilityLabel: null };
+      const merged6 = Object.assign(merged5, triggerIcon);
+      obj3.onPress = FeedbackButton(1059).showFeedbackWidget;
+      obj3.accessibilityLabel = merged.triggerAriaLabel;
+      const obj4 = { source: null, style: null };
+      const tmpResult2 = FeedbackButton(1064);
+      obj4.source = { uri: FeedbackButton(1065).feedbackIcon };
+      obj4.style = merged6;
+      const element = <metroImportDefault source={null} style={null} />;
+      return <React6 style={merged2} onPress={null} accessibilityLabel={null}>{element}<React5 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</React5></React6>;
+    }
+  }
+];
+
+export const FeedbackButton = _createClass(FeedbackButton, items);

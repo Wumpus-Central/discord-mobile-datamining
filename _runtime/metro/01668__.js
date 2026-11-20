@@ -1,25 +1,5 @@
 // === Module 1668: ? ===
 
 // Module 1668
-const require = globalThis.__r;
 
-for (const key10013 in require("FONT_WEIGHT_MAPPINGS")) {
-  arg5[key10013] = require("FONT_WEIGHT_MAPPINGS")[key10013];
-  continue;
-}
-for (const key10017 in require("logToConsole")) {
-  arg5[key10017] = require("logToConsole")[key10017];
-  continue;
-}
-for (const key10021 in require("module_1673")) {
-  arg5[key10021] = require("module_1673")[key10021];
-  continue;
-}
-for (const key10025 in require("ValueProcessorTarget")) {
-  arg5[key10025] = require("ValueProcessorTarget")[key10025];
-  continue;
-}
-for (const key10029 in require("module_1677")) {
-  arg5[key10029] = require("module_1677")[key10029];
-  continue;
-}
+export const FONT_WEIGHT_MAPPINGS = { thin: "100", ultralight: "200", light: "300", normal: "400", regular: "400", medium: "500", condensed: "500", semibold: "600", bold: "700", condensedBold: "700", heavy: "800", black: "900" };

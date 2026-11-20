@@ -1,7 +1,7 @@
 // === Module 9423: ? ===
 
 // Module 9423
-import _modDef1655 from "module_1655" /* 1655 */;
+import _modDef1653 from "module_1653" /* 1653 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,11 +22,11 @@ export (count) => {
   ({ horizontal, customReanimatedStyle } = count);
   const accessibilityLabel = count.accessibilityLabel;
   ({ size, children, onPress } = count);
-  const sharedValue = require("module_1655").useSharedValue({});
-  let obj = require("module_1655");
+  const sharedValue = require("module_1653").useSharedValue({});
+  let obj = require("module_1653");
   items = [
     constants,
-    require("module_1655").runOnJS,
+    require("module_1653").runOnJS,
     (arg0) => {
       let obj;
       if (c2 != null) {
@@ -54,9 +54,9 @@ export (count) => {
   pnpm_PaginationItemTsx1.__closure = items1;
   pnpm_PaginationItemTsx1.__workletHash = 8160033721614;
   pnpm_PaginationItemTsx1.__initData = tmp4;
-  const derivedValue = require("module_1655").useDerivedValue(pnpm_PaginationItemTsx1);
-  const obj2 = require("module_1655");
-  let items2 = [closure_9, size, 10, dotStyle, activeDotStyle, animValue, index, count, require("module_1655").interpolate, require("module_1655").Extrapolation, require("module_1655").interpolateColor, sharedValue];
+  const derivedValue = require("module_1653").useDerivedValue(pnpm_PaginationItemTsx1);
+  const obj2 = require("module_1653");
+  let items2 = [closure_9, size, 10, dotStyle, activeDotStyle, animValue, index, count, require("module_1653").interpolate, require("module_1653").Extrapolation, require("module_1653").interpolateColor, sharedValue];
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -197,7 +197,7 @@ export (count) => {
   let items4 = [animValue, index, count, horizontal, dotStyle, activeDotStyle, customReanimatedStyle];
   const obj3 = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: null, accessibilityState: null, children: null };
   let str = "";
-  const animatedStyle = require("module_1655").useAnimatedStyle(pnpm_PaginationItemTsx2, items4);
+  const animatedStyle = require("module_1653").useAnimatedStyle(pnpm_PaginationItemTsx2, items4);
   if (animValue.value !== index) {
     const _HermesInternal = HermesInternal;
     str = "Go to " + accessibilityLabel;
@@ -214,6 +214,6 @@ export (count) => {
   obj5.transform = items5;
   const items6 = [obj5, dotStyle, animatedStyle];
   obj4.style = items6;
-  obj3.children = jsx(_modDef1655.View, { style: null, children });
+  obj3.children = jsx(_modDef1653.View, { style: null, children });
   return <Pressable onPress={onPress} accessibilityLabel={accessibilityLabel} accessibilityRole="button" accessibilityHint={null} accessibilityState={null}>{null}</Pressable>;
 }

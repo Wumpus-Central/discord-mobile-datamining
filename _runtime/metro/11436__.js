@@ -1,13 +1,14 @@
 // === Module 11436: ? ===
 
 // Module 11436
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod11374 from "module_11374" /* 11374 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod11426 from "module_11426" /* 11426 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const RUTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,31 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class PTMergeDateTimeRefiner {
+class RUTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, PTMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(PTMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, RUTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(RUTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -64,15 +48,30 @@ class PTMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = PTMergeDateTimeRefiner;
-_inherits(PTMergeDateTimeRefiner, fn(_mod11374).default);
+_inherits(RUTimeUnitCasualRelativeFormatParser, _mod11426.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(?:,|\u00E0)?\\s*$");
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u044D\u0442\u0438|\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435|\u043F\u0440\u043E\u0448\u043B\u044B\u0435|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435|\u043F\u043E\u0441\u043B\u0435|\u0441\u043F\u0443\u0441\u0442\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" + RUTimeUnitCasualRelativeFormatParser(11424).TIME_UNITS_PATTERN + ")";
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = RUTimeUnitCasualRelativeFormatParser(11424).parseDuration(arg1[2]);
+      if ("\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435" !== formatted) {
+        if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
+        }
+        const ParsingComponents = RUTimeUnitCasualRelativeFormatParser(11298).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      reverseDurationResult = RUTimeUnitCasualRelativeFormatParser(11297).reverseDuration(parseDurationResult);
+    }
+  }
+];
 
-export default _createClass(PTMergeDateTimeRefiner, items);
+export default _createClass(RUTimeUnitCasualRelativeFormatParser, items);

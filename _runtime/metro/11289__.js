@@ -1,7 +1,186 @@
 // === Module 11289: ? ===
 
 // Module 11289
-import registerAsset from "module_1119" /* 1119 */;
+import Chrono from "Chrono" /* 11290 */;
+import _mod11338 from "module_11338" /* 11338 */;
+import _mod11350 from "module_11350" /* 11350 */;
+import _mod11363 from "module_11363" /* 11363 */;
+import _mod11374 from "module_11374" /* 11374 */;
+import _mod11383 from "module_11383" /* 11383 */;
+import _mod11401 from "module_11401" /* 11401 */;
+import _mod11422 from "module_11422" /* 11422 */;
+import _mod11437 from "module_11437" /* 11437 */;
+import _mod11447 from "module_11447" /* 11447 */;
+import _mod11462 from "module_11462" /* 11462 */;
+import _mod11481 from "module_11481" /* 11481 */;
 
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e482df76bca128861506eefe107fb633", name: "BackspaceIcon", type: "png" });
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function t(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    exports.en = undefined;
+    exports.Chrono = undefined;
+    exports.ParsingContext = undefined;
+    exports.ParsingResult = undefined;
+    exports.ParsingComponents = undefined;
+    exports.ReferenceWithTimezone = undefined;
+    exports.Meridiem = undefined;
+    exports.Weekday = undefined;
+    exports.de = undefined;
+    exports.fr = undefined;
+    exports.ja = undefined;
+    exports.pt = undefined;
+    exports.nl = undefined;
+    exports.zh = undefined;
+    exports.ru = undefined;
+    exports.es = undefined;
+    exports.uk = undefined;
+    exports.it = undefined;
+    exports.sv = undefined;
+    exports.strict = undefined;
+    exports.casual = undefined;
+    exports.parse = function parse(arg0, arg1, arg2) {
+      const casual = exports.casual;
+      return casual.parse(arg0, arg1, arg2);
+    };
+    exports.parseDate = function parseDate(arg0, arg1, arg2) {
+      const casual = exports.casual;
+      return casual.parseDate(arg0, arg1, arg2);
+    };
+    const fnResult = fn(Chrono);
+    exports.en = fnResult;
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_11291").Chrono;
+          }
+    };
+    Object.defineProperty(exports, "Chrono", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_11291").ParsingContext;
+          }
+    };
+    Object.defineProperty(exports, "ParsingContext", obj2);
+    const _Object6 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ParsingResult;
+          }
+    };
+    Object.defineProperty(exports, "ParsingResult", obj3);
+    const _Object7 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ParsingComponents;
+          }
+    };
+    Object.defineProperty(exports, "ParsingComponents", obj4);
+    const _Object8 = Object;
+    const obj5 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ReferenceWithTimezone;
+          }
+    };
+    Object.defineProperty(exports, "ReferenceWithTimezone", obj5);
+    const _Object9 = Object;
+    const obj6 = {
+      enumerable: true,
+      get() {
+            return require("Meridiem").Meridiem;
+          }
+    };
+    Object.defineProperty(exports, "Meridiem", obj6);
+    const _Object10 = Object;
+    const obj7 = {
+      enumerable: true,
+      get() {
+            return require("Meridiem").Weekday;
+          }
+    };
+    Object.defineProperty(exports, "Weekday", obj7);
+    exports.de = fn(_mod11338);
+    exports.fr = fn(_mod11350);
+    exports.ja = fn(_mod11363);
+    exports.pt = fn(_mod11374);
+    exports.nl = fn(_mod11383);
+    exports.zh = fn(_mod11401);
+    exports.ru = fn(_mod11422);
+    exports.es = fn(_mod11437);
+    exports.uk = fn(_mod11447);
+    exports.it = fn(_mod11462);
+    exports.sv = fn(_mod11481);
+    ({ strict: exports.strict, casual: exports.casual } = fnResult);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

@@ -1,22 +1,17 @@
 // === Module 1756: ? ===
 
 // Module 1756
-import NativeWorklets from "NativeWorklets" /* 1712 */;
-import registerCustomSerializable from "registerCustomSerializable" /* 1719 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function createSynchronizable(__initData, fixedType) {
-  fixedType = undefined;
-  if (fixedType != null) {
-    fixedType = fixedType.fixedType;
-  }
-  const WorkletsModule = NativeWorklets.WorkletsModule;
-  let serializable = __initData;
-  if (!fixedType) {
-    serializable = registerCustomSerializable.createSerializable(__initData);
-    const tmp3Result = registerCustomSerializable;
-  }
-  return globalThis.__synchronizableUnpacker(WorkletsModule.createSynchronizable(serializable, fixedType), fixedType);
+for (const key10013 in require("normalizeAnimationKeyframes")) {
+  arg5[key10013] = require("normalizeAnimationKeyframes")[key10013];
+  continue;
+}
+for (const key10017 in require("normalizeDelay")) {
+  arg5[key10017] = require("normalizeDelay")[key10017];
+  continue;
+}
+for (const key10021 in require("normalizeCSSTransitionProperties")) {
+  arg5[key10021] = require("normalizeCSSTransitionProperties")[key10021];
+  continue;
 }

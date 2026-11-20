@@ -1,48 +1,29 @@
 // === Module 1958: ? ===
 
 // Module 1958
-import _mod1668 from "module_1668" /* 1668 */;
-import _mod1708 from "module_1708" /* 1708 */;
+import _mod1666 from "module_1666" /* 1666 */;
+import _mod1706 from "module_1706" /* 1706 */;
 
-const items = [{ code: "(function measureNative_Pnpm_measureNativeTs1(animatedRef){let[RuntimeKind,logger]=this.__closure;if(globalThis.__RUNTIME_KIND===RuntimeKind.ReactNative){return null;}const viewTag=animatedRef.value;if(!viewTag){logger.warn(\"The view with tag \"+viewTag+\" is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).\");return null;}const measured=global._measure(viewTag);if(measured===null){logger.warn(\"The view has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).\");return null;}if(isNaN(measured.x)){logger.warn(\"The view gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.\");return null;}return measured;})" }, _mod1708.RuntimeKind, _mod1668.logger];
+const items = [{ code: "(function setGestureStateNative_Pnpm_setGestureStateNativeTs1(handlerTag,newState){let[RuntimeKind,logger]=this.__closure;if(globalThis.__RUNTIME_KIND===RuntimeKind.ReactNative){logger.warn('You can not use setGestureState in non-worklet function.');return;}global._setGestureState(handlerTag,newState);})" }, _mod1706.RuntimeKind, _mod1666.logger];
 let c0;
 let c1;
 [tmp2, tmp3, tmp4] = items;
-let measureJest = function measureNative(value) {
-  if (globalThis.__RUNTIME_KIND === _undefined.ReactNative) {
-    return null;
+let setGestureStateJest = function setGestureStateNative(arg0, arg1) {
+  if (globalThis.__RUNTIME_KIND !== _undefined.ReactNative) {
+    _undefined._setGestureState(arg0, arg1);
   } else {
-    value = value.value;
-    if (value) {
-      let _measureResult = _undefined._measure(value);
-      if (null === _measureResult) {
-        _undefined2.warn("The view has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");
-        _measureResult = null;
-      } else {
-        const _isNaN = isNaN;
-        if (isNaN(_measureResult.x)) {
-          _undefined2.warn("The view gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.");
-          _measureResult = null;
-        }
-      }
-      return _measureResult;
-    } else {
-      const _HermesInternal = HermesInternal;
-      _undefined2.warn("The view with tag " + value + " is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");
-      return null;
-    }
+    _undefined2.warn("You can not use setGestureState in non-worklet function.");
   }
 };
 const items1 = [tmp3, tmp4];
-measureJest.__closure = items1;
-measureJest.__workletHash = 4237073728719;
-measureJest.__initData = tmp2;
-if (_mod1668.IS_JEST) {
-  measureJest = function measureJest() {
-    const logger = _undefined2(1668).logger;
-    logger.warn("measure() cannot be used with Jest.");
-    return null;
+setGestureStateJest.__closure = items1;
+setGestureStateJest.__workletHash = 10884479007598;
+setGestureStateJest.__initData = tmp2;
+if (_mod1666.IS_JEST) {
+  setGestureStateJest = function setGestureStateJest() {
+    const logger = _undefined2(1666).logger;
+    logger.warn("setGestureState() cannot be used with Jest.");
   };
 }
 
-export const measure = measureJest;
+export const setGestureState = setGestureStateJest;

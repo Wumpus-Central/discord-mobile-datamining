@@ -1,7 +1,7 @@
 // === Module 2826: ? ===
 
 // Module 2826
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2ZpbGVfdXBsb2Fk", scales: [1], hash: "4aa88b11f4e385beeb0a8f908b807819", name: "bg.messages.4aa88b11f4e385beeb0a8f908b807819.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/gifting", scales: [1], hash: "9828da678219fed549e6986d671ca2e3", name: "DiscordAnniversary.compiled.messages", type: "jsona" });

@@ -1,7 +1,7 @@
 // === Module 14748: ? ===
 
 // Module 14748
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 251, height: 120, scales: [1, 2, 3], hash: "ded9c31a2e9dd512048ecebbadd9fab8", name: "audience_welcome", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 16, height: 16, scales: [2, 3], hash: "e75d6cb3291053e29f69fac93519aa0b", name: "spectator", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 3470: ? ===
 
 // Module 3470
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_assurance", scales: [1], hash: "067fbf0747d2765b44a0b22eb2a1a444", name: "ManualReview.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNl", scales: [1], hash: "bf4799804f5c73342de355dec10c7c4d", name: "zh-CN.messages.bf4799804f5c73342de355dec10c7c4d.compiled.messages", type: "jsona" });

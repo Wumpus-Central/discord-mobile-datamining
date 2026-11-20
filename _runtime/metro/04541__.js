@@ -1,7 +1,7 @@
 // === Module 4541: ? ===
 
 // Module 4541
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native", scales: [1], hash: "0e3c99f4304b88d181459bf694c28c1f", name: "PlayableReward.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/connected_apps", scales: [1], hash: "b50ef845a3f41f3a92290f7873930c0e", name: "ConnectedApps.compiled.messages", type: "jsona" });

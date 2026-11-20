@@ -1,7 +1,7 @@
 // === Module 9407: useOnProgressChange ===
 
 // Module 9407 (useOnProgressChange)
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 import SINGLE_ITEM from "SINGLE_ITEM" /* 9393 */;
 
 require = arg1;
@@ -20,7 +20,7 @@ export function useOnProgressChange(offsetX) {
   pnpm_useOnProgressChangeTs1.__closure = items1;
   pnpm_useOnProgressChangeTs1.__workletHash = 14875767740928;
   pnpm_useOnProgressChangeTs1.__initData = tmp3;
-  const items2 = [autoFillData, SINGLE_ITEM.computedOffsetXValueWithAutoFillData, rawDataLength, size, autoFillData, loop, onProgressChange, typeof onProgressChange === "function", _mod1655.runOnJS];
+  const items2 = [autoFillData, SINGLE_ITEM.computedOffsetXValueWithAutoFillData, rawDataLength, size, autoFillData, loop, onProgressChange, typeof onProgressChange === "function", _mod1653.runOnJS];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -58,6 +58,6 @@ export function useOnProgressChange(offsetX) {
   pnpm_useOnProgressChangeTs2.__workletHash = 16405314453734;
   pnpm_useOnProgressChangeTs2.__initData = tmp6;
   const items4 = [loop, autoFillData, rawDataLength, onProgressChange, size];
-  const animatedReaction = _mod1655.useAnimatedReaction(pnpm_useOnProgressChangeTs1, pnpm_useOnProgressChangeTs2, items4);
+  const animatedReaction = _mod1653.useAnimatedReaction(pnpm_useOnProgressChangeTs1, pnpm_useOnProgressChangeTs2, items4);
   const tmp5 = typeof onProgressChange === "function";
 }

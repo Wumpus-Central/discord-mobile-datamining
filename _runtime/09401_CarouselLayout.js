@@ -1,7 +1,7 @@
 // === Module 9401: CarouselLayout ===
 
 // Module 9401 (CarouselLayout)
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 import SINGLE_ITEM from "SINGLE_ITEM" /* 9393 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,8 +58,8 @@ export const CarouselLayout = noop.forwardRef((arg0, ref) => {
   pnpm_CarouselLayoutTsx1.__workletHash = 12314304910940;
   pnpm_CarouselLayoutTsx1.__initData = tmp7;
   const items2 = [loop, size, dataLength, handlerOffset];
-  const derivedValue = require("module_1655").useDerivedValue(pnpm_CarouselLayoutTsx1, items2);
-  const obj5 = require("module_1655");
+  const derivedValue = require("module_1653").useDerivedValue(pnpm_CarouselLayoutTsx1, items2);
+  const obj5 = require("module_1653");
   const onProgressChange1 = require("useOnProgressChange").useOnProgressChange({ autoFillData, loop, size, offsetX: derivedValue, rawDataLength, onProgressChange });
   const tmpResult = require("useOnProgressChange");
   const carouselController = require("useCarouselController").useCarouselController({
@@ -74,12 +74,12 @@ export const CarouselLayout = noop.forwardRef((arg0, ref) => {
     fixedDirection,
     duration: scrollAnimationDuration,
     onScrollEnd() {
-      return _mod1655.runOnJS(callback)();
+      return _mod1653.runOnJS(callback)();
     },
     onScrollStart() {
       let tmp2 = onScrollStart;
       if (tmp2) {
-        tmp2 = _mod1655.runOnJS(tmp)();
+        tmp2 = _mod1653.runOnJS(tmp)();
       }
       return tmp2;
     }
@@ -108,12 +108,12 @@ export const CarouselLayout = noop.forwardRef((arg0, ref) => {
     fixedDirection,
     duration: scrollAnimationDuration,
     onScrollEnd() {
-      return _mod1655.runOnJS(callback)();
+      return _mod1653.runOnJS(callback)();
     },
     onScrollStart() {
       let tmp2 = onScrollStart;
       if (tmp2) {
-        tmp2 = _mod1655.runOnJS(tmp)();
+        tmp2 = _mod1653.runOnJS(tmp)();
       }
       return tmp2;
     }
@@ -161,7 +161,7 @@ export const CarouselLayout = noop.forwardRef((arg0, ref) => {
   pnpm_CarouselLayoutTsx2.__workletHash = 2577603405426;
   pnpm_CarouselLayoutTsx2.__initData = tmp21;
   const items10 = [width, height, size, globalState.layout.itemDimensions];
-  const animatedStyle = require("module_1655").useAnimatedStyle(pnpm_CarouselLayoutTsx2, items10);
+  const animatedStyle = require("module_1653").useAnimatedStyle(pnpm_CarouselLayoutTsx2, items10);
   const obj7 = { style: null, children: null };
   const items11 = [getSharedIndex.layoutContainer, containerStyle];
   obj7.style = items11;

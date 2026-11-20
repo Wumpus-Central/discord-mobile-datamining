@@ -217,7 +217,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "HermesInternal", done: "+60" };
+                                return { value: "HermesInternal", done: null };
                               }
                             } else {
                               try {
@@ -432,7 +432,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                               }
                                               let obj2 = str(_function[4]);
                                             }
-                                            return str(_function[9]).handleCallbackErrors(/* F136623 */ function() { ... }, /* F136624 */ function() { ... }, /* F136625 */ function() { ... }, /* F136626 */ function() { ... });
+                                            return str(_function[9]).handleCallbackErrors(/* F134572 */ function() { ... }, /* F134573 */ function() { ... }, /* F134574 */ function() { ... }, /* F134575 */ function() { ... });
                                           });
                                         }
                                       }
@@ -462,7 +462,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                 const obj2 = { value, done: true };
                                                 return obj2;
                                               } else {
-                                                return { value: "HermesInternal", done: "+60" };
+                                                return { value: "HermesInternal", done: null };
                                               }
                                             } else {
                                               try {
@@ -663,7 +663,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                           const tmp2Result5 = tmp2(startSpanManual[7]);
                                                           obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
                                                           obj3.attributes = obj;
-                                                          return tmp2Result5.startSpan(obj3, /* F122204 */ function() { ... });
+                                                          return tmp2Result5.startSpan(obj3, /* F120343 */ function() { ... });
                                                         }
                                                       }
                                                       dependencyMap = arr;
@@ -681,14 +681,14 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                       obj4.attributes = obj;
                                                       if (BooleanResult) {
                                                         if (!tmp12) {
-                                                          closure_0 = _self(/* F141604 */ function() { ... });
-                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F141605 */ function() { ... });
+                                                          closure_0 = _self(/* F139476 */ function() { ... });
+                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F139477 */ function() { ... });
                                                           const tmp2Result8 = tmp2(startSpanManual[7]);
                                                         }
                                                       }
                                                       tmp2 = tmp2(startSpanManual[7]);
                                                       startSpanManual = tmp2.startSpanManual;
-                                                      startSpanManualResult = startSpanManual(obj4, /* F136622 */ function() { ... });
+                                                      startSpanManualResult = startSpanManual(obj4, /* F134571 */ function() { ... });
                                                       const tmp2Result7 = tmp2(startSpanManual[2]);
                                                     }
                                                   }

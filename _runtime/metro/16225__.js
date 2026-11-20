@@ -1,7 +1,7 @@
 // === Module 16225: ? ===
 
 // Module 16225
-import _mod16226 from "module_16226" /* 16226 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default _mod16226;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d4b8535e8fda48cfe70d5688d1051d12", name: "ClosedCaptionsOutlineIcon", type: "png" });

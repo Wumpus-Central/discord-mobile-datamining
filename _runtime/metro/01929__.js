@@ -1,157 +1,84 @@
 // === Module 1929: ? ===
 
 // Module 1929
-let obj = { IDENTITY: "identity", CLAMP: "clamp", EXTEND: "extend" };
-const items = [{ code: "(function getVal_Pnpm_interpolationTs1(type,coef,val,leftEdgeOutput,rightEdgeOutput,x){let[Extrapolation]=this.__closure;switch(type){case Extrapolation.IDENTITY:return x;case Extrapolation.CLAMP:if(coef*val<coef*leftEdgeOutput){return leftEdgeOutput;}return rightEdgeOutput;case Extrapolation.EXTEND:default:return val;}})" }, obj];
-let c0;
-[tmp2, tmp3] = items;
-function getVal(arg0, arg1, arg2, arg3, arg4, arg5) {
-  if (_undefined.IDENTITY === arg0) {
-    return arg5;
-  } else if (_undefined.CLAMP === arg0) {
-    let tmp5 = arg4;
-    if (arg1 * arg2 < arg1 * arg3) {
-      tmp5 = arg3;
-    }
-    return tmp5;
-  } else {
-    const EXTEND = _undefined.EXTEND;
-    return arg2;
-  }
-}
-const items1 = [tmp3];
-getVal.__closure = items1;
-getVal.__workletHash = 9746283677561;
-getVal.__initData = tmp2;
-const items2 = [{ code: "(function isExtrapolate_Pnpm_interpolationTs2(value){let[Extrapolation]=this.__closure;return value===Extrapolation.EXTEND||value===Extrapolation.CLAMP||value===Extrapolation.IDENTITY;})" }, obj];
-let closure_129_0;
-[tmp4, tmp5] = items2;
-function isExtrapolate(arg0) {
-  return arg0 === _undefined.EXTEND || arg0 === _undefined.CLAMP || arg0 === _undefined.IDENTITY;
-}
-const items3 = [tmp5];
-isExtrapolate.__closure = items3;
-isExtrapolate.__workletHash = 2614032807769;
-isExtrapolate.__initData = tmp4;
-const items4 = [{ code: "(function validateType_Pnpm_interpolationTs3(type){let[Extrapolation,isExtrapolate]=this.__closure;const extrapolationConfig={extrapolateLeft:Extrapolation.EXTEND,extrapolateRight:Extrapolation.EXTEND};if(!type){return extrapolationConfig;}if(typeof type==='string'){if(!isExtrapolate(type)){throw new Error(\"[Reanimated] Unsupported value for \\\"interpolate\\\" \\nSupported values: [\\\"extend\\\", \\\"clamp\\\", \\\"identity\\\", Extrapolation.CLAMP, Extrapolation.EXTEND, Extrapolation.IDENTITY]\\n Valid example:\\n        interpolate(value, [inputRange], [outputRange], \\\"clamp\\\")\");}extrapolationConfig.extrapolateLeft=type;extrapolationConfig.extrapolateRight=type;return extrapolationConfig;}if(type.extrapolateLeft&&!isExtrapolate(type.extrapolateLeft)||type.extrapolateRight&&!isExtrapolate(type.extrapolateRight)){throw new Error(\"[Reanimated] Unsupported value for \\\"interpolate\\\" \\nSupported values: [\\\"extend\\\", \\\"clamp\\\", \\\"identity\\\", Extrapolation.CLAMP, Extrapolation.EXTEND, Extrapolation.IDENTITY]\\n Valid example:\\n      interpolate(value, [inputRange], [outputRange], {\\n        extrapolateLeft: Extrapolation.CLAMP,\\n        extrapolateRight: Extrapolation.IDENTITY\\n      }})\");}Object.assign(extrapolationConfig,type);return extrapolationConfig;})" }, obj, isExtrapolate];
-let closure_130_0;
-let closure_130_1;
-[tmp6, tmp7, tmp8] = items4;
-function validateType(extrapolateLeft) {
-  const obj = { extrapolateLeft: _undefined.EXTEND, extrapolateRight: _undefined.EXTEND };
-  if (extrapolateLeft) {
-    if (typeof extrapolateLeft === "string") {
-      if (duration(extrapolateLeft)) {
-        obj.extrapolateLeft = extrapolateLeft;
-        obj.extrapolateRight = extrapolateLeft;
-        return obj;
-      } else {
-        const _Error2 = Error;
-        const error = new Error("[Reanimated] Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolation.CLAMP, Extrapolation.EXTEND, Extrapolation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], \"clamp\")");
-        throw error;
-      }
-    } else {
-      if (!extrapolateLeft.extrapolateLeft) {
-        const _Object = Object;
-        const merged = Object.assign(obj, extrapolateLeft);
-        return obj;
-      }
-      const _Error = Error;
-      const error1 = new Error("[Reanimated] Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolation.CLAMP, Extrapolation.EXTEND, Extrapolation.IDENTITY]\n Valid example:\n      interpolate(value, [inputRange], [outputRange], {\n        extrapolateLeft: Extrapolation.CLAMP,\n        extrapolateRight: Extrapolation.IDENTITY\n      }})");
-      throw error1;
-    }
-  } else {
-    return obj;
-  }
-}
-const items5 = [tmp7, tmp8];
-validateType.__closure = items5;
-validateType.__workletHash = 1861796590910;
-validateType.__initData = tmp6;
-const items6 = [{ code: "(function internalInterpolate_Pnpm_interpolationTs4(x,narrowedInput,extrapolationConfig){let[getVal]=this.__closure;const{leftEdgeInput:leftEdgeInput,rightEdgeInput:rightEdgeInput,leftEdgeOutput:leftEdgeOutput,rightEdgeOutput:rightEdgeOutput}=narrowedInput;if(rightEdgeInput-leftEdgeInput===0){return leftEdgeOutput;}const progress=(x-leftEdgeInput)/(rightEdgeInput-leftEdgeInput);const val=leftEdgeOutput+progress*(rightEdgeOutput-leftEdgeOutput);const coef=rightEdgeOutput>=leftEdgeOutput?1:-1;if(coef*val<coef*leftEdgeOutput){return getVal(extrapolationConfig.extrapolateLeft,coef,val,leftEdgeOutput,rightEdgeOutput,x);}else if(coef*val>coef*rightEdgeOutput){return getVal(extrapolationConfig.extrapolateRight,coef,val,leftEdgeOutput,rightEdgeOutput,x);}return val;})" }, getVal];
-let closure_131_0;
-[tmp9, tmp10] = items6;
-function internalInterpolate(arg0, arg1, extrapolateLeft) {
-  ({ leftEdgeInput, rightEdgeInput, leftEdgeOutput, rightEdgeOutput } = arg1);
-  if (rightEdgeInput - leftEdgeInput == 0) {
-    return leftEdgeOutput;
-  } else {
-    const sum = leftEdgeOutput + (arg0 - leftEdgeInput) / (rightEdgeInput - leftEdgeInput) * (rightEdgeOutput - leftEdgeOutput);
-    let num = -1;
-    if (rightEdgeOutput >= leftEdgeOutput) {
-      num = 1;
-    }
-    if (num * sum < num * leftEdgeOutput) {
-      let tmp2 = _undefined(extrapolateLeft.extrapolateLeft, num, sum, leftEdgeOutput, rightEdgeOutput, arg0);
-    } else {
-      tmp2 = sum;
-      if (num * rightEdgeOutput < num * sum) {
-        tmp2 = _undefined(extrapolateLeft.extrapolateRight, num, sum, leftEdgeOutput, rightEdgeOutput, arg0);
-      }
-    }
-    return tmp2;
-  }
-}
-const items7 = [tmp10];
-internalInterpolate.__closure = items7;
-internalInterpolate.__workletHash = 11943656015833;
-internalInterpolate.__initData = tmp9;
-const items8 = [{ code: "(function interpolate_Pnpm_interpolationTs5(value,inputRange,outputRange,type){let[validateType,internalInterpolate]=this.__closure;if(inputRange.length<2||outputRange.length<2){throw new Error('[Reanimated] Interpolation input and output ranges should contain at least two values.');}const extrapolationConfig=validateType(type);const length=inputRange.length;let narrowedInput;if(value>inputRange[length-1]){narrowedInput={leftEdgeInput:inputRange[length-2],rightEdgeInput:inputRange[length-1],leftEdgeOutput:outputRange[length-2],rightEdgeOutput:outputRange[length-1]};}else{let left=1;let right=length-1;while(left<right){const mid=Math.floor((left+right)/2);if(value<=inputRange[mid]){right=mid;}else{left=mid+1;}}const segmentIndex=left;narrowedInput={leftEdgeInput:inputRange[segmentIndex-1],rightEdgeInput:inputRange[segmentIndex],leftEdgeOutput:outputRange[segmentIndex-1],rightEdgeOutput:outputRange[segmentIndex]};}return internalInterpolate(value,narrowedInput,extrapolationConfig);})" }, validateType, internalInterpolate];
-let closure_132_0;
-let closure_132_1;
-[tmp11, tmp12, tmp13] = items8;
-function interpolate(arg0, arg1, arg2, arg3) {
-  let sum;
-  let tmp4;
-  if (arg1.length >= 2) {
-    if (arg2.length >= 2) {
-      if (arg0 > arg1[arg1.length - 1]) {
-        const obj2 = { leftEdgeInput: arg1[length - 2], rightEdgeInput: arg1[length - 1], leftEdgeOutput: arg2[length - 2], rightEdgeOutput: arg2[length - 1] };
-        let obj = obj2;
-      } else {
-        let diff = length - 1;
-        let num = 1;
-        let num2 = 1;
-        if (1 < diff) {
-          do {
-            let _Math = Math;
-            let rounded = Math.floor((num + diff) / 2);
-            sum = num;
-            tmp4 = rounded;
-            if (arg0 > arg1[rounded]) {
-              sum = rounded + 1;
-              tmp4 = diff;
-            }
-            diff = tmp4;
-            num = sum;
-            num2 = sum;
-          } while (sum < tmp4);
-        }
-        obj = { leftEdgeInput: null, rightEdgeInput: null, leftEdgeOutput: null, rightEdgeOutput: null };
-        const diff1 = num2 - 1;
-        obj.leftEdgeInput = arg1[diff1];
-        obj.rightEdgeInput = arg1[num2];
-        obj.leftEdgeOutput = arg2[diff1];
-        obj.rightEdgeOutput = arg2[num2];
-      }
-      return duration(arg0, obj, _undefined(arg3));
-    }
-  }
-  const error = new Error("[Reanimated] Interpolation input and output ranges should contain at least two values.");
-  throw error;
-}
-const items9 = [tmp12, tmp13];
-interpolate.__closure = items9;
-interpolate.__workletHash = 5158302140286;
-interpolate.__initData = tmp11;
-const items10 = [{ code: "(function clamp_Pnpm_interpolationTs6(value,min,max){return Math.min(Math.max(value,min),max);})" }];
-[tmp14] = items10;
-function clamp(arg0, arg1, arg2) {
-  return Math.min(Math.max(arg0, arg1), arg2);
-}
-clamp.__workletHash = 9382877233223;
-clamp.__initData = tmp14;
+import lrgbDefault from "lrgb" /* 1930 */;
 
-export const Extrapolation = obj;
-export { interpolate };
-export { clamp };
+const items = [{ code: "(function convertLrgbToOklab_Pnpm_oklabTs1({r=0,g=0,b=0,alpha:alpha}){const L=Math.cbrt(0.41222147079999993*r+0.5363325363*g+0.0514459929*b);const M=Math.cbrt(0.2119034981999999*r+0.6806995450999999*g+0.1073969566*b);const S=Math.cbrt(0.08830246189999998*r+0.2817188376*g+0.6299787005000002*b);return{l:0.2104542553*L+0.793617785*M-0.0040720468*S,a:1.9779984951*L-2.428592205*M+0.4505937099*S,b:0.0259040371*L+0.7827717662*M-0.808675766*S,alpha:alpha};})" }];
+[tmp2] = items;
+function convertLrgbToOklab(alpha) {
+  let num = alpha.r;
+  if (num === undefined) {
+    num = 0;
+  }
+  let num2 = alpha.g;
+  if (num2 === undefined) {
+    num2 = 0;
+  }
+  let num3 = alpha.b;
+  if (num3 === undefined) {
+    num3 = 0;
+  }
+  const cbrtResult = Math.cbrt(0.41222147079999993 * num + 0.5363325363 * num2 + 0.0514459929 * num3);
+  const cbrtResult1 = Math.cbrt(0.2119034981999999 * num + 0.6806995450999999 * num2 + 0.1073969566 * num3);
+  const cbrtResult2 = Math.cbrt(0.08830246189999998 * num + 0.2817188376 * num2 + 0.6299787005000002 * num3);
+  return { l: 0.2104542553 * cbrtResult + 0.793617785 * cbrtResult1 - 0.0040720468 * cbrtResult2, a: 1.9779984951 * cbrtResult - 2.428592205 * cbrtResult1 + 0.4505937099 * cbrtResult2, b: 0.0259040371 * cbrtResult + 0.7827717662 * cbrtResult1 - 0.808675766 * cbrtResult2, alpha: alpha.alpha };
+}
+convertLrgbToOklab.__workletHash = 2780270900612;
+convertLrgbToOklab.__initData = tmp2;
+const items1 = [{ code: "(function convertRgbToOklab_Pnpm_oklabTs2(rgb){let[lrgb,convertLrgbToOklab]=this.__closure;const lrgbColor=lrgb.convert.fromRgb(rgb);const result=convertLrgbToOklab(lrgbColor);if(rgb.r===rgb.b&&rgb.b===rgb.g){result.a=result.b=0;}return result;})" }, lrgbDefault, convertLrgbToOklab];
+let c0;
+let c1;
+[tmp3, tmp4, tmp5] = items1;
+function convertRgbToOklab(arg0) {
+  const convert = _undefined.convert;
+  const tmp = _undefined2(convert.fromRgb(arg0));
+  if (tmp2) {
+    tmp.b = 0;
+    tmp.a = 0;
+  }
+  return tmp;
+}
+const items2 = [tmp4, tmp5];
+convertRgbToOklab.__closure = items2;
+convertRgbToOklab.__workletHash = 2421518391540;
+convertRgbToOklab.__initData = tmp3;
+const items3 = [{ code: "(function convertOklabToLrgb_Pnpm_oklabTs3({l=0,a=0,b=0,alpha:alpha}){const L=Math.pow(l*0.99999999845051981432+0.39633779217376785678*a+0.21580375806075880339*b,3);const M=Math.pow(l*1.0000000088817607767-0.1055613423236563494*a-0.063854174771705903402*b,3);const S=Math.pow(l*1.0000000546724109177-0.089484182094965759684*a-1.2914855378640917399*b,3);return{r:+4.076741661347994*L-3.307711590408193*M+0.230969928729428*S,g:-1.2684380040921763*L+2.6097574006633715*M-0.3413193963102197*S,b:-0.004196086541837188*L-0.7034186144594493*M+1.7076147009309444*S,alpha:alpha};})" }];
+[tmp6] = items3;
+function convertOklabToLrgb(alpha) {
+  let num = alpha.l;
+  if (num === undefined) {
+    num = 0;
+  }
+  let num2 = alpha.a;
+  if (num2 === undefined) {
+    num2 = 0;
+  }
+  let num3 = alpha.b;
+  if (num3 === undefined) {
+    num3 = 0;
+  }
+  const powResult = Math.pow(0.9999999984505198 * num + 0.39633779217376786 * num2 + 0.2158037580607588 * num3, 3);
+  const powResult1 = Math.pow(1.0000000088817609 * num - 0.10556134232365635 * num2 - 0.06385417477170591 * num3, 3);
+  const powResult2 = Math.pow(1.0000000546724108 * num - 0.08948418209496575 * num2 - 1.2914855378640917 * num3, 3);
+  return { r: 4.076741661347994 * powResult - 3.307711590408193 * powResult1 + 0.230969928729428 * powResult2, g: -1.2684380040921763 * powResult + 2.6097574006633715 * powResult1 - 0.3413193963102197 * powResult2, b: -0.004196086541837188 * powResult - 0.7034186144594493 * powResult1 + 1.7076147009309444 * powResult2, alpha: alpha.alpha };
+}
+convertOklabToLrgb.__workletHash = 12470059961197;
+convertOklabToLrgb.__initData = tmp6;
+const items4 = [{ code: "(function convertOklabToRgb_Pnpm_oklabTs4(labColor){let[convertOklabToLrgb,lrgb]=this.__closure;const roundChannel=function(channel){return Math.ceil(channel*100_000)/100_000;};const lrgbColor=convertOklabToLrgb(labColor);const rgbColor=lrgb.convert.toRgb(lrgbColor);rgbColor.r=roundChannel(rgbColor.r);rgbColor.g=roundChannel(rgbColor.g);rgbColor.b=roundChannel(rgbColor.b);return rgbColor;})" }, convertOklabToLrgb, lrgbDefault];
+let closure_129_0;
+let closure_129_1;
+[tmp7, tmp8, tmp9] = items4;
+function convertOklabToRgb(arg0) {
+  const convert = _undefined2.convert;
+  const toRgbResult = convert.toRgb(_undefined(arg0));
+  toRgbResult.r = Math.ceil(100000 * toRgbResult.r) / 100000;
+  toRgbResult.g = Math.ceil(100000 * toRgbResult.g) / 100000;
+  toRgbResult.b = Math.ceil(100000 * toRgbResult.b) / 100000;
+  return toRgbResult;
+}
+const items5 = [tmp8, tmp9];
+convertOklabToRgb.__closure = items5;
+convertOklabToRgb.__workletHash = 10889156287459;
+convertOklabToRgb.__initData = tmp7;
+
+export default { convert: { fromRgb: convertRgbToOklab, toRgb: convertOklabToRgb } };

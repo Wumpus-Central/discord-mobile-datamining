@@ -1,19 +1,7 @@
 // === Module 1847: ? ===
 
 // Module 1847
-import mutablesNative from "mutablesNative" /* 1834 */;
+import decay from "decay" /* 1848 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function createReducedMotionManager(_REANIMATED_IS_REDUCED_MOTION) {
-  const obj = {
-    jsValue: _REANIMATED_IS_REDUCED_MOTION,
-    uiValue: mutablesNative.makeMutable(_REANIMATED_IS_REDUCED_MOTION),
-    setEnabled(jsValue) {
-      obj.jsValue = jsValue;
-      obj.uiValue.value = jsValue;
-    }
-  };
-  return obj;
-}
+export const withDecay = decay.withDecay;

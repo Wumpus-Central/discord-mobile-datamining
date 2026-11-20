@@ -1,7 +1,7 @@
 // === Module 19584: ? ===
 
 // Module 19584
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/holidays/assets", scales: [1], hash: "7209f284854b7ea1e5642c91fd2e43d4", name: "winter_2026_loading_dark", type: "webm" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/overview", width: 343, height: 193, scales: [2, 3], hash: "14f8bd930afc02eff31d9dfb6640a712", name: "asset_gradient", type: "png" });

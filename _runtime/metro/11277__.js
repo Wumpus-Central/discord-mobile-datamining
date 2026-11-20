@@ -1,7 +1,7 @@
 // === Module 11277: ? ===
 
 // Module 11277
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "aa86e9bedf9e29074b68adcd3222cf32", name: "NatureIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 16, height: 16, scales: [2, 3], hash: "494d75fe739ed4a36d195ab8193847fa", name: "alert", type: "png" });

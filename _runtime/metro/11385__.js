@@ -1,14 +1,13 @@
 // === Module 11385: ? ===
 
 // Module 11385
-import Filter from "Filter" /* 11372 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod11316 from "module_11316" /* 11316 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeFollowByDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +27,31 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeFollowByDateRefiner {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class NLMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ENMergeRelativeFollowByDateRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, NLMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(NLMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,59 +64,15 @@ class ENMergeRelativeFollowByDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
+_classCallCheck = NLMergeDateTimeRefiner;
+_inherits(NLMergeDateTimeRefiner, fn(_mod11316).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*$/i;
+    const regExp = new RegExp("^\\s*(om|na|voor|in de|,|-)?\\s*$");
+    return regExp;
   }
 };
-const items = [
-  entry,
-  {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(after|since)$/i);
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
-          }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
-        }
-        match = tmp6;
-      }
-      return match;
-    }
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(11352).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(before|from)$/i)) {
-        reverseDurationResult = ENMergeRelativeFollowByDateRefiner(11355).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = ENMergeRelativeFollowByDateRefiner(11356).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeFollowByDateRefiner(11356).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      return new ENMergeRelativeFollowByDateRefiner(11356).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(ENMergeRelativeFollowByDateRefiner, items);
+export default _createClass(NLMergeDateTimeRefiner, items);

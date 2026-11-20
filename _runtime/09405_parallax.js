@@ -1,7 +1,7 @@
 // === Module 9405: parallax ===
 
 // Module 9405 (parallax)
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -27,7 +27,7 @@ export function parallaxLayout(arg0) {
   if (undefined === parallaxAdjacentItemScale) {
     parallaxAdjacentItemScale = num2 ** 2;
   }
-  items = [closure_2, _mod1655.interpolate, size, num, _mod1655.Extrapolation, parallaxAdjacentItemScale, num2, vertical];
+  items = [closure_2, _mod1653.interpolate, size, num, _mod1653.Extrapolation, parallaxAdjacentItemScale, num2, vertical];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;

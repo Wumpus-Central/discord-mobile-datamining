@@ -2,4 +2,4 @@
 
 // Module 1311
 
-export default Function.prototype.call;
+export default Function.prototype.apply;

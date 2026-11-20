@@ -1,20 +1,19 @@
 // === Module 1720: ? ===
 
 // Module 1720
-const SymbolResult = Symbol("serializable flag");
-const weakMap = new WeakMap();
-const obj = {
-  set(arg0, arg1) {
-    let tmp = arg1;
-    if (!arg1) {
-      tmp = SymbolResult;
-    }
-    const result = weakMap.set(arg0, tmp);
-  },
-  get: null
-};
-const get = weakMap.get;
-obj.get = get.bind(weakMap);
+const items = [{ code: "(function isSynchronizable_Pnpm_isSynchronizableTs1(value){return typeof value==='object'&&value!==null&&!!value.__synchronizableRef;})" }];
+[tmp2] = items;
+function isSynchronizable(__synchronizableRef) {
+  __synchronizableRef = typeof __synchronizableRef === "object";
+  if (typeof __synchronizableRef === "object") {
+    __synchronizableRef = null !== __synchronizableRef;
+  }
+  if (__synchronizableRef) {
+    __synchronizableRef = __synchronizableRef.__synchronizableRef;
+  }
+  return __synchronizableRef;
+}
+isSynchronizable.__workletHash = 15473062699358;
+isSynchronizable.__initData = tmp2;
 
-export const serializableMappingFlag = SymbolResult;
-export const serializableMappingCache = obj;
+export { isSynchronizable };

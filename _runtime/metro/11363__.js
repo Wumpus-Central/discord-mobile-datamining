@@ -1,96 +1,99 @@
 // === Module 11363: ? ===
 
 // Module 11363
-import _mod11352 from "module_11352" /* 11352 */;
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 11353 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 11360 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 11331 */;
+import _mod11337 from "module_11337" /* 11337 */;
+import JPStandardParser2 from "JPStandardParser" /* 11364 */;
+import _mod11366 from "module_11366" /* 11366 */;
+import _mod11367 from "module_11367" /* 11367 */;
+import _mod11368 from "module_11368" /* 11368 */;
+import _mod11369 from "module_11369" /* 11369 */;
+import _mod11370 from "module_11370" /* 11370 */;
+import _mod11371 from "module_11371" /* 11371 */;
+import _mod11372 from "module_11372" /* 11372 */;
+import _mod11373 from "module_11373" /* 11373 */;
 
-const ENMonthNameParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-const regExp = new RegExp("((?:in)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod11352.MONTH_DICTIONARY) + ")\\s*(?:(?:,|-|of)?\\s*(" + _mod11352.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
-class ENMonthNameParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENMonthNameParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(11352).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(index.index + str2.length, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const start2 = parsingResult.start;
-      start2.addTag("parser/ENMonthNameParser");
-      const tmp10 = ENMonthNameParser(11352).MONTH_DICTIONARY[formatted];
-      const start3 = parsingResult.start;
-      start3.assign("month", tmp10);
-      if (index[3]) {
-        const start5 = parsingResult.start;
-        start5.assign("year", ENMonthNameParser(11352).parseYear(index[3]));
-      } else {
-        const start4 = parsingResult.start;
-        start4.imply("year", ENMonthNameParser(11354).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
-      }
-      return parsingResult;
-    }
-  }
-];
+const require = globalThis.__r;
 
-export default _createClass(ENMonthNameParser, items);
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  items = [new JPStandardParser.default(), , , , ];
+  const _default = new JPStandardParser.default();
+  items[1] = new regExp.default();
+  const _default1 = new regExp.default();
+  items[2] = new regExp.default();
+  const _default2 = new regExp.default();
+  items[3] = new regExp.default();
+  const _default3 = new regExp.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
+  return result;
+}
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  parsers.unshift(new module_11367.default());
+  return tmp;
+}
+const JPStandardParser = fn(JPStandardParser2);
+fn(_mod11366);
+const module_11367 = fn(_mod11367);
+fn(_mod11368);
+fn(_mod11369);
+fn(_mod11370);
+fn(_mod11371);
+fn(_mod11372);
+const regExp = fn(_mod11373);
+const _isNativeReflectConstruct = fn(_mod11337);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+parsers.unshift(new module_11367.default());
+const chrono = new require("module_11291").Chrono(configuration);
+const chrono1 = new require("module_11291").Chrono(createConfiguration(true));
+
+export function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+}
+export function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+}
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_11291").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

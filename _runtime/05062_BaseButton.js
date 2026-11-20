@@ -1,0 +1,37 @@
+// === Module 5062: BaseButton ===
+
+// Module 5062 (BaseButton)
+import _mod5063 from "module_5063" /* 5063 */;
+import GestureDetectorType from "GestureDetectorType" /* 5066 */;
+import _mod5167 from "module_5167" /* 5167 */;
+import _mod5176 from "module_5176" /* 5176 */;
+
+
+export const BaseButton = _mod5063.BaseButton;
+export const BorderlessButton = _mod5063.BorderlessButton;
+export const FlatList = _mod5063.FlatList;
+export const Pressable = _mod5063.Pressable;
+export const RawButton = _mod5063.RawButton;
+export const RectButton = _mod5063.RectButton;
+export const RefreshControl = _mod5063.RefreshControl;
+export const ScrollView = _mod5063.ScrollView;
+export const Switch = _mod5063.Switch;
+export const TextInput = _mod5063.TextInput;
+export const Touchable = _mod5063.Touchable;
+export const GestureDetector = GestureDetectorType.GestureDetector;
+export const GestureDetectorType = GestureDetectorType.GestureDetectorType;
+export const InterceptingGestureDetector = GestureDetectorType.InterceptingGestureDetector;
+export const VirtualGestureDetector = GestureDetectorType.VirtualGestureDetector;
+export const GestureStateManager = _mod5176.GestureStateManager;
+export const useCompetingGestures = _mod5167.useCompetingGestures;
+export const useExclusiveGestures = _mod5167.useExclusiveGestures;
+export const useFlingGesture = _mod5167.useFlingGesture;
+export const useHoverGesture = _mod5167.useHoverGesture;
+export const useLongPressGesture = _mod5167.useLongPressGesture;
+export const useManualGesture = _mod5167.useManualGesture;
+export const useNativeGesture = _mod5167.useNativeGesture;
+export const usePanGesture = _mod5167.usePanGesture;
+export const usePinchGesture = _mod5167.usePinchGesture;
+export const useRotationGesture = _mod5167.useRotationGesture;
+export const useSimultaneousGestures = _mod5167.useSimultaneousGestures;
+export const useTapGesture = _mod5167.useTapGesture;

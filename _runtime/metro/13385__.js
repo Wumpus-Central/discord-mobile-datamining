@@ -1,7 +1,7 @@
 // === Module 13385: ? ===
 
 // Module 13385
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "60410ef8275ee557c4c66e4f0d7dfc15", name: "BoostGemSlashIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 240, height: 130, scales: [2, 3], hash: "ddcb188db6ac661c6c9a0057112012b2", name: "no_mutual_servers_light", type: "png" });

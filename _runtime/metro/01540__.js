@@ -1,50 +1,18 @@
 // === Module 1540: ? ===
 
 // Module 1540
+import _mod1541 from "module_1541" /* 1541 */;
 import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
-export function createNavigatorFactory(AccessibleNativeStackNavigator) {
-  let Navigator = AccessibleNativeStackNavigator;
-  let str = AccessibleNativeStackNavigator.displayName;
-  if (str == null) {
-    str = AccessibleNativeStackNavigator.name;
+export function useRoute() {
+  const context = noop.useContext(_mod1541.NavigationRouteContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
+    throw error;
+  } else {
+    return context;
   }
-  if (str == null) {
-    str = "Navigator";
-  }
-  return function createNavigator(config) {
-    Navigator = config;
-    if (null != config) {
-      const obj3 = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
-      Navigator = Navigator(str[1]).createComponentForStaticNavigation(obj3, Navigator);
-      const obj4 = {
-        config,
-        with(arg0) {
-            config = arg0;
-            class WithComponent {
-              constructor() {
-                obj = { Navigator: closure_1 };
-                return closure_2.createElement(closure_0, obj);
-              }
-            }
-            WithComponent.displayName = "" + Navigator + "With";
-            return {
-              config,
-              getComponent() {
-                return WithComponent;
-              }
-            };
-          },
-        getComponent() {
-            return closure_1;
-          }
-      };
-      return obj4;
-    } else {
-      const obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group };
-      return obj;
-    }
-  };
 }

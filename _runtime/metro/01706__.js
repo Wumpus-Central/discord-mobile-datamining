@@ -1,84 +1,88 @@
 // === Module 1706: ? ===
 
 // Module 1706
-import _mod281 from "module_281" /* 281 */;
-import findHostInstance from "findHostInstance" /* 1707 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import threadsNative from "threadsNative" /* 1709 */;
+import NativeWorklets from "NativeWorklets" /* 1710 */;
+import bundleModeNative from "bundleModeNative" /* 1711 */;
+import registerCustomSerializable from "registerCustomSerializable" /* 1717 */;
+import _mod1718 from "module_1718" /* 1718 */;
+import _mod1719 from "module_1719" /* 1719 */;
+import _mod1720 from "module_1720" /* 1720 */;
+import runtimesNative from "runtimesNative" /* 1725 */;
+import toggleSlowAnimationsOnUIRuntime from "toggleSlowAnimationsOnUIRuntime" /* 1749 */;
+import callMicrotasks from "callMicrotasks" /* 1750 */;
+import DynamicFlags from "DynamicFlags" /* 1751 */;
+import _mod1752 from "module_1752" /* 1752 */;
+import _mod1753 from "module_1753" /* 1753 */;
+import _mod1754 from "module_1754" /* 1754 */;
+import initializersNative_mod from "module_1707" /* 1707 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getNodeFromPublicInstanceFallback(__internalInstanceHandle) {
-  let node;
-  if (__internalInstanceHandle != null) {
-    __internalInstanceHandle = __internalInstanceHandle.__internalInstanceHandle;
-    if (__internalInstanceHandle != null) {
-      const stateNode = __internalInstanceHandle.stateNode;
-      if (stateNode != null) {
-        node = stateNode.node;
-      }
-    }
-  }
-  return node;
-}
-let closure_3 = (function resolveGetNodeFromPublicInstance() {
-  try {
-    const tmp3 = _mod281;
-    let prop;
-    if (tmp3 != null) {
-      prop = tmp3.getNodeFromPublicInstance;
-    }
-    if (prop == null) {
-      let prop1;
-      if (tmp4 != null) {
-        if (tmp4.default != null) {
-          prop1 = _default.getNodeFromPublicInstance;
-        }
-      }
-      prop = prop1;
-    }
-    if (prop == null) {
-      prop = getNodeFromPublicInstanceFallback;
-    }
-    return prop;
-  } catch (err) {
-    return getNodeFromPublicInstanceFallback;
-  }
-})();
+globalThis._WORKLETS_BUNDLE_MODE_ENABLED = false;
+let initializersNative = initializersNative_mod;
+initializersNative = initializersNative.init();
 
-export function getShadowNodeWrapperFromRef(__internalInstanceHandle, findHostInstanceResult) {
-  let prop;
-  if (findHostInstanceResult != null) {
-    prop = findHostInstanceResult.__internalInstanceHandle;
-  }
-  if (!prop) {
-    let prop1;
-    if (__internalInstanceHandle != null) {
-      prop1 = __internalInstanceHandle.__internalInstanceHandle;
-    }
-    findHostInstanceResult = __internalInstanceHandle;
-    if (!prop1) {
-      const getNativeScrollRef = __internalInstanceHandle.getNativeScrollRef;
-      let nativeScrollRef;
-      if (getNativeScrollRef != null) {
-        nativeScrollRef = getNativeScrollRef();
-      }
-      findHostInstanceResult = nativeScrollRef;
-      if (!nativeScrollRef) {
-        if (__internalInstanceHandle._reactInternals) {
-          findHostInstanceResult = findHostInstance.findHostInstance(__internalInstanceHandle);
-        } else {
-          const _Error = Error;
-          const error = new Error("[Reanimated] Failed to find host instance for a ref.");
-          throw error;
-        }
-      }
-    }
-  }
-  const tmp13 = closure_3(findHostInstanceResult);
-  if (tmp13) {
-    return tmp13;
-  } else {
-    const _Error2 = Error;
-    const error1 = new Error("[Reanimated] Failed to find shadow node for a ref.");
-    throw error1;
-  }
-}
+export const isBundleModeEnabled = bundleModeNative.isBundleModeEnabled;
+export const toggleSlowAnimationsOnUIRuntime = toggleSlowAnimationsOnUIRuntime.toggleSlowAnimationsOnUIRuntime;
+export const callMicrotasks = callMicrotasks.callMicrotasks;
+export const isShareableRef = callMicrotasks.isShareableRef;
+export const makeShareable = callMicrotasks.makeShareable;
+export const makeShareableCloneOnUIRecursive = callMicrotasks.makeShareableCloneOnUIRecursive;
+export const makeShareableCloneRecursive = callMicrotasks.makeShareableCloneRecursive;
+export const shareableMappingCache = callMicrotasks.shareableMappingCache;
+export const getDynamicFeatureFlag = DynamicFlags.getDynamicFeatureFlag;
+export const getStaticFeatureFlag = DynamicFlags.getStaticFeatureFlag;
+export const setDynamicFeatureFlag = DynamicFlags.setDynamicFeatureFlag;
+export const isShareable = _mod1752.isShareable;
+export const isSynchronizable = _mod1720.isSynchronizable;
+export const createSerializable = registerCustomSerializable.createSerializable;
+export const createSerializableArray = registerCustomSerializable.createSerializableArray;
+export const createSerializableArrayBuffer = registerCustomSerializable.createSerializableArrayBuffer;
+export const createSerializableArrayBufferView = registerCustomSerializable.createSerializableArrayBufferView;
+export const createSerializableBigInt = registerCustomSerializable.createSerializableBigInt;
+export const createSerializableBoolean = registerCustomSerializable.createSerializableBoolean;
+export const createSerializableError = registerCustomSerializable.createSerializableError;
+export const createSerializableHostObject = registerCustomSerializable.createSerializableHostObject;
+export const createSerializableMap = registerCustomSerializable.createSerializableMap;
+export const createSerializableNull = registerCustomSerializable.createSerializableNull;
+export const createSerializableNumber = registerCustomSerializable.createSerializableNumber;
+export const createSerializableObject = registerCustomSerializable.createSerializableObject;
+export const createSerializableRegExp = registerCustomSerializable.createSerializableRegExp;
+export const createSerializableRemoteFunction = registerCustomSerializable.createSerializableRemoteFunction;
+export const createSerializableSet = registerCustomSerializable.createSerializableSet;
+export const createSerializableString = registerCustomSerializable.createSerializableString;
+export const createSerializableUndefined = registerCustomSerializable.createSerializableUndefined;
+export const createSerializableWorklet = registerCustomSerializable.createSerializableWorklet;
+export const isSerializableRef = registerCustomSerializable.isSerializableRef;
+export const registerCustomSerializable = registerCustomSerializable.registerCustomSerializable;
+export const serializableMappingCache = _mod1718.serializableMappingCache;
+export const createShareable = _mod1753.createShareable;
+export const createSynchronizable = _mod1754.createSynchronizable;
+export const getRuntimeKind = _mod1708.getRuntimeKind;
+export const isRNRuntime = _mod1708.isRNRuntime;
+export const isUIRuntime = _mod1708.isUIRuntime;
+export const isWorkerRuntime = _mod1708.isWorkerRuntime;
+export const isWorkletRuntime = _mod1708.isWorkletRuntime;
+export const RuntimeKind = _mod1708.RuntimeKind;
+export const createWorkletRuntime = runtimesNative.createWorkletRuntime;
+export const getUIRuntimeHolder = runtimesNative.getUIRuntimeHolder;
+export const getUISchedulerHolder = runtimesNative.getUISchedulerHolder;
+export const runOnRuntime = runtimesNative.runOnRuntime;
+export const runOnRuntimeAsync = runtimesNative.runOnRuntimeAsync;
+export const runOnRuntimeAsyncWithId = runtimesNative.runOnRuntimeAsyncWithId;
+export const runOnRuntimeSync = runtimesNative.runOnRuntimeSync;
+export const runOnRuntimeSyncWithId = runtimesNative.runOnRuntimeSyncWithId;
+export const scheduleOnRuntime = runtimesNative.scheduleOnRuntime;
+export const scheduleOnRuntimeWithId = runtimesNative.scheduleOnRuntimeWithId;
+export const UIRuntimeId = runtimesNative.UIRuntimeId;
+export const executeOnUIRuntimeSync = threadsNative.executeOnUIRuntimeSync;
+export const getCurrentThreadId = threadsNative.getCurrentThreadId;
+export const runOnJS = threadsNative.runOnJS;
+export const runOnRNSync = threadsNative.runOnRNSync;
+export const runOnUI = threadsNative.runOnUI;
+export const runOnUIAsync = threadsNative.runOnUIAsync;
+export const runOnUISync = threadsNative.runOnUISync;
+export const scheduleOnRN = threadsNative.scheduleOnRN;
+export const scheduleOnUI = threadsNative.scheduleOnUI;
+export const isWorkletFunction = _mod1719.isWorkletFunction;
+export const WorkletsModule = NativeWorklets.WorkletsModule;

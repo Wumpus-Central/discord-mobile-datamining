@@ -1,7 +1,7 @@
 // === Module 10939: ? ===
 
 // Module 10939
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 195, height: 92, scales: [1, 2, 3], hash: "6d3bdfffed77899f44fd075e4ef2e92a", name: "krisp_logo_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 20, height: 20, scales: [2, 3], hash: "40d8dc40d3509844c13de0abfc4c355d", name: "camera_swap", type: "png" });

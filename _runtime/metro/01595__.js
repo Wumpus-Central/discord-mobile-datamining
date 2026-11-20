@@ -1,15 +1,18 @@
 // === Module 1595: ? ===
 
 // Module 1595
-import NOT_INITIALIZED_ERROR from "NOT_INITIALIZED_ERROR" /* 1528 */;
+import PreventRemoveContext from "PreventRemoveContext" /* 1570 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export function useNavigationContainerRef() {
-  const ref = noop.useRef(null);
-  if (null == ref.current) {
-    ref.current = NOT_INITIALIZED_ERROR.createNavigationContainerRef();
+export function usePreventRemoveContext() {
+  const context = noop.useContext(PreventRemoveContext.PreventRemoveContext);
+  if (null == context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the prevent remove context. Is your component inside NavigationContent?");
+    throw error;
+  } else {
+    return context;
   }
-  return ref.current;
 }

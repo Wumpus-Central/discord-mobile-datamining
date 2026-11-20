@@ -1,7 +1,7 @@
 // === Module 7199: ? ===
 
 // Module 7199
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 375, height: 413, scales: [2, 3], hash: "9dd921dedb90562e62ae59d45a63666c", name: "register-background-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 330, height: 717, scales: [1], hash: "b1362f1f417418db6366da6b57e07d77", name: "login-bg-tall", type: "webp" });

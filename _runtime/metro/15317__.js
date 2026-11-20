@@ -1,7 +1,22 @@
 // === Module 15317: ? ===
 
 // Module 15317
-import registerAsset from "module_1119" /* 1119 */;
+const weakMap = new WeakMap();
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "89ef758cad16b0f89bf10bf57ab078db", name: "StatusDND", type: "png" });
+export default function getInternalSlots(arg0, arg1) {
+  items = arg1;
+  if (undefined === arg1) {
+    items = [];
+  }
+  value = weakMap.get(arg0);
+  if (!value) {
+    const _Object = Object;
+    const obj2 = Object.create(null, items.reduce((acc, item) => {
+      acc[item] = { enumerable: false, writable: true, configurable: true };
+      return acc;
+    }, {}));
+    const result = weakMap.set(arg0, obj2);
+    value = obj2;
+  }
+  return value;
+};

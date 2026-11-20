@@ -1,7 +1,7 @@
 // === Module 2392: ? ===
 
 // Module 2392
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/checkout/messages", scales: [1], hash: "1611897b344571726ff320dc6b32cd1c", name: "GiftCard.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/checkout/messages", scales: [1], hash: "3009b1746fe9c2e1e2935c2a9cae0bc9", name: "CheckoutUntranslated.compiled.messages", type: "jsona" });

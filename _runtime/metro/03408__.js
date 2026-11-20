@@ -1,7 +1,7 @@
 // === Module 3408: ? ===
 
 // Module 3408
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "15f2e88af9d88c79f3708083bf2545ac", name: "bg.messages.15f2e88af9d88c79f3708083bf2545ac.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_assurance/age_notice/intl", scales: [1], hash: "ed713f3e131c3544a2ab6d91af973833", name: "AgeNotice.compiled.messages", type: "jsona" });

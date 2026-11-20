@@ -1,14 +1,7 @@
 // === Module 15499: ? ===
 
 // Module 15499
-import _mod15500 from "module_15500" /* 15500 */;
+import replaceByteInByteSequence from "replaceByteInByteSequence" /* 15487 */;
 
 
-export default (arg0) => {
-  const tmp = _mod15500(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export const URLSearchParams = replaceByteInByteSequence.URLSearchParams;

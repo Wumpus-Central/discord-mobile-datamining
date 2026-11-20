@@ -1,28 +1,11 @@
 // === Module 1902: ? ===
 
 // Module 1902
-import _mod19 from "module_19" /* 19 */;
-import WorkletEventHandler from "WorkletEventHandler" /* 1866 */;
+import useComposedEventHandlerCommon from "useComposedEventHandlerCommon" /* 1903 */;
 
-const useRef = _mod19.useRef;
+require = arg1;
+const dependencyMap = arg6;
 
-export function useEvent(FastListTsx2) {
-  if (items === undefined) {
-    items = [];
-  }
-  let flag = doDependenciesDiffer;
-  if (doDependenciesDiffer === undefined) {
-    flag = false;
-  }
-  const tmp = useRef(null);
-  if (null === tmp.current) {
-    const workletEventHandler1 = new WorkletEventHandler.WorkletEventHandler(FastListTsx2, items);
-    const obj2 = { workletEventHandler: workletEventHandler1 };
-    tmp.current = obj2;
-  } else if (flag) {
-    tmp.current.workletEventHandler.updateEventHandler(FastListTsx2, items);
-    const obj = { workletEventHandler: tmp.current.workletEventHandler };
-    tmp.current = obj;
-  }
-  return tmp.current;
+export function useComposedEventHandler(tmp8Result4) {
+  return useComposedEventHandlerCommon.useComposedEventHandlerBase(tmp8Result4, undefined);
 }

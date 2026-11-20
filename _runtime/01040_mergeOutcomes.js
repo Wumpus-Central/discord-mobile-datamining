@@ -1,0 +1,20 @@
+// === Module 1040: mergeOutcomes ===
+
+// Module 1040 (mergeOutcomes)
+
+export function mergeOutcomes() {
+  items = [...arguments];
+  const map = new Map();
+  function process(reason) {
+    const combined = "" + reason.reason + ":" + reason.category;
+    value = map.get(combined);
+    if (value) {
+      value.quantity = value.quantity + reason.quantity;
+    } else {
+      const result = map.set(combined, reason);
+    }
+  }
+  const item = items.forEach((arr) => arr.forEach(process));
+  const items1 = [...map.values()];
+  return items1;
+}

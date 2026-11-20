@@ -37,11 +37,11 @@ export function useCarouselController(size) {
   const memo = noop.useMemo(() => ({ length: _undefined3, disable: !_undefined3, originalLength: _undefined3 }), items);
   c7 = memo;
   let obj = require("module_9400");
-  const sharedValue = require("module_1655").useSharedValue(num);
+  const sharedValue = require("module_1653").useSharedValue(num);
   c8 = sharedValue;
   const tmp5 = useRef(num);
   let items1 = [handlerOffset, memo, size, loop];
-  let obj3 = require("module_1655");
+  let obj3 = require("module_1653");
   const callback = noop.useCallback(() => {
     if (c2) {
       const _Math2 = Math;
@@ -90,7 +90,7 @@ export function useCarouselController(size) {
   const items4 = [
     c5,
     sharedValue,
-    require("module_1655").runOnJS,
+    require("module_1653").runOnJS,
     function setSharedIndex(current) {
       c9.current = current;
     }
@@ -106,7 +106,7 @@ export function useCarouselController(size) {
   pnpm_useCarouselControllerTsx2.__workletHash = 10044128116354;
   pnpm_useCarouselControllerTsx2.__initData = tmp16;
   const items6 = [tmp6, tmp5, size, memo, sharedValue, loop, autoFillData, handlerOffset];
-  const animatedReaction = require("module_1655").useAnimatedReaction(pnpm_useCarouselControllerTsx1, pnpm_useCarouselControllerTsx2, items6);
+  const animatedReaction = require("module_1653").useAnimatedReaction(pnpm_useCarouselControllerTsx1, pnpm_useCarouselControllerTsx2, items6);
   const items7 = [sharedValue, autoFillData, memo, loop];
   const callback1 = obj2.useCallback(() => SINGLE_ITEM.computedRealIndexWithAutoFillData({ index: _undefined7.value, dataLength: _undefined6.originalLength, loop, autoFillData: _undefined5 }), items7);
   const items8 = [memo];
@@ -125,7 +125,7 @@ export function useCarouselController(size) {
       onScrollStart();
     }
   }, items10);
-  const items11 = [c7, c6, require("module_1655").runOnJS, callback3, duration, require("DATA_LENGTH").Easing, require("dealWithAnimation").dealWithAnimation, withAnimation];
+  const items11 = [c7, c6, require("module_1653").runOnJS, callback3, duration, require("DATA_LENGTH").Easing, require("dealWithAnimation").dealWithAnimation, withAnimation];
   [tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32] = items11;
   function pnpm_useCarouselControllerTsx4(arg0, arg1) {
     items = [c0, c1, c2, arg1];

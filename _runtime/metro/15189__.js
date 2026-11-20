@@ -1,43 +1,5 @@
 // === Module 15189: ? ===
 
 // Module 15189
-import _mod518 from "module_518" /* 518 */;
-import baseKeys from "baseKeys" /* 544 */;
-import _mod545 from "module_545" /* 545 */;
-import _mod633 from "module_633" /* 633 */;
 
-
-export default function isEmpty(size) {
-  if (null == size) {
-    return true;
-  } else {
-    if (_mod518(size)) {
-      return !size.length;
-    }
-    const tmp = _mod633(size);
-    if ("[object Map]" != tmp) {
-      if ("[object Set]" != tmp) {
-        if (_mod545(size)) {
-          return !baseKeys(size).length;
-        } else {
-          for (const key10021 in arg0) {
-            let call = hasOwnProperty.call;
-            if (typeof call === "unknown") {
-              let callResult = hasOwnProperty(key10021);
-            } else {
-              callResult = call(arg0, key10021);
-            }
-            if (!callResult) {
-              continue;
-            } else {
-              let flag = false;
-              return false;
-            }
-          }
-          return true;
-        }
-      }
-    }
-    return !size.size;
-  }
-};
+export default { MAX_LENGTH: 256, MAX_SAFE_COMPONENT_LENGTH: 16, MAX_SAFE_BUILD_LENGTH: 250, MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER || 9007199254740991, RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"], SEMVER_SPEC_VERSION: "2.0.0", FLAG_INCLUDE_PRERELEASE: 1, FLAG_LOOSE: 2 };

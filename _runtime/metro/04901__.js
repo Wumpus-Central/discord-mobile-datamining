@@ -1,18 +1,18 @@
 // === Module 4901: ? ===
 
 // Module 4901
-import c from "c" /* 4884 */;
-import _mod4897 from "module_4897" /* 4897 */;
+import c from "c" /* 4886 */;
+import _mod4899 from "module_4899" /* 4899 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getStringProperty(stringProperty, arg1) {
+  return stringProperty.stringProperty(arg1);
 }
 
-export function useRiveEnum(device, instance) {
+export function useRiveString(LVL, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4897.useRiveProperty(instance, device, getEnumProperty);
+  [tmp3, tmp4, tmp5] = _mod4899.useRiveProperty(instance, LVL, getStringProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

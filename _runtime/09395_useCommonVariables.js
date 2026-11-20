@@ -1,7 +1,7 @@
 // === Module 9395: useCommonVariables ===
 
 // Module 9395 (useCommonVariables)
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 import handlerOffsetDirection from "handlerOffsetDirection" /* 9396 */;
 import omitZero from "omitZero" /* 9397 */;
 import computeOffsetIfSizeChanged from "computeOffsetIfSizeChanged" /* 9398 */;
@@ -22,11 +22,11 @@ export function useCommonVariables(initProps) {
   if (defaultScrollOffsetValue == null) {
     defaultScrollOffsetValue = obj.useSharedValue(tmp);
   }
-  obj = _mod1655;
-  const sharedValue = _mod1655.useSharedValue(dataLength);
-  const tmp2Result = _mod1655;
-  const sharedValue1 = _mod1655.useSharedValue(width);
-  const tmp2Result4 = _mod1655;
+  obj = _mod1653;
+  const sharedValue = _mod1653.useSharedValue(dataLength);
+  const tmp2Result = _mod1653;
+  const sharedValue1 = _mod1653.useSharedValue(width);
+  const tmp2Result4 = _mod1653;
   items = [_undefined3, sharedValue, dataLength, loop];
   [tmp6, tmp7, tmp8, tmp9] = items;
   function pnpm_useCommonVariablesTs1() {
@@ -60,8 +60,8 @@ export function useCommonVariables(initProps) {
   pnpm_useCommonVariablesTs2.__workletHash = 11532323410777;
   pnpm_useCommonVariablesTs2.__initData = tmp10;
   const items4 = [dataLength, loop];
-  const animatedReaction = _mod1655.useAnimatedReaction(pnpm_useCommonVariablesTs1, pnpm_useCommonVariablesTs2, items4);
-  const tmp2Result5 = _mod1655;
+  const animatedReaction = _mod1653.useAnimatedReaction(pnpm_useCommonVariablesTs1, pnpm_useCommonVariablesTs2, items4);
+  const tmp2Result5 = _mod1653;
   const items5 = [closure_4, sharedValue1, width];
   [tmp16, tmp17, tmp18] = items5;
   function pnpm_useCommonVariablesTs3() {
@@ -92,6 +92,6 @@ export function useCommonVariables(initProps) {
   pnpm_useCommonVariablesTs4.__workletHash = 5882991041416;
   pnpm_useCommonVariablesTs4.__initData = tmp19;
   const items9 = [width];
-  const animatedReaction1 = _mod1655.useAnimatedReaction(pnpm_useCommonVariablesTs3, pnpm_useCommonVariablesTs4, items9);
+  const animatedReaction1 = _mod1653.useAnimatedReaction(pnpm_useCommonVariablesTs3, pnpm_useCommonVariablesTs4, items9);
   return { size: width, validLength: dataLength - 1, handlerOffset: defaultScrollOffsetValue };
 }

@@ -1,11 +1,15 @@
 // === Module 1904: ? ===
 
 // Module 1904
-import useComposedEventHandlerCommon from "useComposedEventHandlerCommon" /* 1905 */;
+import useDerivedValueCommon from "useDerivedValueCommon" /* 1905 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function useComposedEventHandler(tmp8Result4) {
-  return useComposedEventHandlerCommon.useComposedEventHandlerBase(tmp8Result4, undefined);
+export function useDerivedValue(pnpm_indexTsx1, items2) {
+  let __closure = pnpm_indexTsx1.__closure;
+  if (__closure == null) {
+    __closure = [];
+  }
+  return useDerivedValueCommon.useDerivedValueBase(pnpm_indexTsx1, undefined, __closure);
 }

@@ -1,21 +1,14 @@
 // === Module 15477: ? ===
 
 // Module 15477
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
+import _mod15415 from "module_15415" /* 15415 */;
+import all from "module_15441" /* 15441 */;
+
+let _moduleResult = all(_mod15415.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod15415.WeakMap));
+  const obj = /native code/;
 }
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+
+export default _moduleResult;

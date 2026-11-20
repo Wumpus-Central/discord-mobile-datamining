@@ -1,7 +1,7 @@
 // === Module 10838: ? ===
 
 // Module 10838
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e535ea871b8155df08d1e92a6b532c6c", name: "GroupArrowDownIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "bed3256ccaf0e78cd27d637be4c78d04", name: "ic_stop_stream_24px", type: "png" });

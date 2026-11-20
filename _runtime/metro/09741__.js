@@ -125,33 +125,33 @@ export function prependChild(parent, prev) {
     prev.next = null;
   }
 }
-export function prepend(parent, next) {
-  if (next.prev) {
-    next.prev.next = next.next;
+export function prepend(parent, prev) {
+  if (prev.prev) {
+    prev.prev.next = prev.next;
   }
-  if (next.next) {
-    next.next.prev = next.prev;
+  if (prev.next) {
+    prev.next.prev = prev.prev;
   }
-  if (next.parent) {
-    const children = next.parent.children;
-    const lastIndexOfResult = children.lastIndexOf(next);
+  if (prev.parent) {
+    const children = prev.parent.children;
+    const lastIndexOfResult = children.lastIndexOf(prev);
     if (lastIndexOfResult >= 0) {
       children.splice(lastIndexOfResult, 1);
     }
   }
-  next.next = null;
-  next.prev = null;
-  next.parent = null;
+  prev.next = null;
+  prev.prev = null;
+  prev.parent = null;
   parent = parent.parent;
   if (parent) {
     const children1 = parent.children;
-    children1.splice(children1.indexOf(parent), 0, next);
+    children1.splice(children1.indexOf(parent), 0, prev);
   }
   if (parent.prev) {
-    parent.prev.next = next;
+    parent.prev.next = prev;
   }
-  next.parent = parent;
-  next.prev = parent.prev;
-  next.next = parent;
-  parent.prev = next;
+  prev.parent = parent;
+  prev.prev = parent.prev;
+  prev.next = parent;
+  parent.prev = prev;
 }

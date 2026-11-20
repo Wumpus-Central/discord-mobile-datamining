@@ -1,7 +1,7 @@
 // === Module 7519: ? ===
 
 // Module 7519
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f5152f59510615cd9a196a52f24801ee", name: "ThreadIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8aacc7898585bec38aca6cf682c01533", name: "FolderIcon", type: "png" });

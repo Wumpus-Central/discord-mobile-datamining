@@ -1,40 +1,89 @@
 // === Module 11468: ? ===
 
 // Module 11468
-const exports = arg5;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 11295 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 11302 */;
+import _mod11464 from "module_11464" /* 11464 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-export function zhStringToNumber(arg0) {
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < arg0.length) {
-    while ("\u5341" !== arg0[num]) {
-      let sum = num2 + exports.NUMBER[tmp];
-      num = num + 1;
-      num2 = sum;
-      num3 = sum;
-    }
-    if (0 === num2) {
-      let result = exports.NUMBER[tmp];
+const ENCasualYearMonthDayParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      result = num2 * exports.NUMBER[tmp];
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod11464.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
+class ENCasualYearMonthDayParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENCasualYearMonthDayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENCasualYearMonthDayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(arg1[3]);
+      } else {
+        parsed = ENCasualYearMonthDayParser(11464).MONTH_DICTIONARY[str.toLowerCase(str)];
+      }
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          const _parseInt2 = parseInt;
+          const date = { day: null, month: null, year: null };
+          const _parseInt3 = parseInt;
+          const parsed1 = parseInt(arg1[1]);
+          date.day = parseInt(arg1[4]);
+          date.month = parsed;
+          date.year = parsed1;
+          return date;
+        }
+      }
+      return null;
     }
   }
-  return num3;
-}
-export function zhStringToYear(arg0) {
-  let num = 0;
-  let str = "";
-  let str2 = "";
-  if (0 < arg0.length) {
-    do {
-      str = `${exports.NUMBER[arg0[num]]}`;
-      num = num + 1;
-      str2 = str;
-      length = arg0.length;
-    } while (num < length);
-  }
-  return parseInt(str2);
-}
-export const NUMBER = { "零": 0, "一": 1, "二": 2, "兩": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10, "廿": 20, "卅": 30 };
-export const WEEKDAY_OFFSET = { "天": 0, "日": 0, "一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6 };
+];
+
+export default _createClass(ENCasualYearMonthDayParser, items);

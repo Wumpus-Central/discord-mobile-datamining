@@ -1,49 +1,11 @@
 // === Module 15418: ? ===
 
 // Module 15418
-import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 15419 */;
-import compareKV from "compareKV" /* 15420 */;
-import likelySubtags from "likelySubtags" /* 15423 */;
-import _mod15424 from "module_15424" /* 15424 */;
-import e_mod from "e" /* 1159 */;
+import _mod15419 from "module_15419" /* 15419 */;
 
-const require = globalThis.__r;
 
-let e = e_mod;
-e.__exportStar(emitUnicodeLanguageId, exports);
-let e = e_mod;
-e.__exportStar(_mod15424, exports);
-let e = e_mod;
-e.__exportStar(likelySubtags, exports);
-
-export function getCanonicalLocales(items) {
-  if (undefined === items) {
-    items = [];
-  } else {
-    let arr3 = items;
-    if (typeof items === "string") {
-      const items1 = [items];
-      arr3 = items1;
-    }
-    const items2 = [];
-    let num3 = 0;
-    items = items2;
-    if (0 < arr3.length) {
-      do {
-        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_15422").parseUnicodeLocaleId(arr3[num3])));
-        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
-          let arr = items2.push(emitUnicodeLocaleIdResult);
-        }
-        num3 = num3 + 1;
-        items = items2;
-      } while (num3 < arr3.length);
-    }
+export default !_mod15419(() => 7 !== Object.defineProperty({}, 1, {
+  get() {
+    return 7;
   }
-  return items;
-}
-export const isStructurallyValidLanguageTag = require("module_15422").isStructurallyValidLanguageTag;
-export const isUnicodeLanguageSubtag = require("module_15422").isUnicodeLanguageSubtag;
-export const isUnicodeRegionSubtag = require("module_15422").isUnicodeRegionSubtag;
-export const isUnicodeScriptSubtag = require("module_15422").isUnicodeScriptSubtag;
-export const parseUnicodeLanguageId = require("module_15422").parseUnicodeLanguageId;
-export const parseUnicodeLocaleId = require("module_15422").parseUnicodeLocaleId;
+})[1]);

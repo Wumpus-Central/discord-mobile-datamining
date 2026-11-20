@@ -7,7 +7,7 @@ import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let ComplexAnimationBuilder = fn;
+const AnimatedComponent = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,267 +27,265 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class AnimationConfigBuilder {
-  constructor() {
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+class AnimatedComponent {
+  constructor(arg0, arg1) {
     self = this;
-    tmp = c2(this, ComplexAnimationBuilder);
+    tmp = c2(this, AnimatedComponent);
+    items = [];
+    items[0] = fn;
     tmp2 = closure_4;
-    obj = closure_4(ComplexAnimationBuilder);
+    obj = closure_4(AnimatedComponent);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    if (metroImportDefault()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result._cssStyle = {};
+    tmp3Result._componentRef = null;
+    tmp3Result._rawComponentRef = null;
+    tmp3Result._componentDOMRef = null;
+    tmp3Result._willUnmount = false;
+    tmp3Result._setComponentRef = (_rawComponentRef) => {
+      const forwardedRef = props.props.forwardedRef;
+      if (_rawComponentRef) {
+        props._forwardedRefCleanup = AnimatedComponent(1878).assignRef(forwardedRef, _rawComponentRef);
+        if (_rawComponentRef !== props._rawComponentRef) {
+          props._rawComponentRef = _rawComponentRef;
+          const _resolveComponentRefResult = props._resolveComponentRef(_rawComponentRef);
+          if (_resolveComponentRefResult !== props._componentRef) {
+            props._updateComponentRef(_resolveComponentRefResult);
+          }
+        }
+        props._onSetLocalRef();
+        const obj3 = AnimatedComponent(1878);
+      } else if (props._forwardedRefCleanup) {
+        props._forwardedRefCleanup();
+        props._forwardedRefCleanup = undefined;
+      } else {
+        AnimatedComponent(1878).assignRef(forwardedRef, null);
+        const obj2 = AnimatedComponent(1878);
+      }
+    };
+    tmp3Result._resolveComponentRef = (getAnimatableRef) => {
+      let animatableRef = getAnimatableRef;
+      if (getAnimatableRef) {
+        animatableRef = getAnimatableRef;
+        if (getAnimatableRef.getAnimatableRef) {
+          animatableRef = getAnimatableRef.getAnimatableRef();
+        }
+      }
+      return animatableRef;
+    };
+    tmp3Result.ChildComponent = global;
+    return tmp3Result;
   }
 }
-ComplexAnimationBuilder = AnimationConfigBuilder;
-_inherits(AnimationConfigBuilder, fn(1876).BaseAnimationBuilder);
+_inherits(AnimatedComponent, fn(19).Component);
 const entry = {
-  key: "easing",
-  value: function easing(easingV) {
-    this.easingV = easingV;
-    return this;
+  key: "getComponentViewTag",
+  value: function getComponentViewTag() {
+    return this._getViewInfo().viewTag;
   }
 };
 let items = [
   entry,
   {
-    key: "rotate",
-    value: function rotate(rotateV) {
-      this.rotateV = rotateV;
-      return this;
+    key: "_onSetLocalRef",
+    value: function _onSetLocalRef() {
+
     }
   },
   {
-    key: "springify",
-    value: function springify(durationV) {
-      return { durationV, type: ComplexAnimationBuilder(1842).withSpring };
-    }
-  },
-  {
-    key: "dampingRatio",
-    value: function dampingRatio(dampingRatioV) {
-      this.dampingRatioV = dampingRatioV;
-      return this;
-    }
-  },
-  {
-    key: "damping",
-    value: function damping(dampingV) {
-      this.dampingV = dampingV;
-      return this;
-    }
-  },
-  {
-    key: "mass",
-    value: function mass(massV) {
-      this.massV = massV;
-      return this;
-    }
-  },
-  {
-    key: "stiffness",
-    value: function stiffness(stiffnessV) {
-      this.stiffnessV = stiffnessV;
-      return this;
-    }
-  },
-  {
-    key: "overshootClamping",
-    value: function overshootClamping(overshootClampingV) {
-      this.overshootClampingV = overshootClampingV;
-      return this;
-    }
-  },
-  {
-    key: "restDisplacementThreshold",
-    value: function restDisplacementThreshold(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "restSpeedThreshold",
-    value: function restSpeedThreshold(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "energyThreshold",
-    value: function energyThreshold(energyThresholdV) {
-      this.energyThresholdV = energyThresholdV;
-      return this;
-    }
-  },
-  {
-    key: "getAnimationAndConfig",
-    value: function getAnimationAndConfig() {
+    key: "_getViewInfo",
+    value: function _getViewInfo() {
       const self = this;
-      ({ easingV, durationV, rotateV } = this);
-      if (this.type) {
-        let withTiming = self.type;
+      if (undefined === this._viewInfo) {
+        self._viewInfo = self._resolveViewInfo();
+      }
+      return self._viewInfo;
+    }
+  },
+  {
+    key: "_resolveViewInfo",
+    value: function _resolveViewInfo() {
+      const findHostInstanceResult = AnimatedComponent(1705).findHostInstance(this);
+      if (findHostInstanceResult) {
+        const viewInfo = AnimatedComponent(1879).getViewInfo(findHostInstanceResult);
+        let num = viewInfo.viewTag;
+        if (num == null) {
+          num = -1;
+        }
+        const obj2 = { viewTag: num, shadowNodeWrapper: null, reactViewName: null };
+        const tmpResult = AnimatedComponent(1879);
+        obj2.shadowNodeWrapper = AnimatedComponent(1704).getShadowNodeWrapperFromRef(this, findHostInstanceResult);
+        obj2.reactViewName = viewInfo.reactViewName;
+        return obj2;
       } else {
-        withTiming = ComplexAnimationBuilder(1842).withTiming;
+        const _Error = Error;
+        const error = new Error("[Reanimated] Cannot find host instance for this component. Maybe it renders nothing?");
+        throw error;
       }
-      const obj = {};
-      ({ dampingV, dampingRatioV, massV, stiffnessV, overshootClampingV, energyThresholdV } = self);
-      if (withTiming === ComplexAnimationBuilder(1842).withTiming) {
-        if (easingV) {
-          obj.easing = easingV;
+      const obj = AnimatedComponent(1705);
+    }
+  },
+  {
+    key: "_refreshComponentRef",
+    value: function _refreshComponentRef() {
+      const self = this;
+      const _rawComponentRef = this._rawComponentRef;
+      let getAnimatableRef;
+      if (_rawComponentRef != null) {
+        getAnimatableRef = _rawComponentRef.getAnimatableRef;
+      }
+      if (getAnimatableRef) {
+        const _resolveComponentRefResult = self._resolveComponentRef(_rawComponentRef);
+        if (_resolveComponentRefResult !== self._componentRef) {
+          self._updateComponentRef(_resolveComponentRefResult);
         }
       }
-      items = [{ variableName: "damping", value: dampingV }, { variableName: "dampingRatio", value: dampingRatioV }, { variableName: "mass", value: massV }, { variableName: "stiffness", value: stiffnessV }, { variableName: "overshootClamping", value: overshootClampingV }, { variableName: "energyThreshold", value: energyThresholdV }, { variableName: "duration", value: durationV }, { variableName: "rotate", value: rotateV }];
-      const item = items.forEach((value) => {
-        value = value.value;
-        if (value) {
-          obj[tmp] = value;
+    }
+  },
+  {
+    key: "_updateComponentRef",
+    value: function _updateComponentRef(_resolveComponentRefResult) {
+      const self = this;
+      const _viewInfo = this._viewInfo;
+      this._componentRef = _resolveComponentRefResult;
+      if (undefined !== _viewInfo) {
+        const _resolveViewInfoResult = self._resolveViewInfo();
+        if (_resolveViewInfoResult.viewTag !== _viewInfo.viewTag) {
+          self._detachHostBindings(_viewInfo);
+          if (_viewInfo.shadowNodeWrapper) {
+            AnimatedComponent(1656).markNodeAsRemovable(shadowNodeWrapper);
+            const obj = AnimatedComponent(1656);
+          }
+          self._viewInfo = _resolveViewInfoResult;
+          if (self._CSSManager) {
+            const _CSSManager = self._CSSManager;
+            _CSSManager.unmountCleanup();
+            self._CSSManager = self._createCSSManager();
+            const _CSSManager2 = self._CSSManager;
+            _CSSManager2.update(self._cssStyle, self.props);
+          }
+          self._attachHostBindings();
+        } else {
+          self._viewInfo = _resolveViewInfoResult;
         }
-      });
-      const items1 = [withTiming, obj];
-      return items1;
-    }
-  }
-];
-const entry1 = {
-  key: "easing",
-  value: function easing(arg0) {
-    const instance = this.createInstance();
-    return instance.easing(arg0);
-  }
-};
-let items1 = [
-  entry1,
-  {
-    key: "rotate",
-    value: function rotate(arg0) {
-      const instance = this.createInstance();
-      return instance.rotate(arg0);
+      }
     }
   },
   {
-    key: "springify",
-    value: function springify(arg0) {
-      const instance = this.createInstance();
-      return instance.springify(arg0);
+    key: "_detachHostBindings",
+    value: function _detachHostBindings(arg0) {
+
     }
   },
   {
-    key: "dampingRatio",
-    value: function dampingRatio(arg0) {
-      const instance = this.createInstance();
-      return instance.dampingRatio(arg0);
+    key: "_attachHostBindings",
+    value: function _attachHostBindings() {
+
     }
   },
   {
-    key: "damping",
-    value: function damping(arg0) {
-      const instance = this.createInstance();
-      return instance.damping(arg0);
+    key: "_createCSSManager",
+    value: function _createCSSManager() {
+      let name = this.ChildComponent.displayName;
+      if (name == null) {
+        name = this.ChildComponent.name;
+      }
+      const cSSManager = new AnimatedComponent(1880).CSSManager(this._getViewInfo(), name);
+      return cSSManager;
     }
   },
   {
-    key: "mass",
-    value: function mass(arg0) {
-      const instance = this.createInstance();
-      return instance.mass(arg0);
+    key: "_updateStyles",
+    value: function _updateStyles(style) {
+      let flattenResult = hasOwnProperty.flatten(style.style);
+      if (flattenResult == null) {
+        flattenResult = {};
+      }
+      this._cssStyle = flattenResult;
     }
   },
   {
-    key: "stiffness",
-    value: function stiffness(arg0) {
-      const instance = this.createInstance();
-      return instance.stiffness(arg0);
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      const self = this;
+      this._updateStyles(this.props);
+      const _viewInfo = this._viewInfo;
+      let viewTag;
+      if (_viewInfo != null) {
+        viewTag = _viewInfo.viewTag;
+      }
+      if (tmp3) {
+        const result = AnimatedComponent(1656).unmarkNodeAsRemovable(viewTag);
+        const obj = AnimatedComponent(1656);
+      }
+      if (self._CSSManager == null) {
+        self._CSSManager = self._createCSSManager();
+      }
+      const _CSSManager = self._CSSManager;
+      if (_CSSManager != null) {
+        _CSSManager.update(self._cssStyle, self.props);
+      }
+      self._willUnmount = false;
+      tmp3 = self._willUnmount && typeof viewTag === "number";
     }
   },
   {
-    key: "overshootClamping",
-    value: function overshootClamping(arg0) {
-      const instance = this.createInstance();
-      return instance.overshootClamping(arg0);
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const self = this;
+      if (this._CSSManager) {
+        const _CSSManager = self._CSSManager;
+        _CSSManager.unmountCleanup();
+      }
+      const _viewInfo = self._viewInfo;
+      let shadowNodeWrapper;
+      if (_viewInfo != null) {
+        shadowNodeWrapper = _viewInfo.shadowNodeWrapper;
+      }
+      if (shadowNodeWrapper) {
+        AnimatedComponent(1656).markNodeAsRemovable(shadowNodeWrapper);
+        const obj = AnimatedComponent(1656);
+      }
+      self._willUnmount = true;
     }
   },
   {
-    key: "restDisplacementThreshold",
-    value: function restDisplacementThreshold(arg0) {
-      return this.createInstance();
+    key: "shouldComponentUpdate",
+    value: function shouldComponentUpdate(arg0) {
+      const self = this;
+      this._updateStyles(arg0);
+      if (this._CSSManager) {
+        const _CSSManager = self._CSSManager;
+        _CSSManager.update(self._cssStyle, arg0);
+      }
+      return true;
     }
   },
   {
-    key: "restSpeedThreshold",
-    value: function restSpeedThreshold(arg0) {
-      return this.createInstance();
-    }
-  },
-  {
-    key: "energyThreshold",
-    value: function energyThreshold(arg0) {
-      const instance = this.createInstance();
-      return instance.energyThreshold(arg0);
-    }
-  }
-];
-const importDefaultResultResult = _createClass(AnimationConfigBuilder, items, items1);
-class ComplexAnimationBuilder {
-  constructor() {
-    self = this;
-    tmp = c2(this, ComplexAnimationBuilder);
-    tmp2 = closure_4;
-    obj = closure_4(ComplexAnimationBuilder);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ComplexAnimationBuilder, importDefaultResultResult);
-const entry2 = {
-  key: "withInitialValues",
-  value: function withInitialValues(initialValues) {
-    this.initialValues = initialValues;
-    return this;
-  }
-};
-const items2 = [
-  entry2,
-  {
-    key: "withTargetValues",
-    value: function withTargetValues(targetValues) {
-      this.targetValues = targetValues;
-      return this;
-    }
-  }
-];
-const entry3 = {
-  key: "withInitialValues",
-  value: function withInitialValues(arg0) {
-    const instance = this.createInstance();
-    return instance.withInitialValues(arg0);
-  }
-};
-const items3 = [
-  entry3,
-  {
-    key: "withTargetValues",
-    value: function withTargetValues(arg0) {
-      const instance = this.createInstance();
-      return instance.withTargetValues(arg0);
+    key: "render",
+    value: function render(props) {
+      const self = this;
+      if (props == null) {
+        props = self.props;
+      }
+      const obj2 = {};
+      const merged = Object.assign(AnimatedComponent(1881).filterCSSProps(props));
+      obj2.collapsable = false;
+      obj2.ref = self._setComponentRef;
+      return jsx(this.ChildComponent, {});
     }
   }
 ];
 
-export const AnimationConfigBuilder = importDefaultResultResult;
-export const ComplexAnimationBuilder = _createClass(ComplexAnimationBuilder, items2, items3);
+export default _createClass(AnimatedComponent, items);

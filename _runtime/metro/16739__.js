@@ -1,7 +1,7 @@
 // === Module 16739: ? ===
 
 // Module 16739
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 160, scales: [1], hash: "483ce0fdce44b3dc03843ae26158121f", name: "amanda_1", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "4db0790f7a81e49025d7fbfb9aeb182c", name: "zh-TW", type: "png" });

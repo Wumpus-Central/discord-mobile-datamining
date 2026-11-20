@@ -1,70 +1,7 @@
 // === Module 11504: ? ===
 
 // Module 11504
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 11360 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const ESTimeUnitWithinFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-class ESTimeUnitWithinFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ESTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ESTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(11497).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-    return regExp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ESTimeUnitWithinFormatParser(11356).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ESTimeUnitWithinFormatParser(11497).parseDuration(arg1[1]));
-    }
-  }
-];
 
-export default _createClass(ESTimeUnitWithinFormatParser, items);
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "651f23c3c753462d68eac15857d95d39", name: "PollsIcon", type: "png" });

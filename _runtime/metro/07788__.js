@@ -1,14 +1,16 @@
 // === Module 7788: ? ===
 
 // Module 7788
-import _modDef7785 from "module_7785" /* 7785 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7784 from "module_7784" /* 7784 */;
+import _modDef7789 from "module_7789" /* 7789 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeComponentTransfer = arg1;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeComponentTransfer {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeComposite {
   constructor() {
     self = this;
-    tmp = c2(this, FeComponentTransfer);
-    tmp2 = closure_4;
-    obj = closure_4(FeComponentTransfer);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeComposite);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeComposite);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,33 @@ class FeComponentTransfer {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeComponentTransfer, _modDef7785);
+_inherits(FeComposite, _modDef7784);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeComponentTransfer(7762).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeComposite(7783).extractFilter(this.props));
+    const obj2 = FeComposite(7783);
+    const merged1 = Object.assign(FeComposite(7783).extractFeComposite(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeComponentTransfer, items);
-importDefaultResultResult.displayName = "FeComponentTransfer";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

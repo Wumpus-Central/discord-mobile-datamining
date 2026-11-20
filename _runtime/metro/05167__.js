@@ -1,14 +1,13 @@
 // === Module 5167: ? ===
 
 // Module 5167
-import ComposedGestureName from "ComposedGestureName" /* 5114 */;
-import _mod5168 from "module_5168" /* 5168 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function useCompetingGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod5168.useComposedGesture.apply(items1);
+for (const key10013 in require("module_5168")) {
+  arg5[key10013] = require("module_5168")[key10013];
+  continue;
+}
+for (const key10017 in require("transformTapProps")) {
+  arg5[key10017] = require("transformTapProps")[key10017];
+  continue;
 }

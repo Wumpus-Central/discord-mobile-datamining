@@ -1,18 +1,7 @@
 // === Module 16294: ? ===
 
 // Module 16294
-import _mod16235 from "module_16235" /* 16235 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const Ident = _mod16235.TYPE.Ident;
-const obj = {
-  name: "Identifier",
-  structure: { name: String },
-  parse() {
-    return { type: "Identifier", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), name: this.consume(Ident) };
-  },
-  generate(name) {
-    this.chunk(name.name);
-  }
-};
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hexagon_campaign/images", width: 88, height: 88, scales: [2, 3, 4], hash: "1314a80c1b4760307a1e41ed1c339f0e", name: "hexagon_campaign_logo", type: "png" });

@@ -1,38 +1,15 @@
 // === Module 1046: ? ===
 
 // Module 1046
-import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 680 */;
+import _mod17 from "module_17" /* 17 */;
 import _mod867 from "module_867" /* 867 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const Platform = _mod17.Platform;
 
-export function createReleaseFromGlobalReleaseConstants() {
-  const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
-  if (SENTRY_RELEASE) {
-    ({ name, version } = SENTRY_RELEASE);
-    if (name) {
-      if (version) {
-        const _HermesInternal = HermesInternal;
-        return "" + name + "@" + version;
-      }
-    }
+export function shouldEnableNativeNagger(enableNativeNagger) {
+  let tmp = enableNativeNagger;
+  if (typeof enableNativeNagger !== "boolean") {
+    tmp = !_mod867.isExpoGo();
   }
-}
-export function getDefaultRelease() {
-  if (!obj.notWeb()) {
-    const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
-    let combined;
-    if (SENTRY_RELEASE) {
-      ({ name, version } = SENTRY_RELEASE);
-      if (name) {
-        if (version) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + name + "@" + version;
-        }
-      }
-    }
-    return combined;
-  }
-  obj = _mod867;
+  return tmp;
 }

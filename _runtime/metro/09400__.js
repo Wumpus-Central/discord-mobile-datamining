@@ -1,7 +1,7 @@
 // === Module 9400: ? ===
 
 // Module 9400
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,8 +12,8 @@ let closure_6 = { code: "(function pnpm_indexTsx2(dimensions){let[containerSize]
 
 export const GlobalStateContext = context;
 export (value) => {
-  const sharedValue = _mod1655.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = _mod1655.useSharedValue({});
+  const sharedValue = _mod1653.useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = _mod1653.useSharedValue({});
   items = [closure_5, sharedValue1];
   [tmp3, tmp4] = items;
   function pnpm_indexTsx1(arg0, arg1) {

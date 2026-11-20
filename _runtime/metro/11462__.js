@@ -1,138 +1,149 @@
 // === Module 11462: ? ===
 
 // Module 11462
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 11360 */;
-import NUMBER from "NUMBER" /* 11461 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod11291 from "module_11291" /* 11291 */;
+import _mod11324 from "module_11324" /* 11324 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 11331 */;
+import _mod11463 from "module_11463" /* 11463 */;
+import _mod11465 from "module_11465" /* 11465 */;
+import _mod11466 from "module_11466" /* 11466 */;
+import _mod11467 from "module_11467" /* 11467 */;
+import _mod11468 from "module_11468" /* 11468 */;
+import _mod11469 from "module_11469" /* 11469 */;
+import _mod11470 from "module_11470" /* 11470 */;
+import _mod11471 from "module_11471" /* 11471 */;
+import _mod11472 from "module_11472" /* 11472 */;
+import _mod11473 from "module_11473" /* 11473 */;
+import _mod11474 from "module_11474" /* 11474 */;
+import _mod11475 from "module_11475" /* 11475 */;
+import _mod11476 from "module_11476" /* 11476 */;
+import _mod11477 from "module_11477" /* 11477 */;
+import _mod11478 from "module_11478" /* 11478 */;
+import _mod11479 from "module_11479" /* 11479 */;
+import _mod11480 from "module_11480" /* 11480 */;
 
-const ZHHansDeadlineFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = false;
+  }
+  const obj = { parsers: null, refiners: null };
+  items = [new regExp.default(flag2), , , , , , , , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  const _default4 = new _isNativeReflectConstruct.default();
+  items[5] = new _isNativeReflectConstruct.default();
+  const _default5 = new _isNativeReflectConstruct.default();
+  items[6] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items[7] = new _isNativeReflectConstruct.default(flag);
+  const _default7 = new _isNativeReflectConstruct.default(flag);
+  items[8] = new _isNativeReflectConstruct.default(flag);
+  const _default8 = new _isNativeReflectConstruct.default(flag);
+  items[9] = new _isNativeReflectConstruct.default(flag);
+  obj.parsers = items;
+  const _default9 = new _isNativeReflectConstruct.default(flag);
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default10 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default11 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-const keys = Object.keys(NUMBER.NUMBER);
-const regExp = new RegExp("(\\d+|[" + keys.join("") + "]+|\u534A|\u51E0)(?:\\s*)(?:\u4E2A)?(\u79D2(?:\u949F)?|\u5206\u949F|\u5C0F\u65F6|\u949F|\u65E5|\u5929|\u661F\u671F|\u793C\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u8FC7)?\u540E|(?:\u4E4B)?\u5185)", "i");
-class ZHHansDeadlineFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ZHHansDeadlineFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHansDeadlineFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
 }
-_inherits(ZHHansDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      let num = parseInt(index[1]);
-      if (isNaN(num)) {
-        num = ZHHansDeadlineFormatParser(11461).zhStringToNumber(index[1]);
-      }
-      if (isNaN(num)) {
-        num = 3;
-        if ("\u51E0" !== index[1]) {
-          num = 0.5;
-          if ("\u534A" !== tmp4) {
-            return null;
-          }
-        }
-      }
-      const obj = {};
-      if (index[2][0].match(/[日天星礼月年]/)) {
-        if ("\u65E5" != str3) {
-          if ("\u5929" != str3) {
-            if ("\u661F" != str3) {
-              if ("\u793C" != str3) {
-                if ("\u6708" == str3) {
-                  obj.month = num;
-                } else if ("\u5E74" == str3) {
-                  obj.year = num;
-                }
-              }
-            }
-            obj.week = num;
-          }
-          const addDurationResult = ZHHansDeadlineFormatParser(11355).addDuration(createParsingResult.refDate, obj);
-          const start7 = parsingResult.start;
-          start7.assign("year", addDurationResult.getFullYear());
-          const start8 = parsingResult.start;
-          start8.assign("month", addDurationResult.getMonth() + 1);
-          const start9 = parsingResult.start;
-          start9.assign("day", addDurationResult.getDate());
-          return parsingResult;
-        }
-        obj.day = num;
-      } else {
-        if ("\u79D2" == str3) {
-          obj.second = num;
-        } else if ("\u5206" == str3) {
-          obj.minute = num;
-        } else {
-          let tmp6 = "\u5C0F" != str3;
-          if (tmp6) {
-            tmp6 = "\u949F" != str3;
-          }
-          if (!tmp6) {
-            obj.hour = num;
-          }
-        }
-        const addDurationResult1 = ZHHansDeadlineFormatParser(11355).addDuration(createParsingResult.refDate, obj);
-        const start = parsingResult.start;
-        start.imply("year", addDurationResult1.getFullYear());
-        const start2 = parsingResult.start;
-        start2.imply("month", addDurationResult1.getMonth() + 1);
-        const start3 = parsingResult.start;
-        start3.imply("day", addDurationResult1.getDate());
-        const start4 = parsingResult.start;
-        start4.assign("hour", addDurationResult1.getHours());
-        const start5 = parsingResult.start;
-        start5.assign("minute", addDurationResult1.getMinutes());
-        const start6 = parsingResult.start;
-        start6.assign("second", addDurationResult1.getSeconds());
-        return parsingResult;
-      }
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
     }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
   }
-];
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  const parsers3 = tmp.parsers;
+  const _default2 = new _isNativeReflectConstruct.default();
+  parsers3.unshift(new _isNativeReflectConstruct.default());
+  const parsers4 = tmp.parsers;
+  const _default3 = new _isNativeReflectConstruct.default();
+  parsers4.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+fn(_mod11463);
+fn(_mod11465);
+fn(_mod11466);
+fn(_mod11467);
+fn(_mod11468);
+fn(_mod11469);
+fn(_mod11470);
+fn(_mod11471);
+fn(_mod11472);
+fn(_mod11473);
+fn(_mod11474);
+fn(_mod11475);
+fn(_mod11476);
+fn(_mod11477);
+fn(_mod11478);
+const regExp = fn(_mod11324);
+fn(_mod11479);
+const _isNativeReflectConstruct = fn(_mod11480);
+const configuration = createConfiguration(false, false);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+let parsers3 = configuration.parsers;
+let _default2 = new _isNativeReflectConstruct.default();
+parsers3.unshift(new _isNativeReflectConstruct.default());
+let parsers4 = configuration.parsers;
+let _default3 = new _isNativeReflectConstruct.default();
+parsers4.unshift(new _isNativeReflectConstruct.default());
+const chrono = new _mod11291.Chrono(configuration);
+const chrono1 = new _mod11291.Chrono(createConfiguration(true, false));
+const chrono2 = new _mod11291.Chrono(createConfiguration(false, true));
 
-export default _createClass(ZHHansDeadlineFormatParser, items);
+export function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+}
+export function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+}
+export { createCasualConfiguration };
+export { createConfiguration };
+export const casual = chrono;
+export const strict = chrono1;
+export const GB = chrono2;

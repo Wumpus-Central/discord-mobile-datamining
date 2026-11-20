@@ -1,7 +1,7 @@
 // === Module 5340: ? ===
 
 // Module 5340
-import BottomSheetBackdrop from "BottomSheetBackdrop" /* 5341 */;
+import _modDef5341 from "module_5341" /* 5341 */;
 
 
-export const BottomSheetBackdrop = BottomSheetBackdrop.BottomSheetBackdrop;
+export default _modDef5341;

@@ -1,7 +1,7 @@
 // === Module 7200: ? ===
 
 // Module 7200
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 330, height: 717, scales: [1], hash: "b1362f1f417418db6366da6b57e07d77", name: "login-bg-tall", type: "webp" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 615, height: 545, scales: [1], hash: "d54710903433aefed46a1fbeef429df2", name: "login-bg-square", type: "webp" });

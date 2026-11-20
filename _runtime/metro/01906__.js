@@ -1,15 +1,36 @@
 // === Module 1906: ? ===
 
 // Module 1906
-import useDerivedValueCommon from "useDerivedValueCommon" /* 1907 */;
+import FrameCallbackRegistryJSDefault from "FrameCallbackRegistryJS" /* 1907 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+({ useEffect: closure_0, useRef: closure_1 } = noop);
+let closure_2 = new FrameCallbackRegistryJSDefault();
 
-export function useDerivedValue(pnpm_indexTsx1, items2) {
-  let __closure = pnpm_indexTsx1.__closure;
-  if (__closure == null) {
-    __closure = [];
+export function useFrameCallback(ConjureDitherAndroidTsx1) {
+  closure_0 = ConjureDitherAndroidTsx1;
+  if (flag === undefined) {
+    flag = true;
   }
-  return useDerivedValueCommon.useDerivedValueBase(pnpm_indexTsx1, undefined, __closure);
+  closure_1 = undefined;
+  const tmp = closure_1({
+    setActive(isActive) {
+      const result = closure_2.manageStateFrameCallback(closure_1.current.callbackId, isActive);
+      closure_1.current.isActive = isActive;
+    },
+    isActive: flag,
+    callbackId: -1
+  });
+  closure_1 = tmp;
+  items = [ConjureDitherAndroidTsx1, flag];
+  closure_0(() => {
+    closure_1.current.callbackId = closure_2.registerFrameCallback(callbackId);
+    ({ current: closure_0, current } = closure_1);
+    current.setActive(closure_1.current.isActive);
+    return () => {
+      const result = closure_2_2.unregisterFrameCallback(callbackId.callbackId);
+      callbackId.callbackId = -1;
+    };
+  }, items);
+  return tmp.current;
 }

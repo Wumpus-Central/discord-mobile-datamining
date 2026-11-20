@@ -1,7 +1,7 @@
 // === Module 3634: ? ===
 
 // Module 3634
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tenure_reward", scales: [1], hash: "4ce7db81a29e051a11be32b72852c173", name: "TenureReward.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3RlbnVyZV9yZXdhcmQ=", scales: [1], hash: "882f16b7368f802f3f92fe1d7573aaee", name: "zh-CN.messages.882f16b7368f802f3f92fe1d7573aaee.compiled.messages", type: "jsona" });

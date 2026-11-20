@@ -1,78 +1,34 @@
 // === Module 1898: ? ===
 
 // Module 1898
-import _mod19 from "module_19" /* 19 */;
-import findNodeHandle from "findNodeHandle" /* 1869 */;
+import noop from "module_19" /* 19 */;
 
-let useRef = _mod19.useRef;
+const require = globalThis.__r;
 
-export function useAnimatedRefBase(arg0) {
-  closure_0 = arg0;
-  const current = useRef(new Map()).current;
-  useRef = useRef(null);
-  const tmp2 = useRef(null);
-  if (!tmp2.current) {
-    function fun(current) {
-      let getScrollableNode = current;
-      if (current) {
-        ref.current = getScrollableNode(current);
-        fun.getTag = () => {
-          getScrollableNode = getScrollableNode.getScrollableNode;
-          let scrollableNode;
-          if (getScrollableNode != null) {
-            scrollableNode = getScrollableNode();
-          }
-          if (!scrollableNode) {
-            scrollableNode = findNodeHandle.findNodeHandle(getScrollableNode);
-          }
-          return scrollableNode;
-        };
-        fun.current = current;
-        if (tag.size) {
-          tag = undefined;
-          if (fun != null) {
-            const getTag = fun.getTag;
-            if (getTag != null) {
-              tag = getTag();
-            }
-          }
-          if (tag == null) {
-            tag = null;
-          }
-          const item = arr.forEach((fn, fn2) => {
-            if (fn != null) {
-              fn();
-            }
-            const result = current.set(fn2, fn2(tag));
-          });
-        }
-        arr = tag;
-      }
-      return ref.current;
-    }
-    fun.observe = (fn) => {
-      closure_0 = fn;
-      let tag;
-      if (fun != null) {
-        const getTag = fun.getTag;
-        if (getTag != null) {
-          tag = getTag();
-        }
-      }
-      if (tag == null) {
-        tag = null;
-      }
-      const result = current.set(fn, fn(tag));
-      return () => {
-        value = current.get(closure_0);
-        if (value != null) {
-          value();
-        }
-        current.delete(closure_0);
-      };
-    };
-    fun.current = null;
-    tmp2.current = fun;
+({ useEffect: c2, useRef: c3 } = noop);
+
+export function useHandler(ChannelListLegendListTsx1, items26) {
+  _require = ChannelListLegendListTsx1;
+  const tmp = closure_3(null);
+  if (null === tmp.current) {
+    tmp.current = { context: "Array", prevHandlers: "analyticsLocations" };
   }
-  return tmp2.current;
+  const current = tmp.current;
+  let obj = require("areDependenciesEqual");
+  closure_2(() => {
+    current.prevHandlers = prevHandlers;
+  });
+  const obj2 = {};
+  Object.defineProperty(obj2, "context", {
+    get: () => {
+      if (undefined === current.context) {
+        current.context = require("module_1706").makeShareable({});
+        const obj = require("module_1706");
+      }
+      return current.context;
+    },
+    set: undefined
+  });
+  obj2.doDependenciesDiffer = !require("areDependenciesEqual").areWorkletHandlersEqual(ChannelListLegendListTsx1, current.prevHandlers);
+  return obj2;
 }

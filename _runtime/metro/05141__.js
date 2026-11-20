@@ -1,34 +1,27 @@
 // === Module 5141: ? ===
 
 // Module 5141
-import reanimatedWrapper from "reanimatedWrapper" /* 5096 */;
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5123 */;
+import ComposedGestureName from "ComposedGestureName" /* 5116 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5125 */;
 import _mod5142 from "module_5142" /* 5142 */;
-import useReanimatedEventHandler from "useReanimatedEventHandler" /* 5144 */;
 
 require = arg1;
 const dependencyMap = arg6;
-let closure_2 = {};
+function transformTapProps(shouldCancelWhenOutside) {
+  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
+    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
+  }
+  return shouldCancelWhenOutside;
+}
+const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
+const map = new Map(items);
+let closure_4 = {};
 
-export function useGestureCallbacks(arg0, disableReanimated) {
-  const memoizedGestureCallbacks = resolveInternalConfigProps.useMemoizedGestureCallbacks(disableReanimated);
-  let reanimatedEventHandler;
-  if (!disableReanimated.disableReanimated) {
-    let tmp6 = memoizedGestureCallbacks;
-    if (true === disableReanimated.runOnJS) {
-      tmp6 = closure_2;
-    }
-    const Reanimated = reanimatedWrapper.Reanimated;
-    let handler;
-    if (Reanimated != null) {
-      handler = Reanimated.useHandler(tmp6);
-    }
-    const tmpResult = useReanimatedEventHandler;
-    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(arg0, tmp6, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
+export function useTapGesture() {
+  let tmp = tmp82Result;
+  if (tmp82Result === undefined) {
+    tmp = closure_4;
   }
-  let animatedEventHandler;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    animatedEventHandler = disableReanimated.onUpdate;
-  }
-  return { jsEventHandler: _mod5142.useGestureEventHandler(arg0, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp, map, transformTapProps);
+  return _mod5142.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
 }

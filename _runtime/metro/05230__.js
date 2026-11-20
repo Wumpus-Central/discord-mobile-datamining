@@ -1,9 +1,7 @@
 // === Module 5230: ? ===
 
 // Module 5230
-import BottomSheetFooter from "BottomSheetFooter" /* 5231 */;
-import BottomSheetFooterContainer from "BottomSheetFooterContainer" /* 5233 */;
+import _modDef5231 from "module_5231" /* 5231 */;
 
 
-export const BottomSheetFooter = BottomSheetFooter.BottomSheetFooter;
-export const BottomSheetFooterContainer = BottomSheetFooterContainer.BottomSheetFooterContainer;
+export default _modDef5231;

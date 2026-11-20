@@ -1,7 +1,7 @@
 // === Module 2592: ? ===
 
 // Module 2592
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/waterwheels", scales: [1], hash: "2039cacc56d3223c34b5645932e561ac", name: "Waterwheels.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy93YXRlcndoZWVscw==", scales: [1], hash: "b6cedf47c27dce96147a004ee9513273", name: "zh-CN.messages.b6cedf47c27dce96147a004ee9513273.compiled.messages", type: "jsona" });

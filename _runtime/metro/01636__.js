@@ -1,12 +1,9 @@
 // === Module 1636: ? ===
 
 // Module 1636
-import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaProvider", directEventTypes: { topInsetsChange: { registrationName: "onInsetsChange" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onInsetsChange: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = {};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaView", validAttributes: { mode: true, edges: true } };
 
-export default module_65.get("RNCSafeAreaProvider", () => obj);
+export default module_65.get("RNCSafeAreaView", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

@@ -1,7 +1,7 @@
 // === Module 3440: ? ===
 
 // Module 3440
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNl", scales: [1], hash: "0916a7bcc5f28cd3d9e17b4b14634cfd", name: "bg.messages.0916a7bcc5f28cd3d9e17b4b14634cfd.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/pinot", scales: [1], hash: "364c75e0f639bba06c466572843c5113", name: "Pinot.compiled.messages", type: "jsona" });

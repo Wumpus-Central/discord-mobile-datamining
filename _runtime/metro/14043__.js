@@ -1,7 +1,7 @@
 // === Module 14043: ? ===
 
 // Module 14043
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2e0d6978350694e35552111153599c69", name: "BoostTier3Icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 200, height: 90, scales: [1], hash: "d354a91b7a8b3b1cf9e4de447250911f", name: "yearly_upsell_wumpus", type: "png" });

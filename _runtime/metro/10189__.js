@@ -1,7 +1,8 @@
 // === Module 10189: ? ===
 
 // Module 10189
-import _mod10166 from "module_10166" /* 10166 */;
+import _mod10167 from "module_10167" /* 10167 */;
+import sourceShape from "sourceShape" /* 10169 */;
 
 const self = this;
 let self2 = this;
@@ -53,165 +54,155 @@ if (self2) {
         return obj;
       };
     }
-    const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        const obj = { localeError: null };
-        const obj2 = { string: { unit: "caracteres", verb: "tener" }, file: { unit: "bytes", verb: "tener" }, array: { unit: "elementos", verb: "tener" }, set: { unit: "elementos", verb: "tener" } };
-        closure_1 = { regex: "entrada", email: "direcci\u00F3n de correo electr\u00F3nico", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "fecha y hora ISO", date: "fecha ISO", time: "hora ISO", duration: "duraci\u00F3n ISO", ipv4: "direcci\u00F3n IPv4", ipv6: "direcci\u00F3n IPv6", mac: "direcci\u00F3n MAC", cidrv4: "rango IPv4", cidrv6: "rango IPv6", base64: "cadena codificada en base64", base64url: "URL codificada en base64", json_string: "cadena JSON", e164: "n\u00FAmero E.164", credit_card: "n\u00FAmero de tarjeta de cr\u00E9dito", currency_code: "c\u00F3digo de moneda", iban: "IBAN", jwt: "JWT", template_literal: "entrada" };
-        closure_2 = { nan: "NaN", string: "texto", number: "n\u00FAmero", boolean: "booleano", array: "arreglo", object: "objeto", set: "conjunto", file: "archivo", date: "fecha", bigint: "n\u00FAmero grande", symbol: "s\u00EDmbolo", undefined: "indefinido", null: "nulo", function: "funci\u00F3n", map: "mapa", record: "registro", tuple: "tupla", enum: "enumeraci\u00F3n", union: "uni\u00F3n", literal: "literal", promise: "promesa", void: "vac\u00EDo", never: "nunca", unknown: "desconocido", any: "cualquiera" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp56 = closure_2[parsedTypeResult];
-              if (tmp56 == null) {
-                tmp56 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Entrada inv\u00E1lida: se esperaba instanceof " + code.expected + ", recibido " + tmp56;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Entrada inv\u00E1lida: se esperaba " + expected + ", recibido " + tmp56;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Entrada inv\u00E1lida: se esperaba " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 = "Opci\u00F3n inv\u00E1lida: se esperaba una de " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str27 = "<";
-              if (code.inclusive) {
-                str27 = "<=";
-              }
-              let tmp34 = obj2[code.origin];
-              if (tmp34 == null) {
-                tmp34 = null;
-              }
-              let str28 = closure_2[code.origin];
-              if (str28 == null) {
-                str28 = code.origin;
-              }
-              if (tmp34) {
-                if (str28 == null) {
-                  str28 = "valor";
-                }
-                const str1 = code.maximum.toString();
-                let str34 = tmp34.unit;
-                if (str34 == null) {
-                  str34 = "elementos";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "Demasiado grande: se esperaba que " + str28 + " tuviera " + str27 + str1 + " " + str34;
-              } else {
-                let str29 = str28;
-                if (str28 == null) {
-                  str29 = "valor";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "Demasiado grande: se esperaba que " + str29 + " fuera " + str27 + code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp21 = obj2[code.origin];
-              if (tmp21 == null) {
-                tmp21 = null;
-              }
-              let origin3 = closure_2[code.origin];
-              if (origin3 == null) {
-                origin3 = code.origin;
-              }
-              const str48 = code.minimum.toString();
-              if (tmp21) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " tuviera " + str20 + str48 + " " + tmp21.unit;
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " fuera " + str20 + str48;
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 = "Cadena inv\u00E1lida: debe comenzar con \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 = "Cadena inv\u00E1lida: debe terminar en \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = "Cadena inv\u00E1lida: debe incluir \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "Cadena inv\u00E1lida: debe coincidir con el patr\u00F3n " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Inv\u00E1lido " + format;
-              }
-              return combined4;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return "N\u00FAmero inv\u00E1lido: debe ser m\u00FAltiplo de " + code.divisor;
-            case "unrecognized_keys":
-              let str3 = "";
-              let str4 = "";
-              if (code.keys.length > 1) {
-                str4 = "s";
-              }
-              if (code.keys.length > 1) {
-                str3 = "s";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return "Llave" + str4 + " desconocida" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              let origin2 = closure_2[code.origin];
-              if (origin2 == null) {
-                origin2 = code.origin;
-              }
-              const _HermesInternal2 = HermesInternal;
-              return "Llave inv\u00E1lida en " + origin2;
-            case "invalid_union":
-              return "Entrada inv\u00E1lida";
-            case "invalid_element":
-              let origin = closure_2[code.origin];
-              if (origin == null) {
-                origin = code.origin;
-              }
-              const _HermesInternal = HermesInternal;
-              return "Valor inv\u00E1lido en " + origin;
-            default:
-              return "Entrada inv\u00E1lida";
-          }
+    let _Object3 = Object;
+    exports.ZodError = undefined;
+    exports.ZodRealError = undefined;
+    const fnResult = fn(_mod10167);
+    let hasOwnProperty = fnResult;
+    let closure_6 = fn(sourceShape);
+    const _WeakSet = WeakSet;
+    let _Object4 = Object;
+    let items = [Object.prototype, ];
+    const _Error = Error;
+    items[1] = Error.prototype;
+    const weakSet = new WeakSet(items);
+    function initializer(arg0, arg1) {
+      const $ZodError = _mod10167.$ZodError;
+      $ZodError.init(arg0, arg1);
+      arg0.name = "ZodError";
+      const prototypeOf = Object.getPrototypeOf(arg0);
+      if (!weakSet.has(prototypeOf)) {
+        weakSet.add(prototypeOf);
+        let addIssues = "format";
+        let f97089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => closure_2_5.formatError(closure_0, arg0);
         };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
+        const _Object = Object;
+        const obj2 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f97089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "format", obj2);
+        addIssues = "flatten";
+        f97089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => closure_2_5.flattenError(closure_0, arg0);
+        };
+        const _Object2 = Object;
+        const obj3 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f97089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "flatten", obj3);
+        addIssues = "addIssue";
+        f97089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => {
+            const issues = closure_0.issues;
+            issues.push(arg0);
+            closure_0.message = JSON.stringify(closure_0.issues, closure_2_6.jsonStringifyReplacer, 2);
+          };
+        };
+        const _Object3 = Object;
+        const obj4 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f97089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "addIssue", obj4);
+        addIssues = "addIssues";
+        f97089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => {
+            const issues = closure_0.issues;
+            items = [...arg0];
+            issues.push.apply(items);
+            closure_0.message = JSON.stringify(closure_0.issues, closure_2_6.jsonStringifyReplacer, 2);
+          };
+        };
+        const _Object4 = Object;
+        const obj5 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f97089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "addIssues", obj5);
+        const _Object5 = Object;
+        const obj6 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              return 0 === this.issues.length;
+            }
+        };
+        Object.defineProperty(prototypeOf, "isEmpty", obj6);
       }
-    };
-    let closure_2 = fn(_mod10166);
-    function error() {
-
     }
-    module.exports = exports.default;
+    exports.ZodError = fnResult.$constructor("ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error2 = Error;
+    obj.Parent = Error;
+    exports.ZodRealError = fnResult.$constructor("ZodError", initializer, undefined, obj);
+    (() => {
+      let tmp = exports;
+      const ownPropertyNames = Object.getOwnPropertyNames(exports);
+      let num = 0;
+      if (0 < ownPropertyNames.length) {
+        const _Object = Object;
+        const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(exports, ownPropertyNames[num]);
+        if (ownPropertyDescriptor) {
+          if (ownPropertyDescriptor.get) {
+            if (ownPropertyDescriptor.configurable) {
+              try {
+                value = ownPropertyDescriptor.get();
+                if (undefined !== value) {
+                  const _Object2 = Object;
+                  const obj = { value, writable: false, enumerable: ownPropertyDescriptor.enumerable, configurable: false };
+                  Object.defineProperty(exports, ownPropertyNames[num], obj);
+                }
+              } catch (err) {
+              }
+            }
+          }
+        }
+        num = num + 1;
+        tmp = exports;
+      }
+      const frozen = Object.freeze(tmp);
+    })();
   } else {
-    const _Object2 = Object;
+    let _Object2 = Object;
   }
 } else {
   let _Object = Object;

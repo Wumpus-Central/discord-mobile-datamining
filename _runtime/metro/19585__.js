@@ -1,7 +1,7 @@
 // === Module 19585: ? ===
 
 // Module 19585
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/holidays/assets", scales: [1], hash: "69a0ecf46982cea47de18b3e75dfe8f5", name: "winter_2026_loading_light", type: "webm" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 32, height: 32, scales: [2, 3], hash: "d505051fb36c757db4674831cf82260a", name: "ic_image_upload", type: "png" });

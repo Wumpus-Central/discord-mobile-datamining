@@ -1,16 +1,15 @@
 // === Module 11453: ? ===
 
 // Module 11453
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 11353 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 11360 */;
-import _mod11447 from "module_11447" /* 11447 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 11309 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLCasualYearMonthDayParser = require;
+const UKTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,60 +29,109 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod11447.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
-class NLCasualYearMonthDayParser {
-  constructor() {
+class UKTimeExpressionParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, NLCasualYearMonthDayParser);
+    tmp = c2(this, UKTimeExpressionParser);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(NLCasualYearMonthDayParser);
+    obj = closure_4(UKTimeExpressionParser);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    if (closure_6()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(UKTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "patternFlags",
+  value: function patternFlags() {
+    return UKTimeExpressionParser(11449).REGEX_PARTS.flags;
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = NLCasualYearMonthDayParser(11447).MONTH_DICTIONARY[str.toLowerCase(str)];
+    key: "primaryPatternLeftBoundary",
+    value: function primaryPatternLeftBoundary() {
+      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
+    }
+  },
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0456|\u043F\u043E|\\?)\\s*";
+    }
+  },
+  {
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:\u0432|\u0443|\u043E|\u043E\u0431|\u0437|\u0456\u0437|\u0432\u0456\u0434)\\s*)??";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:\u0440\u0430\u043D\u043A\u0443|\u0432\u0435\u0447\u043E\u0440\u0430|\u043F\u043E \u043E\u0431\u0456\u0434\u0456|\u043F\u0456\u0441\u043B\u044F \u043E\u0431\u0456\u0434\u0443))?(?!\\/)" + UKTimeExpressionParser(11449).REGEX_PARTS.rightBoundary;
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(_getPrototypeOf(UKTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => closure_1.apply(self, items);
       }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
+      items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("\u0432\u0435\u0447\u043E\u0440\u0430")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", UKTimeExpressionParser(11300).Meridiem.PM);
+            }
+          }
+          if (value < 6) {
+            fnResult.assign("meridiem", UKTimeExpressionParser(11300).Meridiem.AM);
+          }
+        }
+        const first1 = arg1[0];
+        if (first1.endsWith("\u043F\u043E \u043E\u0431\u0456\u0434\u0456")) {
+          fnResult.assign("meridiem", UKTimeExpressionParser(11300).Meridiem.PM);
+          const value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        } else {
+          const first2 = arg1[0];
+        }
+        const first3 = arg1[0];
+        if (first3.endsWith("\u0440\u0430\u043D\u043A\u0443")) {
+          fnResult.assign("meridiem", UKTimeExpressionParser(11300).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
         }
       }
-      return null;
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(NLCasualYearMonthDayParser, items);
+export default _createClass(UKTimeExpressionParser, items);

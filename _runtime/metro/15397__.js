@@ -1,0 +1,30 @@
+// === Module 15397: ? ===
+
+// Module 15397
+const require = globalThis.__r;
+
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("module_15398").calendars;
+  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-ca-");
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+      if ("gregory" === item) {
+        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
+}

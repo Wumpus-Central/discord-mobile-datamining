@@ -1,28 +1,57 @@
 // === Module 1798: ? ===
 
 // Module 1798
-import _mod1668 from "module_1668" /* 1668 */;
-import _mod1799 from "module_1799" /* 1799 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function initSvgCssSupport() {
-  const result = _mod1668.registerComponentPropsBuilder("RNSVGCircle", _mod1799.SVG_CIRCLE_PROPERTIES_CONFIG);
-  const result1 = _mod1668.registerComponentPropsBuilder("RNSVGEllipse", _mod1799.SVG_ELLIPSE_PROPERTIES_CONFIG);
-  const result2 = _mod1668.registerComponentPropsBuilder("RNSVGImage", _mod1799.SVG_IMAGE_PROPERTIES_CONFIG);
-  const result3 = _mod1668.registerComponentPropsBuilder("RNSVGLine", _mod1799.SVG_LINE_PROPERTIES_CONFIG);
-  const result4 = _mod1668.registerComponentPropsBuilder("RNSVGLinearGradient", _mod1799.SVG_LINEAR_GRADIENT_PROPERTIES_CONFIG);
-  const result5 = _mod1668.registerComponentPropsBuilder("RNSVGRadialGradient", _mod1799.SVG_RADIAL_GRADIENT_PROPERTIES_CONFIG);
-  const result6 = _mod1668.registerComponentPropsBuilder("RNSVGPath", _mod1799.SVG_PATH_PROPERTIES_CONFIG);
-  const result7 = _mod1668.registerComponentPropsBuilder("RNSVGPattern", _mod1799.SVG_PATTERN_PROPERTIES_CONFIG);
-  const obj9 = _mod1668;
-  const compoundComponentName = _mod1668.getCompoundComponentName("RNSVGPath", "Polygon");
-  const result8 = obj9.registerComponentPropsBuilder(compoundComponentName, _mod1799.SVG_POLYGON_PROPERTIES_CONFIG);
-  const obj11 = _mod1668;
-  const compoundComponentName1 = _mod1668.getCompoundComponentName("RNSVGPath", "Polyline");
-  const result9 = obj11.registerComponentPropsBuilder(compoundComponentName1, _mod1799.SVG_POLYLINE_PROPERTIES_CONFIG);
-  const result10 = _mod1668.registerComponentPropsBuilder("RNSVGRect", _mod1799.SVG_RECT_PROPERTIES_CONFIG);
-  const result11 = _mod1668.registerComponentPropsBuilder("RNSVGText", _mod1799.SVG_TEXT_PROPERTIES_CONFIG);
-  const result12 = _mod1668.registerComponentPropsBuilder(/^RNSVG/, _mod1799.SVG_COMMON_PROPERTIES_CONFIG);
+for (const key10013 in require("SVG_CIRCLE_PROPERTIES_CONFIG")) {
+  arg5[key10013] = require("SVG_CIRCLE_PROPERTIES_CONFIG")[key10013];
+  continue;
+}
+for (const key10017 in require("SVG_COMMON_PROPERTIES_CONFIG")) {
+  arg5[key10017] = require("SVG_COMMON_PROPERTIES_CONFIG")[key10017];
+  continue;
+}
+for (const key10021 in require("SVG_ELLIPSE_PROPERTIES_CONFIG")) {
+  arg5[key10021] = require("SVG_ELLIPSE_PROPERTIES_CONFIG")[key10021];
+  continue;
+}
+for (const key10025 in require("SVG_IMAGE_PROPERTIES_CONFIG")) {
+  arg5[key10025] = require("SVG_IMAGE_PROPERTIES_CONFIG")[key10025];
+  continue;
+}
+for (const key10029 in require("SVG_LINE_PROPERTIES_CONFIG")) {
+  arg5[key10029] = require("SVG_LINE_PROPERTIES_CONFIG")[key10029];
+  continue;
+}
+for (const key10033 in require("SVG_LINEAR_GRADIENT_PROPERTIES_CONFIG")) {
+  arg5[key10033] = require("SVG_LINEAR_GRADIENT_PROPERTIES_CONFIG")[key10033];
+  continue;
+}
+for (const key10037 in require("SVG_PATH_PROPERTIES_CONFIG")) {
+  arg5[key10037] = require("SVG_PATH_PROPERTIES_CONFIG")[key10037];
+  continue;
+}
+for (const key10041 in require("module_1814")) {
+  arg5[key10041] = require("module_1814")[key10041];
+  continue;
+}
+for (const key10045 in require("SVG_POLYGON_PROPERTIES_CONFIG")) {
+  arg5[key10045] = require("SVG_POLYGON_PROPERTIES_CONFIG")[key10045];
+  continue;
+}
+for (const key10049 in require("SVG_POLYLINE_PROPERTIES_CONFIG")) {
+  arg5[key10049] = require("SVG_POLYLINE_PROPERTIES_CONFIG")[key10049];
+  continue;
+}
+for (const key10053 in require("SVG_RADIAL_GRADIENT_PROPERTIES_CONFIG")) {
+  arg5[key10053] = require("SVG_RADIAL_GRADIENT_PROPERTIES_CONFIG")[key10053];
+  continue;
+}
+for (const key10057 in require("SVG_RECT_PROPERTIES_CONFIG")) {
+  arg5[key10057] = require("SVG_RECT_PROPERTIES_CONFIG")[key10057];
+  continue;
+}
+for (const key10061 in require("SVG_TEXT_PROPERTIES_CONFIG")) {
+  arg5[key10061] = require("SVG_TEXT_PROPERTIES_CONFIG")[key10061];
+  continue;
 }

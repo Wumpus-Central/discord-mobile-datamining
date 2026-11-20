@@ -1,22 +1,67 @@
 // === Module 1755: ? ===
 
 // Module 1755
-import NativeWorklets from "NativeWorklets" /* 1712 */;
-import registerCustomSerializable from "registerCustomSerializable" /* 1719 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function createShareable(arg0, __initData, arg2) {
-  let obj = arg2;
-  if (!arg2) {
-    obj = {};
+const CSSKeyframesRuleImpl = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const guestDecorator = obj.guestDecorator;
-  ({ hostDecorator, initSynchronously } = obj);
-  const WorkletsModule = NativeWorklets.WorkletsModule;
-  const serializable = registerCustomSerializable.createSerializable(__initData);
-  const tmp2 = !initSynchronously;
-  const serializable1 = registerCustomSerializable.createSerializable(hostDecorator);
-  return globalThis.__shareableGuestUnpacker(arg0, WorkletsModule.createShareable(arg0, serializable, !tmp2, serializable1, registerCustomSerializable.createSerializable(guestDecorator)), guestDecorator);
 }
+class CSSKeyframesRuleImpl {
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = c2(this, CSSKeyframesRuleImpl);
+    items = [, ];
+    items[0] = global;
+    items[1] = fn;
+    tmp2 = closure_4;
+    obj = closure_4(CSSKeyframesRuleImpl);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.normalizedKeyframesCache_ = {};
+    return tmp3Result;
+  }
+}
+_inherits(CSSKeyframesRuleImpl, fn(1785).CSSKeyframesRuleBase);
+const entry = {
+  key: "getNormalizedKeyframesConfig",
+  value: function getNormalizedKeyframesConfig(compoundComponentName) {
+    const self = this;
+    const normalizedKeyframesCache_ = this.normalizedKeyframesCache_;
+    if (normalizedKeyframesCache_[compoundComponentName] == null) {
+      normalizedKeyframesCache_[compoundComponentName] = CSSKeyframesRuleImpl(1756).normalizeAnimationKeyframes(self.cssRules, compoundComponentName);
+      const obj = CSSKeyframesRuleImpl(1756);
+    }
+    return self.normalizedKeyframesCache_[compoundComponentName];
+  }
+};
+let items = [entry];
+
+export default _createClass(CSSKeyframesRuleImpl, items);

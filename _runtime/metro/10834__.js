@@ -1,7 +1,7 @@
 // === Module 10834: ? ===
 
 // Module 10834
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "adb011bbeb7f189fa87848559cc4fbc7", name: "ic_leave_stage", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f32d9237628628dc39ab04879ac15862", name: "ScreenArrowIcon", type: "png" });

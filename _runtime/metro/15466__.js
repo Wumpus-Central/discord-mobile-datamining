@@ -1,19 +1,15 @@
 // === Module 15466: ? ===
 
 // Module 15466
-import _mod15467 from "module_15467" /* 15467 */;
+import _mod15464 from "module_15464" /* 15464 */;
 
 
 export default (arg0, arg1) => {
-  let tmp3 = _mod15467[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
-    }
-    _mod15467[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod15467;
+  const tmp = _mod15464(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
   }
   return tmp3;
 };

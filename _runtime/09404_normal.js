@@ -1,7 +1,7 @@
 // === Module 9404: normal ===
 
 // Module 9404 (normal)
-import _mod1655 from "module_1655" /* 1655 */;
+import _mod1653 from "module_1653" /* 1653 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -10,7 +10,7 @@ let closure_2 = { code: "(function pnpm_normalTs1(value){let[interpolate,size,ve
 export function normalLayout(arg0) {
   items = [closure_2, , , ];
   ({ size, vertical } = arg0);
-  items[1] = _mod1655.interpolate;
+  items[1] = _mod1653.interpolate;
   items[2] = size;
   items[3] = vertical;
   c0 = undefined;

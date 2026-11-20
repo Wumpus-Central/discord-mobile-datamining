@@ -1,7 +1,7 @@
 // === Module 2424: ? ===
 
 // Module 2424
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/gift_cards/messages", scales: [1], hash: "b934c964caf25d4a4932b147dae1743e", name: "GiftCards.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz", scales: [1], hash: "687851ba731078498ffcbc260e9639c1", name: "zh-CN.messages.687851ba731078498ffcbc260e9639c1.compiled.messages", type: "jsona" });

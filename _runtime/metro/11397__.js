@@ -1,14 +1,15 @@
 // === Module 11397: ? ===
 
 // Module 11397
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 11367 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 11302 */;
+import _mod11389 from "module_11389" /* 11389 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
+const NLTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,16 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class DETimeExpressionParser {
+const regExp = new RegExp("(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(" + _mod11389.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+class NLTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, DETimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(DETimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_4()) {
+    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,38 +50,30 @@ class DETimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = DETimeExpressionParser;
-_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(NLTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:um|von)\\s*)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(11389).parseDuration(arg1[2]);
+      if ("vorig" !== formatted) {
+        if ("afgelopen" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
-        items = [arg0, arg1];
-        fnResult = fn(items);
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(11298).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      return fnResult;
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(11297).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(DETimeExpressionParser, items);
+export default _createClass(NLTimeUnitCasualRelativeFormatParser, items);

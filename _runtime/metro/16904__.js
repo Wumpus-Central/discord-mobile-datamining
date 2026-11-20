@@ -1,7 +1,7 @@
 // === Module 16904: ? ===
 
 // Module 16904
-import registerAsset from "module_1119" /* 1119 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "fcdf14841cd468de3f43704be16fa303", name: "no", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c6597e29df99a6319981970d49c96987", name: "MagicDoorIcon", type: "png" });
