@@ -1,9 +1,13 @@
 // _runtime/metro/07004__.js
-import get_ActivityIndicator from "00017__.js";
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
-
-export function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
+export function getHeaderTitle(options, name) {
+  if (typeof options.headerTitle === "string") {
+    let title = options.headerTitle;
+  } else {
+    title = name;
+    if (undefined !== options.title) {
+      title = options.title;
+    }
+  }
+  return title;
 }

@@ -1,13 +1,13 @@
 // _runtime/metro/13125__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "32771d83b99e21d6b5e0c30976058344",
-  name: "TiktokNeutralIcon",
+  hash: "5150b233942dc6f429a27a73fff2408c",
+  name: "ic_show_password",
   type: "png",
 });

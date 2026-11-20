@@ -1,3 +1,3 @@
 // _runtime/metro/15468__.js
 
-export default false;
+export const f = Object.getOwnPropertySymbols;

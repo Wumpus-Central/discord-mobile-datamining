@@ -1,5 +1,5 @@
 // _runtime/09418_useOffsetX.js
-import _mod1655 from "metro/01655__.js";
+import _mod1653 from "metro/01653__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -29,7 +29,7 @@ export (viewCount, visibleRanges) => {
   }
   const result3 = diff1 * size;
   const result4 = -diff - diff1 * size;
-  items = [closure_2, visibleRanges, index, loop, result, result4, result1, result2, result3, _mod1655.interpolate, handlerOffset, _mod1655.Extrapolation, size];
+  items = [closure_2, visibleRanges, index, loop, result, result4, result1, result2, result3, _mod1653.interpolate, handlerOffset, _mod1653.Extrapolation, size];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -78,5 +78,5 @@ export (viewCount, visibleRanges) => {
   pnpm_useOffsetXTs1.__workletHash = 11642073628354;
   pnpm_useOffsetXTs1.__initData = tmp9;
   const items2 = [loop, dataLength, viewCount, str, size, visibleRanges, handlerOffset];
-  return _mod1655.useDerivedValue(pnpm_useOffsetXTs1, items2);
+  return _mod1653.useDerivedValue(pnpm_useOffsetXTs1, items2);
 }

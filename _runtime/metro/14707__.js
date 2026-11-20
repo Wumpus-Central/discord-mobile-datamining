@@ -1,13 +1,13 @@
 // _runtime/metro/14707__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b0762f0f9ef3f22f62e92b1be981b656",
-  name: "ChevronLargeUpIcon",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 251,
+  height: 120,
+  scales: [1, 2, 3],
+  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
+  name: "audience_welcome",
   type: "png",
 });

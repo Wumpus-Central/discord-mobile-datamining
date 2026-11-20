@@ -1,49 +1,115 @@
 // _runtime/metro/11426__.js
-import alphaNum from "../11423_alphaNum.js";
+import AbstractParserWithWordBoundaryChecking from "../11302_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const JPWeekdayParser = require;
-const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp(
-  "((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)",
-  "i",
-);
-class JPWeekdayParser {
+let AbstractParserWithLeftRightBoundaryChecking = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class AbstractParserWithLeftBoundaryChecking {
   constructor() {
-    tmp = c2(this, JPWeekdayParser);
-    return;
+    self = this;
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
+AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
+_inherits(
+  AbstractParserWithLeftBoundaryChecking,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return AbstractParserWithLeftRightBoundaryChecking(11424).REGEX_PARTS.leftBoundary;
   },
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(reference, groups) {
-      const tmp3 = JPWeekdayParser(11423).WEEKDAY_OFFSET[groups.groups.weekday];
-      if (undefined === tmp3) {
-        return null;
-      } else {
-        let str2 = "last";
-        if (!groups.groups.prefix || "".match(/前の/)) {
-          str2 = "next";
-          if (!str.match(/次の/)) {
-            str2 = null;
-            if (str.match(/今週/)) {
-              str2 = "this";
-            }
-          }
-        }
-        return JPWeekdayParser(11380).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
-      }
+    key: "innerPattern",
+    value: function innerPattern(arg0) {
+      const regExp = new RegExp(
+        this.innerPatternString(arg0),
+        AbstractParserWithLeftRightBoundaryChecking(11424).REGEX_PARTS.flags,
+      );
+      return regExp;
+    },
+  },
+  {
+    key: "innerPatternHasChange",
+    value: function innerPatternHasChange(arg0, arg1) {
+      return false;
     },
   },
 ];
+const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
+class AbstractParserWithLeftRightBoundaryChecking {
+  constructor() {
+    self = this;
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
+const entry1 = {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    const combined =
+      "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(11424).REGEX_PARTS.rightBoundary;
+    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(11424).REGEX_PARTS.flags);
+    return regExp;
+  },
+};
+const items1 = [entry1];
 
-export default _createClass(JPWeekdayParser, items);
+export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
+export const AbstractParserWithLeftRightBoundaryChecking = _createClass(
+  AbstractParserWithLeftRightBoundaryChecking,
+  items1,
+);

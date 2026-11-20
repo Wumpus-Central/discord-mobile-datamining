@@ -1,13 +1,13 @@
 // _runtime/metro/08437__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/roadblocks/images",
-  width: 552,
-  height: 336,
+  width: 488,
+  height: 240,
   scales: [1],
-  hash: "b268e078b582bb90a27bb6e89edb55ca",
-  name: "client_themes_upsell",
-  type: "webp",
+  hash: "1653812d24f945a581bfdacd052d1cd9",
+  name: "app_icons_upsell",
+  type: "png",
 });

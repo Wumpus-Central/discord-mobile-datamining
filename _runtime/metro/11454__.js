@@ -1,12 +1,12 @@
 // _runtime/metro/11454__.js
-import AbstractParserWithWordBoundaryChecking from "../11360_AbstractParserWithWordBoundaryChecking.js";
+import _mod11451 from "11451__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLCasualDateTimeParser = require;
+const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class NLCasualDateTimeParser {
+class UKTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLCasualDateTimeParser);
+    tmp = c2(this, UKTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLCasualDateTimeParser);
+    obj = closure_4(UKTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,52 +45,26 @@ class NLCasualDateTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLCasualDateTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(UKTimeUnitAgoFormatParser, _mod11451.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    return /(gisteren|morgen|van)(ochtend|middag|namiddag|avond|nacht)(?=\W|$)/i;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + UKTimeUnitAgoFormatParser(11449).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const refDate = createParsingComponents.refDate;
-      if ("gisteren" === formatted) {
-        const _Date = Date;
-        const date = new Date(refDate.getTime());
-        date.setDate(date.getDate() - 1);
-        NLCasualDateTimeParser(11359).assignSimilarDate(parsingComponents, date);
-      } else if ("van" === formatted) {
-        NLCasualDateTimeParser(11359).assignSimilarDate(parsingComponents, refDate);
-      } else if ("morgen" === formatted) {
-        const _Date2 = Date;
-        const date1 = new Date(refDate.getTime());
-        date1.setDate(date1.getDate() + 1);
-        NLCasualDateTimeParser(11359).assignSimilarDate(parsingComponents, date1);
-        NLCasualDateTimeParser(11359).implySimilarTime(parsingComponents, date1);
-      }
-      if ("ochtend" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(11358).Meridiem.AM);
-        parsingComponents.imply("hour", 6);
-      } else if ("middag" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(11358).Meridiem.AM);
-        parsingComponents.imply("hour", 12);
-      } else if ("namiddag" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(11358).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else if ("avond" === formatted1) {
-        parsingComponents.imply("meridiem", NLCasualDateTimeParser(11358).Meridiem.PM);
-        parsingComponents.imply("hour", 20);
-      }
-      return parsingComponents;
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = UKTimeUnitAgoFormatParser(11449).parseDuration(arg1[1]);
+      const ParsingComponents = UKTimeUnitAgoFormatParser(11298).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        UKTimeUnitAgoFormatParser(11297).reverseDuration(UKTimeUnitAgoFormatParser(11449).parseDuration(arg1[1])),
+      );
     },
   },
 ];
 
-export default _createClass(NLCasualDateTimeParser, items);
+export default _createClass(UKTimeUnitAgoFormatParser, items);

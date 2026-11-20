@@ -1,19 +1,12 @@
 // _runtime/metro/15477__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
+import _mod15415 from "15415__.js";
+import all from "15441__.js";
+
+let _moduleResult = all(_mod15415.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod15415.WeakMap));
+  const obj = /native code/;
 }
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+
+export default _moduleResult;

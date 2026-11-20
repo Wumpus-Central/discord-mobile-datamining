@@ -1,29 +1,14 @@
 // _runtime/metro/15433__.js
-const require = globalThis.__r;
+import prop_mod from "15434__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export function getSupportedCalendars(locale) {
-  _require = locale;
-  const calendars = require("15434__.js").calendars;
-  return calendars.filter((item) =>
-    (function isSupportedCalendar(item, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
-      }
-      try {
-        const concat = "".concat;
-        const combined = "".concat(str, "-u-ca-");
-        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
-        if ("gregory" === item) {
-          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
-            return false;
-          }
-        }
-        return true;
-      } catch (err) {}
-    })(item, closure_0),
-  );
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
 }
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

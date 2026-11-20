@@ -1,5 +1,5 @@
 // _runtime/metro/12043__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eac553938fe05ac1b820e85a05890a1f",
-  name: "SlashBoxIcon",
+  hash: "6adfcc7a553215ee3085ec15a5a3e3a4",
+  name: "ClockXIcon",
   type: "png",
 });

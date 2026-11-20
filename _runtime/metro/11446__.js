@@ -1,12 +1,12 @@
 // _runtime/metro/11446__.js
-import AbstractParserWithWordBoundaryChecking from "../11360_AbstractParserWithWordBoundaryChecking.js";
+import AbstractParserWithWordBoundaryChecking from "../11302_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitWithinFormatParser = require;
+const ESTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class NLTimeUnitWithinFormatParser {
+class ESTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitWithinFormatParser);
+    tmp = c2(this, ESTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitWithinFormatParser);
+    obj = closure_4(ESTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,12 +45,12 @@ class NLTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
     const regExp = new RegExp(
-      "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(11447).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+      "(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(11439).TIME_UNITS_PATTERN + ")(?=\\W|$)",
       "i",
     );
     return regExp;
@@ -61,13 +61,13 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = NLTimeUnitWithinFormatParser(11356).ParsingComponents;
+      const ParsingComponents = ESTimeUnitWithinFormatParser(11298).ParsingComponents;
       return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        NLTimeUnitWithinFormatParser(11447).parseDuration(arg1[1]),
+        ESTimeUnitWithinFormatParser(11439).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(ESTimeUnitWithinFormatParser, items);

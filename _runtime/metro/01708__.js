@@ -1,86 +1,48 @@
 // _runtime/metro/01708__.js
-import _mod1710 from "01710__.js";
-import threadsNative from "../01711_threadsNative.js";
-import NativeWorklets from "../01712_NativeWorklets.js";
-import bundleModeNative from "../01713_bundleModeNative.js";
-import registerCustomSerializable from "../01719_registerCustomSerializable.js";
-import _mod1720 from "01720__.js";
-import _mod1721 from "01721__.js";
-import _mod1722 from "01722__.js";
-import runtimesNative from "../01727_runtimesNative.js";
-import toggleSlowAnimationsOnUIRuntime from "../01751_toggleSlowAnimationsOnUIRuntime.js";
-import callMicrotasks from "../01752_callMicrotasks.js";
-import DynamicFlags from "../01753_DynamicFlags.js";
-import _mod1754 from "01754__.js";
-import _mod1755 from "01755__.js";
-import _mod1756 from "01756__.js";
-import initializersNative_mod from "01709__.js";
+const obj = { ReactNative: 1, [1]: "ReactNative", UI: 2, [2]: "UI", Worker: 3, [3]: "Worker" };
+const items = [{ code: "(function getRuntimeKind_Pnpm_runtimeKindTs1(){return globalThis.__RUNTIME_KIND;})" }];
+[tmp2] = items;
+function getRuntimeKind() {
+  return globalThis.__RUNTIME_KIND;
+}
+getRuntimeKind.__workletHash = 14246769391097;
+getRuntimeKind.__initData = tmp2;
+const items1 = [{ code: "(function isRNRuntime_Pnpm_runtimeKindTs2(){return globalThis.__RUNTIME_KIND===1;})" }];
+[tmp3] = items1;
+function isRNRuntime() {
+  return 1 === globalThis.__RUNTIME_KIND;
+}
+isRNRuntime.__workletHash = 267943890542;
+isRNRuntime.__initData = tmp3;
+const items2 = [{ code: "(function isWorkletRuntime_Pnpm_runtimeKindTs3(){return globalThis.__RUNTIME_KIND!==1;})" }];
+[tmp4] = items2;
+function isWorkletRuntime() {
+  return 1 !== globalThis.__RUNTIME_KIND;
+}
+isWorkletRuntime.__workletHash = 9385234667507;
+isWorkletRuntime.__initData = tmp4;
+const items3 = [{ code: "(function isUIRuntime_Pnpm_runtimeKindTs4(){return globalThis.__RUNTIME_KIND===2;})" }];
+[tmp5] = items3;
+function isUIRuntime() {
+  return 2 === globalThis.__RUNTIME_KIND;
+}
+isUIRuntime.__workletHash = 15353895308651;
+isUIRuntime.__initData = tmp5;
+const items4 = [{ code: "(function isWorkerRuntime_Pnpm_runtimeKindTs5(){return globalThis.__RUNTIME_KIND===3;})" }];
+[tmp6] = items4;
+function isWorkerRuntime() {
+  return 3 === globalThis.__RUNTIME_KIND;
+}
+isWorkerRuntime.__workletHash = 15479002839105;
+isWorkerRuntime.__initData = tmp6;
+if (undefined === globalThis.__RUNTIME_KIND) {
+  const _globalThis = globalThis;
+  globalThis.__RUNTIME_KIND = obj.ReactNative;
+}
 
-globalThis._WORKLETS_BUNDLE_MODE_ENABLED = false;
-let initializersNative = initializersNative_mod;
-initializersNative = initializersNative.init();
-
-export const isBundleModeEnabled = bundleModeNative.isBundleModeEnabled;
-export const toggleSlowAnimationsOnUIRuntime = toggleSlowAnimationsOnUIRuntime.toggleSlowAnimationsOnUIRuntime;
-export const callMicrotasks = callMicrotasks.callMicrotasks;
-export const isShareableRef = callMicrotasks.isShareableRef;
-export const makeShareable = callMicrotasks.makeShareable;
-export const makeShareableCloneOnUIRecursive = callMicrotasks.makeShareableCloneOnUIRecursive;
-export const makeShareableCloneRecursive = callMicrotasks.makeShareableCloneRecursive;
-export const shareableMappingCache = callMicrotasks.shareableMappingCache;
-export const getDynamicFeatureFlag = DynamicFlags.getDynamicFeatureFlag;
-export const getStaticFeatureFlag = DynamicFlags.getStaticFeatureFlag;
-export const setDynamicFeatureFlag = DynamicFlags.setDynamicFeatureFlag;
-export const isShareable = _mod1754.isShareable;
-export const isSynchronizable = _mod1722.isSynchronizable;
-export const createSerializable = registerCustomSerializable.createSerializable;
-export const createSerializableArray = registerCustomSerializable.createSerializableArray;
-export const createSerializableArrayBuffer = registerCustomSerializable.createSerializableArrayBuffer;
-export const createSerializableArrayBufferView = registerCustomSerializable.createSerializableArrayBufferView;
-export const createSerializableBigInt = registerCustomSerializable.createSerializableBigInt;
-export const createSerializableBoolean = registerCustomSerializable.createSerializableBoolean;
-export const createSerializableError = registerCustomSerializable.createSerializableError;
-export const createSerializableHostObject = registerCustomSerializable.createSerializableHostObject;
-export const createSerializableMap = registerCustomSerializable.createSerializableMap;
-export const createSerializableNull = registerCustomSerializable.createSerializableNull;
-export const createSerializableNumber = registerCustomSerializable.createSerializableNumber;
-export const createSerializableObject = registerCustomSerializable.createSerializableObject;
-export const createSerializableRegExp = registerCustomSerializable.createSerializableRegExp;
-export const createSerializableRemoteFunction = registerCustomSerializable.createSerializableRemoteFunction;
-export const createSerializableSet = registerCustomSerializable.createSerializableSet;
-export const createSerializableString = registerCustomSerializable.createSerializableString;
-export const createSerializableUndefined = registerCustomSerializable.createSerializableUndefined;
-export const createSerializableWorklet = registerCustomSerializable.createSerializableWorklet;
-export const isSerializableRef = registerCustomSerializable.isSerializableRef;
-export const registerCustomSerializable = registerCustomSerializable.registerCustomSerializable;
-export const serializableMappingCache = _mod1720.serializableMappingCache;
-export const createShareable = _mod1755.createShareable;
-export const createSynchronizable = _mod1756.createSynchronizable;
-export const getRuntimeKind = _mod1710.getRuntimeKind;
-export const isRNRuntime = _mod1710.isRNRuntime;
-export const isUIRuntime = _mod1710.isUIRuntime;
-export const isWorkerRuntime = _mod1710.isWorkerRuntime;
-export const isWorkletRuntime = _mod1710.isWorkletRuntime;
-export const RuntimeKind = _mod1710.RuntimeKind;
-export const createWorkletRuntime = runtimesNative.createWorkletRuntime;
-export const getUIRuntimeHolder = runtimesNative.getUIRuntimeHolder;
-export const getUISchedulerHolder = runtimesNative.getUISchedulerHolder;
-export const runOnRuntime = runtimesNative.runOnRuntime;
-export const runOnRuntimeAsync = runtimesNative.runOnRuntimeAsync;
-export const runOnRuntimeAsyncWithId = runtimesNative.runOnRuntimeAsyncWithId;
-export const runOnRuntimeSync = runtimesNative.runOnRuntimeSync;
-export const runOnRuntimeSyncWithId = runtimesNative.runOnRuntimeSyncWithId;
-export const scheduleOnRuntime = runtimesNative.scheduleOnRuntime;
-export const scheduleOnRuntimeWithId = runtimesNative.scheduleOnRuntimeWithId;
-export const UIRuntimeId = runtimesNative.UIRuntimeId;
-export const executeOnUIRuntimeSync = threadsNative.executeOnUIRuntimeSync;
-export const getCurrentThreadId = threadsNative.getCurrentThreadId;
-export const runOnJS = threadsNative.runOnJS;
-export const runOnRNSync = threadsNative.runOnRNSync;
-export const runOnUI = threadsNative.runOnUI;
-export const runOnUIAsync = threadsNative.runOnUIAsync;
-export const runOnUISync = threadsNative.runOnUISync;
-export const scheduleOnRN = threadsNative.scheduleOnRN;
-export const scheduleOnUI = threadsNative.scheduleOnUI;
-export const isWorkletFunction = _mod1721.isWorkletFunction;
-export const WorkletsModule = NativeWorklets.WorkletsModule;
+export const RuntimeKind = obj;
+export { getRuntimeKind };
+export { isRNRuntime };
+export { isWorkletRuntime };
+export { isUIRuntime };
+export { isWorkerRuntime };

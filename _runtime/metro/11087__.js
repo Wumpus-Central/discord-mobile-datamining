@@ -1,13 +1,13 @@
 // _runtime/metro/11087__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "4d46cb9270219102b4f9e899fd51586c",
-  name: "FileIcon",
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "b193e2a038165601eb12e283d0af80aa",
+  name: "ic_file_small_webcode",
   type: "png",
 });

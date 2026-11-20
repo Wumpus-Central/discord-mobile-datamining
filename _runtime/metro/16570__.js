@@ -1,13 +1,13 @@
 // _runtime/metro/16570__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
-  width: 345,
-  height: 82,
-  scales: [1, 2, 3],
-  hash: "91248bc802fa2159ae23ab96ddaf91db",
-  name: "clouds_light_background",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
+  scales: [1],
+  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
+  name: "graggle_2",
   type: "png",
 });

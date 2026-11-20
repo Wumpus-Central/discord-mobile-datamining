@@ -1,11 +1,11 @@
 // _runtime/metro/02494__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl",
+  httpServerLocation: "/assets/modules/go_live/web/modal",
   scales: [1],
-  hash: "fa009e61b150a6e618764c75f6638cac",
-  name: "bg.messages.fa009e61b150a6e618764c75f6638cac.compiled.messages",
+  hash: "cd2d5c0ef187afb877c9d94c96dd5098",
+  name: "GoLiveModal.compiled.messages",
   type: "jsona",
 });

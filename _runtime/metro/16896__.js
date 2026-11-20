@@ -1,13 +1,13 @@
 // _runtime/metro/16896__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "78cbfbf0381b8c7f5a192c4a46bd0b0e",
-  name: "hi",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "0b857719cad21b09b5bc6a1b36ef90c4",
+  name: "TrainIcon",
   type: "png",
 });

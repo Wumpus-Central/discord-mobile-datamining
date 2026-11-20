@@ -1,10 +1,9 @@
 // _runtime/metro/07003__.js
+import get_ActivityIndicator from "00017__.js";
 
-export (width) => {
-  width = width.width;
-  let num = 360;
-  if (width - 56 <= 360) {
-    num = width - 56;
-  }
-  return num;
+({ PixelRatio, Platform } = get_ActivityIndicator);
+
+export function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
+  ({ width, height } = layout);
+  return 64 + headerStatusBarHeight;
 }

@@ -1,13 +1,13 @@
 // _runtime/metro/14720__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 424,
-  height: 254,
-  scales: [1],
-  hash: "16c887e8a2a3597bff0b1e42c0c69934",
-  name: "top_perk_vanity_url",
+  httpServerLocation: "/assets/images/native/chat_sidebar",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f15a8eea867ca31909b0a1cf49c6c7d8",
+  name: "ic_notif",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/16856__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "db35345983d690e62cbfaf36e7ceaebb",
-  name: "EmojiSquintingFaceWithTongueIcon",
+  hash: "e0471dd70c51b44f6fe3c89ec72a7182",
+  name: "MobilePhoneSettingsIcon",
   type: "png",
 });

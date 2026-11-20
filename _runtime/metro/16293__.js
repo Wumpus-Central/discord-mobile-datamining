@@ -1,22 +1,13 @@
 // _runtime/metro/16293__.js
-import _mod16235 from "16235__.js";
+import registerAsset from "01118__.js";
 
-const Hash = _mod16235.TYPE.Hash;
-let obj = {
-  name: "Hash",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Hash);
-    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
-    const scanner = this.scanner;
-    obj.value = scanner.substrToCursor(tokenStart + 1);
-    return obj;
-  },
-  generate(value) {
-    this.chunk("#");
-    this.chunk(value.value);
-  },
-};
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/hexagon_campaign/images",
+  width: 448,
+  height: 448,
+  scales: [1, 2, 3],
+  hash: "2cafb0515248fbc81635d5ff7a9836f9",
+  name: "hexagon_campaign_hero_background",
+  type: "webp",
+});

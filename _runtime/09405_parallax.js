@@ -1,5 +1,5 @@
 // _runtime/09405_parallax.js
-import _mod1655 from "metro/01655__.js";
+import _mod1653 from "metro/01653__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -29,10 +29,10 @@ export function parallaxLayout(arg0) {
   }
   items = [
     closure_2,
-    _mod1655.interpolate,
+    _mod1653.interpolate,
     size,
     num,
-    _mod1655.Extrapolation,
+    _mod1653.Extrapolation,
     parallaxAdjacentItemScale,
     num2,
     vertical,

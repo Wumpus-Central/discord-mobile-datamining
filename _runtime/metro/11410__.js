@@ -1,90 +1,53 @@
 // _runtime/metro/11410__.js
-import AbstractParserWithWordBoundaryChecking from "../11360_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+const exports = arg5;
 
-const FRCasualTimeParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export function zhStringToNumber(arg0) {
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < arg0.length) {
+    while ("\u5341" !== arg0[num]) {
+      let sum = num2 + exports.NUMBER[tmp];
+      num = num + 1;
+      num2 = sum;
+      num3 = sum;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class FRCasualTimeParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, FRCasualTimeParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRCasualTimeParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    if (0 === num2) {
+      let result = exports.NUMBER[tmp];
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      result = num2 * exports.NUMBER[tmp];
     }
-    return tmp3(self, constructResult);
   }
+  return num3;
 }
-_inherits(FRCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
-  },
+export function zhStringToYear(arg0) {
+  let num = 0;
+  let str = "";
+  let str2 = "";
+  if (0 < arg0.length) {
+    do {
+      str = `${exports.NUMBER[arg0[num]]}`;
+      num = num + 1;
+      str2 = str;
+      length = arg0.length;
+    } while (num < length);
+  }
+  return parseInt(str2);
+}
+export const NUMBER = {
+  零: 0,
+  一: 1,
+  二: 2,
+  兩: 2,
+  三: 3,
+  四: 4,
+  五: 5,
+  六: 6,
+  七: 7,
+  八: 8,
+  九: 9,
+  十: 10,
+  廿: 20,
+  卅: 30,
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      if ("apr\u00E8s-midi" !== formatted) {
-        if ("aprem" !== formatted) {
-          if ("soir" === formatted) {
-            parsingComponents.imply("hour", 18);
-            parsingComponents.imply("minute", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(11358).Meridiem.PM);
-          } else if ("matin" === formatted) {
-            parsingComponents.imply("hour", 8);
-            parsingComponents.imply("minute", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(11358).Meridiem.AM);
-          } else if ("a midi" === formatted) {
-            parsingComponents.imply("hour", 12);
-            parsingComponents.imply("minute", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(11358).Meridiem.AM);
-          } else if ("\u00E0 minuit" === formatted) {
-            parsingComponents.imply("hour", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(11358).Meridiem.AM);
-          }
-        }
-        return parsingComponents;
-      }
-      parsingComponents.imply("hour", 14);
-      parsingComponents.imply("minute", 0);
-      parsingComponents.imply("meridiem", FRCasualTimeParser(11358).Meridiem.PM);
-    },
-  },
-];
-
-export default _createClass(FRCasualTimeParser, items);
+export const WEEKDAY_OFFSET = { 天: 0, 日: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6 };

@@ -1,13 +1,13 @@
 // _runtime/metro/14738__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 203,
-  height: 120,
-  scales: [1, 2, 3],
-  hash: "0c52217e1b36f758b126e56747a120ea",
-  name: "guild_subscription_removal_light",
+  httpServerLocation: "/assets/images/native/empties",
+  width: 230,
+  height: 110,
+  scales: [2, 3],
+  hash: "13bbd5c08cf3fa23ae993ffb532d6b29",
+  name: "empty_voice_channel",
   type: "png",
 });

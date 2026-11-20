@@ -1,3 +1,3 @@
 // _runtime/metro/01314__.js
 
-export default EvalError;
+export default RangeError;

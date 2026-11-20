@@ -1,13 +1,13 @@
 // _runtime/metro/10831__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "44d2aa5379438547523c3d419e9ade52",
-  name: "MusicSlashIcon",
+  hash: "15492a52206e63f9d08f70b19c6b74cb",
+  name: "ic_nitro_basic_wheel_gradient",
   type: "png",
 });

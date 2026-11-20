@@ -1,13 +1,13 @@
 // _runtime/metro/14057__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
-  scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
+  httpServerLocation: "/assets/images/native/gifting/seasonal",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "ccdfa582cc7b9c2866cdcd81d25dbd3c",
+  name: "box_idle",
   type: "png",
 });

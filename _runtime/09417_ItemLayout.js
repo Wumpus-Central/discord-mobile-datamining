@@ -1,10 +1,10 @@
 // _runtime/09417_ItemLayout.js
-import _mod1655 from "metro/01655__.js";
+import _mod1653 from "metro/01653__.js";
 import _mod9400 from "metro/09400__.js";
 import useOffsetX from "09418_useOffsetX.js";
 import noop from "metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -45,8 +45,8 @@ export (arg0) => {
   pnpm_ItemLayoutTsx1.__workletHash = 1131903372333;
   pnpm_ItemLayoutTsx1.__initData = tmp7;
   const items2 = [offsetX, tmp3];
-  const derivedValue = _mod1655.useDerivedValue(pnpm_ItemLayoutTsx1, items2);
-  const tmpResult3 = _mod1655;
+  const derivedValue = _mod1653.useDerivedValue(pnpm_ItemLayoutTsx1, items2);
+  const tmpResult3 = _mod1653;
   const items3 = [closure_5, animationStyle, offsetX, tmp3, index];
   c0 = undefined;
   c1 = undefined;
@@ -61,7 +61,7 @@ export (arg0) => {
   pnpm_ItemLayoutTsx2.__workletHash = 4847228470595;
   pnpm_ItemLayoutTsx2.__initData = tmp11;
   const items5 = [animationStyle, index, offsetX, tmp3];
-  const animatedStyle = _mod1655.useAnimatedStyle(pnpm_ItemLayoutTsx2, items5);
+  const animatedStyle = _mod1653.useAnimatedStyle(pnpm_ItemLayoutTsx2, items5);
   if (!width) {
     width = "100%";
   }
@@ -73,5 +73,5 @@ export (arg0) => {
   size.height = height;
   const items6 = [size, animatedStyle];
   obj4.style = items6;
-  return jsx(_modDef1655.View, { style: null, testID: "__CAROUSEL_ITEM_" + index + "__", children: children({ animationValue: derivedValue }) });
+  return jsx(_modDef1653.View, { style: null, testID: "__CAROUSEL_ITEM_" + index + "__", children: children({ animationValue: derivedValue }) });
 }

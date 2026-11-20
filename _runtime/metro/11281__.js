@@ -1,13 +1,13 @@
 // _runtime/metro/11281__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/stickers/native/images",
+  width: 90,
+  height: 90,
   scales: [2, 3],
-  hash: "24c4788690396bae9cc4c1af395a6a87",
-  name: "BicycleIcon",
+  hash: "5decb69ef43f8e7b31fcaaf11b388fe1",
+  name: "sticker_search_empty",
   type: "png",
 });

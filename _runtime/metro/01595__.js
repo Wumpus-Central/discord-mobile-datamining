@@ -1,13 +1,16 @@
 // _runtime/metro/01595__.js
-import NOT_INITIALIZED_ERROR from "../01528_NOT_INITIALIZED_ERROR.js";
+import PreventRemoveContext from "../01570_PreventRemoveContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useNavigationContainerRef() {
-  const ref = noop.useRef(null);
-  if (null == ref.current) {
-    ref.current = NOT_INITIALIZED_ERROR.createNavigationContainerRef();
+export function usePreventRemoveContext() {
+  const context = noop.useContext(PreventRemoveContext.PreventRemoveContext);
+  if (null == context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the prevent remove context. Is your component inside NavigationContent?");
+    throw error;
+  } else {
+    return context;
   }
-  return ref.current;
 }

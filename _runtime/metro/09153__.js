@@ -3,7 +3,7 @@ import colorPropType from "../09146_colorPropType.js";
 import _mod9154 from "09154__.js";
 import merged12 from "../09155_merged1.js";
 import merged22 from "../09156_merged2.js";
-import emptyFunction_mod from "04833__.js";
+import emptyFunction_mod from "04835__.js";
 
 const obj = {};
 const size = Object.assign(_mod9154);

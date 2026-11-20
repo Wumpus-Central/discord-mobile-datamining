@@ -1,8 +1,8 @@
 // _runtime/09421_PaginationItem.js
-import _mod1655 from "metro/01655__.js";
+import _mod1653 from "metro/01653__.js";
 import noop from "metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -34,7 +34,7 @@ export (arg0) => {
   if (!size) {
     size = 10;
   }
-  items = [_undefined, horizontal, size, num, index, animValue, count, _mod1655.interpolate, _mod1655.Extrapolation];
+  items = [_undefined, horizontal, size, num, index, animValue, count, _mod1653.interpolate, _mod1653.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -78,7 +78,7 @@ export (arg0) => {
   let items2 = [animValue, index, count, horizontal];
   const obj2 = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: null, accessibilityState: null, children: null };
   let str = "";
-  const animatedStyle = _mod1655.useAnimatedStyle(pnpm_PaginationItemTsx1, items2);
+  const animatedStyle = _mod1653.useAnimatedStyle(pnpm_PaginationItemTsx1, items2);
   if (animValue.value !== index) {
     const _HermesInternal = HermesInternal;
     str = "Go to " + accessibilityLabel;
@@ -98,7 +98,7 @@ export (arg0) => {
   const obj4 = { style: null, children };
   const items5 = [{ backgroundColor: "black", flex: 1 }, animatedStyle, activeDotStyle];
   obj4.style = items5;
-  obj3.children = jsx(_modDef1655.View, { style: null, children });
+  obj3.children = jsx(_modDef1653.View, { style: null, children });
   obj2.children = <React4 style={null}>{null}</React4>;
   return <React3 onPress={onPress} accessibilityLabel={accessibilityLabel} accessibilityRole="button" accessibilityHint={null} accessibilityState={null}>{null}</React3>;
 }

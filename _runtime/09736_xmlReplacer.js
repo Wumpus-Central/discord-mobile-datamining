@@ -65,12 +65,12 @@ export const xmlReplacer = /["&'<>$\x80-\uFFFF]/g;
 export const getCodePoint =
   null != String.prototype.codePointAt
     ? (str, arg1) => str.codePointAt(arg1)
-    : (str, sum) => {
-        if (55296 === (64512 & str.charCodeAt(sum))) {
-          const diff = str.charCodeAt(sum) - 55296;
-          sum = 1024 * diff + str.charCodeAt(sum + 1) - 56320 + 65536;
+    : (str, arg1) => {
+        if (55296 === (64512 & str.charCodeAt(arg1))) {
+          const diff = str.charCodeAt(arg1) - 55296;
+          let sum = 1024 * diff + str.charCodeAt(arg1 + 1) - 56320 + 65536;
         } else {
-          sum = str.charCodeAt(sum);
+          sum = str.charCodeAt(arg1);
         }
         return sum;
       };

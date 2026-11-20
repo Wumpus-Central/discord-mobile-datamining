@@ -1,13 +1,13 @@
 // _runtime/metro/10967__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/game_console/images",
-  width: 126,
-  height: 118,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "02b1067b85b45dd047c8c944ed8c1d6e",
-  name: "devices_not_found",
+  hash: "164752cabe6d4eb331413f5b61581302",
+  name: "ic_playstation_24px",
   type: "png",
 });

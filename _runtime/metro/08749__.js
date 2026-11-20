@@ -1,13 +1,13 @@
 // _runtime/metro/08749__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 195,
+  height: 95,
   scales: [2, 3],
-  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
-  name: "XNeutralIcon",
+  hash: "6767aee50457385555e7e15b59dff5c6",
+  name: "img_nitro_ticket_bg",
   type: "png",
 });

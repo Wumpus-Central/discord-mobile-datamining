@@ -1,11 +1,14 @@
 // _runtime/metro/11395__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import Filter from "../11372_Filter.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import repeatedTimeunitPattern from "../11295_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../11302_AbstractParserWithWordBoundaryChecking.js";
+import _mod11389 from "11389__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const NLCasualYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,16 +27,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class MergeWeekdayComponentRefiner {
+const regExp = new RegExp(
+  "([0-9]{4})[\\.\\/\\s](?:(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod11389.MONTH_DICTIONARY) +
+    ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
+  "i",
+);
+class NLCasualYearMonthDayParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, MergeWeekdayComponentRefiner);
-    tmp2 = c2;
-    obj = c2(MergeWeekdayComponentRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, NLCasualYearMonthDayParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLCasualYearMonthDayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -46,46 +53,39 @@ class MergeWeekdayComponentRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = MergeWeekdayComponentRefiner;
-_inherits(MergeWeekdayComponentRefiner, Filter.MergingRefiner);
+_inherits(NLCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "mergeResults",
-  value: function mergeResults(arg0, index, clone) {
-    const cloneResult = clone.clone();
-    cloneResult.index = index.index;
-    cloneResult.text = index.text + arg0 + cloneResult.text;
-    const start = cloneResult.start;
-    const start2 = index.start;
-    start.assign("weekday", start2.get("weekday"));
-    if (cloneResult.end) {
-      const end = cloneResult.end;
-      const start3 = index.start;
-      end.assign("weekday", start3.get("weekday"));
-    }
-    return cloneResult;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, start, start2) {
-      start = start.start;
-      let result = start.isOnlyWeekdayComponent();
-      if (result) {
-        start2 = start.start;
-        result = !start2.isCertain("hour");
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(arg1[3]);
+      } else {
+        parsed = NLCasualYearMonthDayParser(11389).MONTH_DICTIONARY[str.toLowerCase(str)];
       }
-      if (result) {
-        const start3 = start2.start;
-        result = start3.isCertain("day");
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          const _parseInt2 = parseInt;
+          const date = { day: null, month: null, year: null };
+          const _parseInt3 = parseInt;
+          const parsed1 = parseInt(arg1[1]);
+          date.day = parseInt(arg1[4]);
+          date.month = parsed;
+          date.year = parsed1;
+          return date;
+        }
       }
-      if (result) {
-        result = null != str.match(/^,?\s*$/);
-      }
-      return result;
+      return null;
     },
   },
 ];
 
-export default _createClass(MergeWeekdayComponentRefiner, items);
+export default _createClass(NLCasualYearMonthDayParser, items);

@@ -1,3 +1,3 @@
 // _runtime/metro/01311__.js
 
-export default Function.prototype.call;
+export default Function.prototype.apply;

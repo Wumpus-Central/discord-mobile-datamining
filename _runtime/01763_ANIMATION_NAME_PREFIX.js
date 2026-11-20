@@ -1,0 +1,3 @@
+// _runtime/01763_ANIMATION_NAME_PREFIX.js
+
+export const ANIMATION_NAME_PREFIX = "REA-CSS-";

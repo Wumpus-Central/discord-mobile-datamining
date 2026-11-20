@@ -1,11 +1,11 @@
 // _runtime/metro/03306__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_panel/native/dock",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92b2ljZV9wYW5lbC9uYXRpdmUvZG9jaw==",
   scales: [1],
-  hash: "d24bba461b937c817a1f5469143e0980",
-  name: "VoicePanelDock.compiled.messages",
+  hash: "8f1439ec87b50d19586155a4f246504b",
+  name: "zh-CN.messages.8f1439ec87b50d19586155a4f246504b.compiled.messages",
   type: "jsona",
 });

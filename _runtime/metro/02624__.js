@@ -1,11 +1,11 @@
 // _runtime/metro/02624__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_rooms",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
   scales: [1],
-  hash: "ba2c65822693400e26b3312ce422a7e4",
-  name: "GuildRooms.compiled.messages",
+  hash: "f2ce8b09c85fa3caa4c0645ccca9f3c2",
+  name: "zh-CN.messages.f2ce8b09c85fa3caa4c0645ccca9f3c2.compiled.messages",
   type: "jsona",
 });

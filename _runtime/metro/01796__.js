@@ -1,80 +1,32 @@
 // _runtime/metro/01796__.js
-import ReanimatedModule2 from "../01666_ReanimatedModule.js";
-import _mod1668 from "01668__.js";
+import _mod1666 from "01666__.js";
+import _mod1797 from "01797__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const DynamicFlags = {
-  EXAMPLE_DYNAMIC_FLAG: true,
-  TRACK_SYNCHRONOUS_PROPS_IN_LAYOUT_ANIMATIONS: false,
-  init() {
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      let tmp = "init" !== item;
-      if (tmp) {
-        tmp = "setFlag" !== item;
-      }
-      if (tmp) {
-        tmp = "getFlag" !== item;
-      }
-      if (tmp) {
-        const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
-        const result = ReanimatedModule.setDynamicFeatureFlag(item, DynamicFlags[item]);
-      }
-    });
-  },
-  setFlag(arg0, arg1) {
-    if (arg0 in obj) {
-      tmp[arg0] = arg1;
-      const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
-      const result = ReanimatedModule.setDynamicFeatureFlag(arg0, arg1);
-    } else {
-      const logger = _mod1668.logger;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "The feature flag: '" +
-          arg0 +
-          "' no longer exists, you can safely remove invocation of `setDynamicFeatureFlag('" +
-          arg0 +
-          "')` from your code.",
-      );
-    }
-  },
-  getFlag(arg0) {
-    if (arg0 in obj) {
-      let flag = obj[arg0];
-    } else {
-      const logger = _mod1668.logger;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "The feature flag: '" +
-          arg0 +
-          "' no longer exists, you can safely remove invocation of `getDynamicFeatureFlag('" +
-          arg0 +
-          "')` from your code.",
-      );
-      flag = false;
-    }
-    return flag;
-  },
-};
-DynamicFlags.init();
-let closure_3 = {};
 
-export { DynamicFlags };
-export function setDynamicFeatureFlag(arg0, arg1) {
-  obj.setFlag(arg0, arg1);
-}
-export function getDynamicFeatureFlag(arg0) {
-  return obj.getFlag(arg0);
-}
-export function getStaticFeatureFlag(USE_ANIMATION_BACKEND) {
-  if (USE_ANIMATION_BACKEND in closure_3) {
-    return closure_3[USE_ANIMATION_BACKEND];
-  } else {
-    const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
-    const staticFeatureFlag = ReanimatedModule.getStaticFeatureFlag(USE_ANIMATION_BACKEND);
-    closure_3[USE_ANIMATION_BACKEND] = staticFeatureFlag;
-    return staticFeatureFlag;
-  }
+export function initSvgCssSupport() {
+  const result = _mod1666.registerComponentPropsBuilder("RNSVGCircle", _mod1797.SVG_CIRCLE_PROPERTIES_CONFIG);
+  const result1 = _mod1666.registerComponentPropsBuilder("RNSVGEllipse", _mod1797.SVG_ELLIPSE_PROPERTIES_CONFIG);
+  const result2 = _mod1666.registerComponentPropsBuilder("RNSVGImage", _mod1797.SVG_IMAGE_PROPERTIES_CONFIG);
+  const result3 = _mod1666.registerComponentPropsBuilder("RNSVGLine", _mod1797.SVG_LINE_PROPERTIES_CONFIG);
+  const result4 = _mod1666.registerComponentPropsBuilder(
+    "RNSVGLinearGradient",
+    _mod1797.SVG_LINEAR_GRADIENT_PROPERTIES_CONFIG,
+  );
+  const result5 = _mod1666.registerComponentPropsBuilder(
+    "RNSVGRadialGradient",
+    _mod1797.SVG_RADIAL_GRADIENT_PROPERTIES_CONFIG,
+  );
+  const result6 = _mod1666.registerComponentPropsBuilder("RNSVGPath", _mod1797.SVG_PATH_PROPERTIES_CONFIG);
+  const result7 = _mod1666.registerComponentPropsBuilder("RNSVGPattern", _mod1797.SVG_PATTERN_PROPERTIES_CONFIG);
+  const obj9 = _mod1666;
+  const compoundComponentName = _mod1666.getCompoundComponentName("RNSVGPath", "Polygon");
+  const result8 = obj9.registerComponentPropsBuilder(compoundComponentName, _mod1797.SVG_POLYGON_PROPERTIES_CONFIG);
+  const obj11 = _mod1666;
+  const compoundComponentName1 = _mod1666.getCompoundComponentName("RNSVGPath", "Polyline");
+  const result9 = obj11.registerComponentPropsBuilder(compoundComponentName1, _mod1797.SVG_POLYLINE_PROPERTIES_CONFIG);
+  const result10 = _mod1666.registerComponentPropsBuilder("RNSVGRect", _mod1797.SVG_RECT_PROPERTIES_CONFIG);
+  const result11 = _mod1666.registerComponentPropsBuilder("RNSVGText", _mod1797.SVG_TEXT_PROPERTIES_CONFIG);
+  const result12 = _mod1666.registerComponentPropsBuilder(/^RNSVG/, _mod1797.SVG_COMMON_PROPERTIES_CONFIG);
 }

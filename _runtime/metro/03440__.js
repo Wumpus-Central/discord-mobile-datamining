@@ -1,11 +1,11 @@
 // _runtime/metro/03440__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNl",
+  httpServerLocation: "/assets/modules/pinot",
   scales: [1],
-  hash: "0916a7bcc5f28cd3d9e17b4b14634cfd",
-  name: "bg.messages.0916a7bcc5f28cd3d9e17b4b14634cfd.compiled.messages",
+  hash: "364c75e0f639bba06c466572843c5113",
+  name: "Pinot.compiled.messages",
   type: "jsona",
 });

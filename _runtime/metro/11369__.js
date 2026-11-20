@@ -1,79 +1,61 @@
 // _runtime/metro/11369__.js
-import _mod11352 from "11352__.js";
-import AbstractParserWithWordBoundaryChecking from "../11360_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitLaterFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
+const JPSlashDateFormatParser = require;
 const regExp = new RegExp(
-  "(" + _mod11352.TIME_UNITS_PATTERN + ")\\s{0,5}(?:later|after|from now|henceforth|forward|out)(?=(?:\\W|$))",
+  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
   "i",
 );
-const regExp1 = new RegExp(
-  "(" + _mod11352.TIME_UNITS_NO_ABBR_PATTERN + ")\\s{0,5}(later|after|from now)(?=\\W|$)",
-  "i",
-);
-class ENTimeUnitLaterFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeUnitLaterFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitLaterFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+class JPSlashDateFormatParser {
+  constructor() {
+    tmp = c2(this, JPSlashDateFormatParser);
+    return;
   }
 }
-_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = ENTimeUnitLaterFormatParser(11352).parseDuration(arg1[1]);
-      let relativeFromReference = null;
-      if (parseDurationResult) {
-        const ParsingComponents = ENTimeUnitLaterFormatParser(11356).ParsingComponents;
-        relativeFromReference = ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(11365).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(11365).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(JPSlashDateFormatParser(11365).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(11296).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply(
+                  "year",
+                  JPSlashDateFormatParser(11296).findYearClosestToRef(
+                    createParsingComponents.reference.instant,
+                    parsed1,
+                    parsed,
+                  ),
+                );
+              }
+              return parsingComponents;
+            }
+          }
+          return null;
+        }
       }
-      return relativeFromReference;
+      return null;
     },
   },
 ];
 
-export default _createClass(ENTimeUnitLaterFormatParser, items);
+export default _createClass(JPSlashDateFormatParser, items);

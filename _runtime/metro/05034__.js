@@ -1,14 +1,15 @@
 // _runtime/metro/05034__.js
 import _mod19 from "00019__.js";
-import BottomSheetContext from "../05035_BottomSheetContext.js";
+import _mod5035 from "05035__.js";
 
 const useContext = _mod19.useContext;
 
-export () => {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
-  if (null === tmp) {
-    throw "'BottomSheetModalContext' cannot be null!";
-  } else {
-    return tmp;
+export function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod5035.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
+    }
   }
+  return tmp;
 }

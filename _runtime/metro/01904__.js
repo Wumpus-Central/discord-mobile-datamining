@@ -1,9 +1,13 @@
 // _runtime/metro/01904__.js
-import useComposedEventHandlerCommon from "../01905_useComposedEventHandlerCommon.js";
+import useDerivedValueCommon from "../01905_useDerivedValueCommon.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function useComposedEventHandler(tmp8Result4) {
-  return useComposedEventHandlerCommon.useComposedEventHandlerBase(tmp8Result4, undefined);
+export function useDerivedValue(pnpm_indexTsx1, items2) {
+  let __closure = pnpm_indexTsx1.__closure;
+  if (__closure == null) {
+    __closure = [];
+  }
+  return useDerivedValueCommon.useDerivedValueBase(pnpm_indexTsx1, undefined, __closure);
 }

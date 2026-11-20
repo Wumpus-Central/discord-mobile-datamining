@@ -1,11 +1,11 @@
 // _runtime/metro/03636__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/tenure_reward",
   scales: [1],
-  hash: "e4f86c592460aead9f44c410a1e015ff",
-  name: "Norbs.compiled.messages",
+  hash: "4ce7db81a29e051a11be32b72852c173",
+  name: "TenureReward.compiled.messages",
   type: "jsona",
 });

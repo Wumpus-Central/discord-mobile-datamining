@@ -1,12 +1,12 @@
 // _runtime/metro/11452__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../11367_AbstractTimeExpressionParser.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod11451 from "11451__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
+const UkMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class NLTimeExpressionParser {
+class UkMonthNameParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, NLTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(NLTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_4()) {
+    tmp = c2(this, UkMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(UkMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,44 +45,49 @@ class NLTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = NLTimeExpressionParser;
-_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(UkMonthNameParser, _mod11451.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:om)\\s*)?";
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "((?:\u0432|\u0443)\\s*)?(" +
+      UkMonthNameParser(11295).matchAnyPattern(UkMonthNameParser(11449).MONTH_DICTIONARY) +
+      ")\\s*(?:[,-]?\\s*(" +
+      UkMonthNameParser(11449).YEAR_PATTERN +
+      ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)"
+    );
   },
 };
-let items = [
+const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
-    },
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!UkMonthNameParser(11449).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
         }
-        items = [arg0, arg1];
-        fnResult = fn(items);
       }
-      return fnResult;
+      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = UkMonthNameParser(11449).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", UkMonthNameParser(11449).parseYearPattern(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply(
+          "year",
+          UkMonthNameParser(11296).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9),
+        );
+      }
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(NLTimeExpressionParser, items);
+export default _createClass(UkMonthNameParser, items);

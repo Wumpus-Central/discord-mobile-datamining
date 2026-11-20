@@ -1,13 +1,13 @@
 // _runtime/metro/14026__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 45.5,
+  height: 8.5,
   scales: [2, 3],
-  hash: "61da0f232b2cca239e867e8e10712e2b",
-  name: "tier_0_48px_dark",
+  hash: "8d16389f341b45c184ca21d1deb5fd2e",
+  name: "img_logo_discord",
   type: "png",
 });

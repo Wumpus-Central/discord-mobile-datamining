@@ -1,5 +1,5 @@
 // _runtime/metro/09796__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dcae1df15663c479951183ad5f2fe3dd",
-  name: "RedditNeutralIcon",
+  hash: "46bee89e41092010bef3088a4b8308ea",
+  name: "BlueskyNeutralIcon",
   type: "png",
 });

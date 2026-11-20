@@ -1,107 +1,164 @@
 // _runtime/metro/01974__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod1653 from "01653__.js";
+import _mod1972 from "01972__.js";
+import NOOP from "../01973_NOOP.js";
+import AndroidSoftInputModes from "../01975_AndroidSoftInputModes.js";
+import noop from "00019__.js";
 
-let c2 = true;
-let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
-obj.timestamp = new Date().getTime();
-let global = obj;
-let KeyboardEvents = fn(1645).KeyboardEvents;
-KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
-  c2 = true;
-  global = arg0;
-});
-const KeyboardEvents2 = fn(1645).KeyboardEvents;
-KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
-  c2 = false;
-  global = arg0;
-});
-let closure_0 = asyncGeneratorStep(async (arg0) => {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: "+60" };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        let keepFocus;
-        if (closure_0 != null) {
-          keepFocus = tmp18.keepFocus;
-        }
-        c1 = keepFocus;
-        if (keepFocus == null) {
-          c1 = false;
-        }
-        closure_0 = c1;
-        let animated;
-        if (closure_0 != null) {
-          animated = tmp18.animated;
-        }
-        c2 = animated;
-        if (animated == null) {
-          c2 = true;
-        }
-        dependencyMap = c2;
-        const promise = new Promise((fn) => {
-          closure_0 = fn;
-          if (c2) {
-            fn();
-          } else {
-            const KeyboardEvents = closure_0(1645).KeyboardEvents;
-            closure_1 = KeyboardEvents.addListener("keyboardDidHide", () => {
-              closure_0(undefined);
-              closure_1.remove();
-            });
-            const KeyboardControllerNative = closure_0(1645).KeyboardControllerNative;
-            KeyboardControllerNative.dismiss(closure_0, closure_1);
-          }
-        });
-        c3 = 3;
-        const obj = { value: promise, done: true };
-        return obj;
+const require = globalThis.__r;
+
+function useGenericKeyboardHandler(ChannelListLegendListTsx1, items2) {
+  NOOP.useKeyboardContext();
+  const obj2 = _mod1653;
+  items = [closure_5, ChannelListLegendListTsx1];
+  c0 = undefined;
+  [tmp, tmp2] = items;
+  function pnpm_indexTs1(eventName) {
+    eventName = eventName.eventName;
+    if (eventName.endsWith("onKeyboardMoveStart")) {
+      const onStart = _undefined.onStart;
+      if (onStart != null) {
+        onStart(eventName);
       }
-    } catch (tmp13) {
-      c3 = tmp;
-      throw tmp13;
+    }
+    const eventName2 = eventName.eventName;
+    if (eventName2.endsWith("onKeyboardMove")) {
+      const onMove = _undefined.onMove;
+      if (onMove != null) {
+        onMove(eventName);
+      }
+    }
+    const eventName3 = eventName.eventName;
+    if (eventName3.endsWith("onKeyboardMoveEnd")) {
+      const onEnd = _undefined.onEnd;
+      if (onEnd != null) {
+        onEnd(eventName);
+      }
+    }
+    const eventName4 = eventName.eventName;
+    if (eventName4.endsWith("onKeyboardMoveInteractive")) {
+      const onInteractive = _undefined.onInteractive;
+      if (onInteractive != null) {
+        onInteractive(eventName);
+      }
     }
   }
-});
-const date = new Date();
+  const items1 = [tmp2];
+  pnpm_indexTs1.__closure = items1;
+  pnpm_indexTs1.__workletHash = 82243721795;
+  pnpm_indexTs1.__initData = tmp;
+  closure_1 = _mod1653.useEvent(pnpm_indexTs1, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(ChannelListLegendListTsx1, items2).doDependenciesDiffer);
+  React3(() => {
+    _undefined.setKeyboardHandlers(closure_1);
+    return () => closure_0();
+  }, items2);
+}
+({ useEffect: c2, useLayoutEffect: c3 } = noop);
+function useResizeMode() {
+  React2(() => {
+    let KeyboardController = _mod1972.KeyboardController;
+    KeyboardController.setInputMode(AndroidSoftInputModes.AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+    return () => {
+      const KeyboardController = closure_1_0(dependencyMap[1]).KeyboardController;
+      return KeyboardController.setDefaultMode();
+    };
+  }, []);
+}
+let closure_5 = { code: "(function pnpm_indexTs1(event){let[handler]=this.__closure;if(event.eventName.endsWith(\"onKeyboardMoveStart\")){var _handler$onStart,_handler;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,event);}if(event.eventName.endsWith(\"onKeyboardMove\")){var _handler$onMove,_handler2;(_handler$onMove=(_handler2=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler2,event);}if(event.eventName.endsWith(\"onKeyboardMoveEnd\")){var _handler$onEnd,_handler3;(_handler$onEnd=(_handler3=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler3,event);}if(event.eventName.endsWith(\"onKeyboardMoveInteractive\")){var _handler$onInteractiv,_handler4;(_handler$onInteractiv=(_handler4=handler).onInteractive)===null||_handler$onInteractiv===void 0||_handler$onInteractiv.call(_handler4,event);}})" };
+let closure_7 = { code: "(function pnpm_indexTs2(event){let[handler]=this.__closure;if(event.eventName.endsWith(\"onFocusedInputTextChanged\")){var _handler$onChangeText,_handler;(_handler$onChangeText=(_handler=handler).onChangeText)===null||_handler$onChangeText===void 0||_handler$onChangeText.call(_handler,event);}if(event.eventName.endsWith(\"onFocusedInputSelectionChanged\")){var _handler$onSelectionC,_handler2;(_handler$onSelectionC=(_handler2=handler).onSelectionChange)===null||_handler$onSelectionC===void 0||_handler$onSelectionC.call(_handler2,event);}})" };
+for (const key10021 in require("01976__.js")) {
+  arg5[key10021] = require("01976__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("01977__.js")) {
+  arg5[key10025] = require("01977__.js")[key10025];
+  continue;
+}
 
-export const KeyboardController = {
-  setDefaultMode: fn(1645).KeyboardControllerNative.setDefaultMode,
-  setInputMode: fn(1645).KeyboardControllerNative.setInputMode,
-  setFocusTo: fn(1645).KeyboardControllerNative.setFocusTo,
-  preload: fn(1645).KeyboardControllerNative.preload,
-  dismiss(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+export { useResizeMode };
+export () => {
+  if (typeof useResizeMode === "function") {
+    React2(() => {
+      let KeyboardController = _mod1972.KeyboardController;
+      KeyboardController.setInputMode(AndroidSoftInputModes.AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+      return () => {
+        const KeyboardController = closure_1_0(dependencyMap[1]).KeyboardController;
+        return KeyboardController.setDefaultMode();
+      };
+    }, []);
+    return NOOP.useKeyboardContext().animated;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+export () => {
+  if (typeof useResizeMode === "function") {
+    React2(() => {
+      let KeyboardController = _mod1972.KeyboardController;
+      KeyboardController.setInputMode(AndroidSoftInputModes.AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+      return () => {
+        const KeyboardController = closure_1_0(dependencyMap[1]).KeyboardController;
+        return KeyboardController.setDefaultMode();
+      };
+    }, []);
+    return NOOP.useKeyboardContext().reanimated;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+export { useGenericKeyboardHandler };
+export function useKeyboardHandler(ChannelListLegendListTsx1, items2) {
+  if (typeof useResizeMode === "function") {
+    React2(() => {
+      let KeyboardController = _mod1972.KeyboardController;
+      KeyboardController.setInputMode(AndroidSoftInputModes.AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+      return () => {
+        const KeyboardController = closure_1_0(dependencyMap[1]).KeyboardController;
+        return KeyboardController.setDefaultMode();
+      };
+    }, []);
+    useGenericKeyboardHandler(ChannelListLegendListTsx1, items2);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+export function useKeyboardController() {
+  const keyboardContext = NOOP.useKeyboardContext();
+  return { setEnabled: keyboardContext.setEnabled, enabled: keyboardContext.enabled };
+}
+export function useReanimatedFocusedInput() {
+  const keyboardContext = NOOP.useKeyboardContext();
+  return { input: keyboardContext.layout, update: keyboardContext.update };
+}
+export function useFocusedInputHandler(ChannelListLegendListTsx1, items26) {
+  NOOP.useKeyboardContext();
+  const obj2 = _mod1653;
+  items = [closure_7, ChannelListLegendListTsx1];
+  c0 = undefined;
+  [tmp, tmp2] = items;
+  function pnpm_indexTs2(eventName) {
+    eventName = eventName.eventName;
+    if (eventName.endsWith("onFocusedInputTextChanged")) {
+      const onChangeText = _undefined.onChangeText;
+      if (onChangeText != null) {
+        onChangeText(eventName);
+      }
     }
-    return applyArgumentsResult;
-  },
-  isVisible() {
-    return !c2;
-  },
-  state() {
-    return global;
-  },
-};
+    const eventName2 = eventName.eventName;
+    if (eventName2.endsWith("onFocusedInputSelectionChanged")) {
+      const onSelectionChange = _undefined.onSelectionChange;
+      if (onSelectionChange != null) {
+        onSelectionChange(eventName);
+      }
+    }
+  }
+  const items1 = [tmp2];
+  pnpm_indexTs2.__closure = items1;
+  pnpm_indexTs2.__workletHash = 3141072070902;
+  pnpm_indexTs2.__initData = tmp;
+  closure_1 = _mod1653.useEvent(pnpm_indexTs2, ["onFocusedInputTextChanged", "onFocusedInputSelectionChanged"], obj2.useHandler(ChannelListLegendListTsx1, items26).doDependenciesDiffer);
+  React3(() => {
+    _undefined.setInputHandlers(closure_1);
+    return () => closure_0();
+  }, items26);
+}

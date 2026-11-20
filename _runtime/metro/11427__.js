@@ -1,61 +1,90 @@
 // _runtime/metro/11427__.js
+import _mod11426 from "11426__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
-  "i",
-);
-class JPSlashDateFormatParser {
+const RUMonthNameParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class RUMonthNameParser {
   constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
+    self = this;
+    tmp = c2(this, RUMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(RUMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
+_inherits(RUMonthNameParser, _mod11426.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "((?:\u0432)\\s*)?(" +
+      RUMonthNameParser(11295).matchAnyPattern(RUMonthNameParser(11424).MONTH_DICTIONARY) +
+      ")\\s*(?:[,-]?\\s*(" +
+      RUMonthNameParser(11424).YEAR_PATTERN +
+      ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)"
+    );
   },
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(11423).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(11423).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(11423).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(11354).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply(
-                  "year",
-                  JPSlashDateFormatParser(11354).findYearClosestToRef(
-                    createParsingComponents.reference.instant,
-                    parsed1,
-                    parsed,
-                  ),
-                );
-              }
-              return parsingComponents;
-            }
-          }
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!RUMonthNameParser(11424).FULL_MONTH_NAME_DICTIONARY[formatted]) {
           return null;
         }
       }
-      return null;
+      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = RUMonthNameParser(11424).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", RUMonthNameParser(11424).parseYear(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", RUMonthNameParser(11296).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+      }
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(RUMonthNameParser, items);

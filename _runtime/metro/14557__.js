@@ -1,13 +1,13 @@
 // _runtime/metro/14557__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 251,
-  height: 147,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "c013c533d835389917bf422e9978d1be",
-  name: "img_app_crash_light",
+  hash: "bc9640d059e4504fae6e197e103e15f0",
+  name: "whatsapp",
   type: "png",
 });

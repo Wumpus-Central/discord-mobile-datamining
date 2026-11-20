@@ -10,10 +10,10 @@ import DEFAULT_ENVIRONMENT2 from "../00722_DEFAULT_ENVIRONMENT.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function getDynamicSamplingContextFromSpan(activeSpan) {
+function getDynamicSamplingContextFromSpan(sentryNonRecordingSpan) {
   const client = _mod712.getClient();
   if (client) {
-    const rootSpan = spanToJSON.getRootSpan(activeSpan);
+    const rootSpan = spanToJSON.getRootSpan(sentryNonRecordingSpan);
     const tmpResult = spanToJSON;
     const spanToJSONResult = spanToJSON.spanToJSON(rootSpan);
     const data = spanToJSONResult.data;
@@ -68,7 +68,7 @@ function getDynamicSamplingContextFromSpan(activeSpan) {
           environment: DEFAULT_ENVIRONMENT,
           release: options.release,
           public_key: client.getDsn() || {}.publicKey,
-          trace_id: activeSpan.spanContext().traceId,
+          trace_id: sentryNonRecordingSpan.spanContext().traceId,
           org_id: null,
         };
         const tmp12 = client.getDsn() || {};
@@ -165,7 +165,7 @@ export function getDynamicSamplingContextFromScope(client, scope) {
   return dsc;
 }
 export { getDynamicSamplingContextFromSpan };
-export function spanToBaggageHeader(activeSpan) {
-  const tmp = getDynamicSamplingContextFromSpan(activeSpan);
+export function spanToBaggageHeader(sentryNonRecordingSpan) {
+  const tmp = getDynamicSamplingContextFromSpan(sentryNonRecordingSpan);
   return MAX_BAGGAGE_STRING_LENGTH.dynamicSamplingContextToSentryBaggageHeader(tmp);
 }

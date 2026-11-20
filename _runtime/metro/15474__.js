@@ -1,10 +1,11 @@
 // _runtime/metro/15474__.js
-import _mod15458 from "15458__.js";
-import _mod15475 from "15475__.js";
+import _mod15422 from "15422__.js";
+import _mod15431 from "15431__.js";
+import all from "15441__.js";
 
-let closure_2 = _mod15458({}.hasOwnProperty);
+let closure_0 = _mod15422(Function.toString);
+if (!all(_mod15431.inspectSource)) {
+  _mod15431.inspectSource = (arg0) => closure_0(arg0);
+}
 
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return closure_2(_mod15475(arg0), arg1);
-  };
+export default _mod15431.inspectSource;

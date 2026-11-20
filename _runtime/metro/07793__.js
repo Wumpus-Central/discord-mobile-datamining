@@ -1,12 +1,11 @@
 // _runtime/metro/07793__.js
-import _modDef7785 from "07785__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeDisplacementMap = arg1;
+const FeDistantLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +24,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDisplacementMap {
+class FeDistantLight {
   constructor() {
     self = this;
-    tmp = c2(this, FeDisplacementMap);
+    tmp = c2(this, FeDistantLight);
     tmp2 = closure_4;
-    obj = closure_4(FeDisplacementMap);
+    obj = closure_4(FeDistantLight);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,18 +44,17 @@ class FeDisplacementMap {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDisplacementMap, _modDef7785);
+_inherits(FeDistantLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDisplacementMap(7762).warnUnimplementedFilter();
+    const result = FeDistantLight(7761).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDisplacementMap, items);
-importDefaultResultResult.displayName = "FeDisplacementMap";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

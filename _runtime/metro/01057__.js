@@ -6,7 +6,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const TouchEventBoundary = fn;
+let FeedbackWidgetProvider = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,414 +27,225 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const wrapperView = StyleSheet.create({ wrapperView: { flex: 1 } });
-let c9 = "sentry-label";
-let c10 = "data-sentry-component";
-let c11 = "data-sentry-element";
-let c12 = "data-sentry-source-file";
-class TouchEventBoundary {
-  constructor() {
+({ Animated: closure_6, Appearance: metroImportDefault, Dimensions: closure_8, Easing: closure_9, Modal: closure_10, PanResponder: closure_11, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
+const module_1058 = fn(1058);
+const useNativeDriver = module_1058.isNativeDriverSupportedForColorAnimations();
+class FeedbackWidgetProvider {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, TouchEventBoundary);
+    tmp = c2(this, FeedbackWidgetProvider);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(TouchEventBoundary);
+    obj = closure_4(FeedbackWidgetProvider);
     tmp3 = closure_3;
-    if (metroImportDefault()) {
-      tmp7 = globalThis;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.name = "TouchEventBoundary";
+    closure_0 = tmp3Result;
+    obj1 = { isButtonVisible: false, isScreenshotButtonVisible: false, isVisible: false, backgroundOpacity: null, panY: null, isScrollAtTop: true };
+    value = new closure_6.Value(0);
+    obj1.backgroundOpacity = value;
+    value1 = new closure_6.Value(closure_8.get("screen").height);
+    obj1.panY = value1;
+    tmp3Result.state = obj1;
+    obj4 = {
+      onStartShouldSetPanResponder(arg0, dy) {
+            let isScrollAtTop = FeedbackWidgetProvider(867).notWeb();
+            if (isScrollAtTop) {
+              isScrollAtTop = closure_0.state.isScrollAtTop;
+            }
+            if (isScrollAtTop) {
+              isScrollAtTop = dy.dy > 0;
+            }
+            return isScrollAtTop;
+          },
+      onMoveShouldSetPanResponder(arg0, dy) {
+            let isScrollAtTop = FeedbackWidgetProvider(867).notWeb();
+            if (isScrollAtTop) {
+              isScrollAtTop = closure_0.state.isScrollAtTop;
+            }
+            if (isScrollAtTop) {
+              isScrollAtTop = dy.dy > 0;
+            }
+            return isScrollAtTop;
+          },
+      onPanResponderMove(arg0, dy) {
+            if (dy.dy > 0) {
+              const panY = closure_0.state.panY;
+              panY.setValue(dy.dy);
+            }
+          },
+      onPanResponderRelease(arg0, dy) {
+            if (dy.dy > FeedbackWidgetProvider(1059).PULL_DOWN_CLOSE_THRESHOLD) {
+              const obj = { toValue: React5.get("screen").height, duration: FeedbackWidgetProvider(1059).SLIDE_ANIMATION_DURATION, useNativeDriver: true };
+              RN.timing(closure_0.state.panY, obj).start(() => {
+                closure_1_0._handleClose();
+              });
+              const timingResult = RN.timing(closure_0.state.panY, obj);
+            } else {
+              RN.spring(closure_0.state.panY, { toValue: 0, useNativeDriver: true }).start();
+              const springResult = RN.spring(closure_0.state.panY, { toValue: 0, useNativeDriver: true });
+            }
+          }
+    };
+    tmp3Result._panResponder = closure_11.create(obj4);
+    tmp3Result._handleScroll = (nativeEvent) => {
+      closure_0.setState({ isScrollAtTop: nativeEvent.nativeEvent.contentOffset.y <= 0 });
+    };
+    tmp3Result._setVisibilityFunction = (isVisible) => {
+      if (isVisible) {
+        const obj2 = { isVisible };
+        isVisible.setState(obj2);
+      } else {
+        const obj = { toValue: null, duration: null, useNativeDriver: true, easing: null };
+        ({ parallel, timing } = RN);
+        obj.toValue = closure_1_8.get("screen").height;
+        obj.duration = isVisible(1059).SLIDE_ANIMATION_DURATION;
+        obj.easing = closure_1_9.out(closure_1_9.quad);
+        items = [timing(isVisible.state.panY, obj), ];
+        const obj3 = { toValue: 0, duration: isVisible(1059).BACKGROUND_ANIMATION_DURATION, useNativeDriver, easing: closure_1_9.out(closure_1_9.quad) };
+        items[1] = RN.timing(isVisible.state.backgroundOpacity, obj3);
+        parallel(items).start(() => {
+          isVisible.setState({ isVisible });
+        });
+        const parallelResult = parallel(items);
+      }
+    };
+    tmp3Result._setButtonVisibilityFunction = (isButtonVisible) => {
+      closure_0.setState({ isButtonVisible });
+    };
+    tmp3Result._setScreenshotButtonVisibilityFunction = (isScreenshotButtonVisible) => {
+      closure_0.setState({ isScreenshotButtonVisible });
+    };
+    tmp3Result._handleClose = () => {
+      const FeedbackWidgetManager = closure_0(1059).FeedbackWidgetManager;
+      FeedbackWidgetManager.hide();
+    };
+    FeedbackButtonManager = closure_0(closure_1[9]).FeedbackButtonManager;
+    initializeResult = FeedbackButtonManager.initialize(tmp3Result._setButtonVisibilityFunction);
+    ScreenshotButtonManager = closure_0(closure_1[9]).ScreenshotButtonManager;
+    initializeResult1 = ScreenshotButtonManager.initialize(tmp3Result._setScreenshotButtonVisibilityFunction);
+    FeedbackWidgetManager = closure_0(closure_1[9]).FeedbackWidgetManager;
+    initializeResult2 = FeedbackWidgetManager.initialize(tmp3Result._setVisibilityFunction);
     return tmp3Result;
   }
 }
-_inherits(TouchEventBoundary, noop.Component);
+_inherits(FeedbackWidgetProvider, noop.Component);
 const entry = {
   key: "componentDidMount",
   value: function componentDidMount() {
-    const client = TouchEventBoundary(681).getClient();
-    let addIntegration;
-    if (null != client) {
-      addIntegration = client.addIntegration;
-    }
-    if (!tmp5) {
-      const self = this;
-      const call = addIntegration.call;
-      const integration = TouchEventBoundary(1055).createIntegration(this.name);
-      if (typeof call === "unknown") {
-        addIntegration(integration);
-      } else {
-        call(client, integration);
-      }
-      const tmpResult = TouchEventBoundary(1055);
-    }
-    const obj = TouchEventBoundary(681);
-    tmp5 = null === addIntegration || undefined === addIntegration;
+    const self = this;
+    this._themeListener = metroImportDefault.addChangeListener(() => {
+      self.forceUpdate();
+    });
   }
 };
 let items = [
   entry,
   {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this._themeListener) {
+        const _themeListener = this._themeListener;
+        _themeListener.remove();
+      }
+    }
+  },
+  {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(arg0, isVisible) {
+      const self = this;
+      if (!isVisible.isVisible) {
+        if (self.state.isVisible) {
+          const obj = { toValue: 1, duration: null, useNativeDriver: null, easing: null };
+          ({ parallel, timing } = RN);
+          obj.duration = FeedbackWidgetProvider(1059).BACKGROUND_ANIMATION_DURATION;
+          obj.useNativeDriver = useNativeDriver;
+          obj.easing = React6.in(React6.quad);
+          items = [timing(self.state.backgroundOpacity, obj), ];
+          const obj2 = { toValue: 0, duration: FeedbackWidgetProvider(1059).SLIDE_ANIMATION_DURATION, useNativeDriver: true, easing: React6.in(React6.quad) };
+          items[1] = RN.timing(self.state.panY, obj2);
+          parallel(items).start(() => {
+            const debug = FeedbackWidgetProvider(dependencyMap[10]).debug;
+            debug.log("FeedbackWidgetProvider componentDidUpdate");
+          });
+          const parallelResult = parallel(items);
+        }
+      }
+      if (tmp7) {
+        const backgroundOpacity = self.state.backgroundOpacity;
+        backgroundOpacity.setValue(0);
+      }
+      tmp7 = isVisible.isVisible && !self.state.isVisible;
+    }
+  },
+  {
     key: "render",
     value: function render() {
-      const obj = { style: wrapperView.wrapperView, onTouchStart: null };
-      const _onTouchStart = this._onTouchStart;
-      obj.onTouchStart = _onTouchStart.bind(this);
-      return <timestampProducer style={wrapperView.wrapperView} onTouchStart={null}>{this.props.children}</timestampProducer>;
-    }
-  },
-  {
-    key: "_logTouchEvent",
-    value: function _logTouchEvent(items, label) {
-      const first = items[0];
-      if (first) {
-        let combined = label;
-        if (!label) {
-          let str3 = "";
-          if (first.file) {
-            const _HermesInternal = HermesInternal;
-            str3 = " (" + first.file + ")";
-          }
-          const _HermesInternal2 = HermesInternal;
-          combined = "" + first.name + str3;
-        }
-        const self = this;
-        const obj = { category: this.props.breadcrumbCategory, data: null, level: "info", message: null, type: null };
-        const obj2 = { path: items };
-        obj.data = obj2;
-        const _HermesInternal3 = HermesInternal;
-        obj.message = "Touch event within element: " + combined;
-        obj.type = this.props.breadcrumbType;
-        TouchEventBoundary(681).addBreadcrumb(obj);
-        const debug2 = TouchEventBoundary(681).debug;
-        const _HermesInternal4 = HermesInternal;
-        debug2.log("[TouchEvents] " + obj.message);
-        const obj3 = TouchEventBoundary(681);
-      } else {
-        const debug = TouchEventBoundary(681).debug;
-        debug.warn("[TouchEvents] No root component found in touch path.");
-      }
-    }
-  },
-  {
-    key: "_isNameIgnored",
-    value: function _isNameIgnored(label) {
       const self = this;
-      let tmp = this.props.ignoreNames || [];
-      let obj = tmp;
-      if (self.props.ignoredDisplayNames) {
-        items = [];
-        HermesBuiltin.arraySpread(self.props.ignoredDisplayNames, HermesBuiltin.arraySpread(tmp, 0));
-        obj = items;
+      if (obj.isModalSupported()) {
+        ({ isButtonVisible, isScreenshotButtonVisible, isVisible, backgroundOpacity } = self.state);
+        const obj2 = { inputRange: [0, 1], outputRange: ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"] };
+        const theme = FeedbackWidgetProvider(1061).getTheme();
+        const Fragment = noop.Fragment;
+        const children = self.props.children;
+        const tmpResult = FeedbackWidgetProvider(1061);
+        if (isButtonVisible) {
+          const _Object = Object;
+          isButtonVisible = noop.createElement(FeedbackWidgetProvider(1062).FeedbackButton, Object.assign({}, FeedbackWidgetProvider(994).getFeedbackButtonOptions()));
+          const tmpResult5 = FeedbackWidgetProvider(994);
+        }
+        if (isScreenshotButtonVisible) {
+          const _Object2 = Object;
+          isScreenshotButtonVisible = noop.createElement(FeedbackWidgetProvider(1066).ScreenshotButton, Object.assign({}, FeedbackWidgetProvider(994).getScreenshotButtonOptions()));
+          const tmpResult6 = FeedbackWidgetProvider(994);
+        }
+        let element = isVisible;
+        if (isVisible) {
+          const obj3 = { style: null };
+          items = [FeedbackWidgetProvider(1064).modalWrapper, ];
+          const obj5 = { backgroundColor: interpolateResult };
+          items[1] = obj5;
+          obj3.style = items;
+          const obj6 = { visible: isVisible, transparent: true, animationType: "none", onRequestClose: self._handleClose, testID: "feedback-form-modal" };
+          const obj7 = { style: null };
+          ({ createElement, createElement: createElement2 } = noop);
+          obj7.style = FeedbackWidgetProvider(1064).topSpacer;
+          const element2 = createElement2(state, obj7);
+          const _Object3 = Object;
+          const obj8 = { style: null };
+          const items1 = [FeedbackWidgetProvider(1064).modalSheetContainer(theme), ];
+          const obj9 = { transform: null };
+          const obj10 = { translateY: self.state.panY };
+          const items2 = [obj10];
+          obj9.transform = items2;
+          items1[1] = obj9;
+          obj8.style = items1;
+          const obj11 = { bounces: false, keyboardShouldPersistTaps: "handled", automaticallyAdjustKeyboardInsets: false, onScroll: self._handleScroll };
+          const merged = Object.assign(obj8, self._panResponder.panHandlers);
+          ({ createElement: createElement3, createElement: createElement4 } = noop);
+          const _Object4 = Object;
+          const tmpResult7 = FeedbackWidgetProvider(1064);
+          ({ _handleClose: obj17.onFormClose, _handleClose: obj17.onFormSubmitted } = self);
+          element = <RN.View style={null}><refs visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(application_id, obj11, createElement4(FeedbackWidgetProvider(1067).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(994).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></refs></RN.View>;
+          const obj12 = { onFormClose: null, onFormSubmitted: null };
+          const tmpResult8 = FeedbackWidgetProvider(994);
+        }
+        return <>{children}{isButtonVisible}{isScreenshotButtonVisible}{element}</>;
+      } else {
+        const debug = FeedbackWidgetProvider(681).debug;
+        debug.error("FeedbackWidget Modal is not supported in React Native < 0.71 with Fabric renderer.");
+        return <>{self.props.children}</>;
       }
-      return obj.some((item) => {
-        let tmp = typeof item === "string";
-        if (typeof item === "string") {
-          tmp = label === item;
-        }
-        if (!tmp) {
-          const _RegExp = RegExp;
-          let match = item instanceof RegExp;
-          if (match) {
-            match = label.match(item);
-          }
-          tmp = match;
-        }
-        return tmp;
-      });
-    }
-  },
-  {
-    key: "_onTouchStart",
-    value: function _onTouchStart(_targetInst) {
-      let displayName;
-      let labelName;
-      if (_targetInst._targetInst) {
-        const self = this;
-        _targetInst = _targetInst._targetInst;
-        items = [];
-        if (_targetInst) {
-          if (self.props.maxComponentTreeSize) {
-            if (items.length < self.props.maxComponentTreeSize) {
-              const elementType5 = _targetInst.elementType;
-              let displayName1;
-              if (null !== elementType5) {
-                if (undefined !== elementType5) {
-                  displayName1 = elementType5.displayName;
-                }
-              }
-              if (displayName1 !== TouchEventBoundary.displayName) {
-                while (true) {
-                  labelName = self.props.labelName;
-                  let elementType = _targetInst.elementType;
-                  if (null !== elementType) {
-                    if (undefined !== elementType) {
-                      displayName = elementType.displayName;
-                    }
-                  }
-                  if (_targetInst.memoizedProps) {
-                    break;
-                  } else {
-                    let tmp5;
-                    if (displayName) {
-                      let obj = { name: displayName };
-                      tmp5 = obj;
-                    }
-                    let _pushIfNotIgnoredResult = self._pushIfNotIgnored(items, tmp5);
-                    let _return = _targetInst.return;
-                    if (_return) {
-                      if (self.props.maxComponentTreeSize) {
-                        if (items.length < self.props.maxComponentTreeSize) {
-                          let elementType2 = _return.elementType;
-                          let displayName2;
-                          if (null !== elementType2) {
-                            if (undefined !== elementType2) {
-                              displayName2 = elementType2.displayName;
-                            }
-                          }
-                          _targetInst = _return;
-                        }
-                      }
-                    }
-                  }
-                }
-                let tmp10 = typeof tmp9 === "string";
-                if (typeof tmp4[closure_10] === "string") {
-                  tmp10 = tmp4[closure_10].length > 0;
-                }
-                if (tmp10) {
-                  tmp10 = "unknown" !== tmp4[closure_10];
-                }
-                if (tmp10) {
-                  tmp10 = tmp4[closure_10];
-                }
-                if (!tmp10) {
-                  tmp10 = displayName;
-                }
-                const obj3 = { name: tmp10, element: null, file: null, label: null };
-                let tmp13 = typeof tmp12 === "string";
-                if (typeof tmp4[closure_11] === "string") {
-                  tmp13 = tmp4[closure_11].length > 0;
-                }
-                if (tmp13) {
-                  tmp13 = "unknown" !== tmp4[closure_11];
-                }
-                if (tmp13) {
-                  tmp13 = tmp4[closure_11];
-                }
-                obj3.element = tmp13;
-                let tmp16 = typeof tmp15 === "string";
-                if (typeof tmp4[closure_12] === "string") {
-                  tmp16 = tmp4[closure_12].length > 0;
-                }
-                if (tmp16) {
-                  tmp16 = "unknown" !== tmp4[closure_12];
-                }
-                if (tmp16) {
-                  tmp16 = tmp4[closure_12];
-                }
-                obj3.file = tmp16;
-                if (typeof tmp4[closure_9] !== "string") {
-                  let tmp18;
-                  if (typeof labelName === "string") {
-                    if (typeof tmp4[labelName] === "string") {
-                      if (tmp4[labelName].length > 0) {
-                        tmp18 = tmp4[labelName];
-                      }
-                    }
-                  }
-                  obj3.label = tmp18;
-                  obj2.dropUndefinedKeys(obj3);
-                }
-                tmp18 = tmp4[closure_9];
-                obj2 = TouchEventBoundary(681);
-              }
-            }
-          }
-        }
-        const found = items.find((label) => label.label);
-        let label;
-        if (null !== found) {
-          if (undefined !== found) {
-            label = found.label;
-          }
-        }
-        if (items.length > 0) {
-          self._logTouchEvent(items, label);
-        }
-        const obj5 = { elementId: label, op: TouchEventBoundary(1017).UI_ACTION_TOUCH };
-        const result = TouchEventBoundary(1027).startUserInteractionSpan(obj5);
-        if (result) {
-          const attr = result.setAttribute(TouchEventBoundary(681).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, TouchEventBoundary(1020).SPAN_ORIGIN_AUTO_INTERACTION);
-          const _targetInst2 = _targetInst._targetInst;
-          let tmp36;
-          if (_targetInst2) {
-            const elementType3 = _targetInst2.elementType;
-            let displayName3;
-            if (null !== elementType3) {
-              if (undefined !== elementType3) {
-                displayName3 = elementType3.displayName;
-              }
-            }
-            if (displayName3 !== TouchEventBoundary.displayName) {
-              let tmp42;
-              if (_targetInst2.memoizedProps) {
-                const prop = _targetInst2.memoizedProps["sentry-span-attributes"];
-                let tmp40;
-                if (typeof prop === "object") {
-                  if (null !== prop) {
-                    const _Array = Array;
-                    if (!Array.isArray(prop)) {
-                      tmp40 = prop;
-                    }
-                  }
-                }
-                tmp42 = tmp40;
-              }
-              let tmp44 = _targetInst2;
-              let tmp45 = tmp42;
-              if (!tmp42) {
-                const _return2 = tmp44.return;
-                tmp36 = tmp45;
-                while (_return2) {
-                  let elementType4 = _return2.elementType;
-                  let displayName4;
-                  if (null !== elementType4) {
-                    if (undefined !== elementType4) {
-                      displayName4 = elementType4.displayName;
-                    }
-                  }
-                  tmp36 = tmp45;
-                  if (displayName4 === TouchEventBoundary.displayName) {
-                    break;
-                  } else {
-                    let tmp49;
-                    if (_return2.memoizedProps) {
-                      let prop1 = _return2.memoizedProps["sentry-span-attributes"];
-                      let tmp51;
-                      if (typeof prop1 === "object") {
-                        if (null !== prop1) {
-                          let _Array2 = Array;
-                          if (!Array.isArray(prop1)) {
-                            tmp51 = prop1;
-                          }
-                        }
-                      }
-                      tmp49 = tmp51;
-                    }
-                    tmp44 = _return2;
-                    tmp45 = tmp49;
-                    if (!tmp49) {
-                      continue;
-                    } else {
-                      let _Object2 = Object;
-                      tmp44 = _return2;
-                      tmp45 = tmp49;
-                      tmp36 = tmp49;
-                      if (Object.keys(tmp49).length > 0) {
-                        break;
-                      }
-                    }
-                    continue;
-                  }
-                }
-              } else {
-                const _Object = Object;
-                tmp44 = _targetInst2;
-                tmp45 = tmp42;
-                tmp36 = tmp42;
-              }
-            }
-          }
-          let tmp52 = tmp36;
-          if (tmp36) {
-            const _Object3 = Object;
-            tmp52 = Object.keys(tmp36).length > 0;
-          }
-          if (tmp52) {
-            result.setAttributes(tmp36);
-          }
-        }
-        const obj4 = TouchEventBoundary(1027);
-      }
-    }
-  },
-  {
-    key: "_pushIfNotIgnored",
-    value: function _pushIfNotIgnored(items, name) {
-      let tmp = name;
-      if (tmp) {
-        name = name.name;
-        let tmp2 = !name;
-        if (!name) {
-          tmp2 = !name.label;
-        }
-        let tmp3 = !tmp2;
-        if (!tmp2) {
-          const self = this;
-          const name2 = name.name;
-          let tmp4 = !name2;
-          if (name2) {
-            tmp4 = !self._isNameIgnored(name.name);
-          }
-          if (tmp4) {
-            const label = name.label;
-            let tmp5 = !label;
-            if (label) {
-              tmp5 = !self._isNameIgnored(name.label);
-            }
-            if (tmp5) {
-              let tmp7 = items.length > 0;
-              if (tmp7) {
-                const _JSON = JSON;
-                const _JSON2 = JSON;
-                const json = JSON.stringify(items[items.length - 1]);
-                tmp7 = json === JSON.stringify(name);
-              }
-              let flag = !tmp7;
-              if (!tmp7) {
-                items.push(name);
-                flag = true;
-              }
-              tmp5 = flag;
-            }
-            tmp4 = tmp5;
-          }
-          tmp3 = tmp4;
-        }
-        tmp = tmp3;
-      }
-      return tmp;
+      obj = FeedbackWidgetProvider(1058);
     }
   }
 ];
-const importDefaultResultResult = _createClass(TouchEventBoundary, items);
-importDefaultResultResult.displayName = "__Sentry.TouchEventBoundary";
-importDefaultResultResult.defaultProps = { breadcrumbCategory: "touch", breadcrumbType: "user", ignoreNames: [], maxComponentTreeSize: 20 };
 
-export const TouchEventBoundary = importDefaultResultResult;
-export (arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  class WrappedComponent {
-    constructor(arg0) {
-      obj = closure_5;
-      obj1 = closure_1;
-      tmp = closure_13;
-      if (null == closure_1) {
-        obj1 = {};
-      }
-      merged = Object.assign({}, obj1);
-      return closure_5.createElement(tmp, merged, obj.createElement(closure_0, Object.assign({}, arg0)));
-    }
-  }
-  WrappedComponent.displayName = "WithTouchEventBoundary";
-  return WrappedComponent;
-}
+export const FeedbackWidgetProvider = _createClass(FeedbackWidgetProvider, items);

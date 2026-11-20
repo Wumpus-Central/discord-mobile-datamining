@@ -1,13 +1,13 @@
 // _runtime/metro/07200__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/auth/native/images",
-  width: 330,
-  height: 717,
+  width: 615,
+  height: 545,
   scales: [1],
-  hash: "b1362f1f417418db6366da6b57e07d77",
-  name: "login-bg-tall",
+  hash: "d54710903433aefed46a1fbeef429df2",
+  name: "login-bg-square",
   type: "webp",
 });

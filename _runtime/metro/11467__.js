@@ -1,12 +1,14 @@
 // _runtime/metro/11467__.js
-import AbstractParserWithWordBoundaryChecking from "../11360_AbstractParserWithWordBoundaryChecking.js";
+import repeatedTimeunitPattern from "../11295_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../11302_AbstractParserWithWordBoundaryChecking.js";
+import _mod11464 from "11464__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ZHHantDateParser = require;
+const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +27,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ZHHantDateParser {
+const regExp = new RegExp(
+  "((?:in)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod11464.MONTH_DICTIONARY) +
+    ")\\s*(?:[,-]?\\s*(" +
+    _mod11464.YEAR_PATTERN +
+    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
+  "i",
+);
+class ENMonthNameParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantDateParser);
+    tmp = c2(this, ENMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantDateParser);
+    obj = closure_4(ENMonthNameParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,20 +55,10 @@ class ZHHantDateParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const keys = Object.keys(ZHHantDateParser(11468).NUMBER);
-    const text = `(\\d{2,4}|[${obj.join("")}`;
-    const keys1 = Object.keys(ZHHantDateParser(11468).NUMBER);
-    const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
-    const keys2 = Object.keys(ZHHantDateParser(11468).NUMBER);
-    const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
-    const keys3 = Object.keys(ZHHantDateParser(11468).NUMBER);
-    const regExp = new RegExp(
-      text2 + "]{1,2})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,2})?(?:\\s*)(?:\u65E5|\u865F)?",
-    );
     return regExp;
   },
 };
@@ -67,46 +67,35 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const parsed = parseInt(index[2]);
-      let zhStringToNumberResult = parsed;
-      if (isNaN(parsed)) {
-        zhStringToNumberResult = ZHHantDateParser(11468).zhStringToNumber(index[2]);
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(11464).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
+        }
       }
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(
+        index.index + str2.length,
+        index.index + index[0].length,
+      );
       const start = parsingResult.start;
-      start.assign("month", zhStringToNumberResult);
+      start.imply("day", 1);
+      const tmp9 = ENMonthNameParser(11464).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
       if (index[3]) {
-        const _parseInt = parseInt;
-        const parsed1 = parseInt(index[3]);
-        const _isNaN = isNaN;
-        let zhStringToNumberResult1 = parsed1;
-        if (isNaN(parsed1)) {
-          zhStringToNumberResult1 = ZHHantDateParser(11468).zhStringToNumber(index[3]);
-        }
-        const start3 = parsingResult.start;
-        start3.assign("day", zhStringToNumberResult1);
-      } else {
-        const start2 = parsingResult.start;
-        const refDate = createParsingResult.refDate;
-        start2.imply("day", refDate.getDate());
-      }
-      if (index[1]) {
-        const _parseInt2 = parseInt;
-        let parsed2 = parseInt(index[1]);
-        const _isNaN2 = isNaN;
-        if (isNaN(parsed2)) {
-          parsed2 = ZHHantDateParser(11468).zhStringToYear(index[1]);
-        }
-        const start5 = parsingResult.start;
-        start5.assign("year", parsed2);
-      } else {
         const start4 = parsingResult.start;
-        const refDate2 = createParsingResult.refDate;
-        start4.imply("year", refDate2.getFullYear());
+        start4.assign("year", ENMonthNameParser(11464).parseYear(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", ENMonthNameParser(11296).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
       }
       return parsingResult;
     },
   },
 ];
 
-export default _createClass(ZHHantDateParser, items);
+export default _createClass(ENMonthNameParser, items);

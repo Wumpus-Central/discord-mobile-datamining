@@ -1,11 +1,11 @@
 // _runtime/metro/04188__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  httpServerLocation: "/assets/modules/friends",
   scales: [1],
-  hash: "f7d8cd400e857096f90f219e9030b1b0",
-  name: "bg.messages.f7d8cd400e857096f90f219e9030b1b0.compiled.messages",
+  hash: "a104fe5ede94645fb2df317a74cf6e09",
+  name: "Friends.compiled.messages",
   type: "jsona",
 });

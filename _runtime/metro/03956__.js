@@ -1,11 +1,11 @@
 // _runtime/metro/03956__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_player",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "464dcf0f450d33faf13d82b8f2efc31e",
-  name: "VideoPlayer.compiled.messages",
+  hash: "8321505fb9b6f8434c18a78c92f7ec2f",
+  name: "zh-CN.messages.8321505fb9b6f8434c18a78c92f7ec2f.compiled.messages",
   type: "jsona",
 });

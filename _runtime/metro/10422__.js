@@ -1,13 +1,13 @@
 // _runtime/metro/10422__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "0958a3140b1354fdc2a2c5ce3e4f3233",
-  name: "CherryBlossomIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 40,
+  height: 40,
+  scales: [1, 2, 3],
+  hash: "55227139f1f67d25c138599e308898b1",
+  name: "ic_upload_image_40px",
   type: "png",
 });

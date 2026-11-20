@@ -1,12 +1,12 @@
 // _runtime/metro/07791__.js
-import _modDef7785 from "07785__.js";
+import _modDef7784 from "07784__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeConvolveMatrix = arg1;
+const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeConvolveMatrix {
+class FeDiffuseLighting {
   constructor() {
     self = this;
-    tmp = c2(this, FeConvolveMatrix);
+    tmp = c2(this, FeDiffuseLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
+    obj = closure_4(FeDiffuseLighting);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,17 +45,17 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeConvolveMatrix, _modDef7785);
+_inherits(FeDiffuseLighting, _modDef7784);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(7762).warnUnimplementedFilter();
+    const result = FeDiffuseLighting(7761).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
+const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

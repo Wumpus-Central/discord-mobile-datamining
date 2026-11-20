@@ -3,7 +3,7 @@ import colorPropType from "../09146_colorPropType.js";
 import _mod9148 from "09148__.js";
 import _mod9162 from "09162__.js";
 import flattenStyle from "09151__.js";
-import emptyFunction_mod from "04833__.js";
+import emptyFunction_mod from "04835__.js";
 
 const obj = {
   ellipsizeMode: null,

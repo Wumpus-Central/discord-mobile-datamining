@@ -1,126 +1,37 @@
 // _runtime/metro/01748__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class AbortSignal {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = closure_0(this, AbortController);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(AbortController);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.aborted = false;
-    tmp3Result.reason = undefined;
-    tmp3Result.onabort = null;
-    return tmp3Result;
-  }
-}
-_classCallCheck = AbortSignal;
-_inherits(AbortSignal, fn(1740).EventTargetLite);
-const entry = {
-  key: "throwIfAborted",
-  value: function throwIfAborted() {
-    if (this.aborted) {
-      throw this.reason;
-    }
-  },
-};
 let items = [
-  entry,
   {
-    key: "__abort",
-    value: function __abort(error) {
-      const self = this;
-      if (!this.aborted) {
-        let tmp = error;
-        self.aborted = true;
-        if (undefined === error) {
-          const _Error = Error;
-          error = new Error("[Worklets] The operation was aborted.");
-          error.name = "AbortError";
-          tmp = error;
-        }
-        self.reason = tmp;
-        self.__dispatch("abort");
+    code: "(function setupSetTimeout_Pnpm_setTimeoutPolyfillTs1(){const timeoutHandleToRafHandle=new Map();const setTimeoutPolyfill=function(callback,delay=0,...args){const start=performance.now();let timeoutHandle=0;const rafCallback=function(){const now=performance.now();if(now-start>=delay){callback(...args);timeoutHandleToRafHandle.delete(timeoutHandle);}else{const rafHandle=requestAnimationFrame(rafCallback);timeoutHandleToRafHandle.set(timeoutHandle,rafHandle);}};timeoutHandle=requestAnimationFrame(rafCallback);timeoutHandleToRafHandle.set(timeoutHandle,timeoutHandle);return timeoutHandle;};const clearTimeoutPolyfill=function(timeoutHandle){const rafHandle=timeoutHandleToRafHandle.get(timeoutHandle);timeoutHandleToRafHandle.delete(timeoutHandle);cancelAnimationFrame(rafHandle);};globalThis.setTimeout=setTimeoutPolyfill;globalThis.clearTimeout=clearTimeoutPolyfill;})",
+  },
+];
+[tmp2] = items;
+function setupSetTimeout() {
+  const map = new Map();
+  globalThis.setTimeout = (arg0) => {
+    closure_2 = [...arguments].slice();
+    closure_3 = performance.now();
+    function rafCallback() {
+      if (performance.now() - closure_3 >= num) {
+        items = [];
+        HermesBuiltin.arraySpread(closure_2, 0);
+        HermesBuiltin.apply(items, undefined);
+        map.delete(animationFrame);
+      } else {
+        const _requestAnimationFrame = requestAnimationFrame;
+        const result = map.set(animationFrame, requestAnimationFrame(rafCallback));
       }
-    },
-  },
-];
-const entry1 = {
-  key: "abort",
-  value: function abort(error) {
-    const obj = _classCallCheck();
-    obj.__abort(error);
-    return obj;
-  },
-};
-let items1 = [
-  entry1,
-  {
-    key: "timeout",
-    value: function timeout(promise) {
-      const tmp = _classCallCheck();
-      closure_0 = tmp;
-      const timerId = setTimeout(() => {
-        const error = new Error("[Worklets] The operation timed out.");
-        error.name = "TimeoutError";
-        return closure_0.__abort(error);
-      }, promise);
-      return tmp;
-    },
-  },
-];
-const importDefaultResultResult = _createClass(AbortSignal, items, items1);
-class AbortController {
-  constructor() {
-    tmp = closure_0(this, AbortController);
-    tmp2 = new closure_4();
-    this.signal = tmp2;
-    return;
-  }
+    }
+    const animationFrame = requestAnimationFrame(rafCallback);
+    let result = arg0.set(animationFrame, animationFrame);
+    return animationFrame;
+  };
+  globalThis.clearTimeout = (arg0) => {
+    value = map.get(arg0);
+    map.delete(arg0);
+    cancelAnimationFrame(value);
+  };
 }
-_classCallCheck = AbortController;
-const entry2 = {
-  key: "abort",
-  value: function abort(error) {
-    const signal = this.signal;
-    signal.__abort(error);
-  },
-};
-const items2 = [entry2];
+setupSetTimeout.__workletHash = 2751764254925;
+setupSetTimeout.__initData = tmp2;
 
-export const AbortSignal = importDefaultResultResult;
-export const AbortController = _createClass(AbortController, items2);
+export { setupSetTimeout };

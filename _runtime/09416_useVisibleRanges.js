@@ -1,6 +1,6 @@
 // _runtime/09416_useVisibleRanges.js
 import _mod19 from "metro/00019__.js";
-import _mod1655 from "metro/01655__.js";
+import _mod1653 from "metro/01653__.js";
 
 const useRef = _mod19.useRef;
 let closure_3 = {
@@ -98,5 +98,5 @@ export function useVisibleRanges(total) {
   pnpm_useVisibleRangesTsx1.__workletHash = 6169560456169;
   pnpm_useVisibleRangesTsx1.__initData = tmp2;
   let items2 = [loop, num, windowSize, translation];
-  return _mod1655.useDerivedValue(pnpm_useVisibleRangesTsx1, items2);
+  return _mod1653.useDerivedValue(pnpm_useVisibleRangesTsx1, items2);
 }

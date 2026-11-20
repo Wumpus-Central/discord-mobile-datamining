@@ -1,7 +1,7 @@
 // _runtime/metro/01647__.js
 import 00065__ from "00065__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "KeyboardGestureArea", validAttributes: { interpolator: true, showOnSwipeUp: true, enableSwipeToDismiss: true, offset: true, textInputNativeID: true } };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "OverKeyboardView", validAttributes: { visible: true } };
 
-export default module_65.get("KeyboardGestureArea", () => obj);
+export default module_65.get("OverKeyboardView", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

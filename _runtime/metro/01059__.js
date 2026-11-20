@@ -1,87 +1,227 @@
 // _runtime/metro/01059__.js
-import _mod17 from "00017__.js";
-import RN_GLOBAL_OBJ2 from "../00680_RN_GLOBAL_OBJ.js";
-import TurboModuleRegistry from "../00862_TurboModuleRegistry.js";
-import _mod867 from "00867__.js";
+import c2 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-const Alert = _mod17.Alert;
+let ScreenshotButtonManager = arg1;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+function NOOP_SET_VISIBILITY() {
 
-export function isModalSupported() {
-  const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
-  let version;
-  if (null !== ReactNativeVersion) {
-    if (undefined !== ReactNativeVersion) {
-      version = ReactNativeVersion.version;
-    }
-  }
-  if (!version) {
-    version = {};
-  }
-  ({ minor, major } = version);
-  let isFabricEnabledResult = _mod867.isFabricEnabled();
-  if (isFabricEnabledResult) {
-    isFabricEnabledResult = 0 === major;
-  }
-  if (isFabricEnabledResult) {
-    isFabricEnabledResult = minor;
-  }
-  if (isFabricEnabledResult) {
-    isFabricEnabledResult = minor < 71;
-  }
-  return !isFabricEnabledResult;
 }
-export function isNativeDriverSupportedForColorAnimations() {
-  const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
-  let version;
-  if (null !== ReactNativeVersion) {
-    if (undefined !== ReactNativeVersion) {
-      version = ReactNativeVersion.version;
-    }
+class FeedbackManager {
+  constructor() {
+    tmp = closure_4(this, ScreenshotButtonManager);
+    return;
   }
-  if (!version) {
-    version = {};
-  }
-  ({ major, minor } = version);
-  let flag = major;
-  if (major) {
-    flag = major > 0;
-  }
-  if (!flag) {
-    let tmp = minor;
-    if (minor) {
-      tmp = minor >= 69;
-    }
-    flag = tmp;
-  }
-  if (!flag) {
-    flag = false;
-  }
-  return flag;
 }
-export (trimmed1) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed1)
-export (match) => {
-  if (typeof atob === "function") {
-    if (obj.isWeb()) {
-      const _atob = atob;
-      const _Uint8Array = Uint8Array;
-      items = [];
-      HermesBuiltin.arraySpread(atob(match), 0);
-      const uint8Array = new Uint8Array(items.map((item) => item.charCodeAt(0)));
-      return uint8Array;
+ScreenshotButtonManager = FeedbackManager;
+const items = [
+  {
+    key: "_feedbackComponentName",
+    get() {
+      const error = new Error("Subclasses must override feedbackComponentName");
+      throw error;
     }
-    obj = _mod867;
+  },
+  {
+    key: "initialize",
+    value: function initialize(_setVisibility) {
+      this._setVisibility = _setVisibility;
+    }
+  },
+  {
+    key: "reset",
+    value: function reset() {
+
+    }
+  },
+  {
+    key: "show",
+    value: function show() {
+      const self = this;
+      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
+        self._isVisible = true;
+        self._setVisibility(true);
+      } else {
+        const _console = console;
+        const _HermesInternal = HermesInternal;
+        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' to be called before 'show" + self._feedbackComponentName + "()'.");
+      }
+    }
+  },
+  {
+    key: "hide",
+    value: function hide() {
+      const self = this;
+      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
+        self._isVisible = false;
+        self._setVisibility(false);
+      } else {
+        const _console = console;
+        const _HermesInternal = HermesInternal;
+        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.");
+      }
+    }
+  },
+  {
+    key: "isFormVisible",
+    value: function isFormVisible() {
+      return this._isVisible;
+    }
   }
-  const error = new Error("atob is not available in this environment.");
-  throw error;
+];
+const importDefaultResult1Result = _createClass(FeedbackManager, null, items);
+importDefaultResult1Result._isVisible = false;
+class FeedbackWidgetManager {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, ScreenshotButtonManager);
+    tmp2 = closure_3;
+    obj = closure_3(ScreenshotButtonManager);
+    tmp3 = c2;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
 }
-export (errorTitle, captureScreenshotError) => {
+ScreenshotButtonManager = FeedbackWidgetManager;
+_inherits(FeedbackWidgetManager, importDefaultResult1Result);
+const items1 = [
+  {
+    key: "_feedbackComponentName",
+    get() {
+      return "FeedbackWidget";
+    }
+  }
+];
+const importDefaultResult1Result1 = _createClass(FeedbackWidgetManager, null, items1);
+class FeedbackButtonManager {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, ScreenshotButtonManager);
+    tmp2 = closure_3;
+    obj = closure_3(ScreenshotButtonManager);
+    tmp3 = c2;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+ScreenshotButtonManager = FeedbackButtonManager;
+_inherits(FeedbackButtonManager, importDefaultResult1Result);
+const items2 = [
+  {
+    key: "_feedbackComponentName",
+    get() {
+      return "FeedbackButton";
+    }
+  }
+];
+const importDefaultResult1Result2 = _createClass(FeedbackButtonManager, null, items2);
+class ScreenshotButtonManager {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, ScreenshotButtonManager);
+    tmp2 = closure_3;
+    obj = closure_3(ScreenshotButtonManager);
+    tmp3 = c2;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ScreenshotButtonManager, importDefaultResult1Result);
+const items3 = [
+  {
+    key: "_feedbackComponentName",
+    get() {
+      return "ScreenshotButton";
+    }
+  }
+];
+const importDefaultResult1Result3 = _createClass(ScreenshotButtonManager, null, items3);
+
+export const PULL_DOWN_CLOSE_THRESHOLD = 200;
+export const SLIDE_ANIMATION_DURATION = 200;
+export const BACKGROUND_ANIMATION_DURATION = 200;
+export const FeedbackWidgetManager = importDefaultResult1Result1;
+export const FeedbackButtonManager = importDefaultResult1Result2;
+export const ScreenshotButtonManager = importDefaultResult1Result3;
+export () => {
+  const result = ScreenshotButtonManager(1060).lazyLoadAutoInjectFeedbackButtonIntegration();
+  importDefaultResult1Result2.show();
+}
+export () => {
+  importDefaultResult1Result2.hide();
+}
+export () => {
+  const result = ScreenshotButtonManager(1060).lazyLoadAutoInjectFeedbackIntegration();
+  importDefaultResult1Result1.show();
+}
+export () => {
   if (obj.isWeb()) {
-    if (undefined !== RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.alert) {
-      const RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
-      const _HermesInternal = HermesInternal;
-      RN_GLOBAL_OBJ.alert("" + errorTitle + "\n" + captureScreenshotError);
-    }
+    const debug = ScreenshotButtonManager(681).debug;
+    debug.warn("ScreenshotButton is not supported on Web.");
+  } else {
+    const result = ScreenshotButtonManager(1060).lazyLoadAutoInjectScreenshotButtonIntegration();
+    importDefaultResult1Result3.show();
+    const tmpResult = ScreenshotButtonManager(1060);
   }
-  Alert.alert(errorTitle, captureScreenshotError);
-  obj = _mod867;
+  obj = ScreenshotButtonManager(867);
+}
+export () => {
+  importDefaultResult1Result3.hide();
+}
+export () => {
+  importDefaultResult1Result2.reset();
+}
+export () => {
+  importDefaultResult1Result1.reset();
+}
+export () => {
+  importDefaultResult1Result3.reset();
 }

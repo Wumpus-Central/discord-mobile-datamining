@@ -1,11 +1,99 @@
 // _runtime/metro/15461__.js
-import _mod15462 from "15462__.js";
+let c0 = false;
 
-export default (arg0) => {
-  if (_mod15462(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
+export default {
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(15420)(arg0);
+    const tmp4 = closure_0(15462)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = closure_0(15466)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  },
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(15420)(arg0);
+    const tmp4 = closure_0(15462)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = closure_0(15466)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  },
 };

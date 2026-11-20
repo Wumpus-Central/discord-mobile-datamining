@@ -1,11 +1,13 @@
 // _runtime/metro/17105__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "1146ad1374798af61befeddbf75c5f47",
-  name: "es-ES.messages.1146ad1374798af61befeddbf75c5f47.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "74d1abdb8a51df8677242205d5859ee7",
+  name: "GridSquareIcon",
+  type: "png",
 });

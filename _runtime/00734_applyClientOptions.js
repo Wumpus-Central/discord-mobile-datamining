@@ -137,7 +137,7 @@ export function parseEventHintOrCaptureContext(captureContext) {
     return tmp5;
   }
 }
-export function prepareEvent(options, event_id, event_id2, clone, self, isolationScope) {
+export function prepareEvent(options, event_id, event_id2, clone, self, setLastEventId) {
   const normalizeDepth = options.normalizeDepth;
   let num = 3;
   if (undefined !== normalizeDepth) {
@@ -217,7 +217,7 @@ export function prepareEvent(options, event_id, event_id2, clone, self, isolatio
     } else {
       eventProcessors = [];
     }
-    const combinedScopeData = require("mergeScopeData").getCombinedScopeData(isolationScope, clone);
+    const combinedScopeData = require("mergeScopeData").getCombinedScopeData(setLastEventId, clone);
     const tmp31 = event_id2.attachments || [];
     const items1 = [];
     HermesBuiltin.arraySpread(combinedScopeData.attachments, HermesBuiltin.arraySpread(tmp31, 0));

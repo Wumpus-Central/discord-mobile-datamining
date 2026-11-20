@@ -1,35 +1,26 @@
 // _runtime/metro/01900__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import WorkletEventHandler from "../01864_WorkletEventHandler.js";
 
-const require = globalThis.__r;
+const useRef = _mod19.useRef;
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export function useHandler(ChannelListLegendListTsx1, items26) {
-  _require = ChannelListLegendListTsx1;
-  const tmp = closure_3(null);
-  if (null === tmp.current) {
-    tmp.current = { context: "Array", prevHandlers: "Path" };
+export function useEvent(FastListTsx2) {
+  if (items === undefined) {
+    items = [];
   }
-  const current = tmp.current;
-  let obj = require("areDependenciesEqual");
-  closure_2(() => {
-    current.prevHandlers = prevHandlers;
-  });
-  const obj2 = {};
-  Object.defineProperty(obj2, "context", {
-    get: () => {
-      if (undefined === current.context) {
-        current.context = require("01708__.js").makeShareable({});
-        const obj = require("01708__.js");
-      }
-      return current.context;
-    },
-    set: undefined,
-  });
-  obj2.doDependenciesDiffer = !require("areDependenciesEqual").areWorkletHandlersEqual(
-    ChannelListLegendListTsx1,
-    current.prevHandlers,
-  );
-  return obj2;
+  let flag = doDependenciesDiffer;
+  if (doDependenciesDiffer === undefined) {
+    flag = false;
+  }
+  const tmp = useRef(null);
+  if (null === tmp.current) {
+    const workletEventHandler1 = new WorkletEventHandler.WorkletEventHandler(FastListTsx2, items);
+    const obj2 = { workletEventHandler: workletEventHandler1 };
+    tmp.current = obj2;
+  } else if (flag) {
+    tmp.current.workletEventHandler.updateEventHandler(FastListTsx2, items);
+    const obj = { workletEventHandler: tmp.current.workletEventHandler };
+    tmp.current = obj;
+  }
+  return tmp.current;
 }

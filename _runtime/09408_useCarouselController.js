@@ -45,11 +45,11 @@ export function useCarouselController(size) {
   const memo = noop.useMemo(() => ({ length: _undefined3, disable: !_undefined3, originalLength: _undefined3 }), items);
   c7 = memo;
   let obj = require("metro/09400__.js");
-  const sharedValue = require("metro/01655__.js").useSharedValue(num);
+  const sharedValue = require("metro/01653__.js").useSharedValue(num);
   c8 = sharedValue;
   const tmp5 = useRef(num);
   let items1 = [handlerOffset, memo, size, loop];
-  let obj3 = require("metro/01655__.js");
+  let obj3 = require("metro/01653__.js");
   const callback = noop.useCallback(() => {
     if (c2) {
       const _Math2 = Math;
@@ -115,7 +115,7 @@ export function useCarouselController(size) {
   const items4 = [
     c5,
     sharedValue,
-    require("metro/01655__.js").runOnJS,
+    require("metro/01653__.js").runOnJS,
     function setSharedIndex(current) {
       c9.current = current;
     },
@@ -131,7 +131,7 @@ export function useCarouselController(size) {
   pnpm_useCarouselControllerTsx2.__workletHash = 10044128116354;
   pnpm_useCarouselControllerTsx2.__initData = tmp16;
   const items6 = [tmp6, tmp5, size, memo, sharedValue, loop, autoFillData, handlerOffset];
-  const animatedReaction = require("metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("metro/01653__.js").useAnimatedReaction(
     pnpm_useCarouselControllerTsx1,
     pnpm_useCarouselControllerTsx2,
     items6,
@@ -166,7 +166,7 @@ export function useCarouselController(size) {
   const items11 = [
     c7,
     c6,
-    require("metro/01655__.js").runOnJS,
+    require("metro/01653__.js").runOnJS,
     callback3,
     duration,
     require("DATA_LENGTH").Easing,

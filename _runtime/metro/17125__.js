@@ -1,11 +1,13 @@
 // _runtime/metro/17125__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "ec62a0adb2a6736a93fafc0b9d7dfef7",
-  name: "vi.messages.ec62a0adb2a6736a93fafc0b9d7dfef7.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "49797bf2e9feeabeb3ed3af5b9cf8473",
+  name: "SparklesIcon",
+  type: "png",
 });

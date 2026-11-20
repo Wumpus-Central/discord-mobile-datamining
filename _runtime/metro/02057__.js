@@ -1,45 +1,37 @@
 // _runtime/metro/02057__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "pl",
+  locale: "ro",
   pluralRuleFunction(arg0, arg1) {
     const parts = String(arg0).split(".");
-    [arr, tmp2] = parts;
-    const substr = arr.slice(-1);
-    const substr1 = arr.slice(-2);
-    let str2 = "other";
-    if (!arg1) {
-      if (1 != arg0) {
-        if (!tmp2) {
-          if (substr >= 2) {
-            if (substr <= 4) {
-              let str5 = "few";
-              if (substr1 >= 12) {
-                str5 = "few";
-              }
-            }
-            let str3 = str5;
-          }
-        }
-        if (!tmp2) {
-          if (1 != arr) {
-            if (0 != substr) {
-              str5 = str6;
-            }
-          }
-          str6 = "many";
-        }
-        str6 = "other";
-        if (!tmp2) {
-          str6 = "other";
-          if (substr1 >= 12) {
-            str6 = "other";
-          }
-        }
-      } else {
-        str3 = "one";
+    let substr = Number(parts[0]) == arg0;
+    if (substr) {
+      const first = parts[0];
+      substr = first.slice(-2);
+    }
+    if (arg1) {
+      let str5 = "other";
+      if (1 == arg0) {
+        str5 = "one";
       }
-      str2 = str3;
+      let str2 = str5;
+    } else if (1 != arg0) {
+      if (!tmp2) {
+        if (0 != arg0) {
+          let str4 = "other";
+          if (1 != arg0) {
+            str4 = "other";
+            if (substr >= 1) {
+              str4 = "other";
+            }
+          }
+        }
+        str2 = str4;
+      }
+      str4 = "few";
+    } else {
+      str2 = "one";
     }
     return str2;
   },
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "ro-MD", parentLocale: "ro" });

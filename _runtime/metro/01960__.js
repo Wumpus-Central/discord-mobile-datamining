@@ -1,33 +1,5 @@
 // _runtime/metro/01960__.js
-import _mod1668 from "01668__.js";
-import _mod1708 from "01708__.js";
 
-const items = [
-  {
-    code: "(function setGestureStateNative_Pnpm_setGestureStateNativeTs1(handlerTag,newState){let[RuntimeKind,logger]=this.__closure;if(globalThis.__RUNTIME_KIND===RuntimeKind.ReactNative){logger.warn('You can not use setGestureState in non-worklet function.');return;}global._setGestureState(handlerTag,newState);})",
-  },
-  _mod1708.RuntimeKind,
-  _mod1668.logger,
-];
-let c0;
-let c1;
-[tmp2, tmp3, tmp4] = items;
-let setGestureStateJest = function setGestureStateNative(arg0, arg1) {
-  if (globalThis.__RUNTIME_KIND !== _undefined.ReactNative) {
-    _undefined._setGestureState(arg0, arg1);
-  } else {
-    _undefined2.warn("You can not use setGestureState in non-worklet function.");
-  }
-};
-const items1 = [tmp3, tmp4];
-setGestureStateJest.__closure = items1;
-setGestureStateJest.__workletHash = 10884479007598;
-setGestureStateJest.__initData = tmp2;
-if (_mod1668.IS_JEST) {
-  setGestureStateJest = function setGestureStateJest() {
-    const logger = _undefined2(1668).logger;
-    logger.warn("setGestureState() cannot be used with Jest.");
-  };
+export function getUseOfValueInStyleWarning() {
+  return "It looks like you might be using shared value's .value inside reanimated inline style. If you want a component to update when shared value changes you should use the shared value directly instead of its current state represented by `.value`. See documentation here: https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary/#animations-in-inline-styling";
 }
-
-export const setGestureState = setGestureStateJest;

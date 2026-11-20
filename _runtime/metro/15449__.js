@@ -1,7 +1,36 @@
 // _runtime/metro/15449__.js
-import _mod15515 from "15515__.js";
-import 15450__ from "15450__.js";
+import _mod15440 from "15440__.js";
+import _mod15441 from "15441__.js";
+import _mod15448 from "15448__.js";
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod15515;
-module_15450(obj, { assign: _mod15515 });
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod15441(toString)) {
+      const tmp4 = _mod15448(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+      tmpResult = _mod15440;
+    }
+  }
+  const valueOf = arg0.valueOf;
+  if (_mod15441(valueOf)) {
+    const tmp8 = _mod15448(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod15440;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod15441(toString2)) {
+      const tmp10 = _mod15448(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod15440;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};

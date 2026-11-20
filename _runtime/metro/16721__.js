@@ -1,13 +1,13 @@
 // _runtime/metro/16721__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "805fda450615a79e013d34cae4b4a783",
-  name: "PaintPaletteIcon",
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "cfc9643cb00e44fae64bfeda3556bfd9",
+  name: "hr",
   type: "png",
 });

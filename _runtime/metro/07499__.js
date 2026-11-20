@@ -1,13 +1,13 @@
 // _runtime/metro/07499__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "be0495259d7800ba5ff04ac01243104d",
-  name: "LocationIcon",
+  scales: [1, 2, 3],
+  hash: "c08dbe4e409a6c5d300d5c847a8685e2",
+  name: "ic_stage_channel_24px",
   type: "png",
 });

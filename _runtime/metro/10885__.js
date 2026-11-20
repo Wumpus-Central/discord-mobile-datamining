@@ -1,13 +1,13 @@
 // _runtime/metro/10885__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "31757ea45ee4fb60779fd700caf7d93e",
-  name: "ic_nitro_wheel_gradient_purple",
+  hash: "ac381080e803b7da0a8a3822cdf80aee",
+  name: "BlurBackgroundIcon",
   type: "png",
 });

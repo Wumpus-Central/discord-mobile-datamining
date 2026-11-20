@@ -1,15 +1,13 @@
 // _runtime/metro/15259__.js
-import _mod15252 from "15252__.js";
+import registerAsset from "01118__.js";
 
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod15252(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
-  } catch (err) {
-    return null;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "4d498b99244dd74c9e2dd5b1de10ead7",
+  name: "ic_radio_square_checked_24px",
+  type: "png",
+});

@@ -1,5 +1,5 @@
 // _runtime/metro/09798__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f707107902b0c142d4942c459b0a28b3",
-  name: "TwitchNeutralIcon",
+  hash: "dcae1df15663c479951183ad5f2fe3dd",
+  name: "RedditNeutralIcon",
   type: "png",
 });

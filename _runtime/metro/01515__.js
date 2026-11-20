@@ -1,14 +1,14 @@
 // _runtime/metro/01515__.js
+import nanoid from "../01509_nanoid.js";
+import _mod1513 from "01513__.js";
 
-export function createParamsFromAction(routeParamList) {
-  routeParamList = routeParamList.routeParamList;
-  ({ name, params } = routeParamList.action.payload);
-  let tmp = params;
-  if (undefined !== routeParamList[name]) {
-    const obj = {};
-    const merged = Object.assign(routeParamList[name]);
-    const merged1 = Object.assign(params);
-    tmp = obj;
-  }
-  return tmp;
+require = arg1;
+const dependencyMap = arg6;
+
+export function createRouteFromAction(routeParamList) {
+  const action = routeParamList.action;
+  const name = action.payload.name;
+  const obj = { key: "" + name + "-" + nanoid.nanoid(), name, params: null };
+  obj.params = _mod1513.createParamsFromAction({ action, routeParamList: routeParamList.routeParamList });
+  return obj;
 }

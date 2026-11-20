@@ -1,282 +1,210 @@
 // _runtime/metro/01879__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const AnimatedComponent = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export function getViewInfo(findHostInstanceResult) {
+  let uiViewClassName;
+  if (findHostInstanceResult != null) {
+    const __viewConfig = findHostInstanceResult.__viewConfig;
+    if (__viewConfig != null) {
+      uiViewClassName = __viewConfig.uiViewClassName;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+  }
+  if (uiViewClassName == null) {
+    let uiViewClassName1;
+    if (findHostInstanceResult != null) {
+      const _viewConfig = findHostInstanceResult._viewConfig;
+      if (_viewConfig != null) {
+        uiViewClassName1 = _viewConfig.uiViewClassName;
+      }
+    }
+    uiViewClassName = uiViewClassName1;
+  }
+  if (uiViewClassName == null) {
+    let type;
+    if (findHostInstanceResult != null) {
+      const __internalInstanceHandle = findHostInstanceResult.__internalInstanceHandle;
+      if (__internalInstanceHandle != null) {
+        type = __internalInstanceHandle.type;
+      }
+    }
+    uiViewClassName = type;
+  }
+  if (uiViewClassName == null) {
+    let elementType;
+    if (findHostInstanceResult != null) {
+      const __internalInstanceHandle2 = findHostInstanceResult.__internalInstanceHandle;
+      if (__internalInstanceHandle2 != null) {
+        elementType = __internalInstanceHandle2.elementType;
+      }
+    }
+    uiViewClassName = elementType;
+  }
+  const obj = { reactViewName: uiViewClassName, viewTag: null };
+  let __nativeTag;
+  if (findHostInstanceResult != null) {
+    __nativeTag = findHostInstanceResult.__nativeTag;
+  }
+  obj.viewTag = __nativeTag;
+  return obj;
 }
-get_ActivityIndicator = fn(17);
-({ Platform, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-class AnimatedComponent {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = c2(this, AnimatedComponent);
-    items = [];
-    items[0] = fn;
-    tmp2 = closure_4;
-    obj = closure_4(AnimatedComponent);
-    tmp3 = closure_3;
-    if (metroImportDefault()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
+export function getViewTagFromInstance(_childInstance) {
+  if (_childInstance) {
+    if (typeof _childInstance.getComponentViewTag === "function") {
+      const componentViewTag = _childInstance.getComponentViewTag();
+      if (-1 !== componentViewTag) {
+        return componentViewTag;
+      }
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result._cssStyle = {};
-    tmp3Result._componentRef = null;
-    tmp3Result._rawComponentRef = null;
-    tmp3Result._componentDOMRef = null;
-    tmp3Result._willUnmount = false;
-    tmp3Result._setComponentRef = (_rawComponentRef) => {
-      const forwardedRef = props.props.forwardedRef;
-      if (_rawComponentRef) {
-        props._forwardedRefCleanup = AnimatedComponent(1880).assignRef(forwardedRef, _rawComponentRef);
-        if (_rawComponentRef !== props._rawComponentRef) {
-          props._rawComponentRef = _rawComponentRef;
-          const _resolveComponentRefResult = props._resolveComponentRef(_rawComponentRef);
-          if (_resolveComponentRefResult !== props._componentRef) {
-            props._updateComponentRef(_resolveComponentRefResult);
+    let uiViewClassName;
+    if (_childInstance != null) {
+      const __viewConfig = _childInstance.__viewConfig;
+      if (__viewConfig != null) {
+        uiViewClassName = __viewConfig.uiViewClassName;
+      }
+    }
+    if (uiViewClassName == null) {
+      let uiViewClassName1;
+      if (_childInstance != null) {
+        const _viewConfig = _childInstance._viewConfig;
+        if (_viewConfig != null) {
+          uiViewClassName1 = _viewConfig.uiViewClassName;
+        }
+      }
+      uiViewClassName = uiViewClassName1;
+    }
+    if (uiViewClassName == null) {
+      let type;
+      if (_childInstance != null) {
+        const __internalInstanceHandle = _childInstance.__internalInstanceHandle;
+        if (__internalInstanceHandle != null) {
+          type = __internalInstanceHandle.type;
+        }
+      }
+      uiViewClassName = type;
+    }
+    if (uiViewClassName == null) {
+      if (_childInstance != null) {
+        const __internalInstanceHandle2 = _childInstance.__internalInstanceHandle;
+        if (__internalInstanceHandle2 != null) {
+          const elementType = __internalInstanceHandle2.elementType;
+        }
+      }
+    }
+    let __nativeTag;
+    if (_childInstance != null) {
+      __nativeTag = _childInstance.__nativeTag;
+    }
+    if (undefined !== __nativeTag) {
+      return __nativeTag;
+    } else {
+      const getNativeScrollRef = _childInstance.getNativeScrollRef;
+      let nativeScrollRef;
+      if (getNativeScrollRef != null) {
+        nativeScrollRef = getNativeScrollRef();
+      }
+      if (nativeScrollRef) {
+        let uiViewClassName2;
+        if (nativeScrollRef != null) {
+          const __viewConfig3 = nativeScrollRef.__viewConfig;
+          if (__viewConfig3 != null) {
+            uiViewClassName2 = __viewConfig3.uiViewClassName;
           }
         }
-        props._onSetLocalRef();
-        const obj3 = AnimatedComponent(1880);
-      } else if (props._forwardedRefCleanup) {
-        props._forwardedRefCleanup();
-        props._forwardedRefCleanup = undefined;
-      } else {
-        AnimatedComponent(1880).assignRef(forwardedRef, null);
-        const obj2 = AnimatedComponent(1880);
-      }
-    };
-    tmp3Result._resolveComponentRef = (getAnimatableRef) => {
-      let animatableRef = getAnimatableRef;
-      if (getAnimatableRef) {
-        animatableRef = getAnimatableRef;
-        if (getAnimatableRef.getAnimatableRef) {
-          animatableRef = getAnimatableRef.getAnimatableRef();
+        if (uiViewClassName2 == null) {
+          let uiViewClassName3;
+          if (nativeScrollRef != null) {
+            const _viewConfig3 = nativeScrollRef._viewConfig;
+            if (_viewConfig3 != null) {
+              uiViewClassName3 = _viewConfig3.uiViewClassName;
+            }
+          }
+          uiViewClassName2 = uiViewClassName3;
         }
+        if (uiViewClassName2 == null) {
+          let type1;
+          if (nativeScrollRef != null) {
+            const __internalInstanceHandle5 = nativeScrollRef.__internalInstanceHandle;
+            if (__internalInstanceHandle5 != null) {
+              type1 = __internalInstanceHandle5.type;
+            }
+          }
+          uiViewClassName2 = type1;
+        }
+        if (uiViewClassName2 == null) {
+          if (nativeScrollRef != null) {
+            const __internalInstanceHandle6 = nativeScrollRef.__internalInstanceHandle;
+            if (__internalInstanceHandle6 != null) {
+              const elementType3 = __internalInstanceHandle6.elementType;
+            }
+          }
+        }
+        let __nativeTag1;
+        if (nativeScrollRef != null) {
+          __nativeTag1 = nativeScrollRef.__nativeTag;
+        }
+        if (__nativeTag1 == null) {
+          __nativeTag1 = null;
+        }
+        return __nativeTag1;
+      } else {
+        const getScrollableNode = _childInstance.getScrollableNode;
+        let scrollableNode;
+        if (getScrollableNode != null) {
+          scrollableNode = getScrollableNode();
+        }
+        let tmp9 = scrollableNode;
+        if (typeof scrollableNode !== "number") {
+          let tmp14 = null;
+          if (scrollableNode) {
+            let uiViewClassName4;
+            if (scrollableNode != null) {
+              const __viewConfig2 = scrollableNode.__viewConfig;
+              if (__viewConfig2 != null) {
+                uiViewClassName4 = __viewConfig2.uiViewClassName;
+              }
+            }
+            if (uiViewClassName4 == null) {
+              let uiViewClassName5;
+              if (scrollableNode != null) {
+                const _viewConfig2 = scrollableNode._viewConfig;
+                if (_viewConfig2 != null) {
+                  uiViewClassName5 = _viewConfig2.uiViewClassName;
+                }
+              }
+              uiViewClassName4 = uiViewClassName5;
+            }
+            if (uiViewClassName4 == null) {
+              let type2;
+              if (scrollableNode != null) {
+                const __internalInstanceHandle3 = scrollableNode.__internalInstanceHandle;
+                if (__internalInstanceHandle3 != null) {
+                  type2 = __internalInstanceHandle3.type;
+                }
+              }
+              uiViewClassName4 = type2;
+            }
+            if (uiViewClassName4 == null) {
+              if (scrollableNode != null) {
+                const __internalInstanceHandle4 = scrollableNode.__internalInstanceHandle;
+                if (__internalInstanceHandle4 != null) {
+                  const elementType2 = __internalInstanceHandle4.elementType;
+                }
+              }
+            }
+            let __nativeTag2;
+            if (scrollableNode != null) {
+              __nativeTag2 = scrollableNode.__nativeTag;
+            }
+            if (__nativeTag2 == null) {
+              __nativeTag2 = null;
+            }
+            tmp14 = __nativeTag2;
+          }
+          tmp9 = tmp14;
+        }
+        return tmp9;
       }
-      return animatableRef;
-    };
-    tmp3Result.ChildComponent = global;
-    return tmp3Result;
+    }
+  } else {
+    return null;
   }
 }
-_inherits(AnimatedComponent, fn(19).Component);
-const entry = {
-  key: "getComponentViewTag",
-  value: function getComponentViewTag() {
-    return this._getViewInfo().viewTag;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "_onSetLocalRef",
-    value: function _onSetLocalRef() {},
-  },
-  {
-    key: "_getViewInfo",
-    value: function _getViewInfo() {
-      const self = this;
-      if (undefined === this._viewInfo) {
-        self._viewInfo = self._resolveViewInfo();
-      }
-      return self._viewInfo;
-    },
-  },
-  {
-    key: "_resolveViewInfo",
-    value: function _resolveViewInfo() {
-      const findHostInstanceResult = AnimatedComponent(1707).findHostInstance(this);
-      if (findHostInstanceResult) {
-        const viewInfo = AnimatedComponent(1881).getViewInfo(findHostInstanceResult);
-        let num = viewInfo.viewTag;
-        if (num == null) {
-          num = -1;
-        }
-        const obj2 = { viewTag: num, shadowNodeWrapper: null, reactViewName: null };
-        const tmpResult = AnimatedComponent(1881);
-        obj2.shadowNodeWrapper = AnimatedComponent(1706).getShadowNodeWrapperFromRef(this, findHostInstanceResult);
-        obj2.reactViewName = viewInfo.reactViewName;
-        return obj2;
-      } else {
-        const _Error = Error;
-        const error = new Error("[Reanimated] Cannot find host instance for this component. Maybe it renders nothing?");
-        throw error;
-      }
-      const obj = AnimatedComponent(1707);
-    },
-  },
-  {
-    key: "_refreshComponentRef",
-    value: function _refreshComponentRef() {
-      const self = this;
-      const _rawComponentRef = this._rawComponentRef;
-      let getAnimatableRef;
-      if (_rawComponentRef != null) {
-        getAnimatableRef = _rawComponentRef.getAnimatableRef;
-      }
-      if (getAnimatableRef) {
-        const _resolveComponentRefResult = self._resolveComponentRef(_rawComponentRef);
-        if (_resolveComponentRefResult !== self._componentRef) {
-          self._updateComponentRef(_resolveComponentRefResult);
-        }
-      }
-    },
-  },
-  {
-    key: "_updateComponentRef",
-    value: function _updateComponentRef(_resolveComponentRefResult) {
-      const self = this;
-      const _viewInfo = this._viewInfo;
-      this._componentRef = _resolveComponentRefResult;
-      if (undefined !== _viewInfo) {
-        const _resolveViewInfoResult = self._resolveViewInfo();
-        if (_resolveViewInfoResult.viewTag !== _viewInfo.viewTag) {
-          self._detachHostBindings(_viewInfo);
-          if (_viewInfo.shadowNodeWrapper) {
-            AnimatedComponent(1658).markNodeAsRemovable(shadowNodeWrapper);
-            const obj = AnimatedComponent(1658);
-          }
-          self._viewInfo = _resolveViewInfoResult;
-          if (self._CSSManager) {
-            const _CSSManager = self._CSSManager;
-            _CSSManager.unmountCleanup();
-            self._CSSManager = self._createCSSManager();
-            const _CSSManager2 = self._CSSManager;
-            _CSSManager2.update(self._cssStyle, self.props);
-          }
-          self._attachHostBindings();
-        } else {
-          self._viewInfo = _resolveViewInfoResult;
-        }
-      }
-    },
-  },
-  {
-    key: "_detachHostBindings",
-    value: function _detachHostBindings(arg0) {},
-  },
-  {
-    key: "_attachHostBindings",
-    value: function _attachHostBindings() {},
-  },
-  {
-    key: "_createCSSManager",
-    value: function _createCSSManager() {
-      let name = this.ChildComponent.displayName;
-      if (name == null) {
-        name = this.ChildComponent.name;
-      }
-      const cSSManager = new AnimatedComponent(1882).CSSManager(this._getViewInfo(), name);
-      return cSSManager;
-    },
-  },
-  {
-    key: "_updateStyles",
-    value: function _updateStyles(style) {
-      let flattenResult = hasOwnProperty.flatten(style.style);
-      if (flattenResult == null) {
-        flattenResult = {};
-      }
-      this._cssStyle = flattenResult;
-    },
-  },
-  {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      const self = this;
-      this._updateStyles(this.props);
-      const _viewInfo = this._viewInfo;
-      let viewTag;
-      if (_viewInfo != null) {
-        viewTag = _viewInfo.viewTag;
-      }
-      if (tmp3) {
-        const result = AnimatedComponent(1658).unmarkNodeAsRemovable(viewTag);
-        const obj = AnimatedComponent(1658);
-      }
-      if (self._CSSManager == null) {
-        self._CSSManager = self._createCSSManager();
-      }
-      const _CSSManager = self._CSSManager;
-      if (_CSSManager != null) {
-        _CSSManager.update(self._cssStyle, self.props);
-      }
-      self._willUnmount = false;
-      tmp3 = self._willUnmount && typeof viewTag === "number";
-    },
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      const self = this;
-      if (this._CSSManager) {
-        const _CSSManager = self._CSSManager;
-        _CSSManager.unmountCleanup();
-      }
-      const _viewInfo = self._viewInfo;
-      let shadowNodeWrapper;
-      if (_viewInfo != null) {
-        shadowNodeWrapper = _viewInfo.shadowNodeWrapper;
-      }
-      if (shadowNodeWrapper) {
-        AnimatedComponent(1658).markNodeAsRemovable(shadowNodeWrapper);
-        const obj = AnimatedComponent(1658);
-      }
-      self._willUnmount = true;
-    },
-  },
-  {
-    key: "shouldComponentUpdate",
-    value: function shouldComponentUpdate(arg0) {
-      const self = this;
-      this._updateStyles(arg0);
-      if (this._CSSManager) {
-        const _CSSManager = self._CSSManager;
-        _CSSManager.update(self._cssStyle, arg0);
-      }
-      return true;
-    },
-  },
-  {
-    key: "render",
-    value: function render(props) {
-      const self = this;
-      if (props == null) {
-        props = self.props;
-      }
-      const obj2 = {};
-      const merged = Object.assign(AnimatedComponent(1883).filterCSSProps(props));
-      obj2.collapsable = false;
-      obj2.ref = self._setComponentRef;
-      return jsx(this.ChildComponent, {});
-    },
-  },
-];
-
-export default _createClass(AnimatedComponent, items);

@@ -1,13 +1,11 @@
 // _runtime/metro/11366__.js
-import AbstractTimeExpressionParser from "../11367_AbstractTimeExpressionParser.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod11313 from "11313__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,121 +24,51 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENTimeExpressionParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeExpressionParser);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeExpressionParser);
-    tmp3 = closure_3;
-    if (closure_6()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      constructResult = obj.apply(self, items);
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class JPMergeDateRangeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, JPMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(JPMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = JPMergeDateRangeRefiner;
+_inherits(JPMergeDateRangeRefiner, fn(_mod11313).default);
 const entry = {
-  key: "followingPhase",
-  value: function followingPhase() {
-    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(から|－|ー|-|～|~)\s*$/i;
   },
 };
-let items = [
-  entry,
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:at|from)\\s*)??";
-    },
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(
-        _getPrototypeOf(ENTimeExpressionParser.prototype),
-        "extractPrimaryTimeComponents",
-        this,
-      );
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("night")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", ENTimeExpressionParser(11358).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", ENTimeExpressionParser(11358).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("afternoon")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(11358).Meridiem.PM);
-          const value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("morning")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(11358).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-        return fnResult.addTag("parser/ENTimeExpressionParser");
-      } else {
-        return fnResult;
-      }
-    },
-  },
-  {
-    key: "extractFollowingTimeComponents",
-    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
-      const self = this;
-      let fn = hasOwnProperty(
-        _getPrototypeOf(ENTimeExpressionParser.prototype),
-        "extractFollowingTimeComponents",
-        this,
-      );
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [arg0, arg1, arg2];
-      const fnResult = fn(items);
-      if (fnResult) {
-        fnResult.addTag("parser/ENTimeExpressionParser");
-      }
-      return fnResult;
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(ENTimeExpressionParser, items);
+export default _createClass(JPMergeDateRangeRefiner, items);

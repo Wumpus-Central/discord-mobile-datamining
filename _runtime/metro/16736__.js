@@ -1,13 +1,13 @@
 // _runtime/metro/16736__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "feb0699dba8bf9a96f37b026eba6ef56",
-  name: "arrow-sm-down",
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "d52ce383ca6d8eb53588bcc042574cae",
+  name: "uk",
   type: "png",
 });

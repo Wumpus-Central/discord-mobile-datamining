@@ -1,13 +1,13 @@
 // _runtime/metro/10834__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "adb011bbeb7f189fa87848559cc4fbc7",
-  name: "ic_leave_stage",
+  scales: [2, 3],
+  hash: "f32d9237628628dc39ab04879ac15862",
+  name: "ScreenArrowIcon",
   type: "png",
 });

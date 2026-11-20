@@ -1,11 +1,11 @@
 // _runtime/metro/02688__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_settings/server_monetization/tags/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9zZXR0aW5ncy9zZXJ2ZXJfbW9uZXRpemF0aW9uL3RhZ3Mvd2Vi",
   scales: [1],
-  hash: "c3685a2fecec4fcf3399bcc8edd129b0",
-  name: "GuildSettingsTags.compiled.messages",
+  hash: "c86cafcf51d7ae39d5b9628829b8606b",
+  name: "zh-CN.messages.c86cafcf51d7ae39d5b9628829b8606b.compiled.messages",
   type: "jsona",
 });

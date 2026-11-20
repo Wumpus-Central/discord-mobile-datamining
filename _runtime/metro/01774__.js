@@ -1,100 +1,210 @@
 // _runtime/metro/01774__.js
-import _mod1761 from "01761__.js";
-import _mod1764 from "01764__.js";
+import _mod1666 from "01666__.js";
+import _mod1759 from "01759__.js";
+import normalizeDelay from "../01771_normalizeDelay.js";
+import VALID_ANIMATION_DIRECTIONS2 from "../01775_VALID_ANIMATION_DIRECTIONS.js";
 
 require = arg1;
 const dependencyMap = arg6;
 const ERROR_MESSAGES = {
-  invalidDelay(animationDelay) {
-    return 'Invalid delay "' + animationDelay + '". Expected a number, "ms", or "s".';
+  invalidAnimationDirection(animationDirection) {
+    return 'Invalid animation direction "' + animationDirection + '".';
   },
-  invalidDuration(animationDuration) {
-    return 'Invalid duration "' + animationDuration + '". Expected a number, "ms", or "s".';
+  invalidIterationCount(animationIterationCount) {
+    return 'Invalid iteration count "' + animationIterationCount + '". Expected a number or "infinite".';
   },
-  negativeDuration(animationDuration) {
-    return 'Duration cannot be negative, received "' + animationDuration + '".';
+  negativeIterationCount(animationIterationCount) {
+    return 'Iteration count cannot be negative, received "' + animationIterationCount + '".';
   },
-  invalidPredefinedTimingFunction(ease) {
-    const VALID_PREDEFINED_TIMING_FUNCTIONS = _mod1764.VALID_PREDEFINED_TIMING_FUNCTIONS;
-    return (
-      'Invalid predefined timing function "' +
-      ease +
-      '". Supported values are: ' +
-      VALID_PREDEFINED_TIMING_FUNCTIONS.join(", ") +
-      "."
-    );
+  invalidFillMode(animationFillMode) {
+    return 'Invalid fill mode "' + animationFillMode + '".';
   },
-  invalidParametrizedTimingFunction(ease) {
-    let str;
-    if (ease != null) {
-      str = ease.toString();
-    }
-    return 'Invalid parametrized timing function "' + str + '".';
+  invalidPlayState(animationPlayState) {
+    return 'Invalid play state "' + animationPlayState + '".';
   },
 };
 
 export { ERROR_MESSAGES };
-export function normalizeDelay() {
-  let num = animationDelay;
-  if (animationDelay === undefined) {
-    num = 0;
+export function normalizeDirection() {
+  let str = animationDirection;
+  if (animationDirection === undefined) {
+    str = "normal";
   }
-  const obj = _mod1761;
-  const normalizeTimeUnitResult = obj.normalizeTimeUnit(num);
-  if (null === normalizeTimeUnitResult) {
+  const VALID_ANIMATION_DIRECTIONS = VALID_ANIMATION_DIRECTIONS2.VALID_ANIMATION_DIRECTIONS;
+  if (VALID_ANIMATION_DIRECTIONS.has(str)) {
+    return str;
+  } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("[Reanimated] " + obj.invalidDelay(num));
+    const error = new Error("[Reanimated] " + obj.invalidAnimationDirection(str));
     throw error;
-  } else {
-    return normalizeTimeUnitResult;
   }
 }
-export function normalizeDuration() {
-  let num = animationDuration;
-  if (animationDuration === undefined) {
-    num = 0;
+export function normalizeIterationCount() {
+  let num = animationIterationCount;
+  if (animationIterationCount === undefined) {
+    num = 1;
   }
-  const obj = _mod1761;
-  const normalizeTimeUnitResult = obj.normalizeTimeUnit(num);
-  if (null === normalizeTimeUnitResult) {
-    const _Error2 = Error;
-    const _HermesInternal2 = HermesInternal;
-    const error = new Error("[Reanimated] " + obj.invalidDuration(num));
-    throw error;
-  } else if (normalizeTimeUnitResult < 0) {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error1 = new Error("[Reanimated] " + obj.negativeDuration(num));
-    throw error1;
-  } else {
-    return normalizeTimeUnitResult;
-  }
-}
-export function normalizeTimingFunction() {
-  let str = animationTimingFunction;
-  if (animationTimingFunction === undefined) {
-    str = "ease";
-  }
-  if (typeof str === "string") {
-    const obj = _mod1761;
-    if (obj.isPredefinedTimingFunction(str)) {
-      return str;
-    } else {
-      const _Error2 = Error;
-      const _HermesInternal2 = HermesInternal;
-      const error = new Error("[Reanimated] " + obj.invalidPredefinedTimingFunction(str));
-      throw error;
-    }
-  } else {
-    if (str.normalize) {
-      if (typeof str.normalize === "function") {
-        return str.normalize();
+  if ("infinite" !== num) {
+    if (num !== Infinity) {
+      const obj = _mod1666;
+      if (obj.isNumber(num)) {
+        if (num < 0) {
+          const _Error2 = Error;
+          const _HermesInternal2 = HermesInternal;
+          const error = new Error("[Reanimated] " + obj.negativeIterationCount(num));
+          throw error;
+        } else {
+          return num;
+        }
+      } else {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error1 = new Error("[Reanimated] " + obj.invalidIterationCount(num));
+        throw error1;
       }
     }
+  }
+  return -1;
+}
+export function normalizeFillMode() {
+  let str = animationFillMode;
+  if (animationFillMode === undefined) {
+    str = "none";
+  }
+  const VALID_FILL_MODES = VALID_ANIMATION_DIRECTIONS2.VALID_FILL_MODES;
+  if (VALID_FILL_MODES.has(str)) {
+    return str;
+  } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error1 = new Error("[Reanimated] " + obj.invalidParametrizedTimingFunction(str));
-    throw error1;
+    const error = new Error("[Reanimated] " + obj.invalidFillMode(str));
+    throw error;
   }
+}
+export function normalizePlayState() {
+  let str = animationPlayState;
+  if (animationPlayState === undefined) {
+    str = "running";
+  }
+  const VALID_PLAY_STATES = VALID_ANIMATION_DIRECTIONS2.VALID_PLAY_STATES;
+  if (VALID_PLAY_STATES.has(str)) {
+    return str;
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[Reanimated] " + obj.invalidPlayState(str));
+    throw error;
+  }
+}
+export function normalizeSingleCSSAnimationSettings(animationName) {
+  ({ animationIterationCount, animationDirection, animationFillMode, animationPlayState } = animationName);
+  const obj = {
+    duration: normalizeDelay.normalizeDuration(animationDuration),
+    timingFunction: null,
+    delay: null,
+    iterationCount: null,
+    direction: null,
+    fillMode: null,
+    playState: null,
+  };
+  ({ animationDuration, animationTimingFunction, animationDelay } = animationName);
+  obj.timingFunction = normalizeDelay.normalizeTimingFunction(animationTimingFunction);
+  obj.delay = normalizeDelay.normalizeDelay(animationDelay);
+  if (animationIterationCount === undefined) {
+    animationIterationCount = 1;
+  }
+  let num = -1;
+  if ("infinite" !== animationIterationCount) {
+    num = -1;
+    if (animationIterationCount !== Infinity) {
+      if (tmpResult.isNumber(animationIterationCount)) {
+        num = animationIterationCount;
+        if (animationIterationCount < 0) {
+          const _Error2 = Error;
+          const _HermesInternal2 = HermesInternal;
+          const error = new Error("[Reanimated] " + obj.negativeIterationCount(animationIterationCount));
+          throw error;
+        }
+      } else {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error1 = new Error("[Reanimated] " + obj.invalidIterationCount(animationIterationCount));
+        throw error1;
+      }
+      tmpResult = _mod1666;
+    }
+  }
+  obj.iterationCount = num;
+  if (animationDirection === undefined) {
+    animationDirection = "normal";
+  }
+  const VALID_ANIMATION_DIRECTIONS = VALID_ANIMATION_DIRECTIONS2.VALID_ANIMATION_DIRECTIONS;
+  if (VALID_ANIMATION_DIRECTIONS.has(animationDirection)) {
+    obj.direction = animationDirection;
+    if (animationFillMode === undefined) {
+      animationFillMode = "none";
+    }
+    const VALID_FILL_MODES = VALID_ANIMATION_DIRECTIONS2.VALID_FILL_MODES;
+    if (VALID_FILL_MODES.has(animationFillMode)) {
+      obj.fillMode = animationFillMode;
+      if (animationPlayState === undefined) {
+        animationPlayState = "running";
+      }
+      const VALID_PLAY_STATES = VALID_ANIMATION_DIRECTIONS2.VALID_PLAY_STATES;
+      if (VALID_PLAY_STATES.has(animationPlayState)) {
+        obj.playState = animationPlayState;
+        return obj;
+      } else {
+        const _Error5 = Error;
+        const _HermesInternal5 = HermesInternal;
+        const error2 = new Error("[Reanimated] " + obj.invalidPlayState(animationPlayState));
+        throw error2;
+      }
+    } else {
+      const _Error4 = Error;
+      const _HermesInternal4 = HermesInternal;
+      const error3 = new Error("[Reanimated] " + obj.invalidFillMode(animationFillMode));
+      throw error3;
+    }
+  } else {
+    const _Error3 = Error;
+    const _HermesInternal3 = HermesInternal;
+    const error4 = new Error("[Reanimated] " + obj.invalidAnimationDirection(animationDirection));
+    throw error4;
+  }
+}
+export function getAnimationSettingsUpdates(normalizedSettings, normalizedSettings2) {
+  const obj = {};
+  if (normalizedSettings.duration !== normalizedSettings2.duration) {
+    obj.duration = normalizedSettings2.duration;
+  }
+  let tmp = normalizedSettings.timingFunction === normalizedSettings2.timingFunction;
+  if (!tmp) {
+    const timingFunction = normalizedSettings.timingFunction;
+    let deepEqualResult = typeof timingFunction === "object";
+    if (typeof timingFunction === "object") {
+      deepEqualResult = _mod1759.deepEqual(normalizedSettings.timingFunction, normalizedSettings2.timingFunction);
+    }
+    tmp = deepEqualResult;
+  }
+  if (!tmp) {
+    obj.timingFunction = normalizedSettings2.timingFunction;
+  }
+  if (normalizedSettings.delay !== normalizedSettings2.delay) {
+    obj.delay = normalizedSettings2.delay;
+  }
+  if (normalizedSettings.iterationCount !== normalizedSettings2.iterationCount) {
+    obj.iterationCount = normalizedSettings2.iterationCount;
+  }
+  if (normalizedSettings.direction !== normalizedSettings2.direction) {
+    obj.direction = normalizedSettings2.direction;
+  }
+  if (normalizedSettings.fillMode !== normalizedSettings2.fillMode) {
+    obj.fillMode = normalizedSettings2.fillMode;
+  }
+  if (normalizedSettings.playState !== normalizedSettings2.playState) {
+    obj.playState = normalizedSettings2.playState;
+  }
+  return obj;
 }

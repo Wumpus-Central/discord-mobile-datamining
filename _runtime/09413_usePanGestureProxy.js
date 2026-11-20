@@ -1,6 +1,6 @@
 // _runtime/09413_usePanGestureProxy.js
 import _mod19 from "metro/00019__.js";
-import LegacyBaseButton from "05052_LegacyBaseButton.js";
+import LegacyBaseButton from "05054_LegacyBaseButton.js";
 
 const useMemo = _mod19.useMemo;
 let closure_3 = { code: "(function pnpm_usePanGestureProxyTs1(e){let[userDefinedConflictGestures]=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);})" };
@@ -23,7 +23,7 @@ export (onConfigurePanGesture) => {
     const Gesture = LegacyBaseButton.Gesture;
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     c0 = withTestIdResult;
-    const obj = { onBegin: "ind", onStart: "channel_id", onUpdate: "__packager_asset", onEnd: "format", onFinalize: "ip" };
+    const obj = { onBegin: "Array", onStart: "channel_id", onUpdate: "__closure", onEnd: "user", onFinalize: "HermesInternal" };
     c1 = obj;
     withTestIdResult.onBegin = (onBegin) => {
       c1.onBegin = onBegin;

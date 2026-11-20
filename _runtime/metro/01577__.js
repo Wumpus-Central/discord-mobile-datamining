@@ -1,28 +1,16 @@
 // _runtime/metro/01577__.js
-import _slicedToArray from "00032__.js";
+import NavigationBuilderContext from "../01530_NavigationBuilderContext.js";
+import _mod1578 from "01578__.js";
 import noop from "00019__.js";
 
-const require = arg1;
+require = arg1;
 
-export function useRegisterNavigator() {
-  const first = _slicedToArray(
-    noop.useState(() => first(context[2]).nanoid()),
-    1,
-  )[0];
-  context = noop.useContext(first(context[3]).SingleNavigatorContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't register the navigator. Have you wrapped your app with 'NavigationContainer'?\n\nThis can also happen if there are multiple copies of '@react-navigation' packages installed.",
-    );
-    throw error;
-  } else {
-    items = [context, first];
-    const effect = noop.useEffect(() => {
-      const unregister = context.unregister;
-      context.register(unregister);
-      return () => unregister(first);
-    }, items);
-    return first;
-  }
+export function useScheduleUpdate(arg0) {
+  closure_0 = arg0;
+  const context = noop.useContext(NavigationBuilderContext.NavigationBuilderContext);
+  ({ scheduleUpdate: dependencyMap, flushUpdates } = context);
+  const insertionEffect = noop.useInsertionEffect(() => {
+    dependencyMap(closure_0);
+  });
+  const clientLayoutEffect = _mod1578.useClientLayoutEffect(flushUpdates);
 }

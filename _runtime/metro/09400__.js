@@ -1,5 +1,5 @@
 // _runtime/metro/09400__.js
-import _mod1655 from "01655__.js";
+import _mod1653 from "01653__.js";
 import noop from "00019__.js";
 
 require = fn;
@@ -10,8 +10,8 @@ let closure_6 = { code: "(function pnpm_indexTsx2(dimensions){let[containerSize]
 
 export const GlobalStateContext = context;
 export (value) => {
-  const sharedValue = _mod1655.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = _mod1655.useSharedValue({});
+  const sharedValue = _mod1653.useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = _mod1653.useSharedValue({});
   items = [closure_5, sharedValue1];
   [tmp3, tmp4] = items;
   function pnpm_indexTsx1(arg0, arg1) {

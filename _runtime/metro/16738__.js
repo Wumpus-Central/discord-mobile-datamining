@@ -1,13 +1,13 @@
 // _runtime/metro/16738__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/main_tabs",
-  width: 192,
-  height: 144,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
   scales: [1],
-  hash: "2bbd6220afd7d7de1fa25c481ae56a3d",
-  name: "ExampleSketchheadsActivity",
+  hash: "b2da62f020089ccee92860e4defafdb4",
+  name: "zh-CN",
   type: "png",
 });

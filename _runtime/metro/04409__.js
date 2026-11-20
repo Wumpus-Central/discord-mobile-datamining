@@ -1,11 +1,11 @@
 // _runtime/metro/04409__.js
-import registerAsset from "01119__.js";
+import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/code_blurple",
   scales: [1],
-  hash: "ad112359b49e5fa8f607c360b9c70651",
-  name: "bg.messages.ad112359b49e5fa8f607c360b9c70651.compiled.messages",
+  hash: "b59878279e93cc37a1ec280690b41dfd",
+  name: "CodeBlurple.compiled.messages",
   type: "jsona",
 });

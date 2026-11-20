@@ -1,14 +1,14 @@
 // _runtime/metro/07065__.js
-import CardAnimationContext from "../07059_CardAnimationContext.js";
+import GestureHandlerRefContext from "../07038_GestureHandlerRefContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
+export function useGestureHandlerRef() {
+  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
   if (undefined === context) {
     const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
+    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
     throw error;
   } else {
     return context;

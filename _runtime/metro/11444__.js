@@ -1,7 +1,7 @@
 // _runtime/metro/11444__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../11360_AbstractParserWithWordBoundaryChecking.js";
-import now from "../11377_now.js";
+import AbstractParserWithWordBoundaryChecking from "../11302_AbstractParserWithWordBoundaryChecking.js";
+import now from "../11319_now.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -91,12 +91,12 @@ if (self2) {
     }
     const _Object3 = Object;
     let closure_7 = fn(now);
-    class NLCasualDateParser {
+    class ESCasualDateParser {
       constructor() {
         self = this;
-        tmp = closure_0(this, NLCasualDateParser);
+        tmp = closure_0(this, ESCasualDateParser);
         tmp2 = c2;
-        obj = c2(NLCasualDateParser);
+        obj = c2(ESCasualDateParser);
         tmp3 = closure_1;
         if (closure_3()) {
           tmp7 = globalThis;
@@ -111,12 +111,12 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _classCallCheck = NLCasualDateParser;
-    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    _classCallCheck = ESCasualDateParser;
+    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     const entry = {
       key: "innerPattern",
       value: function innerPattern(arg0) {
-        return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
+        return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
       },
     };
     let items = [entry];
@@ -124,26 +124,21 @@ if (self2) {
       key: "innerExtract",
       value: function innerExtract(reference, arg1) {
         const formatted = arg1[0].toLowerCase();
-        if ("nu" === formatted) {
+        if ("ahora" === formatted) {
           return closure_7.now(reference.reference);
-        } else if ("vandaag" === formatted) {
+        } else if ("hoy" === formatted) {
           return closure_7.today(reference.reference);
-        } else {
-          if ("morgen" !== formatted) {
-            if ("morgend" !== formatted) {
-              if ("gisteren" === formatted) {
-                return closure_7.yesterday(reference.reference);
-              } else {
-                return tmp2;
-              }
-            }
-          }
+        } else if ("ma\u00F1ana" === formatted) {
           return closure_7.tomorrow(reference.reference);
+        } else if ("ayer" === formatted) {
+          return closure_7.yesterday(reference.reference);
+        } else {
+          return tmp2;
         }
       },
     };
     items[1] = entry1;
-    exports.default = _createClass(NLCasualDateParser, items);
+    exports.default = _createClass(ESCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

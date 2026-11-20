@@ -1,5 +1,5 @@
 // _runtime/metro/09423__.js
-import _modDef1655 from "01655__.js";
+import _modDef1653 from "01653__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
@@ -20,11 +20,11 @@ export (count) => {
   ({ horizontal, customReanimatedStyle } = count);
   const accessibilityLabel = count.accessibilityLabel;
   ({ size, children, onPress } = count);
-  const sharedValue = require("01655__.js").useSharedValue({});
-  let obj = require("01655__.js");
+  const sharedValue = require("01653__.js").useSharedValue({});
+  let obj = require("01653__.js");
   items = [
     constants,
-    require("01655__.js").runOnJS,
+    require("01653__.js").runOnJS,
     (arg0) => {
       let obj;
       if (c2 != null) {
@@ -52,9 +52,9 @@ export (count) => {
   pnpm_PaginationItemTsx1.__closure = items1;
   pnpm_PaginationItemTsx1.__workletHash = 8160033721614;
   pnpm_PaginationItemTsx1.__initData = tmp4;
-  const derivedValue = require("01655__.js").useDerivedValue(pnpm_PaginationItemTsx1);
-  const obj2 = require("01655__.js");
-  let items2 = [closure_9, size, 10, dotStyle, activeDotStyle, animValue, index, count, require("01655__.js").interpolate, require("01655__.js").Extrapolation, require("01655__.js").interpolateColor, sharedValue];
+  const derivedValue = require("01653__.js").useDerivedValue(pnpm_PaginationItemTsx1);
+  const obj2 = require("01653__.js");
+  let items2 = [closure_9, size, 10, dotStyle, activeDotStyle, animValue, index, count, require("01653__.js").interpolate, require("01653__.js").Extrapolation, require("01653__.js").interpolateColor, sharedValue];
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -195,7 +195,7 @@ export (count) => {
   let items4 = [animValue, index, count, horizontal, dotStyle, activeDotStyle, customReanimatedStyle];
   const obj3 = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: null, accessibilityState: null, children: null };
   let str = "";
-  const animatedStyle = require("01655__.js").useAnimatedStyle(pnpm_PaginationItemTsx2, items4);
+  const animatedStyle = require("01653__.js").useAnimatedStyle(pnpm_PaginationItemTsx2, items4);
   if (animValue.value !== index) {
     const _HermesInternal = HermesInternal;
     str = "Go to " + accessibilityLabel;
@@ -212,6 +212,6 @@ export (count) => {
   obj5.transform = items5;
   const items6 = [obj5, dotStyle, animatedStyle];
   obj4.style = items6;
-  obj3.children = jsx(_modDef1655.View, { style: null, children });
+  obj3.children = jsx(_modDef1653.View, { style: null, children });
   return <Pressable onPress={onPress} accessibilityLabel={accessibilityLabel} accessibilityRole="button" accessibilityHint={null} accessibilityState={null}>{null}</Pressable>;
 }
