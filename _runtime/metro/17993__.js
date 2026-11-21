@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "308384ec5f601de5c19058de1122cf7d",
-  name: "PaintbrushThinIcon",
+  hash: "7130af78aa8ba064d8c79243ff2e60a2",
+  name: "MobilePhoneXIcon",
   type: "png",
 });

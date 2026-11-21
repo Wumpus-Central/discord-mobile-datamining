@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 38,
+  height: 38,
   scales: [2, 3],
-  hash: "9ca1aab40b1d1dec8d5caf0688317d98",
-  name: "TextSpoilerIcon",
+  hash: "396b5aebc51e5c35836ff2654ee02ebc",
+  name: "game_icon_placeholder",
   type: "png",
 });

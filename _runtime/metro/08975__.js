@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "540091c70b333c8b8937ba1627138192",
-  name: "wumpus-pikachu",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "9037a70d8faa972c462f54c8bc0bf00a",
+  name: "HeartOutlineIcon",
   type: "png",
 });

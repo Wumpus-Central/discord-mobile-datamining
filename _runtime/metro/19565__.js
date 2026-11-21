@@ -1,12 +1,14 @@
 // _runtime/metro/19565__.js
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod19566 from "19566__.js";
+import Events from "../19570_Events.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import "_classCallCheck";
 import _createClass from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _assertThisInitialized_mod from "../00094__assertThisInitialized.js";
-import c3_mod from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import _wrapNativeSuper from "00158__wrapNativeSuper.js";
 
+const PQueue = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,937 +25,770 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
+  } catch (err) {}
+}
+_possibleConstructorReturn;
+function empty() {}
+const timeoutError = new _mod19566.TimeoutError();
+let duration;
+let closure_2;
+let _classCallCheck;
+class PQueue {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_3(this, PQueue);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(PQueue);
+    tmp3 = closure_4;
+    if (closure_6()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._intervalCount = 0;
+    tmp3Result._intervalEnd = 0;
+    tmp3Result._pendingCount = 0;
+    tmp3Result._resolveEmpty = metroImportDefault;
+    tmp3Result._resolveIdle = metroImportDefault;
+    obj1 = {
+      carryoverConcurrencyCount: false,
+      intervalCap: Infinity,
+      interval: 0,
+      concurrency: Infinity,
+      autoStart: true,
+      queueClass: closure_0(closure_1[7]).default,
+    };
+    merged = Object.assign(obj1, global);
+    if (typeof merged.intervalCap === "number") {
+      num = 1;
+      if (merged.intervalCap >= 1) {
+        if (undefined !== merged.interval) {
+          _Number = Number;
+          if (Number.isFinite(merged.interval)) {
+            if (merged.interval >= 0) {
+              tmp3Result._carryoverConcurrencyCount = merged.carryoverConcurrencyCount;
+              num2 = Infinity;
+              tmp3Result._isIntervalIgnored = merged.intervalCap === Infinity || 0 === merged.interval;
+              ({ intervalCap: tmp6._intervalCap, interval: tmp6._interval } = merged);
+              tmp10 = new.target;
+              tmp11 = new.target;
+              queueClass = new merged.queueClass();
+              tmp13 = queueClass;
+              tmp3Result._queue = queueClass;
+              ({ queueClass: tmp6._queueClass, concurrency: tmp6.concurrency, timeout: tmp6._timeout } = merged);
+              flag = true;
+              tmp3Result._throwOnTimeout = true === merged.throwOnTimeout;
+              flag2 = false;
+              tmp3Result._isPaused = false === merged.autoStart;
+              return tmp3Result;
+            }
+          }
+        }
+        str3 = merged.interval;
+        tmp14 = null;
+        str1 = undefined;
+        if (null !== str3) {
+          if (undefined !== str3) {
+            str1 = str3.toString();
+          }
+        }
+        str4 = "";
+        str5 = "";
+        if (null !== str1) {
+          str5 = "";
+          if (undefined !== str1) {
+            str5 = str1;
+          }
+        }
+        _HermesInternal = HermesInternal;
+        str6 = ")";
+        str7 = "` (";
+        str8 = "Expected `interval` to be a finite number >= 0, got `";
+        tmp16 = str5;
+        tmp17 = new.target;
+        tmp18 = new.target;
+        typeError = new TypeError(
+          "Expected `interval` to be a finite number >= 0, got `" + str5 + "` (" + typeof merged.interval + ")",
+        );
+        tmp20 = typeError;
+        throw typeError;
+      }
+    }
+    str = merged.intervalCap;
+    str9 = undefined;
+    if (null !== str) {
+      if (undefined !== str) {
+        str9 = str.toString();
+      }
+    }
+    str2 = "";
+    if (null !== str9) {
+      str2 = "";
+      if (undefined !== str9) {
+        str2 = str9;
+      }
+    }
+    typeError1 = new TypeError(
+      "Expected `intervalCap` to be a number from 1 and up, got `" + str2 + "` (" + typeof merged.intervalCap + ")",
+    );
+    throw typeError1;
   }
 }
-let _moduleResult1 = _createClass;
-let _classCallCheck = _classCallCheck_mod;
-let _assertThisInitialized = _assertThisInitialized_mod;
-let c3 = c3_mod;
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    const _Error = Error;
-    const fn3 = function t(arg0) {
+_inherits(PQueue, Events);
+const items = [
+  {
+    key: "_doesIntervalAllowAnother",
+    get() {
       const self = this;
-      _classCallCheck(this, closure_0);
-      let str = "Timed out";
-      if (null != arg0) {
-        const _HermesInternal = HermesInternal;
-        str = "Timed out after waiting for " + arg0 + " ms";
+      return this._isIntervalIgnored || self._intervalCount < self._intervalCap;
+    },
+  },
+  {
+    key: "_doesConcurrentAllowAnother",
+    get() {
+      return this._pendingCount < this._concurrency;
+    },
+  },
+  {
+    key: "_next",
+    value: function _next() {
+      this._pendingCount = this._pendingCount - 1;
+      this._tryToStartAnother();
+      this.emit("next");
+    },
+  },
+  {
+    key: "_resolvePromises",
+    value: function _resolvePromises() {
+      const self = this;
+      this._resolveEmpty();
+      this._resolveEmpty = empty;
+      if (0 === this._pendingCount) {
+        self._resolveIdle();
+        self._resolveIdle = tmp2;
+        self.emit("idle");
       }
-      items = [str];
-      const obj = _getPrototypeOf(closure_0);
-      if (_isNativeReflectConstruct()) {
-        const _Reflect = Reflect;
-        let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
-      } else {
-        constructResult = obj.apply(self, items);
-      }
-      const tmp5Result = _possibleConstructorReturn(self, constructResult);
-      Object.setPrototypeOf(_assertThisInitialized(tmp5Result), closure_0.prototype);
-      return tmp5Result;
-    };
-    _inherits(fn3, _wrapNativeSuper(Error));
-    const _moduleResult = _createClass(fn3);
-    _moduleResult1 = _moduleResult;
-    _classCallCheck = function o(arg0, arg1) {
-
-    };
-    const obj2 = {
-      schedule(arg0, arg1) {
-            closure_0 = arg0;
-            const timeout = setTimeout(() => {
-              if (null != c1) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(tmp);
-              }
-              c1 = undefined;
-              closure_0();
-            }, arg1);
-            return {
-              cancel() {
-                if (null != c1) {
-                  const _clearTimeout = clearTimeout;
-                  clearTimeout(tmp);
-                }
-                c1 = undefined;
-              }
-            };
+    },
+  },
+  {
+    key: "_onResumeInterval",
+    value: function _onResumeInterval() {
+      this._onInterval();
+      const result = this._initializeIntervalIfNeeded();
+      this._timeoutId = undefined;
+    },
+  },
+  {
+    key: "_isIntervalPaused",
+    value: function _isIntervalPaused() {
+      const self = this;
+      if (undefined === this._intervalId) {
+        const diff = self._intervalEnd - tmp;
+        if (diff < 0) {
+          let num2 = 0;
+          if (self._carryoverConcurrencyCount) {
+            num2 = self._pendingCount;
           }
-    };
-    _assertThisInitialized = obj2;
-    const _Number = Number;
-    c3 = POSITIVE_INFINITY2;
-    const fn4 = function r(arg0, timeout, arg2) {
-      closure_0 = arg0;
-      let tmp = timeout;
-      if (typeof timeout !== "number") {
-        timeout = undefined;
-        if (null != timeout) {
-          timeout = timeout.timeout;
-        }
-        tmp = timeout;
-      }
-      let num = 5000;
-      if (null !== tmp) {
-        num = 5000;
-        if (undefined !== tmp) {
-          num = tmp;
+          self._intervalCount = num2;
+        } else {
+          if (undefined === self._timeoutId) {
+            const _setTimeout = setTimeout;
+            self._timeoutId = setTimeout(() => {
+              self._onResumeInterval();
+            }, diff);
+          }
+          return true;
         }
       }
-      let tmp3 = arg2;
-      if (typeof timeout !== "number") {
-        let prop;
-        if (null != timeout) {
-          prop = timeout.intervalBetweenAttempts;
+      return false;
+    },
+  },
+  {
+    key: "_tryToStartAnother",
+    value: function _tryToStartAnother() {
+      const self = this;
+      if (0 === this._queue.size) {
+        if (self._intervalId) {
+          const _clearInterval = clearInterval;
+          clearInterval(self._intervalId);
         }
-        tmp3 = prop;
-      }
-      if (null !== tmp3) {
-      }
-      c3 = false;
-      let fn;
-      if (num !== c3) {
-        fn = () => {
-          if (typeof o === "function") {
-            closure_0 = closure_2;
-            const promise = new Promise((arg0, fn) => {
-              try {
-                closure_0.schedule(arg0, closure_1);
-              } catch (tmp5) {
-                fn(tmp5);
+        self._intervalId = undefined;
+        self._resolvePromises();
+        return false;
+      } else {
+        if (!self._isPaused) {
+          const _isIntervalPausedResult = self._isIntervalPaused();
+          if (self._doesIntervalAllowAnother) {
+            if (self._doesConcurrentAllowAnother) {
+              const _queue = self._queue;
+              const dequeueResult = _queue.dequeue();
+              let flag = dequeueResult;
+              if (flag) {
+                self.emit("active");
+                dequeueResult();
+                flag = true;
+                if (!_isIntervalPausedResult) {
+                  const result = self._initializeIntervalIfNeeded();
+                  flag = true;
+                }
               }
-            });
-            return promise.then(() => {
-              c3 = true;
-              throw new closure_0(closure_1);
-            });
+              return flag;
+            }
+          }
+        }
+        return false;
+      }
+    },
+  },
+  {
+    key: "_initializeIntervalIfNeeded",
+    value: function _initializeIntervalIfNeeded() {
+      const self = this;
+      let _isIntervalIgnored = this._isIntervalIgnored;
+      if (!_isIntervalIgnored) {
+        _isIntervalIgnored = undefined !== self._intervalId;
+      }
+      if (!_isIntervalIgnored) {
+        const _setInterval = setInterval;
+        self._intervalId = setInterval(() => {
+          self._onInterval();
+        }, self._interval);
+        const _Date = Date;
+        self._intervalEnd = Date.now() + self._interval;
+      }
+    },
+  },
+  {
+    key: "_onInterval",
+    value: function _onInterval() {
+      const self = this;
+      if (tmp) {
+        const _clearInterval = clearInterval;
+        clearInterval(self._intervalId);
+        self._intervalId = undefined;
+      }
+      let num = 0;
+      if (self._carryoverConcurrencyCount) {
+        num = self._pendingCount;
+      }
+      self._intervalCount = num;
+      self._processQueue();
+    },
+  },
+  {
+    key: "_processQueue",
+    value: function _processQueue() {
+      let _tryToStartAnotherResult;
+      const self = this;
+      if (this._tryToStartAnother()) {
+        do {
+          _tryToStartAnotherResult = self._tryToStartAnother();
+        } while (_tryToStartAnotherResult);
+      }
+    },
+  },
+  {
+    key: "concurrency",
+    get() {
+      return this._concurrency;
+    },
+    set(_concurrency) {
+      if (typeof _concurrency === "number") {
+        if (_concurrency >= 1) {
+          const self = this;
+          this._concurrency = _concurrency;
+          this._processQueue();
+        }
+      }
+      const typeError = new TypeError(
+        "Expected `concurrency` to be a number from 1 and up, got `" + _concurrency + "` (" + typeof _concurrency + ")",
+      );
+      throw typeError;
+    },
+  },
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+];
+const entry = { key: "add", value: null };
+asyncGeneratorStep(async function (arg0) {
+  let self = this;
+  dependencyMap = arg0;
+  closure_2 = arg1;
+  c5 = 0;
+  c6 = 0;
+  const iter = (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        };
-      }
-      if (null != fn) {
-        let promise = new Promise((arg0, arg1) => {
-          closure_0 = arg0;
-          closure_1 = arg1;
-          function r() {
-            if (!c3) {
-              let promise = new Promise((fn, fn2) => {
-                try {
-                  fn(closure_1_0());
-                } catch (tmp4) {
-                  fn2(tmp4);
-                }
-              });
-              promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }).catch(closure_1);
-              let nextPromise = promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              });
+            closure_4 = self;
+            closure_3 = tmp2;
+            closure_131_3 = self;
+            closure_131_2 = undefined;
+            closure_131_1 = closure_1;
+            let obj4 = closure_2;
+            if (closure_2 === undefined) {
+              obj4 = {};
             }
+            closure_131_2 = obj4;
+            closure_131_0 = undefined;
+            c5 = 1;
+            c6 = 1;
+            return { value: "Path", done: true };
           }
-          if (!c3) {
-            let promise = new Promise((fn, fn2) => {
-              try {
-                fn(closure_1_0());
-              } catch (tmp4) {
-                fn2(tmp4);
-              }
-            });
-            promise.then((result) => {
-              if (result) {
-                closure_1_0(result);
-              } else if (typeof num === "function") {
-                closure_0 = num2;
-                closure_1 = tmp2;
-                const promise = new Promise((arg0, fn) => {
-                  try {
-                    closure_0.schedule(arg0, closure_1);
-                  } catch (tmp5) {
-                    fn(tmp5);
-                  }
-                });
-                promise.then(closure_1_2).catch(closure_1_1);
-                const nextPromise = promise.then(closure_1_2);
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }).catch(arg1);
-            let nextPromise = promise.then((result) => {
-              if (result) {
-                closure_1_0(result);
-              } else if (typeof num === "function") {
-                closure_0 = num2;
-                closure_1 = tmp2;
-                const promise = new Promise((arg0, fn) => {
-                  try {
-                    closure_0.schedule(arg0, closure_1);
-                  } catch (tmp5) {
-                    fn(tmp5);
-                  }
-                });
-                promise.then(closure_1_2).catch(closure_1_1);
-                const nextPromise = promise.then(closure_1_2);
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            });
-          }
-        });
-        items = [promise, fn()];
-        let racePromise = Promise.race(items);
-      } else {
-        racePromise = new Promise((arg0, arg1) => {
-          closure_0 = arg0;
-          closure_1 = arg1;
-          function r() {
-            if (!c3) {
-              let promise = new Promise((fn, fn2) => {
-                try {
-                  fn(closure_1_0());
-                } catch (tmp4) {
-                  fn2(tmp4);
-                }
-              });
-              promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }).catch(closure_1);
-              let nextPromise = promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              });
-            }
-          }
-          if (!c3) {
-            let promise = new Promise((fn, fn2) => {
-              try {
-                fn(closure_1_0());
-              } catch (tmp4) {
-                fn2(tmp4);
-              }
-            });
-            promise.then((result) => {
-              if (result) {
-                closure_1_0(result);
-              } else if (typeof num === "function") {
-                closure_0 = num2;
-                closure_1 = tmp2;
-                const promise = new Promise((arg0, fn) => {
-                  try {
-                    closure_0.schedule(arg0, closure_1);
-                  } catch (tmp5) {
-                    fn(tmp5);
-                  }
-                });
-                promise.then(closure_1_2).catch(closure_1_1);
-                const nextPromise = promise.then(closure_1_2);
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }).catch(arg1);
-            let nextPromise = promise.then((result) => {
-              if (result) {
-                closure_1_0(result);
-              } else if (typeof num === "function") {
-                closure_0 = num2;
-                closure_1 = tmp2;
-                const promise = new Promise((arg0, fn) => {
-                  try {
-                    closure_0.schedule(arg0, closure_1);
-                  } catch (tmp5) {
-                    fn(tmp5);
-                  }
-                });
-                promise.then(closure_1_2).catch(closure_1_1);
-                const nextPromise = promise.then(closure_1_2);
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            });
-          }
-        });
-      }
-      return racePromise;
-    };
-    exports.DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS = 50;
-    exports.DEFAULT_TIMEOUT_IN_MS = 5000;
-    exports.TimeoutError = _moduleResult;
-    exports.WAIT_FOREVER = POSITIVE_INFINITY2;
-    exports.default = fn4;
-    exports.waitUntil = fn4;
-    const _Object = Object;
-  }
-}
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["exports"], function i(arg0) {
-      let fn = function t(arg0) {
-        const self = this;
-        _classCallCheck(this, closure_0);
-        let str = "Timed out";
-        if (null != arg0) {
-          const _HermesInternal = HermesInternal;
-          str = "Timed out after waiting for " + arg0 + " ms";
-        }
-        items = [str];
-        const obj = _getPrototypeOf(closure_0);
-        if (_isNativeReflectConstruct()) {
-          const _Reflect = Reflect;
-          let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          constructResult = obj.apply(self, items);
+          closure_131_0 = closure_4;
+          const promise = new Promise((arg0, arg1) => {
+            closure_1 = arg1;
+            closure_0 = closure_1_2(function* () {
+              if (c5 === 2) {
+                c5 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp6 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  c5 = 2;
+                  if (0 === c4) {
+                    if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c5 = 3;
+                      const obj4 = { value, done: true };
+                      return obj4;
+                    } else {
+                      _throwOnTimeout._pendingCount = _throwOnTimeout._pendingCount + 1;
+                      _throwOnTimeout._intervalCount = _throwOnTimeout._intervalCount + 1;
+                      c3 = 1;
+                      if (undefined !== _throwOnTimeout._timeout) {
+                        const resolved = Promise.resolve(tmp3());
+                        if (undefined === config.timeout) {
+                          let timeout = _throwOnTimeout._timeout;
+                        } else {
+                          timeout = tmp23.timeout;
+                        }
+                        self(dependencyMap[6]).default(resolved, timeout, () => {
+                          if (undefined === throwOnTimeout.throwOnTimeout) {
+                            throwOnTimeout = _throwOnTimeout._throwOnTimeout;
+                          } else {
+                            throwOnTimeout = tmp.throwOnTimeout;
+                          }
+                          if (throwOnTimeout) {
+                            closure_1_1(closure_3_8);
+                          }
+                        });
+                        c4 = 2;
+                        c5 = 1;
+                        const obj2 = self(dependencyMap[6]);
+                      }
+                      tmp3();
+                    }
+                  } else {
+                    if (1 === tmp7) {
+                      c3 = 0;
+                      tmp3(throwOnTimeout);
+                      _throwOnTimeout._next();
+                      c5 = 3;
+                    } else if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 !== 2) {
+                      _throwOnTimeout(value);
+                      c3 = 0;
+                    }
+                    c3 = 0;
+                    c5 = 3;
+                    const obj = { value, done: true };
+                    return obj;
+                  }
+                } catch (tmp29) {
+                  throwOnTimeout = tmp29;
+                  if (tmp4 === c3) {
+                    c5 = tmp2;
+                    throw tmp29;
+                  } else {
+                    c4 = tmp;
+                  }
+                }
+              }
+            });
+            const _queue = closure_3._queue;
+            _queue.enqueue(function run() {
+              self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            }, config);
+            closure_3._tryToStartAnother();
+            closure_3.emit("add");
+          });
+          c6 = 3;
+          let obj = { value: promise, done: true };
+          return obj;
         }
-        const tmp5Result = _possibleConstructorReturn(self, constructResult);
-        Object.setPrototypeOf(_assertThisInitialized(tmp5Result), closure_0.prototype);
-        return tmp5Result;
-      };
-      closure_129_0 = fn;
-      _inherits(fn, _wrapNativeSuper(Error));
-      tmp2 = tmp2(fn);
-      function o(arg0, arg1) {
-
+      } catch (tmp15) {
+        c6 = tmp;
+        throw tmp15;
       }
-      closure_2 = {
-        schedule(arg0, arg1) {
-          closure_0 = arg0;
-          const timeout = setTimeout(() => {
-            if (null != c1) {
-              const _clearTimeout = clearTimeout;
-              clearTimeout(tmp);
-            }
-            c1 = undefined;
-            closure_0();
-          }, arg1);
-          return {
-            cancel() {
-              if (null != c1) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(tmp);
-              }
-              c1 = undefined;
-            }
-          };
-        }
-      };
-      const fn2 = function r(arg0, timeout, arg2) {
-        closure_0 = arg0;
-        let tmp = timeout;
-        if (typeof timeout !== "number") {
-          timeout = undefined;
-          if (null != timeout) {
-            timeout = timeout.timeout;
-          }
-          tmp = timeout;
-        }
-        let num = 5000;
-        if (null !== tmp) {
-          num = 5000;
-          if (undefined !== tmp) {
-            num = tmp;
-          }
-        }
-        let tmp3 = arg2;
-        if (typeof timeout !== "number") {
-          let prop;
-          if (null != timeout) {
-            prop = timeout.intervalBetweenAttempts;
-          }
-          tmp3 = prop;
-        }
-        if (null !== tmp3) {
-        }
-        c3 = false;
-        let fn;
-        if (num !== c3) {
-          fn = () => {
-            if (typeof o === "function") {
-              closure_0 = closure_2;
-              const promise = new Promise((arg0, fn) => {
-                try {
-                  closure_0.schedule(arg0, closure_1);
-                } catch (tmp5) {
-                  fn(tmp5);
-                }
-              });
-              return promise.then(() => {
-                c3 = true;
-                throw new closure_0(closure_1);
-              });
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          };
-        }
-        if (null != fn) {
-          let promise = new Promise((arg0, arg1) => {
-            closure_0 = arg0;
-            closure_1 = arg1;
-            function r() {
-              if (!c3) {
-                let promise = new Promise((fn, fn2) => {
-                  try {
-                    fn(closure_1_0());
-                  } catch (tmp4) {
-                    fn2(tmp4);
-                  }
-                });
-                promise.then((result) => {
-                  if (result) {
-                    closure_1_0(result);
-                  } else if (typeof num === "function") {
-                    closure_0 = num2;
-                    closure_1 = tmp2;
-                    const promise = new Promise(/* F133730 */ function() { ... });
-                    promise.then(closure_1_2).catch(closure_1_1);
-                    const nextPromise = promise.then(closure_1_2);
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                }).catch(closure_1);
-                let nextPromise = promise.then((result) => {
-                  if (result) {
-                    closure_1_0(result);
-                  } else if (typeof num === "function") {
-                    closure_0 = num2;
-                    closure_1 = tmp2;
-                    const promise = new Promise(/* F133730 */ function() { ... });
-                    promise.then(closure_1_2).catch(closure_1_1);
-                    const nextPromise = promise.then(closure_1_2);
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                });
-              }
-            }
-            if (!c3) {
-              let promise = new Promise((fn, fn2) => {
-                try {
-                  fn(closure_1_0());
-                } catch (tmp4) {
-                  fn2(tmp4);
-                }
-              });
-              promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }).catch(arg1);
-              let nextPromise = promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              });
-            }
-          });
-          items = [promise, fn()];
-          let racePromise = Promise.race(items);
-        } else {
-          racePromise = new Promise((arg0, arg1) => {
-            closure_0 = arg0;
-            closure_1 = arg1;
-            function r() {
-              if (!c3) {
-                let promise = new Promise((fn, fn2) => {
-                  try {
-                    fn(closure_1_0());
-                  } catch (tmp4) {
-                    fn2(tmp4);
-                  }
-                });
-                promise.then((result) => {
-                  if (result) {
-                    closure_1_0(result);
-                  } else if (typeof num === "function") {
-                    closure_0 = num2;
-                    closure_1 = tmp2;
-                    const promise = new Promise(/* F133730 */ function() { ... });
-                    promise.then(closure_1_2).catch(closure_1_1);
-                    const nextPromise = promise.then(closure_1_2);
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                }).catch(closure_1);
-                let nextPromise = promise.then((result) => {
-                  if (result) {
-                    closure_1_0(result);
-                  } else if (typeof num === "function") {
-                    closure_0 = num2;
-                    closure_1 = tmp2;
-                    const promise = new Promise(/* F133730 */ function() { ... });
-                    promise.then(closure_1_2).catch(closure_1_1);
-                    const nextPromise = promise.then(closure_1_2);
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                });
-              }
-            }
-            if (!c3) {
-              let promise = new Promise((fn, fn2) => {
-                try {
-                  fn(closure_1_0());
-                } catch (tmp4) {
-                  fn2(tmp4);
-                }
-              });
-              promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }).catch(arg1);
-              let nextPromise = promise.then((result) => {
-                if (result) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp2;
-                  const promise = new Promise((arg0, fn) => {
-                    try {
-                      closure_0.schedule(arg0, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  promise.then(closure_1_2).catch(closure_1_1);
-                  const nextPromise = promise.then(closure_1_2);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              });
-            }
-          });
-        }
-        return racePromise;
-      };
-      arg0.DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS = 50;
-      arg0.DEFAULT_TIMEOUT_IN_MS = 5000;
-      arg0.TimeoutError = tmp2;
-      arg0.WAIT_FOREVER = POSITIVE_INFINITY;
-      arg0.default = fn2;
-      arg0.waitUntil = fn2;
-    });
-  }
-}
-let self = this;
-if (typeof globalThis !== "undefined") {
-  self = globalThis;
-}
-let obj = {};
-self["async-wait-until"] = obj;
-let fn = function t(arg0) {
+    }
+  })();
+  iter.next();
+  return iter;
+});
+entry.value = function add(arg0) {
   const self = this;
-  _classCallCheck(this, closure_0);
-  let str = "Timed out";
-  if (null != arg0) {
-    const _HermesInternal = HermesInternal;
-    str = "Timed out after waiting for " + arg0 + " ms";
-  }
-  items = [str];
-  const obj = _getPrototypeOf(closure_0);
-  if (_isNativeReflectConstruct()) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  const apply = _possibleConstructorReturn.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    constructResult = obj.apply(self, items);
+    applyArgumentsResult = apply(self, arguments);
   }
-  const tmp5Result = _possibleConstructorReturn(self, constructResult);
-  Object.setPrototypeOf(_assertThisInitialized(tmp5Result), closure_0.prototype);
-  return tmp5Result;
+  return applyArgumentsResult;
 };
-_inherits(fn, _wrapNativeSuper(Error));
-_moduleResult1 = _createClass(fn);
-_classCallCheck = function o(arg0, arg1) {
-
-};
-_assertThisInitialized = {
-  schedule(arg0, arg1) {
-    closure_0 = arg0;
-    const timeout = setTimeout(() => {
-      if (null != c1) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(tmp);
-      }
-      c1 = undefined;
-      closure_0();
-    }, arg1);
-    return {
-      cancel() {
-        if (null != c1) {
-          const _clearTimeout = clearTimeout;
-          clearTimeout(tmp);
-        }
-        c1 = undefined;
-      }
-    };
-  }
-};
-c3 = POSITIVE_INFINITY;
-let fn2 = function r(arg0, timeout, arg2) {
-  closure_0 = arg0;
-  let tmp = timeout;
-  if (typeof timeout !== "number") {
-    timeout = undefined;
-    if (null != timeout) {
-      timeout = timeout.timeout;
-    }
-    tmp = timeout;
-  }
-  let num = 5000;
-  if (null !== tmp) {
-    num = 5000;
-    if (undefined !== tmp) {
-      num = tmp;
-    }
-  }
-  let tmp3 = arg2;
-  if (typeof timeout !== "number") {
-    let prop;
-    if (null != timeout) {
-      prop = timeout.intervalBetweenAttempts;
-    }
-    tmp3 = prop;
-  }
-  if (null !== tmp3) {
-  }
-  c3 = false;
-  let fn;
-  if (num !== c3) {
-    fn = () => {
-      if (typeof o === "function") {
-        closure_0 = closure_2;
-        const promise = new Promise((arg0, fn) => {
-          try {
-            closure_0.schedule(arg0, closure_1);
-          } catch (tmp5) {
-            fn(tmp5);
-          }
-        });
-        return promise.then(() => {
-          c3 = true;
-          throw new closure_0(closure_1);
-        });
+items[11] = entry;
+const entry1 = { key: "addAll", value: null };
+_classCallCheck = asyncGeneratorStep(async function (arg0, arg1) {
+  let self = this;
+  closure_1 = arg0;
+  closure_2 = arg1;
+  c3 = 0;
+  return (async (arg0, value) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
-        throw new TypeError("Trying to call a non-function");
+        return { value: "HermesInternal", done: null };
       }
-    };
-  }
-  if (null != fn) {
-    let promise = new Promise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      function r() {
-        if (!c3) {
-          let promise = new Promise((fn, fn2) => {
-            try {
-              fn(closure_1_0());
-            } catch (tmp4) {
-              fn2(tmp4);
-            }
-          });
-          promise.then((result) => {
-            if (result) {
-              closure_1_0(result);
-            } else if (typeof num === "function") {
-              closure_0 = num2;
-              closure_1 = tmp2;
-              const promise = new Promise((arg0, fn) => {
-                try {
-                  closure_0.schedule(arg0, closure_1);
-                } catch (tmp5) {
-                  fn(tmp5);
-                }
-              });
-              promise.then(closure_1_2).catch(closure_1_1);
-              const nextPromise = promise.then(closure_1_2);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }).catch(closure_1);
-          let nextPromise = promise.then((result) => {
-            if (result) {
-              closure_1_0(result);
-            } else if (typeof num === "function") {
-              closure_0 = num2;
-              closure_1 = tmp2;
-              const promise = new Promise((arg0, fn) => {
-                try {
-                  closure_0.schedule(arg0, closure_1);
-                } catch (tmp5) {
-                  fn(tmp5);
-                }
-              });
-              promise.then(closure_1_2).catch(closure_1_1);
-              const nextPromise = promise.then(closure_1_2);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
+    } else {
+      try {
+        c3 = 2;
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          let obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_0 = closure_2;
+          closure_1 = self;
+          c3 = 3;
+          let obj = {
+            value: Promise.all(
+              closure_1.map(
+                (() => {
+                  closure_0 = closure_1_2(function* (arg0) {
+                    if (set === 2) {
+                      set = 3;
+                      throw new TypeError("Generator functions may not be called on executing generators");
+                    } else if (tmp3 === 3) {
+                      if (arg0 === 1) {
+                        throw value;
+                      } else if (arg0 === 2) {
+                        const obj2 = { value, done: true };
+                        return obj2;
+                      } else {
+                        return { value: "HermesInternal", done: null };
+                      }
+                    } else {
+                      try {
+                        set = 2;
+                        if (arg0 === 1) {
+                          set = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          set = 3;
+                          const obj3 = { value, done: true };
+                          return obj3;
+                        } else {
+                          set = 3;
+                          const obj = { value: set.add(closure_0, closure_0), done: true };
+                          return obj;
+                        }
+                      } catch (tmp7) {
+                        set = tmp;
+                        throw tmp7;
+                      }
+                    }
+                  });
+                  return function (arg0) {
+                    self = this;
+                    const apply = closure_0.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  };
+                })(),
+              ),
+            ),
+            done: true,
+          };
+          return obj;
         }
+      } catch (tmp8) {
+        c3 = tmp;
+        throw tmp8;
       }
-      if (!c3) {
-        let promise = new Promise((fn, fn2) => {
-          try {
-            fn(closure_1_0());
-          } catch (tmp4) {
-            fn2(tmp4);
-          }
-        });
-        promise.then((result) => {
-          if (result) {
-            closure_1_0(result);
-          } else if (typeof num === "function") {
-            closure_0 = num2;
-            closure_1 = tmp2;
-            const promise = new Promise((arg0, fn) => {
-              try {
-                closure_0.schedule(arg0, closure_1);
-              } catch (tmp5) {
-                fn(tmp5);
-              }
-            });
-            promise.then(closure_1_2).catch(closure_1_1);
-            const nextPromise = promise.then(closure_1_2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }).catch(arg1);
-        let nextPromise = promise.then((result) => {
-          if (result) {
-            closure_1_0(result);
-          } else if (typeof num === "function") {
-            closure_0 = num2;
-            closure_1 = tmp2;
-            const promise = new Promise((arg0, fn) => {
-              try {
-                closure_0.schedule(arg0, closure_1);
-              } catch (tmp5) {
-                fn(tmp5);
-              }
-            });
-            promise.then(closure_1_2).catch(closure_1_1);
-            const nextPromise = promise.then(closure_1_2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        });
-      }
-    });
-    items = [promise, fn()];
-    let racePromise = Promise.race(items);
+    }
+  })();
+});
+entry1.value = function addAll(arg0, arg1) {
+  const self = this;
+  const apply = _classCallCheck.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    racePromise = new Promise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      function r() {
-        if (!c3) {
-          let promise = new Promise((fn, fn2) => {
-            try {
-              fn(closure_1_0());
-            } catch (tmp4) {
-              fn2(tmp4);
-            }
-          });
-          promise.then((result) => {
-            if (result) {
-              closure_1_0(result);
-            } else if (typeof num === "function") {
-              closure_0 = num2;
-              closure_1 = tmp2;
-              const promise = new Promise((arg0, fn) => {
-                try {
-                  closure_0.schedule(arg0, closure_1);
-                } catch (tmp5) {
-                  fn(tmp5);
-                }
-              });
-              promise.then(closure_1_2).catch(closure_1_1);
-              const nextPromise = promise.then(closure_1_2);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }).catch(closure_1);
-          let nextPromise = promise.then((result) => {
-            if (result) {
-              closure_1_0(result);
-            } else if (typeof num === "function") {
-              closure_0 = num2;
-              closure_1 = tmp2;
-              const promise = new Promise((arg0, fn) => {
-                try {
-                  closure_0.schedule(arg0, closure_1);
-                } catch (tmp5) {
-                  fn(tmp5);
-                }
-              });
-              promise.then(closure_1_2).catch(closure_1_1);
-              const nextPromise = promise.then(closure_1_2);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-        }
-      }
-      if (!c3) {
-        let promise = new Promise((fn, fn2) => {
-          try {
-            fn(closure_1_0());
-          } catch (tmp4) {
-            fn2(tmp4);
-          }
-        });
-        promise.then((result) => {
-          if (result) {
-            closure_1_0(result);
-          } else if (typeof num === "function") {
-            closure_0 = num2;
-            closure_1 = tmp2;
-            const promise = new Promise((arg0, fn) => {
-              try {
-                closure_0.schedule(arg0, closure_1);
-              } catch (tmp5) {
-                fn(tmp5);
-              }
-            });
-            promise.then(closure_1_2).catch(closure_1_1);
-            const nextPromise = promise.then(closure_1_2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }).catch(arg1);
-        let nextPromise = promise.then((result) => {
-          if (result) {
-            closure_1_0(result);
-          } else if (typeof num === "function") {
-            closure_0 = num2;
-            closure_1 = tmp2;
-            const promise = new Promise((arg0, fn) => {
-              try {
-                closure_0.schedule(arg0, closure_1);
-              } catch (tmp5) {
-                fn(tmp5);
-              }
-            });
-            promise.then(closure_1_2).catch(closure_1_1);
-            const nextPromise = promise.then(closure_1_2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        });
-      }
-    });
+    applyArgumentsResult = apply(self, arguments);
   }
-  return racePromise;
+  return applyArgumentsResult;
 };
-obj.DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS = 50;
-obj.DEFAULT_TIMEOUT_IN_MS = 5000;
-obj.TimeoutError = _moduleResult1;
-obj.WAIT_FOREVER = POSITIVE_INFINITY;
-obj.default = fn2;
-obj.waitUntil = fn2;
+items[12] = entry1;
+items[13] = {
+  key: "start",
+  value: function start() {
+    const self = this;
+    if (this._isPaused) {
+      self._isPaused = false;
+      self._processQueue();
+    }
+    return self;
+  },
+};
+items[14] = {
+  key: "pause",
+  value: function pause() {
+    this._isPaused = true;
+  },
+};
+items[15] = {
+  key: "clear",
+  value: function clear() {
+    const _queueClass = new this._queueClass();
+    this._queue = _queueClass;
+  },
+};
+const entry2 = { key: "onEmpty", value: null };
+closure_2 = asyncGeneratorStep(async function () {
+  const self = this;
+  c1 = 0;
+  return (async (arg0) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          let _resolveEmpty = self;
+          if (0 !== self._queue.size) {
+            const promise = new Promise((arg0) => {
+              _resolveEmpty = arg0;
+              _resolveEmpty = _resolveEmpty._resolveEmpty;
+              _resolveEmpty._resolveEmpty = () => {
+                _resolveEmpty();
+                closure_0();
+              };
+            });
+            c1 = 3;
+            const obj = { value: promise, done: true };
+            return obj;
+          } else {
+            c1 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        }
+      } catch (tmp10) {
+        c1 = tmp;
+        throw tmp10;
+      }
+    }
+  })();
+});
+entry2.value = function onEmpty() {
+  const self = this;
+  const apply = closure_2.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+items[16] = entry2;
+const entry3 = { key: "onIdle", value: null };
+duration = asyncGeneratorStep(async function () {
+  const self = this;
+  c1 = 0;
+  return (async (arg0) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          let _resolveIdle = self;
+          if (0 === self._pendingCount) {
+            if (0 === self._queue.size) {
+              c1 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
+          const promise = new Promise((arg0) => {
+            _resolveIdle = arg0;
+            _resolveIdle = _resolveIdle._resolveIdle;
+            _resolveIdle._resolveIdle = () => {
+              _resolveIdle();
+              closure_0();
+            };
+          });
+          c1 = 3;
+          const obj = { value: promise, done: true };
+          return obj;
+        }
+      } catch (tmp9) {
+        c1 = tmp;
+        throw tmp9;
+      }
+    }
+  })();
+});
+entry3.value = function onIdle() {
+  const self = this;
+  const apply = closure_1.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+items[17] = entry3;
+items[18] = {
+  key: "size",
+  get() {
+    return this._queue.size;
+  },
+};
+items[19] = {
+  key: "sizeBy",
+  value: function sizeBy(arg0) {
+    const _queue = this._queue;
+    return _queue.filter(arg0).length;
+  },
+};
+items[20] = {
+  key: "pending",
+  get() {
+    return this._pendingCount;
+  },
+};
+items[21] = {
+  key: "isPaused",
+  get() {
+    return this._isPaused;
+  },
+};
+items[22] = {
+  key: "timeout",
+  get() {
+    return this._timeout;
+  },
+  set(_timeout) {
+    this._timeout = _timeout;
+  },
+};
+
+export default _createClass(PQueue, items);

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e8a96141e48bf46350215d4dadeaaebc",
-  name: "ExperimentalGameControllerLinkIcon",
+  hash: "d24fd30a4be11fedb417c4afcd1e21a5",
+  name: "ExperimentalWebBadgeIcon-secondary",
   type: "png",
 });

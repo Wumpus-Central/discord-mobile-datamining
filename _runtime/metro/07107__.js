@@ -3,11 +3,12 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "db11ea9da81d79144310eac53428fbe9",
-  name: "CircleErrorIcon-primary",
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_shb2al3n4oohkkhnm35rfpv56i/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 64,
+  height: 64,
+  scales: [1, 1, 2, 3, 4],
+  hash: "61378328a719f21f093de82dd89ecfb0",
+  name: "clear-icon",
   type: "png",
 });

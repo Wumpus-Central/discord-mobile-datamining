@@ -1,13 +1,11 @@
 // _runtime/metro/05286__.js
-import noop from "00019__.js";
+const require = globalThis.__r;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
-
-export const RecyclerViewContextProvider = context.Provider;
-export function useRecyclerViewContext() {
-  return useContext(context);
+for (const key10013 in require("05287__.js")) {
+  arg5[key10013] = require("05287__.js")[key10013];
+  continue;
 }
-export function useFlashListContext() {
-  return useContext(context);
+for (const key10017 in require("transformTapProps")) {
+  arg5[key10017] = require("transformTapProps")[key10017];
+  continue;
 }

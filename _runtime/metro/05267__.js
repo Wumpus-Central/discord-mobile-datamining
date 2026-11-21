@@ -1,9 +1,17 @@
 // _runtime/metro/05267__.js
-import _mod5268 from "05268__.js";
-import _mod5269 from "05269__.js";
-import _mod5270 from "05270__.js";
-import _mod5272 from "05272__.js";
+import ComposedGestureName from "../05235_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05244_resolveInternalConfigProps.js";
+import _mod5261 from "05261__.js";
 
-export default function _slicedToArray(arg0, arg1) {
-  return _mod5268(arg0) || _mod5269(arg0, arg1) || _mod5270(arg0, arg1) || _mod5272();
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5261.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 }

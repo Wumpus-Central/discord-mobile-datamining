@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b58afbfc4faaabe5f94fadb0443cc8ee",
-  name: "voice_bar_deafen_off",
+  hash: "9bcd40cb62b748b314b1aa933da9be99",
+  name: "HandRequestDenyIcon",
   type: "png",
 });

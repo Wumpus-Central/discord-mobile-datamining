@@ -1,159 +1,336 @@
 // _runtime/metro/05316__.js
-import _mod19 from "00019__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import CompatView from "../05317_CompatView.js";
-import _mod5318 from "05318__.js";
-import CompatScroller from "../05319_CompatScroller.js";
-import get_ActivityIndicator from "00017__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const noop = _mod19;
-
-({ Animated: c2, RefreshControl: c3 } = get_ActivityIndicator);
-const useMemo = _mod19.useMemo;
-const jsx = jsxProd.jsx;
-
-export function useSecondaryProps(ListHeaderComponent) {
-  ListHeaderComponent = ListHeaderComponent.ListHeaderComponent;
-  const ListHeaderComponentStyle = ListHeaderComponent.ListHeaderComponentStyle;
-  const ListFooterComponent = ListHeaderComponent.ListFooterComponent;
-  const ListFooterComponentStyle = ListHeaderComponent.ListFooterComponentStyle;
-  const ListEmptyComponent = ListHeaderComponent.ListEmptyComponent;
-  const ListEmptyComponentStyle = ListHeaderComponent.ListEmptyComponentStyle;
-  const renderScrollComponent = ListHeaderComponent.renderScrollComponent;
-  const refreshing = ListHeaderComponent.refreshing;
-  const progressViewOffset = ListHeaderComponent.progressViewOffset;
-  const onRefresh = ListHeaderComponent.onRefresh;
-  const data = ListHeaderComponent.data;
-  const refreshControl = ListHeaderComponent.refreshControl;
-  const stickyHeaderConfig = ListHeaderComponent.stickyHeaderConfig;
-  let invertedTransformStyle;
-  if (ListHeaderComponent.inverted) {
-    invertedTransformStyle = ListHeaderComponent(ListHeaderComponentStyle[3]).getInvertedTransformStyle(tmp);
-    let obj = ListHeaderComponent(ListHeaderComponentStyle[3]);
-  }
-  items = [onRefresh, refreshing, progressViewOffset, refreshControl];
-  const items1 = [ListHeaderComponent, ListHeaderComponentStyle, invertedTransformStyle];
-  const items2 = [ListFooterComponent, ListFooterComponentStyle, invertedTransformStyle];
-  const tmp6 = ListEmptyComponentStyle(() => {
-    let tmp = refreshControl;
-    if (!refreshControl) {
-      let tmp3;
-      if (onRefresh) {
-        const obj = { refreshing: null, progressViewOffset: null, onRefresh: null };
-        const _Boolean = Boolean;
-        obj.refreshing = Boolean(refreshing);
-        obj.progressViewOffset = progressViewOffset;
-        obj.onRefresh = tmp2;
-        tmp3 = <React3 refreshing={null} progressViewOffset={null} onRefresh={null} />;
-      }
-      tmp = tmp3;
+const GenericTouchable = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return tmp;
-  }, items);
-  const items3 = [ListEmptyComponent, data, invertedTransformStyle, ListEmptyComponentStyle];
-  let tmp7 = ListEmptyComponentStyle(() => {
-    let tmp2 = null;
-    if (ListHeaderComponent) {
-      const obj = { style: null, children: null };
-      items = [ListHeaderComponentStyle, invertedTransformStyle];
-      obj.style = items;
-      obj.children = _mod5318.getValidComponent(tmp);
-      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
-    }
-    return tmp2;
-  }, items1);
-  let backdropComponent;
-  const tmp8 = ListEmptyComponentStyle(() => {
-    let tmp2 = null;
-    if (ListFooterComponent) {
-      const obj = { style: null, children: null };
-      items = [ListFooterComponentStyle, invertedTransformStyle];
-      obj.style = items;
-      obj.children = _mod5318.getValidComponent(tmp);
-      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
-    }
-    return tmp2;
-  }, items2);
-  if (stickyHeaderConfig != null) {
-    backdropComponent = stickyHeaderConfig.backdropComponent;
-  }
-  const items4 = [backdropComponent, invertedTransformStyle];
-  let obj2 = {
-    refreshControl: tmp6,
-    renderHeader: tmp7,
-    renderFooter: tmp8,
-    renderEmpty: ListEmptyComponentStyle(() => {
-      if (ListEmptyComponent) {
-        const validComponent = _mod5318.getValidComponent(tmp);
-        if (invertedTransformStyle) {
-          const obj2 = { style: null, children: null };
-          items = [ListEmptyComponentStyle, tmp5];
-          obj2.style = items;
-          obj2.children = validComponent;
-          let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
-        } else {
-          tmp7 = validComponent;
-        }
-        return tmp7;
-      }
-      return null;
-    }, items3),
-    CompatScrollView: null,
-    renderStickyHeaderBackdrop: null,
-  };
-  const items5 = [renderScrollComponent];
-  const tmp9 = ListEmptyComponentStyle(() => {
-    if (ListEmptyComponent) {
-      const validComponent = _mod5318.getValidComponent(tmp);
-      if (invertedTransformStyle) {
-        const obj2 = { style: null, children: null };
-        items = [ListEmptyComponentStyle, tmp5];
-        obj2.style = items;
-        obj2.children = validComponent;
-        let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
-      } else {
-        tmp7 = validComponent;
-      }
-      return tmp7;
-    }
-    return null;
-  }, items3);
-  obj2.CompatScrollView = ListEmptyComponentStyle(() => {
-    if (typeof renderScrollComponent === "function") {
-      if (!tmpResult.isComponentClass(renderScrollComponent)) {
-        let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj.ref = ref;
-          return renderScrollComponent(obj);
-        });
-        CompatAnimatedScroller.displayName = "CustomScrollView";
-      }
-      return React2.createAnimatedComponent(CompatAnimatedScroller);
-    }
-    CompatAnimatedScroller = CompatScroller.CompatAnimatedScroller;
-    if (renderScrollComponent) {
-      CompatAnimatedScroller = renderScrollComponent;
-    }
-  }, items5);
-  obj2.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
-    let backdropComponent;
-    if (stickyHeaderConfig != null) {
-      backdropComponent = stickyHeaderConfig.backdropComponent;
-    }
-    let tmp4Result = null;
-    if (backdropComponent) {
-      const obj = { style: null, children: null };
-      items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
-      obj.style = items;
-      let backdropComponent1;
-      if (stickyHeaderConfig != null) {
-        backdropComponent1 = stickyHeaderConfig.backdropComponent;
-      }
-      obj.children = _mod5318.getValidComponent(backdropComponent1);
-      tmp4Result = jsx(CompatView.CompatView, { style: null, children: null });
-    }
-    return tmp4Result;
-  }, items4);
-  return obj2;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
+const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
+class GenericTouchable {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, GenericTouchable);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(GenericTouchable);
+    tmp3 = closure_3;
+    if (metroImportDefault()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.longPressDetected = false;
+    tmp3Result.pointerInside = true;
+    tmp3Result.STATE = closure_8.UNDETERMINED;
+    tmp3Result.onGestureEvent = (nativeEvent) => {
+      const pointerInside = nativeEvent.nativeEvent.pointerInside;
+      if (closure_0.pointerInside !== pointerInside) {
+        if (pointerInside) {
+          closure_0.onMoveIn();
+        } else {
+          closure_0.onMoveOut();
+        }
+      }
+      closure_0.pointerInside = pointerInside;
+    };
+    tmp3Result.onHandlerStateChange = (nativeEvent) => {
+      state = nativeEvent.nativeEvent.state;
+      if (state !== GenericTouchable(5178).State.CANCELLED) {
+        if (state !== GenericTouchable(5178).State.FAILED) {
+          if (state === GenericTouchable(5178).State.BEGAN) {
+            if (closure_0.STATE === closure_0.UNDETERMINED) {
+              closure_0.handlePressIn();
+            }
+          }
+          if (state === GenericTouchable(5178).State.END) {
+            const longPressDetected = closure_0.longPressDetected;
+            let tmp5 = !longPressDetected;
+            if (!longPressDetected) {
+              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
+            }
+            if (tmp5) {
+              tmp5 = undefined === closure_0.pressOutTimeout;
+            }
+            const result = closure_0.handleGoToUndetermined();
+            if (tmp5) {
+              const props = closure_0.props;
+              const onPress = props.onPress;
+              if (onPress != null) {
+                onPress();
+              }
+            }
+          }
+        }
+      }
+      closure_0.moveToState(closure_0.UNDETERMINED);
+    };
+    tmp3Result.onLongPressDetected = () => {
+      closure_0.longPressDetected = true;
+      const props = closure_0.props;
+      const onLongPress = props.onLongPress;
+      if (onLongPress != null) {
+        onLongPress();
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(GenericTouchable, fn(19).Component);
+const entry = {
+  key: "handlePressIn",
+  value: function handlePressIn() {
+    const self = this;
+    if (this.props.delayPressIn) {
+      const _setTimeout = setTimeout;
+      self.pressInTimeout = setTimeout(() => {
+        self.moveToState(obj.BEGAN);
+        self.pressInTimeout = undefined;
+      }, self.props.delayPressIn);
+    } else {
+      self.moveToState(obj.BEGAN);
+    }
+    if (self.props.onLongPress) {
+      const _setTimeout2 = setTimeout;
+      self.longPressTimeout = setTimeout(
+        self.onLongPressDetected,
+        (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0),
+      );
+      const tmp4 = self.props.delayPressIn || 0;
+      const tmp5 = self.props.delayLongPress || 0;
+    }
+  },
+};
+let items = [
+  entry,
+  {
+    key: "handleMoveOutside",
+    value: function handleMoveOutside() {
+      const self = this;
+      if (this.props.delayPressOut) {
+        let pressOutTimeout = self.pressOutTimeout;
+        if (!pressOutTimeout) {
+          const _setTimeout = setTimeout;
+          pressOutTimeout = setTimeout(() => {
+            self.moveToState(obj.MOVED_OUTSIDE);
+            self.pressOutTimeout = undefined;
+          }, self.props.delayPressOut);
+        }
+        self.pressOutTimeout = pressOutTimeout;
+      } else {
+        self.moveToState(obj.MOVED_OUTSIDE);
+      }
+    },
+  },
+  {
+    key: "handleGoToUndetermined",
+    value: function handleGoToUndetermined() {
+      const self = this;
+      clearTimeout(this.pressOutTimeout);
+      if (this.props.delayPressOut) {
+        const _setTimeout = setTimeout;
+        self.pressOutTimeout = setTimeout(() => {
+          if (self.STATE === self.UNDETERMINED) {
+            self.moveToState(self.BEGAN);
+          }
+          self.moveToState(self.UNDETERMINED);
+          self.pressOutTimeout = undefined;
+        }, self.props.delayPressOut);
+      } else {
+        if (self.STATE === obj.UNDETERMINED) {
+          self.moveToState(obj.BEGAN);
+        }
+        self.moveToState(obj.UNDETERMINED);
+      }
+    },
+  },
+  {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.reset();
+    },
+  },
+  {
+    key: "reset",
+    value: function reset() {
+      const obj = { longPressDetected: false, pointerInside: true };
+      clearTimeout(obj.pressInTimeout);
+      clearTimeout(obj.pressOutTimeout);
+      clearTimeout(obj.longPressTimeout);
+      obj.pressOutTimeout = undefined;
+      obj.longPressTimeout = undefined;
+      obj.pressInTimeout = undefined;
+    },
+  },
+  {
+    key: "moveToState",
+    value: function moveToState(BEGAN) {
+      const self = this;
+      if (BEGAN !== this.STATE) {
+        if (BEGAN === obj.BEGAN) {
+          const props3 = self.props;
+          const onPressIn = props3.onPressIn;
+          if (onPressIn != null) {
+            onPressIn();
+          }
+        } else if (BEGAN === obj.MOVED_OUTSIDE) {
+          const props2 = self.props;
+          const onPressOut2 = props2.onPressOut;
+          if (onPressOut2 != null) {
+            onPressOut2();
+          }
+        } else if (BEGAN === obj.UNDETERMINED) {
+          self.reset();
+          if (self.STATE === obj.BEGAN) {
+            const props = self.props;
+            const onPressOut = props.onPressOut;
+            if (onPressOut != null) {
+              onPressOut();
+            }
+          }
+        }
+        const props4 = self.props;
+        const onStateChange = props4.onStateChange;
+        if (onStateChange != null) {
+          onStateChange(self.STATE, BEGAN);
+        }
+        self.STATE = BEGAN;
+      }
+    },
+  },
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.reset();
+    },
+  },
+  {
+    key: "onMoveIn",
+    value: function onMoveIn() {
+      const self = this;
+      if (this.STATE === obj.MOVED_OUTSIDE) {
+        self.moveToState(tmp.BEGAN);
+      }
+    },
+  },
+  {
+    key: "onMoveOut",
+    value: function onMoveOut() {
+      const self = this;
+      clearTimeout(this.longPressTimeout);
+      this.longPressTimeout = undefined;
+      if (this.STATE === obj.BEGAN) {
+        self.handleMoveOutside();
+      }
+    },
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      if (typeof this.props.hitSlop === "number") {
+        const rect = {
+          top: self.props.hitSlop,
+          left: self.props.hitSlop,
+          bottom: self.props.hitSlop,
+          right: self.props.hitSlop,
+        };
+        let hitSlop = rect;
+      } else {
+        hitSlop = self.props.hitSlop;
+      }
+      const obj2 = {
+        style: self.props.containerStyle,
+        onHandlerStateChange: null,
+        onGestureEvent: null,
+        hitSlop: null,
+        userSelect: null,
+        shouldActivateOnStart: null,
+        disallowInterruption: null,
+        testID: null,
+        touchSoundDisabled: null,
+        enabled: null,
+      };
+      let onHandlerStateChange;
+      if (!self.props.disabled) {
+        onHandlerStateChange = self.onHandlerStateChange;
+      }
+      obj2.onHandlerStateChange = onHandlerStateChange;
+      obj2.onGestureEvent = self.onGestureEvent;
+      obj2.hitSlop = hitSlop;
+      obj2.userSelect = self.props.userSelect;
+      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
+      obj2.disallowInterruption = self.props.disallowInterruption;
+      obj2.testID = self.props.testID;
+      let flag = self.props.touchSoundDisabled;
+      if (flag == null) {
+        flag = false;
+      }
+      obj2.touchSoundDisabled = flag;
+      obj2.enabled = !self.props.disabled;
+      const merged = Object.assign(self.props.extraButtonProps);
+      const obj3 = {};
+      const merged1 = Object.assign({
+        accessible: false !== self.props.accessible,
+        accessibilityLabel: self.props.accessibilityLabel,
+        accessibilityHint: self.props.accessibilityHint,
+        accessibilityRole: self.props.accessibilityRole,
+        accessibilityState: self.props.accessibilityState,
+        accessibilityActions: self.props.accessibilityActions,
+        onAccessibilityAction: self.props.onAccessibilityAction,
+        nativeID: self.props.nativeID,
+        onLayout: self.props.onLayout,
+      });
+      obj3.style = self.props.style;
+      obj3.children = self.props.children;
+      obj2.children = <Animated.View />;
+      return jsx(GenericTouchable(5296).LegacyBaseButton, {
+        style: self.props.containerStyle,
+        onHandlerStateChange: null,
+        onGestureEvent: null,
+        hitSlop: null,
+        userSelect: null,
+        shouldActivateOnStart: null,
+        disallowInterruption: null,
+        testID: null,
+        touchSoundDisabled: null,
+        enabled: null,
+      });
+    },
+  },
+];
+const importDefaultResultResult = _createClass(GenericTouchable, items);
+importDefaultResultResult.defaultProps = {
+  delayLongPress: 600,
+  extraButtonProps: { rippleColor: "transparent", exclusive: true },
+};
+
+export default importDefaultResultResult;
+export { TOUCHABLE_STATE };

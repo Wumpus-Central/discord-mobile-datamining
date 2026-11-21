@@ -1,53 +1,102 @@
 // _runtime/metro/05016__.js
-import _mod19 from "00019__.js";
-import _modDef5013 from "05013__.js";
+import c from "../05005_c.js";
+import _slicedToArray from "00032__.js";
 
-const useMemo = _mod19.useMemo;
+require = fn;
+const noop = fn(19);
+({ useRef: c3, useCallback, useState: closure_4 } = noop);
 
-export function useHaptics(enableVibrateFallback) {
-  closure_0 = enableVibrateFallback;
-  let prop;
-  if (enableVibrateFallback != null) {
-    prop = enableVibrateFallback.enableVibrateFallback;
+export function useRive() {
+  const cResult = c.c(4);
+  const tmp2 = React3(null);
+  [tmp4, dependencyMap] = React4(null);
+  React3(null);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(current) {
+      if (current.current !== current) {
+        ref.current = current;
+        if (ref2.current) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(tmp11.current);
+        }
+        const promise = new Promise((arg0, arg1) => {
+          closure_0 = arg1;
+          ref.current = setTimeout(() => {
+            const error = new Error("Rive view ready timeout");
+            closure_0(error);
+          }, 5000);
+        });
+        let awaitViewReadyResult;
+        if (current != null) {
+          awaitViewReadyResult = current.awaitViewReady();
+        }
+        items = [awaitViewReadyResult, promise];
+        const racePromise = Promise.race(items);
+        const nextPromise = Promise.race(items).then((result) => {
+          if (true === result) {
+            dependencyMap(closure_0);
+          } else {
+            const _console = console;
+            console.warn("Rive view ready check returned false");
+            dependencyMap(null);
+          }
+        });
+        Promise.race(items)
+          .then((result) => {
+            if (true === result) {
+              dependencyMap(closure_0);
+            } else {
+              const _console = console;
+              console.warn("Rive view ready check returned false");
+              dependencyMap(null);
+            }
+          })
+          .catch((error) => {
+            console.warn("Failed to initialize Rive view:", error);
+            closure_1_1(null);
+          })
+          .finally(() => {
+            if (ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
+              ref.current = null;
+            }
+          });
+        const catchPromise = Promise.race(items)
+          .then((result) => {
+            if (true === result) {
+              dependencyMap(closure_0);
+            } else {
+              const _console = console;
+              console.warn("Rive view ready check returned false");
+              dependencyMap(null);
+            }
+          })
+          .catch((error) => {
+            console.warn("Failed to initialize Rive view:", error);
+            closure_1_1(null);
+          });
+      }
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
   }
-  let prop1;
-  if (enableVibrateFallback != null) {
-    prop1 = enableVibrateFallback.ignoreAndroidSystemSettings;
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { f: first };
+    cResult[1] = obj2;
+    let tmp6 = obj2;
+  } else {
+    tmp6 = cResult[1];
   }
-  items = [prop, prop1];
-  return useMemo(
-    () => ({
-      trigger(arg0, arg1) {
-        const merged = Object.assign(enableVibrateFallback);
-        const merged1 = Object.assign(arg1);
-        _modDef5013.trigger(arg0, {});
-      },
-      triggerPattern(arg0, arg1) {
-        const merged = Object.assign(enableVibrateFallback);
-        const merged1 = Object.assign(arg1);
-        _modDef5013.triggerPattern(arg0, {});
-      },
-      stop() {
-        closure_1_1(5013).stop();
-      },
-      isSupported() {
-        return closure_1_1(5013).isSupported();
-      },
-      playHaptic(arg0, arg1, arg2) {
-        const merged = Object.assign(enableVibrateFallback);
-        const merged1 = Object.assign(arg2);
-        return closure_0(5017).playHaptic(arg0, arg1, {});
-      },
-      impact(arg0, arg1, arg2) {
-        const merged = Object.assign(enableVibrateFallback);
-        const merged1 = Object.assign(arg2);
-        _modDef5013.impact(arg0, arg1, {});
-      },
-      setEnabled: _modDef5013.setEnabled,
-      isEnabled: _modDef5013.isEnabled,
-      getSystemHapticStatus: _modDef5013.getSystemHapticStatus,
-      playAHAP: _modDef5013.playAHAP,
-    }),
-    items,
-  );
+  if (cResult[2] !== tmp4) {
+    const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
+    cResult[2] = tmp4;
+    cResult[3] = obj3;
+    let tmp7 = obj3;
+  } else {
+    tmp7 = cResult[3];
+  }
+  return tmp7;
 }

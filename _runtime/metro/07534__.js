@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "97a83fa92aca73b91331f0f57ecb4c27",
-  name: "ForumIcon",
+  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
+  name: "CircleCheckIcon-primary",
   type: "png",
 });

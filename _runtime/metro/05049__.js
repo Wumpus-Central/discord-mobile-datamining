@@ -1,10 +1,11 @@
 // _runtime/metro/05049__.js
-const global = arg0;
+import registerAsset from "01118__.js";
 
-export function isFabricInstalled() {
-  let prop;
-  if (global != null) {
-    prop = global.nativeFabricUIManager;
-  }
-  return null != prop;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
+  scales: [1],
+  hash: "5c039726051aeed924751dff0e50eba8",
+  name: "CheckpointCharacter",
+  type: "riv",
+});

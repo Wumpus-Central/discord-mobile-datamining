@@ -1,13 +1,13 @@
 // _runtime/metro/05604__.js
-import _process from "../00539__process.js";
-import baseUnary from "../00540_baseUnary.js";
-import baseIsMap from "../05605_baseIsMap.js";
+import registerAsset from "01118__.js";
 
-const tmp = _process && _process.isMap;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsMap;
-}
-
-export default _module;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d66ecc5b57601bd45d541b2c12ca7702",
+  name: "UserPlusIcon",
+  type: "png",
+});

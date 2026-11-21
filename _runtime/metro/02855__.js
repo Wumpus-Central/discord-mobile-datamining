@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2ZpbGVfdXBsb2Fk",
+  httpServerLocation: "/assets/modules/parent_tools",
   scales: [1],
-  hash: "acc80c691f9d2c489708ef6055908170",
-  name: "vi.messages.acc80c691f9d2c489708ef6055908170.compiled.messages",
+  hash: "023ca9e052466f41019d827b63cedbc0",
+  name: "FamilyCenter.compiled.messages",
   type: "jsona",
 });

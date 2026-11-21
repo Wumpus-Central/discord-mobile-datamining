@@ -1,237 +1,50 @@
 // _runtime/metro/05381__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef5382 from "05382__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import ErrorMessages from "../05383_ErrorMessages.js";
+import FlashList from "../05384_FlashList.js";
+import _mod5404 from "05404__.js";
+import _mod5405 from "05405__.js";
+import _mod5443 from "05443__.js";
+import RenderTargetOptions from "../05444_RenderTargetOptions.js";
+import _modDef5445 from "05445__.js";
+import _mod5446 from "05446__.js";
+import Cancellable from "../05447_Cancellable.js";
+import JSFPSMonitor from "../05448_JSFPSMonitor.js";
+import _mod5450 from "05450__.js";
+import runScrollBenchmark from "../05451_runScrollBenchmark.js";
+import _mod5452 from "05452__.js";
+import _mod5453 from "05453__.js";
+import _modDef5454 from "05454__.js";
+import LayoutCommitObserver from "../05455_LayoutCommitObserver.js";
+import get_ActivityIndicator from "05382__.js";
 
-const LottieView = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+if (get_ActivityIndicator.isNewArch()) {
+  exports.FlashList = FlashList.FlashList;
+  exports.FlashListRef = _mod5443.FlashListRef;
+  exports.FlashListProps = RenderTargetOptions.FlashListProps;
+  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
+  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
+  exports.RenderTarget = RenderTargetOptions.RenderTarget;
+  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
+  exports.AnimatedFlashList = _modDef5445;
+  exports.useBenchmark = _mod5446.useBenchmark;
+  exports.BenchmarkParams = _mod5446.BenchmarkParams;
+  exports.BenchmarkResult = _mod5446.BenchmarkResult;
+  exports.useDataMultiplier = _mod5450.useDataMultiplier;
+  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
+  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
+  exports.useLayoutState = _mod5404.useLayoutState;
+  exports.useRecyclingState = _mod5452.useRecyclingState;
+  exports.useMappingHelper = _mod5453.useMappingHelper;
+  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
+  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
+  exports.autoScroll = Cancellable.autoScroll;
+  exports.Cancellable = Cancellable.Cancellable;
+  exports.ViewToken = _modDef5454;
+  exports.useFlashListContext = _mod5405.useFlashListContext;
+  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
+  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
+} else {
+  const _Error = Error;
+  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
+  throw error;
 }
-let closure_3 = [
-  "style",
-  "source",
-  "autoPlay",
-  "duration",
-  "textFiltersAndroid",
-  "textFiltersIOS",
-  "resizeMode",
-  "containerStyle",
-];
-_possibleConstructorReturnDefault;
-get_ActivityIndicator = fn(17);
-({ View: closure_8, processColor: closure_9 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-let obj = {
-  source: "sa",
-  progress: null,
-  speed: true,
-  loop: false,
-  autoPlay: false,
-  enableMergePathsAndroidForKitKatAndAbove: false,
-  enableSafeModeAndroid: true,
-  cacheComposition: false,
-  useNativeLooping: "contain",
-  resizeMode: null,
-  colorFilters: [],
-  textFiltersAndroid: [],
-  textFiltersIOS: [],
-};
-class LottieView {
-  constructor(arg0) {
-    self = this;
-    tmp = hasOwnProperty(this, LottieView);
-    items = [];
-    items[0] = global;
-    tmp2 = metroImportDefault;
-    obj = metroImportDefault(LottieView);
-    tmp3 = closure_6;
-    if (closure_11()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.onAnimationFinish = (nativeEvent) => {
-      const props = closure_0.props;
-      const onAnimationFinish = props.onAnimationFinish;
-      if (onAnimationFinish != null) {
-        onAnimationFinish(nativeEvent.nativeEvent.isCancelled);
-      }
-    };
-    tmp3Result.onAnimationFailure = (nativeEvent) => {
-      const props = closure_0.props;
-      const onAnimationFailure = props.onAnimationFailure;
-      if (onAnimationFailure != null) {
-        onAnimationFailure(nativeEvent.nativeEvent.error);
-      }
-    };
-    tmp3Result.onAnimationLoaded = () => {
-      const props = closure_0.props;
-      const onAnimationLoaded = props.onAnimationLoaded;
-      if (onAnimationLoaded != null) {
-        onAnimationLoaded();
-      }
-    };
-    play = tmp3Result.play;
-    tmp3Result.play = play.bind(tmp3Result);
-    reset = tmp3Result.reset;
-    tmp3Result.reset = reset.bind(tmp3Result);
-    pause = tmp3Result.pause;
-    tmp3Result.pause = pause.bind(tmp3Result);
-    resume = tmp3Result.resume;
-    tmp3Result.resume = resume.bind(tmp3Result);
-    onAnimationFinish = tmp3Result.onAnimationFinish;
-    tmp3Result.onAnimationFinish = onAnimationFinish.bind(tmp3Result);
-    captureRef = tmp3Result.captureRef;
-    tmp3Result.captureRef = captureRef.bind(tmp3Result);
-    return tmp3Result;
-  }
-}
-_inherits(LottieView, noop.PureComponent);
-const entry = {
-  key: "play",
-  value: function play(arg0, arg1) {
-    let num = arg0;
-    const Commands = LottieView(5382).Commands;
-    if (arg0 == null) {
-      num = -1;
-    }
-    let num2 = arg1;
-    if (arg1 == null) {
-      num2 = -1;
-    }
-    Commands.play(this.lottieAnimationViewRef, num, num2);
-  },
-};
-let items = [
-  entry,
-  {
-    key: "reset",
-    value: function reset() {
-      const Commands = LottieView(5382).Commands;
-      Commands.reset(this.lottieAnimationViewRef);
-    },
-  },
-  {
-    key: "pause",
-    value: function pause() {
-      const Commands = LottieView(5382).Commands;
-      Commands.pause(this.lottieAnimationViewRef);
-    },
-  },
-  {
-    key: "resume",
-    value: function resume() {
-      const Commands = LottieView(5382).Commands;
-      Commands.resume(this.lottieAnimationViewRef);
-    },
-  },
-  {
-    key: "captureRef",
-    value: function captureRef(lottieAnimationViewRef) {
-      if (null !== lottieAnimationViewRef) {
-        const self = this;
-        this.lottieAnimationViewRef = lottieAnimationViewRef;
-        if (true === this.props.autoPlay) {
-          self.play();
-        }
-      }
-    },
-  },
-  {
-    key: "renderLottieView",
-    value: function renderLottieView() {
-      const self = this;
-      const props = this.props;
-      ({ source, duration, containerStyle } = props);
-      ({ style, autoPlay, textFiltersAndroid, textFiltersIOS, resizeMode } = props);
-      const tmp = _objectWithoutProperties(props, closure_3);
-      const parsePossibleSourcesResult = LottieView(5383).parsePossibleSources(source);
-      if (duration) {
-        if (parsePossibleSourcesResult.sourceJson) {
-          if (source.fr) {
-            const _Math = Math;
-            let speed = Math.round(((source.op / source.fr) * 1000) / duration);
-          }
-          const colorFilters = self.props.colorFilters;
-          let mapped;
-          if (colorFilters != null) {
-            mapped = colorFilters.map((color) => {
-              const obj = {};
-              const merged = Object.assign(color);
-              obj.color = closure_1_9(color.color);
-              return obj;
-            });
-          }
-          const obj3 = { ref: self.captureRef };
-          let merged = Object.assign(tmp);
-          obj3.colorFilters = mapped;
-          obj3.textFiltersAndroid = textFiltersAndroid;
-          obj3.textFiltersIOS = textFiltersIOS;
-          obj3.speed = speed;
-          obj3.style = style;
-          ({
-            onAnimationFinish: obj2.onAnimationFinish,
-            onAnimationFailure: obj2.onAnimationFailure,
-            onAnimationLoaded: obj2.onAnimationLoaded,
-          } = self);
-          obj3.autoPlay = autoPlay;
-          obj3.resizeMode = resizeMode;
-          const merged1 = Object.assign(parsePossibleSourcesResult);
-          return jsx(_modDef5382, { ref: self.captureRef });
-        }
-      }
-      speed = self.props.speed;
-      let obj = LottieView(5383);
-    },
-  },
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      ({ source, containerStyle } = this.props);
-      if (null == source) {
-        const _console = console;
-        console.warn("LottieView needs `source` parameter, provided value for source:", source);
-        let renderLottieViewResult = null;
-      } else if (containerStyle) {
-        const obj = { style: containerStyle, collapsable: false, children: self.renderLottieView() };
-        renderLottieViewResult = (
-          <React5 style={containerStyle} collapsable={false}>
-            {self.renderLottieView()}
-          </React5>
-        );
-      } else {
-        renderLottieViewResult = self.renderLottieView();
-      }
-      return renderLottieViewResult;
-    },
-  },
-];
-const importDefaultResultResult = _createClass(LottieView, items);
-importDefaultResultResult.defaultProps = obj;
-
-export const LottieView = importDefaultResultResult;

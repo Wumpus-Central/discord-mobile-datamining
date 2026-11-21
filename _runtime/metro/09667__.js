@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons/voice_calls",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "8c94b907df8972f3dc35ed38a2375c9f",
-  name: "EpicGamesNeutralIcon",
+  scales: [1, 2],
+  hash: "acab5012253c87ed34de4d06c393d7c0",
+  name: "voice_bar_phone",
   type: "png",
 });

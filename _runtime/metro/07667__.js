@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "9e9c2d9cc8f1fa482e39489caafdfd7e",
-  name: "img_no_results_dark_theme",
+  hash: "4f2842b39c98933e8b7bea806132028f",
+  name: "ForumLockIcon",
   type: "png",
 });

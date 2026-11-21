@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/game_console/images",
+  width: 126,
+  height: 118,
   scales: [2, 3],
-  hash: "4d46cb9270219102b4f9e899fd51586c",
-  name: "FileIcon",
+  hash: "02b1067b85b45dd047c8c944ed8c1d6e",
+  name: "devices_not_found",
   type: "png",
 });

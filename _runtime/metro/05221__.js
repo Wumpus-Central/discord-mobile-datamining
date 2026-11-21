@@ -1,80 +1,61 @@
 // _runtime/metro/05221__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../05027_value2.js";
-import _mod5222 from "05222__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
 
-let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
-  }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    items = [style, _mod5222.styles.container];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
+export function assignRef(fn, current) {
+  if (typeof fn === "function") {
+    const tmp = fn(current);
+    let tmp2;
+    if (typeof tmp === "function") {
+      tmp2 = tmp;
     }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
-      }
-    });
+    return tmp2;
+  } else if (fn) {
+    fn.current = current;
   }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
-
-export const BottomSheetHostingContainer = memoResult;
+}
+export function isHostInstance(preferHostInstanceResult) {
+  let prop;
+  if (preferHostInstanceResult != null) {
+    prop = preferHostInstanceResult.__internalInstanceHandle;
+  }
+  return undefined !== prop;
+}
+export function preferHostInstance(__internalInstanceHandle) {
+  if (null != __internalInstanceHandle) {
+    let prop;
+    if (__internalInstanceHandle != null) {
+      prop = __internalInstanceHandle.__internalInstanceHandle;
+    }
+    if (undefined === prop) {
+      const getNativeScrollRef = __internalInstanceHandle.getNativeScrollRef;
+      let nativeScrollRef;
+      if (getNativeScrollRef != null) {
+        nativeScrollRef = getNativeScrollRef();
+      }
+      let prop1;
+      if (nativeScrollRef != null) {
+        prop1 = nativeScrollRef.__internalInstanceHandle;
+      }
+      let tmp4 = __internalInstanceHandle;
+      if (undefined !== prop1) {
+        tmp4 = nativeScrollRef;
+      }
+      return tmp4;
+    }
+  }
+  return __internalInstanceHandle;
+}
+export function resolveHostInstance(viewRef) {
+  let getHostInstance;
+  if (viewRef != null) {
+    getHostInstance = viewRef.getHostInstance;
+  }
+  let tmp2 = viewRef;
+  if (typeof getHostInstance === "function") {
+    let hostInstance = viewRef.getHostInstance();
+    if (hostInstance == null) {
+      hostInstance = viewRef;
+    }
+    tmp2 = hostInstance;
+  }
+  return tmp2;
+}

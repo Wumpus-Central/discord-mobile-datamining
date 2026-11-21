@@ -1,13 +1,7 @@
 // _runtime/metro/07916__.js
-import registerAsset from "01118__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 33,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "981aef55993c2a089b56e9b3e929139e",
-  name: "ic_stage_channel_32px",
-  type: "png",
-});
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeGaussianBlur", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, stdDeviationX: true, stdDeviationY: true, edgeMode: true } };
+
+export default module_65.get("RNSVGFeGaussianBlur", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

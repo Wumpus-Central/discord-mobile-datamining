@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 128,
-  height: 128,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "665fb7ab43f458f1e2e4d5c788dac4b4",
-  name: "img_meta_quest_white",
-  type: "png",
+  hash: "8b42912ce44ddbe707d5a6f54419c49d",
+  name: "img_account_sync_youtube_light_and_dark",
+  type: "svg",
 });

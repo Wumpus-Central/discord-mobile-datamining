@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 80,
+  height: 80,
   scales: [2, 3],
-  hash: "cb3e9c62b8b2529f17e6e1b9b76c6ce0",
-  name: "StageLockIcon",
+  hash: "900d6a1aeefc6f4c571ad9d81203dc5c",
+  name: "img_nitro_classic_icon_80px",
   type: "png",
 });

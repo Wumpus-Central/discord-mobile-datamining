@@ -1,28 +1,13 @@
 // _runtime/metro/16840__.js
-import _regeneratorRuntime2 from "../16841__regeneratorRuntime.js";
-import 10851__ from "10851__.js";
+import registerAsset from "01118__.js";
 
-let _regeneratorRuntime = module_10851(_regeneratorRuntime2);
-
-export function getYoutubeMeta(arg0) {
-  _regeneratorRuntime = arg0;
-  return _regeneratorRuntime.default.async(async function getYoutubeMeta$(next) {
-    next = next.next;
-    next.prev = next;
-    while (0 !== next) {
-      if (2 === next) {
-        sent = next.sent;
-        next.next = 5;
-        let _default = _regeneratorRuntime.default;
-        return _default.awrap(sent.json());
-      } else if (5 === next) {
-        let str = "return";
-        return next.abrupt("return", next.sent);
-      } else {
-        return next.stop();
-      }
-    }
-    next.next = 2;
-    return _regeneratorRuntime.default.awrap(fetch("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + closure_0 + "&format=json"));
-  }, null, null, null, Promise);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "43a01bb0fa7bd2e9d7fb4172be185309",
+  name: "es-419",
+  type: "png",
+});

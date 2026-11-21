@@ -1,13 +1,7 @@
 // _runtime/metro/07546__.js
-import registerAsset from "01118__.js";
+import _mod7548 from "07548__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d9312bb32f25ade901c17406f7f53267",
-  name: "ImageLockIcon",
-  type: "png",
-});
+const require = globalThis.__r;
+
+export const useClipboard = require("07547__.js").useClipboard;
+export default _mod7548.Clipboard;

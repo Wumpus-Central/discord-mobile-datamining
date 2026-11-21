@@ -1,23 +1,12 @@
 // _runtime/metro/15317__.js
-const weakMap = new WeakMap();
+import _mod15309 from "15309__.js";
 
-export default function getInternalSlots(arg0, arg1) {
-  items = arg1;
-  if (undefined === arg1) {
-    items = [];
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod15309(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
   }
-  value = weakMap.get(arg0);
-  if (!value) {
-    const _Object = Object;
-    const obj2 = Object.create(
-      null,
-      items.reduce((acc, item) => {
-        acc[item] = { enumerable: false, writable: true, configurable: true };
-        return acc;
-      }, {}),
-    );
-    const result = weakMap.set(arg0, obj2);
-    value = obj2;
-  }
-  return value;
-}
+  return version;
+};

@@ -1,17 +1,4 @@
 // _runtime/metro/05301__.js
-function _setPrototypeOf(arg0, arg1) {
-  if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
-  } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0, arg1);
-}
-let exports = _setPrototypeOf;
+import PressableDefault from "../05302_Pressable.js";
 
-export default _setPrototypeOf;
+export default PressableDefault;

@@ -1,13 +1,13 @@
 // _runtime/metro/05602__.js
-import _process from "../00539__process.js";
-import baseUnary from "../00540_baseUnary.js";
-import baseIsSet from "../05603_baseIsSet.js";
+import registerAsset from "01118__.js";
 
-const tmp = _process && _process.isSet;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsSet;
-}
-
-export default _module;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "b4d386a6c709f08f81d6e286fdb2ebc4",
+  name: "FriendsIcon",
+  type: "png",
+});

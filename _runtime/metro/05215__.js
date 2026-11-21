@@ -1,47 +1,96 @@
 // _runtime/metro/05215__.js
-import noop from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const require = globalThis.__r;
-
-({ useEffect: c2, useRef: c3 } = noop);
-
-export (INITIAL_CONTAINER_HEIGHT) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = INITIAL_CONTAINER_HEIGHT;
-  if (INITIAL_CONTAINER_HEIGHT) {
-    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = INITIAL_CONTAINER_HEIGHT;
-      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
-        const obj2 = {};
-        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
-        let mutable = require("01653__.js").makeMutable(obj2);
-        let obj = require("01653__.js");
-      } else {
-        mutable = require("01653__.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
-        const obj3 = require("01653__.js");
-      }
-      tmp2.current = mutable;
-    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
-      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-  closure_2(() => () => {
-    if (ref.current) {
-      ref(dependencyMap[1]).cancelAnimation(tmp.current);
-      const obj = ref(dependencyMap[1]);
-    }
-  }, []);
-  let current = tmp2.current;
-  if (current == null) {
-    current = INITIAL_CONTAINER_HEIGHT;
-  }
-  return current;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [
+  {
+    code: "(function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};})",
+  },
+];
+[tmp4] = items;
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
+  }
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 8313798372423;
+changeEventCalculator.__initData = tmp4;
+class HoverGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, HoverGesture);
+    tmp2 = c2;
+    obj = c2(HoverGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "HoverGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = HoverGesture;
+_inherits(HoverGesture, fn(5193).ContinousBaseGesture);
+const entry = {
+  key: "effect",
+  value: function effect(hoverEffect) {
+    this.config.hoverEffect = hoverEffect;
+    return this;
+  },
+};
+const items1 = [
+  entry,
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
+    },
+  },
+];
+
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = _createClass(HoverGesture, items1);

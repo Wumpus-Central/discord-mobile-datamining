@@ -1,13 +1,11 @@
 // _runtime/metro/05499__.js
-import registerAsset from "01118__.js";
+import _mod5500 from "05500__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleInformationIcon-secondary",
-  type: "png",
-});
+const require = globalThis.__r;
+
+for (const key10016 in require("05503__.js")) {
+  arg5[key10016] = require("05503__.js")[key10016];
+  continue;
+}
+
+export default _mod5500.LottieView;

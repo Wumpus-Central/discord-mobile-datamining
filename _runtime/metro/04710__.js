@@ -1,124 +1,107 @@
 // _runtime/metro/04710__.js
-import _slicedToArray from "00032__.js";
+import _mod2168 from "02168__.js";
 
-function isIterable(arg0) {}
-function hasIterableEntries(arg0) {}
-function compareEntries(arr, arr2) {
-  let map = arr;
-  if (!(arr instanceof Map)) {
-    const _Map = Map;
-    map = new Map(arr.entries());
-  }
-  let map1 = arr2;
-  if (!(arr2 instanceof Map)) {
-    const _Map2 = Map;
-    map1 = new Map(arr2.entries());
-  }
-  if (map.size !== map1.size) {
-    return false;
-  } else {
-    const obj2 = map[Symbol.iterator]();
-    while (obj2 !== undefined) {
-      let tmp11 = _slicedToArray(tmp8, 2);
-      [tmp12, tmp14] = tmp11;
-      if (map1.has(tmp12)) {
-        let _Object = Object;
-      }
-      obj2.return();
-      let flag = false;
-      return false;
-    }
-    return true;
-  }
-}
-
-export function shallow(current, current2) {
-  closure_0 = current;
-  closure_1 = current2;
-  let isResult = Object.is(current, current2);
-  if (!isResult) {
-    let tmp2 = typeof current === "object";
-    if (typeof current === "object") {
-      tmp2 = null !== current;
-    }
-    if (tmp2) {
-      tmp2 = typeof current2 === "object";
-    }
-    if (tmp2) {
-      tmp2 = null !== current2;
-    }
-    if (tmp2) {
-      const _Object = Object;
-      const _Object2 = Object;
-      const prototypeOf = Object.getPrototypeOf(current);
-      const tmp5 = prototypeOf === Object.getPrototypeOf(current2);
-      if (!tmp5) {
-        tmp2 = tmp5;
-      } else if (typeof isIterable === "function") {
-        const _Symbol = Symbol;
-        if (!(Symbol.iterator in current)) {
-          const obj = {
-            entries() {
-              return Object.entries(closure_0);
-            },
-          };
-          const obj2 = {
-            entries() {
-              return Object.entries(closure_1);
-            },
-          };
-          compareEntries(obj, obj2);
-        } else if (typeof tmp6 === "function") {
-          const _Symbol2 = Symbol;
+const fn = function t(moment) {
+  closure_0 = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_");
+  closure_1 = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_");
+  items = [
+    /^jan/i,
+    /^feb/i,
+    /^(maart|mrt\.?)$/i,
+    /^apr/i,
+    /^mei$/i,
+    /^jun[i.]?$/i,
+    /^jul[i.]?$/i,
+    /^aug/i,
+    /^sep/i,
+    /^okt/i,
+    /^nov/i,
+    /^dec/i,
+  ];
+  const tmp =
+    /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
+  return moment.defineLocale("nl", {
+    months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
+    monthsShort(arg0, arg1) {
+      if (arg0) {
+        if (obj.test(arg1)) {
+          let tmp3 = closure_1[arg0.month(arg0)];
         } else {
-          throw new TypeError("Trying to call a non-function");
+          tmp3 = closure_0[arg0.month(arg0)];
         }
-        if (typeof hasIterableEntries === "function") {
-          if (!("entries" in current)) {
-            const _Symbol3 = Symbol;
-            const iter = current[Symbol.iterator]();
-            const _Symbol4 = Symbol;
-            const iter2 = current2[Symbol.iterator]();
-            const iter3 = iter.next();
-            const iter4 = iter2.next();
-            let iter5 = iter4;
-            let iter6 = iter3;
-            if (!iter3.done) {
-              let iter7 = iter4;
-              let iter8 = iter3;
-              iter5 = iter4;
-              iter6 = iter3;
-              if (!iter4.done) {
-                const _Object3 = Object;
-                let flag = false;
-                while (Object.is(iter8.value, iter7.value)) {
-                  let iter9 = iter.next();
-                  let iter10 = iter2.next();
-                  iter5 = iter10;
-                  iter6 = iter9;
-                  if (!iter9.done) {
-                    iter7 = iter10;
-                    iter8 = iter9;
-                    iter5 = iter10;
-                    iter6 = iter9;
-                  }
-                }
-              }
-            }
-            flag = iter6.done && iter5.done;
-            const tmp9 = iter6.done && iter5.done;
-          } else if (typeof tmp8 !== "function") {
-            throw new TypeError("Trying to call a non-function");
-          }
-          flag = compareEntries(current, current2);
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+        obj = /-MMM-/;
       } else {
-        throw new TypeError("Trying to call a non-function");
+        return closure_0;
       }
+    },
+    monthsRegex: tmp,
+    monthsShortRegex: tmp,
+    monthsStrictRegex: /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
+    monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
+    monthsParse: items,
+    longMonthsParse: items,
+    shortMonthsParse: items,
+    weekdays: "zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),
+    weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
+    weekdaysMin: "zo_ma_di_wo_do_vr_za".split("_"),
+    weekdaysParseExact: true,
+    longDateFormat: {
+      LT: "HH:mm",
+      LTS: "HH:mm:ss",
+      L: "DD-MM-YYYY",
+      LL: "D MMMM YYYY",
+      LLL: "D MMMM YYYY HH:mm",
+      LLLL: "dddd D MMMM YYYY HH:mm",
+    },
+    calendar: {
+      sameDay: "[vandaag om] LT",
+      nextDay: "[morgen om] LT",
+      nextWeek: "dddd [om] LT",
+      lastDay: "[gisteren om] LT",
+      lastWeek: "[afgelopen] dddd [om] LT",
+      sameElse: "L",
+    },
+    relativeTime: {
+      future: "over %s",
+      past: "%s geleden",
+      s: "een paar seconden",
+      ss: "%d seconden",
+      m: "\u00E9\u00E9n minuut",
+      mm: "%d minuten",
+      h: "\u00E9\u00E9n uur",
+      hh: "%d uur",
+      d: "\u00E9\u00E9n dag",
+      dd: "%d dagen",
+      w: "\u00E9\u00E9n week",
+      ww: "%d weken",
+      M: "\u00E9\u00E9n maand",
+      MM: "%d maanden",
+      y: "\u00E9\u00E9n jaar",
+      yy: "%d jaar",
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}(ste|de)/,
+    ordinal(arg0) {
+      if (1 !== arg0) {
+        if (8 !== arg0) {
+          let str = "de";
+        }
+        return arg0 + str;
+      }
+      str = "ste";
+    },
+    week: { dow: 1, doy: 4 },
+  });
+};
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      fn(_mod2168);
     }
-    isResult = tmp2;
   }
-  return isResult;
 }
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], fn);
+  }
+}
+fn(this.moment);

@@ -1,34 +1,23 @@
 // _runtime/metro/05226__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod5227 from "05227__.js";
-import noop_mod from "00019__.js";
+import _mod19 from "00019__.js";
+import _modDef5209 from "05209__.js";
+import _mod5221 from "05221__.js";
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    items = [_mod5227.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
+_mod19.useCallback;
+
+export function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        const tmp4 = _modDef5209;
+        previousViewTag.previousViewTag = tmp4(_mod5221.resolveHostInstance(previousViewTag.viewRef));
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
   }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(5228).BottomSheetBackground;
-  }
-  return (
-    <backgroundComponent
-      pointerEvents="none"
-      animatedIndex={animatedIndex}
-      animatedPosition={animatedPosition}
-      style={style}
-    />
-  );
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
-
-export const BottomSheetBackgroundContainer = memoResult;
+}

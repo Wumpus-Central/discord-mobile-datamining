@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "bb53327d21615c77cfbccb9f06aeb711",
-  name: "wumpus-link",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ab7bfd0490af9a9d0729fca1ff2529c0",
+  name: "HeartIcon",
   type: "png",
 });

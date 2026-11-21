@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_settings/discovery/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
   scales: [1],
-  hash: "94306b69d4faf0f478351808640b1a83",
-  name: "GuildSettingsDiscoveryLandingPage.compiled.messages",
+  hash: "d838dbc00d76c029ebf5009369a90cee",
+  name: "lt.messages.d838dbc00d76c029ebf5009369a90cee.compiled.messages",
   type: "jsona",
 });

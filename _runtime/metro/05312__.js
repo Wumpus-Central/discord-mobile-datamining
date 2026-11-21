@@ -1,54 +1,72 @@
 // _runtime/metro/05312__.js
-import _slicedToArray from "05267__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const noop = fn(19);
-({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [{ code: "(function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;})" }];
+[tmp4] = items;
+function changeEventCalculator(arg0, arg1) {
+  return arg0;
+}
+changeEventCalculator.__workletHash = 8372703750542;
+changeEventCalculator.__initData = tmp4;
+class ManualGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ManualGesture);
+    tmp2 = c2;
+    obj = c2(ManualGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.handlerName = "ManualGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = ManualGesture;
+_inherits(ManualGesture, fn(5193).ContinousBaseGesture);
+const entry = {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    items = [arg0];
+    return fn(items);
+  },
+};
+const items1 = [entry];
 
-export function useUnmountAwareTimeout() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => closure_1_0.clearTimeout(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { setTimeout: null };
-  const items1 = [first];
-  obj.setTimeout = closure_2((arg0, arg1) => {
-    const timerId = first.setTimeout(() => {
-      first.delete(timerId);
-      closure_0();
-    }, arg1);
-    arg0.add(timerId);
-  }, items1);
-  return obj;
-}
-export function useUnmountAwareAnimationFrame() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => cancelAnimationFrame(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { requestAnimationFrame: null };
-  const items1 = [first];
-  obj.requestAnimationFrame = closure_2((arg0) => {
-    const animationFrame = first.requestAnimationFrame((arg0) => {
-      first.delete(animationFrame);
-      closure_0(arg0);
-    });
-    arg0.add(animationFrame);
-  }, items1);
-  return obj;
-}
+export const ManualGesture = _createClass(ManualGesture, items1);

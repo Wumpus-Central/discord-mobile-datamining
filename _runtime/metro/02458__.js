@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/collectibles/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==",
   scales: [1],
-  hash: "84f7d9cdf2bf301df423f836e8247433",
-  name: "CollectiblesSearchBar.compiled.messages",
+  hash: "3e695a4264bb322c6b9ea9108490fd67",
+  name: "no.messages.3e695a4264bb322c6b9ea9108490fd67.compiled.messages",
   type: "jsona",
 });

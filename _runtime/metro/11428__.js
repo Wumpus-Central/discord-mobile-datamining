@@ -1,5 +1,5 @@
 // _runtime/metro/11428__.js
-import AbstractTimeExpressionParser from "../11309_AbstractTimeExpressionParser.js";
+import AbstractTimeExpressionParser from "../11429_AbstractTimeExpressionParser.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeExpressionParser = require;
+const ENTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,14 +26,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUTimeExpressionParser {
+class ENTimeExpressionParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, RUTimeExpressionParser);
+    tmp = c2(this, ENTimeExpressionParser);
     items = [];
     items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(RUTimeExpressionParser);
+    obj = closure_4(ENTimeExpressionParser);
     tmp3 = closure_3;
     if (closure_6()) {
       tmp5 = globalThis;
@@ -45,40 +45,25 @@ class RUTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "patternFlags",
-  value: function patternFlags() {
-    return RUTimeExpressionParser(11424).REGEX_PARTS.flags;
+  key: "followingPhase",
+  value: function followingPhase() {
+    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
   },
 };
 let items = [
   entry,
   {
-    key: "primaryPatternLeftBoundary",
-    value: function primaryPatternLeftBoundary() {
-      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
-    },
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0438|\u043F\u043E|\\?)\\s*";
-    },
-  },
-  {
     key: "primaryPrefix",
     value: function primaryPrefix() {
-      return "(?:(?:\u0432|\u0441)\\s*)??";
+      return "(?:(?:at|from)\\s*)??";
     },
   },
   {
     key: "primarySuffix",
     value: function primarySuffix() {
-      return (
-        "(?:\\s*(?:\u0443\u0442\u0440\u0430|\u0432\u0435\u0447\u0435\u0440\u0430|\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F))?(?!\\/)" +
-        RUTimeExpressionParser(11424).REGEX_PARTS.rightBoundary
-      );
+      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
     },
   },
   {
@@ -86,34 +71,34 @@ let items = [
     value: function extractPrimaryTimeComponents(arg0, arg1) {
       const self = this;
       const tmp = hasOwnProperty(
-        _getPrototypeOf(RUTimeExpressionParser.prototype),
+        _getPrototypeOf(ENTimeExpressionParser.prototype),
         "extractPrimaryTimeComponents",
         this,
       );
       dependencyMap = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
+        fn = (items) => fn.apply(self, items);
       }
       items = [arg0, arg1];
       const fnResult = fn(items);
       if (fnResult) {
         const first = arg1[0];
-        if (first.endsWith("\u0432\u0435\u0447\u0435\u0440\u0430")) {
+        if (first.endsWith("night")) {
           value = fnResult.get("hour");
           if (value >= 6) {
             if (value < 12) {
               fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", RUTimeExpressionParser(11300).Meridiem.PM);
+              fnResult.assign("meridiem", ENTimeExpressionParser(11420).Meridiem.PM);
             }
           }
           if (value < 6) {
-            fnResult.assign("meridiem", RUTimeExpressionParser(11300).Meridiem.AM);
+            fnResult.assign("meridiem", ENTimeExpressionParser(11420).Meridiem.AM);
           }
         }
         const first1 = arg1[0];
-        if (first1.endsWith("\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(11300).Meridiem.PM);
+        if (first1.endsWith("afternoon")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(11420).Meridiem.PM);
           const value2 = fnResult.get("hour");
           let tmp14 = value2 >= 0;
           if (tmp14) {
@@ -124,16 +109,38 @@ let items = [
           }
         }
         const first2 = arg1[0];
-        if (first2.endsWith("\u0443\u0442\u0440\u0430")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(11300).Meridiem.AM);
+        if (first2.endsWith("morning")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(11420).Meridiem.AM);
           if (fnResult.get("hour") < 12) {
             fnResult.assign("hour", fnResult.get("hour"));
           }
         }
+        return fnResult.addTag("parser/ENTimeExpressionParser");
+      } else {
+        return fnResult;
+      }
+    },
+  },
+  {
+    key: "extractFollowingTimeComponents",
+    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
+      const self = this;
+      let fn = hasOwnProperty(
+        _getPrototypeOf(ENTimeExpressionParser.prototype),
+        "extractFollowingTimeComponents",
+        this,
+      );
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0, arg1, arg2];
+      const fnResult = fn(items);
+      if (fnResult) {
+        fnResult.addTag("parser/ENTimeExpressionParser");
       }
       return fnResult;
     },
   },
 ];
 
-export default _createClass(RUTimeExpressionParser, items);
+export default _createClass(ENTimeExpressionParser, items);

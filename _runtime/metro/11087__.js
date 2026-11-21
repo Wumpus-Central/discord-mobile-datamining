@@ -5,9 +5,9 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
   width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "b193e2a038165601eb12e283d0af80aa",
-  name: "ic_file_small_webcode",
+  height: 24,
+  scales: [2, 3],
+  hash: "164752cabe6d4eb331413f5b61581302",
+  name: "ic_playstation_24px",
   type: "png",
 });

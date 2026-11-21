@@ -1,31 +1,33 @@
 // _runtime/metro/05263__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
 
-const Platform = _mod17.Platform;
+let useMemo = _mod19.useMemo;
 
-export function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
-      }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
-    }
-  }
+export function useGestureEventHandler(arg0, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = arg0;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
+  closure_3 = tmp;
+  items = [arg0, memoizedGestureCallbacks, , , ,];
+  ({
+    changeEventCalculator: arr[2],
+    dispatchesAnimatedEvents: arr[3],
+    fillInDefaultValues: arr[4],
+  } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(
+    () => (arg0) => {
+      closure_0(closure_1[1]).eventHandler(
+        closure_1_0,
+        arg0,
+        memoizedGestureCallbacks,
+        disableReanimated.changeEventCalculator,
+        closure_1_3,
+        disableReanimated.dispatchesAnimatedEvents,
+        disableReanimated.fillInDefaultValues,
+      );
+    },
+    items,
+  );
 }

@@ -1,26 +1,31 @@
 // _runtime/metro/05382__.js
-import renderElement from "../00114_renderElement.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import _mod17 from "00017__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "LottieAnimationView", bubblingEventTypes: { topAnimationFinish: { phasedRegistrationNames: { captured: "onAnimationFinishCapture", bubbled: "onAnimationFinish" } }, topAnimationFailure: { phasedRegistrationNames: { captured: "onAnimationFailureCapture", bubbled: "onAnimationFailure" } }, topAnimationLoaded: { phasedRegistrationNames: { captured: "onAnimationLoadedCapture", bubbled: "onAnimationLoaded" } } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAnimationFinish: true, onAnimationFailure: true, onAnimationLoaded: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { resizeMode: true, renderMode: true, sourceName: true, sourceJson: true, sourceURL: true, sourceDotLottieURI: true, imageAssetsFolder: true, progress: true, speed: true, loop: true, autoPlay: true, enableMergePathsAndroidForKitKatAndAbove: true, enableSafeModeAndroid: true, hardwareAccelerationAndroid: true, cacheComposition: true, colorFilters: true, dummy: true, textFiltersAndroid: true, textFiltersIOS: true };
+const Platform = _mod17.Platform;
 
-export default module_65.get("LottieAnimationView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
-export const Commands = {
-  play(nodeFromPublicInstance, arg1, arg2) {
-    items = [arg1, arg2];
-    renderElement.dispatchCommand(nodeFromPublicInstance, "play", items);
-  },
-  reset(nodeFromPublicInstance) {
-    renderElement.dispatchCommand(nodeFromPublicInstance, "reset", []);
-  },
-  pause(nodeFromPublicInstance) {
-    renderElement.dispatchCommand(nodeFromPublicInstance, "pause", []);
-  },
-  resume(nodeFromPublicInstance) {
-    renderElement.dispatchCommand(nodeFromPublicInstance, "resume", []);
+export function isNewArch() {
+  if (undefined !== c1) {
+    return c1;
+  } else {
+    try {
+      let prop;
+      if (global != null) {
+        prop = global.nativeFabricUIManager;
+      }
+      let flag = Boolean(prop);
+      if (global != null) {
+        const __turboModuleProxy = global.__turboModuleProxy;
+      }
+      if (!flag) {
+        flag = Boolean(__turboModuleProxy);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      c1 = flag;
+      return c1;
+    } catch (err) {
+      c1 = true;
+    }
   }
-};
+}

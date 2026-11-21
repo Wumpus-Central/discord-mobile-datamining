@@ -1,33 +1,7 @@
 // _runtime/metro/05158__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
 
-const Platform = _mod17.Platform;
+const context = _mod19.createContext(null);
 
-export function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
-}
-export function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
-}
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

@@ -1,14 +1,12 @@
 // _runtime/metro/11433__.js
-import now from "../11319_now.js";
-import _mod11426 from "11426__.js";
+import Filter from "../11434_Filter.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let self = this;
-const RUCasualTimeParser = require;
+const AbstractMergeDateRangeRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,147 +25,158 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+class AbstractMergeDateRangeRefiner {
+  constructor() {
+    self = this;
+    tmp = c2(this, AbstractMergeDateRangeRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractMergeDateRangeRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+}
+_inherits(AbstractMergeDateRangeRefiner, Filter.MergingRefiner);
+const entry = {
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, end, end2) {
+    end = end.end;
+    let tmp = !end;
+    if (!end) {
+      tmp = !end2.end;
     }
-    if (!fn) {
-      fn = function c(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
+    if (tmp) {
+      const self = this;
+      tmp = null != str.match(this.patternBetween());
     }
-    const _Object3 = Object;
-    let closure_9 = fn(now);
-    class RUCasualTimeParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, RUCasualTimeParser);
-        tmp2 = closure_4;
-        obj = closure_4(RUCasualTimeParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+    return tmp;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, start2) {
+      closure_0 = start;
+      let first = start2;
+      start = start.start;
+      let result = start.isOnlyWeekdayComponent();
+      if (!result) {
+        start2 = start2.start;
+        result = start2.isOnlyWeekdayComponent();
       }
-    }
-    _inherits(RUCasualTimeParser, _mod11426.AbstractParserWithLeftRightBoundaryChecking);
-    const entry = {
-      key: "innerPatternString",
-      value: function innerPatternString(arg0) {
-        return "(\u0441\u0435\u0439\u0447\u0430\u0441|\u043F\u0440\u043E\u0448\u043B\u044B\u043C\\s*\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u043F\u0440\u043E\u0448\u043B\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u0435\u0433\u043E\u0434\u043D\u044F\\s*\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u0438\u043C \u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u0434\u0435\u043D\u044C|\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u0432\u0435\u0447\u0435\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u043D\u043E\u0447\u044C)";
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-        refDate = refDate.refDate;
-        const str2 = arg1[0].toLowerCase();
-        let parsingComponents = refDate.createParsingComponents();
-        if ("\u0441\u0435\u0439\u0447\u0430\u0441" === str2) {
-          return closure_9.now(refDate.reference);
-        } else {
-          if ("\u0432\u0435\u0447\u0435\u0440\u043E\u043C" !== str2) {
-            if ("\u0432\u0435\u0447\u0435\u0440\u0430" !== str2) {
-              if (!str2.endsWith("\u0443\u0442\u0440\u043E\u043C")) {
-                if (!str2.endsWith("\u0443\u0442\u0440\u0430")) {
-                  if (str2.match(/в\s*полдень/)) {
-                    return closure_9.noon(refDate.reference);
-                  } else if (str2.match(/прошлой\s*ночью/)) {
-                    return closure_9.lastNight(refDate.reference);
-                  } else if (str2.match(/прошлым\s*вечером/)) {
-                    return closure_9.yesterdayEvening(refDate.reference);
-                  } else {
-                    if (str2.match(/следующей\s*ночью/)) {
-                      let num2 = 2;
-                      if (refDate.getHours() < 22) {
-                        num2 = 1;
-                      }
-                      const _Date = Date;
-                      const date = new Date(refDate.getTime());
-                      date.setDate(date.getDate() + num2);
-                      RUCasualTimeParser(11301).assignSimilarDate(parsingComponents, date);
-                      parsingComponents.imply("hour", 0);
-                    }
-                    if (str2.match(/в\s*полночь/)) {
-                      parsingComponents = closure_9.midnight(refDate.reference);
-                    }
-                    return parsingComponents;
-                  }
-                }
-              }
-              return closure_9.morning(refDate.reference);
-            }
+      if (!result) {
+        let start3 = start2.start;
+        const certainComponents = start3.getCertainComponents();
+        const item = certainComponents.forEach((item) => {
+          const start = closure_0.start;
+          if (!start.isCertain(item)) {
+            const start2 = closure_0.start;
+            const start3 = first.start;
+            start2.imply(item, start3.get(item));
           }
-          return closure_9.evening(refDate.reference);
+        });
+        const start4 = start.start;
+        const certainComponents1 = start4.getCertainComponents();
+        const item1 = certainComponents1.forEach((item) => {
+          const start = first.start;
+          if (!start.isCertain(item)) {
+            const start2 = first.start;
+            const start3 = closure_0.start;
+            start2.imply(item, start3.get(item));
+          }
+        });
+      }
+      const start5 = start.start;
+      const start6 = start2.start;
+      let tmp5 = start2;
+      let obj = start;
+      if (dateResult > start6.date()) {
+        const start18 = start.start;
+        const dateResult1 = start18.date();
+        const start19 = start2.start;
+        const dateResult2 = start19.date();
+        const start20 = start2.start;
+        if (start20.isOnlyWeekdayComponent()) {
+          if (AbstractMergeDateRangeRefiner(11417).addDuration(dateResult2, { day: 7 }) > dateResult1) {
+            const addDurationResult = AbstractMergeDateRangeRefiner(11417).addDuration(dateResult2, { day: 7 });
+            const start15 = start2.start;
+            start15.imply("day", addDurationResult.getDate());
+            const start16 = start2.start;
+            start16.imply("month", addDurationResult.getMonth() + 1);
+            const start17 = start2.start;
+            start17.imply("year", addDurationResult.getFullYear());
+            tmp5 = start2;
+            obj = start;
+          }
         }
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(RUCasualTimeParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
-}
+        const start7 = start.start;
+        if (start7.isOnlyWeekdayComponent()) {
+          if (AbstractMergeDateRangeRefiner(11417).addDuration(dateResult1, { day: -7 }) < dateResult2) {
+            const addDurationResult1 = AbstractMergeDateRangeRefiner(11417).addDuration(dateResult1, { day: -7 });
+            const start12 = start.start;
+            start12.imply("day", addDurationResult1.getDate());
+            const start13 = start.start;
+            start13.imply("month", addDurationResult1.getMonth() + 1);
+            const start14 = start.start;
+            start14.imply("year", addDurationResult1.getFullYear());
+            tmp5 = start2;
+            obj = start;
+          }
+        }
+        const start8 = start2.start;
+        if (start8.isDateWithUnknownYear()) {
+          if (AbstractMergeDateRangeRefiner(11417).addDuration(dateResult2, { year: 1 }) > dateResult1) {
+            const start11 = start2.start;
+            start11.imply(
+              "year",
+              AbstractMergeDateRangeRefiner(11417).addDuration(dateResult2, { year: 1 }).getFullYear(),
+            );
+            tmp5 = start2;
+            obj = start;
+            const addDurationResult2 = AbstractMergeDateRangeRefiner(11417).addDuration(dateResult2, { year: 1 });
+          }
+        }
+        const start9 = start.start;
+        if (start9.isDateWithUnknownYear()) {
+          if (AbstractMergeDateRangeRefiner(11417).addDuration(dateResult1, { year: -1 }) < dateResult2) {
+            const start10 = start.start;
+            start10.imply(
+              "year",
+              AbstractMergeDateRangeRefiner(11417).addDuration(dateResult1, { year: -1 }).getFullYear(),
+            );
+            tmp5 = start2;
+            obj = start;
+            const addDurationResult3 = AbstractMergeDateRangeRefiner(11417).addDuration(dateResult1, { year: -1 });
+          }
+        }
+        items = [start, start2];
+        first = items[0];
+        closure_0 = tmp15;
+        tmp5 = first;
+        obj = tmp15;
+      }
+      const cloneResult = obj.clone();
+      cloneResult.start = obj.start;
+      cloneResult.end = tmp5.start;
+      cloneResult.index = Math.min(obj.index, tmp5.index);
+      if (obj.index < tmp5.index) {
+        cloneResult.text = obj.text + arg0 + tmp5.text;
+      } else {
+        cloneResult.text = tmp5.text + arg0 + obj.text;
+      }
+      return cloneResult;
+    },
+  },
+];
+
+export default _createClass(AbstractMergeDateRangeRefiner, items);

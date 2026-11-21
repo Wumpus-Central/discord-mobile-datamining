@@ -1,12 +1,13 @@
 // _runtime/metro/10461__.js
+import registerAsset from "01118__.js";
 
-export default function basePropertyOf(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    let tmp2;
-    if (null != closure_0) {
-      tmp2 = tmp[arg0];
-    }
-    return tmp2;
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
+  scales: [2, 3],
+  hash: "8c6e7658ce5157dd6c415ee437c71c87",
+  name: "img_nitro_animated_emoji",
+  type: "png",
+});

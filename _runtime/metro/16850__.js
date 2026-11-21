@@ -1,7 +1,13 @@
 // _runtime/metro/16850__.js
-const require = globalThis.__r;
+import registerAsset from "01118__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const WebView = require("WebView").WebView;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "c9f51873ae719a6b4b8c6724362e999e",
+  name: "nl",
+  type: "png",
+});

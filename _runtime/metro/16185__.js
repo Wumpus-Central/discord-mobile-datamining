@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/virtual_currency/native/orb_wallet/svgs",
-  width: 56,
-  height: 37,
-  scales: [1],
-  hash: "377389c9144977b74c1cf1d53250b6ef",
-  name: "nitro_upsell_graphic",
-  type: "svg",
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 185,
+  height: 125,
+  scales: [1, 2, 3],
+  hash: "fa358a5ff3d1f49a00fc1180e0e601e5",
+  name: "family_center_activity_banner_image_parent",
+  type: "png",
 });

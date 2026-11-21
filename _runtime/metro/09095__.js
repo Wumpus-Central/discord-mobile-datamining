@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
-  scales: [2, 3],
-  hash: "44a779cd60ac7d5dac850e6fc886896f",
-  name: "img_nitro_subheader_mobile",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "540091c70b333c8b8937ba1627138192",
+  name: "wumpus-pikachu",
   type: "png",
 });

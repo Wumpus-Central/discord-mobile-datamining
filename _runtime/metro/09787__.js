@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "36a084fbace40e0af86aab037df7e8b7",
-  name: "PlaystationNeutralIcon",
+  hash: "8c94b907df8972f3dc35ed38a2375c9f",
+  name: "EpicGamesNeutralIcon",
   type: "png",
 });

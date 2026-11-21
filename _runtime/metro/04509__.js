@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hexagon_campaign",
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/code_blurple",
   scales: [1],
-  hash: "29581e1de7d4a922ab5eac13e54b4dda",
-  name: "HexagonCampaign.compiled.messages",
+  hash: "b59878279e93cc37a1ec280690b41dfd",
+  name: "CodeBlurple.compiled.messages",
   type: "jsona",
 });

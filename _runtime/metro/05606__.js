@@ -1,9 +1,13 @@
 // _runtime/metro/05606__.js
-import baseGetAllKeys from "../00656_baseGetAllKeys.js";
-import _mod5589 from "05589__.js";
-import keysIn from "../05591_keysIn.js";
+import registerAsset from "01118__.js";
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod5589);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "cc60adc9d34b42157ecab0277b6b238d",
+  name: "UserPlatformIcon",
+  type: "png",
+});

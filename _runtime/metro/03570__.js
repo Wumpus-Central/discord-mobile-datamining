@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/premium_group",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNl",
   scales: [1],
-  hash: "09c77c616b487e7027bec5001310d80d",
-  name: "PremiumGroupTransition.compiled.messages",
+  hash: "ddf0eb70174b38e9d94e624a1a702553",
+  name: "zh-TW.messages.ddf0eb70174b38e9d94e624a1a702553.compiled.messages",
   type: "jsona",
 });

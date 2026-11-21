@@ -3,10 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
+  httpServerLocation: "/assets/modules/intelligence_layer/search",
   scales: [1],
-  hash: "8ba71f24ff8201884e107a83601fb08f",
-  name: "bg.messages.8ba71f24ff8201884e107a83601fb08f.compiled.messages",
+  hash: "60af52011985d9b9d318df776245f864",
+  name: "SmartSearch.compiled.messages",
   type: "jsona",
 });

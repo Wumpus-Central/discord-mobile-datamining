@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "5ec77c8acc74b99b6106b4203580cb98",
-  name: "BugIcon",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "99ca2b0cb6c6ab32f98726cbd8d2cd48",
+  name: "pl.messages.99ca2b0cb6c6ab32f98726cbd8d2cd48.compiled.messages",
+  type: "jsona",
 });

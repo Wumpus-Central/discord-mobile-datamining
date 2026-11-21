@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native",
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron",
   scales: [1],
-  hash: "0e3c99f4304b88d181459bf694c28c1f",
-  name: "PlayableReward.compiled.messages",
+  hash: "769d6c29e0fec3e25e8c18b9e94bd16a",
+  name: "MacaronPhase2.compiled.messages",
   type: "jsona",
 });

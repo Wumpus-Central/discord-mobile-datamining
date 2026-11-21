@@ -1,8 +1,17 @@
 // _runtime/metro/05272__.js
+import ComposedGestureName from "../05235_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05244_resolveInternalConfigProps.js";
+import _mod5261 from "05261__.js";
 
-export default function _nonIterableRest() {
-  const typeError = new TypeError(
-    "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
-  );
-  throw typeError;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useManualGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5261.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 }

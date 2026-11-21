@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 48,
-  height: 48,
-  scales: [1, 2, 3],
-  hash: "3c685966e643346896f1eed744338b14",
-  name: "study",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "efd2f6e96d574d8c2d560cd22ba2302a",
+  name: "ChevronSmallUpIcon",
   type: "png",
 });

@@ -1,232 +1,125 @@
 // _runtime/metro/05350__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef5351 from "05351__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import LegacyBaseButton from "../05173_LegacyBaseButton.js";
 import noop_mod from "00019__.js";
 
-const LinearGradient = global;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let closure_3 = ["children", "colors", "end", "locations", "useAngle", "angleCenter", "angle", "start", "style"];
-_possibleConstructorReturnDefault;
-let noop = fn(19);
-({ createRef: closure_8, Component } = noop);
 let noop = noop_mod;
-get_ActivityIndicator = fn(17);
-({ processColor: closure_9, StyleSheet: closure_10, View: closure_11 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-function convertPoint(arg0, arg1) {}
-class LinearGradient {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = hasOwnProperty(this, LinearGradient);
-    items1 = [...items];
-    tmp2 = metroImportDefault;
-    obj = metroImportDefault(LinearGradient);
-    tmp3 = closure_6;
-    if (closure_2_14()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
+({ useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const memoResult = memo((nativeGestureRef) => {
+  nativeGestureRef = nativeGestureRef.nativeGestureRef;
+  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
+  ({ style, children } = nativeGestureRef);
+  const merged = Object.assign(
+    nativeGestureRef,
+    Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }),
+  );
+  let enableContentPanningGesture;
+  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
+  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
+  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
+  const waitFor = bottomSheetInternal.waitFor;
+  const activeOffsetX = bottomSheetInternal.activeOffsetX;
+  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  const failOffsetX = bottomSheetInternal.failOffsetX;
+  const failOffsetY = bottomSheetInternal.failOffsetY;
+  const obj = nativeGestureRef(enableContentPanningGesture[2]);
+  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers()
+    .contentPanGestureHandler;
+  items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
+  const tmp3 = simultaneousHandlers(() => {
+    items = [];
+    if (nativeGestureRef) {
+      items.push(tmp);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.gradientRef = closure_8();
-    return tmp3Result;
-  }
-}
-_inherits(LinearGradient, Component);
-const entry = {
-  key: "setNativeProps",
-  value: function setNativeProps(arg0) {
-    const current = this.gradientRef.current;
-    current.setNativeProps(arg0);
-  },
-};
-let items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      const props = this.props;
-      ({ colors, end, locations, angleCenter, start, style } = props);
-      ({ children, useAngle, angle } = props);
-      let tmp2 = colors;
-      if (colors) {
-        tmp2 = locations;
-      }
-      if (tmp2) {
-        tmp2 = colors.length !== locations.length;
-      }
-      if (tmp2) {
-        const _console = console;
-        console.warn("LinearGradient colors and locations props should be arrays of the same length");
-      }
-      const tmp5 = refs.flatten(style) || {};
-      let tmp6 = tmp5.borderRadius || 0;
-      const borderTopLeftRadius = tmp5.borderTopLeftRadius;
-      let tmp7 = tmp6;
-      if (typeof borderTopLeftRadius === "number") {
-        tmp7 = borderTopLeftRadius;
-      }
-      items = [tmp7, , , , , , ,];
-      const borderTopLeftRadius2 = tmp5.borderTopLeftRadius;
-      let tmp8 = tmp6;
-      if (typeof borderTopLeftRadius2 === "number") {
-        tmp8 = borderTopLeftRadius2;
-      }
-      items[1] = tmp8;
-      const borderTopRightRadius = tmp5.borderTopRightRadius;
-      let tmp9 = tmp6;
-      if (typeof borderTopRightRadius === "number") {
-        tmp9 = borderTopRightRadius;
-      }
-      items[2] = tmp9;
-      const borderTopRightRadius2 = tmp5.borderTopRightRadius;
-      let tmp10 = tmp6;
-      if (typeof borderTopRightRadius2 === "number") {
-        tmp10 = borderTopRightRadius2;
-      }
-      items[3] = tmp10;
-      const borderBottomRightRadius = tmp5.borderBottomRightRadius;
-      let tmp11 = tmp6;
-      if (typeof borderBottomRightRadius === "number") {
-        tmp11 = borderBottomRightRadius;
-      }
-      items[4] = tmp11;
-      const borderBottomRightRadius2 = tmp5.borderBottomRightRadius;
-      let tmp12 = tmp6;
-      if (typeof borderBottomRightRadius2 === "number") {
-        tmp12 = borderBottomRightRadius2;
-      }
-      items[5] = tmp12;
-      const borderBottomLeftRadius = tmp5.borderBottomLeftRadius;
-      let tmp13 = tmp6;
-      if (typeof borderBottomLeftRadius === "number") {
-        tmp13 = borderBottomLeftRadius;
-      }
-      items[6] = tmp13;
-      const borderBottomLeftRadius2 = tmp5.borderBottomLeftRadius;
-      if (typeof borderBottomLeftRadius2 === "number") {
-        tmp6 = borderBottomLeftRadius2;
-      }
-      items[7] = tmp6;
-      const obj = { ref: this.gradientRef };
-      const merged = Object.assign(_objectWithoutProperties(props, closure_3));
-      obj.style = style;
-      const obj2 = {
-        style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 },
-        colors: null,
-        startPoint: null,
-        endPoint: null,
-        locations: null,
-        useAngle: null,
-        angleCenter: null,
-        angle: null,
-        borderRadii: null,
-      };
-      let mapped = colors;
-      const tmp = _objectWithoutProperties(props, closure_3);
-      if (!LinearGradient.RN$Bridgeless) {
-        mapped = colors.map(React6);
-      }
-      obj2.colors = mapped;
-      if (typeof convertPoint === "function") {
-        const _Array = Array;
-        let tmp23 = start;
-        if (Array.isArray(start)) {
-          const _console2 = console;
-          const _HermesInternal = HermesInternal;
-          console.warn(
-            "LinearGradient '" +
-              "start" +
-              "' property should be an object with fields 'x' and 'y', Array type is deprecated.",
-          );
-          const point = { x: null, y: null };
-          [obj3.x, obj3.y] = start;
-          tmp23 = point;
-        }
-        obj2.startPoint = tmp23;
-        if (typeof convertPoint === "function") {
-          const _Array2 = Array;
-          let tmp25 = end;
-          if (Array.isArray(end)) {
-            const _console3 = console;
-            const _HermesInternal2 = HermesInternal;
-            console.warn(
-              "LinearGradient '" +
-                "end" +
-                "' property should be an object with fields 'x' and 'y', Array type is deprecated.",
-            );
-            const point1 = { x: null, y: null };
-            [obj4.x, obj4.y] = end;
-            tmp25 = point1;
-          }
-          obj2.endPoint = tmp25;
-          let substr = null;
-          if (locations) {
-            substr = locations.slice(0, colors.length);
-          }
-          obj2.locations = substr;
-          obj2.useAngle = useAngle;
-          if (typeof convertPoint === "function") {
-            const _Array3 = Array;
-            let tmp28 = angleCenter;
-            if (Array.isArray(angleCenter)) {
-              const _console4 = console;
-              const _HermesInternal3 = HermesInternal;
-              console.warn(
-                "LinearGradient '" +
-                  "angleCenter" +
-                  "' property should be an object with fields 'x' and 'y', Array type is deprecated.",
-              );
-              const point2 = { x: null, y: null };
-              [obj5.x, obj5.y] = angleCenter;
-              tmp28 = point2;
-            }
-            obj2.angleCenter = tmp28;
-            obj2.angle = angle;
-            obj2.borderRadii = items;
-            const items1 = [application_id(tmp18, obj2), children];
-            obj.children = items1;
-            return state(closure_1_11, obj);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+    if (refreshControlGestureRef) {
+      items.push(tmp3);
+    }
+    if (simultaneousHandlers) {
+      const _Array = Array;
+      const push = items.push;
+      if (Array.isArray(simultaneousHandlers)) {
+        const items1 = [];
+        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
+        HermesBuiltin.apply(items1, items);
       } else {
-        throw new TypeError("Trying to call a non-function");
+        push(simultaneousHandlers);
       }
-      tmp18 = _modDef5351;
-    },
-  },
-];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.defaultProps = { start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 } };
+    }
+    return items;
+  }, items);
+  closure_10 = tmp3;
+  let items1 = [
+    activeOffsetX,
+    activeOffsetY,
+    enableContentPanningGesture,
+    failOffsetX,
+    failOffsetY,
+    tmp3,
+    waitFor,
+    ,
+    ,
+    ,
+  ];
+  ({
+    handleOnChange: arr2[7],
+    handleOnEnd: arr2[8],
+    handleOnFinalize: arr2[9],
+    handleOnStart: arr2[10],
+  } = contentPanGestureHandler);
+  const tmp4 = simultaneousHandlers(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
+    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
+    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
+    const runOnJSResult = result.runOnJS(false);
+    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
+    const onChangeResult = result
+      .runOnJS(false)
+      .onStart(contentPanGestureHandler.handleOnStart)
+      .onChange(contentPanGestureHandler.handleOnChange);
+    const onFinalizeResult = result
+      .runOnJS(false)
+      .onStart(contentPanGestureHandler.handleOnStart)
+      .onChange(contentPanGestureHandler.handleOnChange)
+      .onEnd(contentPanGestureHandler.handleOnEnd)
+      .onFinalize(contentPanGestureHandler.handleOnFinalize);
+    let result1 = onFinalizeResult;
+    if (waitFor) {
+      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
+    }
+    let result2 = result1;
+    if (closure_10) {
+      result2 = result1.simultaneousWithExternalGesture(tmp2);
+    }
+    let activeOffsetXResult = result2;
+    if (activeOffsetX) {
+      activeOffsetXResult = result2.activeOffsetX(tmp3);
+    }
+    let activeOffsetYResult = activeOffsetXResult;
+    if (activeOffsetY) {
+      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
+    }
+    let failOffsetXResult = activeOffsetYResult;
+    if (failOffsetX) {
+      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
+    }
+    let failOffsetYResult = failOffsetXResult;
+    if (failOffsetY) {
+      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
+    }
+    return failOffsetYResult;
+  }, items1);
+  const obj3 = { gesture: tmp4, children: null };
+  const obj4 = { value: tmp4, children: null };
+  const obj5 = { style };
+  const merged1 = Object.assign(merged);
+  obj5.children = children;
+  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
+  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
+  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
+});
+memoResult.displayName = "BottomSheetDraggableView";
 
-export default importDefaultResultResult;
+export default memoResult;

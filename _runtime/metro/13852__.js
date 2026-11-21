@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 61,
-  height: 61,
-  scales: [3],
-  hash: "3a3116b60fa5fc30eead27358e20c1e0",
-  name: "asset_platinum_badge_small",
-  type: "webp",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e34464fbaad016de0cccce358d754f22",
+  name: "ic_more_android",
+  type: "png",
 });

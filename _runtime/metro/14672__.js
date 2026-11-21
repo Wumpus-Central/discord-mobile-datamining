@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 30,
-  height: 30,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "565bfab9e414d3cdf97ad89eaffbf2b3",
-  name: "member_list_icon",
+  hash: "1d1181e321dc8059ed1b1ce7cbbde121",
+  name: "ic_chat_bubble_32px",
   type: "png",
 });

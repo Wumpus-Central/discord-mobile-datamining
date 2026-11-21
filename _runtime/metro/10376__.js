@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_identity/images",
-  width: 303,
-  height: 198,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "af6f5b1f2e3f6f41820436ec96e0f065",
-  name: "guild_identity_education_light",
+  hash: "dcf38117e5a3cdcdf164b333d0b65b5d",
+  name: "LinkExternalMediumIcon",
   type: "png",
 });

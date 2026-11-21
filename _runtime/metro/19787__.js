@@ -1,15 +1,13 @@
 // _runtime/metro/19787__.js
-import arrayReduce from "../05628_arrayReduce.js";
-import words from "../19788_words.js";
-import deburr from "../19792_deburr.js";
+import registerAsset from "01118__.js";
 
-let closure_2 = RegExp("['\u2019]", "g");
-
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c993344d8197e11d62f0d0a7ef753412",
+  name: "BoostGemOutlineIcon",
+  type: "png",
+});

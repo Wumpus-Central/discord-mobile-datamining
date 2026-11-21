@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "cde816791540f65e5c599ecf6c251745",
-  name: "ChatXIcon",
+  hash: "3ee579776b13459d07461b433997e652",
+  name: "ChevronLargeRightIcon",
   type: "png",
 });

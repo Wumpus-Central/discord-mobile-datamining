@@ -1,9 +1,13 @@
 // _runtime/metro/05608__.js
-import shortOut from "../05609_shortOut.js";
-import overRest from "../05613_overRest.js";
-import flatten from "../05615_flatten.js";
+import registerAsset from "01118__.js";
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "262032a99df43d5b5fc14dd6e335ec5e",
+  name: "UserMinusIcon",
+  type: "png",
+});
