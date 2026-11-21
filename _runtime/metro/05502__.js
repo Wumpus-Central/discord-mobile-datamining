@@ -1,7 +1,33 @@
 // === Module 5502: ? ===
 
 // Module 5502
-import registerAsset from "module_1118" /* 1118 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Image = _mod17.Image;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "11be77dcd70d75753c8cf2c079b0771e", name: "TrashIcon", type: "png" });
+export function parsePossibleSources(source) {
+  const uri = source.uri;
+  if (typeof source === "string") {
+    const obj2 = { sourceName: source };
+    let obj = obj2;
+  } else {
+    if (typeof source === "object") {
+      if (!uri) {
+        obj = { sourceJson: null };
+        const _JSON = JSON;
+        obj.sourceJson = JSON.stringify(source);
+      }
+    }
+    if (typeof source !== "object") {
+      if (typeof source === "number") {
+        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
+      }
+    }
+    if (uri.includes(".lottie")) {
+      const obj4 = { sourceDotLottieURI: uri };
+    } else {
+      const obj5 = { sourceURL: uri };
+    }
+  }
+  return obj;
+}

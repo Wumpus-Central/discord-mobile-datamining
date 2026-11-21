@@ -1,12 +1,7 @@
 // === Module 5606: ? ===
 
 // Module 5606
-import baseGetAllKeys from "baseGetAllKeys" /* 656 */;
-import _mod5589 from "module_5589" /* 5589 */;
-import keysIn from "keysIn" /* 5591 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod5589);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cc60adc9d34b42157ecab0277b6b238d", name: "UserPlatformIcon", type: "png" });

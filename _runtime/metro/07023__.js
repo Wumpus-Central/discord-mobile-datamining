@@ -1,18 +1,7 @@
 // === Module 7023: ? ===
 
 // Module 7023
-import HeaderHeightContext from "HeaderHeightContext" /* 7022 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-require = arg1;
 
-export function useHeaderHeight() {
-  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3badf2b48a53beb45ce4acb0a2b90dbd", name: "MoreHorizontalIcon", type: "png" });

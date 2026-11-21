@@ -1,76 +1,79 @@
 // === Module 5106: ? ===
 
 // Module 5106
-import handlerIDToTag from "handlerIDToTag" /* 5057 */;
-import convertToHandlerTag from "convertToHandlerTag" /* 5078 */;
-import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 5083 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 5085 */;
+import nanoid from "nanoid" /* 1509 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
-  _require = attachedGestures;
-  prepare.prepare();
-  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
-    let tmp2 = attachedGestures.attachedGestures[num];
-    let obj = require("convertToHandlerTag");
-    let result = obj.checkGestureCallbacksForWorklets(tmp2);
-    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
-      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
+({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const memoResult = noop.memo((name) => {
+  name = name.name;
+  const handleOnMount = name.handleOnMount;
+  const handleOnUnmount = name.handleOnUnmount;
+  const handleOnUpdate = name.handleOnUpdate;
+  const children = name.children;
+  const portal = name(handleOnMount[1]).usePortal(name.hostName);
+  const addPortal = portal.addPortal;
+  const removePortal = portal.removePortal;
+  items = [name];
+  closure_7 = children(() => {
+    let nanoidResult = name;
+    if (!name) {
+      nanoidResult = nanoid.nanoid();
     }
-  }
-  attachedGestures = attachedGestures.attachedGestures;
-  attachedGestures.hasExternalRelations = true;
-  require("ghQueueMicrotask").ghQueueMicrotask(() => {
-    if (attachedGestures.isMounted) {
-      let arr = attachedGestures;
-      if (attachedGestures === tmp.attachedGestures) {
-        let tmp23 = gesturesToAttach;
-        let tmp21 = arr.length !== gesturesToAttach.length;
-        let num = 0;
-        let tmp22 = tmp21;
-        if (0 < gesturesToAttach.length) {
-          do {
-            let tmp3 = attachedGestures[num];
-            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
-            let flag = tmp21;
-            if (tmp4) {
-              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
-              tmp4 = tmp6;
-            }
-            if (tmp4) {
-              flag = true;
-            }
-            tmp3.config = gesturesToAttach[num].config;
-            tmp3.handlers = gesturesToAttach[num].handlers;
-            let obj = RNGestureHandlerModuleDefault;
-            let obj2 = transformIntoHandlerTags;
-            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS));
-            let obj3 = RNGestureHandlerModuleDefault;
-            let obj4 = convertToHandlerTag;
-            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
-            let obj5 = handlerIDToTag;
-            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
-            num = num + 1;
-            tmp21 = flag;
-            tmp22 = flag;
-            tmp23 = gesturesToAttach;
-            arr = attachedGestures;
-          } while (num < gesturesToAttach.length);
-        }
-        attachedGestures.hasExternalRelations = convertToHandlerTag.hasExternalRelations(tmp23);
-        if (attachedGestures.animatedHandlers) {
-          if (tmp22) {
-            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-            attachedGestures.animatedHandlers.value = found.map((handlers) => handlers.handlers);
-          }
-        }
-        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+    return nanoidResult;
+  }, items);
+  const tmp2 = addPortal();
+  const tmp3 = addPortal();
+  closure_9 = tmp3;
+  const tmp4 = addPortal();
+  const items1 = [handleOnMount, addPortal];
+  tmp2.current = handleOnUnmount(() => {
+    if (handleOnMount) {
+      tmp(() => addPortal(closure_1_7, children));
+    } else {
+      addPortal(closure_7, children);
+    }
+  }, items1);
+  const items2 = [handleOnUnmount, removePortal];
+  tmp3.current = handleOnUnmount(() => {
+    if (handleOnUnmount) {
+      tmp(() => removePortal(closure_1_7));
+    } else {
+      removePortal(closure_7);
+    }
+  }, items2);
+  const items3 = [handleOnUpdate, addPortal, children];
+  tmp4.current = handleOnUnmount(() => {
+    if (handleOnUpdate) {
+      tmp(() => addPortal(closure_1_7, children));
+    } else {
+      addPortal(closure_7, children);
+    }
+  }, items3);
+  handleOnUpdate(() => {
+    let current = ref.current;
+    if (current != null) {
+      current();
+    }
+    return () => {
+      const current = ref.current;
+      if (current != null) {
+        current();
       }
+      closure_1_8.current = undefined;
+      ref.current = undefined;
+      ref2.current = undefined;
+    };
+  }, []);
+  const items4 = [children];
+  handleOnUpdate(() => {
+    const current = ref2.current;
+    if (current != null) {
+      current();
     }
-  });
-}
+  }, items4);
+  return null;
+});
+memoResult.displayName = "Portal";
+
+export const Portal = memoResult;

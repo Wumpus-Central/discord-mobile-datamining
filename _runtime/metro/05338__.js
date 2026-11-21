@@ -1,64 +1,29 @@
 // === Module 5338: ? ===
 
 // Module 5338
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 5027 */;
-import _mod5339 from "module_5339" /* 5339 */;
-import noop_mod from "module_19" /* 19 */;
+import _mod1653 from "module_1653" /* 1653 */;
+import value2 from "value2" /* 5146 */;
+import _mod5150 from "module_5150" /* 5150 */;
+import BottomSheetContext from "BottomSheetContext" /* 5156 */;
+import noop from "module_19" /* 19 */;
 
-let noop = noop_mod;
-({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
-let noop = noop_mod;
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
-  focusHook = focusHook.focusHook;
-  if (focusHook === undefined) {
-    focusHook = animatedScrollableType;
-  }
-  let flag = focusHook.enableFooterMarginAdjustment;
-  if (flag === undefined) {
-    flag = false;
-  }
-  const onLayout = focusHook.onLayout;
-  ({ style, children } = focusHook);
-  const merged = Object.assign(focusHook, Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }));
-  let animatedScrollableContentOffsetY;
-  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
-  animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj = onLayout(animatedScrollableContentOffsetY[3]);
-  const bottomSheetContentContainerStyle = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetContentContainerStyle(flag, style);
-  items = [bottomSheetContentContainerStyle];
-  const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
-  const obj2 = onLayout(animatedScrollableContentOffsetY[3]);
-  const items2 = [onLayout, animatedContentHeight, enableDynamicSizing];
-  const tmp4 = animatedContentHeight(() => {
-    items = [bottomSheetContentContainerStyle, _mod5339.styles.container];
-    return items;
-  }, items);
-  const tmp5 = enableDynamicSizing(() => {
-    animatedScrollableContentOffsetY.value = 0;
-    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
-  }, items1);
-  focusHook(tmp5);
-  const obj3 = {};
-  const merged1 = Object.assign(merged);
-  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
-    }
-    if (onLayout) {
-      tmp3(nativeEvent);
-    }
-  }, items2);
-  obj3.style = tmp4;
-  obj3.children = children;
-  return <bottomSheetContentContainerStyle />;
-});
-memoResult.displayName = "BottomSheetView";
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 
-export default memoResult;
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod5150.useGestureEventsHandlersDefault;
+  }
+  const sharedValue = _mod1653.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod5150.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod5150.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const gestureHandler1 = _mod5150.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+};

@@ -1,38 +1,107 @@
 // === Module 5310: ? ===
 
 // Module 5310
-function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
+
+function _isNativeReflectConstruct() {
   try {
-    const iter = arg0[arg5](arg6);
-    value = iter.value;
-    if (iter.done) {
-      fn(value);
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      const resolved = Promise.resolve(value);
-      resolved.then(arg3, arg4);
+      callResult = call(constructResult);
     }
-  } catch (tmp13) {
-    fn2(tmp13);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-
-export default function _asyncToGenerator(arg0) {
-  closure_0 = arg0;
-  return function() {
-    const self = this;
-    closure_1 = arguments;
-    return new Promise((arg0, arg1) => {
-      _self = arg0;
-      closure_1 = arg1;
-      function _next(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
-      }
-      function _throw(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
-      }
-      const applyResult = _self.apply(self, closure_1);
-      closure_2 = applyResult;
-      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
-    });
-  };
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [{ code: "(function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};})" }];
+[tmp4] = items;
+function changeEventCalculator(force, force2) {
+  if (undefined === force2) {
+    const obj2 = { forceChange: force.force };
+    let obj = obj2;
+  } else {
+    obj = { forceChange: force.force - force2.force };
+  }
+  const merged = Object.assign(force);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 14930773822007;
+changeEventCalculator.__initData = tmp4;
+class ForceTouchGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ForceTouchGesture);
+    tmp2 = c2;
+    obj = c2(ForceTouchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = ForceTouchGesture;
+_inherits(ForceTouchGesture, fn(5193).ContinousBaseGesture);
+const entry = {
+  key: "minForce",
+  value: function minForce(minForce) {
+    this.config.minForce = minForce;
+    return this;
+  }
 };
+const items1 = [
+  entry,
+  {
+    key: "maxForce",
+    value: function maxForce(maxForce) {
+      this.config.maxForce = maxForce;
+      return this;
+    }
+  },
+  {
+    key: "feedbackOnActivation",
+    value: function feedbackOnActivation(feedbackOnActivation) {
+      this.config.feedbackOnActivation = feedbackOnActivation;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
+    }
+  }
+];
+
+export const ForceTouchGesture = _createClass(ForceTouchGesture, items1);

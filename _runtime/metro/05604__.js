@@ -1,15 +1,7 @@
 // === Module 5604: ? ===
 
 // Module 5604
-import _process from "_process" /* 539 */;
-import baseUnary from "baseUnary" /* 540 */;
-import baseIsMap from "baseIsMap" /* 5605 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const tmp = _process && _process.isMap;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsMap;
-}
 
-export default _module;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d66ecc5b57601bd45d541b2c12ca7702", name: "UserPlusIcon", type: "png" });

@@ -1,15 +1,7 @@
 // === Module 5602: ? ===
 
 // Module 5602
-import _process from "_process" /* 539 */;
-import baseUnary from "baseUnary" /* 540 */;
-import baseIsSet from "baseIsSet" /* 5603 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const tmp = _process && _process.isSet;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsSet;
-}
 
-export default _module;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b4d386a6c709f08f81d6e286fdb2ebc4", name: "FriendsIcon", type: "png" });

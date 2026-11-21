@@ -1,7 +1,7 @@
 // === Module 14666: ? ===
 
 // Module 14666
-import registerAsset from "module_1118" /* 1118 */;
+import _mod14667 from "module_14667" /* 14667 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b0762f0f9ef3f22f62e92b1be981b656", name: "ChevronLargeUpIcon", type: "png" });
+export default _mod14667();

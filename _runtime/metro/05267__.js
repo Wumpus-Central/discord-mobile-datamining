@@ -1,12 +1,19 @@
 // === Module 5267: ? ===
 
 // Module 5267
-import _mod5268 from "module_5268" /* 5268 */;
-import _mod5269 from "module_5269" /* 5269 */;
-import _mod5270 from "module_5270" /* 5270 */;
-import _mod5272 from "module_5272" /* 5272 */;
+import ComposedGestureName from "ComposedGestureName" /* 5235 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5244 */;
+import _mod5261 from "module_5261" /* 5261 */;
 
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export default function _slicedToArray(arg0, arg1) {
-  return _mod5268(arg0) || _mod5269(arg0, arg1) || _mod5270(arg0, arg1) || _mod5272();
-};
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5261.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+}

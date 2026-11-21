@@ -1,9 +1,7 @@
 // === Module 7778: ? ===
 
 // Module 7778
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGDefs", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true } };
 
-export default module_65.get("RNSVGDefs", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "04a2168426a5392d149f48315e795b77", name: "ic_crown_16px", type: "png" });

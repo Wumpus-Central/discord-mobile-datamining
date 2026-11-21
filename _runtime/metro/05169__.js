@@ -1,14 +1,7 @@
 // === Module 5169: ? ===
 
 // Module 5169
-import ComposedGestureName from "ComposedGestureName" /* 5116 */;
-import _mod5170 from "module_5170" /* 5170 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function useCompetingGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod5170.useComposedGesture.apply(items1);
-}
+export const findNodeHandle = _mod17.findNodeHandle;

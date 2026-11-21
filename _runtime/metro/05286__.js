@@ -1,15 +1,13 @@
 // === Module 5286: ? ===
 
 // Module 5286
-import noop from "module_19" /* 19 */;
+const require = globalThis.__r;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
-
-export const RecyclerViewContextProvider = context.Provider;
-export function useRecyclerViewContext() {
-  return useContext(context);
+for (const key10013 in require("module_5287")) {
+  arg5[key10013] = require("module_5287")[key10013];
+  continue;
 }
-export function useFlashListContext() {
-  return useContext(context);
+for (const key10017 in require("transformTapProps")) {
+  arg5[key10017] = require("transformTapProps")[key10017];
+  continue;
 }

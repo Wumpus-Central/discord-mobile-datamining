@@ -1,7 +1,24 @@
 // === Module 9262: ? ===
 
 // Module 9262
-import registerAsset from "module_1118" /* 1118 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300.5, height: 175, scales: [2, 3], hash: "767971903774f3e283939a2d77b5c958", name: "server_boosts", type: "png" });
+export default (obj) => {
+  if (obj instanceof Object) {
+    const _Array = Array;
+    if (!Array.isArray(obj)) {
+      obj = {};
+      for (const key10010 in arg0) {
+        if (!arg0.hasOwnProperty(key10010)) {
+          continue;
+        } else {
+          obj[key10010] = key10010;
+          continue;
+        }
+        continue;
+      }
+      return obj;
+    }
+  }
+  const error = new Error("keyMirror(...): Argument must be an object.");
+  throw error;
+};

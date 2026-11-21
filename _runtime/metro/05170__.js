@@ -1,77 +1,43 @@
 // === Module 5170: ? ===
 
 // Module 5170
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5125 */;
+import _mod5162 from "module_5162" /* 5162 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-require = arg1;
-let dependencyMap = arg6;
+({ useCallback: c2, useEffect: c3 } = noop);
 
-export function useComposedGesture(type) {
-  _require = type;
-  const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((type) => {
-    if (obj.isComposedGesture(type)) {
-      if (type.type === closure_0) {
-        let gestures = type.gestures;
-      }
-      return gestures;
-    }
-    gestures = [type];
-    obj = resolveInternalConfigProps;
-  });
-  dependencyMap = flatMapResult;
-  const flatMapResult1 = flatMapResult.flatMap((handlerTags) => {
-    if (obj.isComposedGesture(handlerTags)) {
-      handlerTags = handlerTags.handlerTags;
-    } else {
-      handlerTags = [];
-      handlerTags[0] = handlerTags.handlerTag;
-    }
-    return handlerTags;
-  });
-  if (obj2.containsDuplicates(flatMapResult1)) {
-    const _Error2 = Error;
-    const error = new Error(tmp2(5058).tagMessage("Each gesture can be used only once in the gesture composition."));
-    throw error;
-  } else {
-    let obj = { shouldUseReanimatedDetector: flatMapResult.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: flatMapResult.some((config) => config.config.dispatchesAnimatedEvents) };
-    if (obj.shouldUseReanimatedDetector) {
-      if (obj.dispatchesAnimatedEvents) {
-        const _Error = Error;
-        const error1 = new Error(tmp2(5058).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
-        throw error1;
-      }
-    }
-    const Reanimated = tmp2(5098).Reanimated;
-    let composedEventHandler;
-    if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(flatMapResult.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
-    }
-    const found = flatMapResult.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
-    let animatedEventHandler;
-    if (found.length > 0) {
-      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
-    }
-    const obj3 = { handlerTags: flatMapResult1, type, config: obj, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
-    const obj4 = {
-      jsEventHandler(arg0) {
-          for (const item10007 of c1) {
-            if (item10007.detectorCallbacks.jsEventHandler) {
-              let detectorCallbacks = tmp.detectorCallbacks;
-              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-            }
-            continue;
-          }
-        },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler
-    };
-    obj3.detectorCallbacks = obj4;
-    obj3.externalSimultaneousHandlers = [];
-    obj3.gestures = flatMapResult;
-    return obj3;
+export (scrollableRef, value, scrollableContentOffsetY, value2) => {
+  _require = scrollableRef;
+  dependencyMap = value;
+  let tmp = focusHook;
+  if (focusHook === undefined) {
+    tmp = value2;
   }
-  obj2 = require("resolveInternalConfigProps");
+  const bottomSheetInternal = require("module_5153").useBottomSheetInternal();
+  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
+  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
+  const setScrollableRef = bottomSheetInternal.setScrollableRef;
+  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
+  items = [scrollableRef, value, value2, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
+  tmp(scrollableContentOffsetY(() => {
+    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
+    animatedScrollableType.value = value;
+    isScrollableRefreshable.value = value2;
+    isContentHeightFixed.value = false;
+    const findNodeHandleResult = _mod5162.findNodeHandle(scrollableRef.current);
+    if (findNodeHandleResult) {
+      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
+      setScrollableRef(obj2);
+    } else {
+      const _console = console;
+      console.warn("Couldn't find the scrollable node handle id!");
+    }
+    return () => {
+      removeScrollableRef(scrollableRef);
+    };
+  }, items));
 }

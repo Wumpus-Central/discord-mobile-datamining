@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/download_apps", scales: [1], hash: "be9275894c73751881c1dcb597f10f76", name: "MetaQuestAppUpsell.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/ZGVzaWdu", scales: [1], hash: "5bdc78c4d5c97aa07a2b606ba9ef78ab", name: "cs.messages.5bdc78c4d5c97aa07a2b606ba9ef78ab.compiled.messages", type: "jsona" });

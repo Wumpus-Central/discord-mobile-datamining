@@ -1,109 +1,49 @@
 // === Module 15505: ? ===
 
 // Module 15505
-import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 15506 */;
+import compareKV from "compareKV" /* 15507 */;
+import likelySubtags from "likelySubtags" /* 15510 */;
+import _mod15511 from "module_15511" /* 15511 */;
+import e_mod from "e" /* 1158 */;
 
-function monadic(call, get, fn, image) {
-  let tmp2 = image;
-  if (!tmp) {
-    tmp2 = fn(image);
-  }
-  value = get.get(tmp2);
-  if (undefined !== value) {
-    return value;
-  } else {
-    const self = this;
-    let result = call;
-    call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(image) : call(self, image);
-    result = get.set(tmp2, tmp6);
-  }
-}
-function variadic(apply, get, fn) {
-  const call = slice.call;
-  if (typeof call === "unknown") {
-    let substr = slice(3);
-  } else {
-    substr = call(arguments, 3);
-  }
-  const tmp3 = fn(substr);
-  value = get.get(tmp3);
-  if (undefined === value) {
-    const self = this;
-    const applyResult = apply.apply(this, substr);
-    const result = get.set(tmp3, applyResult);
-    value = applyResult;
-  }
-  return value;
-}
-function strategyDefault(c165, cache) {
-  cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
-}
-let _classCallCheck = _classCallCheck_mod;
-function serializerDefault() {
-  return JSON.stringify(arguments);
-}
-class ObjectWithoutPrototypeCache {
-  constructor() {
-    tmp = closure_0(this, ObjectWithoutPrototypeCache);
-    this.cache = Object.create(null);
-    return;
-  }
-}
-_classCallCheck = ObjectWithoutPrototypeCache;
-const entry = {
-  key: "get",
-  value: function get(arg0) {
-    return this.cache[arg0];
-  }
-};
-const items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      this.cache[arg0] = arg1;
-    }
-  }
-];
-let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
-let closure_6 = {
-  create() {
-    return new closure_5();
-  }
-};
+const require = globalThis.__r;
 
-export function memoize(arg0, cache) {
-  if (cache) {
-    if (cache.cache) {
-      cache = cache.cache;
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod15511, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
     }
-    if (cache) {
-      if (cache.serializer) {
-        let serializer = cache.serializer;
-      }
-      if (cache) {
-        if (cache.strategy) {
-          let strategy = cache.strategy;
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_15509").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
         }
-        const obj = { cache, serializer };
-        return strategy(arg0, obj);
-      }
-      strategy = strategyDefault;
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
     }
-    serializer = serializerDefault;
   }
-  cache = closure_6;
+  return items;
 }
-export const strategies = {
-  variadic: function strategyVariadic(c165, cache) {
-    cache = cache.cache;
-    return variadic.bind(this, c165, cache.create(), cache.serializer);
-  },
-  monadic: function strategyMonadic(c165, cache) {
-    cache = cache.cache;
-    return monadic.bind(this, c165, cache.create(), cache.serializer);
-  }
-};
+export const isStructurallyValidLanguageTag = require("module_15509").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_15509").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_15509").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_15509").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_15509").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_15509").parseUnicodeLocaleId;

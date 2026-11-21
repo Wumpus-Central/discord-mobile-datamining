@@ -1,7 +1,5 @@
 // === Module 10826: ? ===
 
 // Module 10826
-import registerAsset from "module_1118" /* 1118 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4f5dc667b92ff05a99d9028260a9bf5b", name: "ImageSparkleIcon", type: "png" });
+export default "\"use strict\";(()=>{var a=\"discordEmbeddedAppShim\";function g(e){return e!=null&&typeof e==\"object\"&&Object.getOwnPropertyDescriptor(e,a)!=null}function S(e){let t=Object.getOwnPropertyDescriptor(e,\"nonce\")?.value;return typeof t==\"string\"?t:null}function E(e,t,o,l){let i=new globalThis.MessageChannel,{port1:n,port2:d}=i;l({post(r){n.postMessage(r)},listen(r){n.onmessage=C=>r(C.data)},close(){n.close()}});let s={[a]:\"connection_open\",nonce:o};e.postMessage(s,t,[d])}var c=\"discordEmbeddedAppShimBridge\",h=\"DiscordEmbeddedAppShimBridge\";var p=new Map,u=0;function m(e){let{ReactNativeWebView:t}=window;t.postMessage(JSON.stringify(e))}window[h]={start(e,t){window.addEventListener(\"message\",o=>{if(!g(o.data))return;o.stopImmediatePropagation();let l=document.getElementById(t),i=l instanceof HTMLIFrameElement?l.contentWindow:null,n=S(o.data);i==null||o.source!==i||o.origin===\"null\"||o.data[a]!==\"hello\"||n==null||E(i,o.origin,n,d=>{let s=++u;p.set(s,d),m({[c]:e,event:\"open\",pipeId:s}),d.listen(r=>m({[c]:e,event:\"message\",pipeId:s,message:r}))})},!0)},post(e,t){p.get(e)?.post(t)},close(e){p.get(e)?.close(),p.delete(e)}};})();";

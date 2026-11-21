@@ -1,29 +1,25 @@
 // === Module 5226: ? ===
 
 // Module 5226
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod5227 from "module_5227" /* 5227 */;
-import noop_mod from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef5209 from "module_5209" /* 5209 */;
+import _mod5221 from "module_5221" /* 5221 */;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    items = [_mod5227.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
+_mod19.useCallback;
+
+export function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        const tmp4 = _modDef5209;
+        previousViewTag.previousViewTag = tmp4(_mod5221.resolveHostInstance(previousViewTag.viewRef));
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
   }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(5228).BottomSheetBackground;
-  }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
-
-export const BottomSheetBackgroundContainer = memoResult;
+}

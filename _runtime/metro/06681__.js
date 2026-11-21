@@ -1,7 +1,43 @@
 // === Module 6681: ? ===
 
 // Module 6681
-import registerAsset from "module_1118" /* 1118 */;
+function _extends() {
+  if (Object.assign) {
+    const _Object = Object;
+    exports = assign.bind();
+  } else {
+    exports = (arg0) => {
+      for (let num = 1; num < arguments.length; num = num + 1) {
+        let tmp = arguments[num];
+        for (const key10011 in tmp) {
+          hasOwnProperty = {}.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10011);
+          } else {
+            hasOwnPropertyResult = call(tmp, key10011);
+          }
+          if (!hasOwnPropertyResult) {
+            continue;
+          } else {
+            arg0[key10011] = tmp[key10011];
+            continue;
+          }
+          continue;
+        }
+      }
+      return arg0;
+    };
+  }
+  module.exports = exports;
+  const apply = exports.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+  } else {
+    applyArgumentsResult = apply(null, arguments);
+  }
+  return applyArgumentsResult;
+}
+let exports = _extends;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 500, height: 500, scales: [1], hash: "92530bd573dd795df92f429bb50bdfa5", name: "img_account_sync_letterboxd_dark", type: "svg" });
+export default _extends;

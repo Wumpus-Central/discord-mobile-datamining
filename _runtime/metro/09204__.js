@@ -1,7 +1,12 @@
 // === Module 9204: ? ===
 
 // Module 9204
-import registerAsset from "module_1118" /* 1118 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "f6149fc51c6f815b5a58a1e50a88555c", name: "img_subheader_resub_mobile", type: "png" });
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return duration(() => closure_0({}), []);
+};

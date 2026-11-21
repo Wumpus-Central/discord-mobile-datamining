@@ -1,25 +1,7 @@
 // === Module 5147: ? ===
 
 // Module 5147
-import reanimatedWrapper from "reanimatedWrapper" /* 5098 */;
+import BottomSheetDefault from "BottomSheet" /* 5148 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function createLastUpdateEventMap() {
-  const Worklets = reanimatedWrapper.Worklets;
-  let createShareable;
-  if (Worklets != null) {
-    createShareable = Worklets.createShareable;
-  }
-  if (undefined !== createShareable) {
-    if (undefined !== reanimatedWrapper.Worklets.UIRuntimeId) {
-      if (undefined !== reanimatedWrapper.Reanimated) {
-        const Worklets2 = reanimatedWrapper.Worklets;
-        const _Map = Map;
-        const map = new Map();
-        return Worklets2.createShareable(reanimatedWrapper.Worklets.UIRuntimeId, map);
-      }
-    }
-  }
-}
+export default BottomSheetDefault;

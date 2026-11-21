@@ -1,12 +1,12 @@
 // === Module 5306: ? ===
 
 // Module 5306
-import _modDef5295 from "module_5295" /* 5295 */;
-import _classCallCheck_mod from "module_5276" /* 5276 */;
-import _createClass from "module_5277" /* 5277 */;
-import _getPrototypeOf from "module_5297" /* 5297 */;
-import _get from "module_5298" /* 5298 */;
-import _inherits from "module_5300" /* 5300 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -28,217 +28,56 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-_modDef5295;
-class RVLinearLayoutManagerImpl {
-  constructor(arg0, arg1) {
+_possibleConstructorReturnDefault;
+let items = [{ code: "(function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};})" }];
+[tmp4] = items;
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
+    let obj = obj2;
+  } else {
+    obj = { scaleChange: scale.scale / scale2.scale };
+  }
+  const merged = Object.assign(scale);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 3108914846004;
+changeEventCalculator.__initData = tmp4;
+class PinchGesture {
+  constructor() {
     self = this;
-    tmp = closure_0(this, RVLinearLayoutManagerImpl);
-    items = [, ];
-    items[0] = global;
-    items[1] = fn;
+    tmp = closure_0(this, PinchGesture);
     tmp2 = c2;
-    obj = c2(RVLinearLayoutManagerImpl);
+    obj = c2(PinchGesture);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.hasSize = false;
-    tmp3Result.tallestItemHeight = 0;
-    windowSize = global.windowSize;
-    tmp3Result.boundedSize = tmp3Result.horizontal ? windowSize.height : windowSize.width;
-    tmp3Result.hasSize = tmp3Result.boundedSize > 0;
+    tmp3Result.handlerName = "PinchGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = RVLinearLayoutManagerImpl;
-_inherits(RVLinearLayoutManagerImpl, fn(5302).RVLayoutManager);
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(5193).ContinousBaseGesture);
 const entry = {
-  key: "updateLayoutParams",
-  value: function updateLayoutParams(windowSize) {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
     const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "updateLayoutParams", this);
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
-    items = [windowSize];
-    !fn(items);
-    windowSize = windowSize.windowSize;
-    self.boundedSize = self.horizontal ? windowSize.height : windowSize.width;
-    if (!tmp2) {
-      if (self.layouts.length > 0) {
-        self.recomputeLayouts(0, self.layouts.length - 1);
-        self.requiresRepaint = true;
-      }
-    }
+    items = [arg0];
+    return fn(items);
   }
 };
-let items = [
-  entry,
-  {
-    key: "processLayoutInfo",
-    value: function processLayoutInfo(arg0, arg1) {
-      const self = this;
-      const iter = arg0[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let dimensions = nextResult.dimensions;
-        let tmp2 = self.layouts[nextResult.index];
-        let tmp3 = tmp2;
-        if (self.horizontal) {
-          let boundedSize = dimensions.width;
-        } else {
-          boundedSize = self.boundedSize;
-        }
-        tmp2.width = boundedSize;
-        tmp3.isHeightMeasured = true;
-        tmp3.isWidthMeasured = true;
-        tmp3.height = dimensions.height;
-        continue;
-      }
-      if (tmp7) {
-        const result = self.normalizeLayoutHeights(arg0);
-      }
-    }
-  },
-  {
-    key: "estimateLayout",
-    value: function estimateLayout(arg0) {
-      const self = this;
-      if (this.horizontal) {
-        let boundedSize = self.getEstimatedWidth(arg0);
-      } else {
-        boundedSize = self.boundedSize;
-      }
-      this.layouts[arg0].width = boundedSize;
-      this.layouts[arg0].height = self.getEstimatedHeight(arg0);
-      this.layouts[arg0].isWidthMeasured = !self.horizontal;
-      this.layouts[arg0].enforcedWidth = !self.horizontal;
-    }
-  },
-  {
-    key: "getLayoutSize",
-    value: function getLayoutSize() {
-      const self = this;
-      if (0 === this.layouts.length) {
-        return { width: 0, height: 0 };
-      } else {
-        const size = self.layouts[self.layouts.length - 1];
-        if (self.horizontal) {
-          let boundedSize = size.x + size.width;
-        } else {
-          boundedSize = self.boundedSize;
-        }
-        const size1 = { width: boundedSize, height: null };
-        if (self.horizontal) {
-          const tallestItem = self.tallestItem;
-          let height;
-          if (tallestItem != null) {
-            height = tallestItem.height;
-          }
-          if (height == null) {
-            height = self.boundedSize;
-          }
-          let sum = height;
-        } else {
-          sum = size.y + size.height;
-        }
-        size1.height = sum;
-        return size1;
-      }
-    }
-  },
-  {
-    key: "normalizeLayoutHeights",
-    value: function normalizeLayoutHeights(arg0) {
-      const self = this;
-      let tmp;
-      const iter = arg0[Symbol.iterator]();
-      while (iter !== undefined) {
-        let tmp2 = self.layouts[iter.next().index];
-        let num = tmp2.minHeight;
-        let tmp3 = tmp2;
-        if (num == null) {
-          num = 0;
-        }
-        let tmp4 = tmp2.height > num;
-        if (tmp4) {
-          let num2;
-          if (tmp != null) {
-            num2 = tmp.height;
-          }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          tmp4 = tmp3.height > num2;
-        }
-        if (tmp4) {
-          tmp = tmp2;
-        }
-        continue;
-      }
-      if (tmp) {
-        if (tmp.height !== self.tallestItemHeight) {
-          let num3 = tmp.height;
-          if (tmp.height < self.tallestItemHeight) {
-            self.requiresRepaint = true;
-            num3 = 0;
-          }
-          const layouts = self.layouts;
-          for (const item10035 of layouts) {
-            if (num3 > 0) {
-              item10035.height = tmp.height;
-            }
-            item10035.minHeight = num3;
-            continue;
-          }
-          tmp.minHeight = 0;
-          self.tallestItem = tmp;
-          self.tallestItemHeight = tmp.height;
-        }
-      }
-    }
-  },
-  {
-    key: "recomputeLayouts",
-    value: function recomputeLayouts(arg0, arg1) {
-      const self = this;
-      let sum = arg0;
-      if (arg0 <= arg1) {
-        do {
-          let layout = self.getLayout(sum);
-          if (0 === sum) {
-            layout.x = 0;
-            layout.y = 0;
-          } else {
-            let size = self.getLayout(sum - 1);
-            let num = 0;
-            if (self.horizontal) {
-              num = size.x + size.width;
-            }
-            layout.x = num;
-            let num2 = 0;
-            if (!self.horizontal) {
-              num2 = size.y + size.height;
-            }
-            layout.y = num2;
-          }
-          if (self.horizontal) {
-            if (self.hasSize) {
-              layout.minHeight = self.boundedSize;
-            }
-          } else {
-            layout.width = self.boundedSize;
-          }
-          sum = sum + 1;
-        } while (sum <= arg1);
-      }
-    }
-  }
-];
+const items1 = [entry];
 
-export const RVLinearLayoutManagerImpl = _createClass(RVLinearLayoutManagerImpl, items);
+export const PinchGesture = _createClass(PinchGesture, items1);

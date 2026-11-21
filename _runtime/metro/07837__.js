@@ -1,9 +1,21 @@
 // === Module 7837: ? ===
 
 // Module 7837
-import module_65 from "module_65" /* 65 */;
+import _mod514 from "module_514" /* 514 */;
+import baseIteratee from "baseIteratee" /* 583 */;
+import arrayAggregator from "arrayAggregator" /* 7838 */;
+import baseAggregator from "baseAggregator" /* 7839 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGRadialGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, fx: true, fy: true, cx: true, cy: true, rx: true, ry: true, gradient: true, gradientUnits: true, gradientTransform: true } };
 
-export default module_65.get("RNSVGRadialGradient", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function createAggregator(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return (arg0, arg1) => {
+    if (_mod514(arg0)) {
+      let tmpResult = arrayAggregator;
+    } else {
+      tmpResult = baseAggregator;
+    }
+    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
+  };
+};

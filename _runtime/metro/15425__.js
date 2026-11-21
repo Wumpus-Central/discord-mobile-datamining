@@ -1,14 +1,7 @@
 // === Module 15425: ? ===
 
 // Module 15425
-import _mod15426 from "module_15426" /* 15426 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default (arg0) => {
-  if (_mod15426(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "28f8b1169842d727fc6c85639ed0d766", name: "llm-pilot.compiled.messages", type: "jsona" });

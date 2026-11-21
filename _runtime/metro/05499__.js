@@ -1,7 +1,13 @@
 // === Module 5499: ? ===
 
 // Module 5499
-import registerAsset from "module_1118" /* 1118 */;
+import _mod5500 from "module_5500" /* 5500 */;
 
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleInformationIcon-secondary", type: "png" });
+for (const key10016 in require("module_5503")) {
+  arg5[key10016] = require("module_5503")[key10016];
+  continue;
+}
+
+export default _mod5500.LottieView;

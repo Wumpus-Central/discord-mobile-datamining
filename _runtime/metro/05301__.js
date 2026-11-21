@@ -1,19 +1,7 @@
 // === Module 5301: ? ===
 
 // Module 5301
-function _setPrototypeOf(arg0, arg1) {
-  if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
-  } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0, arg1);
-}
-let exports = _setPrototypeOf;
+import PressableDefault from "Pressable" /* 5302 */;
 
-export default _setPrototypeOf;
+
+export default PressableDefault;

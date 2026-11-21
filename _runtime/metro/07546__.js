@@ -1,7 +1,10 @@
 // === Module 7546: ? ===
 
 // Module 7546
-import registerAsset from "module_1118" /* 1118 */;
+import _mod7548 from "module_7548" /* 7548 */;
+
+const require = globalThis.__r;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d9312bb32f25ade901c17406f7f53267", name: "ImageLockIcon", type: "png" });
+export const useClipboard = require("module_7547").useClipboard;
+export default _mod7548.Clipboard;

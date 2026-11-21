@@ -1,19 +1,17 @@
 // === Module 5153: ? ===
 
 // Module 5153
-import ComposedGestureName from "ComposedGestureName" /* 5116 */;
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5125 */;
-import _mod5142 from "module_5142" /* 5142 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5154 from "module_5154" /* 5154 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const useContext = _mod19.useContext;
 
-export function useManualGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod5154.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
+    }
   }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5142.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
+  return tmp;
 }

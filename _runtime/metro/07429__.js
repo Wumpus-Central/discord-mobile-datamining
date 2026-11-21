@@ -1,37 +1,7 @@
 // === Module 7429: ? ===
 
 // Module 7429
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
-const enforcing = TurboModuleRegistry.getEnforcing("RNCClipboard");
-const RNCClipboard_TEXT_CHANGED = "RNCClipboard_TEXT_CHANGED";
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcing);
-const listenerCount = nativeEventEmitter.listenerCount;
-let fn = listenerCount;
-if (listenerCount) {
-  const listenerCount2 = nativeEventEmitter.listenerCount;
-  fn = listenerCount2.bind(nativeEventEmitter);
-} else {
-  fn = (arg0) => nativeEventEmitter.listeners(arg0).length;
-}
 
-export default enforcing;
-export (arg0) => {
-  if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
-    enforcing.setListener();
-  }
-  const addListenerResult = nativeEventEmitter.addListener(RNCClipboard_TEXT_CHANGED, arg0);
-  addListenerResult._remove = addListenerResult.remove;
-  addListenerResult.remove = function() {
-    this._remove();
-    if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
-      enforcing.removeListener();
-    }
-  };
-  return addListenerResult;
-}
-export () => {
-  nativeEventEmitter.removeAllListeners(RNCClipboard_TEXT_CHANGED);
-  enforcing.removeListener();
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "45c8ad8f30ca8563a8afaab90a692e66", name: "MagnifyingGlassIcon", type: "png" });
