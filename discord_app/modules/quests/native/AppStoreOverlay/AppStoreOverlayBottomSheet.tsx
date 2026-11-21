@@ -1,17 +1,17 @@
-// === Module 9884: AppStoreOverlayBottomSheet ===
+// === Module 10004: AppStoreOverlayBottomSheet ===
 
-// Module 9884 (AppStoreOverlayBottomSheet)
-import openURLDefault from "openURL" /* 5469 */;
-import AnalyticsActions from "AnalyticsActions" /* 8301 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 9880 */;
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 9885 */;
+// Module 10004 (AppStoreOverlayBottomSheet)
+import openURLDefault from "openURL" /* 5588 */;
+import AnalyticsActions from "AnalyticsActions" /* 8421 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10000 */;
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 10005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");

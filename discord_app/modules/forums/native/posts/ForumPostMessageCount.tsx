@@ -1,19 +1,19 @@
-// === Module 12765: ForumPostMessageCount ===
+// === Module 12887: ForumPostMessageCount ===
 
-// Module 12765 (ForumPostMessageCount)
+// Module 12887 (ForumPostMessageCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import ChatIcon from "ChatIcon" /* 7552 */;
-import ForumHooks from "ForumHooks" /* 8497 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11556 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import ChatIcon from "ChatIcon" /* 7672 */;
+import ForumHooks from "ForumHooks" /* 8617 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11676 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
 let PlatformUtils = fn(1378);
 let num = 0;

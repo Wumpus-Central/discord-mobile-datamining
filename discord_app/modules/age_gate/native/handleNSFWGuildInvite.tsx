@@ -1,15 +1,15 @@
-// === Module 10401: handleNSFWGuildInvite ===
+// === Module 10521: handleNSFWGuildInvite ===
 
-// Module 10401 (handleNSFWGuildInvite)
+// Module 10521 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1071 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import GuildRecord from "GuildRecord" /* 4661 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5456 */;
-import AgeNoticeConstants from "AgeNoticeConstants" /* 6303 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6304 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10402 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10404 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import GuildRecord from "GuildRecord" /* 4780 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5575 */;
+import AgeNoticeConstants from "AgeNoticeConstants" /* 6422 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6423 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10522 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10524 */;
+import GuildStore from "GuildStore" /* 4784 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

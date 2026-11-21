@@ -1,6 +1,6 @@
-// === Module 11835: useFoldSeam ===
+// === Module 11955: useFoldSeam ===
 
-// Module 11835 (useFoldSeam)
+// Module 11955 (useFoldSeam)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/screen/native/useFoldSeam.tsx");

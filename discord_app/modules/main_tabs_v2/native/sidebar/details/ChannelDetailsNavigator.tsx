@@ -1,14 +1,14 @@
-// === Module 18794: ChannelDetailsNavigator ===
+// === Module 18921: ChannelDetailsNavigator ===
 
-// Module 18794 (ChannelDetailsNavigator)
+// Module 18921 (ChannelDetailsNavigator)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import HeaderShared from "HeaderShared" /* 8441 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11526 */;
-import _modDef13607 from "module_13607" /* 13607 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 18795 */;
+import HeaderShared from "HeaderShared" /* 8561 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11646 */;
+import _modDef13729 from "module_13729" /* 13729 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 18922 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
 
 require = fn;
 function ConnectedCreateThreadHeaderButton(channelId) {
@@ -25,26 +25,26 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(6774).useCanStartThread(channel);
+  const canStartThread = channel(6893).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1112).intl;
     obj2.accessibilityLabel = intl.string(tmp(1112).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13607;
-    tmp5 = closure_9(tmp(8441).HeaderIconButton, obj2);
+    obj2.source = _modDef13729;
+    tmp5 = closure_9(tmp(8561).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(10411).ChannelDetailsNavigatorScreens;
+const constants = fn(10531).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const SearchNavigatorScreens = fn(18608).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18735).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = Object.freeze({});
-const NativeStackNavigator = fn(8518);
+const NativeStackNavigator = fn(8638);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
@@ -131,7 +131,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(8441);
+            const obj = route(8561);
             obj2.shouldHandleSafeArea = route(1378).isAndroid();
             return obj.renderHeader(obj2);
           },
@@ -169,7 +169,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(8441);
+          const obj = route(8561);
           obj2.shouldHandleSafeArea = route(1378).isAndroid();
           return obj.renderHeader(obj2);
         },

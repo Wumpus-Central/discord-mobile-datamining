@@ -1,15 +1,15 @@
-// === Module 18683: SearchHistoricalIndexingHeader ===
+// === Module 18810: SearchHistoricalIndexingHeader ===
 
-// Module 18683 (SearchHistoricalIndexingHeader)
-import TrackingDefault from "Tracking" /* 13098 */;
+// Module 18810 (SearchHistoricalIndexingHeader)
+import TrackingDefault from "Tracking" /* 13220 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 
 const require = fn;
-const SearchConstants = fn(8456);
+const SearchConstants = fn(8576);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_7 = createStyles.createStyles({ header: { marginBottom: 16 }, headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx");

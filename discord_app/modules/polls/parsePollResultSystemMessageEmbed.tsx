@@ -1,6 +1,6 @@
-// === Module 8711: parsePollResultSystemMessageEmbed ===
+// === Module 8831: parsePollResultSystemMessageEmbed ===
 
-// Module 8711 (parsePollResultSystemMessageEmbed)
+// Module 8831 (parsePollResultSystemMessageEmbed)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");

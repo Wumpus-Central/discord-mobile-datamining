@@ -1,34 +1,34 @@
-// === Module 9963: QuickSwitcherActionCreators ===
+// === Module 10083: QuickSwitcherActionCreators ===
 
-// Module 9963 (QuickSwitcherActionCreators)
+// Module 10083 (QuickSwitcherActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import transitionToChannel from "transitionToChannel" /* 5527 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6410 */;
-import transitionToGuild from "transitionToGuild" /* 6716 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 6748 */;
-import ValidationUtilsDefault from "ValidationUtils" /* 7140 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7142 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7954 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9649 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
-import sortByMatchScore from "sortByMatchScore" /* 9943 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 9966 */;
-import ChannelTabsActionCreators from "ChannelTabsActionCreators" /* 9967 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 9968 */;
-import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 9969 */;
-import showChannelTabLimitToast from "showChannelTabLimitToast" /* 9970 */;
+import transitionToChannel from "transitionToChannel" /* 5646 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6529 */;
+import transitionToGuild from "transitionToGuild" /* 6835 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 6867 */;
+import ValidationUtilsDefault from "ValidationUtils" /* 7260 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7262 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9769 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9774 */;
+import sortByMatchScore from "sortByMatchScore" /* 10063 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 10086 */;
+import ChannelTabsActionCreators from "ChannelTabsActionCreators" /* 10087 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10088 */;
+import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 10089 */;
+import showChannelTabLimitToast from "showChannelTabLimitToast" /* 10090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 9964 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2161 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9942 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 10084 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2162 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 10062 */;
 
 const require = globalThis.__r;
 
@@ -365,20 +365,20 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6438).InAppNavigationType;
-const ChannelRecordBase = fn(4647).ChannelRecordBase;
+const InAppNavigationType = fn(6557).InAppNavigationType;
+const ChannelRecordBase = fn(4766).ChannelRecordBase;
 const Constants = fn(1071);
 ({ Layers, ME: map1, AppContext: closure_14, AnalyticEvents: closure_15, AnalyticsLocations: closure_16, AnalyticsPages: closure_17, Routes: closure_18 } = Constants);
-const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4769).isStaticChannelRoute;
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let obj = {};
-obj[fn(9943).AutocompleterQuerySymbols.USER] = fn(9943).AutocompleterResultTypes.USER;
-obj[fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9943).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9943).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(9943).AutocompleterQuerySymbols.GUILD] = fn(9943).AutocompleterResultTypes.GUILD;
-obj[fn(9943).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9943).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(10063).AutocompleterQuerySymbols.USER] = fn(10063).AutocompleterResultTypes.USER;
+obj[fn(10063).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(10063).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(10063).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(10063).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(10063).AutocompleterQuerySymbols.GUILD] = fn(10063).AutocompleterResultTypes.GUILD;
+obj[fn(10063).AutocompleterQuerySymbols.GAME_PROFILE] = fn(10063).AutocompleterResultTypes.GAME_PROFILE;
 let closure_21 = Object.freeze(obj);
-const regExp = new RegExp("^" + fn(9943).AutocompleterQuerySymbols.USER + "|" + fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL + "|" + fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL + "|\\" + fn(9943).AutocompleterQuerySymbols.GUILD + "|\\" + fn(9943).AutocompleterQuerySymbols.GAME_PROFILE);
+const regExp = new RegExp("^" + fn(10063).AutocompleterQuerySymbols.USER + "|" + fn(10063).AutocompleterQuerySymbols.TEXT_CHANNEL + "|" + fn(10063).AutocompleterQuerySymbols.VOICE_CHANNEL + "|\\" + fn(10063).AutocompleterQuerySymbols.GUILD + "|\\" + fn(10063).AutocompleterQuerySymbols.GAME_PROFILE);
 let items = [, , ];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
 const set = new Set(items);
@@ -496,7 +496,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7737).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -508,7 +508,7 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9967);
+                      const obj = tmp5(10087);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
@@ -553,7 +553,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7737).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -565,7 +565,7 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9967);
+                      const obj = tmp5(10087);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;

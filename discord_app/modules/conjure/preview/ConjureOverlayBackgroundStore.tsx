@@ -1,6 +1,6 @@
-// === Module 6859: ConjureOverlayBackgroundStore ===
+// === Module 6978: ConjureOverlayBackgroundStore ===
 
-// Module 6859 (ConjureOverlayBackgroundStore)
+// Module 6978 (ConjureOverlayBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

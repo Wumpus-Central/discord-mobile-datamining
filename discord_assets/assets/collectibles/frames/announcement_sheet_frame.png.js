@@ -1,6 +1,6 @@
-// === Module 18947: ? ===
+// === Module 19074: ? ===
 
-// Module 18947
+// Module 19074
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js");

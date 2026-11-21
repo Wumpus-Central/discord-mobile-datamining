@@ -1,9 +1,9 @@
-// === Module 6730: SocialLayerStorefrontStore ===
+// === Module 6849: SocialLayerStorefrontStore ===
 
-// Module 6730 (SocialLayerStorefrontStore)
+// Module 6849 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUserSettingsStoreUpdate() {

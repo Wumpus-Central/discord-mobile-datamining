@@ -1,20 +1,20 @@
-// === Module 18177: ConjureAwaitingUser ===
+// === Module 18304: ConjureAwaitingUser ===
 
-// Module 18177 (ConjureAwaitingUser)
+// Module 18304 (ConjureAwaitingUser)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
+import timing_timing from "timing/timing" /* 5123 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { ring: null };
-const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(18176).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
+const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(18303).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);
 let closure_7 = { code: "(function ConjureAwaitingUserTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };

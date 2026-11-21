@@ -1,9 +1,9 @@
-// === Module 8821: DynamicBadgeTooltip ===
+// === Module 8941: DynamicBadgeTooltip ===
 
-// Module 8821 (DynamicBadgeTooltip)
+// Module 8941 (DynamicBadgeTooltip)
 import util from "util" /* 1112 */;
-import Pressables from "Pressables" /* 6910 */;
-import useTooltip from "useTooltip" /* 8822 */;
+import Pressables from "Pressables" /* 7030 */;
+import useTooltip from "useTooltip" /* 8942 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

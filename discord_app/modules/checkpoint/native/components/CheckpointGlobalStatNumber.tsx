@@ -1,10 +1,10 @@
-// === Module 12627: CheckpointGlobalStatNumber ===
+// === Module 12749: CheckpointGlobalStatNumber ===
 
-// Module 12627 (CheckpointGlobalStatNumber)
+// Module 12749 (CheckpointGlobalStatNumber)
 import nativeDefault from "native" /* 575 */;
-import CheckpointStatNumber from "CheckpointStatNumber" /* 12601 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 12602 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12628 */;
+import CheckpointStatNumber from "CheckpointStatNumber" /* 12723 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 12724 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12750 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 1.3392857142857142;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_8 }, croppedContainer: null, uncroppedContainer: null, clip: null, value: null, globe: null, globeImage: null };
 let obj3 = { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_8 };
 obj2.croppedContainer = { marginTop: -nativeDefault.space.PX_30, marginBottom: -nativeDefault.space.PX_20 };

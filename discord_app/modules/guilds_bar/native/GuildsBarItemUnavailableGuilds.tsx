@@ -1,18 +1,18 @@
-// === Module 17801: GuildsBarItemUnavailableGuilds ===
+// === Module 17927: GuildsBarItemUnavailableGuilds ===
 
-// Module 17801 (GuildsBarItemUnavailableGuilds)
+// Module 17927 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
-import _modDef17788 from "module_17788" /* 17788 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
+import _modDef17914 from "module_17914" /* 17914 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6432 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;
@@ -40,8 +40,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17788 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17788 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17914 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17914 });
     tmp5 = <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</Pressable>;
   }
   return tmp5;

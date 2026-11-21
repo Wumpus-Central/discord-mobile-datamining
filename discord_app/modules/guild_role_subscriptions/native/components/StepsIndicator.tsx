@@ -1,12 +1,12 @@
-// === Module 19921: components/StepsIndicator ===
+// === Module 20048: components/StepsIndicator ===
 
-// Module 19921 (components/StepsIndicator)
+// Module 20048 (components/StepsIndicator)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import Text_Text from "Text/Text" /* 5385 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import Text_Text from "Text/Text" /* 5504 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const _modDef1653 = _mod1653;
 
@@ -83,7 +83,7 @@ function StepNode(isCurrent) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" }, emptyNode: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
 obj2.emptyNode = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };

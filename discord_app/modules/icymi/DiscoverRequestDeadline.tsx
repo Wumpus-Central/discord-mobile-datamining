@@ -1,6 +1,6 @@
-// === Module 9925: DiscoverRequestDeadline ===
+// === Module 10045: DiscoverRequestDeadline ===
 
-// Module 9925 (DiscoverRequestDeadline)
+// Module 10045 (DiscoverRequestDeadline)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _withDiscoverRequestDeadline(arg0, arg1) {

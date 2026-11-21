@@ -1,18 +1,18 @@
-// === Module 19361: EntityVersionsManager ===
+// === Module 19488: EntityVersionsManager ===
 
-// Module 19361 (EntityVersionsManager)
+// Module 19488 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 8233 */;
-import EmojiStore from "EmojiStore" /* 6454 */;
-import StickersStore from "StickersStore" /* 6495 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildRoleStore from "GuildRoleStore" /* 4700 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
+import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 8353 */;
+import EmojiStore from "EmojiStore" /* 6573 */;
+import StickersStore from "StickersStore" /* 6614 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildRoleStore from "GuildRoleStore" /* 4819 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;
@@ -36,7 +36,7 @@ function handleDeletedEntityIds(guild_id) {
       const item = keys.forEach((id) => {
         if (!set1.has(id)) {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
-          const obj3 = { guild_id: set3, id, parent_id: "Array" };
+          const obj3 = { guild_id: set3, id, parent_id: "r" };
           obj2.channel = obj3;
           set3(572).dispatch(obj2);
           const obj = set3(572);

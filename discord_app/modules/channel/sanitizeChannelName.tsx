@@ -1,9 +1,9 @@
-// === Module 7629: sanitizeChannelName ===
+// === Module 7749: sanitizeChannelName ===
 
-// Module 7629 (sanitizeChannelName)
+// Module 7749 (sanitizeChannelName)
 import ChannelTypes from "ChannelTypes" /* 1092 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 5837 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7630 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 5956 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7750 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/sanitizeChannelName.tsx");

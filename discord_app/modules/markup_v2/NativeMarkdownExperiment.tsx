@@ -1,7 +1,7 @@
-// === Module 8672: NativeMarkdownExperiment ===
+// === Module 8792: NativeMarkdownExperiment ===
 
-// Module 8672 (NativeMarkdownExperiment)
-import LabFeatureStore from "LabFeatureStore" /* 8673 */;
+// Module 8792 (NativeMarkdownExperiment)
+import LabFeatureStore from "LabFeatureStore" /* 8793 */;
 
 let ApexExperiment = fn(1450);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2025-04-native-markdown", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

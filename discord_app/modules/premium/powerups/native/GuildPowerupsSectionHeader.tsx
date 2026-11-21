@@ -1,11 +1,11 @@
-// === Module 13322: GuildPowerupsSectionHeader ===
+// === Module 13444: GuildPowerupsSectionHeader ===
 
-// Module 13322 (GuildPowerupsSectionHeader)
+// Module 13444 (GuildPowerupsSectionHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5385 */;
+import Text_Text from "Text/Text" /* 5504 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4794 */;
+import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

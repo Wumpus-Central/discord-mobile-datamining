@@ -1,8 +1,8 @@
-// === Module 17355: components/MFA ===
+// === Module 17479: components/MFA ===
 
-// Module 17355 (components/MFA)
+// Module 17479 (components/MFA)
 import applyDefault from "apply" /* 12 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6306 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6425 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -23,7 +23,7 @@ export default function ConnectedMFA() {
   ({ inContainer, isMultiAccount } = obj);
   const navigation = isMultiAccount(1500).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7252)();
+    inContainer = navigation(7372)();
   }
   const obj2 = isMultiAccount(1500);
   items = [AuthenticationStore];
@@ -56,7 +56,7 @@ export default function ConnectedMFA() {
       tmp13 = obj4;
     }
     obj3.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(16967).MFAModal, obj3);
+    return jsx(isMultiAccount(17090).MFAModal, obj3);
   } else {
     const tmpResult2 = isMultiAccount(1358);
     tmp4(575).space;

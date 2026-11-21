@@ -1,8 +1,8 @@
-// === Module 15033: GuildBadgeDog ===
+// === Module 15156: GuildBadgeDog ===
 
-// Module 15033 (GuildBadgeDog)
-import inlineStyles from "inlineStyles" /* 7745 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15010 */;
+// Module 15156 (GuildBadgeDog)
+import inlineStyles from "inlineStyles" /* 7865 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 13810: BadgeUnreadStateExperiment ===
+// === Module 13932: BadgeUnreadStateExperiment ===
 
-// Module 13810 (BadgeUnreadStateExperiment)
+// Module 13932 (BadgeUnreadStateExperiment)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

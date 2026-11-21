@@ -1,7 +1,7 @@
-// === Module 12836: useClickOnHomeActivityOpensAppDetails ===
+// === Module 12958: useClickOnHomeActivityOpensAppDetails ===
 
-// Module 12836 (useClickOnHomeActivityOpensAppDetails)
-import UserSettings from "UserSettings" /* 4619 */;
+// Module 12958 (useClickOnHomeActivityOpensAppDetails)
+import UserSettings from "UserSettings" /* 4738 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");

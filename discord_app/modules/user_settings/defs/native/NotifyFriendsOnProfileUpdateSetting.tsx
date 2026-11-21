@@ -1,22 +1,22 @@
-// === Module 17285: NotifyFriendsOnProfileUpdateSetting ===
+// === Module 17409: NotifyFriendsOnProfileUpdateSetting ===
 
-// Module 17285 (NotifyFriendsOnProfileUpdateSetting)
+// Module 17409 (NotifyFriendsOnProfileUpdateSetting)
 import util from "util" /* 1112 */;
-import _modDef2925 from "module_2925" /* 2925 */;
-import UserSettings from "UserSettings" /* 4619 */;
-import SettingsConstants from "SettingsConstants" /* 8592 */;
-import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 17286 */;
-import SettingBuilders from "SettingBuilders" /* 11817 */;
+import _modDef3024 from "module_3024" /* 3024 */;
+import UserSettings from "UserSettings" /* 4738 */;
+import SettingsConstants from "SettingsConstants" /* 8712 */;
+import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 17410 */;
+import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2925.F3llsQ);
+    return intl.string(_modDef3024.F3llsQ);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2925["6goWcz"]);
+    return intl.string(_modDef3024["6goWcz"]);
   },
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useValue: UserSettings.NotifyFriendsOnProfileUpdate.useSetting,

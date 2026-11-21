@@ -1,11 +1,11 @@
-// === Module 8241: UserSearchUtils ===
+// === Module 8361: UserSearchUtils ===
 
-// Module 8241 (UserSearchUtils)
-import StringUtils from "StringUtils" /* 2151 */;
-import UserUtilsDefault from "UserUtils" /* 4850 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 8242 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+// Module 8361 (UserSearchUtils)
+import StringUtils from "StringUtils" /* 2152 */;
+import UserUtilsDefault from "UserUtils" /* 4969 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 8362 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 
 require = fn;
 const RelationshipTypes = fn(1071).RelationshipTypes;
@@ -30,23 +30,23 @@ export function getNames(user) {
   const names = {};
   const nick = RelationshipStore.getNickname(user.id);
   if (null != nick) {
-    const obj3 = names(2151);
-    let str = names(2151).stripDiacritics(nick.toLocaleLowerCase());
-    names[nick] = names(2151).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
-    let str2 = names(2151).stripDiacritics(nick.toLocaleLowerCase()).trim();
+    const obj3 = names(2152);
+    let str = names(2152).stripDiacritics(nick.toLocaleLowerCase());
+    names[nick] = names(2152).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
+    let str2 = names(2152).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
   const globalName = UserUtilsDefault.getGlobalName(user);
   if (tmp4) {
-    const obj6 = names(2151);
-    const str4 = names(2151).stripDiacritics(globalName.toLocaleLowerCase());
-    names[globalName] = names(2151).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
-    const str5 = names(2151).stripDiacritics(globalName.toLocaleLowerCase()).trim();
+    const obj6 = names(2152);
+    const str4 = names(2152).stripDiacritics(globalName.toLocaleLowerCase());
+    names[globalName] = names(2152).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
+    const str5 = names(2152).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
   tmp4 = null != globalName && null == names[globalName];
-  const obj7 = names(2151);
-  const str7 = names(2151).stripDiacritics(username.toLocaleLowerCase());
-  names[user.username] = names(2151).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
+  const obj7 = names(2152);
+  const str7 = names(2152).stripDiacritics(username.toLocaleLowerCase());
+  names[user.username] = names(2152).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
   const nicknames = GuildMemberStore.getNicknames(user.id);
   const item = nicknames.forEach((toLocaleLowerCase) => {
     if (null == names[toLocaleLowerCase]) {

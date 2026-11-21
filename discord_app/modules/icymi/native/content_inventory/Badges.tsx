@@ -1,22 +1,22 @@
-// === Module 14342: Badges ===
+// === Module 14464: Badges ===
 
-// Module 14342 (Badges)
+// Module 14464 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import GameControllerIcon from "GameControllerIcon" /* 6920 */;
-import utils from "utils" /* 7890 */;
-import TrophyIcon from "TrophyIcon" /* 9694 */;
-import RetryIcon from "RetryIcon" /* 10223 */;
-import TimerIcon from "TimerIcon" /* 11954 */;
-import FireIcon from "FireIcon" /* 13683 */;
-import NewUserIcon from "NewUserIcon" /* 14343 */;
-import FlashIcon from "FlashIcon" /* 14345 */;
-import TrendingType from "TrendingType" /* 14347 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import GameControllerIcon from "GameControllerIcon" /* 7040 */;
+import utils from "utils" /* 8010 */;
+import TrophyIcon from "TrophyIcon" /* 9814 */;
+import RetryIcon from "RetryIcon" /* 10343 */;
+import TimerIcon from "TimerIcon" /* 12074 */;
+import FireIcon from "FireIcon" /* 13805 */;
+import NewUserIcon from "NewUserIcon" /* 14465 */;
+import FlashIcon from "FlashIcon" /* 14467 */;
+import TrendingType from "TrendingType" /* 14469 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 
 require = fn;
 class ActiveTimestamp {
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

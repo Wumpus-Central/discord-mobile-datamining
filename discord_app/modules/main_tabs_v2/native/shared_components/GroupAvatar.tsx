@@ -1,12 +1,12 @@
-// === Module 14376: GroupAvatar ===
+// === Module 14498: GroupAvatar ===
 
-// Module 14376 (GroupAvatar)
+// Module 14498 (GroupAvatar)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import FastImageDefault from "FastImage" /* 5481 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import FastImageDefault from "FastImage" /* 5600 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 require = fn;
 function AnimatedContainer(children) {
@@ -163,7 +163,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };

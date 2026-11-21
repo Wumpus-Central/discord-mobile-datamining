@@ -1,13 +1,13 @@
-// === Module 15072: GuildHeaderCountsStore ===
+// === Module 15195: GuildHeaderCountsStore ===
 
-// Module 15072 (GuildHeaderCountsStore)
+// Module 15195 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6800 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5415 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 6919 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
 import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5442 */;
+import VoiceStateStore from "VoiceStateStore" /* 5561 */;
 
 const obj = {};
 const dependencyMap = obj;

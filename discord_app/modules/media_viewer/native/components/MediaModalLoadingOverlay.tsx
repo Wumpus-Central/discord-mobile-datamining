@@ -1,9 +1,9 @@
-// === Module 10466: MediaModalLoadingOverlay ===
+// === Module 10586: MediaModalLoadingOverlay ===
 
-// Module 10466 (MediaModalLoadingOverlay)
+// Module 10586 (MediaModalLoadingOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
+import Text_Text from "Text/Text" /* 5504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { loader: null, loaderIndicator: null, loaderText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

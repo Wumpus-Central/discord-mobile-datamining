@@ -1,15 +1,15 @@
-// === Module 13689: GuildProfileCreateTagUpsell ===
+// === Module 13811: GuildProfileCreateTagUpsell ===
 
-// Module 13689 (GuildProfileCreateTagUpsell)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 13693 */;
+// Module 13811 (GuildProfileCreateTagUpsell)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 13815 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_5 = createStyles.createStyles({ upsell: { minHeight: 44, alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCreateTagUpsell.tsx");
@@ -18,7 +18,7 @@ export default function GuildProfileCreateTagUpsell(guildId) {
   guildId = guildId.guildId;
   let creatableGuilds;
   const tmp = closure_5();
-  const guildTagCreationUpsell = guildId(13690).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(13692));
+  const guildTagCreationUpsell = guildId(13812).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(13814));
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   let tmp5 = null;
   if (guildTagCreationUpsell.isUpsellVisible) {
@@ -34,7 +34,7 @@ export default function GuildProfileCreateTagUpsell(guildId) {
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1112).intl;
     obj3.children = intl.string(tmp2(1112).t.J0YWRq);
-    obj2.children = jsx(tmp2(5385).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    obj2.children = jsx(tmp2(5504).Text, { variant: "body-md/medium", color: "text-muted", children: null });
     tmp5 = <Pressable style={tmp.upsell} role="button" onPress={function handlePress() {
       ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
       openGuildTagCreateFlowDefault(creatableGuilds, AnalyticsLocationDefault.GUILD_PROFILE);

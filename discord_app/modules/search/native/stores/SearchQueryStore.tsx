@@ -1,18 +1,18 @@
-// === Module 13091: SearchQueryStore ===
+// === Module 13213: SearchQueryStore ===
 
-// Module 13091 (SearchQueryStore)
+// Module 13213 (SearchQueryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SearchUtils from "SearchUtils" /* 13084 */;
-import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 13092 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import SearchUtils from "SearchUtils" /* 13206 */;
+import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 13214 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const SearchConstants = fn(8456);
+const SearchConstants = fn(8576);
 ({ EMPTY_SEARCH_QUERY_STRING: closure_6, SearchQueryTagTypes: metroImportDefault } = SearchConstants);
-const SearchFilterAddLocations = fn(8455).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(8575).SearchFilterAddLocations;
 const Constants = fn(1071);
 ({ SearchTokenTypes: closure_9, SearchTypes: closure_10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
@@ -173,8 +173,8 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(5410).computeChannelName(channel, UserStore, RelationshipStore);
-      const obj2 = obj(5410);
+      channelName = obj(5529).computeChannelName(channel, UserStore, RelationshipStore);
+      const obj2 = obj(5529);
     }
     if (null == channelName) {
       let items1 = [];
@@ -183,17 +183,17 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1112).intl;
       const stringResult = intl.string(obj(1112).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(13084).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(13206).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(13084);
+      const obj4 = obj(13206);
     }
     items = items1;
   }
 }.prototype;
 const map = new Map();
-const FunctionUtils = fn(2159);
+const FunctionUtils = fn(2160);
 let closure_13 = FunctionUtils.cachedFunction((arg0) => new prototype(arg0));
 const Store = initializeDefault.Store;
 class NativeSearchQueryStore extends Store {

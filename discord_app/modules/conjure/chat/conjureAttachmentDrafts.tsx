@@ -1,10 +1,10 @@
-// === Module 18303: conjureAttachmentDrafts ===
+// === Module 18430: conjureAttachmentDrafts ===
 
-// Module 18303 (conjureAttachmentDrafts)
+// Module 18430 (conjureAttachmentDrafts)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18149 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18189 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18276 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18316 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -129,10 +129,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(6848).sendUserMessage;
+const sendUserMessage = fn(6967).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(4983).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5102).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);
@@ -156,7 +156,7 @@ export function conjureAttachmentTooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef4091.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef4190.JZ59Bo, obj);
 }
 export function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
@@ -168,7 +168,7 @@ export function uploadConjureAttachment(arg0, size, name, contentType) {
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef4091.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef4190.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }

@@ -1,10 +1,10 @@
-// === Module 13706: useActiveLeaderboardWinnerData ===
+// === Module 13828: useActiveLeaderboardWinnerData ===
 
-// Module 13706 (useActiveLeaderboardWinnerData)
+// Module 13828 (useActiveLeaderboardWinnerData)
 import DurationsDefault from "Durations" /* 1088 */;
-import canUseGuildSpace from "canUseGuildSpace" /* 6725 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import canUseGuildSpace from "canUseGuildSpace" /* 6844 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import GuildStore from "GuildStore" /* 4784 */;
 
 const require = globalThis.__r;
 

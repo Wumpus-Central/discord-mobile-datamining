@@ -1,11 +1,11 @@
-// === Module 14465: useProfileNewContent ===
+// === Module 14587: useProfileNewContent ===
 
-// Module 14465 (useProfileNewContent)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 6846 */;
-import ProfileReadStateSection from "ProfileReadStateSection" /* 6847 */;
-import WishlistStore from "WishlistStore" /* 8863 */;
+// Module 14587 (useProfileNewContent)
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 6965 */;
+import ProfileReadStateSection from "ProfileReadStateSection" /* 6966 */;
+import WishlistStore from "WishlistStore" /* 8983 */;
 import UserStore from "UserStore" /* 1386 */;
-import UserProfileStore from "UserProfileStore" /* 6837 */;
+import UserProfileStore from "UserProfileStore" /* 6956 */;
 
 const require = globalThis.__r;
 

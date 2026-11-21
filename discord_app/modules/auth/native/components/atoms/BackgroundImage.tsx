@@ -1,8 +1,8 @@
-// === Module 7196: BackgroundImage ===
+// === Module 7316: BackgroundImage ===
 
-// Module 7196 (BackgroundImage)
-import shared from "shared" /* 4801 */;
-import _modDef7198 from "module_7198" /* 7198 */;
+// Module 7316 (BackgroundImage)
+import shared from "shared" /* 4920 */;
+import _modDef7318 from "module_7318" /* 7318 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = flag(5003)();
+  const tmp = flag(5122)();
   dependencyMap = tmp;
   items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -32,15 +32,15 @@ export default function BackgroundImage(backgroundImageSource) {
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 7197;
+        tmp2 = 7317;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef7198;
+        tmp4Result = _modDef7318;
       }
       obj2 = shared;
     }
   }, items);
   const merged = Object.assign(memo);
-  obj.children = jsx(flag(5481), {});
+  obj.children = jsx(flag(5600), {});
   return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
 };

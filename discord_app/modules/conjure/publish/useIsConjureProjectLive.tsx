@@ -1,7 +1,7 @@
-// === Module 18153: useIsConjureProjectLive ===
+// === Module 18280: useIsConjureProjectLive ===
 
-// Module 18153 (useIsConjureProjectLive)
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6860 */;
+// Module 18280 (useIsConjureProjectLive)
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 
 const require = fn;
 const size = fn(2);
@@ -30,8 +30,8 @@ export default function useIsConjureProjectLive(id) {
     return tmp2;
   }, items1);
   if (null != stateFromStores) {
-    let isConjureLiveResult = id(12190).isConjureLive(stateFromStores);
-    const tmp2Result = id(12190);
+    let isConjureLiveResult = id(12312).isConjureLive(stateFromStores);
+    const tmp2Result = id(12312);
   } else {
     let num;
     if (id != null) {

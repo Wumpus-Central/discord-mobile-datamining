@@ -1,14 +1,14 @@
-// === Module 11263: StickerPickerListRow ===
+// === Module 11383: StickerPickerListRow ===
 
-// Module 11263 (StickerPickerListRow)
+// Module 11383 (StickerPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import UserSettings from "UserSettings" /* 4619 */;
-import HapticUtils from "HapticUtils" /* 5010 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5011 */;
-import StickersUtils from "StickersUtils" /* 6267 */;
-import StickerSendability from "StickerSendability" /* 6710 */;
-import LockIcon from "LockIcon" /* 7575 */;
+import UserSettings from "UserSettings" /* 4738 */;
+import HapticUtils from "HapticUtils" /* 5129 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5130 */;
+import StickersUtils from "StickersUtils" /* 6386 */;
+import StickerSendability from "StickerSendability" /* 6829 */;
+import LockIcon from "LockIcon" /* 7695 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -20,13 +20,13 @@ function StickerItemLockedOverlay() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const StickerAnimationSettings = fn(4622).StickerAnimationSettings;
-const StickerPickerConstants = fn(11151);
+const StickerAnimationSettings = fn(4741).StickerAnimationSettings;
+const StickerPickerConstants = fn(11271);
 const STICKER_SIZE = StickerPickerConstants.STICKER_SIZE;
 const PADDING_VERTICAL = fn(1227).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { row: { height: StickerPickerConstants.ROW_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", overflow: "hidden" }, stickerImage: { height: STICKER_SIZE, width: STICKER_SIZE }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, lockContainer: null, lock: null };
 const obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -87,7 +87,7 @@ export default function StickerPickerListRow(stickers) {
   }
   const tmp6 = items();
   rowContentPaddingVertical = tmp6;
-  let AnimateStickers = stickers(4619).AnimateStickers;
+  let AnimateStickers = stickers(4738).AnimateStickers;
   closure_8 = AnimateStickers.useSetting();
   items = [];
   if (nativeRow) {
@@ -101,7 +101,7 @@ export default function StickerPickerListRow(stickers) {
           let obj2 = { stickerId: null, stickerName: null, stickerType: null, stickerUrl: null, stickerAnimated: null, stickerDisabled: null, stickerOpaque: null, stickerLocked: null };
           ({ id: obj4.stickerId, name: obj4.stickerName, format_type: obj4.stickerType } = tmp12);
           ({ isOpaque, isDisabled, isLocked } = rowTraitsResult);
-          let obj5 = stickers(11045);
+          let obj5 = stickers(11165);
           obj2.stickerUrl = obj5.getStickerAssetUrl(tmp12, STICKER_SIZE, isAnimated);
           obj2.stickerAnimated = isAnimated;
           obj2.stickerDisabled = isDisabled;
@@ -110,7 +110,7 @@ export default function StickerPickerListRow(stickers) {
           let arr2 = items.push(obj2);
         } else {
           let obj3 = { stickerId: "", stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false, stickerLocked: false };
-          obj3.stickerType = stickers(6268).StickerFormat.PNG;
+          obj3.stickerType = stickers(6387).StickerFormat.PNG;
           let arr3 = items.push(obj3);
         }
         num4 = num4 + 1;
@@ -137,7 +137,7 @@ export default function StickerPickerListRow(stickers) {
           handleOnLongPressSticker(found);
         }
       };
-      return closure_8(isSectionNitroLocked(11264), obj6);
+      return closure_8(isSectionNitroLocked(11384), obj6);
     } catch (tmp26) {
       const obj9 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       const obj10 = { itemLength: arr.length, items: null };
@@ -164,13 +164,13 @@ export default function StickerPickerListRow(stickers) {
               id = currentUser.id;
             }
             let isSendableStickerResult = isSectionNitroLocked;
-            const obj5 = stickers(6267);
+            const obj5 = stickers(6386);
             if (!isSectionNitroLocked) {
               isSendableStickerResult = null == closure_6;
             }
             if (!isSendableStickerResult) {
-              isSendableStickerResult = tmp25(6710).isSendableSticker(tmp2, currentUser.getCurrentUser(), closure_6);
-              const tmp25Result = tmp25(6710);
+              isSendableStickerResult = tmp25(6829).isSendableSticker(tmp2, currentUser.getCurrentUser(), closure_6);
+              const tmp25Result = tmp25(6829);
             }
             let disabledOverlay = !isSendableStickerResult;
             const obj2 = { accessibilityRole: "button", accessibilityLabel: tmp2.name, style: null, disabled: null, onPress: null, onLongPress: null, children: null };
@@ -182,25 +182,25 @@ export default function StickerPickerListRow(stickers) {
             obj2.style = items;
             obj2.disabled = null == dependencyMap;
             obj2.onPress = function onPress() {
-              const result = closure_0(5010).triggerHapticFeedback(isSectionNitroLocked(5011).IMPACT_LIGHT);
+              const result = closure_0(5129).triggerHapticFeedback(isSectionNitroLocked(5130).IMPACT_LIGHT);
               if (dependencyMap != null) {
                 dependencyMap(closure_0);
               }
-              const obj = closure_0(5010);
+              const obj = closure_0(5129);
             };
             obj2.onLongPress = function onLongPress() {
               return handleOnLongPressSticker(closure_0);
             };
-            const obj3 = { sticker: tmp2, size, animated: stickers(6267).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
-            const items1 = [closure_8(isSectionNitroLocked(11045), obj3, c11), ];
+            const obj3 = { sticker: tmp2, size, animated: stickers(6386).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
+            const items1 = [closure_8(isSectionNitroLocked(11165), obj3, c11), ];
             let tmp16 = null;
             if (!isSendableStickerResult) {
               tmp16 = closure_8(c11, {});
             }
             items1[1] = tmp16;
             obj2.children = items1;
-            items.push(handleOnLongPressSticker(stickers(6910).PressableOpacity, obj2, tmp2.id));
-            const shouldAnimateStickerResult = stickers(6267).shouldAnimateSticker(closure_8, tmp2.id === id);
+            items.push(handleOnLongPressSticker(stickers(7030).PressableOpacity, obj2, tmp2.id));
+            const shouldAnimateStickerResult = stickers(6386).shouldAnimateSticker(closure_8, tmp2.id === id);
             const tmp10 = null == dependencyMap;
           }
         })();

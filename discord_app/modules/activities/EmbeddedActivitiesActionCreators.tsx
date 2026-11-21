@@ -1,26 +1,26 @@
-// === Module 10551: EmbeddedActivitiesActionCreators ===
+// === Module 10671: EmbeddedActivitiesActionCreators ===
 
-// Module 10551 (EmbeddedActivitiesActionCreators)
+// Module 10671 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import dismissible_content from "dismissible_content" /* 4627 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4628 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6510 */;
-import createProxyTicket from "createProxyTicket" /* 6826 */;
+import dismissible_content from "dismissible_content" /* 4746 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4747 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6629 */;
+import createProxyTicket from "createProxyTicket" /* 6945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6501 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 6338 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 6457 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5442 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 
 require = fn;
 let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0) {
@@ -289,9 +289,9 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2149).supportsEmbeddedSurface(application, closure_1_0(5438).EmbeddedSurfaceType.MAIN);
-                const obj = closure_1_0(2149);
-                const result1 = closure_1_0(7346).isActivityInTextSupportedForChannel(type);
+                const result = closure_1_0(2150).supportsEmbeddedSurface(application, closure_1_0(5557).EmbeddedSurfaceType.MAIN);
+                const obj = closure_1_0(2150);
+                const result1 = closure_1_0(7466).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -591,26 +591,26 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(6231)(obj3);
+                              const tmp21 = new nonce(6350)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(5853).ReasonCodes) {
-                            const tmp14 = new nonce(5853)(error_reason_code);
+                          if (error_reason_code in nonce(5972).ReasonCodes) {
+                            const tmp14 = new nonce(5972)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
                         const obj = nonce(1255);
-                        const tmp3Result = nonce(5853);
-                        closure_1_1(new nonce(5853)(nonce(5853).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(5853)(nonce(5853).ReasonCodes.UNKNOWN);
+                        const tmp3Result = nonce(5972);
+                        closure_1_1(new nonce(5972)(nonce(5972).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(5972)(nonce(5972).ReasonCodes.UNKNOWN);
                       }
                     };
                   }
                 };
-                nonce(10557)(obj);
+                nonce(10677)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1307,12 +1307,12 @@ let closure_34 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(10316).getOrFetchApplicationCommandIndexForTarget;
-let closure_16 = fn(2143).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+let closure_5 = fn(10436).getOrFetchApplicationCommandIndexForTarget;
+let closure_16 = fn(2144).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1363).INSTALL_LESS_APP_IDS;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 let closure_25 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_27 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER", CHANNEL_CONTENT_GATED: 10, [10]: "CHANNEL_CONTENT_GATED" };
 const size = fn(2);

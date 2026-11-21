@@ -1,17 +1,17 @@
-// === Module 15859: SettingsAccountHeader ===
+// === Module 15982: SettingsAccountHeader ===
 
-// Module 15859 (SettingsAccountHeader)
+// Module 15982 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import TableRow from "TableRow" /* 6925 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7222 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7297 */;
-import openUserSettings from "openUserSettings" /* 8074 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15860 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import TableRow from "TableRow" /* 7045 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7342 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7417 */;
+import openUserSettings from "openUserSettings" /* 8194 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15983 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -27,10 +27,10 @@ function RestrictedAccountRedirect() {
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1071).AnalyticsSections;
-const SafetySettingsNoticeType = fn(6385).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(6504).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 const obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };

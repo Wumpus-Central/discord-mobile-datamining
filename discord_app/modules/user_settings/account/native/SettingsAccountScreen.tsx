@@ -1,20 +1,20 @@
-// === Module 15854: SettingsAccountScreen ===
+// === Module 15977: SettingsAccountScreen ===
 
-// Module 15854 (SettingsAccountScreen)
+// Module 15977 (SettingsAccountScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import useMountEffectDefault from "useMountEffect" /* 5355 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6314 */;
-import TableRowGroup from "TableRowGroup" /* 7228 */;
-import MFAUtils from "MFAUtils" /* 7259 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12297 */;
-import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 15858 */;
-import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 15859 */;
-import SettingLayoutDefault from "SettingLayout" /* 15862 */;
+import useMountEffectDefault from "useMountEffect" /* 5474 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6433 */;
+import TableRowGroup from "TableRowGroup" /* 7348 */;
+import MFAUtils from "MFAUtils" /* 7379 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12419 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 15981 */;
+import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 15982 */;
+import SettingLayoutDefault from "SettingLayout" /* 15985 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 15855 */;
+import WebAuthnStore from "WebAuthnStore" /* 15978 */;
 
 require = fn;
 function PasswordlessUpsell() {
@@ -26,7 +26,7 @@ function PasswordlessUpsell() {
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("module_15856");
+  obj6.source = require("module_15979");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
   items = [closure_10(View, obj5), ];
@@ -67,7 +67,7 @@ function AccountTwoFALabel() {
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(15857).useIsUserVerified();
+  const isUserVerified = first(15980).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -91,7 +91,7 @@ function AccountTwoFALabel() {
   const obj4 = { title: null };
   const intl = tmp(1112).intl;
   obj4.title = intl.string(first(1112).t.fuTmEJ);
-  items3[1] = closure_10(first(7228).TableRowGroupTitle, obj4);
+  items3[1] = closure_10(first(7348).TableRowGroupTitle, obj4);
   obj3.children = items3;
   return closure_11(closure_12, obj3);
 }
@@ -135,11 +135,11 @@ function AccountSecurityPage() {
   return refs(SettingLayoutDefault, { node });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8592).MobileUserSettings;
+const MobileUserSettings = fn(8712).MobileUserSettings;
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { upsellPasswordless: { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, upsellImagePasswordless: { height: "100%", width: "100%" } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg };

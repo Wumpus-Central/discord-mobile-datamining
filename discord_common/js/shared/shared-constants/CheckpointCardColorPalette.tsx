@@ -1,6 +1,6 @@
-// === Module 5872: CheckpointCardColorPalette ===
+// === Module 5991: CheckpointCardColorPalette ===
 
-// Module 5872 (CheckpointCardColorPalette)
+// Module 5991 (CheckpointCardColorPalette)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointCardColorPalette.tsx");

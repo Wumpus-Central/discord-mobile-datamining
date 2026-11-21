@@ -1,10 +1,10 @@
-// === Module 7871: ManualReviewPendingAlertModal ===
+// === Module 7991: ManualReviewPendingAlertModal ===
 
-// Module 7871 (ManualReviewPendingAlertModal)
+// Module 7991 (ManualReviewPendingAlertModal)
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import _modDef3441 from "module_3441" /* 3441 */;
-import AlertModal from "AlertModal" /* 5747 */;
+import _modDef3540 from "module_3540" /* 3540 */;
+import AlertModal from "AlertModal" /* 5866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/ManualRe
 export default function ManualReviewPendingAlertModal() {
   const obj = { title: null, content: null, actions: null, trackingProps: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3441.CNm4w6);
+  obj.title = intl.string(_modDef3540.CNm4w6);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3441["14Fje3"]);
+  obj.content = intl2.string(_modDef3540["14Fje3"]);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

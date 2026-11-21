@@ -1,25 +1,25 @@
-// === Module 12389: CheckpointHeader ===
+// === Module 12511: CheckpointHeader ===
 
-// Module 12389 (CheckpointHeader)
+// Module 12511 (CheckpointHeader)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import HapticUtils from "HapticUtils" /* 5010 */;
-import _modDef5879 from "module_5879" /* 5879 */;
-import _modDef5880 from "module_5880" /* 5880 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 6914 */;
-import XSmallIcon from "XSmallIcon" /* 7031 */;
-import VoiceXIcon from "VoiceXIcon" /* 10861 */;
-import CheckpointActionCreators from "CheckpointActionCreators" /* 12378 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12390 */;
-import CheckpointHeaderButtonDefault from "CheckpointHeaderButton" /* 12391 */;
-import CheckpointStore from "CheckpointStore" /* 12370 */;
-import CheckpointConstants from "CheckpointConstants" /* 5850 */;
+import HapticUtils from "HapticUtils" /* 5129 */;
+import _modDef5998 from "module_5998" /* 5998 */;
+import _modDef5999 from "module_5999" /* 5999 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 7034 */;
+import XSmallIcon from "XSmallIcon" /* 7151 */;
+import VoiceXIcon from "VoiceXIcon" /* 10981 */;
+import CheckpointActionCreators from "CheckpointActionCreators" /* 12500 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
+import CheckpointHeaderButtonDefault from "CheckpointHeaderButton" /* 12513 */;
+import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointConstants from "CheckpointConstants" /* 5969 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4794 */;
+import createStyles from "createStyles" /* 4913 */;
 import size_mod from "module_2" /* 2 */;
 
 function handleClose() {
@@ -42,11 +42,11 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/Ch
 export default function CheckpointHeader(logoAnimatedUri) {
   logoAnimatedUri = logoAnimatedUri.logoAnimatedUri;
   if (logoAnimatedUri === undefined) {
-    logoAnimatedUri = _modDef5879;
+    logoAnimatedUri = _modDef5998;
   }
   let logoStaticUri = logoAnimatedUri.logoStaticUri;
   if (logoStaticUri === undefined) {
-    logoStaticUri = _modDef5880;
+    logoStaticUri = _modDef5999;
   }
   let color = logoAnimatedUri.color;
   if (color === undefined) {

@@ -1,64 +1,64 @@
-// === Module 15707: UserProfileEditForm ===
+// === Module 15830: UserProfileEditForm ===
 
-// Module 15707 (UserProfileEditForm)
+// Module 15830 (UserProfileEditForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5369 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7125 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7400 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 7952 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8011 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8022 */;
-import useUserProfileColors from "useUserProfileColors" /* 8071 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8077 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8790 */;
-import useFetchCollectiblesCategoriesAndPurchasesDefault from "useFetchCollectiblesCategoriesAndPurchases" /* 9355 */;
-import UserProfileEditFormKeyboardAvoidingContextDefault from "UserProfileEditFormKeyboardAvoidingContext" /* 10119 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11534 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 14080 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 14426 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14471 */;
-import _modDef15709 from "module_15709" /* 15709 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15710 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15726 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15728 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15729 */;
-import UserProfileEditFormTextFieldDefault from "UserProfileEditFormTextField" /* 15738 */;
-import UserProfileDisplayNameStylesEditButtonDefault from "UserProfileDisplayNameStylesEditButton" /* 15739 */;
-import UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault from "UserProfileHexagonCampaignDisplayNameStyleEditButton" /* 15752 */;
-import UserProfileBadgesEditButtonDefault from "UserProfileBadgesEditButton" /* 15757 */;
-import UserProfileEditThemeDefault from "UserProfileEditTheme" /* 15763 */;
-import UserProfileAvatarDecorationEditButtonDefault from "UserProfileAvatarDecorationEditButton" /* 15767 */;
-import UserProfileEffectEditButtonDefault from "UserProfileEffectEditButton" /* 15768 */;
-import UserProfileFrameEditButtonDefault from "UserProfileFrameEditButton" /* 15772 */;
-import UserProfileNameplateEditButtonDefault from "UserProfileNameplateEditButton" /* 15776 */;
-import UserProfileTypingIndicatorEditButtonDefault from "UserProfileTypingIndicatorEditButton" /* 15781 */;
-import UserProfilePrimaryGuildEditButtonDefault from "UserProfilePrimaryGuildEditButton" /* 15782 */;
-import UserProfileLegacyUsernameSwitchDefault from "UserProfileLegacyUsernameSwitch" /* 15785 */;
-import UserProfilePremiumTryItOutSectionDefault from "UserProfilePremiumTryItOutSection" /* 15786 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15830 */;
-import UserProfileEditFormTabsDefault from "UserProfileEditFormTabs" /* 15831 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5488 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7245 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7520 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8072 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8131 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
+import useUserProfileColors from "useUserProfileColors" /* 8191 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8197 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8910 */;
+import useFetchCollectiblesCategoriesAndPurchasesDefault from "useFetchCollectiblesCategoriesAndPurchases" /* 9475 */;
+import UserProfileEditFormKeyboardAvoidingContextDefault from "UserProfileEditFormKeyboardAvoidingContext" /* 10239 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11654 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 14202 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 14548 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14593 */;
+import _modDef15832 from "module_15832" /* 15832 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15833 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15849 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15851 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15852 */;
+import UserProfileEditFormTextFieldDefault from "UserProfileEditFormTextField" /* 15861 */;
+import UserProfileDisplayNameStylesEditButtonDefault from "UserProfileDisplayNameStylesEditButton" /* 15862 */;
+import UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault from "UserProfileHexagonCampaignDisplayNameStyleEditButton" /* 15875 */;
+import UserProfileBadgesEditButtonDefault from "UserProfileBadgesEditButton" /* 15880 */;
+import UserProfileEditThemeDefault from "UserProfileEditTheme" /* 15886 */;
+import UserProfileAvatarDecorationEditButtonDefault from "UserProfileAvatarDecorationEditButton" /* 15890 */;
+import UserProfileEffectEditButtonDefault from "UserProfileEffectEditButton" /* 15891 */;
+import UserProfileFrameEditButtonDefault from "UserProfileFrameEditButton" /* 15895 */;
+import UserProfileNameplateEditButtonDefault from "UserProfileNameplateEditButton" /* 15899 */;
+import UserProfileTypingIndicatorEditButtonDefault from "UserProfileTypingIndicatorEditButton" /* 15904 */;
+import UserProfilePrimaryGuildEditButtonDefault from "UserProfilePrimaryGuildEditButton" /* 15905 */;
+import UserProfileLegacyUsernameSwitchDefault from "UserProfileLegacyUsernameSwitch" /* 15908 */;
+import UserProfilePremiumTryItOutSectionDefault from "UserProfilePremiumTryItOutSection" /* 15909 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15953 */;
+import UserProfileEditFormTabsDefault from "UserProfileEditFormTabs" /* 15954 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8017 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9305 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9425 */;
 import module_1653 from "module_1653" /* 1653 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useMeasuredLayoutDefault = tmp(7477);
-const useProfileThemeDefault = tmp(8060);
-const useUserProfileBannerHeightDefault = tmp(8063);
-const UserProfileFixedBackgroundDefault = tmp(8070);
-const useBadgesDefault = tmp(8078);
-const UserProfileCustomStatusBubbleDefault = tmp(8931);
-const useTryItOutUpsellScrollTrackingDefault = tmp(15735);
-const useStickyEditFormHeadersDefault = tmp(15736);
-const useScrollToUserProfileEditFormSectionDefault = tmp(15737);
-const EditUserProfileAvatarDefault = tmp(15822);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(15834);
+const useMeasuredLayoutDefault = tmp(7597);
+const useProfileThemeDefault = tmp(8180);
+const useUserProfileBannerHeightDefault = tmp(8183);
+const UserProfileFixedBackgroundDefault = tmp(8190);
+const useBadgesDefault = tmp(8198);
+const UserProfileCustomStatusBubbleDefault = tmp(9051);
+const useTryItOutUpsellScrollTrackingDefault = tmp(15858);
+const useStickyEditFormHeadersDefault = tmp(15859);
+const useScrollToUserProfileEditFormSectionDefault = tmp(15860);
+const EditUserProfileAvatarDefault = tmp(15945);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(15957);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({ user, displayProfile, pendingBanner, tryItOutBanner, isTryItOut, pendingAvatarSrc, pendingAccentColor, pendingThemeColors, disabled } = arg0);
@@ -523,7 +523,7 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(8789).setPendingChanges({ globalName });
+          return _undefined(8909).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
@@ -553,7 +553,7 @@ function UserProfileEditFormContent(currentUser) {
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(8789).setPendingChanges({ pronouns });
+            return _undefined(8909).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
@@ -576,7 +576,7 @@ function UserProfileEditFormContent(currentUser) {
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(8789).setPendingChanges({ bio });
+            return _undefined(8909).setPendingChanges({ bio });
           };
           obj10.autoFocus = c1 === constants.BIO;
           obj10.maxLength = maxLength;
@@ -587,7 +587,7 @@ function UserProfileEditFormContent(currentUser) {
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(8789).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(8909).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
@@ -643,7 +643,7 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_53.onTryItOutSectionLayout,
               onPreviewPremium() {
-                    return _undefined(15818).openPremiumTryItOutModal();
+                    return _undefined(15941).openPremiumTryItOutModal();
                   }
             };
             tmp12Result9 = gesture(UserProfilePremiumTryItOutSectionDefault, obj21);
@@ -696,7 +696,7 @@ function UserProfileEditFormContent(currentUser) {
     items10[2] = tmp27;
     obj19.children = items10;
     obj18.children = tmp58(tmp59, obj19);
-    return tmp57(tmp4(4855).ThemeContextProvider, obj18);
+    return tmp57(tmp4(4974).ThemeContextProvider, obj18);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -708,26 +708,26 @@ function UserProfileEditFormContent(currentUser) {
     let tmp57Result2 = tmp57(tmp, obj);
   } else {
     let obj29 = { isTryItOut };
-    tmp57Result2 = tmp57(tmp4(15835).UserProfilePremiumUpsellCard, obj29);
+    tmp57Result2 = tmp57(tmp4(15958).UserProfilePremiumUpsellCard, obj29);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7444).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7564).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1071);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_8, PRONOUNS_MAX_LENGTH: closure_9 } = Constants);
-const HexagonCampaignConstants = fn(4819);
+const HexagonCampaignConstants = fn(4938);
 ({ HexagonCampaignPerk: closure_10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 let closure_12 = fn(1081).ProfileCustomizationScrollPositions;
-let closure_13 = fn(15708).UserProfileEditAutoFocusElement;
+let closure_13 = fn(15831).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = [1];
 let closure_18 = module_1653.createAnimatedComponent(ScrollView);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { stickyHeader: { zIndex: 2 }, tabsAnchor: { marginTop: nativeDefault.space.PX_12 } };
 let closure_19 = createStyles.createStyles(obj);
-let obj4 = { assetOrigin: fn(7290).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15709, staticImageUri: _modDef15709, description: "", originalAsset: "analyticsLocations" };
+let obj4 = { assetOrigin: fn(7410).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15832, staticImageUri: _modDef15832, description: "", originalAsset: "analyticsLocations" };
 let closure_24 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

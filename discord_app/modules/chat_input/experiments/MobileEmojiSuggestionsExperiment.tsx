@@ -1,6 +1,6 @@
-// === Module 12706: MobileEmojiSuggestionsExperiment ===
+// === Module 12828: MobileEmojiSuggestionsExperiment ===
 
-// Module 12706 (MobileEmojiSuggestionsExperiment)
+// Module 12828 (MobileEmojiSuggestionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

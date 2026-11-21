@@ -1,16 +1,16 @@
-// === Module 10810: StageActionBar ===
+// === Module 10930: StageActionBar ===
 
-// Module 10810 (StageActionBar)
-import StageActionBarButtons from "StageActionBarButtons" /* 10759 */;
-import ChannelCallActionBar from "ChannelCallActionBar" /* 10811 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 10888 */;
+// Module 10930 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 10879 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 10931 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 11008 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");

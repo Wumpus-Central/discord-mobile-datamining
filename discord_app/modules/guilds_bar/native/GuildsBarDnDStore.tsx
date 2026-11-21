@@ -1,10 +1,10 @@
-// === Module 17737: GuildsBarDnDStore ===
+// === Module 17863: GuildsBarDnDStore ===
 
-// Module 17737 (GuildsBarDnDStore)
+// Module 17863 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import _mod4709 from "module_4709" /* 4709 */;
-import SortedGuildStore from "SortedGuildStore" /* 6431 */;
+import _mod4828 from "module_4828" /* 4828 */;
+import SortedGuildStore from "SortedGuildStore" /* 6550 */;
 import identity from "module_1257" /* 1257 */;
 import size from "module_2" /* 2 */;
 
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "replace" }));
+      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "fill" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -198,7 +198,7 @@ export function useItemDragState(guildId, flag) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

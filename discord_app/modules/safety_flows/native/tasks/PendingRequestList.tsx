@@ -1,12 +1,12 @@
-// === Module 20030: PendingRequestList ===
+// === Module 20157: PendingRequestList ===
 
-// Module 20030 (PendingRequestList)
+// Module 20157 (PendingRequestList)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import _modDef2725 from "module_2725" /* 2725 */;
-import _modDef3021 from "module_3021" /* 3021 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16056 */;
-import _modDef16105 from "module_16105" /* 16105 */;
+import _modDef2824 from "module_2824" /* 2824 */;
+import _modDef3120 from "module_3120" /* 3120 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16179 */;
+import _modDef16228 from "module_16228" /* 16228 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -259,7 +259,7 @@ export default function PendingRequestList(arg0) {
   const items1 = [c7(c5, { style: tmp.dividerLine }), , ];
   const obj7 = { style: tmp.dividerLabel, variant: "body-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1112).intl;
-  obj7.children = intl.string(_modDef3021["/SbB94"]);
+  obj7.children = intl.string(_modDef3120["/SbB94"]);
   items1[1] = c7(require("Text/Text").Text, obj7);
   items1[2] = c7(c5, { style: tmp.dividerLine });
   obj5.children = items1;
@@ -285,11 +285,11 @@ export default function PendingRequestList(arg0) {
   const obj11 = { style: tmp.details, children: null };
   const obj12 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1112).intl;
-  obj12.children = intl2.string(_modDef3021.z9gkwZ);
+  obj12.children = intl2.string(_modDef3120.z9gkwZ);
   const items4 = [c7(require("Text/Text").Text, obj12), ];
   const obj13 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1112).intl;
-  obj13.children = intl3.string(_modDef3021["9t4+vC"]);
+  obj13.children = intl3.string(_modDef3120["9t4+vC"]);
   items4[1] = c7(require("Text/Text").Text, obj13);
   obj11.children = items4;
   items3[1] = closure_8(c5, obj11);
@@ -305,7 +305,7 @@ export default function PendingRequestList(arg0) {
   const items6 = [c7(require("Pressables").PressableOpacity, obj15), ];
   const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl5 = tmp5(1112).intl;
-  obj17.accessibilityLabel = intl5.string(_modDef3021.z9gkwZ);
+  obj17.accessibilityLabel = intl5.string(_modDef3120.z9gkwZ);
   obj17.onPress = onInviteAnotherGuardian;
   const items7 = [, ];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);

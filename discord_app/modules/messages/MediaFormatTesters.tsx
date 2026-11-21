@@ -1,7 +1,7 @@
-// === Module 5834: MediaFormatTesters ===
+// === Module 5953: MediaFormatTesters ===
 
-// Module 5834 (MediaFormatTesters)
-import WebViewWebmSupportTest from "WebViewWebmSupportTest" /* 5835 */;
+// Module 5953 (MediaFormatTesters)
+import WebViewWebmSupportTest from "WebViewWebmSupportTest" /* 5954 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -35,12 +35,12 @@ function urlMatchesFileExtension(sourceURI, GIF_RE_IOS) {
     return GIF_RE_IOS.test(tmp3[0]);
   }
 }
-function isWebPlayerVideoUrl(mediaUrl) {
+function isWebPlayerVideoUrl(proxyURL4) {
   let isIOSWithWebMResult = WebViewWebmSupportTest.isIOSWithWebM();
   if (isIOSWithWebMResult) {
     let flag = false;
-    if (null != mediaUrl) {
-      const tmp5 = _slicedToArray(mediaUrl.split(/\?/, 1), 2);
+    if (null != proxyURL4) {
+      const tmp5 = _slicedToArray(proxyURL4.split(/\?/, 1), 2);
       flag = re7.test(tmp5[0]);
     }
     isIOSWithWebMResult = flag;

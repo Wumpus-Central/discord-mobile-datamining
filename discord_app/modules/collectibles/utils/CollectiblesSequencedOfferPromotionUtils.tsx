@@ -1,10 +1,10 @@
-// === Module 8845: CollectiblesSequencedOfferPromotionUtils ===
+// === Module 8965: CollectiblesSequencedOfferPromotionUtils ===
 
-// Module 8845 (CollectiblesSequencedOfferPromotionUtils)
-import StorefrontTypes from "StorefrontTypes" /* 6735 */;
-import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8843 */;
-import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8846 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8807 */;
+// Module 8965 (CollectiblesSequencedOfferPromotionUtils)
+import StorefrontTypes from "StorefrontTypes" /* 6854 */;
+import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8963 */;
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8966 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8927 */;
 import size from "module_2" /* 2 */;
 
 function isSequencedOfferRewardAvailable(rewardStatus) {

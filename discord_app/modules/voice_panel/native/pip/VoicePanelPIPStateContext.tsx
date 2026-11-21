@@ -1,10 +1,10 @@
-// === Module 11639: VoicePanelPIPStateContext ===
+// === Module 11759: VoicePanelPIPStateContext ===
 
-// Module 11639 (VoicePanelPIPStateContext)
+// Module 11759 (VoicePanelPIPStateContext)
 import noop from "module_19" /* 19 */;
 
-let size = { id: "dispatch", mode: "isArray", width: false, height: null, containerHeight: "transparent", showSecondaryPIP: null, scale: null };
-const ReanimatedHelperTypes = fn(7330);
+let size = { id: "dispatch", mode: "isArray", width: false, height: null, containerHeight: "sku", showSecondaryPIP: null, scale: null };
+const ReanimatedHelperTypes = fn(7450);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 size = fn(2);

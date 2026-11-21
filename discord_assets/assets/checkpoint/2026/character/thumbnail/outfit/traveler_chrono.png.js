@@ -1,6 +1,6 @@
-// === Module 5999: ? ===
+// === Module 6118: ? ===
 
-// Module 5999
+// Module 6118
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/traveler_chrono.png.js");

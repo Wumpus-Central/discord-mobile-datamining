@@ -1,19 +1,19 @@
-// === Module 16092: FamilyCenterRequestsPage ===
+// === Module 16215: FamilyCenterRequestsPage ===
 
-// Module 16092 (FamilyCenterRequestsPage)
+// Module 16215 (FamilyCenterRequestsPage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef2725 from "module_2725" /* 2725 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
-import useUserLinks from "useUserLinks" /* 9016 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9017 */;
-import useHelpLineVisibility from "useHelpLineVisibility" /* 11704 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12341 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16052 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 16093 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 16098 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 16106 */;
+import _modDef2824 from "module_2824" /* 2824 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7017 */;
+import useUserLinks from "useUserLinks" /* 9136 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9137 */;
+import useHelpLineVisibility from "useHelpLineVisibility" /* 11824 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12463 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16175 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 16216 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 16221 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 16229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function FamilyCenterMaxConnectionsBlurb() {
   const hasMaxConnections = useUserLinks.useHasMaxConnections();
   useAgeSpecificText;
   const intl = util.intl;
-  intl.formatToPlainString(_modDef2725["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
+  intl.formatToPlainString(_modDef2824["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
   const intl2 = util.intl;
   let tmp10 = null;
   if (hasMaxConnections) {
@@ -39,13 +39,13 @@ function FamilyCenterHelpLineInfo() {
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
-    let formatResult = intl2.format(_modDef2725["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    let formatResult = intl2.format(_modDef2824["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
       const intl = util.intl;
       const obj2 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2725["6tsC8u"], obj2);
+      formatResult = intl.format(_modDef2824["6tsC8u"], obj2);
     }
   }
   let tmp11 = null;
@@ -53,7 +53,7 @@ function FamilyCenterHelpLineInfo() {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.supportHeader, variant: "heading-xs/semibold", children: null };
     const intl3 = util.intl;
-    obj4.children = intl3.string(_modDef2725["7/tVhv"]);
+    obj4.children = intl3.string(_modDef2824["7/tVhv"]);
     items = [React5(Text_Text.Text, obj4), ];
     const obj5 = { variant: "body-xs/medium", color: "text-muted", children: formatResult };
     items[1] = React5(Text_Text.Text, obj5);
@@ -64,22 +64,22 @@ function FamilyCenterHelpLineInfo() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(8216);
+const FamilyCenterConstants = fn(8336);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_6 } = FamilyCenterConstants);
-const THROUGHLINE_URL = fn(11662).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(11782).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let obj2 = { container: { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
-createStyles = fn(4794);
+createStyles = fn(4913);
 let obj5 = { container: null, supportHeader: null };
 let obj3 = { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 };
 obj5.container = { display: "flex", marginTop: nativeDefault.space.PX_16 };
 const obj6 = { display: "flex", marginTop: nativeDefault.space.PX_16 };
 obj5.supportHeader = { marginBottom: nativeDefault.space.PX_4 };
 let closure_12 = createStyles.createStyles(obj5);
-createStyles = fn(4794);
+createStyles = fn(4913);
 const obj9 = { scrollView: { flex: 1 }, container: null };
 const obj7 = { marginBottom: nativeDefault.space.PX_4 };
 obj9.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };

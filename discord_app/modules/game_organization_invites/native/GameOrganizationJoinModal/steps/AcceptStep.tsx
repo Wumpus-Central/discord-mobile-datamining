@@ -1,6 +1,6 @@
-// === Module 12121: AcceptStep ===
+// === Module 12243: AcceptStep ===
 
-// Module 12121 (AcceptStep)
+// Module 12243 (AcceptStep)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -8,12 +8,12 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const GameOrganizationInviteConstants = fn(11776);
+const GameOrganizationInviteConstants = fn(11896);
 ({ GameOrganizationCharacterMode: metroImportDefault, GameOrganizationInviteAcceptStatus: closure_8 } = GameOrganizationInviteConstants);
-const onPress = fn(12115).closeGameOrganizationJoinModal;
+const onPress = fn(12237).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 12660: CheckpointRecapCard ===
+// === Module 12782: CheckpointRecapCard ===
 
-// Module 12660 (CheckpointRecapCard)
+// Module 12782 (CheckpointRecapCard)
 import nativeDefault from "native" /* 575 */;
-import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6216 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12384 */;
-import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 12396 */;
-import CheckpointShareCardYearDefault from "CheckpointShareCardYear" /* 12400 */;
+import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6335 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12506 */;
+import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 12518 */;
+import CheckpointShareCardYearDefault from "CheckpointShareCardYear" /* 12522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,8 +32,8 @@ export default function CheckpointRecapCard(character) {
     const _Math2 = Math;
     bound = Math.min(Math.max(maxHeight / 268, 0.75), maxScale);
   }
-  const characterCardColorPalette = character(5874).getCharacterCardColorPalette(character);
-  const obj2 = character(5874);
+  const characterCardColorPalette = character(5993).getCharacterCardColorPalette(character);
+  const obj2 = character(5993);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -43,11 +43,11 @@ export default function CheckpointRecapCard(character) {
     return checkpointCharacterAccessibilityLabel;
   }, items);
   const obj4 = { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: bound, clydeSize: 28, characterLayout: rect, children: null };
-  const obj3 = character(5874);
+  const obj3 = character(5993);
   const obj5 = { path: null, x: null, color: null };
   const tmpResult = CheckpointCardFrameDefault;
-  obj5.path = character(12400).YEAR_PATH;
-  obj5.x = 200 - character(12400).YEAR_WIDTH;
+  obj5.path = character(12522).YEAR_PATH;
+  obj5.x = 200 - character(12522).YEAR_WIDTH;
   obj5.color = obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor;
   obj4.children = jsx(CheckpointShareCardYearDefault, { path: null, x: null, color: null });
   const tmp11 = <tmpResult character={character} cardColorPalette={characterCardColorPalette} canvasWidth={200} canvasHeight={268} scale={bound} clydeSize={28} characterLayout={rect}>{null}</tmpResult>;

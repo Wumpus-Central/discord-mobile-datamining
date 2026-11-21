@@ -1,22 +1,22 @@
-// === Module 16048: UserSettingsFamilyCenter ===
+// === Module 16171: UserSettingsFamilyCenter ===
 
-// Module 16048 (UserSettingsFamilyCenter)
+// Module 16171 (UserSettingsFamilyCenter)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef2725 from "module_2725" /* 2725 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6246 */;
-import MetricEvents from "MetricEvents" /* 6251 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6305 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7105 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8217 */;
+import _modDef2824 from "module_2824" /* 2824 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6365 */;
+import MetricEvents from "MetricEvents" /* 6370 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6424 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7225 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8337 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8215 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8335 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function FamilyCenterLoading() {
 function FamilyCenterLoadError() {
   const tmp = closure_18();
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2725.nGX8Co);
+  const stringResult = intl.string(_modDef2824.nGX8Co);
   require = stringResult;
   items = [stringResult];
   const effect = noop.useEffect(() => {
@@ -195,13 +195,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const AgeGateSource = fn(1096).AgeGateSource;
-const FamilyCenterConstants = fn(8216);
+const FamilyCenterConstants = fn(8336);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_10, FamilyCenterSubPageAnalyticsIds: closure_11, FamilyCenterSubPages } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [, ];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, loadingContainer: { minHeight: "100%" }, loadErrorContainer: null, loadErrorText: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.loadErrorContainer = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };

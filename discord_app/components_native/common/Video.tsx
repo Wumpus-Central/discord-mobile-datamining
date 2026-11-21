@@ -1,11 +1,11 @@
-// === Module 9134: common/Video ===
+// === Module 9254: common/Video ===
 
-// Module 9134 (common/Video)
+// Module 9254 (common/Video)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7069 */;
-import openMediaModal from "openMediaModal" /* 8097 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7189 */;
+import openMediaModal from "openMediaModal" /* 8217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -92,7 +92,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: closure_6, AppState: metroImportDefault } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, video: null };
 let obj3 = { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -232,7 +232,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(4855).ThemeContext;
+Video.contextType = fn(4974).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

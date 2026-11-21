@@ -1,6 +1,6 @@
-// === Module 14624: conjureSettingValues ===
+// === Module 14747: conjureSettingValues ===
 
-// Module 14624 (conjureSettingValues)
+// Module 14747 (conjureSettingValues)
 import _slicedToArray from "module_32" /* 32 */;
 
 function conjureSettingSubmitValue(found, num) {

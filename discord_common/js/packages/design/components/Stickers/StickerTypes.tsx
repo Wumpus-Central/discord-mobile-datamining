@@ -1,6 +1,6 @@
-// === Module 4815: StickerTypes ===
+// === Module 4934: StickerTypes ===
 
-// Module 4815 (StickerTypes)
+// Module 4934 (StickerTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx");

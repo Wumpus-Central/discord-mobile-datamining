@@ -1,12 +1,12 @@
-// === Module 6711: SoundboardActionCreators ===
+// === Module 6830: SoundboardActionCreators ===
 
-// Module 6711 (SoundboardActionCreators)
+// Module 6830 (SoundboardActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4624 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4743 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5842 */;
+import SoundboardStore from "SoundboardStore" /* 5961 */;
 
 const require = globalThis.__r;
 
@@ -396,7 +396,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5844).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5963).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1071);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1081);

@@ -1,25 +1,25 @@
-// === Module 13663: ConjureProjectsSheet ===
+// === Module 13785: ConjureProjectsSheet ===
 
-// Module 13663 (ConjureProjectsSheet)
+// Module 13785 (ConjureProjectsSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import BottomSheetModal from "BottomSheetModal" /* 5026 */;
-import useMountEffectDefault from "useMountEffect" /* 5355 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
-import TableRow from "TableRow" /* 6925 */;
-import TableRowGroup from "TableRowGroup" /* 7228 */;
-import Search_SearchBar from "Search/SearchBar" /* 7307 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
-import ActionSheet from "ActionSheet" /* 7433 */;
-import IconButton from "IconButton" /* 7471 */;
-import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9831 */;
-import _modDef11552 from "module_11552" /* 11552 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12168 */;
-import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 13664 */;
-import ConjureProjectIcon from "ConjureProjectIcon" /* 13667 */;
-import ConjureProjectGroupListDefault from "ConjureProjectGroupList" /* 13668 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import BottomSheetModal from "BottomSheetModal" /* 5145 */;
+import useMountEffectDefault from "useMountEffect" /* 5474 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
+import TableRow from "TableRow" /* 7045 */;
+import TableRowGroup from "TableRowGroup" /* 7348 */;
+import Search_SearchBar from "Search/SearchBar" /* 7427 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7515 */;
+import ActionSheet from "ActionSheet" /* 7553 */;
+import IconButton from "IconButton" /* 7591 */;
+import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9951 */;
+import _modDef11672 from "module_11672" /* 11672 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12290 */;
+import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 13786 */;
+import ConjureProjectIcon from "ConjureProjectIcon" /* 13789 */;
+import ConjureProjectGroupListDefault from "ConjureProjectGroupList" /* 13790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ function confirmPin() {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;
@@ -51,12 +51,12 @@ export default function ConjureProjectsSheet() {
   });
   const obj = { title: null, trailing: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef4091.uk6jhJ);
+  obj.title = intl.string(_modDef4190.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef11552, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef11672, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
-    obj2.accessibilityLabel = intl2.string(_modDef4091.qCBh6V);
+    obj2.accessibilityLabel = intl2.string(_modDef4190.qCBh6V);
     obj2.onPress = confirmPin;
     tmp10Result = hasOwnProperty(IconButton.IconButton, obj2);
   }
@@ -65,16 +65,16 @@ export default function ConjureProjectsSheet() {
   const obj4 = { contentContainerStyle: tmp3.scrollContent, scrollIndicatorInsets: { bottom }, keyboardShouldPersistTaps: "handled", children: null };
   const obj5 = { size: "md", onChange: tmp6, placeholder: null, accessibilityLabel: null };
   const intl3 = util.intl;
-  obj5.placeholder = intl3.string(_modDef4091["2y8sUh"]);
+  obj5.placeholder = intl3.string(_modDef4190["2y8sUh"]);
   const intl4 = util.intl;
-  obj5.accessibilityLabel = intl4.string(_modDef4091.u0kEN9);
+  obj5.accessibilityLabel = intl4.string(_modDef4190.u0kEN9);
   items = [hasOwnProperty(Search_SearchBar.SearchBar, obj5), , ];
   const obj6 = { hasIcons: true, children: null };
   const obj7 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
   const intl5 = util.intl;
-  obj7.label = intl5.string(_modDef4091.bnVYYC);
+  obj7.label = intl5.string(_modDef4190.bnVYYC);
   const intl6 = util.intl;
-  obj7.subLabel = intl6.string(_modDef4091.gnzLwZ);
+  obj7.subLabel = intl6.string(_modDef4190.gnzLwZ);
   obj7.icon = hasOwnProperty(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
   obj7.onPress = function onPress() {
     return openConjureHomeScreenDefault(undefined, { focusComposer: true });

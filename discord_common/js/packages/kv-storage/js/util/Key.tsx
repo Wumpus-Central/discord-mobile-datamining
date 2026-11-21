@@ -1,7 +1,7 @@
-// === Module 4678: Key ===
+// === Module 4797: Key ===
 
-// Module 4678 (Key)
-import TableId from "TableId" /* 4679 */;
+// Module 4797 (Key)
+import TableId from "TableId" /* 4798 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");

@@ -1,7 +1,7 @@
-// === Module 8457: useChannelChatUnread ===
+// === Module 8577: useChannelChatUnread ===
 
-// Module 8457 (useChannelChatUnread)
-import ReadStateStore from "ReadStateStore" /* 6500 */;
+// Module 8577 (useChannelChatUnread)
+import ReadStateStore from "ReadStateStore" /* 6619 */;
 
 const require = globalThis.__r;
 

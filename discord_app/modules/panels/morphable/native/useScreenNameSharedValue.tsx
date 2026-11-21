@@ -1,6 +1,6 @@
-// === Module 19041: useScreenNameSharedValue ===
+// === Module 19168: useScreenNameSharedValue ===
 
-// Module 19041 (useScreenNameSharedValue)
+// Module 19168 (useScreenNameSharedValue)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,8 +9,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
-  let rootNavigationRef = sharedValue(4971).getRootNavigationRef();
-  let obj = sharedValue(4971);
+  let rootNavigationRef = sharedValue(5090).getRootNavigationRef();
+  let obj = sharedValue(5090);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();

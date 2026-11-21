@@ -1,11 +1,11 @@
-// === Module 13308: GuildBoostPurchasingUtils ===
+// === Module 13430: GuildBoostPurchasingUtils ===
 
-// Module 13308 (GuildBoostPurchasingUtils)
+// Module 13430 (GuildBoostPurchasingUtils)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2177 */;
+import SubscriptionStore from "SubscriptionStore" /* 2178 */;
 
 require = fn;
 function alertUnableToManageSub(body, source) {
@@ -153,10 +153,10 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(2172).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(2172);
-                      num3 = numPremiumGuildSubscriptions + c1(2172).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(2172);
+                      const numPremiumGuildSubscriptions = closure_0(2173).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(2173);
+                      num3 = numPremiumGuildSubscriptions + c1(2173).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(2173);
                     }
                     tmp = sum > num3;
                   }

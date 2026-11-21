@@ -1,6 +1,6 @@
-// === Module 5348: NavigatorConstants ===
+// === Module 5467: NavigatorConstants ===
 
-// Module 5348 (NavigatorConstants)
+// Module 5467 (NavigatorConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorConstants.native.tsx");

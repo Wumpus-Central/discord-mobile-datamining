@@ -1,9 +1,9 @@
-// === Module 11572: BookmarkIcon ===
+// === Module 11692: BookmarkIcon ===
 
-// Module 11572 (BookmarkIcon)
+// Module 11692 (BookmarkIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod11573 from "module_11573" /* 11573 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod11693 from "module_11693" /* 11693 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BookmarkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11573, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11693, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

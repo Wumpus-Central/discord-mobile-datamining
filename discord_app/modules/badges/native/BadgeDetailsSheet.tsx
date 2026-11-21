@@ -1,24 +1,24 @@
-// === Module 13868: BadgeDetailsSheet ===
+// === Module 13990: BadgeDetailsSheet ===
 
-// Module 13868 (BadgeDetailsSheet)
+// Module 13990 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5498 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8022 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13867 */;
-import BadgeUtils from "BadgeUtils" /* 13870 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 13885 */;
-import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 13891 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13989 */;
+import BadgeUtils from "BadgeUtils" /* 13992 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14007 */;
+import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 14013 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import UserStore from "UserStore" /* 1386 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13869 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8017 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13991 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
 
 const _modDef1653 = _mod1653;
 
@@ -596,10 +596,10 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-let closure_12 = fn(5023).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(5142).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { content: { flexGrow: 1 }, page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, header: null, newTag: null, graphic: null, graphicAnimated: null, identity: null, centeredText: null, eyebrow: null, title: null, identityArea: null, unlockLabel: null, uppercase: null, accessoryLine: null, accessoryDot: null, card: null, cardContent: null, descriptionGroup: null, divider: null, notice: null, noticeIcon: null, noticeText: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_8 };

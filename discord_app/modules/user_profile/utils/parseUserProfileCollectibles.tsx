@@ -1,6 +1,6 @@
-// === Module 6845: parseUserProfileCollectibles ===
+// === Module 6964: parseUserProfileCollectibles ===
 
-// Module 6845 (parseUserProfileCollectibles)
+// Module 6964 (parseUserProfileCollectibles)
 import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
 import size from "module_2" /* 2 */;
 

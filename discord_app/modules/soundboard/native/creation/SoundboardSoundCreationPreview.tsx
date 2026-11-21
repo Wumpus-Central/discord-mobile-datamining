@@ -1,15 +1,15 @@
-// === Module 19681: SoundboardSoundCreationPreview ===
+// === Module 19808: SoundboardSoundCreationPreview ===
 
-// Module 19681 (SoundboardSoundCreationPreview)
+// Module 19808 (SoundboardSoundCreationPreview)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import useToken from "useToken" /* 5358 */;
-import _modDef9140 from "module_9140" /* 9140 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import useToken from "useToken" /* 5477 */;
+import _modDef9260 from "module_9260" /* 9260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const _modDef1653 = _mod1653;
 
@@ -47,11 +47,11 @@ function PlayheadLine(arg0) {
   return refs(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const MAX_SOUND_LENGTH_SECONDS = fn(5844).MAX_SOUND_LENGTH_SECONDS;
-const SoundOutputChannel = fn(5695).SoundOutputChannel;
+const MAX_SOUND_LENGTH_SECONDS = fn(5963).MAX_SOUND_LENGTH_SECONDS;
+const SoundOutputChannel = fn(5814).SoundOutputChannel;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { waveformCard: { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 }, waveformContainer: { height: 96, justifyContent: "center" }, playheadLine: null, trimError: null, previewButton: null, hiddenPlayer: null };
 let size = { position: "absolute", top: 0, width: 3, height: 96, borderRadius: nativeDefault.radii.sm };
 obj2.playheadLine = size;
@@ -67,7 +67,7 @@ let closure_16 = PlatformUtils.isIOS() ? (function VideoPreviewPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   ({ uri, volume, onEnd, onError } = onLoad);
   const tmp = closure_13();
-  return refs(_modDef9140, {
+  return refs(_modDef9260, {
     source: { uri },
     audioOnly: true,
     paused: false,
@@ -84,11 +84,11 @@ let closure_16 = PlatformUtils.isIOS() ? (function VideoPreviewPlayer(onLoad) {
   uri = uri.uri;
   let volume = uri.volume;
   ({ onLoad, onEnd, onError } = uri);
-  const tmp = volume(7272)(onLoad);
+  const tmp = volume(7392)(onLoad);
   dependencyMap = tmp;
-  const tmp2 = volume(7272)(onEnd);
+  const tmp2 = volume(7392)(onEnd);
   closure_3 = tmp2;
-  const tmp3 = volume(7272)(onError);
+  const tmp3 = volume(7392)(onError);
   closure_4 = tmp3;
   items = [uri, volume, tmp, tmp2, tmp3];
   const effect = noop.useEffect(() => {
@@ -174,7 +174,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(19673).loadSoundboardAudioPreview(c4, closure_2_0(19673).WAVEFORM_BAR_COUNT);
+      await closure_2_0(19800).loadSoundboardAudioPreview(c4, closure_2_0(19800).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {

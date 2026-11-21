@@ -1,6 +1,6 @@
-// === Module 4980: ScreenIndexFrozen ===
+// === Module 5099: ScreenIndexFrozen ===
 
-// Module 4980 (ScreenIndexFrozen)
+// Module 5099 (ScreenIndexFrozen)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

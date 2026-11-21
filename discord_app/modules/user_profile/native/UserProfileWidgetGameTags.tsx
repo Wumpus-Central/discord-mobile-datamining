@@ -1,14 +1,14 @@
-// === Module 10122: UserProfileWidgetGameTags ===
+// === Module 10242: UserProfileWidgetGameTags ===
 
-// Module 10122 (UserProfileWidgetGameTags)
+// Module 10242 (UserProfileWidgetGameTags)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import XSmallIcon from "XSmallIcon" /* 7031 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8016 */;
-import WidgetUtils from "WidgetUtils" /* 10097 */;
-import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 10123 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import XSmallIcon from "XSmallIcon" /* 7151 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8136 */;
+import WidgetUtils from "WidgetUtils" /* 10217 */;
+import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 10243 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -39,15 +39,15 @@ function GameTag(removeButtonRef) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(7949).TrackUserProfileEditActions;
+let closure_7 = fn(8069).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let xs = "xs";
-xs = fn(7120).ICON_SIZE.xs;
+xs = fn(7240).ICON_SIZE.xs;
 const PX_4 = nativeDefault.space.PX_4;
 let c13 = "body-sm/normal";
 const hitSlop = Math.max((44 - xs) / 2, 0);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { tags: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 }, tag: null, tagText: null, singleLine: null, addTag: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
 obj.tag = { minHeight: 30, flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };

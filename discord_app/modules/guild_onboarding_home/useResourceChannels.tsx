@@ -1,8 +1,8 @@
-// === Module 18079: useResourceChannels ===
+// === Module 18205: useResourceChannels ===
 
-// Module 18079 (useResourceChannels)
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6565 */;
+// Module 18205 (useResourceChannels)
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6684 */;
 
 const require = globalThis.__r;
 

@@ -1,7 +1,7 @@
-// === Module 18134: useConjurePublishRemix ===
+// === Module 18261: useConjurePublishRemix ===
 
-// Module 18134 (useConjurePublishRemix)
-import useConjureSharingModeDefault from "useConjureSharingMode" /* 18135 */;
+// Module 18261 (useConjurePublishRemix)
+import useConjureSharingModeDefault from "useConjureSharingMode" /* 18262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

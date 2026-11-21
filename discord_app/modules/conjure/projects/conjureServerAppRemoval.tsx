@@ -1,18 +1,18 @@
-// === Module 12260: conjureServerAppRemoval ===
+// === Module 12382: conjureServerAppRemoval ===
 
-// Module 12260 (conjureServerAppRemoval)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6392 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6540 */;
-import ConjureUtils from "ConjureUtils" /* 6746 */;
-import conjureAppInServer from "conjureAppInServer" /* 6836 */;
+// Module 12382 (conjureServerAppRemoval)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6659 */;
+import ConjureUtils from "ConjureUtils" /* 6865 */;
+import conjureAppInServer from "conjureAppInServer" /* 6955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
-import GuildChannelStore from "GuildChannelStore" /* 4724 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -300,7 +300,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

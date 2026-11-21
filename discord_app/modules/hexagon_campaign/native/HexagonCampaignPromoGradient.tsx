@@ -1,9 +1,9 @@
-// === Module 15749: HexagonCampaignPromoGradient ===
+// === Module 15872: HexagonCampaignPromoGradient ===
 
-// Module 15749 (HexagonCampaignPromoGradient)
+// Module 15872 (HexagonCampaignPromoGradient)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5349 */;
-import useToken from "useToken" /* 5358 */;
+import LinearGradientDefault from "LinearGradient" /* 5468 */;
+import useToken from "useToken" /* 5477 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,13 +13,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const angleCenter = { x: 0.5, y: 0.5 };
-[closure_9, closure_10, closure_11, closure_12] = fn(15750).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
-const prop = fn(15750).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+[closure_9, closure_10, closure_11, closure_12] = fn(15873).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+const prop = fn(15873).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
 const locations = prop.map((location) => location.location);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { shade: null };
-const importDefaultResultResult = _slicedToArray(fn(15750).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
-obj2.shade = { backgroundColor: nativeDefault.colors[fn(undefined, 15750).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN] };
+const importDefaultResultResult = _slicedToArray(fn(15873).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
+obj2.shade = { backgroundColor: nativeDefault.colors[fn(undefined, 15873).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN] };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPromoGradient.tsx");

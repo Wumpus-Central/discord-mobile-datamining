@@ -1,15 +1,15 @@
-// === Module 9347: PremiumGiftPlanSelect ===
+// === Module 9467: PremiumGiftPlanSelect ===
 
-// Module 9347 (PremiumGiftPlanSelect)
+// Module 9467 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 9365 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 9485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8017 */;
-import PromotionsStore from "PromotionsStore" /* 9023 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
+import PromotionsStore from "PromotionsStore" /* 9143 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 let items = [, ];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1388).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -323,14 +323,14 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         str4 = "";
       }
       obj15.nextTierName = str4;
-      const tmp4Result = tmp4(9389);
+      const tmp4Result = tmp4(9509);
       const tmp79 = currentIndex;
-      obj15.nextTierIcon = tmp(9362).getGiftingBadgeTierIconUrl(nextTier);
-      obj15.analyticsLocation = tmp4(7419).PREMIUM_GIFT_PLAN_SELECTION;
+      obj15.nextTierIcon = tmp(9482).getGiftingBadgeTierIconUrl(nextTier);
+      obj15.analyticsLocation = tmp4(7539).PREMIUM_GIFT_PLAN_SELECTION;
       obj14.children = tmp74(tmp4Result, obj15);
       obj13.children = tmp74(tmp79, obj14);
       tmp74Result = tmp74(tmp75, obj13);
-      const tmpResult7 = tmp(9362);
+      const tmpResult7 = tmp(9482);
     }
     const items16 = [tmp74Result, , ];
     const obj16 = { style: tmp13.dmGiftingContent, children: null };
@@ -341,7 +341,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         let tmp74Result4 = null != recipientUser;
         if (tmp74Result4) {
           const obj17 = { giftRecipient: recipientUser };
-          tmp74Result4 = tmp74(tmp(9424).PremiumGiftWishlistBanner, obj17);
+          tmp74Result4 = tmp74(tmp(9544).PremiumGiftWishlistBanner, obj17);
         }
         items16[2] = tmp74Result4;
         obj11.children = items16;
@@ -366,13 +366,13 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       };
       size.customAnimation = callback3;
       size.onSnapToItem = tmp16;
-      tmp74Result6 = tmp74(tmp4(9390), size);
-      const tmp4Result5 = tmp4(9390);
+      tmp74Result6 = tmp74(tmp4(9510), size);
+      const tmp4Result5 = tmp4(9510);
     }
     tmp76 = callback2;
   } else {
     if (tmp18) {
-      tmp18 = c12(tmp4(10481), { animated: true, barStyle: "light-content" });
+      tmp18 = c12(tmp4(10601), { animated: true, barStyle: "light-content" });
     }
     const items17 = [tmp18, , , , , ];
     const obj21 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -385,15 +385,15 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     obj21.accessibilityLabel = intl.string(tmp(1112).t.cpT0Cq);
     const obj23 = { style: tmp13.closeButton, children: null };
     const obj24 = { size: "md", style: tmp13.closeButtonIcon };
-    obj23.children = c12(tmp(7031).XSmallIcon, obj24);
+    obj23.children = c12(tmp(7151).XSmallIcon, obj24);
     obj21.children = c12(c7, obj23);
     items17[1] = c12(currentIndex, obj21);
     const obj25 = { resizeMode: "cover", style: null, source: null };
     const items19 = [, ];
     ({ headerImageContainer: arr20[0], headerImage: arr20[1] } = tmp13);
     obj25.style = items19;
-    obj25.source = tmp4(13818);
-    items17[2] = c12(tmp4(5481), obj25);
+    obj25.source = tmp4(13940);
+    items17[2] = c12(tmp4(5600), obj25);
     const obj26 = { style: null };
     const items20 = [, ];
     ({ headerImageContainer: arr21[0], headerOverlay: arr21[1] } = tmp13);
@@ -402,12 +402,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const obj27 = { style: tmp13.headerBackground, start: null, end: null, colors: null };
     ({ START: obj18.start, END: obj18.end } = callback);
     obj27.colors = memo2;
-    items17[4] = c12(tmp4(5349), obj27);
+    items17[4] = c12(tmp4(5468), obj27);
     const obj28 = { contentContainerStyle: null, children: null };
     const obj29 = { paddingBottom: bottom };
     obj28.contentContainerStyle = obj29;
     const obj30 = { style: null, children: null };
-    const obj31 = { paddingTop: top + tmp(5348).NAV_BAR_HEIGHT };
+    const obj31 = { paddingTop: top + tmp(5467).NAV_BAR_HEIGHT };
     obj30.style = obj31;
     if (null == recipientUser) {
       const items21 = [tmp62, , , , ];
@@ -430,11 +430,11 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         formatToPlainStringResult = intl2.string(tmp(1112).t.dqQgZv);
       }
       obj32.children = formatToPlainStringResult;
-      items21[1] = tmp56(tmp(5385).Text, obj32);
+      items21[1] = tmp56(tmp(5504).Text, obj32);
       const obj34 = { style: tmp13.description, variant: "heading-xs/medium", color: "text-overlay-light", children: null };
       const intl4 = tmp(1112).intl;
       obj34.children = intl4.string(tmp(1112).t["30qzrd"]);
-      items21[2] = tmp56(tmp(5385).Text, obj34);
+      items21[2] = tmp56(tmp(5504).Text, obj34);
       let tmp56Result = tmp12;
       if (tmp12) {
         const obj35 = { style: tmp13.badgeBanner, onPress: callback1, accessibilityRole: "button", children: null };
@@ -444,12 +444,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
           str3 = "";
         }
         obj36.nextTierName = str3;
-        const tmp4Result7 = tmp4(9389);
-        obj36.nextTierIcon = tmp(9362).getGiftingBadgeTierIconUrl(nextTier);
-        obj36.analyticsLocation = tmp4(7419).PREMIUM_GIFT_PLAN_SELECTION;
+        const tmp4Result7 = tmp4(9509);
+        obj36.nextTierIcon = tmp(9482).getGiftingBadgeTierIconUrl(nextTier);
+        obj36.analyticsLocation = tmp4(7539).PREMIUM_GIFT_PLAN_SELECTION;
         obj35.children = tmp56(tmp4Result7, obj36);
         tmp56Result = tmp56(tmp57, obj35);
-        const tmpResult8 = tmp(9362);
+        const tmpResult8 = tmp(9482);
       }
       items21[3] = tmp56Result;
       if (0 !== stateFromStoresArray.length) {
@@ -495,21 +495,21 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         size1.customAnimation = tmp70;
         size1.modeConfig = { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 };
         size1.onSnapToItem = tmp16;
-        const items23 = [tmp56(tmp4(9390), size1), ];
+        const items23 = [tmp56(tmp4(9510), size1), ];
         const obj41 = { numberOfItems: arr14.length, currentIndex };
         items23[1] = tmp56(tmp(1186).CarouselPagination, obj41);
         obj40.children = items23;
         tmp56Result3 = tmp53(tmp54, obj40);
-        const tmp4Result8 = tmp4(9390);
+        const tmp4Result8 = tmp4(9510);
       }
     } else {
-      const obj42 = { style: tmp13.avatar, guildId: "r", size: "Promise", user: null };
+      const obj42 = { style: tmp13.avatar, guildId: "r", size: null, user: "\u{1FAF1}\u{1F3FC}" };
       const AvatarSizes = tmp(1186).AvatarSizes;
       obj42.size = tmp12 ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj42.user = recipientUser;
       tmp56(tmp(1186).Avatar, obj42);
     }
-    const tmp4Result6 = tmp4(5481);
+    const tmp4Result6 = tmp4(5600);
     tmp57 = currentIndex;
     tmp58 = c7;
   }

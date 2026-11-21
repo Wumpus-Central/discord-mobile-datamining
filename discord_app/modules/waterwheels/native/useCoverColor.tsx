@@ -1,6 +1,6 @@
-// === Module 17708: useInterestCoverColor ===
+// === Module 17822: useCoverColor ===
 
-// Module 17708 (useInterestCoverColor)
+// Module 17822 (useCoverColor)
 import _modDef671 from "module_671" /* 671 */;
 import privDefault from "priv" /* 1454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -46,7 +46,7 @@ function accessibleCoverColor(arg0) {
   }
   return hexResult;
 }
-function fetchInterestCoverColor(arg0, uri) {
+function fetchCoverColor(arg0, uri) {
   closure_2 = async function _extractColor() {
     if (c4 === 2) {
       c4 = 3;
@@ -160,12 +160,12 @@ function fetchInterestCoverColor(arg0, uri) {
     return obj2.pending;
   }
 }
-const sum = fn(4801).WCAGContrastRatios.Text + 0.3;
+const sum = fn(4920).WCAGContrastRatios.Text + 0.3;
 let closure_7 = new privDefault({ max: 256 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestCoverColor.tsx");
+let result = size.fileFinishedImporting("modules/waterwheels/native/useCoverColor.tsx");
 
-export default function useInterestCoverColor(arg0, arg1) {
+export default function useCoverColor(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   [tmp2, dependencyMap] = noop.useState(null);
@@ -201,7 +201,7 @@ export default function useInterestCoverColor(arg0, arg1) {
               closure_128_0 = undefined;
               v1 = 1;
               c3 = 1;
-              const obj4 = { value: fetchInterestCoverColor(gameId, closure_2_0), done: false };
+              const obj4 = { value: fetchCoverColor(gameId, closure_2_0), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -279,4 +279,4 @@ export function coverArtColor(backgroundColor) {
   const obj = _modDef671(backgroundColor);
   return obj.luminance(0.5 * obj.luminance()).hex();
 }
-export { fetchInterestCoverColor };
+export { fetchCoverColor };

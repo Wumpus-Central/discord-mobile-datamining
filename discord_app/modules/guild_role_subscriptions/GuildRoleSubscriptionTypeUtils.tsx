@@ -1,11 +1,11 @@
-// === Module 16511: GuildRoleSubscriptionTypeUtils ===
+// === Module 16634: GuildRoleSubscriptionTypeUtils ===
 
-// Module 16511 (GuildRoleSubscriptionTypeUtils)
+// Module 16634 (GuildRoleSubscriptionTypeUtils)
 import Constants from "Constants" /* 1082 */;
 import util from "util" /* 1112 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
-import PriceUtils from "PriceUtils" /* 6737 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 16487 */;
+import PriceUtils from "PriceUtils" /* 6856 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 16610 */;
 import size from "module_2" /* 2 */;
 
 const constants = GuildRoleSubscriptionsConstants.GuildRoleSubscriptionBenefitTypes;

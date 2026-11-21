@@ -1,11 +1,11 @@
-// === Module 18247: useConjureRevealedText ===
+// === Module 18374: useConjureRevealedText ===
 
-// Module 18247 (useConjureRevealedText)
-import ConjureStreamReveal from "ConjureStreamReveal" /* 18248 */;
-import conjurePageVisibility from "conjurePageVisibility" /* 18249 */;
+// Module 18374 (useConjureRevealedText)
+import ConjureStreamReveal from "ConjureStreamReveal" /* 18375 */;
+import conjurePageVisibility from "conjurePageVisibility" /* 18376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const require = globalThis.__r;
 
@@ -100,7 +100,7 @@ export function useConjureRevealedText(source, streaming) {
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(18249);
+          obj = closure_0(18376);
         }
         obj = conjurePageVisibility;
         return conjurePageVisibility.subscribePageVisibility(flushIfHidden);
@@ -122,8 +122,8 @@ export function useConjureRevealedText(source, streaming) {
     obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(18248).reconcileRevealedLength(target, source, length);
-      const targetResult = target(18248);
+      let length2 = target(18375).reconcileRevealedLength(target, source, length);
+      const targetResult = target(18375);
     } else {
       length2 = source.length;
     }

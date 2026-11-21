@@ -1,9 +1,9 @@
-// === Module 14332: useConjurePresenceActivityImage ===
+// === Module 14454: useConjurePresenceActivityImage ===
 
-// Module 14332 (useConjurePresenceActivityImage)
-import shared from "shared" /* 4801 */;
-import useThemeDefault from "useTheme" /* 5003 */;
-import conjurePresenceActivityImageDefault from "conjurePresenceActivityImage" /* 14333 */;
+// Module 14454 (useConjurePresenceActivityImage)
+import shared from "shared" /* 4920 */;
+import useThemeDefault from "useTheme" /* 5122 */;
+import conjurePresenceActivityImageDefault from "conjurePresenceActivityImage" /* 14455 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/presence/useConjurePresenceActivityImage.tsx");

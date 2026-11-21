@@ -1,12 +1,12 @@
-// === Module 5404: ButtonShine ===
+// === Module 5523: ButtonShine ===
 
-// Module 5404 (ButtonShine)
+// Module 5523 (ButtonShine)
 import _modDef671 from "module_671" /* 671 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import createStyles from "createStyles" /* 4794 */;
-import shared from "shared" /* 4801 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import ButtonHooks from "ButtonHooks" /* 5399 */;
+import createStyles from "createStyles" /* 4913 */;
+import shared from "shared" /* 4920 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import ButtonHooks from "ButtonHooks" /* 5518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

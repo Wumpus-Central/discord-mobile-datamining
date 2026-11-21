@@ -1,17 +1,17 @@
-// === Module 12658: SidekickStats ===
+// === Module 12780: SidekickStats ===
 
-// Module 12658 (SidekickStats)
+// Module 12780 (SidekickStats)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef3341 from "module_3341" /* 3341 */;
-import CheckpointConstants from "CheckpointConstants" /* 5850 */;
-import ChatIcon from "ChatIcon" /* 7552 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 10891 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12601 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12629 */;
+import _modDef3440 from "module_3440" /* 3440 */;
+import CheckpointConstants from "CheckpointConstants" /* 5969 */;
+import ChatIcon from "ChatIcon" /* 7672 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11011 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12723 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12751 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4794 */;
+import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -33,10 +33,10 @@ export default function SidekickStats(sidekick) {
   const intl = util.intl;
   const obj3 = { duration: null };
   const intl2 = util.intl;
-  obj3.duration = intl2.formatToPlainString(_modDef3341.x7PkHm, { minutes: rounded1 });
+  obj3.duration = intl2.formatToPlainString(_modDef3440.x7PkHm, { minutes: rounded1 });
   const obj4 = { style: tmp.stats, children: null };
   const obj5 = { accessible: true, accessibilityLabel: null, style: null, children: null };
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3341.lw35aH, obj3);
+  const formatToPlainStringResult = intl.formatToPlainString(_modDef3440.lw35aH, obj3);
   obj5.accessibilityLabel = CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel("messages", rounded);
   obj5.style = tmp.stat;
   items = [hasOwnProperty(ChatIcon.ChatIcon, { size: "md", color: CHECKPOINT_PRIMARY }), hasOwnProperty(CheckpointStatNumberDefault, { value: result })];

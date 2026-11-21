@@ -1,12 +1,12 @@
-// === Module 19081: useMainFramePlayable ===
+// === Module 19208: useMainFramePlayable ===
 
-// Module 19081 (useMainFramePlayable)
+// Module 19208 (useMainFramePlayable)
 import initialize from "initialize" /* 504 */;
-import FramesStore from "FramesStore" /* 6504 */;
-import PlayableStore from "PlayableStore" /* 16347 */;
+import FramesStore from "FramesStore" /* 6623 */;
+import PlayableStore from "PlayableStore" /* 16470 */;
 
 require = fn;
-const asLaunched = fn(6505).asLaunched;
+const asLaunched = fn(6624).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/useMainFramePlayable.tsx");
 

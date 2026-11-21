@@ -1,16 +1,16 @@
-// === Module 9967: ChannelTabsActionCreators ===
+// === Module 10087: ChannelTabsActionCreators ===
 
-// Module 9967 (ChannelTabsActionCreators)
+// Module 10087 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
-import FavoritesUtils from "FavoritesUtils" /* 4668 */;
-import transitionToChannel from "transitionToChannel" /* 5527 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 9966 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 9964 */;
+import FavoritesUtils from "FavoritesUtils" /* 4787 */;
+import transitionToChannel from "transitionToChannel" /* 5646 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 10086 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 10084 */;
 
 require = fn;
 function getTabProperties(kind) {

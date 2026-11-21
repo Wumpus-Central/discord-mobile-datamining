@@ -1,6 +1,6 @@
-// === Module 11974: ? ===
+// === Module 12094: ? ===
 
-// Module 11974
+// Module 12094
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CharacterFallbackAbstractUI-3x.png.js");

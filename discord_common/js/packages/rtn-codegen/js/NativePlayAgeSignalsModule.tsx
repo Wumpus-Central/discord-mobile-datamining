@@ -1,6 +1,6 @@
-// === Module 7867: NativePlayAgeSignalsModule ===
+// === Module 7987: NativePlayAgeSignalsModule ===
 
-// Module 7867 (NativePlayAgeSignalsModule)
+// Module 7987 (NativePlayAgeSignalsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

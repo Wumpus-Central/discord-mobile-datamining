@@ -1,6 +1,6 @@
-// === Module 8565: getAccessibilityLabelOrCheapFallbackUnsafe ===
+// === Module 8685: getAccessibilityLabelOrCheapFallbackUnsafe ===
 
-// Module 8565 (getAccessibilityLabelOrCheapFallbackUnsafe)
+// Module 8685 (getAccessibilityLabelOrCheapFallbackUnsafe)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx");

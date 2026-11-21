@@ -1,20 +1,20 @@
-// === Module 12024: chat/formatPollMessageChatData ===
+// === Module 12146: chat/formatPollMessageChatData ===
 
-// Module 12024 (chat/formatPollMessageChatData)
+// Module 12146 (chat/formatPollMessageChatData)
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4713 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4732 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4740 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4744 */;
-import _mod6263 from "module_6263" /* 6263 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9766 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12027 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
-import EmojiStore from "EmojiStore" /* 6454 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import MessageStore from "MessageStore" /* 5845 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4832 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4851 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4863 */;
+import _mod6382 from "module_6382" /* 6382 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9886 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12149 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import EmojiStore from "EmojiStore" /* 6573 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import MessageStore from "MessageStore" /* 5964 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -165,7 +165,7 @@ function computeBasicPollChatData(message, arg1, arg2) {
     return obj6;
   }
 }
-const getPollState = fn(11783).getPollState;
+const getPollState = fn(11903).getPollState;
 const Constants = fn(1071);
 ({ MessageStates: closure_10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
 const ThemeTypes = fn(1082).ThemeTypes;
@@ -282,7 +282,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             tmp6 = flag;
           }
           let tmp7 = isExpired;
-          const match = _mod6263.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
+          const match = _mod6382.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
           obj = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults };
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
@@ -323,7 +323,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             obj2.shouldAnimateTransition = tmp20;
             const _Math = Math;
             obj2.votesPercentage = Math.round(100 * num2);
-            const match1 = _mod6263.match(layout_type);
+            const match1 = _mod6382.match(layout_type);
             obj2.votes = match1.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
               const intl = flag(layout_type[17]).intl;
               return intl.formatToPlainString(flag(layout_type[17]).t.XRkuof, { count: num });

@@ -1,19 +1,19 @@
-// === Module 15729: useUserProfileEditForm ===
+// === Module 15852: useUserProfileEditForm ===
 
-// Module 15729 (useUserProfileEditForm)
+// Module 15852 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8012 */;
-import UserProfileStore from "UserProfileStore" /* 6837 */;
-import WidgetStore from "WidgetStore" /* 10087 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8132 */;
+import UserProfileStore from "UserProfileStore" /* 6956 */;
+import WidgetStore from "WidgetStore" /* 10207 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 const FormStates = fn(1071).FormStates;
-const HexagonCampaignPerk = fn(4819).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(4938).HexagonCampaignPerk;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
@@ -91,7 +91,7 @@ export default function useUserProfileEditForm() {
               const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(7282).saveProfileAndAccountChanges(obj5), done: false };
+              const obj6 = { value: tmp5(7402).saveProfileAndAccountChanges(obj5), done: false };
               return obj6;
             }
           }
@@ -105,8 +105,8 @@ export default function useUserProfileEditForm() {
             ok = closure_128_0.ok;
           }
           if (ok) {
-            const result = tmp5(7282).resetPendingAccountChanges();
-            const obj = tmp5(7282);
+            const result = tmp5(7402).resetPendingAccountChanges();
+            const obj = tmp5(7402);
           }
         }
         c3 = 3;

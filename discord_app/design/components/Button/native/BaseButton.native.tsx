@@ -1,10 +1,10 @@
-// === Module 5401: Button/BaseButton ===
+// === Module 5520: Button/BaseButton ===
 
-// Module 5401 (Button/BaseButton)
+// Module 5520 (Button/BaseButton)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import native from "native" /* 4855 */;
-import ButtonHooks from "ButtonHooks" /* 5399 */;
+import native from "native" /* 4974 */;
+import ButtonHooks from "ButtonHooks" /* 5518 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import module_1653_mod from "module_1653" /* 1653 */;
@@ -14,9 +14,9 @@ let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1071).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5402).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5521).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 let module_1653 = module_1653_mod;
 let closure_9 = module_1653.createAnimatedComponent(Pressable);
@@ -54,7 +54,7 @@ export function BaseButton(disabled) {
   const tmp = closure_8();
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

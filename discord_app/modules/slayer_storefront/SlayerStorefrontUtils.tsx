@@ -1,17 +1,17 @@
-// === Module 6728: SlayerStorefrontUtils ===
+// === Module 6847: SlayerStorefrontUtils ===
 
-// Module 6728 (SlayerStorefrontUtils)
+// Module 6847 (SlayerStorefrontUtils)
 import applyDefault from "apply" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1379 */;
-import StoreUtils from "StoreUtils" /* 6240 */;
-import keysSorter from "keysSorter" /* 6451 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6732 */;
-import StorefrontUtils from "StorefrontUtils" /* 6733 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
-import ApplicationRecord from "ApplicationRecord" /* 2141 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6730 */;
+import StoreUtils from "StoreUtils" /* 6359 */;
+import keysSorter from "keysSorter" /* 6570 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6851 */;
+import StorefrontUtils from "StorefrontUtils" /* 6852 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
+import ApplicationRecord from "ApplicationRecord" /* 2142 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6849 */;
 
 const require = globalThis.__r;
 
@@ -159,14 +159,14 @@ function getSKUShareURL(guildId, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + gesture.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(6729).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(6731);
+let closure_4 = fn(6848).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(6850);
 ({ BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9, getChannelsGameShopPrefix: closure_10, STOREFRONT_MARKETING_GUILD_ID: closure_11, STOREFRONT_MARKETING_GUILD_ID_TEST: closure_12 } = SocialLayerStorefrontConstants);
 const Constants = fn(1071);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let str = "jpg";
-if (fn(6240).SUPPORTS_WEBP) {
+if (fn(6359).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {

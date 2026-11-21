@@ -1,8 +1,8 @@
-// === Module 9957: ForwardingIcon ===
+// === Module 10077: ForwardingIcon ===
 
-// Module 9957 (ForwardingIcon)
+// Module 10077 (ForwardingIcon)
 import jsxProd from "jsxProd" /* 21 */;
-import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 9958 */;
+import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 10078 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

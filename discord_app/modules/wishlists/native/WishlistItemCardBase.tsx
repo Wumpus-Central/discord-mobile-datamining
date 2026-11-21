@@ -1,19 +1,19 @@
-// === Module 8861: WishlistItemCardBase ===
+// === Module 8981: WishlistItemCardBase ===
 
-// Module 8861 (WishlistItemCardBase)
+// Module 8981 (WishlistItemCardBase)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import native from "native" /* 4855 */;
-import useToken from "useToken" /* 5358 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
-import LockIcon from "LockIcon" /* 7575 */;
-import useUserProfileColors from "useUserProfileColors" /* 8071 */;
-import useWishlistHooks from "useWishlistHooks" /* 8862 */;
-import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 8883 */;
-import WishlistShopUnpublishLabelDefault from "WishlistShopUnpublishLabel" /* 8884 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8885 */;
-import IndicatorDot from "IndicatorDot" /* 8887 */;
+import native from "native" /* 4974 */;
+import useToken from "useToken" /* 5477 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
+import LockIcon from "LockIcon" /* 7695 */;
+import useUserProfileColors from "useUserProfileColors" /* 8191 */;
+import useWishlistHooks from "useWishlistHooks" /* 8982 */;
+import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 9003 */;
+import WishlistShopUnpublishLabelDefault from "WishlistShopUnpublishLabel" /* 9004 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9005 */;
+import IndicatorDot from "IndicatorDot" /* 9007 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(8856).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(8976).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 }
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, newContentDot: null, lockBadge: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

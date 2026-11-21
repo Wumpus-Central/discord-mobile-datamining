@@ -1,18 +1,18 @@
-// === Module 18370: useConjurePatchNotesComposer ===
+// === Module 18497: useConjurePatchNotesComposer ===
 
-// Module 18370 (useConjurePatchNotesComposer)
-import ConjureUtils from "ConjureUtils" /* 6746 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 18371 */;
+// Module 18497 (useConjurePatchNotesComposer)
+import ConjureUtils from "ConjureUtils" /* 6865 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 18498 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(4799).MessageSendLocation;
+let closure_7 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(4918).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesComposer.tsx");
 

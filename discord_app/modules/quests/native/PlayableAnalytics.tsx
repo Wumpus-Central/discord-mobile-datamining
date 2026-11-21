@@ -1,9 +1,9 @@
-// === Module 16348: PlayableAnalytics ===
+// === Module 16471: PlayableAnalytics ===
 
-// Module 16348 (PlayableAnalytics)
-import QuestContent from "QuestContent" /* 6444 */;
-import AdCreativeType from "AdCreativeType" /* 6446 */;
-import AnalyticsActions from "AnalyticsActions" /* 8301 */;
+// Module 16471 (PlayableAnalytics)
+import QuestContent from "QuestContent" /* 6563 */;
+import AdCreativeType from "AdCreativeType" /* 6565 */;
+import AnalyticsActions from "AnalyticsActions" /* 8421 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/PlayableAnalytics.tsx");

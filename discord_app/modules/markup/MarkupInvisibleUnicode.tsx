@@ -1,6 +1,6 @@
-// === Module 8698: MarkupInvisibleUnicode ===
+// === Module 8818: MarkupInvisibleUnicode ===
 
-// Module 8698 (MarkupInvisibleUnicode)
+// Module 8818 (MarkupInvisibleUnicode)
 import size from "module_2" /* 2 */;
 
 const re0 = /^[\u200B-\u200D\uFEFF\u180E\u061C]+/;

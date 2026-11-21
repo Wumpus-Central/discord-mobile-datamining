@@ -1,6 +1,6 @@
-// === Module 4860: TransitionGroup/TransitionGroup ===
+// === Module 4979: TransitionGroup/TransitionGroup ===
 
-// Module 4860 (TransitionGroup/TransitionGroup)
+// Module 4979 (TransitionGroup/TransitionGroup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

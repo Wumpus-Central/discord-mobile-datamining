@@ -1,6 +1,6 @@
-// === Module 8165: timeRequire ===
+// === Module 8285: timeRequire ===
 
-// Module 8165 (timeRequire)
+// Module 8285 (timeRequire)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import size from "module_2" /* 2 */;
 

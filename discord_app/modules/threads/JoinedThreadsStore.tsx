@@ -1,11 +1,11 @@
-// === Module 4728: JoinedThreadsStore ===
+// === Module 4847: JoinedThreadsStore ===
 
-// Module 4728 (JoinedThreadsStore)
+// Module 4847 (JoinedThreadsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4647 */;
-import MuteTimersDefault from "MuteTimers" /* 4729 */;
+import ChannelRecord from "ChannelRecord" /* 4766 */;
+import MuteTimersDefault from "MuteTimers" /* 4848 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 

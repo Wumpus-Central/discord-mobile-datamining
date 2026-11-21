@@ -1,14 +1,14 @@
-// === Module 7725: AgeVerificationExpressiveV2Modal ===
+// === Module 7845: AgeVerificationExpressiveV2Modal ===
 
-// Module 7725 (AgeVerificationExpressiveV2Modal)
+// Module 7845 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 575 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6292 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6295 */;
-import NavigatorHeader from "NavigatorHeader" /* 6975 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7673 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7708 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7709 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
+import NavigatorHeader from "NavigatorHeader" /* 7095 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7828 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -383,11 +383,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6294).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(6413).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: null, emptyContainer: null, footer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 obj2.loadingContainer = { marginTop: nativeDefault.space.PX_24 };

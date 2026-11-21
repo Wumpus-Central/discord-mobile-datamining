@@ -1,23 +1,23 @@
-// === Module 18763: YouScreen ===
+// === Module 18890: YouScreen ===
 
-// Module 18763 (YouScreen)
+// Module 18890 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import RootNavigationRef from "RootNavigationRef" /* 4971 */;
-import Pressables from "Pressables" /* 6910 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7953 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8081 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 9825 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 15848 */;
+import RootNavigationRef from "RootNavigationRef" /* 5090 */;
+import Pressables from "Pressables" /* 7030 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8073 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8201 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 9945 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 15971 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 6837 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15864 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6545 */;
+import UserProfileStore from "UserProfileStore" /* 6956 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15987 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6664 */;
 import UserStore from "UserStore" /* 1386 */;
 import module_1653_mod from "module_1653" /* 1653 */;
 
@@ -506,18 +506,18 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(17824);
+const YouConstants = fn(17950);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 let closure_17 = fn(1073).CollectiblesMobileShopScreen;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
-const Constants = fn(7444);
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const Constants = fn(7564);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let module_1653 = module_1653_mod;
 const VisualEffectViewThemed = module_1653.createAnimatedComponent(VisualEffectViewThemedDefault);
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let closure_24 = createStyles.createStyles(() => {
   let xl;
   if (obj.isIOS()) {
@@ -553,7 +553,7 @@ let closure_24 = createStyles.createStyles(() => {
   obj3.content = { flex: 1, flexGrow: 1 };
   return obj3;
 });
-createStyles = fn(4794);
+createStyles = fn(4913);
 let closure_25 = createStyles.createStyles(() => {
   const obj = { backButton: { position: "absolute", marginTop: nativeDefault.space.PX_4, left: nativeDefault.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" } };
   return obj;

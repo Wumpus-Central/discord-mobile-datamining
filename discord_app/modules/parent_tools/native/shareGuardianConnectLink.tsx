@@ -1,10 +1,10 @@
-// === Module 16057: shareGuardianConnectLink ===
+// === Module 16180: shareGuardianConnectLink ===
 
-// Module 16057 (shareGuardianConnectLink)
+// Module 16180 (shareGuardianConnectLink)
 import util from "util" /* 1112 */;
-import _modDef2725 from "module_2725" /* 2725 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 8216 */;
-import showShareActionSheet from "showShareActionSheet" /* 9598 */;
+import _modDef2824 from "module_2824" /* 2824 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 8336 */;
+import showShareActionSheet from "showShareActionSheet" /* 9718 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = FamilyCenterConstants.FAMILY_CENTER_REQUEST_QR_CODE_URL;
@@ -18,6 +18,6 @@ export function shareGuardianConnectLink(stateFromStores, linkCode) {
   const tmp = closure_3(stateFromStores.id, linkCode);
   const obj2 = { message: null };
   const intl = util.intl;
-  obj2.message = intl.formatToPlainString(_modDef2725.lVD5Nd, { username, url: tmp });
+  obj2.message = intl.formatToPlainString(_modDef2824.lVD5Nd, { username, url: tmp });
   showShareActionSheet.showShareActionSheet(obj2, "Family Center Connect Guardian");
 }

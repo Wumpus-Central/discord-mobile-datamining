@@ -1,9 +1,9 @@
-// === Module 14330: useEntryActivityAndApplication ===
+// === Module 14452: useEntryActivityAndApplication ===
 
-// Module 14330 (useEntryActivityAndApplication)
+// Module 14452 (useEntryActivityAndApplication)
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
-import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 14331 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 14453 */;
 
 const require = globalThis.__r;
 
@@ -27,9 +27,9 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  [activityApplication, obj2.fallbackApplication] = activityApplication(6745)(items1);
+  [activityApplication, obj2.fallbackApplication] = activityApplication(6864)(items1);
   const obj2 = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
-  const tmp4 = activityApplication(6745);
+  const tmp4 = activityApplication(6864);
   const items2 = [EmbeddedActivitiesStore];
   obj2.embeddedActivity = tmp(504).useStateFromStores(items2, () => {
     let id;

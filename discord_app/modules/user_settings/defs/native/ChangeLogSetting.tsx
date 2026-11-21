@@ -1,11 +1,11 @@
-// === Module 16837: ChangeLogSetting ===
+// === Module 16960: ChangeLogSetting ===
 
-// Module 16837 (ChangeLogSetting)
+// Module 16960 (ChangeLogSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5498 */;
-import ChangeLogModal from "ChangeLogModal" /* 16838 */;
-import SettingBuilders from "SettingBuilders" /* 11817 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
+import ChangeLogModal from "ChangeLogModal" /* 16961 */;
+import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

@@ -1,19 +1,19 @@
-// === Module 12663: FinalizeTraitPicker ===
+// === Module 12785: FinalizeTraitPicker ===
 
-// Module 12663 (FinalizeTraitPicker)
+// Module 12785 (FinalizeTraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef3341 from "module_3341" /* 3341 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5894 */;
-import CheckpointTrait from "CheckpointTrait" /* 5895 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6217 */;
-import TraitOptionItem from "TraitOptionItem" /* 12665 */;
-import TraitPicker from "TraitPicker" /* 12666 */;
-import useTraitPicker from "useTraitPicker" /* 12669 */;
-import useLastColorwayIdByOutfitIdDefault from "useLastColorwayIdByOutfitId" /* 12673 */;
-import useLastMoreTabOptionDefault from "useLastMoreTabOption" /* 12674 */;
-import FinalizeTraitTabs from "FinalizeTraitTabs" /* 12675 */;
+import _modDef3440 from "module_3440" /* 3440 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6013 */;
+import CheckpointTrait from "CheckpointTrait" /* 6014 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6336 */;
+import TraitOptionItem from "TraitOptionItem" /* 12787 */;
+import TraitPicker from "TraitPicker" /* 12788 */;
+import useTraitPicker from "useTraitPicker" /* 12791 */;
+import useLastColorwayIdByOutfitIdDefault from "useLastColorwayIdByOutfitId" /* 12795 */;
+import useLastMoreTabOptionDefault from "useLastMoreTabOption" /* 12796 */;
+import FinalizeTraitTabs from "FinalizeTraitTabs" /* 12797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,11 +60,11 @@ function NoOutfitColorways(minHeight) {
   items[1] = tmp4;
   const obj3 = { variant: "body-lg/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3341.zsYYN1);
+  obj3.children = intl.string(_modDef3440.zsYYN1);
   const items1 = [React4(Text_Text.Text, obj3), ];
   const obj4 = { variant: "body-md/medium", color: "text-subtle", style: tmp.description, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3341.BkuqWx);
+  obj4.children = intl2.string(_modDef3440.BkuqWx);
   items1[1] = React4(Text_Text.Text, obj4);
   obj2.children = items1;
   return timestampProducer(View, obj2);
@@ -83,9 +83,9 @@ function OptionListSpacer(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
-let obj2 = { message: { paddingHorizontal: fn(12664).CONTENT_INSET }, description: null };
-let obj3 = { paddingHorizontal: fn(12664).CONTENT_INSET };
+const createStyles = fn(4913);
+let obj2 = { message: { paddingHorizontal: fn(12786).CONTENT_INSET }, description: null };
+let obj3 = { paddingHorizontal: fn(12786).CONTENT_INSET };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

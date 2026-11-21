@@ -1,15 +1,15 @@
-// === Module 9760: GameProfileGuildCard ===
+// === Module 9880: GameProfileGuildCard ===
 
-// Module 9760 (GameProfileGuildCard)
+// Module 9880 (GameProfileGuildCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import GuildIcon from "GuildIcon" /* 7202 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7253 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 9635 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9755 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import GuildIcon from "GuildIcon" /* 7322 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7373 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 9755 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9875 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const sum = nativeDefault.space.PX_48 + nativeDefault.space.PX_8;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, guildContent: null, guildHeaderRow: null, guildIcon: null, guildIconImage: null, guildIconLoading: null, guildInfo: null, guildNameDescriptionContainer: null, guildNameRow: null, guildName: null, memberCountsContainer: null, memberCountContainer: null, onlineEllipse: null, membersEllipse: null, skeletonGuildIcon: null, skeletonGuildInfo: null, skeletonGuildInfoSmall: null, skeletonGuildInfoLarge: null, skeletonGuildName: null, skeletonGuildDescription: null, skeletonMemberCounts: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.guildContent = { flexDirection: "column", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

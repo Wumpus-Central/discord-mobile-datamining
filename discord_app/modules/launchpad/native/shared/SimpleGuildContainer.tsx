@@ -1,13 +1,13 @@
-// === Module 18998: SimpleGuildContainer ===
+// === Module 19125: SimpleGuildContainer ===
 
-// Module 18998 (SimpleGuildContainer)
+// Module 19125 (SimpleGuildContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 8446 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17780 */;
-import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 18997 */;
-import CutoutImageDefault from "CutoutImage" /* 18999 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 8566 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17906 */;
+import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 19124 */;
+import CutoutImageDefault from "CutoutImage" /* 19126 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let closure_11 = noop.memo(function SimpleGuildContainerBadge(backgroundColor) {
   ({ badge, unread } = backgroundColor);

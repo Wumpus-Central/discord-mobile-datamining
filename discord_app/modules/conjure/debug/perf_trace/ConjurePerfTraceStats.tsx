@@ -1,7 +1,7 @@
-// === Module 18541: ConjurePerfTraceStats ===
+// === Module 18668: ConjurePerfTraceStats ===
 
-// Module 18541 (ConjurePerfTraceStats)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 6869 */;
+// Module 18668 (ConjurePerfTraceStats)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 6989 */;
 import size from "module_2" /* 2 */;
 
 function perfTraceStats(trace) {
@@ -66,7 +66,7 @@ export function sumPerfTraceStats(memo) {
   const obj = { categories: null, busyMs: null, model: null };
   const PERF_CATEGORIES = ConjurePerfTraceLayout.PERF_CATEGORIES;
   obj.categories = PERF_CATEGORIES.map((category) => {
-    const f132463 = (categories) => {
+    const f132870 = (categories) => {
       categories = categories.categories;
       const found = categories.find((category) => category.category === closure_1_0);
       let num;
@@ -78,11 +78,11 @@ export function sumPerfTraceStats(memo) {
       }
       return num;
     };
-    return { category, ms: f115109.reduce((acc, item) => acc + f132463(item), 0) };
+    return { category, ms: f115512.reduce((acc, item) => acc + f132870(item), 0) };
   });
-  let f115109 = (busyMs) => busyMs.busyMs;
-  obj.busyMs = mapped.reduce((acc, item) => acc + f132463(item), 0);
-  f115109 = (model) => model.model.costUsd;
-  obj.model = { calls: mapped.reduce((acc, item) => acc + f132463(item), 0), input: mapped.reduce((acc, item) => acc + f132463(item), 0), output: mapped.reduce((acc, item) => acc + f132463(item), 0), cacheRead: mapped.reduce((acc, item) => acc + f132463(item), 0), cacheWrite: mapped.reduce((acc, item) => acc + f132463(item), 0), costUsd: mapped.reduce((acc, item) => acc + f132463(item), 0) };
+  let f115512 = (busyMs) => busyMs.busyMs;
+  obj.busyMs = mapped.reduce((acc, item) => acc + f132870(item), 0);
+  f115512 = (model) => model.model.costUsd;
+  obj.model = { calls: mapped.reduce((acc, item) => acc + f132870(item), 0), input: mapped.reduce((acc, item) => acc + f132870(item), 0), output: mapped.reduce((acc, item) => acc + f132870(item), 0), cacheRead: mapped.reduce((acc, item) => acc + f132870(item), 0), cacheWrite: mapped.reduce((acc, item) => acc + f132870(item), 0), costUsd: mapped.reduce((acc, item) => acc + f132870(item), 0) };
   return obj;
 }

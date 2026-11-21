@@ -1,6 +1,6 @@
-// === Module 12501: ? ===
+// === Module 12623: ? ===
 
-// Module 12501
+// Module 12623
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_03_streamer_stripes.webp.js");

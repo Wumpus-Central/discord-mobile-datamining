@@ -1,9 +1,9 @@
-// === Module 18026: CaughtUpRow ===
+// === Module 18152: CaughtUpRow ===
 
-// Module 18026 (CaughtUpRow)
+// Module 18152 (CaughtUpRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5349 */;
+import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,8 +15,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1653.createAnimatedComponent(fn(5385).Text);
-const createICYMIStyles = fn(17965);
+let closure_9 = module_1653.createAnimatedComponent(fn(5504).Text);
+const createICYMIStyles = fn(18091);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -85,14 +85,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(9923).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(9923);
+            v1(10043).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(10043);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(9923).feedItemActioned(obj4);
-            const obj6 = v1(9923);
+            v1(10043).feedItemActioned(obj4);
+            const obj6 = v1(10043);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(17982).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18108).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {

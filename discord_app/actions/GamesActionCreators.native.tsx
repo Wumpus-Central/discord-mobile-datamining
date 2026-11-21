@@ -1,10 +1,10 @@
-// === Module 12070: GamesActionCreators ===
+// === Module 12192: GamesActionCreators ===
 
-// Module 12070 (GamesActionCreators)
+// Module 12192 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LinkingDefault from "Linking" /* 5473 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12071 */;
-import fetchDetectableGamesDefault from "fetchDetectableGames" /* 12072 */;
+import LinkingDefault from "Linking" /* 5592 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12193 */;
+import fetchDetectableGamesDefault from "fetchDetectableGames" /* 12194 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -43,8 +43,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(5473).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(5473);
+          applicationId(5592).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(5592);
           const obj2 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag3 = closure_1_0.embedded;
           if (flag3 == null) {
@@ -62,8 +62,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(5473).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(5473);
+          applicationId(5592).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(5592);
           const obj8 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag = closure_1_0.embedded;
           if (flag == null) {
@@ -105,7 +105,7 @@ function fetchJoinSecret(applicationId, arg1) {
 }
 const Constants = fn(1071);
 ({ Endpoints: closure_4, DiscordConnectDeeplinks: hasOwnProperty, WebBrowserType: closure_6, ActivityFlags: metroImportDefault } = Constants);
-const ActivityIntent = fn(10654).ActivityIntent;
+const ActivityIntent = fn(10774).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 

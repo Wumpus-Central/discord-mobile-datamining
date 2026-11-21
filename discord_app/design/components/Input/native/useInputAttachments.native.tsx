@@ -1,8 +1,8 @@
-// === Module 7119: useInputAttachments ===
+// === Module 7239: useInputAttachments ===
 
-// Module 7119 (useInputAttachments)
-import Text_Text from "Text/Text" /* 5385 */;
-import IconSize from "IconSize" /* 7120 */;
+// Module 7239 (useInputAttachments)
+import Text_Text from "Text/Text" /* 5504 */;
+import IconSize from "IconSize" /* 7240 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

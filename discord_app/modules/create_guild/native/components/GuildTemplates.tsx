@@ -1,13 +1,13 @@
-// === Module 13496: GuildTemplates ===
+// === Module 13618: GuildTemplates ===
 
-// Module 13496 (GuildTemplates)
+// Module 13618 (GuildTemplates)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 13058 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13468 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 13497 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 13180 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13590 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 13619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,8 +53,8 @@ function GuildTemplatesJoinFooter(trigger) {
   const intl3 = tmp2(1112).intl;
   obj4.children = intl3.string(trigger(1112).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(5385).Text, obj4),
-    closure_14(trigger(5392).Button, {
+    closure_14(trigger(5504).Text, obj4),
+    closure_14(trigger(5511).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -88,17 +88,17 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let CreateGuildConstants = fn(13493);
+let CreateGuildConstants = fn(13615);
 ({ getGuildTemplatesMap: metroImportDefault, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(7279);
+CreateGuildConstants = fn(7399);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: closure_10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4794);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5348).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-let obj3 = { marginTop: fn(5348).NAV_BAR_HEIGHT };
+const createStyles = fn(4913);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5467).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
+let obj3 = { marginTop: fn(5467).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };

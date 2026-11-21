@@ -1,15 +1,15 @@
-// === Module 9964: ChannelTabsStore ===
+// === Module 10084: ChannelTabsStore ===
 
-// Module 9964 (ChannelTabsStore)
+// Module 10084 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5551 */;
-import TabsExperimentDefault from "TabsExperiment" /* 9965 */;
+import FrecencyDefault from "Frecency" /* 5670 */;
+import TabsExperimentDefault from "TabsExperiment" /* 10085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4831 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4950 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
 import UserStore from "UserStore" /* 1386 */;
 
 let handleChannelSelect = fn;
@@ -86,7 +86,7 @@ function createTab(routeTabForLocation, arg1) {
     items[HermesBuiltin.arraySpread(mapped, 0)] = routeTabForLocation;
     let substr1 = items.slice(-11);
   } else {
-    handleChannelSelect(9966);
+    handleChannelSelect(10086);
     substr1 = mapped;
   }
   const obj2 = { id: null };
@@ -119,8 +119,8 @@ function navigateTo(routeTabForLocation1, PUSH) {
         const found = tabs.find((id) => id.id === id);
         let tmp9 = null != found;
         if (tmp9) {
-          tmp9 = !handleChannelSelect(9966).isSameTabLocation(found, routeTabForLocation1);
-          const obj4 = handleChannelSelect(9966);
+          tmp9 = !handleChannelSelect(10086).isSameTabLocation(found, routeTabForLocation1);
+          const obj4 = handleChannelSelect(10086);
         }
         if (tmp9) {
           let hasItem = null != id;
@@ -221,8 +221,8 @@ function handleChannelDelete(channel) {
   channel = channel.channel;
   let isStrandedBackgroundTab;
   if (enabled) {
-    enabled = isStrandedBackgroundTab(9965).getConfig({ location: "ChannelTabsStore.handleChannelDelete" }).enabled;
-    const obj = isStrandedBackgroundTab(9965);
+    enabled = isStrandedBackgroundTab(10085).getConfig({ location: "ChannelTabsStore.handleChannelDelete" }).enabled;
+    const obj = isStrandedBackgroundTab(10085);
   }
   if (enabled) {
     enabled = channel(1358).isDesktop();
@@ -276,7 +276,7 @@ function handleChannelDelete(channel) {
   }
 }
 const Routes = fn(1071).Routes;
-const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4769).isStaticChannelRoute;
 let tabs = [];
 let c12 = null;
 let c13 = null;
@@ -826,7 +826,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       }
       if (tmp3) {
         const _window = window;
-        let routeTabForLocation = handleChannelSelect(9966).getRouteTabForLocation(window.location);
+        let routeTabForLocation = handleChannelSelect(10086).getRouteTabForLocation(window.location);
         if (null == routeTabForLocation) {
           const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
           let tmp15 = null;
@@ -850,7 +850,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
           tabs = items;
           let id = tmp20.id;
         }
-        const obj3 = handleChannelSelect(9966);
+        const obj3 = handleChannelSelect(10086);
       }
     } else {
       tabs = [];
@@ -897,7 +897,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       if (!tmp6) {
         if (0 === routeTabForLocation1.length) {
           const _window2 = window;
-          let routeTabForLocation = id(9966).getRouteTabForLocation(window.location);
+          let routeTabForLocation = id(10086).getRouteTabForLocation(window.location);
           if (null == routeTabForLocation) {
             const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
             let tmp10 = null;
@@ -966,7 +966,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         return tmp6;
       } else {
         const _window = window;
-        routeTabForLocation1 = id(9966).getRouteTabForLocation(window.location);
+        routeTabForLocation1 = id(10086).getRouteTabForLocation(window.location);
         if (null == routeTabForLocation1) {
           const currentlySelectedChannelId1 = SelectedChannelStore.getCurrentlySelectedChannelId();
           let tmp30 = null;
@@ -986,8 +986,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         }
         if (routeTabForLocation1 == null) {
           const obj7 = { pathname: DefaultRouteStore.defaultRoute };
-          routeTabForLocation1 = tmp25(9966).getRouteTabForLocation(obj7);
-          const tmp25Result = tmp25(9966);
+          routeTabForLocation1 = tmp25(10086).getRouteTabForLocation(obj7);
+          const tmp25Result = tmp25(10086);
         }
         let flag4 = false;
         if (null != routeTabForLocation1) {
@@ -1033,7 +1033,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                 });
                 flag4 = true;
               }
-              tmp25Result2 = tmp25(9966);
+              tmp25Result2 = tmp25(10086);
             } else {
               const currentUser1 = UserStore.getCurrentUser();
               let isStaffResult1;
@@ -1049,7 +1049,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         routeTabForLocation1[num4] = tmp46;
         id = tmp46.id;
         flag4 = true;
-        const obj6 = id(9966);
+        const obj6 = id(10086);
       }
     } else {
       return false;

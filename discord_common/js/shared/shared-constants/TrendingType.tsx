@@ -1,6 +1,6 @@
-// === Module 14347: TrendingType ===
+// === Module 14469: TrendingType ===
 
-// Module 14347 (TrendingType)
+// Module 14469 (TrendingType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/TrendingType.tsx");

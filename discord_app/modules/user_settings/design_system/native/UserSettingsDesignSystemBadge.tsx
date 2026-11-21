@@ -1,22 +1,22 @@
-// === Module 17131: UserSettingsDesignSystemBadge ===
+// === Module 17255: UserSettingsDesignSystemBadge ===
 
-// Module 17131 (UserSettingsDesignSystemBadge)
+// Module 17255 (UserSettingsDesignSystemBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import Card from "Card" /* 6927 */;
-import Badge from "Badge" /* 6941 */;
-import TextInput from "TextInput" /* 7101 */;
-import TableRadioGroup from "TableRadioGroup" /* 7227 */;
-import TableSwitchRow from "TableSwitchRow" /* 7436 */;
-import LockIcon from "LockIcon" /* 7575 */;
-import TagIcon from "TagIcon" /* 8921 */;
-import StarIcon3 from "StarIcon" /* 9891 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 13876 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 13878 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 13880 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 13882 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import Card from "Card" /* 7047 */;
+import Badge from "Badge" /* 7061 */;
+import TextInput from "TextInput" /* 7221 */;
+import TableRadioGroup from "TableRadioGroup" /* 7347 */;
+import TableSwitchRow from "TableSwitchRow" /* 7556 */;
+import LockIcon from "LockIcon" /* 7695 */;
+import TagIcon from "TagIcon" /* 9041 */;
+import StarIcon3 from "StarIcon" /* 10011 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 13998 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 14000 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 14002 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 14004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -260,7 +260,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, preview: null, badgeRow: null, narrow: null, comparisonLabel: null, comparisonCell: null, layoutCase: null, inlineRow: null, trailingRow: null, inlineBadge: null, selfStart: null, selfStartParent: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.preview = { minHeight: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center" };

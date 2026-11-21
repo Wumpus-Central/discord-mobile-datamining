@@ -1,13 +1,13 @@
-// === Module 17698: WaterwheelsDiscoverHeader ===
+// === Module 17828: WaterwheelsDiscoverHeader ===
 
-// Module 17698 (WaterwheelsDiscoverHeader)
+// Module 17828 (WaterwheelsDiscoverHeader)
 import nativeDefault from "native" /* 575 */;
-import _modDef2563 from "module_2563" /* 2563 */;
-import useGameRecordsDefault from "useGameRecords" /* 10095 */;
-import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17700 */;
-import InterestGameCoverDefault from "InterestGameCover" /* 17707 */;
+import _modDef2643 from "module_2643" /* 2643 */;
+import useGameRecordsDefault from "useGameRecords" /* 10215 */;
+import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17829 */;
+import InterestGameCoverDefault from "InterestGameCover" /* 17843 */;
 import noop from "module_19" /* 19 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9924 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 10044 */;
 
 const require = globalThis.__r;
 
@@ -17,12 +17,12 @@ function openPicker() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17699);
+const InterestGamePickerConstants = fn(17821);
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { header: { height: nativeDefault.space.PX_64, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE }, title: null, titleText: null, picks: null, cover: null, overlappingCover: null, overflow: null };
 let obj3 = { height: nativeDefault.space.PX_64, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flexShrink: 1 };
@@ -52,25 +52,25 @@ export default function WaterwheelsDiscoverHeader() {
   const items1 = [closure_7(require("CompassIcon").CompassIcon, { size: "refresh_sm", color: nativeDefault.colors.ICON_STRONG }), ];
   const obj5 = { variant: "heading-md/semibold", color: "text-strong", style: tmp.titleText, lineClamp: 1, children: null };
   const intl = require("util").intl;
-  obj5.children = intl.string(_modDef2563.v010oN);
+  obj5.children = intl.string(_modDef2643.v010oN);
   items1[1] = closure_7(require("Text/Text").Heading, obj5);
   obj3.children = items1;
   const items2 = [closure_8(closure_4, obj3), ];
   if (0 === stateFromStoresArray.length) {
     const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
     const intl3 = tmp2(1112).intl;
-    obj6.text = intl3.string(_modDef2563.SCFT8N);
-    obj6.icon = closure_7(tmp2(6920).GameControllerIcon, { size: "sm" });
+    obj6.text = intl3.string(_modDef2643.SCFT8N);
+    obj6.icon = closure_7(tmp2(7040).GameControllerIcon, { size: "sm" });
     obj6.onPress = openPicker;
-    let tmp8Result = closure_7(tmp2(5392).Button, obj6);
+    let tmp8Result = closure_7(tmp2(5511).Button, obj6);
   } else {
     const obj7 = { style: tmp.picks, accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, children: null };
     const intl4 = tmp2(1112).intl;
-    obj7.accessibilityLabel = intl4.string(_modDef2563["788GGP"]);
+    obj7.accessibilityLabel = intl4.string(_modDef2643["788GGP"]);
     const obj8 = { text: null };
     const intl5 = tmp2(1112).intl;
     const obj9 = { count: stateFromStoresArray.length };
-    const items3 = [intl5.formatToPlainString(_modDef2563.tQPcpe, obj9)];
+    const items3 = [intl5.formatToPlainString(_modDef2643.tQPcpe, obj9)];
     HermesBuiltin.arraySpread(substr.map((name) => name.name), 1);
     obj8.text = items3.join(", ");
     obj7.accessibilityValue = obj8;
@@ -94,8 +94,8 @@ export default function WaterwheelsDiscoverHeader() {
       const obj11 = { variant: "body-sm/semibold", color: "text-strong", style: tmp.overflow, children: null };
       const intl2 = tmp2(1112).intl;
       const obj12 = { count: diff };
-      obj11.children = intl2.formatToPlainString(_modDef2563["OxfP+s"], obj12);
-      tmp8Result2 = closure_7(tmp2(5385).Text, obj11);
+      obj11.children = intl2.formatToPlainString(_modDef2643["OxfP+s"], obj12);
+      tmp8Result2 = closure_7(tmp2(5504).Text, obj11);
     }
     items4[1] = tmp8Result2;
     obj10.children = items4;

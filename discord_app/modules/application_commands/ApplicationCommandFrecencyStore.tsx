@@ -1,10 +1,10 @@
-// === Module 10318: ApplicationCommandFrecencyStore ===
+// === Module 10438: ApplicationCommandFrecencyStore ===
 
-// Module 10318 (ApplicationCommandFrecencyStore)
+// Module 10438 (ApplicationCommandFrecencyStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5551 */;
+import FrecencyDefault from "Frecency" /* 5670 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -25,7 +25,7 @@ function handleUserSettingsProtoStoreChange() {
     return obj;
   }), global.pendingUsages);
 }
-const ApplicationCommandConstants = fn(5818);
+const ApplicationCommandConstants = fn(5937);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1081).UserSettingsTypes;
 let global = { pendingUsages: [] };

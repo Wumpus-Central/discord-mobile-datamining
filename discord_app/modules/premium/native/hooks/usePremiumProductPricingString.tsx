@@ -1,9 +1,9 @@
-// === Module 9373: usePremiumProductPricingString ===
+// === Module 9493: usePremiumProductPricingString ===
 
-// Module 9373 (usePremiumProductPricingString)
+// Module 9493 (usePremiumProductPricingString)
 import PremiumConstants from "PremiumConstants" /* 1388 */;
-import PremiumUtils from "PremiumUtils" /* 2172 */;
-import usePremiumPlanPriceDefault from "usePremiumPlanPrice" /* 9374 */;
+import PremiumUtils from "PremiumUtils" /* 2173 */;
+import usePremiumPlanPriceDefault from "usePremiumPlanPrice" /* 9494 */;
 import size from "module_2" /* 2 */;
 
 const PRICE_PLACEHOLDER = PremiumConstants.PRICE_PLACEHOLDER;

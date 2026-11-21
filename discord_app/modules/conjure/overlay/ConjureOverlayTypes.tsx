@@ -1,6 +1,6 @@
-// === Module 18196: ConjureOverlayTypes ===
+// === Module 18323: ConjureOverlayTypes ===
 
-// Module 18196 (ConjureOverlayTypes)
+// Module 18323 (ConjureOverlayTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/overlay/ConjureOverlayTypes.tsx");

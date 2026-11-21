@@ -1,6 +1,6 @@
-// === Module 12465: ? ===
+// === Module 12587: ? ===
 
-// Module 12465
+// Module 12587
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_face_06_confused_textureAtlas.webp.js");

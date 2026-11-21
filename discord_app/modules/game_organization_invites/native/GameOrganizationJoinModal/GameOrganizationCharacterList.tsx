@@ -1,16 +1,16 @@
-// === Module 12119: GameOrganizationCharacterList ===
+// === Module 12241: GameOrganizationCharacterList ===
 
-// Module 12119 (GameOrganizationCharacterList)
+// Module 12241 (GameOrganizationCharacterList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef2559 from "module_2559" /* 2559 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4856 */;
-import useToken from "useToken" /* 5358 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import Card from "Card" /* 6927 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7105 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 11966 */;
+import _modDef2639 from "module_2639" /* 2639 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4975 */;
+import useToken from "useToken" /* 5477 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import Card from "Card" /* 7047 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7225 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { card: { padding: 0, borderTopStartRadius: nativeDefault.radii.lg, borderTopEndRadius: nativeDefault.radii.lg, borderBottomStartRadius: nativeDefault.radii.lg, borderBottomEndRadius: nativeDefault.radii.lg, overflow: "hidden" }, cardContent: null, selectedCardContent: null, selectedCardTint: null, cardBorder: null, selectedCard: null, labels: null, cards: null, title: null };
 let obj3 = { padding: 0, borderTopStartRadius: nativeDefault.radii.lg, borderTopEndRadius: nativeDefault.radii.lg, borderBottomStartRadius: nativeDefault.radii.lg, borderBottomEndRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj.cardContent = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.lg };
@@ -77,7 +77,7 @@ let closure_9 = noop.memo(function CharacterCard(character) {
         displayNoun = "other";
       }
       const obj3 = { displayNoun };
-      formatToPlainStringResult = intl.formatToPlainString(_modDef2559.VNY3C1, obj3);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef2639.VNY3C1, obj3);
     }
   }
   const obj4 = {
@@ -163,8 +163,8 @@ export default function GameOrganizationCharacterList(characters) {
   if (displayNoun == null) {
     str = "other";
   }
-  obj2.title = intl.formatToPlainString(_modDef2559["Xm+emB"], { displayNoun: str });
-  const items1 = [closure_5(characters(7228).TableRowGroupTitle, obj2), closure_5(closure_4, { accessibilityRole: "radiogroup", style: tmp.cards, children: memo.map((character) => hasOwnProperty(closure_9, { character, selected: character.id === importDefault, onSelect, displayNoun }, character.id)) }), ];
+  obj2.title = intl.formatToPlainString(_modDef2639["Xm+emB"], { displayNoun: str });
+  const items1 = [closure_5(characters(7348).TableRowGroupTitle, obj2), closure_5(closure_4, { accessibilityRole: "radiogroup", style: tmp.cards, children: memo.map((character) => hasOwnProperty(closure_9, { character, selected: character.id === importDefault, onSelect, displayNoun }, character.id)) }), ];
   if (someResult) {
     const intl2 = tmp4(1112).intl;
     if (displayNoun == null) {
@@ -172,10 +172,10 @@ export default function GameOrganizationCharacterList(characters) {
     }
     const obj4 = { variant: "body-md/medium", color: "text-subtle", children: null };
     const obj5 = { displayNoun };
-    obj4.children = intl2.formatToPlainString(_modDef2559.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5385).Text, obj4);
+    obj4.children = intl2.formatToPlainString(_modDef2639.ybJIQJ, obj5);
+    someResult = closure_5(tmp4(5504).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(5810).Stack, obj);
+  return closure_6(characters(5929).Stack, obj);
 };

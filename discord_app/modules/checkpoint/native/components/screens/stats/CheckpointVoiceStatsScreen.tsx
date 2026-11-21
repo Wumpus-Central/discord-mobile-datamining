@@ -1,29 +1,29 @@
-// === Module 12624: CheckpointVoiceStatsScreen ===
+// === Module 12746: CheckpointVoiceStatsScreen ===
 
-// Module 12624 (CheckpointVoiceStatsScreen)
+// Module 12746 (CheckpointVoiceStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _modDef3341 from "module_3341" /* 3341 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6220 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12387 */;
-import CheckpointTextDefault from "CheckpointText" /* 12388 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12390 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12607 */;
-import _modDef12625 from "module_12625" /* 12625 */;
-import _modDef12626 from "module_12626" /* 12626 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12627 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12628 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12630 */;
+import _modDef3440 from "module_3440" /* 3440 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6339 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12509 */;
+import CheckpointTextDefault from "CheckpointText" /* 12510 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12729 */;
+import _modDef12747 from "module_12747" /* 12747 */;
+import _modDef12748 from "module_12748" /* 12748 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12749 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12750 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12752 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12370 */;
+import CheckpointStore from "CheckpointStore" /* 12492 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(5850).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5969).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, title: null, titleText: null, imageContainer: null, image: null, copy: null, number: null, wideBackdrop: null, wideImage: null, wideContainer: null, wideCopy: null, wideTitle: null, wideText: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -88,10 +88,10 @@ export default function CheckpointVoiceStatsScreen() {
   if (stateFromStores != null) {
     prop = stateFromStores.totalVoiceMinutesPercentile;
   }
-  const checkpointTopPercent = stateFromStores1(6220).getCheckpointTopPercent(prop);
+  const checkpointTopPercent = stateFromStores1(6339).getCheckpointTopPercent(prop);
   const intl = tmp4(1112).intl;
   const string = intl.string;
-  const tmp2Result = _modDef3341;
+  const tmp2Result = _modDef3440;
   if (rounded <= 0) {
     let stringResult = string(tmp2Result.ZCwB8J);
   } else {
@@ -102,13 +102,13 @@ export default function CheckpointVoiceStatsScreen() {
     if (null != checkpointTopPercent) {
       const intl2 = tmp4(1112).intl;
       const obj3 = { percent: checkpointTopPercent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3341["5vpcvA"], obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3440["5vpcvA"], obj3);
     }
   }
   const obj4 = { animatedUri: null, staticUri: null, style: null };
-  const tmp4Result = stateFromStores1(6220);
-  obj4.animatedUri = _modDef12625;
-  obj4.staticUri = _modDef12626;
+  const tmp4Result = stateFromStores1(6339);
+  obj4.animatedUri = _modDef12747;
+  obj4.staticUri = _modDef12748;
   const items3 = [tmp.image, ];
   let tmp16 = wideText;
   if (wideText) {
@@ -143,7 +143,7 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj11 = { style: items7, children: null };
   items7[1] = wideTitle;
-  const items8 = [closure_7(stateFromStores1(10891).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
+  const items8 = [closure_7(stateFromStores1(11011).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
   const obj13 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj12 = { size: "xs", color: CHECKPOINT_PRIMARY };
   const tmp2Result6 = CheckpointScreenDefault;
@@ -168,8 +168,8 @@ export default function CheckpointVoiceStatsScreen() {
     const obj17 = { duration: null };
     const intl4 = tmp4(1112).intl;
     const obj18 = { minutes: rounded };
-    obj17.duration = intl4.formatToPlainString(_modDef3341.x7PkHm, obj18);
-    obj15.accessibilityLabel = intl3.formatToPlainString(_modDef3341.lw35aH, obj17);
+    obj17.duration = intl4.formatToPlainString(_modDef3440.x7PkHm, obj18);
+    obj15.accessibilityLabel = intl3.formatToPlainString(_modDef3440.lw35aH, obj17);
     obj15.style = tmp.number;
     const obj19 = { end: rounded };
     obj15.children = closure_7(CheckpointCountUpStatNumberDefault, obj19);
@@ -184,7 +184,7 @@ export default function CheckpointVoiceStatsScreen() {
   obj20.style = wideText;
   if (rounded <= 0) {
     const intl7 = tmp4(1112).intl;
-    let stringResult1 = intl7.string(_modDef3341.huiTne);
+    let stringResult1 = intl7.string(_modDef3440.huiTne);
   } else if (null != checkpointTopPercent) {
     const intl6 = tmp4(1112).intl;
     const obj21 = {
@@ -193,11 +193,11 @@ export default function CheckpointVoiceStatsScreen() {
           return closure_1_7(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    stringResult1 = intl6.format(_modDef3341.RqXsIs, obj21);
+    stringResult1 = intl6.format(_modDef3440.RqXsIs, obj21);
   } else {
     const intl5 = tmp4(1112).intl;
     const obj22 = { numMinutes: rounded };
-    stringResult1 = intl5.format(_modDef3341.Y3poDW, obj22);
+    stringResult1 = intl5.format(_modDef3440.Y3poDW, obj22);
   }
   const obj23 = { children: null };
   obj20.children = stringResult1;

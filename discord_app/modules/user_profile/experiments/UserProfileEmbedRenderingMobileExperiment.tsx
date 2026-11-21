@@ -1,6 +1,6 @@
-// === Module 12103: UserProfileEmbedRenderingMobileExperiment ===
+// === Module 12225: UserProfileEmbedRenderingMobileExperiment ===
 
-// Module 12103 (UserProfileEmbedRenderingMobileExperiment)
+// Module 12225 (UserProfileEmbedRenderingMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

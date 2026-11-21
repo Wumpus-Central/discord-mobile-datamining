@@ -1,16 +1,16 @@
-// === Module 7896: useCanCreateAnEvent ===
+// === Module 8016: useCanCreateAnEvent ===
 
-// Module 7896 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 7513 */;
+// Module 8016 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 7633 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildChannelStore from "GuildChannelStore" /* 4724 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4724).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4843).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");

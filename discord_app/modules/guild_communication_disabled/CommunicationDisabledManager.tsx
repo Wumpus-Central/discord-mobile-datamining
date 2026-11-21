@@ -1,11 +1,11 @@
-// === Module 13229: CommunicationDisabledManager ===
+// === Module 13351: CommunicationDisabledManager ===
 
-// Module 13229 (CommunicationDisabledManager)
+// Module 13351 (CommunicationDisabledManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4713 */;
-import GuildMemberStore_mod from "GuildMemberStore" /* 4706 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4832 */;
+import GuildMemberStore_mod from "GuildMemberStore" /* 4825 */;
 import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 import size from "module_2" /* 2 */;
 
 function clearGuildMemberTimeout(guildId, arg1) {
@@ -17,20 +17,15 @@ function clearGuildMemberTimeout(guildId, arg1) {
         const obj = {};
         const merged = Object.assign(member);
         obj.guildId = guildId;
-        let username = member.nick;
-        if (username == null) {
-          username = user.username;
-        }
-        obj.nick = username;
         const avatar = member.avatar;
         obj.avatar = avatar;
-        let tmp5;
+        let tmp6;
         if (null != member.avatarDecoration) {
           const obj2 = {};
           const merged1 = Object.assign(member.avatarDecoration);
-          tmp5 = obj2;
+          tmp6 = obj2;
         }
-        obj.avatarDecoration = tmp5;
+        obj.avatarDecoration = tmp6;
         const premiumSince = member.premiumSince;
         obj.premiumSince = premiumSince;
         let flag = member.isPending;

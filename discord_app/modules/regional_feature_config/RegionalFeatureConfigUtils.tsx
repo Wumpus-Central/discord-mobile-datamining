@@ -1,9 +1,8 @@
-// === Module 5456: RegionalFeatureConfigUtils ===
+// === Module 5575: RegionalFeatureConfigUtils ===
 
-// Module 5456 (RegionalFeatureConfigUtils)
+// Module 5575 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
-import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5463 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5457 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5576 */;
 
 const require = globalThis.__r;
 
@@ -43,11 +42,4 @@ export function useHasTeenDefaults() {
 }
 export function shouldCollectAppStoreSignal() {
   return RegionalFeatureConfigStore.shouldCollectAppStoreSignal();
-}
-export function isTidaMediaTakedownRegion() {
-  return RegionalFeatureConfigStore.isMediaTakedownRegulation(MediaTakedownRegulation.MediaTakedownRegulation.TIDA);
-}
-export function useIsTidaMediaTakedownRegion() {
-  items = [RegionalFeatureConfigStore];
-  return initialize.useStateFromStores(items, () => mediaTakedownRegulation.isMediaTakedownRegulation(require("MediaTakedownRegulation").MediaTakedownRegulation.TIDA));
 }

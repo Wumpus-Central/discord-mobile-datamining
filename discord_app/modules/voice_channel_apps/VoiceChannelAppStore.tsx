@@ -1,6 +1,6 @@
-// === Module 15626: VoiceChannelAppStore ===
+// === Module 15749: VoiceChannelAppStore ===
 
-// Module 15626 (VoiceChannelAppStore)
+// Module 15749 (VoiceChannelAppStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

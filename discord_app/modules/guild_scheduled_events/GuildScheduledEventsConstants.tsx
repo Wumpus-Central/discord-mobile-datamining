@@ -1,6 +1,6 @@
-// === Module 4649: GuildScheduledEventsConstants ===
+// === Module 4768: GuildScheduledEventsConstants ===
 
-// Module 4649 (GuildScheduledEventsConstants)
+// Module 4768 (GuildScheduledEventsConstants)
 import Constants from "Constants" /* 1071 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import size from "module_2" /* 2 */;

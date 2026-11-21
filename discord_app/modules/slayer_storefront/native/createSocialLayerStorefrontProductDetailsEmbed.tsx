@@ -1,29 +1,29 @@
-// === Module 14194: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 14316: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 14194 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 14316 (createSocialLayerStorefrontProductDetailsEmbed)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1112 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2172 */;
-import _modDef3991 from "module_3991" /* 3991 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6728 */;
-import StorefrontUtils from "StorefrontUtils" /* 6733 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6740 */;
-import Constants from "Constants" /* 8318 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8560 */;
-import _modDef8839 from "module_8839" /* 8839 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10293 */;
-import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11844 */;
-import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11846 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13372 */;
-import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14192 */;
-import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 14193 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
-import UserProfileStore from "UserProfileStore" /* 6837 */;
-import WishlistStore from "WishlistStore" /* 8863 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
+import _modDef4090 from "module_4090" /* 4090 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6847 */;
+import StorefrontUtils from "StorefrontUtils" /* 6852 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6859 */;
+import Constants from "Constants" /* 8438 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8680 */;
+import _modDef8959 from "module_8959" /* 8959 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10413 */;
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11964 */;
+import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11966 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13494 */;
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14314 */;
+import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 14315 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
+import UserProfileStore from "UserProfileStore" /* 6956 */;
+import WishlistStore from "WishlistStore" /* 8983 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1386 */;
-import SKUStore from "SKUStore" /* 6555 */;
+import SKUStore from "SKUStore" /* 6674 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -118,7 +118,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 obj5.orbPriceText = StringResult;
                 let uri;
                 if (null != orbPriceFromPrices) {
-                  uri = Image.resolveAssetSource(_modDef8839).uri;
+                  uri = Image.resolveAssetSource(_modDef8959).uri;
                 }
                 obj5.orbIconUrl = uri;
                 ({ badgeText: obj14.overlayBadgeText, badgeIconUrl: obj14.overlayBadgeIconUrl } = socialLayerStorefrontSkuEmbedDetails);
@@ -128,7 +128,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 const tmpResult9 = socialLayerStorefrontEmbedColors;
                 obj5.backgroundColor = socialLayerStorefrontEmbedColors.getSocialLayerStorefrontEmbedColors(theme).backgroundColor;
                 obj5.showWishlistButton = true;
-                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 8857 : 8855)).uri;
+                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 8977 : 8975)).uri;
                 const intl5 = util.intl;
                 const t = util.t;
                 obj5.wishlistButtonAccessibilityLabel = intl5.string(hasSkuIdResult ? t["19b82d"] : t.Hcgz2S);
@@ -210,7 +210,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 if (result2) {
                   let stringResult = string(util.t.boqtTA);
                 } else {
-                  stringResult = string(_modDef3991.BKf0MM);
+                  stringResult = string(_modDef4090.BKf0MM);
                 }
                 obj6.acceptLabelText = stringResult;
                 let prop;

@@ -1,21 +1,21 @@
-// === Module 14811: LocalVoiceStateManager ===
+// === Module 14934: LocalVoiceStateManager ===
 
-// Module 14811 (LocalVoiceStateManager)
+// Module 14934 (LocalVoiceStateManager)
 import FlagUtils from "FlagUtils" /* 1404 */;
-import UserSettings from "UserSettings" /* 4619 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6282 */;
-import isClipsEnabled from "isClipsEnabled" /* 14757 */;
-import PassTheControllerStore from "PassTheControllerStore" /* 6276 */;
+import UserSettings from "UserSettings" /* 4738 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
+import isClipsEnabled from "isClipsEnabled" /* 14880 */;
+import PassTheControllerStore from "PassTheControllerStore" /* 6395 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import RTCRegionStore from "RTCRegionStore" /* 5634 */;
-import StateManager from "StateManager" /* 14809 */;
+import RTCRegionStore from "RTCRegionStore" /* 5753 */;
+import StateManager from "StateManager" /* 14932 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, VoiceFlags: closure_8 } = Constants);
-const StreamTypes = fn(6278).StreamTypes;
+const StreamTypes = fn(6397).StreamTypes;
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);

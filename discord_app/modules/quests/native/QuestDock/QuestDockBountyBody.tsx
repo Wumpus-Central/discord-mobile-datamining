@@ -1,21 +1,21 @@
-// === Module 16476: QuestDockBountyBody ===
+// === Module 16599: QuestDockBountyBody ===
 
-// Module 16476 (QuestDockBountyBody)
+// Module 16599 (QuestDockBountyBody)
 import util from "util" /* 1112 */;
-import QuestTypes from "QuestTypes" /* 6442 */;
-import AdCreativeType from "AdCreativeType" /* 6446 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8307 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
-import captureAdUserAction from "captureAdUserAction" /* 9841 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9844 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9878 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10496 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16194 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 16196 */;
+import QuestTypes from "QuestTypes" /* 6561 */;
+import AdCreativeType from "AdCreativeType" /* 6565 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8427 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
+import captureAdUserAction from "captureAdUserAction" /* 9961 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9964 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9998 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10616 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16317 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 16319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6439).QuestDockMode;
+const QuestDockMode = fn(6558).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");

@@ -1,27 +1,48 @@
-// === Module 14487: CheckpointTestingOptions ===
+// === Module 14609: CheckpointTestingOptions ===
 
-// Module 14487 (CheckpointTestingOptions)
-import _modDef3343 from "module_3343" /* 3343 */;
+// Module 14609 (CheckpointTestingOptions)
+import _modDef3442 from "module_3442" /* 3442 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_2 = fn(14485).getCheckpointMitigationMock;
+let closure_2 = fn(14607).getCheckpointMitigationMock;
 const items = [
   {
     id: "open",
-    label: _modDef3343.yLZjcu,
+    label: _modDef3442.yLZjcu,
     action() {
       const tmp = c2();
       const merged = Object.assign(tmp);
       const merged1 = Object.assign(UNAVAILABLE);
-      return UNAVAILABLE(12375).openCheckpoint("qa_menu", {});
+      return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
     }
   },
 ,
 ,
 ,
+,
 
 ];
-const obj2 = { id: "reset", label: _modDef3343["2DL3aX"], action: null };
+let obj = {
+  id: "open",
+  label: _modDef3442.yLZjcu,
+  action() {
+    const tmp = c2();
+    const merged = Object.assign(tmp);
+    const merged1 = Object.assign(UNAVAILABLE);
+    return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
+  }
+};
+items[1] = {
+  id: "reset-progress",
+  label: _modDef3442.HYMZmZ,
+  action() {
+    const result = UNAVAILABLE(12500).resetCheckpointProgress();
+    const obj = UNAVAILABLE(12500);
+    const intl = UNAVAILABLE(1112).intl;
+    const result1 = UNAVAILABLE(14610).showCheckpointTestingToast(intl.string(UNAVAILABLE(1112).t.i4jeWR), "success");
+  }
+};
+let obj3 = { id: "reset-character", label: _modDef3442.Q9JHSs, action: null };
 let closure_3 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
     c2 = 3;
@@ -50,7 +71,7 @@ let closure_3 = asyncGeneratorStep(async () => {
           closure_0 = tmp4;
           c1 = 1;
           c2 = 1;
-          const obj5 = { value: UNAVAILABLE(12378).resetCheckpoint(), done: false };
+          const obj5 = { value: UNAVAILABLE(12500).resetCheckpointCharacter(), done: false };
           return obj5;
         }
       } else if (arg0 === 1) {
@@ -80,7 +101,7 @@ let closure_3 = asyncGeneratorStep(async () => {
     }
   }
 });
-obj2.action = function action() {
+obj3.action = function action() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -90,66 +111,66 @@ obj2.action = function action() {
   }
   return applyArgumentsResult;
 };
-items[1] = obj2;
-fn(14486).CheckpointMocks.FAKE_DATA;
-items[2] = {
-  id: "open-fake-data",
-  label: _modDef3343.kPBZ5M,
-  action() {
-    const tmp = c2();
-    const merged = Object.assign(tmp);
-    const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12375).openCheckpoint("qa_menu", {});
-  }
-};
-fn(14486).CheckpointMocks.GLOBAL_STATS;
+items[2] = obj3;
+fn(14608).CheckpointMocks.FAKE_DATA;
 items[3] = {
-  id: "open-global-stats",
-  label: _modDef3343.UwiUbM,
+  id: "open-fake-data",
+  label: _modDef3442.kPBZ5M,
   action() {
     const tmp = c2();
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12375).openCheckpoint("qa_menu", {});
+    return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
   }
 };
-fn(14486).CheckpointMocks.ZERO_STATS;
+fn(14608).CheckpointMocks.GLOBAL_STATS;
 items[4] = {
-  id: "open-zero-stats",
-  label: _modDef3343.BYW9oX,
+  id: "open-global-stats",
+  label: _modDef3442.UwiUbM,
   action() {
     const tmp = c2();
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12375).openCheckpoint("qa_menu", {});
+    return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
+  }
+};
+fn(14608).CheckpointMocks.ZERO_STATS;
+items[5] = {
+  id: "open-zero-stats",
+  label: _modDef3442.BYW9oX,
+  action() {
+    const tmp = c2();
+    const merged = Object.assign(tmp);
+    const merged1 = Object.assign(UNAVAILABLE);
+    return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
   }
 };
 const items1 = [...items];
-const UNAVAILABLE = fn(14486).CheckpointMocks.UNAVAILABLE;
-let obj = {
-  id: "open",
-  label: _modDef3343.yLZjcu,
+const UNAVAILABLE = fn(14608).CheckpointMocks.UNAVAILABLE;
+const obj2 = {
+  id: "reset-progress",
+  label: _modDef3442.HYMZmZ,
   action() {
-    const tmp = c2();
-    const merged = Object.assign(tmp);
-    const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12375).openCheckpoint("qa_menu", {});
+    const result = UNAVAILABLE(12500).resetCheckpointProgress();
+    const obj = UNAVAILABLE(12500);
+    const intl = UNAVAILABLE(1112).intl;
+    const result1 = UNAVAILABLE(14610).showCheckpointTestingToast(intl.string(UNAVAILABLE(1112).t.i4jeWR), "success");
   }
 };
 const items2 = [
   {
     id: "open-unavailable",
-    label: _modDef3343["58TARv"],
+    label: _modDef3442["58TARv"],
     action() {
       const tmp = c2();
       const merged = Object.assign(tmp);
       const merged1 = Object.assign(UNAVAILABLE);
-      return UNAVAILABLE(12375).openCheckpoint("qa_menu", {});
+      return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
     }
   }
 ];
 HermesBuiltin.arraySpread(items2, tmp3);
-let closure_5 = ["reset"];
+let closure_5 = ["reset-progress", "reset-character"];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/testing/CheckpointTestingOptions.tsx");
 

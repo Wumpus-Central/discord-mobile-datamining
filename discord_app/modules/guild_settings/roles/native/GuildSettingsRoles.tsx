@@ -1,51 +1,51 @@
-// === Module 19703: GuildSettingsRoles ===
+// === Module 19830: GuildSettingsRoles ===
 
-// Module 19703 (GuildSettingsRoles)
+// Module 19830 (GuildSettingsRoles)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4731 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6392 */;
-import Pressables from "Pressables" /* 6910 */;
-import TableRowGroup from "TableRowGroup" /* 7228 */;
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7375 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
-import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 10108 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17539 */;
-import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 19706 */;
-import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 19707 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19714 */;
-import actions_GuildActionCreators from "actions/GuildActionCreators" /* 19716 */;
-import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 19717 */;
-import MemberRolesAbstractUI from "MemberRolesAbstractUI" /* 19718 */;
-import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 19722 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
+import Pressables from "Pressables" /* 7030 */;
+import TableRowGroup from "TableRowGroup" /* 7348 */;
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7495 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
+import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 10228 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17663 */;
+import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 19833 */;
+import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 19834 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19841 */;
+import actions_GuildActionCreators from "actions/GuildActionCreators" /* 19843 */;
+import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 19844 */;
+import MemberRolesAbstractUI from "MemberRolesAbstractUI" /* 19845 */;
+import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 19849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5415 */;
-import GuildRoleStore from "GuildRoleStore" /* 4700 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7374 */;
-import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 19704 */;
-import TextStyles from "TextStyles" /* 6288 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
+import GuildRoleStore from "GuildRoleStore" /* 4819 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7494 */;
+import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 19831 */;
+import TextStyles from "TextStyles" /* 6407 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
-const isEveryoneRole = fn(4701).isEveryoneRole;
-let closure_15 = fn(19705).GuildSettingsRoleEditSections;
+const isEveryoneRole = fn(4820).isEveryoneRole;
+let closure_15 = fn(19832).GuildSettingsRoleEditSections;
 const Constants = fn(1071);
 ({ GuildSettingsSections: closure_16, AnalyticEvents: closure_17, AnalyticsSections: closure_18, Permissions: closure_19, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { flex: 1 }, scrollContainer: { paddingHorizontal: 12 }, searchWrapper: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_12 }, subheaderContainer: null, emptySubheaderContainer: null, emptyIlloContainer: null, emptySubheaderBody: null, subheader: null, subheaderBody: null, subheaderButton: null, subheaderDescription: null, divider: null, everyoneWrapper: null, edittingRolesHeader: null, rolesHeader: null, reorderButton: null, reorderButtonText: null, rolesBody: null, emptyRolesIcon: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.subheaderContainer = { paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -579,7 +579,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp44Result = null;
     if (!hasRoles) {
       let obj9 = { leading: null, label: null };
-      let obj10 = { style: tmp.emptyRolesIcon, size: tmp3(tmp4[44]).Icon.Sizes.LARGE, source: require("module_7659") };
+      let obj10 = { style: tmp.emptyRolesIcon, size: tmp3(tmp4[44]).Icon.Sizes.LARGE, source: require("module_7779") };
       obj9.leading = tmp44(tmp3(tmp4[44]).Icon, obj10);
       let obj11 = { variant: "body-md/semibold", color: "interactive-text-default", children: null };
       let intl = tmp3(tmp4[29]).intl;

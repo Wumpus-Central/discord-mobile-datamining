@@ -1,9 +1,9 @@
-// === Module 14132: ProductDetailsActionSheetSkeleton ===
+// === Module 14254: ProductDetailsActionSheetSkeleton ===
 
-// Module 14132 (ProductDetailsActionSheetSkeleton)
+// Module 14254 (ProductDetailsActionSheetSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
+import timing_timing from "timing/timing" /* 5123 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const obj2 = { container: { flex: 1 }, scrollArea: { flex: 1 }, block: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, preview: null, info: null, title: null, description: null, price: null, purchaseSection: null, purchaseButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.preview = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, height: 280, borderRadius: nativeDefault.radii.md };
@@ -28,7 +28,7 @@ obj2.price = size2;
 let obj5 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.purchaseSection = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
-obj2.purchaseButton = { height: fn(5398).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5517).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 let closure_8 = { code: "(function ProductDetailsActionSheetSkeletonTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 size = fn(2);

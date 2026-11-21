@@ -1,17 +1,17 @@
-// === Module 12656: FriendsAnimation ===
+// === Module 12778: FriendsAnimation ===
 
-// Module 12656 (FriendsAnimation)
+// Module 12778 (FriendsAnimation)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import UserUtils from "UserUtils" /* 4850 */;
-import CheckpointFriendsRive from "CheckpointFriendsRive" /* 4931 */;
-import CheckpointConstants from "CheckpointConstants" /* 5850 */;
+import UserUtils from "UserUtils" /* 4969 */;
+import CheckpointFriendsRive from "CheckpointFriendsRive" /* 5050 */;
+import CheckpointConstants from "CheckpointConstants" /* 5969 */;
 import UserStore from "UserStore" /* 1386 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import createStyles from "createStyles" /* 4794 */;
+import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

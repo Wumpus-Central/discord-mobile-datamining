@@ -1,6 +1,6 @@
-// === Module 6770: getGuildModeratorReportingEnabled ===
+// === Module 6889: getGuildModeratorReportingEnabled ===
 
-// Module 6770 (getGuildModeratorReportingEnabled)
+// Module 6889 (getGuildModeratorReportingEnabled)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");

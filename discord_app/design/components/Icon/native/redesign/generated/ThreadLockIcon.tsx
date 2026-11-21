@@ -1,9 +1,9 @@
-// === Module 7553: ThreadLockIcon ===
+// === Module 7673: ThreadLockIcon ===
 
-// Module 7553 (ThreadLockIcon)
+// Module 7673 (ThreadLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod7517 from "module_7517" /* 7517 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod7637 from "module_7637" /* 7637 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThreadLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7517, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7637, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

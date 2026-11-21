@@ -1,13 +1,13 @@
-// === Module 6743: OrderActionCreators ===
+// === Module 6862: OrderActionCreators ===
 
-// Module 6743 (OrderActionCreators)
+// Module 6862 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import _modDef2359 from "module_2359" /* 2359 */;
-import OrderSigningErrors from "OrderSigningErrors" /* 6744 */;
+import _modDef2439 from "module_2439" /* 2439 */;
+import OrderSigningErrors from "OrderSigningErrors" /* 6863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 6232 */;
+import BillingError_mod from "BillingError" /* 6351 */;
 
 require = fn;
 function isOrderShape(obj) {
@@ -595,10 +595,10 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     }
   }
 };
-const ConstraintReasonCode = fn(6742).ConstraintReasonCode;
+const ConstraintReasonCode = fn(6861).ConstraintReasonCode;
 const Endpoints = fn(1071).Endpoints;
 let closure_6 = new LoggerDefault("OrderActionCreators");
-let obj = { [SPENDING_LIMIT_REACHED]: fn(6232).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED, [SPENDING_LIMIT_WILL_EXCEED]: fn(6232).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED };
+let obj = { [SPENDING_LIMIT_REACHED]: fn(6351).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED, [SPENDING_LIMIT_WILL_EXCEED]: fn(6351).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED };
 ({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = ConstraintReasonCode);
 let BillingError = BillingError_mod;
 class OrderSigningFailedWithConstraintsError extends tmp3 {

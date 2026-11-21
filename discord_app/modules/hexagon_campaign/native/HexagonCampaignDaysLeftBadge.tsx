@@ -1,11 +1,11 @@
-// === Module 15755: HexagonCampaignDaysLeftBadge ===
+// === Module 15878: HexagonCampaignDaysLeftBadge ===
 
-// Module 15755 (HexagonCampaignDaysLeftBadge)
+// Module 15878 (HexagonCampaignDaysLeftBadge)
 import util from "util" /* 1112 */;
-import _modDef4478 from "module_4478" /* 4478 */;
-import ClockIcon from "ClockIcon" /* 5503 */;
-import Badge from "Badge" /* 6941 */;
-import useHexagonCampaignDaysLeft from "useHexagonCampaignDaysLeft" /* 15756 */;
+import _modDef4597 from "module_4597" /* 4597 */;
+import ClockIcon from "ClockIcon" /* 5622 */;
+import Badge from "Badge" /* 7061 */;
+import useHexagonCampaignDaysLeft from "useHexagonCampaignDaysLeft" /* 15879 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function HexagonCampaignDaysLeftBadge(variant) {
   const obj2 = { type: null, variant: null, icon: null };
   const obj3 = { text: null };
   const intl = util.intl;
-  obj3.text = intl.formatToPlainString(_modDef4478["noGK/D"], { days: hexagonCampaignDaysLeft });
+  obj3.text = intl.formatToPlainString(_modDef4597["noGK/D"], { days: hexagonCampaignDaysLeft });
   obj2.type = obj3;
   obj2.variant = str;
   obj2.icon = ClockIcon.ClockIcon;

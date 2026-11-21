@@ -1,6 +1,6 @@
-// === Module 18800: RegionActionCreators ===
+// === Module 18927: RegionActionCreators ===
 
-// Module 18800 (RegionActionCreators)
+// Module 18927 (RegionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;

@@ -1,9 +1,9 @@
-// === Module 11279: StickerPickerPremiumSearchUpsell ===
+// === Module 11399: StickerPickerPremiumSearchUpsell ===
 
-// Module 11279 (StickerPickerPremiumSearchUpsell)
+// Module 11399 (StickerPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import PremiumUtils from "PremiumUtils" /* 2172 */;
+import PremiumUtils from "PremiumUtils" /* 2173 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const Constants = fn(1071);
 const PremiumConstants = fn(1388);
 ({ PremiumSubscriptionSKUs: metroImportDefault, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { nitroIcon: { marginRight: nativeDefault.space.PX_8, alignSelf: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

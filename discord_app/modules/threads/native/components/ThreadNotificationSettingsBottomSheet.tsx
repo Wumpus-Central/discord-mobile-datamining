@@ -1,9 +1,9 @@
-// === Module 11550: ThreadNotificationSettingsBottomSheet ===
+// === Module 11670: ThreadNotificationSettingsBottomSheet ===
 
-// Module 11550 (ThreadNotificationSettingsBottomSheet)
+// Module 11670 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1111 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8339 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8459 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ThreadConstants.getThreadNotificationOptions;
@@ -12,12 +12,12 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  const threadNotificationSetting = channel(6551).useThreadNotificationSetting(channel);
+  const threadNotificationSetting = channel(6670).useThreadNotificationSetting(channel);
   const obj2 = { header: null, children: null };
   const obj3 = { title: null };
   const intl = channel(1112).intl;
   obj3.title = intl.string(channel(1112).t.h850Ss);
-  obj2.header = jsx(channel(7395).BottomSheetTitleHeader, { title: null });
+  obj2.header = jsx(channel(7515).BottomSheetTitleHeader, { title: null });
   const obj4 = {
     hasIcons: false,
     value: threadNotificationSetting,
@@ -29,12 +29,12 @@ export default function ThreadNotificationsBottomSheet(channel) {
   };
   const intl2 = channel(1112).intl;
   obj4.accessibilityLabel = intl2.string(channel(1112).t.h850Ss);
-  const obj = channel(6551);
+  const obj = channel(6670);
   obj4.children = closure_3().map((label) => {
     const setting = label.setting;
     return jsx(channel(dependencyMap[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
-  obj2.children = jsx(channel(7227).TableRadioGroup, {
+  obj2.children = jsx(channel(7347).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
@@ -43,5 +43,5 @@ export default function ThreadNotificationsBottomSheet(channel) {
     accessibilityLabel: null,
     children: null
   });
-  return jsx(channel(7433).ActionSheet, { header: null, children: null });
+  return jsx(channel(7553).ActionSheet, { header: null, children: null });
 };

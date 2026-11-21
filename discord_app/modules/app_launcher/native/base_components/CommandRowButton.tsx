@@ -1,11 +1,11 @@
-// === Module 12852: CommandRowButton ===
+// === Module 12974: CommandRowButton ===
 
-// Module 12852 (CommandRowButton)
+// Module 12974 (CommandRowButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import SendMessageIcon from "SendMessageIcon" /* 5492 */;
-import TableRowArrow from "TableRowArrow" /* 6938 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import SendMessageIcon from "SendMessageIcon" /* 5611 */;
+import TableRowArrow from "TableRowArrow" /* 7058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

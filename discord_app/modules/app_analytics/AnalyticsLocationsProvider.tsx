@@ -1,7 +1,7 @@
-// === Module 16188: AnalyticsLocationsProvider ===
+// === Module 16311: AnalyticsLocationsProvider ===
 
-// Module 16188 (AnalyticsLocationsProvider)
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7400 */;
+// Module 16311 (AnalyticsLocationsProvider)
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7520 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;

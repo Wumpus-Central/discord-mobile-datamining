@@ -1,16 +1,16 @@
-// === Module 10147: UserProfileWidgetContainer ===
+// === Module 10267: UserProfileWidgetContainer ===
 
-// Module 10147 (UserProfileWidgetContainer)
+// Module 10267 (UserProfileWidgetContainer)
 import nativeDefault from "native" /* 575 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7443 */;
-import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 10148 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7563 */;
+import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 10268 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { actions: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,8 +30,8 @@ export default function UserProfileWidgetContainer(style) {
   const obj = userId(504);
   const tmp = userId;
   if (title == null) {
-    title = tmp(10097).getWidgetTitle(widget);
-    const tmpResult = tmp(10097);
+    title = tmp(10217).getWidgetTitle(widget);
+    const tmpResult = tmp(10217);
   }
   obj2.title = title;
   obj2.titleLeadingIcon = titleLeadingIcon;

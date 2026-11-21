@@ -1,8 +1,8 @@
-// === Module 6724: FakePlaceholderPrivateChannel ===
+// === Module 6843: FakePlaceholderPrivateChannel ===
 
-// Module 6724 (FakePlaceholderPrivateChannel)
+// Module 6843 (FakePlaceholderPrivateChannel)
 import Constants from "Constants" /* 1071 */;
-import ChannelRecord from "ChannelRecord" /* 4647 */;
+import ChannelRecord from "ChannelRecord" /* 4766 */;
 import size from "module_2" /* 2 */;
 
 const channelRecord = ChannelRecord.createChannelRecord({ id: "131", type: Constants.ChannelTypes.DM, name: "Placeholder Channel" });

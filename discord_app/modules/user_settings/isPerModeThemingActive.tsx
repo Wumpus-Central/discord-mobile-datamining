@@ -1,6 +1,6 @@
-// === Module 4853: isPerModeThemingActive ===
+// === Module 4972: isPerModeThemingActive ===
 
-// Module 4853 (isPerModeThemingActive)
+// Module 4972 (isPerModeThemingActive)
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 

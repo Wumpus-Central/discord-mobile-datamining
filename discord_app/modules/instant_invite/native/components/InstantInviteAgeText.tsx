@@ -1,20 +1,20 @@
-// === Module 13542: InstantInviteAgeText ===
+// === Module 13664: InstantInviteAgeText ===
 
-// Module 13542 (InstantInviteAgeText)
+// Module 13664 (InstantInviteAgeText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import Pressables from "Pressables" /* 6910 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 7931 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 7934 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import Pressables from "Pressables" /* 7030 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 8054 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 7933 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8053 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");

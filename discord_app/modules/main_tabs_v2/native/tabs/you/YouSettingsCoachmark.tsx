@@ -1,8 +1,8 @@
-// === Module 18765: YouSettingsCoachmark ===
+// === Module 18892: YouSettingsCoachmark ===
 
-// Module 18765 (YouSettingsCoachmark)
-import useCoachmark from "useCoachmark" /* 8967 */;
-import useConsoleConnectionCoachmark from "useConsoleConnectionCoachmark" /* 18766 */;
+// Module 18892 (YouSettingsCoachmark)
+import useCoachmark from "useCoachmark" /* 9087 */;
+import useConsoleConnectionCoachmark from "useConsoleConnectionCoachmark" /* 18893 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");

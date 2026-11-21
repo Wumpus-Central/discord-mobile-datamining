@@ -1,29 +1,29 @@
-// === Module 18586: layout/SearchBar ===
+// === Module 18713: layout/SearchBar ===
 
-// Module 18586 (layout/SearchBar)
+// Module 18713 (layout/SearchBar)
 import util from "util" /* 1112 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
-import useChannelName from "useChannelName" /* 5410 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13077 */;
-import TrackingDefault from "Tracking" /* 13098 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13102 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
+import useChannelName from "useChannelName" /* 5529 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13199 */;
+import TrackingDefault from "Tracking" /* 13220 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13224 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
-import SearchQueryStore from "SearchQueryStore" /* 13091 */;
+import SearchQueryStore from "SearchQueryStore" /* 13213 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8456);
+const SearchConstants = fn(8576);
 ({ SEARCH_BAR_HEIGHT: closure_10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(8455).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(8575).SearchFilterAddLocations;
 const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = { searchBar: { minHeight: minHeight + 2 }, icon: { width: 32, minHeight, justifyContent: "center", zIndex: 10 } };
   return obj;

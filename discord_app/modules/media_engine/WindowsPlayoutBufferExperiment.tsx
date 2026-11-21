@@ -1,6 +1,6 @@
-// === Module 15245: WindowsPlayoutBufferExperiment ===
+// === Module 15368: WindowsPlayoutBufferExperiment ===
 
-// Module 15245 (WindowsPlayoutBufferExperiment)
+// Module 15368 (WindowsPlayoutBufferExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

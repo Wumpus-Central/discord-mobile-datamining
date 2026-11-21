@@ -1,9 +1,9 @@
-// === Module 14304: useSheetDismissPointerEvents ===
+// === Module 14426: useSheetDismissPointerEvents ===
 
-// Module 14304 (useSheetDismissPointerEvents)
+// Module 14426 (useSheetDismissPointerEvents)
 import _mod1653 from "module_1653" /* 1653 */;
-import BottomSheetModal from "BottomSheetModal" /* 5026 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+import BottomSheetModal from "BottomSheetModal" /* 5145 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { code: "(function useSheetDismissPointerEventsTsx1(){let[contentGestureState,State,handleGestureState]=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};})" };

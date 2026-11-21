@@ -1,24 +1,24 @@
-// === Module 17394: useMainTabsPanelsGesture ===
+// === Module 17518: useMainTabsPanelsGesture ===
 
-// Module 17394 (useMainTabsPanelsGesture)
+// Module 17518 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1378 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import timingPresets from "timingPresets" /* 5007 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11814 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import timingPresets from "timingPresets" /* 5126 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11934 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(17396);
+const LaunchPadGestureRefContextDefault = tmp(17520);
 require = fn;
-const LaunchPadTypes = fn(11813).LaunchPadTypes;
+const LaunchPadTypes = fn(11933).LaunchPadTypes;
 let PlatformUtils = fn(1378);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(17395);
+const PanelsConfig = fn(17519);
 let closure_6 = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "(function useMainTabsPanelsGestureTsx1(width){let[isDragging,translateX,IS_ANDROID,withTiming,timingInstant,isFoldChange,timingStandard]=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;if(IS_ANDROID){translateX.set(withTiming(width,timingInstant,'animate-always'));}else{translateX.set(isFoldChange?withTiming(width,timingStandard,'respect-motion-settings'):width);}})" };
 let closure_8 = { code: "(function handleAnimationFinish_useMainTabsPanelsGestureTsx2(finished){let[onVisibilityChange,scheduleOnRN,show]=this.__closure;if(!finished)return;if(onVisibilityChange!=null){scheduleOnRN(onVisibilityChange,show);}})" };

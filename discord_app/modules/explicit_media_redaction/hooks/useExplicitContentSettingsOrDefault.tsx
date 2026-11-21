@@ -1,9 +1,9 @@
-// === Module 16004: useExplicitContentSettingsOrDefault ===
+// === Module 16127: useExplicitContentSettingsOrDefault ===
 
-// Module 16004 (useExplicitContentSettingsOrDefault)
+// Module 16127 (useExplicitContentSettingsOrDefault)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8111 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8113 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8231 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8233 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
 require = fn;

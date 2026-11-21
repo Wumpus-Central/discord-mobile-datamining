@@ -1,9 +1,9 @@
-// === Module 8883: WishlistShopUnpublishUtils ===
+// === Module 9003: WishlistShopUnpublishUtils ===
 
-// Module 8883 (WishlistShopUnpublishUtils)
+// Module 9003 (WishlistShopUnpublishUtils)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7967 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;
 import size from "module_2" /* 2 */;
 
 const SKUProductLines = Constants.SKUProductLines;

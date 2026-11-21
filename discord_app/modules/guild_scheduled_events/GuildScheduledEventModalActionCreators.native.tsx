@@ -1,9 +1,9 @@
-// === Module 7448: GuildScheduledEventModalActionCreators ===
+// === Module 7568: GuildScheduledEventModalActionCreators ===
 
-// Module 7448 (GuildScheduledEventModalActionCreators)
+// Module 7568 (GuildScheduledEventModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import ScheduleUtils from "ScheduleUtils" /* 7455 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ScheduleUtils from "ScheduleUtils" /* 7575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,8 +17,8 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = ScheduleUtils;
   }
   obj2.recurrenceId = recurrenceId;
-  obj.openLazy(asyncRequireImpl(7450, dependencyMap.paths), closure_5, obj2, "stack");
-  const tmp3 = asyncRequireImpl(7450, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(7570, dependencyMap.paths), closure_5, obj2, "stack");
+  const tmp3 = asyncRequireImpl(7570, dependencyMap.paths);
 }
 let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
@@ -78,8 +78,8 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let closure_4 = fn(4649).EXPLICIT_END_EVENT_SHEET_KEY;
-let closure_5 = fn(7449).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_4 = fn(4768).EXPLICIT_END_EVENT_SHEET_KEY;
+let closure_5 = fn(7569).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx");
 
@@ -95,5 +95,5 @@ export function transitionToEventDetailsFromInvite() {
   return applyArgumentsResult;
 }
 export function openEndEventModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14569, dependencyMap.paths), closure_4, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14691, dependencyMap.paths), closure_4, { channel });
 }

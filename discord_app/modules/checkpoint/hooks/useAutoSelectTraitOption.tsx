@@ -1,6 +1,6 @@
-// === Module 12672: useAutoSelectTraitOption ===
+// === Module 12794: useAutoSelectTraitOption ===
 
-// Module 12672 (useAutoSelectTraitOption)
+// Module 12794 (useAutoSelectTraitOption)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -38,7 +38,7 @@ function getInitialTraitOption(availableTraitOptions) {
   }
   return found[0];
 }
-let items = [fn(5851).CheckpointTraitRarity.ULTRA, fn(5851).CheckpointTraitRarity.EPIC, fn(5851).CheckpointTraitRarity.RARE, fn(5851).CheckpointTraitRarity.COMMON, fn(5851).CheckpointTraitRarity.DEFAULT];
+let items = [fn(5970).CheckpointTraitRarity.ULTRA, fn(5970).CheckpointTraitRarity.EPIC, fn(5970).CheckpointTraitRarity.RARE, fn(5970).CheckpointTraitRarity.COMMON, fn(5970).CheckpointTraitRarity.DEFAULT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useAutoSelectTraitOption.tsx");
 

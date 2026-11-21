@@ -1,7 +1,7 @@
-// === Module 5800: Dialog ===
+// === Module 5919: Dialog ===
 
-// Module 5800 (Dialog)
-import AccessibilityView from "AccessibilityView" /* 5801 */;
+// Module 5919 (Dialog)
+import AccessibilityView from "AccessibilityView" /* 5920 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

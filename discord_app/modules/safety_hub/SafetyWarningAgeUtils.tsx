@@ -1,15 +1,15 @@
-// === Module 14223: SafetyWarningAgeUtils ===
+// === Module 14345: SafetyWarningAgeUtils ===
 
-// Module 14223 (SafetyWarningAgeUtils)
+// Module 14345 (SafetyWarningAgeUtils)
 import util from "util" /* 1112 */;
-import _modDef2167 from "module_2167" /* 2167 */;
+import _modDef2168 from "module_2168" /* 2168 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyWarningAgeUtils.tsx");
 
 export function getDaysAgo(parsed) {
-  const obj = _modDef2167();
-  return obj.diff(_modDef2167.unix(parsed), "days");
+  const obj = _modDef2168();
+  return obj.diff(_modDef2168.unix(parsed), "days");
 }
 export function formatSafetyWarningAge(daysAgo, isSafetyWarningAgeTextEnabled) {
   if (isSafetyWarningAgeTextEnabled) {

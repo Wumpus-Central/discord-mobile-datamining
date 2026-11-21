@@ -1,16 +1,16 @@
-// === Module 8000: EntitlementStore ===
+// === Module 8120: EntitlementStore ===
 
-// Module 8000 (EntitlementStore)
+// Module 8120 (EntitlementStore)
 import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1074 */;
-import EntitlementTypes from "EntitlementTypes" /* 2171 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8001 */;
-import EntitlementSourceTypes from "EntitlementSourceTypes" /* 8002 */;
-import EntitlementRecord from "EntitlementRecord" /* 2164 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2161 */;
-import SKUStore from "SKUStore" /* 6555 */;
+import EntitlementTypes from "EntitlementTypes" /* 2172 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8121 */;
+import EntitlementSourceTypes from "EntitlementSourceTypes" /* 8122 */;
+import EntitlementRecord from "EntitlementRecord" /* 2165 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2162 */;
+import SKUStore from "SKUStore" /* 6674 */;
 
 require = fn;
 function addEntitlement(entitlement) {

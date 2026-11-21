@@ -1,6 +1,6 @@
-// === Module 9896: useMediaModalFooterAction ===
+// === Module 10016: useMediaModalFooterAction ===
 
-// Module 9896 (useMediaModalFooterAction)
+// Module 10016 (useMediaModalFooterAction)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

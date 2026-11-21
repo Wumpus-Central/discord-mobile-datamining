@@ -1,9 +1,9 @@
-// === Module 8736: useIsEligibleSenderForReferralProgram ===
+// === Module 8856: useIsEligibleSenderForReferralProgram ===
 
-// Module 8736 (useIsEligibleSenderForReferralProgram)
+// Module 8856 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8737 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 8722 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8857 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 8842 */;
 
 require = fn;
 const size = fn(2);

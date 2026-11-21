@@ -1,10 +1,10 @@
-// === Module 8654: StageStartSystemMessage ===
+// === Module 8774: StageStartSystemMessage ===
 
-// Module 8654 (StageStartSystemMessage)
+// Module 8774 (StageStartSystemMessage)
 import util from "util" /* 1112 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8578 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8580 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8582 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8698 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8700 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8702 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx");

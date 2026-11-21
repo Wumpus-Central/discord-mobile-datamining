@@ -1,15 +1,15 @@
-// === Module 17166: ShopBlockItem ===
+// === Module 17290: ShopBlockItem ===
 
-// Module 17166 (ShopBlockItem)
+// Module 17290 (ShopBlockItem)
 import nativeDefault from "native" /* 575 */;
-import ShopBlockType from "ShopBlockType" /* 5452 */;
+import ShopBlockType from "ShopBlockType" /* 5571 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7955 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8075 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { shopBlockSpacing: { marginTop: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

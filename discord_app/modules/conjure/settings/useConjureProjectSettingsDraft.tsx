@@ -1,10 +1,10 @@
-// === Module 18157: useConjureProjectSettingsDraft ===
+// === Module 18284: useConjureProjectSettingsDraft ===
 
-// Module 18157 (useConjureProjectSettingsDraft)
+// Module 18284 (useConjureProjectSettingsDraft)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 
 const require = globalThis.__r;
 

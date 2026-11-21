@@ -1,6 +1,6 @@
-// === Module 12384: CheckpointStepHeaderRefContext ===
+// === Module 12506: CheckpointStepHeaderRefContext ===
 
-// Module 12384 (CheckpointStepHeaderRefContext)
+// Module 12506 (CheckpointStepHeaderRefContext)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export function CheckpointStepFocusProvider(arg0) {
       return tmp;
     });
   }, []);
-  isScreenReaderEnabled = first(5024).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = first(5143).useIsScreenReaderEnabled();
   items = [route, first, isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
     if (isScreenReaderEnabled) {

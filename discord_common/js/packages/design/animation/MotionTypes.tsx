@@ -1,6 +1,6 @@
-// === Module 4859: MotionTypes ===
+// === Module 4978: MotionTypes ===
 
-// Module 4859 (MotionTypes)
+// Module 4978 (MotionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/animation/MotionTypes.tsx");

@@ -1,8 +1,8 @@
-// === Module 8009: preloadUserBannerImage ===
+// === Module 8129: preloadUserBannerImage ===
 
-// Module 8009 (preloadUserBannerImage)
+// Module 8129 (preloadUserBannerImage)
 import AvatarUtils from "AvatarUtils" /* 1412 */;
-import UserSettings from "UserSettings" /* 4619 */;
+import UserSettings from "UserSettings" /* 4738 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");

@@ -1,15 +1,15 @@
-// === Module 7510: EditGuildEventModal ===
+// === Module 7630: EditGuildEventModal ===
 
-// Module 7510 (EditGuildEventModal)
+// Module 7630 (EditGuildEventModal)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2018 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7453 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 7454 */;
-import EntityUtils from "EntityUtils" /* 7458 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 7511 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 7514 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 7886 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 7887 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7573 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 7574 */;
+import EntityUtils from "EntityUtils" /* 7578 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 7631 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 7634 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8006 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8007 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,9 +18,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4649).GuildScheduledEventEntityTypes;
+let closure_8 = fn(4768).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -78,7 +78,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
           return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(4803).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(4922).AccessibilityAnnouncer;
             const intl = tmp4(1112).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1112).t["5HzXO5"]));
             closure_128_1();
@@ -88,7 +88,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(4803).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(4922).AccessibilityAnnouncer;
           const intl2 = tmp4(1112).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1112).t["F9On+q"]));
         }

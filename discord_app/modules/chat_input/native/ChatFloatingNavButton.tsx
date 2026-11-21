@@ -1,12 +1,12 @@
-// === Module 13011: ChatFloatingNavButton ===
+// === Module 13133: ChatFloatingNavButton ===
 
-// Module 13011 (ChatFloatingNavButton)
+// Module 13133 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import useToken from "useToken" /* 5358 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import springPresets from "springPresets" /* 5396 */;
-import FastImageDefault from "FastImage" /* 5481 */;
+import useToken from "useToken" /* 5477 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import springPresets from "springPresets" /* 5515 */;
+import FastImageDefault from "FastImage" /* 5600 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -14,7 +14,7 @@ const _modDef1653 = _mod1653;
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { pill: null, icon: null };
 let size = { height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 obj2.pill = size;

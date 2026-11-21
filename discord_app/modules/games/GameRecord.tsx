@@ -1,15 +1,15 @@
-// === Module 2140: GameRecord ===
+// === Module 2141: GameRecord ===
 
-// Module 2140 (GameRecord)
+// Module 2141 (GameRecord)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
 import Server from "Server" /* 2117 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2150 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2151 */;
 import Record from "Record" /* 1406 */;
-import ApplicationRecord from "ApplicationRecord" /* 2141 */;
+import ApplicationRecord from "ApplicationRecord" /* 2142 */;
 
 require = fn;
-const createExecutable = fn(2141).createExecutable;
+const createExecutable = fn(2142).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {

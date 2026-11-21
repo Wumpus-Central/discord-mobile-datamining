@@ -1,10 +1,10 @@
-// === Module 8084: VideoBackground ===
+// === Module 8204: VideoBackground ===
 
-// Module 8084 (VideoBackground)
+// Module 8204 (VideoBackground)
 import native from "native" /* 1186 */;
-import LinearGradientDefault from "LinearGradient" /* 5349 */;
-import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8086 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8087 */;
+import LinearGradientDefault from "LinearGradient" /* 5468 */;
+import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8206 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import apply from "apply" /* 12 */;
@@ -18,11 +18,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8085)();
+  const tmp5 = first(8205)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8086).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8206).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(575).unsafe_rawColors.PRIMARY_800);
@@ -53,13 +53,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8086).cachedDominantColors[closure_1_0] = obj;
+            first(8206).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(8086).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8206).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -166,7 +166,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const refs = createStyles.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
 const memoizeResult = apply.memoize((uri) => {
   let tmp = null;

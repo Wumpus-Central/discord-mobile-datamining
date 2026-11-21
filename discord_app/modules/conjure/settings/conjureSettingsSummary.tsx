@@ -1,8 +1,8 @@
-// === Module 18364: conjureSettingsSummary ===
+// === Module 18491: conjureSettingsSummary ===
 
-// Module 18364 (conjureSettingsSummary)
+// Module 18491 (conjureSettingsSummary)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
+import _modDef4190 from "module_4190" /* 4190 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,13 +33,13 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
       const type = found.type;
       if ("secret" === type) {
         const intl6 = util.intl;
-        let stringResult = intl6.string(_modDef4091.CJq1rY);
+        let stringResult = intl6.string(_modDef4190.CJq1rY);
       } else if ("checkbox" === type) {
         const intl5 = util.intl;
         if (true === arr2) {
-          let nXtpn3 = _modDef4091.nXtpn3;
+          let nXtpn3 = _modDef4190.nXtpn3;
         } else {
-          nXtpn3 = _modDef4091["0vfaMW"];
+          nXtpn3 = _modDef4190["0vfaMW"];
         }
         stringResult = intl5.string(nXtpn3);
       } else if ("select" === type) {
@@ -67,7 +67,7 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
             let combined = "#" + tmp;
           } else {
             const intl = closure_0(1112).intl;
-            combined = intl.string(closure_1(4091).Fw9G9A);
+            combined = intl.string(closure_1(4190).Fw9G9A);
           }
           return combined;
         });
@@ -75,10 +75,10 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
       } else if ("game" === type) {
         if (0 === mapped.length) {
           const intl4 = util.intl;
-          let stringResult1 = intl4.string(_modDef4091.nEv677);
+          let stringResult1 = intl4.string(_modDef4190.nEv677);
         } else {
           const intl3 = util.intl;
-          stringResult1 = intl3.string(_modDef4091.Fw9G9A);
+          stringResult1 = intl3.string(_modDef4190.Fw9G9A);
         }
         stringResult = stringResult1;
       } else {
@@ -88,10 +88,10 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
           }
         }
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef4091.Fw9G9A);
+        stringResult = intl2.string(_modDef4190.Fw9G9A);
       }
       obj2.value = stringResult;
-      obj.text = intl.formatToPlainString(_modDef4091["Z+FC3j"], obj2);
+      obj.text = intl.formatToPlainString(_modDef4190["Z+FC3j"], obj2);
       items = [obj];
       return items;
     }
@@ -102,8 +102,8 @@ export function conjureConnectedKeysSummary(arr) {
     const intl = require("util").intl;
     const obj = { label, value: null };
     const intl2 = require("util").intl;
-    obj.value = intl2.string(_modDef4091.CJq1rY);
-    return intl.formatToPlainString(_modDef4091["Z+FC3j"], obj);
+    obj.value = intl2.string(_modDef4190.CJq1rY);
+    return intl.formatToPlainString(_modDef4190["Z+FC3j"], obj);
   });
   return mapped.join(" \u00B7 ");
 }

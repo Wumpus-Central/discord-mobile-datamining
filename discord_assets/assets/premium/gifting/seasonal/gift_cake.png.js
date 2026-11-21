@@ -1,6 +1,6 @@
-// === Module 13802: ? ===
+// === Module 13924: ? ===
 
-// Module 13802
+// Module 13924
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js");

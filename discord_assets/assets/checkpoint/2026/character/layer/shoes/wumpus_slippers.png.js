@@ -1,6 +1,6 @@
-// === Module 5935: ? ===
+// === Module 6054: ? ===
 
-// Module 5935
+// Module 6054
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/shoes/wumpus_slippers.png.js");

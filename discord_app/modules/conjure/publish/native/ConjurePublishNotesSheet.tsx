@@ -1,17 +1,17 @@
-// === Module 18369: ConjurePublishNotesSheet ===
+// === Module 18496: ConjurePublishNotesSheet ===
 
-// Module 18369 (ConjurePublishNotesSheet)
+// Module 18496 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5008 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11611 */;
-import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 18370 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11731 */;
+import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 18497 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, notesSection: null, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.notesSection = { gap: nativeDefault.space.PX_4 };
@@ -61,7 +61,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef4091.Gd63Fl);
+    obj4.title = intl.string(_modDef4190.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = channels;
@@ -73,7 +73,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     obj.showActionSheet(obj2);
   }, items1);
   const callback2 = pickChannel.useCallback(() => {
-    _undefined(5008).hideActionSheet(ConjurePublishNotesSheet);
+    _undefined(5127).hideActionSheet(ConjurePublishNotesSheet);
   }, []);
   const items2 = [trimmed, callback2, send];
   const callback3 = pickChannel.useCallback(channels(function*() {
@@ -132,43 +132,43 @@ export default function ConjurePublishNotesSheet(guildId) {
   let obj = { startExpanded: true, header: null, children: null };
   let obj2 = { title: null };
   let intl = guildId(1112).intl;
-  obj2.title = intl.formatToPlainString(_modDef4091.lsYQII, { projectName });
-  obj.header = closure_10(guildId(7395).BottomSheetTitleHeader, obj2);
+  obj2.title = intl.formatToPlainString(_modDef4190.lsYQII, { projectName });
+  obj.header = closure_10(guildId(7515).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.container, children: null };
   let tmp14Result = null;
   if (channels.length > 0) {
     let obj4 = { style: tmp.notesSection, children: null };
     const obj5 = { label: null, placeholder: null, description: null, errorMessage: null, maxLength: null, value: null, onChange: null, disabled: null };
     const intl2 = tmp13(1112).intl;
-    obj5.label = intl2.string(tmp5(4091).r4du8k);
+    obj5.label = intl2.string(tmp5(4190).r4du8k);
     const intl3 = tmp13(1112).intl;
-    const tmp5Result = tmp5(4091);
+    const tmp5Result = tmp5(4190);
     obj5.placeholder = intl3.string(drafting ? tmp5Result.aYQksU : tmp5Result["3hV1Gc"]);
     let stringResult;
     if (draftFailed) {
       const intl4 = tmp13(1112).intl;
-      stringResult = intl4.string(tmp5(4091)["Em8bo+"]);
+      stringResult = intl4.string(tmp5(4190)["Em8bo+"]);
     }
     obj5.description = stringResult;
     let stringResult1;
     if (tmp4[0]) {
       const intl5 = tmp13(1112).intl;
-      stringResult1 = intl5.string(tmp5(4091)["6oEjjD"]);
+      stringResult1 = intl5.string(tmp5(4190)["6oEjjD"]);
     }
     obj5.errorMessage = stringResult1;
     obj5.maxLength = maxNotesLength;
     obj5.value = str;
     obj5.onChange = callback;
     obj5.disabled = sending;
-    const items3 = [closure_10(tmp13(7341).TextArea, obj5), ];
+    const items3 = [closure_10(tmp13(7461).TextArea, obj5), ];
     const intl6 = tmp13(1112).intl;
     if (null != selectedChannel) {
       const _HermesInternal = HermesInternal;
-      let combined = "#" + tmp13(5410).computeChannelName(selectedChannel, callback2, trimmed);
-      const tmp13Result = tmp13(5410);
+      let combined = "#" + tmp13(5529).computeChannelName(selectedChannel, callback2, trimmed);
+      const tmp13Result = tmp13(5529);
     } else {
       const intl7 = tmp13(1112).intl;
-      combined = intl7.string(tmp5(4091)["7CvxMC"]);
+      combined = intl7.string(tmp5(4190)["7CvxMC"]);
     }
     const obj6 = { channel: combined, onPick: null };
     let fn = callback1;
@@ -179,8 +179,8 @@ export default function ConjurePublishNotesSheet(guildId) {
     }
     const obj7 = { variant: "body-md/medium", color: "text-subtle", children: null };
     obj6.onPick = fn;
-    obj7.children = intl6.format(tmp5(4091)["1lVhj/"], obj6);
-    items3[1] = closure_10(tmp13(5385).Text, obj7);
+    obj7.children = intl6.format(tmp5(4190)["1lVhj/"], obj6);
+    items3[1] = closure_10(tmp13(5504).Text, obj7);
     obj4.children = items3;
     tmp14Result = closure_11(tmp15, obj4);
   }
@@ -190,18 +190,18 @@ export default function ConjurePublishNotesSheet(guildId) {
   const intl8 = tmp13(1112).intl;
   obj9.text = intl8.string(guildId(1112).t["ETE/oC"]);
   obj9.onPress = callback2;
-  const items5 = [closure_10(guildId(5392).Button, obj9), ];
+  const items5 = [closure_10(guildId(5511).Button, obj9), ];
   const obj10 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
   const intl9 = tmp13(1112).intl;
-  obj10.text = intl9.string(_modDef4091["69aIG4"]);
+  obj10.text = intl9.string(_modDef4190["69aIG4"]);
   obj10.loading = sending;
   obj10.disabled = "" === trimmed || trimmed.length > maxNotesLength || null == selectedChannel || sending;
   obj10.onPress = callback3;
-  items5[1] = closure_10(guildId(5392).Button, obj10);
+  items5[1] = closure_10(guildId(5511).Button, obj10);
   obj8.children = items5;
   items4[1] = closure_11(markEdited, obj8);
   obj3.children = items4;
   obj.children = closure_11(markEdited, obj3);
-  return closure_10(guildId(7433).ActionSheet, obj);
+  return closure_10(guildId(7553).ActionSheet, obj);
 };
 export const CONJURE_PUBLISH_NOTES_SHEET_KEY = "ConjurePublishNotesSheet";

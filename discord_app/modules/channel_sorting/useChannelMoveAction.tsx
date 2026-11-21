@@ -1,16 +1,16 @@
-// === Module 13765: useChannelMoveAction ===
+// === Module 13887: useChannelMoveAction ===
 
-// Module 13765 (useChannelMoveAction)
-import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13767 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 13769 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7357 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
+// Module 13887 (useChannelMoveAction)
+import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13889 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 13891 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7477 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
 import UserStore from "UserStore" /* 1386 */;
-import getChannelListRecord from "getChannelListRecord" /* 13766 */;
+import getChannelListRecord from "getChannelListRecord" /* 13888 */;
 
 const require = globalThis.__r;
 
@@ -62,8 +62,8 @@ export default function useChannelMoveAction(getGuildId) {
     let _categories = categories._categories;
     let found = _categories.filter((channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID);
   } else {
-    found = tmp(13769).getSectionSiblings(listChannel, categories);
-    const tmpResult5 = tmp(13769);
+    found = tmp(13891).getSectionSiblings(listChannel, categories);
+    const tmpResult5 = tmp(13891);
   }
   let id1 = null;
   if (found.length > 1) {

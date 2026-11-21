@@ -1,13 +1,13 @@
-// === Module 19040: pip/usePIPAvoidanceSpecs ===
+// === Module 19167: pip/usePIPAvoidanceSpecs ===
 
-// Module 19040 (pip/usePIPAvoidanceSpecs)
+// Module 19167 (pip/usePIPAvoidanceSpecs)
 import _mod1653 from "module_1653" /* 1653 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10536 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11634 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18109 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 18912 */;
-import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19041 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19042 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10656 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11754 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18235 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19039 */;
+import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19168 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19169 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { code: "(function usePIPAvoidanceSpecsTsx1(){let[keyboardHeight,safeArea,screenName]=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};})" };

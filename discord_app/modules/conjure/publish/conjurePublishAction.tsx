@@ -1,10 +1,10 @@
-// === Module 12197: conjurePublishAction ===
+// === Module 12319: conjurePublishAction ===
 
-// Module 12197 (conjurePublishAction)
+// Module 12319 (conjurePublishAction)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 12174 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 12190 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 12296 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 12312 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -59,7 +59,7 @@ export function resolveConjurePublishAction(input) {
         str3 = "";
       }
       const obj5 = { server: str3 };
-      formatResult = intl.format(_modDef4091.N4NkyR, obj5);
+      formatResult = intl.format(_modDef4190.N4NkyR, obj5);
     }
   }
   const obj7 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -101,7 +101,7 @@ export function resolveConjurePublishAction(input) {
             str5 = "";
           }
           const obj9 = { server: str5 };
-          formatResult1 = intl2.format(_modDef4091.eHYXFg, obj9);
+          formatResult1 = intl2.format(_modDef4190.eHYXFg, obj9);
         }
       }
     }
@@ -129,7 +129,7 @@ export function resolveConjurePublishAction(input) {
       const obj10 = {};
       const merged2 = Object.assign(obj8);
       const intl4 = util.intl;
-      obj10.label = intl4.string(_modDef4091["tUeY/h"]);
+      obj10.label = intl4.string(_modDef4190["tUeY/h"]);
       obj10.action = "review_permissions";
       let obj11 = obj10;
     }
@@ -138,6 +138,6 @@ export function resolveConjurePublishAction(input) {
   obj11 = {};
   const merged3 = Object.assign(obj8);
   const intl3 = util.intl;
-  obj11.label = intl3.string(_modDef4091["120EFN"]);
+  obj11.label = intl3.string(_modDef4190["120EFN"]);
   obj11.action = "publish";
 }

@@ -1,16 +1,16 @@
-// === Module 4972: getInitialNavigationState ===
+// === Module 5091: getInitialNavigationState ===
 
-// Module 4972 (getInitialNavigationState)
+// Module 5091 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1098 */;
-import matchPathCompat from "matchPathCompat" /* 4832 */;
-import RouteUtils from "RouteUtils" /* 4845 */;
-import useChatLayout from "useChatLayout" /* 4973 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4976 */;
+import matchPathCompat from "matchPathCompat" /* 4951 */;
+import RouteUtils from "RouteUtils" /* 4964 */;
+import useChatLayout from "useChatLayout" /* 5092 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5095 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4831 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4950 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 
 require = fn;
 function getInitialGuildState(guildId, channelId, flag) {

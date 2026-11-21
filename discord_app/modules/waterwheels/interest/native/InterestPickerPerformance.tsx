@@ -1,6 +1,6 @@
-// === Module 17710: InterestPickerPerformance ===
+// === Module 17824: InterestPickerPerformance ===
 
-// Module 17710 (InterestPickerPerformance)
+// Module 17824 (InterestPickerPerformance)
 import size from "module_2" /* 2 */;
 
 let set = new Set();

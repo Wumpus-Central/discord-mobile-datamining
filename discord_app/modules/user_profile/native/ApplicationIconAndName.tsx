@@ -1,11 +1,11 @@
-// === Module 13418: ApplicationIconAndName ===
+// === Module 13540: ApplicationIconAndName ===
 
-// Module 13418 (ApplicationIconAndName)
+// Module 13540 (ApplicationIconAndName)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5385 */;
+import Text_Text from "Text/Text" /* 5504 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4794 */;
+import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);

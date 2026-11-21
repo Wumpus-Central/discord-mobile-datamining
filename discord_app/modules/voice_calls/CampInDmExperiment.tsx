@@ -1,6 +1,6 @@
-// === Module 19325: CampInDmExperiment ===
+// === Module 19452: CampInDmExperiment ===
 
-// Module 19325 (CampInDmExperiment)
+// Module 19452 (CampInDmExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

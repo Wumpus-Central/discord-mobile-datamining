@@ -1,10 +1,10 @@
-// === Module 19672: SoundboardCreationUtils ===
+// === Module 19799: SoundboardCreationUtils ===
 
-// Module 19672 (SoundboardCreationUtils)
+// Module 19799 (SoundboardCreationUtils)
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -360,7 +360,7 @@ export function showAddSoundboardSoundOptions(guildId) {
   const intl2 = require("util").intl;
   obj4.label = intl2.string(require("util").t["/VJ/Sp"]);
   obj4.onPress = function onPress() {
-    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19674, dependencyMap.paths), "SoundboardRecordSoundActionSheet", { guildId, analyticsSource: "guild_settings_record" });
+    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19801, dependencyMap.paths), "SoundboardRecordSoundActionSheet", { guildId, analyticsSource: "guild_settings_record" });
   };
   items = [obj4, ];
   let obj5 = { label: null, onPress: null };

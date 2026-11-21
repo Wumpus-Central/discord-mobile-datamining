@@ -1,10 +1,10 @@
-// === Module 2185: PremiumGroupConstants ===
+// === Module 2186: PremiumGroupConstants ===
 
-// Module 2185 (PremiumGroupConstants)
+// Module 2186 (PremiumGroupConstants)
 import util from "util" /* 1112 */;
-import _modDef3537 from "module_3537" /* 3537 */;
+import _modDef3636 from "module_3636" /* 3636 */;
 import Constants from "Constants" /* 1071 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2186 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2187 */;
 import size from "module_2" /* 2 */;
 
 ({ SubscriptionStatusTypes, HelpdeskArticles } = Constants);
@@ -21,7 +21,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export function getPremiumGroupProductName() {
   const intl = util.intl;
-  return intl.string(_modDef3537.aFBQ3d);
+  return intl.string(_modDef3636.aFBQ3d);
 }
 export function getPremiumGroupCountryName() {
   const intl = util.intl;

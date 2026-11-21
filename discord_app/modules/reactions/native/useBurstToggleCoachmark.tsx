@@ -1,9 +1,9 @@
-// === Module 8957: useBurstToggleCoachmark ===
+// === Module 9077: useBurstToggleCoachmark ===
 
-// Module 8957 (useBurstToggleCoachmark)
+// Module 9077 (useBurstToggleCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 8958 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -14,10 +14,10 @@ function EducationCoachmarkImg() {
   return <View style={closure_10().upsellImageContainer}>{jsx(SuperReactionIcon.SuperReactionIcon, { color: nativeDefault.colors.WHITE, size: "md" })}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_9 = fn(4627).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(4794);
+let closure_9 = fn(4746).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+const createStyles = fn(4913);
 let obj2 = { upsellImageContainer: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, height: 40, width: 40, display: "flex", alignItems: "center", justifyContent: "center" };
 obj2.upsellImageContainer = size;
@@ -35,8 +35,8 @@ export default function useBurstToggleCoachmark(targetRef) {
   } else {
     items2 = [];
   }
-  obj2 = first(2172);
-  const tmp5 = _slicedToArray(first(8960).useSelectedDismissibleContent(items2), 2);
+  obj2 = first(2173);
+  const tmp5 = _slicedToArray(first(9080).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -55,7 +55,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(8960);
-  const coachmark = first(8967).useCoachmark(targetRef, memo);
+  const tmpResult = first(9080);
+  const coachmark = first(9087).useCoachmark(targetRef, memo);
   return tmp5[1];
 };

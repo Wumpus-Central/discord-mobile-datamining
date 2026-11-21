@@ -1,7 +1,7 @@
-// === Module 8803: useMaybeFetchPromotionsForApplication ===
+// === Module 8923: useMaybeFetchPromotionsForApplication ===
 
-// Module 8803 (useMaybeFetchPromotionsForApplication)
-import StorefrontActionCreators from "StorefrontActionCreators" /* 8804 */;
+// Module 8923 (useMaybeFetchPromotionsForApplication)
+import StorefrontActionCreators from "StorefrontActionCreators" /* 8924 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 8685: MarkupSubtextRule ===
+// === Module 8805: MarkupSubtextRule ===
 
-// Module 8685 (MarkupSubtextRule)
+// Module 8805 (MarkupSubtextRule)
 import _mod2068 from "module_2068" /* 2068 */;
 import size from "module_2" /* 2 */;
 

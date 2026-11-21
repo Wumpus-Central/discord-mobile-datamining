@@ -1,21 +1,21 @@
-// === Module 17744: useGuildsBarProps ===
+// === Module 17870: useGuildsBarProps ===
 
-// Module 17744 (useGuildsBarProps)
+// Module 17870 (useGuildsBarProps)
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 17800 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 17926 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
-import LurkingStore from "LurkingStore" /* 4727 */;
-import MessageRequestStore from "MessageRequestStore" /* 6515 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6516 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 14903 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6432 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 14910 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
-import SortedGuildStore from "SortedGuildStore" /* 6431 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17737 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
+import LurkingStore from "LurkingStore" /* 4846 */;
+import MessageRequestStore from "MessageRequestStore" /* 6634 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6635 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 15026 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15033 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import SortedGuildStore from "SortedGuildStore" /* 6550 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17863 */;
 
 const require = globalThis.__r;
 
@@ -75,8 +75,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(6431).GuildsNodeType;
-const GuildsBarConstants = fn(17734);
+const GuildsNodeType = fn(6550).GuildsNodeType;
+const GuildsBarConstants = fn(17860);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", CHECKPOINT_INTRO: "section-checkpoint-intro", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -469,26 +469,26 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return pendingFolderNode(closure_1_1(17801), {}, item);
+              return pendingFolderNode(closure_1_1(17927), {}, item);
             } else if ("empty-nux" === item) {
-              return pendingFolderNode(closure_1_1(17802), {}, item);
+              return pendingFolderNode(closure_1_1(17928), {}, item);
             } else if ("waterwheels" === item) {
-              return pendingFolderNode(closure_1_1(17803), {}, item);
+              return pendingFolderNode(closure_1_1(17929), {}, item);
             } else if ("create-join-guild" === item) {
-              return pendingFolderNode(closure_1_1(17804), {}, item);
+              return pendingFolderNode(closure_1_1(17930), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return pendingFolderNode(closure_1_1(17801), {}, item);
+              return pendingFolderNode(closure_1_1(17927), {}, item);
             } else if ("empty-nux" === item) {
-              return pendingFolderNode(closure_1_1(17802), {}, item);
+              return pendingFolderNode(closure_1_1(17928), {}, item);
             } else if ("waterwheels" === item) {
-              return pendingFolderNode(closure_1_1(17803), {}, item);
+              return pendingFolderNode(closure_1_1(17929), {}, item);
             } else if ("create-join-guild" === item) {
-              return pendingFolderNode(closure_1_1(17804), {}, item);
+              return pendingFolderNode(closure_1_1(17930), {}, item);
             }
           })
         });

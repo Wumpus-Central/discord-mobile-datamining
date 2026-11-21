@@ -1,14 +1,14 @@
-// === Module 10425: ApplicationInteractionInfoUtils ===
+// === Module 10545: ApplicationInteractionInfoUtils ===
 
-// Module 10425 (ApplicationInteractionInfoUtils)
+// Module 10545 (ApplicationInteractionInfoUtils)
 import Server from "Server" /* 2117 */;
-import InteractionTypes from "InteractionTypes" /* 5854 */;
+import InteractionTypes from "InteractionTypes" /* 5973 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
-export function canViewInteractionInfo(message) {
-  return null != message.interactionMetadata;
+export function canViewInteractionInfo(interactionMetadata) {
+  return null != interactionMetadata.interactionMetadata;
 }
 export function isPrimaryEntryPointCommandMessage(message) {
   const interactionMetadata = message.interactionMetadata;

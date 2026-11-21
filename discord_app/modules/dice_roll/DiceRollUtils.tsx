@@ -1,6 +1,6 @@
-// === Module 13134: DiceRollUtils ===
+// === Module 13256: DiceRollUtils ===
 
-// Module 13134 (DiceRollUtils)
+// Module 13256 (DiceRollUtils)
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 

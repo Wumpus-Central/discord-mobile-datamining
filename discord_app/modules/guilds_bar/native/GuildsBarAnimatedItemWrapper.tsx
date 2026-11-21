@@ -1,13 +1,13 @@
-// === Module 17746: GuildsBarAnimatedItemWrapper ===
+// === Module 17872: GuildsBarAnimatedItemWrapper ===
 
-// Module 17746 (GuildsBarAnimatedItemWrapper)
+// Module 17872 (GuildsBarAnimatedItemWrapper)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import native from "native" /* 4855 */;
-import useToken from "useToken" /* 5358 */;
-import NativeViewDefault from "NativeView" /* 7204 */;
-import usePressabilityDefault from "usePressability" /* 17747 */;
-import useHomeDrawerToggleAccessibilityActionDefault from "useHomeDrawerToggleAccessibilityAction" /* 17748 */;
+import native from "native" /* 4974 */;
+import useToken from "useToken" /* 5477 */;
+import NativeViewDefault from "NativeView" /* 7324 */;
+import usePressabilityDefault from "usePressability" /* 17873 */;
+import useHomeDrawerToggleAccessibilityActionDefault from "useHomeDrawerToggleAccessibilityAction" /* 17874 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -198,14 +198,14 @@ class UnreadIndicator {
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return React5(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5402).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(17734);
+const IOS_POINTER_STYLE = fn(5521).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(17860);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: closure_6, useGuildWrapperSize: metroImportDefault } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
 let closure_11 = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 const application_id = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -218,7 +218,7 @@ const application_id = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(4794);
+createStyles = fn(4913);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };
@@ -328,7 +328,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   GuildsBarAnimatedItemWrapperTsx4.__workletHash = 1300086607522;
   GuildsBarAnimatedItemWrapperTsx4.__initData = tmp9;
   const animatedStyle = require("module_1653").useAnimatedStyle(GuildsBarAnimatedItemWrapperTsx4);
-  const enableHome = noop.useContext(tmp2(17418).HomeDrawerStateContext).enableHome;
+  const enableHome = noop.useContext(tmp2(17542).HomeDrawerStateContext).enableHome;
   const obj3 = require("module_1653");
   const drawerOpen = require("useDrawerState").useDrawerOpen(enableHome);
   const items2 = [isDragTarget, dragState, num, overState, zIndex, tmp];
@@ -410,7 +410,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(4803).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(4922).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);
@@ -542,8 +542,8 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       tmp41 = expandedChildren;
     }
     obj10.children = tmp41;
-    tmp29Result = tmp29(tmp4(7204), obj10);
-    const tmp4Result6 = tmp4(7204);
+    tmp29Result = tmp29(tmp4(7324), obj10);
+    const tmp4Result6 = tmp4(7324);
   }
   items14[1] = tmp29Result;
   obj9.children = items14;

@@ -1,10 +1,10 @@
-// === Module 18162: ConjureSharingModeSheet ===
+// === Module 18289: ConjureSharingModeSheet ===
 
-// Module 18162 (ConjureSharingModeSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import TableRadioGroup from "TableRadioGroup" /* 7227 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7395 */;
-import ActionSheet from "ActionSheet" /* 7433 */;
+// Module 18289 (ConjureSharingModeSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import TableRadioGroup from "TableRadioGroup" /* 7347 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7515 */;
+import ActionSheet from "ActionSheet" /* 7553 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function ConjureSharingModeSheet(onChange) {
   }, items);
   if (title == null) {
     const intl = tmp3(1112).intl;
-    title = intl.string(onChange(4091).jDBYrs);
+    title = intl.string(onChange(4190).jDBYrs);
   }
   let obj = { header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }), children: jsx(TableRadioGroup.TableRadioGroup, { value, onChange: callback, hasIcons: false, children: options.map((value) => jsx(value(dependencyMap[8]).TableRadioRow, { value: value.value, label: value.label }, value.value)) }) };
   return jsx(ActionSheet.ActionSheet, { header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }), children: jsx(TableRadioGroup.TableRadioGroup, { value, onChange: callback, hasIcons: false, children: options.map((value) => jsx(value(dependencyMap[8]).TableRadioRow, { value: value.value, label: value.label }, value.value)) }) });

@@ -1,7 +1,7 @@
-// === Module 9702: GameProfileHorizontalScrollView ===
+// === Module 9822: GameProfileHorizontalScrollView ===
 
-// Module 9702 (GameProfileHorizontalScrollView)
-import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
+// Module 9822 (GameProfileHorizontalScrollView)
+import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 20026: ParentalConsentConnectionHeader ===
+// === Module 20153: ParentalConsentConnectionHeader ===
 
-// Module 20026 (ParentalConsentConnectionHeader)
+// Module 20153 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef3021 from "module_3021" /* 3021 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6306 */;
+import _modDef3120 from "module_3120" /* 3120 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6425 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -15,9 +15,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
-let obj2 = { row: { height: fn(5348).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
-let obj3 = { height: fn(5348).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+const createStyles = fn(4913);
+let obj2 = { row: { height: fn(5467).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
+let obj3 = { height: fn(5467).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -47,7 +47,7 @@ export function ParentalConsentConnectionNavbar() {
     children: null
   };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3021["3HuGuY"]);
+  obj4.children = intl.string(_modDef3120["3HuGuY"]);
   const items1 = [hasOwnProperty(Text_Text.Text, obj4), ];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {

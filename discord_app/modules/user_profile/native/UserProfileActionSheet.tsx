@@ -1,25 +1,25 @@
-// === Module 8028: UserProfileActionSheet ===
+// === Module 8148: UserProfileActionSheet ===
 
-// Module 8028 (UserProfileActionSheet)
+// Module 8148 (UserProfileActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import isChangelogUserDefault from "isChangelogUser" /* 4695 */;
-import BottomSheetModal from "BottomSheetModal" /* 5026 */;
-import UserActionCreators from "UserActionCreators" /* 6835 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7419 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7953 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8037 */;
-import ProfileFrameDefault from "ProfileFrame" /* 8053 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8057 */;
-import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8064 */;
-import openUserSettings from "openUserSettings" /* 8074 */;
+import isChangelogUserDefault from "isChangelogUser" /* 4814 */;
+import BottomSheetModal from "BottomSheetModal" /* 5145 */;
+import UserActionCreators from "UserActionCreators" /* 6954 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8073 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8157 */;
+import ProfileFrameDefault from "ProfileFrame" /* 8173 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8177 */;
+import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8184 */;
+import openUserSettings from "openUserSettings" /* 8194 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
 import UserStore from "UserStore" /* 1386 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8012 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8132 */;
 
 const require = globalThis.__r;
 const _modDef1653 = _mod1653;
@@ -86,13 +86,13 @@ function ActionSheetAlignedView(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7444).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7564).UserProfileThemeTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5023).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5142).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_18 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 }, profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 } });
 let closure_19 = { code: "(function UserProfileActionSheetTsx1(){let[value]=this.__closure;return value.get();})" };
 let closure_20 = { code: "(function UserProfileActionSheetTsx2(prepared){let[animatedPosition]=this.__closure;return animatedPosition.set(prepared);})" };

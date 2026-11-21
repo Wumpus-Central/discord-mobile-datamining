@@ -1,13 +1,13 @@
-// === Module 8108: HarmTypeConfiguration ===
+// === Module 8228: HarmTypeConfiguration ===
 
-// Module 8108 (HarmTypeConfiguration)
+// Module 8228 (HarmTypeConfiguration)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import UserSettings from "UserSettings" /* 4619 */;
-import MediaTypes from "MediaTypes" /* 5856 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 8109 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8110 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8111 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8113 */;
+import UserSettings from "UserSettings" /* 4738 */;
+import MediaTypes from "MediaTypes" /* 5975 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 8229 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8230 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8231 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8233 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

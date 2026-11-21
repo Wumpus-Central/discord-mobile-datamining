@@ -1,14 +1,14 @@
-// === Module 6965: XboxLinkEducation ===
+// === Module 7085: XboxLinkEducation ===
 
-// Module 6965 (XboxLinkEducation)
+// Module 7085 (XboxLinkEducation)
 import util from "util" /* 1112 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 6924 */;
-import _modDef6966 from "module_6966" /* 6966 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7017 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 7044 */;
+import _modDef7086 from "module_7086" /* 7086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
@@ -27,7 +27,7 @@ export default function XboxLinkEducation(onClose) {
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef6966 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef7086 }), []);
   items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

@@ -1,11 +1,11 @@
-// === Module 4737: MessageRecord ===
+// === Module 4856: MessageRecord ===
 
-// Module 4737 (MessageRecord)
+// Module 4856 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1404 */;
-import ReactionUtils from "ReactionUtils" /* 4738 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5376 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5408 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5409 */;
+import ReactionUtils from "ReactionUtils" /* 4857 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5495 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5527 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5528 */;
 import Record from "Record" /* 1406 */;
 
 require = fn;
@@ -524,9 +524,9 @@ prototype["isInteractionPlaceholder"] = function isInteractionPlaceholder() {
   }
   return isNonUserBotResult;
 };
-prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id2) {
+prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
   const self = this;
-  if (this.author.id === id2) {
+  if (this.author.id === id1) {
     return true;
   } else {
     const interactionMetadata2 = self.interactionMetadata;
@@ -542,7 +542,7 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id2) {
     if (interactionMetadata != null) {
       id = interactionMetadata.user.id;
     }
-    let tmp2 = id === id2;
+    let tmp2 = id === id1;
     if (tmp2) {
       const _Object = Object;
       tmp2 = 1 === Object.keys(prop).length;

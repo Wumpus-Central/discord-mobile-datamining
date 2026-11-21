@@ -1,10 +1,10 @@
-// === Module 9460: useProductDisableState ===
+// === Module 9580: useProductDisableState ===
 
-// Module 9460 (useProductDisableState)
+// Module 9580 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1074 */;
 import util from "util" /* 1112 */;
-import SubscriptionStore from "SubscriptionStore" /* 2177 */;
+import SubscriptionStore from "SubscriptionStore" /* 2178 */;
 
 require = fn;
 const size = fn(2);

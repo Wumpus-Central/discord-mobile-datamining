@@ -1,11 +1,11 @@
-// === Module 13412: TabItem ===
+// === Module 13534: TabItem ===
 
-// Module 13412 (TabItem)
+// Module 13534 (TabItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import spring_spring from "spring/spring" /* 5395 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import spring_spring from "spring/spring" /* 5514 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -91,15 +91,15 @@ const jsxProd = fn(21);
 let closure_7 = module_1653.createAnimatedComponent(Pressable);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_9 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 }, indicatorDot: null };
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj.indicatorDot = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_10 = createStyles.createStyles(obj);
-createStyles = fn(4794);
+createStyles = fn(4913);
 let obj4 = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_11 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4794);
+createStyles = fn(4913);
 let obj5 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
 let closure_13 = { code: "(function TabItemNativeTsx1(){let[colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG]=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};})" };
@@ -171,7 +171,7 @@ export function TabItem(arg0) {
       str = "neutral";
     }
     const obj6 = { variant: str };
-    obj5.children = closure_5(tmp3(8887).IndicatorDot, obj6);
+    obj5.children = closure_5(tmp3(9007).IndicatorDot, obj6);
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

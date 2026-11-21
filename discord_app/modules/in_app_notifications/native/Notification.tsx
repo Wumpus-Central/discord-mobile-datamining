@@ -1,26 +1,26 @@
-// === Module 11040: Notification ===
+// === Module 11160: Notification ===
 
-// Module 11040 (Notification)
+// Module 11160 (Notification)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10993 */;
-import NotificationContentDefault from "NotificationContent" /* 11041 */;
-import NotificationProgressDefault from "NotificationProgress" /* 11043 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11113 */;
+import NotificationContentDefault from "NotificationContent" /* 11161 */;
+import NotificationProgressDefault from "NotificationProgress" /* 11163 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 const _modDef1653 = _mod1653;
 
 require = fn;
-const InAppNotificationConstants = fn(10994);
+const InAppNotificationConstants = fn(11114);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

@@ -1,6 +1,6 @@
-// === Module 4981: useKeyboardType ===
+// === Module 5100: useKeyboardType ===
 
-// Module 4981 (useKeyboardType)
+// Module 5100 (useKeyboardType)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1498 */;
 import noop from "module_19" /* 19 */;

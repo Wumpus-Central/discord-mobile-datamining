@@ -1,8 +1,8 @@
-// === Module 11261: StickerPackBanner ===
+// === Module 11381: StickerPackBanner ===
 
-// Module 11261 (StickerPackBanner)
-import FastImageDefault from "FastImage" /* 5481 */;
-import StickersUtils from "StickersUtils" /* 6267 */;
+// Module 11381 (StickerPackBanner)
+import FastImageDefault from "FastImage" /* 5600 */;
+import StickersUtils from "StickersUtils" /* 6386 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

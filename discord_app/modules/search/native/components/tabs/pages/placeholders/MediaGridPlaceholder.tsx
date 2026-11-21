@@ -1,25 +1,25 @@
-// === Module 18612: MediaGridPlaceholder ===
+// === Module 18739: MediaGridPlaceholder ===
 
-// Module 18612 (MediaGridPlaceholder)
+// Module 18739 (MediaGridPlaceholder)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13077 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18611 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 18613 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13199 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18738 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 18740 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8456);
+const SearchConstants = fn(8576);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: closure_6, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, sectionText: { opacity: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);

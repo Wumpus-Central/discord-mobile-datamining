@@ -1,14 +1,14 @@
-// === Module 19147: VoicePanelUserSheet ===
+// === Module 19274: VoicePanelUserSheet ===
 
-// Module 19147 (VoicePanelUserSheet)
+// Module 19274 (VoicePanelUserSheet)
 import nativeDefault from "native" /* 575 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7617 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
-import UserProfileActivity from "UserProfileActivity" /* 14326 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19146 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
+import UserProfileActivity from "UserProfileActivity" /* 14448 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19273 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -38,10 +38,8 @@ function OverflowMenu(userId) {
   const DeveloperMode = userId(analyticsLocations[15]).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   const tmp11 = channelId(analyticsLocations[14])(userId, guildId);
-  const isTidaMediaTakedownRegion = userId(analyticsLocations[16]).useIsTidaMediaTakedownRegion();
-  const obj4 = userId(analyticsLocations[16]);
   const items2 = [userId, channelId, context, analyticsLocations];
-  const result = userId(analyticsLocations[17]).isIarUserReportingEnabled("VoicePanelUserSheet - Mobile");
+  const result = userId(analyticsLocations[16]).isIarUserReportingEnabled("VoicePanelUserSheet - Mobile");
   const showUserProfile = context.useCallback((showGuildProfile) => {
     const obj = {};
     const merged = Object.assign(context);
@@ -55,82 +53,82 @@ function OverflowMenu(userId) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const obj6 = { user: stateFromStores, channelId, location: tmp3Result.newestAnalyticsLocation, analyticsLocations, trackUserProfileAction, showUserProfile };
+    const obj5 = { user: stateFromStores, channelId, location: tmp3Result.newestAnalyticsLocation, analyticsLocations, trackUserProfileAction, showUserProfile };
     const items3 = [];
     const items4 = [];
-    const obj7 = { label: null, action: null };
-    const intl2 = tmp7(tmp2[19]).intl;
-    obj7.label = intl2.string(tmp7(tmp2[19]).t.GISTta);
-    obj7.action = function action() {
+    const obj6 = { label: null, action: null };
+    const intl2 = tmp7(tmp2[18]).intl;
+    obj6.label = intl2.string(tmp7(tmp2[18]).t.GISTta);
+    obj6.action = function action() {
       trackUserProfileAction({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations });
       callback(false);
     };
-    items3.push(obj7);
+    items3.push(obj6);
     if (userId.currentUserId !== userId) {
-      const obj8 = { isIgnored, isBlocked: relationshipType === RelationshipTypes.BLOCKED };
-      const ignoreMenuItem = tmp7(tmp2[20]).getIgnoreMenuItem(obj6, obj8);
+      const obj7 = { isIgnored, isBlocked: relationshipType === RelationshipTypes.BLOCKED };
+      const ignoreMenuItem = tmp7(tmp2[19]).getIgnoreMenuItem(obj5, obj7);
       if (null != ignoreMenuItem) {
         items4.push(ignoreMenuItem);
       }
-      const tmp7Result = tmp7(tmp2[20]);
-      const obj9 = { isBlocked: relationshipType === RelationshipTypes.BLOCKED };
-      items4.push(tmp7(tmp2[20]).getBlockMenuItem(obj6, obj9));
+      const tmp7Result = tmp7(tmp2[19]);
+      const obj8 = { isBlocked: relationshipType === RelationshipTypes.BLOCKED };
+      items4.push(tmp7(tmp2[19]).getBlockMenuItem(obj5, obj8));
       if (relationshipType !== RelationshipTypes.BLOCKED) {
-        const obj10 = { isInIarUserReportingExperiment: result, guildId, reportEntrypoint: "VoicePanelUserSheet" };
-        const reportMenuItem = tmp7(tmp2[20]).getReportMenuItem(obj6, obj10);
+        const obj9 = { isInIarUserReportingExperiment: result, guildId, reportEntrypoint: "VoicePanelUserSheet" };
+        const reportMenuItem = tmp7(tmp2[19]).getReportMenuItem(obj5, obj9);
         if (null != reportMenuItem) {
           items4.push(reportMenuItem);
         }
-        const tmp7Result5 = tmp7(tmp2[20]);
+        const tmp7Result5 = tmp7(tmp2[19]);
       }
-      const tmp7Result4 = tmp7(tmp2[20]);
+      const tmp7Result4 = tmp7(tmp2[19]);
     }
     if (setting) {
-      const obj11 = { isTidaRegion: isTidaMediaTakedownRegion, avatarGuildId: guildId };
-      items3.push(tmp7(tmp2[20]).getDeveloperCopyMenuItem(obj6, obj11));
-      const tmp7Result6 = tmp7(tmp2[20]);
+      const obj10 = { avatarGuildId: guildId };
+      items3.push(tmp7(tmp2[19]).getDeveloperCopyMenuItem(obj5, obj10));
+      const tmp7Result6 = tmp7(tmp2[19]);
     }
-    const obj12 = { label: null, action: null };
-    let intl = tmp7(tmp2[19]).intl;
-    obj12.label = intl.string(tmp7(tmp2[19]).t.oeb1vg);
-    obj12.action = function action() {
+    const obj11 = { label: null, action: null };
+    let intl = tmp7(tmp2[18]).intl;
+    obj11.label = intl.string(tmp7(tmp2[18]).t.oeb1vg);
+    obj11.action = function action() {
       trackUserProfileAction({ action: "SEND_MESSAGE", analyticsLocations });
       ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: stateFromStores.id });
     };
-    const items5 = [obj12];
-    const obj13 = { value: analyticsLocations, children: null };
-    const obj14 = { ref, children: null };
-    const obj15 = { style: tmp6, children: null };
+    const items5 = [obj11];
+    const obj12 = { value: analyticsLocations, children: null };
+    const obj13 = { ref, children: null };
+    const obj14 = { style: tmp6, children: null };
     if (tmp11) {
       const items6 = [items5, items3, items4];
       let items7 = items6;
     } else {
       items7 = [items3, items4];
     }
-    const obj16 = {
+    const obj15 = {
       items: items7,
       children(ref) {
           const obj = { ref: ref.ref };
           const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
-          const intl = userId(analyticsLocations[19]).intl;
-          obj.accessibilityLabel = intl.string(userId(analyticsLocations[19]).t["+zofAD"]);
-          obj.children = closure_1_10(userId(analyticsLocations[24]).MoreHorizontalIcon, { size: "sm", color: channelId(analyticsLocations[8]).colors.WHITE });
+          const intl = userId(analyticsLocations[18]).intl;
+          obj.accessibilityLabel = intl.string(userId(analyticsLocations[18]).t["+zofAD"]);
+          obj.children = closure_1_10(userId(analyticsLocations[23]).MoreHorizontalIcon, { size: "sm", color: channelId(analyticsLocations[8]).colors.WHITE });
           return closure_1_10(stateFromStores, obj);
         }
     };
-    obj15.children = closure_10(tmp7(tmp2[23]).ContextMenu, obj16);
-    obj14.children = closure_10(tmp(tmp2[22]).View, obj15);
-    obj13.children = closure_10(trackUserProfileAction, obj14);
-    return closure_10(tmp7(tmp2[9]).AnalyticsLocationProvider, obj13);
+    obj14.children = closure_10(tmp7(tmp2[22]).ContextMenu, obj15);
+    obj13.children = closure_10(tmp(tmp2[21]).View, obj14);
+    obj12.children = closure_10(trackUserProfileAction, obj13);
+    return closure_10(tmp7(tmp2[9]).AnalyticsLocationProvider, obj12);
   }
-  const obj5 = userId(analyticsLocations[17]);
+  const obj4 = userId(analyticsLocations[16]);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { wrapper: { gap: 12, padding: 16 }, card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg }, header: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 16 }, user: { display: "flex", gap: 8, flexDirection: "row", alignItems: "center", flex: 1, minWidth: 0 }, avatar: null, username: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg };
 obj2.avatar = { maxWidth: 48, maxHeight: 48, borderRadius: nativeDefault.radii.round };
@@ -153,8 +151,8 @@ export default function VoicePanelUserSheet(userId) {
   const items2 = [UserStore];
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
-  const name = channelId(5824).useName(guildId, channelId, stateFromStores);
-  const live = userId(14377)(userId).live;
+  const name = channelId(5943).useName(guildId, channelId, stateFromStores);
+  const live = userId(14499)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -167,8 +165,8 @@ export default function VoicePanelUserSheet(userId) {
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(8916).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(8916);
+          const cachedSourceFromURI = channelId(9036).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(9036);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
         const obj2 = { style: tmp.wrapper, children: null };
@@ -179,13 +177,13 @@ export default function VoicePanelUserSheet(userId) {
           let tmp11Result = closure_10(channelId(1186).Avatar, obj8);
         } else {
           const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 48, height: 48, style: tmp.avatar };
-          tmp11Result = closure_10(tmp7(5481), size);
-          const tmp7Result = tmp7(5481);
+          tmp11Result = closure_10(tmp7(5600), size);
+          const tmp7Result = tmp7(5600);
         }
         const obj9 = { children: null };
         const items4 = [tmp11Result, ];
         const obj10 = { variant: "body-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-        items4[1] = closure_10(channelId(5385).Text, obj10);
+        items4[1] = closure_10(channelId(5504).Text, obj10);
         obj7.children = items4;
         const items5 = [closure_11(stateFromStores2, obj7), ];
         const obj11 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
@@ -203,10 +201,10 @@ export default function VoicePanelUserSheet(userId) {
 
         ];
         const obj12 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
-        items6[2] = closure_10(tmp7(14380), obj12);
+        items6[2] = closure_10(tmp7(14502), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
-        return closure_10(channelId(5022).BottomSheet, obj9);
+        return closure_10(channelId(5141).BottomSheet, obj9);
       }
     }
   }

@@ -1,16 +1,16 @@
-// === Module 19049: ActivityPanelUtils ===
+// === Module 19176: ActivityPanelUtils ===
 
-// Module 19049 (ActivityPanelUtils)
+// Module 19176 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5441 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5560 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 
 require = fn;
-const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const ActivityPanelModes = fn(5539).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 

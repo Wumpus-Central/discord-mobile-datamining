@@ -1,10 +1,10 @@
-// === Module 17891: ExpressionPickerStore ===
+// === Module 18017: ExpressionPickerStore ===
 
-// Module 17891 (ExpressionPickerStore)
+// Module 18017 (ExpressionPickerStore)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1227 */;
-import uniqueIdDefault from "uniqueId" /* 5812 */;
+import uniqueIdDefault from "uniqueId" /* 5931 */;
 import identity_mod from "module_1257" /* 1257 */;
-import module_4984 from "module_4984" /* 4984 */;
+import module_5103 from "module_5103" /* 5103 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, showEmojiPacks: false, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_4984.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_5103.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };

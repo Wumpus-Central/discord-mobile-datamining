@@ -1,7 +1,7 @@
-// === Module 13294: entitlementExpirationDateToString ===
+// === Module 13416: entitlementExpirationDateToString ===
 
-// Module 13294 (entitlementExpirationDateToString)
-import LocaleStore from "LocaleStore" /* 2187 */;
+// Module 13416 (entitlementExpirationDateToString)
+import LocaleStore from "LocaleStore" /* 2188 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/entitlementExpirationDateToString.tsx");

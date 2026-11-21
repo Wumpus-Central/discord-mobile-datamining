@@ -1,16 +1,16 @@
-// === Module 2141: ApplicationRecord ===
+// === Module 2142: ApplicationRecord ===
 
-// Module 2141 (ApplicationRecord)
+// Module 2142 (ApplicationRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2148 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2149 */;
 import Record from "Record" /* 1406 */;
-import CompanyRecord from "CompanyRecord" /* 2142 */;
+import CompanyRecord from "CompanyRecord" /* 2143 */;
 import UserRecord from "UserRecord" /* 1405 */;
 
 require = fn;
-const Constants = fn(2143);
+const Constants = fn(2144);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
 const ApplicationTypes = fn(1363).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };

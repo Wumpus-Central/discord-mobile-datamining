@@ -1,8 +1,8 @@
-// === Module 9782: GameProfileVisibilityUtils ===
+// === Module 9902: GameProfileVisibilityUtils ===
 
-// Module 9782 (GameProfileVisibilityUtils)
-import useGameProfileObscured from "useGameProfileObscured" /* 8707 */;
-import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9646 */;
+// Module 9902 (GameProfileVisibilityUtils)
+import useGameProfileObscured from "useGameProfileObscured" /* 8827 */;
+import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9766 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileVisibilityUtils.tsx");

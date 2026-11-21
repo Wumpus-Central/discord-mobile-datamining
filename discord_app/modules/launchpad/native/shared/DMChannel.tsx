@@ -1,15 +1,15 @@
-// === Module 19011: shared/DMChannel ===
+// === Module 19138: shared/DMChannel ===
 
-// Module 19011 (shared/DMChannel)
+// Module 19138 (shared/DMChannel)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5527 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13723 */;
+import transitionToChannel from "transitionToChannel" /* 5646 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(6434).UnreadSetting;
+const UnreadSetting = fn(6553).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
@@ -26,10 +26,10 @@ export default noop.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = closure_6();
-  const tmp4 = flag(18627)();
-  const baseChannelUnreadBadgeState = channel(17791).useBaseChannelUnreadBadgeState(channel, muted);
+  const tmp4 = flag(18754)();
+  const baseChannelUnreadBadgeState = channel(17917).useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(16600)(channel, { unread });
+  const tmp7 = flag(16723)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     extractTimestampResult = tmp2(11).extractTimestamp(tmp7.id);
@@ -42,9 +42,9 @@ export default noop.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const obj = channel(17791);
-  const fontScale = channel(5400).useFontScale();
-  const tmp5Result = channel(5400);
+  const obj = channel(17917);
+  const fontScale = channel(5519).useFontScale();
+  const tmp5Result = channel(5519);
   const obj2 = { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj2.style = items;
@@ -57,17 +57,17 @@ export default noop.memo(function DMChannel(navigationReplace) {
   obj3.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id), items2);
   const merged = Object.assign(obj3);
   const obj4 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
-  const tmp2Result3 = flag(19003);
-  obj4.unreadBadge = jsx(flag(19004), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp2Result3 = flag(19130);
+  obj4.unreadBadge = jsx(flag(19131), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
-    const obj6 = { channel, message: tmp7, color: str, muted, layout: channel(5455).ChannelListLayoutTypes.COMPACT };
-    tmp11Result = jsx(channel(11005).ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: channel(5455).ChannelListLayoutTypes.COMPACT });
+    const obj6 = { channel, message: tmp7, color: str, muted, layout: channel(5574).ChannelListLayoutTypes.COMPACT };
+    tmp11Result = jsx(channel(11125).ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: channel(5574).ChannelListLayoutTypes.COMPACT });
   }
   obj4.subtitle = tmp11Result;
   obj4.latestMessageTimestamp = extractTimestampResult;
-  obj4.channelName = flag(5410)(channel);
+  obj4.channelName = flag(5529)(channel);
   obj4.fontScale = fontScale;
-  obj2.children = flag(18626)(obj4);
-  return tmp2Result3(jsx(channel(6910).PressableHighlight, { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor }));
+  obj2.children = flag(18753)(obj4);
+  return tmp2Result3(jsx(channel(7030).PressableHighlight, { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor }));
 });

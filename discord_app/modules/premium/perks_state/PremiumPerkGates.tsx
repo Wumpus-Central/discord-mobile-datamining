@@ -1,12 +1,12 @@
-// === Module 13838: PremiumPerkGates ===
+// === Module 13960: PremiumPerkGates ===
 
-// Module 13838 (PremiumPerkGates)
+// Module 13960 (PremiumPerkGates)
 import PerksStateUtils from "PerksStateUtils" /* 1392 */;
 import user2 from "user" /* 1399 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
-import FileSizeUtils from "FileSizeUtils" /* 6236 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8323 */;
-import ProductCatalog from "ProductCatalog" /* 13839 */;
+import FileSizeUtils from "FileSizeUtils" /* 6355 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8443 */;
+import ProductCatalog from "ProductCatalog" /* 13961 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
 import size from "module_2" /* 2 */;
 

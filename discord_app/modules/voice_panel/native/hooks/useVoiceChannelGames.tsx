@@ -1,11 +1,11 @@
-// === Module 19178: useVoiceChannelGames ===
+// === Module 19305: useVoiceChannelGames ===
 
-// Module 19178 (useVoiceChannelGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 8707 */;
+// Module 19305 (useVoiceChannelGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 8827 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5532 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
+import PresenceStore from "PresenceStore" /* 5651 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;

@@ -1,10 +1,10 @@
-// === Module 9778: CollectiblesShopManager ===
+// === Module 9898: CollectiblesShopManager ===
 
-// Module 9778 (CollectiblesShopManager)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8047 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9779 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8849 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8048 */;
+// Module 9898 (CollectiblesShopManager)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8167 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9899 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8969 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8168 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;

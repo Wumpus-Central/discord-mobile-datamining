@@ -1,9 +1,9 @@
-// === Module 8934: GameActionCreators ===
+// === Module 9054: GameActionCreators ===
 
-// Module 8934 (GameActionCreators)
+// Module 9054 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameStore from "GameStore" /* 2139 */;
+import GameStore from "GameStore" /* 2140 */;
 
 function requestGames() {
   const self = this;
@@ -124,7 +124,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4638).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4757).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

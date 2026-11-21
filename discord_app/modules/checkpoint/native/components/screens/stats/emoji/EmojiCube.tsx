@@ -1,10 +1,10 @@
-// === Module 12645: EmojiCube ===
+// === Module 12767: EmojiCube ===
 
-// Module 12645 (EmojiCube)
+// Module 12767 (EmojiCube)
 import nativeDefault from "native" /* 575 */;
-import EmojiDefault from "Emoji" /* 7376 */;
+import EmojiDefault from "Emoji" /* 7496 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const require = fn;
 function createFaceTransforms(items, items2, items1) {
@@ -40,8 +40,8 @@ const importDefaultResultResult = _slicedToArray(createFaceTransforms(items, ite
 [tmp7, tmp8] = createFaceTransforms(items1, items2, items4);
 const importDefaultResultResult1 = _slicedToArray(createFaceTransforms(items1, items2, items4), 2);
 [tmp10, tmp11] = createFaceTransforms(items, items2, items1);
-const createStyles = fn(4794);
-let obj2 = { container: { position: "relative", width: 200, height: 200 }, face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 }, emoji: { position: "absolute", top: 0, left: 0, width: 200, height: 200, borderWidth: 2, borderColor: fn(5850).CHECKPOINT_PRIMARY, overflow: "hidden" }, customEmoji: { width: 196, height: 196 }, textEmoji: null, topFace: null, leftFace: null, rightFace: null, topEmoji: null, leftEmoji: null, rightEmoji: null };
+const createStyles = fn(4913);
+let obj2 = { container: { position: "relative", width: 200, height: 200 }, face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 }, emoji: { position: "absolute", top: 0, left: 0, width: 200, height: 200, borderWidth: 2, borderColor: fn(5969).CHECKPOINT_PRIMARY, overflow: "hidden" }, customEmoji: { width: 196, height: 196 }, textEmoji: null, topFace: null, leftFace: null, rightFace: null, topEmoji: null, leftEmoji: null, rightEmoji: null };
 let PlatformUtils = fn(1358);
 let num = 196;
 if (PlatformUtils.isIOS()) {

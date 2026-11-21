@@ -1,19 +1,19 @@
-// === Module 17924: useNotificationCenterItemsLoader ===
+// === Module 18050: useNotificationCenterItemsLoader ===
 
-// Module 17924 (useNotificationCenterItemsLoader)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7356 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 17925 */;
+// Module 18050 (useNotificationCenterItemsLoader)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7476 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18051 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6546 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6517 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 17923 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6665 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6636 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18049 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6434).ReadStateTypes;
+const ReadStateTypes = fn(6553).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
 

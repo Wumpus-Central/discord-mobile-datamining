@@ -1,14 +1,14 @@
-// === Module 15553: guildVoice ===
+// === Module 15676: guildVoice ===
 
-// Module 15553 (guildVoice)
-import RPCErrorDefault from "RPCError" /* 6790 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+// Module 15676 (guildVoice)
+import RPCErrorDefault from "RPCError" /* 6909 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 6913 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6235).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6354).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8, RPCErrors: closure_9 } = Constants);
 const size = fn(2);

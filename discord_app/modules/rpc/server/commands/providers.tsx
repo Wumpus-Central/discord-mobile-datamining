@@ -1,13 +1,13 @@
-// === Module 15589: providers ===
+// === Module 15712: providers ===
 
-// Module 15589 (providers)
+// Module 15712 (providers)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import RPCErrorDefault from "RPCError" /* 6790 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6948 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10681 */;
+import RPCErrorDefault from "RPCError" /* 6909 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7068 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6570 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6689 */;
 
 require = fn;
 let closure_10 = async function _refreshProviderAccessToken() {
@@ -20,11 +20,11 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6235);
+let Constants = fn(6354);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1071);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: closure_6, PlatformTypes: metroImportDefault } = Constants);
-Constants = fn(2143);
+Constants = fn(2144);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1082);
 ({ RPCCommands, RPCErrors: closure_8 } = Constants);

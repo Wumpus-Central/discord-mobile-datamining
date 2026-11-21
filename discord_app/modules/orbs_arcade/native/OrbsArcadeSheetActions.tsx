@@ -1,18 +1,18 @@
-// === Module 16320: OrbsArcadeSheetActions ===
+// === Module 16443: OrbsArcadeSheetActions ===
 
-// Module 16320 (OrbsArcadeSheetActions)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16301 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16311 */;
-import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 16321 */;
-import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 16324 */;
+// Module 16443 (OrbsArcadeSheetActions)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16424 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16434 */;
+import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 16444 */;
+import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 16447 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16300 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16423 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles({ buttonGroup: { paddingVertical: 0 } });
 let obj2 = { PLAY: "PLAY", CLAIM: "CLAIM" };
 let obj3 = { CLOSE: "CLOSE", HOW_TO_PLAY: "HOW_TO_PLAY" };
@@ -74,7 +74,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5392).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
+        tmp19 = closure_4(tmp10(5511).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
         const obj5 = { grow: true, size: "lg", variant: "secondary", text: null, onPress: null };
       }
       items3[1] = tmp19;

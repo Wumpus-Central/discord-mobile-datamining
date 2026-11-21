@@ -1,6 +1,6 @@
-// === Module 8888: IndicatorDotShared ===
+// === Module 9008: IndicatorDotShared ===
 
-// Module 8888 (IndicatorDotShared)
+// Module 9008 (IndicatorDotShared)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/IndicatorDot/shared/IndicatorDotShared.tsx");

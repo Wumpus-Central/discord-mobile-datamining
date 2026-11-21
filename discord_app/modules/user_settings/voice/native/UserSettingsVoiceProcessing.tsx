@@ -1,21 +1,21 @@
-// === Module 10874: UserSettingsVoiceProcessing ===
+// === Module 10994: UserSettingsVoiceProcessing ===
 
-// Module 10874 (UserSettingsVoiceProcessing)
+// Module 10994 (UserSettingsVoiceProcessing)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5690 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10875 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10876 */;
-import KrispLogoDefault from "KrispLogo" /* 10879 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5809 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10995 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10996 */;
+import KrispLogoDefault from "KrispLogo" /* 10999 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 const util = EUNgko(1112);
-const Text_Text = EUNgko(5385);
-const TableRadioGroup = EUNgko(7227);
-const TableRadioRow = EUNgko(7229);
-const TableSwitchRow = EUNgko(7436);
-const UserSettingsVoice = EUNgko(10842);
+const Text_Text = EUNgko(5504);
+const TableRadioGroup = EUNgko(7347);
+const TableRadioRow = EUNgko(7349);
+const TableSwitchRow = EUNgko(7556);
+const UserSettingsVoice = EUNgko(10962);
 require = fn;
 class VoiceProcessingOptions {
   constructor() {
@@ -120,7 +120,7 @@ class VoiceProcessingOptions {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { optionsParentContainer: { marginTop: 12 }, optionsDescriptionContainer: { paddingTop: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 }, krisp: { marginStart: -20 } };
 const React5 = createStyles.createStyles(obj2);
 const size = fn(2);

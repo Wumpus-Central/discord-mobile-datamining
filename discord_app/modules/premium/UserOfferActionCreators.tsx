@@ -1,13 +1,13 @@
-// === Module 8744: UserOfferActionCreators ===
+// === Module 8864: UserOfferActionCreators ===
 
-// Module 8744 (UserOfferActionCreators)
+// Module 8864 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8729 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8724 */;
-import UserOfferStore from "UserOfferStore" /* 8727 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8849 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8844 */;
+import UserOfferStore from "UserOfferStore" /* 8847 */;
 
 const require = globalThis.__r;
 

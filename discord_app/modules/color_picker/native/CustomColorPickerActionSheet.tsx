@@ -1,13 +1,13 @@
-// === Module 15718: CustomColorPickerActionSheet ===
+// === Module 15841: CustomColorPickerActionSheet ===
 
-// Module 15718 (CustomColorPickerActionSheet)
+// Module 15841 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import ColorUtils from "ColorUtils" /* 4791 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 15720 */;
+import ColorUtils from "ColorUtils" /* 4910 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 15843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = "#000000";
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, suggestedColor: null, suggestedColorsContainer: null };
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.suggestedColor = { minWidth: 32, height: 32, borderRadius: nativeDefault.radii.xs };
@@ -124,8 +124,8 @@ export default function CustomColorPickerActionSheet(arg0) {
   const intl2 = onSelect(1112).intl;
   obj9.text = intl2.string(onSelect(1112).t.XqMe3N);
   obj9.onPress = callback1;
-  obj7.trailing = sharedValue2(onSelect(5392).Button, obj9);
-  obj5.header = sharedValue2(onSelect(7395).BottomSheetTitleHeader, obj7);
+  obj7.trailing = sharedValue2(onSelect(5511).Button, obj9);
+  obj5.header = sharedValue2(onSelect(7515).BottomSheetTitleHeader, obj7);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
   const intl3 = onSelect(1112).intl;
@@ -148,7 +148,7 @@ export default function CustomColorPickerActionSheet(arg0) {
       const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
   };
-  const items3 = [sharedValue2(onSelect(7101).TextInput, obj11), , ];
+  const items3 = [sharedValue2(onSelect(7221).TextInput, obj11), , ];
   const obj12 = { suggestedColors: null, onSelect: null, color: null };
   const obj8 = onSelect(1653);
   const tmp13 = updateInputHexValueFromHsv;
@@ -171,7 +171,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(SuggestedColors, obj12);
-  items3[2] = sharedValue2(tmp16(15721), {
+  items3[2] = sharedValue2(tmp16(15844), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,
@@ -182,5 +182,5 @@ export default function CustomColorPickerActionSheet(arg0) {
   });
   obj10.children = items3;
   obj5.children = tmp13(tmp14, obj10);
-  return sharedValue2(onSelect(5022).BottomSheet, obj5);
+  return sharedValue2(onSelect(5141).BottomSheet, obj5);
 };

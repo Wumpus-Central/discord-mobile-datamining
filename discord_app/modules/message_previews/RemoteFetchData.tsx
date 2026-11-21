@@ -1,6 +1,6 @@
-// === Module 16603: RemoteFetchData ===
+// === Module 16726: RemoteFetchData ===
 
-// Module 16603 (RemoteFetchData)
+// Module 16726 (RemoteFetchData)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };

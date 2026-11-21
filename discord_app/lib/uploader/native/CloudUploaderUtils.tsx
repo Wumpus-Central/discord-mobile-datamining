@@ -1,16 +1,16 @@
-// === Module 8374: CloudUploaderUtils ===
+// === Module 8494: CloudUploaderUtils ===
 
-// Module 8374 (CloudUploaderUtils)
+// Module 8494 (CloudUploaderUtils)
 import applyDefault from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import UploadUtils from "UploadUtils" /* 8322 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import UploadUtils from "UploadUtils" /* 8442 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1360 */;
 
 require = fn;
 function getUploadPayload(self) {
-  const obj = { filename: self.filename, file_size: self.currentSize, id: applyDefault.uniqueId(), original_content_type: "a" };
+  const obj = { filename: self.filename, file_size: self.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
   return obj;
 }
 const size = fn(2);

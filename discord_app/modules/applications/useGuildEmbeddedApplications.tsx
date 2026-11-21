@@ -1,11 +1,11 @@
-// === Module 7633: useGuildEmbeddedApplications ===
+// === Module 7753: useGuildEmbeddedApplications ===
 
-// Module 7633 (useGuildEmbeddedApplications)
+// Module 7753 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1088 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6540 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6659 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
 
 const require = fn;
 const initialize = fn(504);

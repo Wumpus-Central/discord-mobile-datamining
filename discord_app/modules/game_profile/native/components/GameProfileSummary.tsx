@@ -1,9 +1,9 @@
-// === Module 9718: GameProfileSummary ===
+// === Module 9838: GameProfileSummary ===
 
-// Module 9718 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
-import findTextStart from "findTextStart" /* 9720 */;
-import GameProfileSummaryUtils from "GameProfileSummaryUtils" /* 9748 */;
+// Module 9838 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9774 */;
+import findTextStart from "findTextStart" /* 9840 */;
+import GameProfileSummaryUtils from "GameProfileSummaryUtils" /* 9868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_8 = createStyles.createStyles({ container: { flexDirection: "column", overflow: "hidden" }, measurement: { position: "absolute", top: 0, left: 0, right: 0, opacity: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");

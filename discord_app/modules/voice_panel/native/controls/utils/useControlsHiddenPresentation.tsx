@@ -1,11 +1,11 @@
-// === Module 19213: useControlsHiddenPresentation ===
+// === Module 19340: useControlsHiddenPresentation ===
 
-// Module 19213 (useControlsHiddenPresentation)
+// Module 19340 (useControlsHiddenPresentation)
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import native from "native" /* 4855 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11630 */;
+import native from "native" /* 4974 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11750 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

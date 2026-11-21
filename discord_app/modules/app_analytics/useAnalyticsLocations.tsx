@@ -1,6 +1,6 @@
-// === Module 7400: useAnalyticsLocations ===
+// === Module 7520: useAnalyticsLocations ===
 
-// Module 7400 (useAnalyticsLocations)
+// Module 7520 (useAnalyticsLocations)
 import applyDefault from "apply" /* 12 */;
 import _modDef1343 from "module_1343" /* 1343 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,9 +1,9 @@
-// === Module 13683: FireIcon ===
+// === Module 13805: FireIcon ===
 
-// Module 13683 (FireIcon)
+// Module 13805 (FireIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod13684 from "module_13684" /* 13684 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod13806 from "module_13806" /* 13806 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FireIcon(ORANGE_260) {
   }
   const merged = Object.assign(ORANGE_260, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13684, color: INTERACTIVE_ICON_DEFAULT, style: ORANGE_260.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13806, color: INTERACTIVE_ICON_DEFAULT, style: ORANGE_260.style });
 }

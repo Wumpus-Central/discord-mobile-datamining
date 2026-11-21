@@ -1,6 +1,6 @@
-// === Module 8364: VideoUploadUtils ===
+// === Module 8484: VideoUploadUtils ===
 
-// Module 8364 (VideoUploadUtils)
+// Module 8484 (VideoUploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 import size from "module_2" /* 2 */;

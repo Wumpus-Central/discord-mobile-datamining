@@ -1,6 +1,6 @@
-// === Module 11893: GuildRoleConnectionsModal ===
+// === Module 12013: GuildRoleConnectionsModal ===
 
-// Module 11893 (GuildRoleConnectionsModal)
+// Module 12013 (GuildRoleConnectionsModal)
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,16 +24,16 @@ export default noop.memo(function GuildRoleConnectionsModal(guildId) {
       return null;
     };
     obj2.headerRight = function headerRight() {
-      const obj = { source: onClose(6912), onPress, accessibilityLabel: null };
+      const obj = { source: onClose(7032), onPress, accessibilityLabel: null };
       const intl = guildId(1112).intl;
       obj.accessibilityLabel = intl.string(guildId(1112).t.cpT0Cq);
-      return jsx(guildId(6909).HeaderActionButton, { source: onClose(6912), onPress, accessibilityLabel: null });
+      return jsx(guildId(7029).HeaderActionButton, { source: onClose(7032), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
-      return jsx(onClose(11894), { guildId, onCloseModal });
+      return jsx(onClose(12014), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;
   }, items);
-  return jsx(guildId(6972).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(7092).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });

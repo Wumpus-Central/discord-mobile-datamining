@@ -1,8 +1,8 @@
-// === Module 17813: HomeDrawerTTIFirstContentfulPaint ===
+// === Module 17939: HomeDrawerTTIFirstContentfulPaint ===
 
-// Module 17813 (HomeDrawerTTIFirstContentfulPaint)
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8148 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 10312 */;
+// Module 17939 (HomeDrawerTTIFirstContentfulPaint)
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8268 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 10432 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

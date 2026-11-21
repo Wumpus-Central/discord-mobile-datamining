@@ -1,6 +1,6 @@
-// === Module 7358: getFlattedChannelList ===
+// === Module 7478: getFlattedChannelList ===
 
-// Module 7358 (getFlattedChannelList)
+// Module 7478 (getFlattedChannelList)
 import applyDefault from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 

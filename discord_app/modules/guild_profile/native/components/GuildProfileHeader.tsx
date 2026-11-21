@@ -1,24 +1,24 @@
-// === Module 9631: GuildProfileHeader ===
+// === Module 9751: GuildProfileHeader ===
 
-// Module 9631 (GuildProfileHeader)
+// Module 9751 (GuildProfileHeader)
 import nativeDefault from "native" /* 575 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4657 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
-import transitionToGuild from "transitionToGuild" /* 6716 */;
-import GuildTraits from "GuildTraits" /* 9633 */;
-import BadgeCategory from "BadgeCategory" /* 9634 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4776 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
+import transitionToGuild from "transitionToGuild" /* 6835 */;
+import GuildTraits from "GuildTraits" /* 9753 */;
+import BadgeCategory from "BadgeCategory" /* 9754 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9632).getBadgeTooltip;
+const getBadgeTooltip = fn(9752).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;

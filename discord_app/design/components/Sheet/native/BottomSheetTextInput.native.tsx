@@ -1,9 +1,9 @@
-// === Module 7661: BottomSheetTextInput ===
+// === Module 7781: BottomSheetTextInput ===
 
-// Module 7661 (BottomSheetTextInput)
-import NativeTextInput from "NativeTextInput" /* 7124 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7126 */;
-import TextInput_TextInputDefault from "TextInput/TextInput" /* 7662 */;
+// Module 7781 (BottomSheetTextInput)
+import NativeTextInput from "NativeTextInput" /* 7244 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7246 */;
+import TextInput_TextInputDefault from "TextInput/TextInput" /* 7782 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,14 +1,14 @@
-// === Module 10961: StreamPreview ===
+// === Module 11081: StreamPreview ===
 
-// Module 10961 (StreamPreview)
+// Module 11081 (StreamPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import Pressables from "Pressables" /* 6910 */;
-import _modDef10962 from "module_10962" /* 10962 */;
-import _modDef10963 from "module_10963" /* 10963 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10964 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import Pressables from "Pressables" /* 7030 */;
+import _modDef11082 from "module_11082" /* 11082 */;
+import _modDef11083 from "module_11083" /* 11083 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11084 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let obj2 = { wrapper: null, text: null, fallbackImage: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -38,16 +38,16 @@ DefaultFallback.prototype["render"] = function render() {
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   const tmp6 = FastImageDefault;
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp4Result = _modDef10962;
+    let tmp4Result = _modDef11082;
   } else {
-    tmp4Result = _modDef10963;
+    tmp4Result = _modDef11083;
   }
   obj2.source = tmp4Result;
   obj.children = hasOwnProperty(tmp6, obj2);
   return hasOwnProperty(React3, obj);
 };
-DefaultFallback.contextType = fn(4855).ThemeContext;
-createStyles = fn(4794);
+DefaultFallback.contextType = fn(4974).ThemeContext;
+createStyles = fn(4913);
 const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = { flex: 1, width: "100%", height: "__d", aspectRatio: true, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj6.touchable = size;
@@ -111,7 +111,7 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = fn(4855).ThemeContext;
+StreamPreview.contextType = fn(4974).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };

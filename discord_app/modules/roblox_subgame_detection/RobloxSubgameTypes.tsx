@@ -1,6 +1,6 @@
-// === Module 6329: RobloxSubgameTypes ===
+// === Module 6448: RobloxSubgameTypes ===
 
-// Module 6329 (RobloxSubgameTypes)
+// Module 6448 (RobloxSubgameTypes)
 import size from "module_2" /* 2 */;
 
 class ROBLOX_PROTOCOL_URL {

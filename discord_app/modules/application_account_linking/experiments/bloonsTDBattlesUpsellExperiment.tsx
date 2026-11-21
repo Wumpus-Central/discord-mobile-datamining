@@ -1,7 +1,7 @@
-// === Module 18969: bloonsTDBattlesUpsellExperiment ===
+// === Module 19096: bloonsTDBattlesUpsellExperiment ===
 
-// Module 18969 (bloonsTDBattlesUpsellExperiment)
-import accountLinkUpsellExperimentConfig from "accountLinkUpsellExperimentConfig" /* 18970 */;
+// Module 19096 (bloonsTDBattlesUpsellExperiment)
+import accountLinkUpsellExperimentConfig from "accountLinkUpsellExperimentConfig" /* 19097 */;
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

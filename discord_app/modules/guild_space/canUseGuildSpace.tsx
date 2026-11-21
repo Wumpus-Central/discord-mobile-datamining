@@ -1,9 +1,9 @@
-// === Module 6725: canUseGuildSpace ===
+// === Module 6844: canUseGuildSpace ===
 
-// Module 6725 (canUseGuildSpace)
-import GuildSpaceTypes from "GuildSpaceTypes" /* 6726 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+// Module 6844 (canUseGuildSpace)
+import GuildSpaceTypes from "GuildSpaceTypes" /* 6845 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 const require = globalThis.__r;
 

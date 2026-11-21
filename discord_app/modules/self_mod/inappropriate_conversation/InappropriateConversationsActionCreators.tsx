@@ -1,6 +1,6 @@
-// === Module 11717: InappropriateConversationsActionCreators ===
+// === Module 11837: InappropriateConversationsActionCreators ===
 
-// Module 11717 (InappropriateConversationsActionCreators)
+// Module 11837 (InappropriateConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;

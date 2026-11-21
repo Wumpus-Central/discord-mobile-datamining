@@ -1,17 +1,17 @@
-// === Module 17916: ForLaterOpenActionButton ===
+// === Module 18042: ForLaterOpenActionButton ===
 
-// Module 17916 (ForLaterOpenActionButton)
+// Module 18042 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5003 */;
-import useToken from "useToken" /* 5358 */;
-import ButtonHooks from "ButtonHooks" /* 5399 */;
-import ClockIcon from "ClockIcon" /* 5503 */;
-import ClipViewDefault from "ClipView" /* 8903 */;
-import showForLaterModal from "showForLaterModal" /* 11559 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11560 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 11572 */;
+import useThemeDefault from "useTheme" /* 5122 */;
+import useToken from "useToken" /* 5477 */;
+import ButtonHooks from "ButtonHooks" /* 5518 */;
+import ClockIcon from "ClockIcon" /* 5622 */;
+import ClipViewDefault from "ClipView" /* 9023 */;
+import showForLaterModal from "showForLaterModal" /* 11679 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11680 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11692 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11564 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11684 */;
 
 require = fn;
 function BadgedIcon(arg0) {
@@ -51,10 +51,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const point = { shape: fn(8903).CutoutShape.Circle, x: fn(13655).ICON_SIZE.sm - 7, y: fn(13655).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(4794);
+const point = { shape: fn(9023).CutoutShape.Circle, x: fn(13777).ICON_SIZE.sm - 7, y: fn(13777).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(4913);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(13655).ICON_SIZE.sm, height: fn(13655).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(13777).ICON_SIZE.sm, height: fn(13777).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;
@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export default function ForLaterActionButton(ref) {
   const type = ref.type;
   const onOpen = ref.onOpen;
-  const tmp3 = type === type(11560).SavedMessageSortTypes.REMINDER;
+  const tmp3 = type === type(11680).SavedMessageSortTypes.REMINDER;
   dependencyMap = tmp3;
   items = [SavedMessagesStore];
   const items1 = [tmp3];
@@ -93,6 +93,6 @@ export default function ForLaterActionButton(ref) {
   }
   const obj3 = { ref: ref.ref, children: null };
   const obj = type(504);
-  obj3.children = closure_6(type(7471).IconButton, { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, { type, showRedDot: stateFromStores > 0 }), onPress: callback, accessibilityLabel: combined, maxFontSizeMultiplier: 2 });
+  obj3.children = closure_6(type(7591).IconButton, { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, { type, showRedDot: stateFromStores > 0 }), onPress: callback, accessibilityLabel: combined, maxFontSizeMultiplier: 2 });
   return closure_6(View, obj3);
 };

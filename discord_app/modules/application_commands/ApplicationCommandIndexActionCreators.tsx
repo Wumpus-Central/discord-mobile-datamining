@@ -1,6 +1,6 @@
-// === Module 10320: ApplicationCommandIndexActionCreators ===
+// === Module 10440: ApplicationCommandIndexActionCreators ===
 
-// Module 10320 (ApplicationCommandIndexActionCreators)
+// Module 10440 (ApplicationCommandIndexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

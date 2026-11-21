@@ -1,18 +1,18 @@
-// === Module 8420: ScheduledMessageUtils ===
+// === Module 8540: ScheduledMessageUtils ===
 
-// Module 8420 (ScheduledMessageUtils)
+// Module 8540 (ScheduledMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import _modDef2167 from "module_2167" /* 2167 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 8264 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 8422 */;
+import _modDef2168 from "module_2168" /* 2168 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 8384 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 8542 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ require = fn;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, MessageFlags: metroImportDefault, Permissions: closure_8 } = Constants);
 const PremiumTypes = fn(1388).PremiumTypes;
-const ScheduledMessagesConstants = fn(8421);
+const ScheduledMessagesConstants = fn(8541);
 ({ MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_10, MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11, MAX_SCHEDULED_MESSAGES_PER_USER: closure_12, MAX_SCHEDULED_MESSAGES_PER_USER_WITHOUT_NITRO: map1, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_14 } = ScheduledMessagesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
@@ -89,15 +89,15 @@ export function canSendScheduledMessagesInChannel(isPrivate) {
   return canResult;
 }
 export function getPresetScheduledTimes() {
-  const addResult = _modDef2167().add(gesture, "seconds");
-  const obj = _modDef2167();
-  const obj2 = _modDef2167();
-  const result = _modDef2167().startOf("day").set("hours", 9);
-  const startOfResult = _modDef2167().startOf("day");
-  const obj5 = _modDef2167();
-  const result1 = _modDef2167().startOf("day").set("hours", 13);
+  const addResult = _modDef2168().add(gesture, "seconds");
+  const obj = _modDef2168();
+  const obj2 = _modDef2168();
+  const result = _modDef2168().startOf("day").set("hours", 9);
+  const startOfResult = _modDef2168().startOf("day");
+  const obj5 = _modDef2168();
+  const result1 = _modDef2168().startOf("day").set("hours", 13);
   const obj3 = { label: null, value: null };
-  const startOfResult1 = _modDef2167().startOf("day");
+  const startOfResult1 = _modDef2168().startOf("day");
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -132,16 +132,16 @@ export function getPresetScheduledTimes() {
   const intl3 = tmp6(1112).intl;
   obj6.label = intl3.string(tmp6(1112).t["+P5MmK"]);
   isAfterResult1 = result1.isAfter(addResult);
-  const obj11 = _modDef2167();
-  const startOfResult2 = _modDef2167().startOf("isoWeek");
-  obj6.value = _modDef2167().startOf("isoWeek").add(1, "week").set("hours", 9);
+  const obj11 = _modDef2168();
+  const startOfResult2 = _modDef2168().startOf("isoWeek");
+  obj6.value = _modDef2168().startOf("isoWeek").add(1, "week").set("hours", 9);
   items[2] = obj6;
   return items;
 }
 export function getDefaultScheduledTime() {
-  const obj = _modDef2167();
-  const addResult = _modDef2167().startOf("hour").add(1, "hour");
-  const startOfResult = _modDef2167().startOf("hour");
+  const obj = _modDef2168();
+  const addResult = _modDef2168().startOf("hour").add(1, "hour");
+  const startOfResult = _modDef2168().startOf("hour");
   let addResult1 = addResult;
   if (addResult.isBefore(obj4.add(gesture, "seconds"))) {
     addResult1 = addResult.add(1, "hour");
@@ -153,38 +153,38 @@ export function getScheduledTimeError(isBefore, dependencyMap) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t["w/fgvh"]);
   } else {
-    const addResult = _modDef2167().add(closure_1_11, "seconds");
+    const addResult = _modDef2168().add(closure_1_11, "seconds");
     let minResult = addResult;
     if (null != dependencyMap) {
-      const tmpResult = _modDef2167;
+      const tmpResult = _modDef2168;
       const tmpResult3 = SnowflakeUtilsDefault;
       const tmpResultResult = tmpResult(SnowflakeUtilsDefault.extractTimestamp(dependencyMap));
-      minResult = _modDef2167.min(addResult, tmpResultResult.add(refs, "seconds"));
-      const tmpResult4 = _modDef2167;
+      minResult = _modDef2168.min(addResult, tmpResultResult.add(refs, "seconds"));
+      const tmpResult4 = _modDef2168;
     }
     stringResult = null;
     if (isBefore.isAfter(minResult)) {
       const intl = util.intl;
       stringResult = intl.string(util.t.Nt0tz7);
     }
-    const obj2 = _modDef2167();
+    const obj2 = _modDef2168();
   }
   return stringResult;
 }
 export function getEarliestScheduledTime() {
-  return _modDef2167().add(gesture, "seconds");
+  return _modDef2168().add(gesture, "seconds");
 }
 export function getLatestScheduledTime(arg0) {
-  const addResult = _modDef2167().add(closure_1_11, "seconds");
+  const addResult = _modDef2168().add(closure_1_11, "seconds");
   if (null == arg0) {
     return addResult;
   } else {
-    const tmpResult = _modDef2167;
+    const tmpResult = _modDef2168;
     const tmpResult3 = SnowflakeUtilsDefault;
     const tmpResultResult = tmpResult(SnowflakeUtilsDefault.extractTimestamp(arg0));
-    return _modDef2167.min(addResult, tmpResultResult.add(refs, "seconds"));
+    return _modDef2168.min(addResult, tmpResultResult.add(refs, "seconds"));
   }
-  const obj = _modDef2167();
+  const obj = _modDef2168();
 }
 export function getScheduledMessagesLimit() {
   if (obj.isPremium(UserStore.getCurrentUser(), PremiumTypes.TIER_2)) {

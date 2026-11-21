@@ -1,6 +1,6 @@
-// === Module 8577: UnlinkedGamePlayerPlaceholders ===
+// === Module 8697: UnlinkedGamePlayerPlaceholders ===
 
-// Module 8577 (UnlinkedGamePlayerPlaceholders)
+// Module 8697 (UnlinkedGamePlayerPlaceholders)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

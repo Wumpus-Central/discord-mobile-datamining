@@ -1,12 +1,12 @@
-// === Module 20018: SafetyFlowsUtils ===
+// === Module 20145: SafetyFlowsUtils ===
 
-// Module 20018 (SafetyFlowsUtils)
+// Module 20145 (SafetyFlowsUtils)
 import util from "util" /* 1112 */;
-import _modDef3021 from "module_3021" /* 3021 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5476 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
-import types from "types" /* 20012 */;
-import constants from "constants" /* 20013 */;
+import _modDef3120 from "module_3120" /* 3120 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
+import types from "types" /* 20139 */;
+import constants from "constants" /* 20140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -39,7 +39,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef3021["/fHz9S"]);
+    obj3.text = intl.string(_modDef3120["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;

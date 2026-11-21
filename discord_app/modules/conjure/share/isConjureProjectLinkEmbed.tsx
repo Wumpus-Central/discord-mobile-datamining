@@ -1,8 +1,8 @@
-// === Module 8778: isConjureProjectLinkEmbed ===
+// === Module 8898: isConjureProjectLinkEmbed ===
 
-// Module 8778 (isConjureProjectLinkEmbed)
+// Module 8898 (isConjureProjectLinkEmbed)
 import Constants from "Constants" /* 1071 */;
-import conjureProjectLink from "conjureProjectLink" /* 8779 */;
+import conjureProjectLink from "conjureProjectLink" /* 8899 */;
 import size from "module_2" /* 2 */;
 
 const MessageEmbedTypes = Constants.MessageEmbedTypes;

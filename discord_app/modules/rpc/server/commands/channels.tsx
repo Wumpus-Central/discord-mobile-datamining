@@ -1,23 +1,23 @@
-// === Module 15570: channels ===
+// === Module 15693: channels ===
 
-// Module 15570 (channels)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6507 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 6784 */;
-import RPCErrorDefault from "RPCError" /* 6790 */;
-import botScopedAccess from "botScopedAccess" /* 6793 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7142 */;
-import RPCHelpers from "RPCHelpers" /* 10684 */;
-import guildVoice from "guildVoice" /* 15553 */;
+// Module 15693 (channels)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6626 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 6903 */;
+import RPCErrorDefault from "RPCError" /* 6909 */;
+import botScopedAccess from "botScopedAccess" /* 6912 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 6913 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7262 */;
+import RPCHelpers from "RPCHelpers" /* 10804 */;
+import guildVoice from "guildVoice" /* 15676 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
-import SpeakingStore from "SpeakingStore" /* 6416 */;
-import VoiceStateStore from "VoiceStateStore" /* 5442 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import SpeakingStore from "SpeakingStore" /* 6535 */;
+import VoiceStateStore from "VoiceStateStore" /* 5561 */;
 
 require = fn;
 let closure_18 = async function _validateUserAllowsJoiningVoice() {
@@ -65,17 +65,17 @@ let closure_19 = async function _getGuildVoiceSnapshot() {
   });
   return obj;
 };
-const ChannelRecord = fn(4647);
+const ChannelRecord = fn(4766);
 ({ isVoiceChannel: hasOwnProperty, isTextChannel: closure_6 } = ChannelRecord);
-let Constants = fn(6235);
+let Constants = fn(6354);
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1071);
 ({ Routes: closure_14, Permissions: closure_15, RPCCommands, RPCErrors: closure_16, ChannelTypes: closure_17 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15557);
+let CONTEXT_MENU_ICON_NAMES = fn(15680);
 let obj3 = { scope: null, validateAccess: null, handler: null };
 let obj4 = {};
-let items = [fn(6794).OAuth2Scopes.RPC, fn(6794).OAuth2Scopes.GUILDS, fn(6794).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(6794).OAuth2Scopes.BOT, fn(6794).OAuth2Scopes.SDK_SOCIAL_LAYER];
+let items = [fn(6913).OAuth2Scopes.RPC, fn(6913).OAuth2Scopes.GUILDS, fn(6913).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(6913).OAuth2Scopes.BOT, fn(6913).OAuth2Scopes.SDK_SOCIAL_LAYER];
 obj4[RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.validateAccess = function validateAccess(botScopeOnly) {
@@ -143,10 +143,10 @@ obj3.handler = function handler(args) {
   obj2 = guildVoice;
 };
 obj[RPCCommands.GET_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(15557);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 let obj6 = { scope: null, validateAccess: null, handler: null };
 let obj7 = {};
-const items1 = [fn(6794).OAuth2Scopes.RPC, fn(6794).OAuth2Scopes.BOT, fn(6794).OAuth2Scopes.SDK_SOCIAL_LAYER];
+const items1 = [fn(6913).OAuth2Scopes.RPC, fn(6913).OAuth2Scopes.BOT, fn(6913).OAuth2Scopes.SDK_SOCIAL_LAYER];
 obj7[RPC_SCOPE_CONFIG.ANY] = items1;
 obj6.scope = obj7;
 obj6.validateAccess = function validateAccess(args) {
@@ -168,10 +168,10 @@ obj6.handler = function handler(args) {
   guild = undefined;
   if (obj.isGuildVoiceSocket(socket)) {
     const obj3 = { errorCode: constants3.INVALID_GUILD };
-    const tmp19 = new guild(6790)(obj3, "Invalid guild");
+    const tmp19 = new guild(6909)(obj3, "Invalid guild");
     throw tmp19;
   }
-  obj = socket(15553);
+  obj = socket(15676);
   const tmp3 = guild;
   const values = guild(12).values(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
   let found = values;
@@ -182,7 +182,7 @@ obj6.handler = function handler(args) {
       if (null == guild) {
         const obj4 = { errorCode: constants3.INVALID_GUILD };
         const _HermesInternal = HermesInternal;
-        const tmp3Result1 = new tmp3(6790)(obj4, "Invalid guild id: " + guild_id);
+        const tmp3Result1 = new tmp3(6909)(obj4, "Invalid guild id: " + guild_id);
         throw tmp3Result1;
       } else {
         found = values.filter((guild_id) => guild_id.guild_id === guild.id);
@@ -210,10 +210,10 @@ obj6.handler = function handler(args) {
   return obj5;
 };
 obj[RPCCommands.GET_CHANNELS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNELS, obj6);
-CONTEXT_MENU_ICON_NAMES = fn(15557);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 let obj9 = { scope: null, validateAccess: null, handler: null };
 let obj10 = {};
-const items2 = [fn(6794).OAuth2Scopes.GUILDS_MEMBERS_READ, fn(6794).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(6794).OAuth2Scopes.BOT];
+const items2 = [fn(6913).OAuth2Scopes.GUILDS_MEMBERS_READ, fn(6913).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(6913).OAuth2Scopes.BOT];
 obj10[RPC_SCOPE_CONFIG.ANY] = items2;
 obj9.scope = obj10;
 obj9.validateAccess = function validateAccess(socket) {
@@ -250,10 +250,10 @@ obj9.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.GET_CHANNEL_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL_PERMISSIONS, obj9);
-CONTEXT_MENU_ICON_NAMES = fn(15557);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 let obj12 = { scope: null, handler: null };
 let obj13 = {};
-const items3 = [fn(6794).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE, fn(6794).OAuth2Scopes.SDK_SOCIAL_LAYER];
+const items3 = [fn(6913).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE, fn(6913).OAuth2Scopes.SDK_SOCIAL_LAYER];
 obj13[RPC_SCOPE_CONFIG.ANY] = items3;
 obj12.scope = obj13;
 obj12.handler = function handler(args) {
@@ -568,10 +568,10 @@ obj12.handler = function handler(args) {
   obj = require("guildVoice");
 };
 obj[RPCCommands.SELECT_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_VOICE_CHANNEL, obj12);
-CONTEXT_MENU_ICON_NAMES = fn(15557);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj15 = { scope: null, handler: null };
 const obj16 = {};
-const items4 = [fn(6794).OAuth2Scopes.RPC, fn(6794).OAuth2Scopes.RPC_VOICE_READ];
+const items4 = [fn(6913).OAuth2Scopes.RPC, fn(6913).OAuth2Scopes.RPC_VOICE_READ];
 obj16[RPC_SCOPE_CONFIG.ANY] = items4;
 obj15.scope = obj16;
 obj15.handler = function handler(socket) {
@@ -589,9 +589,9 @@ obj15.handler = function handler(socket) {
   return transformChannelResult;
 };
 obj[RPCCommands.GET_SELECTED_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SELECTED_VOICE_CHANNEL, obj15);
-CONTEXT_MENU_ICON_NAMES = fn(15557);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_TEXT_CHANNEL, {
-  scope: fn(6794).OAuth2Scopes.RPC,
+  scope: fn(6913).OAuth2Scopes.RPC,
   handler(args) {
     ({ server, socket } = args);
     args = args.args;
@@ -607,10 +607,10 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(6790)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(6909)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       });
       nextPromise1 = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(6790)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(6909)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           const obj4 = { errorCode: constants3.INVALID_CHANNEL };
@@ -630,20 +630,20 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       }).then((result) => {
         [tmp, tmp2] = result;
         if (null == tmp2.guild_id) {
-          const privateChannel = channel_id(6410).selectPrivateChannel(tmp.id);
-          const obj3 = channel_id(6410);
+          const privateChannel = channel_id(6529).selectPrivateChannel(tmp.id);
+          const obj3 = channel_id(6529);
         } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
           socket(1098).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
           const obj2 = socket(1098);
         } else {
           const obj = { errorCode: constants2.INVALID_CHANNEL };
-          const tmp9 = new channel_id(6790)(obj, "No permission to see channel");
+          const tmp9 = new channel_id(6909)(obj, "No permission to see channel");
           throw tmp9;
         }
         return tmp2;
       });
       const nextPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(6790)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(6909)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           const obj4 = { errorCode: constants3.INVALID_CHANNEL };
@@ -665,9 +665,9 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
     return nextPromise1;
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(15557);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj18 = {
-  scope: fn(6794).OAuth2Scopes.RPC,
+  scope: fn(6913).OAuth2Scopes.RPC,
   handler(args) {
     ({ server, socket } = args);
     args = args.args;
@@ -683,10 +683,10 @@ const obj18 = {
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(6790)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(6909)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       });
       nextPromise1 = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(6790)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(6909)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           const obj4 = { errorCode: constants3.INVALID_CHANNEL };
@@ -706,20 +706,20 @@ const obj18 = {
       }).then((result) => {
         [tmp, tmp2] = result;
         if (null == tmp2.guild_id) {
-          const privateChannel = channel_id(6410).selectPrivateChannel(tmp.id);
-          const obj3 = channel_id(6410);
+          const privateChannel = channel_id(6529).selectPrivateChannel(tmp.id);
+          const obj3 = channel_id(6529);
         } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
           socket(1098).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
           const obj2 = socket(1098);
         } else {
           const obj = { errorCode: constants2.INVALID_CHANNEL };
-          const tmp9 = new channel_id(6790)(obj, "No permission to see channel");
+          const tmp9 = new channel_id(6909)(obj, "No permission to see channel");
           throw tmp9;
         }
         return tmp2;
       });
       const nextPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(6790)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(6909)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           const obj4 = { errorCode: constants3.INVALID_CHANNEL };
@@ -742,7 +742,7 @@ const obj18 = {
   }
 };
 obj[RPCCommands.CREATE_CHANNEL_INVITE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.CREATE_CHANNEL_INVITE, {
-  scope: fn(6794).OAuth2Scopes.RPC,
+  scope: fn(6913).OAuth2Scopes.RPC,
   handler(args) {
     args = args.args;
     const channel_id = args.channel_id;

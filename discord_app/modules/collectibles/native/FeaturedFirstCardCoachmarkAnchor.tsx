@@ -1,7 +1,7 @@
-// === Module 17186: FeaturedFirstCardCoachmarkAnchor ===
+// === Module 17310: FeaturedFirstCardCoachmarkAnchor ===
 
-// Module 17186 (FeaturedFirstCardCoachmarkAnchor)
-import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 17187 */;
+// Module 17310 (FeaturedFirstCardCoachmarkAnchor)
+import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 17311 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

@@ -1,27 +1,27 @@
-// === Module 9587: SecureFramesUtils ===
+// === Module 9707: SecureFramesUtils ===
 
-// Module 9587 (SecureFramesUtils)
+// Module 9707 (SecureFramesUtils)
 import _modDef38 from "module_38" /* 38 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
-import _modDef2167 from "module_2167" /* 2167 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2186 */;
-import UserUtilsDefault from "UserUtils" /* 4850 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5741 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
-import _mod9572 from "module_9572" /* 9572 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9589 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9590 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9591 */;
+import _modDef2168 from "module_2168" /* 2168 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
+import UserUtilsDefault from "UserUtils" /* 4969 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5943 */;
+import _mod9692 from "module_9692" /* 9692 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9709 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9710 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5535 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6277 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6396 */;
 import UserStore from "UserStore" /* 1386 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5553 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5672 */;
 
 const require = globalThis.__r;
 
@@ -419,7 +419,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9588);
+const SecureFramesConstants = fn(9708);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SecureFramesConstants);
 const Constants = fn(1071);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
@@ -449,7 +449,7 @@ export function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9572.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9692.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);
@@ -485,8 +485,8 @@ export function deleteUserPersistentVerifications(userId) {
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
 }
 export function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2167(timestamp);
-  const diffResult = _modDef2167().diff(tmp3, "s");
+  const tmp3 = _modDef2168(timestamp);
+  const diffResult = _modDef2168().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -528,7 +528,7 @@ export function getSecureFramesUserVerifiedTimestamp(timestamp) {
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2167();
+  const obj = _modDef2168();
 }
 export function getUserVerificationDeeplink(userId, arg1) {
   return "" + location.protocol + "//" + location.host + gesture.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + userId + "&fingerprint=" + encodeURIComponent(arg1);

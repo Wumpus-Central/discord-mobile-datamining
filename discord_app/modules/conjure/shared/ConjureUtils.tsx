@@ -1,14 +1,14 @@
-// === Module 6746: ConjureUtils ===
+// === Module 6865: ConjureUtils ===
 
-// Module 6746 (ConjureUtils)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6538 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6747 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4724 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+// Module 6865 (ConjureUtils)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6657 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6866 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
 
 require = fn;
 function conjureChannelAppId(channel) {
@@ -26,7 +26,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4724);
+let GuildChannelStore = fn(4843);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1071);

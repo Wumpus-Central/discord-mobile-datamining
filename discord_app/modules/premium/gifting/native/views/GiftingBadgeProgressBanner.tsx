@@ -1,14 +1,14 @@
-// === Module 9389: GiftingBadgeProgressBanner ===
+// === Module 9509: GiftingBadgeProgressBanner ===
 
-// Module 9389 (GiftingBadgeProgressBanner)
+// Module 9509 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import _modDef2821 from "module_2821" /* 2821 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 5811 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 9364 */;
+import _modDef2920 from "module_2920" /* 2920 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 5930 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 9484 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -52,7 +52,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   const items2 = [React4(View, obj3), ];
   const obj5 = { variant: "body-md/semibold", children: null };
   const intl = util.intl;
-  obj5.children = intl.formatToPlainString(_modDef2821["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
+  obj5.children = intl.formatToPlainString(_modDef2920["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
   items2[1] = React4(Text_Text.Text, obj5);
   obj2.children = items2;
   return hasOwnProperty(View, obj2);

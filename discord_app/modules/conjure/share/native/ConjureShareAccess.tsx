@@ -1,13 +1,13 @@
-// === Module 18219: ConjureShareAccess ===
+// === Module 18346: ConjureShareAccess ===
 
-// Module 18219 (ConjureShareAccess)
+// Module 18346 (ConjureShareAccess)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import ToastUtils from "ToastUtils" /* 5475 */;
-import ClipboardUtils from "ClipboardUtils" /* 7425 */;
-import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18162 */;
-import buildConjureProjectLinkDefault from "buildConjureProjectLink" /* 18223 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ToastUtils from "ToastUtils" /* 5594 */;
+import ClipboardUtils from "ClipboardUtils" /* 7545 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18289 */;
+import buildConjureProjectLinkDefault from "buildConjureProjectLink" /* 18350 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function ShareLinkRow(project) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null, sharingMode: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -62,7 +62,7 @@ export default function ConjureShareAccess(arg0) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18162, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(18289, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, {
       options,
       value: mode,
       onChange(AUTO_DISMISS) {

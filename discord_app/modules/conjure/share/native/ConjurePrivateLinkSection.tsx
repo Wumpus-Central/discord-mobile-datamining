@@ -1,17 +1,17 @@
-// === Module 18220: ConjurePrivateLinkSection ===
+// === Module 18347: ConjurePrivateLinkSection ===
 
-// Module 18220 (ConjurePrivateLinkSection)
+// Module 18347 (ConjurePrivateLinkSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import ToastUtils from "ToastUtils" /* 5475 */;
-import useAlertStore from "useAlertStore" /* 5743 */;
-import AlertModal from "AlertModal" /* 5747 */;
-import ClipboardUtils from "ClipboardUtils" /* 7425 */;
-import showShareActionSheet from "showShareActionSheet" /* 9598 */;
-import conjureShareLinkMaxAges from "conjureShareLinkMaxAges" /* 18221 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ToastUtils from "ToastUtils" /* 5594 */;
+import useAlertStore from "useAlertStore" /* 5862 */;
+import AlertModal from "AlertModal" /* 5866 */;
+import ClipboardUtils from "ClipboardUtils" /* 7545 */;
+import showShareActionSheet from "showShareActionSheet" /* 9718 */;
+import conjureShareLinkMaxAges from "conjureShareLinkMaxAges" /* 18348 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { failed: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function ConjurePrivateLinkSection(project) {
   first1 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [value, dependencyMap] = noop.useState(project(18221).CONJURE_SHARE_LINK_DEFAULT_MAX_AGE);
+  [value, dependencyMap] = noop.useState(project(18348).CONJURE_SHARE_LINK_DEFAULT_MAX_AGE);
   [first1, _slicedToArray] = noop.useState(null);
   const tmp = closure_10();
   [tmp9, c5] = noop.useState(false);
@@ -49,7 +49,7 @@ export default function ConjurePrivateLinkSection(project) {
   const callback = noop.useCallback(first1(function*() {
     _undefined(true);
     closure_6(false);
-    yield closure_0(18222).mintConjureShareLink(project.id, first);
+    yield closure_0(18349).mintConjureShareLink(project.id, first);
     if (1 === tmp7) {
       dependencyMap = 0;
       closure_129_6(true);
@@ -60,7 +60,7 @@ export default function ConjurePrivateLinkSection(project) {
       throw value;
     } else if (arg0 !== 2) {
       closure_128_0 = value;
-      closure_129_4(tmp3(18223)(closure_129_0.application_id, closure_129_0.name, closure_128_0));
+      closure_129_4(tmp3(18350)(closure_129_0.application_id, closure_129_0.name, closure_128_0));
       dependencyMap = 0;
     }
     return value;
@@ -68,17 +68,17 @@ export default function ConjurePrivateLinkSection(project) {
   const items1 = [project.id];
   const callback1 = noop.useCallback(first1(function*() {
     _undefined(true);
-    yield tmp3(6814).updateProjectSettings(project.id, { reset_share_links: true });
+    yield tmp3(6933).updateProjectSettings(project.id, { reset_share_links: true });
     if (1 === tmp7) {
       dependencyMap = 0;
       const obj7 = { text: null, icon: null, iconColor: "icon-feedback-critical" };
       const intl = tmp3(1112).intl;
-      obj7.text = intl.string(v2(4091)["5lL390"]);
-      obj7.icon = tmp3(14246).RefreshIcon;
-      v2(5476).open("CONJURE_PRIVATE_LINK_RESET", obj7);
+      obj7.text = intl.string(v2(4190)["5lL390"]);
+      obj7.icon = tmp3(14368).RefreshIcon;
+      v2(5595).open("CONJURE_PRIVATE_LINK_RESET", obj7);
       closure_128_5(false);
       c3 = 3;
-      v2(5476);
+      v2(5595);
     } else if (arg0 === 1) {
       c3 = 3;
       throw value;
@@ -86,11 +86,11 @@ export default function ConjurePrivateLinkSection(project) {
       closure_128_4(null);
       const obj9 = { text: null, icon: null };
       const intl2 = tmp3(1112).intl;
-      obj9.text = intl2.string(v2(4091).w9w1Zh);
-      obj9.icon = tmp3(14246).RefreshIcon;
-      v2(5476).open("CONJURE_PRIVATE_LINK_RESET", obj9);
+      obj9.text = intl2.string(v2(4190).w9w1Zh);
+      obj9.icon = tmp3(14368).RefreshIcon;
+      v2(5595).open("CONJURE_PRIVATE_LINK_RESET", obj9);
       dependencyMap = 0;
-      v2(5476);
+      v2(5595);
     }
     return value;
   }), items1);
@@ -100,29 +100,29 @@ export default function ConjurePrivateLinkSection(project) {
     let obj = ActionSheetActionCreatorsDefault;
     const obj2 = { title: null, options: null, value: null, onChange: null };
     const intl = util.intl;
-    obj2.title = intl.string(_modDef4091.eMlOXz);
+    obj2.title = intl.string(_modDef4190.eMlOXz);
     const prop = conjureShareLinkMaxAges.CONJURE_SHARE_LINK_MAX_AGES;
     obj2.options = prop.map((value) => {
-      const obj = { value, label: project(18221).conjureShareLinkMaxAgeLabel(value) };
+      const obj = { value, label: project(18348).conjureShareLinkMaxAgeLabel(value) };
       return obj;
     });
     obj2.value = value;
     obj2.onChange = function onChange(arg0) {
       return dependencyMap(arg0);
     };
-    obj.openLazy(asyncRequireImpl(18224, dependencyMap.paths), "ConjurePrivateLinkMaxAge", obj2, "stack");
+    obj.openLazy(asyncRequireImpl(18351, dependencyMap.paths), "ConjurePrivateLinkMaxAge", obj2, "stack");
   }, items2);
   const items4 = [first1];
   const callback3 = noop.useCallback(() => {
     const obj2 = { title: null, content: null, actions: null };
     const intl = util.intl;
-    obj2.title = intl.string(_modDef4091.LQawVH);
+    obj2.title = intl.string(_modDef4190.LQawVH);
     const intl2 = util.intl;
-    obj2.content = intl2.string(_modDef4091.xBBqXx);
+    obj2.content = intl2.string(_modDef4190.xBBqXx);
     const obj3 = { children: null };
     const obj4 = { variant: "destructive", text: null, onPress: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef4091.oq0hBy);
+    obj4.text = intl3.string(_modDef4190.oq0hBy);
     obj4.onPress = callback1;
     items = [metroImportDefault(AlertModal.AlertActionButton, obj4), ];
     const obj5 = { variant: "secondary", text: null };
@@ -148,55 +148,55 @@ export default function ConjurePrivateLinkSection(project) {
   }, items5);
   let obj = { title: null, description: null, hasIcons: true, children: null };
   let intl = project(1112).intl;
-  obj.title = intl.string(value(4091)["/lZVfj"]);
+  obj.title = intl.string(value(4190)["/lZVfj"]);
   let intl2 = project(1112).intl;
-  obj.description = intl2.string(value(4091).wp7r6t);
+  obj.description = intl2.string(value(4190).wp7r6t);
   let obj2 = { icon: null, label: null, trailing: null, arrow: true, disabled: null, onPress: null };
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  obj2.icon = callback1(project(6937).TableRowIcon, { IconComponent: project(5503).ClockIcon });
+  obj2.icon = callback1(project(7057).TableRowIcon, { IconComponent: project(5622).ClockIcon });
   let intl3 = project(1112).intl;
-  obj2.label = intl3.string(value(4091).eMlOXz);
+  obj2.label = intl3.string(value(4190).eMlOXz);
   let obj4 = { text: null };
-  let obj3 = { IconComponent: project(5503).ClockIcon };
-  obj4.text = project(18221).conjureShareLinkMaxAgeLabel(value);
-  obj2.trailing = callback1(project(6925).TableRow.TrailingText, obj4);
+  let obj3 = { IconComponent: project(5622).ClockIcon };
+  obj4.text = project(18348).conjureShareLinkMaxAgeLabel(value);
+  obj2.trailing = callback1(project(7045).TableRow.TrailingText, obj4);
   let tmp21 = tmp9;
   if (!tmp9) {
     tmp21 = flag;
   }
   obj2.disabled = tmp21;
   obj2.onPress = callback2;
-  const items6 = [callback1(project(6925).TableRow, obj2), , , ];
+  const items6 = [callback1(project(7045).TableRow, obj2), , , ];
   const obj6 = { icon: null, label: null, disabled: null, onPress: null };
-  let obj5 = project(18221);
-  obj6.icon = callback1(project(6937).TableRowIcon, { IconComponent: project(18225).LinkPlusIcon });
+  let obj5 = project(18348);
+  obj6.icon = callback1(project(7057).TableRowIcon, { IconComponent: project(18352).LinkPlusIcon });
   let intl4 = tmp2(1112).intl;
-  obj6.label = intl4.string(value(4091).wELODD);
+  obj6.label = intl4.string(value(4190).wELODD);
   let tmp22 = tmp9;
   if (!tmp9) {
     tmp22 = flag;
   }
   obj6.disabled = tmp22;
   obj6.onPress = callback;
-  items6[1] = callback1(project(6925).TableRow, obj6);
+  items6[1] = callback1(project(7045).TableRow, obj6);
   let tmp17Result = null;
   if (null != first1) {
     const obj8 = { children: null };
     let obj9 = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, onPress: null };
-    const obj10 = { IconComponent: tmp2(5490).LinkIcon };
-    obj9.icon = tmp20(tmp2(6937).TableRowIcon, obj10);
+    const obj10 = { IconComponent: tmp2(5609).LinkIcon };
+    obj9.icon = tmp20(tmp2(7057).TableRowIcon, obj10);
     const intl5 = tmp2(1112).intl;
     obj9.label = intl5.string(tmp2(1112).t.WqhZss);
     obj9.subLabel = first1;
     obj9.onPress = callback4;
-    const items7 = [tmp20(tmp2(6925).TableRow, obj9), ];
+    const items7 = [tmp20(tmp2(7045).TableRow, obj9), ];
     const obj11 = { icon: null, label: null, onPress: null };
-    const obj12 = { IconComponent: tmp2(10017).ShareIcon };
-    obj11.icon = tmp20(tmp2(6937).TableRowIcon, obj12);
+    const obj12 = { IconComponent: tmp2(10137).ShareIcon };
+    obj11.icon = tmp20(tmp2(7057).TableRowIcon, obj12);
     const intl6 = tmp2(1112).intl;
     obj11.label = intl6.string(tmp2(1112).t.RDE0Sc);
     obj11.onPress = callback5;
-    items7[1] = tmp20(tmp2(6925).TableRow, obj11);
+    items7[1] = tmp20(tmp2(7045).TableRow, obj11);
     obj8.children = items7;
     tmp17Result = closure_9(closure_8, obj8);
   }
@@ -204,24 +204,24 @@ export default function ConjurePrivateLinkSection(project) {
   let tmp20Result = null;
   if (project.isOwner) {
     const obj13 = { icon: null, variant: "danger", label: null, disabled: null, onPress: null };
-    const obj14 = { IconComponent: tmp2(14246).RefreshIcon, variant: "danger" };
-    obj13.icon = tmp20(tmp2(6937).TableRowIcon, obj14);
+    const obj14 = { IconComponent: tmp2(14368).RefreshIcon, variant: "danger" };
+    obj13.icon = tmp20(tmp2(7057).TableRowIcon, obj14);
     const intl7 = tmp2(1112).intl;
-    obj13.label = intl7.string(tmp19(4091).oq0hBy);
+    obj13.label = intl7.string(tmp19(4190).oq0hBy);
     obj13.disabled = tmp9;
     obj13.onPress = callback3;
-    tmp20Result = tmp20(tmp2(6925).TableRow, obj13);
+    tmp20Result = tmp20(tmp2(7045).TableRow, obj13);
   }
   items6[3] = tmp20Result;
   obj.children = items6;
-  const children = [closure_9(project(7228).TableRowGroup, obj), ];
+  const children = [closure_9(project(7348).TableRowGroup, obj), ];
   let tmp20Result2 = null;
   if (tmp10[0]) {
     const obj15 = { style: tmp.failed, children: null };
     const obj16 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
     const intl8 = tmp2(1112).intl;
-    obj16.children = intl8.string(tmp19(4091).KIrnzC);
-    obj15.children = tmp20(tmp2(5385).Text, obj16);
+    obj16.children = intl8.string(tmp19(4190).KIrnzC);
+    obj15.children = tmp20(tmp2(5504).Text, obj16);
     tmp20Result2 = tmp20(tmp18, obj15);
   }
   children[1] = tmp20Result2;

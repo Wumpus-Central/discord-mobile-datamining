@@ -1,16 +1,16 @@
-// === Module 15564: application ===
+// === Module 15687: application ===
 
-// Module 15564 (application)
+// Module 15687 (application)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6542 */;
-import RPCErrorDefault from "RPCError" /* 6790 */;
-import TestModeUtils from "TestModeUtils" /* 9200 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10681 */;
-import RPCHelpers from "RPCHelpers" /* 10684 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 15565 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15566 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6661 */;
+import RPCErrorDefault from "RPCError" /* 6909 */;
+import TestModeUtils from "TestModeUtils" /* 9320 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10801 */;
+import RPCHelpers from "RPCHelpers" /* 10804 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 15688 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15689 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
 
 require = fn;
 const Constants = fn(1071);
@@ -69,7 +69,7 @@ export default {
     }
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(6235).RPC_LOCAL_SCOPE,
+    scope: fn(6354).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

@@ -1,7 +1,7 @@
-// === Module 13661: conjureProjectGroups ===
+// === Module 13783: conjureProjectGroups ===
 
-// Module 13661 (conjureProjectGroups)
-import conjureServerProject from "conjureServerProject" /* 6719 */;
+// Module 13783 (conjureProjectGroups)
+import conjureServerProject from "conjureServerProject" /* 6838 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/project_groups/conjureProjectGroups.tsx");

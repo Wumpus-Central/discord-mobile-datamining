@@ -1,17 +1,17 @@
-// === Module 15077: GuildActionSheetGameProfileButton ===
+// === Module 15200: GuildActionSheetGameProfileButton ===
 
-// Module 15077 (GuildActionSheetGameProfileButton)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import _modDef6921 from "module_6921" /* 6921 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9645 */;
-import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15075 */;
-import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15076 */;
+// Module 15200 (GuildActionSheetGameProfileButton)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import _modDef7041 from "module_7041" /* 7041 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9765 */;
+import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15198 */;
+import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GameProfileButton(applicationId) {
   const guildId = applicationId.guildId;
-  let obj = { applicationId: applicationId.applicationId, source: guildId(9654).GameProfileSources.GuildActionSheet, trackEntryPointImpression: true };
+  let obj = { applicationId: applicationId.applicationId, source: guildId(9774).GameProfileSources.GuildActionSheet, trackEntryPointImpression: true };
   const tmp3Result = useOpenGameProfileModalDefault(obj, {
     onOpened(gameId) {
       const obj = GuildActionSheetAnalyticsUtils;
@@ -24,12 +24,12 @@ function GameProfileButton(applicationId) {
     const obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl = tmp4(1112).intl;
     obj3.label = intl.string(tmp4(1112).t.f7aVGn);
-    obj3.icon = _modDef6921;
+    obj3.icon = _modDef7041;
     obj3.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_1();
     };
-    tmp6 = jsx(tmp4(7471).IconButton, { variant: "secondary", label: null, icon: null, grow: true, onPress: null });
+    tmp6 = jsx(tmp4(7591).IconButton, { variant: "secondary", label: null, icon: null, grow: true, onPress: null });
   }
   return tmp6;
 }

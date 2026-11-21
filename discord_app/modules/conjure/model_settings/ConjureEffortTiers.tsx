@@ -1,16 +1,16 @@
-// === Module 18214: ConjureEffortTiers ===
+// === Module 18341: ConjureEffortTiers ===
 
-// Module 18214 (ConjureEffortTiers)
+// Module 18341 (ConjureEffortTiers)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 18215 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 18342 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
-let obj = { simple: _modDef4091.Mqb8mc, balanced: _modDef4091.zCZfA6, complex: _modDef4091["8l2atm"] };
-const CONJURE_MODEL_TIERS = fn(18216).CONJURE_MODEL_TIERS;
+let obj = { simple: _modDef4190.Mqb8mc, balanced: _modDef4190.zCZfA6, complex: _modDef4190["8l2atm"] };
+const CONJURE_MODEL_TIERS = fn(18343).CONJURE_MODEL_TIERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
@@ -133,7 +133,7 @@ export function conjureTierStopLabel(value) {
   if ("complex" === value) {
     const intl2 = util.intl;
     const _HermesInternal = HermesInternal;
-    combined = "" + stringResult + ", " + intl2.string(_modDef4091["17yEQw"]);
+    combined = "" + stringResult + ", " + intl2.string(_modDef4190["17yEQw"]);
   }
   return combined;
 }

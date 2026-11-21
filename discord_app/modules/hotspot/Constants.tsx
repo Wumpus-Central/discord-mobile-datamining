@@ -1,6 +1,6 @@
-// === Module 7920: Constants ===
+// === Module 8040: Constants ===
 
-// Module 7920 (Constants)
+// Module 8040 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/hotspot/Constants.tsx");

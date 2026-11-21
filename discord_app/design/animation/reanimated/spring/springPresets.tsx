@@ -1,8 +1,8 @@
-// === Module 5396: springPresets ===
+// === Module 5515: springPresets ===
 
-// Module 5396 (springPresets)
+// Module 5515 (springPresets)
 import _mod1653 from "module_1653" /* 1653 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 5397 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 5516 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");

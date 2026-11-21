@@ -1,15 +1,15 @@
-// === Module 18445: ConjurePlanExperiences ===
+// === Module 18572: ConjurePlanExperiences ===
 
-// Module 18445 (ConjurePlanExperiences)
+// Module 18572 (ConjurePlanExperiences)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import AppsIcon2 from "AppsIcon" /* 7584 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 18430 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 18438 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 18446 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 18452 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import AppsIcon2 from "AppsIcon" /* 7704 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 18557 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 18565 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 18573 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 18579 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -94,7 +94,7 @@ function ExperienceBlocks(arg0) {
         const obj2 = { channels: true, caption: null, children: null };
         const intl2 = util.intl;
         const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef4091.w8F5sy, obj4);
+        obj2.caption = intl2.formatToPlainString(_modDef4190.w8F5sy, obj4);
         const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
         obj5.children = channels.map((description) => {
@@ -109,7 +109,7 @@ function ExperienceBlocks(arg0) {
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
         const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef4091.MY6UGJ);
+        obj6.caption = intl3.string(_modDef4190.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -227,8 +227,8 @@ function ComponentSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { frame: fn(6920).GameControllerIcon, overlay_widget: fn(18144).WindowTopIcon, user_widget: fn(12930).UserCircleIcon, bot: fn(12050).RobotIcon, commands: fn(12050).RobotIcon, automod: fn(10013).ShieldIcon };
-const createStyles = fn(4794);
+let obj = { frame: fn(7040).GameControllerIcon, overlay_widget: fn(18271).WindowTopIcon, user_widget: fn(13052).UserCircleIcon, bot: fn(12172).RobotIcon, commands: fn(12172).RobotIcon, automod: fn(10133).ShieldIcon };
+const createStyles = fn(4913);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.divider = { marginVertical: nativeDefault.space.PX_24, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };

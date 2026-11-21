@@ -1,23 +1,23 @@
-// === Module 6717: getGuildTransitionRoute ===
+// === Module 6836: getGuildTransitionRoute ===
 
-// Module 6717 (getGuildTransitionRoute)
-import FavoritesUtils from "FavoritesUtils" /* 4668 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6564 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6728 */;
-import ConjureUtils from "ConjureUtils" /* 6746 */;
-import ConjureServerProjectRouteStore from "ConjureServerProjectRouteStore" /* 6718 */;
-import FavoriteStore from "FavoriteStore" /* 4646 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6722 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildChannelStore from "GuildChannelStore" /* 4724 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6723 */;
+// Module 6836 (getGuildTransitionRoute)
+import FavoritesUtils from "FavoritesUtils" /* 4787 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6683 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6847 */;
+import ConjureUtils from "ConjureUtils" /* 6865 */;
+import ConjureServerProjectRouteStore from "ConjureServerProjectRouteStore" /* 6837 */;
+import FavoriteStore from "FavoriteStore" /* 4765 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6841 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6842 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ ME: closure_10, WATERWHEELS: closure_11 } = Constants);
-const StaticChannelRoute = fn(4650).StaticChannelRoute;
+const StaticChannelRoute = fn(4769).StaticChannelRoute;
 const CONJURE_PROJECT = StaticChannelRoute.CONJURE_PROJECT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");

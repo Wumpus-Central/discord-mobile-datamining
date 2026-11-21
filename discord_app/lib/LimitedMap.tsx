@@ -1,6 +1,6 @@
-// === Module 11780: LimitedMap ===
+// === Module 11900: LimitedMap ===
 
-// Module 11780 (LimitedMap)
+// Module 11900 (LimitedMap)
 import size from "module_2" /* 2 */;
 
 class LimitedMap extends Map {

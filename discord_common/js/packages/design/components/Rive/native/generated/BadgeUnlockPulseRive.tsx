@@ -1,8 +1,8 @@
-// === Module 4917: BadgeUnlockPulseRive ===
+// === Module 5036: BadgeUnlockPulseRive ===
 
-// Module 4917 (BadgeUnlockPulseRive)
-import BaseRive from "BaseRive" /* 4863 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4916 */;
+// Module 5036 (BadgeUnlockPulseRive)
+import BaseRive from "BaseRive" /* 4982 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5035 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

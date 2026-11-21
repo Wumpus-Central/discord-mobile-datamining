@@ -1,23 +1,23 @@
-// === Module 18129: useConjurePublishReview ===
+// === Module 18256: useConjurePublishReview ===
 
-// Module 18129 (useConjurePublishReview)
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 7614 */;
-import conjurePublishReview from "conjurePublishReview" /* 18125 */;
-import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18130 */;
-import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18133 */;
-import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18134 */;
+// Module 18256 (useConjurePublishReview)
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 7734 */;
+import conjurePublishReview from "conjurePublishReview" /* 18252 */;
+import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18257 */;
+import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18260 */;
+import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18261 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6860 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6502).isProjectOwner;
+let isProjectOwner = fn(6621).isProjectOwner;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_11, Permissions: closure_12 } = Constants);
 const size = fn(2);
@@ -147,8 +147,8 @@ export default function useConjurePublishReview(id, arg1) {
   const trimmed = str.trim();
   let result = null;
   if (tmp14) {
-    result = tmp3(18139).conjureProjectNameError(trimmed);
-    const tmp3Result = tmp3(18139);
+    result = tmp3(18266).conjureProjectNameError(trimmed);
+    const tmp3Result = tmp3(18266);
   }
   isProjectOwner = result;
   const tmp11 = stateFromStores(saving.useState(false), 2);

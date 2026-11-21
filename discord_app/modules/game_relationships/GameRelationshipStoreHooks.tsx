@@ -1,8 +1,8 @@
-// === Module 14404: GameRelationshipStoreHooks ===
+// === Module 14526: GameRelationshipStoreHooks ===
 
-// Module 14404 (GameRelationshipStoreHooks)
+// Module 14526 (GameRelationshipStoreHooks)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8240 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8360 */;
 
 const require = globalThis.__r;
 

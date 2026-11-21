@@ -1,11 +1,11 @@
-// === Module 14509: FriendRequestNote ===
+// === Module 14631: FriendRequestNote ===
 
-// Module 14509 (FriendRequestNote)
+// Module 14631 (FriendRequestNote)
 import nativeDefault from "native" /* 575 */;
-import PeopleListTracking from "PeopleListTracking" /* 14511 */;
+import PeopleListTracking from "PeopleListTracking" /* 14633 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { width: "100%", position: "relative", padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" }, spoiler: null, hidden: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
 obj2.spoiler = rect;

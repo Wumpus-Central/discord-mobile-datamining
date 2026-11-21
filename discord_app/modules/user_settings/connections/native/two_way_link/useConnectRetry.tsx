@@ -1,6 +1,6 @@
-// === Module 6968: useConnectRetry ===
+// === Module 7088: useConnectRetry ===
 
-// Module 6968 (useConnectRetry)
+// Module 7088 (useConnectRetry)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

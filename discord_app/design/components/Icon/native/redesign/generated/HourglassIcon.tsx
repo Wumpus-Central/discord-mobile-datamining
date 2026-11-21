@@ -1,9 +1,9 @@
-// === Module 10226: HourglassIcon ===
+// === Module 10346: HourglassIcon ===
 
-// Module 10226 (HourglassIcon)
+// Module 10346 (HourglassIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod10227 from "module_10227" /* 10227 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod10347 from "module_10347" /* 10347 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HourglassIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10227, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10347, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

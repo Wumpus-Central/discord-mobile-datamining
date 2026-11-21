@@ -1,26 +1,26 @@
-// === Module 11823: MessagesHooks ===
+// === Module 11943: MessagesHooks ===
 
-// Module 11823 (MessagesHooks)
+// Module 11943 (MessagesHooks)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6540 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8317 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10261 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11824 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11825 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6659 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8437 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10381 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11944 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10292 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6432 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import PresenceStore from "PresenceStore" /* 5532 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10412 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import PresenceStore from "PresenceStore" /* 5651 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(10262).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(10382).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 

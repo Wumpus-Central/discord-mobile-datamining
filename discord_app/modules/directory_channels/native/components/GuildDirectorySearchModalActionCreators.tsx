@@ -1,8 +1,8 @@
-// === Module 13034: GuildDirectorySearchModalActionCreators ===
+// === Module 13156: GuildDirectorySearchModalActionCreators ===
 
-// Module 13034 (GuildDirectorySearchModalActionCreators)
+// Module 13156 (GuildDirectorySearchModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import size from "module_2" /* 2 */;
 
 const GUILD_DIRECTORY_SEARCH_MODAL_KEY = "GUILD_DIRECTORY_SEARCH_MODAL_KEY";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/native/com
 
 export default {
   open(channel) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13035, dependencyMap.paths), { channel: channel.channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13157, dependencyMap.paths), { channel: channel.channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);

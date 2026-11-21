@@ -1,6 +1,6 @@
-// === Module 6260: PurchaseTokenUtils ===
+// === Module 6379: PurchaseTokenUtils ===
 
-// Module 6260 (PurchaseTokenUtils)
+// Module 6379 (PurchaseTokenUtils)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import v1 from "v1" /* 1268 */;

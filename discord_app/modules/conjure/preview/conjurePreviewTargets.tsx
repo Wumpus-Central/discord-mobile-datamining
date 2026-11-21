@@ -1,11 +1,11 @@
-// === Module 18116: conjurePreviewTargets ===
+// === Module 18243: conjurePreviewTargets ===
 
-// Module 18116 (conjurePreviewTargets)
+// Module 18243 (conjurePreviewTargets)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5438 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 12175 */;
-import slugConjureChannelNameDefault from "slugConjureChannelName" /* 18117 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5557 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 12297 */;
+import slugConjureChannelNameDefault from "slugConjureChannelName" /* 18244 */;
 import size from "module_2" /* 2 */;
 
 function getPreviewTargetLabel(string) {
@@ -16,18 +16,18 @@ function getPreviewTargetLabel(string) {
     } else {
       const intl4 = util.intl;
       const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface), channel: string.appChannel };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4091["6xVl+N"], obj);
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4190["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef4091.y5GiL1);
+    return intl3.string(_modDef4190.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef4091["2940LX"]);
+    return intl2.string(_modDef4190["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef4091.tjpaGN);
+    return intl.string(_modDef4190.tjpaGN);
   }
 }
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
@@ -89,7 +89,7 @@ export { getPreviewTargetLabel };
 export function getPreviewTabLabel(mode, arg1) {
   if ("bot" === mode.mode) {
     const intl = util.intl;
-    return intl.string(_modDef4091.gThNz6);
+    return intl.string(_modDef4190.gThNz6);
   } else {
     if ("frame" === mode.mode) {
       if (mode.surface === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL) {

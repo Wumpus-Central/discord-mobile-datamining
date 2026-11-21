@@ -1,17 +1,17 @@
-// === Module 16330: OrbsArcadeGameGraphic ===
+// === Module 16453: OrbsArcadeGameGraphic ===
 
-// Module 16330 (OrbsArcadeGameGraphic)
+// Module 16453 (OrbsArcadeGameGraphic)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import AssetUtils from "AssetUtils" /* 9852 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import AssetUtils from "AssetUtils" /* 9972 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { graphic: { width: nativeDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH, maxWidth: "100%", alignSelf: "center", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, graphicMedia: { width: "100%", height: "100%" } };
 let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -49,7 +49,7 @@ export default function OrbsArcadeGameGraphic(game) {
         obj3.onError = function onError() {
           return closure_1(sheetVideoAsset.url);
         };
-        let tmp7Result = jsx(tmp2(9134).VideoComponent, { style: tmp.graphicMedia, source: null, poster: null, posterResizeMode: "cover", resizeMode: "cover", onError: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" });
+        let tmp7Result = jsx(tmp2(9254).VideoComponent, { style: tmp.graphicMedia, source: null, poster: null, posterResizeMode: "cover", resizeMode: "cover", onError: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" });
       }
       obj2.children = tmp7Result;
       return <tmp8 {...obj2} />;

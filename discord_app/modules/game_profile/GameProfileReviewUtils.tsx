@@ -1,11 +1,11 @@
-// === Module 9708: GameProfileReviewUtils ===
+// === Module 9828: GameProfileReviewUtils ===
 
-// Module 9708 (GameProfileReviewUtils)
+// Module 9828 (GameProfileReviewUtils)
 import util from "util" /* 1112 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2160 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9661 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9709 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2161 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9774 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9781 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9829 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

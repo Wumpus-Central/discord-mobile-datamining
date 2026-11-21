@@ -1,13 +1,13 @@
-// === Module 12370: CheckpointStore ===
+// === Module 12492: CheckpointStore ===
 
-// Module 12370 (CheckpointStore)
+// Module 12492 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5894 */;
-import CheckpointTrait from "CheckpointTrait" /* 5895 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6219 */;
-import CheckpointFlows from "CheckpointFlows" /* 12372 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6013 */;
+import CheckpointTrait from "CheckpointTrait" /* 6014 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6338 */;
+import CheckpointFlows from "CheckpointFlows" /* 12494 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -232,10 +232,9 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   CHECKPOINT_COMPLETE_FAILED: function handleCompleteFailed() {
     c14 = false;
   },
-  CHECKPOINT_RESET_SUCCESS: function handleResetSuccess() {
-    c9 = null;
-    c13 = null;
+  CHECKPOINT_RESET_PROGRESS: function handleResetProgress() {
     obj.progress = null;
+    c13 = null;
   },
   CHECKPOINT_SELECT_CHARACTER_TRAIT: function handleSelectCharacterTrait(trait) {
     let tmp = selectedCharacterTraits;

@@ -1,12 +1,12 @@
-// === Module 12133: GameOrganizationBenefitsCarousel ===
+// === Module 12255: GameOrganizationBenefitsCarousel ===
 
-// Module 12133 (GameOrganizationBenefitsCarousel)
+// Module 12255 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import Card from "Card" /* 6927 */;
-import GameOrganizationBenefits from "GameOrganizationBenefits" /* 12146 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import Card from "Card" /* 7047 */;
+import GameOrganizationBenefits from "GameOrganizationBenefits" /* 12268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -78,20 +78,20 @@ function BenefitsCarousel(cardWidth) {
   };
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   const tmp9 = closure_5;
-  const prop = cardWidth(12146).GAME_ORGANIZATION_BENEFITS;
+  const prop = cardWidth(12268).GAME_ORGANIZATION_BENEFITS;
   obj2.children = prop.map((key, index) => {
     obj = { cardWidth, text: key.key.getText(displayNoun), Illustration: obj[key.key], isLast: index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1 };
     return timestampProducer(BenefitCard, obj, key.key);
   });
-  obj.children = closure_6(displayNoun(10384), obj2);
+  obj.children = closure_6(displayNoun(10504), obj2);
   const children = [closure_6(closure_5, obj), ];
   let tmp10Result = null;
-  if (cardWidth(12146).GAME_ORGANIZATION_BENEFITS.length > 1) {
+  if (cardWidth(12268).GAME_ORGANIZATION_BENEFITS.length > 1) {
     tmp10Result = null;
     if (tmp6 > 0) {
       tmp10Result = null;
       if (tmp7[0] > tmp6) {
-        const obj3 = { containerStyle: tmp2.pagination, numberOfItems: tmp13(12146).GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp4 };
+        const obj3 = { containerStyle: tmp2.pagination, numberOfItems: tmp13(12268).GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp4 };
         tmp10Result = closure_6(tmp13(1186).CarouselPagination, obj3);
       }
     }
@@ -104,8 +104,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-let obj = { "auto-sync": fn(12134).GuildRolesAbstractUI, "linked-channel": fn(12138).GuildChatAbstractUI, "guild-invite": fn(12142).GuildInviteAbstractUI };
-const createStyles = fn(4794);
+let obj = { "auto-sync": fn(12256).GuildRolesAbstractUI, "linked-channel": fn(12260).GuildChatAbstractUI, "guild-invite": fn(12264).GuildInviteAbstractUI };
+const createStyles = fn(4913);
 let closure_11 = createStyles.createStyles((width) => {
   obj = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: { padding: nativeDefault.space.PX_16, width, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, cardSpacing: { marginRight: PX_12 }, pagination: { paddingBottom: 0 } };
   return obj;

@@ -1,23 +1,23 @@
-// === Module 17282: NotifyFriendsOnCustomStatusUpdateSetting ===
+// === Module 17406: NotifyFriendsOnCustomStatusUpdateSetting ===
 
-// Module 17282 (NotifyFriendsOnCustomStatusUpdateSetting)
+// Module 17406 (NotifyFriendsOnCustomStatusUpdateSetting)
 import util from "util" /* 1112 */;
-import _modDef2893 from "module_2893" /* 2893 */;
-import UserSettings from "UserSettings" /* 4619 */;
-import SettingsConstants from "SettingsConstants" /* 8592 */;
-import NotifyFriendsOnCustomStatusUpdateUtils from "NotifyFriendsOnCustomStatusUpdateUtils" /* 17283 */;
-import NotifyFriendsOnCustomStatusUpdateExperiment from "NotifyFriendsOnCustomStatusUpdateExperiment" /* 17284 */;
-import SettingBuilders from "SettingBuilders" /* 11817 */;
+import _modDef2992 from "module_2992" /* 2992 */;
+import UserSettings from "UserSettings" /* 4738 */;
+import SettingsConstants from "SettingsConstants" /* 8712 */;
+import NotifyFriendsOnCustomStatusUpdateUtils from "NotifyFriendsOnCustomStatusUpdateUtils" /* 17407 */;
+import NotifyFriendsOnCustomStatusUpdateExperiment from "NotifyFriendsOnCustomStatusUpdateExperiment" /* 17408 */;
+import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2893.AOUyrx);
+    return intl.string(_modDef2992.AOUyrx);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2893.bZ094C);
+    return intl.string(_modDef2992.bZ094C);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyFriendsOnCustomStatusUpdate.useSetting,

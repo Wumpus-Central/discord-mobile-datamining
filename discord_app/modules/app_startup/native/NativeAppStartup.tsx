@@ -1,6 +1,6 @@
-// === Module 19269: NativeAppStartup ===
+// === Module 19396: NativeAppStartup ===
 
-// Module 19269 (NativeAppStartup)
+// Module 19396 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -9,14 +9,14 @@ import TokenManagerAll from "TokenManager" /* 1097 */;
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4689 */;
-import timeRequireDefault from "timeRequire" /* 8165 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15311 */;
-import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20049 */;
-import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20050 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4808 */;
+import timeRequireDefault from "timeRequire" /* 8285 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15434 */;
+import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20176 */;
+import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20177 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
 
 require = fn;
@@ -702,11 +702,11 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15525).updateSaturation(closure_0(4795).default.saturation);
-            obj = closure_0(15525);
-            closure_0(18985).updateVisualRefresh(true);
-            const obj2 = closure_0(18985);
-            closure_0(18986).updateTheme(closure_0(1191).default.theme);
+            closure_0(15648).updateSaturation(closure_0(4914).default.saturation);
+            obj = closure_0(15648);
+            closure_0(19112).updateVisualRefresh(true);
+            const obj2 = closure_0(19112);
+            closure_0(19113).updateTheme(closure_0(1191).default.theme);
             closure_1_0();
           }));
         });
@@ -850,14 +850,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19270 = fn(19270);
-const superagentPatch = fn(19272);
+const module_19397 = fn(19397);
+const superagentPatch = fn(19399);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(19296);
-let closure_11 = fn(2188).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(8134);
-const ManagerRegistry = fn(19297);
+const logThirdPartyImportsDone = fn(19423);
+let closure_11 = fn(2189).subscribeToIntlLoadingSuccess;
+const AnalyticsTrackingStore = fn(8254);
+const ManagerRegistry = fn(19424);
 const Constants = fn(1071);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -880,7 +880,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(10319).Future();
+const future = new fn(10439).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

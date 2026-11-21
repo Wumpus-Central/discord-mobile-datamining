@@ -1,6 +1,6 @@
-// === Module 12909: useLatch ===
+// === Module 13031: useLatch ===
 
-// Module 12909 (useLatch)
+// Module 13031 (useLatch)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

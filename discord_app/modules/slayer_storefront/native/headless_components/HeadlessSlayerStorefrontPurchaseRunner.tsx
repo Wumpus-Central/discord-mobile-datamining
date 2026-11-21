@@ -1,6 +1,6 @@
-// === Module 9480: HeadlessSlayerStorefrontPurchaseRunner ===
+// === Module 9600: HeadlessSlayerStorefrontPurchaseRunner ===
 
-// Module 9480 (HeadlessSlayerStorefrontPurchaseRunner)
+// Module 9600 (HeadlessSlayerStorefrontPurchaseRunner)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-let useNativeCheckoutStore = fn(8992).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(9112).useNativeCheckoutStore;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx");

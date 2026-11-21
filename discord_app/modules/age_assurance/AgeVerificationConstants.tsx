@@ -1,19 +1,19 @@
-// === Module 6294: AgeVerificationConstants ===
+// === Module 6413: AgeVerificationConstants ===
 
-// Module 6294 (AgeVerificationConstants)
-import _modDef3345 from "module_3345" /* 3345 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6295 */;
+// Module 6413 (AgeVerificationConstants)
+import _modDef3444 from "module_3444" /* 3444 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
 import size from "module_2" /* 2 */;
 
 const items = [AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_GUILD];
 const obj = { FACIAL_AGE_ESTIMATION: 1, [1]: "FACIAL_AGE_ESTIMATION", ID_VERIFICATION: 2, [2]: "ID_VERIFICATION", MODULAR: 3, [3]: "MODULAR", GOOGLE_WALLET: 9, [9]: "GOOGLE_WALLET" };
 const obj2 = {};
 const set = new Set(items);
-obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3345["2yLvkS"], description: _modDef3345.eJmat5 };
-const obj3 = { title: _modDef3345["2yLvkS"], description: _modDef3345.eJmat5 };
-obj2[obj.ID_VERIFICATION] = { title: _modDef3345.dwkwo0, description: _modDef3345.ZdmRwW };
-const obj4 = { title: _modDef3345.dwkwo0, description: _modDef3345.ZdmRwW };
-obj2[obj.GOOGLE_WALLET] = { title: _modDef3345.Y9sLpR, description: _modDef3345.dah4bF };
+obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3444["2yLvkS"], description: _modDef3444.eJmat5 };
+const obj3 = { title: _modDef3444["2yLvkS"], description: _modDef3444.eJmat5 };
+obj2[obj.ID_VERIFICATION] = { title: _modDef3444.dwkwo0, description: _modDef3444.ZdmRwW };
+const obj4 = { title: _modDef3444.dwkwo0, description: _modDef3444.ZdmRwW };
+obj2[obj.GOOGLE_WALLET] = { title: _modDef3444.Y9sLpR, description: _modDef3444.dah4bF };
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;

@@ -1,22 +1,22 @@
-// === Module 17883: VoicePanelDockStatusViews ===
+// === Module 18009: VoicePanelDockStatusViews ===
 
-// Module 17883 (VoicePanelDockStatusViews)
+// Module 18009 (VoicePanelDockStatusViews)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import useChannelName from "useChannelName" /* 5410 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6704 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13191 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import useChannelName from "useChannelName" /* 5529 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6823 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13313 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
-import SoundboardStore from "SoundboardStore" /* 5842 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
-import SpeakingStore from "SpeakingStore" /* 6416 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import SoundboardStore from "SoundboardStore" /* 5961 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
+import SpeakingStore from "SpeakingStore" /* 6535 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -25,13 +25,13 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-let closure_13 = fn(17882).useDockUserPlayingSoundboardId;
-const VoicePanelDockConstants = fn(11648);
+let closure_13 = fn(18008).useDockUserPlayingSoundboardId;
+const VoicePanelDockConstants = fn(11768);
 ({ DOCK_FADE_TIMING: closure_14, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const sum = DOCK_TILE_SIZE + 4;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { face: null, avatar: null, avatarImage: null, ring: null, halo: null, haloDisc: null, guildIcon: null, guildIconAsset: null, avatarShadow: null, titleRow: null, title: null, soundboardEmoji: null, soundboardEmojiText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -184,11 +184,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_19();
-  const tmp4Result = guildId(17884)(channelId(575).Shadow.SHADOW_MEDIUM);
-  const context = noop.useContext(guildId(11629));
+  const tmp4Result = guildId(18010)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const context = noop.useContext(guildId(11749));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(17884);
+  const tmp4 = guildId(18010);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -222,13 +222,13 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(17885);
-    obj6.size = tmp5(7202).GuildIconSizes.SMALL_32;
+    const tmp2Result = tmp2(18011);
+    obj6.size = tmp5(7322).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
-    obj5.children = closure_16(tmp2(7202), obj6);
+    obj5.children = closure_16(tmp2(7322), obj6);
     obj3.children = closure_16(tmp2Result, obj5);
     let tmp13 = closure_16(View, obj3);
-    const tmp2Result3 = tmp2(7202);
+    const tmp2Result3 = tmp2(7322);
   } else {
     tmp13 = null;
     if (null != stateFromStores1) {
@@ -240,9 +240,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1186).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_16(tmp5(1186).Avatar, obj10);
-      obj7.children = closure_16(tmp2(17885), obj9);
+      obj7.children = closure_16(tmp2(18011), obj9);
       tmp13 = closure_16(View, obj7);
-      const tmp2Result4 = tmp2(17885);
+      const tmp2Result4 = tmp2(18011);
     }
   }
   return tmp13;
@@ -268,12 +268,12 @@ export function DockChannelTitle() {
     return channelName;
   }, items3);
   if (stateFromStores) {
-    let VoiceNormalIcon = tmp4(7577).VoiceLockIcon;
+    let VoiceNormalIcon = tmp4(7697).VoiceLockIcon;
   } else {
-    VoiceNormalIcon = tmp4(6914).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(7034).VoiceNormalIcon;
   }
   const obj2 = channelId(504);
-  const items4 = [closure_16(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_16(channelId(5385).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
+  const items4 = [closure_16(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_16(channelId(5504).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
   obj3.children = items4;
   return closure_17(View, obj3);
 }
@@ -481,7 +481,7 @@ export function DockFace(userId) {
   if (null != memo) {
     const obj7 = { style: tmp.avatar, children: null };
     const obj8 = { style: tmp.avatarImage, source: memo };
-    obj7.children = closure_16(tmp2(5481), obj8);
+    obj7.children = closure_16(tmp2(5600), obj8);
     tmp24 = closure_16(View, obj7);
   }
   items9[2] = tmp24;

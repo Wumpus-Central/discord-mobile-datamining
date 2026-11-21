@@ -1,10 +1,10 @@
-// === Module 10730: useIsInvitedToSpeak ===
+// === Module 10850: useIsInvitedToSpeak ===
 
-// Module 10730 (useIsInvitedToSpeak)
+// Module 10850 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5831 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5950 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
 

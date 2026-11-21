@@ -1,10 +1,10 @@
-// === Module 14759: InputConnection ===
+// === Module 14882: InputConnection ===
 
-// Module 14759 (InputConnection)
+// Module 14882 (InputConnection)
 import LoggerDefault from "Logger" /* 3 */;
-import DatagramEvent from "DatagramEvent" /* 14762 */;
-import InputEvent from "InputEvent" /* 14766 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5563 */;
+import DatagramEvent from "DatagramEvent" /* 14885 */;
+import InputEvent from "InputEvent" /* 14889 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5682 */;
 
 require = fn;
 _instance_members_initializer_InputConnection_ = function() {

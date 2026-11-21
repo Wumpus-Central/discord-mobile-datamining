@@ -1,9 +1,9 @@
-// === Module 9930: parseWaterwheelsCard ===
+// === Module 10050: parseWaterwheelsCard ===
 
-// Module 9930 (parseWaterwheelsCard)
+// Module 10050 (parseWaterwheelsCard)
 import LoggerDefault from "Logger" /* 3 */;
 import apply from "apply" /* 12 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9931 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -48,17 +48,22 @@ function isActionValid(value) {
 function mapLayout(layout) {
   const type = layout.type;
   if ("server_row" === type) {
-    const description = layout.description;
-    let tmp9 = null;
+    ({ banner_url, description } = layout);
     ({ guild_id, icon_url, online, members, partnered } = layout);
     const obj4 = {};
-    let merged = Object.assign(Object.assign(layout, Object.assign({ guild_id: 0, icon_url: 0, online: 0, members: 0, description: 0, partnered: 0 })));
+    let merged = Object.assign(Object.assign(layout, Object.assign({ guild_id: 0, icon_url: 0, banner_url: 0, online: 0, members: 0, description: 0, partnered: 0 })));
     obj4.guildId = guild_id;
     obj4.iconUrl = icon_url;
-    if (typeof description === "string") {
-      tmp9 = description;
+    let tmp13 = null;
+    if (typeof banner_url === "string") {
+      tmp13 = banner_url;
     }
-    obj4.description = tmp9;
+    obj4.bannerUrl = tmp13;
+    let tmp14 = null;
+    if (typeof description === "string") {
+      tmp14 = description;
+    }
+    obj4.description = tmp14;
     obj4.partnered = true === partnered;
     let _Number = Number;
     obj4.online = Number(online);
@@ -112,16 +117,21 @@ function mapLayout(layout) {
       obj.coverUrl = cover_url;
       let tmp5 = null;
       if (null != server) {
-        ({ description: description2, guild_id, icon_url, online, members, partnered } = server);
+        ({ banner_url, description: description2, guild_id, icon_url, online, members, partnered } = server);
         const obj3 = {};
-        const merged1 = Object.assign(Object.assign(server, Object.assign({ guild_id: 0, icon_url: 0, online: 0, members: 0, description: 0, partnered: 0 })));
+        const merged1 = Object.assign(Object.assign(server, Object.assign({ guild_id: 0, icon_url: 0, banner_url: 0, online: 0, members: 0, description: 0, partnered: 0 })));
         obj3.guildId = guild_id;
         obj3.iconUrl = icon_url;
         let tmp9 = null;
-        if (typeof description2 === "string") {
-          tmp9 = description2;
+        if (typeof banner_url === "string") {
+          tmp9 = banner_url;
         }
-        obj3.description = tmp9;
+        obj3.bannerUrl = tmp9;
+        let tmp10 = null;
+        if (typeof description2 === "string") {
+          tmp10 = description2;
+        }
+        obj3.description = tmp10;
         obj3.partnered = true === partnered;
         const _Number = Number;
         obj3.online = Number(online);

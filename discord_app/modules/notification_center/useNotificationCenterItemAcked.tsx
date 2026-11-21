@@ -1,7 +1,7 @@
-// === Module 17930: useNotificationCenterItemAcked ===
+// === Module 18056: useNotificationCenterItemAcked ===
 
-// Module 17930 (useNotificationCenterItemAcked)
-import NotificationCenterStore from "NotificationCenterStore" /* 17923 */;
+// Module 18056 (useNotificationCenterItemAcked)
+import NotificationCenterStore from "NotificationCenterStore" /* 18049 */;
 
 const require = globalThis.__r;
 

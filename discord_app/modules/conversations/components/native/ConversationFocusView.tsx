@@ -1,10 +1,10 @@
-// === Module 14230: ConversationFocusView ===
+// === Module 14352: ConversationFocusView ===
 
-// Module 14230 (ConversationFocusView)
+// Module 14352 (ConversationFocusView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8514 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8529 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8634 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8649 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { container: { flex: 1, backgroundColor }, pendingContent: { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor } };
   return obj;

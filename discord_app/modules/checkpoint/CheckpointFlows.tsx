@@ -1,10 +1,10 @@
-// === Module 12372: CheckpointFlows ===
+// === Module 12494: CheckpointFlows ===
 
-// Module 12372 (CheckpointFlows)
-import CheckpointNavigation from "CheckpointNavigation" /* 6219 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6220 */;
-import CheckpointSharedDataFlow from "CheckpointSharedDataFlow" /* 12373 */;
-import CheckpointNoSharedDataFlow from "CheckpointNoSharedDataFlow" /* 12374 */;
+// Module 12494 (CheckpointFlows)
+import CheckpointNavigation from "CheckpointNavigation" /* 6338 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6339 */;
+import CheckpointSharedDataFlow from "CheckpointSharedDataFlow" /* 12495 */;
+import CheckpointNoSharedDataFlow from "CheckpointNoSharedDataFlow" /* 12496 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,9 +20,9 @@ function getAdjacentCheckpointRoute(arg0) {
     isCharacterCreatorEnabled = true;
   }
   if (flow === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp2(12373).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp2(12495).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp2(12374).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp2(12496).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {

@@ -1,9 +1,9 @@
-// === Module 13869: BadgeDirectorySeenStore ===
+// === Module 13991: BadgeDirectorySeenStore ===
 
-// Module 13869 (BadgeDirectorySeenStore)
+// Module 13991 (BadgeDirectorySeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BadgeUtils from "BadgeUtils" /* 13870 */;
+import BadgeUtils from "BadgeUtils" /* 13992 */;
 
 require = fn;
 let obj = { seenBadgeIndicatorIds: new Set() };

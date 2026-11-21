@@ -1,28 +1,28 @@
-// === Module 13084: SearchUtils ===
+// === Module 13206: SearchUtils ===
 
-// Module 13084 (SearchUtils)
+// Module 13206 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import _modDef2167 from "module_2167" /* 2167 */;
-import UserUtilsDefault from "UserUtils" /* 4850 */;
-import useChannelName from "useChannelName" /* 5410 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 13083 */;
-import SearchTokens from "SearchTokens" /* 13085 */;
+import _modDef2168 from "module_2168" /* 2168 */;
+import UserUtilsDefault from "UserUtils" /* 4969 */;
+import useChannelName from "useChannelName" /* 5529 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 13205 */;
+import SearchTokens from "SearchTokens" /* 13207 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildChannelStore from "GuildChannelStore" /* 4724 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6301 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4697 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6420 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(8456).SearchTabs;
+const SearchTabs = fn(8576).SearchTabs;
 const Constants = fn(1071);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);
@@ -87,7 +87,7 @@ export function getSearchTabFetchId(searchContext, MESSAGES, searchResultsQuery)
   return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
 }
 export function getChannelActiveAgoTimestamp(arg0) {
-  const diffResult = _modDef2167().diff(_modDef2167(arg0), "s");
+  const diffResult = _modDef2168().diff(_modDef2168(arg0), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -125,7 +125,7 @@ export function getChannelActiveAgoTimestamp(arg0) {
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef2167();
+  const obj = _modDef2168();
 }
 export function getIndexingErrorText(searchContext) {
   const type = searchContext.type;

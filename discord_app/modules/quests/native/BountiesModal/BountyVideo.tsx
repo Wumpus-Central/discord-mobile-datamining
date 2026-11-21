@@ -1,15 +1,15 @@
-// === Module 16218: BountyVideo ===
+// === Module 16341: BountyVideo ===
 
-// Module 16218 (BountyVideo)
+// Module 16341 (BountyVideo)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import timingPresets from "timingPresets" /* 5007 */;
-import LinearGradientDefault from "LinearGradient" /* 5349 */;
-import AssetUtils from "AssetUtils" /* 9852 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 16219 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16220 */;
-import BountiesModalAdvertiserCtaDefault from "BountiesModalAdvertiserCta" /* 16236 */;
-import BountiesModalTimerDefault from "BountiesModalTimer" /* 16239 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import timingPresets from "timingPresets" /* 5126 */;
+import LinearGradientDefault from "LinearGradient" /* 5468 */;
+import AssetUtils from "AssetUtils" /* 9972 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 16342 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16343 */;
+import BountiesModalAdvertiserCtaDefault from "BountiesModalAdvertiserCta" /* 16359 */;
+import BountiesModalTimerDefault from "BountiesModalTimer" /* 16362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1653 from "module_1653" /* 1653 */;
@@ -21,7 +21,7 @@ const BountiesModalProgressDefault = BountiesModalProgress;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, ActivityIndicator: metroImportDefault, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(16198);
+const BountiesModalConstants = fn(16321);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: closure_10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -38,7 +38,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0).hex();
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null, scrimGradient: null };
   const obj2 = {};
@@ -374,17 +374,17 @@ export function BountyVideo(handleVideoProgress) {
     obj7.source = obj8;
     let prop3;
     if (flag2) {
-      prop3 = tmp7(16233).SOFT_CAP_PRELOAD_MAX_BITRATE;
+      prop3 = tmp7(16356).SOFT_CAP_PRELOAD_MAX_BITRATE;
     }
     obj7.maxBitRate = prop3;
     let prop4;
     if (flag2) {
-      prop4 = tmp7(16233).SOFT_CAP_PRELOAD_BUFFER_CONFIG;
+      prop4 = tmp7(16356).SOFT_CAP_PRELOAD_BUFFER_CONFIG;
     }
     obj7.bufferConfig = prop4;
     let prop5;
     if (flag2) {
-      prop5 = tmp7(16233).SOFT_CAP_PRELOAD_FORWARD_BUFFER_SEC;
+      prop5 = tmp7(16356).SOFT_CAP_PRELOAD_FORWARD_BUFFER_SEC;
     }
     obj7.preferredForwardBufferDuration = prop5;
     obj7.initialProgress = initialProgress;
@@ -410,7 +410,7 @@ export function BountyVideo(handleVideoProgress) {
     obj7.hideControls = isEndCardVisible;
     obj7.repeat = repeat;
     obj7.onPlayerStateChange = onPlayerStateChange;
-    tmp60Result = tmp60(tmp7(16221).AdVideoPlayer, obj7);
+    tmp60Result = tmp60(tmp7(16344).AdVideoPlayer, obj7);
   }
   const items15 = [tmp60Result, , , , , , ];
   if (null != memo1) {
@@ -420,7 +420,7 @@ export function BountyVideo(handleVideoProgress) {
     const obj10 = { style: tmp36.absoluteFillObject, source: null, resizeMode: "cover" };
     const obj11 = { uri: memo1 };
     obj10.source = obj11;
-    const items17 = [tmp60(tmp11(5481), obj10), ];
+    const items17 = [tmp60(tmp11(5600), obj10), ];
     let tmp60Result3 = !first;
     if (!first) {
       const obj12 = { animating: true, size: "small", color: token };
@@ -462,8 +462,8 @@ export function BountyVideo(handleVideoProgress) {
     }
     obj16.enabled = isActive;
     obj16.isEndCardVisible = isEndCardVisible;
-    isScrollIndicatorEnabled = tmp60(tmp11(16234), obj16);
-    const tmp11Result = tmp11(16234);
+    isScrollIndicatorEnabled = tmp60(tmp11(16357), obj16);
+    const tmp11Result = tmp11(16357);
   }
   items15[5] = isScrollIndicatorEnabled;
   const obj17 = { style: null, pointerEvents: "box-none", children: null };

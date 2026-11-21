@@ -1,6 +1,6 @@
-// === Module 8306: QuestUtmStore ===
+// === Module 8426: QuestUtmStore ===
 
-// Module 8306 (QuestUtmStore)
+// Module 8426 (QuestUtmStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ const obj = module_560.create((arg0) => {
   return {
     utmSourceCurrent: "r",
     utmMediumCurrent: "disabled",
-    utmCampaignCurrent: "application",
+    utmCampaignCurrent: "TableRow",
     utmContentCurrent: "isArray",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });

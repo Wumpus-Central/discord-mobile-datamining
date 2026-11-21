@@ -1,20 +1,20 @@
-// === Module 14263: GroupDMNitroCapCoachmark ===
+// === Module 14385: GroupDMNitroCapCoachmark ===
 
-// Module 14263 (GroupDMNitroCapCoachmark)
+// Module 14385 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8832 */;
-import _modDef10935 from "module_10935" /* 10935 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11940 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8952 */;
+import _modDef11055 from "module_11055" /* 11055 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 12060 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11942).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+let closure_6 = fn(12062).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_9 = createStyles.createStyles({ nitroWheelIcon: { width: 16, height: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapCoachmark.tsx");
@@ -28,23 +28,23 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11940).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(12060).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11940);
-  obj3.acquisitionStrategy = channelId(11940).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11947)(obj3);
+  const obj2 = channelId(12060);
+  obj3.acquisitionStrategy = channelId(12060).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(12067)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11947);
-  channelId(8960);
+  let tmp7 = _location(12067);
+  channelId(9080);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
-      items = [tmp3(4627).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
+      items = [tmp3(4746).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
     }
     const tmp13 = groupDMNitroAudience(tmp10([]), 2);
     number = tmp14;
-    const tmp15 = tmp13[0] === tmp3(4627).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
+    const tmp15 = tmp13[0] === tmp3(4746).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
     visible = tmp15;
     const items1 = [groupDMNitroAudience, tmp6, tmp15, tmp13[1], channelId, _location, tmp, tmp7Result];
     const memo = obj.useMemo(() => {
@@ -55,7 +55,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.description = intl2.formatToPlainString(util.t.U3CkDg, { number });
       obj.visible = visible;
       obj.renderImgComponent = function renderImgComponent() {
-        return closure_1_8(channelId(6941).Badge, { type: "beta", variant: "expressive" });
+        return closure_1_8(channelId(7061).Badge, { type: "beta", variant: "expressive" });
       };
       obj.onDismiss = function onDismiss() {
         return number(constants.USER_DISMISS);
@@ -63,7 +63,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
       if (closure_4) {
-        let tmp7 = _modDef10935;
+        let tmp7 = _modDef11055;
       } else {
         const obj4 = { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE };
         tmp7 = jsx(NitroWheelIcon.NitroWheelIcon, { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE });
@@ -77,7 +77,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11939)(channelId, closure_1_1);
+          _location(12059)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -85,9 +85,9 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       return obj;
     }, items1);
-    const coachmark = tmp3(8967).useCoachmark(ref, memo);
+    const coachmark = tmp3(9087).useCoachmark(ref, memo);
     const obj5 = { ref, collapsable: false, children: channelId.children };
     return <closure_5 ref={ref} collapsable={false}>{channelId.children}</closure_5>;
   }
-  obj4 = _location(11943);
+  obj4 = _location(12063);
 };

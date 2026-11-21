@@ -1,6 +1,6 @@
-// === Module 16187: LocalSvg ===
+// === Module 16310: LocalSvg ===
 
-// Module 16187 (LocalSvg)
+// Module 16310 (LocalSvg)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -87,5 +87,5 @@ export default function LocalSvg(asset) {
     };
   }, items);
   const merged1 = Object.assign(merged);
-  return jsx(asset(7745).SvgXml, { xml: tmp2[0] });
+  return jsx(asset(7865).SvgXml, { xml: tmp2[0] });
 };

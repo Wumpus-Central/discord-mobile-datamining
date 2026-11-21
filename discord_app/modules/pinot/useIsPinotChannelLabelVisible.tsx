@@ -1,8 +1,8 @@
-// === Module 11731: useIsPinotChannelLabelVisible ===
+// === Module 11851: useIsPinotChannelLabelVisible ===
 
-// Module 11731 (useIsPinotChannelLabelVisible)
-import PinotExperiment from "PinotExperiment" /* 7652 */;
-import useIsChannelPinotPromotable from "useIsChannelPinotPromotable" /* 11732 */;
+// Module 11851 (useIsPinotChannelLabelVisible)
+import PinotExperiment from "PinotExperiment" /* 7772 */;
+import useIsChannelPinotPromotable from "useIsChannelPinotPromotable" /* 11852 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/useIsPinotChannelLabelVisible.tsx");

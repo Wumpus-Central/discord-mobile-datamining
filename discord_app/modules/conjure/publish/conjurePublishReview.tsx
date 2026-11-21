@@ -1,23 +1,23 @@
-// === Module 18125: conjurePublishReview ===
+// === Module 18252: conjurePublishReview ===
 
-// Module 18125 (conjurePublishReview)
-import _modDef4091 from "module_4091" /* 4091 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
+// Module 18252 (conjurePublishReview)
+import _modDef4190 from "module_4190" /* 4190 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-let items = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4091.UnoAgo];
+let items = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4190.UnoAgo];
 let items1 = [items, , , , , ];
-let items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4091["I88/iG"]];
+let items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4190["I88/iG"]];
 items1[1] = items2;
-let items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4091.skjf5I];
+let items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4190.skjf5I];
 items1[2] = items3;
-let items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4091.gXY1x1];
+let items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4190.gXY1x1];
 items1[3] = items4;
-const items5 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4091.Q9ruoM];
+const items5 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4190.Q9ruoM];
 items1[4] = items5;
-const items6 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4091.KR5R34];
+const items6 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4190.KR5R34];
 items1[5] = items6;
 const items7 = [
   ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL,
@@ -54,7 +54,7 @@ export function conjureReviewComponents(arr) {
     return obj;
   });
 }
-export const CONJURE_REVIEW_PERMISSION_LABELS = { screen_capture: _modDef4091["8/7kE7"], connect_user_to_voice: _modDef4091.uvDWXa };
+export const CONJURE_REVIEW_PERMISSION_LABELS = { screen_capture: _modDef4190["8/7kE7"], connect_user_to_voice: _modDef4190.uvDWXa };
 export function conjureAddedSurfaces(supported_surfaces) {
   supported_surfaces = supported_surfaces.supported_surfaces;
   if (supported_surfaces == null) {
@@ -107,7 +107,7 @@ export function conjurePublishReviewReason(project, publishStatus) {
         str = tmp9;
       }
       tmp = str;
-      obj = set(12190);
+      obj = set(12312);
     }
   }
   return tmp;

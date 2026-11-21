@@ -1,6 +1,6 @@
-// === Module 13075: getChatPlaceholderRowWidth ===
+// === Module 13197: getChatPlaceholderRowWidth ===
 
-// Module 13075 (getChatPlaceholderRowWidth)
+// Module 13197 (getChatPlaceholderRowWidth)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowWidth.tsx");

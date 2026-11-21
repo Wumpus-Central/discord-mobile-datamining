@@ -1,8 +1,8 @@
-// === Module 9660: useSteamWebsiteUrl ===
+// === Module 9780: useSteamWebsiteUrl ===
 
-// Module 9660 (useSteamWebsiteUrl)
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9661 */;
-import GameStore from "GameStore" /* 2139 */;
+// Module 9780 (useSteamWebsiteUrl)
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9781 */;
+import GameStore from "GameStore" /* 2140 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ export function useSteamWebsiteUrl(id) {
         return null;
       } else {
         const websites = game.websites;
-        const found = websites.find((category) => category.category === id(9659).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+        const found = websites.find((category) => category.category === id(9779).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         if (found != null) {
           const url = found.url;
         }
@@ -37,8 +37,8 @@ export function useSteamWebsiteUrl(id) {
         const found1 = thirdPartySkus.filter((distributor) => {
           let tmp = distributor.distributor === constants.STEAM;
           if (tmp) {
-            tmp = !id(2151).isNullOrEmpty(distributor.id);
-            const obj = id(2151);
+            tmp = !id(2152).isNullOrEmpty(distributor.id);
+            const obj = id(2152);
           }
           return tmp;
         });

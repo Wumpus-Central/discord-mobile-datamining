@@ -1,6 +1,6 @@
-// === Module 13658: conjureWandGeometry ===
+// === Module 13780: conjureWandGeometry ===
 
-// Module 13658 (conjureWandGeometry)
+// Module 13780 (conjureWandGeometry)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/conjureWandGeometry.tsx");

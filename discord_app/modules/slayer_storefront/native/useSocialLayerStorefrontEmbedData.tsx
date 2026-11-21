@@ -1,14 +1,14 @@
-// === Module 11842: useSocialLayerStorefrontEmbedData ===
+// === Module 11962: useSocialLayerStorefrontEmbedData ===
 
-// Module 11842 (useSocialLayerStorefrontEmbedData)
+// Module 11962 (useSocialLayerStorefrontEmbedData)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import CodedLink from "CodedLink" /* 5516 */;
+import CodedLink from "CodedLink" /* 5635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6555 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6730 */;
-import SocialLayerStorefrontEmbedStore from "SocialLayerStorefrontEmbedStore" /* 11843 */;
+import SKUStore from "SKUStore" /* 6674 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6849 */;
+import SocialLayerStorefrontEmbedStore from "SocialLayerStorefrontEmbedStore" /* 11963 */;
 
 const require = globalThis.__r;
 

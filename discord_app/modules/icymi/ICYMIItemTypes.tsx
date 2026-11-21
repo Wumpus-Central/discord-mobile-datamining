@@ -1,6 +1,6 @@
-// === Module 17997: ICYMIItemTypes ===
+// === Module 18123: ICYMIItemTypes ===
 
-// Module 17997 (ICYMIItemTypes)
+// Module 18123 (ICYMIItemTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/ICYMIItemTypes.tsx");

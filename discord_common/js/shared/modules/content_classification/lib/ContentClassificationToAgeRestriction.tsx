@@ -1,17 +1,17 @@
-// === Module 5424: ContentClassificationToAgeRestriction ===
+// === Module 5543: ContentClassificationToAgeRestriction ===
 
-// Module 5424 (ContentClassificationToAgeRestriction)
+// Module 5543 (ContentClassificationToAgeRestriction)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import AgeRestrictionSource from "AgeRestrictionSource" /* 5425 */;
-import AgeRestrictionStatus11 from "AgeRestrictionStatus" /* 5426 */;
-import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5427 */;
-import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5428 */;
-import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5429 */;
-import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5430 */;
-import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5431 */;
-import ContentRatingAppleRating from "ContentRatingAppleRating" /* 5432 */;
-import ContentRatingRobloxRating from "ContentRatingRobloxRating" /* 5433 */;
-import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5434 */;
+import AgeRestrictionSource from "AgeRestrictionSource" /* 5544 */;
+import AgeRestrictionStatus11 from "AgeRestrictionStatus" /* 5545 */;
+import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5546 */;
+import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5547 */;
+import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5548 */;
+import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5549 */;
+import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5550 */;
+import ContentRatingAppleRating from "ContentRatingAppleRating" /* 5551 */;
+import ContentRatingRobloxRating from "ContentRatingRobloxRating" /* 5552 */;
+import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5553 */;
 import size from "module_2" /* 2 */;
 
 function contentClassificationToAgeRestrictionConclusion(arg0) {
@@ -90,7 +90,7 @@ function contentClassificationToAgeRestrictionConclusion(arg0) {
                       EVERYONE2 = AgeRestrictionStatus10.EVERYONE;
                       tmp29 = require;
                     }
-                    const obj5 = { source: tmp29(5425).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB_CSR, status: EVERYONE2 };
+                    const obj5 = { source: tmp29(5544).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB_CSR, status: EVERYONE2 };
                     AgeRestrictionStatus10 = items.push(obj5);
                     someResult = ratings.some((severity) => null != obj3[severity.category] && severity.severity >= obj3[severity.category]);
                   }
@@ -130,7 +130,7 @@ function contentClassificationToAgeRestrictionConclusion(arg0) {
                 EVERYONE = AgeRestrictionStatus7.EVERYONE;
                 tmp21 = require;
               }
-              const obj8 = { source: tmp21(5425).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+              const obj8 = { source: tmp21(5544).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
               AgeRestrictionStatus7 = items.push(obj8);
               someResult1 = themes.some((item) => {
                 const ADULT_THEMES = ContentRatingIGDBTheme.ContentRatingIGDBThemeSets.ADULT_THEMES;

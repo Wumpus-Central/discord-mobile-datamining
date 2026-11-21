@@ -1,6 +1,6 @@
-// === Module 8278: useConstRef ===
+// === Module 8398: useConstRef ===
 
-// Module 8278 (useConstRef)
+// Module 8398 (useConstRef)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

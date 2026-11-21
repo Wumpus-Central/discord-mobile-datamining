@@ -1,11 +1,11 @@
-// === Module 14064: GiftCodeRow ===
+// === Module 14186: GiftCodeRow ===
 
-// Module 14064 (GiftCodeRow)
+// Module 14186 (GiftCodeRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6228 */;
-import showShareActionSheet from "showShareActionSheet" /* 9598 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11786 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6347 */;
+import showShareActionSheet from "showShareActionSheet" /* 9718 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1071).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.giftCodeShare = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
@@ -93,7 +93,7 @@ prototype["render"] = function render() {
     const intl2 = tmp6(tmp7[13]).intl;
     const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj11.hours = expiresAt.diff(require("module_2167")(), "h");
+    obj11.hours = expiresAt.diff(require("module_2168")(), "h");
     obj11.revokeHook = function revokeHook(children, arg1) {
       const obj = {
         accessibilityRole: "button",
@@ -117,7 +117,7 @@ prototype["render"] = function render() {
   obj.children = items3;
   return closure_7(closure_3, obj);
 };
-GiftCodeRow.contextType = fn(4855).ThemeContext;
+GiftCodeRow.contextType = fn(4974).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/gifting/native/GiftCodeRow.tsx");
 

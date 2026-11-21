@@ -1,23 +1,23 @@
-// === Module 10959: CallTile ===
+// === Module 11079: CallTile ===
 
-// Module 10959 (CallTile)
+// Module 11079 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5530 */;
-import _modDef6962 from "module_6962" /* 6962 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
-import RevealProvider from "RevealProvider" /* 10524 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10960 */;
-import _modDef10965 from "module_10965" /* 10965 */;
-import _modDef10966 from "module_10966" /* 10966 */;
-import _modDef10967 from "module_10967" /* 10967 */;
-import _modDef10968 from "module_10968" /* 10968 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10969 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
+import _modDef7082 from "module_7082" /* 7082 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
+import RevealProvider from "RevealProvider" /* 10644 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11080 */;
+import _modDef11085 from "module_11085" /* 11085 */;
+import _modDef11086 from "module_11086" /* 11086 */;
+import _modDef11087 from "module_11087" /* 11087 */;
+import _modDef11088 from "module_11088" /* 11088 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11089 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -45,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10965;
+    let tmp3 = _modDef11085;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10966;
+      tmp3 = _modDef11086;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef6962;
+      tmp3 = _modDef7082;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10967;
+      tmp3 = _modDef11087;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef10968;
+      tmp3 = _modDef11088;
     }
   }
   let tmp14 = null;
@@ -157,16 +157,16 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10516);
+const ChannelCallStore = fn(10636);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5444);
+const CallConstants = fn(5563);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4791);
+const ColorUtils = fn(4910);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;

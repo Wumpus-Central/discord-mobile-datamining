@@ -1,8 +1,8 @@
-// === Module 12423: CheckpointCharacterTextureUtils ===
+// === Module 12545: CheckpointCharacterTextureUtils ===
 
-// Module 12423 (CheckpointCharacterTextureUtils)
+// Module 12545 (CheckpointCharacterTextureUtils)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2022 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 12424 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 12546 */;
 import size from "module_2" /* 2 */;
 
 function getCheckpointCharacterTextureUrl(name, textureScale) {

@@ -1,10 +1,10 @@
-// === Module 18114: conjureStandaloneScenes ===
+// === Module 18240: conjureStandaloneScenes ===
 
-// Module 18114 (conjureStandaloneScenes)
+// Module 18240 (conjureStandaloneScenes)
 import Constants from "Constants" /* 1071 */;
 import router_utils from "router_utils" /* 1098 */;
-import ChannelConstants from "ChannelConstants" /* 4650 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12168 */;
+import ChannelConstants from "ChannelConstants" /* 4769 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12290 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

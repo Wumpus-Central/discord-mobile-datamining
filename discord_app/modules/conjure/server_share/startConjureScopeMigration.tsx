@@ -1,13 +1,13 @@
-// === Module 18168: startConjureScopeMigration ===
+// === Module 18295: startConjureScopeMigration ===
 
-// Module 18168 (startConjureScopeMigration)
+// Module 18295 (startConjureScopeMigration)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import createNonce from "createNonce" /* 8327 */;
-import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 13374 */;
-import conjureSendToProject from "conjureSendToProject" /* 18169 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import createNonce from "createNonce" /* 8447 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 13496 */;
+import conjureSendToProject from "conjureSendToProject" /* 18296 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6860 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 
 require = fn;
 let closure_7 = async function _sendMigrationMessage(arg0) {
@@ -117,7 +117,7 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
   }
 };
 const logger = new fn(4).Logger("startConjureScopeMigration");
-let obj = { added: _modDef4091.YXmrDJ, removed: _modDef4091.OYaecm };
+let obj = { added: _modDef4190.YXmrDJ, removed: _modDef4190.OYaecm };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/startConjureScopeMigration.tsx");
 

@@ -1,21 +1,21 @@
-// === Module 12805: useActivityShelfItem ===
+// === Module 12927: useActivityShelfItem ===
 
-// Module 12805 (useActivityShelfItem)
+// Module 12927 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import Server from "Server" /* 2117 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4715 */;
-import getPlatformDefault from "getPlatform" /* 5445 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6542 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6745 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7400 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10506 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10655 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10656 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10714 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12806 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12807 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
+import getPlatformDefault from "getPlatform" /* 5564 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6661 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6864 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10626 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10775 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10776 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10834 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12928 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 
 require = fn;
 function useActivityAction(applicationId) {
@@ -252,7 +252,7 @@ function useOnActivityItemSelected(arg0) {
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2143).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2144).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1071).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);

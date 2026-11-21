@@ -1,9 +1,9 @@
-// === Module 18668: SuggestedSearchSkeleton ===
+// === Module 18795: SuggestedSearchSkeleton ===
 
-// Module 18668 (SuggestedSearchSkeleton)
+// Module 18795 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5004 */;
+import timing_timing from "timing/timing" /* 5123 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,11 +13,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
-const obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(8456).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
+const createStyles = fn(4913);
+const obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(8576).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: nativeDefault.space.PX_12 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13079).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13201).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = { height: 16, width: "72%", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.line = size1;
 let closure_7 = createStyles.createStyles(obj2);

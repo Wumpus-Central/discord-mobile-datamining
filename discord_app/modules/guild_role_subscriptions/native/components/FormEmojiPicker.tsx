@@ -1,7 +1,7 @@
-// === Module 19907: FormEmojiPicker ===
+// === Module 20034: FormEmojiPicker ===
 
-// Module 19907 (FormEmojiPicker)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 8943 */;
+// Module 20034 (FormEmojiPicker)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,30 +18,30 @@ export default function FormEmojiPicker(emoji) {
     if (emojiName == null) {
       emojiName = "";
     }
-    emojiId = onChange(4740).convertSurrogateToName(emojiName, false);
-    let obj = onChange(4740);
+    emojiId = onChange(4859).convertSurrogateToName(emojiName, false);
+    let obj = onChange(4859);
   }
-  const emojiByIdOrName = guildId(16522).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(16645).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
-    allEmojiNamesString = tmp3(4744).getAllEmojiNamesString(emojiByIdOrName);
-    const tmp3Result = tmp3(4744);
+    allEmojiNamesString = tmp3(4863).getAllEmojiNamesString(emojiByIdOrName);
+    const tmp3Result = tmp3(4863);
   }
   const intl = tmp3(1112).intl;
-  let obj2 = guildId(16522);
+  let obj2 = guildId(16645);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(16521), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(16644), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;
-    const obj4 = { IconComponent: tmp3(9369).ReactionIcon };
-    tmp9 = jsx(tmp3(6925).TableRow.Icon, { IconComponent: tmp3(9369).ReactionIcon });
+    const obj4 = { IconComponent: tmp3(9489).ReactionIcon };
+    tmp9 = jsx(tmp3(7045).TableRow.Icon, { IconComponent: tmp3(9489).ReactionIcon });
   }
   const obj5 = { icon: tmp9, label: null, arrow: true, onPress: null };
   if (allEmojiNamesString == null) {
     const obj6 = { variant: "body-md/medium", color: "text-muted", children: stringResult };
-    allEmojiNamesString = tmp8(tmp3(5385).Text, obj6);
+    allEmojiNamesString = tmp8(tmp3(5504).Text, obj6);
   }
   obj5.label = allEmojiNamesString;
   obj5.onPress = function handleSelectEmoji() {
@@ -63,5 +63,5 @@ export default function FormEmojiPicker(emoji) {
       pickerIntention: EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI
     });
   };
-  return tmp8(guildId(6925).TableRow, obj5);
+  return tmp8(guildId(7045).TableRow, obj5);
 };

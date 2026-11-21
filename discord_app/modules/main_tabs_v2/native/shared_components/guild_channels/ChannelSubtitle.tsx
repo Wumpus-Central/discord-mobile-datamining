@@ -1,9 +1,9 @@
-// === Module 18620: guild_channels/ChannelSubtitle ===
+// === Module 18747: guild_channels/ChannelSubtitle ===
 
-// Module 18620 (guild_channels/ChannelSubtitle)
-import Text_Text from "Text/Text" /* 5385 */;
-import ChannelListLayout from "ChannelListLayout" /* 11010 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11015 */;
+// Module 18747 (guild_channels/ChannelSubtitle)
+import Text_Text from "Text/Text" /* 5504 */;
+import ChannelListLayout from "ChannelListLayout" /* 11130 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11135 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

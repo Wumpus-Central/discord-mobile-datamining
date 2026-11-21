@@ -1,9 +1,9 @@
-// === Module 18170: showConjureProjectServerSheet ===
+// === Module 18297: showConjureProjectServerSheet ===
 
-// Module 18170 (showConjureProjectServerSheet)
+// Module 18297 (showConjureProjectServerSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5008 */;
-import TableRadioRow from "TableRadioRow" /* 7229 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
+import TableRadioRow from "TableRadioRow" /* 7349 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -52,11 +52,11 @@ function ConjureProjectServerSheet(projectId) {
         } else {
           closure_128_0 = value;
           if (null != closure_128_0) {
-            tmp5(5008).hideAllActionSheets();
-            const obj = tmp5(5008);
+            tmp5(5127).hideAllActionSheets();
+            const obj = tmp5(5127);
             const obj7 = { text: closure_128_0, variant: "success" };
-            tmp5(5476).open(ConjureProjectServerSheet, obj7);
-            const obj2 = tmp5(5476);
+            tmp5(5595).open(ConjureProjectServerSheet, obj7);
+            const obj2 = tmp5(5595);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -67,12 +67,12 @@ function ConjureProjectServerSheet(projectId) {
       }
     }
   };
-  const tmp4 = pending(18165)(projectId.projectId);
+  const tmp4 = pending(18292)(projectId.projectId);
   _require = tmp4;
   ({ moving, guilds, guild, rows, pending } = tmp4);
   const error = tmp4.error;
   const intl = require("util").intl;
-  const tmp7 = pending(4091);
+  const tmp7 = pending(4190);
   let obj = { header: null, children: null };
   const tmp = closure_8();
   obj.header = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: intl.formatToPlainString(moving ? tmp7.M4jq44 : tmp7.PE4egI, { app: tmp4.appName }) });
@@ -81,27 +81,27 @@ function ConjureProjectServerSheet(projectId) {
   if (null != guild) {
     let obj4 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
     const intl2 = tmp6(1112).intl;
-    obj4.title = intl2.string(tmp2(4091).Uq5hU9);
+    obj4.title = intl2.string(tmp2(4190).Uq5hU9);
     obj4.value = guild.id;
     obj4.onChange = tmp4.pickGuild;
     obj4.children = guilds.map((id) => hasOwnProperty(TableRadioRow.TableRadioRow, { value: id.id, label: id.name, disabled: pending }, id.id));
-    tmp5Result = closure_5(tmp6(7227).TableRadioGroup, obj4);
+    tmp5Result = closure_5(tmp6(7347).TableRadioGroup, obj4);
   }
   items = [tmp5Result, , , , ];
   let tmp5Result3 = null;
   if (rows.length > 0) {
     let obj5 = { rows };
-    tmp5Result3 = closure_5(tmp2(18171), obj5);
+    tmp5Result3 = closure_5(tmp2(18298), obj5);
   }
   items[1] = tmp5Result3;
   let tmp5Result4 = null;
   if (null != error) {
     let obj6 = { variant: "body-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
-    tmp5Result4 = closure_5(tmp6(5385).Text, obj6);
+    tmp5Result4 = closure_5(tmp6(5504).Text, obj6);
   }
   items[2] = tmp5Result4;
   const intl3 = tmp6(1112).intl;
-  const tmp2Result = pending(4091);
+  const tmp2Result = pending(4190);
   let obj2 = { title: intl.formatToPlainString(moving ? tmp7.M4jq44 : tmp7.PE4egI, { app: tmp4.appName }) };
   items[3] = closure_5(require("components/Button/Button").Button, {
     variant: "primary",
@@ -135,7 +135,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 ConjureProjectServerSheet = "ConjureProjectServerSheet";
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

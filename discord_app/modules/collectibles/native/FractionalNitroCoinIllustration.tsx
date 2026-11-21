@@ -1,8 +1,8 @@
-// === Module 9432: FractionalNitroCoinIllustration ===
+// === Module 9552: FractionalNitroCoinIllustration ===
 
-// Module 9432 (FractionalNitroCoinIllustration)
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9433 */;
-import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9437 */;
+// Module 9552 (FractionalNitroCoinIllustration)
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9553 */;
+import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9557 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

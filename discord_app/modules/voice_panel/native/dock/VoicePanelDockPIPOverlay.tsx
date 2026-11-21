@@ -1,17 +1,17 @@
-// === Module 19190: VoicePanelDockPIPOverlay ===
+// === Module 19317: VoicePanelDockPIPOverlay ===
 
-// Module 19190 (VoicePanelDockPIPOverlay)
+// Module 19317 (VoicePanelDockPIPOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5698 */;
-import NativeViewDefault from "NativeView" /* 7204 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10478 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10920 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11629 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5817 */;
+import NativeViewDefault from "NativeView" /* 7324 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10598 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11040 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -29,19 +29,19 @@ function StreamVolumeSlider(stacked) {
   stacked = stacked.stacked;
   let handleVolumeChange;
   const tmp = closure_16();
-  const tmp4Result = useMuteAwareLocalVolumeDefault(stacked.ownerId, handleVolumeChange(5560).MediaEngineContextTypes.STREAM);
+  const tmp4Result = useMuteAwareLocalVolumeDefault(stacked.ownerId, handleVolumeChange(5679).MediaEngineContextTypes.STREAM);
   handleVolumeChange = tmp4Result.handleVolumeChange;
   items = [handleVolumeChange];
   const obj = { Icon: null };
   const callback = noop.useCallback((arg0) => handleVolumeChange(PerceptualVolumeUtils.perceptualToAmplitude(arg0)), items);
-  obj.Icon = handleVolumeChange(19191).VoiceLowIcon;
+  obj.Icon = handleVolumeChange(19318).VoiceLowIcon;
   const tmp9 = closure_9(VolumeIcon, obj);
-  const tmp10 = closure_9(VolumeIcon, { Icon: handleVolumeChange(6914).VoiceNormalIcon });
+  const tmp10 = closure_9(VolumeIcon, { Icon: handleVolumeChange(7034).VoiceNormalIcon });
   const obj3 = { style: stacked ? tmp.stackedSlider : tmp.slider, children: null };
-  obj2 = { Icon: handleVolumeChange(6914).VoiceNormalIcon };
+  obj2 = { Icon: handleVolumeChange(7034).VoiceNormalIcon };
   const obj4 = { value: null, maxValue: null, onChange: null, formatValue: null, accessibilityLabel: null };
   const tmp11 = NativeViewDefault;
-  obj4.value = handleVolumeChange(5698).amplitudeToPerceptual(tmp4Result.effectiveVolume);
+  obj4.value = handleVolumeChange(5817).amplitudeToPerceptual(tmp4Result.effectiveVolume);
   obj4.maxValue = maxValue;
   obj4.onChange = callback;
   obj4.formatValue = function formatValue(arg0) {
@@ -49,7 +49,7 @@ function StreamVolumeSlider(stacked) {
   };
   const intl = tmp5(1112).intl;
   obj4.accessibilityLabel = intl.string(handleVolumeChange(1112).t.pEAl4b);
-  obj3.children = closure_9(handleVolumeChange(14382).Slider, obj4);
+  obj3.children = closure_9(handleVolumeChange(14504).Slider, obj4);
   const tmp8Result = closure_9(tmp11, obj3);
   if (stacked) {
     const obj5 = { children: null };
@@ -72,7 +72,7 @@ function StreamVolumeSlider(stacked) {
   return tmp13Result;
 }
 const StyleSheet = fn(17).StyleSheet;
-const maxValue = fn(5539).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const maxValue = fn(5658).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const VoicePanelDockPIPOverlayModes = { HIDDEN: "HIDDEN", CONTROLS: "CONTROLS", VOLUME: "VOLUME" };
@@ -81,7 +81,7 @@ const FadeIn = fn(1653).FadeIn;
 let closure_14 = FadeIn.duration(obj2.duration);
 const FadeOut = fn(1653).FadeOut;
 let closure_15 = FadeOut.duration(obj2.duration);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj3 = { modeContent: null, row: null, bottomRow: null, rowEnd: null, volumeContent: null, volumeIcon: null, slider: null, stackedSlider: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -91,11 +91,11 @@ obj5.backgroundColor = nativeDefault.unsafe_rawColors.OPACITY_BLACK_20;
 obj3.modeContent = obj5;
 obj3.row = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
 let obj6 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
-obj3.bottomRow = { height: fn(5398).SMALL_BUTTON_HEIGHT };
+obj3.bottomRow = { height: fn(5517).SMALL_BUTTON_HEIGHT };
 obj3.rowEnd = { justifyContent: "flex-end" };
-let obj7 = { height: fn(5398).SMALL_BUTTON_HEIGHT };
+let obj7 = { height: fn(5517).SMALL_BUTTON_HEIGHT };
 obj3.volumeContent = { justifyContent: "flex-end", backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
-let size = { width: fn(5398).SMALL_BUTTON_HEIGHT, height: fn(5398).SMALL_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(5517).SMALL_BUTTON_HEIGHT, height: fn(5517).SMALL_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center" };
 obj3.volumeIcon = size;
 obj3.slider = { flex: 1, flexDirection: "row", alignItems: "center" };
 let obj8 = { justifyContent: "flex-end", backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
@@ -248,17 +248,17 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
     } else {
       const obj7 = { style: tmp.row, pointerEvents: "box-none", children: null };
       let tmp29Result4 = null;
-      const tmp2Result7 = tmp2(7204);
+      const tmp2Result7 = tmp2(7324);
       if (null != stateFromStores1) {
-        const obj8 = { source: tmp12(8916).getCachedSourceFromURI(stateFromStores1), size: tmp12(1186).AvatarSizes.SMALL };
+        const obj8 = { source: tmp12(9036).getCachedSourceFromURI(stateFromStores1), size: tmp12(1186).AvatarSizes.SMALL };
         tmp29Result4 = closure_9(tmp12(1186).Avatar, obj8);
-        const tmp12Result8 = tmp12(8916);
+        const tmp12Result8 = tmp12(9036);
       }
       const obj9 = { pointerEvents: "none", children: tmp29Result4 };
-      const items10 = [closure_9(tmp2(7204), obj9), ];
+      const items10 = [closure_9(tmp2(7324), obj9), ];
       const obj10 = { icon: null, onPress: null, accessibilityLabel: null };
-      const tmp2Result8 = tmp2(7204);
-      obj10.icon = tmp2(tmp24 ? 7032 : 10833);
+      const tmp2Result8 = tmp2(7324);
+      obj10.icon = tmp2(tmp24 ? 7152 : 10953);
       obj10.onPress = onStopWatching;
       const intl = tmp12(1112).intl;
       const string = intl.string;
@@ -269,13 +269,13 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         stringResult = string(t.q3O3J8);
       }
       obj10.accessibilityLabel = stringResult;
-      items10[1] = closure_9(tmp2(19073), obj10);
+      items10[1] = closure_9(tmp2(19200), obj10);
       obj7.children = items10;
       const items11 = [closure_10(tmp2Result7, obj7), ];
       const items12 = [, , ];
       ({ row: arr13[0], bottomRow: arr13[1] } = tmp);
       let rowEnd = null;
-      const tmp2Result9 = tmp2(19073);
+      const tmp2Result9 = tmp2(19200);
       if (tmp24) {
         rowEnd = tmp.rowEnd;
       }
@@ -284,26 +284,26 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       obj11.style = items12;
       let tmp29Result5 = null;
       if (!tmp24) {
-        const obj12 = { icon: tmp2(6915), onPress: onToggleVolume, accessibilityLabel: null };
+        const obj12 = { icon: tmp2(7035), onPress: onToggleVolume, accessibilityLabel: null };
         const intl2 = tmp12(1112).intl;
         obj12.accessibilityLabel = intl2.string(tmp12(1112).t.pEAl4b);
-        tmp29Result5 = closure_9(tmp2(19073), obj12);
-        const tmp2Result11 = tmp2(19073);
+        tmp29Result5 = closure_9(tmp2(19200), obj12);
+        const tmp2Result11 = tmp2(19200);
       }
       const obj13 = { children: null };
       const items13 = [tmp29Result5, ];
       const obj14 = { icon: null, onPress: null, accessibilityLabel: null };
-      const tmp2Result10 = tmp2(7204);
-      obj14.icon = tmp2(16232);
+      const tmp2Result10 = tmp2(7324);
+      obj14.icon = tmp2(16355);
       obj14.onPress = onOpenCall;
       const intl3 = tmp12(1112).intl;
-      obj14.accessibilityLabel = intl3.string(tmp2(3277).MPtef8);
-      items13[1] = closure_9(tmp2(19073), obj14);
+      obj14.accessibilityLabel = intl3.string(tmp2(3376).MPtef8);
+      items13[1] = closure_9(tmp2(19200), obj14);
       obj11.children = items13;
       items11[1] = closure_10(tmp2Result10, obj11);
       obj13.children = items11;
       tmp44Result = closure_10(closure_11, obj13);
-      const tmp2Result12 = tmp2(19073);
+      const tmp2Result12 = tmp2(19200);
     }
     obj5.children = tmp44Result;
     let str2 = "controls";

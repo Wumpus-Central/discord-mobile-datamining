@@ -1,9 +1,9 @@
-// === Module 7441: RoleIcon ===
+// === Module 7561: RoleIcon ===
 
-// Module 7441 (RoleIcon)
+// Module 7561 (RoleIcon)
 import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import FastImageDefault from "FastImage" /* 5481 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import FastImageDefault from "FastImage" /* 5600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function RoleIcon(layout) {
   if (isIOSResult) {
     str3 = "system-ui";
   }
-  const obj2 = { fontFamily: str3, fontSize: null, lineHeight: "Array" };
+  const obj2 = { fontFamily: str3, fontSize: null, lineHeight: "r" };
   if (isIOSResult) {
     let result = size / c6;
   } else {

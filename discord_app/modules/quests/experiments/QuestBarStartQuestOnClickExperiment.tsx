@@ -1,6 +1,6 @@
-// === Module 16466: QuestBarStartQuestOnClickExperiment ===
+// === Module 16589: QuestBarStartQuestOnClickExperiment ===
 
-// Module 16466 (QuestBarStartQuestOnClickExperiment)
+// Module 16589 (QuestBarStartQuestOnClickExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

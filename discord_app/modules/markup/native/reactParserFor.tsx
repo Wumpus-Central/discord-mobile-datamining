@@ -1,8 +1,8 @@
-// === Module 5519: reactParserFor ===
+// === Module 5638: reactParserFor ===
 
-// Module 5519 (reactParserFor)
-import MarkupParserDefault from "MarkupParser" /* 5520 */;
-import Spoiler from "Spoiler" /* 5522 */;
+// Module 5638 (reactParserFor)
+import MarkupParserDefault from "MarkupParser" /* 5639 */;
+import Spoiler from "Spoiler" /* 5641 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

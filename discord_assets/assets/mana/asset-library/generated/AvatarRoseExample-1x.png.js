@@ -1,6 +1,6 @@
-// === Module 19834: ? ===
+// === Module 19961: ? ===
 
-// Module 19834
+// Module 19961
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarRoseExample-1x.png.js");

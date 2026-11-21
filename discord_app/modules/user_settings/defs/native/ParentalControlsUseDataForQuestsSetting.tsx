@@ -1,20 +1,20 @@
-// === Module 17275: ParentalControlsUseDataForQuestsSetting ===
+// === Module 17399: ParentalControlsUseDataForQuestsSetting ===
 
-// Module 17275 (ParentalControlsUseDataForQuestsSetting)
+// Module 17399 (ParentalControlsUseDataForQuestsSetting)
 import util from "util" /* 1112 */;
-import _modDef2725 from "module_2725" /* 2725 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15996 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16000 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8215 */;
+import _modDef2824 from "module_2824" /* 2824 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16119 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16123 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8335 */;
 
 require = fn;
-const SettingBuilders = fn(11817);
+const SettingBuilders = fn(11937);
 const toggle = SettingBuilders.createToggle({
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2725.ZhaNu8);
+    return intl.string(_modDef2824.ZhaNu8);
   },
-  parent: fn(8592).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8712).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuestsSettingValue() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;

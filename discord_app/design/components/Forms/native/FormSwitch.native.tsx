@@ -1,13 +1,13 @@
-// === Module 7437: FormSwitch ===
+// === Module 7557: FormSwitch ===
 
-// Module 7437 (FormSwitch)
+// Module 7557 (FormSwitch)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import HapticUtils from "HapticUtils" /* 5010 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5011 */;
-import IconDefault from "Icon" /* 5394 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import springPresets from "springPresets" /* 5396 */;
+import HapticUtils from "HapticUtils" /* 5129 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5130 */;
+import IconDefault from "Icon" /* 5513 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import springPresets from "springPresets" /* 5515 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ require = fn;
 let jsx = fn(21).jsx;
 let module_1653 = module_1653_mod;
 let closure_6 = module_1653.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;
@@ -225,14 +225,14 @@ export function FormSwitch(onValueChange) {
   } else {
     const obj7 = { source: null, size: null, style: null };
     if (tmp6) {
-      obj7.source = tmp10(7217);
-      obj7.size = tmp10(5394).Sizes.SMALL_20;
+      obj7.source = tmp10(7337);
+      obj7.size = tmp10(5513).Sizes.SMALL_20;
       const items7 = [tmp9.selectedIcon, iconAnimation];
       obj7.style = items7;
       let tmp38 = obj7;
     } else {
-      obj7.source = tmp10(7438);
-      obj7.size = tmp10(5394).Sizes.SMALL;
+      obj7.source = tmp10(7558);
+      obj7.size = tmp10(5513).Sizes.SMALL;
       const items8 = [tmp9.unselectedIcon, tmp35];
       obj7.style = items8;
       tmp38 = obj7;

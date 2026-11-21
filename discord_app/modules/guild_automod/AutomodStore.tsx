@@ -1,8 +1,8 @@
-// === Module 19588: AutomodStore ===
+// === Module 19715: AutomodStore ===
 
-// Module 19588 (AutomodStore)
-import _mod4709 from "module_4709" /* 4709 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 19589 */;
+// Module 19715 (AutomodStore)
+import _mod4828 from "module_4828" /* 4828 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 19716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12279).AutomodTriggerType;
+const AutomodTriggerType = fn(12401).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1257);
@@ -228,7 +228,7 @@ export function useSyncAutomodRules(arg0) {
     items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _mod4709.shallow), 2);
+  }, _mod4828.shallow), 2);
   const first = tmp2[0];
   closure_3 = tmp4;
   items = [tmp[0], ];
@@ -308,7 +308,7 @@ export function useSyncAutomodRulesEffect(arg0) {
     items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4709").shallow), 2);
+  }, require("module_4828").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   items = [tmp[0], ];
@@ -445,5 +445,5 @@ export function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_4709").shallow);
+  }, require("module_4828").shallow);
 }

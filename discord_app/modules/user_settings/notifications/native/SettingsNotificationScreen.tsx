@@ -1,17 +1,17 @@
-// === Module 16766: SettingsNotificationScreen ===
+// === Module 16889: SettingsNotificationScreen ===
 
-// Module 16766 (SettingsNotificationScreen)
+// Module 16889 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import Card from "Card" /* 6927 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7105 */;
-import SettingBuilders from "SettingBuilders" /* 11817 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13161 */;
-import SettingLayoutDefault from "SettingLayout" /* 15862 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16768 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16769 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16770 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import Card from "Card" /* 7047 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7225 */;
+import SettingBuilders from "SettingBuilders" /* 11937 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13283 */;
+import SettingLayoutDefault from "SettingLayout" /* 15985 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16891 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16892 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,11 +51,11 @@ function SystemNotificationsSubLabel() {
   return React5(React6, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(16767).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8592).MobileUserSettings;
+let closure_5 = fn(16890).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8712).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { card: { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, cardContent: { flexDirection: "row", alignItems: "center", gap: 8 }, text: { flex: 1 } };
 let closure_10 = createStyles.createStyles(obj);
 let obj3 = { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg };

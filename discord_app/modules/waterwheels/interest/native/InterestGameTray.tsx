@@ -1,9 +1,9 @@
-// === Module 17717: InterestGameTray ===
+// === Module 17842: InterestGameTray ===
 
-// Module 17717 (InterestGameTray)
+// Module 17842 (InterestGameTray)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import InterestGameCoverDefault from "InterestGameCover" /* 17707 */;
+import GameCoverDefault from "GameCover" /* 17820 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -131,14 +131,14 @@ function TrayCover(game) {
   }
   obj3.importantForAccessibility = str;
   const obj4 = { accessible: true, accessibilityLabel: game.name, style: tmp.target, children: null };
-  const obj5 = { style: tmp.art, children: sharedValue2(InterestGameCoverDefault, { game, width: game.coverWidth, imageWidth: sharedValue1, compact: true }) };
+  const obj5 = { style: tmp.art, children: sharedValue2(GameCoverDefault, { game, width: game.coverWidth, imageWidth: sharedValue1, compact: true }) };
   const items4 = [sharedValue2(sharedValue, obj5), sharedValue2(sharedValue, { pointerEvents: "none", style: tmp.stroke })];
   obj4.children = items4;
   obj3.children = closure_9(sharedValue, obj4);
   return sharedValue2(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(17699);
+const InterestGamePickerConstants = fn(17821);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
@@ -147,7 +147,7 @@ const jsxProd = fn(21);
 let result = THUMBNAIL_WIDTH / THUMBNAIL_ASPECT_RATIO;
 let closure_10 = THUMBNAIL_WIDTH + FOOTER_THUMBNAIL_GAP;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { tray: { height: result, flex: 1 }, viewport: { position: "absolute", inset: -SELECTED_BORDER_WIDTH, right: 0, overflow: "hidden" }, content: { position: "absolute", inset: SELECTED_BORDER_WIDTH, right: 0 }, item: { position: "absolute", width: THUMBNAIL_WIDTH, height: result }, target: { flex: 1 }, art: { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, stroke: null };
 let obj3 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.stroke = { position: "absolute", inset: -SELECTED_BORDER_WIDTH, borderRadius: nativeDefault.radii.xs + SELECTED_BORDER_WIDTH, borderWidth: SELECTED_BORDER_WIDTH, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

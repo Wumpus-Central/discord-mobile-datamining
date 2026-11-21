@@ -1,12 +1,12 @@
-// === Module 12170: ConjureRemix ===
+// === Module 12292: ConjureRemix ===
 
-// Module 12170 (ConjureRemix)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6821 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 12171 */;
+// Module 12292 (ConjureRemix)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6940 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 12293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import GuildStore from "GuildStore" /* 4784 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -142,7 +142,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     }
   };
   const intl = require("util").intl;
-  closure_3 = intl.string(copy(4091).Cn8H0Y);
+  closure_3 = intl.string(copy(4190).Cn8H0Y);
   let tmp3;
   if (null != share_ticket) {
     let obj2 = { share_ticket };
@@ -160,8 +160,8 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
   guild = GuildStore.getGuild(guildId);
   let result = "guild" === id.install_scope && null != guild;
   if (result) {
-    result = tmp(6746).canStartConjureProject(guild, "ConjureRemix");
-    const tmpResult = tmp(6746);
+    result = tmp(6865).canStartConjureProject(guild, "ConjureRemix");
+    const tmpResult = tmp(6865);
   }
   c11 = result;
   let obj = require("ConjureWorkerTickets");
@@ -249,7 +249,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     }
   };
 }
-const ConjureConnectionStore = fn(6848);
+const ConjureConnectionStore = fn(6967);
 ({ closeConnection: hasOwnProperty, ensureConnection: closure_6 } = ConjureConnectionStore);
 let map = new Map();
 const subscription = Dispatcher.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (nonce) => {

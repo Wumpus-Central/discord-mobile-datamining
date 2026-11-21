@@ -1,13 +1,13 @@
-// === Module 18014: GamingLikeEntryRow ===
+// === Module 18140: GamingLikeEntryRow ===
 
-// Module 18014 (GamingLikeEntryRow)
+// Module 18140 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import utils from "utils" /* 7890 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7892 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9923 */;
-import BadgesAll from "Badges" /* 14342 */;
-import TrendingType from "TrendingType" /* 14347 */;
+import utils from "utils" /* 8010 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8012 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10043 */;
+import BadgesAll from "Badges" /* 14464 */;
+import TrendingType from "TrendingType" /* 14469 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -15,8 +15,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(7890).isEntryNew }, , , , ];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(7890).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8010).isEntryNew }, , , , ];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8010).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -69,7 +69,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(17965);
+const createICYMIStyles = fn(18091);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -144,7 +144,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(18015, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(18141, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

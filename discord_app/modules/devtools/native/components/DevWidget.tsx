@@ -1,19 +1,19 @@
-// === Module 17311: DevWidget ===
+// === Module 17435: DevWidget ===
 
-// Module 17311 (DevWidget)
+// Module 17435 (DevWidget)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import springPresets from "springPresets" /* 5396 */;
-import Pressables from "Pressables" /* 6910 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11651 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12781 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 16875 */;
-import VEVOODefault from "VEVOO" /* 17312 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import springPresets from "springPresets" /* 5515 */;
+import Pressables from "Pressables" /* 7030 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11771 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12903 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 16998 */;
+import VEVOODefault from "VEVOO" /* 17436 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8302 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8422 */;
 
 const require = globalThis.__r;
 const _modDef1653 = _mod1653;
@@ -149,7 +149,7 @@ function DraggableContainer(arg0) {
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

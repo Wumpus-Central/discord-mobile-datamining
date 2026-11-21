@@ -1,16 +1,16 @@
-// === Module 17295: SystemNotifPermissionLayout ===
+// === Module 17419: SystemNotifPermissionLayout ===
 
-// Module 17295 (SystemNotifPermissionLayout)
+// Module 17419 (SystemNotifPermissionLayout)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef3053 from "module_3053" /* 3053 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 10745 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13161 */;
+import _modDef3152 from "module_3152" /* 3152 */;
+import openNotificationSettingsDefault from "openNotificationSettings" /* 10865 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13159 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17296 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13281 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17420 */;
 
 require = fn;
 function SystemNotifPermissionHeader() {
@@ -126,15 +126,15 @@ function SystemNotifPermissionHeader() {
 }
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
-let closure_10 = fn(6377).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13160);
+let closure_10 = fn(6496).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13282);
 ({ EventActionLocation: closure_11, EventActionType: closure_12, NotificationNudgeAnalyticsAction: map1, NotificationNudgeSurface: closure_14 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { "111_realtime": _modDef3053.dF4FmA, "222_social": _modDef3053.tgF0IR, "333_server": _modDef3053.rwJXCw, "444_other": _modDef3053["8gfmjs"] };
-let obj2 = { "111_realtime": _modDef3053.HszTZQ, "222_social": _modDef3053.UbGSlJ, "333_server": _modDef3053.Jweb0a, "444_other": _modDef3053.NQH8GA };
+let obj = { "111_realtime": _modDef3152.dF4FmA, "222_social": _modDef3152.tgF0IR, "333_server": _modDef3152.rwJXCw, "444_other": _modDef3152["8gfmjs"] };
+let obj2 = { "111_realtime": _modDef3152.HszTZQ, "222_social": _modDef3152.UbGSlJ, "333_server": _modDef3152.Jweb0a, "444_other": _modDef3152.NQH8GA };
 const redux = noop.createContext(undefined);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj3 = { container: { paddingTop: nativeDefault.space.PX_16 }, card: null, iconCircle: null, centeredText: null, button: null };
 let obj5 = { paddingTop: nativeDefault.space.PX_16 };
 obj3.card = { padding: nativeDefault.space.PX_20 };
@@ -156,7 +156,7 @@ export default function SystemNotifPermissionLayout(node) {
   const effect = noop.useEffect(() => {
     closure_1 = async function _loadPermissionStatus() {
       closure_1 = tmp3;
-      await closure_2_1(7682).getNotificationAuthorizationStatus();
+      await closure_2_1(7802).getNotificationAuthorizationStatus();
       if (1 === tmp7) {
         c2 = 0;
         if (closure_129_0) {
@@ -170,8 +170,8 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13162).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13162);
+            const result = node(13284).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13284);
           }
           v2(true);
           c2 = 0;

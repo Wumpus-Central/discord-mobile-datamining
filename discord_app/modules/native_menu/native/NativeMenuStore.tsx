@@ -1,6 +1,6 @@
-// === Module 10738: NativeMenuStore ===
+// === Module 10858: NativeMenuStore ===
 
-// Module 10738 (NativeMenuStore)
+// Module 10858 (NativeMenuStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

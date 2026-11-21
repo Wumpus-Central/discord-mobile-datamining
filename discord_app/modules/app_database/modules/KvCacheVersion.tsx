@@ -1,8 +1,8 @@
-// === Module 8236: KvCacheVersion ===
+// === Module 8356: KvCacheVersion ===
 
-// Module 8236 (KvCacheVersion)
+// Module 8356 (KvCacheVersion)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4672 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4791 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const KvCacheVersionConstants = fn(499);

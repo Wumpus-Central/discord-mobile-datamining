@@ -1,11 +1,11 @@
-// === Module 17246: SafetyPrivacyPolicySetting ===
+// === Module 17370: SafetyPrivacyPolicySetting ===
 
-// Module 17246 (SafetyPrivacyPolicySetting)
+// Module 17370 (SafetyPrivacyPolicySetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import LinkingDefault from "Linking" /* 5473 */;
-import SettingsConstants from "SettingsConstants" /* 8592 */;
-import SettingBuilders from "SettingBuilders" /* 11817 */;
+import LinkingDefault from "Linking" /* 5592 */;
+import SettingsConstants from "SettingsConstants" /* 8712 */;
+import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

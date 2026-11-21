@@ -1,12 +1,12 @@
-// === Module 13832: TieredTenureBadgePerkCard ===
+// === Module 13954: TieredTenureBadgePerkCard ===
 
-// Module 13832 (TieredTenureBadgePerkCard)
+// Module 13954 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import BadgeId from "BadgeId" /* 7950 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13867 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 13899 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import BadgeId from "BadgeId" /* 8070 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13989 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 14021 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_9 = createStyles.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");

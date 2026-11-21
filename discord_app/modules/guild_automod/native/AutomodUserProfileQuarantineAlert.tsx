@@ -1,21 +1,21 @@
-// === Module 12286: AutomodUserProfileQuarantineAlert ===
+// === Module 12408: AutomodUserProfileQuarantineAlert ===
 
-// Module 12286 (AutomodUserProfileQuarantineAlert)
+// Module 12408 (AutomodUserProfileQuarantineAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4732 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import common_AlertDefault from "common/Alert" /* 5813 */;
-import openUserSettings from "openUserSettings" /* 8074 */;
-import _modDef12287 from "module_12287" /* 12287 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4851 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import common_AlertDefault from "common/Alert" /* 5932 */;
+import openUserSettings from "openUserSettings" /* 8194 */;
+import _modDef12409 from "module_12409" /* 12409 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import GuildStore from "GuildStore" /* 4784 */;
 
 require = fn;
 function ChatBlockedAlert(arg0) {
@@ -36,7 +36,7 @@ function ChatBlockedAlert(arg0) {
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
   const tmp6 = common_AlertDefault;
-  items = [closure_1_16(native.Icon, { source: _modDef12287, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), closure_1_16(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title }), closure_1_16(Text_Text.Text, { style: tmp2.description, variant: "body-sm/medium", color: "text-default", children: description })];
+  items = [closure_1_16(native.Icon, { source: _modDef12409, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), closure_1_16(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title }), closure_1_16(Text_Text.Text, { style: tmp2.description, variant: "body-sm/medium", color: "text-default", children: description })];
   obj2.children = items;
   obj.children = closure_1_17(View, obj2);
   return closure_1_16(tmp6, obj);
@@ -53,8 +53,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(util.t.TBeZmG);
   }
   const tmp = _objectWithoutProperties(arg0, closure_4);
-  const tmp2Result = tmp2(12288);
-  [require, tmp8] = tmp2(12288).useOpenFixQuarantinedProfileModal({ guildId });
+  const tmp2Result = tmp2(12410);
+  [require, tmp8] = tmp2(12410).useOpenFixQuarantinedProfileModal({ guildId });
   if (!tmp8) {
     const intl3 = tmp2(1112).intl;
     stringResult = intl3.string(tmp2(1112).t.FFj5Dt);
@@ -96,13 +96,13 @@ let closure_3 = ["title", "description", "buttonCta", "onConfirm"];
 let closure_4 = ["guildId", "guildName", "automodReason"];
 let closure_5 = ["guildName"];
 const View = fn(17).View;
-const QUARANTINE_USER_ALERT_KEY = fn(12279).QUARANTINE_USER_ALERT_KEY;
+const QUARANTINE_USER_ALERT_KEY = fn(12401).QUARANTINE_USER_ALERT_KEY;
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
-const GuildMemberFlags = fn(4712).GuildMemberFlags;
+const GuildMemberFlags = fn(4831).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { wrapper: { padding: 16 }, body: { flexDirection: "column", alignItems: "center" }, mainIcon: null, title: null, description: null };
 let size = { width: 48, height: 48, tintColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, marginBottom: 16 };
 obj2.mainIcon = size;
@@ -139,7 +139,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
       return AutomodPermissionUtils.getAutomodReason(automodQuarantinedGuildMemberFlags);
     }
   }, items4);
-  stateFromStores(5355)(() => {
+  stateFromStores(5474)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: QUARANTINE_USER_ALERT_KEY, guild_id: guildId, other_user_id: stateFromStores });
   });
   if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) {

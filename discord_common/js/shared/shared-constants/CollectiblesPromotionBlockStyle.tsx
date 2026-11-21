@@ -1,6 +1,6 @@
-// === Module 8811: CollectiblesPromotionBlockStyle ===
+// === Module 8931: CollectiblesPromotionBlockStyle ===
 
-// Module 8811 (CollectiblesPromotionBlockStyle)
+// Module 8931 (CollectiblesPromotionBlockStyle)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesPromotionBlockStyle.tsx");

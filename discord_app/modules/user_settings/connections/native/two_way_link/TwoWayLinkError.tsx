@@ -1,21 +1,21 @@
-// === Module 6969: TwoWayLinkError ===
+// === Module 7089: TwoWayLinkError ===
 
-// Module 6969 (TwoWayLinkError)
+// Module 7089 (TwoWayLinkError)
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 6924 */;
-import _modDef6970 from "module_6970" /* 6970 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7017 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 7044 */;
+import _modDef7090 from "module_7090" /* 7090 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
@@ -27,7 +27,7 @@ export function TwoWayLinkError(arg0) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef6970;
+  obj4.source = _modDef7090;
   obj4.style = tmp.image;
   items = [React4(FastImageDefault, obj4), React4(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), React4(Text_Text.Text, { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj3.children = items;

@@ -1,9 +1,9 @@
-// === Module 2155: ImageProxyUtils ===
+// === Module 2156: ImageProxyUtils ===
 
-// Module 2155 (ImageProxyUtils)
+// Module 2156 (ImageProxyUtils)
 import URLUtilsDefault from "URLUtils" /* 1379 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1447 */;
-import UrlHostUtils from "UrlHostUtils" /* 2156 */;
+import UrlHostUtils from "UrlHostUtils" /* 2157 */;
 import size from "module_2" /* 2 */;
 
 function getSizedImageProxyURL(iconUrl, size) {

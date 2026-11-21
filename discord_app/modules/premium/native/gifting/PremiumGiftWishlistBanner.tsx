@@ -1,10 +1,10 @@
-// === Module 9424: PremiumGiftWishlistBanner ===
+// === Module 9544: PremiumGiftWishlistBanner ===
 
-// Module 9424 (PremiumGiftWishlistBanner)
+// Module 9544 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7947 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 9468 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 9588 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,17 +13,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_7 = fn(6729).WishlistRecommendationReason;
+let closure_7 = fn(6848).WishlistRecommendationReason;
 const PremiumConstants = fn(1388);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1073).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(7949).UserProfileSections;
+const UserProfileSections = fn(8069).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };

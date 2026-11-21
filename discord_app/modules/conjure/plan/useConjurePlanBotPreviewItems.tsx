@@ -1,15 +1,15 @@
-// === Module 18442: useConjurePlanBotPreviewItems ===
+// === Module 18569: useConjurePlanBotPreviewItems ===
 
-// Module 18442 (useConjurePlanBotPreviewItems)
+// Module 18569 (useConjurePlanBotPreviewItems)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import UserActionCreators from "UserActionCreators" /* 6835 */;
-import conjurePlanBot from "conjurePlanBot" /* 18443 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import UserActionCreators from "UserActionCreators" /* 6954 */;
+import conjurePlanBot from "conjurePlanBot" /* 18570 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
 import UserRecord from "UserRecord" /* 1405 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6502 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function mentionMember(str, username) {
 }
 const Constants = fn(1071);
 ({ MessageStates: closure_8, MessageTypes: closure_9 } = Constants);
-const guildTextChannelRecord = new fn(4647).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
+const guildTextChannelRecord = new fn(4766).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
 const re12 = /^@\S+/;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/useConjurePlanBotPreviewItems.tsx");
@@ -79,11 +79,11 @@ export function useConjurePlanBotExchanges(proposal) {
       } else {
         const obj2 = { message: null, reply: null, event: null };
         const intl = util.intl;
-        obj2.message = intl.string(_modDef4091.J7qggf);
+        obj2.message = intl.string(_modDef4190.J7qggf);
         const intl2 = util.intl;
-        obj2.reply = intl2.string(_modDef4091.nqYtiy);
+        obj2.reply = intl2.string(_modDef4190.nqYtiy);
         const intl3 = util.intl;
-        obj2.event = intl3.string(_modDef4091["05lU9W"]);
+        obj2.event = intl3.string(_modDef4190["05lU9W"]);
         items = conjurePlanBot.getConjurePlanBotExchanges(closure_0, tmp, obj2);
       }
       return items;
@@ -100,11 +100,11 @@ export function useConjurePlanCommandExchanges(proposal) {
       obj.bot = undefined;
       const obj2 = { message: null, reply: null, event: null };
       const intl = util.intl;
-      obj2.message = intl.string(_modDef4091.J7qggf);
+      obj2.message = intl.string(_modDef4190.J7qggf);
       const intl2 = util.intl;
-      obj2.reply = intl2.string(_modDef4091.nqYtiy);
+      obj2.reply = intl2.string(_modDef4190.nqYtiy);
       const intl3 = util.intl;
-      obj2.event = intl3.string(_modDef4091["05lU9W"]);
+      obj2.event = intl3.string(_modDef4190["05lU9W"]);
       let conjurePlanBotExchanges = conjurePlanBot.getConjurePlanBotExchanges(obj, "commands", obj2);
       const tmp2Result = conjurePlanBot;
     } else {
@@ -153,7 +153,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
   }
   if (name == null) {
     let intl = tmp(tmp2[13]).intl;
-    name = intl.string(require("module_4091").JEYq8M);
+    name = intl.string(require("module_4190").JEYq8M);
   }
   const tmpResult = require("initialize");
   const items4 = [tmp3];
@@ -174,7 +174,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
     obj6 = stateFromStores3;
   }
   let intl2 = tmp(tmp2[13]).intl;
-  const tmp14Result = useSampleUser("31338", intl2.string(require("module_4091")["9iAOsw"]), { discriminator: "0003" });
+  const tmp14Result = useSampleUser("31338", intl2.string(require("module_4190")["9iAOsw"]), { discriminator: "0003" });
   closure_5 = tmp14Result;
   let obj3 = { bot: true, enabled: true !== bot };
   const tmpResult3 = require("initialize");
@@ -194,9 +194,9 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
             let obj = { bot: tmp4, currentUser: tmp, viewer: tmp3, member: tmp5 };
             let obj2 = { targetMessage: null, memberMessage: null };
             const intl = util.intl;
-            obj2.targetMessage = intl.string(_modDef4091["y+QYes"]);
+            obj2.targetMessage = intl.string(_modDef4190["y+QYes"]);
             const intl2 = util.intl;
-            obj2.memberMessage = intl2.string(_modDef4091.BUTRDc);
+            obj2.memberMessage = intl2.string(_modDef4190.BUTRDc);
             (function buildPreviewItems(arg0, arg1, memberMessage) {
               ({ bot, currentUser } = arg1);
               ({ viewer, member } = arg1);
@@ -208,26 +208,26 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(5847);
+                const obj2 = projectId(5966);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(8326)(obj3));
+                const merged = Object.assign(exchanges(8446)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
                   const obj5 = { interaction: null };
-                  obj6 = { id: StringResult, name: interactionName, type: projectId(5854).InteractionTypes.APPLICATION_COMMAND, user: projectId(8326).userRecordToServer(currentUser) };
+                  obj6 = { id: StringResult, name: interactionName, type: projectId(5973).InteractionTypes.APPLICATION_COMMAND, user: projectId(8446).userRecordToServer(currentUser) };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(8326);
+                  const tmp2Result = projectId(8446);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(8326);
+                const tmp4 = exchanges(8446);
                 items.push({ key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu });
                 const obj8 = { key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu };
               }

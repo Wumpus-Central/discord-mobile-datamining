@@ -1,7 +1,7 @@
-// === Module 18907: ActivityPanelNativeConstants ===
+// === Module 19034: ActivityPanelNativeConstants ===
 
-// Module 18907 (ActivityPanelNativeConstants)
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5420 */;
+// Module 19034 (ActivityPanelNativeConstants)
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5539 */;
 import size from "module_2" /* 2 */;
 
 const obj = { top: { disable: false, override: ActivityPanelConstants.ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT } };

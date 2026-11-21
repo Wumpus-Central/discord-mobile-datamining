@@ -1,18 +1,18 @@
-// === Module 7487: FloatingActionButton ===
+// === Module 7607: FloatingActionButton ===
 
-// Module 7487 (FloatingActionButton)
+// Module 7607 (FloatingActionButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import ButtonConstants from "ButtonConstants" /* 5398 */;
-import BaseIconButton from "BaseIconButton" /* 6930 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import ButtonConstants from "ButtonConstants" /* 5517 */;
+import BaseIconButton from "BaseIconButton" /* 7050 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const styles = createStyles.createStyles(() => {
   const obj = { button: null, iconButtonPill: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

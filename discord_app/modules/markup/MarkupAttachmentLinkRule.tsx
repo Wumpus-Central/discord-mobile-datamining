@@ -1,8 +1,8 @@
-// === Module 5839: MarkupAttachmentLinkRule ===
+// === Module 5958: MarkupAttachmentLinkRule ===
 
-// Module 5839 (MarkupAttachmentLinkRule)
+// Module 5958 (MarkupAttachmentLinkRule)
 import _modDef2068 from "module_2068" /* 2068 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5840 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5959 */;
 import size from "module_2" /* 2 */;
 
 const mapped = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES).map((item) => item.replaceAll("/", ""));

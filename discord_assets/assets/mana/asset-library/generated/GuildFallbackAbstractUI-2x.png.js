@@ -1,6 +1,6 @@
-// === Module 11969: ? ===
+// === Module 12089: ? ===
 
-// Module 11969
+// Module 12089
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GuildFallbackAbstractUI-2x.png.js");

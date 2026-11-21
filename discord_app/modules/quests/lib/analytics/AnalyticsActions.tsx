@@ -1,20 +1,20 @@
-// === Module 8301: AnalyticsActions ===
+// === Module 8421: AnalyticsActions ===
 
-// Module 8301 (AnalyticsActions)
+// Module 8421 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5531 */;
-import QuestTypes from "QuestTypes" /* 6442 */;
-import AdCreativeType from "AdCreativeType" /* 6446 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8135 */;
-import QuestDataUtils from "QuestDataUtils" /* 8280 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8304 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8305 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8307 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8310 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
+import QuestTypes from "QuestTypes" /* 6561 */;
+import AdCreativeType from "AdCreativeType" /* 6565 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8255 */;
+import QuestDataUtils from "QuestDataUtils" /* 8400 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8424 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8425 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8427 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8302 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8422 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1360 */;
-import QuestStore from "QuestStore" /* 8284 */;
+import QuestStore from "QuestStore" /* 8404 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {

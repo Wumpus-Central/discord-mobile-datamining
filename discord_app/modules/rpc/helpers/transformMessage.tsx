@@ -1,15 +1,15 @@
-// === Module 10685: transformMessage ===
+// === Module 10805: transformMessage ===
 
-// Module 10685 (transformMessage)
+// Module 10805 (transformMessage)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import Server from "Server" /* 2117 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5518 */;
-import useMessageAuthor from "useMessageAuthor" /* 6222 */;
-import transformUserDefault from "transformUser" /* 6788 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 10686 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5637 */;
+import useMessageAuthor from "useMessageAuthor" /* 6341 */;
+import transformUserDefault from "transformUser" /* 6907 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 10806 */;
 import UserRecord from "UserRecord" /* 1405 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;

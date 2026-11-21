@@ -1,6 +1,6 @@
-// === Module 6855: ConjureSequencedBuffer ===
+// === Module 6974: ConjureSequencedBuffer ===
 
-// Module 6855 (ConjureSequencedBuffer)
+// Module 6974 (ConjureSequencedBuffer)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureSequencedBuffer.tsx");

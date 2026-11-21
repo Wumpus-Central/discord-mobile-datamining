@@ -1,11 +1,11 @@
-// === Module 15668: ICYMIManager ===
+// === Module 15791: ICYMIManager ===
 
-// Module 15668 (ICYMIManager)
+// Module 15791 (ICYMIManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9921 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9923 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 9926 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 10041 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10043 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 10046 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 
 require = fn;
@@ -70,7 +70,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               let _clearTimeout = clearTimeout;
               clearTimeout(timeout);
             }
-            timeout = setTimeout(/* F108105 */ function() { ... }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
+            timeout = setTimeout(/* F108494 */ function() { ... }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
             obj = closure_1_0(closure_1_2[0]);
           }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
           obj = closure_1_0(closure_1_2[0]);

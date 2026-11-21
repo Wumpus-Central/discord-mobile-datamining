@@ -1,6 +1,6 @@
-// === Module 8806: StorefrontPromotionStore ===
+// === Module 8926: StorefrontPromotionStore ===
 
-// Module 8806 (StorefrontPromotionStore)
+// Module 8926 (StorefrontPromotionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

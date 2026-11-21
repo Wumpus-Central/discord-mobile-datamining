@@ -1,7 +1,7 @@
-// === Module 10387: getTrialCtaOverride ===
+// === Module 10507: getTrialCtaOverride ===
 
-// Module 10387 (getTrialCtaOverride)
-import PremiumUtils from "PremiumUtils" /* 2172 */;
+// Module 10507 (getTrialCtaOverride)
+import PremiumUtils from "PremiumUtils" /* 2173 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/getTrialCtaOverride.tsx");

@@ -1,6 +1,6 @@
-// === Module 7331: refObjectUnionAsProp ===
+// === Module 7451: refObjectUnionAsProp ===
 
-// Module 7331 (refObjectUnionAsProp)
+// Module 7451 (refObjectUnionAsProp)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/typescript/refObjectUnionAsProp.tsx");

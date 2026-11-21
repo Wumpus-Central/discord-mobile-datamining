@@ -1,28 +1,28 @@
-// === Module 14475: UserProfileDismissibleUpsells ===
+// === Module 14597: UserProfileDismissibleUpsells ===
 
-// Module 14475 (UserProfileDismissibleUpsells)
+// Module 14597 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4627 */;
+import dismissible_content from "dismissible_content" /* 4746 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const util = ShopIcon(1112);
 const native = ShopIcon(1186);
-const Text_Text = ShopIcon(5385);
-const components_Button_Button = ShopIcon(5392);
-const Pressables = ShopIcon(6910);
-const XSmallIcon = ShopIcon(7031);
-const NitroWheelIcon = ShopIcon(8832);
-const ShopIcon2 = ShopIcon(12887);
+const Text_Text = ShopIcon(5504);
+const components_Button_Button = ShopIcon(5511);
+const Pressables = ShopIcon(7030);
+const XSmallIcon = ShopIcon(7151);
+const NitroWheelIcon = ShopIcon(8952);
+const ShopIcon2 = ShopIcon(13009);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(7949).TrackUserProfileActions;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const TrackUserProfileActions = fn(8069).TrackUserProfileActions;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(8831).Gradients.PREMIUM_GUILD];
+let items = [...fn(8951).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
 let obj3 = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.customProfileThemeUpsellContainer = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };

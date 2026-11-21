@@ -1,6 +1,6 @@
-// === Module 8204: RecentlyActiveCollapseStore ===
+// === Module 8324: RecentlyActiveCollapseStore ===
 
-// Module 8204 (RecentlyActiveCollapseStore)
+// Module 8324 (RecentlyActiveCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

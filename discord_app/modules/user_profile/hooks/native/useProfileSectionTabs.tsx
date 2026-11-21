@@ -1,10 +1,10 @@
-// === Module 14472: useProfileSectionTabs ===
+// === Module 14594: useProfileSectionTabs ===
 
-// Module 14472 (useProfileSectionTabs)
+// Module 14594 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileSections = fn(7949).UserProfileSections;
+const UserProfileSections = fn(8069).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 

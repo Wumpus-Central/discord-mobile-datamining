@@ -1,10 +1,10 @@
-// === Module 6734: SKUPricesStore ===
+// === Module 6853: SKUPricesStore ===
 
-// Module 6734 (SKUPricesStore)
+// Module 6853 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 
 require = fn;
 function setPriceIdState(priceId, arg1) {

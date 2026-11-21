@@ -1,17 +1,17 @@
-// === Module 20004: RequestToStreamManager ===
+// === Module 20131: RequestToStreamManager ===
 
-// Module 20004 (RequestToStreamManager)
+// Module 20131 (RequestToStreamManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import StreamActionCreatorsAll from "StreamActionCreators" /* 6337 */;
-import MobileRequestToStreamExperiment2 from "MobileRequestToStreamExperiment" /* 14356 */;
-import useStreamRequestActivities from "useStreamRequestActivities" /* 14358 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6281 */;
-import MessageStore from "MessageStore" /* 5845 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 14327 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
+import StreamActionCreatorsAll from "StreamActionCreators" /* 6456 */;
+import MobileRequestToStreamExperiment2 from "MobileRequestToStreamExperiment" /* 14478 */;
+import useStreamRequestActivities from "useStreamRequestActivities" /* 14480 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
+import MessageStore from "MessageStore" /* 5964 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 14449 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 require = fn;
-let closure_7 = fn(14361).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
+let closure_7 = fn(14483).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
 const ActivityActionTypes = fn(1071).ActivityActionTypes;
 class RequestToStreamManager extends tmp2 {
   constructor() {

@@ -1,7 +1,7 @@
-// === Module 9337: useDisplayNameFontsAvailable ===
+// === Module 9457: useDisplayNameFontsAvailable ===
 
-// Module 9337 (useDisplayNameFontsAvailable)
-import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 9338 */;
+// Module 9457 (useDisplayNameFontsAvailable)
+import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 9458 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function isAvailable() {

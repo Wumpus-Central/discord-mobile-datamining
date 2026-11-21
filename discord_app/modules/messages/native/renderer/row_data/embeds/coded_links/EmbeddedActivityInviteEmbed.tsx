@@ -1,28 +1,28 @@
-// === Module 14183: EmbeddedActivityInviteEmbed ===
+// === Module 14305: EmbeddedActivityInviteEmbed ===
 
-// Module 14183 (EmbeddedActivityInviteEmbed)
+// Module 14305 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import useChannelName from "useChannelName" /* 5410 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 6798 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7147 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7516 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8560 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 14184 */;
+import useChannelName from "useChannelName" /* 5529 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 6917 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7267 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8680 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 14306 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 6799 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 6918 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import InviteStore from "InviteStore" /* 5513 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import InviteStore from "InviteStore" /* 5632 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(6799).FetchState;
-const CodedLinkExtendedType = fn(10293).CodedLinkExtendedType;
+const FetchState = fn(6918).FetchState;
+const CodedLinkExtendedType = fn(10413).CodedLinkExtendedType;
 let closure_15 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");

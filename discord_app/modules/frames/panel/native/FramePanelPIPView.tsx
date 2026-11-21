@@ -1,17 +1,17 @@
-// === Module 19079: FramePanelPIPView ===
+// === Module 19206: FramePanelPIPView ===
 
-// Module 19079 (FramePanelPIPView)
-import FrameStackLevel from "FrameStackLevel" /* 15633 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 18275 */;
-import ActivityPanelPIPView from "ActivityPanelPIPView" /* 19056 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19077 */;
+// Module 19206 (FramePanelPIPView)
+import FrameStackLevel from "FrameStackLevel" /* 15756 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 18402 */;
+import ActivityPanelPIPView from "ActivityPanelPIPView" /* 19183 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19204 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6504 */;
+import FramesStore from "FramesStore" /* 6623 */;
 
 require = fn;
-const FramesConstants = fn(6505);
+const FramesConstants = fn(6624);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6, getPipOrientationLockStateForFrame: metroImportDefault } = FramesConstants);
-let closure_8 = fn(18907).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(19034).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");

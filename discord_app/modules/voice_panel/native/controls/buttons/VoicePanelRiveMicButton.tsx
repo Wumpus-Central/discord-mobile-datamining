@@ -1,16 +1,16 @@
-// === Module 10890: VoicePanelRiveMicButton ===
+// === Module 11010: VoicePanelRiveMicButton ===
 
-// Module 10890 (VoicePanelRiveMicButton)
-import MicrophoneRive from "MicrophoneRive" /* 4943 */;
-import IconSize from "IconSize" /* 7120 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9564 */;
-import MicrophoneIcon2 from "MicrophoneIcon" /* 10891 */;
+// Module 11010 (VoicePanelRiveMicButton)
+import MicrophoneRive from "MicrophoneRive" /* 5062 */;
+import IconSize from "IconSize" /* 7240 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9684 */;
+import MicrophoneIcon2 from "MicrophoneIcon" /* 11011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const size = { width: IconSize.ICON_SIZE[arg0], height: IconSize.ICON_SIZE[arg0], pointerEvents: "none" };

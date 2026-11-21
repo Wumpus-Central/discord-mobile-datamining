@@ -1,6 +1,6 @@
-// === Module 19417: RadioGroupActionComponent ===
+// === Module 19544: RadioGroupActionComponent ===
 
-// Module 19417 (RadioGroupActionComponent)
+// Module 19544 (RadioGroupActionComponent)
 import _modDef1653 from "module_1653" /* 1653 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,8 +124,8 @@ export default noop.memo(function RadioGroupActionComponent(type) {
     }
     obj5.importantForAccessibility = str2;
     const obj6 = { icon: null, label: null, onPress: null, start: true, end: true };
-    const obj7 = { IconComponent: tmp3(7031).XSmallIcon };
-    obj6.icon = tmp16(tmp3(6925).TableRow.Icon, obj7);
+    const obj7 = { IconComponent: tmp3(7151).XSmallIcon };
+    obj6.icon = tmp16(tmp3(7045).TableRow.Icon, obj7);
     const intl = tmp3(1112).intl;
     obj6.label = intl.string(tmp3(1112).t["5uAtZN"]);
     obj6.onPress = function onPress() {
@@ -135,7 +135,7 @@ export default noop.memo(function RadioGroupActionComponent(type) {
         current.setValue("");
       }
     };
-    obj5.children = tmp16(tmp3(6925).TableRow, obj6);
+    obj5.children = tmp16(tmp3(7045).TableRow, obj6);
     tmp16Result = tmp16(_modDef1653.View, obj5);
   }
   children[1] = tmp16Result;

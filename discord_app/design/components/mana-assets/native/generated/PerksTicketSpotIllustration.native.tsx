@@ -1,19 +1,19 @@
-// === Module 19820: PerksTicketSpotIllustration ===
+// === Module 19947: PerksTicketSpotIllustration ===
 
-// Module 19820 (PerksTicketSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7237 */;
-import _modDef19821 from "module_19821" /* 19821 */;
-import _modDef19822 from "module_19822" /* 19822 */;
-import _modDef19823 from "module_19823" /* 19823 */;
+// Module 19947 (PerksTicketSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7357 */;
+import _modDef19948 from "module_19948" /* 19948 */;
+import _modDef19949 from "module_19949" /* 19949 */;
+import _modDef19950 from "module_19950" /* 19950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19821 }, 3: null };
-let obj2 = { uri: _modDef19821 };
-obj[2] = { uri: _modDef19822 };
-const obj3 = { uri: _modDef19822 };
-obj[3] = { uri: _modDef19823 };
+let obj = { 1: null, 2: { uri: _modDef19948 }, 3: null };
+let obj2 = { uri: _modDef19948 };
+obj[2] = { uri: _modDef19949 };
+const obj3 = { uri: _modDef19949 };
+obj[3] = { uri: _modDef19950 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PerksTicketSpotIllustration.native.tsx");
 

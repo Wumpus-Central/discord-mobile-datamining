@@ -1,15 +1,15 @@
-// === Module 10047: MediaModalOverlayFooter ===
+// === Module 10167: MediaModalOverlayFooter ===
 
-// Module 10047 (MediaModalOverlayFooter)
+// Module 10167 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5054 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 10045 */;
-import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground" /* 10048 */;
-import MediaMessagePreviewDefault from "MediaMessagePreview" /* 10049 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 10165 */;
+import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground" /* 10168 */;
+import MediaMessagePreviewDefault from "MediaMessagePreview" /* 10169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,8 +20,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "analyticsLocations" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(4913);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "__d" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 let items = [{ code: "(function clamp_MediaModalOverlayFooterTsx1(value,min,max){return Math.max(Math.min(value,max),min);})" }];
@@ -684,7 +684,7 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(10029), obj14);
+    obj13.children = tmp81(tmp53(10149), obj14);
     tmp81Result = tmp81(tmp53(1653).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };

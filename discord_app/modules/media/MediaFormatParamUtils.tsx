@@ -1,6 +1,6 @@
-// === Module 5836: MediaFormatParamUtils ===
+// === Module 5955: MediaFormatParamUtils ===
 
-// Module 5836 (MediaFormatParamUtils)
+// Module 5955 (MediaFormatParamUtils)
 import URLUtilsDefault from "URLUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 12368: Tracking ===
+// === Module 12490: Tracking ===
 
-// Module 12368 (Tracking)
+// Module 12490 (Tracking)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
-import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12369 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
+import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12491 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/checkpoint/tracking/Tracking.tsx");
 
-export function trackCheckpoint2026CardClicked(authorId, channel) {
+export function trackCheckpoint2026CardClicked(other_user_id, channel) {
   const obj = AnalyticsUtilsDefault;
-  const obj2 = { other_user_id: authorId };
+  const obj2 = { other_user_id };
   const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
   let guild_id;
   if (channel != null) {

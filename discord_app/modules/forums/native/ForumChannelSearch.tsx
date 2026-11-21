@@ -1,16 +1,16 @@
-// === Module 14250: ForumChannelSearch ===
+// === Module 14372: ForumChannelSearch ===
 
-// Module 14250 (ForumChannelSearch)
-import Tracking from "Tracking" /* 8341 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 8502 */;
+// Module 14372 (ForumChannelSearch)
+import Tracking from "Tracking" /* 8461 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 8622 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import ForumSearchStore from "ForumSearchStore" /* 8343 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import ForumSearchStore from "ForumSearchStore" /* 8463 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 const memoResult = noop.memo(function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -52,8 +52,8 @@ export const ForumChannelSearchInput = noop.memo(function SearchInput(channelId)
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(11759).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(11759);
+  const canSearchForumPostsByChannelId = channelId(11879).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(11879);
   items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {

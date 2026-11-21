@@ -1,23 +1,23 @@
-// === Module 14329: ContentInventoryActivityImageUtils ===
+// === Module 14451: ContentInventoryActivityImageUtils ===
 
-// Module 14329 (ContentInventoryActivityImageUtils)
+// Module 14451 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import Constants2 from "Constants" /* 2143 */;
-import PlatformsDefault from "Platforms" /* 6572 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6745 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 6798 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 6813 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8876 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8879 */;
-import useGame from "useGame" /* 8933 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 13402 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14330 */;
-import isOnXboxDefault from "isOnXbox" /* 14336 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 14337 */;
-import ApplicationStore from "ApplicationStore" /* 2163 */;
+import Constants2 from "Constants" /* 2144 */;
+import PlatformsDefault from "Platforms" /* 6691 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6864 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 6917 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 6932 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8996 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8999 */;
+import useGame from "useGame" /* 9053 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 13524 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14452 */;
+import isOnXboxDefault from "isOnXbox" /* 14458 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 14459 */;
+import ApplicationStore from "ApplicationStore" /* 2164 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

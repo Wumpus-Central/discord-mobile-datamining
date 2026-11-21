@@ -1,11 +1,11 @@
-// === Module 13402: StageChannelRichPresenceUtils ===
+// === Module 13524: StageChannelRichPresenceUtils ===
 
-// Module 13402 (StageChannelRichPresenceUtils)
+// Module 13524 (StageChannelRichPresenceUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6417 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6536 */;
 
 function unpackStageChannelParty(party) {
   if (null != party) {
@@ -26,7 +26,7 @@ function unpackStageChannelParty(party) {
     }
   }
 }
-const STAGE_APPLICATION_ID = fn(6381).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6500).STAGE_APPLICATION_ID;
 const GuildFeatures = fn(1071).GuildFeatures;
 let c7 = "stage:";
 const size = fn(2);

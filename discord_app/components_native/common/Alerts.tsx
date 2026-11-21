@@ -1,20 +1,20 @@
-// === Module 18917: Alerts ===
+// === Module 19044: Alerts ===
 
-// Module 18917 (Alerts)
+// Module 19044 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import native from "native" /* 4855 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5742 */;
-import OverlayViewDefault from "OverlayView" /* 5748 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5805 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6956 */;
-import ModalRegistryDefault from "ModalRegistry" /* 18918 */;
+import native from "native" /* 4974 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;
+import OverlayViewDefault from "OverlayView" /* 5867 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5924 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7076 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19045 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 14909 */;
-import PermissionVADStore from "PermissionVADStore" /* 15515 */;
-import AlertStore from "AlertStore" /* 10409 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15032 */;
+import PermissionVADStore from "PermissionVADStore" /* 15638 */;
+import AlertStore from "AlertStore" /* 10529 */;
 
 const require = globalThis.__r;
 
@@ -245,7 +245,7 @@ let items2 = [PermissionVADStore];
 obj2.stores = items2;
 items1[1] = obj2;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj3 = { alertWrapper: null, alertContentWrapper: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

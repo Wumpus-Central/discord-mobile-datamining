@@ -1,13 +1,13 @@
-// === Module 13758: useInappropriateConversationsTiers ===
+// === Module 13880: useInappropriateConversationsTiers ===
 
-// Module 13758 (useInappropriateConversationsTiers)
+// Module 13880 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11669 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11670 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11789 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11790 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11664).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11784).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 19145: StreamVolumeMovedHint ===
+// === Module 19272: StreamVolumeMovedHint ===
 
-// Module 19145 (StreamVolumeMovedHint)
+// Module 19272 (StreamVolumeMovedHint)
 import nativeDefault from "native" /* 575 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
 import noop from "module_19" /* 19 */;
-import StreamVolumeMovedStore from "StreamVolumeMovedStore" /* 14384 */;
+import StreamVolumeMovedStore from "StreamVolumeMovedStore" /* 14506 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(14384).clearStreamVolumeMovedHint;
+let closure_6 = fn(14506).clearStreamVolumeMovedHint;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: null, pill: null };
 const rect = { position: "absolute", top: 0, right: 0, bottom: 0, left: 0, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_8 };
 obj2.container = rect;
@@ -69,7 +69,7 @@ export default function StreamVolumeMovedHint(streamKey) {
     const items4 = [tmp.pill, animatedStyle];
     obj3.style = items4;
     const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult };
-    obj3.children = jsx(tmp2(5385).Text, { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult });
+    obj3.children = jsx(tmp2(5504).Text, { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult });
     obj2.children = jsx(state(1653).View, { style: null, children: null });
     tmp13 = <View style={tmp.container} pointerEvents="none">{null}</View>;
   }

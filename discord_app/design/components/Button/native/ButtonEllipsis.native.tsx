@@ -1,6 +1,6 @@
-// === Module 5405: ButtonEllipsis ===
+// === Module 5524: ButtonEllipsis ===
 
-// Module 5405 (ButtonEllipsis)
+// Module 5524 (ButtonEllipsis)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ const jsxProd = fn(21);
 let obj = { duration: 500, easing: null };
 const Easing = fn(1653).Easing;
 obj.easing = Easing.inOut(fn(1653).Easing.quad);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -94,7 +94,7 @@ let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   circle.backgroundColor = backgroundColor;
   return { circle };
 });
-let items = [{ code: "(function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){let[ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING]=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));})" }, 500, fn(1653).withDelay, fn(1653).withRepeat, fn(5004).withTiming, obj];
+let items = [{ code: "(function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){let[ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING]=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));})" }, 500, fn(1653).withDelay, fn(1653).withRepeat, fn(5123).withTiming, obj];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

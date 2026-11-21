@@ -1,8 +1,8 @@
-// === Module 8332: ForegroundServiceManager ===
+// === Module 8452: ForegroundServiceManager ===
 
-// Module 8332 (ForegroundServiceManager)
+// Module 8452 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8333 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8453 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 import size from "module_2" /* 2 */;
 

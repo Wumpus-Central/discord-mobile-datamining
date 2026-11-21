@@ -1,9 +1,9 @@
-// === Module 11779: LocalInteractionComponentStateStore ===
+// === Module 11899: LocalInteractionComponentStateStore ===
 
-// Module 11779 (LocalInteractionComponentStateStore)
+// Module 11899 (LocalInteractionComponentStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LimitedMapDefault from "LimitedMap" /* 11780 */;
+import LimitedMapDefault from "LimitedMap" /* 11900 */;
 
 let closure_0 = new LimitedMapDefault(196606);
 let closure_1 = 0;

@@ -1,15 +1,15 @@
-// === Module 13705: LeaderboardWinnerBadge ===
+// === Module 13827: LeaderboardWinnerBadge ===
 
-// Module 13705 (LeaderboardWinnerBadge)
-import canUseGuildSpace from "canUseGuildSpace" /* 6725 */;
-import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 13706 */;
+// Module 13827 (LeaderboardWinnerBadge)
+import canUseGuildSpace from "canUseGuildSpace" /* 6844 */;
+import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 13828 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import GuildStore from "GuildStore" /* 4784 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");
@@ -30,14 +30,14 @@ export default function LeaderboardWinnerBadge(guildId) {
   }, items1);
   const tmp5 = useActiveLeaderboardWinnerDataDefault(guildId, userId);
   let obj = guildId(504);
-  const activeLeaderboardLeaderData = guildId(13706).useActiveLeaderboardLeaderData(guildId, userId);
+  const activeLeaderboardLeaderData = guildId(13828).useActiveLeaderboardLeaderData(guildId, userId);
   if (stateFromStores) {
     if (null == tmp5) {
       let tmp9 = null;
       if (null != activeLeaderboardLeaderData) {
-        const obj3 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(12216).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData), children: jsx(tmp2(13707).MedalFirstBadge, { width: 16, height: 16 }) };
-        tmp9 = <View style={tmp.container} accessible accessibilityLabel={tmp2(12216).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData)}>{jsx(tmp2(13707).MedalFirstBadge, { width: 16, height: 16 })}</View>;
-        const tmp2Result = tmp2(12216);
+        const obj3 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(12338).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData), children: jsx(tmp2(13829).MedalFirstBadge, { width: 16, height: 16 }) };
+        tmp9 = <View style={tmp.container} accessible accessibilityLabel={tmp2(12338).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData)}>{jsx(tmp2(13829).MedalFirstBadge, { width: 16, height: 16 })}</View>;
+        const tmp2Result = tmp2(12338);
       }
       return tmp9;
     } else {
@@ -46,15 +46,15 @@ export default function LeaderboardWinnerBadge(guildId) {
         num = 0;
       }
       if (num > 1) {
-        let WinnerTrophyBadge = tmp2(13711).StreakTrophyBadge;
+        let WinnerTrophyBadge = tmp2(13833).StreakTrophyBadge;
       } else {
-        WinnerTrophyBadge = tmp2(13715).WinnerTrophyBadge;
+        WinnerTrophyBadge = tmp2(13837).WinnerTrophyBadge;
       }
-      const obj4 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(12216).getLeaderboardWinnerBadgeText(tmp5), children: <WinnerTrophyBadge width={16} height={16} /> };
-      return <View style={tmp.container} accessible accessibilityLabel={tmp2(12216).getLeaderboardWinnerBadgeText(tmp5)}><WinnerTrophyBadge width={16} height={16} /></View>;
+      const obj4 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(12338).getLeaderboardWinnerBadgeText(tmp5), children: <WinnerTrophyBadge width={16} height={16} /> };
+      return <View style={tmp.container} accessible accessibilityLabel={tmp2(12338).getLeaderboardWinnerBadgeText(tmp5)}><WinnerTrophyBadge width={16} height={16} /></View>;
     }
   } else {
     return null;
   }
-  const obj2 = guildId(13706);
+  const obj2 = guildId(13828);
 };

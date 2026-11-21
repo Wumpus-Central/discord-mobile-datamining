@@ -1,20 +1,20 @@
-// === Module 7095: CrunchyrollLinkSuccess ===
+// === Module 7215: CrunchyrollLinkSuccess ===
 
-// Module 7095 (CrunchyrollLinkSuccess)
+// Module 7215 (CrunchyrollLinkSuccess)
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6897 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 6924 */;
-import _modDef7096 from "module_7096" /* 7096 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7017 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 7044 */;
+import _modDef7216 from "module_7216" /* 7216 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef7096;
+  obj4.source = _modDef7216;
   obj4.style = tmp.image;
   items = [React4(FastImageDefault, obj4), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };

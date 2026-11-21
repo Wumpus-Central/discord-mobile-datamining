@@ -1,11 +1,11 @@
-// === Module 14877: HabitualDNDStore ===
+// === Module 15000: HabitualDNDStore ===
 
-// Module 14877 (HabitualDNDStore)
+// Module 15000 (HabitualDNDStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import UserSettings from "UserSettings" /* 4619 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
+import UserSettings from "UserSettings" /* 4738 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;
 
 require = fn;
 const StatusTypes = fn(1071).StatusTypes;

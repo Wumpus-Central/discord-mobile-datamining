@@ -1,7 +1,7 @@
-// === Module 13396: isGameActivity ===
+// === Module 13518: isGameActivity ===
 
-// Module 13396 (isGameActivity)
-import ActivityTypes from "ActivityTypes" /* 5533 */;
+// Module 13518 (isGameActivity)
+import ActivityTypes from "ActivityTypes" /* 5652 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");

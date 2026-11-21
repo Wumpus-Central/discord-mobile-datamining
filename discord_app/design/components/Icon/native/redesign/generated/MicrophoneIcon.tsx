@@ -1,9 +1,9 @@
-// === Module 10891: MicrophoneIcon ===
+// === Module 11011: MicrophoneIcon ===
 
-// Module 10891 (MicrophoneIcon)
+// Module 11011 (MicrophoneIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod10892 from "module_10892" /* 10892 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod11012 from "module_11012" /* 11012 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MicrophoneIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10892, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11012, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

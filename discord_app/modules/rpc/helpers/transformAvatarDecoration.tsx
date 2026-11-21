@@ -1,6 +1,6 @@
-// === Module 6789: transformAvatarDecoration ===
+// === Module 6908: transformAvatarDecoration ===
 
-// Module 6789 (transformAvatarDecoration)
+// Module 6908 (transformAvatarDecoration)
 import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2104 */;
 import size from "module_2" /* 2 */;
 

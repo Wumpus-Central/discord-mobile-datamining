@@ -1,17 +1,17 @@
-// === Module 17762: GuildsBarFavorites ===
+// === Module 17888: GuildsBarFavorites ===
 
-// Module 17762 (GuildsBarFavorites)
+// Module 17888 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import StarIcon from "StarIcon" /* 9891 */;
-import FavoritesHooks from "FavoritesHooks" /* 11100 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17746 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17749 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17763 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17764 */;
+import StarIcon from "StarIcon" /* 10011 */;
+import FavoritesHooks from "FavoritesHooks" /* 11220 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17872 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17875 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17889 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17890 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4646 */;
+import FavoriteStore from "FavoriteStore" /* 4765 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -32,10 +32,10 @@ export default noop.memo(function GuildsBarFavorites() {
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(17697)(closure_1_5);
+      closure_1_1(17827)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(17530)();
+      closure_1_1(17654)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {

@@ -1,20 +1,20 @@
-// === Module 17838: YouBarNameplate ===
+// === Module 17964: YouBarNameplate ===
 
-// Module 17838 (YouBarNameplate)
+// Module 17964 (YouBarNameplate)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import useToken from "useToken" /* 5358 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import NameplateDefault from "Nameplate" /* 8908 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16443 */;
+import useToken from "useToken" /* 5477 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import NameplateDefault from "Nameplate" /* 9028 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16566 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const _modDef1653 = _mod1653;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(16355).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(16478).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 let closure_6 = { code: "(function YouBarNameplateTsx1(){let[withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG]=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};})" };
 const size = fn(2);

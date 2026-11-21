@@ -1,6 +1,6 @@
-// === Module 9439: ? ===
+// === Module 9559: ? ===
 
-// Module 9439
+// Module 9559
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroCoinStackSpotIllustration-2x.png.js");

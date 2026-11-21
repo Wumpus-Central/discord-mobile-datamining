@@ -1,9 +1,9 @@
-// === Module 12004: ReportToModStore ===
+// === Module 12124: ReportToModStore ===
 
-// Module 12004 (ReportToModStore)
+// Module 12124 (ReportToModStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4827 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
 
 function handleSelectedGuildChange() {
   let lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();

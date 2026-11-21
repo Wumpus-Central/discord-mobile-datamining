@@ -1,17 +1,17 @@
-// === Module 12317: ClassificationEvidence ===
+// === Module 12439: ClassificationEvidence ===
 
-// Module 12317 (ClassificationEvidence)
+// Module 12439 (ClassificationEvidence)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 12318 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 12440 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
 const native = fn(1186);
 obj2.cardShadow = native.generateBoxShadowStyle(fn(1186).FOUR_DP_ELEVATION_SHADOW_PARAMS);

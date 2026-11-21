@@ -1,8 +1,8 @@
-// === Module 9542: getPrivateChannelCall ===
+// === Module 9662: getPrivateChannelCall ===
 
-// Module 9542 (getPrivateChannelCall)
-import CallsUtils from "CallsUtils" /* 9543 */;
-import VoiceStateStore from "VoiceStateStore" /* 5442 */;
+// Module 9662 (getPrivateChannelCall)
+import CallsUtils from "CallsUtils" /* 9663 */;
+import VoiceStateStore from "VoiceStateStore" /* 5561 */;
 
 const require = globalThis.__r;
 

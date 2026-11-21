@@ -1,17 +1,17 @@
-// === Module 19332: ChannelResyncManager ===
+// === Module 19459: ChannelResyncManager ===
 
-// Module 19332 (ChannelResyncManager)
+// Module 19459 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8234 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8354 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6432 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6275 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7364 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 const require = fn;
 function handleGuildCreate(guild) {
@@ -298,7 +298,7 @@ let closure_25 = async function _getResyncGuilds() {
   }, { eligible: [], ineligible: [] });
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4650).ChannelFlags;
+const ChannelFlags = fn(4769).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

@@ -1,9 +1,9 @@
-// === Module 19191: VoiceLowIcon ===
+// === Module 19318: VoiceLowIcon ===
 
-// Module 19191 (VoiceLowIcon)
+// Module 19318 (VoiceLowIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod19192 from "module_19192" /* 19192 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod19319 from "module_19319" /* 19319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VoiceLowIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19192, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19319, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,9 +1,9 @@
-// === Module 14229: ConversationFocusScreen ===
+// === Module 14351: ConversationFocusScreen ===
 
-// Module 14229 (ConversationFocusScreen)
-import ConversationFocusViewDefault from "ConversationFocusView" /* 14230 */;
+// Module 14351 (ConversationFocusScreen)
+import ConversationFocusViewDefault from "ConversationFocusView" /* 14352 */;
 import noop from "module_19" /* 19 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 8512 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 8632 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

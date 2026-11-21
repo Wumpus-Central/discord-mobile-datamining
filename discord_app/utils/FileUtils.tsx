@@ -1,13 +1,13 @@
-// === Module 8350: FileUtils ===
+// === Module 8470: FileUtils ===
 
-// Module 8350 (FileUtils)
+// Module 8470 (FileUtils)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
-import PremiumUtils from "PremiumUtils" /* 2172 */;
-import FileSizeUtils from "FileSizeUtils" /* 6236 */;
-import UploadUtils from "UploadUtils" /* 8322 */;
-import noConflictDefault from "noConflict" /* 8351 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import PremiumUtils from "PremiumUtils" /* 2173 */;
+import FileSizeUtils from "FileSizeUtils" /* 6355 */;
+import UploadUtils from "UploadUtils" /* 8442 */;
+import noConflictDefault from "noConflict" /* 8471 */;
+import GuildStore from "GuildStore" /* 4784 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const PremiumUtilsDefault = PremiumUtils;

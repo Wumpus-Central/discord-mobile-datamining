@@ -1,6 +1,6 @@
-// === Module 8065: isPortraitToLandscapeChannelReset ===
+// === Module 8185: isPortraitToLandscapeChannelReset ===
 
-// Module 8065 (isPortraitToLandscapeChannelReset)
+// Module 8185 (isPortraitToLandscapeChannelReset)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/native/isPortraitToLandscapeChannelReset.tsx");

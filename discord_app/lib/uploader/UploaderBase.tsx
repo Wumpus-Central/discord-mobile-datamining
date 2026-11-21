@@ -1,15 +1,15 @@
-// === Module 8413: UploaderBase ===
+// === Module 8533: UploaderBase ===
 
-// Module 8413 (UploaderBase)
+// Module 8533 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8352 */;
-import UploadTargets from "UploadTargets" /* 8375 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8472 */;
+import UploadTargets from "UploadTargets" /* 8495 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1071).AbortCodes;
-const FileUploadErrorTypes = fn(4799).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4918).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -78,7 +78,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = closure_1(closure_2[5]);
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "channel_id" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "HermesInternal" };
     return tmp3;
   }
 }

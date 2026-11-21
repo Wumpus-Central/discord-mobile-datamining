@@ -1,6 +1,6 @@
-// === Module 18117: slugConjureChannelName ===
+// === Module 18244: slugConjureChannelName ===
 
-// Module 18117 (slugConjureChannelName)
+// Module 18244 (slugConjureChannelName)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/shared/slugConjureChannelName.tsx");

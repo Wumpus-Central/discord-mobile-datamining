@@ -1,15 +1,15 @@
-// === Module 17712: useInterestGameSearch ===
+// === Module 17837: useInterestGameSearch ===
 
-// Module 17712 (useInterestGameSearch)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8706 */;
+// Module 17837 (useInterestGameSearch)
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8826 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8705 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8825 */;
 
 require = fn;
 let closure_6 = [];
-const DEFAULT = fn(9812).GameSearchFilterGroup.DEFAULT;
+const DEFAULT = fn(9932).GameSearchFilterGroup.DEFAULT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestGameSearch.tsx");
 

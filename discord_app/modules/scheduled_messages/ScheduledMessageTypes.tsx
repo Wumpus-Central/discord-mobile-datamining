@@ -1,6 +1,6 @@
-// === Module 8422: ScheduledMessageTypes ===
+// === Module 8542: ScheduledMessageTypes ===
 
-// Module 8422 (ScheduledMessageTypes)
+// Module 8542 (ScheduledMessageTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageTypes.tsx");

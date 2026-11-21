@@ -1,11 +1,11 @@
-// === Module 17793: useCheckpointGuildsBarEntrypoint ===
+// === Module 17919: useCheckpointGuildsBarEntrypoint ===
 
-// Module 17793 (useCheckpointGuildsBarEntrypoint)
+// Module 17919 (useCheckpointGuildsBarEntrypoint)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx");
 

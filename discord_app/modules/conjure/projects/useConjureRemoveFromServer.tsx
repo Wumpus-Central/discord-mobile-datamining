@@ -1,10 +1,10 @@
-// === Module 12264: useConjureRemoveFromServer ===
+// === Module 12386: useConjureRemoveFromServer ===
 
-// Module 12264 (useConjureRemoveFromServer)
+// Module 12386 (useConjureRemoveFromServer)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12265 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12387 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -109,7 +109,7 @@ export default function useConjureRemoveFromServer(arg0) {
             obj4.alsoRemovePreviewBot = alsoRemovePreviewBot;
             c3 = 2;
             c4 = 1;
-            const obj5 = { value: closure_0(12188).unpublishProject(projectId, obj4), done: false };
+            const obj5 = { value: closure_0(12310).unpublishProject(projectId, obj4), done: false };
             return obj5;
           }
         } else {
@@ -132,10 +132,10 @@ export default function useConjureRemoveFromServer(arg0) {
           if (ok) {
             const intl2 = closure_0(1112).intl;
             const obj7 = { app: closure_129_9, server: closure_129_10 };
-            intl2.formatToPlainString(tmp3(4091).SNFGxP, obj7);
+            intl2.formatToPlainString(tmp3(4190).SNFGxP, obj7);
           } else {
             const intl = closure_0(1112).intl;
-            closure_129_5(intl.string(tmp3(4091).PJ2Fkn));
+            closure_129_5(intl.string(tmp3(4190).PJ2Fkn));
             closure_129_6(null);
           }
           c4 = 3;
@@ -156,7 +156,7 @@ export default function useConjureRemoveFromServer(arg0) {
     if (endsCollaboration) {
       const intl = util.intl;
       const obj3 = { server: guildName };
-      items = [intl.formatToPlainString(_modDef4091["9b3KdT"], obj3)];
+      items = [intl.formatToPlainString(_modDef4190["9b3KdT"], obj3)];
       let items1 = items;
     } else {
       items1 = [];
@@ -183,7 +183,7 @@ export default function useConjureRemoveFromServer(arg0) {
     const obj2 = { keptChannelNames };
   }, items2);
   let intl = require("util").intl;
-  obj2.body = intl.formatToPlainString(checked(4091)["8OKM1N"], { server: guildName });
+  obj2.body = intl.formatToPlainString(checked(4190)["8OKM1N"], { server: guildName });
   obj2.notes = memo1;
   obj2.error = tmp7;
   obj2.submit = callback;

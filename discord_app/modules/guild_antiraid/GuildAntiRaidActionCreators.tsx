@@ -1,14 +1,14 @@
-// === Module 12239: GuildAntiRaidActionCreators ===
+// === Module 12361: GuildAntiRaidActionCreators ===
 
-// Module 12239 (GuildAntiRaidActionCreators)
+// Module 12361 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import _modDef2167 from "module_2167" /* 2167 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5531 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7874 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10998 */;
+import _modDef2168 from "module_2168" /* 2168 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import GuildStore from "GuildStore" /* 4784 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -91,9 +91,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef2167();
-    toISOStringResult = _modDef2167().add(tmp8, "hours").toISOString();
-    _modDef2167().add(tmp8, "hours");
+    _modDef2168();
+    toISOStringResult = _modDef2168().add(tmp8, "hours").toISOString();
+    _modDef2168().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -186,7 +186,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8644).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8764).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

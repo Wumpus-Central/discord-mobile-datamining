@@ -1,6 +1,6 @@
-// === Module 2181: PremiumSubscriptionInvoiceItem ===
+// === Module 2182: PremiumSubscriptionInvoiceItem ===
 
-// Module 2181 (PremiumSubscriptionInvoiceItem)
+// Module 2182 (PremiumSubscriptionInvoiceItem)
 import applyDefault from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 

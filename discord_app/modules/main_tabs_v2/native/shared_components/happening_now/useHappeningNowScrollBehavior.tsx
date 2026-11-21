@@ -1,6 +1,6 @@
-// === Module 17466: useHappeningNowScrollBehavior ===
+// === Module 17590: useHappeningNowScrollBehavior ===
 
-// Module 17466 (useHappeningNowScrollBehavior)
+// Module 17590 (useHappeningNowScrollBehavior)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

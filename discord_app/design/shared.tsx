@@ -1,10 +1,10 @@
-// === Module 4801: shared ===
+// === Module 4920: shared ===
 
-// Module 4801 (shared)
-import design_shared from "design/shared" /* 4802 */;
-import StickerTypes from "StickerTypes" /* 4815 */;
-import themes from "themes" /* 4816 */;
-import shared_Colors from "shared/Colors" /* 4817 */;
+// Module 4920 (shared)
+import design_shared from "design/shared" /* 4921 */;
+import StickerTypes from "StickerTypes" /* 4934 */;
+import themes from "themes" /* 4935 */;
+import shared_Colors from "shared/Colors" /* 4936 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/shared.tsx");

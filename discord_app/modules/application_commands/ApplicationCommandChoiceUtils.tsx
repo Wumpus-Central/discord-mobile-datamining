@@ -1,9 +1,9 @@
-// === Module 10560: ApplicationCommandChoiceUtils ===
+// === Module 10680: ApplicationCommandChoiceUtils ===
 
-// Module 10560 (ApplicationCommandChoiceUtils)
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8396 */;
+// Module 10680 (ApplicationCommandChoiceUtils)
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8516 */;
 
-const ApplicationCommandConstants = fn(5818);
+const ApplicationCommandConstants = fn(5937);
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");

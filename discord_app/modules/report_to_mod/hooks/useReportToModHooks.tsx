@@ -1,14 +1,14 @@
-// === Module 12008: useReportToModHooks ===
+// === Module 12130: useReportToModHooks ===
 
-// Module 12008 (useReportToModHooks)
+// Module 12130 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6770 */;
-import UserActionCreators from "UserActionCreators" /* 6835 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8130 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8208 */;
-import ReportToModUtils from "ReportToModUtils" /* 11128 */;
-import GuildStore from "GuildStore" /* 4665 */;
-import MessageStore from "MessageStore" /* 5845 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6889 */;
+import UserActionCreators from "UserActionCreators" /* 6954 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8328 */;
+import ReportToModUtils from "ReportToModUtils" /* 11248 */;
+import GuildStore from "GuildStore" /* 4784 */;
+import MessageStore from "MessageStore" /* 5964 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,8 +16,8 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
 
-export function useIsReportToModEnabled(arg0) {
-  _require = arg0;
+export function useIsReportToModEnabled(id2) {
+  _require = id2;
   items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {

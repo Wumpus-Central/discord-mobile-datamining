@@ -1,6 +1,6 @@
-// === Module 11630: VoicePanelConstants ===
+// === Module 11750: VoicePanelConstants ===
 
-// Module 11630 (VoicePanelConstants)
+// Module 11750 (VoicePanelConstants)
 import PlatformUtils_mod from "PlatformUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 

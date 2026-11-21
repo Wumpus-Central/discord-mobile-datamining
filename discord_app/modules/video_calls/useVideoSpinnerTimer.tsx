@@ -1,7 +1,7 @@
-// === Module 10608: useVideoSpinnerTimer ===
+// === Module 10728: useVideoSpinnerTimer ===
 
-// Module 10608 (useVideoSpinnerTimer)
-import VideoSpinnerTimer from "VideoSpinnerTimer" /* 10609 */;
+// Module 10728 (useVideoSpinnerTimer)
+import VideoSpinnerTimer from "VideoSpinnerTimer" /* 10729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

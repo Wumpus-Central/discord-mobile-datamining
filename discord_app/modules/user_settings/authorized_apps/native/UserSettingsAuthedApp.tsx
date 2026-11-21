@@ -1,28 +1,28 @@
-// === Module 16130: UserSettingsAuthedApp ===
+// === Module 16253: UserSettingsAuthedApp ===
 
-// Module 16130 (UserSettingsAuthedApp)
+// Module 16253 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Link from "Link" /* 1501 */;
-import RootNavigationRef from "RootNavigationRef" /* 4971 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5498 */;
-import useAlertStore from "useAlertStore" /* 5743 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6892 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 7135 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7291 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7295 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7360 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7365 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10506 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13371 */;
+import RootNavigationRef from "RootNavigationRef" /* 5090 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
+import useAlertStore from "useAlertStore" /* 5862 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7012 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7255 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7411 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7480 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7485 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10626 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13493 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6706 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6433 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 
 require = fn;
 function WarningLabel(children) {
@@ -55,11 +55,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1071);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10411).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11693).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10531).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11813).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;

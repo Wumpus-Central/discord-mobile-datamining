@@ -1,6 +1,6 @@
-// === Module 15560: discord_common/helpers ===
+// === Module 15683: discord_common/helpers ===
 
-// Module 15560 (discord_common/helpers)
+// Module 15683 (discord_common/helpers)
 import Constants from "Constants" /* 1082 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 18156: useConjureProjectSettingsForm ===
+// === Module 18283: useConjureProjectSettingsForm ===
 
-// Module 18156 (useConjureProjectSettingsForm)
+// Module 18283 (useConjureProjectSettingsForm)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6503 */;
-import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18162 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18289 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4700 */;
+import GuildRoleStore from "GuildRoleStore" /* 4819 */;
 
 const require = globalThis.__r;
 
@@ -81,12 +81,12 @@ function ConjureCollaboratorRolesSheet(guildId) {
   let obj2 = { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES };
   const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[12]).intl;
-  obj3.dismissAccessibilityLabel = intl2.string(require("module_4091").un99lK);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_4091").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES });
-  obj3.footer = closure_9(closure_6, { style: tmp.roleListFooter, children: closure_9(guildId(onSave[15]).Text, { variant: "body-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_4091").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
+  obj3.dismissAccessibilityLabel = intl2.string(require("module_4190").un99lK);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_4190").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES });
+  obj3.footer = closure_9(closure_6, { style: tmp.roleListFooter, children: closure_9(guildId(onSave[15]).Text, { variant: "body-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_4190").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
   const obj5 = { title: null, trailing: null };
   const intl3 = guildId(onSave[12]).intl;
-  obj5.title = intl3.string(require("module_4091")["pO3+p5"]);
+  obj5.title = intl3.string(require("module_4190")["pO3+p5"]);
   const obj6 = { label: null, onPress: null };
   const intl4 = guildId(onSave[12]).intl;
   obj6.label = intl4.string(guildId(onSave[12]).t.i4jeWR);
@@ -140,7 +140,7 @@ function ConjureCollaboratorRolesSheet(guildId) {
           if (tmp3) {
             const intl = guildId(onSave[12]).intl;
             const obj4 = { max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_4091")["dH7+/Z"], obj4);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_4190")["dH7+/Z"], obj4);
           }
           obj2.accessibilityHint = formatToPlainStringResult;
           obj2.onPress = function onPress(arg0) {
@@ -161,7 +161,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1071).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -172,7 +172,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_12 = createStyles.createStyles(obj2);
-createStyles = fn(4794);
+createStyles = fn(4913);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -333,7 +333,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj6.disabled = tmp20;
       obj6.onPress = function onPress() {
         const obj = ActionSheetActionCreatorsDefault;
-        return obj.openLazy(asyncRequireImpl(18162, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
+        return obj.openLazy(asyncRequireImpl(18289, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
       };
       obj8.children = closure_9(tmp7(tmp3[25]).TableRow, obj6);
       tmp16Result10 = closure_9(tmp7(tmp3[19]).TableRowGroup, obj8);
@@ -440,18 +440,18 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   const obj24 = { hasIcons: false, children: null };
   const obj25 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
   const intl11 = tmp7(tmp3[12]).intl;
-  obj25.label = intl11.string(require("module_4091")["4liZ45"]);
+  obj25.label = intl11.string(require("module_4190")["4liZ45"]);
   const intl12 = tmp7(tmp3[12]).intl;
-  obj25.subLabel = intl12.string(require("module_4091").I5cl7p);
+  obj25.subLabel = intl12.string(require("module_4190").I5cl7p);
   obj25.checked = smartContext.checked;
   obj25.disabled = saving;
   obj25.onPress = handleSmartContextChange;
   const items2 = [closure_9(require("TableCheckboxRow").TableCheckboxRow, obj25), ];
   const obj26 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
   const intl13 = tmp7(tmp3[12]).intl;
-  obj26.label = intl13.string(require("module_4091").mpjaVm);
+  obj26.label = intl13.string(require("module_4190").mpjaVm);
   const intl14 = tmp7(tmp3[12]).intl;
-  obj26.subLabel = intl14.string(require("module_4091")["2PxChh"]);
+  obj26.subLabel = intl14.string(require("module_4190")["2PxChh"]);
   obj26.checked = hostApproval.checked;
   obj26.disabled = saving;
   obj26.onPress = handleRequireHostApprovalChange;

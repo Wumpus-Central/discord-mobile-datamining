@@ -1,6 +1,6 @@
-// === Module 9478: MobileWebHandoffUtils ===
+// === Module 9598: MobileWebHandoffUtils ===
 
-// Module 9478 (MobileWebHandoffUtils)
+// Module 9598 (MobileWebHandoffUtils)
 import v1 from "v1" /* 1268 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

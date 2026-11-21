@@ -1,16 +1,16 @@
-// === Module 4698: GatedChannelStore ===
+// === Module 4817: GatedChannelStore ===
 
-// Module 4698 (GatedChannelStore)
+// Module 4817 (GatedChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4716 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4717 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4718 */;
-import ImpersonateStore from "ImpersonateStore" /* 4699 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import GuildRoleStore from "GuildRoleStore" /* 4700 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4835 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 4836 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4837 */;
+import ImpersonateStore from "ImpersonateStore" /* 4818 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import GuildRoleStore from "GuildRoleStore" /* 4819 */;
+import GuildStore from "GuildStore" /* 4784 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -161,8 +161,8 @@ function handleChannelUpdate(channel) {
   }
   return tmp;
 }
-const THREAD_CHANNEL_TYPES = fn(4647).THREAD_CHANNEL_TYPES;
-const hasPermission = fn(4701).hasPermission;
+const THREAD_CHANNEL_TYPES = fn(4766).THREAD_CHANNEL_TYPES;
+const hasPermission = fn(4820).hasPermission;
 const Constants = fn(1071);
 ({ Permissions: closure_10, GuildFeatures: closure_11 } = Constants);
 const dependencyMap = {};

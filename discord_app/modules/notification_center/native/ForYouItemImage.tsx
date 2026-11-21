@@ -1,21 +1,21 @@
-// === Module 17934: ForYouItemImage ===
+// === Module 18060: ForYouItemImage ===
 
-// Module 17934 (ForYouItemImage)
+// Module 18060 (ForYouItemImage)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Pressables from "Pressables" /* 6910 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8083 */;
+import Pressables from "Pressables" /* 7030 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8203 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import GuildStore from "GuildStore" /* 4784 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const View = fn(17).View;
-const getGuildAcronym = fn(4661).getGuildAcronym;
-const Constants = fn(17935);
+const getGuildAcronym = fn(4780).getGuildAcronym;
+const Constants = fn(18061);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -34,7 +34,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-createStyles = fn(4794);
+createStyles = fn(4913);
 let obj = { fallbackImage: { color: nativeDefault.colors.WHITE }, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
 let obj4 = { color: nativeDefault.colors.WHITE };
 obj.fallbackImageV2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

@@ -1,8 +1,8 @@
-// === Module 2152: utils/StringUtils ===
+// === Module 2153: utils/StringUtils ===
 
-// Module 2152 (utils/StringUtils)
-import _mod2153 from "module_2153" /* 2153 */;
-import DOMUtils from "DOMUtils" /* 2154 */;
+// Module 2153 (utils/StringUtils)
+import _mod2154 from "module_2154" /* 2154 */;
+import DOMUtils from "DOMUtils" /* 2155 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /[\u0300-\u036f]/g;
@@ -20,7 +20,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2153;
+    closure_0 = _mod2154;
     dependencyMap = "";
     items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {

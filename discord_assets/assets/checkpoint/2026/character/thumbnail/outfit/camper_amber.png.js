@@ -1,6 +1,6 @@
-// === Module 6017: ? ===
+// === Module 6136: ? ===
 
-// Module 6017
+// Module 6136
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/camper_amber.png.js");

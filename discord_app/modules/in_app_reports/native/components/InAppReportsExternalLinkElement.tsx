@@ -1,15 +1,15 @@
-// === Module 10254: InAppReportsExternalLinkElement ===
+// === Module 10374: InAppReportsExternalLinkElement ===
 
-// Module 10254 (InAppReportsExternalLinkElement)
+// Module 10374 (InAppReportsExternalLinkElement)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import LinkingDefault from "Linking" /* 5473 */;
-import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 10065 */;
-import LinkExternalMediumIcon from "LinkExternalMediumIcon" /* 10255 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import LinkingDefault from "Linking" /* 5592 */;
+import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 10185 */;
+import LinkExternalMediumIcon from "LinkExternalMediumIcon" /* 10375 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4794 */;
+import createStyles from "createStyles" /* 4913 */;
 import size_mod from "module_2" /* 2 */;
 
 function ExternalLinkItem(data) {

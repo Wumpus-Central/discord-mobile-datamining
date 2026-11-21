@@ -1,25 +1,25 @@
-// === Module 8776: RowGeneratorUtils ===
+// === Module 8896: RowGeneratorUtils ===
 
-// Module 8776 (RowGeneratorUtils)
+// Module 8896 (RowGeneratorUtils)
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1493 */;
-import ColorUtils from "ColorUtils" /* 4791 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5847 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6772 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildStore from "GuildStore" /* 4665 */;
+import ColorUtils from "ColorUtils" /* 4910 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6891 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildStore from "GuildStore" /* 4784 */;
 import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1442 */;
 
 require = fn;
-const MessageConstants = fn(4799);
+const MessageConstants = fn(4918);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: metroImportDefault } = MessageConstants);
-const SwipeActionsType = fn(8550).SwipeActionsType;
+const SwipeActionsType = fn(8670).SwipeActionsType;
 const Constants = fn(1071);
 ({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 const result = createStyles.experimental_createToken(() => ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1));
-createStyles = fn(4794);
+createStyles = fn(4913);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({ ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: nativeDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: nativeDefault.unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: nativeDefault.unsafe_rawColors.RED_345, editingColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT });
 const set = new Set(NativeMediaManagerModule.getConstants().supportedExtensions);
 const size = fn(2);

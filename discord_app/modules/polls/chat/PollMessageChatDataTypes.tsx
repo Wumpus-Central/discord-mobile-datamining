@@ -1,6 +1,6 @@
-// === Module 12028: PollMessageChatDataTypes ===
+// === Module 12150: PollMessageChatDataTypes ===
 
-// Module 12028 (PollMessageChatDataTypes)
+// Module 12150 (PollMessageChatDataTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");

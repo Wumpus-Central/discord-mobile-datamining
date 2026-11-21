@@ -1,7 +1,7 @@
-// === Module 11285: useHorizontalAutocompleteResults ===
+// === Module 11405: useHorizontalAutocompleteResults ===
 
-// Module 11285 (useHorizontalAutocompleteResults)
-import AutocompleteOptions from "AutocompleteOptions" /* 11286 */;
+// Module 11405 (useHorizontalAutocompleteResults)
+import AutocompleteOptions from "AutocompleteOptions" /* 11406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

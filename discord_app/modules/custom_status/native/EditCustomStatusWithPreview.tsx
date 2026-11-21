@@ -1,24 +1,24 @@
-// === Module 8936: EditCustomStatusWithPreview ===
+// === Module 9056: EditCustomStatusWithPreview ===
 
-// Module 8936 (EditCustomStatusWithPreview)
+// Module 9056 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import shared from "shared" /* 4801 */;
-import ChatInputUtils from "ChatInputUtils" /* 4979 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5804 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6310 */;
-import Pressables from "Pressables" /* 6910 */;
-import NavigatorHeader from "NavigatorHeader" /* 6975 */;
-import _modDef7130 from "module_7130" /* 7130 */;
-import setCustomStatusDefault from "setCustomStatus" /* 8940 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 8942 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 8943 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 14075 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 14077 */;
+import shared from "shared" /* 4920 */;
+import ChatInputUtils from "ChatInputUtils" /* 5098 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
+import Pressables from "Pressables" /* 7030 */;
+import NavigatorHeader from "NavigatorHeader" /* 7095 */;
+import _modDef7250 from "module_7250" /* 7250 */;
+import setCustomStatusDefault from "setCustomStatus" /* 9060 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 9062 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9063 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 14197 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 14199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -31,7 +31,7 @@ function ClearInputButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
-  obj.children = state(native.Icon, { source: _modDef7130, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  obj.children = state(native.Icon, { source: _modDef7250, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
   return state(Pressables.PressableOpacity, obj);
 }
 function EditCustomStatusWithPreview(navigation) {
@@ -120,7 +120,7 @@ function EditCustomStatusWithPreview(navigation) {
   const callback2 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(4801).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = navigation(4920).AccessibilityAnnouncer;
       const intl = navigation(1112).intl;
       AccessibilityAnnouncer.announce(intl.string(navigation(1112).t.YdUwBS));
     }, 300);
@@ -268,7 +268,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14088, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14210, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "body-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[30]).Text, obj19);
@@ -306,13 +306,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(8937).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(9057).STATUS_MAX_LENGTH;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 }, statusInputRow: { flexDirection: "row", alignItems: "center" }, emoji: { marginRight: 8 }, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
 let obj3 = { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 };
 obj2.status = { color: nativeDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
@@ -343,7 +343,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1112).intl;
       obj.title = intl.string(analyticsLocations(1112).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(8441).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(8561).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -360,5 +360,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(6972).Navigator, obj);
+  return closure_13(analyticsLocations(7092).Navigator, obj);
 };

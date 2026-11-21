@@ -1,22 +1,22 @@
-// === Module 9792: getGameProfileWebsiteData ===
+// === Module 9912: getGameProfileWebsiteData ===
 
-// Module 9792 (getGameProfileWebsiteData)
+// Module 9912 (getGameProfileWebsiteData)
 import util from "util" /* 1112 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 7646 */;
-import AppleNeutralIcon from "AppleNeutralIcon" /* 7732 */;
-import XNeutralIcon from "XNeutralIcon" /* 8686 */;
-import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8688 */;
-import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8690 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9659 */;
-import RobloxNeutralIcon from "RobloxNeutralIcon" /* 9668 */;
-import GooglePlayNeutralIcon from "GooglePlayNeutralIcon" /* 9705 */;
-import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 9793 */;
-import BlueskyNeutralIcon from "BlueskyNeutralIcon" /* 9795 */;
-import RedditNeutralIcon from "RedditNeutralIcon" /* 9797 */;
-import TwitchNeutralIcon from "TwitchNeutralIcon" /* 9799 */;
-import ItchNeutralIcon from "ItchNeutralIcon" /* 9801 */;
-import FandomNeutralIcon from "FandomNeutralIcon" /* 9803 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 7766 */;
+import AppleNeutralIcon from "AppleNeutralIcon" /* 7852 */;
+import XNeutralIcon from "XNeutralIcon" /* 8806 */;
+import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8808 */;
+import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8810 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9774 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9779 */;
+import RobloxNeutralIcon from "RobloxNeutralIcon" /* 9788 */;
+import GooglePlayNeutralIcon from "GooglePlayNeutralIcon" /* 9825 */;
+import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 9913 */;
+import BlueskyNeutralIcon from "BlueskyNeutralIcon" /* 9915 */;
+import RedditNeutralIcon from "RedditNeutralIcon" /* 9917 */;
+import TwitchNeutralIcon from "TwitchNeutralIcon" /* 9919 */;
+import ItchNeutralIcon from "ItchNeutralIcon" /* 9921 */;
+import FandomNeutralIcon from "FandomNeutralIcon" /* 9923 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

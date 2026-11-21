@@ -1,13 +1,13 @@
-// === Module 7957: CollectiblesProductRecord ===
+// === Module 8077: CollectiblesProductRecord ===
 
-// Module 7957 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 2168 */;
+// Module 8077 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 2169 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7958 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7964 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 8078 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 8084 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7959);
+const CollectiblesItemRecord = fn(8079);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } = CollectiblesItemRecord);
 let closure_7 = fn(1073).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1071);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "id", items: "<string:374497215>", categorySkuId: "<string:1382006536>", categoryWillUnpublishAt: "<string:1606371960>", isCategoryReward: "<string:3214385490>", prices: "<string:1116885599>", previewAssets: "<string:108093375>", googleSkuIds: "<string:2852147957>", eligibleOffers: "<string:3679608767>", variants: "<string:1382006702>", bundledProducts: "<string:1606373266>", isFirstParty: "en-GM" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "id", items: "<string:1382958091>", categorySkuId: "<string:1849965702>", categoryWillUnpublishAt: "en-NZ", isCategoryReward: "en-001", prices: "en-PG", previewAssets: "en-001", googleSkuIds: "en-PH", eligibleOffers: "en-001", variants: "snowman2", bundledProducts: "<string:1486674077>", isFirstParty: false };
               let str;
               if (first != null) {
                 str = first.optionValue;

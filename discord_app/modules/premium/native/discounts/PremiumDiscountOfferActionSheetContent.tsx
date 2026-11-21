@@ -1,18 +1,18 @@
-// === Module 18937: PremiumDiscountOfferActionSheetContent ===
+// === Module 19064: PremiumDiscountOfferActionSheetContent ===
 
-// Module 18937 (PremiumDiscountOfferActionSheetContent)
+// Module 19064 (PremiumDiscountOfferActionSheetContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import PremiumUtils from "PremiumUtils" /* 2172 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import components_Button_Button from "components/Button/Button" /* 5392 */;
-import FolderIcon from "FolderIcon" /* 7555 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8323 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8832 */;
-import UserIcon from "UserIcon" /* 12232 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14595 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 16994 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 16998 */;
+import PremiumUtils from "PremiumUtils" /* 2173 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import components_Button_Button from "components/Button/Button" /* 5511 */;
+import FolderIcon from "FolderIcon" /* 7675 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8443 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8952 */;
+import UserIcon from "UserIcon" /* 12354 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14717 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17117 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 17121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1388).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };

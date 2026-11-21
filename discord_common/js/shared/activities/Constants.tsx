@@ -1,6 +1,6 @@
-// === Module 10654: Constants ===
+// === Module 10774: Constants ===
 
-// Module 10654 (Constants)
+// Module 10774 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/activities/Constants.tsx");

@@ -1,9 +1,9 @@
-// === Module 17584: AccountLinkBanner ===
+// === Module 17708: AccountLinkBanner ===
 
-// Module 17584 (AccountLinkBanner)
+// Module 17708 (AccountLinkBanner)
 import nativeDefault from "native" /* 575 */;
-import ButtonConstants from "ButtonConstants" /* 5398 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5524 */;
+import ButtonConstants from "ButtonConstants" /* 5517 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -45,7 +45,7 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = closure_6(View, obj9);
     obj6.children = items3;
     items2[1] = closure_7(View, obj6);
-    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
+    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
     items2[2] = closure_6(require("native").Avatar, obj10);
     obj4.children = items2;
     items1[1] = closure_7(View, obj4);
@@ -75,7 +75,7 @@ function AccountLinkLargeBanner(arg0) {
   return tmp8;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -83,12 +83,12 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7406).GameIconSizes.NORMAL;
-let closure_14 = fn(7406).GameIconImageSize[NORMAL];
+const NORMAL = fn(7526).GameIconSizes.NORMAL;
+let closure_14 = fn(7526).GameIconImageSize[NORMAL];
 let c15 = "heading-sm/semibold";
 let c16 = "body-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;

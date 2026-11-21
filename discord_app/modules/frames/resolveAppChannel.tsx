@@ -1,9 +1,9 @@
-// === Module 10569: resolveAppChannel ===
+// === Module 10689: resolveAppChannel ===
 
-// Module 10569 (resolveAppChannel)
+// Module 10689 (resolveAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 const require = fn;
 let closure_7 = async function _resolveAppChannel(arg0) {

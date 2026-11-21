@@ -1,13 +1,13 @@
-// === Module 10325: ApplicationCommandFrecencyHooks ===
+// === Module 10445: ApplicationCommandFrecencyHooks ===
 
-// Module 10325 (ApplicationCommandFrecencyHooks)
+// Module 10445 (ApplicationCommandFrecencyHooks)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 10318 */;
+import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 10438 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let ApplicationCommandFrecencyStore = fn(10318);
+let ApplicationCommandFrecencyStore = fn(10438);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
 let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
 const UserSettingsTypes = fn(1081).UserSettingsTypes;

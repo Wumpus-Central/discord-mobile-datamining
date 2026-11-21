@@ -1,6 +1,6 @@
-// === Module 13567: ? ===
+// === Module 13689: ? ===
 
-// Module 13567
+// Module 13689
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-3x.png.js");

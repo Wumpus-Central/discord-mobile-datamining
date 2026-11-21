@@ -1,9 +1,9 @@
-// === Module 13038: GuildDirectoryUtils ===
+// === Module 13160: GuildDirectoryUtils ===
 
-// Module 13038 (GuildDirectoryUtils)
+// Module 13160 (GuildDirectoryUtils)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 13039 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 13161 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryTypes = GuildDirectoryConstants.DirectoryEntryTypes;

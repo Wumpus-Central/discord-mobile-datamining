@@ -1,17 +1,17 @@
-// === Module 14197: UserProfileEmbed ===
+// === Module 14319: UserProfileEmbed ===
 
-// Module 14197 (UserProfileEmbed)
+// Module 14319 (UserProfileEmbed)
 import util from "util" /* 1112 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5824 */;
-import useDisplayProfile from "useDisplayProfile" /* 7952 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8125 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8560 */;
-import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 12103 */;
-import UserProfileStore from "UserProfileStore" /* 6837 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5943 */;
+import useDisplayProfile from "useDisplayProfile" /* 8072 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8245 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8680 */;
+import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 12225 */;
+import UserProfileStore from "UserProfileStore" /* 6956 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const InviteTypes = fn(8318).InviteTypes;
+const InviteTypes = fn(8438).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/UserProfileEmbed.tsx");
 

@@ -1,15 +1,15 @@
-// === Module 7363: CategoryCollapseStore ===
+// === Module 7483: CategoryCollapseStore ===
 
-// Module 7363 (CategoryCollapseStore)
+// Module 7483 (CategoryCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import FavoritesUtils from "FavoritesUtils" /* 4668 */;
+import FavoritesUtils from "FavoritesUtils" /* 4787 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6432 */;
-import GuildChannelStore from "GuildChannelStore" /* 4724 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 
 require = fn;
 function incrementVersion() {

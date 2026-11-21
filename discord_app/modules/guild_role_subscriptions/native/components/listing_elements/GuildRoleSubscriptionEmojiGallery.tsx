@@ -1,9 +1,9 @@
-// === Module 16520: GuildRoleSubscriptionEmojiGallery ===
+// === Module 16643: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 16520 (GuildRoleSubscriptionEmojiGallery)
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import chunkDefault from "chunk" /* 11211 */;
-import EmojiIconDefault from "EmojiIcon" /* 16521 */;
+// Module 16643 (GuildRoleSubscriptionEmojiGallery)
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import chunkDefault from "chunk" /* 11331 */;
+import EmojiIconDefault from "EmojiIcon" /* 16644 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

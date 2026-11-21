@@ -1,32 +1,32 @@
-// === Module 10086: UserProfileAddGameActionSheet ===
+// === Module 10206: UserProfileAddGameActionSheet ===
 
-// Module 10086 (UserProfileAddGameActionSheet)
+// Module 10206 (UserProfileAddGameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2150 */;
-import StringUtils from "StringUtils" /* 2151 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4803 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5008 */;
-import FastImageDefault from "FastImage" /* 5481 */;
-import _mod6561 from "module_6561" /* 6561 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6839 */;
-import TableRow from "TableRow" /* 6925 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 7857 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8016 */;
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 10085 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 10088 */;
-import WidgetUtils from "WidgetUtils" /* 10097 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2151 */;
+import StringUtils from "StringUtils" /* 2152 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import FastImageDefault from "FastImage" /* 5600 */;
+import _mod6680 from "module_6680" /* 6680 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6958 */;
+import TableRow from "TableRow" /* 7045 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7977 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8136 */;
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 10205 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 10208 */;
+import WidgetUtils from "WidgetUtils" /* 10217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WidgetStore from "WidgetStore" /* 10087 */;
+import WidgetStore from "WidgetStore" /* 10207 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(7949).TrackUserProfileEditActions;
+let closure_8 = fn(8069).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 }, list: null, loading: null, emptyState: null, emptyStateText: null, gameIcon: null, gameIconBackground: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
 obj.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -270,7 +270,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_5) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        length = _mod6561.matchSorter(memo1, query, obj2).length;
+        length = _mod6680.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }

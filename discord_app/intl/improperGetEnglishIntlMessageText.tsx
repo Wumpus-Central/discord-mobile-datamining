@@ -1,6 +1,6 @@
-// === Module 19383: improperGetEnglishIntlMessageText ===
+// === Module 19510: improperGetEnglishIntlMessageText ===
 
-// Module 19383 (improperGetEnglishIntlMessageText)
+// Module 19510 (improperGetEnglishIntlMessageText)
 import util from "util" /* 1112 */;
 import _mod1151 from "module_1151" /* 1151 */;
 import size from "module_2" /* 2 */;

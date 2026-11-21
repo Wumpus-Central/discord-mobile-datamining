@@ -1,6 +1,6 @@
-// === Module 15660: MediaPlayerManager ===
+// === Module 15783: MediaPlayerManager ===
 
-// Module 15660 (MediaPlayerManager)
+// Module 15783 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1071 */;
 import Constants2 from "Constants" /* 1082 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import RootNavigationRef from "RootNavigationRef" /* 4971 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5420 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8130 */;
+import RootNavigationRef from "RootNavigationRef" /* 5090 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5539 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4642 */;
-import VoicePanelStore from "VoicePanelStore" /* 6376 */;
-import ChannelStore from "ChannelStore" /* 4643 */;
-import MessageStore from "MessageStore" /* 5845 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
+import VoicePanelStore from "VoicePanelStore" /* 6495 */;
+import ChannelStore from "ChannelStore" /* 4762 */;
+import MessageStore from "MessageStore" /* 5964 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15661 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15784 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: "fist_tone3",
+    showPip: "2026-03-acom-modify-dark-launch",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "+237"
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });
@@ -286,7 +286,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "nextElementSibling" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "_reportAppStart" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

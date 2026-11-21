@@ -1,9 +1,9 @@
-// === Module 18259: ExperimentalDirectSelectIcon ===
+// === Module 18386: ExperimentalDirectSelectIcon ===
 
-// Module 18259 (ExperimentalDirectSelectIcon)
+// Module 18386 (ExperimentalDirectSelectIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5480 */;
-import _mod18260 from "module_18260" /* 18260 */;
+import BaseIconImage from "BaseIconImage" /* 5599 */;
+import _mod18387 from "module_18387" /* 18387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalDirectSelectIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18260, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18387, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

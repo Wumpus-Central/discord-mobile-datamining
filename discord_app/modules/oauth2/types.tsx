@@ -1,6 +1,6 @@
-// === Module 6894: types ===
+// === Module 7014: types ===
 
-// Module 6894 (types)
+// Module 7014 (types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/oauth2/types.tsx");

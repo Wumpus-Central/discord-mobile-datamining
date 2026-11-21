@@ -1,15 +1,15 @@
-// === Module 16309: useTrackOrbsArcadeGameTileViewed ===
+// === Module 16432: useTrackOrbsArcadeGameTileViewed ===
 
-// Module 16309 (useTrackOrbsArcadeGameTileViewed)
-import useTimeoutDefault from "useTimeout" /* 13895 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 16310 */;
+// Module 16432 (useTrackOrbsArcadeGameTileViewed)
+import useTimeoutDefault from "useTimeout" /* 14017 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 16433 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AppStates = fn(1071).AppStates;
-let closure_5 = fn(9843).MIN_QUEST_VIEW_TIME_SECONDS;
+let closure_5 = fn(9963).MIN_QUEST_VIEW_TIME_SECONDS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/useTrackOrbsArcadeGameTileViewed.tsx");
 

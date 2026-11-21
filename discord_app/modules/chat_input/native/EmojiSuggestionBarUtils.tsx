@@ -1,15 +1,15 @@
-// === Module 13176: EmojiSuggestionBarUtils ===
+// === Module 13298: EmojiSuggestionBarUtils ===
 
-// Module 13176 (EmojiSuggestionBarUtils)
+// Module 13298 (EmojiSuggestionBarUtils)
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import native from "native" /* 4855 */;
-import timing_timing from "timing/timing" /* 5004 */;
-import spring_spring from "spring/spring" /* 5395 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10339 */;
+import native from "native" /* 4974 */;
+import timing_timing from "timing/timing" /* 5123 */;
+import spring_spring from "spring/spring" /* 5514 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4795 */;
+import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 const require = globalThis.__r;
 
@@ -174,21 +174,21 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
   items = [setDataImmediate];
   const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
   obj2 = chatInputRef(504);
-  analyticsLocations = chatInputStateRef(7400)(chatInputStateRef(7419).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp5 = chatInputStateRef(13141)(tmp[1], 16);
+  analyticsLocations = chatInputStateRef(7520)(chatInputStateRef(7539).EMOJI_SUGGESTIONS).analyticsLocations;
+  const tmp5 = chatInputStateRef(13263)(tmp[1], 16);
   setData = tmp5.setData;
   setDataImmediate = tmp5.setDataImmediate;
   const items1 = [setData];
   const imperativeHandle = setData.useImperativeHandle(ref, () => ({ setData }), items1);
   let obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null, minUnlockedEmojis: null };
-  const tmp4 = chatInputStateRef(7400);
+  const tmp4 = chatInputStateRef(7520);
   if (focused) {
     focused = !suppressed;
   }
   obj3.enabled = focused;
   obj3.maxCount = MAX_SUGGESTIONS_LARGE;
   obj3.minUnlockedEmojis = minUnlockedEmojis;
-  const tmp7Result = chatInputStateRef(13177)(obj3);
+  const tmp7Result = chatInputStateRef(13299)(obj3);
   unlockedEmojis = tmp7Result.unlockedEmojis;
   queryEnd = tmp7Result.queryEnd;
   clear = tmp7Result.clear;
@@ -232,7 +232,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
       ref = queryEnd + combined.length;
     }
   }, items2);
-  const tmp7 = chatInputStateRef(13177);
+  const tmp7 = chatInputStateRef(13299);
   return {
     unlockedEmojis,
     lockedEmojis: tmp7Result.lockedEmojis,

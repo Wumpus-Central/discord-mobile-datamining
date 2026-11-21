@@ -1,25 +1,25 @@
-// === Module 7954: CollectiblesActionCreators ===
+// === Module 8074: CollectiblesActionCreators ===
 
-// Module 7954 (CollectiblesActionCreators)
+// Module 8074 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import RootNavigationRef from "RootNavigationRef" /* 4971 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7967 */;
-import LayerActionCreators from "LayerActionCreators" /* 7996 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7997 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7998 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8004 */;
-import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 8005 */;
+import RootNavigationRef from "RootNavigationRef" /* 5090 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;
+import LayerActionCreators from "LayerActionCreators" /* 8116 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 8117 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 8118 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8124 */;
+import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 8125 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5388 */;
-import LocaleStore from "LocaleStore" /* 2187 */;
+import DevSettingsStore from "DevSettingsStore" /* 5507 */;
+import LocaleStore from "LocaleStore" /* 2188 */;
 import UserStore from "UserStore" /* 1386 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7955 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5447 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7970 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7957 */;
-import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7981 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8075 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5566 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8090 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 8077 */;
+import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 8101 */;
 
 require = fn;
 function openCollectiblesShop(arg0) {
@@ -876,16 +876,16 @@ let closure_32 = async function _fetchCollectiblesShopHome() {
     return value;
   })();
 };
-const addDebugLog = fn(7969).addDebugLog;
-let closure_11 = fn(7971).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7975);
+const addDebugLog = fn(8089).addDebugLog;
+let closure_11 = fn(8091).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(8095);
 ({ CollectiblesMarketingsRecord: closure_12, rehydratePersistedMarketings: map1 } = CollectiblesMarketingRecord);
-let closure_16 = fn(7982).CollectiblesShopHomeRecord;
+let closure_16 = fn(8102).CollectiblesShopHomeRecord;
 const constants = fn(1073).CollectiblesMobileShopScreen;
 const Constants = fn(1071);
 ({ Endpoints: closure_18, Routes, UserSettingsSections: closure_19 } = Constants);
-const CollectiblesShopHomeStore = fn(5451);
-const CollectiblesShopStore = fn(7995);
+const CollectiblesShopHomeStore = fn(5570);
+const CollectiblesShopStore = fn(8115);
 let result = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
@@ -894,7 +894,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4971).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(5090).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

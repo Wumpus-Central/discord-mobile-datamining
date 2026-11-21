@@ -1,17 +1,17 @@
-// === Module 13733: InstantInviteCode ===
+// === Module 13855: InstantInviteCode ===
 
-// Module 13733 (InstantInviteCode)
+// Module 13855 (InstantInviteCode)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5385 */;
-import useChannelName from "useChannelName" /* 5410 */;
-import ClockIcon from "ClockIcon" /* 5503 */;
-import Stack_Stack from "Stack/Stack" /* 5810 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7516 */;
-import TextIcon2 from "TextIcon" /* 7561 */;
-import CountDownDefault from "CountDown" /* 10423 */;
+import Text_Text from "Text/Text" /* 5504 */;
+import useChannelName from "useChannelName" /* 5529 */;
+import ClockIcon from "ClockIcon" /* 5622 */;
+import Stack_Stack from "Stack/Stack" /* 5929 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
+import TextIcon2 from "TextIcon" /* 7681 */;
+import CountDownDefault from "CountDown" /* 10543 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4736 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -60,10 +60,10 @@ class InstantInviteDetails {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(4647).createChannelRecordFromInvite;
+let closure_5 = fn(4766).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
 const refs = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -75,12 +75,12 @@ export default function InstantInviteCode(invite) {
   const obj = { style: closure_10().flex, children: null };
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
-  const items1 = [closure_8(invite(5385).Text, { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code }), ];
+  const items1 = [closure_8(invite(5504).Text, { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code }), ];
   const obj3 = { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5810).Stack, obj2);
+  obj.children = closure_9(invite(5929).Stack, obj2);
   return closure_8(View, obj);
 };
 export { InstantInviteDetails };

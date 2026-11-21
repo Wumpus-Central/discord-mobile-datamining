@@ -1,7 +1,7 @@
-// === Module 8938: getRandomCustomStatusPrompt ===
+// === Module 9058: getRandomCustomStatusPrompt ===
 
-// Module 8938 (getRandomCustomStatusPrompt)
-import Constants from "Constants" /* 8937 */;
+// Module 9058 (getRandomCustomStatusPrompt)
+import Constants from "Constants" /* 9057 */;
 import size from "module_2" /* 2 */;
 
 ({ CustomStatusPrompts: c2, CustomStatusPromptValues: c3 } = Constants);

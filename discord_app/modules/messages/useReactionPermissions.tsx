@@ -1,11 +1,11 @@
-// === Module 10051: useReactionPermissions ===
+// === Module 10171: useReactionPermissions ===
 
-// Module 10051 (useReactionPermissions)
+// Module 10171 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4727 */;
-import GuildMemberStore from "GuildMemberStore" /* 4706 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6412 */;
-import PermissionStore from "PermissionStore" /* 4726 */;
+import LurkingStore from "LurkingStore" /* 4846 */;
+import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6531 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 const require = globalThis.__r;
 

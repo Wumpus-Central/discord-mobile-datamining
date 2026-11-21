@@ -1,6 +1,6 @@
-// === Module 8292: getQuestLogger ===
+// === Module 8412: getQuestLogger ===
 
-// Module 8292 (getQuestLogger)
+// Module 8412 (getQuestLogger)
 import LoggerDefault from "Logger" /* 3 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1360 */;
 

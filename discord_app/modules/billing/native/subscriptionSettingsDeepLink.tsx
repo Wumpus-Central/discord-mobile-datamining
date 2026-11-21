@@ -1,10 +1,10 @@
-// === Module 15087: subscriptionSettingsDeepLink ===
+// === Module 15210: subscriptionSettingsDeepLink ===
 
-// Module 15087 (subscriptionSettingsDeepLink)
+// Module 15210 (subscriptionSettingsDeepLink)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import openUserSettings from "openUserSettings" /* 8074 */;
+import openUserSettings from "openUserSettings" /* 8194 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2177 */;
+import SubscriptionStore from "SubscriptionStore" /* 2178 */;
 
 require = fn;
 function openNitroHome() {
@@ -91,7 +91,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5008).default;
+            closure_0 = closure_0(5127).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1112).intl;
@@ -111,7 +111,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15088).showSimpleActionSheet(obj);
+            const result = closure_0(15211).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

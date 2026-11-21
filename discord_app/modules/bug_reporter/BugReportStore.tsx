@@ -1,7 +1,7 @@
-// === Module 11049: BugReportStore ===
+// === Module 11169: BugReportStore ===
 
-// Module 11049 (BugReportStore)
-import ZustandStore from "ZustandStore" /* 4983 */;
+// Module 11169 (BugReportStore)
+import ZustandStore from "ZustandStore" /* 5102 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ isReportOpen: false }));

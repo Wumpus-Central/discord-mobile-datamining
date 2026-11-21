@@ -1,12 +1,12 @@
-// === Module 16379: useAdRefreshLoop ===
+// === Module 16502: useAdRefreshLoop ===
 
-// Module 16379 (useAdRefreshLoop)
+// Module 16502 (useAdRefreshLoop)
 import _mod19 from "module_19" /* 19 */;
-import QuestConstants from "QuestConstants" /* 6439 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6532 */;
-import QuestsEligibility from "QuestsEligibility" /* 9830 */;
-import AdDeliveryActionCreators from "AdDeliveryActionCreators" /* 9872 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8281 */;
+import QuestConstants from "QuestConstants" /* 6558 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6651 */;
+import QuestsEligibility from "QuestsEligibility" /* 9950 */;
+import AdDeliveryActionCreators from "AdDeliveryActionCreators" /* 9992 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8401 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

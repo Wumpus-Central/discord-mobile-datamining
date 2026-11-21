@@ -1,10 +1,10 @@
-// === Module 12182: openConjureDevicePermissionPrompt ===
+// === Module 12304: openConjureDevicePermissionPrompt ===
 
-// Module 12182 (openConjureDevicePermissionPrompt)
+// Module 12304 (openConjureDevicePermissionPrompt)
 import util from "util" /* 1112 */;
-import _modDef4091 from "module_4091" /* 4091 */;
-import AlertModal from "AlertModal" /* 5747 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 12181 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import AlertModal from "AlertModal" /* 5866 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 12303 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/device_permissions/openConjureDevicePermissionPrompt.native.tsx");
@@ -19,9 +19,9 @@ export default function _default(arg0) {
     const mapped = closure_1_1.map(conjureDevicePermissions.getConjureDevicePermissionLabel);
     obj2.content = mapped.join("\n");
     const intl = util.intl;
-    obj2.confirmText = intl.string(_modDef4091.xbsXd9);
+    obj2.confirmText = intl.string(_modDef4190.xbsXd9);
     const intl2 = util.intl;
-    obj2.cancelText = intl2.string(_modDef4091.rDyl56);
+    obj2.cancelText = intl2.string(_modDef4190.rDyl56);
     obj2.onConfirm = function onConfirm() {
       return closure_0(true);
     };

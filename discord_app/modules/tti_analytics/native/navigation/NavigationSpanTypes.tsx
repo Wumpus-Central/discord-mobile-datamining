@@ -1,6 +1,6 @@
-// === Module 10310: NavigationSpanTypes ===
+// === Module 10430: NavigationSpanTypes ===
 
-// Module 10310 (NavigationSpanTypes)
+// Module 10430 (NavigationSpanTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx");
