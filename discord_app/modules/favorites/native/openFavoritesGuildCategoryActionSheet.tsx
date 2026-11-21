@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/openFavorite
 
 export default function openFavoritesGuildCategoryActionSheet(categoryId) {
   const combined = "FavoritesGuildCategoryLongPress-" + categoryId;
-  ActionSheetActionCreatorsDefault.openLazy(combined(2119)(17506, dependencyMap.paths), combined, {
+  ActionSheetActionCreatorsDefault.openLazy(combined(2119)(17630, dependencyMap.paths), combined, {
     categoryId,
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);

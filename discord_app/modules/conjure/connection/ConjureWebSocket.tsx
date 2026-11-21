@@ -21,7 +21,11 @@ prototype["open"] = function open(ticket) {
     obj3 = {};
   }
   const merged = Object.assign(obj3);
-  const uRLSearchParams = new URLSearchParams({ ticket: ticket.ticket, debug: "on_demand" });
+  const uRLSearchParams = new URLSearchParams({
+    ticket: ticket.ticket,
+    debug: "on_demand",
+    preview_add_bot_prompt: "1",
+  });
   webSocket = new WebSocket("" + replaced + "/agent/ws?" + uRLSearchParams);
   this.socket = webSocket;
   const listener = webSocket.addEventListener("message", (event) => {
@@ -477,6 +481,20 @@ prototype["sendHostAccess"] = function sendHostAccess(arg0) {
       const socket = self.socket;
       const _JSON = JSON;
       socket.send(JSON.stringify(arg0));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendPreviewBotAnswer"] = function sendPreviewBotAnswer(id, added) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "preview_bot_answer", id, answer: added };
+      socket.send(JSON.stringify(obj));
     }
   }
   const error = new Error("WebSocket not open");

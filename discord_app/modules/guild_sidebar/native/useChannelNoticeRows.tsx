@@ -11,9 +11,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_9 = fn(8207).ChannelListChannelNoticeRow;
+let closure_9 = fn(8327).ChannelListChannelNoticeRow;
 const MFALevels = fn(1071).MFALevels;
-const DismissibleContentConstants = fn(4640);
+const DismissibleContentConstants = fn(4759);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");

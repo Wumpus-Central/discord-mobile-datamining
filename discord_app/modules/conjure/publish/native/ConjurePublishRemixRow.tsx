@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_16 },
   label: null,
@@ -44,7 +44,7 @@ export default function ConjurePublishRemixRow(remix) {
         const obj = { label: label.label, trailingIndicator: null, action: null };
         let CheckmarkLargeIcon;
         if (label.value === closure_1) {
-          CheckmarkLargeIcon = options(7220).CheckmarkLargeIcon;
+          CheckmarkLargeIcon = options(7340).CheckmarkLargeIcon;
         }
         obj.trailingIndicator = CheckmarkLargeIcon;
         obj.action = function action() {

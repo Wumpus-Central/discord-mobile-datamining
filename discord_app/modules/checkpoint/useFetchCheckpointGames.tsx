@@ -4,7 +4,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import CheckpointStore from "CheckpointStore.tsx";
 
 require = fn;
-let closure_4 = fn(5850).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
+let closure_4 = fn(5969).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useFetchCheckpointGames.tsx");
 

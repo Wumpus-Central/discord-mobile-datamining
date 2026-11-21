@@ -16,7 +16,7 @@ import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 const _modDef1653 = _mod1653;
 
-const _modDef4091 = tmp7(4091);
+const _modDef4190 = tmp7(4190);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1071).AppStates;
@@ -27,14 +27,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(6920).GameControllerIcon,
-  apps: fn(7584).AppsIcon,
-  profile_widget: fn(18499).WidgetsIcon,
-  overlay_widget: fn(9784).ScreenIcon,
-  automod: fn(10013).ShieldIcon,
-  chat_bot: fn(12050).RobotIcon,
+  games: fn(7040).GameControllerIcon,
+  apps: fn(7704).AppsIcon,
+  profile_widget: fn(18626).WidgetsIcon,
+  overlay_widget: fn(9904).ScreenIcon,
+  automod: fn(10133).ShieldIcon,
+  chat_bot: fn(12172).RobotIcon,
 };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -310,7 +310,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     children: null,
   };
   const intl = tmp2(1112).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4091.Qc4S39);
+  obj5.accessibilityLabel = intl.string(_modDef4190.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

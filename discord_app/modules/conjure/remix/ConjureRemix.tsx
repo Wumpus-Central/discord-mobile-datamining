@@ -140,7 +140,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     }
   };
   const intl = require("util").intl;
-  closure_3 = intl.string(copy(4091).Cn8H0Y);
+  closure_3 = intl.string(copy(4190).Cn8H0Y);
   let tmp3;
   if (null != share_ticket) {
     let obj2 = { share_ticket };
@@ -158,8 +158,8 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
   guild = GuildStore.getGuild(guildId);
   let result = "guild" === id.install_scope && null != guild;
   if (result) {
-    result = tmp(6746).canStartConjureProject(guild, "ConjureRemix");
-    const tmpResult = tmp(6746);
+    result = tmp(6865).canStartConjureProject(guild, "ConjureRemix");
+    const tmpResult = tmp(6865);
   }
   c11 = result;
   let obj = require("ConjureWorkerTickets");
@@ -247,7 +247,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     }
   };
 }
-const ConjureConnectionStore = fn(6848);
+const ConjureConnectionStore = fn(6967);
 ({ closeConnection: hasOwnProperty, ensureConnection: closure_6 } = ConjureConnectionStore);
 let map = new Map();
 const subscription = Dispatcher.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (nonce) => {

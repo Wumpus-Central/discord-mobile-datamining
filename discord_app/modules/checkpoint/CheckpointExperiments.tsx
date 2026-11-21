@@ -57,10 +57,10 @@ export function useCheckpointQAMode(CheckpointProfileEntrypoint) {
 export function useIsCheckpointIntroEnabled(location) {
   return closure_3.useConfig({ location }).enabled;
 }
-export function isCheckpointCharacterSaveEnabled(location) {
-  let canSaveCharacter = closure_1.getConfig({ location }).enabled;
+export function isCheckpointCharacterSaveEnabled(message_long_press) {
+  let canSaveCharacter = closure_1.getConfig({ location: message_long_press }).enabled;
   if (canSaveCharacter) {
-    const obj2 = { location };
+    const obj2 = { location: message_long_press };
     canSaveCharacter = config.getConfig(obj2).canSaveCharacter;
   }
   return canSaveCharacter;

@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1653 from "../../../../_runtime/metro/01653__.js";
-import _mod4709 from "../../../../_runtime/metro/04709__.js";
+import _mod4828 from "../../../../_runtime/metro/04828__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "GuildsBarDnDStore.tsx";
@@ -184,9 +184,9 @@ function PreviewItem(overState) {
           id: -1,
           parentId: "Path",
           name: "Array",
-          color: "ao",
-          expanded: "nm",
-          children: "r",
+          color: "analyticsLocations",
+          expanded: null,
+          children: null,
         };
         items = [tmp2];
         element.children = items;
@@ -398,30 +398,30 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(17745), obj5);
+    let tmp22Result = tmp22(tmp4(17871), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(4855).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(4974).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(17765), obj6);
-    const tmp4Result = tmp4(17765);
+    tmp22Result = tmp22(tmp4(17891), obj6);
+    const tmp4Result = tmp4(17891);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1653.View, obj4);
 }
-let GuildsNodeType = fn(6431).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17734).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6550).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17860).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4794);
+createStyles = fn(4913);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -506,11 +506,11 @@ export default noop.memo(function GuildsBarDragPreview() {
             overNode: null,
             dropPosition: "o",
             gestureState: true,
-            scrollPosition: "/assets/images/platforms",
-            dragRegion: 255,
-            windowSize: 255,
+            scrollPosition: "/assets/design/components/Icon/native/redesign/generated/images",
+            dragRegion: 24,
+            windowSize: 24,
             dropComplete: null,
-            listInsets: "97cdba3c0b32d79e6f8d3cdafd7b4530",
+            listInsets: "80139ae0e2b501617462c705b80c97d5",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -530,7 +530,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

@@ -311,7 +311,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

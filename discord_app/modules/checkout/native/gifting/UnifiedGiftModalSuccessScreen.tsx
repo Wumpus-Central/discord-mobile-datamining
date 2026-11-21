@@ -9,7 +9,7 @@ require = fn;
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   alertContainer: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -42,7 +42,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (null != giftBadgeProgress) {
       const obj2 = { giftBadgeProgress: tmp2 };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(13806, dependencyMap.paths),
+        asyncRequireImpl(13928, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );
@@ -54,17 +54,17 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  const tmp4 = giftBadgeProgress(13795).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
-  const tmp8 = onClose(5813);
-  const items2 = [closure_5(onClose(5481), { source: tmp4, style: tmp.image }), , ,];
+  const tmp4 = giftBadgeProgress(13917).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
+  const tmp8 = onClose(5932);
+  const items2 = [closure_5(onClose(5600), { source: tmp4, style: tmp.image }), , ,];
   const obj3 = { variant: "heading-lg/semibold", style: tmp.title, children: null };
   const intl = tmp2(1112).intl;
   obj3.children = intl.string(giftBadgeProgress(1112).t.MqZXbv);
-  items2[1] = closure_5(giftBadgeProgress(5385).Text, obj3);
+  items2[1] = closure_5(giftBadgeProgress(5504).Text, obj3);
   const obj4 = { variant: "body-md/medium", style: tmp.description, children: null };
   const intl2 = tmp2(1112).intl;
   obj4.children = intl2.format(giftBadgeProgress(1112).t.YS2J4S, { onClick: callback1 });
-  items2[2] = closure_5(giftBadgeProgress(5385).Text, obj4);
+  items2[2] = closure_5(giftBadgeProgress(5504).Text, obj4);
   const obj5 = { onPress: callback, text: null, textVariant: "body-md/semibold", grow: true };
   const intl3 = tmp2(1112).intl;
   if (null != giftBadgeProgress) {
@@ -73,7 +73,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     cpT0Cq = tmp2(1112).t.cpT0Cq;
   }
   obj5.text = intl3.string(cpT0Cq);
-  items2[3] = closure_5(giftBadgeProgress(5393).BaseTextButton, obj5);
+  items2[3] = closure_5(giftBadgeProgress(5512).BaseTextButton, obj5);
   obj.children = items2;
   return closure_6(tmp8, obj);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/server_share/startConjureScopeMigration.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import openConjureProjectInBuilderDefault from "../projects/openConjureProjectInBuilder.native.tsx";
 import conjureSendToProject from "../connection/conjureSendToProject.tsx";
@@ -125,7 +125,7 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
   }
 };
 const logger = new fn(4).Logger("startConjureScopeMigration");
-let obj = { added: _modDef4091.YXmrDJ, removed: _modDef4091.OYaecm };
+let obj = { added: _modDef4190.YXmrDJ, removed: _modDef4190.OYaecm };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/startConjureScopeMigration.tsx");
 

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../design/animation/reanimated/spring/springPresets.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -150,7 +150,7 @@ function DraggableContainer(arg0) {
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,

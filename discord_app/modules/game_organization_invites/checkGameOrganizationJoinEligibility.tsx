@@ -92,7 +92,7 @@ let closure_10 = async function _checkGameOrganizationJoinEligibility(arg0) {
     }
   }
 };
-const GameOrganizationInviteConstants = fn(11776);
+const GameOrganizationInviteConstants = fn(11896);
 ({
   GameOrganizationCharacterMode: metroImportDefault,
   GameOrganizationCantJoinReasons: closure_8,

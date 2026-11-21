@@ -7,13 +7,13 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 const VideoQualitySettings = fn(1193).VideoQualitySettings;
-const SettingBuilders = fn(11817);
+const SettingBuilders = fn(11937);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8592).MobileUserSettings.CHAT,
+  parent: fn(8712).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
     items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);

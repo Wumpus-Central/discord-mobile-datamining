@@ -12,7 +12,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   titleWrapper: {
     position: "absolute",
@@ -22,7 +22,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(11628).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(11748).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 },
   titlePillBG: null,

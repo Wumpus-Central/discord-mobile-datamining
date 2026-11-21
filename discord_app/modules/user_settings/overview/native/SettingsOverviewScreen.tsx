@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8592).MobileUserSettings;
+const MobileUserSettings = fn(8712).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
@@ -37,9 +37,15 @@ export default function SettingsOverviewScreen() {
     "SettingsOverviewScreen",
   );
   let obj5 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[10]);
+  const isPhoenixInstalled = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[11]).useIsPhoenixInstalled();
+  let obj6 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[11]);
+  let tmp9 = !staffOrDeveloperSettingPredicate;
+  if (!staffOrDeveloperSettingPredicate) {
+    tmp9 = isPhoenixInstalled;
+  }
   enabled = staffOrDeveloperSettingPredicate;
   if (!staffOrDeveloperSettingPredicate) {
-    enabled = obj6.useConfig({ location: "SettingsOverviewScreen" }, { autoTrackExposure: false }).enabled;
+    enabled = obj7.useConfig({ location: "SettingsOverviewScreen" }, { autoTrackExposure: tmp9 }).enabled;
   }
   let items1 = [
     hasPremiumSubscriptionToDisplay,
@@ -192,5 +198,5 @@ export default function SettingsOverviewScreen() {
     obj13.sections = items1;
     return obj.createList(obj13);
   }, items1);
-  return jsx(tmp(tmp2[13]).SearchableSettingsList, { node });
+  return jsx(tmp(tmp2[14]).SearchableSettingsList, { node });
 }

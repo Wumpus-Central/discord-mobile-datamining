@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureProjectList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
@@ -28,8 +28,8 @@ function ProjectRow(project) {
   project = project.project;
   const onMore = project.onMore;
   const tmp = closure_12(0);
-  const conjureProjectBadge = project(6816).useConjureProjectBadge(project.id);
-  const obj = project(6816);
+  const conjureProjectBadge = project(6935).useConjureProjectBadge(project.id);
+  const obj = project(6935);
   items = [ConjureProjectStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(
@@ -43,9 +43,9 @@ function ProjectRow(project) {
     const obj3 = { time: null };
     const _Date = Date;
     const date = new Date(project.updated_at);
-    obj3.time = tmp2(6519).getRelativeTimestamp(date.getTime());
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4091.AXydi3, obj3);
-    const tmp2Result = tmp2(6519);
+    obj3.time = tmp2(6638).getRelativeTimestamp(date.getTime());
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4190.AXydi3, obj3);
+    const tmp2Result = tmp2(6638);
   }
   const obj4 = {
     label: project.name,
@@ -59,13 +59,13 @@ function ProjectRow(project) {
   };
   if (stateFromStores) {
     const intl2 = tmp2(1112).intl;
-    formatToPlainStringResult = intl2.string(_modDef4091.Yh5pAc);
+    formatToPlainStringResult = intl2.string(_modDef4190.Yh5pAc);
   }
   obj4.subLabel = formatToPlainStringResult;
   let stringResult;
   if (null != conjureProjectBadge && conjureProjectBadge > 0 && !stateFromStores) {
     const intl3 = tmp2(1112).intl;
-    stringResult = intl3.string(_modDef4091.hfIuc7);
+    stringResult = intl3.string(_modDef4190.hfIuc7);
   }
   obj4.accessibilityHint = stringResult;
   obj4.disabled = stateFromStores;
@@ -80,7 +80,7 @@ function ProjectRow(project) {
       tmp15Result3 = closure_10(ConjureNumberBadgeDefault, obj6);
     }
     const items2 = [tmp15Result3];
-    const obj7 = { IconComponent: tmp2(6902).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+    const obj7 = { IconComponent: tmp2(7022).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
     const intl4 = tmp2(1112).intl;
     obj7.accessibilityLabel = intl4.string(tmp2(1112).t["UKOtz+"]);
     items2[1] = closure_10(ConjureHeaderIconButtonDefault, obj7);
@@ -91,7 +91,7 @@ function ProjectRow(project) {
   obj4.trailing = tmp13Result;
   obj4.onPress = project.onPress;
   obj4.onLongPress = onMore;
-  const children = [closure_10(project(6925).TableRow, obj4)];
+  const children = [closure_10(project(7045).TableRow, obj4)];
   let tmp15Result4 = null;
   if (null != conjureProjectBadge) {
     tmp15Result4 = null;
@@ -112,7 +112,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },

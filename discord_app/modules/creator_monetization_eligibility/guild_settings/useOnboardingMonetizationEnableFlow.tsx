@@ -5,7 +5,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4661).isGuildOwner;
+const isGuildOwner = fn(4780).isGuildOwner;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_6, HelpdeskArticles: metroImportDefault, MarketingURLs: closure_8 } = Constants);
 const size = fn(2);
@@ -39,18 +39,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(19861);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(19861)(id));
+  const tmp10 = refresh(19988);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(19988)(id));
   let id1;
-  const tmp10Result = refresh(19861)(id);
+  const tmp10Result = refresh(19988)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(19862)(id1);
+  const tmp9ResultResult = refresh(19989)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(19862);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(19863)(eligibility));
+  const tmp9Result = refresh(19989);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(19990)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -65,7 +65,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(19863)(eligibility);
+  const tmp16 = refresh(19990)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -85,8 +85,8 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   const intl = tmp(1112).intl;
   const obj2 = { faqUrl: null };
   const tmpResult3 = require("CreatorMonetizationRestrictionsHooks");
-  obj2.faqUrl = refresh(2186).getArticleURL(constants2.CREATOR_FAQ);
-  const tmp9Result3 = refresh(2186);
+  obj2.faqUrl = refresh(2187).getArticleURL(constants2.CREATOR_FAQ);
+  const tmp9Result3 = refresh(2187);
   if (isApplicationRejected) {
     if (tmpResult3.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
@@ -109,10 +109,10 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const intl2 = tmp(1112).intl;
     const obj5 = {
       requestCooldownDuration,
-      creatorRevenuePolicyUrl: tmp9(2186).getArticleURL(constants2.CREATOR_POLICY),
+      creatorRevenuePolicyUrl: tmp9(2187).getArticleURL(constants2.CREATOR_POLICY),
     };
     formatResult2 = intl2.format(tmp(1112).t.TvX207, obj5);
-    const tmp9Result4 = tmp9(2186);
+    const tmp9Result4 = tmp9(2187);
   }
   let tmp34 = isExpeditedOnboardingGuild;
   if (isExpeditedOnboardingGuild) {

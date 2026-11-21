@@ -325,7 +325,7 @@ let closure_25 = async function _getResyncGuilds() {
   );
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4650).ChannelFlags;
+const ChannelFlags = fn(4769).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

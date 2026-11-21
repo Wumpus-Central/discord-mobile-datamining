@@ -7,7 +7,7 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 let require = fn;
 const GuildFeatures = fn(1071).GuildFeatures;
-const GuildMemberFlags = fn(4712).GuildMemberFlags;
+const GuildMemberFlags = fn(4831).GuildMemberFlags;
 let guildId = null;
 const channelId = null;
 const prototype = function GuildOnboardingManager() {
@@ -54,7 +54,7 @@ const prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7347).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(7467).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);

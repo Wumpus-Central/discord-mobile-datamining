@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const obj2 = {
   screen: {
     flex: 1,
@@ -80,7 +80,7 @@ export default function NewMemberActionsCompleted(arg0) {
   );
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => _undefined2(6310).popWithKey(_undefined(6566).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => _undefined2(6429).popWithKey(_undefined(6685).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);

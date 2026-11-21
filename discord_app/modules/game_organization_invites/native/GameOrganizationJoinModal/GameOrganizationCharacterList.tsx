@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationCharacterList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2559 from "../../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2639 from "../../GameOrganizationInvitesUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -32,7 +32,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   card: {
     padding: 0,
@@ -107,7 +107,7 @@ let closure_9 = noop.memo(function CharacterCard(character) {
         displayNoun = "other";
       }
       const obj3 = { displayNoun };
-      formatToPlainStringResult = intl.formatToPlainString(_modDef2559.VNY3C1, obj3);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef2639.VNY3C1, obj3);
     }
   }
   const obj4 = {
@@ -201,9 +201,9 @@ export default function GameOrganizationCharacterList(characters) {
   if (displayNoun == null) {
     str = "other";
   }
-  obj2.title = intl.formatToPlainString(_modDef2559["Xm+emB"], { displayNoun: str });
+  obj2.title = intl.formatToPlainString(_modDef2639["Xm+emB"], { displayNoun: str });
   const items1 = [
-    closure_5(characters(7228).TableRowGroupTitle, obj2),
+    closure_5(characters(7348).TableRowGroupTitle, obj2),
     closure_5(closure_4, {
       accessibilityRole: "radiogroup",
       style: tmp.cards,
@@ -223,10 +223,10 @@ export default function GameOrganizationCharacterList(characters) {
     }
     const obj4 = { variant: "body-md/medium", color: "text-subtle", children: null };
     const obj5 = { displayNoun };
-    obj4.children = intl2.formatToPlainString(_modDef2559.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5385).Text, obj4);
+    obj4.children = intl2.formatToPlainString(_modDef2639.ybJIQJ, obj5);
+    someResult = closure_5(tmp4(5504).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(5810).Stack, obj);
+  return closure_6(characters(5929).Stack, obj);
 }

@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("design/void/Form/native/FreeFormError
 export default function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(4959).getNodeText(children);
+  nodeText = nodeText(5078).getNodeText(children);
   items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -22,7 +22,7 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
-  return jsx(nodeText(5385).Text, {
+  return jsx(nodeText(5504).Text, {
     style: style.style,
     variant: "body-xs/medium",
     color: "text-feedback-critical",

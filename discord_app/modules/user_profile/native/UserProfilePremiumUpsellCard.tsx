@@ -45,7 +45,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9006).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9126).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -80,7 +80,7 @@ const Constants = fn(1071);
 } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

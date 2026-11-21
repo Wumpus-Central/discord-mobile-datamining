@@ -16,7 +16,7 @@ require = fn;
 let jsx = fn(21).jsx;
 let module_1653 = module_1653_mod;
 let closure_6 = module_1653.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;
@@ -223,14 +223,14 @@ export function FormSwitch(onValueChange) {
   } else {
     const obj7 = { source: null, size: null, style: null };
     if (tmp6) {
-      obj7.source = tmp10(7217);
-      obj7.size = tmp10(5394).Sizes.SMALL_20;
+      obj7.source = tmp10(7337);
+      obj7.size = tmp10(5513).Sizes.SMALL_20;
       const items7 = [tmp9.selectedIcon, iconAnimation];
       obj7.style = items7;
       let tmp38 = obj7;
     } else {
-      obj7.source = tmp10(7438);
-      obj7.size = tmp10(5394).Sizes.SMALL;
+      obj7.source = tmp10(7558);
+      obj7.size = tmp10(5513).Sizes.SMALL;
       const items8 = [tmp9.unselectedIcon, tmp35];
       obj7.style = items8;
       tmp38 = obj7;

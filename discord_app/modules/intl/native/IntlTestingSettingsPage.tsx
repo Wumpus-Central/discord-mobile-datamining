@@ -3,11 +3,11 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import _mod1151 from "../../../../_runtime/metro/01151__.js";
-import _modDef2167 from "../../../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../../../_runtime/metro/02168__.js";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef16921 from "../messages/Test.messages.js";
-import _modDef16953 from "../messages/SecondTest.messages.js";
+import _modDef17044 from "../messages/Test.messages.js";
+import _modDef17076 from "../messages/SecondTest.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -101,15 +101,15 @@ function LocaleInfo() {
     2,
   );
   const first = tmp[0];
-  [tmp4, require] = noop.useState(_modDef2167.locale);
+  [tmp4, require] = noop.useState(_modDef2168.locale);
   const items1 = [first];
   const effect = noop.useEffect(() => {
     const timerId = setTimeout(() => {
-      closure_1_0(_modDef2167.locale());
+      closure_1_0(_modDef2168.locale());
     }, 0);
   }, items1);
-  const tmp3 = _slicedToArray(noop.useState(_modDef2167.locale), 2);
-  const obj2 = _modDef2167;
+  const tmp3 = _slicedToArray(noop.useState(_modDef2168.locale), 2);
+  const obj2 = _modDef2168;
   const items2 = [
     closure_10(TableRow.TableRow, {
       label: "Active System",
@@ -153,10 +153,10 @@ function LocaleInfo() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const setAppLocale = fn(2188).setAppLocale;
+const setAppLocale = fn(2189).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -180,34 +180,34 @@ export default function IntlTestingSettingsPage() {
   items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , ,];
   const obj3 = { variant: "body-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef16921.HMvEC5, {});
+  obj3.children = intl.format(_modDef17044.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
   const obj4 = { variant: "body-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef16953.swfLzV, {});
+  obj4.children = intl2.format(_modDef17076.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
   const obj5 = { variant: "body-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef16921.rmps8y, {});
+  obj5.children = intl3.format(_modDef17044.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "body-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef16921.uczI4g, {
+  obj6.children = intl4.format(_modDef17044.uczI4g, {
     linkTarget() {},
   });
   items[5] = closure_10(require("Text/Text").Text, obj6);
   const obj8 = { variant: "body-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef16921.rdfRyh, {});
+  obj8.children = intl5.format(_modDef17044.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
   const obj9 = { variant: "body-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef16921.XOdbAy, {
+  obj9.children = intl6.format(_modDef17044.XOdbAy, {
     username: "some user",
     usernameHook(children) {
       const obj = {
         style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 },
-        children: closure_1_10(closure_0(5385).Text, {
+        children: closure_1_10(closure_0(5504).Text, {
           variant: "body-sm/normal",
           color: "text-overlay-light",
           children,

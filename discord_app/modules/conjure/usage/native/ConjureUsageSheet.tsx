@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/usage/native/ConjureUsageSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureUsageTypes from "../ConjureUsageTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,7 +30,7 @@ function RoleRow(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "baseline", justifyContent: "space-between", gap: nativeDefault.space.PX_8 },
   label: { flexShrink: 1 },
@@ -52,15 +52,15 @@ export default function ConjureUsageSheet(projectId) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const tmp2Result = tmp2(6851);
-    const tmp2Result8 = tmp2(6851);
-    const sumTokenUsageResult = tmp2(6851).sumTokenUsage(stateFromStores.orchestrator, stateFromStores.codegen);
-    const tmp2Result9 = tmp2(6851);
+    const tmp2Result = tmp2(6970);
+    const tmp2Result8 = tmp2(6970);
+    const sumTokenUsageResult = tmp2(6970).sumTokenUsage(stateFromStores.orchestrator, stateFromStores.codegen);
+    const tmp2Result9 = tmp2(6970);
     const obj2 = { header: null, children: null };
     const obj3 = { title: null };
     const intl = tmp2(1112).intl;
-    obj3.title = intl.string(_modDef4091.p5EGzq);
-    obj2.header = closure_5(tmp2(7395).BottomSheetTitleHeader, obj3);
+    obj3.title = intl.string(_modDef4190.p5EGzq);
+    obj2.header = closure_5(tmp2(7515).BottomSheetTitleHeader, obj3);
     const obj4 = { children: null };
     const obj5 = { direction: "vertical", spacing: nativeDefault.space.PX_12, children: null };
     const obj6 = { variant: "body-md/semibold", color: "text-default", children: null };
@@ -68,62 +68,62 @@ export default function ConjureUsageSheet(projectId) {
     const obj7 = { runes: null };
     const sumTokenUsageResult1 = tmp2Result.sumTokenUsage(
       sumTokenUsageResult,
-      tmp2(6851).usageOrEmpty(stateFromStores.compaction),
+      tmp2(6970).usageOrEmpty(stateFromStores.compaction),
     );
-    const tmp2Result10 = tmp2(6851);
-    obj7.runes = tmp2(6851).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
-    obj6.children = intl2.formatToPlainString(_modDef4091.gMuw5d, obj7);
-    const items2 = [closure_5(tmp2(5385).Text, obj6), ,];
+    const tmp2Result10 = tmp2(6970);
+    obj7.runes = tmp2(6970).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
+    obj6.children = intl2.formatToPlainString(_modDef4190.gMuw5d, obj7);
+    const items2 = [closure_5(tmp2(5504).Text, obj6), ,];
     const obj8 = { direction: "vertical", spacing: nativeDefault.space.PX_4, children: null };
     const obj9 = { label: null, usage: null };
     const intl3 = tmp2(1112).intl;
-    obj9.label = intl3.string(_modDef4091.xtxP0e);
+    obj9.label = intl3.string(_modDef4190.xtxP0e);
     obj9.usage = stateFromStores.orchestrator;
     const items3 = [closure_5(RoleRow, obj9), , , ,];
     const obj10 = { label: null, usage: null };
     const intl4 = tmp2(1112).intl;
-    obj10.label = intl4.string(_modDef4091["9Sj3SX"]);
+    obj10.label = intl4.string(_modDef4190["9Sj3SX"]);
     obj10.usage = stateFromStores.codegen;
     items3[1] = closure_5(RoleRow, obj10);
     const obj11 = { label: null, usage: null };
     const intl5 = tmp2(1112).intl;
-    obj11.label = intl5.string(_modDef4091.ANCEo3);
-    const runesFromUsdResult = tmp2(6851).runesFromUsd(stateFromStores.cost_usd);
-    obj11.usage = tmp2(6851).usageOrEmpty(stateFromStores.compaction);
+    obj11.label = intl5.string(_modDef4190.ANCEo3);
+    const runesFromUsdResult = tmp2(6970).runesFromUsd(stateFromStores.cost_usd);
+    obj11.usage = tmp2(6970).usageOrEmpty(stateFromStores.compaction);
     items3[2] = closure_5(RoleRow, obj11);
     const obj12 = { label: null, usage: null };
     const intl6 = tmp2(1112).intl;
-    obj12.label = intl6.string(_modDef4091.ugL6D4);
-    const tmp2Result11 = tmp2(6851);
-    obj12.usage = tmp2(6851).usageOrEmpty(stateFromStores.classifier);
+    obj12.label = intl6.string(_modDef4190.ugL6D4);
+    const tmp2Result11 = tmp2(6970);
+    obj12.usage = tmp2(6970).usageOrEmpty(stateFromStores.classifier);
     items3[3] = closure_5(RoleRow, obj12);
     const obj13 = { label: null, usage: null };
     const intl7 = tmp2(1112).intl;
-    obj13.label = intl7.string(_modDef4091.DHr5On);
-    const tmp2Result12 = tmp2(6851);
-    obj13.usage = tmp2(6851).usageOrEmpty(stateFromStores.image);
+    obj13.label = intl7.string(_modDef4190.DHr5On);
+    const tmp2Result12 = tmp2(6970);
+    obj13.usage = tmp2(6970).usageOrEmpty(stateFromStores.image);
     items3[4] = closure_5(RoleRow, obj13);
     obj8.children = items3;
-    items2[1] = closure_6(tmp2(5810).Stack, obj8);
+    items2[1] = closure_6(tmp2(5929).Stack, obj8);
     const obj14 = { style: tmp.row, children: null };
     const obj15 = { style: tmp.label, children: null };
     const obj16 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl8 = tmp2(1112).intl;
-    obj16.children = intl8.string(_modDef4091["8OUg09"]);
-    obj15.children = closure_5(tmp2(5385).Text, obj16);
+    obj16.children = intl8.string(_modDef4190["8OUg09"]);
+    obj15.children = closure_5(tmp2(5504).Text, obj16);
     const items4 = [closure_5(View, obj15)];
     const obj17 = { variant: "body-sm/medium", color: "text-default", children: null };
     const _Math = Math;
-    const tmp2Result13 = tmp2(6851);
+    const tmp2Result13 = tmp2(6970);
     const _HermesInternal = HermesInternal;
-    obj17.children = "" + Math.round(100 * tmp2(6851).cacheHitRate(sumTokenUsageResult1)) + "%";
-    items4[1] = closure_5(tmp2(5385).Text, obj17);
+    obj17.children = "" + Math.round(100 * tmp2(6970).cacheHitRate(sumTokenUsageResult1)) + "%";
+    items4[1] = closure_5(tmp2(5504).Text, obj17);
     obj14.children = items4;
     items2[2] = closure_6(View, obj14);
     obj5.children = items2;
-    obj4.children = closure_6(tmp2(5810).Stack, obj5);
+    obj4.children = closure_6(tmp2(5929).Stack, obj5);
     obj2.children = closure_5(View, obj4);
-    return closure_5(tmp2(7433).ActionSheet, obj2);
+    return closure_5(tmp2(7553).ActionSheet, obj2);
   }
   const obj = projectId(504);
 }

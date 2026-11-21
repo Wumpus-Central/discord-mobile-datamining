@@ -6,7 +6,7 @@ import useAutoSelectTraitOption from "../../../hooks/useAutoSelectTraitOption.ts
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const rarityOrder = fn(5850).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(5969).CHECKPOINT_RARITY_ORDER_MOBILE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/useTraitPicker.tsx");
 

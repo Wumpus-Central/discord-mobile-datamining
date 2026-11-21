@@ -88,5 +88,5 @@ export default function LocalSvg(asset) {
     };
   }, items);
   const merged1 = Object.assign(merged);
-  return jsx(asset(7745).SvgXml, { xml: tmp2[0] });
+  return jsx(asset(7865).SvgXml, { xml: tmp2[0] });
 }

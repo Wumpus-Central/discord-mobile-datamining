@@ -90,7 +90,7 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(11510)(obj2);
+          lastAssetIndex(11630)(obj2);
         }
         obj = assets(1378);
       }

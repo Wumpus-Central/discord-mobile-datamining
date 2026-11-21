@@ -36,7 +36,7 @@ function ShareLinkRow(project) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null, sharingMode: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -68,7 +68,7 @@ export default function ConjureShareAccess(arg0) {
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(18162, dependencyMap.paths),
+      asyncRequireImpl(18289, dependencyMap.paths),
       ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
       {
         options,

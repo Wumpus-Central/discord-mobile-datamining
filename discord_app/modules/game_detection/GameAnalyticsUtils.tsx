@@ -22,10 +22,10 @@ export function getRunningGameAnalytics(streamApplication) {
     return {
       gameName: "Array",
       gameId: "channel_id",
-      exe: "memo",
-      distributor: "",
+      exe: "c",
+      distributor: "useSharedValue",
       sku: "sa",
-      gameMetadata: "Error",
+      gameMetadata: "l",
       rawExePath: "isArray",
     };
   } else {

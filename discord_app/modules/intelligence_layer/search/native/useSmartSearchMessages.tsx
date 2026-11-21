@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SuggestedSearchStore from "../SuggestedSearchStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(8456).SearchListItemTypes;
+const SearchListItemTypes = fn(8576).SearchListItemTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchMessages.tsx");
 

@@ -6,9 +6,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1499).DEFAULT_CONTENT_PADDING;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const obj2 = { appsIcon: null, appsIconImage: null };
 let size = {
   height: 40,
@@ -81,7 +81,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(8969).Coachmark, {
+    tmp3 = jsx(markAsDismissed(9089).Coachmark, {
       renderImgComponent: function appsIcon() {
         const obj = {
           style: closure_2.appsIcon,

@@ -1430,7 +1430,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(5511).OrderStatus;
+const OrderStatus = fn(5630).OrderStatus;
 const Endpoints = fn(1071).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

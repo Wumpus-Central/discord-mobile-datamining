@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/05607_flatRest.js";
+import flatRestDefault from "../../_runtime/05726_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import DaveRecipientTrackerDefault from "../modules/rtc/DaveRecipientTracker.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
@@ -114,7 +114,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5554).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5673).getSystemAnalyticsInfo;
 let Constants = fn(1071);
 ({
   AnalyticEvents: closure_18,
@@ -123,10 +123,10 @@ let Constants = fn(1071);
   RTCConnectionQuality: closure_21,
   BoostedGuildTiers: closure_22,
 } = Constants);
-const StreamSettingsConstants = fn(5635);
+const StreamSettingsConstants = fn(5754);
 ({ ApplicationStreamFPS: closure_23, ApplicationStreamResolutions: closure_24 } = StreamSettingsConstants);
-let closure_25 = fn(5636).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5539);
+let closure_25 = fn(5755).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5658);
 ({
   ExperimentFlags: closure_26,
   Features: closure_27,
@@ -1603,7 +1603,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesLastExecutedTransitionId = undefined;
     const _daveJoinTimer = self._daveJoinTimer;
     _daveJoinTimer.socketLost();
-    const tmp49 = new self(5639)();
+    const tmp49 = new self(5758)();
     self._daveRecipientTracker = tmp49;
     self._daveRecipientsActive = false;
     if (null != self._connection) {
@@ -4168,15 +4168,28 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
   tmp = require;
   tmp2 = self;
 };
+prototype["_getSecureFramesGroupMembers"] = function _getSecureFramesGroupMembers(memberIds) {
+  memberIds = memberIds.memberIds;
+  let mapped;
+  if (memberIds != null) {
+    mapped = memberIds.map(castUserId);
+  }
+  if (mapped == null) {
+    const self = this;
+    const _secureFramesRosterMap = this._secureFramesRosterMap;
+    mapped = _secureFramesRosterMap.keys();
+  }
+  return mapped;
+};
 prototype["_handleSecureFramesRosterChange"] = function _handleSecureFramesRosterChange(
-  arg0,
+  changes,
   _secureFramesLastExecutedTransitionId,
 ) {
   const self = this;
   items = [];
   dependencyMap = 0;
   _require = 0;
-  const entries = Object.entries(arg0);
+  const entries = Object.entries(changes);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     items.push(tmp);
@@ -4415,14 +4428,14 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5543).now();
+  const commitReceivedTime = _connection(5662).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
     _daveRecipientTracker.mlsMessageSubmitted(arg0);
   }
   if (_connection != null) {
-    let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
+    let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, changes) => {
       if (_connection === self._connection) {
         const obj2 = {
           protocolVersion,
@@ -4434,9 +4447,14 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
         const result = self._storeSecureFrameTransitionData(closure_1, obj2);
         if (arg0) {
           self._handleMLSSuccess();
-          const result1 = self._handleSecureFramesRosterChange(arg2, closure_1);
-          ({ _daveRecipientTracker: _daveRecipientTracker2, _secureFramesRosterMap } = self);
-          _daveRecipientTracker2.mlsMessageProcessed(closure_1, true, protocolVersion, _secureFramesRosterMap.keys());
+          const result1 = self._handleSecureFramesRosterChange(changes.changes, closure_1);
+          const _daveRecipientTracker2 = self._daveRecipientTracker;
+          _daveRecipientTracker2.mlsMessageProcessed(
+            closure_1,
+            true,
+            protocolVersion,
+            self._getSecureFramesGroupMembers(changes),
+          );
           const result2 = self._maybeSendSecureFramesTransitionReady(closure_1);
           const _daveJoinTimer = self._daveJoinTimer;
           _daveJoinTimer.joinSucceeded(closure_1, 0 === closure_1);
@@ -4463,14 +4481,14 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5543).now();
+  const welcomeReceivedTime = _connection(5662).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
     _daveRecipientTracker.mlsMessageSubmitted(arg0);
   }
   if (_connection != null) {
-    _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {
+    _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, changes) => {
       if (_connection === self._connection) {
         const obj2 = {
           protocolVersion,
@@ -4482,9 +4500,14 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
         const result = self._storeSecureFrameTransitionData(closure_1, obj2);
         if (arg0) {
           self._handleMLSSuccess();
-          const result1 = self._handleSecureFramesRosterChange(arg2, closure_1);
-          ({ _daveRecipientTracker: _daveRecipientTracker2, _secureFramesRosterMap } = self);
-          _daveRecipientTracker2.mlsMessageProcessed(closure_1, true, protocolVersion, _secureFramesRosterMap.keys());
+          const result1 = self._handleSecureFramesRosterChange(changes.changes, closure_1);
+          const _daveRecipientTracker2 = self._daveRecipientTracker;
+          _daveRecipientTracker2.mlsMessageProcessed(
+            closure_1,
+            true,
+            protocolVersion,
+            self._getSecureFramesGroupMembers(changes),
+          );
           const result2 = self._maybeSendSecureFramesTransitionReady(closure_1);
           const _daveJoinTimer = self._daveJoinTimer;
           _daveJoinTimer.joinSucceeded(closure_1, 0 === closure_1);

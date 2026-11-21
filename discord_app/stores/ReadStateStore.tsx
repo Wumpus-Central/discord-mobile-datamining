@@ -490,9 +490,9 @@ function mergeForGuild(guild) {
   }
   const value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
-  const tmp12 = id(2167);
-  const tmp12Result = id(2167)(Date.now());
-  value3.lastMessageId = obj4.fromTimestamp(id(2167)(Date.now()).subtract(24, "h").valueOf());
+  const tmp12 = id(2168);
+  const tmp12Result = id(2168)(Date.now());
+  value3.lastMessageId = obj4.fromTimestamp(id(2168)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -505,7 +505,7 @@ function mergeForGuild(guild) {
       value4.lastMessageId = prop2;
     }
   }
-  const subtractResult = id(2167)(Date.now()).subtract(24, "h");
+  const subtractResult = id(2168)(Date.now()).subtract(24, "h");
 }
 function mergeRelationships(relationships) {
   const currentUser = UserStore.getCurrentUser();
@@ -818,18 +818,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6514).isEventUpcoming;
-const ChannelRecord = fn(4647);
+const isEventUpcoming = fn(6633).isEventUpcoming;
+const ChannelRecord = fn(4766);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5420);
+const ActivityPanelConstants = fn(5539);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4650);
+const ChannelConstants = fn(4769);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4649).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6434).ReadStateTypes;
+const GuildScheduledEventStatus = fn(4768).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6553).ReadStateTypes;
 const ThreadMemberFlags = fn(1111).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -945,7 +945,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1006,7 +1006,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1923,14 +1923,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6549, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6668, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6549, dependencyMap.paths);
+          const promise = asyncRequireImpl(6668, dependencyMap.paths);
         }
       }
     });
@@ -3231,7 +3231,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: true, isExplicitUserAction: "/assets/images/platforms", trackAnalytics: 1005 });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: true, isExplicitUserAction: "/assets/images/platforms", trackAnalytics: 128 });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3618,7 +3618,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: 12704, trackAnalytics: "<string:4291260864>" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "2026-10-conjure-mobile", trackAnalytics: "user" });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

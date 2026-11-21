@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
-const GuildTemplateStates = fn(7613).GuildTemplateStates;
+const GuildTemplateStates = fn(7733).GuildTemplateStates;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");

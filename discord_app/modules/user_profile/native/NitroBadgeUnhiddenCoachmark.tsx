@@ -4,14 +4,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/NitroBadgeUnhiddenCoachmark.tsx");
 
 export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
   ({ targetRef, visible } = markAsDismissed);
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = markAsDismissed(18784)(targetRef, visible);
+  const tmp = markAsDismissed(18911)(targetRef, visible);
   dependencyMap = tmp;
   items = [visible, tmp, markAsDismissed];
   const memo = noop.useMemo(() => {
@@ -38,11 +38,11 @@ export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
     obj.buttonLabel = intl3.string(util.t.hvVgAZ);
     obj.onButtonPress = function onButtonPress() {
       closure_1_1(constants2.TAKE_ACTION);
-      const obj = markAsDismissed(5473);
-      obj.openURL(markAsDismissed(2186).getArticleURL(constants.PROFILE_BADGES_MANAGEMENT));
+      const obj = markAsDismissed(5592);
+      obj.openURL(markAsDismissed(2187).getArticleURL(constants.PROFILE_BADGES_MANAGEMENT));
     };
     return obj;
   }, items);
-  const coachmark = visible(8967).useCoachmark(targetRef, memo);
+  const coachmark = visible(9087).useCoachmark(targetRef, memo);
   return null;
 }

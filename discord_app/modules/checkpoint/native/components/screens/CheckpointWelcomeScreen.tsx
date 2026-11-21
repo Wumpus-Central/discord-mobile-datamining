@@ -4,8 +4,8 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3309 from "../../../Checkpoint.messages.js";
-import _modDef3341 from "../../../Checkpoint2026.messages.js";
+import _modDef3408 from "../../../Checkpoint.messages.js";
+import _modDef3440 from "../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import CheckpointScreen from "../CheckpointScreen.tsx";
 import useIsCheckpointWideDefault from "../../useIsCheckpointWide.tsx";
@@ -60,7 +60,7 @@ export default function CheckpointWelcomeScreen() {
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const name = UserUtils.useName(stateFromStores);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3309["CdU/PF"]);
+  const stringResult = intl.string(_modDef3408["CdU/PF"]);
   let str = "Check\u200Bpoint";
   if ("Checkpoint" !== stringResult) {
     str = stringResult;
@@ -99,7 +99,7 @@ export default function CheckpointWelcomeScreen() {
     ({ wideSubtitle: obj19.style, wideSubtitleText: obj19.textStyle } = tmp);
     const intl3 = util.intl;
     const obj8 = { username: name };
-    obj7.text = intl3.formatToPlainString(_modDef3341.xhZ23b, obj8);
+    obj7.text = intl3.formatToPlainString(_modDef3440.xhZ23b, obj8);
     obj7.delay = delay + TextWritingAnimation.DURATION;
     items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj7);
     obj4.children = items3;
@@ -146,7 +146,7 @@ export default function CheckpointWelcomeScreen() {
     const tmp2Result5 = TextWritingAnimationDefault;
     const intl2 = util.intl;
     const obj17 = { username: name };
-    obj16.text = intl2.formatToPlainString(_modDef3341.xhZ23b, obj17);
+    obj16.text = intl2.formatToPlainString(_modDef3440.xhZ23b, obj17);
     obj16.delay = delay + TextWritingAnimation.DURATION;
     items6[1] = hasOwnProperty(TextWritingAnimationDefault, obj16);
     const obj18 = { style: tmp.knickKnacks };

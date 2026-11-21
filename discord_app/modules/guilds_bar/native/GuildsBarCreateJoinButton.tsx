@@ -108,7 +108,7 @@ const Constants = fn(1071);
 } = Constants);
 const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
@@ -148,8 +148,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "GG",
-    expandedChildren: "+44",
+    label: "switch",
+    expandedChildren: null,
     children: null,
   };
   const intl = util.intl;
@@ -167,8 +167,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "GG",
-    expandedChildren: "+44",
+    label: "switch",
+    expandedChildren: null,
     children: null,
   });
   return <View style={tmp.stretch}>{null}</View>;

@@ -2,7 +2,7 @@
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const HexagonCampaignConstants = fn(4819);
+const HexagonCampaignConstants = fn(4938);
 ({
   HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c3,
   HexagonCampaignPerk: closure_4,
@@ -22,9 +22,9 @@ export function useHexagonCampaignFontPickerSection(DisplayNameStylesFontPickerS
     flag = false;
   }
   let visibleFontOrder;
-  visibleFontOrder = visibleFontOrder(16619).useVisibleFontOrder({ includeCampaignFonts: true });
-  const obj2 = visibleFontOrder(16619);
-  const hexagonCampaignPerkAvailability = visibleFontOrder(4824).useHexagonCampaignPerkAvailability(
+  visibleFontOrder = visibleFontOrder(16742).useVisibleFontOrder({ includeCampaignFonts: true });
+  const obj2 = visibleFontOrder(16742);
+  const hexagonCampaignPerkAvailability = visibleFontOrder(4943).useHexagonCampaignPerkAvailability(
     constants.DISPLAY_NAME_STYLE,
     DisplayNameStylesFontPickerSheet,
   );
@@ -41,18 +41,18 @@ export function useHexagonCampaignFontPickerSection(DisplayNameStylesFontPickerS
   if (hasItem) {
     hasItem = visibleFontOrder.includes(closure_3);
   }
-  const obj4 = visibleFontOrder(4824);
+  const obj4 = visibleFontOrder(4943);
   let tmp7 = hasItem;
   if (hasItem) {
     tmp7 = !isTryItOut;
   }
-  const trackHexagonCampaignContentViewed = visibleFontOrder(15731).useTrackHexagonCampaignContentViewed(
-    tmp(6442).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
-    tmp(15731).HexagonCampaignContentSurface.FONT_PICKER,
+  const trackHexagonCampaignContentViewed = visibleFontOrder(15854).useTrackHexagonCampaignContentViewed(
+    tmp(6561).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
+    tmp(15854).HexagonCampaignContentSurface.FONT_PICKER,
     tmp7,
   );
   items = [visibleFontOrder];
-  const tmpResult = visibleFontOrder(15731);
+  const tmpResult = visibleFontOrder(15854);
   return {
     visibleFontOrder,
     gridFontOrder: noop.useMemo(() => visibleFontOrder.filter((item) => !closure_1_6.includes(item)), items),

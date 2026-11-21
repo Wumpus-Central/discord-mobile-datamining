@@ -5,7 +5,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,11 +13,11 @@ const _modDef1653 = _mod1653;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10516).useChannelCallStore;
-const Constants = fn(10523);
+const useChannelCallStore = fn(10636).useChannelCallStore;
+const Constants = fn(10643);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 let closure_9 = {

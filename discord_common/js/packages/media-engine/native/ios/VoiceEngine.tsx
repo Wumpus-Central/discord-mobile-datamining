@@ -241,17 +241,21 @@ const prototype = VoiceConnection.prototype;
 prototype["wrapRosterCallback"] = function wrapRosterCallback(arg0) {
   closure_0 = arg0;
   return (arg0, arg1, arg2) => {
-    const obj = {};
+    let parsed = null;
     if (null != arg2) {
       const _JSON = JSON;
-      const parsed = JSON.parse(arg2);
-      for (const key10010 in parsed) {
-        let _Buffer = Buffer;
-        obj[key10010] = Buffer.from(parsed[key10010], "base64").buffer;
-        continue;
-      }
+      parsed = JSON.parse(arg2);
     }
-    closure_0(arg0, arg1, obj);
+    const result = require("RosterUpdate").parseNativeRosterUpdate(parsed);
+    const changes = result.changes;
+    const obj2 = {};
+    for (const key10020 in changes) {
+      let _Buffer = Buffer;
+      obj2[key10020] = Buffer.from(changes[key10020], "base64").buffer;
+      continue;
+    }
+    closure_0(arg0, arg1, { changes: obj2, memberIds: result.memberIds });
+    const obj = require("RosterUpdate");
   };
 };
 prototype["destroy"] = function destroy() {

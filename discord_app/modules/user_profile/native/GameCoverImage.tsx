@@ -7,19 +7,19 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { cover: null, coverArt: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.cover = {
-  aspectRatio: fn(10080).GAME_COVER_ASPECT_RATIO,
-  borderRadius: fn(10080).GAME_COVER_BORDER_RADIUS,
+  aspectRatio: fn(10200).GAME_COVER_ASPECT_RATIO,
+  borderRadius: fn(10200).GAME_COVER_BORDER_RADIUS,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
 obj.coverArt = { width: "100%", height: "100%" };
 let closure_4 = createStyles.createStyles(obj);
 const obj3 = {
-  aspectRatio: fn(10080).GAME_COVER_ASPECT_RATIO,
-  borderRadius: fn(10080).GAME_COVER_BORDER_RADIUS,
+  aspectRatio: fn(10200).GAME_COVER_ASPECT_RATIO,
+  borderRadius: fn(10200).GAME_COVER_BORDER_RADIUS,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
 const size = fn(2);

@@ -6,7 +6,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6235).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6354).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8, RPCErrors: closure_9 } = Constants);
 const size = fn(2);

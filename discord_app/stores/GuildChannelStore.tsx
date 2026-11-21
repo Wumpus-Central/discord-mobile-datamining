@@ -73,7 +73,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  obj2 = obj(4668);
+  obj2 = obj(4787);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
@@ -192,8 +192,8 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4725).createFavoritesGuildChannelRecord;
-const ChannelRecord = fn(4647);
+let closure_6 = fn(4844).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(4766);
 ({
   isGuildSelectableChannelType: metroImportDefault,
   GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,

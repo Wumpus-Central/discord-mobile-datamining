@@ -34,7 +34,7 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx";
 
 require = fn;
-let closure_10 = fn(7402).ApplicationAccountLinkingConstants;
+let closure_10 = fn(7522).ApplicationAccountLinkingConstants;
 const PremiumConstants = fn(1388);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,

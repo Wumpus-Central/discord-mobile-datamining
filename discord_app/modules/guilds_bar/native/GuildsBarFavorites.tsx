@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(17697)(closure_1_5);
+        closure_1_1(17827)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(17530)();
+        closure_1_1(17654)();
       },
     }),
     [],

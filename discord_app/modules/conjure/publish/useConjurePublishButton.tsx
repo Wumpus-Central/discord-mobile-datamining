@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/useConjurePublishButton.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
 import useConjurePublishActionDefault from "useConjurePublishAction.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -40,7 +40,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
   obj.variant = str2;
   if (null == tmp4) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef4091["120EFN"]);
+    let label = intl2.string(_modDef4190["120EFN"]);
   } else {
     let tmp7 = null != tmp4 && tmp4.upToDate;
     if (tmp7) {
@@ -52,7 +52,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
     if (tmp7) {
       if (!tmp4.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef4091.kAfbEN);
+        label = intl.string(_modDef4190.kAfbEN);
       }
     }
     label = tmp4.label;

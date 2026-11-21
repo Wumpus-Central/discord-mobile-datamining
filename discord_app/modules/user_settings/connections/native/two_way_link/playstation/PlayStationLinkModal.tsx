@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx
 import util from "../../../../../../intl/index.native.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef6912 from "../../../../../../../_runtime/metro/06912__.js";
+import _modDef7032 from "../../../../../../../_runtime/metro/07032__.js";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function CloseButton() {
   const obj = {
-    source: _modDef6912,
+    source: _modDef7032,
     onPress: function onClose() {
       return PlayStationLinkModalActionCreatorsDefault.hideModal();
     },
@@ -17,14 +17,14 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef6912,
+    source: _modDef7032,
     onPress: function onClose() {
       return PlayStationLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null,
   });
 }
-const constants = fn(7075).PlayStationLinkModalScenes;
+const constants = fn(7195).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

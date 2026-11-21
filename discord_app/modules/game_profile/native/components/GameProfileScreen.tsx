@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   loadingContainer: {
     flex: 1,
@@ -391,9 +391,9 @@ export default function GameProfileScreen(gameId) {
   const items20 = [gameId, source, sourceUserId, viewId];
   const effect4 = obj2.useEffect(
     () => () => {
-      const guildIdAndVerifiedFromInvite = gameId(9654).getGuildIdAndVerifiedFromInvite(ref2.current);
+      const guildIdAndVerifiedFromInvite = gameId(9774).getGuildIdAndVerifiedFromInvite(ref2.current);
       ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-      const obj = gameId(9654);
+      const obj = gameId(9774);
       const obj3 = {
         viewId,
         gameId,
@@ -418,8 +418,8 @@ export default function GameProfileScreen(gameId) {
       obj3.similarGames = similarGames;
       obj3.guildId = guildId;
       obj3.isVerified = isVerified;
-      const result = gameId(9654).trackGameProfileClose(obj3);
-      const obj2 = gameId(9654);
+      const result = gameId(9774).trackGameProfileClose(obj3);
+      const obj2 = gameId(9774);
     },
     items20,
   );
@@ -460,7 +460,7 @@ export default function GameProfileScreen(gameId) {
         children: null,
       };
       const obj6 = { obscured: tmp12, children: null };
-      let tmp77Result = selectedTab === tmp2(9681).GameProfileNavTab.OVERVIEW;
+      let tmp77Result = selectedTab === tmp2(9801).GameProfileNavTab.OVERVIEW;
       if (tmp77Result) {
         const obj7 = {
           game: data,
@@ -469,33 +469,33 @@ export default function GameProfileScreen(gameId) {
           source,
           trackAction: callback1,
           onGuildInviteResolved: tmp13[1],
-          closeModal: tmp5(5008).hideAllActionSheets,
+          closeModal: tmp5(5127).hideAllActionSheets,
           scrollY: sharedValue,
           websiteButtons: memo,
           onStoreLinksMeasured: callback5,
           onHeaderHeightMeasured: callback4,
         };
-        tmp77Result = tmp77(tmp5(9685), obj7);
-        const tmp5Result5 = tmp5(9685);
+        tmp77Result = tmp77(tmp5(9805), obj7);
+        const tmp5Result5 = tmp5(9805);
       }
       const items24 = [tmp77Result];
-      let tmp77Result4 = selectedTab === tmp2(9681).GameProfileNavTab.COMMUNITIES;
+      let tmp77Result4 = selectedTab === tmp2(9801).GameProfileNavTab.COMMUNITIES;
       if (tmp77Result4) {
         const obj8 = {
           game: data,
           viewId,
           scrollY: sharedValue,
           trackAction: callback1,
-          closeModal: tmp5(5008).hideAllActionSheets,
+          closeModal: tmp5(5127).hideAllActionSheets,
         };
-        tmp77Result4 = tmp77(tmp5(9813), obj8);
-        const tmp5Result6 = tmp5(9813);
+        tmp77Result4 = tmp77(tmp5(9933), obj8);
+        const tmp5Result6 = tmp5(9933);
       }
       items24[1] = tmp77Result4;
       obj6.children = items24;
-      obj5.children = tmp70(tmp5(9683), obj6);
-      let tmp77Result5 = tmp77(tmp2(5026).BottomSheetScrollView, obj5);
-      const tmp5Result4 = tmp5(9683);
+      obj5.children = tmp70(tmp5(9803), obj6);
+      let tmp77Result5 = tmp77(tmp2(5145).BottomSheetScrollView, obj5);
+      const tmp5Result4 = tmp5(9803);
     }
     const items25 = [tmp77Result5, , ,];
     const obj9 = {
@@ -519,7 +519,7 @@ export default function GameProfileScreen(gameId) {
     }
     obj9.importantForAccessibility = str2;
     const obj10 = { game: data, headerRight: memo2 };
-    obj9.children = tmp77(tmp5(9823), obj10);
+    obj9.children = tmp77(tmp5(9943), obj10);
     items25[1] = tmp77(tmp5(1653).View, obj9);
     let tmp77Result6 = !isLoading;
     if (!isLoading) {
@@ -527,11 +527,11 @@ export default function GameProfileScreen(gameId) {
     }
     if (tmp77Result6) {
       const obj11 = { game: data, navigation, onLayout: callback2 };
-      tmp77Result6 = tmp77(tmp5(9824), obj11);
+      tmp77Result6 = tmp77(tmp5(9944), obj11);
     }
     items25[2] = tmp77Result6;
     const obj12 = { variant: "overlay", onPress: bottomSheetClose };
-    items25[3] = tmp77(tmp2(5357).ActionSheetHeaderBar, obj12);
+    items25[3] = tmp77(tmp2(5476).ActionSheetHeaderBar, obj12);
     obj4.children = items25;
     return tmp70(tmp71, obj4);
   }

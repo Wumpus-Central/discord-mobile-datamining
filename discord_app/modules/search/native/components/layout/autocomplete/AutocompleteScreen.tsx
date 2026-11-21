@@ -14,7 +14,7 @@ import SearchAutocompleteStore from "../../../../SearchAutocompleteStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(8456);
+const SearchConstants = fn(8576);
 ({
   SearchListItemTypes: closure_10,
   SearchQueryTagTypes: closure_11,

@@ -115,13 +115,13 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(13464);
+const ContactSyncPersistedStore = fn(13586);
 ({
   setStoredContacts: hasOwnProperty,
   deleteStoredContacts: closure_6,
   useContactSyncStore: metroImportDefault,
 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(13463).ContactPermissions;
+const ContactPermissions = fn(13585).ContactPermissions;
 const PlatformTypes = fn(1071).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {

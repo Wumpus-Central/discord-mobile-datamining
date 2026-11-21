@@ -16,7 +16,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(6457);
+const EmojiPickerConstants = fn(6576);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: closure_10 } = EmojiPickerConstants);
 const Constants = fn(1071);
 ({

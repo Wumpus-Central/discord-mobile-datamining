@@ -8,8 +8,8 @@ import BackPressTracking from "../../../../modules/routing/native/BackPressTrack
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
 import NavigatorBackgroundContext from "NavigatorBackgroundContext.native.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod6982 from "../../../../../_runtime/metro/06982__.js";
-import StackNavigator from "../../../../../_runtime/07033_StackNavigator.js";
+import _mod7102 from "../../../../../_runtime/metro/07102__.js";
+import StackNavigator from "../../../../../_runtime/07153_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -303,7 +303,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp5 = navigationContainerRef(5003)();
+  const tmp5 = navigationContainerRef(5122)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = {
     ref: navigationContainerRef,
@@ -325,7 +325,7 @@ function WrappedNavigationStack(arg0) {
     initialRouteState = tmp8;
   }
   const obj5 = { children: null };
-  const obj6 = { value: "Array", children: false };
+  const obj6 = { value: "Array", children: 0 };
   obj4.initialState = initialRouteState;
   obj4.onReady = function onReady() {
     const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -342,13 +342,13 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj5.children = jsx(_mod6982.HeaderBackContext.Provider, { value: "Array", children: false });
+  obj5.children = jsx(_mod7102.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: null,
   navbar: null,

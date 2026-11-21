@@ -222,7 +222,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(4647).PrivateChannelRecord;
+const PrivateChannelRecord = fn(4766).PrivateChannelRecord;
 const Constants = fn(1071);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;

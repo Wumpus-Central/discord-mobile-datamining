@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(8946);
+const EmojiPickerListConstants = fn(9066);
 ({
   ROW_HEIGHT: closure_4,
   LABEL_HEIGHT: hasOwnProperty,

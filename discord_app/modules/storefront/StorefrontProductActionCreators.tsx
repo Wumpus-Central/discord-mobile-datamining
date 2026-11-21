@@ -199,8 +199,8 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
             closure_129_4 = closure_129_0.filter((item) => {
               let storefrontPricingKey = closure_1_3;
               if (closure_1_3 === undefined) {
-                storefrontPricingKey = closure_0(8052).getStorefrontPricingKey();
-                const obj = closure_0(8052);
+                storefrontPricingKey = closure_0(8172).getStorefrontPricingKey();
+                const obj = closure_0(8172);
               }
               let diff = globalThis;
               let flag = false;
@@ -213,9 +213,9 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
                     flag = true;
                     if (null != fetchedAtForSku) {
                       if ("error" === fetchStateForSku) {
-                        let TWELVE_HOURS_MS = closure_0(8051).ERROR_STALE_THRESHOLD_MS;
+                        let TWELVE_HOURS_MS = closure_0(8171).ERROR_STALE_THRESHOLD_MS;
                       } else {
-                        TWELVE_HOURS_MS = closure_0(8051).TWELVE_HOURS_MS;
+                        TWELVE_HOURS_MS = closure_0(8171).TWELVE_HOURS_MS;
                       }
                       const _Date = diff.Date;
                       diff = _Date.now() - fetchedAtForSku;

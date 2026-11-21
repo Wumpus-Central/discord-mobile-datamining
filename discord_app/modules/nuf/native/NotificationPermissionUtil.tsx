@@ -271,9 +271,9 @@ let closure_15 = async function _enableProvisionalPushNotification() {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_6, Platform: metroImportDefault } = get_ActivityIndicator);
-const EventActionType = fn(13160).EventActionType;
+const EventActionType = fn(13282).EventActionType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-let closure_12 = fn(6377).NotificationAuthorizationStatus;
+let closure_12 = fn(6496).NotificationAuthorizationStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 

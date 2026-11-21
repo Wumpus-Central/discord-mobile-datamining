@@ -61,7 +61,7 @@ export function useDMAppChannelApplicationId(stateFromStores) {
     if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
       id = data.id;
     }
-    tmpResult = tmp(6542);
+    tmpResult = tmp(6661);
   }
   return id;
 }

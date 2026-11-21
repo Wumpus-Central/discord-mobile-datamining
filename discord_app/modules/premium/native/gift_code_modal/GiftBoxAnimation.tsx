@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import _mod6263 from "module_6263" /* 6263 */;
+import _mod6382 from "module_6382" /* 6382 */;
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -20,116 +20,116 @@ export default function GiftBoxAnimation(giftStyle) {
   if (null == giftStyle) {
     return null;
   } else {
-    const match = _mod6263.match(giftStyle);
+    const match = _mod6382.match(giftStyle);
     const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () =>
-      require("../../../../../_runtime/metro/11804__.js"),
+      require("../../../../../_runtime/metro/11924__.js"),
     );
     const withResult1 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"));
     const withResult2 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"));
     const withResult3 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"));
     const withResult4 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"));
     const withResult5 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"));
     const withResult6 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"));
     const withResult7 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"))
-      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09512__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"))
+      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09632__.js"));
     const withResult8 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"))
-      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09512__.js"))
-      .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09515__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"))
+      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09632__.js"))
+      .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09635__.js"));
     const withResult9 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"))
-      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09512__.js"))
-      .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09515__.js"))
-      .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09518__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"))
+      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09632__.js"))
+      .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09635__.js"))
+      .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09638__.js"));
     const withResult10 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"))
-      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09512__.js"))
-      .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09515__.js"))
-      .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09518__.js"))
-      .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/09521__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+      .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+      .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+      .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+      .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"))
+      .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09632__.js"))
+      .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09635__.js"))
+      .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09638__.js"))
+      .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/09641__.js"));
     const obj = {
       source: match
-        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-        .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-        .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-        .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-        .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"))
-        .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09512__.js"))
-        .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09515__.js"))
-        .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09518__.js"))
-        .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/09521__.js"))
-        .otherwise(() => require("../../../../../_runtime/metro/09500__.js")),
+        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+        .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+        .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+        .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+        .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"))
+        .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09632__.js"))
+        .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09635__.js"))
+        .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09638__.js"))
+        .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/09641__.js"))
+        .otherwise(() => require("../../../../../_runtime/metro/09620__.js")),
       autoPlay: !tmp4,
       style: { width: 320, height: 212 },
     };
     return jsx(LottieAnimationViewDefault, {
       source: match
-        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11804__.js"))
-        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11805__.js"))
-        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11806__.js"))
-        .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09500__.js"))
-        .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09509__.js"))
-        .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09506__.js"))
-        .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09503__.js"))
-        .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09512__.js"))
-        .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09515__.js"))
-        .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09518__.js"))
-        .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/09521__.js"))
-        .otherwise(() => require("../../../../../_runtime/metro/09500__.js")),
+        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11924__.js"))
+        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11925__.js"))
+        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11926__.js"))
+        .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/09620__.js"))
+        .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/09629__.js"))
+        .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/09626__.js"))
+        .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/09623__.js"))
+        .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/09632__.js"))
+        .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/09635__.js"))
+        .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/09638__.js"))
+        .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/09641__.js"))
+        .otherwise(() => require("../../../../../_runtime/metro/09620__.js")),
       autoPlay: !tmp4,
       style: { width: 320, height: 212 },
     });

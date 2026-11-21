@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_11 = createStyles.createStyles((paddingLeft, paddingRight) => {
   const obj = {
     containerWithPadding: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingLeft, paddingRight },
@@ -30,15 +30,15 @@ export default function Modal(route) {
   importDefault = undefined;
   let isIpadOSResult = useIsWindowLargeDefault();
   if (isIpadOSResult) {
-    isIpadOSResult = modal(4751).isIpadOS();
-    const obj = modal(4751);
+    isIpadOSResult = modal(4870).isIpadOS();
+    const obj = modal(4870);
   }
   if (isIpadOSResult) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = modal(18868).shouldExcludeSafeAreaForModalKey(modal.key);
-    const obj2 = modal(18868);
+    isIpadOSResult = modal(18995).shouldExcludeSafeAreaForModalKey(modal.key);
+    const obj2 = modal(18995);
   }
   ({ insets, styles } = useAppFrameDefault({ enabled: !isIpadOSResult }));
   const tmp7 = closure_11(insets.left, insets.right);
@@ -50,7 +50,7 @@ export default function Modal(route) {
   const obj3 = { enabled: !isIpadOSResult };
   const tmp6 = useAppFrameDefault({ enabled: !isIpadOSResult });
   const callback = noop.useCallback(() => {
-    closure_1(6310).pop();
+    closure_1(6429).pop();
   }, []);
   const obj4 = { type: null, name: null, properties: null };
   const tmp9 = _objectWithoutProperties(props, closure_3);
@@ -83,7 +83,7 @@ export default function Modal(route) {
     },
     [],
   );
-  const layoutEffect = noop.useLayoutEffect(() => modal(8148).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(8268).trackAppUIViewed("ModalScreen"), []);
   items = [absoluteFillObject.absoluteFillObject, ,];
   let containerWithPadding;
   if (!isIpadOSResult) {
@@ -93,7 +93,7 @@ export default function Modal(route) {
   items[1] = containerWithPadding;
   items[2] = styles.container;
   if (modal.closable) {
-    let pop = tmp(6310).pop;
+    let pop = tmp(6429).pop;
   } else {
     pop = NOOP;
   }
@@ -121,7 +121,7 @@ export default function Modal(route) {
   const items4 = [closure_10(closure_6, obj7)];
   const tmpResult = useTrackImpressionDefault;
   const tmp12Result = modal(1378);
-  items4[1] = modal(1378).isIOS() && closure_9(modal(18279).PortalKeyboardRenderer, { portal: false });
-  obj6.children = closure_10(modal(15698).SafeAreaProvider, { children: items4 });
+  items4[1] = modal(1378).isIOS() && closure_9(modal(18406).PortalKeyboardRenderer, { portal: false });
+  obj6.children = closure_10(modal(15821).SafeAreaProvider, { children: items4 });
   return closure_9(closure_6, obj6);
 }

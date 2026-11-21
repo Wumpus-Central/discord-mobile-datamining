@@ -1,7 +1,7 @@
 // discord_app/modules/media_playback/native/Video.tsx
 import MediaPlaybackExperiment from "MediaPlaybackExperiment.tsx";
 import NativeVideo from "NativeVideo.tsx";
-import _mod9140 from "../../../../_runtime/metro/09140__.js";
+import _mod9260 from "../../../../_runtime/metro/09260__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,7 +20,7 @@ export default noop.memo(function Video(ref) {
     const obj3 = {};
     const merged2 = Object.assign(merged);
     obj3.ref = ref;
-    return jsx(_mod9140.default, {});
+    return jsx(_mod9260.default, {});
   }
   obj = MediaPlaybackExperiment;
 });

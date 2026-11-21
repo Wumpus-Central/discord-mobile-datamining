@@ -131,10 +131,10 @@ function MemberActionRow(icon) {
 const View = fn(17).View;
 const Permissions = fn(1071).Permissions;
 const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(4712).GuildMemberFlags;
+const GuildMemberFlags = fn(4831).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   actionsContainer: { paddingHorizontal: 12 },
   actionsHeader: { display: "flex", marginBottom: 16 },

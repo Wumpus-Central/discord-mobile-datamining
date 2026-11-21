@@ -3,8 +3,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 const require = fn;
-let closure_5 = fn(7949).TrackUserProfileEditActions;
-const widgetShowsGameDetails = fn(6840).widgetShowsGameDetails;
+let closure_5 = fn(8069).TrackUserProfileEditActions;
+const widgetShowsGameDetails = fn(6959).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
 const constants = { REORDER_GAMES: "reorder-games", REMOVE: "remove-widget" };
 const size = fn(2);
@@ -74,54 +74,54 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5008).hideActionSheet(label(10106).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5008);
+              closure_1_1(5127).hideActionSheet(label(10226).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5127);
               const tmp9 = closure_1_6(widget.type);
-              const openLazy = closure_1_1(5008).openLazy;
+              const openLazy = closure_1_1(5127).openLazy;
               const tmp2Result = label(2119);
               if (tmp9) {
                 const obj3 = { widgetType: widget.type, returnFocusRef };
                 openLazy(
-                  tmp2Result(10110, dependencyMap.paths),
+                  tmp2Result(10230, dependencyMap.paths),
                   "UserProfileWidgetGameDetailsReorderActionSheet",
                   obj3,
                 );
               } else {
                 const obj4 = { widgetType: widget.type, returnFocusRef };
                 openLazy(
-                  tmp2Result(10126, dependencyMap.paths),
+                  tmp2Result(10246, dependencyMap.paths),
                   "UserProfileWidgetGameCoverGridReorderActionSheet",
                   obj4,
                 );
               }
-              const tmp10 = closure_1_1(5008);
+              const tmp10 = closure_1_1(5127);
             }
-            obj = label(6839);
+            obj = label(6958);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5008).hideActionSheet(label(10106).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5008);
+            closure_1_1(5127).hideActionSheet(label(10226).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5127);
             const obj7 = {
               widgetName: widgetTitle,
               onConfirm() {
-                const result = profileEditAnalyticsOptions(10097).removeWidgetFromPending(profileEditAnalyticsOptions);
-                const obj = profileEditAnalyticsOptions(10097);
-                const obj2 = profileEditAnalyticsOptions(8016);
+                const result = profileEditAnalyticsOptions(10217).removeWidgetFromPending(profileEditAnalyticsOptions);
+                const obj = profileEditAnalyticsOptions(10217);
+                const obj2 = profileEditAnalyticsOptions(8136);
                 const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                 const result1 = obj2.trackUserProfileEditAction({
                   userId: id.getId(),
                   action: constants.WIDGET_REMOVED,
                 });
-                const AccessibilityAnnouncer = profileEditAnalyticsOptions(4803).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = profileEditAnalyticsOptions(4922).AccessibilityAnnouncer;
                 const intl = profileEditAnalyticsOptions(1112).intl;
                 AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1112).t.zzsK7h));
               },
               onDismissWithoutRemoving() {
-                return profileEditAnalyticsOptions(5804).setAccessibilityFocus({ ref, delay: 100 });
+                return profileEditAnalyticsOptions(5923).setAccessibilityFocus({ ref, delay: 100 });
               },
             };
-            label(10127).confirmRemoveWidget(obj7);
-            const obj6 = label(10127);
+            label(10247).confirmRemoveWidget(obj7);
+            const obj6 = label(10247);
           }
         },
       };
@@ -139,55 +139,55 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
             if (constants2.REORDER_GAMES === label.key) {
               if (obj.isGameWidget(widget)) {
                 closure_3.current = false;
-                closure_1_1(5008).hideActionSheet(label(10106).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-                let obj2 = closure_1_1(5008);
+                closure_1_1(5127).hideActionSheet(label(10226).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+                let obj2 = closure_1_1(5127);
                 const tmp9 = closure_1_6(widget.type);
-                const openLazy = closure_1_1(5008).openLazy;
+                const openLazy = closure_1_1(5127).openLazy;
                 const tmp2Result = label(2119);
                 if (tmp9) {
                   const obj3 = { widgetType: widget.type, returnFocusRef };
                   openLazy(
-                    tmp2Result(10110, dependencyMap.paths),
+                    tmp2Result(10230, dependencyMap.paths),
                     "UserProfileWidgetGameDetailsReorderActionSheet",
                     obj3,
                   );
                 } else {
                   const obj4 = { widgetType: widget.type, returnFocusRef };
                   openLazy(
-                    tmp2Result(10126, dependencyMap.paths),
+                    tmp2Result(10246, dependencyMap.paths),
                     "UserProfileWidgetGameCoverGridReorderActionSheet",
                     obj4,
                   );
                 }
-                const tmp10 = closure_1_1(5008);
+                const tmp10 = closure_1_1(5127);
               }
-              obj = label(6839);
+              obj = label(6958);
             } else if (tmp.REMOVE === key) {
               closure_3.current = false;
-              closure_1_1(5008).hideActionSheet(label(10106).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              const obj5 = closure_1_1(5008);
+              closure_1_1(5127).hideActionSheet(label(10226).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              const obj5 = closure_1_1(5127);
               const obj7 = {
                 widgetName: widgetTitle,
                 onConfirm() {
                   const result =
-                    profileEditAnalyticsOptions(10097).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(10097);
-                  const obj2 = profileEditAnalyticsOptions(8016);
+                    profileEditAnalyticsOptions(10217).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(10217);
+                  const obj2 = profileEditAnalyticsOptions(8136);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({
                     userId: id.getId(),
                     action: constants.WIDGET_REMOVED,
                   });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(4803).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(4922).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1112).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1112).t.zzsK7h));
                 },
                 onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(5804).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(5923).setAccessibilityFocus({ ref, delay: 100 });
                 },
               };
-              label(10127).confirmRemoveWidget(obj7);
-              const obj6 = label(10127);
+              label(10247).confirmRemoveWidget(obj7);
+              const obj6 = label(10247);
             }
           },
         },

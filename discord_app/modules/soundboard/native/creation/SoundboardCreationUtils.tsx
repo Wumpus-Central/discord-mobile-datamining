@@ -377,7 +377,7 @@ export function showAddSoundboardSoundOptions(guildId) {
   obj4.label = intl2.string(require("util").t["/VJ/Sp"]);
   obj4.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(19674, dependencyMap.paths),
+      asyncRequireImpl(19801, dependencyMap.paths),
       "SoundboardRecordSoundActionSheet",
       { guildId, analyticsSource: "guild_settings_record" },
     );

@@ -22,13 +22,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: closure_6 } = Constants);
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -136,9 +136,9 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(9475).redirectDeveloperPortalWithHandoffToken(
+                value: v1(9595).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(9479).LoginHandoffSource.GAME_CLAIM,
+                  v3(9599).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };

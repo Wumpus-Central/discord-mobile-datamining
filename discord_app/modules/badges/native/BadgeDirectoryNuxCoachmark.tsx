@@ -1,9 +1,9 @@
 // discord_app/modules/badges/native/BadgeDirectoryNuxCoachmark.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import BadgeArtImageDefault from "BadgeArtImage.tsx";
-import _modDef14410 from "../../../../discord_assets/assets/mana/asset-library/generated/GameTimeTier9SmallBadge.svg.js";
-import _modDef14411 from "../../../../discord_assets/assets/mana/asset-library/generated/StreamingTier10SmallBadge.svg.js";
-import _modDef14412 from "../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier8SmallBadge.svg.js";
+import _modDef14532 from "../../../../discord_assets/assets/mana/asset-library/generated/GameTimeTier9SmallBadge.svg.js";
+import _modDef14533 from "../../../../discord_assets/assets/mana/asset-library/generated/StreamingTier10SmallBadge.svg.js";
+import _modDef14534 from "../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier8SmallBadge.svg.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -14,13 +14,13 @@ function NoProgressGraphic() {
   obj.style = items;
   const obj2 = { url: null, height: 44 };
   const tmp = closure_9();
-  obj2.url = _modDef14410;
+  obj2.url = _modDef14532;
   const items1 = [timestampProducer(BadgeArtImageDefault, obj2), ,];
   const obj3 = { url: null, height: 72 };
-  obj3.url = _modDef14411;
+  obj3.url = _modDef14533;
   items1[1] = timestampProducer(BadgeArtImageDefault, obj3);
   const obj4 = { url: null, height: 44 };
-  obj4.url = _modDef14412;
+  obj4.url = _modDef14534;
   items1[2] = timestampProducer(BadgeArtImageDefault, obj4);
   obj.children = items1;
   return metroImportDefault(View, obj);
@@ -34,9 +34,9 @@ function ProgressGraphic(badgeIconUrls) {
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
     items = [
-      closure_6(tmp2(14413).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
-      closure_6(tmp2(14417).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
-      closure_6(tmp2(14421).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
+      closure_6(tmp2(14535).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
+      closure_6(tmp2(14539).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
+      closure_6(tmp2(14543).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
     ];
     obj2.children = items;
     return closure_7(View, obj2);
@@ -55,11 +55,11 @@ function ProgressGraphic(badgeIconUrls) {
   const obj = require("BadgeDirectoryNuxGraphicUtils");
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { single: [80], pair: [80, 80], trio: [44, 72, 44] };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   graphicRow: {
     flexDirection: "row",

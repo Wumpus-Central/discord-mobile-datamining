@@ -156,8 +156,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let handleContactSupportClick;
       if (!noRecentViolations) {
         handleContactSupportClick = function handleContactSupportClick() {
-          const tmp = onEligibilityBecameStale(5469);
-          return tmp(onEligibilityBecameStale(2186).getSubmitRequestURL());
+          const tmp = onEligibilityBecameStale(5588);
+          return tmp(onEligibilityBecameStale(2187).getSubmitRequestURL());
         };
       }
       obj2.actionHandler = handleContactSupportClick;

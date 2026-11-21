@@ -1,7 +1,7 @@
-// discord_app/modules/waterwheels/interest/native/InterestCoverTitle.tsx
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+// discord_app/modules/waterwheels/native/CoverTitle.tsx
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function wrapCoverTitle(memo, widths, width, arg3) {
@@ -51,7 +51,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 0.75;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_8 = createStyles.createStyles((width, scale, height, paddingBottom) => {
   const obj = {
     container: { width, alignItems: "center", justifyContent: "center" },
@@ -67,9 +67,9 @@ let closure_8 = createStyles.createStyles((width, scale, height, paddingBottom) 
   return obj;
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestCoverTitle.tsx");
+let result = size.fileFinishedImporting("modules/waterwheels/native/CoverTitle.tsx");
 
-export default function InterestCoverTitle(name) {
+export default function CoverTitle(name) {
   name = name.name;
   const width = name.width;
   const maxHeight = name.maxHeight;

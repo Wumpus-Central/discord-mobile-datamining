@@ -30,11 +30,11 @@ const View = fn(17).View;
 const ProfileCustomizationSubsection = fn(1081).ProfileCustomizationSubsection;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
-const RootNavigatorScreen = fn(9300).RootNavigatorScreen;
-const UserProfileSections = fn(7949).UserProfileSections;
+const RootNavigatorScreen = fn(9420).RootNavigatorScreen;
+const UserProfileSections = fn(8069).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   container: { height: "100%" },
   controls: { paddingTop: 4 },
@@ -280,10 +280,10 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   }, items6);
   const effect2 = obj5.useEffect(
     () => () => {
-      const result = closure_1_0(7282).resetAndCloseUserProfileForm();
+      const result = closure_1_0(7402).resetAndCloseUserProfileForm();
       hasUnsavedChanges.resetState();
-      const obj = closure_1_0(7282);
-      token(10099).clearPendingWidgets();
+      const obj = closure_1_0(7402);
+      token(10219).clearPendingWidgets();
     },
     [],
   );

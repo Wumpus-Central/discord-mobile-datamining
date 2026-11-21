@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8550);
+const RowGeneratorConstants = fn(8670);
 ({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -322,12 +322,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(8511).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(8631).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(8511);
-          applyArgumentsResult(5527).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(8631);
+          applyArgumentsResult(5646).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -360,14 +360,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5527).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5527);
+            applyArgumentsResult(5646).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5646);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 0.546,
-        selectedChannelId: 2.293,
-        tapLinkData: 0.39,
+        messageChannel: 1206.494,
+        selectedChannelId: 966.313,
+        tapLinkData: -3.225,
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -645,18 +645,18 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = state(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4855).ThemeContext;
+ChatPreviewBase.contextType = fn(4974).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
 export function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(4619).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(4738).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(4619).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(4738).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(4619).RenderEmbeds;
+  const RenderEmbeds = channelId(4738).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   items = [AccessibilityStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
@@ -664,10 +664,10 @@ export function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6320).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6320);
-  const isChannelContentGated = channelId(6300).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(6300);
+  const isChannelSpoilerGated = channelId(6439).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6439);
+  const isChannelContentGated = channelId(6419).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6419);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

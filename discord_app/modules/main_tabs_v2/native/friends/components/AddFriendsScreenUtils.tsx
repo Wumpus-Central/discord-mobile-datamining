@@ -140,7 +140,7 @@ let closure_7 = async function _sendWave(arg0) {
   }
 };
 const AnalyticsSections = fn(1071).AnalyticsSections;
-const MessageSendLocation = fn(4799).MessageSendLocation;
+const MessageSendLocation = fn(4918).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 

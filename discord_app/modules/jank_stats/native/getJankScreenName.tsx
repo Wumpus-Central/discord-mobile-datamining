@@ -216,7 +216,13 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "SIDE_GROUP_SEAT_2" };
+          let obj9 = {
+            screen,
+            expectedScreenIds: "",
+            focusedRoute: "Array",
+            chatScreens:
+              "(function VideoQuestModalContentCompletedTsx1(){let[withDelay,ANIMATION_DELAY,withSpring,isComponentMounted,ANIMATED_CONTENT_SPRING_CONFIG,interpolate,ANIMATED_CONTENT_OFFSET_Y]=this.__closure;return{opacity:withDelay(ANIMATION_DELAY,withSpring(isComponentMounted.get(),ANIMATED_CONTENT_SPRING_CONFIG)),transform:[{translateY:withDelay(ANIMATION_DELAY,withSpring(interpolate(isComponentMounted.get(),[0,1],[ANIMATED_CONTENT_OFFSET_Y,0]),ANIMATED_CONTENT_SPRING_CONFIG))}]};})",
+          };
           let obj10 = obj9;
         } else {
           obj10 = {

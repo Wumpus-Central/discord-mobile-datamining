@@ -6,7 +6,7 @@ import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(6848).interruptTurn;
+const interruptTurn = fn(6967).interruptTurn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/useConjureControlBar.tsx");
 

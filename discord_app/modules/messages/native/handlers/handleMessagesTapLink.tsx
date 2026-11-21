@@ -152,11 +152,11 @@ export function handleMessagesTapLink(tapLinkData) {
                 const obj19 = ActionSheetActionCreatorsDefault;
                 const obj9 = { guildId: guild_id };
                 obj19.openLazy(
-                  asyncRequireImpl(9624, dependencyMap.paths),
+                  asyncRequireImpl(9744, dependencyMap.paths),
                   "GuildProfileActionSheet:" + guild_id,
                   obj9,
                 );
-                const tmp97 = asyncRequireImpl(9624, dependencyMap.paths);
+                const tmp97 = asyncRequireImpl(9744, dependencyMap.paths);
               }
             }
             break;
@@ -398,7 +398,7 @@ export function handleMessagesTapLink(tapLinkData) {
                   constants.MESSAGE_EMBED,
                 );
               } else {
-                const tmp106 = asyncRequireImpl(10453, dependencyMap.paths);
+                const tmp106 = asyncRequireImpl(10573, dependencyMap.paths);
                 const obj49 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {

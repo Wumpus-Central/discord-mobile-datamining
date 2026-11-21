@@ -39,7 +39,7 @@ function OverlayMuteButton(isMuted) {
     children: metroImportDefault(tmp5, {
       accessibilityRole: "button",
       accessibilityLabel: stringResult,
-      source: importDefault(isMuted ? 10024 : 10025),
+      source: importDefault(isMuted ? 10144 : 10145),
       color: nativeDefault.unsafe_rawColors.WHITE,
       onPress: isMuted.onToggleMute,
       style: tmp.overlayButton,
@@ -63,7 +63,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 10026 : 10027);
+  obj.source = importDefault(spoilerActive ? 10146 : 10147);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -73,7 +73,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  const tmp2 = videoControls(8100)(index, source, videoControls);
+  const tmp2 = videoControls(8220)(index, source, videoControls);
   items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -89,7 +89,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(10030).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(10150).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }
@@ -98,7 +98,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   portraitFooterButtons: null,
   invisibleFooter: null,

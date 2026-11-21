@@ -14,7 +14,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1186).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9531).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9651).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -87,7 +87,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: "\u{1FAF1}\u{1F3FC}" };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -97,7 +97,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1186).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout: "\u{1FAF1}\u{1F3FC}",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -117,7 +117,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: "\u{1FAF1}\u{1F3FC}" };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -127,7 +127,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1186).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout: "\u{1FAF1}\u{1F3FC}",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

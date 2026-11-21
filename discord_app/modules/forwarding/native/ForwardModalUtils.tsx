@@ -23,7 +23,7 @@ export function openForwardModal(arg0) {
   ({ forwardOptions, customSendHandler } = arg0);
   ForwardingAnalyticsUtils.trackForwardStart(message.channel_id, message.id, source);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(9939, dependencyMap.paths),
+    asyncRequireImpl(10059, dependencyMap.paths),
     { message, initialSelectedDestinations, forwardOptions, source, customSendHandler },
     c5,
   );

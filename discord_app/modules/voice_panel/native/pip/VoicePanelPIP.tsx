@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import embeddedActivityLocationUtils from "../../../activities/utils/embeddedActivityLocationUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
@@ -469,7 +469,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F141319 */ function() { ... });
+          found = allTouches.filter(/* F141729 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);
@@ -1131,16 +1131,16 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11630);
+const VoicePanelConstants = fn(11750);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11628).VoicePanelControlsModes;
-const VoicePanelPIPConstants = fn(19038);
+const VoicePanelControlsModes = fn(11748).VoicePanelControlsModes;
+const VoicePanelPIPConstants = fn(19165);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_12, VoicePanelPIPModes: map1 } = VoicePanelPIPConstants);
-const ActivityPanelModes = fn(5420).ActivityPanelModes;
-const isLaunched = fn(6505).isLaunched;
+const ActivityPanelModes = fn(5539).ActivityPanelModes;
+const isLaunched = fn(6624).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -1228,12 +1228,12 @@ function usePIPTileHandoff() {
 let closure_41 = noop.memo(function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const pipHandoff = noop.useContext(transitionCleanUp(11629)).pipHandoff;
-  const mode = transitionState(11639).usePIPState().mode;
-  const obj = transitionState(11639);
-  const pIPCardsSettled = transitionState(11637).usePIPCardsSettled(pipHandoff);
-  const obj2 = transitionState(11637);
-  const pIPPanelLayoutCommitted = transitionState(11637).usePIPPanelLayoutCommitted(pipHandoff);
+  const pipHandoff = noop.useContext(transitionCleanUp(11749)).pipHandoff;
+  const mode = transitionState(11759).usePIPState().mode;
+  const obj = transitionState(11759);
+  const pIPCardsSettled = transitionState(11757).usePIPCardsSettled(pipHandoff);
+  const obj2 = transitionState(11757);
+  const pIPPanelLayoutCommitted = transitionState(11757).usePIPPanelLayoutCommitted(pipHandoff);
   items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {

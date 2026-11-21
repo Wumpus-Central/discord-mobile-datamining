@@ -30,9 +30,9 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(4999);
+const GuildThemePreviewConstants = fn(5118);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
-const timeout = new fn(4638).Timeout();
+const timeout = new fn(4757).Timeout();
 let closure_5 = {
   guildId: null,
   draft: null,
@@ -185,7 +185,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: "Array", customUserThemeSettings: false };
+      const obj2 = { presetId: "Array", customUserThemeSettings: 0 };
       const obj3 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       items = [];
       HermesBuiltin.arraySpread(colors, 0);

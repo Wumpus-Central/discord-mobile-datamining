@@ -18,7 +18,7 @@ const PX_40 = nativeDefault.space.PX_40;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_6 = nativeDefault.space.PX_6;
 let closure_8 = PX_40 - PX_6;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   connector: { width: PX_40, height: PX_12, flexShrink: 0 },
   line: null,
@@ -138,7 +138,7 @@ export default function ConjureLinkedAppConnector(flow) {
   if ("gets" === flow) {
     let obj6 = { style: tmp.headStart, children: null };
     let obj7 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj6.children = closure_6(tmp2(18209).ChevronSmallLeftIcon, obj7);
+    obj6.children = closure_6(tmp2(18336).ChevronSmallLeftIcon, obj7);
     let tmp15Result = closure_6(closure_4, obj6);
   } else {
     tmp15Result = null;
@@ -147,7 +147,7 @@ export default function ConjureLinkedAppConnector(flow) {
   if ("sends" === flow) {
     const obj8 = { style: tmp.headEnd, children: null };
     const obj9 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj8.children = closure_6(tmp2(7445).ChevronSmallRightIcon, obj9);
+    obj8.children = closure_6(tmp2(7565).ChevronSmallRightIcon, obj9);
     let tmp15Result3 = closure_6(closure_4, obj8);
   } else {
     tmp15Result3 = null;

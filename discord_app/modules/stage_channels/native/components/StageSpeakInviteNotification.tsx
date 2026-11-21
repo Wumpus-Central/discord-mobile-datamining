@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(10994).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_5 = fn(11114).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { iconContainer: null, actions: null };
 let size = {
   width: 40,
@@ -38,17 +38,17 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   const channel = notification.channel;
   guild = notification.guild;
   const tmp = closure_8();
-  let stringResult = guild(5410)(channel);
+  let stringResult = guild(5529)(channel);
   if (stringResult == null) {
     const intl = channel(1112).intl;
     stringResult = intl.string(channel(1112).t["/YzI63"]);
   }
   dependencyMap = stringResult;
-  const tmp6 = guild(10730)();
+  const tmp6 = guild(10850)();
   noop = tmp6;
-  isVoicePanelOpen = channel(10734).useIsVoicePanelOpen(channel.id);
-  let obj = channel(10734);
-  handleDismissNotification = channel(11032).useInAppNotificationContext().handleDismissNotification;
+  isVoicePanelOpen = channel(10854).useIsVoicePanelOpen(channel.id);
+  let obj = channel(10854);
+  handleDismissNotification = channel(11152).useInAppNotificationContext().handleDismissNotification;
   ref = noop.useRef(false);
   items = [handleDismissNotification];
   callback = noop.useCallback((arg0) => {
@@ -81,15 +81,15 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   }, items3);
   const obj3 = { icon: null, header: null, rightAccessory: null, children: null, onPress: null, notification: null };
   const obj4 = { style: tmp.iconContainer, children: null };
-  const obj2 = channel(11032);
-  obj4.children = ref(channel(10804).HandRequestSpeakIcon, { size: "md", color: guild(575).colors.WHITE });
+  const obj2 = channel(11152);
+  obj4.children = ref(channel(10924).HandRequestSpeakIcon, { size: "md", color: guild(575).colors.WHITE });
   obj3.icon = ref(isVoicePanelOpen, obj4);
   obj3.header = memo;
   const obj6 = { direction: "horizontal", spacing: guild(575).space.PX_8, style: tmp.actions, children: null };
   const obj7 = {
     size: "sm",
     variant: "secondary",
-    icon: ref(channel(7031).XSmallIcon, {}),
+    icon: ref(channel(7151).XSmallIcon, {}),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -99,11 +99,11 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
     const result = StageChannelActionCreators.audienceAckRequestToSpeak(channel, true);
     callback("declined");
   };
-  const items4 = [ref(channel(7471).IconButton, obj7)];
+  const items4 = [ref(channel(7591).IconButton, obj7)];
   const obj8 = {
     size: "sm",
     variant: "primary",
-    icon: ref(channel(7379).CheckmarkSmallIcon, { color: "white" }),
+    icon: ref(channel(7499).CheckmarkSmallIcon, { color: "white" }),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -113,9 +113,9 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
     speakOnStageDefault(channel);
     callback("accepted");
   };
-  items4[1] = ref(channel(7471).IconButton, obj8);
+  items4[1] = ref(channel(7591).IconButton, obj8);
   obj6.children = items4;
-  obj3.rightAccessory = callback(channel(5810).Stack, obj6);
+  obj3.rightAccessory = callback(channel(5929).Stack, obj6);
   const obj9 = {
     variant: "heading-sm/medium",
     color: "text-subtle",
@@ -124,11 +124,11 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   };
   const intl4 = channel(1112).intl;
   obj9.children = intl4.string(channel(1112).t.Ul1RJQ);
-  obj3.children = ref(channel(5385).Text, obj9);
+  obj3.children = ref(channel(5504).Text, obj9);
   obj3.onPress = function onPress() {
     StageChannelActionCreatorExtras.openStageChannel(channel);
     callback("notification_clicked");
   };
   obj3.notification = notification;
-  return ref(channel(11040).NotificationPressable, obj3);
+  return ref(channel(11160).NotificationPressable, obj3);
 });

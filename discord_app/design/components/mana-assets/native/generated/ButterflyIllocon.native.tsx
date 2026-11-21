@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef18403 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-1x.png.js";
-import _modDef18404 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js";
-import _modDef18405 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-3x.png.js";
+import _modDef18530 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-1x.png.js";
+import _modDef18531 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js";
+import _modDef18532 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18403 }, 3: null };
-const obj2 = { uri: _modDef18403 };
-obj[2] = { uri: _modDef18404 };
-const obj3 = { uri: _modDef18404 };
-obj[3] = { uri: _modDef18405 };
+let obj = { 1: null, 2: { uri: _modDef18530 }, 3: null };
+const obj2 = { uri: _modDef18530 };
+obj[2] = { uri: _modDef18531 };
+const obj3 = { uri: _modDef18531 };
+obj[3] = { uri: _modDef18532 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 
@@ -28,7 +28,7 @@ export function ButterflyIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7237).getAssetSource(obj);
+  obj.source = num(7357).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

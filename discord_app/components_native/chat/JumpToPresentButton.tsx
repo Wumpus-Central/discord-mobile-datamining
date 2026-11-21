@@ -8,11 +8,11 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(10262);
+let useChatBottomManagerUIStore = fn(10382);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.round,
@@ -62,10 +62,10 @@ export default function JumpToPresentButton(channelId) {
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(10734).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(10734);
-  const isVoicePanelOpen = channelId(10734).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(10734);
+  const isVoicePanelMounted = channelId(10854).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(10854);
+  const isVoicePanelOpen = channelId(10854).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(10854);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(
     items1,
@@ -92,15 +92,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13012), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13011), {
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13134), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13133), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(13012),
+      icon: screenIndex(13134),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(13011);
+    const tmp16 = screenIndex(13133);
   } else {
-    tmp12Result = jsx(tmp3(13013).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13135).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

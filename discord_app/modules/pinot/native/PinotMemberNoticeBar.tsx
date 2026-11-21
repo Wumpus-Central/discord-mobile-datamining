@@ -12,7 +12,7 @@ const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   underlay: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   bar: null,
@@ -57,7 +57,7 @@ export function PinotMemberNoticeBar(channel) {
   let obj2 = { style: tmp.bar, children: null };
   let obj3 = { variant: "body-sm/normal", color: "text-default", style: tmp.text, children: null };
   const intl = channel(1112).intl;
-  obj3.children = intl.format(onDismiss(3409).Jry6Gr, {
+  obj3.children = intl.format(onDismiss(3508).Jry6Gr, {
     learnMoreHook(children, arg1) {
       return timestampProducer(
         Text_Text.Text,
@@ -73,7 +73,7 @@ export function PinotMemberNoticeBar(channel) {
       );
     },
   });
-  const items1 = [closure_6(channel(5385).Text, obj3)];
+  const items1 = [closure_6(channel(5504).Text, obj3)];
   const obj5 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
   const intl2 = channel(1112).intl;
   obj5.accessibilityLabel = intl2.string(channel(1112).t.WAI6xu);
@@ -82,8 +82,8 @@ export function PinotMemberNoticeBar(channel) {
     const result = PinotAnalytics.trackPinotNoticeAction({ noticeType: "member_channel", channel }, "dismiss");
     onDismiss();
   };
-  obj5.children = closure_6(channel(7031).XSmallIcon, { size: "sm", color: "icon-muted" });
-  items1[1] = closure_6(channel(6910).PressableOpacity, obj5);
+  obj5.children = closure_6(channel(7151).XSmallIcon, { size: "sm", color: "icon-muted" });
+  items1[1] = closure_6(channel(7030).PressableOpacity, obj5);
   obj2.children = items1;
   obj.children = closure_7(View, obj2);
   return closure_6(View, obj);

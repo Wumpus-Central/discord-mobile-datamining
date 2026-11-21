@@ -1,5 +1,5 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignExpiredPromoSheet.tsx
-import _modDef4478 from "../HexagonCampaign.messages.js";
+import _modDef4597 from "../HexagonCampaign.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiredPromoSheet.tsx");
@@ -190,16 +190,16 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
   noop = noop.useCallback(() => {
-    const obj = closure_0(15731);
+    const obj = closure_0(15854);
     const result = obj.trackHexagonCampaignContentClicked({
-      content: closure_0(6442).QuestContent.AD_PERK_MODAL,
-      questContentCTA: closure_0(8310).QuestContentCTA.LEARN_MORE,
+      content: closure_0(6561).QuestContent.AD_PERK_MODAL,
+      questContentCTA: closure_0(8430).QuestContentCTA.LEARN_MORE,
     });
     const obj2 = {
-      content: closure_0(6442).QuestContent.AD_PERK_MODAL,
-      questContentCTA: closure_0(8310).QuestContentCTA.LEARN_MORE,
+      content: closure_0(6561).QuestContent.AD_PERK_MODAL,
+      questContentCTA: closure_0(8430).QuestContentCTA.LEARN_MORE,
     };
-    const result1 = closure_0(15751).openHexagonCampaignLearnMore();
+    const result1 = closure_0(15874).openHexagonCampaignLearnMore();
   }, []);
   let obj3 = {
     illustration: jsx(require("BundleAbstractUI").BundleAbstractUI, { accessible: false }),
@@ -209,9 +209,9 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
     actions: null,
   };
   let intl = require("util").intl;
-  obj3.title = intl.string(_modDef4478.bZTNDw);
+  obj3.title = intl.string(_modDef4597.bZTNDw);
   const intl2 = require("util").intl;
-  obj3.description = intl2.format(_modDef4478.uL0TOA, {
+  obj3.description = intl2.format(_modDef4597.uL0TOA, {
     learnMoreHook(children, key) {
       return jsx(
         Text_Text.Text,

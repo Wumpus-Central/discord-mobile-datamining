@@ -60,7 +60,7 @@ const Constants = fn(1071);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(4650).ChannelFlags;
+const ChannelFlags = fn(4769).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -870,22 +870,22 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "kiss_person_person_tone3_tone4",
-    safetyWarnings: "kiss_person_person_medium_skin_tone_medium_dark_skin_tone",
-    blockedUserWarningDismissed: true,
-    template: false,
-    themeColor: "android",
-    threadMetadata: null,
-    topic_: null,
-    totalMessageSent: null,
-    type: "clientHeight",
+    rtcRegion: "casa",
+    safetyWarnings: "casa com jardim",
+    blockedUserWarningDismissed: "constru\u00E7\u00E3o",
+    template: "jardim",
+    themeColor: "lar",
+    threadMetadata: true,
+    topic_: false,
+    totalMessageSent: "android",
+    type: null,
     userLimit_: null,
-    version: "\u{1F619}",
-    videoQualityMode: 6.1,
-    linkedLobby: 21,
-    hdStreamingUntil: "1",
-    hdStreamingBuyerId: 0,
-    voiceHangout: "sfu-migration",
+    version: null,
+    videoQualityMode: "clientHeight",
+    linkedLobby: null,
+    hdStreamingUntil: "\u{1F60B}",
+    hdStreamingBuyerId: 6,
+    voiceHangout: 23,
   };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;
@@ -1042,7 +1042,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(4655).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(4774).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1199,7 +1199,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4655).dangerouslyCast(obj, tmp7);
+  return obj6(4774).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1331,7 +1331,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4655).dangerouslyCast(obj, tmp7);
+  return obj6(4774).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1506,7 +1506,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(4655).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(4774).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {

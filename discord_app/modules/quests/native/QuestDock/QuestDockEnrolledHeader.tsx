@@ -17,8 +17,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-sm/semibold";
 let c8 = "body-sm/medium";
-let closure_9 = fn(16352).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(4794);
+let closure_9 = fn(16475).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles({
   wrapper: {
     alignItems: "center",

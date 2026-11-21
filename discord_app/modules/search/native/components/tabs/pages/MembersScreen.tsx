@@ -30,10 +30,10 @@ function SearchableMembersScreen(searchContext) {
   let stateFromStores6;
   let contentContainerStyles;
   let bound;
-  const analyticsLocations = guildId(7400)().analyticsLocations;
+  const analyticsLocations = guildId(7520)().analyticsLocations;
   const tmp = closure_21();
-  dependencyMap = searchContext(13084).getSearchContextId(searchContext);
-  let obj = searchContext(13084);
+  dependencyMap = searchContext(13206).getSearchContextId(searchContext);
+  let obj = searchContext(13206);
   items = [contentContainerStyles];
   const stateFromStores = searchContext(563).useStateFromStores(items, () =>
     SearchMemberTabStore.getResults(closure_3),
@@ -62,9 +62,9 @@ function SearchableMembersScreen(searchContext) {
   const items3 = [stateFromStores5];
   stateFromStores2 = searchContext(563).useStateFromStores(items3, () => stateFromStores5.getChannelId());
   const tmp4Result = searchContext(563);
-  fullscreenPlaceholderCount = searchContext(18611).useFullscreenPlaceholderCount({ placeholderHeight, numColumns: 1 });
+  fullscreenPlaceholderCount = searchContext(18738).useFullscreenPlaceholderCount({ placeholderHeight, numColumns: 1 });
   let obj4 = { placeholderHeight, numColumns: 1 };
-  const tmp4Result9 = searchContext(18611);
+  const tmp4Result9 = searchContext(18738);
   const items4 = [callback];
   stateFromStores3 = searchContext(563).useStateFromStores(items4, () => {
     guild = GuildStore.getGuild(guildId);
@@ -236,9 +236,9 @@ function SearchableMembersScreen(searchContext) {
     return items;
   }, items13);
   const tmp4Result13 = searchContext(563);
-  contentContainerStyles = searchContext(18672).useContentContainerStyles();
-  const tmp4Result14 = searchContext(18672);
-  const channelDockHeight = searchContext(11647).useChannelDockHeight();
+  contentContainerStyles = searchContext(18799).useContentContainerStyles();
+  const tmp4Result14 = searchContext(18799);
+  const channelDockHeight = searchContext(11767).useChannelDockHeight();
   bound = undefined;
   if (channelDockHeight > 0) {
     const _Math = Math;
@@ -256,11 +256,11 @@ function SearchableMembersScreen(searchContext) {
     }
     return membersContentContainer;
   }, items14);
-  const tmp4Result15 = searchContext(11647);
-  const messageTabCountsErrorText = searchContext(18670).useMessageTabCountsErrorText({ searchContext });
+  const tmp4Result15 = searchContext(11767);
+  const messageTabCountsErrorText = searchContext(18797).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
     const obj5 = { text: messageTabCountsErrorText };
-    let tmp29 = jsx(tmp2(18602), { text: messageTabCountsErrorText });
+    let tmp29 = jsx(tmp2(18729), { text: messageTabCountsErrorText });
   } else {
     if (stateFromStores5) {
       if (null != stateFromStores4) {
@@ -276,7 +276,7 @@ function SearchableMembersScreen(searchContext) {
           disableBottomSafeZone: null != bound,
           insetEnd: bound,
         };
-        tmp29 = jsx(tmp2(11925), {
+        tmp29 = jsx(tmp2(12045), {
           onUserPress: callback1,
           onUserLongPress: callback2,
           channelId: stateFromStores4,
@@ -291,7 +291,7 @@ function SearchableMembersScreen(searchContext) {
       }
     }
     const obj7 = { contentContainerStyle: memo1, data: memo };
-    tmp29 = jsx(tmp2(18615), { contentContainerStyle: memo1, data: memo });
+    tmp29 = jsx(tmp2(18742), { contentContainerStyle: memo1, data: memo });
   }
   return tmp29;
 }
@@ -299,12 +299,12 @@ function ThreadMembersScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const channelId = searchContext.channelId;
   const guildId = searchContext.guildId;
-  const channelDockHeight = searchContext(11647).useChannelDockHeight();
+  const channelDockHeight = searchContext(11767).useChannelDockHeight();
   if (channelDockHeight > 0) {
     const _Math = Math;
     const bound = Math.max(channelId(1628)().bottom, channelDockHeight);
   }
-  const obj = searchContext(11647);
+  const obj = searchContext(11767);
   const tmp = channelId;
   items = [ChannelStore];
   const stateFromStores = searchContext(563).useStateFromStores(items, () => {
@@ -337,7 +337,7 @@ function ThreadMembersScreen(searchContext) {
         disableBottomSafeZone: null != bound,
         insetEnd: bound,
       };
-      let tmp11 = jsx(tmp(18673), {
+      let tmp11 = jsx(tmp(18800), {
         channelId,
         guildId,
         onUserPress: tmp3(2018).dismissGlobalKeyboard,
@@ -345,7 +345,7 @@ function ThreadMembersScreen(searchContext) {
         disableBottomSafeZone: null != bound,
         insetEnd: bound,
       });
-      const tmpResult = tmp(18673);
+      const tmpResult = tmp(18800);
     }
     return tmp11;
   }
@@ -353,14 +353,14 @@ function ThreadMembersScreen(searchContext) {
   tmp3Result2 = searchContext(563);
 }
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(6800).EVERYONE_CHANNEL_ID;
-const SearchConstants = fn(8456);
+const EVERYONE_CHANNEL_ID = fn(6919).EVERYONE_CHANNEL_ID;
+const SearchConstants = fn(8576);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_14, SearchListItemTypes: closure_15 } = SearchConstants);
-let closure_16 = fn(8455).SearchResultContentEntityTypes;
+let closure_16 = fn(8575).SearchResultContentEntityTypes;
 const Constants = fn(1071);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_17, RelationshipTypes: closure_18, SearchTypes: closure_19 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   container: { flex: 1, flexGrow: 1 },
   userList: { backgroundColor: "transparent" },
@@ -376,9 +376,9 @@ export default noop.memo(function MembersScreen(searchContext) {
   let channelId;
   let stateFromStores;
   let tmp = closure_21();
-  const analyticsLocations = stateFromStores(7400)(stateFromStores(7419).SEARCH_MEMBERS).analyticsLocations;
-  const tmp4 = stateFromStores(7400);
-  const channelDockHeight = channelId(11647).useChannelDockHeight();
+  const analyticsLocations = stateFromStores(7520)(stateFromStores(7539).SEARCH_MEMBERS).analyticsLocations;
+  const tmp4 = stateFromStores(7520);
+  const channelDockHeight = channelId(11767).useChannelDockHeight();
   if (channelDockHeight > 0) {
     const _Math = Math;
     const bound = Math.max(stateFromStores(1628)().bottom, channelDockHeight);
@@ -387,7 +387,7 @@ export default noop.memo(function MembersScreen(searchContext) {
   if (searchContext.type === constants3.CHANNEL) {
     channelId = searchContext.channelId;
   }
-  const obj = channelId(11647);
+  const obj = channelId(11767);
   items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = channelId(563).useStateFromStores(
@@ -460,7 +460,7 @@ export default noop.memo(function MembersScreen(searchContext) {
         recipientLimit: tmp14,
         wrapperStyle: tmp.promoBanner,
       };
-      tmp24Result = jsx(tmp2(18675), {
+      tmp24Result = jsx(tmp2(18802), {
         location: "GroupDMDetailsMembers",
         memberCount: stateFromStores1,
         recipientLimit: tmp14,
@@ -468,7 +468,7 @@ export default noop.memo(function MembersScreen(searchContext) {
       });
     }
     obj4.listHeaderContent = tmp24Result;
-    obj3.children = jsx(tmp2(12938), {
+    obj3.children = jsx(tmp2(13060), {
       channelId: searchContext.channelId,
       disableStickySections: true,
       listStyleOverride: tmp.userList,
@@ -478,7 +478,7 @@ export default noop.memo(function MembersScreen(searchContext) {
       listHeaderContent: null,
     });
     obj2.children = <View style={tmp.container}>{null}</View>;
-    return jsx(tmp5(7400).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
+    return jsx(tmp5(7520).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   } else if (constants3.THREAD === type) {
     const obj7 = { searchContext, channelId: null, guildId: null };
     ({ channelId: obj6.channelId, guildId: obj6.guildId } = searchContext);
@@ -495,7 +495,7 @@ export default noop.memo(function MembersScreen(searchContext) {
     const obj8 = { value: analyticsLocations, children: null };
     const obj9 = { searchContext, guildId: searchContext.guildId };
     obj8.children = <SearchableMembersScreen searchContext={searchContext} guildId={searchContext.guildId} />;
-    return jsx(tmp5(7400).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
+    return jsx(tmp5(7520).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   }
   const tmp5Result3 = channelId(563);
 });

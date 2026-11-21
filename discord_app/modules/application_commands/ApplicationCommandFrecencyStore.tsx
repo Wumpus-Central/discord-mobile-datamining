@@ -26,7 +26,7 @@ function handleUserSettingsProtoStoreChange() {
     global.pendingUsages,
   );
 }
-const ApplicationCommandConstants = fn(5818);
+const ApplicationCommandConstants = fn(5937);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1081).UserSettingsTypes;
 let global = { pendingUsages: [] };

@@ -13,8 +13,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(7745);
-const inlineStylesDefault = tmp9(7745);
+const inlineStyles = Circle(7865);
+const inlineStylesDefault = tmp9(7865);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -203,7 +203,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(14368).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(14490).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

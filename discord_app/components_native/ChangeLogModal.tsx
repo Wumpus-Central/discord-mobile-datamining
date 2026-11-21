@@ -9,8 +9,8 @@ import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/Toucha
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import common_VideoDefault from "common/Video.tsx";
-import _modDef11259 from "../../_runtime/metro/11259__.js";
-import _modDef16839 from "../../_runtime/metro/16839__.js";
+import _modDef11379 from "../../_runtime/metro/11379__.js";
+import _modDef16962 from "../../_runtime/metro/16962__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -131,11 +131,11 @@ function hideChangeLog() {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const CHANGELOG_MODAL_KEY = fn(4696).CHANGELOG_MODAL_KEY;
+const CHANGELOG_MODAL_KEY = fn(4815).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let obj2 = {
   video: { alignSelf: "center" },
   videoWrapper: { marginBottom: 8 },
@@ -160,7 +160,7 @@ obj2.playButton = size;
 obj2.playIcon = { width: 21, height: 21 };
 obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
-createStyles = fn(4794);
+createStyles = fn(4913);
 let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 let size1 = {
   width: 7,
@@ -194,7 +194,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React5(View, obj);
 };
-ListItem.contextType = fn(4855).ThemeContext;
+ListItem.contextType = fn(4974).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      items = [closure_7(_modDef16839, obj4)];
+      items = [closure_7(_modDef16962, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -358,14 +358,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef11259,
+      source: _modDef11379,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1186).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(6910).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(7030).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -380,7 +380,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return metroImportDefault(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4855).ThemeContext;
+ChangeLog.contextType = fn(4974).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

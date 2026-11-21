@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const obj2 = {
   container: {
     display: "flex",
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterLinkRowWrapper(userId) {
   userId = userId.userId;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7400)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7520)().analyticsLocations;
   let tmp3 = null;
   if (undefined !== userId) {
     const obj = {
@@ -38,7 +38,7 @@ export default function FamilyCenterLinkRowWrapper(userId) {
       },
       children: userId.children,
     };
-    tmp3 = jsx(userId(6910).PressableOpacity, {
+    tmp3 = jsx(userId(7030).PressableOpacity, {
       style: tmp.container,
       onPress: function handlePress() {
         showUserProfileActionSheetDefault({

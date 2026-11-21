@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockRim.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import LinearGradientDefault from "../../../../../_runtime/05349_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles({ rim: { position: "absolute", left: 0, right: 0, height: 1 } });
 let closure_7 = {
   code: "(function VoicePanelDockRimTsx1(){let[voicePanelDockRimOpacity]=this.__closure;return{opacity:voicePanelDockRimOpacity.get()};})",
@@ -56,7 +56,7 @@ export default noop.memo(function VoicePanelDockRim(style) {
       end: { x: 1, y: 0.5 },
     }),
   };
-  obj3.children = jsx(tmp2(13188).VoicePanelDockRimLevel, {
+  obj3.children = jsx(tmp2(13310).VoicePanelDockRimLevel, {
     style: StyleSheet.absoluteFill,
     children: jsx(LinearGradientDefault, {
       style: StyleSheet.absoluteFill,

@@ -1,19 +1,20 @@
 // discord_common/js/packages/media-engine/native/Connection.tsx
 import inject from "inject.tsx";
+import RosterUpdate from "RosterUpdate.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import _modDef5578 from "../../../../../_runtime/metro/05578__.js";
+import _modDef5697 from "../../../../../_runtime/metro/05697__.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
-import _modDef5625 from "../../../../../_runtime/metro/05625__.js";
+import _modDef5744 from "../../../../../_runtime/metro/05744__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/05627_reduce.js";
-import _modDef5630 from "../../../../../_runtime/metro/05630__.js";
+import reduceDefault from "../../../../../_runtime/05746_reduce.js";
+import _modDef5749 from "../../../../../_runtime/metro/05749__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(5539);
+let Constants = fn(5658);
 ({
   StatsFilter: hasOwnProperty,
   ExperimentFlags: closure_6,
@@ -23,7 +24,7 @@ let Constants = fn(5539);
   MediaTypes: closure_10,
   SIMULCAST_HQ_QUALITY: closure_11,
 } = Constants);
-Constants = fn(5562);
+Constants = fn(5681);
 ({
   NATIVE_MODE_VALUES: closure_12,
   InputModes: map1,
@@ -250,7 +251,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5578(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5697(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -420,9 +421,9 @@ class Connection extends tmp4 {
               if (diff1 >= 0) {
                 closure_0.emit(
                   discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef5630(diff1 / (diff + diff1), 0, 1),
+                  100 * _modDef5749(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef5630(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5749(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -1131,7 +1132,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5625(sorted, sorted1);
+  _modDef5744(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -2015,7 +2016,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         return { v: "r" };
       } else {
         items = [];
-        if (!_modDef5625(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5744(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;
@@ -2404,19 +2405,25 @@ prototype["processMLSProposals"] = function processMLSProposals(arg0, arg1) {
   }
 };
 prototype["prepareMLSCommitTransition"] = function prepareMLSCommitTransition(lastPreparedTransitionId, arg1, arg2) {
+  closure_0 = arg2;
   this.lastPreparedTransitionId = lastPreparedTransitionId;
   const conn = this.conn;
   const prepareMLSCommitTransition = conn.prepareMLSCommitTransition;
   if (prepareMLSCommitTransition != null) {
-    const result = prepareMLSCommitTransition(lastPreparedTransitionId, arg1, arg2);
+    const result = prepareMLSCommitTransition(lastPreparedTransitionId, arg1, (arg0, arg1, changes) =>
+      closure_0(arg0, arg1, RosterUpdate.toRosterUpdate(changes)),
+    );
   }
 };
 prototype["processMLSWelcome"] = function processMLSWelcome(lastPreparedTransitionId, arg1, arg2) {
+  closure_0 = arg2;
   this.lastPreparedTransitionId = lastPreparedTransitionId;
   const conn = this.conn;
   const processMLSWelcome = conn.processMLSWelcome;
   if (processMLSWelcome != null) {
-    processMLSWelcome(lastPreparedTransitionId, arg1, arg2);
+    processMLSWelcome(lastPreparedTransitionId, arg1, (arg0, arg1, changes) =>
+      closure_0(arg0, arg1, RosterUpdate.toRosterUpdate(changes)),
+    );
   }
 };
 prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(arg0) {

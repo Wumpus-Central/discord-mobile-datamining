@@ -200,7 +200,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

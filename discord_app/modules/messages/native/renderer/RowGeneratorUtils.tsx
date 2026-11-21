@@ -10,17 +10,17 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import NativeMediaManagerModule from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 
 require = fn;
-const MessageConstants = fn(4799);
+const MessageConstants = fn(4918);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: metroImportDefault } =
   MessageConstants);
-const SwipeActionsType = fn(8550).SwipeActionsType;
+const SwipeActionsType = fn(8670).SwipeActionsType;
 const Constants = fn(1071);
 ({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 const result = createStyles.experimental_createToken(() =>
   ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1),
 );
-createStyles = fn(4794);
+createStyles = fn(4913);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
   ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND,

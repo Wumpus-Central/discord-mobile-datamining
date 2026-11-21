@@ -2,7 +2,7 @@
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import util from "../intl/index.native.tsx";
 import preloaded_user_settings from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import _modDef2167 from "../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../_runtime/metro/02168__.js";
 import onTimezoneChangeDefault from "../modules/date/onTimezoneChange.android.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import SystemDateFormatter from "../modules/system_date_format/SystemDateFormatter.native.tsx";
@@ -86,9 +86,9 @@ function differenceInCalendarDays(date, date2) {
 function dateFormat(date, LL, setting) {
   let obj2 = date;
   if (!obj.isMoment(date)) {
-    obj2 = _modDef2167(date);
+    obj2 = _modDef2168(date);
   }
-  obj = _modDef2167;
+  obj = _modDef2168;
   if (setting == null) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
     setting = TimestampHourCycle.getSetting();
@@ -157,8 +157,8 @@ export function calendarFormat(timestamp, arg1) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj3 = _modDef2167();
-  const localeDataResult = _modDef2167.localeData();
+  const obj3 = _modDef2168();
+  const localeDataResult = _modDef2168.localeData();
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
     toDateResult = timestamp.toDate();
@@ -184,15 +184,15 @@ export function calendarFormat(timestamp, arg1) {
     }
     let tmp8 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp8 = _modDef2167(timestamp);
+      tmp8 = _modDef2168(timestamp);
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
-  obj4 = _modDef2167;
+  obj4 = _modDef2168;
 }
 export function calendarFormatCompact(timestamp, arg1) {
-  const obj3 = _modDef2167();
-  const localeDataResult = _modDef2167.localeData();
+  const obj3 = _modDef2168();
+  const localeDataResult = _modDef2168.localeData();
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
     toDateResult = timestamp.toDate();
@@ -203,17 +203,17 @@ export function calendarFormatCompact(timestamp, arg1) {
   } else if (-1 === tmp2Result) {
     let tmp6 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp6 = _modDef2167(timestamp);
+      tmp6 = _modDef2168(timestamp);
     }
     let str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
-    tmpResult = _modDef2167;
+    tmpResult = _modDef2168;
   } else {
     str2 = "L";
     if (tmp2Result > -7) {
       str2 = "dddd";
     }
   }
-  obj4 = _modDef2167;
+  obj4 = _modDef2168;
 }
 export function dateStringToMoment(arg0) {
   if (arg0.length >= 200) {
@@ -221,7 +221,7 @@ export function dateStringToMoment(arg0) {
     const error = new Error("Date string exceeds maximum length");
     throw error;
   } else {
-    return _modDef2167(arg0);
+    return _modDef2168(arg0);
   }
 }
 export function accessibilityLabelCalendarFormat(timestamp) {
@@ -245,8 +245,8 @@ export function accessibilityLabelCalendarFormat(timestamp) {
   }
   let str5 = "LLL";
   if ("sameElse" !== str) {
-    str5 = localeDataResult.calendar(str, _modDef2167(timestamp), _modDef2167(date));
-    const tmp6 = _modDef2167(timestamp);
+    str5 = localeDataResult.calendar(str, _modDef2168(timestamp), _modDef2168(date));
+    const tmp6 = _modDef2168(timestamp);
   }
   return dateFormat(timestamp, str5);
 }
@@ -330,8 +330,8 @@ export function formatDateForDatetimeLocal(arg0) {
       const error = new Error("Date string exceeds maximum length");
       throw error;
     } else {
-      str = _modDef2167(arg0).format("YYYY-MM-DDTHH:mm");
-      const obj = _modDef2167(arg0);
+      str = _modDef2168(arg0).format("YYYY-MM-DDTHH:mm");
+      const obj = _modDef2168(arg0);
     }
   }
   return str;

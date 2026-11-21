@@ -26,10 +26,10 @@ export default function FormTrialIntervalPicker(interval) {
     const intl3 = tmp2(1112).intl;
     let stringResult = intl3.string(tmp2(1112).t.WZG1BU);
   } else {
-    stringResult = tmp2(16511).formatPlanIntervalDuration(interval);
-    const tmp2Result = tmp2(16511);
+    stringResult = tmp2(16634).formatPlanIntervalDuration(interval);
+    const tmp2Result = tmp2(16634);
   }
-  obj.trailing = jsx(interval(6925).TableRow.TrailingText, { text: stringResult });
+  obj.trailing = jsx(interval(7045).TableRow.TrailingText, { text: stringResult });
   obj.onPress = function handleSelectTrialInterval() {
     const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
     const obj = ActionSheetActionCreatorsDefault;
@@ -47,11 +47,11 @@ export default function FormTrialIntervalPicker(interval) {
       tmp3 = null;
     }
     obj2.selectedItem = tmp3;
-    obj.openLazy(asyncRequireImpl(7492, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
-    const tmp = asyncRequireImpl(7492, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(7612, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
+    const tmp = asyncRequireImpl(7612, dependencyMap.paths);
   };
   obj.disabled = interval.disabled;
-  return jsx(interval(6925).TableRow, {
+  return jsx(interval(7045).TableRow, {
     label: null,
     subLabel: null,
     trailing: null,

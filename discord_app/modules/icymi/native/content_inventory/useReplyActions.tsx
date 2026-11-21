@@ -13,9 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(8195).DraftType;
+const DraftType = fn(8315).DraftType;
 const EmojiIntention = fn(1389).EmojiIntention;
-const MessageSendLocation = fn(4799).MessageSendLocation;
+const MessageSendLocation = fn(4918).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -275,7 +275,7 @@ export function useReplyActions(content) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18018, dependencyMap.paths),
+          asyncRequireImpl(18144, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

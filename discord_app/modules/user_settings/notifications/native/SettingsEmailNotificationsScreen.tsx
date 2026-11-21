@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import EmailSettingsStore from "../EmailSettingsStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8592).MobileUserSettings;
+const MobileUserSettings = fn(8712).MobileUserSettings;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { notice: { padding: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };

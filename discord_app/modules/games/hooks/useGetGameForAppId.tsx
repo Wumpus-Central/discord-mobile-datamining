@@ -121,7 +121,7 @@ export function useGetGameResultsForAppIds(arg0) {
   );
 }
 export function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(6745)(stateFromStoresArray);
+  const tmp = memo(6864)(stateFromStoresArray);
   _require = tmp;
   items = [tmp];
   memo = noop.useMemo(() => {

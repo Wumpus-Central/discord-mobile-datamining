@@ -22,7 +22,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5444).ParticipantTypes;
+const ParticipantTypes = fn(5563).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
@@ -50,8 +50,8 @@ export default function useStableParticipant(id, channelId, guildId) {
               userAvatarDecoration: null,
               streamId: "Promise",
               ringing: null,
-              hasVideo: 0.414,
-              isSelf: 1,
+              hasVideo: "user",
+              isSelf: "2026-09-mobile-nitro-upsell-in-shop-feed",
             };
             id = AuthenticationStore.getId();
             obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

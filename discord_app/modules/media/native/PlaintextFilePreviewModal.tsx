@@ -93,7 +93,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let closure_8 = { PREVIEW: "PREVIEW" };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
@@ -122,7 +122,7 @@ export default function PlaintextFilePreviewModal(url) {
   const tmp2 = first(noop.useState(true), 2);
   first = tmp2[0];
   noop = tmp2[1];
-  const MARKDOWN_LANGUAGES = url(9986).MARKDOWN_LANGUAGES;
+  const MARKDOWN_LANGUAGES = url(10106).MARKDOWN_LANGUAGES;
   const parts = str.split(".");
   const hasItem = MARKDOWN_LANGUAGES.has(parts.slice(-1)[0]);
   const tmp7 = first(noop.useState(true), 2);
@@ -194,12 +194,12 @@ export default function PlaintextFilePreviewModal(url) {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(6902).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const obj = { IconComponent: url(7022).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
             const intl = url(1112).intl;
             obj.accessibilityLabel = intl.string(url(1112).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return renderMarkdown(url(6909).HeaderActionButton, obj);
+            return renderMarkdown(url(7029).HeaderActionButton, obj);
           },
         });
       },
@@ -214,5 +214,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[memo.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return first1(url(11923).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
+  return first1(url(12043).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
 }

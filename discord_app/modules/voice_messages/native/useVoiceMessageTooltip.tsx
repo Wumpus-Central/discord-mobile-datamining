@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VoiceMessagesUIStore = fn(12703);
+const VoiceMessagesUIStore = fn(12825);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/voice_messages/native/useVoic
 
 export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
-  targetBottomInset = targetBottomInset(13002)().targetBottomInset;
-  let tmp3 = targetBottomInset(6298)(targetBottomInset);
+  targetBottomInset = targetBottomInset(13124)().targetBottomInset;
+  let tmp3 = targetBottomInset(6417)(targetBottomInset);
   if (tmp3 == null) {
     tmp3 = targetBottomInset;
   }
@@ -48,6 +48,6 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items2);
-  const tooltip = targetBottomInset(8822).useTooltip(ref, memo);
+  const tooltip = targetBottomInset(8942).useTooltip(ref, memo);
   return { tooltipTargetRef: ref, showVoiceMessagesTooltip };
 }

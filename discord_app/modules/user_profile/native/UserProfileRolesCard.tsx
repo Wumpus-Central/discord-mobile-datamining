@@ -84,12 +84,10 @@ class RoleItem {
     };
     closure_5 = undefined !== guild_connections;
     DeveloperMode = tmp4(tmp5[9]).DeveloperMode;
-    setting = DeveloperMode.useSetting();
-    tmp4Result = tmp4(tmp5[10]);
     items = [,];
     items[0] = role.id;
     items[1] = name;
-    isTidaMediaTakedownRegion = tmp4Result.useIsTidaMediaTakedownRegion();
+    setting = DeveloperMode.useSetting();
     items1 = [, ,];
     items1[0] = role;
     items1[1] = name;
@@ -98,9 +96,9 @@ class RoleItem {
       ClipboardUtils.copy(role.id);
       ToastUtils.roleIdCopied(name);
     }, items);
-    tmp12 = jsx;
+    tmp11 = jsx;
     if (setting) {
-      obj6 = {
+      obj5 = {
         onPress: null,
         onLongPress: null,
         accessibilityRole: "button",
@@ -109,30 +107,24 @@ class RoleItem {
         style: null,
         children: null,
       };
-      obj6.onPress = callback;
-      tmp15 = undefined;
-      if (setting) {
-        if (isTidaMediaTakedownRegion) {
-          tmp15 = tmp11;
-        }
-      }
-      obj6.onLongPress = tmp15;
-      obj6.accessibilityLabel = name;
-      intl = tmp4(tmp5[13]).intl;
-      obj6.accessibilityHint = intl.string(tmp4(tmp5[13]).t.sMsaLg);
-      obj6.style = tmp.role;
+      obj5.onPress = callback;
+      obj5.onLongPress = tmp10;
+      obj5.accessibilityLabel = name;
+      intl = tmp4(tmp5[12]).intl;
+      obj5.accessibilityHint = intl.string(tmp4(tmp5[12]).t.sMsaLg);
+      obj5.style = tmp.role;
       num3 = 0;
-      obj6.children = renderContent();
-      tmp12Result = tmp12(tmp4(tmp5[19]).PressableHighlight, obj6);
+      obj5.children = renderContent();
+      tmp11Result = tmp11(tmp4(tmp5[18]).PressableHighlight, obj5);
     } else {
-      tmp13 = closure_4;
-      obj7 = { style: null, children: null };
-      obj7.style = tmp.role;
+      tmp12 = closure_4;
+      obj6 = { style: null, children: null };
+      obj6.style = tmp.role;
       num2 = 0;
-      obj7.children = renderContent();
-      tmp12Result = tmp12(closure_4, obj7);
+      obj6.children = renderContent();
+      tmp11Result = tmp11(closure_4, obj6);
     }
-    return tmp12Result;
+    return tmp11Result;
   }
 }
 function RolesList(guildMemberRoleIds) {
@@ -164,7 +156,7 @@ const Constants = fn(1071);
 ({ DEFAULT_ROLE_COLOR_HEX: metroImportDefault, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" },
   role: {
@@ -208,8 +200,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7443), obj2);
-    const tmp7 = guildId(7443);
+    tmp4 = closure_9(guildId(7563), obj2);
+    const tmp7 = guildId(7563);
   }
   return tmp4;
 }

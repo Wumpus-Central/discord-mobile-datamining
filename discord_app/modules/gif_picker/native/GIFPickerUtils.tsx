@@ -58,9 +58,9 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtil
 
 export const GIF_HEADER_HEIGHT = 56;
 export function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10034).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10154).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10034);
+  let obj = sortedFavoriteGIFs(10154);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

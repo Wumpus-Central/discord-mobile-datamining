@@ -7,12 +7,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(13181);
+const useChatInputKeyboardOffsetDefault = tmp5(13303);
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const rect = { position: "absolute", top: -nativeDefault.space.PX_8, bottom: 0, left: null, width: 0 };
 const PlatformUtils = fn(1378);
 let num = 5;
@@ -33,11 +33,11 @@ export default function FormatMenuNuxCoachmark() {
   require("useSelectedDismissibleContent");
   if (isMobileMarkdownFormatMenuEnabled) {
     if (tmp6) {
-      items = [tmp2(4627).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK];
+      items = [tmp2(4746).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK];
     }
     const tmp11 = _slicedToArray(tmp8([]), 2);
     importDefault = tmp12;
-    const tmp13 = tmp11[0] === tmp2(4627).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK;
+    const tmp13 = tmp11[0] === tmp2(4746).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK;
     dependencyMap = tmp13;
     const tmp14 = useChatInputKeyboardOffsetDefault();
     _slicedToArray = tmp14;
@@ -64,7 +64,7 @@ export default function FormatMenuNuxCoachmark() {
       return obj;
     }, items1);
     const ref = coachmark.useRef(null);
-    coachmark = tmp2(8967).useCoachmark(ref, memo);
+    coachmark = tmp2(9087).useCoachmark(ref, memo);
     const items2 = [coachmark];
     const obj2 = {
       style: tmp.anchor,

@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/native/components/share/CheckpointShareActionSheet.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3341 from "../../../Checkpoint2026.messages.js";
+import _modDef3440 from "../../../Checkpoint2026.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import checkpoint_CheckpointMessageComponentUtils from "../../../CheckpointMessageComponentUtils.tsx";
 import CheckpointCardTypes from "../../../../../../discord_common/js/shared/shared-constants/CheckpointCardTypes.tsx";
@@ -11,14 +11,14 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const ACTION_SHEET_MAX_WIDTH = fn(5023).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5142).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(5873).CheckpointCardTypes.DEFAULT] = _modDef3341.DZQzJn;
-obj[fn(5873).CheckpointCardTypes.CHARACTER_ONLY] = _modDef3341.tUU3fe;
-obj[fn(5873).CheckpointCardTypes.STATS_ONLY] = _modDef3341.e2UHGT;
-const createStyles = fn(4794);
+obj[fn(5992).CheckpointCardTypes.DEFAULT] = _modDef3440.DZQzJn;
+obj[fn(5992).CheckpointCardTypes.CHARACTER_ONLY] = _modDef3440.tUU3fe;
+obj[fn(5992).CheckpointCardTypes.STATS_ONLY] = _modDef3440.e2UHGT;
+const createStyles = fn(4913);
 let obj3 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16, height: 284 },
   carouselContent: { alignItems: "center", gap: 48 },

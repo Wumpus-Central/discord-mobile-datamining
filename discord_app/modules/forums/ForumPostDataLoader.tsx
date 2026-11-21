@@ -193,7 +193,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(8498).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(8618).computeThreadIdsSnapshot;
 const Endpoints = fn(1071).Endpoints;
 class DefaultDict {
   constructor(arg0) {

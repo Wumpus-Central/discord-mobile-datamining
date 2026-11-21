@@ -176,7 +176,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5532).sortActivity;
+const sortActivity = fn(5651).sortActivity;
 const Constants = fn(1071);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;

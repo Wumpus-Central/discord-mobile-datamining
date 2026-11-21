@@ -14,11 +14,11 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(6848).sendUserMessage;
+const sendUserMessage = fn(6967).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -415,19 +415,19 @@ export default function ConjureCreateSheet(guildId) {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
               if (!first) {
-                tmp3(5008).hideActionSheet(callback1);
+                tmp3(5127).hideActionSheet(callback1);
                 dependencyMap = 1;
-                const obj7 = tmp3(5008);
+                const obj7 = tmp3(5127);
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: guildId(18262).pickConjureArchive(), done: false };
+                const obj6 = { value: guildId(18389).pickConjureArchive(), done: false };
                 return obj6;
               }
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             const intl = guildId(1112).intl;
-            guildId(5475).presentError(intl.string(tmp3(4091)["Q+l4Hv"]));
+            guildId(5594).presentError(intl.string(tmp3(4190)["Q+l4Hv"]));
             c4 = 3;
             const obj9 = { value: undefined, done: true };
             return obj9;
@@ -444,12 +444,12 @@ export default function ConjureCreateSheet(guildId) {
               closure_128_0 = value;
               dependencyMap = 0;
               if (null != closure_128_0) {
-                closure_128_1 = guildId(18262).describeConjureArchiveRejection(closure_128_0);
+                closure_128_1 = guildId(18389).describeConjureArchiveRejection(closure_128_0);
                 if (null != closure_128_1) {
-                  guildId(5475).presentError(closure_128_1);
-                  const obj2 = guildId(5475);
+                  guildId(5594).presentError(closure_128_1);
+                  const obj2 = guildId(5594);
                 }
-                const obj12 = guildId(18262);
+                const obj12 = guildId(18389);
               }
               c3 = 3;
               c4 = 1;

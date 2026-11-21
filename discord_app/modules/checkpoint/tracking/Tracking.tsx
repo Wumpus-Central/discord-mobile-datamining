@@ -8,9 +8,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/checkpoint/tracking/Tracking.tsx");
 
-export function trackCheckpoint2026CardClicked(authorId, channel) {
+export function trackCheckpoint2026CardClicked(other_user_id, channel) {
   const obj = AnalyticsUtilsDefault;
-  const obj2 = { other_user_id: authorId };
+  const obj2 = { other_user_id };
   const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
   let guild_id;
   if (channel != null) {

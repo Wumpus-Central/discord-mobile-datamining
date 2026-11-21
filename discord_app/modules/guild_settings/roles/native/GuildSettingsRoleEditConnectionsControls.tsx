@@ -245,20 +245,20 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(19740, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(19867, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
-const Constants = fn(6905);
+const Constants = fn(7025);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   formContent: { paddingTop: 16, paddingBottom: 0 },
   warningContainer: {
@@ -439,7 +439,13 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "keys", value: true };
+      const obj = {
+        connectionType,
+        connectionMetadataField: "Array",
+        applicationId,
+        operator: "ip",
+        value: "<string:1090584577>",
+      };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

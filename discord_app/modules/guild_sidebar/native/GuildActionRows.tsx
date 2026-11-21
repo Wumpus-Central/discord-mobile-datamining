@@ -9,13 +9,13 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(7348).CHANNELS_AND_ROLES_MODAL_KEY;
-const ReadStateTypes = fn(6434).ReadStateTypes;
+let closure_7 = fn(7468).CHANNELS_AND_ROLES_MODAL_KEY;
+const ReadStateTypes = fn(6553).ReadStateTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: {
-    marginVertical: fn(5523).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(5642).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -30,12 +30,12 @@ export function GuildRolesAndChannelsRow(guild) {
   const selected = guild.selected;
   let id;
   const tmp = closure_10();
-  const tmp4 = id(6708)(guild);
+  const tmp4 = id(6827)(guild);
   id = guild.id;
-  const result = guild(4826).useIsDismissibleContentDismissed_UNSAFE(
-    guild(4627).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
+  const result = guild(4945).useIsDismissibleContentDismissed_UNSAFE(
+    guild(4746).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
   );
-  const obj = guild(4826);
+  const obj = guild(4945);
   const tmp2 = id;
   items = [ReadStateStore];
   const stateFromStores = guild(563).useStateFromStores(items, () =>
@@ -49,11 +49,11 @@ export function GuildRolesAndChannelsRow(guild) {
     () => NewChannelsStore.getNewChannelIds(guild.id).size > ChannelListState.MAX_NEW_CHANNELS_TO_SHOW,
   );
   const callback = noop.useCallback(() => {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11871, dependencyMap.paths), { guildId: id }, closure_7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11991, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(13128).ChannelModes.DEFAULT;
+  let SELECTED = guild(13250).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(13128).ChannelModes.SELECTED;
+    SELECTED = tmp5(13250).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export function GuildRolesAndChannelsRow(guild) {
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13025).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13025).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13147).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13147).NewBadge, {})}</View>;
   }
   const obj5 = {
     onPress: callback,
@@ -98,11 +98,11 @@ export function GuildRolesAndChannelsRow(guild) {
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(13128).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(13128);
-  obj5.icon = jsx(guild(13128).BaseChannelIcon, {
+  obj5.name = jsx(guild(13250).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(13250);
+  obj5.icon = jsx(guild(13250).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(14931).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(15054).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (

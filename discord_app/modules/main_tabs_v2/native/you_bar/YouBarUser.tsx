@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16355);
+const YouBarConstants = fn(16478);
 ({
   YOU_BAR_SPRING_CONFIG: closure_6,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: metroImportDefault,
@@ -16,7 +16,7 @@ const YouBarConstants = fn(16355);
 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   youButton: {
     flexDirection: "row",
@@ -77,24 +77,24 @@ export default noop.memo(function YouBarUser(isCondensed) {
   YouBarUserTsx1.__initData = tmp8;
   const animatedStyle = tmp2(1653).useAnimatedStyle(YouBarUserTsx1);
   const tmp2Result = tmp2(1653);
-  const name = sharedValue(4850).useName(stateFromStores);
+  const name = sharedValue(4969).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
-      const items4 = [closure_9(tmp11(17841), obj5)];
+      const items4 = [closure_9(tmp11(17967), obj5)];
       const obj6 = { style: null, children: null };
       const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items5;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp11(17842), obj7);
+      obj6.children = closure_9(tmp11(17968), obj7);
       items4[1] = closure_9(tmp11(1653).View, obj6);
       obj3.children = items4;
     }
     return tmp13(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items6 = [closure_9(sharedValue(17840), { isLarge: !isCondensed })];
+  const items6 = [closure_9(sharedValue(17966), { isLarge: !isCondensed })];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items7 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items7;
@@ -102,5 +102,5 @@ export default noop.memo(function YouBarUser(isCondensed) {
   obj8.children = items6;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(4850);
+  const obj4 = sharedValue(4969);
 });

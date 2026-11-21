@@ -147,10 +147,10 @@ function _trackOnboardingDirectJoin(guildId) {
   obj5.in_onboarding = true;
   obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
 }
-let closure_8 = fn(6703).serverApiResponseToClientState;
+let closure_8 = fn(6822).serverApiResponseToClientState;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, Endpoints: closure_10, GuildFeatures: closure_11 } = Constants);
-const GuildMemberFlags = fn(4712).GuildMemberFlags;
+const GuildMemberFlags = fn(4831).GuildMemberFlags;
 let c16 = -2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");

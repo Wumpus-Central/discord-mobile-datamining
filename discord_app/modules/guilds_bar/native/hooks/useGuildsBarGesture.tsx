@@ -7,7 +7,7 @@ import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -274,8 +274,8 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6431).GuildsNodeType;
-const GuildsBarConstants = fn(17734);
+const GuildsNodeType = fn(6550).GuildsNodeType;
+const GuildsBarConstants = fn(17860);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -285,7 +285,7 @@ module_1653 = fn(1653);
 obj.itemMeasurements = module_1653.makeMutable([]);
 module_1653 = fn(1653);
 obj.activeIndex = module_1653.makeMutable(-1);
-let closure_15 = debounce(fn(5010).triggerHapticFeedback, 16);
+let closure_15 = debounce(fn(5129).triggerHapticFeedback, 16);
 let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -356,7 +356,7 @@ export default function useGuildsBarGesture() {
       listInsets: gestureState.listInsets,
       dragDropInProgress: gestureState.dragDropInProgress,
     }),
-    require("../../../../../_runtime/metro/04709__.js").shallow,
+    require("../../../../../_runtime/metro/04828__.js").shallow,
   );
   let gestureState = tmp9.gestureState;
   let scrollPosition = tmp9.scrollPosition;
@@ -379,7 +379,7 @@ export default function useGuildsBarGesture() {
       arr = Array.from(set);
     }
     return arr;
-  }, require("../../../../../_runtime/metro/04709__.js").shallow);
+  }, require("../../../../../_runtime/metro/04828__.js").shallow);
   const effect = noop.useEffect(() => {
     const current = _undefined5.current;
     scrollPosition = undefined;
@@ -843,10 +843,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(8540).ContextMenuStore;
+        const ContextMenuStore = tmp66(8660).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(8540).hideContextMenu();
-          const tmp66Result = tmp66(8540);
+          tmp66(8660).hideContextMenu();
+          const tmp66Result = tmp66(8660);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -887,9 +887,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(7329).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7449).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(7329).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7449).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";
@@ -1065,7 +1065,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("../../../../../_runtime/metro/01653__.js");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(16356).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(16479).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [
     dragDropInProgress,
     dragRegion,

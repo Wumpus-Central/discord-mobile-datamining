@@ -5,7 +5,7 @@ import GuildSettingsActionCreatorsDefault from "../../guild_settings/GuildSettin
 import GuildSettingsStore from "../../guild_settings/GuildSettingsStore.tsx";
 
 require = fn;
-const CREATE_NEW_CHANNEL_VALUE = fn(7877).CREATE_NEW_CHANNEL_VALUE;
+const CREATE_NEW_CHANNEL_VALUE = fn(7997).CREATE_NEW_CHANNEL_VALUE;
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
@@ -22,7 +22,7 @@ export default {
     }
     GuildSettingsActionCreatorsDefault.updateGuild({ rulesChannelId });
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(19767, dependencyMap.paths),
+      asyncRequireImpl(19894, dependencyMap.paths),
       undefined,
       ENABLED_COMMUNITY_MODAL_KEY,
     );

@@ -226,7 +226,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = module_1653.createAnimatedComponent(Pressable);
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let closure_11 = createStyles.createStyleProperties((arg0) => {
   if ("primary" === arg0) {
     let backgroundColor = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -256,7 +256,7 @@ let closure_11 = createStyles.createStyleProperties((arg0) => {
   }
   return { backgroundColor, backgroundColorPressed };
 });
-createStyles = fn(4794);
+createStyles = fn(4913);
 const application_id = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5, arg6) => {
   if ("primary" === arg2) {
     let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;

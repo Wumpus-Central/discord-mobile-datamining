@@ -16,33 +16,33 @@ function createNativePlaceholderConfig(listFooter) {
   const size = {
     borderRadius: "Array",
     borderTopLeftRadius: "create",
-    borderTopRightRadius: "diversity",
-    borderBottomLeftRadius: "Text",
-    borderBottomRightRadius: "Button",
-    divider: "isArray",
-    dividerColor: "isArray",
-    dividerPaddingLeft: "x",
-    dividerPaddingRight: "Button",
+    borderTopRightRadius: "HermesInternal",
+    borderBottomLeftRadius: "channel_id",
+    borderBottomRightRadius: "it",
+    divider: "diversity",
+    dividerColor: "y",
+    dividerPaddingLeft: "Button",
+    dividerPaddingRight: "isArray",
     placeholderShape: "isArray",
-    placeholderShapeColor: "isArray",
-    placeholderShapeCount: "View",
-    placeholderShapeGap: "Button",
+    placeholderShapeColor: "Boolean",
+    placeholderShapeCount: "Button",
+    placeholderShapeGap: "isArray",
     placeholderShapePaddingHorizontal: "isArray",
-    placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "WireType",
-    placeholderFeedColor: "Button",
+    placeholderShapePaddingVertical: "o",
+    placeholderFeedBackgroundColor: "Button",
+    placeholderFeedColor: "isArray",
     placeholderFeedLabelPadding: "isArray",
-    placeholderFeedLabelPaddingInnerRatio: "isArray",
-    placeholderFeedLabelSize: "__closure",
-    placeholderFeedLabelSecondarySize: "Button",
+    placeholderFeedLabelPaddingInnerRatio: "l",
+    placeholderFeedLabelSize: "Button",
+    placeholderFeedLabelSecondarySize: "isArray",
     placeholderFeedPadding: "isArray",
-    placeholderFeedShape: "isArray",
-    placeholderFeedShapeSize: "channel_id",
+    placeholderFeedShape: "Button",
+    placeholderFeedShapeSize: "Button",
     placeholderType: NONE,
-    width: "Button",
-    height: "GUILD_BANNER",
-    verticalAlignment: "Button",
-    horizontalAlignment: "storeListing",
+    width: 2057,
+    height: 2058,
+    verticalAlignment: 2059,
+    horizontalAlignment: 2060,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7319).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7439).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

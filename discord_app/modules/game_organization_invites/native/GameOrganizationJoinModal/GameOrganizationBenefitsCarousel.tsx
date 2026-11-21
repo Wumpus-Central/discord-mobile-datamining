@@ -79,7 +79,7 @@ function BenefitsCarousel(cardWidth) {
   };
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   const tmp9 = closure_5;
-  const prop = cardWidth(12146).GAME_ORGANIZATION_BENEFITS;
+  const prop = cardWidth(12268).GAME_ORGANIZATION_BENEFITS;
   obj2.children = prop.map((key, index) => {
     obj = {
       cardWidth,
@@ -89,17 +89,17 @@ function BenefitsCarousel(cardWidth) {
     };
     return timestampProducer(BenefitCard, obj, key.key);
   });
-  obj.children = closure_6(displayNoun(10384), obj2);
+  obj.children = closure_6(displayNoun(10504), obj2);
   const children = [closure_6(closure_5, obj)];
   let tmp10Result = null;
-  if (cardWidth(12146).GAME_ORGANIZATION_BENEFITS.length > 1) {
+  if (cardWidth(12268).GAME_ORGANIZATION_BENEFITS.length > 1) {
     tmp10Result = null;
     if (tmp6 > 0) {
       tmp10Result = null;
       if (tmp7[0] > tmp6) {
         const obj3 = {
           containerStyle: tmp2.pagination,
-          numberOfItems: tmp13(12146).GAME_ORGANIZATION_BENEFITS.length,
+          numberOfItems: tmp13(12268).GAME_ORGANIZATION_BENEFITS.length,
           currentIndex: tmp4,
         };
         tmp10Result = closure_6(tmp13(1186).CarouselPagination, obj3);
@@ -115,11 +115,11 @@ const jsxProd = fn(21);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
 let obj = {
-  "auto-sync": fn(12134).GuildRolesAbstractUI,
-  "linked-channel": fn(12138).GuildChatAbstractUI,
-  "guild-invite": fn(12142).GuildInviteAbstractUI,
+  "auto-sync": fn(12256).GuildRolesAbstractUI,
+  "linked-channel": fn(12260).GuildChatAbstractUI,
+  "guild-invite": fn(12264).GuildInviteAbstractUI,
 };
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_11 = createStyles.createStyles((width) => {
   obj = {
     carouselContainer: { marginHorizontal: -PX_16 },

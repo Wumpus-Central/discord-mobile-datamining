@@ -20,6 +20,6 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
     invite_channel_id: invite_channel_id.channel.id,
     invite_guild_id: invite_channel_id.channel.guild_id,
   };
-  obj.openLazy(asyncRequireImpl(7944, dependencyMap.paths), combined, obj2, invite_channel_id.stackingBehavior);
-  const tmp3 = asyncRequireImpl(7944, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(8064, dependencyMap.paths), combined, obj2, invite_channel_id.stackingBehavior);
+  const tmp3 = asyncRequireImpl(8064, dependencyMap.paths);
 }

@@ -1,7 +1,7 @@
 // discord_app/modules/waterwheels/interest/native/InterestGameTray.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import InterestGameCoverDefault from "InterestGameCover.tsx";
+import GameCoverDefault from "../../native/GameCover.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -137,12 +137,7 @@ function TrayCover(game) {
   const obj4 = { accessible: true, accessibilityLabel: game.name, style: tmp.target, children: null };
   const obj5 = {
     style: tmp.art,
-    children: sharedValue2(InterestGameCoverDefault, {
-      game,
-      width: game.coverWidth,
-      imageWidth: sharedValue1,
-      compact: true,
-    }),
+    children: sharedValue2(GameCoverDefault, { game, width: game.coverWidth, imageWidth: sharedValue1, compact: true }),
   };
   const items4 = [
     sharedValue2(sharedValue, obj5),
@@ -153,7 +148,7 @@ function TrayCover(game) {
   return sharedValue2(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(17699);
+const InterestGamePickerConstants = fn(17821);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
@@ -162,7 +157,7 @@ const jsxProd = fn(21);
 let result = THUMBNAIL_WIDTH / THUMBNAIL_ASPECT_RATIO;
 let closure_10 = THUMBNAIL_WIDTH + FOOTER_THUMBNAIL_GAP;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   tray: { height: result, flex: 1 },
   viewport: { position: "absolute", inset: -SELECTED_BORDER_WIDTH, right: 0, overflow: "hidden" },

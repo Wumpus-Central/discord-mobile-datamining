@@ -9,7 +9,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7400)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7520)().analyticsLocations;
   const intl = userRecord(1112).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -44,7 +44,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(15982).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16105).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -64,14 +64,14 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5392).Button, {
+  obj.trailing = jsx(userRecord(5511).Button, {
     size: "sm",
     variant: "secondary",
     text: null,
     accessibilityLabel: null,
     onPress: null,
   });
-  return jsx(userRecord(6925).TableRow, {
+  return jsx(userRecord(7045).TableRow, {
     accessible: false,
     icon: jsx(userRecord(1186).Avatar, {
       source: userRecord.getAvatarSource(undefined),

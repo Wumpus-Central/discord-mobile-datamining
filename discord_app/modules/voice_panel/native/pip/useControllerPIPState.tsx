@@ -13,11 +13,11 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19109);
+const useExternalPipSelectedTileDefault = tmp6(19236);
 require = fn;
-const VoicePanelModes = fn(11630).VoicePanelModes;
-const ActivityPanelModes = fn(5420).ActivityPanelModes;
-const asLaunched = fn(6505).asLaunched;
+const VoicePanelModes = fn(11750).VoicePanelModes;
+const ActivityPanelModes = fn(5539).ActivityPanelModes;
+const asLaunched = fn(6624).asLaunched;
 let closure_12 = {
   code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})",
 };
@@ -44,7 +44,7 @@ export function useControllerPIPState(channelId) {
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "transparent",
+    containerHeight: "sku",
     showSecondaryPIP: null,
     scale: sharedValue,
   });

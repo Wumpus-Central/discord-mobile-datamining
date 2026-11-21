@@ -117,17 +117,17 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11681, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11801, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         items = [
           closure_1_10(
-            channelId(5385).Text,
+            channelId(5504).Text,
             { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(5385).Text,
+            channelId(5504).Text,
             { variant: "body-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),
@@ -176,8 +176,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(11664).SafetyWarningTypes;
-const Constants = fn(11675);
+const SafetyWarningTypes = fn(11784).SafetyWarningTypes;
+const Constants = fn(11795);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: closure_6,
@@ -187,7 +187,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const MuteUntilSeconds = fn(1081).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };

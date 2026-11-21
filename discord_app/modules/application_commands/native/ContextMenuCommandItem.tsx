@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -46,7 +46,7 @@ export default function ContextMenuCommandItem(item) {
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(12971).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(13093).getApplicationCommandsIconSource(section);
   const obj2 = {
     accessibilityLabel: memo,
     onPress,
@@ -59,13 +59,13 @@ export default function ContextMenuCommandItem(item) {
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
     const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp8Result = jsx(section(5481), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+    tmp8Result = jsx(section(5600), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj2.icon = tmp8Result;
-  obj2.trailing = jsx(tmp5(5492).SendMessageIcon, {});
+  obj2.trailing = jsx(tmp5(5611).SendMessageIcon, {});
   obj2.start = start;
   obj2.end = end;
-  return jsx(item(6925).TableRow, {
+  return jsx(item(7045).TableRow, {
     accessibilityLabel: memo,
     onPress,
     label: item.displayName,

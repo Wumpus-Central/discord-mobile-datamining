@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(10659)(obj4), done: false };
+              const obj5 = { value: v1(10779)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(10661).setOrientationLockState(closure_128_3);
-          const obj = tmp2(10661);
+          const result = tmp2(10781).setOrientationLockState(closure_128_3);
+          const obj = tmp2(10781);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -273,12 +273,12 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(10654).ActivityLayoutMode;
+let ActivityLayoutMode = fn(10774).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1186).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1190).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,

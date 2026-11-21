@@ -21,7 +21,7 @@ const Constants = fn(1071);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -85,11 +85,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(17392);
+        obj = obj(17516);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4979).dismissKeyboard();
-        const objResult = obj(4979);
+        obj(5098).dismissKeyboard();
+        const objResult = obj(5098);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

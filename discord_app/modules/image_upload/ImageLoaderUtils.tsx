@@ -261,7 +261,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F120829 */ function() { ... });
+                            image.onerror = closure_2_4(/* F121232 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

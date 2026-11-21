@@ -7,11 +7,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(8286);
+const VideoQuestUIStore = fn(8406);
 ({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: closure_6 } = VideoQuestUIStore);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_8 }, loadingSpinner: { height: 100 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -73,7 +73,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const obj2 = { title: null };
   const intl = quest(1112).intl;
   obj2.title = intl.string(quest(1112).t["1YS80z"]);
-  obj.header = closure_7(quest(7395).BottomSheetTitleHeader, obj2);
+  obj.header = closure_7(quest(7515).BottomSheetTitleHeader, obj2);
   const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -97,7 +97,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
       ),
   ];
   obj4.children = items2;
-  obj3.children = closure_8(quest(5810).Stack, obj4);
-  obj.children = closure_7(quest(5026).BottomSheetScrollView, obj3);
-  return closure_7(quest(7433).ActionSheet, obj);
+  obj3.children = closure_8(quest(5929).Stack, obj4);
+  obj.children = closure_7(quest(5145).BottomSheetScrollView, obj3);
+  return closure_7(quest(7553).ActionSheet, obj);
 }

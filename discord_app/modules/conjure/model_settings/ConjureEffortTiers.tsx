@@ -1,14 +1,14 @@
 // discord_app/modules/conjure/model_settings/ConjureEffortTiers.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
 import ConjureModelLabels from "ConjureModelLabels.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
-let obj = { simple: _modDef4091.Mqb8mc, balanced: _modDef4091.zCZfA6, complex: _modDef4091["8l2atm"] };
-const CONJURE_MODEL_TIERS = fn(18216).CONJURE_MODEL_TIERS;
+let obj = { simple: _modDef4190.Mqb8mc, balanced: _modDef4190.zCZfA6, complex: _modDef4190["8l2atm"] };
+const CONJURE_MODEL_TIERS = fn(18343).CONJURE_MODEL_TIERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
@@ -131,7 +131,7 @@ export function conjureTierStopLabel(value) {
   if ("complex" === value) {
     const intl2 = util.intl;
     const _HermesInternal = HermesInternal;
-    combined = "" + stringResult + ", " + intl2.string(_modDef4091["17yEQw"]);
+    combined = "" + stringResult + ", " + intl2.string(_modDef4190["17yEQw"]);
   }
   return combined;
 }

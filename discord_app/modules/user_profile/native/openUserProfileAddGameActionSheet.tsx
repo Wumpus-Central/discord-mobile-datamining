@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/openUserP
 
 export default function openUserProfileAddGameActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10086, dependencyMap.paths),
+    asyncRequireImpl(10206, dependencyMap.paths),
     UserProfileAddGameActionSheet,
     arg0,
   );

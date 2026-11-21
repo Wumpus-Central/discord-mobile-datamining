@@ -13,8 +13,8 @@ import showUserProfileActionSheetDefault from "../../user_profile/native/showUse
 import PollsUtils from "../PollsUtils.tsx";
 import PollTextUtils from "../PollTextUtils.tsx";
 import chat_formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12031 from "../../../../_runtime/metro/12031__.js";
-import _modDef12032 from "../../../../_runtime/metro/12032__.js";
+import _modDef12153 from "../../../../_runtime/metro/12153__.js";
+import _modDef12154 from "../../../../_runtime/metro/12154__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -484,9 +484,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12031;
+    let tmp2Result = _modDef12153;
   } else {
-    tmp2Result = _modDef12032;
+    tmp2Result = _modDef12154;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];
@@ -510,7 +510,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },

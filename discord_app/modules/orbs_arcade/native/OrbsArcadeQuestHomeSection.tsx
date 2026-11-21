@@ -13,11 +13,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 require = fn;
-const OrbsArcadeNativeConstants = fn(16304);
+const OrbsArcadeNativeConstants = fn(16427);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT } = OrbsArcadeNativeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   section: { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 },
   sectionHeader: null,

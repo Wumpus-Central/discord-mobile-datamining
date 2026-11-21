@@ -148,8 +148,8 @@ function takeSnapshot(isSpatial, arg1) {
     OFF_UNSUPPORTED = obj.OFF_UNSUPPORTED;
   }
 }
-const React6 = fn(5692).SpatialAudioOverrideSource;
-const Constants = fn(5539);
+const React6 = fn(5811).SpatialAudioOverrideSource;
+const Constants = fn(5658);
 ({ DEFAULT_DEVICE_ID: closure_10, Features: closure_11, SpatialAudioStatus: closure_12 } = Constants);
 let obj = {
   OFF_UNSUPPORTED: "off_unsupported",
@@ -173,7 +173,7 @@ let closure_14 = {
   [obj.FAILED_INIT]: "duration_failed_init_ms",
   [obj.FAILED_HRTF]: "duration_failed_hrtf_ms",
 };
-const dependencyMap = Object.values(fn(5723).OutputDeviceClass);
+const dependencyMap = Object.values(fn(5842).OutputDeviceClass);
 let closure_16 = {
   mixUs: "mix_us",
   positioningUs: "positioning_us",

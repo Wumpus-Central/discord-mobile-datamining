@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2167 from "../../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../../_runtime/metro/02168__.js";
 import ContentInventoryTraitType from "../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -94,8 +94,8 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = _modDef2167(timestamp);
-  const tmp3 = _modDef2167;
+  const obj2 = _modDef2168(timestamp);
+  const tmp3 = _modDef2168;
   const diffResult = obj2.diff(tmp3(SnowflakeUtilsDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {
@@ -388,7 +388,7 @@ export function getResurrectedEntryLastPlayTime(entry) {
   return date;
 }
 export function getFullResurrectedBadgeText(arg0) {
-  const obj = _modDef2167();
+  const obj = _modDef2168();
   const diffResult = obj.diff(arg0, "months");
   const intl = util.intl;
   const obj2 = { months: diffResult, weeks: 0, days: null };

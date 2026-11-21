@@ -13,9 +13,9 @@ require = fn;
 function confirmUnpin() {
   confirmConjureYouBarPinDefault(false);
 }
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16355).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16478).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND },

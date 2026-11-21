@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const NOOP = fn(1071).NOOP;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 let items = [];
 const module_560 = fn(560);
 const state = module_560.create(() => ({ suggestions: items, dismiss: NOOP }));
@@ -30,7 +30,7 @@ export function setFavoritesGuildSuggestions(suggestions) {
 export function useFavoritesGuildSuggestionsVisibility() {
   const tmp = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
   if (tmp) {
-    items = [tmp2(4627).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+    items = [tmp2(4746).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
     let items1 = items;
   } else {
     items1 = [];

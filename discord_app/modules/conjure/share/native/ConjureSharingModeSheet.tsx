@@ -25,7 +25,7 @@ export default function ConjureSharingModeSheet(onChange) {
   }, items);
   if (title == null) {
     const intl = tmp3(1112).intl;
-    title = intl.string(onChange(4091).jDBYrs);
+    title = intl.string(onChange(4190).jDBYrs);
   }
   let obj = {
     header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }),

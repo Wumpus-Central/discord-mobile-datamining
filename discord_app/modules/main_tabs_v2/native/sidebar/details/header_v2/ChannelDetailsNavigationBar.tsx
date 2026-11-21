@@ -4,7 +4,7 @@ import _mod1653 from "../../../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../../../_runtime/metro/01706__.js";
 import native from "../../../../../../../discord_common/js/packages/design/native.tsx";
 import timing_timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
-import _modDef7309 from "../../../../../../../_runtime/metro/07309__.js";
+import _modDef7429 from "../../../../../../../_runtime/metro/07429__.js";
 import ChannelSettingsActionCreatorsDefault from "../../../../../../actions/ChannelSettingsActionCreators.tsx";
 import ChannelDetailsUtils from "../ChannelDetailsUtils.tsx";
 import useSearchContext from "../../../../../search/native/hooks/useSearchContext.tsx";
@@ -41,18 +41,18 @@ function MuteButton(channelId) {
     navigation.navigate("sidebar", { screen: constants2.MUTE, channelId, source: "channel-details-navigation-bar" });
   }, items1);
   const obj2 = channelId(1500);
-  const token = channelId(5358).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(5358);
+  const token = channelId(5477).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(5477);
   const tmp5 = navigation;
-  const token1 = channelId(5358).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token1 = channelId(5477).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   const obj5 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null };
   const intl = channelId(1112).intl;
   obj5.accessibilityLabel = intl.string(channelId(1112).t.w4m945);
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = tmp5(stateFromStores ? 10245 : 8563);
-  return closure_15(channelId(7471).IconButton, obj5, constants.MUTE);
+  obj5.icon = tmp5(stateFromStores ? 10365 : 8683);
+  return closure_15(channelId(7591).IconButton, obj5, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -80,20 +80,20 @@ function SearchButton(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   let obj = channelId(504);
-  const shouldHideChannelContent = channelId(6300).useShouldHideChannelContent(stateFromStores);
-  let obj2 = channelId(6300);
-  const token = channelId(5358).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(5358);
-  const token1 = channelId(5358).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const shouldHideChannelContent = channelId(6419).useShouldHideChannelContent(stateFromStores);
+  let obj2 = channelId(6419);
+  const token = channelId(5477).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(5477);
+  const token1 = channelId(5477).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   const obj5 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
   const intl = channelId(1112).intl;
   obj5.accessibilityLabel = intl.string(channelId(1112).t["5h0QOP"]);
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = _modDef7309;
+  obj5.icon = _modDef7429;
   obj5.disabled = shouldHideChannelContent;
-  return closure_15(channelId(7471).IconButton, obj5, constants.SEARCH);
+  return closure_15(channelId(7591).IconButton, obj5, constants.SEARCH);
 }
 function SettingsButton(channel) {
   channel = channel.channel;
@@ -116,9 +116,9 @@ function SettingsButton(channel) {
     }
   }, items);
   const obj = channel(1500);
-  const token = channel(5358).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  let obj2 = channel(5358);
-  const token1 = channel(5358).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token = channel(5477).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  let obj2 = channel(5477);
+  const token1 = channel(5477).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   let obj4 = {
     accessibilityLabel: null,
     onPress: null,
@@ -132,8 +132,8 @@ function SettingsButton(channel) {
   obj4.onPress = callback;
   obj4.variant = token1;
   obj4.size = token;
-  obj4.icon = navigation(10252);
-  return closure_15(channel(7471).IconButton, obj4, constants.SETTINGS);
+  obj4.icon = navigation(10372);
+  return closure_15(channel(7591).IconButton, obj4, constants.SETTINGS);
 }
 function SearchBar(channel) {
   channel = channel.channel;
@@ -346,20 +346,20 @@ function getItemKey(arg0) {
   return arg0;
 }
 const View = fn(17).View;
-const ChannelDetailsStore = fn(8454);
+const ChannelDetailsStore = fn(8574);
 ({ setIsChannelDetailsSearchActive: closure_9, useIsChannelDetailsSearchActive: closure_10 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10411);
+const ChannelDetailsConstants = fn(10531);
 ({ ChannelDetailsButtonTypes: closure_11, ChannelDetailsNavigatorScreens: closure_12 } = ChannelDetailsConstants);
 const ChannelSettingsSections = fn(1071).ChannelSettingsSections;
-let closure_14 = fn(8455).SearchEntrypointAnalyticsLocations;
+let closure_14 = fn(8575).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(13119).SEARCH_BAR_HEIGHT,
+    height: fn(13241).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -370,7 +370,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(13119).SEARCH_BAR_HEIGHT,
+  height: fn(13241).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -379,7 +379,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13119).SEARCH_BAR_HEIGHT,
+  height: fn(13241).SEARCH_BAR_HEIGHT,
 };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
 let obj4 = {
@@ -388,7 +388,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13119).SEARCH_BAR_HEIGHT,
+  height: fn(13241).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,

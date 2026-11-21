@@ -7,7 +7,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/useNavigationTTIContentPainted.tsx");
 
 export function useNavigationTTIContentPainted() {
-  navTTISurface = navTTISurface(10306).useNavTTISurface();
+  navTTISurface = navTTISurface(10426).useNavTTISurface();
   noop.useRef(null);
   let navigationKey;
   if (navTTISurface != null) {

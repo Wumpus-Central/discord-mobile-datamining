@@ -99,8 +99,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(6454).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(13178);
+const LoadState = fn(6573).LoadState;
+const EnglishEmojiSuggestionsConstants = fn(13300);
 ({ QUERY_DENYLIST: metroImportDefault, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1389).EmojiIntention;
 const re10 = /(\S+)\s$/;

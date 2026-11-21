@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7959);
+const CollectiblesItemRecord = fn(8079);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
 let closure_7 = fn(1073).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -261,17 +261,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 styles: "to",
                 type: "Array",
                 premiumType: "id",
-                items: "<string:374497215>",
-                categorySkuId: "<string:1382006536>",
-                categoryWillUnpublishAt: "<string:1606371960>",
-                isCategoryReward: "<string:3214385490>",
-                prices: "<string:1116885599>",
-                previewAssets: "<string:108093375>",
-                googleSkuIds: "<string:2852147957>",
-                eligibleOffers: "<string:3679608767>",
-                variants: "<string:1382006702>",
-                bundledProducts: "<string:1606373266>",
-                isFirstParty: "en-GM",
+                items: "<string:1382958091>",
+                categorySkuId: "<string:1849965702>",
+                categoryWillUnpublishAt: "en-NZ",
+                isCategoryReward: "en-001",
+                prices: "en-PG",
+                previewAssets: "en-001",
+                googleSkuIds: "en-PH",
+                eligibleOffers: "en-001",
+                variants: "snowman2",
+                bundledProducts: "<string:1486674077>",
+                isFirstParty: false,
               };
               let str;
               if (first != null) {

@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -44,12 +44,12 @@ export function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4808).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  const tmp3 = closure_5(noop.useContext(target(4927).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
   return jsx(tmp(1186).LegacyText, {
     accessible: true,
     accessibilityRole: str,
     onPress: fn,
-    style: closure_5(noop.useContext(target(4808).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
+    style: closure_5(noop.useContext(target(4927).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
     children: children.children,
   });
 }

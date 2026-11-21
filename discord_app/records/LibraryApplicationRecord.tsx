@@ -1,6 +1,6 @@
 // discord_app/records/LibraryApplicationRecord.tsx
 import FlagUtilsAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef2167 from "../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../_runtime/metro/02168__.js";
 import Record from "../lib/Record.tsx";
 import ApplicationStore from "../modules/applications/ApplicationStore.tsx";
 import EntitlementRecord from "EntitlementRecord.tsx";
@@ -52,7 +52,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = _modDef2167;
+    entitlements = _modDef2168;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj2.preorderReleaseAt = entitlementsResult;

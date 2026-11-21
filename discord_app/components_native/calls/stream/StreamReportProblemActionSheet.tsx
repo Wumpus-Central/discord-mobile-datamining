@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../_runtime/05026_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05145_BottomSheetModal.js";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import ToastUtils from "../../../modules/toast/native/ToastUtils.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -18,7 +18,7 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { container: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

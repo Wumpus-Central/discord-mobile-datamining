@@ -229,10 +229,9 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   CHECKPOINT_COMPLETE_FAILED: function handleCompleteFailed() {
     c14 = false;
   },
-  CHECKPOINT_RESET_SUCCESS: function handleResetSuccess() {
-    c9 = null;
-    c13 = null;
+  CHECKPOINT_RESET_PROGRESS: function handleResetProgress() {
     obj.progress = null;
+    c13 = null;
   },
   CHECKPOINT_SELECT_CHARACTER_TRAIT: function handleSelectCharacterTrait(trait) {
     let tmp = selectedCharacterTraits;

@@ -193,7 +193,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               let obj3 = { node: root, direction: -1, selectedGuildId };
               let tmp36 = checkNodeAndIterate(obj3);
               if (null != tmp36) {
-                let obj4 = { beforeItem: "Array", afterItem: false };
+                let obj4 = { beforeItem: "Array", afterItem: 0 };
                 let obj5 = { section: tmp36.section + tmp50.GUILDS, row: tmp36.item, mention: true };
                 obj4.afterItem = obj5;
                 let tmp37 = obj4;
@@ -214,13 +214,13 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6431).GuildsNodeType;
-const GuildsBarConstants = fn(17734);
+const GuildsNodeType = fn(6550).GuildsNodeType;
+const GuildsBarConstants = fn(17860);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16355);
+const YouBarConstants = fn(16478);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });

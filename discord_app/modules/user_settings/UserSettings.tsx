@@ -70,13 +70,13 @@ function goreContentToProto(goreContentGuilds) {
 }
 const UserSettingsConstants = fn(1081);
 ({ UserSettingsDelay, ListDensityMode } = UserSettingsConstants);
-const DMSafetyConstants = fn(4621);
+const DMSafetyConstants = fn(4740);
 ({ DmSpamFilterTypes: c3, ExplicitContentFilterTypes: closure_4 } = DMSafetyConstants);
 const Constants = fn(1071);
 ({ AllFriendSourceFlags: hasOwnProperty, SpoilerRenderSetting: closure_6, StatusTypes } = Constants);
-const StickerAnimationSettings = fn(4622).StickerAnimationSettings;
-fn(4623);
-let UserSettingDefinitions = fn(4623);
+const StickerAnimationSettings = fn(4741).StickerAnimationSettings;
+fn(4742);
+let UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "useLegacyChatInput",
@@ -95,7 +95,7 @@ const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult1 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "useRichChatInput",
@@ -114,7 +114,7 @@ const defineProtoSettingResult1 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult2 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "includeStickersInAutocomplete",
@@ -133,7 +133,7 @@ const defineProtoSettingResult2 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult3 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "includeSoundmojiInAutocomplete",
@@ -152,7 +152,7 @@ const defineProtoSettingResult3 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult4 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "includeGameMentionsInAutocomplete",
@@ -171,7 +171,7 @@ const defineProtoSettingResult4 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult5 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "inlineEmojiSuggestionsEnabled",
@@ -190,7 +190,7 @@ const defineProtoSettingResult5 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult6 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "renderSpoilers",
@@ -209,7 +209,7 @@ const defineProtoSettingResult6 = UserSettingDefinitions.defineProtoSetting(
     return StringValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult7 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "useThreadSidebar",
@@ -228,7 +228,7 @@ const defineProtoSettingResult7 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult8 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "showInAppNotifications",
@@ -247,7 +247,7 @@ const defineProtoSettingResult8 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult9 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "reactionNotifications",
@@ -260,7 +260,7 @@ const defineProtoSettingResult9 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult10 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "customStatusPushNotifications",
@@ -273,7 +273,7 @@ const defineProtoSettingResult10 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult11 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableSummaryReminderNotifications",
@@ -292,7 +292,7 @@ const defineProtoSettingResult11 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult12 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableScreenDowntimeScheduleNotifications",
@@ -311,7 +311,7 @@ const defineProtoSettingResult12 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult13 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableVoiceActivityNotifications",
@@ -330,7 +330,7 @@ const defineProtoSettingResult13 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult14 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableFriendOnlineNotifications",
@@ -349,7 +349,7 @@ const defineProtoSettingResult14 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult15 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableFriendAnniversaryNotifications",
@@ -368,7 +368,7 @@ const defineProtoSettingResult15 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult16 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableServerTrendingNotifications",
@@ -387,7 +387,7 @@ const defineProtoSettingResult16 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult17 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableProfileUpdatesNotifications",
@@ -406,7 +406,7 @@ const defineProtoSettingResult17 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult18 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableFriendGamingActivityNotifications",
@@ -425,7 +425,7 @@ const defineProtoSettingResult18 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult19 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableUpcomingServerEventNotifications",
@@ -444,7 +444,7 @@ const defineProtoSettingResult19 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 let closure_9 = [];
 const defineProtoSettingResult20 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
@@ -464,7 +464,7 @@ const defineProtoSettingResult20 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult21 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "focusModeExpiresAtMs",
@@ -477,7 +477,7 @@ const defineProtoSettingResult21 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult22 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "emojiPickerCollapsedSections",
@@ -490,7 +490,7 @@ const defineProtoSettingResult22 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult23 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "stickerPickerCollapsedSections",
@@ -503,7 +503,7 @@ const defineProtoSettingResult23 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult24 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "soundboardPickerCollapsedSections",
@@ -516,7 +516,7 @@ const defineProtoSettingResult24 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult25 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "viewImageDescriptions",
@@ -535,7 +535,7 @@ const defineProtoSettingResult25 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult26 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "showCommandSuggestions",
@@ -554,7 +554,7 @@ const defineProtoSettingResult26 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult27 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "alwaysPreviewVideo",
@@ -573,7 +573,7 @@ const defineProtoSettingResult27 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult28 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "disableStreamPreviews",
@@ -589,7 +589,7 @@ const defineProtoSettingResult28 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult29 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnGoLive",
@@ -605,7 +605,7 @@ const defineProtoSettingResult29 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult30 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnComeOnline",
@@ -624,7 +624,7 @@ const defineProtoSettingResult30 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult31 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyServerMembersOnGoLive",
@@ -643,7 +643,7 @@ const defineProtoSettingResult31 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult32 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnProfileUpdate",
@@ -662,7 +662,7 @@ const defineProtoSettingResult32 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult33 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnCustomStatusUpdate",
@@ -681,7 +681,7 @@ const defineProtoSettingResult33 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult34 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notificationCenterAckedBeforeId",
@@ -694,7 +694,7 @@ const defineProtoSettingResult34 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult35 = UserSettingDefinitions.defineProtoSetting(
   "gameLibrary",
   "installShortcutDesktop",
@@ -713,7 +713,7 @@ const defineProtoSettingResult35 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult36 = UserSettingDefinitions.defineProtoSetting(
   "gameLibrary",
   "installShortcutStartMenu",
@@ -732,7 +732,7 @@ const defineProtoSettingResult36 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 let closure_10 = [];
 const defineProtoSettingResult37 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
@@ -752,7 +752,7 @@ const defineProtoSettingResult37 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult38 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "allowActivityPartyPrivacyVoiceChannel",
@@ -771,7 +771,7 @@ const defineProtoSettingResult38 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult39 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "messageRequestRestrictedGuildIds",
@@ -784,7 +784,7 @@ const defineProtoSettingResult39 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult40 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultMessageRequestRestricted",
@@ -800,7 +800,7 @@ const defineProtoSettingResult40 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult41 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "nonSpamRetrainingOptIn",
@@ -821,7 +821,7 @@ const defineProtoSettingResult41 = UserSettingDefinitions.defineProtoSetting(
     return obj2;
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult42 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "contactSyncEnabled",
@@ -840,7 +840,7 @@ const defineProtoSettingResult42 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult43 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultGuildsRestricted",
@@ -853,7 +853,7 @@ const defineProtoSettingResult43 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult44 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultGuildsRestrictedV2",
@@ -869,7 +869,7 @@ const defineProtoSettingResult44 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult45 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "restrictedGuildIds",
@@ -882,7 +882,7 @@ const defineProtoSettingResult45 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult46 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "friendDiscoveryFlags",
@@ -901,7 +901,7 @@ const defineProtoSettingResult46 = UserSettingDefinitions.defineProtoSetting(
     return UInt32Value.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult47 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "friendSourceFlags",
@@ -920,7 +920,7 @@ const defineProtoSettingResult47 = UserSettingDefinitions.defineProtoSetting(
     return UInt32Value.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult48 = UserSettingDefinitions.defineProtoSetting(
   "debug",
   "rtcPanelShowVoiceStates",
@@ -939,7 +939,7 @@ const defineProtoSettingResult48 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult49 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "convertEmoticons",
@@ -958,7 +958,7 @@ const defineProtoSettingResult49 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult50 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "messageDisplayCompact",
@@ -977,7 +977,7 @@ const defineProtoSettingResult50 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult51 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "displayCompactAvatars",
@@ -996,14 +996,14 @@ const defineProtoSettingResult51 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult52 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "soundboardSettings",
   (arg0) => arg0,
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult53 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "soundmojiVolume",
@@ -1022,7 +1022,7 @@ const defineProtoSettingResult53 = UserSettingDefinitions.defineProtoSetting(
     return FloatValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult54 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "streamNotificationsEnabled",
@@ -1041,7 +1041,7 @@ const defineProtoSettingResult54 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 let closure_11 = [];
 const defineProtoSettingResult55 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
@@ -1061,7 +1061,7 @@ const defineProtoSettingResult55 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult56 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "quests3PDataOptedOut",
@@ -1080,7 +1080,7 @@ const defineProtoSettingResult56 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult57 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "adTopicOptOuts",
@@ -1093,7 +1093,7 @@ const defineProtoSettingResult57 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult58 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "nativePhoneIntegrationEnabled",
@@ -1112,7 +1112,7 @@ const defineProtoSettingResult58 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult59 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "afkTimeout",
@@ -1131,7 +1131,7 @@ const defineProtoSettingResult59 = UserSettingDefinitions.defineProtoSetting(
     return UInt32Value.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult60 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "viewNsfwGuilds",
@@ -1150,7 +1150,7 @@ const defineProtoSettingResult60 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult61 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "viewNsfwCommands",
@@ -1169,7 +1169,7 @@ const defineProtoSettingResult61 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult62 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "detectPlatformAccounts",
@@ -1188,7 +1188,7 @@ const defineProtoSettingResult62 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult63 = UserSettingDefinitions.defineProtoSetting(
   "gameLibrary",
   "disableGamesTab",
@@ -1207,7 +1207,7 @@ const defineProtoSettingResult63 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult64 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "enableTtsCommand",
@@ -1226,7 +1226,7 @@ const defineProtoSettingResult64 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult65 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "explicitContentFilter",
@@ -1245,7 +1245,7 @@ const defineProtoSettingResult65 = UserSettingDefinitions.defineProtoSetting(
     return UInt32Value.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult66 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "dmSpamFilter",
@@ -1264,7 +1264,7 @@ const defineProtoSettingResult66 = UserSettingDefinitions.defineProtoSetting(
     return UInt32Value.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult67 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "dmSpamFilterV2",
@@ -1277,7 +1277,7 @@ const defineProtoSettingResult67 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult68 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "showCurrentGame",
@@ -1296,7 +1296,7 @@ const defineProtoSettingResult68 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult69 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "recentGamesEnabled",
@@ -1316,7 +1316,7 @@ const defineProtoSettingResult69 = UserSettingDefinitions.defineProtoSetting(
   },
 );
 const set = new Set(Object.values(StatusTypes));
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult70 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "profileVisibility",
@@ -1329,7 +1329,7 @@ const defineProtoSettingResult70 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult71 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "status",
@@ -1347,7 +1347,7 @@ const defineProtoSettingResult71 = UserSettingDefinitions.defineProtoSetting(
     return StringValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult72 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "statusExpiresAtMs",
@@ -1360,22 +1360,22 @@ const defineProtoSettingResult72 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult73 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "statusCreatedAtMs",
   (arg0) => arg0,
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult74 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "customStatus",
   (arg0) => arg0,
   (arg0) => arg0,
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   UserSettingDefinitions.defineProtoSetting(
     "textAndImages",
@@ -1398,8 +1398,8 @@ const result = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "text",
   "inlineAttachmentMedia",
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result1 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   UserSettingDefinitions.defineProtoSetting(
     "textAndImages",
@@ -1422,8 +1422,8 @@ const result1 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "text",
   "inlineEmbedMedia",
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result2 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   UserSettingDefinitions.defineProtoSetting(
     "textAndImages",
@@ -1446,8 +1446,8 @@ const result2 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "text",
   "renderEmbeds",
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result3 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   UserSettingDefinitions.defineProtoSetting(
     "textAndImages",
@@ -1470,8 +1470,8 @@ const result3 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "text",
   "renderReactions",
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
   "clips",
   "allowVoiceRecording",
@@ -1545,13 +1545,13 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "text",
   "defaultReactionEmoji",
 );
-fn(4623);
+fn(4742);
 let items = [ListDensityMode.AUTO, ,];
 const obj87 = { comparator: discord_common_shallowEqualDefault };
-items[1] = fn(5455).ChannelListLayoutTypes.COZY;
-items[2] = fn(5455).ChannelListLayoutTypes.COMPACT;
+items[1] = fn(5574).ChannelListLayoutTypes.COZY;
+items[2] = fn(5574).ChannelListLayoutTypes.COMPACT;
 const set1 = new Set(items);
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting(
   "localization",
   "timezoneOffset",
@@ -1575,12 +1575,12 @@ const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting(
   },
 );
 const items1 = [
-  fn(5455).MessagePreviewTypes.ALL,
-  fn(5455).MessagePreviewTypes.UNREADS,
-  fn(5455).MessagePreviewTypes.NONE,
+  fn(5574).MessagePreviewTypes.ALL,
+  fn(5574).MessagePreviewTypes.UNREADS,
+  fn(5574).MessagePreviewTypes.NONE,
 ];
 const set2 = new Set(items1);
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult77 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "channelListLayout",
@@ -1598,8 +1598,8 @@ const defineProtoSettingResult77 = UserSettingDefinitions.defineProtoSetting(
     return StringValue.create({ value });
   },
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result5 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   UserSettingDefinitions.defineProtoSetting(
     "appearance",
@@ -1616,7 +1616,7 @@ const result5 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "appearance",
   "developerMode",
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult78 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "messagePreviews",
@@ -1634,8 +1634,8 @@ const defineProtoSettingResult78 = UserSettingDefinitions.defineProtoSetting(
     return StringValue.create({ value });
   },
 );
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult79 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "darkSidebar",
@@ -1703,9 +1703,9 @@ const result6 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "appearance",
   "clientThemeSettings",
 );
-fn(4623);
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result7 = UserSettingDefinitions.wrapSettingWithOverride(
   UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
     UserSettingDefinitions.defineProtoSetting(
@@ -1750,9 +1750,9 @@ const result7 = UserSettingDefinitions.wrapSettingWithOverride(
     });
   },
 );
-fn(4623);
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 const result8 = UserSettingDefinitions.wrapSettingWithOverride(
   UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
     UserSettingDefinitions.defineProtoSetting(
@@ -1797,9 +1797,9 @@ const result8 = UserSettingDefinitions.wrapSettingWithOverride(
     });
   },
 );
-fn(4623);
-fn(4623);
-UserSettingDefinitions = fn(4623);
+fn(4742);
+fn(4742);
+UserSettingDefinitions = fn(4742);
 let closure_15 = [];
 const result9 = UserSettingDefinitions.wrapSettingWithOverride(
   UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
@@ -1845,9 +1845,9 @@ const result9 = UserSettingDefinitions.wrapSettingWithOverride(
     });
   },
 );
-fn(4623);
+fn(4742);
 const obj96 = { comparator: fn(12).isEqual };
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 let closure_16 = [];
 const defineProtoSettingResult80 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
@@ -1862,7 +1862,7 @@ const defineProtoSettingResult80 = UserSettingDefinitions.defineProtoSetting(
   (arg0) => arg0,
 );
 const obj108 = { delay: UserSettingsDelay.FREQUENT_USER_ACTION };
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult81 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "activityRestrictedGuildIds",
@@ -1876,7 +1876,7 @@ const defineProtoSettingResult81 = UserSettingDefinitions.defineProtoSetting(
   (arg0) => arg0,
   { delay: UserSettingsDelay.FREQUENT_USER_ACTION },
 );
-fn(4623);
+fn(4742);
 const obj111 = {
   baseSetting: null,
   isEligible: null,
@@ -1884,7 +1884,7 @@ const obj111 = {
   ineligibleDefault: null,
   eligibleDefault: null,
 };
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 obj111.baseSetting = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultGuildsActivityRestricted",
@@ -1912,7 +1912,7 @@ obj111.eligibleDefault = function eligibleDefault() {
   return preloaded_user_settings.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS;
 };
 const result10 = UserSettingDefinitions.wrapSettingWithExperimentDefaults(obj111);
-fn(4623);
+fn(4742);
 const obj114 = {
   baseSetting: null,
   isEligible: null,
@@ -1920,7 +1920,7 @@ const obj114 = {
   ineligibleDefault: null,
   eligibleDefault: null,
 };
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 obj114.baseSetting = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultGuildsActivityRestrictedV2",
@@ -1954,7 +1954,7 @@ obj114.eligibleDefault = function eligibleDefault() {
   return preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS;
 };
 const result11 = UserSettingDefinitions.wrapSettingWithExperimentDefaults(obj114);
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult82 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "activityJoiningRestrictedGuildIds",
@@ -1967,7 +1967,7 @@ const defineProtoSettingResult82 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult83 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "familyCenterEnabledV2",
@@ -1983,7 +1983,7 @@ const defineProtoSettingResult83 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult84 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "hideLegacyUsername",
@@ -2002,7 +2002,7 @@ const defineProtoSettingResult84 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult85 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "allowGameFriendDmsInDiscord",
@@ -2021,7 +2021,7 @@ const defineProtoSettingResult85 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult86 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "slayerSdkReceiveDmsInGame",
@@ -2035,7 +2035,7 @@ const defineProtoSettingResult86 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult87 = UserSettingDefinitions.defineProtoSetting(
   "ads",
   "alwaysDeliver",
@@ -2048,21 +2048,21 @@ const defineProtoSettingResult87 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult88 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "explicitContentSettings",
   explicitContentFromProto,
   explicitContentToProto,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult89 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "goreContentSettings",
   goreContentFromProto,
   goreContentToProto,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult90 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "searchResultExactCountEnabled",
@@ -2081,7 +2081,7 @@ const defineProtoSettingResult90 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult91 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "happeningNowCardsDisabled",
@@ -2100,7 +2100,7 @@ const defineProtoSettingResult91 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult92 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "timestampHourCycle",
@@ -2113,14 +2113,14 @@ const defineProtoSettingResult92 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult93 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "defaultGuildThemePreference",
   fn(1235).resolveDefaultGuildThemePreference,
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult94 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "launchPadMode",
@@ -2133,7 +2133,7 @@ const defineProtoSettingResult94 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult95 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "swipeRightToLeftMode",
@@ -2146,7 +2146,7 @@ const defineProtoSettingResult95 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult96 = UserSettingDefinitions.defineProtoSetting(
   "userContent",
   "lastReceivedChangelogId",
@@ -2159,7 +2159,7 @@ const defineProtoSettingResult96 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult97 = UserSettingDefinitions.defineProtoSetting(
   "safetySettings",
   "ignoreProfileSpeedbumpDisabled",
@@ -2172,7 +2172,7 @@ const defineProtoSettingResult97 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult98 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "uiDensity",
@@ -2188,7 +2188,7 @@ const defineProtoSettingResult98 = UserSettingDefinitions.defineProtoSetting(
   (arg0) => arg0,
 );
 const obj133 = { delay: UserSettingsDelay.AUTOMATED };
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult99 = UserSettingDefinitions.defineProtoSetting(
   "inAppFeedbackSettings",
   "inAppFeedbackStates",
@@ -2226,7 +2226,7 @@ const defineProtoSettingResult99 = UserSettingDefinitions.defineProtoSetting(
     ),
   { delay: UserSettingsDelay.AUTOMATED },
 );
-UserSettingDefinitions = fn(4623);
+UserSettingDefinitions = fn(4742);
 const defineProtoSettingResult100 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "isCrossDmSearchEnabled",

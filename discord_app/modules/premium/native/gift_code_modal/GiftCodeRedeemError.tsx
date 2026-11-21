@@ -7,8 +7,8 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11809 from "../../../../../_runtime/metro/11809__.js";
-import _modDef11810 from "../../../../../_runtime/metro/11810__.js";
+import _modDef11929 from "../../../../../_runtime/metro/11929__.js";
+import _modDef11930 from "../../../../../_runtime/metro/11930__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -41,9 +41,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef11809;
+    let tmp8Result = _modDef11929;
   } else {
-    tmp8Result = _modDef11810;
+    tmp8Result = _modDef11930;
   }
   items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
   const obj4 = { variant: "heading-xl/semibold", style: tmp.header, children: null };

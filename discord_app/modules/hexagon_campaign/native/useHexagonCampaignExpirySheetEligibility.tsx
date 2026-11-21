@@ -10,7 +10,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import HexagonCampaignPersistedStore from "../HexagonCampaignPersistedStore.tsx";
 
 require = fn;
-const HexagonCampaignConstants = fn(4819);
+const HexagonCampaignConstants = fn(4938);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_9, HexagonCampaignPerk: closure_10 } = HexagonCampaignConstants);
 const SystemTheme = fn(1194).SystemTheme;
 const size = fn(2);

@@ -13,7 +13,7 @@ const Constants = fn(1071);
 } = Constants);
 const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles({ nitroWheel: { marginRight: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellButton.tsx");
@@ -21,9 +21,9 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7400)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7520)().analyticsLocations;
   const tmp = closure_10();
-  let label = analyticsObject(9006).useNitroTrialCtaOverride();
+  let label = analyticsObject(9126).useNitroTrialCtaOverride();
   items = [analyticsLocations, analyticsObject];
   const effect = noop.useEffect(() => {
     const obj2 = {
@@ -55,8 +55,8 @@ export default function UserProfileUpsellButton(analyticsObject) {
     label = intl.string(tmp3(1112).t.pj0XBN);
   }
   obj2.text = label;
-  obj2.icon = jsx(analyticsObject(8832).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
-  return jsx(analyticsObject(5392).Button, {
+  obj2.icon = jsx(analyticsObject(8952).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
+  return jsx(analyticsObject(5511).Button, {
     onPress() {
       const obj2 = {
         initialUpsellKey: constants2.CUSTOM_PROFILES,

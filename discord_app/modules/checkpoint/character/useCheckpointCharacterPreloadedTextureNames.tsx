@@ -4,8 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const set = new Set();
 const obj = {};
-const items = [fn(12592).WIREFRAME_TEXTURE];
-obj[fn(6219).CheckpointCharacterStage.FINALIZE] = new Set(items);
+const items = [fn(12714).WIREFRAME_TEXTURE];
+obj[fn(6338).CheckpointCharacterStage.FINALIZE] = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/checkpoint/character/useCheckpointCharacterPreloadedTextureNames.tsx",

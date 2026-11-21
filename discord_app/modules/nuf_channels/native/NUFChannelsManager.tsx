@@ -14,7 +14,7 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 require = fn;
 const GuildFeatures = fn(1071).GuildFeatures;
-const GuildMemberFlags = fn(4712).GuildMemberFlags;
+const GuildMemberFlags = fn(4831).GuildMemberFlags;
 let c9 = "2020_02_nuf_channels";
 let c10 = "2020_02_nuf_voice_channels";
 class NUFChannelsManager extends tmp2 {
@@ -83,7 +83,7 @@ class NUFChannelsManager extends tmp2 {
           }
           if (isNewUserResult) {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(14727, dependencyMap.paths),
+              asyncRequireImpl(14850, dependencyMap.paths),
               "NUFChannelsActionSheet",
             );
             const Storage2 = Storage3.Storage;
@@ -99,8 +99,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4850).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4850);
+        isNewUserResult = applyArgumentsResult(4969).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4969);
       }
       return isNewUserResult;
     };

@@ -14,8 +14,8 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
 
-export function useIsReportToModEnabled(arg0) {
-  _require = arg0;
+export function useIsReportToModEnabled(id2) {
+  _require = id2;
   items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {

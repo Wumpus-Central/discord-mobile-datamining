@@ -333,11 +333,11 @@ function YouScreenPrimaryInfoSection(arg0) {
   return colors(View, obj6);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(4635).useIsContentShown;
-const UserProfileSections = fn(7949).UserProfileSections;
-let UserProfileThemeTypes = fn(7444).UserProfileThemeTypes;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
-let closure_12 = fn(15708).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(4754).useIsContentShown;
+const UserProfileSections = fn(8069).UserProfileSections;
+let UserProfileThemeTypes = fn(7564).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
+let closure_12 = fn(15831).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);

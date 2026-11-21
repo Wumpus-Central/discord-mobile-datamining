@@ -9,7 +9,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelLoader = fn(4643).ChannelLoader;
+const ChannelLoader = fn(4762).ChannelLoader;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useConjureSharedProjectAppChannel.tsx");
 

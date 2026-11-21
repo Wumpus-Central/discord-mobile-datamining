@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/FolderPlusIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod17083 from "../../../../../../../_runtime/metro/17083__.js";
+import _mod17207 from "../../../../../../../_runtime/metro/17207__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function FolderPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17083, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17207, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -10,7 +10,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(4819);
+const HexagonCampaignConstants = fn(4938);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: metroImportDefault, HexagonCampaignPerk: closure_8 } =
   HexagonCampaignConstants);
 const size = fn(2);
@@ -27,8 +27,8 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
   });
   let result = null != tmp3;
   if (result) {
-    result = tmp(4822).isHexagonCampaignDisplayNameStyle(tmp3);
-    const tmpResult = tmp(4822);
+    result = tmp(4941).isHexagonCampaignDisplayNameStyle(tmp3);
+    const tmpResult = tmp(4941);
   }
   let obj2 = {
     userId: user.id,

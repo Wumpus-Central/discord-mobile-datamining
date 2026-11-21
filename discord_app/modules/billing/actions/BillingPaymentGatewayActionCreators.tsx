@@ -4,7 +4,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import _mod6254 from "../../../../_runtime/metro/06254__.js";
+import _mod6373 from "../../../../_runtime/metro/06373__.js";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -67,7 +67,7 @@ let closure_13 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod6254.CardNumberElement);
+                element = element.getElement(_mod6373.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError(
                     "Unable to load card elements from Stripe",
@@ -738,7 +738,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
                         }
                         const intl = closure_0(1112).intl;
                         const defaultErrorMessage = intl.string(closure_0(1112).t.khEaRI);
-                        return closure_0(6242).dispatchConfirmationError(message, {
+                        return closure_0(6361).dispatchConfirmationError(message, {
                           captureException: true,
                           defaultErrorMessage,
                           selectedElementType,

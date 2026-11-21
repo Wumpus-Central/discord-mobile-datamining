@@ -115,7 +115,7 @@ export function getExternalManagementMessage(subscription, arg1) {
                 const intl3 = tmp13(1112).intl;
                 const t = tmp13(1112).t;
                 obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(9248).LinkButton, {
+                jsx(tmp13(9368).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                     if (null != _null) {

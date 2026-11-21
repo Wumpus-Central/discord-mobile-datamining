@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4709 from "../../../../../_runtime/metro/04709__.js";
+import _mod4828 from "../../../../../_runtime/metro/04828__.js";
 import identity from "../../../../../_runtime/metro/01257__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({
   name: "",
-  emojiId: "channel_id",
-  emojiName: "accessibilityLabel",
-  description: "location",
-  refId: "id",
+  emojiId: "__d",
+  emojiName: "surrogates",
+  description: "ks",
+  refId: "indexOf",
 });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
@@ -65,33 +65,33 @@ export function useDescriptionState() {
     items = [,];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }
 export function useEmojiIdState() {
   return closure_3((arg0) => {
     items = [,];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }
 export function useEmojiNameState() {
   return closure_3((arg0) => {
     items = [,];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }
 export function useNameState() {
   return closure_3((arg0) => {
     items = [,];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }
 export function useRefIdState() {
   return closure_3((arg0) => {
     items = [,];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }

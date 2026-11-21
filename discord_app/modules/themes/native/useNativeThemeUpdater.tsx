@@ -9,18 +9,18 @@ const result = size.fileFinishedImporting("modules/themes/native/useNativeThemeU
 export default function useNativeThemeUpdater() {
   closure_0 = noop.useRef(ThemeStore.theme);
   const layoutEffect = noop.useLayoutEffect(() => {
-    closure_0(18985).updateVisualRefresh(true);
+    closure_0(19112).updateVisualRefresh(true);
   }, []);
   const layoutEffect1 = noop.useLayoutEffect(() => {
     function handleThemeUpdate() {
       const theme = ThemeStore.theme;
       if (theme !== handleThemeUpdate.current) {
         handleThemeUpdate.current = theme;
-        handleThemeUpdate(18986).updateTheme(theme);
-        const obj = handleThemeUpdate(18986);
+        handleThemeUpdate(19113).updateTheme(theme);
+        const obj = handleThemeUpdate(19113);
       }
     }
-    handleThemeUpdate(18986).updateTheme(ThemeStore.theme);
+    handleThemeUpdate(19113).updateTheme(ThemeStore.theme);
     ThemeStore.addChangeListener(handleThemeUpdate);
     return () => {
       ThemeStore.removeChangeListener(handleThemeUpdate);

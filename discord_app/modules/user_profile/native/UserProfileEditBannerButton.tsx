@@ -9,7 +9,7 @@ import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(15727);
+const EditButtonDefault = tmp(15850);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -57,10 +57,10 @@ function EditButton(disabled) {
   return timestampProducer(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(7949).TrackUserProfileEditActions;
+let closure_5 = fn(8069).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

@@ -54,7 +54,7 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(10516);
+const ChannelCallStore = fn(10636);
 ({
   useChannelCallOrientationHandlers: metroImportDefault,
   resetChannelCallStore: closure_8,
@@ -62,8 +62,8 @@ const ChannelCallStore = fn(10516);
   setVoiceChatDrawerState: closure_10,
   useIsVoiceChatFocused: closure_11,
 } = ChannelCallStore);
-const VoiceChatDrawerState = fn(10517).VoiceChatDrawerState;
-const Constants = fn(10523);
+const VoiceChatDrawerState = fn(10637).VoiceChatDrawerState;
+const Constants = fn(10643);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -75,14 +75,14 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(10718).terminate();
-        const obj = closure_1_1(10718);
-        closure_1_1(10481).setHidden(false);
-        const obj2 = closure_1_1(10481);
+        closure_1_1(10838).terminate();
+        const obj = closure_1_1(10838);
+        closure_1_1(10601).setHidden(false);
+        const obj2 = closure_1_1(10601);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
-        obj3 = channel(4970);
+        obj3 = channel(5089);
       };
     }
   }, items);
@@ -516,9 +516,9 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(ChannelCallModalTsx9);
   let tmp63 = null;
   if (null != stateFromStores) {
-    const obj9 = { value: tmp12Result(tmp12(7419).CHANNEL_CALL).analyticsLocations, children: null };
+    const obj9 = { value: tmp12Result(tmp12(7539).CHANNEL_CALL).analyticsLocations, children: null };
     const obj10 = { gesture: null, children: null };
-    const Gesture = tmp(5054).Gesture;
+    const Gesture = tmp(5173).Gesture;
     obj10.gesture = Gesture.Exclusive(withRefResult, result1);
     const obj11 = { style: animatedStyle, children: null };
     const obj12 = { value: tmp62, children: null };
@@ -527,10 +527,10 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
     const obj15 = { channel: stateFromStores };
     items23[1] = closure_15(ChannelCallCameraPreview, obj15);
     obj12.children = items23;
-    obj11.children = closure_16(tmp(10594).VoiceChatNavigationContext.Provider, obj12);
+    obj11.children = closure_16(tmp(10714).VoiceChatNavigationContext.Provider, obj12);
     obj10.children = closure_15(tmp12(1653).View, obj11);
-    obj9.children = closure_15(tmp(5054).GestureDetector, obj10);
-    tmp63 = closure_15(tmp(7400).AnalyticsLocationProvider, obj9);
+    obj9.children = closure_15(tmp(5173).GestureDetector, obj10);
+    tmp63 = closure_15(tmp(7520).AnalyticsLocationProvider, obj9);
   }
   return tmp63;
 });

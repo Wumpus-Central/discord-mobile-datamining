@@ -16,19 +16,19 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(6434).UnreadSetting;
+const UnreadSetting = fn(6553).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   container: {
-    marginVertical: fn(5523).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(5642).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = {
-  marginVertical: fn(5523).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(5642).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

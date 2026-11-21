@@ -267,11 +267,11 @@ class BaseActivityPanelController {
     return jsx(context.Provider, obj1);
   }
 }
-let closure_11 = fn(2143).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityPanelModes = fn(5420).ActivityPanelModes;
+let closure_11 = fn(2144).ACTIVITY_LOCKED_ASPECT_RATIO;
+const ActivityPanelModes = fn(5539).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_14 = { x: 0, y: 0, gestureActive: false };
-const FunctionUtils = fn(2159);
+const FunctionUtils = fn(2160);
 const colors = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
   ({ width, height } = arg0);
   if (EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.LANDSCAPE === arg2) {
@@ -384,7 +384,7 @@ export default function ActivityPanelController(children) {
   let obj = mode(504);
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(19054)}
+      context={connectedActivityInTextChannelId(19181)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

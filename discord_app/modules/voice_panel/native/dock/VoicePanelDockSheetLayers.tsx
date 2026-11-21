@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockSheetLayers.tsx
 import native from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import Portal from "../../../../../_runtime/04986_Portal.js";
+import Portal from "../../../../../_runtime/05105_Portal.js";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
@@ -13,11 +13,11 @@ const _modDef1653 = _mod1653;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockSlotStore = fn(13190);
+const VoicePanelDockSlotStore = fn(13312);
 ({ VoicePanelDockHiddenContext: hasOwnProperty, useShareVoicePanelDockState: closure_6 } = VoicePanelDockSlotStore);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { dockSheetLayers: null, dockSurfaceClip: null, dockSurfaceShadow: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

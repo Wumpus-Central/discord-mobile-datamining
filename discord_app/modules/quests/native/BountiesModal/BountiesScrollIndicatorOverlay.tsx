@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import LinearGradientDefault from "../../../../../_runtime/05349_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
 import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,8 +13,8 @@ let StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5007).timingSlowDuration;
-const createStyles = fn(4794);
+let closure_9 = 5000 + fn(5126).timingSlowDuration;
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
   const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -71,7 +71,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F140582 */ function() { ... }, num);
+            let timeout = setTimeout(/* F140992 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

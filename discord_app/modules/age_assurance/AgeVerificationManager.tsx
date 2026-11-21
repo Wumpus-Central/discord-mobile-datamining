@@ -93,7 +93,7 @@ const prototype = function AgeVerificationManager() {
     }
     try {
       if (isAdultStatusResult) {
-        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6270).clear(channelId.channelId));
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6389).clear(channelId.channelId));
         const channelId = SelectedChannelStore.getChannelId();
         if (null != channelId) {
           handleLoadChannelMessages(tmp17);
@@ -112,8 +112,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(11553).preloadForumThreads(channel);
-              const obj = closure_1_0(11553);
+              closure_1_0(11673).preloadForumThreads(channel);
+              const obj = closure_1_0(11673);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

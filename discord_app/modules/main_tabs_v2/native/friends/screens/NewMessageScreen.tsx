@@ -10,14 +10,14 @@ import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import UserPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
-import _modDef5485 from "../../../../../../_runtime/metro/05485__.js";
+import _modDef5604 from "../../../../../../_runtime/metro/05604__.js";
 import FakePlaceholderPrivateChannel from "../../../../channel/FakePlaceholderPrivateChannel.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
-import _modDef10935 from "../../../../../../_runtime/metro/10935__.js";
+import _modDef11055 from "../../../../../../_runtime/metro/11055__.js";
 import GroupPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
 import ChatViewDefault from "../../../../chat/native/ChatView.tsx";
 import getGroupDMRecipientLimitDefault from "../../../../group_dm/getGroupDMRecipientLimit.tsx";
@@ -259,14 +259,14 @@ function ChatPreview(channelId) {
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
   obj4.portal = channelId(1378).isAndroid();
-  items2[1] = closure_17(channelId(18279).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(18406).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
 }
 const View = fn(17).View;
-const PrivateChannelRecord = fn(4647).PrivateChannelRecord;
-const UserRowModes = fn(9526).UserRowModes;
+const PrivateChannelRecord = fn(4766).PrivateChannelRecord;
+const UserRowModes = fn(9646).UserRowModes;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_12,
@@ -277,8 +277,8 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = module_1653.createAnimatedComponent(fn(5385).Text);
-const createStyles = fn(4794);
+let closure_19 = module_1653.createAnimatedComponent(fn(5504).Text);
+const createStyles = fn(4913);
 let obj = {
   container: { flex: 1 },
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -352,7 +352,7 @@ export default function NewMessageScreen(navigation) {
   const effect = obj.useEffect(() => {
     function handleChannelCreate(channel) {
       channel = channel.channel;
-      if (channel.id !== handleChannelCreate(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+      if (channel.id !== handleChannelCreate(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (isPrivateChannelMatch(handleChannelCreate, channel)) {
             dependencyMap(findLocalMatchingPrivateChannelId(handleChannelCreate));
@@ -364,7 +364,7 @@ export default function NewMessageScreen(navigation) {
       const channel = arg0;
       dependencyMap((arg0) => {
         let tmp = arg0;
-        if (arg0 !== handleChannelCreate(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (arg0 !== handleChannelCreate(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp3 = null;
           if (arg0 !== channel.channel.id) {
             tmp3 = arg0;
@@ -506,9 +506,9 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
           obj2.channel = {
-            id: navigation(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
+            id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "replace",
+            parent_id: "fill",
           };
           obj.dispatch(obj2);
         };
@@ -548,8 +548,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11940).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11940);
+    enabled = tmp13(12060).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(12060);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -693,7 +693,7 @@ export default function NewMessageScreen(navigation) {
     if (!tmp10) {
       if (selectedUserIds.length > 0) {
         if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         let obj3 = { channelId: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, navigateToChannel, tagListInputRef: ref };
         tmp31Result = closure_17(ChatPreview, obj3, tmp29);
@@ -714,7 +714,7 @@ export default function NewMessageScreen(navigation) {
     if (constants) {
       if (stateFromStores1) {
         const obj = {
-          icon: _modDef10935,
+          icon: _modDef11055,
           IconComponent: GroupPlusIcon.GroupPlusIcon,
           label: null,
           iconVariant: "default",
@@ -728,7 +728,7 @@ export default function NewMessageScreen(navigation) {
         items.push(obj);
       }
       const obj2 = {
-        icon: _modDef5485,
+        icon: _modDef5604,
         IconComponent: UserPlusIcon.UserPlusIcon,
         label: null,
         iconVariant: "default",
@@ -746,7 +746,7 @@ export default function NewMessageScreen(navigation) {
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
     const obj = {
-      icon: _modDef5485,
+      icon: _modDef5604,
       IconComponent: UserPlusIcon.UserPlusIcon,
       label: null,
       iconVariant: "default",

@@ -8,16 +8,16 @@ const Constants = fn(1071);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ReportUtils.tsx");
 
-export function canReportUser(user) {
-  if (null == user) {
+export function canReportUser(author) {
+  if (null == author) {
     return false;
   } else {
     const currentUser = UserStore.getCurrentUser();
     let tmp3 = null != currentUser;
     if (tmp3) {
-      let tmp4 = currentUser.id !== user.id;
+      let tmp4 = currentUser.id !== author.id;
       if (tmp4) {
-        tmp4 = true !== user.system;
+        tmp4 = true !== author.system;
       }
       tmp3 = tmp4;
     }

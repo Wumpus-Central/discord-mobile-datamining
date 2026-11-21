@@ -2,7 +2,7 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import util from "../../intl/index.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef2359 from "../checkout/messages/Checkout.messages.js";
+import _modDef2439 from "../checkout/messages/Checkout.messages.js";
 import OrderSigningErrors from "OrderSigningErrors.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import BillingError_mod from "../../errors/BillingError.tsx";
@@ -606,12 +606,12 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     }
   }
 };
-const ConstraintReasonCode = fn(6742).ConstraintReasonCode;
+const ConstraintReasonCode = fn(6861).ConstraintReasonCode;
 const Endpoints = fn(1071).Endpoints;
 let closure_6 = new LoggerDefault("OrderActionCreators");
 let obj = {
-  [SPENDING_LIMIT_REACHED]: fn(6232).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED,
-  [SPENDING_LIMIT_WILL_EXCEED]: fn(6232).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED,
+  [SPENDING_LIMIT_REACHED]: fn(6351).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED,
+  [SPENDING_LIMIT_WILL_EXCEED]: fn(6351).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED,
 };
 ({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = ConstraintReasonCode);
 let BillingError = BillingError_mod;

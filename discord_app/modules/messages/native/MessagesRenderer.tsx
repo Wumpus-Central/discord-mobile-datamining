@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(10262).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(4706).getUserCommunicationDisabledVersion;
-const Changeset = fn(8550).Changeset;
+let closure_6 = fn(10382).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(4825).getUserCommunicationDisabledVersion;
+const Changeset = fn(8670).Changeset;
 const Constants = fn(1071);
 ({
   ActivityActionTypes: closure_11,

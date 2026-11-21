@@ -158,7 +158,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
     }
   }
 };
-const canRemixProject = fn(6502).canRemixProject;
+const canRemixProject = fn(6621).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

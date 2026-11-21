@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(5523).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(5642).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -124,8 +124,8 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
         status: null,
-        streaming: "c30340cf7cc971807b3562881b6a9701",
-        style: "zh-CN.messages.c30340cf7cc971807b3562881b6a9701.compiled.messages",
+        streaming: "f6ba380d9f29be6dd0be17864eb9f4dc",
+        style: "lt.messages.f6ba380d9f29be6dd0be17864eb9f4dc.compiled.messages",
         size: "jsona",
         animate: "VOICE_CATEGORY_EXPAND",
         typing: null,
@@ -148,8 +148,8 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
         status: null,
-        streaming: "c30340cf7cc971807b3562881b6a9701",
-        style: "zh-CN.messages.c30340cf7cc971807b3562881b6a9701.compiled.messages",
+        streaming: "f6ba380d9f29be6dd0be17864eb9f4dc",
+        style: "lt.messages.f6ba380d9f29be6dd0be17864eb9f4dc.compiled.messages",
         size: "jsona",
         animate: "VOICE_CATEGORY_EXPAND",
         typing: null,

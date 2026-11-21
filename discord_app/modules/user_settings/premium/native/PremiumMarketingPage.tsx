@@ -10,7 +10,7 @@ import UserSettingsAccountUnverifiedHeaderDefault from "../../account/native/Use
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import MarketingPageBannerTileDefault from "../../../premium/promotions/native/MarketingPageBannerTile.tsx";
 import PremiumFeaturesCardsDefault from "PremiumFeaturesCards.tsx";
-import _modDef13020 from "../../../../../_runtime/metro/13020__.js";
+import _modDef13142 from "../../../../../_runtime/metro/13142__.js";
 import NitroMobileRefreshExperiment from "../../../premium/experiments/NitroMobileRefreshExperiment.tsx";
 import PremiumMarketingFloatingSubscribeExperimentDefault from "PremiumMarketingFloatingSubscribeExperiment.tsx";
 import PlanSelectHeaderDefault from "../../../premium/plan_select_cards/native/PlanSelectHeader.tsx";
@@ -30,10 +30,10 @@ function NitroMobileRefreshGate(children) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ Fragment: closure_10, jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { display: "flex" },
   scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 },
@@ -58,9 +58,9 @@ obj2.sectionWidth = { maxWidth: 464 };
 obj2.accountCreditContainer = { width: "100%" };
 obj2.accountCreditContainerWithSpacing = { marginTop: 24, marginBottom: 20 };
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
-obj2.themedBackground = { backgroundColor: fn(6436).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj6 = { backgroundColor: fn(6436).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-obj2.backButtonBackground = { backgroundColor: fn(6436).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+obj2.themedBackground = { backgroundColor: fn(6555).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj6 = { backgroundColor: fn(6555).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+obj2.backButtonBackground = { backgroundColor: fn(6555).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
@@ -96,24 +96,24 @@ export default function PremiumMarketingPage(userHasSubscription) {
   c26 = undefined;
   let flag;
   let surface;
-  const commonTriggerPoint = userHasSubscription(13929).useCommonTriggerPoint(
-    userHasSubscription(13930).OpenNitroTriggerPoint,
+  const commonTriggerPoint = userHasSubscription(14051).useCommonTriggerPoint(
+    userHasSubscription(14052).OpenNitroTriggerPoint,
   );
   const tmp4 = bottom();
   closure_8 = tmp4;
-  let obj = userHasSubscription(13929);
+  let obj = userHasSubscription(14051);
   const navigation = userHasSubscription(1500).useNavigation();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   let obj2 = userHasSubscription(1500);
   [c11, c12] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  let top = userHasSubscription(13939).useYouBarSettingsCustomHeaderPaddingTop();
+  let top = userHasSubscription(14061).useYouBarSettingsCustomHeaderPaddingTop();
   const rect = useSafeAreaInsetsDefault();
   bottom = rect.bottom;
   if (isFullScreenPresentation) {
     top = rect.top;
   }
-  let obj4 = userHasSubscription(13939);
+  let obj4 = userHasSubscription(14061);
   const config = PremiumMarketingFloatingSubscribeExperimentDefault.useConfig({ location: "PremiumMarketingPage" });
   enabled = config.enabled;
   showAfterLastCard = config.showAfterLastCard;
@@ -141,8 +141,8 @@ export default function PremiumMarketingPage(userHasSubscription) {
     navigation.setOptions({ headerShown: userHasSubscription });
   }, items);
   const tmpResult = userHasSubscription(1653);
-  promotionMarketingSurface = userHasSubscription(9279).usePromotionMarketingSurface(
-    tmp(9027).MarketingSurfaceType.PREMIUM_TAB,
+  promotionMarketingSurface = userHasSubscription(9399).usePromotionMarketingSurface(
+    tmp(9147).MarketingSurfaceType.PREMIUM_TAB,
   );
   let items1 = [promotionMarketingSurface];
   const effect = noop.useEffect(() => {
@@ -173,13 +173,13 @@ export default function PremiumMarketingPage(userHasSubscription) {
     obj5.style = items2;
     const intl = tmp(1112).intl;
     obj5.accessibilityLabel = intl.string(tmp(1112).t["13/7kX"]);
-    obj5.source = _modDef13020;
-    obj5.size = tmp(13947).CircularIconButton.Sizes.MEDIUM_32;
+    obj5.source = _modDef13142;
+    obj5.size = tmp(14069).CircularIconButton.Sizes.MEDIUM_32;
     obj5.iconStyle = tmp4.arrowIcon;
     obj5.onPress = function onPress() {
       return onClose();
     };
-    tmp14 = c11(tmp(13947).CircularIconButton, obj5);
+    tmp14 = c11(tmp(14069).CircularIconButton, obj5);
   }
   closure_25 = tmp14;
   let hasAccountCreditResult = null != entitlements;
@@ -188,7 +188,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
     const tmp6Result2 = PremiumUtilsDefault;
   }
   c26 = hasAccountCreditResult;
-  const tmpResult6 = userHasSubscription(9279);
+  const tmpResult6 = userHasSubscription(9399);
   let items3 = [UserStore];
   const stateFromStores = userHasSubscription(504).useStateFromStores(items3, () => onPaymentDismiss.getCurrentUser());
   flag = undefined;
@@ -199,16 +199,16 @@ export default function PremiumMarketingPage(userHasSubscription) {
     flag = false;
   }
   const tmpResult7 = userHasSubscription(504);
-  surface = userHasSubscription(9279).usePromotionMarketingSurface(
-    tmp(9027).MarketingSurfaceType.MARKETING_PAGE_BANNER,
+  surface = userHasSubscription(9399).usePromotionMarketingSurface(
+    tmp(9147).MarketingSurfaceType.MARKETING_PAGE_BANNER,
   );
-  const tmpResult8 = userHasSubscription(9279);
-  const premiumTrialOffer = userHasSubscription(8739).usePremiumTrialOffer();
-  const tmpResult9 = userHasSubscription(8739);
+  const tmpResult8 = userHasSubscription(9399);
+  const premiumTrialOffer = userHasSubscription(8859).usePremiumTrialOffer();
+  const tmpResult9 = userHasSubscription(8859);
   let items4 = [, ,];
   ({ container: arr5[0], themedBackground: arr5[1] } = tmp4);
   let num = 0;
-  const premiumDiscountOffer = userHasSubscription(8742).usePremiumDiscountOffer();
+  const premiumDiscountOffer = userHasSubscription(8862).usePremiumDiscountOffer();
   if (!userHasSubscription) {
     num = top;
   }
@@ -300,13 +300,13 @@ export default function PremiumMarketingPage(userHasSubscription) {
         const items4 = [,];
         ({ sectionWithTopMargin: arr7[0], sectionWidth: arr7[1] } = tmp32);
         obj7.style = items4;
-        items[7] = tmp40(tmp42(13957), obj7);
+        items[7] = tmp40(tmp42(14079), obj7);
         const obj8 = { style: null, isFractionalOnly: null };
         const items5 = [, ,];
         ({ sectionWithTopMargin: arr8[0], sectionWithPadding: arr8[1], sectionWidth: arr8[2] } = tmp32);
         obj8.style = items5;
         obj8.isFractionalOnly = flag;
-        items[8] = tmp40(tmp42(13962), obj8);
+        items[8] = tmp40(tmp42(14084), obj8);
         const items6 = [, , ,];
         ({ sectionWithTopMargin: arr9[0], sectionWithPadding: arr9[1], sectionWidth: arr9[2] } = tmp32);
         let tmp54 = null;
@@ -325,7 +325,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
         }
         const obj11 = { children: null };
         obj10.showSubscribeButton = tmp58;
-        items[9] = tmp40(tmp42(13979), obj10);
+        items[9] = tmp40(tmp42(14101), obj10);
         obj11.children = items;
         return application_id(refs, obj11);
       } else {
@@ -407,5 +407,5 @@ export default function PremiumMarketingPage(userHasSubscription) {
   }
   renderScrollContentResult = renderScrollContent(false);
   tmp19 = c12;
-  const tmpResult10 = userHasSubscription(8742);
+  const tmpResult10 = userHasSubscription(8862);
 }

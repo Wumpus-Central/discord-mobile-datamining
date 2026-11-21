@@ -5,14 +5,14 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const Features = fn(5539).Features;
-const SettingBuilders = fn(11817);
+const Features = fn(5658).Features;
+const SettingBuilders = fn(11937);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(8592).MobileUserSettings.VOICE,
+  parent: fn(8712).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },

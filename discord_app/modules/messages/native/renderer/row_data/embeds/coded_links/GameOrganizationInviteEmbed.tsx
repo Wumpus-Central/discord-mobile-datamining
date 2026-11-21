@@ -1,24 +1,24 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import _modDef2559 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2639 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
 import ColorUtils from "../../../../../../../utils/ColorUtils.tsx";
-import _modDef6919 from "../../../../../../../../_runtime/metro/06919__.js";
-import _modDef7338 from "../../../../../../../../_runtime/metro/07338__.js";
+import _modDef7039 from "../../../../../../../../_runtime/metro/07039__.js";
+import _modDef7458 from "../../../../../../../../_runtime/metro/07458__.js";
 import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import isGameOrganizationFullDefault from "../../../../../../game_organizations/isGameOrganizationFull.tsx";
-import _modDef11969 from "../../../../../../../../discord_assets/assets/mana/asset-library/generated/GuildFallbackAbstractUI-2x.png.js";
+import _modDef12089 from "../../../../../../../../discord_assets/assets/mana/asset-library/generated/GuildFallbackAbstractUI-2x.png.js";
 import canGoToGameOrganizationGuildDefault from "../../../../../../game_organization_invites/canGoToGameOrganizationGuild.tsx";
 import getGameOrganizationInviteCtaStateDefault from "../../../../../../game_organization_invites/getGameOrganizationInviteCtaState.tsx";
 import GameOrganizationInviteStore from "../../../../../../game_organization_invites/GameOrganizationInviteStore.tsx";
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(10293).CodedLinkExtendedType;
-const constants = fn(11776).GameOrganizationInviteStates;
-const InviteTypes = fn(8318).InviteTypes;
+const CodedLinkExtendedType = fn(10413).CodedLinkExtendedType;
+const constants = fn(11896).GameOrganizationInviteStates;
+const InviteTypes = fn(8438).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",
@@ -49,17 +49,17 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
       const obj4 = {};
       const merged2 = Object.assign(obj2);
       const intl2 = util.intl;
-      obj4.headerText = intl2.formatToPlainString(_modDef2559["jKi+kc"], { displayNoun: "other" });
+      obj4.headerText = intl2.formatToPlainString(_modDef2639["jKi+kc"], { displayNoun: "other" });
       const intl3 = util.intl;
-      obj4.titleText = intl3.string(_modDef2559["2/aTr2"]);
+      obj4.titleText = intl3.string(_modDef2639["2/aTr2"]);
       const intl4 = util.intl;
-      obj4.subtitle = intl4.formatToPlainString(_modDef2559["L/fHgw"], { displayNoun: "other" });
+      obj4.subtitle = intl4.formatToPlainString(_modDef2639["L/fHgw"], { displayNoun: "other" });
       const internal3 = nativeDefault.internal;
       obj4.titleColor = RowGeneratorStyleSheet.processColorOrThrow(
         internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL),
       );
       obj4.showInvalidIcon = true;
-      obj4.invalidIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7338);
+      obj4.invalidIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7458);
       obj4.embedCanBeTapped = false;
       obj4.canBeAccepted = false;
       return obj4;
@@ -86,10 +86,10 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
         displayNoun = "other";
       }
       const obj7 = { displayNoun };
-      obj6.headerText = intl6.formatToPlainString(_modDef2559["jKi+kc"], obj7);
+      obj6.headerText = intl6.formatToPlainString(_modDef2639["jKi+kc"], obj7);
       ({ name: obj13.titleText, iconUrl } = organization);
       if (iconUrl == null) {
-        iconUrl = _modDef11969;
+        iconUrl = _modDef12089;
       }
       obj6.thumbnailUrl = iconUrl;
       obj6.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -100,12 +100,12 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
         if (null != maxMembers) {
           const intl = util.intl;
           const obj12 = { count: memberCount, max: maxMembers };
-          formatToPlainStringResult = intl.formatToPlainString(_modDef2559.VuENGl, obj12);
+          formatToPlainStringResult = intl.formatToPlainString(_modDef2639.VuENGl, obj12);
         }
       }
       obj6.memberCountText = formatToPlainStringResult;
       const tmpResultResult = tmpResult(obj5);
-      obj6.memberCountIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6919);
+      obj6.memberCountIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7039);
       const description = organization.description;
       obj6.bodyText = description;
       const tmp28Result = renderer_EmbedUtils;

@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   copy: { color: nativeDefault.colors.TEXT_BRAND },
@@ -26,7 +26,7 @@ export default function TwoFASetupScan(totpSecret) {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  const twoFASetupStyles = totpSecret(15935).useTwoFASetupStyles();
+  const twoFASetupStyles = totpSecret(16058).useTwoFASetupStyles();
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { style: null, children: null };
   const items1 = [,];
@@ -42,7 +42,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl2 = totpSecret(1112).intl;
   obj4.children = intl2.string(totpSecret(1112).t["UQR+Qy"]);
   items2[1] = closure_4(totpSecret(1186).LegacyText, obj4);
-  items2[2] = closure_4(totpSecret(5385).Text, {
+  items2[2] = closure_4(totpSecret(5504).Text, {
     variant: "body-md/semibold",
     style: { textAlign: "center" },
     children: totpSecret,
@@ -60,8 +60,8 @@ export default function TwoFASetupScan(totpSecret) {
   const obj7 = { children: null };
   obj6.children = stringResult;
   obj5.children = closure_4(totpSecret(1186).LegacyText, obj6);
-  items2[3] = closure_4(totpSecret(6910).PressableOpacity, obj5);
+  items2[3] = closure_4(totpSecret(7030).PressableOpacity, obj5);
   obj2.children = items2;
-  obj7.children = closure_5(totpSecret(6897).SafeAreaPaddingView, obj2);
-  return closure_4(totpSecret(15931).TwoFASetupModalScreen, obj7);
+  obj7.children = closure_5(totpSecret(7017).SafeAreaPaddingView, obj2);
+  return closure_4(totpSecret(16054).TwoFASetupModalScreen, obj7);
 }

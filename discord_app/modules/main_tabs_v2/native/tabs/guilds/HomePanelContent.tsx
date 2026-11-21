@@ -203,7 +203,7 @@ function HomeDrawerPanelContent() {
   items7[1] = closure_9(_modDef1653.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(17813), {});
+    tmp34Result2 = closure_9(tmp11(17939), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
@@ -213,10 +213,10 @@ function HomeDrawerPanelContent() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1071).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(17734).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(17860).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = {
     container: { flex: 1 },

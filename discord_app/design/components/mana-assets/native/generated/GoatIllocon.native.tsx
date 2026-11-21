@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/GoatIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef18383 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GoatIllocon-1x.png.js";
-import _modDef18384 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GoatIllocon-2x.png.js";
-import _modDef18385 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GoatIllocon-3x.png.js";
+import _modDef18510 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GoatIllocon-1x.png.js";
+import _modDef18511 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GoatIllocon-2x.png.js";
+import _modDef18512 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GoatIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18383 }, 3: null };
-const obj2 = { uri: _modDef18383 };
-obj[2] = { uri: _modDef18384 };
-const obj3 = { uri: _modDef18384 };
-obj[3] = { uri: _modDef18385 };
+let obj = { 1: null, 2: { uri: _modDef18510 }, 3: null };
+const obj2 = { uri: _modDef18510 };
+obj[2] = { uri: _modDef18511 };
+const obj3 = { uri: _modDef18511 };
+obj[3] = { uri: _modDef18512 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
 
@@ -28,7 +28,7 @@ export function GoatIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7237).getAssetSource(obj);
+  obj.source = num(7357).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

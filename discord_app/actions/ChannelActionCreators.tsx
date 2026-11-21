@@ -20,7 +20,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4647).createChannelRecordFromServer;
+let closure_6 = fn(4766).createChannelRecordFromServer;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_9,
@@ -333,8 +333,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6364).fireSurveyAction(tmp2(6371).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6364);
+        tmp5(6483).fireSurveyAction(tmp2(6490).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(6483);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -468,7 +468,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "replace" },
+      channel: { id, guild_id: "Array", parent_id: "fill" },
       silent: flag2,
     });
     if (flag) {
@@ -482,7 +482,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "replace" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "fill" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1284).rejectWithMigratedError();
     const obj8 = flag3(1284);
@@ -630,8 +630,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7610).checkGuildTemplateDirty(closure_128_2);
-        name(7610);
+        const result = name(7730).checkGuildTemplateDirty(closure_128_2);
+        name(7730);
       }
       return closure_128_1;
     })();

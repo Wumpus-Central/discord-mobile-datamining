@@ -25,15 +25,15 @@ function openStageChannel(channel) {
       const tmpResult = PrivateChannelCallUtils;
       if (!tmpResult2.isModalOpen(voiceChannelKey)) {
         const obj3 = { channel };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10522, dependencyMap.paths), obj3, voiceChannelKey);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10642, dependencyMap.paths), obj3, voiceChannelKey);
       }
       tmpResult2 = NavigationRouteUtils;
     }
     isStageUnifiedCallResult = StageChannelUnifiedCallExperiment.isStageUnifiedCall(channel, "openStageChannel");
   }
 }
-const setIsOnStartStageScreen = fn(6379).setIsOnStartStageScreen;
-const StageChannelsConstants = fn(6381);
+const setIsOnStartStageScreen = fn(6498).setIsOnStartStageScreen;
+const StageChannelsConstants = fn(6500);
 ({
   START_STAGE_CHANNEL_EVENT_SHEET_KEY: hasOwnProperty,
   STAGE_BLOCKED_USERS_SHEET_KEY: closure_6,
@@ -45,23 +45,23 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export function openStageChannelSettings(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6382, dependencyMap.paths), hasOwnProperty, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6501, dependencyMap.paths), hasOwnProperty, { channel });
 }
 export function openEndGuildEventConfirmationModal() {}
 export function openStageBlockedUsersSheet(channel, onAccept) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14717, dependencyMap.paths), timestampProducer, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14840, dependencyMap.paths), timestampProducer, {
     channel,
     onAccept,
   });
 }
 export function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14718, dependencyMap.paths), metroImportDefault, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14841, dependencyMap.paths), metroImportDefault, {
     channelId,
     onOpenRTCDebugOverlay,
   });
 }
 export function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14723, dependencyMap.paths), React5, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14846, dependencyMap.paths), React5, { channel });
 }
 export { openStageChannel };
 export function showPlatformUserProfile(arg0) {

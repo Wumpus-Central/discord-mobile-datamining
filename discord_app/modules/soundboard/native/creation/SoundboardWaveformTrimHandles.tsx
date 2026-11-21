@@ -1,7 +1,7 @@
 // discord_app/modules/soundboard/native/creation/SoundboardWaveformTrimHandles.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,9 +13,9 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = 0.05;
-let closure_9 = 1 / fn(19673).WAVEFORM_BAR_COUNT;
+let closure_9 = 1 / fn(19800).WAVEFORM_BAR_COUNT;
 let items = [{ name: "increment" }, { name: "decrement" }];
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { position: "absolute", top: 0, left: 0 },
   touchTarget: { position: "absolute", top: 0, bottom: 0, width: 44, alignItems: "center", justifyContent: "center" },

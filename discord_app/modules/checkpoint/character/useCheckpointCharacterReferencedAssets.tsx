@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const tex_wireframe_spritesheet = "tex_wireframe_spritesheet";
 let set = new Set([1, 9]);
-const keys = Object.keys(fn(12424).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
+const keys = Object.keys(fn(12546).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
 let closure_5 = keys.map((name) => {
   const obj = { name, role: CheckpointCharacterTextureUtils.getCheckpointCharacterTextureRole(name), swapKey: null };
   let combined = name;

@@ -18,7 +18,7 @@ const Constants = fn(1071);
 const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   scrollView: { flex: 1 },

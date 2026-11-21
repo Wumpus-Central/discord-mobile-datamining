@@ -94,10 +94,10 @@ class YouBarButtonIcon {
         position: "absolute",
         left: size2 - badgeSize + num3,
         top: size2 - badgeSize + num4,
-        right: "analyticsLocations",
-        bottom: "status",
-        padding: "op",
-        minWidth: "y",
+        right: "ao",
+        bottom: "colors",
+        padding: "HermesInternal",
+        minWidth: "Array",
       };
       return rect;
     }, items1);
@@ -136,11 +136,11 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(16355);
+const YouBarConstants = fn(16478);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   buttonContainer: {
     position: "relative",

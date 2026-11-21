@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/conjurePreviewTargets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import ConjurePreviewMode from "ConjurePreviewMode.tsx";
 import slugConjureChannelNameDefault from "../shared/slugConjureChannelName.tsx";
@@ -17,18 +17,18 @@ function getPreviewTargetLabel(string) {
         surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface),
         channel: string.appChannel,
       };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4091["6xVl+N"], obj);
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4190["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef4091.y5GiL1);
+    return intl3.string(_modDef4190.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef4091["2940LX"]);
+    return intl2.string(_modDef4190["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef4091.tjpaGN);
+    return intl.string(_modDef4190.tjpaGN);
   }
 }
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
@@ -90,7 +90,7 @@ export { getPreviewTargetLabel };
 export function getPreviewTabLabel(mode, arg1) {
   if ("bot" === mode.mode) {
     const intl = util.intl;
-    return intl.string(_modDef4091.gThNz6);
+    return intl.string(_modDef4190.gThNz6);
   } else {
     if ("frame" === mode.mode) {
       if (mode.surface === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL) {

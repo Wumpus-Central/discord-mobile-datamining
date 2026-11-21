@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(5376).ReactionTypes.VOTE,
+    channel(5495).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -104,7 +104,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8401);
+const PollsConstants = fn(8521);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1071);
 ({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);
@@ -121,8 +121,8 @@ export function generateLocalCreationAnswerId() {
 export function filterOutUUID(str) {
   return str.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "");
 }
-export function hasNonVoteReactions(message) {
-  const iter = message.reactions[Symbol.iterator]();
+export function hasNonVoteReactions(arg0) {
+  const iter = arg0.reactions[Symbol.iterator]();
   while (iter !== undefined) {
     if (null == iter.next().me_vote) {
       iter.return();

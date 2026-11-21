@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const XLARGE = fn(7202).GuildIconSizes.XLARGE;
-const createStyles = fn(4794);
+const XLARGE = fn(7322).GuildIconSizes.XLARGE;
+const createStyles = fn(4913);
 const obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
   icon: null,

@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/shared/FriendAnniversaryUtils.tsx
-import _modDef2167 from "../../../../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../../../../_runtime/metro/02168__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
@@ -17,10 +17,10 @@ export function isFriendAnniversary(date) {
     let date1 = new Date(date);
     let tmp7 = date1;
     let setFullYearResult = date1.setFullYear(fullYear + tmp2);
-    let obj4 = _modDef2167(date1);
+    let obj4 = _modDef2168(date1);
     if (!obj4.isSame(date, "day")) {
       let _Math = Math;
-      let obj5 = _modDef2167(date);
+      let obj5 = _modDef2168(date);
       if (Math.abs(obj5.diff(tmp7, "days")) <= 7) {
         obj2.return();
         let flag = true;
@@ -32,7 +32,7 @@ export function isFriendAnniversary(date) {
   return false;
 }
 export function yearsSince(friendsSince) {
-  return Math.round(_modDef2167().diff(friendsSince, "months") / 12);
+  return Math.round(_modDef2168().diff(friendsSince, "months") / 12);
 }
 export function categorizeFriendAnniversariesByAffinity(arr, fn, flag) {
   const highestAffinity = new Set();

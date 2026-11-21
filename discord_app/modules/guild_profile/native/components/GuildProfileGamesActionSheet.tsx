@@ -37,7 +37,7 @@ function GuildProfileGameRow(activityLevel) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");
@@ -47,15 +47,15 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(13685).useAllGuildProfileGames(profile);
-  let obj = id(13685);
+  const allGuildProfileGames = id(13807).useAllGuildProfileGames(profile);
+  let obj = id(13807);
   const intl = id(1112).intl;
-  const obj2 = id(8029);
+  const obj2 = id(8149);
   items = [id];
   const str = intl.format(id(1112).t.vuAVo7, { serverName: profile.name });
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(9624, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
+    obj.openLazy(asyncRequireImpl(9744, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
   const obj3 = {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
@@ -67,7 +67,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
   const str1 = intl.format(id(1112).t.vuAVo7, { serverName: profile.name }).toString();
-  obj5.children = jsx(id(7228).TableRowGroup, {
+  obj5.children = jsx(id(7348).TableRowGroup, {
     title: intl.format(id(1112).t.vuAVo7, { serverName: profile.name }).toString(),
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
@@ -75,8 +75,8 @@ export default function GuildProfileGamesActionSheet(profile) {
     )),
   });
   obj4.children = <View style={tmp.container}>{null}</View>;
-  obj3.children = jsx(id(5026).BottomSheetScrollView, { children: null });
-  return jsx(id(5022).BottomSheet, {
+  obj3.children = jsx(id(5145).BottomSheetScrollView, { children: null });
+  return jsx(id(5141).BottomSheet, {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
     scrollable: true,
     onDismiss: callback,

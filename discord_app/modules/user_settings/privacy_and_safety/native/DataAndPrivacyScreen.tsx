@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8592).MobileUserSettings;
+const MobileUserSettings = fn(8712).MobileUserSettings;
 const Constants = fn(1071);
 ({ HelpdeskArticles: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
@@ -18,14 +18,14 @@ export default function DataAndPrivacySettings() {
   stackNavigation = stackNavigation(1500).useStackNavigation();
   closure_129_0 = stackNavigation;
   let obj = stackNavigation(1500);
-  const pinotDataPrivacySections = stackNavigation(17227).usePinotDataPrivacySections();
+  const pinotDataPrivacySections = stackNavigation(17351).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
   items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1112).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(17227);
-  obj4.helpdeskArticle = items1(2186).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
+  let obj2 = stackNavigation(17351);
+  obj4.helpdeskArticle = items1(2187).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1112).t["igTSG/"], obj4);
   items1 = [obj3, , ,];
   let obj6 = { settings: null, subLabel: null };
@@ -33,8 +33,8 @@ export default function DataAndPrivacySettings() {
   obj6.settings = items2;
   let intl2 = stackNavigation(1112).intl;
   const obj7 = { helpdeskArticle: null };
-  const obj5 = items1(2186);
-  obj7.helpdeskArticle = items1(2186).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
+  const obj5 = items1(2187);
+  obj7.helpdeskArticle = items1(2187).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
   obj6.subLabel = intl2.format(stackNavigation(1112).t["eQL/Mr"], obj7);
   items1[1] = obj6;
   const obj9 = { settings: null, subLabel: null };
@@ -42,8 +42,8 @@ export default function DataAndPrivacySettings() {
   obj9.settings = items3;
   let intl3 = stackNavigation(1112).intl;
   const obj10 = { helpdeskArticle: null };
-  const obj8 = items1(2186);
-  obj10.helpdeskArticle = items1(2186).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+  const obj8 = items1(2187);
+  obj10.helpdeskArticle = items1(2187).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj9.subLabel = intl3.format(stackNavigation(1112).t.cf9mvV, obj10);
   items1[2] = obj9;
   const obj12 = { settings: null, subLabel: null };
@@ -51,8 +51,8 @@ export default function DataAndPrivacySettings() {
   obj12.settings = items4;
   let intl4 = stackNavigation(1112).intl;
   const obj13 = { helpdeskArticle: null };
-  const obj11 = items1(2186);
-  obj13.helpdeskArticle = items1(2186).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+  const obj11 = items1(2187);
+  obj13.helpdeskArticle = items1(2187).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj12.subLabel = intl4.format(stackNavigation(1112).t["2QFDU/"], obj13);
   items1[3] = obj12;
   HermesBuiltin.arraySpread(pinotDataPrivacySections, 4);
@@ -63,8 +63,8 @@ export default function DataAndPrivacySettings() {
   obj15.settings = items5;
   const intl6 = stackNavigation(1112).intl;
   const obj16 = { helpdeskArticle: null };
-  const obj14 = items1(2186);
-  obj16.helpdeskArticle = items1(2186).getArticleURL(constants.GDPR_REQUEST_DATA);
+  const obj14 = items1(2187);
+  obj16.helpdeskArticle = items1(2187).getArticleURL(constants.GDPR_REQUEST_DATA);
   obj15.subLabel = intl6.format(stackNavigation(1112).t.P3kNfr, obj16);
   items1.push(obj15);
   const obj18 = { settings: null, subLabel: null };
@@ -83,11 +83,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj20);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(16034).fetchConsents();
-      const obj = stackNavigation(16034);
+      const consents = stackNavigation(16157).fetchConsents();
+      const obj = stackNavigation(16157);
     }
-    const harvestStatus = stackNavigation(16037).fetchHarvestStatus();
-    const obj2 = stackNavigation(16037);
+    const harvestStatus = stackNavigation(16160).fetchHarvestStatus();
+    const obj2 = stackNavigation(16160);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj21 = { children: null };
@@ -126,14 +126,14 @@ export default function DataAndPrivacySettings() {
     return obj.createList(obj2);
   }, items8);
   const obj22 = { screen: null };
-  const obj17 = items1(2186);
+  const obj17 = items1(2187);
   const obj19 = {
     onClick() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     },
   };
-  obj22.screen = stackNavigation(15991).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(15991), obj22), closure_8(items1(15862), { node: memo })];
+  obj22.screen = stackNavigation(16114).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(16114), obj22), closure_8(items1(15985), { node: memo })];
   obj21.children = items9;
   return closure_10(closure_9, obj21);
 }

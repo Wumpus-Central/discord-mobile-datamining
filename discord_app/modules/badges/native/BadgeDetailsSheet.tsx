@@ -641,10 +641,10 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-let closure_12 = fn(5023).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(5142).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   content: { flexGrow: 1 },
   page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },

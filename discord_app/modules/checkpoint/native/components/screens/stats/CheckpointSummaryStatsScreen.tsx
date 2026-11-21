@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3309 from "../../../../Checkpoint.messages.js";
-import _modDef3341 from "../../../../Checkpoint2026.messages.js";
+import _modDef3408 from "../../../../Checkpoint.messages.js";
+import _modDef3440 from "../../../../Checkpoint2026.messages.js";
 import UnicodeEmojisDefault from "../../../../../emojis/UnicodeEmojis.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
@@ -80,7 +80,7 @@ function GlobalSummaryStats() {
   ];
   obj7.style = items3;
   const intl = util.intl;
-  obj7.children = intl.string(_modDef3341["GL+yOs"]);
+  obj7.children = intl.string(_modDef3440["GL+yOs"]);
   obj6.children = React5(CheckpointTextDefault, obj7);
   items2[1] = React5(View, obj6);
   obj5.children = items2;
@@ -174,11 +174,11 @@ function UserSummaryStats(stats) {
   let tmp27Result6 = React5(UnknownGameIcon.UnknownGameIcon, { size: "md", color: primaryBackgroundColor });
   const intl = util.intl;
   const tmp11 = useMeasuredLayoutDefault();
-  const stringResult = intl.string(_modDef3341.s4qVni);
+  const stringResult = intl.string(_modDef3440.s4qVni);
   const intl2 = util.intl;
-  const toLocaleUpperCaseResult = intl.string(_modDef3341.s4qVni).toLocaleUpperCase();
+  const toLocaleUpperCaseResult = intl.string(_modDef3440.s4qVni).toLocaleUpperCase();
   let icon;
-  const stringResult1 = intl2.string(_modDef3309.y4M1na);
+  const stringResult1 = intl2.string(_modDef3408.y4M1na);
   if (first != null) {
     icon = first.guild.icon;
   }
@@ -290,7 +290,7 @@ function UserSummaryStats(stats) {
   const obj19 = { style: items3, children: null };
   const obj20 = { style: wideLeftStat, label: null, statType: "voice", value: null, color: null };
   const intl3 = util.intl;
-  obj20.label = intl3.string(_modDef3341.MSrV9z);
+  obj20.label = intl3.string(_modDef3440.MSrV9z);
   let num6;
   if (voice != null) {
     num6 = voice.totalVoiceMinutes;
@@ -303,7 +303,7 @@ function UserSummaryStats(stats) {
   const items9 = [React5(NumberStat, obj20)];
   const obj21 = { style: wideRightStat, label: null, statType: "messages", value: null, color: null };
   const intl4 = util.intl;
-  obj21.label = intl4.string(_modDef3341.hhh11L);
+  obj21.label = intl4.string(_modDef3440.hhh11L);
   let num7;
   if (messages != null) {
     num7 = messages.numMessagesSent;
@@ -319,7 +319,7 @@ function UserSummaryStats(stats) {
   const obj22 = { style: items3, children: null };
   const obj23 = { style: wideLeftStat, label: null, statType: "topServerDays", value: null, color: null };
   const intl5 = util.intl;
-  obj23.label = intl5.string(_modDef3341["f5S+pt"]);
+  obj23.label = intl5.string(_modDef3440["f5S+pt"]);
   let num8;
   if (first != null) {
     num8 = first.numDaysInteracted;
@@ -332,12 +332,12 @@ function UserSummaryStats(stats) {
   const items11 = [React5(NumberStat, obj23)];
   const obj24 = { style: wideRightStat, singleLine: tmp4, label: null, name: null, color: null, icon: null };
   const intl6 = util.intl;
-  obj24.label = intl6.string(_modDef3309["8XPMJj"]);
+  obj24.label = intl6.string(_modDef3408["8XPMJj"]);
   if (null != first) {
     let name = first.guild.name;
   } else {
     const intl7 = util.intl;
-    name = intl7.string(_modDef3341.GultYJ);
+    name = intl7.string(_modDef3440.GultYJ);
   }
   obj24.name = name;
   obj24.color = primaryBackgroundColor;
@@ -348,7 +348,7 @@ function UserSummaryStats(stats) {
   const obj25 = { style: items3, children: null };
   const obj26 = { style: wideLeftStat, label: null, statType: "emoji", value: null, color: null };
   const intl8 = util.intl;
-  obj26.label = intl8.string(_modDef3341.xVSlv3);
+  obj26.label = intl8.string(_modDef3440.xVSlv3);
   let num9;
   if (emojis != null) {
     num9 = emojis.numEmojisSent;
@@ -361,7 +361,7 @@ function UserSummaryStats(stats) {
   const items12 = [React5(NumberStat, obj26)];
   const obj27 = { style: wideRightStat, singleLine: tmp4, label: null, name: null, color: null, icon: null };
   const intl9 = util.intl;
-  obj27.label = intl9.string(_modDef3309["3sARW7"]);
+  obj27.label = intl9.string(_modDef3408["3sARW7"]);
   if (null == first1) {
     const intl10 = util.intl;
     let stringResult2 = intl10.string(util.t.PoWNfe);
@@ -392,7 +392,7 @@ function UserSummaryStats(stats) {
   const obj29 = { style: items3, children: null };
   const obj30 = { style: wideLeftStat, label: null, statType: "gameDays", value: null, color: null };
   const intl11 = util.intl;
-  obj30.label = intl11.string(_modDef3341.y2Y1DD);
+  obj30.label = intl11.string(_modDef3440.y2Y1DD);
   let num10;
   if (games != null) {
     num10 = games.totalDaysPlayed;
@@ -405,7 +405,7 @@ function UserSummaryStats(stats) {
   const items13 = [React5(NumberStat, obj30)];
   const obj31 = { style: wideRightStat, singleLine: tmp4, label: null, name: null, color: null, icon: null };
   const intl12 = util.intl;
-  obj31.label = intl12.string(_modDef3309.RbT4Zq);
+  obj31.label = intl12.string(_modDef3408.RbT4Zq);
   if (null != game) {
     let name2 = game.name;
   } else {
@@ -477,7 +477,7 @@ function ItemStat(arg0) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(5850);
+const CheckpointConstants = fn(5969);
 ({ CHECKPOINT_PRIMARY: metroImportDefault, CHECKPOINT_CONTROL_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -487,7 +487,7 @@ const PX_32 = nativeDefault.space.PX_32;
 let sum = CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const PX_242 = nativeDefault.space.PX_24;
 let closure_14 = CHECKPOINT_NAV_HEIGHT + nativeDefault.space.PX_24;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   container: {
     width: "100%",

@@ -49,9 +49,9 @@ const Constants = fn(1071);
 ({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(8518);
+const NativeStackNavigator = fn(8638);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj = {
   statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   headerContainer: null,

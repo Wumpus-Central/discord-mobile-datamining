@@ -10,7 +10,7 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4819).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
+let closure_6 = fn(4938).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
 const ClientThemesConstants = fn(1239);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: metroImportDefault, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } =
   ClientThemesConstants);

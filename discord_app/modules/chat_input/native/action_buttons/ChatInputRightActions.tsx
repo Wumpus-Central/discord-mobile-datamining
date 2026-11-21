@@ -121,15 +121,15 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "Path",
-    shouldShowThread: "fist_tone3",
+    shouldShowThread: "2026-03-acom-modify-dark-launch",
   });
   return metroImportDefault(_modDef1653.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12705).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12827).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 const React6 = createStyles.createStyles(() => {
   const obj = {
     container: {

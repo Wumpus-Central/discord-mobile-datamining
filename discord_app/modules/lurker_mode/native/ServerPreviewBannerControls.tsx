@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
-import _modDef6980 from "../../../../_runtime/metro/06980__.js";
+import _modDef7100 from "../../../../_runtime/metro/07100__.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1071).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = { row: null };
 const rect = {
   position: "absolute",
@@ -35,7 +35,7 @@ export default function ServerPreviewBannerControls() {
   const obj2 = {
     size: "md",
     variant: "secondary-overlay",
-    icon: _modDef6980,
+    icon: _modDef7100,
     onPress: callback,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,

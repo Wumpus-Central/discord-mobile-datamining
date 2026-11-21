@@ -389,8 +389,8 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6438).InAppNavigationType;
-const ChannelRecordBase = fn(4647).ChannelRecordBase;
+const InAppNavigationType = fn(6557).InAppNavigationType;
+const ChannelRecordBase = fn(4766).ChannelRecordBase;
 const Constants = fn(1071);
 ({
   Layers,
@@ -401,26 +401,26 @@ const Constants = fn(1071);
   AnalyticsPages: closure_17,
   Routes: closure_18,
 } = Constants);
-const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4769).isStaticChannelRoute;
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let obj = {};
-obj[fn(9943).AutocompleterQuerySymbols.USER] = fn(9943).AutocompleterResultTypes.USER;
-obj[fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9943).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9943).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(9943).AutocompleterQuerySymbols.GUILD] = fn(9943).AutocompleterResultTypes.GUILD;
-obj[fn(9943).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9943).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(10063).AutocompleterQuerySymbols.USER] = fn(10063).AutocompleterResultTypes.USER;
+obj[fn(10063).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(10063).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(10063).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(10063).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(10063).AutocompleterQuerySymbols.GUILD] = fn(10063).AutocompleterResultTypes.GUILD;
+obj[fn(10063).AutocompleterQuerySymbols.GAME_PROFILE] = fn(10063).AutocompleterResultTypes.GAME_PROFILE;
 let closure_21 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(9943).AutocompleterQuerySymbols.USER +
+    fn(10063).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(10063).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(10063).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(9943).AutocompleterQuerySymbols.GUILD +
+    fn(10063).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(9943).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(10063).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 let items = [, ,];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
@@ -539,7 +539,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7737).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -551,7 +551,7 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9967);
+                      const obj = tmp5(10087);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
@@ -594,7 +594,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7737).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -606,7 +606,7 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9967);
+                      const obj = tmp5(10087);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;

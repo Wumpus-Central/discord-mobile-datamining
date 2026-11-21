@@ -4,13 +4,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05349_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import BoostingActionCreators from "../../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../../../components_native/common/SequencedLottieAnimationView.tsx";
-import _mod14700 from "../../../../../_runtime/metro/14700__.js";
+import _mod14823 from "../../../../../_runtime/metro/14823__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -27,10 +27,10 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(8831).Gradients;
+const Gradients = fn(8951).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let obj2 = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
@@ -87,8 +87,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(5742).close();
-    const obj = closure_1(5742);
+    closure_1(5861).close();
+    const obj = closure_1(5861);
     BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -125,9 +125,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(14701);
+    let tmp8Result = tmp8(14824);
   } else {
-    tmp8Result = tmp8(14702);
+    tmp8Result = tmp8(14825);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

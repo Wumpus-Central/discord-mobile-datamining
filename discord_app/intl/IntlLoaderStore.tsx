@@ -69,7 +69,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     dependencyMap = 1;
                     c2 = 1;
-                    const obj6 = { value: closure_0(2189).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2190).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -317,11 +317,11 @@ const identity = fn(1257);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  return {
+  let obj = {
     isLoading: false,
     inProgressLocale: "y",
-    error: "analyticsLocations",
-    localeData: "props",
+    error: "id",
+    localeData: "style",
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
@@ -340,6 +340,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
+  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");

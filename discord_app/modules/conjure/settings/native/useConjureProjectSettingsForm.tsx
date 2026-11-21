@@ -192,7 +192,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1071).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(4794);
+let createStyles = fn(4913);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -215,7 +215,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_12 = createStyles.createStyles(obj2);
-createStyles = fn(4794);
+createStyles = fn(4913);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -419,7 +419,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj6.onPress = function onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         return obj.openLazy(
-          asyncRequireImpl(18162, dependencyMap.paths),
+          asyncRequireImpl(18289, dependencyMap.paths),
           ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
           { options: sharingOptions, value, onChange },
           "stack",

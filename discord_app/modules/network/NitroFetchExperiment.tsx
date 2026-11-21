@@ -1,6 +1,6 @@
 // discord_app/modules/network/NitroFetchExperiment.tsx
 import ApexExperiment2 from "../experiments/apex/index.tsx";
-import _mod8462 from "../../../_runtime/metro/08462__.js";
+import _mod8582 from "../../../_runtime/metro/08582__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
@@ -9,7 +9,7 @@ function synchronizeNetworkLayer() {
   if (tmp !== closure_7) {
     if (tmp) {
       if (null == closure_8) {
-        closure_8 = _mod8462;
+        closure_8 = _mod8582;
       }
       global.XMLHttpRequest = closure_8.XMLHttpRequest;
     } else {
@@ -48,7 +48,7 @@ export function initializeNitroFetchExperiment() {
     if (tmp5 !== closure_7) {
       if (tmp5) {
         if (null == closure_8) {
-          closure_8 = tmp(8462);
+          closure_8 = tmp(8582);
         }
         tmp = global;
         _XMLHttpRequest = closure_8.XMLHttpRequest;

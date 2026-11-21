@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef2167 from "../../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../../_runtime/metro/02168__.js";
 import FakePlaceholderPrivateChannel from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
 import MessageRequestStore from "../../modules/message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../modules/message_request/SpamMessageRequestStore.tsx";
@@ -26,8 +26,8 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      const obj = _modDef2167(isMessageRequestTimestamp);
-      const valueOfResult = _modDef2167(isMessageRequestTimestamp).valueOf();
+      const obj = _modDef2168(isMessageRequestTimestamp);
+      const valueOfResult = _modDef2168(isMessageRequestTimestamp).valueOf();
       let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
@@ -64,10 +64,10 @@ function handleCacheLoaded() {
     continue;
   }
 }
-const isPrivate = fn(4647).isPrivate;
-const ChannelFlags = fn(4650).ChannelFlags;
+const isPrivate = fn(4766).isPrivate;
+const ChannelFlags = fn(4769).ChannelFlags;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new fn(4721).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4840).SecondaryIndexMap(
   function indexBy(value) {
     if (value.isRequest) {
       items = [];
@@ -83,7 +83,7 @@ const secondaryIndexMap = new fn(4721).SecondaryIndexMap(
 let values = [];
 let values2 = [];
 let closure_18 = [];
-const f39971 = () => {};
+const f40218 = () => {};
 const Store = initializeDefault.Store;
 class PrivateChannelSortStore extends Store {}
 const prototype = PrivateChannelSortStore.prototype;
@@ -101,7 +101,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f39971 === "function") {
+  if (typeof f40218 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

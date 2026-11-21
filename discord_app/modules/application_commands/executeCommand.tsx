@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(8327).createNonce();
-      let obj2 = onMessageSuccess(8327);
+      nonce = onMessageSuccess(8447).createNonce();
+      let obj2 = onMessageSuccess(8447);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(5854).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(5973).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(8406).MessageDataType.COMMAND, message };
-    message(8406).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(8526).MessageDataType.COMMAND, message };
+    message(8526).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(8406);
+    const obj6 = message(8526);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1290,14 +1290,14 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1112).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(10429);
-            obj2.maxSize = closure_0(8350).sizeString(dependencyMap);
+            const obj = closure_2(10549);
+            obj2.maxSize = closure_0(8470).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1112).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(8350);
+            const obj3 = closure_0(8470);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
@@ -1402,7 +1402,7 @@ const Constants = fn(1071);
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(4799).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4918).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

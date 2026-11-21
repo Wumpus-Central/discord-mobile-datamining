@@ -450,7 +450,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5844).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5963).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1071);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1081);

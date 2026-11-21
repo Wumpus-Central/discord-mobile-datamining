@@ -100,7 +100,7 @@ export function useShowRoleSubscriptionsInChannelList(id) {
     tmp5 = stateFromStores;
   }
   const obj2 = require("CreatorMonetizationRestrictionsHooks");
-  const guildEligibleForGuildProducts = tmp3(6759).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp3(6878).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {

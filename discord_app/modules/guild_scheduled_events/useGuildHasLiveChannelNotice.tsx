@@ -10,7 +10,7 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 import LiveChannelNoticesStore from "LiveChannelNoticesStore.tsx";
 
 require = fn;
-let closure_11 = fn(4649).GuildScheduledEventEntityTypes;
+let closure_11 = fn(4768).GuildScheduledEventEntityTypes;
 const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");

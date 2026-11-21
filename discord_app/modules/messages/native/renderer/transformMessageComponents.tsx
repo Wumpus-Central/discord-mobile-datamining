@@ -10,10 +10,10 @@ import priv from "../../../../../_runtime/01454_priv.js";
 
 const util = tmp4(1112);
 const FlagUtils = tmp4(1404);
-const MediaTypes = tmp4(5856);
-const AgeVerificationUtils = tmp4(6292);
-const sanitizeMediaDimension = tmp4(8775);
-const ExplicitMediaUtils = tmp4(9935);
+const MediaTypes = tmp4(5975);
+const AgeVerificationUtils = tmp4(6411);
+const sanitizeMediaDimension = tmp4(8895);
+const ExplicitMediaUtils = tmp4(10055);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -594,8 +594,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(5850).CheckpointVersions;
-let closure_7 = fn(8127).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(5969).CheckpointVersions;
+let closure_7 = fn(8247).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -605,7 +605,7 @@ let result = size.fileFinishedImporting("modules/messages/native/renderer/transf
 export default function transformMessageComponents(message, arr) {
   const obj = {
     type: "textDisplayComponent",
-    parserState: obj3(8116).getInitialParserStateFromMessage(message.message, closure_7),
+    parserState: obj3(8236).getInitialParserStateFromMessage(message.message, closure_7),
   };
   obj3 = {};
   const merged = Object.assign(message);

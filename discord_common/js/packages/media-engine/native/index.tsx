@@ -15,7 +15,7 @@ import TypedEventEmitter from "../../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
 let closure_3 = ["id", "useGraphicsCapture", "useGraphicsCaptureApiLevel"];
-let Constants = fn(5539);
+let Constants = fn(5658);
 ({
   QUEUE_METRICS_INTERVAL_MS: metroImportDefault,
   SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8,
@@ -24,7 +24,7 @@ let Constants = fn(5539);
   SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11,
   ProcessPriority: closure_12,
 } = Constants);
-Constants = fn(5562);
+Constants = fn(5681);
 ({
   ClipsRecordingEvent: map1,
   DEFAULT_VOLUME: closure_14,
@@ -331,7 +331,7 @@ class MediaEngineNative extends tmp4 {
           } else if (arg0 !== 2) {
             closure_128_1 = value;
             closure_128_1.periodMs = periodMs;
-            closure_129_0.emit(v0(5569).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
+            closure_129_0.emit(v0(5688).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(closure_129_2, periodMs);
           }
@@ -545,8 +545,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants3.VIDEO);
   }
-  obj3 = self(5572).create(arg0, arg1, videoSupported, flag);
-  obj3.on(obj3(5577).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(5691).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(5696).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -558,15 +558,15 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj3.on(obj3(5577).BaseConnectionEvent.Connected, () => {
+  obj3.on(obj3(5696).BaseConnectionEvent.Connected, () => {
     obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj3.on(obj3(5577).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(5696).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
   connections.add(obj3);
-  let obj2 = self(5572);
+  let obj2 = self(5691);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
@@ -580,7 +580,7 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
     }
     const tmpResult2 = tmp(2133);
   }
-  self.emit(obj3(5569).MediaEngineEvent.Connection, obj3);
+  self.emit(obj3(5688).MediaEngineEvent.Connection, obj3);
   return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
@@ -2053,7 +2053,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   const replay = ConnectionDefault.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
-    replay.on(self(5577).BaseConnectionEvent.Destroy, (arg0) => {
+    replay.on(self(5696).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -2063,7 +2063,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
     let connections = self.connections;
     connections.add(replay);
     self(2133).setProcessPriority(constants.HIGH);
-    self.emit(self(5569).MediaEngineEvent.Connection, replay);
+    self.emit(self(5688).MediaEngineEvent.Connection, replay);
     tmp2 = replay;
     const obj3 = self(2133);
   }

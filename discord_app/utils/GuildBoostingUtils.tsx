@@ -2,10 +2,10 @@
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
-import _modDef2167 from "../../_runtime/metro/02167__.js";
+import _modDef2168 from "../../_runtime/metro/02168__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
-import _modDef3537 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef3636 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import actions_BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
@@ -64,7 +64,7 @@ const EmojiConstants = fn(1389);
 ({ DEFAULT_EMOJI_SLOTS: closure_17, EMOJI_MAX_SLOTS_MORE: closure_18 } = EmojiConstants);
 const PremiumConstants = fn(1388);
 ({ BoostedGuildFeatures: closure_19, DEFAULT_SOUND_SLOTS: closure_20, MORE_SOUNDBOARD_SOUNDS: closure_21, FractionalPremiumStates: closure_22, IncrementalStickerCountsByTier: closure_23, TotalSoundboardSoundCountsByTier: closure_24, TotalStickerCountsByTier: closure_25, PerkIcons: closure_26 } = PremiumConstants);
-let closure_27 = fn(2185).getPremiumGroupProductName;
+let closure_27 = fn(2186).getPremiumGroupProductName;
 let obj = { LEVEL_1: 1, [1]: "LEVEL_1", LEVEL_2: 2, [2]: "LEVEL_2", LEVEL_3: 3, [3]: "LEVEL_3", LEVEL_4: 4, [4]: "LEVEL_4", LEVEL_5: 5, [5]: "LEVEL_5", LEVEL_6: 6, [6]: "LEVEL_6", LEVEL_7: 7, [7]: "LEVEL_7", LEVEL_8: 8, [8]: "LEVEL_8", LEVEL_9: 9, [9]: "LEVEL_9" };
 let closure_28 = Object.freeze({ [obj.LEVEL_1]: 1, [obj.LEVEL_2]: 2, [obj.LEVEL_3]: 3, [obj.LEVEL_4]: 6, [obj.LEVEL_5]: 9, [obj.LEVEL_6]: 12, [obj.LEVEL_7]: 15, [obj.LEVEL_8]: 18, [obj.LEVEL_9]: 24 });
 let items = [, , , ];
@@ -430,7 +430,7 @@ export function getNextGuildTierFromGuild(id) {
   return BoostedGuildTiers.TIER_1;
 }
 export function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef2167().diff(_modDef2167(arg0), "months");
+  let num = _modDef2168().diff(_modDef2168(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -438,9 +438,9 @@ export function getAppliedGuildBoostMonths(arg0) {
 }
 export function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef2167();
+  const obj = _modDef2168();
   const entries = Object.entries(closure_28);
-  const diffResult = _modDef2167().diff(arg0, "months");
+  const diffResult = _modDef2168().diff(arg0, "months");
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     let first = tmp6[0];
@@ -499,7 +499,7 @@ export function generateBlockGuildSubscriptionPurchasesNode(fractionalState) {
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_27() };
-    return intl7.formatToPlainString(_modDef3537["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3636["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -792,7 +792,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8633).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8753).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

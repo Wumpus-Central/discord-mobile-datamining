@@ -4,19 +4,19 @@ import InputFieldContainer from "../../Input/native/InputFieldContainer.native.t
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1112);
-const native = prop(4959);
-const useToken = prop(5358);
-const Text_Text = prop(5385);
-const useScaledTextLineHeight = prop(5524);
-const useTextField = prop(7109);
-const NativeTextInput = prop(7124);
-const propsForNativeTextInput = prop(7127);
-const useCharacterLimitAnnouncement = prop(7343);
+const native = prop(5078);
+const useToken = prop(5477);
+const Text_Text = prop(5504);
+const useScaledTextLineHeight = prop(5643);
+const useTextField = prop(7229);
+const NativeTextInput = prop(7244);
+const propsForNativeTextInput = prop(7247);
+const useCharacterLimitAnnouncement = prop(7463);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_6 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {

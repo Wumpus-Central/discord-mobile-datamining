@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/02119_asyncRequireImpl.js";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
-import _mod6263 from "module_6263" /* 6263 */;
+import _mod6382 from "module_6382" /* 6382 */;
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -123,7 +123,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
   })();
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
-  const match = _mod6263.match(item10010);
+  const match = _mod6382.match(item10010);
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_1_5.verbose("OTA check attempt", result);
     AnalyticsUtilsDefault.track(constants.MOBILE_OTA_CHECK_ATTEMPT, {

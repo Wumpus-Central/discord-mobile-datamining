@@ -1,6 +1,6 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppHeaderButtons.tsx
-import _modDef4189 from "../VoiceChannelApps.messages.js";
-import _modDef10249 from "../../../../_runtime/metro/10249__.js";
+import _modDef4288 from "../VoiceChannelApps.messages.js";
+import _modDef10369 from "../../../../_runtime/metro/10369__.js";
 import VoiceChannelAppActionCreators from "../VoiceChannelAppActionCreators.tsx";
 import VoicePanelIconButtonDefault from "../../voice_panel/native/shared/VoicePanelIconButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,16 +14,16 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 export default function VoiceChannelAppHeaderButtons(arg0) {
   ({ channel, inCall } = arg0);
   let id;
-  const voiceChannelAppAvailable = id(19138).useVoiceChannelAppAvailable(channel, inCall);
-  const obj = id(19138);
-  const voiceChannelAppOpen = id(19138).useVoiceChannelAppOpen(channel, inCall);
-  const obj2 = id(19138);
-  const voiceChannelAppVisible = id(19138).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(19265).useVoiceChannelAppAvailable(channel, inCall);
+  const obj = id(19265);
+  const voiceChannelAppOpen = id(19265).useVoiceChannelAppOpen(channel, inCall);
+  const obj2 = id(19265);
+  const voiceChannelAppVisible = id(19265).useVoiceChannelAppVisible(channel);
   id = channel.id;
   let tmp7Result = null;
   if (voiceChannelAppAvailable) {
     const obj4 = {
-      icon: importDefault(voiceChannelAppVisible ? 17105 : 7521),
+      icon: importDefault(voiceChannelAppVisible ? 17229 : 7641),
       accessibilityLabel: null,
       onPress: null,
     };
@@ -31,7 +31,7 @@ export default function VoiceChannelAppHeaderButtons(arg0) {
     if (voiceChannelAppVisible) {
       let ZtYyOx = tmp(1112).t["3jrUBj"];
     } else {
-      ZtYyOx = _modDef4189.ZtYyOx;
+      ZtYyOx = _modDef4288.ZtYyOx;
     }
     obj4.accessibilityLabel = intl.string(ZtYyOx);
     obj4.onPress = function onPress() {
@@ -40,9 +40,9 @@ export default function VoiceChannelAppHeaderButtons(arg0) {
     items = [closure_3(VoicePanelIconButtonDefault, obj4)];
     let tmp9Result = null;
     if (voiceChannelAppOpen) {
-      const obj5 = { icon: _modDef10249, accessibilityLabel: null, onPress: null };
+      const obj5 = { icon: _modDef10369, accessibilityLabel: null, onPress: null };
       const intl2 = tmp(1112).intl;
-      obj5.accessibilityLabel = intl2.string(_modDef4189["D+wwh8"]);
+      obj5.accessibilityLabel = intl2.string(_modDef4288["D+wwh8"]);
       obj5.onPress = function onPress() {
         return VoiceChannelAppActionCreators.closeVoiceChannelApp(id);
       };

@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4709 from "../../../../_runtime/metro/04709__.js";
+import _mod4828 from "../../../../_runtime/metro/04828__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01257__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "replace" }));
+      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "fill" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -217,7 +217,7 @@ export function useItemDragState(guildId, flag) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4709.shallow);
+  }, _mod4828.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

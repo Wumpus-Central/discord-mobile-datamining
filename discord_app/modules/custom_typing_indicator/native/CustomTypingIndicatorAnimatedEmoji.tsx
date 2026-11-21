@@ -15,7 +15,7 @@ require = fn;
 const AppStates = fn(1071).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(4794);
+const createStyles = fn(4913);
 let closure_9 = createStyles.createStyles((width) => {
   const obj = {
     emojiContainer: { width, height: width, alignItems: "center", justifyContent: "center" },

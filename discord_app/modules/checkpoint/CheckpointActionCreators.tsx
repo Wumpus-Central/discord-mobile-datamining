@@ -52,19 +52,19 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             function checkpointResponseFromServer(body) {
               let statsFromServerResult = null;
               if (null != body.stats) {
-                statsFromServerResult = closure_1_0(6220).statsFromServer(body.stats);
-                const obj = closure_1_0(6220);
+                statsFromServerResult = closure_1_0(6339).statsFromServer(body.stats);
+                const obj = closure_1_0(6339);
               }
               const obj4 = {
                 stats: statsFromServerResult,
-                globalStats: closure_1_0(6220).globalStatsFromServer(body.global_stats),
+                globalStats: closure_1_0(6339).globalStatsFromServer(body.global_stats),
                 character: null,
                 compactAssets: null,
                 availability: null,
               };
               ({ character: obj2.character, compact_assets: obj2.compactAssets, availability } = body);
               if (availability == null) {
-                availability = closure_1_0(12371).CheckpointAvailability.FULL;
+                availability = closure_1_0(12493).CheckpointAvailability.FULL;
               }
               obj4.availability = availability;
               return obj4;
@@ -227,11 +227,11 @@ let closure_9 = async function _completeCheckpoint() {
     }
   })();
 };
-let closure_10 = async function _resetCheckpoint() {
-  if (c3 === 2) {
-    c3 = 3;
+let closure_10 = async function _resetCheckpointCharacter() {
+  if (c0 === 2) {
+    c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  } else if (tmp5 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -242,49 +242,45 @@ let closure_10 = async function _resetCheckpoint() {
     }
   } else {
     try {
-      c3 = 2;
+      c0 = 2;
       if (0 === c1) {
         if (arg0 === 1) {
-          c3 = 3;
+          c0 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          c0 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_0 = tmp3;
-          DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_START" });
           c2 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj5 = { url: constants.CHECKPOINT_RESET, rejectWithError: true };
+          const obj4 = { url: constants.CHECKPOINT_RESET, rejectWithError: true };
           c1 = 2;
-          c3 = 1;
-          const obj6 = { value: HTTP.del(obj5), done: false };
-          return obj6;
+          c0 = 1;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
-      } else if (1 === tmp7) {
+      } else if (1 === tmp6) {
         c2 = 0;
-        closure_128_1(closure_128_2[4]).dispatch({ type: "CHECKPOINT_RESET_FAILED" });
-        c3 = 3;
+        c0 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
-        c3 = 3;
+        c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c2 = 0;
-        c3 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
+        c0 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        closure_128_1(closure_128_2[4]).dispatch({ type: "CHECKPOINT_RESET_SUCCESS" });
         c2 = 0;
-        c3 = 3;
+        c0 = 3;
         return { value: true, done: true };
       }
-    } catch (tmp16) {
-      if (tmp4 === c2) {
-        c3 = tmp2;
-        throw tmp16;
+    } catch (tmp10) {
+      if (tmp3 === c2) {
+        c0 = tmp2;
+        throw tmp10;
       } else {
         c1 = tmp;
       }
@@ -371,10 +367,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(8130);
+                  const obj = checkpointCardType(8250);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(8262).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(8382).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -415,7 +411,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(12370).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12492).CheckpointFetchStates;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");
@@ -453,7 +449,10 @@ export function completeCheckpoint() {
   }
   return applyArgumentsResult;
 }
-export function resetCheckpoint() {
+export function resetCheckpointProgress() {
+  return DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_PROGRESS" });
+}
+export function resetCheckpointCharacter() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
