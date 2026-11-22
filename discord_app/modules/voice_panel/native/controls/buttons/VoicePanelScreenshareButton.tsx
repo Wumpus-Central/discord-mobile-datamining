@@ -11,7 +11,7 @@ const require = fn;
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1625);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13423).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13421).ScreenArrowIcon;
 } else {
   MobilePhoneShareIcon = fn(17994).MobilePhoneShareIcon;
 }

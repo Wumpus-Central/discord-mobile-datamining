@@ -87,7 +87,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: "\u{1FAF1}\u{1F3FC}" };
+            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: "*0.95" };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -97,7 +97,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1186).AvatarSizes.XSMALL,
-              cutout: "\u{1FAF1}\u{1F3FC}",
+              cutout: "*0.95",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -117,7 +117,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: "\u{1FAF1}\u{1F3FC}" };
+            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: "*0.95" };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -127,7 +127,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1186).AvatarSizes.XSMALL,
-              cutout: "\u{1FAF1}\u{1F3FC}",
+              cutout: "*0.95",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

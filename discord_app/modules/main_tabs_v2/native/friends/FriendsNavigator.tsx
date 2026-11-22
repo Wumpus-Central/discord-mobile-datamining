@@ -7,14 +7,14 @@ import useColorThemeBackgroundDefault from "../../../client_themes/native/useCol
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import HeaderShared from "../shared_components/HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import _modDef13492 from "../../../../../_runtime/metro/13492__.js";
+import _modDef13490 from "../../../../../_runtime/metro/13490__.js";
 import AppFrameContainerDefault from "../AppFrameContainer.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function RequestsSettingsModalButton(onPress) {
   const obj = { isModal: true, children: null };
-  const obj2 = { source: _modDef13492, onPress: onPress.onPress, accessibilityLabel: null };
+  const obj2 = { source: _modDef13490, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = React4(HeaderShared.HeaderIconButton, obj2);

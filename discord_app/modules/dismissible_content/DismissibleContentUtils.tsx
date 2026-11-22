@@ -684,7 +684,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "a" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef13145 from "../../../../_runtime/metro/13145__.js";
+import _modDef13143 from "../../../../_runtime/metro/13143__.js";
 import _modDef17878 from "../../../../_runtime/metro/17878__.js";
 import _modDef17879 from "../../../../_runtime/metro/17879__.js";
 import _modDef17880 from "../../../../_runtime/metro/17880__.js";
@@ -45,7 +45,7 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef13145;
+      tmp4 = _modDef13143;
     }
   }
   let tmp9 = null;

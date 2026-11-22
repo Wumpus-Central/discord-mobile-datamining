@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(13303);
+const useChatInputKeyboardOffsetDefault = tmp5(13301);
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;

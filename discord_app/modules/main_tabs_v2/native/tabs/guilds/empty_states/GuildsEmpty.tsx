@@ -233,7 +233,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   }, items1);
   const tmp7 = selectedGuildId(5930);
   const isScreenLandscape = navigation(8150).useIsScreenLandscape();
-  navigation(16480);
+  navigation(16478);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

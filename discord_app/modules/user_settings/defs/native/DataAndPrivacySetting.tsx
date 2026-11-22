@@ -12,7 +12,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: fn(13819).ShieldLockIcon,
+  IconComponent: fn(13817).ShieldLockIcon,
   screen: {
     route: fn(1071).UserSettingsSections.DATA_AND_PRIVACY,
     getComponent() {

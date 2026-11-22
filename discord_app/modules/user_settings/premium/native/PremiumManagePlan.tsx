@@ -871,8 +871,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(14061).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(14061);
+  const youBarSettingsOutsideSafeAreaTop = navigation(14059).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(14059);
   navigation = navigation(1500).useNavigation();
   items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -918,7 +918,7 @@ export default function PremiumManagePlan() {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(8866).useIsInReverseTrial();
   const obj8 = navigation(8866);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(14063).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(14061).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString =
     navigation(2173).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {

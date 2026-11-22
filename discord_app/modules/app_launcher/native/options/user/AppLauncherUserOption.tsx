@@ -77,7 +77,7 @@ export default function AppLauncherUserOption(option) {
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
     obj2.openLazy(
-      asyncRequireImpl(13059, dependencyMap.paths),
+      asyncRequireImpl(13057, dependencyMap.paths),
       AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY,
       {
         option,
@@ -106,7 +106,7 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1186).Avatar, obj3);
   } else {
     const obj4 = {
-      icon: tmp9(tmp2(13052).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
+      icon: tmp9(tmp2(13050).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
       wrapperStyle: tmp.iconWrapper,
     };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj4);

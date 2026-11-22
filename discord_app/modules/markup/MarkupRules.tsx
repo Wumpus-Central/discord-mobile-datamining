@@ -38,7 +38,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "channel_id" };
+    obj3 = { type: "link", content: null, target: null, title: "channel" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     items = [obj4];
     obj3.content = items;

@@ -57,7 +57,7 @@ function DirectMessageIcon(channel) {
       status: "done",
       isMobileOnline: true,
       isVROnline: null,
-      statusStyle: "header",
+      statusStyle: "primary",
     };
     let isSystemUserResult;
     if (stateFromStores != null) {

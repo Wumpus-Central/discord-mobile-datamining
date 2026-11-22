@@ -4,7 +4,7 @@ import router_utils from "../../../routing/router_utils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BaseChannelItemDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import _modDef13735 from "../../../../../_runtime/metro/13735__.js";
+import _modDef13733 from "../../../../../_runtime/metro/13733__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,7 +42,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
       },
     });
   }, items1);
-  const ChannelModes = id(13250).ChannelModes;
+  const ChannelModes = id(13248).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -70,8 +70,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1112).intl;
   obj2.name = intl2.string(tmp6(1112).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(13250).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(13250).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef13735 });
+  obj.name = jsx(tmp6(13248).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(13248).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef13733 });
   return (
     <tmp8
       onPress={callback}

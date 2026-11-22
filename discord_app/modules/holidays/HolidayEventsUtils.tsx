@@ -42,13 +42,9 @@ export default {
       isExperimentEligible
     );
   },
-  getAppSpinnerSources() {
+  isHolidayHappening() {
     const timestamp = Date.now();
-    let appSpinnerSources = null;
-    if (tmp4) {
-      appSpinnerSources = HolidayEventsConfigDefault.appSpinnerSources;
-    }
-    return appSpinnerSources;
+    return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs;
   },
   getLoadingTips() {
     const timestamp = Date.now();

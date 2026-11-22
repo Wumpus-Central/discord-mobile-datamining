@@ -469,7 +469,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F141729 */ function() { ... });
+          found = allTouches.filter(/* F141746 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);

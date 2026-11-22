@@ -16,8 +16,8 @@ import CheckpointGlobalStatNumberDefault from "../../CheckpointGlobalStatNumber.
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointNumberUtils from "../../../CheckpointNumberUtils.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12754 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
-import _modDef12755 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_static.png.js";
+import _modDef12752 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
+import _modDef12753 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_static.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -147,8 +147,8 @@ export default function CheckpointMessagesStatsScreen() {
   const stringResult = intl.string(wWKySP);
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef12754;
-  obj7.staticUri = _modDef12755;
+  obj7.animatedUri = _modDef12752;
+  obj7.staticUri = _modDef12753;
   const items2 = [tmp.image];
   let wideImage = tmp4;
   if (tmp4) {

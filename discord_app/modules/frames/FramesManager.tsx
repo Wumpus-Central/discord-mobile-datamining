@@ -19,14 +19,14 @@ const prototype = function FramesManager() {
     },
     FRAME_LAUNCH(arg0) {
       ({ applicationId, analyticsContext } = arg0);
-      const result = applyArgumentsResult(15689).trackFrameSessionStart(applicationId, analyticsContext);
+      const result = applyArgumentsResult(15687).trackFrameSessionStart(applicationId, analyticsContext);
     },
     FRAME_LAUNCH_FAIL(arg0) {
       ({ applicationId, error, analyticsContext } = arg0);
-      const result = applyArgumentsResult(15689).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+      const result = applyArgumentsResult(15687).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(15689).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(15687).trackFrameSessionEnd(applicationId.applicationId);
     },
     VOICE_CHANNEL_SELECT(arg0) {
       const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);

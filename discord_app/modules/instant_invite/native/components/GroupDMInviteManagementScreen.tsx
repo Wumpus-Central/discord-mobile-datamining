@@ -120,14 +120,14 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp12 = jsx(channelId(7190).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(13863), darkSource: tmp4(13864), title: null, body: null };
+    let obj2 = { lightSource: tmp4(13861), darkSource: tmp4(13862), title: null, body: null };
     const intl = channelId(1112).intl;
     obj2.title = intl.string(channelId(1112).t["+nLJkZ"]);
     const intl2 = channelId(1112).intl;
     obj2.body = intl2.string(channelId(1112).t.F53CAc);
     tmp12 = jsx(channelId(1186).EmptyState, {
-      lightSource: tmp4(13863),
-      darkSource: tmp4(13864),
+      lightSource: tmp4(13861),
+      darkSource: tmp4(13862),
       title: null,
       body: null,
     });

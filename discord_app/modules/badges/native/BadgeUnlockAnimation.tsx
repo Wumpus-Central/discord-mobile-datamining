@@ -377,7 +377,7 @@ export default function BadgeUnlockAnimation(badge) {
   const tmp2Result14 = require("../../../../_runtime/metro/01653__.js");
   FALLBACK_BADGE_COLOR = require("useBadgeColor").useBadgeColor(badgeUnlockArt.rasterUrl);
   if (FALLBACK_BADGE_COLOR == null) {
-    FALLBACK_BADGE_COLOR = tmp2(14015).FALLBACK_BADGE_COLOR;
+    FALLBACK_BADGE_COLOR = tmp2(14013).FALLBACK_BADGE_COLOR;
   }
   const items5 = [FALLBACK_BADGE_COLOR];
   const memo = noop.useMemo(() => ({ fill: FALLBACK_BADGE_COLOR }), items5);

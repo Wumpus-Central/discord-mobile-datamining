@@ -540,12 +540,12 @@ export default {
                     closure_2 = closure_1_2;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F90557 */ function() { ... });
+                      let nextPromise = resolved.then(/* F90566 */ function() { ... });
                     } else {
                       let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
                       closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
-                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F90558 */ function() { ... });
+                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F90567 */ function() { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
                     }
                     return nextPromise;
@@ -617,7 +617,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(572).dispatch(obj2);
       const tmpResult = tmp(572);
-      nextPromise = tmp(14693)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(14691)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -630,7 +630,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(14693)(code, arg1, arg2);
+      const promise = tmp(14691)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -1848,8 +1848,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(14699).onOpenHubInvite(flags);
-        const obj6 = obj(14699);
+        obj(14697).onOpenHubInvite(flags);
+        const obj6 = obj(14697);
       }
     }
     let num = flags.flags;
@@ -1865,10 +1865,10 @@ export default {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(14700).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(14700);
+            const result1 = tmp6(14698).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(14698);
           }
-          tmp6Result3 = tmp6(14700);
+          tmp6Result3 = tmp6(14698);
         }
       }
     }
@@ -2332,9 +2332,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(14702).generateAttemptId();
+    const attemptId = tmp18(14700).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(14702);
+    const tmp18Result = tmp18(14700);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }

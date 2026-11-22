@@ -25,7 +25,7 @@ function UserRow(userActivity) {
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow.TableRow, obj2);
   }

@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, NOOP: closure_6 } = Constants);
-const NotificationPermissionConstants = fn(13282);
+const NotificationPermissionConstants = fn(13280);
 ({
   EventActionLocation: metroImportDefault,
   EventActionType: closure_8,
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting(
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13283).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13281).useCanSeePushNotificationNudge();
   items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {

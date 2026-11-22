@@ -24,11 +24,11 @@ function MessageContent(arg0) {
   let roleStyle;
   const tmp = closure_13();
   items = [message.author.id];
-  const subscribeGuildMembers = message(12380).useSubscribeGuildMembers(
+  const subscribeGuildMembers = message(12387).useSubscribeGuildMembers(
     { [thread.guild_id]: items },
     "ThreadBrowserRowSubtext",
   );
-  let obj = message(12380);
+  let obj = message(12387);
   const items1 = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items1, () => {
     let author = UserStore.getUser(message.author.id);

@@ -60,7 +60,7 @@ const ParticipantTypes = fn(5563).ParticipantTypes;
 const VoicePanelModes = fn(11750).VoicePanelModes;
 let closure_9 = {
   participantType: "Path",
-  selectedParticipantId: "text",
+  selectedParticipantId: "content",
   selectedParticipantSpeaking: 0,
   selectedParticipantStreamId: null,
   selectedParticipantUserId: -1,

@@ -33,7 +33,7 @@ const obj = {
   activeViewType: null,
   activeChannelId: null,
   closeReason: fn(10676).AppLauncherCloseReason.DISMISSED,
-  initialState: "analyticsLocations",
+  initialState: "alignItems",
 };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {}

@@ -186,8 +186,8 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = closure_129_5.actionType === applyArgumentsResult(6685).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(13141).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(13141);
+              const result = applyArgumentsResult(13139).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(13139);
             }
             arr = memberActions;
           }

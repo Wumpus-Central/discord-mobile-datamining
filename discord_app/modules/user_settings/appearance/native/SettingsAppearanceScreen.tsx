@@ -10,7 +10,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(16670);
+const FontScaleStore = fn(16668);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: metroImportDefault, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(8712).MobileUserSettings;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
@@ -21,8 +21,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(function SettingsAppearanceScreen() {
   nativeStackNavigation(5474)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(16671).fetchUserCustomThemes();
-      const obj = closure_0(16671);
+      const userCustomThemes = closure_0(16669).fetchUserCustomThemes();
+      const obj = closure_0(16669);
     }
   });
   items = [ThemeStore, ClientThemesBackgroundStore];
@@ -55,7 +55,7 @@ export default noop.memo(function SettingsAppearanceScreen() {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "Array" });
         }
       }
       const obj2 = { headerRight: null };
@@ -136,5 +136,5 @@ export default noop.memo(function SettingsAppearanceScreen() {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(15985), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(15983), { node }, "" + theme + "-" + gradientPresetId);
 });

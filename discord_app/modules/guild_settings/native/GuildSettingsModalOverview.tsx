@@ -156,12 +156,12 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (((null != systemChannel) !== null) != id) {
-          const result = applyArgumentsResult(19707).trackServerHubToggleSetting(
+          const result = applyArgumentsResult(19704).trackServerHubToggleSetting(
             guild.id,
-            applyArgumentsResult(19707).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
+            applyArgumentsResult(19704).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
             tmp,
           );
-          const obj2 = applyArgumentsResult(19707);
+          const obj2 = applyArgumentsResult(19704);
         }
       };
       if (systemChannel == null) {

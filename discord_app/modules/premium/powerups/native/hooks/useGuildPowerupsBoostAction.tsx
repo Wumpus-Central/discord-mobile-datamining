@@ -120,8 +120,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               }
               const obj = guildId(dependencyMap[9]);
             };
-            const result = tmp3(13430).launchGuildBoostFlowOrAlert(obj10);
-            const obj6 = tmp3(13430);
+            const result = tmp3(13428).launchGuildBoostFlowOrAlert(obj10);
+            const obj6 = tmp3(13428);
           }
           const obj5 = tmp3(8743);
         } catch (tmp50) {

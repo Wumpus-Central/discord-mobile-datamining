@@ -22,7 +22,7 @@ function WaterfallRow(node) {
   if (collapsed) {
     let ChevronSmallDownIcon = tmp2(7565).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(12799).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(12797).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;

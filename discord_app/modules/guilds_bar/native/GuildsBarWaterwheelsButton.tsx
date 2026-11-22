@@ -61,9 +61,9 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "switch",
-    expandedChildren: null,
-    children: null,
+    label: "center",
+    expandedChildren: 8,
+    children: 2,
   };
   const intl = util.intl;
   obj5.label = intl.string(_modDef2643.zFl2A4);

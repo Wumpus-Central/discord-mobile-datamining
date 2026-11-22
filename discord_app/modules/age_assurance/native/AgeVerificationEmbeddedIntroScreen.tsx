@@ -50,7 +50,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj5.children = items1;
   const items3 = [
     closure_6(navigation(5929).Stack, obj5),
-    closure_5(navigation(12433).AgeVerificationMethodsContainer, {
+    closure_5(navigation(12440).AgeVerificationMethodsContainer, {
       ageVerificationMethods: useAgeVerificationMethodsDefault({
         onClose,
         classificationId,

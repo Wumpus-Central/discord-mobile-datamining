@@ -10,7 +10,7 @@ const createStyles = fn(4913);
 let obj = {
   back: {
     justifyContent: "center",
-    height: fn(13241).SEARCH_BAR_HEIGHT,
+    height: fn(13239).SEARCH_BAR_HEIGHT,
     paddingStart: fn(10531).CHANNEL_DETAILS_MARGIN,
     paddingEnd: 8,
   },
@@ -18,7 +18,7 @@ let obj = {
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = {
   justifyContent: "center",
-  height: fn(13241).SEARCH_BAR_HEIGHT,
+  height: fn(13239).SEARCH_BAR_HEIGHT,
   paddingStart: fn(10531).CHANNEL_DETAILS_MARGIN,
   paddingEnd: 8,
 };

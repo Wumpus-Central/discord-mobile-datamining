@@ -26,7 +26,7 @@ const obj2 = {
     return intl.string(_modDef2344.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(14368).RefreshIcon,
+  IconComponent: fn(14366).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -96,7 +96,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2344.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(14368).RefreshIcon,
+  IconComponent: fn(14366).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {

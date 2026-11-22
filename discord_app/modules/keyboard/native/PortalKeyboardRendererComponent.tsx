@@ -58,7 +58,7 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
           transitionState: state,
           entrypoint: tmp(10676).AppLauncherEntrypoint.TEXT,
         };
-        return jsx(chatInputRef(12905), {
+        return jsx(chatInputRef(12903), {
           context: memo1,
           chatInputRef,
           onClose: cleanUp,

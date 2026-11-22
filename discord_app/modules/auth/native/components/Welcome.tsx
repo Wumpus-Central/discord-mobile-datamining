@@ -12,8 +12,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef14309 from "../../../../../_runtime/metro/14309__.js";
-import _mod15073 from "../../../../../_runtime/metro/15073__.js";
+import _modDef14307 from "../../../../../_runtime/metro/14307__.js";
+import _mod15071 from "../../../../../_runtime/metro/15071__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -43,7 +43,7 @@ function InviteCard(invite) {
       let tmp18 = closure_1_19;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "Array" };
+      const obj = { user: null, guildId: "r" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = closure_1_19(native.Avatar, obj);
@@ -55,7 +55,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "Array" };
+      const obj4 = { user: null, guildId: "r" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -87,7 +87,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef14309 };
+  const obj2 = { source: _modDef14307 };
   const items1 = [closure_1_19(FastImageDefault, obj2)];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
@@ -116,7 +116,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15073 }), ,];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15071 }), ,];
   const obj4 = {
     style: tmp4.header,
     lineClamp: null,

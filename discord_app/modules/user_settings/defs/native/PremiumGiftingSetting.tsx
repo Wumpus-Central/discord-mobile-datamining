@@ -16,7 +16,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(12468).GiftIcon,
+  IconComponent: fn(12475).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

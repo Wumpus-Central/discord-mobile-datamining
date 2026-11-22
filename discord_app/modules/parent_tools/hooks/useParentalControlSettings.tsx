@@ -118,7 +118,7 @@ export function useDefaultGuildsRestricted() {
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
   const selectedTeen = controlledSetting(9138).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16119).ParentalControlledFriendSourceFlags;
+  const ParentalControlledFriendSourceFlags = controlledSetting(16117).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;

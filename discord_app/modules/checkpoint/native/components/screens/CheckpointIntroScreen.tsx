@@ -162,7 +162,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12724), obj8);
+    tmp20Result = closure_11(tmp2(12722), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;

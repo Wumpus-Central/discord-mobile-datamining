@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12826).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12824).WAVEFORM_WAVE_MAX_VALUE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);
 let obj = {

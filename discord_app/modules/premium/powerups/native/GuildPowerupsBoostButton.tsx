@@ -43,7 +43,7 @@ export function GuildPowerupsBoostButton(guildId) {
       onAvailableSlotPress: tmp9,
       premiumGroupRole: UNSPECIFIED,
     };
-    tmp10 = jsx(tmp5(13480), {
+    tmp10 = jsx(tmp5(13478), {
       guild: stateFromStores,
       previousGuildSubscriptionSlot: memo,
       analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR,

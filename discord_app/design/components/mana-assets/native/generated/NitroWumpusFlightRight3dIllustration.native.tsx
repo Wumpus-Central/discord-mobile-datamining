@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef17118 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-1x.png.js";
-import _modDef17119 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js";
-import _modDef17120 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-3x.png.js";
+import _modDef17116 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-1x.png.js";
+import _modDef17117 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js";
+import _modDef17118 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17118 }, 3: null };
-let obj2 = { uri: _modDef17118 };
-obj[2] = { uri: _modDef17119 };
-const obj3 = { uri: _modDef17119 };
-obj[3] = { uri: _modDef17120 };
+let obj = { 1: null, 2: { uri: _modDef17116 }, 3: null };
+let obj2 = { uri: _modDef17116 };
+obj[2] = { uri: _modDef17117 };
+const obj3 = { uri: _modDef17117 };
+obj[3] = { uri: _modDef17118 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx",

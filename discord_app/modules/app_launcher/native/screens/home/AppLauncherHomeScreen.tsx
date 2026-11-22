@@ -208,7 +208,7 @@ function ActivityRow(section) {
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     let obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12926), obj3);
+    tmp5 = closure_19(onPress(12924), obj3);
   }
   items = [section];
   const items1 = [section, onPress];
@@ -274,7 +274,7 @@ function ActivityItemTuple(arg0) {
   items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "analyticsLocations" };
+      return { width: "disabled", height: "isArray" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -462,7 +462,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "analyticsLocations" };
+      return { width: "disabled", height: "isArray" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -686,7 +686,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(12946).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const APP_LAUNCHER_IN_TEXT = fn(12944).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 const createStyles = fn(4913);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 },
@@ -1068,7 +1068,7 @@ export default function AppLauncherHomeScreen(route) {
             isLastTuple: false,
           };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(12957).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(12955).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -1077,7 +1077,7 @@ export default function AppLauncherHomeScreen(route) {
         }
         items[items.length - 1].isLastTuple = true;
         const obj5 = {
-          type: tmp8(12957).AppLauncherHomeListItemType.SECTION_HEADER,
+          type: tmp8(12955).AppLauncherHomeListItemType.SECTION_HEADER,
           section: null,
           sectionName: "activities",
           numItems: null,
@@ -1240,13 +1240,13 @@ export default function AppLauncherHomeScreen(route) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(12991).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(12989).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(12991);
+                const tmpResult = found1(12989);
               }
               const obj3 = {
                 application: type.application,
-                showsPromoted: found1(1404).hasFlag(type.flags, found1(12992).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1404).hasFlag(type.flags, found1(12990).ApplicationCollectionItemFlags.PROMOTED),
                 overrideImageUrl: collectionItemAssetUrl,
                 sectionPosition,
               };
@@ -1278,7 +1278,7 @@ export default function AppLauncherHomeScreen(route) {
             if (type.type === found1(10683).ApplicationDirectoryCollectionItemType.APPLICATION) {
               const obj = {
                 application: type.application,
-                showsPromoted: found1(1404).hasFlag(type.flags, found1(12992).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1404).hasFlag(type.flags, found1(12990).ApplicationCollectionItemFlags.PROMOTED),
               };
               return obj;
             }
@@ -1784,7 +1784,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected: function onViewAllInThisServer() {
-        const found = memo.find((type) => type.type === context(12957).AppLauncherHomeListItemType.VIEW_ALL);
+        const found = memo.find((type) => type.type === context(12955).AppLauncherHomeListItemType.VIEW_ALL);
         let mapped;
         if (found != null) {
           const applications = found.applications;

@@ -103,7 +103,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(13509), obj6);
+    let tmp9Result = closure_11(stateFromStores(13507), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -112,7 +112,7 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(13527), obj7);
+      tmp11Result2 = closure_11(stateFromStores(13525), obj7);
     }
     const items3 = [tmp11Result2];
     const obj8 = {

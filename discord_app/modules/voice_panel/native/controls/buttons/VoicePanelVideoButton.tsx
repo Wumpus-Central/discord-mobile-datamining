@@ -76,7 +76,7 @@ export default function VideoButton(arg0) {
     element.style = isVideoEnabled ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (videoBlocked) {
       const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-      memo = jsx(tmp3(14394).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
+      memo = jsx(tmp3(14392).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
     return jsx(tmp(19347), {

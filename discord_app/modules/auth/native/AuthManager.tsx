@@ -11,10 +11,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(13281).PermissionStateType;
+const PermissionStateType = fn(13279).PermissionStateType;
 const ME = fn(1071).ME;
 let closure_8 = fn(6496).NotificationAuthorizationStatus;
-const NewUserTypes = fn(13613).NewUserTypes;
+const NewUserTypes = fn(13611).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -105,13 +105,13 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(13702).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(13702);
+        applyArgumentsResult(13700).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(13700);
       }
       obj = applyArgumentsResult(8051);
       const result = MobileOnboardingFrictionExperimentDefault.trackMobileOnboardingFrictionExposure("AuthManager");
-      applyArgumentsResult(13612).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(13612);
+      applyArgumentsResult(13610).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(13610);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

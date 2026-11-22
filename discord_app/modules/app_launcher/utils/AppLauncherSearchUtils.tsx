@@ -141,7 +141,7 @@ const ApplicationCommandIndexStore = fn(10436);
   useContextIndexState: closure_9,
   useUserIndexState: closure_10,
 } = ApplicationCommandIndexStore);
-const FetchState = fn(12937).FetchState;
+const FetchState = fn(12935).FetchState;
 const BuiltInSectionId = fn(5937).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(5938).COMMAND_SENTINEL;
 const size = fn(2);

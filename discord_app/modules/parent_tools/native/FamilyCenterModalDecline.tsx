@@ -17,7 +17,7 @@ function FamilyCenterModalDeclineScreen(otherUser) {
     otherUser(5594).presentFailedToast(intl.string(otherUser(1112).t.R0RpRX));
   }, []);
   const tmp2 = declineLinkRequest(9137)();
-  const familyCenterActions = otherUser(12460).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+  const familyCenterActions = otherUser(12467).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   declineLinkRequest = familyCenterActions.declineLinkRequest;
   const isDeclineLoading = familyCenterActions.isDeclineLoading;
   items = [declineLinkRequest, otherUser.id];
@@ -29,14 +29,14 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   const obj3 = { children: null };
   const obj4 = { style: tmp.header, children: null };
   const obj5 = { otherUser, iconSrc: null };
-  const obj = otherUser(12460);
+  const obj = otherUser(12467);
   obj5.iconSrc = declineLinkRequest(7032);
-  const items1 = [closure_5(declineLinkRequest(16227), obj5), ,];
+  const items1 = [closure_5(declineLinkRequest(16225), obj5), ,];
   const obj6 = { style: tmp.headerText, variant: "body-lg/semibold", children: null };
   let intl = otherUser(1112).intl;
   obj6.children = intl.string(declineLinkRequest(2824).teIRCR);
   items1[1] = closure_5(otherUser(5504).Text, obj6);
-  items1[2] = closure_5(declineLinkRequest(16194), { user: otherUser });
+  items1[2] = closure_5(declineLinkRequest(16192), { user: otherUser });
   obj4.children = items1;
   const items2 = [closure_6(View, obj4)];
   const obj7 = { style: tmp.body, children: null };
@@ -77,7 +77,7 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   items5[1] = closure_5(otherUser(5511).Button, obj13);
   obj11.children = items5;
   obj10.children = closure_6(otherUser(6545).ButtonGroup, obj11);
-  items4[1] = closure_5(otherUser(12242).ModalFooter, obj10);
+  items4[1] = closure_5(otherUser(12249).ModalFooter, obj10);
   obj2.children = items4;
   return closure_6(otherUser(7811).ModalScreen, obj2);
 }

@@ -20,7 +20,7 @@ const SearchConstants = fn(8576);
   MEDIA_ITEM_GAP_WIDTH: closure_10,
   SearchMediaTypes: closure_11,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13215).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13213).EMPTY_MEDIA_RESULTS;
 const MEDIA_MODAL_KEY = fn(1071).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_15 = [];

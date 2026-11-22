@@ -145,7 +145,7 @@ function SortAndViewOptions(channel) {
   items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13720, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13718, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -176,7 +176,7 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1112).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13721, dependencyMap.paths),
+      asyncRequireImpl(13719, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
@@ -471,7 +471,7 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12870).useForumChannelStore;
+const useForumChannelStore = fn(12868).useForumChannelStore;
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 let closure_14 = fn(11768).getVoicePanelDockButtonsTop;
@@ -760,7 +760,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[17]).intl;
   obj14.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj14.icon = require("../../../../_runtime/metro/13729__.js");
+  obj14.icon = require("../../../../_runtime/metro/13727__.js");
   obj14.disabled = tmp17;
   obj14.positionBottom = sum;
   obj14.onPress = callback1;

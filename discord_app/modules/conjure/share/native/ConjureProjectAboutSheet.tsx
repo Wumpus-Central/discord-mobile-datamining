@@ -169,7 +169,7 @@ export default function ConjureProjectAboutSheet(arg0) {
             return obj5;
           } else {
             if (value) {
-              v1(5127).hideActionSheet(tmp4(12277).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+              v1(5127).hideActionSheet(tmp4(12284).CONJURE_PROJECT_ABOUT_SHEET_KEY);
               const obj = v1(5127);
             }
             dependencyMap = 3;

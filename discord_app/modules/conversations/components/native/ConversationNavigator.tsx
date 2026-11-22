@@ -88,7 +88,7 @@ export default function ConversationNavigator(route) {
     });
   };
   obj4.getComponent = function getComponent() {
-    return closure_0(14351).default;
+    return closure_0(14349).default;
   };
   items[1] = closure_6(Navigator.Screen, obj4);
   obj2.children = items;

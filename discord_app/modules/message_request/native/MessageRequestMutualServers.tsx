@@ -46,7 +46,7 @@ export default function MessageRequestMutualServers(textVariant) {
       names: substr.map((name) => name.name),
       children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)),
     };
-    tmp9 = closure_4(tmp4(13538).GuildIconPile, obj4);
+    tmp9 = closure_4(tmp4(13536).GuildIconPile, obj4);
   }
   const items1 = [tmp9];
   const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };

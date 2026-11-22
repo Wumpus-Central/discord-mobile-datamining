@@ -30,7 +30,7 @@ export default noop.memo(function DMChannel(navigationReplace) {
   const tmp4 = flag(18754)();
   const baseChannelUnreadBadgeState = channel(17917).useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(16723)(channel, { unread });
+  const tmp7 = flag(16721)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     extractTimestampResult = tmp2(11).extractTimestamp(tmp7.id);

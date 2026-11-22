@@ -126,7 +126,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
               const obj4 = { value, done: true };
               return obj4;
             } else if (extendedOnboarding) {
-              const ICYMIAnalytics = tmp2(15642).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(15640).ICYMIAnalytics;
               const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "overview" });
               dependencyMap(true);
               v1 = 1;
@@ -230,7 +230,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const items9 = [
     closure_9(closure_6, {
       style: tmp.infoIcon,
-      children: closure_9(extendedOnboarding(12464).ServerIcon, { size: "sm", color: "interactive-text-active" }),
+      children: closure_9(extendedOnboarding(12471).ServerIcon, { size: "sm", color: "interactive-text-active" }),
     }),
   ];
   const obj18 = {
@@ -247,13 +247,13 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj20 = { style: tmp.infoRow, children: null };
   const obj17 = {
     style: tmp.infoIcon,
-    children: closure_9(extendedOnboarding(12464).ServerIcon, { size: "sm", color: "interactive-text-active" }),
+    children: closure_9(extendedOnboarding(12471).ServerIcon, { size: "sm", color: "interactive-text-active" }),
   };
   const obj19 = { style: tmp.divider };
   const items11 = [
     closure_9(closure_6, {
       style: tmp.infoIcon,
-      children: closure_9(extendedOnboarding(14465).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
+      children: closure_9(extendedOnboarding(14463).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
     }),
   ];
   const obj22 = {
@@ -271,7 +271,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj24 = { style: tmp.infoRow, children: null };
   const obj21 = {
     style: tmp.infoIcon,
-    children: closure_9(extendedOnboarding(14465).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
+    children: closure_9(extendedOnboarding(14463).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
   };
   const obj23 = { style: tmp.divider };
   const items12 = [

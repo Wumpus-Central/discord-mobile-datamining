@@ -143,7 +143,7 @@ Spoiler.prototype["render"] = function render() {
                 if (Array.isArray(style)) {
                   flattenResult = closure_2_5.flatten(style);
                 }
-                const obj = { children: null, style: null, onPress: "r" };
+                const obj = { children: null, style: null, onPress: "Array" };
                 ({ Children, cloneElement } = validElement);
                 obj.children = Children.map(props.props.children, (props) => {
                   if (validElement.isValidElement(props)) {
@@ -153,7 +153,7 @@ Spoiler.prototype["render"] = function render() {
                     if (Array.isArray(style)) {
                       flattenResult = closure_2_5.flatten(style);
                     }
-                    const obj = { children: null, style: null, onPress: "r" };
+                    const obj = { children: null, style: null, onPress: "Array" };
                     ({ Children, cloneElement } = validElement);
                     obj.children = Children.map(props.props.children, (props) => {
                       if (validElement.isValidElement(props)) {
@@ -163,9 +163,9 @@ Spoiler.prototype["render"] = function render() {
                         if (Array.isArray(style)) {
                           flattenResult = closure_2_5.flatten(style);
                         }
-                        const obj = { children: null, style: null, onPress: "r" };
+                        const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F87912 */ function() { ... });
+                        obj.children = Children.map(props.props.children, /* F87921 */ function() { ... });
                         items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);

@@ -21,14 +21,14 @@ export function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(15826).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(15989).getInitialScrollIndex(current, memo);
+    if (tmp(15824).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(15987).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(15989);
+      const tmpResult = tmp(15987);
     }
   }
   items = [memo, flag, ref, navigation, current];

@@ -28,9 +28,9 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
-  let canAccessSettings = guild(15177).useGuildActionSheetPermissions(guild).canAccessSettings;
+  let canAccessSettings = guild(15175).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = canAccessSettings(8749)(guild.id).total;
-  let obj = guild(15177);
+  let obj = guild(15175);
   items = [GuildChannelStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
@@ -147,7 +147,7 @@ export default function GuildActionSheetTabItems(guild) {
     canAccessSettings = closure_12(tmp(7591).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
-  items2[4] = closure_12(canAccessSettings(15200), { guild });
+  items2[4] = closure_12(canAccessSettings(15198), { guild });
   obj4.children = items2;
   return closure_13(guild(6545).ButtonGroup, obj4);
 }

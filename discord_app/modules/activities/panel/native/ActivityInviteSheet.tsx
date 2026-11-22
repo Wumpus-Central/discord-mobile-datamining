@@ -192,14 +192,14 @@ export default function ActivityInviteSheet(activity) {
   obj4.title = intl.string(activity(1112).t["OzOM/q"]);
   obj3.header = closure_12(activity(7515).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(14644).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(14642).AppCrash, title: tmp6 };
     let tmp19Result = closure_12(tmp11(1186).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_12(Loading, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(13190).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(13188).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1112).intl;
     obj8.placeholder = intl2.string(tmp11(1112).t.iI1gMg);
     obj7.children = closure_12(tmp11(7427).SearchBar, obj8);

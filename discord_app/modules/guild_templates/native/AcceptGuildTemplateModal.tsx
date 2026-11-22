@@ -22,7 +22,7 @@ function ConnectedAcceptGuildTemplate(code) {
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(12207)(stateFromStores);
+  stateFromStores(12214)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -104,7 +104,7 @@ function ConnectedAcceptGuildTemplate(code) {
       );
     }
   };
-  obj3.children = jsx(stateFromStores(12208), {
+  obj3.children = jsx(stateFromStores(12215), {
     code,
     guildTemplate: stateFromStores,
     name,

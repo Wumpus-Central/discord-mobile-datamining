@@ -41,7 +41,7 @@ obj2.wideContainer = {
   alignItems: "center",
   alignSelf: "center",
   width: "100%",
-  maxWidth: fn(12729).CHECKPOINT_WIDE_MAX_WIDTH,
+  maxWidth: fn(12727).CHECKPOINT_WIDE_MAX_WIDTH,
 };
 obj2.wideScenePane = {
   width: "50%",
@@ -387,7 +387,7 @@ export default function CheckpointFriendsStatsScreen(arg0) {
         secondUser: null,
         twoFriends: null,
         isReducedMotion: null,
-        artboardFrame: "disabled",
+        artboardFrame: "add",
       };
       let user3;
       if (stateFromStores1 != null) {

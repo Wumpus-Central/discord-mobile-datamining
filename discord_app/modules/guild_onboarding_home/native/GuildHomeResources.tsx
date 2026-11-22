@@ -42,7 +42,7 @@ function ResourceChannelRow(channelId) {
     first = forumPostMediaProperties[0];
   }
   const obj6 = channelId(8621);
-  let flag = channelId(12878).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  let flag = channelId(12876).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
   const tmp11 = stateFromStores(18212)(firstResult);
   const tmp12 =
     null != stateFromStores &&
@@ -148,7 +148,7 @@ function ResourceChannelRow(channelId) {
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_11(tmp2(12878).ForumPostMediaThumbnail, obj17);
+              tmp19Result6 = closure_11(tmp2(12876).ForumPostMediaThumbnail, obj17);
               const tmp2Result2 = tmp2(8621);
             }
           }

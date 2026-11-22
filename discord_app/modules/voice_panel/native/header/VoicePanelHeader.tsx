@@ -11,7 +11,7 @@ import StageMusicActionCreators from "../../../stage_channels/StageMusicActionCr
 import useMyCurrentStageChannelRoleDefault from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs.tsx";
-import _modDef12800 from "../../../../../_runtime/metro/12800__.js";
+import _modDef12798 from "../../../../../_runtime/metro/12798__.js";
 import useIsConnectedToVoiceChannelDefault from "../hooks/useIsConnectedToVoiceChannel.tsx";
 import VoicePanelIconButtonDefault from "../shared/VoicePanelIconButton.tsx";
 import MobileGoLiveEntrypointExperimentDefault from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
@@ -1005,7 +1005,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   const tmp5Result28 = require("useIsSecureFramesVerified");
   const obj15 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
   const tmp2Result8 = NativeViewDefault;
-  obj15.icon = _modDef12800;
+  obj15.icon = _modDef12798;
   obj15.accessibilityLabel = stringResult;
   obj15.onPress = tmp92;
   obj15.style = memo;
@@ -1018,7 +1018,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result8 = null;
     if (flag2) {
       const obj17 = { size: "xs", color: tmp2(575).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-      tmp107Result8 = closure_24(tmp5(13819).ShieldLockIcon, obj17);
+      tmp107Result8 = closure_24(tmp5(13817).ShieldLockIcon, obj17);
     }
   }
   items32[1] = tmp107Result8;

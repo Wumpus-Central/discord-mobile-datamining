@@ -22,8 +22,8 @@ export default function GuildHeaderCoachmarks(arg0) {
   );
   stateFromStores(17674)(guild.id);
   const obj = guild(504);
-  const tmp6 = stateFromStores(13404)(guild.id);
-  const tmp8 = stateFromStores(13397)(guild.id);
+  const tmp6 = stateFromStores(13402)(guild.id);
+  const tmp8 = stateFromStores(13395)(guild.id);
   const items2 = [stateFromStores, guild.premiumProgressBarEnabled];
   const tmp7 = stateFromStores(17681)();
   const memo = noop.useMemo(() => {
@@ -37,7 +37,7 @@ export default function GuildHeaderCoachmarks(arg0) {
     }
     return items;
   }, items2);
-  const tmp9 = stateFromStores(13398)();
+  const tmp9 = stateFromStores(13396)();
   const obj2 = guild(9080);
   const obj3 = { groupName: constants.GUILD_HEADER_TOOLTIPS };
   [tmp14, tmp15] = guild(9080).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
@@ -56,7 +56,7 @@ export default function GuildHeaderCoachmarks(arg0) {
     tmp16 = tmp9;
   }
   const tmp12Result = _slicedToArray(
-    guild(13394).useBoostToUnlockCoachmarkDCF(tmp16, guild.id, constants.GUILD_HEADER_TOOLTIPS),
+    guild(13392).useBoostToUnlockCoachmarkDCF(tmp16, guild.id, constants.GUILD_HEADER_TOOLTIPS),
     2,
   );
   if (first == null) {
@@ -75,5 +75,5 @@ export default function GuildHeaderCoachmarks(arg0) {
   } else {
     return null;
   }
-  const obj4 = guild(13394);
+  const obj4 = guild(13392);
 }

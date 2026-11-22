@@ -216,7 +216,7 @@ function AnimatedToast(cleanUp) {
   let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
   obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(15273).Toast, {});
+  obj6.children = jsx(tmp2(15271).Toast, {});
   return jsx(_modDef1653.View, obj6);
 }
 function getItemKey(key) {

@@ -559,10 +559,10 @@ class ChatInput {
           closure_1_20.state.current.textFieldContentSize = height;
           if (!obj.getIsChatInputHeightWorkletEnabled()) {
             const textFieldHeight = closure_1_20.state.current.textFieldHeight;
-            const result = textFieldHeight.set(c0(12901).getChatInputHeightAnimationTiming(height, sharedValue.get()));
-            const tmp2Result = c0(12901);
+            const result = textFieldHeight.set(c0(12899).getChatInputHeightAnimationTiming(height, sharedValue.get()));
+            const tmp2Result = c0(12899);
           }
-          obj = c0(12900);
+          obj = c0(12898);
         },
         handleLayoutOfInputContainer(arg0) {
           const current = closure_1_20.chatInputAutocomplete.current;
@@ -586,12 +586,12 @@ class ChatInput {
             if (0 !== textFieldContentSize) {
               const textFieldHeight = closure_1_20.state.current.textFieldHeight;
               const result = textFieldHeight.set(
-                c0(12901).getChatInputHeightAnimationTiming(textFieldContentSize, sharedValue.get()),
+                c0(12899).getChatInputHeightAnimationTiming(textFieldContentSize, sharedValue.get()),
               );
-              const tmpResult = c0(12901);
+              const tmpResult = c0(12899);
             }
           }
-          obj = c0(12900);
+          obj = c0(12898);
         },
         handleChangeAutoCompleteVisibility(arg0) {
           dismissCoachmark(closure_1_20.props.current.screenIndex, arg0);
@@ -776,11 +776,11 @@ class ChatInput {
             if (tmp35 == null) {
               tmp35 = null;
             }
-            const result3 = c0(12905).setAppLauncherA11yFocusReturnRef(tmp35);
+            const result3 = c0(12903).setAppLauncherA11yFocusReturnRef(tmp35);
             const obj18 = { type: c0(1626).KeyboardTypes.APP_LAUNCHER, context: null };
             const obj19 = { initialRouteName: constants5.HOME, initialSearchQuery: null };
-            const obj17 = c0(12905);
-            const appDMApplication = c0(13070).getAppDMApplication(closure_1_20.props.current.channel);
+            const obj17 = c0(12903);
+            const appDMApplication = c0(13068).getAppDMApplication(closure_1_20.props.current.channel);
             let name;
             if (appDMApplication != null) {
               name = appDMApplication.name;
@@ -788,7 +788,7 @@ class ChatInput {
             obj19.initialSearchQuery = name;
             obj18.context = obj19;
             memo2.handleToggleKeyboard(obj18);
-            const tmp23Result = c0(13070);
+            const tmp23Result = c0(13068);
           } else if (constants.ALL_PHOTOS === arg1) {
             const result4 = c0(5129).triggerHapticFeedback(c0(5129).HapticFeedbackTypes.IMPACT_LIGHT);
             const obj9 = c0(5129);
@@ -870,7 +870,7 @@ class ChatInput {
         };
         c0(5098).dismissKeyboard();
         const obj4 = c0(5098);
-        c0(13071).openCreatePollModal({
+        c0(13069).openCreatePollModal({
           channel: closure_1_20.props.current.channel,
           onCancel() {
             return closure_1_21.handleToggleKeyboard({ type: closure_0(1626).KeyboardTypes.SYSTEM });
@@ -966,7 +966,7 @@ class ChatInput {
         if ("tapAttachment" === tapAction.action) {
           let current = closure_1_20.chatInput.current;
           current.blur();
-          const obj = c0(13093);
+          const obj = c0(13091);
           const current2 = closure_1_20.chatInput.current;
           const applicationCommandManager = current2.getApplicationCommandManager();
           ({ channelId, optionName } = tapAction);
@@ -988,8 +988,8 @@ class ChatInput {
           focused = text.length > 0;
         }
         if (focused) {
-          const result = c0(12828).trackMobileEmojiSuggestionsExposure({ location: "ChatInputFocusedWithText" });
-          const obj = c0(12828);
+          const result = c0(12826).trackMobileEmojiSuggestionsExposure({ location: "ChatInputFocusedWithText" });
+          const obj = c0(12826);
         }
       };
       obj.handleTextOrFocusChange = function handleTextOrFocusChange(text, focused) {
@@ -1572,7 +1572,7 @@ class ChatInput {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, findNodeHandle: closure_8 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12825).useVoiceMessagesUIStore;
+const useVoiceMessagesUIStore = fn(12823).useVoiceMessagesUIStore;
 const DraftType = fn(8315).DraftType;
 const useChatBottomManagerUIStore = fn(10382);
 ({
@@ -1581,7 +1581,7 @@ const useChatBottomManagerUIStore = fn(10382);
   useChatIsAtBottom: closure_21,
   useChatShowingAutoComplete: closure_22,
 } = useChatBottomManagerUIStore);
-const ChatInputConstants = fn(12827);
+const ChatInputConstants = fn(12825);
 ({
   CHAT_INPUT_HORIZONTAL_PADDING: closure_23,
   CHAT_INPUT_HORIZONTAL_PADDING_PARENT: closure_24,

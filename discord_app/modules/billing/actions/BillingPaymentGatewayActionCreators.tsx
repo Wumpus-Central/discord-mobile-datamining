@@ -709,7 +709,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
                 if (closure_135_24.has(closure_134_3)) {
                   current = closure_134_4.current;
                   if (null != current) {
-                    const obj8 = { setupIntent: current, error: "Array" };
+                    const obj8 = { setupIntent: current, error: "r" };
                     closure_134_10 = obj8;
                     error = closure_134_10.error;
                     if (

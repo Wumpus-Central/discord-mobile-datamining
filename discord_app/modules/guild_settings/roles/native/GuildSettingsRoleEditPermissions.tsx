@@ -82,7 +82,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         metroImportDefault.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(19862, dependencyMap.paths),
+          asyncRequireImpl(19859, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -108,7 +108,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(19859), { role }), , ,];
+  const children = [closure_14(role(19856), { role }), , ,];
   const obj7 = {
     children: closure_14(guild(7427).SearchBar, {
       size: "md",

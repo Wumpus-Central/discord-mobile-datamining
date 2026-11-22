@@ -12,16 +12,16 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = {
-  bots: fn(12172).RobotIcon,
+  bots: fn(12179).RobotIcon,
   channels: fn(7704).AppsIcon,
-  test_app: fn(17004).BeakerIcon,
+  test_app: fn(17002).BeakerIcon,
   profile_widget: fn(7848).IdCardIcon,
   overlay: fn(7040).GameControllerIcon,
   automod: fn(10133).ShieldIcon,
   collaboration: fn(7038).GroupIcon,
-  only_you: fn(12354).UserIcon,
-  location: fn(12322).MagicWandIcon,
-  server: fn(12464).ServerIcon,
+  only_you: fn(12361).UserIcon,
+  location: fn(12329).MagicWandIcon,
+  server: fn(12471).ServerIcon,
   settings: fn(10371).SettingsIcon,
 };
 const createStyles = fn(4913);

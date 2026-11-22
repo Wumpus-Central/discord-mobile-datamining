@@ -7,7 +7,7 @@ import CreateChannelModalActionCreatorsDefault from "../../../../../actions/nati
 import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/GuildSettingsActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import GuildDirectoryAddModalActionCreatorsDefault from "../../../../directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx";
-import _modDef13729 from "../../../../../../_runtime/metro/13729__.js";
+import _modDef13727 from "../../../../../../_runtime/metro/13727__.js";
 import HappeningNowCardDefault from "HappeningNowCard.tsx";
 import _modDef17613 from "../../../../../../_runtime/metro/17613__.js";
 import _modDef17614 from "../../../../../../_runtime/metro/17614__.js";
@@ -19,7 +19,7 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16701);
+const HappeningNowConstants = fn(16699);
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, InstantInviteSources: closure_10 } = Constants);
@@ -167,7 +167,7 @@ export function HappeningNowStudentHubAddServer(guildId) {
     }
     tmp4 = null != guild && null != defaultChannel;
   }, items);
-  obj.imageSource = _modDef13729;
+  obj.imageSource = _modDef13727;
   obj.onPress = callback;
   const intl = guildId(1112).intl;
   obj.text = intl.string(guildId(1112).t.emRpdS);

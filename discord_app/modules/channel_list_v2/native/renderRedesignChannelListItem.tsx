@@ -497,7 +497,7 @@ export function renderChannelListItem(arg0) {
         const guildActionSection1 = guildChannels.getGuildActionSection();
         let tmp46Result = null;
         if (row < guildActionSection1.getRows().length - 1) {
-          tmp46Result = closure_18(selectedChannelId(13151), {});
+          tmp46Result = closure_18(selectedChannelId(13149), {});
         }
         const obj19 = { children: null };
         items[1] = tmp46Result;
@@ -521,7 +521,7 @@ export function renderChannelListItem(arg0) {
         const guildActionSection2 = guildChannels.getGuildActionSection();
         let tmp31Result = null;
         if (row < guildActionSection2.getRows().length - 1) {
-          tmp31Result = closure_18(selectedChannelId(13151), {});
+          tmp31Result = closure_18(selectedChannelId(13149), {});
         }
         const obj25 = { children: null };
         items1[1] = tmp31Result;

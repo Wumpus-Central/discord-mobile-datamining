@@ -13,7 +13,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(16981).WrenchIcon,
+  IconComponent: fn(16979).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {

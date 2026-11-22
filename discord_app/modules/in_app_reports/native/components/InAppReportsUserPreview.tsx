@@ -45,7 +45,7 @@ export default function UserPreview(user) {
   const items1 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
   obj4.style = items1;
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items2 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "r" })];
+  const items2 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" })];
   const obj6 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {

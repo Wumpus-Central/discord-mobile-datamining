@@ -81,7 +81,7 @@ let items = [
     id: "hangout",
     title: fn(1112).t.ScXySs,
     description: fn(1112).t.DSCqxM,
-    Icon: fn(14439).BumpingFistsSpotIllustration,
+    Icon: fn(14437).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -89,7 +89,7 @@ const obj15 = {
   id: "hangout",
   title: fn(1112).t.ScXySs,
   description: fn(1112).t.DSCqxM,
-  Icon: fn(14439).BumpingFistsSpotIllustration,
+  Icon: fn(14437).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",

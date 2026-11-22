@@ -777,7 +777,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
       str2 = "auto";
     }
     obj14.pointerEvents = str2;
-    const obj15 = { frameId, level: tmp2(15756).FrameStackLevel.AboveAppContent, presentation };
+    const obj15 = { frameId, level: tmp2(15754).FrameStackLevel.AboveAppContent, presentation };
     const items17 = [c10(FrameRenderTargetDefault, obj15)];
     let tmp63Result2 = null;
     if (tmp8) {

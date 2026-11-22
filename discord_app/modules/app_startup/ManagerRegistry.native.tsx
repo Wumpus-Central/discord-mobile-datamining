@@ -120,6 +120,7 @@ const obj = {
   ParentalConsentWarningManager: null,
   ParticipantFocusManager: null,
   MobileGiftIntentCardManager: null,
+  PhoenixRolloutManager: null,
   PromotionsManager: null,
   ProximitySensorManager: null,
   PushNotificationCacheManager: null,
@@ -760,6 +761,13 @@ obj.MobileGiftIntentCardManager = {
   },
   neverLoadBeforeConnectionOpen: true,
   hasStoreChangeListeners: true,
+};
+obj.PhoenixRolloutManager = {
+  actions: ["POST_CONNECTION_OPEN"],
+  inlineRequire() {
+    return require("PhoenixRolloutManager").default;
+  },
+  neverLoadBeforeConnectionOpen: true,
 };
 obj.PromotionsManager = {
   actions: [

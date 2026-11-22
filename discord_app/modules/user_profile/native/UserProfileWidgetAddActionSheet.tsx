@@ -103,7 +103,7 @@ function ServerWidgetOptionRow(widget) {
   }
   const obj2 = { icon: null, label: null, subLabel: null, onPress: null };
   const obj = widget(6864);
-  obj2.icon = closure_6(widget(7045).TableRow.Icon, { IconComponent: widget(13002).CirclePlusIcon });
+  obj2.icon = closure_6(widget(7045).TableRow.Icon, { IconComponent: widget(13000).CirclePlusIcon });
   obj2.label = str;
   const intl = tmp(1112).intl;
   obj2.subLabel = intl.formatToPlainString(_modDef4190.ZZywee, { applicationName: str });

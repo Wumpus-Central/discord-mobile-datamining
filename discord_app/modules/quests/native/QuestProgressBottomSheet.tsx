@@ -47,7 +47,7 @@ function QuestProgressBottomSheet(quest) {
   const formatToPlainStringResult = intl.formatToPlainString(quest(1112).t.EAYZAr, {
     questName: quest.config.messages.questName,
   });
-  const tmpResult4 = quest(13756);
+  const tmpResult4 = quest(13754);
   const userStatus = quest.userStatus;
   let completedAt;
   const questsInstructionsToWinReward = tmpResult4.useQuestsInstructionsToWinReward({
@@ -76,7 +76,7 @@ function QuestProgressBottomSheet(quest) {
   };
   const isQuestAccessSuspended = quest(9958).useIsQuestAccessSuspended();
   const tmpResult5 = quest(9958);
-  const tmpResult6 = quest(16509);
+  const tmpResult6 = quest(16507);
   const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({
     quest,
     questContent: quest(6561).QuestContent.RUNNING_ACTIVITY,
@@ -200,7 +200,7 @@ function QuestProgressBottomSheet(quest) {
     num = 56;
   }
   size.width = num;
-  obj11.children = closure_11(claim(13752), size);
+  obj11.children = closure_11(claim(13750), size);
   items3[2] = closure_11(closure_5, obj11);
   const obj12 = { style: tmp4.contextMenuContainer, children: null };
   const obj13 = {
@@ -220,10 +220,10 @@ function QuestProgressBottomSheet(quest) {
     sourceQuestContent: null,
     children: null,
   };
-  const tmp6Result4 = claim(13752);
+  const tmp6Result4 = claim(13750);
   obj14.sourceQuestContent = quest(6561).QuestContent.RUNNING_ACTIVITY;
   obj14.children = contextMenuButton;
-  items5[1] = closure_11(claim(16537), obj14);
+  items5[1] = closure_11(claim(16535), obj14);
   obj12.children = items5;
   items3[3] = closure_12(closure_5, obj12);
   obj7.children = items3;
@@ -284,7 +284,7 @@ function QuestProgressBottomSheet(quest) {
   let tmp6Result6;
   if (isQuestAccessSuspended) {
     if (tmp14) {
-      tmp6Result6 = tmp6(16504);
+      tmp6Result6 = tmp6(16502);
     }
   }
   const obj20 = { handleDisabled: true, startExpanded: true, children: null };
@@ -407,7 +407,7 @@ export default function QuestProgressBottomSheetConnected(questId) {
         return closure_2_11(QuestProgressBottomSheet, { quest: stateFromStores });
       },
     };
-    tmp4 = closure_11(tmp(13759).QuestContentImpressionTrackerNative, obj2);
+    tmp4 = closure_11(tmp(13757).QuestContentImpressionTrackerNative, obj2);
   }
   return tmp4;
 }

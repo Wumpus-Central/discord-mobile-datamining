@@ -27,9 +27,9 @@ function triggerHapticGuarded() {
   }
 }
 let AppState = fn(17).AppState;
-const VoiceMessagesUIStore = fn(12825);
+const VoiceMessagesUIStore = fn(12823);
 ({ setIsVoiceMessageButtonMounted: closure_11, setIsUsingHoldGesture: closure_12, setVoiceMessageAnimationState: map1, showVoiceMessagesTooltip: closure_14, useVoiceMessagesUIStore: closure_15, setShowRecordingOverlay: closure_16, hideVoiceMessagesTooltip: closure_17 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12826);
+const VoiceMessageConstants = fn(12824);
 ({ VoiceMessageAnimationState: closure_18, VOICE_RECORDING_MIN_DURATION_MILLIS: closure_19 } = VoiceMessageConstants);
 const Constants = fn(1071);
 ({ ComponentActions: closure_20, ComponentActionsKeyed: closure_21, MessageFlags: closure_22 } = Constants);
@@ -78,20 +78,20 @@ export default noop.memo(function VoiceMessageButton(disabled) {
   closure_9 = noop.useRef(null);
   const tmp13 = useChatWidthDefault();
   _require = sharedValue(function*(arg0) {
-    yield c0(13121).endAudioRecording();
+    yield c0(13119).endAudioRecording();
     closure_129_2 = value;
     const data = closure_129_2.data;
     const startTimeMillis = closure_129_2.startTimeMillis;
     closure_1_6(false);
     if (closure_129_0) {
       closure_1_9.current = closure_129_1;
-      let result = c0(13121).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
+      let result = c0(13119).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
     }
     if (data.durationSecs < closure_2_19 / 1000) {
-      const result1 = c0(13121).emitVoiceMessageRecorded(c0(12411).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
+      const result1 = c0(13119).emitVoiceMessageRecorded(c0(12418).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
       _undefined();
     }
-    const result2 = c0(13121).emitVoiceMessageRecorded(c0(12411).VoiceMessageRecordingResult.SENT, data.durationSecs, startTimeMillis);
+    const result2 = c0(13119).emitVoiceMessageRecorded(c0(12418).VoiceMessageRecordingResult.SENT, data.durationSecs, startTimeMillis);
     const channel2 = channel.getChannel(closure_1);
     if (null != channel2) {
       const cloudUpload = new c0(8468).CloudUpload({ uri: data.filename, originalUri: data.filename, mimeType: "audio/ogg", filename: "voice-message.ogg", platform: c0(8445).UploadPlatform.REACT_NATIVE, durationSecs: data.durationSecs, waveform: data.waveform }, channel2.id);
@@ -115,15 +115,15 @@ export default noop.memo(function VoiceMessageButton(disabled) {
       const merged = Object.assign(sendMessageOptionsForReply);
       tmp2(8250).sendMessage(id, { content: "", tts: false, invalidEmojis: [], validNonShortcutEmojis: [] }, undefined, obj17);
       tmp2(8250);
-      c0(12133).deletePendingReply(closure_1);
-      c0(12133);
+      c0(12140).deletePendingReply(closure_1);
+      c0(12140);
       tmp2(8250);
     }
     yield "HermesInternal";
     closure_1 = tmp2;
     ({ isCancelling: closure_129_0, cancelReason } = closure_0);
     if (cancelReason === undefined) {
-      cancelReason = c0(12411).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
+      cancelReason = c0(12418).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
     }
     closure_129_1 = cancelReason;
     return "Path";
@@ -256,7 +256,7 @@ export default noop.memo(function VoiceMessageButton(disabled) {
               closure_1_6(false);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: cancel(13121).endAudioRecording(), done: false };
+              const obj5 = { value: cancel(13119).endAudioRecording(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -264,8 +264,8 @@ export default noop.memo(function VoiceMessageButton(disabled) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_0 = value;
-            const result = cancel(13121).emitVoiceMessageRecorded(cancel(12411).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_128_0.data.durationSecs, closure_128_0.startTimeMillis);
-            const obj = cancel(13121);
+            const result = cancel(13119).emitVoiceMessageRecorded(cancel(12418).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_128_0.data.durationSecs, closure_128_0.startTimeMillis);
+            const obj = cancel(13119);
           }
           c3 = 3;
           const obj6 = { value, done: true };

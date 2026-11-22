@@ -374,7 +374,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const items5 = [closure_10(closure_6, obj6), , , ,];
     const obj18 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj19 = { size: "sm", color: tmp4(575).unsafe_rawColors.WHITE };
-    obj18.icon = closure_9(tmp7(12468).GiftIcon, obj19);
+    obj18.icon = closure_9(tmp7(12475).GiftIcon, obj19);
     const intl4 = tmp7(1112).intl;
     obj18.text = intl4.string(tmp4(2920).DZnomS);
     obj18.onPress = function onPress() {
@@ -395,9 +395,9 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj22.children = intl5.string(tmp4(2920).WZ4cXA);
     const items6 = [closure_9(tmp7(5504).Text, obj22)];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(14194).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(14192).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(12799).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(12797).ChevronSmallDownIcon;
     }
     const obj23 = { color: tmp4(575).colors.INTERACTIVE_ICON_DEFAULT };
     items6[1] = closure_9(ChevronSmallDownIcon, obj23);

@@ -41,10 +41,10 @@ export default function ConjureChannelRow(selected) {
   }, items);
   ({ hasUnread, badgeCount } = useConjureGuildUnreadSummaryDefault(id));
   if (true === selected) {
-    let DEFAULT = id(13250).ChannelModes.SELECTED;
+    let DEFAULT = id(13248).ChannelModes.SELECTED;
     let tmp7 = id;
   } else {
-    const ChannelModes = id(13250).ChannelModes;
+    const ChannelModes = id(13248).ChannelModes;
     if (hasUnread) {
       DEFAULT = ChannelModes.UNREAD_IMPORTANT;
       tmp7 = tmp6;
@@ -75,9 +75,9 @@ export default function ConjureChannelRow(selected) {
   const intl2 = tmp7(1112).intl;
   obj2.name = intl2.string(_modDef4190.uk6jhJ);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp7(13250).BaseChannelName, { name: null, mode: null });
+  obj.name = jsx(tmp7(13248).BaseChannelName, { name: null, mode: null });
   const tmp3Result = BaseChannelItemDefault;
-  obj.icon = jsx(tmp7(13250).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12322).MagicWandIcon });
+  obj.icon = jsx(tmp7(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12329).MagicWandIcon });
   let tmp9Result = null;
   if (badgeCount > 0) {
     const obj4 = { style: tmp.badge, children: null };

@@ -44,7 +44,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16667).PaintPaletteIcon,
+  IconComponent: fn(16665).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1071).UserSettingsSections.APPEARANCE,

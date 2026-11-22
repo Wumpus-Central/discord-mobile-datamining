@@ -26,5 +26,5 @@ export function showPushNotificationPromptModal(onComplete) {
       onComplete();
     },
   };
-  const result = onComplete(13284).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  const result = onComplete(13282).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 }

@@ -465,13 +465,13 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(12313).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                    if (ok.code === closure_0(12320).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                       project = closure_0(6933).getProject(projectId);
                       project.catch(() => {});
                       const tmp9Result = closure_0(6933);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(12313)(ok));
+                    const error = new Error(closure_1(12320)(ok));
                     throw error;
                   }
                 })
@@ -480,7 +480,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                     const channel_skipped = result;
                     const intl = project(1112).intl;
                     closure_5.showConfirmation(intl.string(closure_1_1(4190).S6Px3n));
-                    const conjurePublishEval = project(12314).requestConjurePublishEval(projectId);
+                    const conjurePublishEval = project(12321).requestConjurePublishEval(projectId);
                     if (null != channel_skipped.guildId) {
                       const tmpResult = project(6954);
                       const profile = tmpResult.fetchProfile(project(6955).conjureProductionBotUserId(closure_4), {
@@ -489,9 +489,9 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                       profile.catch(() => {});
                       const tmpResult3 = project(6955);
                     }
-                    const obj = project(12314);
-                    result = project(12310).refreshPublishedProject(projectId, { isPreview: false });
-                    const tmpResult4 = project(12310);
+                    const obj = project(12321);
+                    result = project(12317).refreshPublishedProject(projectId, { isPreview: false });
+                    const tmpResult4 = project(12317);
                     const catchPromise1 = result.catch(() => {});
                     const nextPromise = result
                       .catch(() => {})
@@ -563,13 +563,13 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(12313).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                    if (ok.code === closure_0(12320).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                       project = closure_0(6933).getProject(projectId);
                       project.catch(() => {});
                       const tmp9Result = closure_0(6933);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(12313)(ok));
+                    const error = new Error(closure_1(12320)(ok));
                     throw error;
                   }
                 });
@@ -1009,13 +1009,13 @@ let closure_30 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f137741 = requestConsent;
+                  f137757 = requestConsent;
                   if (requestConsent == null) {
-                    f137741 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f137757 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f137741(closure_0), done: false };
+                  const obj5 = { value: f137757(closure_0), done: false };
                   return obj5;
                 }
               }

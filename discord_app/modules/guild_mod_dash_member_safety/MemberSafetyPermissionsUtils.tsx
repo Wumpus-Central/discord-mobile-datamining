@@ -207,7 +207,7 @@ export function useCanAccessBulkActions(guildId) {
     location: "Members page bulk actions",
   }).enabled;
   closure_131_0 = guildId;
-  const obj4 = { guildId, location: "Members page bulk actions" };
+  let obj4 = { guildId, location: "Members page bulk actions" };
   const items4 = [GuildStore, UserStore];
   const items5 = [guildId];
   const stateFromStores2 = require("initialize").useStateFromStores(
@@ -231,12 +231,17 @@ export function useCanAccessBulkActions(guildId) {
       [obj, obj2] = items;
       guild = obj.getGuild(closure_0);
       const currentUser = obj2.getCurrentUser();
+      const obj3 = { role: PermissionStore.can(constants2.MANAGE_ROLES, undefined), kick: null, timeout: null };
       const tmp = _slicedToArray(items, 2);
-      return {
-        role: PermissionStore.can(constants2.MANAGE_ROLES, undefined),
-        kick: PermissionStore.can(constants2.KICK_MEMBERS, undefined),
-        timeout: PermissionStore.can(constants2.MODERATE_MEMBERS, undefined),
-      };
+      obj3.kick = PermissionStore.can(
+        BigFlagUtilsAll.combine(constants2.MANAGE_GUILD, constants2.KICK_MEMBERS),
+        undefined,
+      );
+      obj3.timeout = PermissionStore.can(
+        BigFlagUtilsAll.combine(constants2.MANAGE_GUILD, constants2.MODERATE_MEMBERS),
+        undefined,
+      );
+      return obj3;
     },
     items7,
   );

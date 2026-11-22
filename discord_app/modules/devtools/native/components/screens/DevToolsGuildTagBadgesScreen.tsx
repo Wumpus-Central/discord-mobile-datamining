@@ -28,7 +28,7 @@ let closure_9 = found.map((item) => {
   return { name, value };
 });
 let items = [
-  { label: "Untinted", primary: "dispatch", secondary: "it" },
+  { label: "Untinted", primary: "disabled", secondary: "it" },
   ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({
     label: "P" + index + 1,
     primary: primary.primary,

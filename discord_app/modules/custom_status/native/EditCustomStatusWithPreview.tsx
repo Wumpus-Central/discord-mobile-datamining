@@ -318,7 +318,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14210, dependencyMap.paths),
+        asyncRequireImpl(14208, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );

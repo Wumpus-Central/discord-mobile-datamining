@@ -233,11 +233,11 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(13282);
+const NotificationPermissionConstants = fn(13280);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1071);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(13585).ContactPermissions;
+const ContactPermissions = fn(13583).ContactPermissions;
 let closure_12 = fn(6496).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };

@@ -75,7 +75,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12446, dependencyMap.paths),
+        asyncRequireImpl(12453, dependencyMap.paths),
         "AppealIngestionFreeTextAppealReasonActionSheet",
         obj3,
       );
@@ -85,14 +85,14 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(12418).useSafetyHubAppealSignal();
+  dependencyMap = isDsaEligible(12425).useSafetyHubAppealSignal();
   const intl = isDsaEligible(1112).intl;
-  let obj = isDsaEligible(12418);
+  let obj = isDsaEligible(12425);
   const intl2 = isDsaEligible(1112).intl;
   const stringResult = intl.string(isDsaEligible(1112).t["C5q+pW"]);
   let obj2 = { children: null };
   items = [
-    closure_6(isDsaEligible(12435).AppealIngestionModalHeader, {
+    closure_6(isDsaEligible(12442).AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: intl2.string(isDsaEligible(1112).t.VEcRhw),
     }),
@@ -123,5 +123,5 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj3.children = closure_7(isDsaEligible(7709).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
   obj2.children = items;
-  return closure_7(isDsaEligible(12435).AppealIngestionModalScreen, obj2);
+  return closure_7(isDsaEligible(12442).AppealIngestionModalScreen, obj2);
 }

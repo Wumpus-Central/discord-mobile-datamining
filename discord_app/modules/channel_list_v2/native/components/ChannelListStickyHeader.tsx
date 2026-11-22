@@ -191,7 +191,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp25Result6 = null;
   if (flag) {
     const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
-    tmp25Result6 = closure_6(tmp2(13153), obj16);
+    tmp25Result6 = closure_6(tmp2(13151), obj16);
   }
   items7[1] = tmp25Result6;
   if (tmp25Result7) {

@@ -74,7 +74,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
   const obj4 = { spacing: 24, children: null };
   let items1 = [
     closure_8(first(11278).SegmentedControl, { state: segmentedControlState }),
-    closure_8(first(13536).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(13534).SegmentedControlPages, { state: segmentedControlState }),
   ];
   const obj5 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [

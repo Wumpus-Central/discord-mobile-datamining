@@ -15,7 +15,7 @@ const Constants = fn(1071);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const EXPIRING_SOON_SHEET = fn(15854).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
+const EXPIRING_SOON_SHEET = fn(15852).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiringPromoSheet.tsx");
 

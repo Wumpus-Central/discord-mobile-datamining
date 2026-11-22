@@ -135,7 +135,7 @@ function IconOrPreview(arg0) {
       obj3.children = closure_10(tmp2(11081), obj8);
       return closure_10(closure_4, obj3);
     } else {
-      if (tmp2(13523)(activity)) {
+      if (tmp2(13521)(activity)) {
         const intl4 = tmp28(1112).intl;
         let stringResult = intl4.string(tmp28(1112).t.rmnkz4);
       } else {
@@ -146,7 +146,7 @@ function IconOrPreview(arg0) {
         if (type === tmp28(5652).ActivityTypes.LISTENING) {
           const intl3 = tmp28(1112).intl;
           stringResult = intl3.string(tmp28(1112).t.kUEnxN);
-        } else if (tmp2(14458)(activity)) {
+        } else if (tmp2(14456)(activity)) {
           const intl2 = tmp28(1112).intl;
           stringResult = intl2.string(tmp28(1112).t.T0uYK9);
         } else {
@@ -200,7 +200,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16701);
+const HappeningNowConstants = fn(16699);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: metroImportDefault,
@@ -372,8 +372,8 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12199, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12199, dependencyMap.paths);
+      asyncRequireImpl(12206, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(12206, dependencyMap.paths);
     } else {
       asyncRequireImpl(8067, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),

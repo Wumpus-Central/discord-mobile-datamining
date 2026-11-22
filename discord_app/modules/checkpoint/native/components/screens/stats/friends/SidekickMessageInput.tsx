@@ -232,7 +232,7 @@ export default function SidekickMessageInput(user) {
     let obj5 = {
       onPress: function handleGift() {
         React4.dismiss();
-        const result = Tracking.trackCheckpoint2026GiftCtaClicked(user.id);
+        const result = Tracking.trackCheckpoint2026GiftCTAClicked(user.id);
         const obj3 = { recipientUserId: user.id, analyticsLocations: null };
         items = [AnalyticsLocationDefault.CHECKPOINT, AnalyticsLocationDefault.CHECKPOINT_SIDEKICK];
         obj3.analyticsLocations = items;

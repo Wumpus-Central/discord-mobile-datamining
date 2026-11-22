@@ -71,10 +71,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj2 = {
         headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+          return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
         },
         render() {
-          return closure_2_12(flag(12436), { isDsaEligible, isCoppa, isDeveloperClassification });
+          return closure_2_12(flag(12443), { isDsaEligible, isCoppa, isDeveloperClassification });
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
         impressionProperties,
@@ -89,10 +89,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj4.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj4.render = function render() {
-        return closure_2_12(flag(12445), { isDsaEligible });
+        return closure_2_12(flag(12452), { isDsaEligible });
       };
       obj4.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL;
       obj4.impressionProperties = impressionProperties;
@@ -106,10 +106,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj6.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj6.render = function render() {
-        return closure_2_12(flag(12447), { isDsaEligible });
+        return closure_2_12(flag(12454), { isDsaEligible });
       };
       obj6.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION;
       obj6.impressionProperties = impressionProperties;
@@ -123,10 +123,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj8.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj8.render = function render() {
-        return closure_1_12(isCoppa(12449), {});
+        return closure_1_12(isCoppa(12456), {});
       };
       obj8.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
       obj8.impressionProperties = impressionProperties;
@@ -140,10 +140,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj10.render = function render() {
-        return closure_1_12(isCoppa(12451), {});
+        return closure_1_12(isCoppa(12458), {});
       };
       obj10.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_THANKS;
       obj10.impressionProperties = impressionProperties;
@@ -297,7 +297,7 @@ export function AppealIngestionModalScreen(children) {
                 v2 = 2;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp27(12419).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                  value: tmp27(12426).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                   done: false,
                 };
                 return obj6;

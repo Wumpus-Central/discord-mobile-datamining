@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import navigateToThreadCreation from "../../../../threads/native/navigateToThreadCreation.tsx";
-import _modDef13729 from "../../../../../../_runtime/metro/13729__.js";
+import _modDef13727 from "../../../../../../_runtime/metro/13727__.js";
 import ChannelSettingsModal from "../../../../../components_native/channel_settings/ChannelSettingsModal.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -30,7 +30,7 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1112).intl;
     obj2.accessibilityLabel = intl.string(tmp(1112).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13729;
+    obj2.source = _modDef13727;
     tmp5 = closure_9(tmp(8561).HeaderIconButton, obj2);
   }
   return tmp5;

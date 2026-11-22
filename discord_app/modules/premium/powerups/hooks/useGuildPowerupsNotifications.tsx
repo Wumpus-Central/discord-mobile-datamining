@@ -88,7 +88,7 @@ function maybeGetPerkPurchaseablePopoutDCF(guildId, unlockedPowerups, available)
         )
       ) {
         let obj = {
-          type: tmp4(13386).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
+          type: tmp4(13384).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
           powerups: found,
           markAsDismissed(AUTO_DISMISS) {
             const result = GuildDismissibleContentUtils.markContentAsDismissed(
@@ -111,7 +111,7 @@ function maybeGetPerkPurchaseablePopoutDCF(guildId, unlockedPowerups, available)
         )
       ) {
         const obj2 = {
-          type: tmp4(13386).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
+          type: tmp4(13384).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
           powerups: found,
           markAsDismissed(AUTO_DISMISS) {
             const result = GuildDismissibleContentUtils.markContentAsDismissed(
@@ -124,7 +124,7 @@ function maybeGetPerkPurchaseablePopoutDCF(guildId, unlockedPowerups, available)
         };
         tmp6 = obj2;
       }
-      tmp4Result2 = tmp4(13385);
+      tmp4Result2 = tmp4(13383);
     }
     obj = tmp6;
   }
@@ -421,7 +421,7 @@ function useGuildPowerupsChannelListPopout(guildId, stateFromStores1) {
                           type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.LEVEL_REACHED,
                           powerup: tmp15,
                           markAsDismissed(AUTO_DISMISS) {
-                            const result = closure_0(13385).markContentAsDismissed(
+                            const result = closure_0(13383).markContentAsDismissed(
                               dependencyMap,
                               closure_0,
                               true,
@@ -459,7 +459,7 @@ function useGuildPowerupsChannelListPopout(guildId, stateFromStores1) {
                                 type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType
                                   .GAME_SERVER_HOSTING_GUILD_ELIGIBLE,
                                 markAsDismissed(AUTO_DISMISS) {
-                                  const result = closure_0(13385).markContentAsDismissed(
+                                  const result = closure_0(13383).markContentAsDismissed(
                                     closure_0(4746).DismissibleGuildContent
                                       .GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK,
                                     closure_0,
@@ -651,16 +651,16 @@ export function maybeGetLevelUnlockedPopoutDCF(guildId, arg1) {
         }
         if (null != tmp6) {
           const obj = {
-            type: tmp(13386).GuildPowerupNotificationPopoutType.LEVEL_REACHED,
+            type: tmp(13384).GuildPowerupNotificationPopoutType.LEVEL_REACHED,
             powerup: tmp6,
             markAsDismissed(AUTO_DISMISS) {
-              const result = closure_0(13385).markContentAsDismissed(dependencyMap, closure_0, true, AUTO_DISMISS);
+              const result = closure_0(13383).markContentAsDismissed(dependencyMap, closure_0, true, AUTO_DISMISS);
             },
           };
           return obj;
         }
       }
-      tmpResult = tmp(13385);
+      tmpResult = tmp(13383);
     }
   }
 }
@@ -678,9 +678,9 @@ export function maybeGetGameServerHostingGuildEligiblePopoutDCF(guildId, arg1, a
             )
           ) {
             const obj2 = {
-              type: tmp(13386).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_GUILD_ELIGIBLE,
+              type: tmp(13384).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_GUILD_ELIGIBLE,
               markAsDismissed(AUTO_DISMISS) {
-                const result = closure_0(13385).markContentAsDismissed(
+                const result = closure_0(13383).markContentAsDismissed(
                   closure_0(4746).DismissibleGuildContent.GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK,
                   closure_0,
                   true,
@@ -690,7 +690,7 @@ export function maybeGetGameServerHostingGuildEligiblePopoutDCF(guildId, arg1, a
             };
             return obj2;
           }
-          tmpResult = tmp(13385);
+          tmpResult = tmp(13383);
         }
       }
     }

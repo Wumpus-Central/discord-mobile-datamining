@@ -521,7 +521,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
   const items2 = [
-    closure_11(View, { style: tmp.art, children: closure_11(navigation(12475).FamilyShieldSpotIllustration, {}) }),
+    closure_11(View, { style: tmp.art, children: closure_11(navigation(12482).FamilyShieldSpotIllustration, {}) }),
     ,
   ];
   const obj5 = {
@@ -572,7 +572,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5511).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6545).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(12242).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(12249).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(7811).ModalScreen, obj6);
 }
@@ -925,7 +925,7 @@ export default function FamilyCenterRequestModal(userId) {
     return obj;
   }, items);
   let obj = {
-    initialRouteName: userId(12459).FamilyCenterModalRequestSections.PREREQ_LOADING,
+    initialRouteName: userId(12466).FamilyCenterModalRequestSections.PREREQ_LOADING,
     screens: memo,
     headerBackTitle: null,
   };

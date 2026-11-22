@@ -66,7 +66,7 @@ export function conjureChatMoreSections(project) {
     const obj3 = { kind: "action", key: "refresh", label: null, IconComponent: null, onPress: null };
     const intl4 = tmp2(1112).intl;
     obj3.label = intl4.string(_modDef4190["p4B/7M"]);
-    obj3.IconComponent = tmp2(14368).RefreshIcon;
+    obj3.IconComponent = tmp2(14366).RefreshIcon;
     obj3.onPress = onRefresh;
     items.push(obj3);
   }
@@ -142,7 +142,7 @@ export function conjureChatMoreSections(project) {
     const obj7 = { kind: "action", key: "import", label: null, IconComponent: null, onPress: null };
     const intl9 = tmp2(1112).intl;
     obj7.label = intl9.string(_modDef4190.rWGY3e);
-    obj7.IconComponent = tmp2(16957).FileUpIcon;
+    obj7.IconComponent = tmp2(16955).FileUpIcon;
     obj7.onPress = function onPress() {
       return conjureProjectActions.importConjureProject(project);
     };

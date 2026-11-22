@@ -28,7 +28,7 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
       tmp6Result = timestampProducer(native.Avatar, obj2);
     }
     const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
@@ -113,7 +113,7 @@ export default function SelectConnectionActionSheet(arg0) {
       let tmp = null;
       if (null != application) {
         const obj = { icon: null, label: null, subLabel: null, onPress: null };
-        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "r" };
+        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "Array" };
         obj.icon = closure_1_6(require("native").Avatar, obj2);
         obj.label = application.name;
         let description;

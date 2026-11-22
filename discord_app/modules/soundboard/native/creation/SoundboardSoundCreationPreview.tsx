@@ -198,7 +198,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(19800).loadSoundboardAudioPreview(c4, closure_2_0(19800).WAVEFORM_BAR_COUNT);
+      await closure_2_0(19797).loadSoundboardAudioPreview(c4, closure_2_0(19797).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {

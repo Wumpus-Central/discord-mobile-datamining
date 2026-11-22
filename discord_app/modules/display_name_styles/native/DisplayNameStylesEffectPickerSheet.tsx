@@ -118,7 +118,7 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   EFFECT_ORDER = undefined;
   const tmp = closure_10();
   let obj = userId(8149);
-  const displayNameStylesNewEffects = userId(16743).useDisplayNameStylesNewEffects(EFFECT_ORDER);
+  const displayNameStylesNewEffects = userId(16741).useDisplayNameStylesNewEffects(EFFECT_ORDER);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -137,7 +137,7 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     obj5.text = intl2.string(tmp2(1112).t.XqMe3N);
     obj5.onPress = tmp8;
     obj4.trailing = closure_8(tmp2(5511).Button, obj5);
-    obj3.header = closure_8(onSelectEffect(16746), obj4);
+    obj3.header = closure_8(onSelectEffect(16744), obj4);
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.contentContainer, children: null };
     const obj8 = {
@@ -168,7 +168,7 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     obj6.children = closure_8(closure_5, obj7);
     obj3.children = closure_8(closure_5, obj6);
     tmp9 = closure_8(tmp2(5141).BottomSheet, obj3);
-    const tmp12 = onSelectEffect(16746);
+    const tmp12 = onSelectEffect(16744);
   }
   return tmp9;
 }

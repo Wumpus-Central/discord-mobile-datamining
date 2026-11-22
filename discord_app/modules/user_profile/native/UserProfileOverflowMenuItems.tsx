@@ -135,7 +135,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14436, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14434, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {

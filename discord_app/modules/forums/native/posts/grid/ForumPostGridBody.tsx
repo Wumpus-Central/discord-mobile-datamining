@@ -5,8 +5,8 @@ import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ForumPostMediaUtils from "../../../ForumPostMediaUtils.tsx";
 import _modDef11660 from "../../../../../../_runtime/metro/11660__.js";
-import _modDef12876 from "../../../../../../_runtime/metro/12876__.js";
-import _modDef12877 from "../../../../../../_runtime/metro/12877__.js";
+import _modDef12874 from "../../../../../../_runtime/metro/12874__.js";
+import _modDef12875 from "../../../../../../_runtime/metro/12875__.js";
 import ForumPostMedia from "../ForumPostMedia.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,13 +16,13 @@ function GIFIcon() {
   const tmp = closure_8();
   return timestampProducer(native.Icon, {
     size: native.Icon.Sizes.CUSTOM,
-    source: _modDef12876,
+    source: _modDef12874,
     disableColor: true,
     style: closure_8().gifIcon,
   });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12877, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12875, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
@@ -238,7 +238,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp14Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12882).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12880).ForumPostAppliedTagPills, obj5);
     tmp14Result = closure_6(View, obj4);
   }
   items6[1] = tmp14Result;

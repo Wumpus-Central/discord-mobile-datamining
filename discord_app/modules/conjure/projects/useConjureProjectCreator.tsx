@@ -111,9 +111,9 @@ export default function useConjureProjectCreator(project) {
         let formatToPlainStringResult = intl.formatToPlainString(_modDef4190.t5RWBS, obj2);
       } else {
         const intl2 = intl(1112).intl;
-        const obj4 = { creator: name, collaborators: intl(12286).getListSummaryLabel(mapped) };
+        const obj4 = { creator: name, collaborators: intl(12293).getListSummaryLabel(mapped) };
         formatToPlainStringResult = intl2.formatToPlainString(_modDef4190["b5uCe/"], obj4);
-        const intlResult = intl(12286);
+        const intlResult = intl(12293);
       }
       obj.label = formatToPlainStringResult;
     }

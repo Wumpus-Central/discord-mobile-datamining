@@ -508,7 +508,7 @@ export default function NewMessageScreen(navigation) {
           obj2.channel = {
             id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "fill",
+            parent_id: "isArray",
           };
           obj.dispatch(obj2);
         };

@@ -290,7 +290,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj44 = { children: null };
     items6[2] = tmp8Result5;
     obj12.children = items6;
-    obj11.children = closure_9(tmp4(16641).SeparatedList, obj12);
+    obj11.children = closure_9(tmp4(16639).SeparatedList, obj12);
     items3[1] = closure_8(closure_6, obj11);
     const obj45 = {
       onPress: function handleShowAllPerks() {

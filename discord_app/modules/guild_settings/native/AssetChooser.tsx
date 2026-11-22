@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef19711 from "../../../../_runtime/metro/19711__.js";
-import _modDef19712 from "../../../../_runtime/metro/19712__.js";
+import _modDef19708 from "../../../../_runtime/metro/19708__.js";
+import _modDef19709 from "../../../../_runtime/metro/19709__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -163,13 +163,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef19711;
+    tmp9Result = _modDef19708;
   }
   items = [metroImportDefault(FastImageDefault, { source: tmp9Result, style: tmp.assetImage })];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef19712 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19709 };
     obj4.children = metroImportDefault(FastImageDefault, obj5);
     tmp5Result = metroImportDefault(React4, obj4);
     const tmp9Result2 = FastImageDefault;

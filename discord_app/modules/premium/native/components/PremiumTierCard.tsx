@@ -9,8 +9,8 @@ import _modDef8868 from "../../../../../_runtime/metro/08868__.js";
 import _modDef9127 from "../../../../../_runtime/metro/09127__.js";
 import _modDef9128 from "../../../../../_runtime/metro/09128__.js";
 import _modDef9218 from "../../../../../_runtime/metro/09218__.js";
-import _modDef14188 from "../../../../../_runtime/metro/14188__.js";
-import _modDef14189 from "../../../../../_runtime/metro/14189__.js";
+import _modDef14186 from "../../../../../_runtime/metro/14186__.js";
+import _modDef14187 from "../../../../../_runtime/metro/14187__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -63,9 +63,9 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef14188;
+    let tmp5Result = _modDef14186;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef14189;
+    tmp5Result = _modDef14187;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8868;
   }

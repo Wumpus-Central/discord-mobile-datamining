@@ -35,7 +35,7 @@ function isNewUserModalInStack() {
   }
   return someResult;
 }
-const ContactSyncModalStore = fn(13584);
+const ContactSyncModalStore = fn(13582);
 ({ initialize: closure_4, ContactSyncModes: hasOwnProperty } = ContactSyncModalStore);
 const prototype = function RedesignNewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

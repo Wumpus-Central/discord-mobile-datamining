@@ -84,12 +84,9 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren:
-      "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})",
-    expandedChildren:
-      "(function pnpm_useGestureHandlerTs2(event){let[gestureSource,source,state,onChange]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);})",
-    children:
-      "(function pnpm_useGestureHandlerTs3(event){let[gestureSource,source,state,GESTURE_SOURCE,onEnd]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);})",
+    externalChildren: 20,
+    expandedChildren: 20,
+    children: 20,
   };
   const guildsBarAnimatedWrapperStyles = restrictedGuild(17872).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
@@ -133,11 +130,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren:
-      "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})",
-    expandedChildren:
-      "(function pnpm_useGestureHandlerTs2(event){let[gestureSource,source,state,onChange]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);})",
-    children:
-      "(function pnpm_useGestureHandlerTs3(event){let[gestureSource,source,state,GESTURE_SOURCE,onEnd]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);})",
+    externalChildren: 20,
+    expandedChildren: 20,
+    children: 20,
   });
 });

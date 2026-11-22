@@ -144,7 +144,7 @@ function ChangeSpendingLimitScreen(teenId) {
       items4[1] = closure_7(tmp2(5511).Button, obj15);
       obj14.children = items4;
       obj13.children = closure_8(tmp2(6545).ButtonGroup, obj14);
-      items3[1] = closure_7(tmp2(12242).ModalFooter, obj13);
+      items3[1] = closure_7(tmp2(12249).ModalFooter, obj13);
       obj12.children = items3;
       return closure_8(tmp2(7811).ModalScreen, obj12);
     } else if (isOverspending) {
@@ -179,7 +179,7 @@ function ChangeSpendingLimitScreen(teenId) {
     obj26.text = intl.string(tmp2(1112).t["ETE/oC"]);
     obj26.onPress = ModalActionCreatorsDefault.pop;
     obj25.children = closure_7(tmp2(5511).Button, obj26);
-    items6[1] = closure_7(tmp2(12242).ModalFooter, obj25);
+    items6[1] = closure_7(tmp2(12249).ModalFooter, obj25);
     obj22.children = items6;
     return closure_8(tmp2(7811).ModalScreen, obj22);
   }

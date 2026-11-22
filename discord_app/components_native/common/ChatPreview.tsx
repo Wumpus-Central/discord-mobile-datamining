@@ -365,9 +365,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 1206.494,
-        selectedChannelId: 966.313,
-        tapLinkData: -3.225,
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

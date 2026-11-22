@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(13915)({
+  const tmp3 = onBuySettled(13913)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

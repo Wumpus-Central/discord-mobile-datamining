@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export function showGuildSettingsModalSoundboardSoundInfoActionSheet(arg0) {
   ({ guildId, soundId } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19812, dependencyMap.paths), c3, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19809, dependencyMap.paths), c3, {
     guildId,
     soundId,
     hideActionSheet() {

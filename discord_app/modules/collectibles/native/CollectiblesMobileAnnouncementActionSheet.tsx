@@ -183,11 +183,11 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   obj5.children = intl.string(markAsDismissed(1112).t.vRCvqo);
   items3[1] = closure_8(markAsDismissed(5504).Text, obj5);
   const obj6 = { style: tmp.featureRows, children: null };
-  const obj7 = { icon: closure_8(markAsDismissed(13639).PaintIllocon, { size: 32 }), text: null };
+  const obj7 = { icon: closure_8(markAsDismissed(13637).PaintIllocon, { size: 32 }), text: null };
   const intl2 = markAsDismissed(1112).intl;
   obj7.text = intl2.string(markAsDismissed(1112).t["6ZWB0C"]);
   const items4 = [closure_8(FeatureRow, obj7), ,];
-  const obj8 = { icon: closure_8(markAsDismissed(13627).HeartIllocon, { size: 32 }), text: null };
+  const obj8 = { icon: closure_8(markAsDismissed(13625).HeartIllocon, { size: 32 }), text: null };
   const intl3 = markAsDismissed(1112).intl;
   obj8.text = intl3.string(markAsDismissed(1112).t.MkVbBY);
   items4[1] = closure_8(FeatureRow, obj8);

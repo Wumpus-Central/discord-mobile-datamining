@@ -221,7 +221,7 @@ let closure_20 = noop.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
     () => openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id),
     items2,
   );
-  const arr5 = subtitle(12929)(channel);
+  const arr5 = subtitle(12927)(channel);
   const obj5 = channel(6543);
   const channelAccessibilityProps = channel(18753).getChannelAccessibilityProps({
     channel,
@@ -315,7 +315,7 @@ let closure_20 = noop.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
     } else {
       tmp31 = closure_14;
       const obj16 = { channel, voiceStates };
-      tmp32 = closure_14(tmp5(13147).VocalChannelJoinButton, obj16);
+      tmp32 = closure_14(tmp5(13145).VocalChannelJoinButton, obj16);
     }
     obj12.end = tmp32;
     obj12.connected = isConnectedToVoiceChannel;

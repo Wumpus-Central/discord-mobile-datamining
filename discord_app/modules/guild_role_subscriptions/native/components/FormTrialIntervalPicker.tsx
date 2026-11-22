@@ -26,8 +26,8 @@ export default function FormTrialIntervalPicker(interval) {
     const intl3 = tmp2(1112).intl;
     let stringResult = intl3.string(tmp2(1112).t.WZG1BU);
   } else {
-    stringResult = tmp2(16634).formatPlanIntervalDuration(interval);
-    const tmp2Result = tmp2(16634);
+    stringResult = tmp2(16632).formatPlanIntervalDuration(interval);
+    const tmp2Result = tmp2(16632);
   }
   obj.trailing = jsx(interval(7045).TableRow.TrailingText, { text: stringResult });
   obj.onPress = function handleSelectTrialInterval() {

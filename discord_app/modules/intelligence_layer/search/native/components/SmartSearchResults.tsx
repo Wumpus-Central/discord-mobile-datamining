@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MAX_PRESENTED_CITATIONS = fn(13201).MAX_PRESENTED_CITATIONS;
+const MAX_PRESENTED_CITATIONS = fn(13199).MAX_PRESENTED_CITATIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
@@ -46,7 +46,7 @@ export function SmartSearchResults(smartSearchQuery) {
       SearchSessionAnalyticsManagerDefault,
     );
     return () => {
-      hasKeywordResults(13223).setAnswer(null, hasKeywordResults(13221));
+      hasKeywordResults(13221).setAnswer(null, hasKeywordResults(13219));
     };
   }, items2);
   let obj = { children: null };

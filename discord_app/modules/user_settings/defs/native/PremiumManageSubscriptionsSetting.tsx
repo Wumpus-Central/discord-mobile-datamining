@@ -23,7 +23,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(16289).SubscriptionIcon,
+  IconComponent: fn(16287).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const set = new Set();
 const obj = {};
-const items = [fn(12714).WIREFRAME_TEXTURE];
+const items = [fn(12712).WIREFRAME_TEXTURE];
 obj[fn(6338).CheckpointCharacterStage.FINALIZE] = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting(

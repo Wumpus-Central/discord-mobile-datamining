@@ -16,7 +16,7 @@ import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageType
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import PollsIcon from "../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import PollCreationModalActionCreators from "PollCreationModalActionCreators.tsx";
-import _modDef13073 from "../../../../_runtime/metro/13073__.js";
+import _modDef13071 from "../../../../_runtime/metro/13071__.js";
 import PollAnswerInputDefault from "PollAnswerInput.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -97,11 +97,11 @@ function AddAnswerButton(onPress) {
     accessibilityLabel: null,
     children: null,
   };
-  const obj = { source: _modDef13073, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
+  const obj = { source: _modDef13071, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.B2Uvme);
   items = [
-    React6(native.Icon, { source: _modDef13073, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color }),
+    React6(native.Icon, { source: _modDef13071, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color }),
   ];
   const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
@@ -113,7 +113,7 @@ function AddAnswerButton(onPress) {
 function PollDurationSelectionRow(selectedDuration) {
   selectedDuration = selectedDuration.selectedDuration;
   const onChange = selectedDuration.onChange;
-  const tmp = onChange(13074)()[selectedDuration];
+  const tmp = onChange(13072)()[selectedDuration];
   let obj = {
     label: null,
     accessibilityLabel: null,
@@ -130,7 +130,7 @@ function PollDurationSelectionRow(selectedDuration) {
   obj.accessibilityHint = intl3.string(selectedDuration(1112).t.A4PJ1o);
   obj.onPress = function handlePollDurationPress() {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13075, dependencyMap.paths), React5, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13073, dependencyMap.paths), React5, {
       selectedDuration,
       onChange,
     });
@@ -258,7 +258,7 @@ export default function PollCreation(channel) {
       intl.formatToPlainString(channel(1112).t.BByGU4, { number: indexToRemove.indexToRemove + 1 }),
     );
   }, []);
-  const tmp10 = onCancel(13076)(channel, callback, callback1);
+  const tmp10 = onCancel(13074)(channel, callback, callback1);
   answers = tmp10.answers;
   ({ question: c4, allowMultiSelect } = tmp10);
   ({
@@ -275,8 +275,8 @@ export default function PollCreation(channel) {
   const setShouldFocusOnInvalidField = tmp10.setShouldFocusOnInvalidField;
   ({ handleQuestionChange, handleSubmitPoll, duration, setDuration } = tmp10);
   const tmp3 = onCancel(5930);
-  closure_18 = channel(13081).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
-  let obj2 = channel(13081);
+  closure_18 = channel(13079).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
+  let obj2 = channel(13079);
   channel(7101).useNavigatorBackPressHandler(() => {
     if (obj.isPollCreationEmpty(c4, answers)) {
       closure_18();
@@ -292,7 +292,7 @@ export default function PollCreation(channel) {
     }
     return flag;
   });
-  const obj5 = onCancel(13082)({
+  const obj5 = onCancel(13080)({
     onAddAnswer() {
       handleAddAnswer();
     },
@@ -356,7 +356,7 @@ export default function PollCreation(channel) {
   if (null != scheduledTimestamp) {
     TEXT_BRAND = tmp(575).colors.TEXT_BRAND;
   }
-  obj10.icon = c9(channel(13083).CalendarPlusIcon, { color: TEXT_BRAND });
+  obj10.icon = c9(channel(13081).CalendarPlusIcon, { color: TEXT_BRAND });
   obj10.onPress = function onPress() {
     const obj2 = { onSelect, currentTimestamp: scheduledTimestamp, onClear: null, entryPoint: null, channelId: null };
     let fn;
@@ -393,8 +393,8 @@ export default function PollCreation(channel) {
       anyErrorMessage = createPollError.getAnyErrorMessage();
     }
     const obj13 = { children: anyErrorMessage };
-    tmp13Result = tmp13(tmp(13085), obj13);
-    let tmpResult = tmp(13085);
+    tmp13Result = tmp13(tmp(13083), obj13);
+    let tmpResult = tmp(13083);
   }
   const items6 = [tmp13Result, ,];
   const obj14 = {

@@ -9,7 +9,7 @@ import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import _modDef11007 from "../../../../_runtime/metro/11007__.js";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef14844 from "../../../../_runtime/metro/14844__.js";
+import _modDef14842 from "../../../../_runtime/metro/14842__.js";
 import _modDef19379 from "../../../../_runtime/metro/19379__.js";
 import _modDef19380 from "../../../../_runtime/metro/19380__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -155,7 +155,7 @@ export function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef14844;
+  obj.icon = _modDef14842;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -166,7 +166,7 @@ export function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef14844;
+  obj.icon = _modDef14842;
   obj.onPress = function onPress() {
     items = [closure_1_7];
     const json = require("LogAggregator").stringify(items);

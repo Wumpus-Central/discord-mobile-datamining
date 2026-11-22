@@ -6,10 +6,10 @@ import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import useCodedLinksExperimentEmbeds from "../../../../../../experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx";
 import useLegacyExperiments from "../../../../../../experiments/client_override_hooks/useLegacyExperiments.tsx";
 import useApexExperiments from "../../../../../../experiments/client_override_hooks/useApexExperiments.tsx";
-import _modDef12326 from "../../../../../../../../_runtime/metro/12326__.js";
-import _modDef12327 from "../../../../../../../../_runtime/metro/12327__.js";
+import _modDef12333 from "../../../../../../../../_runtime/metro/12333__.js";
+import _modDef12334 from "../../../../../../../../_runtime/metro/12334__.js";
 import useExperimentAssignments from "../../../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
-import _modDef12329 from "../../../../../../../../_runtime/metro/12329__.js";
+import _modDef12336 from "../../../../../../../../_runtime/metro/12336__.js";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../../stores/AuthenticationStore.tsx";
 
@@ -190,7 +190,7 @@ export function createExperimentEmbed(url, theme) {
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12329);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12336);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor =
           null != tmp12 && null != iter && tmp12.variantId === iter.value
@@ -225,7 +225,7 @@ export function createExperimentEmbed(url, theme) {
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12329);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12336);
         ({
           backgroundColor: obj13.thumbnailBackgroundColor,
           acceptLabelGreenColor: obj13.acceptLabelColor,
@@ -254,9 +254,9 @@ export function createExperimentEmbed(url, theme) {
     "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef12326;
+    let tmpResult = _modDef12333;
   } else {
-    tmpResult = _modDef12327;
+    tmpResult = _modDef12334;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

@@ -47,7 +47,7 @@ class MarkupText {
     tmp3 = closure_0;
     tmp4 = closure_2;
     if (closure_3.useContext(closure_0(closure_2[10]).SpoilerHiddenContext)) {
-      obj = { style: null, onPress: "analyticsLocations", onLongPress: "channelId", accessibilityRole: "position" };
+      obj = { style: null, onPress: "channel", onLongPress: "done", accessibilityRole: "getCurrentUser" };
       items = [,];
       items[0] = merged.style;
       tmp5 = closure_14;
@@ -550,7 +550,7 @@ function MarkupStaticRouteLink(state) {
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_16();
-  let SignPostIcon = state(15052).SignPostIcon;
+  let SignPostIcon = state(15050).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -561,7 +561,7 @@ function MarkupStaticRouteLink(state) {
           }
         }
       }
-      SignPostIcon = tmp2(15054).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(15052).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -631,7 +631,7 @@ function MarkupStaticRouteLink(state) {
     }
     const tmp2Result = tmp2(8802);
   }
-  SignPostIcon = tmp2(15052).SignPostIcon;
+  SignPostIcon = tmp2(15050).SignPostIcon;
 }
 function MarkupAttachmentLink(state) {
   state = state.state;
@@ -647,7 +647,7 @@ function MarkupAttachmentLink(state) {
     str2 = "body-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15056), size: null };
+  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15054), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1186).Icon.Sizes.EXTRA_SMALL_10;
@@ -741,7 +741,7 @@ style.listItem = { paddingTop: 4 };
 style.bullet = { fontFamily: Fonts.CODE_BOLD };
 style.strong = { fontFamily: Fonts.PRIMARY_BOLD };
 let obj3 = { translateY: nativeDefault.space.PX_4 };
-style.spoilerHiddenText = { color: fn(5641).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "Array" };
+style.spoilerHiddenText = { color: fn(5641).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "r" };
 const createStyles = fn(4913);
 let obj6 = {
   link: null,
@@ -752,7 +752,7 @@ let obj6 = {
   codeBlock: null,
   blockQuote: null,
 };
-let obj4 = { color: fn(5641).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "Array" };
+let obj4 = { color: fn(5641).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "r" };
 obj6.link = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
 let obj7 = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
 obj6.channelMention = {

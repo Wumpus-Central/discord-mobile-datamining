@@ -30,11 +30,11 @@ let closure_9 = createStyles.createStyles(obj2);
 let obj5 = {
   checkout: fn(7675).FolderIcon,
   edit: fn(11242).PencilIcon,
-  remote: fn(13767).CloudIcon,
+  remote: fn(13765).CloudIcon,
   commits: fn(18684).ListNumberedIcon,
   calendar: fn(8048).CalendarIcon,
   save: fn(18686).SaveIcon,
-  objects: fn(12464).ServerIcon,
+  objects: fn(12471).ServerIcon,
   download: fn(18688).CloudDownloadIcon,
   size: fn(10943).SpeedometerIcon,
   file: fn(11148).FileIcon,

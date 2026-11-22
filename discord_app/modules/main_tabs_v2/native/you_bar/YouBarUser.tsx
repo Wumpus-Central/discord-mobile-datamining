@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16476);
 ({
   YOU_BAR_SPRING_CONFIG: closure_6,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: metroImportDefault,

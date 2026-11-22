@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Promise",
-  notifCenterActive: "pen_ballpoint",
-  notifCenterTabFocused: "lower_left_ballpoint_pen",
+  notifCenterActive: "board",
+  notifCenterTabFocused: null,
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "pen_ballpoint",
-      notifCenterTabFocused: "lower_left_ballpoint_pen",
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "pen_ballpoint",
-      notifCenterTabFocused: "lower_left_ballpoint_pen",
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "pen_ballpoint",
-      notifCenterTabFocused: "lower_left_ballpoint_pen",
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

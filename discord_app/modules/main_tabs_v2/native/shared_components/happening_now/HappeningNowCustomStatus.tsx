@@ -9,7 +9,7 @@ import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16701);
+const HappeningNowConstants = fn(16699);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 const STATUS_CUTOUT_SMALL = HappeningNowConstants.STATUS_CUTOUT_SMALL;
 const StatusTypes = fn(1082).StatusTypes;
@@ -251,7 +251,7 @@ export function CustomStatusActivityCard(user) {
       let tmp15Result3 = tmp15Result;
     } else {
       let obj9 = { emoji: activity.emoji, size: v32, style: tmp.largeEmoji, animate: false };
-      tmp15Result3 = closure_11(activity(13527), obj9);
+      tmp15Result3 = closure_11(activity(13525), obj9);
     }
     const items4 = [
       tmp15Result3,
@@ -290,7 +290,7 @@ export function CustomStatusActivityCard(user) {
     };
     const items6 = [closure_11(tmp6(1186).Avatar, obj11), ,];
     const obj12 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    items6[1] = closure_11(tmp6(16702).HappeningNowCardHeader, obj12);
+    items6[1] = closure_11(tmp6(16700).HappeningNowCardHeader, obj12);
     state = activity.state;
     let num2;
     if (state != null) {
@@ -333,7 +333,7 @@ export function CustomStatusActivityCard(user) {
     const items7 = [closure_11(tmp6(1186).Avatar, obj16)];
     const obj17 = { style: tmp.customStatusContextContainer, children: null };
     const obj18 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    const items8 = [closure_11(tmp6(16702).HappeningNowCardHeader, obj18)];
+    const items8 = [closure_11(tmp6(16700).HappeningNowCardHeader, obj18)];
     const obj19 = {
       ellipsizeMode: "tail",
       variant: "body-xs/medium",
@@ -350,5 +350,5 @@ export function CustomStatusActivityCard(user) {
   }
   obj5.children = tmp18Result;
   obj4.children = closure_11(View, obj5);
-  return closure_11(activity(16702), obj4);
+  return closure_11(activity(16700), obj4);
 }

@@ -52,9 +52,9 @@ export default function useConjurePublishProgressLabel(arg0) {
     const obj2 = { action: null, detail: null };
     const intl2 = tmp(1112).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(12321).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    obj2.detail = tmp(12328).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
     formatToPlainStringResult = intl.formatToPlainString(stateFromStores(4190)["ndkR+x"], obj2);
-    const tmpResult = tmp(12321);
+    const tmpResult = tmp(12328);
   }
   return formatToPlainStringResult;
 }

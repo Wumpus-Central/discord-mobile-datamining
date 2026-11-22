@@ -174,7 +174,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13253, dependencyMap.paths),
+      asyncRequireImpl(13251, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );

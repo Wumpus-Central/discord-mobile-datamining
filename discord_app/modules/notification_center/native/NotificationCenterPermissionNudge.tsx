@@ -38,12 +38,12 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1112).intl;
   obj9.text = intl3.string(onDismiss(1112).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(13283).requestPushNotificationPermission(
+    const pushNotificationPermission = onDismiss(13281).requestPushNotificationPermission(
       constants2.ALLOW_TO_REQUEST,
       constants3.NOTIFICATION_CENTER,
       closure_1_8,
     );
-    const obj = onDismiss(13283);
+    const obj = onDismiss(13281);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
       action: constants4.ACCEPT,
       prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
@@ -79,7 +79,7 @@ const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
-const NotificationPermissionConstants = fn(13282);
+const NotificationPermissionConstants = fn(13280);
 ({
   EventActionType: closure_10,
   EventActionLocation: closure_11,

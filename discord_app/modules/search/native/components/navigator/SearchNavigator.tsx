@@ -107,7 +107,7 @@ export default noop.memo(function SearchNavigator(route) {
       return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(14351).default;
+      return searchContext(14349).default;
     },
   });
   obj3.children = items1;

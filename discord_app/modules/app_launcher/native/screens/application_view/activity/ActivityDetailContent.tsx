@@ -110,7 +110,7 @@ function TryItOutButton(applicationId) {
       closure_3.current = setTimeout(() => {
         closure_1_2(true);
       }, 250);
-      await v2(12192).launch({ applicationId, analyticsLocations });
+      await v2(12199).launch({ applicationId, analyticsLocations });
       if (1 === tmp7) {
         dependencyMap = 0;
         const _clearTimeout = clearTimeout;
@@ -292,15 +292,15 @@ export default function ActivityDetailContent(application) {
     }
     const tmp2Result8 = tmp2(6864);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(12927).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(12927);
-    const delayedSwapToActivityActionLeave = tmp2(13013).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(12925).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(12925);
+    const delayedSwapToActivityActionLeave = tmp2(13011).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(13013);
-    ({ reason, disabled } = tmp5(13014)(obj10));
+    const tmp2Result10 = tmp2(13011);
+    ({ reason, disabled } = tmp5(13012)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(13015);
+    tmp5(13013);
     if (bot != null) {
       id = bot.id;
     }
@@ -376,13 +376,13 @@ export default function ActivityDetailContent(application) {
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(13014)(obj10);
+    const tmp29 = tmp5(13012)(obj10);
     if (detailsContainerLandscape) {
       result = (65 * width) / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(12953), obj25);
+    obj24.children = closure_11(tmp5(12951), obj25);
     const items4 = [closure_11(View, obj24)];
     const items5 = [tmp.details];
     if (detailsContainerLandscape) {
@@ -392,22 +392,22 @@ export default function ActivityDetailContent(application) {
     items5[1] = detailsContainerLandscape;
     obj26.style = items5;
     const obj27 = { application };
-    const items6 = [closure_11(tmp5(13017), obj27), , , ,];
+    const items6 = [closure_11(tmp5(13015), obj27), , , ,];
     const obj28 = { style: tmp.tagList, children: null };
     const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj30 = { style: tmp.tagIcon, size: "xs" };
     obj29.icon = closure_11(tmp2(7038).GroupIcon, obj30);
-    const tmp5Result3 = tmp5(12953);
+    const tmp5Result3 = tmp5(12951);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(13019).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(13019);
+    obj29.tagName = tmp2(13017).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(13017);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(13019)(num);
+    obj29.accessibilityLabel = tmp5(13017)(num);
     const items7 = [closure_11(Tag, obj29, "participants")];
     const tags = application.tags;
     let mapped;

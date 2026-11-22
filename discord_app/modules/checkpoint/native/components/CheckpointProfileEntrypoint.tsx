@@ -98,7 +98,7 @@ function CheckpointProfileEntrypointRow(source) {
   if ("off" !== checkpointQAMode) {
     fn = () => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14606, dependencyMap.paths),
+        asyncRequireImpl(14604, dependencyMap.paths),
         "CheckpointTestingActionSheet",
         { mode: checkpointQAMode },
       );

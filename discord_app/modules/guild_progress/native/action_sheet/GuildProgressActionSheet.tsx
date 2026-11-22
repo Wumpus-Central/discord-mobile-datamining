@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(13357);
+const GuildProgressConstants = fn(13355);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1071);
 ({
@@ -96,8 +96,8 @@ export default function GuildProgressActionSheet(guild) {
             let base64;
             tmp5(7994).init(View);
             const obj6 = tmp5(7994);
-            tmp2(13362).hideActionSheet(id.id);
-            const obj7 = tmp2(13362);
+            tmp2(13360).hideActionSheet(id.id);
+            const obj7 = tmp2(13360);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;

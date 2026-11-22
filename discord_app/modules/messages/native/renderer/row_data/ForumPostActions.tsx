@@ -28,8 +28,9 @@ export function createDefaultReaction(arg0) {
           id: emojiId,
           name: "a",
           animated: customGuildEmoji.animated,
-          src: "onReturnToGameProfile",
-          displayName: "__filtered__",
+          src:
+            -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002053837551692066,
+          displayName: 36924234065951600000,
         };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);

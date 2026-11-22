@@ -72,7 +72,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let result = ref(2173).canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   let obj4 = ref(2173);
-  enabled2 = markAsDismissed(15857).useTryItOutMobileRefreshConfig(
+  enabled2 = markAsDismissed(15855).useTryItOutMobileRefreshConfig(
     "DisplayNameStylesFlywheelMobileActionSheet",
   ).enabled;
   const intl = markAsDismissed(1112).intl;

@@ -263,7 +263,7 @@ export default function MessageRequestList(goToMessageRequestPreview) {
   dependencyMap = goToMessageRequestPreview(19006).useListHasSingleMessageRequest();
   let obj = goToMessageRequestPreview(19006);
   const tmp2 = data;
-  const isRestricted = goToMessageRequestPreview(13328).useIsMessageRequestRestrictedViewer();
+  const isRestricted = goToMessageRequestPreview(13326).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1112).intl;

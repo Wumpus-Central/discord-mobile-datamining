@@ -7,7 +7,7 @@ import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 const _modDef1653 = tmp2(1653);
 const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16476);
 ({
   YOU_BAR_SPRING_CONFIG: closure_6,
   YOU_BAR_BUTTON_HIT_SLOP: metroImportDefault,

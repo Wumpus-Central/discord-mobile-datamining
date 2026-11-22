@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import IconActionButton from "IconActionButton.tsx";
-import _modDef14674 from "../../../../../_runtime/metro/14674__.js";
+import _modDef14672 from "../../../../../_runtime/metro/14672__.js";
 import _mod17549 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return React5(View, obj3);
   } else {
     const obj6 = {
-      source: _modDef14674,
+      source: _modDef14672,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
       buttonText: null,

@@ -32,7 +32,7 @@ let obj = {
   profile_widget: fn(18626).WidgetsIcon,
   overlay_widget: fn(9904).ScreenIcon,
   automod: fn(10133).ShieldIcon,
-  chat_bot: fn(12172).RobotIcon,
+  chat_bot: fn(12179).RobotIcon,
 };
 const createStyles = fn(4913);
 let obj2 = {

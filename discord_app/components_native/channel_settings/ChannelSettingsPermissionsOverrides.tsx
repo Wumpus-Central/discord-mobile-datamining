@@ -313,7 +313,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
   const tmp12 = closure_20(channelId(5504).Text, obj5);
   if (channelId.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp12 };
-    let tmp11Result = closure_20(tmp5(13857), obj6);
+    let tmp11Result = closure_20(tmp5(13855), obj6);
   } else {
     let role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;

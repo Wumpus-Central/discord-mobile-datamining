@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const QuestDockMode = fn(6558).QuestDockMode;
-let closure_5 = fn(16475).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let closure_5 = fn(16473).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {

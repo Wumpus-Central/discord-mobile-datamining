@@ -7,9 +7,9 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef13762 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
-import _modDef13763 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
-import _modDef13764 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
+import _modDef13760 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
+import _modDef13761 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
+import _modDef13762 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -59,7 +59,7 @@ function StaticOrb() {
   const obj2 = { source: null, style: null, fadeDuration: 0 };
   const obj3 = { uri: null };
   const tmp = closure_25();
-  obj3.uri = _modDef13762;
+  obj3.uri = _modDef13760;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = gesture(FastImageDefault, obj2);
@@ -104,7 +104,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = gesture(React5, obj2);
   }
   const items1 = [tmp13, ,];
-  const obj3 = { uri: _modDef13763, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef13761, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -123,7 +123,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj3.animate = tmp19;
   items1[1] = gesture(closure_24, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef13764, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
+    const obj5 = { uri: _modDef13762, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
     tmp15Result = gesture(closure_24, obj5);
   }
   items1[2] = tmp15Result;

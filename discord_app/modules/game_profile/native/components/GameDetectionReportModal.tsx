@@ -132,7 +132,7 @@ function ReportContent(applicationId) {
         }, 100);
       },
       hasIcons: null,
-      children: "35620600000000",
+      children: "GUILD_MEMBER_UPDATE_LOCAL",
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;

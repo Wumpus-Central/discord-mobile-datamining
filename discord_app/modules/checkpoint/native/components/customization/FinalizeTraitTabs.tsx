@@ -373,7 +373,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
         } else if (closure_8) {
           const obj = { selectedOption: activeCustomizationOption, onSelectOption };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(12798, dependencyMap.paths),
+            asyncRequireImpl(12796, dependencyMap.paths),
             "CheckpointFinalizeTraitPicker",
             obj,
           );
@@ -386,7 +386,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       handleTabLayout("more", nativeEvent);
     };
     const obj6 = { color: tmp15, size: "xs" };
-    obj3.trailing = str(tmp2(12799).ChevronSmallDownIcon, obj6);
+    obj3.trailing = str(tmp2(12797).ChevronSmallDownIcon, obj6);
     items2[1] = str(ref2, obj3);
     obj2.children = items2;
     obj.children = tmp20(tmp21, obj2);

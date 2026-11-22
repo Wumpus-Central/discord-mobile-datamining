@@ -68,7 +68,7 @@ export default function GetStartedScreen(onComplete) {
   const items1 = [closure_8(closure_5, obj5), ,];
   const obj10 = { hasIcons: true, children: null };
   const obj9 = modalSessionId(6411);
-  const ageVerificationGetStartedSteps = modalSessionId(12426).getAgeVerificationGetStartedSteps(modalSessionId);
+  const ageVerificationGetStartedSteps = modalSessionId(12433).getAgeVerificationGetStartedSteps(modalSessionId);
   obj10.children = ageVerificationGetStartedSteps.map((children, index) => {
     const description = children.description;
     const obj = {
@@ -175,7 +175,7 @@ export default function GetStartedScreen(onComplete) {
       }
     }
   });
-  const obj11 = modalSessionId(12426);
+  const obj11 = modalSessionId(12433);
   const obj14 = {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
@@ -187,7 +187,7 @@ export default function GetStartedScreen(onComplete) {
       );
     },
   };
-  obj17.icon = closure_7(modalSessionId(12427).LinkExternalSmallIcon, {
+  obj17.icon = closure_7(modalSessionId(12434).LinkExternalSmallIcon, {
     color: initiateAgeVerification(575).colors.WHITE,
   });
   obj17.loading = initiateAgeVerification.loading;

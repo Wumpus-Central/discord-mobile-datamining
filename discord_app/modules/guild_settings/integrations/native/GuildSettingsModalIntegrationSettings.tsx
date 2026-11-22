@@ -7,7 +7,7 @@ import TableRowGroup from "../../../../design/components/TableRow/native/TableRo
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
-import _modDef19825 from "../../../../../_runtime/metro/19825__.js";
+import _modDef19822 from "../../../../../_runtime/metro/19822__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
@@ -33,7 +33,7 @@ function ForceSyncIcon(isSyncing) {
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["+Josox"]);
     obj.onPress = tmp;
-    const obj2 = { source: _modDef19825 };
+    const obj2 = { source: _modDef19822 };
     obj.children = timestampProducer(TableRow.TableRow.Icon, obj2);
     tmp2Result = timestampProducer(Pressables.PressableOpacity, obj);
   }
@@ -151,7 +151,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   value = self(6691).get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(19824).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(19821).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
@@ -204,11 +204,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
       hasIcons: false,
       children: null,
     };
-    const obj17 = { value: tmp15(19826).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
+    const obj17 = { value: tmp15(19823).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
     const intl6 = tmp15(1112).intl;
     obj17.label = intl6.string(tmp15(1112).t["6kpw4i"]);
     const items3 = [closure_6(tmp15(7349).TableRadioRow, obj17)];
-    const obj18 = { value: tmp15(19826).IntegrationExpireBehaviorTypes.KICK, label: null };
+    const obj18 = { value: tmp15(19823).IntegrationExpireBehaviorTypes.KICK, label: null };
     const intl7 = tmp15(1112).intl;
     obj18.label = intl7.string(tmp15(1112).t.fQUQIJ);
     items3[1] = closure_6(tmp15(7349).TableRadioRow, obj18);

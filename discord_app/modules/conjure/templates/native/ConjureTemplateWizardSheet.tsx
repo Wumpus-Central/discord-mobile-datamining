@@ -64,7 +64,7 @@ let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.action = { flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
-let obj9 = { shield: fn(18654).ChatShieldIcon, hammer: fn(12394).HammerIcon, group: fn(7038).GroupIcon };
+let obj9 = { shield: fn(18654).ChatShieldIcon, hammer: fn(12401).HammerIcon, group: fn(7038).GroupIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/templates/native/ConjureTemplateWizardSheet.tsx");
 

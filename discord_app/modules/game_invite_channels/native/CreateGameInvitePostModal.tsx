@@ -27,7 +27,7 @@ function CreateGameInvitePostContent(parentChannel) {
   items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
   const tmp4 = noMicTag(noop.useState(""), 2);
-  const createGameInvitePost = parentChannel(13728).useCreateGameInvitePost({
+  const createGameInvitePost = parentChannel(13726).useCreateGameInvitePost({
     parentChannel,
     description: tmp5,
     appliedTagIds: memo,
@@ -98,7 +98,7 @@ function CreateGameInvitePostContent(parentChannel) {
   obj8.placeholder = intl4.string(tags(4126)["SU/IAE"]);
   obj8.value = tmp5;
   obj8.onChange = tmp6;
-  obj8.maxLength = parentChannel(12892).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  obj8.maxLength = parentChannel(12890).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
   const items6 = [closure_8(parentChannel(7461).TextArea, obj8), ,];
   let tmp15Result = availableTags.length > 0;
   if (tmp15Result) {
@@ -148,7 +148,7 @@ function CreateGameInvitePostContent(parentChannel) {
   if (isSlowmodeEnabled) {
     const obj16 = { style: tmp.slowmodeRow, children: null };
     const obj17 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj16.children = closure_8(tmp2(12851), obj17);
+    obj16.children = closure_8(tmp2(12849), obj17);
     tmp15Result4 = closure_8(View, obj16);
   }
   const obj18 = { children: null };

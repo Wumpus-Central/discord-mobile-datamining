@@ -76,7 +76,7 @@ export default function ConjurePrivateLinkSection(project) {
         const obj7 = { text: null, icon: null, iconColor: "icon-feedback-critical" };
         const intl = tmp3(1112).intl;
         obj7.text = intl.string(v2(4190)["5lL390"]);
-        obj7.icon = tmp3(14368).RefreshIcon;
+        obj7.icon = tmp3(14366).RefreshIcon;
         v2(5595).open("CONJURE_PRIVATE_LINK_RESET", obj7);
         closure_128_5(false);
         c3 = 3;
@@ -89,7 +89,7 @@ export default function ConjurePrivateLinkSection(project) {
         const obj9 = { text: null, icon: null };
         const intl2 = tmp3(1112).intl;
         obj9.text = intl2.string(v2(4190).w9w1Zh);
-        obj9.icon = tmp3(14368).RefreshIcon;
+        obj9.icon = tmp3(14366).RefreshIcon;
         v2(5595).open("CONJURE_PRIVATE_LINK_RESET", obj9);
         dependencyMap = 0;
         v2(5595);
@@ -208,7 +208,7 @@ export default function ConjurePrivateLinkSection(project) {
   let tmp20Result = null;
   if (project.isOwner) {
     const obj13 = { icon: null, variant: "danger", label: null, disabled: null, onPress: null };
-    const obj14 = { IconComponent: tmp2(14368).RefreshIcon, variant: "danger" };
+    const obj14 = { IconComponent: tmp2(14366).RefreshIcon, variant: "danger" };
     obj13.icon = tmp20(tmp2(7057).TableRowIcon, obj14);
     const intl7 = tmp2(1112).intl;
     obj13.label = intl7.string(tmp19(4190).oq0hBy);

@@ -100,7 +100,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     () => () => {
       const result = projectId(6998).inspectConjurePreviewPoint(
         closure_1_0,
-        projectId(14731).CONJURE_INSPECT_CLEAR_POINT,
+        projectId(14729).CONJURE_INSPECT_CLEAR_POINT,
       );
     },
     items1,

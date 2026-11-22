@@ -137,7 +137,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
               parent: EMAIL_NOTIFICATIONS,
               variant: "danger",
               useIsDisabled: useMarketingEmailsDisabled,
-              onPress: tmp29(16905).updateMarketingEmailSettings,
+              onPress: tmp29(16903).updateMarketingEmailSettings,
             };
             obj.unsubscribeFromAllMarketing = tmp29(11937).createPressable(obj13);
             return obj;
@@ -152,7 +152,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
   }
 }
 const MobileUserSettings = fn(8712).MobileUserSettings;
-const EmailSettingsConstants = fn(16906);
+const EmailSettingsConstants = fn(16904);
 ({
   EmailCategories: c3,
   EmailCategoriesList: closure_4,

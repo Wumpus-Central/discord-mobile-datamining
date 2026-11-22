@@ -40,11 +40,11 @@ export function useControllerPIPState(channelId) {
   let obj = require("../../../../../_runtime/metro/01653__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
   const ref = noop.useRef({
-    id: "dispatch",
+    id: "disabled",
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "sku",
+    containerHeight: "box-none",
     showSecondaryPIP: null,
     scale: sharedValue,
   });

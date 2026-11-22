@@ -115,7 +115,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16144).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16142).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
     if (closure_6((isLoading) => isLoading.isLoading, _mod4828.shallow)) {

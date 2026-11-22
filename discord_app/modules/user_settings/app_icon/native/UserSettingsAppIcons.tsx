@@ -62,7 +62,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             c7 = 2;
             c8 = 1;
             const obj6 = {
-              value: stateFromStores(15853).ensureHexagonCampaignEnrollment(constants.APP_ICON),
+              value: stateFromStores(15851).ensureHexagonCampaignEnrollment(constants.APP_ICON),
               done: false,
             };
             return obj6;
@@ -82,12 +82,12 @@ export default noop.memo(function UserSettingsAppIcons() {
             const obj7 = { value, done: true };
             return obj7;
           } else if (value) {
-            const tmp51 = stateFromStores(15853);
+            const tmp51 = stateFromStores(15851);
             dependencyMap = tmp51;
             closure_1 = tmp51.saveHexagonCampaignPreviousAppIcon;
             c7 = 3;
             c8 = 1;
-            const obj9 = { value: stateFromStores(14049).fetchCurrentAppIcon(), done: false };
+            const obj9 = { value: stateFromStores(14047).fetchCurrentAppIcon(), done: false };
             return obj9;
           } else {
             const obj10 = { text: null };
@@ -118,7 +118,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             }
             c7 = 4;
             c8 = 1;
-            const obj15 = { value: stateFromStores(14049).setAppIcon(closure_131_0, premiumType), done: false };
+            const obj15 = { value: stateFromStores(14047).setAppIcon(closure_131_0, premiumType), done: false };
             return obj15;
           }
         } else if (arg0 === 1) {
@@ -132,15 +132,15 @@ export default noop.memo(function UserSettingsAppIcons() {
           return obj16;
         } else {
           if (value) {
-            const result = stateFromStores(15853).markHexagonCampaignPerkApplied(constants.APP_ICON);
-            const obj = stateFromStores(15853);
+            const result = stateFromStores(15851).markHexagonCampaignPerkApplied(constants.APP_ICON);
+            const obj = stateFromStores(15851);
             const obj17 = { perks: null, content: null, contentSurface: null };
             items = [constants.APP_ICON];
             obj17.perks = items;
             obj17.content = stateFromStores(6561).QuestContent.APP_ICON_SETTINGS;
-            obj17.contentSurface = stateFromStores(15854).HexagonCampaignContentSurface.APP_ICON_PICKER;
-            const result1 = stateFromStores(15854).trackHexagonCampaignPerkAction(obj17);
-            const obj2 = stateFromStores(15854);
+            obj17.contentSurface = stateFromStores(15852).HexagonCampaignContentSurface.APP_ICON_PICKER;
+            const result1 = stateFromStores(15852).trackHexagonCampaignPerkAction(obj17);
+            const obj2 = stateFromStores(15852);
           }
           c5 = 0;
           closure_132_7(null);
@@ -241,7 +241,7 @@ export default noop.memo(function UserSettingsAppIcons() {
                     }
                     dependencyMap = 2;
                     v3 = num2;
-                    const obj10 = { value: tmp8(14049).setAppIcon(id, premiumType), done: false };
+                    const obj10 = { value: tmp8(14047).setAppIcon(id, premiumType), done: false };
                     return obj10;
                   }
                   tmp8Result3 = tmp8(4941);
@@ -253,7 +253,7 @@ export default noop.memo(function UserSettingsAppIcons() {
                   dependencyMap = 3;
                   v3 = num2;
                   const obj11 = {
-                    value: stateFromStores(14049).setAppIcon(
+                    value: stateFromStores(14047).setAppIcon(
                       stateFromStores(4939).FreemiumAppIconIds.DEFAULT,
                       premiumType1,
                     ),
@@ -305,8 +305,8 @@ export default noop.memo(function UserSettingsAppIcons() {
   items = [setPending];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => setPending.getCurrentUser());
   let obj = stateFromStores(504);
-  importDefault = stateFromStores(14049).useCurrentAppIcon();
-  let obj2 = stateFromStores(14049);
+  importDefault = stateFromStores(14047).useCurrentAppIcon();
+  let obj2 = stateFromStores(14047);
   const isPremiumResult = stateFromStores(2108).isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;

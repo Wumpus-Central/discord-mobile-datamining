@@ -270,9 +270,9 @@ const jsxProd = fn(21);
 let obj = {
   frame: fn(7040).GameControllerIcon,
   overlay_widget: fn(18271).WindowTopIcon,
-  user_widget: fn(13052).UserCircleIcon,
-  bot: fn(12172).RobotIcon,
-  commands: fn(12172).RobotIcon,
+  user_widget: fn(13050).UserCircleIcon,
+  bot: fn(12179).RobotIcon,
+  commands: fn(12179).RobotIcon,
   automod: fn(10133).ShieldIcon,
 };
 const createStyles = fn(4913);

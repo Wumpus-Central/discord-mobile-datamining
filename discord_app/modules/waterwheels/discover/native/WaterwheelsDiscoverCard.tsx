@@ -582,7 +582,7 @@ function GamePoster(game) {
     const obj8 = { rank: game.l30Rank };
     obj7.text = intl3.formatToPlainString(tmp2(1112).t.UA6RoE, obj8);
     obj6.type = obj7;
-    obj6.icon = tmp2(13805).FireIcon;
+    obj6.icon = tmp2(13803).FireIcon;
     obj5.children = closure_11(tmp2(7061).Badge, obj6);
     tmp9Result = closure_11(closure_7, obj5);
   }

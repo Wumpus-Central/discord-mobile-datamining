@@ -133,7 +133,7 @@ function UserAvatar(user) {
     status: "done",
     isMobileOnline: true,
     isVROnline: null,
-    style: "header",
+    style: "primary",
     autoStatusCutout: null,
   };
   let tmp3 = null;

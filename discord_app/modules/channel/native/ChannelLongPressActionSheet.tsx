@@ -454,7 +454,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13847, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13845, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -837,7 +837,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj43.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13873, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13871, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);

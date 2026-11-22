@@ -366,7 +366,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
                 "stack",
               );
             },
-            onRsvp: "analyticsLocations",
+            onRsvp: "alignItems",
           });
         },
       };
@@ -392,7 +392,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
               ModalActionCreatorsDefault.pushLazy(
                 asyncRequireImpl(8029, dependencyMap.paths),
-                { event, recurrenceId, onCloseActionSheet: "r" },
+                { event, recurrenceId, onCloseActionSheet: "Array" },
                 colors,
               );
             };
@@ -471,7 +471,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
                 const lazyResult = noop.lazy(() => event(paths[14])(paths[19], paths.paths));
                 useAlertStore.openAlert(
                   "DeleteEventAlert",
-                  <lazyResult eventId={id} guildId={guild_id} recurrenceId="r" />,
+                  <lazyResult eventId={id} guildId={guild_id} recurrenceId="Array" />,
                 );
               },
             };

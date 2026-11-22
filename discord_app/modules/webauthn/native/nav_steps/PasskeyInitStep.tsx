@@ -21,7 +21,7 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_9(tmp(16076).PasskeysSpotIllustration, { scale: 0.6 })];
+    const items1 = [closure_9(tmp(16074).PasskeysSpotIllustration, { scale: 0.6 })];
     let obj3 = { variant: "body-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1112).intl;
     obj3.children = intl2.string(tmp(1112).t.FSNwFW);

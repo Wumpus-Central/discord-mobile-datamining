@@ -29,7 +29,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16476);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -523,7 +523,7 @@ let closure_26 = noop.memo(function YouBar() {
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj13.style = items15;
     const obj14 = { style: tmp.dockRim };
-    obj13.children = closure_18(tmp27(13309), obj14);
+    obj13.children = closure_18(tmp27(13307), obj14);
     tmp52Result4 = closure_18(tmp27(1653).View, obj13);
   }
   children[1] = tmp52Result4;

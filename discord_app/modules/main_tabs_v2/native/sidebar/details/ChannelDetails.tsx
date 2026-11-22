@@ -110,8 +110,8 @@ export default noop.memo(function ChannelDetails(channelId) {
     }
   }, items1);
   let obj2 = require("initialize");
-  const channelDetailsSearchContext = obj(13155).useChannelDetailsSearchContext(channelId, guild_id);
-  const objResult = obj(13155);
+  const channelDetailsSearchContext = obj(13153).useChannelDetailsSearchContext(channelId, guild_id);
+  const objResult = obj(13153);
   const searchSuggestionsGesture = obj(18710).useSearchSuggestionsGesture(channelDetailsSearchContext);
   let tmp7 = importDefault;
   ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
@@ -123,7 +123,7 @@ export default noop.memo(function ChannelDetails(channelId) {
   ref = noop.useRef(null);
   const tmp8 = useAnalyticsLocationsDefault;
   nativeStackNavigation = obj(1500).useNativeStackNavigation();
-  context = noop.useContext(obj(13307).SwipeForMemberListContext);
+  context = noop.useContext(obj(13305).SwipeForMemberListContext);
   const objResult7 = obj(1500);
   const isScreenReaderEnabled = obj(5143).useIsScreenReaderEnabled();
   let isAndroidResult = useIsWindowLargeDefault();
@@ -254,10 +254,10 @@ export default noop.memo(function ChannelDetails(channelId) {
   const items9 = [channelId, channelDetailsSearchContext];
   const effect4 = obj4.useEffect(
     () => () => {
-      const result = c1(13233).clearAllSearchMesssages();
+      const result = c1(13231).clearAllSearchMesssages();
       closure_7(_undefined);
-      const obj = c1(13233);
-      c1(13224).deleteSearchQuery(closure_1_5);
+      const obj = c1(13231);
+      c1(13222).deleteSearchQuery(closure_1_5);
     },
     items9,
   );

@@ -184,9 +184,9 @@ function PreviewItem(overState) {
           id: -1,
           parentId: "Path",
           name: "Array",
-          color: "analyticsLocations",
+          color: "add",
           expanded: null,
-          children: null,
+          children: true,
         };
         items = [tmp2];
         element.children = items;
@@ -506,11 +506,11 @@ export default noop.memo(function GuildsBarDragPreview() {
             overNode: null,
             dropPosition: "o",
             gestureState: true,
-            scrollPosition: "/assets/design/components/Icon/native/redesign/generated/images",
-            dragRegion: 24,
-            windowSize: 24,
+            scrollPosition: "/assets/images/platforms",
+            dragRegion: 500,
+            windowSize: 500,
             dropComplete: null,
-            listInsets: "80139ae0e2b501617462c705b80c97d5",
+            listInsets: "59966e5b844184ad532c25b89628277b",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

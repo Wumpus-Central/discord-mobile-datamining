@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
 import _modDef7619 from "../../../../_runtime/metro/07619__.js";
 import _modDef10878 from "../../../../_runtime/metro/10878__.js";
-import _modDef14302 from "../../../../_runtime/metro/14302__.js";
+import _modDef14300 from "../../../../_runtime/metro/14300__.js";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -46,11 +46,11 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
     let stringResult1 = stringResult;
     let tmp8Result3 = tmp8Result;
   } else if (tmp7) {
-    tmp8Result3 = _modDef14302;
+    tmp8Result3 = _modDef14300;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result3 = _modDef14302;
+    tmp8Result3 = _modDef14300;
     const intl3 = util.intl;
     stringResult1 = intl3.string(util.t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -68,9 +68,9 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
         formatToPlainStringResult = intl.string(util.t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result3 = _modDef14302;
+      tmp8Result3 = _modDef14300;
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result4 = _modDef14302;
+      const tmp8Result4 = _modDef14300;
     }
   }
   if (isCanceled) {

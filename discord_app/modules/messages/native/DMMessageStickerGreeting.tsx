@@ -86,8 +86,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1112).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1112).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(13131).useShowConvoStarterInDM(channel);
-  const TextResult = Text(13131);
+  const showConvoStarterInDM = Text(13129).useShowConvoStarterInDM(channel);
+  const TextResult = Text(13129);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(

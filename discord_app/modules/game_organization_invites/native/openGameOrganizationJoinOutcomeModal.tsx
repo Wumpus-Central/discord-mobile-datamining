@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting(
 );
 
 export default function openGameOrganizationJoinOutcomeModal(code, result) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12245, dependencyMap.paths), { code, result }, closure_3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12252, dependencyMap.paths), { code, result }, closure_3);
 }

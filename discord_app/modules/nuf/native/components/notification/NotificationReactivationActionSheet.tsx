@@ -4,12 +4,12 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef19625 from "../../../../../../_runtime/metro/19625__.js";
+import _modDef19621 from "../../../../../../_runtime/metro/19621__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(13282).EventActionType;
+const EventActionType = fn(13280).EventActionType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -52,14 +52,14 @@ export default function NotificationReactivationActionSheet(location) {
     AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
       action_type: EventActionType.SKIP_STEP,
       action_location: _location,
-      permission_granted: "r",
+      permission_granted: "Array",
     });
-    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
+    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.image, source: _modDef19625, resizeMode: "contain" };
+  const obj3 = { style: tmp.image, source: _modDef19621, resizeMode: "contain" };
   const items2 = [closure_7(FastImageDefault, obj3), , ,];
   const obj4 = { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: null };
   const intl = _location(1112).intl;

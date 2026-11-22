@@ -23,9 +23,9 @@ let obj = {
   selectedRoleIds: new Set(),
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-  selectedJoinSourceType: "analyticsLocations",
-  selectedSourceInviteCode: "color",
-  selectedSort: "useState",
+  selectedJoinSourceType: "add",
+  selectedSourceInviteCode: "channel_id",
+  selectedSort: "concat",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -43,9 +43,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: null,
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
-      selectedJoinSourceType: "analyticsLocations",
-      selectedSourceInviteCode: "color",
-      selectedSort: "useState",
+      selectedJoinSourceType: "add",
+      selectedSourceInviteCode: "channel_id",
+      selectedSort: "concat",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -73,9 +73,9 @@ prototype["reset"] = function reset() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "analyticsLocations",
-    selectedSourceInviteCode: "color",
-    selectedSort: "useState",
+    selectedJoinSourceType: "add",
+    selectedSourceInviteCode: "channel_id",
+    selectedSort: "concat",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -101,9 +101,9 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedRoleIds: null,
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
-      selectedJoinSourceType: "analyticsLocations",
-      selectedSourceInviteCode: "color",
-      selectedSort: "useState",
+      selectedJoinSourceType: "add",
+      selectedSourceInviteCode: "channel_id",
+      selectedSort: "concat",
     };
     const _Set = Set;
     const set = new Set();
@@ -299,9 +299,9 @@ export function getDefaultSearchState() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "analyticsLocations",
-    selectedSourceInviteCode: "color",
-    selectedSort: "useState",
+    selectedJoinSourceType: "add",
+    selectedSourceInviteCode: "channel_id",
+    selectedSort: "concat",
   };
   return obj;
 }

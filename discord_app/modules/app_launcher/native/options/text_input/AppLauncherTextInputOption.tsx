@@ -141,7 +141,7 @@ export default function AppLauncherTextInputOption(initialValue) {
     returnKeyType: true,
     multiline: null,
     keyboardType: null,
-    onPressIn: 408.685,
+    onPressIn: 414.685,
   };
   const items4 = [inputStyles.text, tmp.stringOptionInput];
   obj6.style = items4;

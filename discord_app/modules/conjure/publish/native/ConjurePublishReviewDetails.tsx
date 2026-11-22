@@ -89,7 +89,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { screen_capture: fn(9904).ScreenIcon, connect_user_to_voice: fn(7034).VoiceNormalIcon };
 let obj2 = { app_channel: fn(7704).AppsIcon };
-obj2[fn(6622).ConjureSupportedSurface.BOT] = fn(12172).RobotIcon;
+obj2[fn(6622).ConjureSupportedSurface.BOT] = fn(12179).RobotIcon;
 obj2[fn(6622).ConjureSupportedSurface.ACTIVITY] = fn(17996).ActivitiesIcon;
 obj2[fn(6622).ConjureSupportedSurface.VOICE_CHANNEL] = fn(7034).VoiceNormalIcon;
 obj2[fn(6622).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18269).BadgeIcon;
@@ -256,7 +256,7 @@ export default function ConjurePublishReviewDetails(review) {
     const intl5 = tmp16(1112).intl;
     obj15.label = intl5.string(tmp25(4190).Td1mlg);
     ({ isPrivate: obj12.checked, setPrivate: obj12.onToggle } = appChannelsPrivate);
-    tmp15Result2 = tmp15(tmp16(14724).Checkbox, obj15);
+    tmp15Result2 = tmp15(tmp16(14722).Checkbox, obj15);
   }
   const obj29 = { children: null };
   items[3] = tmp15Result2;

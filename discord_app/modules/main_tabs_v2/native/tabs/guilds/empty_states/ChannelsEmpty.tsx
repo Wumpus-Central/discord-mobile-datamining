@@ -63,8 +63,8 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const obj = guild(563);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper];
-  const obj2 = guild(16480);
-  items4[1] = { paddingBottom: guild(16480).useYouBarTotalHeight(16) };
+  const obj2 = guild(16478);
+  items4[1] = { paddingBottom: guild(16478).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
@@ -80,7 +80,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const items5 = [canCustomizeGuild];
   const obj8 = { style: tmp.content, children: null };
   const obj9 = { source: null };
-  const obj4 = { paddingBottom: guild(16480).useYouBarTotalHeight(16) };
+  const obj4 = { paddingBottom: guild(16478).useYouBarTotalHeight(16) };
   obj9.source = _modDef17774;
   const items6 = [closure_7(FastImageDefault, obj9), , ,];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-sm/semibold", style: null, children: null };

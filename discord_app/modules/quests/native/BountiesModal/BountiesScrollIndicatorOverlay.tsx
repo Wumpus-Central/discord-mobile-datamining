@@ -71,7 +71,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F140992 */ function() { ... }, num);
+            let timeout = setTimeout(/* F141009 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

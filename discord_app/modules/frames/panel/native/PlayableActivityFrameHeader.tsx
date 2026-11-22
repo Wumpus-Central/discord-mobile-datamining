@@ -86,7 +86,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   items = [closure_7(View, obj4), ,];
   const obj6 = { style: tmp.info, children: null };
   const items1 = [
-    closure_7(setMode(16362), {
+    closure_7(setMode(16360), {
       isCompleted: isClaimed,
       totalSeconds: playable.rewardTimerSeconds,
       remainingSeconds: tmp4.remainingSeconds,

@@ -15,7 +15,7 @@ let items = [
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(15823, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(15821, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;

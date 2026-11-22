@@ -17,16 +17,16 @@ const obj2 = {
   },
   shadowContainer: {
     justifyContent: "center",
-    marginRight: -fn(12734).SHADOW_OFFSET,
-    marginBottom: -fn(12734).SHADOW_OFFSET,
+    marginRight: -fn(12732).SHADOW_OFFSET,
+    marginBottom: -fn(12732).SHADOW_OFFSET,
   },
   shadow: null,
   shadowDisabled: null,
 };
 const obj3 = {
   justifyContent: "center",
-  marginRight: -fn(12734).SHADOW_OFFSET,
-  marginBottom: -fn(12734).SHADOW_OFFSET,
+  marginRight: -fn(12732).SHADOW_OFFSET,
+  marginBottom: -fn(12732).SHADOW_OFFSET,
 };
 obj2.shadow = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, borderColor: CHECKPOINT_DARK_CYAN };
 obj2.shadowDisabled = { borderColor: CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE };

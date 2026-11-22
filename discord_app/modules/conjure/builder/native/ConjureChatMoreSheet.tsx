@@ -62,8 +62,8 @@ export default function ConjureChatMoreSheet(canAnnotate) {
   const id = merged.project.id;
   const isConjureProjectMuted = id(6936).useIsConjureProjectMuted(id);
   const obj = id(6936);
-  const conjureControlActive = id(14732).useConjureControlActive(id);
-  const obj2 = id(14732);
+  const conjureControlActive = id(14730).useConjureControlActive(id);
+  const obj2 = id(14730);
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.muted = isConjureProjectMuted;

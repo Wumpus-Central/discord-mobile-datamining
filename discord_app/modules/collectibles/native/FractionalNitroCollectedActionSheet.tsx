@@ -7,14 +7,14 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import _modDef9226 from "../../../../_runtime/metro/09226__.js";
 import _modDef9227 from "../../../../_runtime/metro/09227__.js";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _modDef14246 from "../../../../_runtime/metro/14246__.js";
+import _modDef14244 from "../../../../_runtime/metro/14244__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef14246 };
+  const obj2 = { source: _modDef14244 };
   items = [React6(FastImageDefault, obj2)];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = {

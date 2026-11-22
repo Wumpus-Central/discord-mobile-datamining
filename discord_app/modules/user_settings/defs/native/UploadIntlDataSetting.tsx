@@ -306,7 +306,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(16957).FileUpIcon,
+  IconComponent: fn(16955).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -317,7 +317,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16144).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16142).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

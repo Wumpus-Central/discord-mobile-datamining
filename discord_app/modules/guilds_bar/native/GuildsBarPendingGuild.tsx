@@ -160,8 +160,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children:
-      "(function handleStateChangeEvent_Pnpm_eventHandlerTs1(eventWithData,callbacks,context,fillInDefaultValues){let[flattenAndFilterEvent,State,runCallback,CallbackType]=this.__closure;const{oldState:oldState,state:state}=eventWithData;const event=flattenAndFilterEvent(eventWithData);if(oldState===State.UNDETERMINED&&state===State.BEGAN){runCallback(CallbackType.BEGAN,callbacks,event);}else if((oldState===State.BEGAN||oldState===State.UNDETERMINED)&&state===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(event);runCallback(CallbackType.START,callbacks,event);}else if(oldState!==state&&(state===State.END||state===State.FAILED||state===State.CANCELLED)){const canceled=state===State.FAILED||state===State.CANCELLED;const endEvent={...event,canceled:canceled};if(oldState===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(endEvent);runCallback(CallbackType.END,callbacks,endEvent);}runCallback(CallbackType.FINALIZE,callbacks,endEvent);if(context){context.lastUpdateEvent=undefined;}}})",
+    children: "building",
   };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[19]);
@@ -207,7 +206,6 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children:
-      "(function handleStateChangeEvent_Pnpm_eventHandlerTs1(eventWithData,callbacks,context,fillInDefaultValues){let[flattenAndFilterEvent,State,runCallback,CallbackType]=this.__closure;const{oldState:oldState,state:state}=eventWithData;const event=flattenAndFilterEvent(eventWithData);if(oldState===State.UNDETERMINED&&state===State.BEGAN){runCallback(CallbackType.BEGAN,callbacks,event);}else if((oldState===State.BEGAN||oldState===State.UNDETERMINED)&&state===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(event);runCallback(CallbackType.START,callbacks,event);}else if(oldState!==state&&(state===State.END||state===State.FAILED||state===State.CANCELLED)){const canceled=state===State.FAILED||state===State.CANCELLED;const endEvent={...event,canceled:canceled};if(oldState===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(endEvent);runCallback(CallbackType.END,callbacks,endEvent);}runCallback(CallbackType.FINALIZE,callbacks,endEvent);if(context){context.lastUpdateEvent=undefined;}}})",
+    children: "building",
   });
 });

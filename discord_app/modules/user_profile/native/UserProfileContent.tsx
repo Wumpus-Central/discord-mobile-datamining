@@ -72,7 +72,7 @@ function CustomStatusBubble(guildId) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14200, dependencyMap.paths),
+      asyncRequireImpl(14198, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -155,7 +155,7 @@ function RemoveGameFriendIconButton(user) {
   items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14525, dependencyMap.paths),
+      asyncRequireImpl(14523, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -342,7 +342,7 @@ function EditSection(initialTab) {
   };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(14446);
+  const tmp7 = trackUserProfileAction(14444);
   obj4.icon = closure_19(guildId(11242).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1112).intl;

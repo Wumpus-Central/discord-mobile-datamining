@@ -80,7 +80,7 @@ function ChangeBannerColorRow(arg0) {
     obj4.label = closure_9(tmp2(7709).FormLabel, obj5);
     const obj6 = { style: tmp.selectedColor, children: null };
     const obj7 = { style: tmp.bannerColor, color: pendingAccentColor };
-    const items2 = [closure_9(tmp6(15842), obj7), ,];
+    const items2 = [closure_9(tmp6(15840), obj7), ,];
     const obj8 = {
       style: tmp.selectedColorHex,
       variant: "body-md/medium",
@@ -88,7 +88,7 @@ function ChangeBannerColorRow(arg0) {
       children: tmp2(1089).int2hex(pendingAccentColor),
     };
     items2[1] = closure_9(tmp2(5504).Text, obj8);
-    const obj9 = { style: tmp.rowArrow, size: tmp2(1186).Icon.Sizes.CUSTOM, source: tmp6(15847) };
+    const obj9 = { style: tmp.rowArrow, size: tmp2(1186).Icon.Sizes.CUSTOM, source: tmp6(15845) };
     items2[2] = closure_9(tmp2(1186).Icon, obj9);
     obj6.children = items2;
     obj4.trailing = closure_10(View, obj6);
@@ -100,7 +100,7 @@ function ChangeBannerColorRow(arg0) {
     const intl = tmp2(1112).intl;
     obj10.label = intl.string(tmp2(1112).t.xzNfPz);
     const obj11 = { style: tmp.bannerColor, color: pendingAccentColor };
-    obj10.trailing = closure_9(tmp6(15842), obj11);
+    obj10.trailing = closure_9(tmp6(15840), obj11);
     const obj12 = { text: tmp2(1089).int2hex(pendingAccentColor) };
     obj10.accessibilityValue = obj12;
     obj10.onPress = handleChangeColor;
@@ -221,8 +221,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
               originalAsset: "Array",
               originalMd5,
             };
-            closure_129_0(tmp2(15836).createPendingImage(obj8));
-            const obj = tmp2(15836);
+            closure_129_0(tmp2(15834).createPendingImage(obj8));
+            const obj = tmp2(15834);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -259,7 +259,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     let obj = { text: null };
     const intl6 = util.intl;
     obj.text = intl6.string(util.t.TiLCgw);
-    const tmp7Result = closure_9(tmp2(15838), obj);
+    const tmp7Result = closure_9(tmp2(15836), obj);
     let obj3 = { value: analyticsLocations, children: null };
     const obj5 = { title: null };
     const intl7 = util.intl;
@@ -326,10 +326,10 @@ export default function ChangeBannerActionSheet(isTryItOut) {
       t1.subLabel = string3(util.t.OFNrmu);
       t1.analyticsObject = constants.EDIT_PROFILE_BANNER;
       t1.skipRoadblock = tmp6;
-      closure_9(tmp2(15839), t1);
-      const tmp2Result4 = tmp2(15839);
+      closure_9(tmp2(15837), t1);
+      const tmp2Result4 = tmp2(15837);
     }
-    const tmp2Result3 = tmp2(15838);
+    const tmp2Result3 = tmp2(15836);
   } else {
     const obj12 = { value: analyticsLocations, children: null };
     const obj13 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
@@ -383,7 +383,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     if (!flag) {
       const obj20 = { style: tmp.upsellButton, children: null };
       const obj21 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-      obj20.children = closure_9(tmp2(15837), obj21);
+      obj20.children = closure_9(tmp2(15835), obj21);
       tmp7Result16 = closure_9(View, obj20);
     }
     const obj22 = { children: null };

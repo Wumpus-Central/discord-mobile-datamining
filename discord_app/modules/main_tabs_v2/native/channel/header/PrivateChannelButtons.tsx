@@ -141,7 +141,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
   const tmp2Result9 = channelId(504);
   const items4 = [callParticipants];
   const stateFromStores3 = channelId(504).useStateFromStores(items4, () => callParticipants.supports(constants2.VIDEO));
-  const VideoGuardExperiment = tmp2(14374).VideoGuardExperiment;
+  const VideoGuardExperiment = tmp2(14372).VideoGuardExperiment;
   const videoEnabled = VideoGuardExperiment.useConfig({ location: "PrivateChannelButtons" }).videoEnabled;
   closure_7 = tmp10;
   const tmp2Result10 = channelId(504);
@@ -190,7 +190,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     tmp15 = callParticipants.length > 0;
   }
   closure_11 = tmp15;
-  const tmp17 = screenIndex(14375)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp17 = screenIndex(14373)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp17.application;
   let obj2 = { context: { type: "channel", channel: stateFromStores } };
   const tmp2Result12 = channelId(504);
@@ -286,7 +286,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
       const obj4 = { userId: recipientId, channel: stateFromStores, application };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14392, dependencyMap.paths),
+        asyncRequireImpl(14390, dependencyMap.paths),
         "AppDMOptionsBottomSheet",
         obj4,
       );
@@ -355,7 +355,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
         obj5.accessibilityLabel = intl3.string(tmp2(1112).t.kkKapG);
         const items13 = [closure_21(tmp2(7672).ChatIcon, { size: "sm" })];
         if (hasUnread) {
-          let tmp50Result = closure_21(tmp2(14358).ButtonBadge, { badgePosition: "right" });
+          let tmp50Result = closure_21(tmp2(14356).ButtonBadge, { badgePosition: "right" });
         } else {
           tmp50Result = null;
         }
@@ -467,7 +467,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
               user: user.user,
               guildId: "r",
               size: native.AvatarSizes.XSMALL,
-              cutout: "\u{1FAF5}\u{1F3FE}",
+              cutout: "absolute",
             };
             if (index !== diff) {
               const tmp7 = obj;
@@ -525,7 +525,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
             if (videoEnabled) {
               let VideoDenyIcon = tmp2(11126).VideoIcon;
             } else {
-              VideoDenyIcon = tmp2(14394).VideoDenyIcon;
+              VideoDenyIcon = tmp2(14392).VideoDenyIcon;
             }
             obj16.children = tmp36(VideoDenyIcon, { size: "sm" });
             tmp36(tmp2(7030).PressableOpacity, obj16);

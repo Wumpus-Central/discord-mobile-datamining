@@ -41,8 +41,8 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
       };
       const obj5 = { game: getOrFetchApplication, size: tmp(7526).GameIconSizes.LARGE };
       const items1 = [closure_6(GameIconDefault, obj5), closure_6(tmp(19099).UnionOrbsIcon, {})];
-      const obj6 = { guildId: "a", user: stateFromStores, size: "context", "aria-label": "chorro" };
-      obj6.size = tmp(14489).AvatarSizes.XXLARGE;
+      const obj6 = { guildId: "a", user: stateFromStores, size: "container", "aria-label": "Notifications" };
+      obj6.size = tmp(14487).AvatarSizes.XXLARGE;
       let username;
       if (stateFromStores != null) {
         username = stateFromStores.username;

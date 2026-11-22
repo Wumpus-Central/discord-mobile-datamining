@@ -66,7 +66,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15892, dependencyMap.paths), "Profile Effect", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15890, dependencyMap.paths), "Profile Effect", {
       user,
       currentProfileEffect: userProfileEffect,
       guildId,

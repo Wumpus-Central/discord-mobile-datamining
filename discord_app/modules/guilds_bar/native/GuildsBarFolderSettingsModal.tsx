@@ -75,7 +75,7 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj6 = { hasIcons: false, children: null };
-  obj5.trailing = closure_10(onColorChange(15842), { color: tmp11, style: tmp.colorBlock });
+  obj5.trailing = closure_10(onColorChange(15840), { color: tmp11, style: tmp.colorBlock });
   obj6.children = closure_10(color(7045).TableRow, obj5);
   items1[1] = closure_10(color(7348).TableRowGroup, obj6);
   obj3.children = items1;

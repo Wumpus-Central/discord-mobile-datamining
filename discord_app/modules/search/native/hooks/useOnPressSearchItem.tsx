@@ -544,11 +544,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13199).delayUntilNavigationComplete(() => {
+      const result = searchContext(13197).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(13199);
+      let obj2 = searchContext(13197);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef16624 from "../../../../../_runtime/metro/16624__.js";
+import _modDef16622 from "../../../../../_runtime/metro/16622__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,7 +35,7 @@ export default function ResubscribedAlert(onClose) {
   const obj2 = { style: tmp.body, children: null };
   const obj3 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj3.source = _modDef16624;
+  obj3.source = _modDef16622;
   obj3.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , ,];
   const obj4 = {

@@ -127,7 +127,7 @@ function SystemNotifPermissionHeader() {
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 let closure_10 = fn(6496).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13282);
+const NotificationPermissionConstants = fn(13280);
 ({
   EventActionLocation: closure_11,
   EventActionType: closure_12,
@@ -199,8 +199,8 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13284).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13284);
+            const result = node(13282).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13282);
           }
           v2(true);
           c2 = 0;

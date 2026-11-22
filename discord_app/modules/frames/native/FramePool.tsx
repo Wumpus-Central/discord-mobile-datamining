@@ -50,7 +50,7 @@ function PooledFrame(frame) {
       return obj;
     });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(15754).subscribe, () =>
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(15752).subscribe, () =>
     FramePoolManagerDefault.getWinningTargetState(id),
   );
   const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };

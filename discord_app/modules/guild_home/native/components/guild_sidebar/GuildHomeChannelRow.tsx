@@ -27,7 +27,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
-  const ChannelModes = id(13250).ChannelModes;
+  const ChannelModes = id(13248).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -54,8 +54,8 @@ export default function GuildHomeChannelRow(selected) {
   const intl2 = tmp5(1112).intl;
   obj2.name = intl2.string(tmp5(1112).t.VbpLyU);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(13250).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(13250).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15052).SignPostIcon });
+  obj.name = jsx(tmp5(13248).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15050).SignPostIcon });
   return (
     <tmp7
       onPress={callback}

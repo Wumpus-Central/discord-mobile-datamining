@@ -460,7 +460,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const items19 = [,];
     ({ headerImageContainer: arr20[0], headerImage: arr20[1] } = tmp13);
     obj25.style = items19;
-    obj25.source = tmp4(13940);
+    obj25.source = tmp4(13938);
     items17[2] = c12(tmp4(5600), obj25);
     const obj26 = { style: null };
     const items20 = [,];
@@ -595,7 +595,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result8 = tmp4(9510);
       }
     } else {
-      const obj42 = { style: tmp13.avatar, guildId: "r", size: null, user: "\u{1FAF1}\u{1F3FC}" };
+      const obj42 = { style: tmp13.avatar, guildId: "r", size: "gradient.end", user: "*0.95" };
       const AvatarSizes = tmp(1186).AvatarSizes;
       obj42.size = tmp12 ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj42.user = recipientUser;

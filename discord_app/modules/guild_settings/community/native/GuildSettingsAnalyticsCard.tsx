@@ -88,7 +88,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl3 = tmp4(1112).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1112).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(19931).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(19928).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "body-xs/normal", color: "text-subtle", children: subtext };

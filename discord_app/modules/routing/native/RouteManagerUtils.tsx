@@ -10,7 +10,7 @@ import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUti
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import hasSecondaryViewChatDefault from "../../app_channels/hasSecondaryViewChat.tsx";
-import MemoryRouter from "../../../../_runtime/13739_MemoryRouter.js";
+import MemoryRouter from "../../../../_runtime/13737_MemoryRouter.js";
 import DefaultRouteActionCreators from "../../../actions/DefaultRouteActionCreators.tsx";
 import RouteManagerDefault from "../RouteManager.tsx";
 import conjureRouteRewriterDefault from "../../conjure/builder/native/conjureRouteRewriter.tsx";
@@ -110,7 +110,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   const obj2 = { path: items, strict: false, exact: false };
 }
 function updateSelectedChannelListener(location, arg1) {
-  const matchPathResult = channel2(13739).matchPath(location.pathname, { path: items, strict: false, exact: false });
+  const matchPathResult = channel2(13737).matchPath(location.pathname, { path: items, strict: false, exact: false });
   let params;
   if (matchPathResult != null) {
     params = matchPathResult.params;
@@ -282,7 +282,7 @@ function updateSelectedChannelListener(location, arg1) {
     obj12.isAppStartupNavigation = tmp19;
     const channel3 = SelectedChannelActionCreatorsDefault.selectChannel(obj12);
   }
-  const obj = channel2(13739);
+  const obj = channel2(13737);
   const obj2 = { path: items, strict: false, exact: false };
   const obj4 = { match: matchPathResult, location };
   const tmpResult8 = channel2(5089);

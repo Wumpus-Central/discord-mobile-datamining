@@ -78,7 +78,7 @@ class OrbsOnboardingMenuDismissibleContent {
             fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           });
         };
-        obj.trailing = closure_11(closure_1(17128), {});
+        obj.trailing = closure_11(closure_1(17126), {});
         return closure_11(closure_12, obj);
       } else {
         return null;
@@ -91,7 +91,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
   let str;
   str = str(9566).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   let obj = str(9566);
-  const isOrbWalletEntrypointEnabled = str(16298).useIsOrbWalletEntrypointEnabled({
+  const isOrbWalletEntrypointEnabled = str(16296).useIsOrbWalletEntrypointEnabled({
     location: "MobileBalanceWidgetMenu",
   });
   items = [str, isOrbWalletEntrypointEnabled];
@@ -152,11 +152,11 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     obj3.openCtaObject = AnalyticsLocationDefault.ORB_WALLET_OPEN_FROM_PROFILE;
     let result = useOrbBalanceEntrypoint.openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, obj3);
   }, items);
-  str(16298);
+  str(16296);
   if (isOrbWalletEntrypointEnabled) {
     let obj3 = { ref: orbWalletEntryRowRef.orbWalletEntryRowRef, collapsable: false, children: null };
     let obj4 = { balance: str, notificationType: tmp6, onPress: callback };
-    obj3.children = jsx(tmp(17129).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
+    obj3.children = jsx(tmp(17127).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
     let tmp7Result = (
       <View ref={orbWalletEntryRowRef.orbWalletEntryRowRef} collapsable={false}>
         {null}
@@ -221,11 +221,11 @@ export { OrbsOnboardingMenuDismissibleContent };
 export function useOpenOrbWalletFromYouScreen() {
   balance = balance(9566).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   const obj = balance(9566);
-  const isOrbWalletEntrypointEnabled = balance(16298).useIsOrbWalletEntrypointEnabled({
+  const isOrbWalletEntrypointEnabled = balance(16296).useIsOrbWalletEntrypointEnabled({
     location: "MobileBalanceWidgetMenu",
   });
   items = [balance, isOrbWalletEntrypointEnabled];
-  const obj2 = balance(16298);
+  const obj2 = balance(16296);
   return {
     balance,
     isOrbchievementsEnabled: isOrbWalletEntrypointEnabled,

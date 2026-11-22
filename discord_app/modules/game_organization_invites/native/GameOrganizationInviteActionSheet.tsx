@@ -38,8 +38,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId));
   const tmp5 = useLinkedGameOrganizationInviteSenderDefault(guildId);
-  const data = guildId(15178).useLinkedGameOrganization(guildId).data;
-  const obj = guildId(15178);
+  const data = guildId(15176).useLinkedGameOrganization(guildId).data;
+  const obj = guildId(15176);
   items = [GameOrganizationStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(

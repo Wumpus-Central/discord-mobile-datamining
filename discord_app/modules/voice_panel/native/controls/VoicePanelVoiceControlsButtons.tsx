@@ -28,7 +28,7 @@ import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/ge
 import speakOnStageDefault from "../../../stage_channels/native/speakOnStage.tsx";
 import _modDef11799 from "../../../../../_runtime/metro/11799__.js";
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
-import _modDef14844 from "../../../../../_runtime/metro/14844__.js";
+import _modDef14842 from "../../../../../_runtime/metro/14842__.js";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
 import _modDef18005 from "../../../../../_runtime/metro/18005__.js";
@@ -436,7 +436,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f133849 = () => f133849(!VIDEO);
+          const f133863 = () => f133863(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -504,7 +504,7 @@ export function ToggleShowActivitiesDebugOverlay() {
     showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
   );
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14844 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14842 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });

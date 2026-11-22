@@ -121,7 +121,13 @@ export function convertRouteToNavigation(pathname) {
                   const tmpResult26 = NavigationRouteUtils;
                 }
                 if (tmp18) {
-                  const obj11 = { channelId, guildId, messageId, subRouteId: tmp15, replaceChannelAndFixRoot: "fill" };
+                  const obj11 = {
+                    channelId,
+                    guildId,
+                    messageId,
+                    subRouteId: tmp15,
+                    replaceChannelAndFixRoot: "fileBytes",
+                  };
                   NavigationRouteUtils.navigateToChannel(obj11);
                   const tmpResult27 = NavigationRouteUtils;
                 }

@@ -158,7 +158,7 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(16003).NameValidationState.ERROR) {
+  if (type === tmp14(16001).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

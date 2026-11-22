@@ -10,7 +10,7 @@ import openMediaModal from "../modules/media_viewer/native/components/openMediaM
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import _modDef11379 from "../../_runtime/metro/11379__.js";
-import _modDef16962 from "../../_runtime/metro/16962__.js";
+import _modDef16960 from "../../_runtime/metro/16960__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      items = [closure_7(_modDef16962, obj4)];
+      items = [closure_7(_modDef16960, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };

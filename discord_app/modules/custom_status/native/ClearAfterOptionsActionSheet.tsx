@@ -40,7 +40,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   obj3.title = intl2.string(util.t.E45wvP);
   obj3.defaultValue = initialValue;
   obj3.children = ClearAfterOptions.map((value) =>
-    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(14211)(value) }, value),
+    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(14209)(value) }, value),
   );
   items = [closure_7(TableRadioGroup.TableRadioGroup, obj3)];
   const obj4 = { style: tmp.buttonWrapper, children: null };

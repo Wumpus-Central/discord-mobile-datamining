@@ -682,7 +682,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp19Result = closure_14(tmp2(9005).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(14368).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(14366).RefreshIcon, { size: "sm" });
     }
     const obj12 = {
       size: "sm",

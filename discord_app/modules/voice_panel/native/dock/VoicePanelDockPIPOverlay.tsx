@@ -53,7 +53,7 @@ function StreamVolumeSlider(stacked) {
   };
   const intl = tmp5(1112).intl;
   obj4.accessibilityLabel = intl.string(handleVolumeChange(1112).t.pEAl4b);
-  obj3.children = closure_9(handleVolumeChange(14504).Slider, obj4);
+  obj3.children = closure_9(handleVolumeChange(14502).Slider, obj4);
   const tmp8Result = closure_9(tmp11, obj3);
   if (stacked) {
     const obj5 = { children: null };
@@ -350,7 +350,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       const items13 = [tmp29Result5];
       const obj14 = { icon: null, onPress: null, accessibilityLabel: null };
       const tmp2Result10 = tmp2(7324);
-      obj14.icon = tmp2(16355);
+      obj14.icon = tmp2(16353);
       obj14.onPress = onOpenCall;
       const intl3 = tmp12(1112).intl;
       obj14.accessibilityLabel = intl3.string(tmp2(3376).MPtef8);

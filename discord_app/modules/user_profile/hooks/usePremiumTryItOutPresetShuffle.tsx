@@ -29,7 +29,7 @@ export default function usePremiumTryItOutPresetShuffle() {
       imageUri: tryItOutPresetConfig.getBannerSrc(false),
       staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
       description: tryItOutPresetConfig.getBannerAltText(),
-      originalAsset: "fill",
+      originalAsset: "fileBytes",
     });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

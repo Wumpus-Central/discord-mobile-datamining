@@ -44,7 +44,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(12799).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(12797).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
     ChevronSmallRightIcon = tmp3(7565).ChevronSmallRightIcon;

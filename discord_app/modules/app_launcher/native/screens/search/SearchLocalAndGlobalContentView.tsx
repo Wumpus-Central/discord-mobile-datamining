@@ -37,14 +37,14 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12921).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12919).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12926), obj2);
+    tmp4 = closure_10(onPressSend(12924), obj2);
   }
-  obj = hasOptions(12921);
-  const tmpResult = hasOptions(12974);
+  obj = hasOptions(12919);
+  const tmpResult = hasOptions(12972);
   const commandRowSend = tmpResult.useCommandRowSend({
     command,
     context,
@@ -97,7 +97,7 @@ function CommandRow(arg0) {
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12974), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  obj4.trailing = closure_10(onPressSend(12972), { hasOptions, sending: commandRowSend.sending, onPressSend });
   return closure_10(hasOptions(7045).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
@@ -189,7 +189,7 @@ function CommandsExpandableList(expandedOverride) {
 }
 const View = fn(17).View;
 const getSection = fn(10436).getSection;
-const FetchState = fn(12937).FetchState;
+const FetchState = fn(12935).FetchState;
 const AppLauncherNativeConstants = fn(1499);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;

@@ -991,7 +991,7 @@ let closure_48 = noop.memo(function FloatingParticipantLabel(controlsHidden) {
     const obj15 = { style: tmp6.secureFramesIcon, size: "xs", accessibilityLabel: null };
     const intl4 = tmp4(1112).intl;
     obj15.accessibilityLabel = intl4.string(tmp4(1112).t.mR9cf3);
-    isUserSecureFramesVerified = closure_16(tmp4(13819).ShieldLockIcon, obj15);
+    isUserSecureFramesVerified = closure_16(tmp4(13817).ShieldLockIcon, obj15);
   }
   items13[2] = isUserSecureFramesVerified;
   obj8.children = items13;

@@ -76,7 +76,7 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
   obj = textureScale(6013);
   const characterFromTraits = obj.getCharacterFromTraits(traits);
   ({ base, shoes, outfit, face, hat, wearable, aura } = characterFromTraits);
-  const tmp4 = textureScale(12712).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
+  const tmp4 = textureScale(12710).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
   dependencyMap = tmp4;
   obj2 = {};
   const item = obj2.forEach((item) => {
@@ -114,8 +114,8 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
     obj3.chapterID = tmp6;
     obj3.faceID = face;
     obj3.shoesID = shoes;
-    obj3.headwearID = textureScale(12712).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat];
-    obj3.wearableID = textureScale(12712).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable];
+    obj3.headwearID = textureScale(12710).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat];
+    obj3.wearableID = textureScale(12710).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable];
     let num;
     if (tmp4 != null) {
       num = tmp4.riveId;
@@ -124,14 +124,14 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
       num = 0;
     }
     obj3.outfitID = num;
-    obj3.auraImage = textureScale(12545).getCheckpointCharacterAuraUrl(
-      textureScale(12712).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
+    obj3.auraImage = textureScale(12543).getCheckpointCharacterAuraUrl(
+      textureScale(12710).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
       textureScale,
       flag,
     );
-    const tmpResult = textureScale(12545);
-    obj3.baseColorImage = textureScale(12545).getCheckpointCharacterTextureUrl(
-      textureScale(12712).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
+    const tmpResult = textureScale(12543);
+    obj3.baseColorImage = textureScale(12543).getCheckpointCharacterTextureUrl(
+      textureScale(12710).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
       textureScale,
     );
     if ("MobilePortrait" === layout) {
@@ -143,7 +143,7 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
       return obj3;
     }
     tmp10 = obj[layout];
-    const tmpResult2 = textureScale(12545);
+    const tmpResult2 = textureScale(12543);
   }
   tmp6 = dependencyMap2[stage];
 }

@@ -15,7 +15,7 @@ import useActivityShelfItem from "../../../../activities/utils/useActivityShelfI
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
 import getItemSubtitleForMaxPlayers from "../../../../activities/utils/getItemSubtitleForMaxPlayers.tsx";
-import _modDef13734 from "../../../../../../_runtime/metro/13734__.js";
+import _modDef13732 from "../../../../../../_runtime/metro/13732__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
@@ -71,7 +71,7 @@ function ParticipantsText(arg0) {
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
   const items1 = [
-    timestampProducer(native.Icon, { source: _modDef13734, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+    timestampProducer(native.Icon, { source: _modDef13732, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
   ];
   const obj4 = {
     lineClamp: 1,

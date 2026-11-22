@@ -189,7 +189,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   const tmp3Result = flag(504);
   obj4.profile = flag(11978).Profiles.ChatView;
   let setInterstitial = stateFromStores;
-  const items10 = [stateFromStores(channelId(13561), { channelId, guildId }), ,];
+  const items10 = [stateFromStores(channelId(13559), { channelId, guildId }), ,];
   let setInterstitialResult = null;
   if (!flag2) {
     setInterstitialResult = setInterstitial(tmp9(9659), { absolute: true });
@@ -298,12 +298,12 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       setInterstitial("EmptyState");
     } else if (channel.isDirectory()) {
       let obj6 = { channel, guildId };
-      setInterstitialResult2 = setInterstitial(tmp9(13575), obj6);
+      setInterstitialResult2 = setInterstitial(tmp9(13573), obj6);
       tmp9(9).setInterstitial("GuildDirectory");
       const tmp9Result3 = tmp9(9);
     } else if (channel.isForumLikeChannel()) {
       let obj7 = { channel };
-      setInterstitialResult2 = setInterstitial(tmp9(13717), obj7);
+      setInterstitialResult2 = setInterstitial(tmp9(13715), obj7);
       tmp9(9).setInterstitial("ForumChannel");
       const tmp9Result4 = tmp9(9);
     } else {

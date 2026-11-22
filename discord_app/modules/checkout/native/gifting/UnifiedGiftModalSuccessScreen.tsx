@@ -42,7 +42,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (null != giftBadgeProgress) {
       const obj2 = { giftBadgeProgress: tmp2 };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(13928, dependencyMap.paths),
+        asyncRequireImpl(13926, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );
@@ -54,7 +54,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  const tmp4 = giftBadgeProgress(13917).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
+  const tmp4 = giftBadgeProgress(13915).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
   const tmp8 = onClose(5932);
   const items2 = [closure_5(onClose(5600), { source: tmp4, style: tmp.image }), , ,];
   const obj3 = { variant: "heading-lg/semibold", style: tmp.title, children: null };

@@ -12,7 +12,7 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import _modDef9364 from "../../../../_runtime/metro/09364__.js";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef16192 from "../../../../_runtime/metro/16192__.js";
+import _modDef16190 from "../../../../_runtime/metro/16190__.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal.tsx";
@@ -48,7 +48,7 @@ function FamilyCenterActivityCardPrefaceText() {
   let tmp14 = null;
   const ageSpecificText1 = obj6.useAgeSpecificText(intl3.string(_modDef2824.n6LOrh), intl4.string(_modDef2824.JNLpDZ));
   if (!tmp4) {
-    const obj8 = { color: tmp.icon.color, source: _modDef16192, style: tmp.icon };
+    const obj8 = { color: tmp.icon.color, source: _modDef16190, style: tmp.icon };
     tmp14 = React5(native.Icon, obj8);
   }
   items = [tmp14, ,];

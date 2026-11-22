@@ -147,7 +147,7 @@ export default noop.memo(function ChannelVoice(channel) {
   const obj11 = { source: guild_id(12022), size: id(1186).Icon.Sizes.MEDIUM };
   items7[1] = closure_6(View, {
     style: tmp.chatHeaderTitleContainer,
-    children: closure_6(id(13730).ChannelTitle, { guildId: guild_id, channelId: id }),
+    children: closure_6(id(13728).ChannelTitle, { guildId: guild_id, channelId: id }),
   });
   obj9.children = items7;
   items3[4] = closure_7(View, obj9);

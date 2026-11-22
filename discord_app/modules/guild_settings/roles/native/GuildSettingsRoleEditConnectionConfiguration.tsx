@@ -35,7 +35,7 @@ function Header(arg0) {
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -56,7 +56,7 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
         tmp11 = application_id(native.Avatar, obj3);
       }
       let name1;
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19866).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19863).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(19866);
-  const tmpResult = metadataField(19866);
-  str1 = metadataField(19866).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19863);
+  const tmpResult = metadataField(19863);
+  str1 = metadataField(19863).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -330,7 +330,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     };
     return onInputValueChange(metadataField(7556).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19866).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19863).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);

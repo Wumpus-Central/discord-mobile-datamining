@@ -30,7 +30,7 @@ const require = globalThis.__r;
 require = fn;
 const QuestConstants = fn(6558);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_6, QuestDockMode: metroImportDefault } = QuestConstants);
-const QuestDockConstants = fn(16475);
+const QuestDockConstants = fn(16473);
 ({
   QUEST_DOCK_CLOSED_HEIGHT: closure_8,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_9,
@@ -281,17 +281,17 @@ export function useQuestDockExternalOffset() {
 }
 export function useQuestDockDismissalReset() {
   setRestingQuestDockMode = noop.useContext(
-    setRestingQuestDockMode(16479).QuestDockExternalCoordinationContext,
+    setRestingQuestDockMode(16477).QuestDockExternalCoordinationContext,
   ).setRestingQuestDockMode;
   const activeQuestDockMode = noop.useContext(
-    setRestingQuestDockMode(16476).QuestDockGestureContext,
+    setRestingQuestDockMode(16474).QuestDockGestureContext,
   ).activeQuestDockMode;
   items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = noop.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16474).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16474);
+      isSoftDismissedResult = setRestingQuestDockMode(16472).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(16472);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -299,8 +299,8 @@ export function useQuestDockDismissalReset() {
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16474).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16474);
+        isSoftDismissedResult = setRestingQuestDockMode(16472).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(16472);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
@@ -326,7 +326,7 @@ export function useActionSheetPressHandler(questCreative) {
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16483, dependencyMap.paths),
+      asyncRequireImpl(16481, dependencyMap.paths),
       "QuestDockContextMenuActionSheet",
       { creative, impressionId: questImpressionId },
     );

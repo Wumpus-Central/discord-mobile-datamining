@@ -384,14 +384,14 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(2119)(17088, dependencyMap.paths);
-          statusCode(2119)(17088, dependencyMap.paths)
+          const promise4 = statusCode(2119)(17086, dependencyMap.paths);
+          statusCode(2119)(17086, dependencyMap.paths)
             .then((openMFAModal) => {
               openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
             })
             .catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(2119)(17088, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(2119)(17086, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }

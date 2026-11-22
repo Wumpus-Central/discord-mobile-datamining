@@ -7,8 +7,8 @@ import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
 import useIsCheckpointWideDefault from "../../../useIsCheckpointWide.tsx";
-import _modDef12747 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
-import _modDef12748 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js";
+import _modDef12745 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
+import _modDef12746 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js";
 import CheckpointGlobalStatNumberDefault from "../../CheckpointGlobalStatNumber.tsx";
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
@@ -125,8 +125,8 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj4 = { animatedUri: null, staticUri: null, style: null };
   const tmp4Result = stateFromStores1(6339);
-  obj4.animatedUri = _modDef12747;
-  obj4.staticUri = _modDef12748;
+  obj4.animatedUri = _modDef12745;
+  obj4.staticUri = _modDef12746;
   const items3 = [tmp.image];
   let tmp16 = wideText;
   if (wideText) {

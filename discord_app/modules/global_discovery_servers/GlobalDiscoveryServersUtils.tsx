@@ -216,9 +216,9 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "sa",
+    preferredLocale: "isArray",
     discoverySplash: null,
-    emojis: 0.05,
+    emojis: "\u{1F9D2}\u{1F3FB}",
   };
   ({
     approximate_presence_count: obj.presenceCount,

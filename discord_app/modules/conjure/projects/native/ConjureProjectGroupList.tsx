@@ -271,8 +271,8 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     hideServer = false;
   }
   let tmp = closure_11();
-  const conjureHomeProjectState = project(13772).useConjureHomeProjectState(project.id);
-  let obj = project(13772);
+  const conjureHomeProjectState = project(13770).useConjureHomeProjectState(project.id);
+  let obj = project(13770);
   items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(
@@ -291,11 +291,11 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     items1,
   );
   let obj2 = project(504);
-  let result = project(13772).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  let obj3 = project(13772);
-  let result1 = project(13772).conjureProjectLastActivityTime(project);
-  let obj4 = project(13772);
-  const conjureProjectShareTargetDetails = project(13792).useConjureProjectShareTargetDetails(project);
+  let result = project(13770).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  let obj3 = project(13770);
+  let result1 = project(13770).conjureProjectLastActivityTime(project);
+  let obj4 = project(13770);
+  const conjureProjectShareTargetDetails = project(13790).useConjureProjectShareTargetDetails(project);
   if (!hideServer) {
     let tmp11 = conjureProjectShareTargetDetails;
   } else {
@@ -334,7 +334,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
         stringResult2 = intl2.string(_modDef4190.poYQxw);
       }
       label = stringResult2;
-      tmp2Result = tmp2(13792);
+      tmp2Result = tmp2(13790);
     }
     items2[1] = label;
     items2[2] = stringResult;
@@ -388,7 +388,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
         } else {
           const obj11 = { style: tmp.userIconWrapper, children: null };
           const obj12 = { size: "xxs", color: nativeDefault.colors.TEXT_SUBTLE };
-          obj11.children = closure_8(tmp2(12354).UserIcon, obj12);
+          obj11.children = closure_8(tmp2(12361).UserIcon, obj12);
           tmp28Result4 = closure_8(View, obj11);
         }
         items4[1] = tmp28Result4;
@@ -441,7 +441,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     tmp41 = stringResult1;
   }
   tmp45Result = tmp41;
-  const obj5 = project(13792);
+  const obj5 = project(13790);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectGroupList.tsx");
@@ -509,7 +509,7 @@ export default function ConjureProjectGroupList(query) {
     let tmp18Result = null;
     if (collaborating.length > 0) {
       const obj12 = {
-        groupKey: tmp5(13795).CONJURE_COLLABORATING_GROUP_KEY,
+        groupKey: tmp5(13793).CONJURE_COLLABORATING_GROUP_KEY,
         title: null,
         projects: null,
         forceExpanded: null,

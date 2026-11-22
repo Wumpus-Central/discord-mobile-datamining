@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/WinnerTrophyBadge.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13838 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-1x.png.js";
-import _modDef13839 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-2x.png.js";
-import _modDef13840 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-3x.png.js";
+import _modDef13836 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-1x.png.js";
+import _modDef13837 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-2x.png.js";
+import _modDef13838 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13838 }, 3: null };
-let obj2 = { uri: _modDef13838 };
-obj[2] = { uri: _modDef13839 };
-const obj3 = { uri: _modDef13839 };
-obj[3] = { uri: _modDef13840 };
+let obj = { 1: null, 2: { uri: _modDef13836 }, 3: null };
+let obj2 = { uri: _modDef13836 };
+obj[2] = { uri: _modDef13837 };
+const obj3 = { uri: _modDef13837 };
+obj[3] = { uri: _modDef13838 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/WinnerTrophyBadge.native.tsx",

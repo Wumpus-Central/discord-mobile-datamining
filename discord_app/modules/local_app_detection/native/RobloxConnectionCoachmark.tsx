@@ -43,7 +43,7 @@ function UserIcon() {
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [state(View, { style: tmp.avatarInnerBorder })];
   const obj3 = { style: tmp.avatarInnerBorder };
-  items1[1] = state(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
+  items1[1] = state(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" });
   obj2.children = items1;
   return gesture(View, obj2);
 }
@@ -156,7 +156,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-    appInstalled.isAppInstalled(stateFromStores(14994).DetectableAppNames.ROBLOX),
+    appInstalled.isAppInstalled(stateFromStores(14992).DetectableAppNames.ROBLOX),
   );
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];

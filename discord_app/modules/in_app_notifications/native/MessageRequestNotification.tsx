@@ -27,7 +27,7 @@ export default function MessageRequestInAppNotification(notification) {
     }
   }, []);
   let obj = {
-    icon: jsx(author(1186).Avatar, { user: author, size: author(1186).AvatarSizes.NORMAL, guildId: "r" }),
+    icon: jsx(author(1186).Avatar, { user: author, size: author(1186).AvatarSizes.NORMAL, guildId: "Array" }),
     header: memo,
     children: null,
     onPress: null,
@@ -40,7 +40,7 @@ export default function MessageRequestInAppNotification(notification) {
   obj.onPress = callback;
   obj.notification = notification;
   return jsx(author(11160).NotificationPressable, {
-    icon: jsx(author(1186).Avatar, { user: author, size: author(1186).AvatarSizes.NORMAL, guildId: "r" }),
+    icon: jsx(author(1186).Avatar, { user: author, size: author(1186).AvatarSizes.NORMAL, guildId: "Array" }),
     header: memo,
     children: null,
     onPress: null,

@@ -21,7 +21,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const util = v1votF6(1112);
 const utils_QuestUtils = v1votF6(8425);
-const SponsoredQuestUtils = v1votF6(13757);
+const SponsoredQuestUtils = v1votF6(13755);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);

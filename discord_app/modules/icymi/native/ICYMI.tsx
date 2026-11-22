@@ -42,7 +42,7 @@ const require = globalThis.__r;
 const util = LeftBackIconWithBadge(1112);
 const Pressables = LeftBackIconWithBadge(7030);
 const XSmallIcon = LeftBackIconWithBadge(7151);
-const BackIconWithBadge = LeftBackIconWithBadge(15971);
+const BackIconWithBadge = LeftBackIconWithBadge(15969);
 const notifications_Notifications = LeftBackIconWithBadge(18040);
 require = fn;
 function SettingsButton() {

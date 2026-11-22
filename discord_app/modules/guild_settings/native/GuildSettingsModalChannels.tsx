@@ -18,9 +18,9 @@ import showSimpleActionSheet from "../../action_sheet/native/showSimpleActionShe
 import Form from "../../../design/void/Form/native/index.tsx";
 import FavoritesActionCreators from "../../favorites/FavoritesActionCreators.tsx";
 import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef12217 from "../../../../_runtime/metro/12217__.js";
+import _modDef12224 from "../../../../_runtime/metro/12224__.js";
 import ChannelSortingUtils from "../../channel_sorting/ChannelSortingUtils.tsx";
-import _modDef16704 from "../../../../_runtime/metro/16704__.js";
+import _modDef16702 from "../../../../_runtime/metro/16702__.js";
 import GuildSettingsModalChannelsActionCreatorsDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
 import _modDef17667 from "../../../../_runtime/metro/17667__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -432,7 +432,7 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef12217;
+      obj2.icon = _modDef12224;
       obj2.onPress = function onPress() {
         closure_1_1(17663).startReordering(
           constants.GUILD_TEXT,
@@ -446,7 +446,7 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef16704;
+      obj3.icon = _modDef16702;
       obj3.onPress = function onPress() {
         closure_1_1(17663).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };

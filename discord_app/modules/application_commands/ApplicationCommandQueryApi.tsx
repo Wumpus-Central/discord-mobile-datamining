@@ -70,7 +70,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "disabled", command: "isArray", section: "isArray" };
+    return { application: "fill", command: "channel", section: "justifyContent" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "disabled", command: "isArray", section: "isArray" };
+    return { application: "fill", command: "channel", section: "justifyContent" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "analyticsLocations" };
+    return { command: "disabled", application: "isArray" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

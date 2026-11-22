@@ -3231,7 +3231,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: true, isExplicitUserAction: "/assets/images/platforms", trackAnalytics: 128 });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: true, isExplicitUserAction: "/assets/images/platforms", trackAnalytics: 255 });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3618,7 +3618,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "2026-10-conjure-mobile", trackAnalytics: "user" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "heading-sm/medium", trackAnalytics: "text-subtle" });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

@@ -249,7 +249,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     overState: "y",
     config: memo1,
     label: null,
-    expandedChildren: "\u{1F469}\u200D\u{1F9B3}",
+    expandedChildren: "\u{1F469}",
     children: true,
   };
   const tmpResult2 = require("useCoachmark");

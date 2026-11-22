@@ -112,9 +112,9 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     tmp12 = tmp8;
   }
   const tmp3Result = channel(563);
-  const connectedUserLimit = channel(13150).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(13150);
-  let connectedUserLimitFormatted = channel(13150).useConnectedUserLimitFormatted({
+  const connectedUserLimit = channel(13148).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(13148);
+  let connectedUserLimitFormatted = channel(13148).useConnectedUserLimitFormatted({
     channel,
     video: tmp12,
     userCount: sum,
@@ -242,5 +242,5 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(13150);
+  const tmp3Result4 = channel(13148);
 });

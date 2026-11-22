@@ -54,7 +54,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
+        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -62,7 +62,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -101,12 +101,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          let obj3 = {
-            type: constants.INACTIVE,
-            powerup: skuId,
-            sourceEntitlement: "r",
-            sourcePowerup: "HermesInternal",
-          };
+          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
           if (isActiveFromLevel) {
             const obj4 = {
               type: constants.LEVEL_ACTIVATED,
@@ -135,11 +130,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "fill" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
     let first = obj3;
   } else {
     first = mapped[0];
@@ -179,7 +174,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
+        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -187,7 +182,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -226,12 +221,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          let obj3 = {
-            type: constants.INACTIVE,
-            powerup: skuId,
-            sourceEntitlement: "r",
-            sourcePowerup: "HermesInternal",
-          };
+          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
           if (isActiveFromLevel) {
             const obj4 = {
               type: constants.LEVEL_ACTIVATED,
@@ -260,7 +250,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
     }
   });
 }

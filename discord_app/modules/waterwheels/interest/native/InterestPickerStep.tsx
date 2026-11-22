@@ -11,11 +11,11 @@ export default function InterestPickerStep(navigation) {
   navigation = navigation.navigation;
   let onComplete = navigation.route.params.onComplete;
   const interestPickerGameList = navigation(17832).useInterestPickerGameList("InterestPickerStep");
-  const tmp4 = onComplete(19609)("InterestPickerStep");
+  const tmp4 = onComplete(19605)("InterestPickerStep");
   dependencyMap = tmp4;
   let obj = navigation(17832);
   const tmp3 = onComplete;
-  const setPicks = navigation(19606).useInterestPickerPicks().setPicks;
+  const setPicks = navigation(19602).useInterestPickerPicks().setPicks;
   jsx = setPicks.useRef(false);
   items = [navigation, onComplete, setPicks];
   onComplete = setPicks.useCallback((arg0, arg1) => {
@@ -42,7 +42,7 @@ export default function InterestPickerStep(navigation) {
     tmp7 = null;
     if (null != interestPickerGameList) {
       const obj3 = { arm: interestPickerGameList, catalog: tmp4, onComplete };
-      tmp7 = jsx(tmp3(19610), { arm: interestPickerGameList, catalog: tmp4, onComplete });
+      tmp7 = jsx(tmp3(19606), { arm: interestPickerGameList, catalog: tmp4, onComplete });
     }
   }
   return tmp7;

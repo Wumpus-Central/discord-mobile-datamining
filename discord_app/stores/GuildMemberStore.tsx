@@ -90,9 +90,9 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "ao",
-      hoistRoleId: "colors",
-      iconRoleId: "HermesInternal",
+      colorRoleId: "alignItems",
+      hoistRoleId: "join",
+      iconRoleId: "h",
       highestRoleId: "Array",
     };
   } else {

@@ -245,10 +245,10 @@ function TimelineRow(inGutter) {
     let obj3 = {
       variant: "body-xs/normal",
       color: "text-subtle",
-      children: node(12321).describeDuration(node.durationMs),
+      children: node(12328).describeDuration(node.durationMs),
     };
     tmp4Result = closure_6(node(5504).Text, obj3);
-    const tmp8Result = node(12321);
+    const tmp8Result = node(12328);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), ,];

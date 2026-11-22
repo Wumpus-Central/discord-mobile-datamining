@@ -129,7 +129,7 @@ export function ConjureUserAvatar(size) {
     };
     const intl = tmp3(1112).intl;
     obj2.accessibilityLabel = intl.string(tmp3(1112).t.iXAna6);
-    const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "r" };
+    const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "Array" };
     obj2.children = closure_5(tmp3(1186).Avatar, obj3);
     tmp7 = closure_5(tmp3(7030).PressableOpacity, obj2);
   }

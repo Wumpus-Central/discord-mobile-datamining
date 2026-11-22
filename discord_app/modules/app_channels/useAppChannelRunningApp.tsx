@@ -38,7 +38,7 @@ export default function useAppChannelRunningApp(arg0) {
     items1,
   );
   let obj = require("initialize");
-  let tmp4 = stateFromStores(13894)(stateFromStores);
+  let tmp4 = stateFromStores(13892)(stateFromStores);
   const items2 = [FramesStore];
   const items3 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(

@@ -86,7 +86,7 @@ function UserSummaryRow(arg0) {
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj3.style = items2;
       let obj4 = { size: "custom", style: max(11130).makeSizeStyle(14) };
-      const items3 = [closure_13(max(13421).HeadphonesIcon, obj4)];
+      const items3 = [closure_13(max(13419).HeadphonesIcon, obj4)];
       let obj6 = {
         variant: "body-xs/semibold",
         style: { marginLeft: 4 },

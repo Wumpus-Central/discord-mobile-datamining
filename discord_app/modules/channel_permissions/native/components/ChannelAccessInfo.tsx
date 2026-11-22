@@ -147,7 +147,7 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(13358);
+    channel(13356);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(7038).GroupIcon)];
     const ROLES = constants.ROLES;
     channel(7779);

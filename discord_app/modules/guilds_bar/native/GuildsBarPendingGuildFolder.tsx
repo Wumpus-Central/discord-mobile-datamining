@@ -73,8 +73,8 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     overState: "a",
     preventClipping: true,
     config: "/assets/images/platforms",
-    externalChildren: 255,
-    children: 255,
+    externalChildren: 24,
+    children: 24,
   };
   const obj3 = id(1653);
   obj4.id = "" + id;
@@ -107,7 +107,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     overState: "a",
     preventClipping: true,
     config: "/assets/images/platforms",
-    externalChildren: 255,
-    children: 255,
+    externalChildren: 24,
+    children: 24,
   });
 });

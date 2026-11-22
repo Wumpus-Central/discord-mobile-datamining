@@ -19,9 +19,9 @@ const require = globalThis.__r;
 require = fn;
 fn(17).BackHandler;
 const AnalyticsTrackingStore = fn(8254);
-const ShareStore = fn(15637);
+const ShareStore = fn(15635);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-let closure_8 = fn(13286).MultiAccountSwitchLocation;
+let closure_8 = fn(13284).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const share = "share";
@@ -58,8 +58,8 @@ export default function AppShare(targetUserId) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_0(13289);
-        closure_0(13289)
+        const obj = closure_0(13287);
+        closure_0(13287)
           .switchAccount(targetUserId, false, constants.SHARE_EXTENSION)
           .then(() => {
             closure_1_3(true);

@@ -27,14 +27,14 @@ function getChatInputMaxHeight() {
     ),
   );
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12827).CHAT_INPUT_PILL_CONTENT_SIZE;
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12825).CHAT_INPUT_PILL_CONTENT_SIZE;
 let items = [
   {
     code: "(function getChatInputMaxHeightWorklet_useChatInputMaxHeightTsx1(){let[getKeyboardStateWorklet,KeyboardTypes,getWindowDimensionsWorklet,MAX_HEIGHT,MIN_HEIGHT]=this.__closure;const{keyboardHeight:keyboardHeightSystem,customKeyboardHeight:customKeyboardHeight,keyboardType:keyboardType}=getKeyboardStateWorklet();const keyboardHeight=keyboardType!==KeyboardTypes.SYSTEM?customKeyboardHeight:keyboardHeightSystem;const window=getWindowDimensionsWorklet({ignoreKeyboard:true});const windowHeightNoKeyboard=window.height-keyboardHeight;return Math.min(MAX_HEIGHT,Math.max(MIN_HEIGHT*2,windowHeightNoKeyboard-MAX_HEIGHT));})",
   },
-  fn(12902).getKeyboardStateWorklet,
+  fn(12900).getKeyboardStateWorklet,
   fn(1626).KeyboardTypes,
-  fn(12903).getWindowDimensionsWorklet,
+  fn(12901).getWindowDimensionsWorklet,
   200,
   CHAT_INPUT_PILL_CONTENT_SIZE,
 ];

@@ -71,7 +71,7 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const Sections = fn(13607).Sections;
+const Sections = fn(13605).Sections;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_12,
@@ -79,7 +79,7 @@ const Constants = fn(1071);
   InstantInviteSources: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-const ContactPermissions = fn(13585).ContactPermissions;
+const ContactPermissions = fn(13583).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = {

@@ -81,7 +81,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1358);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "r" };
+  let obj = { lineHeight: "Array" };
 }
 let closure_18 = {
   CALL: "call",
@@ -245,7 +245,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "r" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {

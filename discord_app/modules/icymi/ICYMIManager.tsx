@@ -68,7 +68,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               let _clearTimeout = clearTimeout;
               clearTimeout(timeout);
             }
-            timeout = setTimeout(/* F108494 */ function() { ... }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
+            timeout = setTimeout(/* F108503 */ function() { ... }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
             obj = closure_1_0(closure_1_2[0]);
           }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
           obj = closure_1_0(closure_1_2[0]);

@@ -32,8 +32,8 @@ function SearchableMembersScreen(searchContext) {
   let bound;
   const analyticsLocations = guildId(7520)().analyticsLocations;
   const tmp = closure_21();
-  dependencyMap = searchContext(13206).getSearchContextId(searchContext);
-  let obj = searchContext(13206);
+  dependencyMap = searchContext(13204).getSearchContextId(searchContext);
+  let obj = searchContext(13204);
   items = [contentContainerStyles];
   const stateFromStores = searchContext(563).useStateFromStores(items, () =>
     SearchMemberTabStore.getResults(closure_3),
@@ -468,7 +468,7 @@ export default noop.memo(function MembersScreen(searchContext) {
       });
     }
     obj4.listHeaderContent = tmp24Result;
-    obj3.children = jsx(tmp2(13060), {
+    obj3.children = jsx(tmp2(13058), {
       channelId: searchContext.channelId,
       disableStickySections: true,
       listStyleOverride: tmp.userList,

@@ -87,7 +87,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(13250).BaseChannelIcon, obj10);
+    return state(tmp9(13248).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -118,7 +118,7 @@ function DMChannelIcon(userId) {
     status,
     isMobileOnline,
     isVROnline,
-    statusStyle: 7,
+    statusStyle: 0,
   };
   const items4 = [tmp.avatarStatus];
   if (avatarStatusSelected) {

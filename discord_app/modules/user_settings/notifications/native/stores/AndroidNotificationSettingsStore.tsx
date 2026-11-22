@@ -128,8 +128,8 @@ const identity = fn(1257);
 let closure_4 = identity.createWithEqualityFn(() => ({
   isLightsEnabled: "Array",
   isVibrationsEnabled: "s",
-  isSoundsEnabled: "analyticsLocations",
-  isNotifyEveryTime: "skuId",
+  isSoundsEnabled: "ao",
+  isNotifyEveryTime: "Text",
 }));
 const size = fn(2);
 let result = size.fileFinishedImporting(

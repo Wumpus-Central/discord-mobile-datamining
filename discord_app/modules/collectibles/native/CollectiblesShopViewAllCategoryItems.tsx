@@ -238,7 +238,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj8 = { logoUrl, buttonColor: "Array", categoryName: "Array" };
+  const obj8 = { logoUrl, buttonColor: "Array", categoryName: "user" };
   let name;
   if (category != null) {
     name = category.name;

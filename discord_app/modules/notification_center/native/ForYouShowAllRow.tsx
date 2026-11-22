@@ -78,7 +78,7 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const Sections = fn(13607).Sections;
+const Sections = fn(13605).Sections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4913);
@@ -166,7 +166,7 @@ export function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: "Array" };
+        const obj = { user: user.user, guildId: "Array", size: "user" };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2)

@@ -13,7 +13,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.xZEzbu);
   },
   parent: fn(8712).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(15980).useIs2FAEnabled,
+  usePredicate: fn(15978).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
             const intl4 = onSuccess(1112).intl;
             obj.actionText = intl4.string(onSuccess(1112).t.geKm7t);
             obj.confirmColor = onSuccess(1186).ButtonColors.BRAND;
-            closure_2_1(16070)(obj);
+            closure_2_1(16068)(obj);
           });
         },
         onSuccess,
@@ -63,7 +63,7 @@ const route = SettingBuilders.createRoute({
       let intl3 = closure_0(1112).intl;
       obj.actionText = intl3.string(closure_0(1112).t.PDTjLN);
       obj.confirmColor = closure_0(1186).ButtonColors.BRAND;
-      closure_1(16070)(obj);
+      closure_1(16068)(obj);
       return false;
     }, []);
   },

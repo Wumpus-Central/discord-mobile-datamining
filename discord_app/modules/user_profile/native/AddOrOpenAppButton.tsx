@@ -37,7 +37,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(12427).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(12434).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
