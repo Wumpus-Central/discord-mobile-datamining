@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_role_subscription", width: 330, height: 112, scales: [2, 3], hash: "78e617e8087401b333ebcab08d27a76a", name: "image_role_subscription_purchase_card_bg", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/summaries/native/images", width: 14, height: 18, scales: [2, 3], hash: "a62b86dc1d2c11cbfe0a98b586c4b359", name: "summary_indicator_start", type: "png" });

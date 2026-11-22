@@ -15,11 +15,11 @@ class MemoryInfo {
     self = this;
     tmp = closure_0(this, MemoryInfo);
     tmp2 = c2;
-    definePropertyResult = Object.defineProperty(this, c2, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, c2, { writable: true, value: "Array" });
     tmp4 = closure_3;
-    definePropertyResult1 = Object.defineProperty(this, closure_3, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, closure_3, { writable: true, value: "Array" });
     tmp6 = closure_4;
-    definePropertyResult2 = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(this, closure_4, { writable: true, value: "Array" });
     if (null != global) {
       tmp8 = closure_1;
       ({ jsHeapSizeLimit: closure_1(undefined, self, tmp2)[tmp2], totalJSHeapSize: closure_1(undefined, self, tmp4)[tmp4], usedJSHeapSize: closure_1(undefined, self, tmp6)[tmp6] } = global);

@@ -1,7 +1,7 @@
 // === Module 19394: ? ===
 
 // Module 19394
-import _modDef14666 from "module_14666" /* 14666 */;
+import _modDef14664 from "module_14664" /* 14664 */;
 import _modDef19393 from "module_19393" /* 19393 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
@@ -149,12 +149,12 @@ let items = [
 const importDefaultResultResult = _createClass(AnimatedCircularProgress, items);
 let obj = {};
 let merged = Object.assign(_modDef19393.propTypes);
-obj.prefill = _modDef14666.number;
-obj.duration = _modDef14666.number;
-obj.easing = _modDef14666.func;
-obj.onAnimationComplete = _modDef14666.func;
-obj.useNativeDriver = _modDef14666.bool;
-obj.delay = _modDef14666.number;
+obj.prefill = _modDef14664.number;
+obj.duration = _modDef14664.number;
+obj.easing = _modDef14664.func;
+obj.onAnimationComplete = _modDef14664.func;
+obj.useNativeDriver = _modDef14664.bool;
+obj.delay = _modDef14664.number;
 importDefaultResultResult.propTypes = obj;
 importDefaultResultResult.defaultProps = { duration: 500, easing: Easing.out(Easing.ease), prefill: 0, useNativeDriver: false, delay: 0 };
 

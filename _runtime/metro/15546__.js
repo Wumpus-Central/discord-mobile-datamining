@@ -1,17 +1,14 @@
 // === Module 15546: ? ===
 
 // Module 15546
-import _mod15542 from "module_15542" /* 15542 */;
+import _mod15547 from "module_15547" /* 15547 */;
 
 
-export default !_mod15542(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+export default (arg0) => {
+  if (_mod15547(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
   }
-  return hasOwnPropertyResult;
-});
+};

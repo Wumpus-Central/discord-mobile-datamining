@@ -1,15 +1,8 @@
 // === Module 19913: ? ===
 
 // Module 19913
-import _mod19914 from "module_19914" /* 19914 */;
-import capitalize from "capitalize" /* 19921 */;
+const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
-
-export default _mod19914((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default function hasUnicodeWord(arg0) {
+  return re0.test(arg0);
+};
