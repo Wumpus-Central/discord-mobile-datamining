@@ -1,3 +1,3 @@
 // _runtime/metro/14659__.js
 
-export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };
+export default { L: 1, M: 0, Q: 3, H: 2 };

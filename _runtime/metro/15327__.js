@@ -1,8 +1,7 @@
 // _runtime/metro/15327__.js
-import _mod15310 from "15310__.js";
+import _mod15325 from "15325__.js";
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod15310(arg0, arg2);
-  const tmp = new _mod15310(arg1, arg2);
-  return obj.compare(tmp) || obj.compareBuild(tmp);
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod15325(arg1, arg0, closure_0));
 };

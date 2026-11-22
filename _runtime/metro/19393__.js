@@ -5,7 +5,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
-import emptyFunction_mod from "14666__.js";
+import emptyFunction_mod from "14664__.js";
 
 const CircularProgress = fn;
 function _isNativeReflectConstruct() {

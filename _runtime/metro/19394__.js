@@ -1,5 +1,5 @@
 // _runtime/metro/19394__.js
-import _modDef14666 from "14666__.js";
+import _modDef14664 from "14664__.js";
 import _modDef19393 from "19393__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -152,12 +152,12 @@ let items = [
 const importDefaultResultResult = _createClass(AnimatedCircularProgress, items);
 let obj = {};
 let merged = Object.assign(_modDef19393.propTypes);
-obj.prefill = _modDef14666.number;
-obj.duration = _modDef14666.number;
-obj.easing = _modDef14666.func;
-obj.onAnimationComplete = _modDef14666.func;
-obj.useNativeDriver = _modDef14666.bool;
-obj.delay = _modDef14666.number;
+obj.prefill = _modDef14664.number;
+obj.duration = _modDef14664.number;
+obj.easing = _modDef14664.func;
+obj.onAnimationComplete = _modDef14664.func;
+obj.useNativeDriver = _modDef14664.bool;
+obj.delay = _modDef14664.number;
 importDefaultResultResult.propTypes = obj;
 importDefaultResultResult.defaultProps = {
   duration: 500,

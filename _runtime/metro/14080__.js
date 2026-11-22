@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 314,
-  height: 195,
+  width: 285,
+  height: 177,
   scales: [2, 3],
-  hash: "f774e43fd38da2d8b6e5bdabed98e8b8",
-  name: "img_tier_0_marketing_emojis",
+  hash: "8f1d829bee3b017ccff2f53d55809f29",
+  name: "img_marketing_profiles",
   type: "png",
 });

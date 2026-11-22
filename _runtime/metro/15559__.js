@@ -1,11 +1,10 @@
 // _runtime/metro/15559__.js
-import _mod15538 from "15538__.js";
+import _mod15543 from "15543__.js";
+import _mod15560 from "15560__.js";
 
-const tmp = _mod15538.navigator && _mod15538.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
+let closure_2 = _mod15543({}.hasOwnProperty);
 
-export default str;
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod15560(arg0), arg1);
+  };

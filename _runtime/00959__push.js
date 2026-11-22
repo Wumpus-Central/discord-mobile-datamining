@@ -111,10 +111,10 @@ function _shift(fn) {
           return new Promise((arg0, arg1) => {
             closure_0 = arg0;
             closure_1 = arg1;
-            const fn = /* F120892 */ function() { ... };
+            const fn = /* F120905 */ function() { ... };
             closure_0.onsuccess = fn;
             closure_0.oncomplete = fn;
-            const fn2 = /* F120893 */ function() { ... };
+            const fn2 = /* F120906 */ function() { ... };
             closure_0.onerror = fn2;
             closure_0.onabort = fn2;
           }).then(() => transaction);
@@ -126,7 +126,7 @@ function _shift(fn) {
 function createIndexedDbStore(arg0) {
   let dbName = arg0;
   function getStore() {
-    if (null == f79668) {
+    if (null == f79677) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
@@ -148,12 +148,12 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f79668 = (arg0) => {
+      f79677 = (arg0) => {
         closure_0 = arg0;
         return promise.then((transaction) => closure_0(transaction.transaction(openResult, "readwrite").objectStore(openResult)));
       };
     }
-    return f79668;
+    return f79677;
   }
   const obj = { push: null, unshift: null, shift: null };
   closure_4 = asyncGeneratorStep(async (arg0) => {

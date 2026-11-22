@@ -105,10 +105,10 @@ function pnpm_decayTs3(arg0, arg1) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "sa",
+      current: "ip",
       lastTimestamp: null,
-      startTimestamp: "keyword",
-      reduceMotion: "gray",
+      startTimestamp: true,
+      reduceMotion: "/assets/design/components/Icon/native/redesign/generated/images",
     };
     let num = obj.velocity;
     if (num == null) {

@@ -72,7 +72,7 @@ if (self2) {
       if (!weakSet.has(prototypeOf)) {
         weakSet.add(prototypeOf);
         let addIssues = "format";
-        let f97475 = (arg0) => {
+        let f97484 = (arg0) => {
           closure_0 = arg0;
           return (arg0) => closure_2_5.formatError(closure_0, arg0);
         };
@@ -81,7 +81,7 @@ if (self2) {
           configurable: true,
           enumerable: false,
           get() {
-            const tmp = f97475(this);
+            const tmp = f97484(this);
             Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
             return tmp;
           },
@@ -91,7 +91,7 @@ if (self2) {
         };
         Object.defineProperty(prototypeOf, "format", obj2);
         addIssues = "flatten";
-        f97475 = (arg0) => {
+        f97484 = (arg0) => {
           closure_0 = arg0;
           return (arg0) => closure_2_5.flattenError(closure_0, arg0);
         };
@@ -100,7 +100,7 @@ if (self2) {
           configurable: true,
           enumerable: false,
           get() {
-            const tmp = f97475(this);
+            const tmp = f97484(this);
             Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
             return tmp;
           },
@@ -110,7 +110,7 @@ if (self2) {
         };
         Object.defineProperty(prototypeOf, "flatten", obj3);
         addIssues = "addIssue";
-        f97475 = (arg0) => {
+        f97484 = (arg0) => {
           closure_0 = arg0;
           return (arg0) => {
             const issues = closure_0.issues;
@@ -123,7 +123,7 @@ if (self2) {
           configurable: true,
           enumerable: false,
           get() {
-            const tmp = f97475(this);
+            const tmp = f97484(this);
             Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
             return tmp;
           },
@@ -133,7 +133,7 @@ if (self2) {
         };
         Object.defineProperty(prototypeOf, "addIssue", obj4);
         addIssues = "addIssues";
-        f97475 = (arg0) => {
+        f97484 = (arg0) => {
           closure_0 = arg0;
           return (arg0) => {
             const issues = closure_0.issues;
@@ -147,7 +147,7 @@ if (self2) {
           configurable: true,
           enumerable: false,
           get() {
-            const tmp = f97475(this);
+            const tmp = f97484(this);
             Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
             return tmp;
           },

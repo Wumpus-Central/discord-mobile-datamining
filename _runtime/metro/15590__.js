@@ -1,11 +1,74 @@
 // _runtime/metro/15590__.js
-import _mod15563 from "15563__.js";
+import _mod15539 from "15539__.js";
+import text from "../15548_text.js";
+import _mod15571 from "15571__.js";
+import _mod15588 from "15588__.js";
+import _mod15591 from "15591__.js";
 
-export default (arg0) => {
-  if (_mod15563(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod15539) {
+  if (_mod15591) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod15588(fn);
+      const tmp2 = text(arg1);
+      _mod15588(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = {
+                    configurable: configurable in value ? value[configurable] : tmp7[configurable],
+                    enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable],
+                    writable: false,
+                  };
+                }
+              }
+            }
+          }
+        }
+      }
+      return defineProperty(fn, tmp2, tmp4);
+    };
   }
-};
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod15588(arg0);
+    const tmp2 = text(arg1);
+    _mod15588(value);
+    if (!_mod15571) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
+        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {}
+    }
+  };
+}
+
+export const f = defineProperty2;

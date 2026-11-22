@@ -30,7 +30,7 @@ function mirrorShape(arg0, _zod, ownKeysResult, fn) {
     if (iter.enumerable) {
       if (iter.get) {
         closure_0 = iter;
-        const f126452 = () => {
+        const f126465 = () => {
           let tmp3Result = tmp2;
           if (closure_2) {
             tmp3Result = tmp3(tmp2, tmp);
@@ -40,7 +40,7 @@ function mirrorShape(arg0, _zod, ownKeysResult, fn) {
         const _Object2 = Object;
         const obj2 = {
           get() {
-                const tmp = f137295();
+                const tmp = f137311();
                 Object.defineProperty(this, closure_0, { value: tmp, writable: true, enumerable: true, configurable: true });
                 return tmp;
               },
@@ -198,15 +198,15 @@ function extended(_zod, arg1) {
     closure_1 = arg1;
     function _loop2(iter) {
       closure_0 = iter;
-      iter = Object.getOwnPropertyDescriptor(f137295, iter);
+      iter = Object.getOwnPropertyDescriptor(f137311, iter);
       if (iter.enumerable) {
         if (iter.get) {
           closure_0 = iter;
-          f137295 = () => closure_1[closure_0];
+          f137311 = () => closure_1[closure_0];
           const _Object2 = Object;
           const obj2 = {
             get() {
-                  const tmp = f137295();
+                  const tmp = f137311();
                   Object.defineProperty(this, closure_0, { value: tmp, writable: true, enumerable: true, configurable: true });
                   return tmp;
                 },
@@ -857,15 +857,15 @@ export function safeExtend(_zod, arg1) {
       closure_1 = arg1;
       function _loop2(iter) {
         closure_0 = iter;
-        iter = Object.getOwnPropertyDescriptor(f137295, iter);
+        iter = Object.getOwnPropertyDescriptor(f137311, iter);
         if (iter.enumerable) {
           if (iter.get) {
             closure_0 = iter;
-            f137295 = () => closure_1[closure_0];
+            f137311 = () => closure_1[closure_0];
             const _Object2 = Object;
             const obj2 = {
               get() {
-                    const tmp = f137295();
+                    const tmp = f137311();
                     Object.defineProperty(this, closure_0, { value: tmp, writable: true, enumerable: true, configurable: true });
                     return tmp;
                   },

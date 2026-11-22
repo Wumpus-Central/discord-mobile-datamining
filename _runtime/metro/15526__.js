@@ -4,26 +4,22 @@ const require = globalThis.__r;
 const require = arg1;
 const dependencyMap = arg6;
 
-export function getSupportedNumberingSystems(locale) {
+export function getSupportedTimeZones(locale) {
   _require = locale;
-  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
-  return numberingSystemNames.filter((item) =>
-    (function isSupportedNumberingSystem(item, arg1) {
+  const timezones = require("15527__.js").timezones;
+  return timezones.filter((item) =>
+    (function isSupported(timeZone, arg1) {
       let str = arg1;
       if (undefined === arg1) {
         str = "en";
       }
       try {
-        const concat = "".concat;
-        const combined = "".concat(str, "-u-nu-");
-        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
-        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
-          if ("123" === memoizedNumberFormat.format(123)) {
-            return false;
-          }
-        }
-        return true;
-      } catch (err) {}
+        const obj = { timeZone };
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+        return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+      } catch (err) {
+        return false;
+      }
     })(item, closure_0),
   );
 }

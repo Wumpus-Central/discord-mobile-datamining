@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/modules/video_calls/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f0c32854a135e6d60a3190ac067a0b08",
-  name: "ic_headset_deafened_dark_24px",
+  hash: "cc65a5f47aada2d48ca57f930a5ac833",
+  name: "camera",
   type: "png",
 });

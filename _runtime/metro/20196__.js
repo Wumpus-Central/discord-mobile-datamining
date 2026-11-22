@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 120,
-  height: 62,
+  httpServerLocation: "/assets/images/native/guild_role_subscription",
+  width: 55,
+  height: 128,
   scales: [2, 3],
-  hash: "45f60dd7d404beac5f4bf97c97606d27",
-  name: "poop_light_large",
+  hash: "3ad934bc4ddf8afa206b19b9a38876a2",
+  name: "image_role_subscription_lanyard",
   type: "png",
 });

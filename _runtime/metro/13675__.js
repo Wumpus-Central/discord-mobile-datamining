@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native",
-  width: 121,
-  height: 80,
+  width: 48,
+  height: 48,
   scales: [1, 2, 3],
-  hash: "dc39c8debe144867da8663a97ac0ae70",
-  name: "link_expired_light",
+  hash: "079f1f5099b5396d01af5ed23e7bac76",
+  name: "ic_invites_disabled",
   type: "png",
 });

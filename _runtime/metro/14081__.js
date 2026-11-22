@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 250,
-  height: 175,
+  width: 324,
+  height: 187,
   scales: [2, 3],
-  hash: "286d809a177e5dc702067fdd57e25871",
-  name: "img_marketing_uploads_light_border",
+  hash: "c300172c07e69fb8041898afe2aa282d",
+  name: "img_tier_0_marketing_boosting",
   type: "png",
 });

@@ -1,13 +1,12 @@
 // _runtime/metro/15587__.js
-import _mod15588 from "15588__.js";
+import _mod15585 from "15585__.js";
 
-export default (arg0) => {
-  let num = 0;
-  {
-    num = 0;
-    if (0 !== tmp) {
-      num = _mod15588(tmp);
-    }
+export default (arg0, arg1) => {
+  const tmp = _mod15585(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
   }
-  return num;
+  return tmp3;
 };

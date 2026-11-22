@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 177.5,
   height: 112,
   scales: [2, 3],
-  hash: "d63f711157bc9a870f14f2f22d76c3fb",
-  name: "guild_subscription_no_guilds_dark",
+  hash: "047720876ededd06daff5402c5798f99",
+  name: "guild_subscription_no_guilds_light",
   type: "png",
 });

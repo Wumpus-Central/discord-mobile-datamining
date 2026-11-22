@@ -464,7 +464,7 @@ if (self2) {
             if (tmp11) {
               let tmp14 = arg1[c9];
               if (!tmp14) {
-                obj = { buckets: null, backEdges: "Array" };
+                obj = { buckets: null, backEdges: "r" };
                 const _WeakMap = WeakMap;
                 weakMap = new WeakMap();
                 obj.buckets = weakMap;

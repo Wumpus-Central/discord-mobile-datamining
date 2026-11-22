@@ -430,7 +430,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                               }
                                               let obj2 = str(_function[4]);
                                             }
-                                            return str(_function[9]).handleCallbackErrors(/* F134979 */ function() { ... }, /* F134980 */ function() { ... }, /* F134981 */ function() { ... }, /* F134982 */ function() { ... });
+                                            return str(_function[9]).handleCallbackErrors(/* F134995 */ function() { ... }, /* F134996 */ function() { ... }, /* F134997 */ function() { ... }, /* F134998 */ function() { ... });
                                           });
                                         }
                                       }
@@ -661,7 +661,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                           const tmp2Result5 = tmp2(startSpanManual[7]);
                                                           obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
                                                           obj3.attributes = obj;
-                                                          return tmp2Result5.startSpan(obj3, /* F120746 */ function() { ... });
+                                                          return tmp2Result5.startSpan(obj3, /* F120759 */ function() { ... });
                                                         }
                                                       }
                                                       dependencyMap = arr;
@@ -679,14 +679,14 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                       obj4.attributes = obj;
                                                       if (BooleanResult) {
                                                         if (!tmp12) {
-                                                          closure_0 = _self(/* F139886 */ function() { ... });
-                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F139887 */ function() { ... });
+                                                          closure_0 = _self(/* F139903 */ function() { ... });
+                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F139904 */ function() { ... });
                                                           const tmp2Result8 = tmp2(startSpanManual[7]);
                                                         }
                                                       }
                                                       tmp2 = tmp2(startSpanManual[7]);
                                                       startSpanManual = tmp2.startSpanManual;
-                                                      startSpanManualResult = startSpanManual(obj4, /* F134978 */ function() { ... });
+                                                      startSpanManualResult = startSpanManual(obj4, /* F134994 */ function() { ... });
                                                       const tmp2Result7 = tmp2(startSpanManual[2]);
                                                     }
                                                   }

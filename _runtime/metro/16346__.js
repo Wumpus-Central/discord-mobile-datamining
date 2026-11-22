@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "67084cd4f72fc46263204ba0954f5f2f",
-  name: "ClosedCaptionsIcon",
+  hash: "d4b8535e8fda48cfe70d5688d1051d12",
+  name: "ClosedCaptionsOutlineIcon",
   type: "png",
 });

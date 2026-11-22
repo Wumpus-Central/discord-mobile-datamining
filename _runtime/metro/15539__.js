@@ -1,12 +1,12 @@
 // _runtime/metro/15539__.js
-import _mod15538 from "15538__.js";
+import _mod15540 from "15540__.js";
 
-export default (arg0, value) => {
-  try {
-    const obj = { value, configurable: true, writable: true };
-    defineProperty(_mod15538, arg0, obj);
-    return value;
-  } catch (err) {
-    _mod15538[tmp2] = tmp;
-  }
-};
+export default !_mod15540(
+  () =>
+    7 !==
+    Object.defineProperty({}, 1, {
+      get() {
+        return 7;
+      },
+    })[1],
+);

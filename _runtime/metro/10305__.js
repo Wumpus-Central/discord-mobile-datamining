@@ -1895,7 +1895,7 @@ if (self2) {
           },
       strip() {
             const util = closure_0(10287).util;
-            return this.clone(util.mergeDefs(this._zod.def, { catchall: "r" }));
+            return this.clone(util.mergeDefs(this._zod.def, { catchall: "Array" }));
           },
       extend(arg0) {
             const util = closure_0(10287).util;

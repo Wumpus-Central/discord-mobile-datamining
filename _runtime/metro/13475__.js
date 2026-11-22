@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "18fb368a457a812267e823f947169b18",
-  name: "BoostTier1Icon",
+  hash: "60410ef8275ee557c4c66e4f0d7dfc15",
+  name: "BoostGemSlashIcon",
   type: "png",
 });
