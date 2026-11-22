@@ -1,6 +1,6 @@
-// === Module 12219: AcceptGuildTemplateActionCreators ===
+// === Module 12226: AcceptGuildTemplateActionCreators ===
 
-// Module 12219 (AcceptGuildTemplateActionCreators)
+// Module 12226 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import transitionToGuild from "transitionToGuild" /* 6835 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;

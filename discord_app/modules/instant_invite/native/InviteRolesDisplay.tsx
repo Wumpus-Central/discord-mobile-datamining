@@ -1,7 +1,7 @@
-// === Module 13861: InviteRolesDisplay ===
+// === Module 13859: InviteRolesDisplay ===
 
-// Module 13861 (InviteRolesDisplay)
-import RolePillDefault from "RolePill" /* 12218 */;
+// Module 13859 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 12225 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4819 */;
 

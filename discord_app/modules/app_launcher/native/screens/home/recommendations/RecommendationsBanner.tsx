@@ -1,6 +1,6 @@
-// === Module 12961: RecommendationsBanner ===
+// === Module 12959: RecommendationsBanner ===
 
-// Module 12961 (RecommendationsBanner)
+// Module 12959 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import useDisplayProfileDefault from "useDisplayProfile" /* 8072 */;
@@ -20,7 +20,7 @@ let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", hei
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
   let obj = heroMediaDimensions(12106);
-  heroMediaDimensions = heroMediaDimensions(12953).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  heroMediaDimensions = heroMediaDimensions(12951).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   items = [heroMediaDimensions, tmp4];

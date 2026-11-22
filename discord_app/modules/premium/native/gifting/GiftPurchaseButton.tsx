@@ -1,6 +1,6 @@
-// === Module 14190: GiftPurchaseButton ===
+// === Module 14188: GiftPurchaseButton ===
 
-// Module 14190 (GiftPurchaseButton)
+// Module 14188 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;

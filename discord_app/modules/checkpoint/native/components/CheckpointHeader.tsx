@@ -16,7 +16,7 @@ import VoiceXIcon from "VoiceXIcon" /* 10981 */;
 import CheckpointActionCreators from "CheckpointActionCreators" /* 12500 */;
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
 import CheckpointHeaderButtonDefault from "CheckpointHeaderButton" /* 12513 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 import CheckpointConstants from "CheckpointConstants" /* 5969 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4913 */;

@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13583 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13587 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13581 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13585 */;
 import CompassSpotIllustration from "CompassSpotIllustration" /* 18875 */;
 import noop from "module_19" /* 19 */;
 

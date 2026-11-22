@@ -7,8 +7,8 @@ import ActionSheetContextDefault from "ActionSheetContext" /* 5472 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 10676 */;
 import AppLauncherContext from "AppLauncherContext" /* 12106 */;
 import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12107 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12951 */;
-import getAppDMApplication from "getAppDMApplication" /* 13070 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12949 */;
+import getAppDMApplication from "getAppDMApplication" /* 13068 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

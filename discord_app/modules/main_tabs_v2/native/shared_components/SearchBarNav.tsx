@@ -1,6 +1,6 @@
-// === Module 13198: SearchBarNav ===
+// === Module 13196: SearchBarNav ===
 
-// Module 13198 (SearchBarNav)
+// Module 13196 (SearchBarNav)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;

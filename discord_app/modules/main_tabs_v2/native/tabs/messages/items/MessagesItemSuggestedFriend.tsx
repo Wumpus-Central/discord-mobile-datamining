@@ -8,7 +8,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import _mod7490 from "module_7490" /* 7490 */;
-import _mod13903 from "module_13903" /* 13903 */;
+import _mod13901 from "module_13901" /* 13901 */;
 import FriendSuggestionUtils from "FriendSuggestionUtils" /* 17562 */;
 import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17563 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -150,7 +150,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo(function MessagesItemSuggestedFriendLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod13903.useRecyclingState(false);
+  [tmp2, tmp3] = _mod13901.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

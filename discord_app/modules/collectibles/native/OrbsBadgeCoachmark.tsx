@@ -1,10 +1,10 @@
-// === Module 14205: OrbsBadgeCoachmark ===
+// === Module 14203: OrbsBadgeCoachmark ===
 
-// Module 14205 (OrbsBadgeCoachmark)
+// Module 14203 (OrbsBadgeCoachmark)
 import util from "util" /* 1112 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import useCoachmark from "useCoachmark" /* 9087 */;
-import _modDef14206 from "module_14206" /* 14206 */;
+import _modDef14204 from "module_14204" /* 14204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ function OrbsBadgeCoachmarkImg() {
   const tmp = closure_6();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef14206 };
+  const obj3 = { uri: _modDef14204 };
   obj2.source = obj3;
   obj2.style = tmp.coachmarkImage;
   obj.children = jsx(FastImageDefault, { source: null, style: null });

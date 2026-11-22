@@ -1,8 +1,8 @@
-// === Module 13672: InviteRolesList ===
+// === Module 13670: InviteRolesList ===
 
-// Module 13672 (InviteRolesList)
+// Module 13670 (InviteRolesList)
 import GuildRoleUtils from "GuildRoleUtils" /* 4823 */;
-import RolePillDefault from "RolePill" /* 12218 */;
+import RolePillDefault from "RolePill" /* 12225 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

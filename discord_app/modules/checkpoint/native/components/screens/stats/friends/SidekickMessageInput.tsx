@@ -1,12 +1,12 @@
-// === Module 12776: SidekickMessageInput ===
+// === Module 12774: SidekickMessageInput ===
 
-// Module 12776 (SidekickMessageInput)
+// Module 12774 (SidekickMessageInput)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5093 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 9465 */;
-import Tracking from "Tracking" /* 12490 */;
+import Tracking from "Tracking" /* 12126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -215,7 +215,7 @@ export default function SidekickMessageInput(user) {
     let obj5 = {
       onPress: function handleGift() {
           React4.dismiss();
-          const result = Tracking.trackCheckpoint2026GiftCtaClicked(user.id);
+          const result = Tracking.trackCheckpoint2026GiftCTAClicked(user.id);
           const obj3 = { recipientUserId: user.id, analyticsLocations: null };
           items = [AnalyticsLocationDefault.CHECKPOINT, AnalyticsLocationDefault.CHECKPOINT_SIDEKICK];
           obj3.analyticsLocations = items;

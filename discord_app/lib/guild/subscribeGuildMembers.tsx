@@ -1,6 +1,6 @@
-// === Module 12380: subscribeGuildMembers ===
+// === Module 12387: subscribeGuildMembers ===
 
-// Module 12380 (subscribeGuildMembers)
+// Module 12387 (subscribeGuildMembers)
 import applyDefault from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6538 */;

@@ -1,6 +1,6 @@
-// === Module 16020: DismissiblePremiumNewBadge ===
+// === Module 16018: DismissiblePremiumNewBadge ===
 
-// Module 16020 (DismissiblePremiumNewBadge)
+// Module 16018 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import native from "native" /* 1186 */;

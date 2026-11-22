@@ -1,6 +1,6 @@
-// === Module 13904: SocialLayerStorefrontGiftProductDetails ===
+// === Module 13902: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 13904 (SocialLayerStorefrontGiftProductDetails)
+// Module 13902 (SocialLayerStorefrontGiftProductDetails)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import FastImageDefault from "FastImage" /* 5600 */;

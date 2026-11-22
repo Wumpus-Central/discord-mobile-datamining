@@ -1,6 +1,6 @@
-// === Module 14253: useHandleBuyNow ===
+// === Module 14251: useHandleBuyNow ===
 
-// Module 14253 (useHandleBuyNow)
+// Module 14251 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -69,7 +69,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(13915)({
+  const tmp3 = onBuySettled(13913)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

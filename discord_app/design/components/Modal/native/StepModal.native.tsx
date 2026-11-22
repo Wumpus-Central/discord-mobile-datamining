@@ -1,10 +1,10 @@
-// === Module 12269: StepModal ===
+// === Module 12276: StepModal ===
 
-// Module 12269 (StepModal)
+// Module 12276 (StepModal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import Modal from "Modal" /* 12043 */;
-import ModalStepIndicator from "ModalStepIndicator" /* 12270 */;
+import ModalStepIndicator from "ModalStepIndicator" /* 12277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

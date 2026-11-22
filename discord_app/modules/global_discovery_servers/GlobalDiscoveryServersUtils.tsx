@@ -1,6 +1,6 @@
-// === Module 20103: GlobalDiscoveryServersUtils ===
+// === Module 20100: GlobalDiscoveryServersUtils ===
 
-// Module 20103 (GlobalDiscoveryServersUtils)
+// Module 20100 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import v1 from "v1" /* 1268 */;
@@ -164,7 +164,7 @@ export function fromDiscoverableGuildServer(id) {
   return obj;
 }
 export function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "sa", discoverySplash: null, emojis: 0.05 };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "isArray", discoverySplash: null, emojis: "\u{1F9D2}\u{1F3FB}" };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   obj.emojis = [];
   return obj;

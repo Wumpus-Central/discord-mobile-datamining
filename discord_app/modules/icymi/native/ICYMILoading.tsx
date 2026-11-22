@@ -3,7 +3,7 @@
 // Module 18150 (ICYMILoading)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13552 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13550 */;
 import ICYMIShared from "ICYMIShared" /* 18130 */;
 import noop from "module_19" /* 19 */;
 

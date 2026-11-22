@@ -1,6 +1,6 @@
-// === Module 13191: InviteSuggestionsStore ===
+// === Module 13189: InviteSuggestionsStore ===
 
-// Module 13191 (InviteSuggestionsStore)
+// Module 13189 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6678 */;

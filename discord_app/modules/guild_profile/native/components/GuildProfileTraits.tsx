@@ -1,6 +1,6 @@
-// === Module 13809: GuildProfileTraits ===
+// === Module 13807: GuildProfileTraits ===
 
-// Module 13809 (GuildProfileTraits)
+// Module 13807 (GuildProfileTraits)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4863 */;

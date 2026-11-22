@@ -1,6 +1,6 @@
-// === Module 13855: InstantInviteCode ===
+// === Module 13853: InstantInviteCode ===
 
-// Module 13855 (InstantInviteCode)
+// Module 13853 (InstantInviteCode)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;

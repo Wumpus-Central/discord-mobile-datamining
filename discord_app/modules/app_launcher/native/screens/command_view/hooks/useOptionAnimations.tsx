@@ -1,6 +1,6 @@
-// === Module 13033: useOptionAnimations ===
+// === Module 13031: useOptionAnimations ===
 
-// Module 13033 (useOptionAnimations)
+// Module 13031 (useOptionAnimations)
 import Discord from "Discord" /* 0 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;

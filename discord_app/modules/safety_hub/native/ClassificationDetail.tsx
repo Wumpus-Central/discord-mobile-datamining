@@ -1,6 +1,6 @@
-// === Module 12417: ClassificationDetail ===
+// === Module 12424: ClassificationDetail ===
 
-// Module 12417 (ClassificationDetail)
+// Module 12424 (ClassificationDetail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -13,8 +13,8 @@ import MetricEvents from "MetricEvents" /* 6370 */;
 import TableRow from "TableRow" /* 7045 */;
 import SafetyHubModels from "SafetyHubModels" /* 7810 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8042 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12422 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12434 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12429 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12441 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 import SafetyHubStore from "SafetyHubStore" /* 7835 */;

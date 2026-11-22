@@ -1,8 +1,8 @@
-// === Module 13424: useGuildPowerupCardFooterConfig ===
+// === Module 13422: useGuildPowerupCardFooterConfig ===
 
-// Module 13424 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13387 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13393 */;
+// Module 13422 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13385 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13391 */;
 import GuildStore from "GuildStore" /* 4784 */;
 
 const require = globalThis.__r;

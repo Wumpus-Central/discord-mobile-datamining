@@ -6,7 +6,7 @@ import PlatformUtils from "PlatformUtils" /* 1378 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10043 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 12122 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import ICYMIShared from "ICYMIShared" /* 18130 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

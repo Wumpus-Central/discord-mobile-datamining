@@ -1,6 +1,6 @@
-// === Module 14247: CollectiblesPromotionDiscountCtaUtils ===
+// === Module 14245: CollectiblesPromotionDiscountCtaUtils ===
 
-// Module 14247 (CollectiblesPromotionDiscountCtaUtils)
+// Module 14245 (CollectiblesPromotionDiscountCtaUtils)
 import util from "util" /* 1112 */;
 import useCollectiblesPromotionForProduct from "useCollectiblesPromotionForProduct" /* 8960 */;
 import CollectiblesStorefrontPricingIntegrationExperiment from "CollectiblesStorefrontPricingIntegrationExperiment" /* 8964 */;

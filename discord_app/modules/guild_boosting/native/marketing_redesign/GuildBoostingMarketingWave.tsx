@@ -1,6 +1,6 @@
-// === Module 14777: GuildBoostingMarketingWave ===
+// === Module 14775: GuildBoostingMarketingWave ===
 
-// Module 14777 (GuildBoostingMarketingWave)
+// Module 14775 (GuildBoostingMarketingWave)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5477 */;
 import inlineStyles from "inlineStyles" /* 7865 */;

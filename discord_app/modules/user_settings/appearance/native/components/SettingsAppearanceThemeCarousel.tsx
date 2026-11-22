@@ -1,6 +1,6 @@
-// === Module 16678: SettingsAppearanceThemeCarousel ===
+// === Module 16676: SettingsAppearanceThemeCarousel ===
 
-// Module 16678 (SettingsAppearanceThemeCarousel)
+// Module 16676 (SettingsAppearanceThemeCarousel)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import MobileThemesUtils from "MobileThemesUtils" /* 5119 */;
@@ -9,11 +9,11 @@ import timingPresets from "timingPresets" /* 5126 */;
 import HapticUtils from "HapticUtils" /* 5129 */;
 import PaginationDefault from "Pagination" /* 9510 */;
 import _modDef10503 from "module_10503" /* 10503 */;
-import HexagonCampaignThemeLegalDefault from "HexagonCampaignThemeLegal" /* 16414 */;
-import _modDef16683 from "module_16683" /* 16683 */;
+import HexagonCampaignThemeLegalDefault from "HexagonCampaignThemeLegal" /* 16412 */;
+import _modDef16681 from "module_16681" /* 16681 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16679 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16677 */;
 import module_1653 from "module_1653" /* 1653 */;
 
 const require = globalThis.__r;
@@ -129,7 +129,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     tmp18 = isThumbstickScrollDevice;
   }
-  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6561).QuestContent.CLIENT_THEME_SETTINGS, tmp2(15854).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6561).QuestContent.CLIENT_THEME_SETTINGS, tmp2(15852).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
   const tmp2Result = require("HexagonCampaignAnalytics");
   const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
   const tmp20 = constants;
@@ -361,7 +361,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       if (tmp40Result6) {
         const obj21 = { theme: ThemeTypes.DARK, children: null };
         const obj22 = { perk: tmp20.CLIENT_THEME, variant: "expressive" };
-        obj21.children = tmp40(tmp53(15878), obj22);
+        obj21.children = tmp40(tmp53(15876), obj22);
         tmp40Result6 = tmp40(tmp2(4974).ThemeContextProvider, obj21);
       }
       const obj23 = { children: null };
@@ -384,7 +384,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       const obj28 = { style: null, source: null, size: null };
       const items20 = [tmp.arrowLeft, animatedStyles.iconInteractive];
       obj28.style = items20;
-      obj28.source = _modDef16683;
+      obj28.source = _modDef16681;
       obj28.size = tmp2(1186).IconSizes.REFRESH_SMALL_16;
       const items21 = [tmp40(rounded, obj28), ];
       const obj29 = { animated: true, style: null, variant: "body-sm/medium", maxFontSizeMultiplier: 1.5, children: null };

@@ -3,20 +3,20 @@
 // Module 18722 (SearchTabsLayout)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13199 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13202 */;
-import SearchUtils from "SearchUtils" /* 13206 */;
-import TrackingDefault from "Tracking" /* 13220 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13221 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13223 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13224 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 13233 */;
-import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 13234 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13200 */;
+import SearchUtils from "SearchUtils" /* 13204 */;
+import TrackingDefault from "Tracking" /* 13218 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13219 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13221 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 13231 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 13232 */;
 import SearchTabsPageDefault from "SearchTabsPage" /* 18731 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6641 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 13225 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 13223 */;
 
 require = fn;
 function NoSearchResultsScreen(searchContext) {

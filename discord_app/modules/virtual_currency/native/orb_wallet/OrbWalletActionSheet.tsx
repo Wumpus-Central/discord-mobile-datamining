@@ -1,17 +1,17 @@
-// === Module 16301: OrbWalletActionSheet ===
+// === Module 16299: OrbWalletActionSheet ===
 
-// Module 16301 (OrbWalletActionSheet)
+// Module 16299 (OrbWalletActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import _modDef2375 from "module_2375" /* 2375 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15021 */;
-import OrbWalletCards from "OrbWalletCards" /* 16307 */;
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15019 */;
+import OrbWalletCards from "OrbWalletCards" /* 16305 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
-import OrbChallengesStore from "OrbChallengesStore" /* 15019 */;
+import OrbChallengesStore from "OrbChallengesStore" /* 15017 */;
 
 require = fn;
 function StatefulOrbChallengesCard(reopenWallet) {
@@ -174,8 +174,8 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj5);
 }
 const View = fn(17).View;
-let closure_7 = fn(15019).OrbChallengesDisplayErrorType;
-let closure_8 = fn(16299).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(15017).OrbChallengesDisplayErrorType;
+let closure_8 = fn(16297).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const PremiumTypes = fn(1388).PremiumTypes;
 const jsxProd = fn(21);

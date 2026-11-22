@@ -1,6 +1,6 @@
-// === Module 17155: CollectiblesTool ===
+// === Module 17153: CollectiblesTool ===
 
-// Module 17155 (CollectiblesTool)
+// Module 17153 (CollectiblesTool)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import BaseTextButton from "BaseTextButton" /* 5512 */;

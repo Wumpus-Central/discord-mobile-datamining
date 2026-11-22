@@ -1,6 +1,6 @@
-// === Module 16915: UserSettingsCommunityNotifications ===
+// === Module 16913: UserSettingsCommunityNotifications ===
 
-// Module 16915 (UserSettingsCommunityNotifications)
+// Module 16913 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;

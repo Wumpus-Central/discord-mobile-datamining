@@ -1,6 +1,6 @@
-// === Module 13132: JumpToPresentButton ===
+// === Module 13130: JumpToPresentButton ===
 
-// Module 13132 (JumpToPresentButton)
+// Module 13130 (JumpToPresentButton)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5477 */;
 import noop from "module_19" /* 19 */;
@@ -82,11 +82,11 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13134), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13133), { accessibilityLabel: stringResult, icon: screenIndex(13134), onPress: channelId.onJumpToPresent });
-    const tmp16 = screenIndex(13133);
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13132), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13131), { accessibilityLabel: stringResult, icon: screenIndex(13132), onPress: channelId.onJumpToPresent });
+    const tmp16 = screenIndex(13131);
   } else {
-    tmp12Result = jsx(tmp3(13135).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13133).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

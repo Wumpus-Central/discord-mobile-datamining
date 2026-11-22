@@ -1,12 +1,12 @@
-// === Module 14447: AddOrOpenAppButton ===
+// === Module 14445: AddOrOpenAppButton ===
 
-// Module 14447 (AddOrOpenAppButton)
+// Module 14445 (AddOrOpenAppButton)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import ToastUtils from "ToastUtils" /* 5594 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
 import ApplicationUtils from "ApplicationUtils" /* 10695 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12999 */;
-import useIsAppDMDefault from "useIsAppDM" /* 13016 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12997 */;
+import useIsAppDMDefault from "useIsAppDM" /* 13014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(12427).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(12434).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];

@@ -1,6 +1,6 @@
-// === Module 12246: useGameOrganizationJoinOutcome ===
+// === Module 12253: useGameOrganizationJoinOutcome ===
 
-// Module 12246 (useGameOrganizationJoinOutcome)
+// Module 12253 (useGameOrganizationJoinOutcome)
 import transitionToGuild from "transitionToGuild" /* 6835 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

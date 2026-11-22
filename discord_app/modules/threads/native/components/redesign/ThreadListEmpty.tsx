@@ -6,7 +6,7 @@ import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
-import _modDef13100 from "module_13100" /* 13100 */;
+import _modDef13098 from "module_13098" /* 13098 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default noop.memo(function ThreadListEmpty(onCreateThreadPress) {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef13100, size: native.Icon.Sizes.MEDIUM }) };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef13098, size: native.Icon.Sizes.MEDIUM }) };
   items = [React4(View, obj2), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

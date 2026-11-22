@@ -1,6 +1,6 @@
-// === Module 16047: AccountChangePasswordSetting ===
+// === Module 16045: AccountChangePasswordSetting ===
 
-// Module 16047 (AccountChangePasswordSetting)
+// Module 16045 (AccountChangePasswordSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;

@@ -74,7 +74,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
             const obj4 = { value, done: true };
             return obj4;
           } else if (extendedOnboarding) {
-            const ICYMIAnalytics = tmp2(15642).ICYMIAnalytics;
+            const ICYMIAnalytics = tmp2(15640).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "overview" });
             dependencyMap(true);
             v1 = 1;
@@ -173,7 +173,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj15 = { style: tmp.body, children: null };
   const obj16 = { style: tmp.infoRow, children: null };
   const tmp2Result2 = navigation(5600);
-  const items9 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(12464).ServerIcon, { size: "sm", color: "interactive-text-active" }) }), ];
+  const items9 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(12471).ServerIcon, { size: "sm", color: "interactive-text-active" }) }), ];
   const obj18 = { variant: "body-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
   const intl4 = tmp6(1112).intl;
   obj18.children = intl4.string(extendedOnboarding(1112).t.knxfqR);
@@ -181,9 +181,9 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   obj16.children = items9;
   const items10 = [closure_10(closure_6, obj16), closure_9(closure_6, { style: tmp.divider }), , , ];
   const obj20 = { style: tmp.infoRow, children: null };
-  const obj17 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(12464).ServerIcon, { size: "sm", color: "interactive-text-active" }) };
+  const obj17 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(12471).ServerIcon, { size: "sm", color: "interactive-text-active" }) };
   const obj19 = { style: tmp.divider };
-  const items11 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(14465).NewUserIcon, { size: "sm", color: "interactive-text-active" }) }), ];
+  const items11 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(14463).NewUserIcon, { size: "sm", color: "interactive-text-active" }) }), ];
   const obj22 = { variant: "body-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
   const intl5 = tmp6(1112).intl;
   obj22.children = intl5.string(extendedOnboarding(1112).t.BnUXZi);
@@ -192,7 +192,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   items10[2] = closure_10(closure_6, obj20);
   items10[3] = closure_9(closure_6, { style: tmp.divider });
   const obj24 = { style: tmp.infoRow, children: null };
-  const obj21 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(14465).NewUserIcon, { size: "sm", color: "interactive-text-active" }) };
+  const obj21 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(14463).NewUserIcon, { size: "sm", color: "interactive-text-active" }) };
   const obj23 = { style: tmp.divider };
   const items12 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(7532).CircleCheckIcon, { size: "sm", color: "interactive-text-active" }) }), ];
   const obj26 = { variant: "body-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };

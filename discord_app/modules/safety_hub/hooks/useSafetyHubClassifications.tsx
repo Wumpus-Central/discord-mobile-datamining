@@ -1,9 +1,9 @@
-// === Module 12418: useSafetyHubClassifications ===
+// === Module 12425: useSafetyHubClassifications ===
 
-// Module 12418 (useSafetyHubClassifications)
+// Module 12425 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12419 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12426 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 7835 */;
 

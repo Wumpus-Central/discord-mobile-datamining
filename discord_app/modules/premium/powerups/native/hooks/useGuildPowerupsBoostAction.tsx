@@ -2,7 +2,7 @@
 
 // Module 17685 (useGuildPowerupsBoostAction)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 13429 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 13427 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 8744 */;
@@ -107,8 +107,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             }
             const obj = guildId(dependencyMap[9]);
           };
-          const result = tmp3(13430).launchGuildBoostFlowOrAlert(obj10);
-          const obj6 = tmp3(13430);
+          const result = tmp3(13428).launchGuildBoostFlowOrAlert(obj10);
+          const obj6 = tmp3(13428);
         }
         const obj5 = tmp3(8743);
       } catch (tmp50) {

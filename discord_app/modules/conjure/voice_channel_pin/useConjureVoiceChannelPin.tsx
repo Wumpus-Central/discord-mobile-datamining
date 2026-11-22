@@ -2,7 +2,7 @@
 
 // Module 18488 (useConjureVoiceChannelPin)
 import useChannelName from "useChannelName" /* 5529 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 12309 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 12316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

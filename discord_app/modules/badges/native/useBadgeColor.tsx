@@ -1,6 +1,6 @@
-// === Module 14015: useBadgeColor ===
+// === Module 14013: useBadgeColor ===
 
-// Module 14015 (useBadgeColor)
+// Module 14013 (useBadgeColor)
 import nativeDefault from "native" /* 575 */;
 import privDefault from "priv" /* 1454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -56,7 +56,7 @@ export function useBadgeColor(rasterUrl) {
               const obj4 = {
                 value: promiseDeduper.one(uri, asyncGeneratorStep(async () => {
                           closure_3 = tmp2;
-                          const tmp14 = value(14016);
+                          const tmp14 = value(14014);
                           const pickBadgeColor = tmp14.pickBadgeColor;
                           await pickBadgeColor(2023).getDominantColors({ uri });
                           const tmp8 = pickBadgeColor(value);

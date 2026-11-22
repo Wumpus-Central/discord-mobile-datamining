@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import InteractionComponentTypes from "InteractionComponentTypes" /* 5976 */;
 import TableRowIcon from "TableRowIcon" /* 7057 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
-import MentionableSelectOptionParts from "MentionableSelectOptionParts" /* 12353 */;
+import MentionableSelectOptionParts from "MentionableSelectOptionParts" /* 12360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 13250 */;
-import _modDef13735 from "module_13735" /* 13735 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 13248 */;
+import _modDef13733 from "module_13733" /* 13733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
       }
     });
   }, items1);
-  const ChannelModes = id(13250).ChannelModes;
+  const ChannelModes = id(13248).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -54,7 +54,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1112).intl;
   obj2.name = intl2.string(tmp6(1112).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(13250).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(13250).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef13735 });
+  obj.name = jsx(tmp6(13248).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(13248).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef13733 });
   return <tmp8 onPress={callback} onLongPress={callback1} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

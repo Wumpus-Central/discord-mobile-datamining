@@ -1,6 +1,6 @@
-// === Module 20166: RestrictedHoursManager ===
+// === Module 20163: RestrictedHoursManager ===
 
-// Module 20166 (RestrictedHoursManager)
+// Module 20163 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1410 */;

@@ -1,6 +1,6 @@
-// === Module 13359: ChannelAccessInfo ===
+// === Module 13357: ChannelAccessInfo ===
 
-// Module 13359 (ChannelAccessInfo)
+// Module 13357 (ChannelAccessInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
@@ -121,7 +121,7 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(13358);
+    channel(13356);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(7038).GroupIcon), ];
     const ROLES = constants.ROLES;
     channel(7779);

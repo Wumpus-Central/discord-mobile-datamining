@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5646 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13164 */;
-import BaseChannelItem from "BaseChannelItem" /* 13250 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13162 */;
+import BaseChannelItem from "BaseChannelItem" /* 13248 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
@@ -26,8 +26,8 @@ function HubItem(arg0) {
   }
   const obj = { style: closure_9().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = closure_9();
-  obj.name = metroImportDefault(tmp5(13250).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = metroImportDefault(tmp5(13250).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = metroImportDefault(tmp5(13248).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = metroImportDefault(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     const obj2 = { value: unreadCount };
@@ -74,7 +74,7 @@ export default function HubSidebar(guild) {
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
     const items4 = [closure_7(stateFromStores(17727), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(17014).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(17012).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1112).intl;
     obj6.label = intl.string(tmp(1112).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -82,7 +82,7 @@ export default function HubSidebar(guild) {
     };
     obj6.unreadCount = tmp7;
     items4[1] = closure_7(HubItem, obj6);
-    const obj7 = { IconComponent: tmp(13709).PlusMediumIcon, label: null, handleItemClick: null };
+    const obj7 = { IconComponent: tmp(13707).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1112).intl;
     obj7.label = intl2.string(tmp(1112).t.emRpdS);
     obj7.handleItemClick = function handleItemClick() {

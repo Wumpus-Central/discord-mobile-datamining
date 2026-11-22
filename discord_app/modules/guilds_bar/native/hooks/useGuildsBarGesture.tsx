@@ -244,7 +244,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "disabled", positionPercentage: false };
+    sectionItemFromPosition = { item: "description", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -592,7 +592,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "analyticsLocations" });
+    state1.setStateShallow({ dragSpecs: "disabled", overSpecs: "isArray" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -992,7 +992,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("module_1653");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(16479).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(16477).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [dragDropInProgress, dragRegion, gestureState, callback3, state, callback4, callback2, callback1, listInsets, scrollPosition, scrollerRef, windowSize, gesture];
   const onFastListScroll = obj4.useCallback(() => {
     const gestureState = GuildsBarDnDStore.getState().gestureState;

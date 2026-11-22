@@ -9,7 +9,7 @@ import IconButton from "IconButton" /* 7591 */;
 import _modDef8615 from "module_8615" /* 8615 */;
 import VoiceActionUtils from "VoiceActionUtils" /* 11009 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import _modDef13420 from "module_13420" /* 13420 */;
+import _modDef13418 from "module_13418" /* 13418 */;
 import useDockBoxShadowDefault from "useDockBoxShadow" /* 18010 */;
 import useSoundboardConfig from "useSoundboardConfig" /* 18014 */;
 import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18034 */;
@@ -88,7 +88,7 @@ function DockSoundboardButton(arg0) {
   const obj = { accessibilityLabel: null, variant: "secondary", size: "sm", icon: null, onPress: null, disabled: null, accessibilityHint: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13420;
+  obj.icon = _modDef13418;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;

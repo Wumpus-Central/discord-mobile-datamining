@@ -9,7 +9,7 @@ import spring_spring from "spring/spring" /* 5514 */;
 import useChannelName from "useChannelName" /* 5529 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 6823 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13313 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13311 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import SoundboardStore from "SoundboardStore" /* 5961 */;

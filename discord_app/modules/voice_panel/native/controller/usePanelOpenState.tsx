@@ -88,10 +88,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items4);
-  [first, closure_5] = first.useState(() => _undefined2(13745).getHistory().location.pathname);
+  [first, closure_5] = first.useState(() => _undefined2(13743).getHistory().location.pathname);
   const items5 = [arg0, first];
   const effect1 = first.useEffect(() => {
-    closure_0 = _undefined2(13745).addRouteChangeListener((pathname) => {
+    closure_0 = _undefined2(13743).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_5(tmp);
         const obj2 = { path: null };
@@ -110,7 +110,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
             c1(10623)();
           }
         }
-        obj3 = c0(13738);
+        obj3 = c0(13736);
       }
     });
     return () => {

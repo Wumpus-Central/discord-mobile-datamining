@@ -1,6 +1,6 @@
-// === Module 16317: BountiesModalActionCreators ===
+// === Module 16315: BountiesModalActionCreators ===
 
-// Module 16317 (BountiesModalActionCreators)
+// Module 16315 (BountiesModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import size from "module_2" /* 2 */;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 export default {
   showModal(arg0) {
     ({ bountyId, sourceQuestContent, variant, bounty } = arg0);
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16318, dependencyMap.paths), { bountyId, sourceQuestContent, variant, bounty }, BOUNTIES_MODAL);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16316, dependencyMap.paths), { bountyId, sourceQuestContent, variant, bounty }, BOUNTIES_MODAL);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(BOUNTIES_MODAL);

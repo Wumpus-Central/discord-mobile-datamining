@@ -1,6 +1,6 @@
-// === Module 12270: ModalStepIndicator ===
+// === Module 12277: ModalStepIndicator ===
 
-// Module 12270 (ModalStepIndicator)
+// Module 12277 (ModalStepIndicator)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;

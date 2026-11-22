@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "id", items: "<string:1382958091>", categorySkuId: "<string:1849965702>", categoryWillUnpublishAt: "en-NZ", isCategoryReward: "en-001", prices: "en-PG", previewAssets: "en-001", googleSkuIds: "en-PH", eligibleOffers: "en-001", variants: "snowman2", bundledProducts: "<string:1486674077>", isFirstParty: false };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channelId", items: "en-001", categorySkuId: "REFRESH_SMALL_16", categoryWillUnpublishAt: "FULLPLAIN", isCategoryReward: "subscribeToIsInAppBrowserOpen", prices: "RNSVGUse", previewAssets: "en-FM", googleSkuIds: "en-001", eligibleOffers: "VERY_LOW", variants: "AVError", bundledProducts: "SHARE_EVENT_DETAILS_LINK", isFirstParty: "en-GD" };
               let str;
               if (first != null) {
                 str = first.optionValue;

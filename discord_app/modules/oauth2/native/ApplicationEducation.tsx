@@ -1,6 +1,6 @@
-// === Module 14716: ApplicationEducation ===
+// === Module 14714: ApplicationEducation ===
 
-// Module 14716 (ApplicationEducation)
+// Module 14714 (ApplicationEducation)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -9,8 +9,8 @@ import OAuth2Scopes from "OAuth2Scopes" /* 6913 */;
 import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 7010 */;
 import GameControllerIcon from "GameControllerIcon" /* 7040 */;
 import SettingsIcon from "SettingsIcon" /* 10371 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14717 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14719 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14715 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14717 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

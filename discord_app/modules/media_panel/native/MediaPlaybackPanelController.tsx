@@ -1,7 +1,7 @@
 // === Module 19387: MediaPlaybackPanelController ===
 
 // Module 19387 (MediaPlaybackPanelController)
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15783 */;
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -9,7 +9,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import VoicePanelStore from "VoicePanelStore" /* 6495 */;
 
 const require = fn;
-const MediaPlaybackPanelModes = fn(15784).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(15782).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(5539).ActivityPanelModes;
 const MorphablePanelModes = fn(11751).MorphablePanelModes;
 const jsx = fn(21).jsx;

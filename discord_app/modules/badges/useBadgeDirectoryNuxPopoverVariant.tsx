@@ -1,8 +1,8 @@
-// === Module 14528: useBadgeDirectoryNuxPopoverVariant ===
+// === Module 14526: useBadgeDirectoryNuxPopoverVariant ===
 
-// Module 14528 (useBadgeDirectoryNuxPopoverVariant)
+// Module 14526 (useBadgeDirectoryNuxPopoverVariant)
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
-import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14529 */;
+import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14527 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;

@@ -1,9 +1,9 @@
-// === Module 14313: createSocialLayerStorefrontMultiSkuEmbed ===
+// === Module 14311: createSocialLayerStorefrontMultiSkuEmbed ===
 
-// Module 14313 (createSocialLayerStorefrontMultiSkuEmbed)
+// Module 14311 (createSocialLayerStorefrontMultiSkuEmbed)
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8680 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13494 */;
-import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14314 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13492 */;
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14312 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import SKUStore from "SKUStore" /* 6674 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6849 */;
@@ -55,7 +55,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
               }
               const obj3 = {};
               let merged = Object.assign(getEmbedThemeColorsDefault(ThemeTypes.DARK).baseColors);
-              obj3.backgroundColor = tmp(14315).getSocialLayerStorefrontEmbedColors(ThemeTypes.DARK).backgroundColor;
+              obj3.backgroundColor = tmp(14313).getSocialLayerStorefrontEmbedColors(ThemeTypes.DARK).backgroundColor;
               obj3.extendedType = CodedLinkExtendedType.SOCIAL_LAYER_STOREFRONT_MULTI_SKU_EMBED;
               obj3.type = InviteTypes.GUILD;
               obj3.headerText = storefront.title;
@@ -65,7 +65,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
                 const tmpResult5 = tmp(6359);
               }
               obj3.headerLogoUrl = assetURL;
-              const tmpResult4 = tmp(14315);
+              const tmpResult4 = tmp(14313);
               const socialLayerStorefrontBackgroundImageURL = tmp(6847).getSocialLayerStorefrontBackgroundImageURL(storefront);
               obj3.headerBackgroundImageUrl = socialLayerStorefrontBackgroundImageURL;
               const _HermesInternal = HermesInternal;

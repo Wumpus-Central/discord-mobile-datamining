@@ -2,7 +2,7 @@
 
 // Module 18615 (ConjureNativeTurnTimer)
 import Text_Text from "Text/Text" /* 5504 */;
-import ConjureDuration from "ConjureDuration" /* 12321 */;
+import ConjureDuration from "ConjureDuration" /* 12328 */;
 import useConjureElapsedMs from "useConjureElapsedMs" /* 18616 */;
 import noop from "module_19" /* 19 */;
 

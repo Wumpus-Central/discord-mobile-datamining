@@ -1,6 +1,6 @@
-// === Module 13946: PremiumGiftPurchaseButton ===
+// === Module 13944: PremiumGiftPurchaseButton ===
 
-// Module 13946 (PremiumGiftPurchaseButton)
+// Module 13944 (PremiumGiftPurchaseButton)
 import nativeDefault from "native" /* 575 */;
 import ChatInputUtils from "ChatInputUtils" /* 5098 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5488 */;

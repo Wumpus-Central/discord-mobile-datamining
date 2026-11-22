@@ -1,6 +1,6 @@
-// === Module 13844: ChannelRow ===
+// === Module 13842: ChannelRow ===
 
-// Module 13844 (ChannelRow)
+// Module 13842 (ChannelRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import DateUtils from "DateUtils" /* 4735 */;
@@ -9,7 +9,7 @@ import useChannelName from "useChannelName" /* 5529 */;
 import TextIcon2 from "TextIcon" /* 7681 */;
 import ForumIcon from "ForumIcon" /* 7689 */;
 import GuildIconWithChannelType from "GuildIconWithChannelType" /* 10125 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildStore from "GuildStore" /* 4784 */;

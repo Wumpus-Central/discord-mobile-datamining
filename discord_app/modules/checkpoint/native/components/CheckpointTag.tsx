@@ -1,6 +1,6 @@
-// === Module 12760: CheckpointTag ===
+// === Module 12758: CheckpointTag ===
 
-// Module 12760 (CheckpointTag)
+// Module 12758 (CheckpointTag)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6336 */;

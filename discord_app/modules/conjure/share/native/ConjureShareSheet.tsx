@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7515 */;
 import ActionSheet from "ActionSheet" /* 7553 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13789 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13787 */;
 import useConjureSharingModeDefault from "useConjureSharingMode" /* 18262 */;
 import ConjureShareAccessDefault from "ConjureShareAccess" /* 18346 */;
 import noop from "module_19" /* 19 */;

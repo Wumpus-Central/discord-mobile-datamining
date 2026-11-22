@@ -2069,7 +2069,7 @@ export function useFetchQuestHomeBounties(arg0) {
   }
   const previewAdCreativeIds = obj.previewAdCreativeIds;
   dependencyMap = undefined;
-  const QuestHomeBountiesFeatureGateExperiment = previewAdCreativeIds(13750).QuestHomeBountiesFeatureGateExperiment;
+  const QuestHomeBountiesFeatureGateExperiment = previewAdCreativeIds(13748).QuestHomeBountiesFeatureGateExperiment;
   const enabled = QuestHomeBountiesFeatureGateExperiment.useConfig({ location: constants2.QUEST_HOME_MOBILE }).enabled;
   [tmp2, c2] = noop.useState(enabled);
   obj2 = { location: constants2.QUEST_HOME_MOBILE };
@@ -2127,13 +2127,13 @@ export function useFetchQuestHomeBounties(arg0) {
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(13751).fetchBountyPreview(arr, previewAdCreativeIds(6561).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(13749).fetchBountyPreview(arr, previewAdCreativeIds(6561).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(13751).fetchQuestHomeBounties(previewAdCreativeIds(6561).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(13749).fetchQuestHomeBounties(previewAdCreativeIds(6561).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {

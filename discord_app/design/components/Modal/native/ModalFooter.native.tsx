@@ -1,6 +1,6 @@
-// === Module 12242: ModalFooter ===
+// === Module 12249: ModalFooter ===
 
-// Module 12242 (ModalFooter)
+// Module 12249 (ModalFooter)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5488 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 13929: GiftBadgePostPurchase ===
+// === Module 13927: GiftBadgePostPurchase ===
 
-// Module 13929 (GiftBadgePostPurchase)
+// Module 13927 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -12,7 +12,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import BadgeId from "BadgeId" /* 8070 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13931 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13929 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
 
@@ -34,7 +34,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(12468).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(12475).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1112).intl;
   obj2.text = intl.string(_modDef2920.g86YiI);
   obj2.onPress = callback;
@@ -109,7 +109,7 @@ function LevelUpScreen(newTier) {
   obj6.children = tmp12Result;
   const items3 = [closure_10(View, obj6), ];
   const obj8 = { style: tmp3.levelUpBody, children: null };
-  const items4 = [closure_10(isBadgeUnreadStateEnabled(13933), { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
+  const items4 = [closure_10(isBadgeUnreadStateEnabled(13931), { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
   const obj10 = { style: tmp3.messageSection, children: null };
   const obj11 = { variant: "heading-xxl/semibold", style: tmp3.centerText, children: null };
   const intl = tmp4(1112).intl;
@@ -146,7 +146,7 @@ function LevelUpScreen(newTier) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13930);
+const GiftingBadgeConstants = fn(13928);
 ({ getRemainingGiftsToNextTier: closure_6, getTierForProgress: metroImportDefault, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsxProd = fn(21);

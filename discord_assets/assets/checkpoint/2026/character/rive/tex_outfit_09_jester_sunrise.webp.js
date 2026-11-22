@@ -1,6 +1,6 @@
-// === Module 12654: ? ===
+// === Module 12652: ? ===
 
-// Module 12654
+// Module 12652
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_09_jester_sunrise.webp.js");

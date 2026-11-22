@@ -1,6 +1,6 @@
-// === Module 14322: getGameOrganizationInviteCtaState ===
+// === Module 14320: getGameOrganizationInviteCtaState ===
 
-// Module 14322 (getGameOrganizationInviteCtaState)
+// Module 14320 (getGameOrganizationInviteCtaState)
 import util from "util" /* 1112 */;
 import _modDef2639 from "module_2639" /* 2639 */;
 import size from "module_2" /* 2 */;

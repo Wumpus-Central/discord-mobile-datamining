@@ -18,7 +18,7 @@ import EntityUtils from "EntityUtils" /* 7578 */;
 import LocationIcon from "LocationIcon" /* 7617 */;
 import CalendarIcon from "CalendarIcon" /* 8048 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 8802 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import noop from "module_19" /* 19 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6534 */;
 import StageInstanceStore from "StageInstanceStore" /* 4767 */;
@@ -89,7 +89,7 @@ function UserSummaryRow(arg0) {
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj3.style = items2;
       let obj4 = { size: "custom", style: max(11130).makeSizeStyle(14) };
-      const items3 = [closure_13(max(13421).HeadphonesIcon, obj4), ];
+      const items3 = [closure_13(max(13419).HeadphonesIcon, obj4), ];
       let obj6 = { variant: "body-xs/semibold", style: { marginLeft: 4 }, maxFontSizeMultiplier: 1, children: audienceCount };
       items3[1] = closure_13(max(5504).Text, obj6);
       obj3.children = items3;

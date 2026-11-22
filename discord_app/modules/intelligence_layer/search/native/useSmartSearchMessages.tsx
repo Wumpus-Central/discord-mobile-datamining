@@ -1,10 +1,10 @@
 // === Module 18823: useSmartSearchMessages ===
 
 // Module 18823 (useSmartSearchMessages)
-import SmartSearchUtils from "SmartSearchUtils" /* 13202 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13204 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13200 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13202 */;
 import noop from "module_19" /* 19 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13200 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13198 */;
 
 require = fn;
 const SearchListItemTypes = fn(8576).SearchListItemTypes;

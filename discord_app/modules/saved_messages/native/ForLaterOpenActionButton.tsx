@@ -51,10 +51,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const point = { shape: fn(9023).CutoutShape.Circle, x: fn(13777).ICON_SIZE.sm - 7, y: fn(13777).ICON_SIZE.sm - 8, size: 10 };
+const point = { shape: fn(9023).CutoutShape.Circle, x: fn(13775).ICON_SIZE.sm - 7, y: fn(13775).ICON_SIZE.sm - 8, size: 10 };
 const createStyles = fn(4913);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(13777).ICON_SIZE.sm, height: fn(13777).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(13775).ICON_SIZE.sm, height: fn(13775).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;

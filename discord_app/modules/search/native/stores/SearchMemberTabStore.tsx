@@ -1,6 +1,6 @@
-// === Module 13227: SearchMemberTabStore ===
+// === Module 13225: SearchMemberTabStore ===
 
-// Module 13227 (SearchMemberTabStore)
+// Module 13225 (SearchMemberTabStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4850 */;

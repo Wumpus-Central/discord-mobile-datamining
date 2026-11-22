@@ -1,6 +1,6 @@
-// === Module 14316: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 14314: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 14316 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 14314 (createSocialLayerStorefrontProductDetailsEmbed)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1112 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
@@ -15,9 +15,9 @@ import _modDef8959 from "module_8959" /* 8959 */;
 import CodedLinksConstants from "CodedLinksConstants" /* 10413 */;
 import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11964 */;
 import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11966 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13494 */;
-import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14314 */;
-import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 14315 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 13492 */;
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 14312 */;
+import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 14313 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import UserProfileStore from "UserProfileStore" /* 6956 */;
 import WishlistStore from "WishlistStore" /* 8983 */;

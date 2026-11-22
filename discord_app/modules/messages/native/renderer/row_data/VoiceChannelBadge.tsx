@@ -1,12 +1,12 @@
-// === Module 14275: VoiceChannelBadge ===
+// === Module 14273: VoiceChannelBadge ===
 
-// Module 14275 (VoiceChannelBadge)
+// Module 14273 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1071 */;
 import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6410 */;
 import AgeGateUtils from "AgeGateUtils" /* 6419 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
-import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 14276 */;
+import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 14274 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import VoiceStateStore from "VoiceStateStore" /* 5561 */;

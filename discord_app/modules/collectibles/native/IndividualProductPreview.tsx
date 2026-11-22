@@ -8,10 +8,10 @@ import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import useCurrentUser from "useCurrentUser" /* 8920 */;
 import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 9047 */;
 import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 9452 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14218 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14219 */;
-import FractionalNitroPreview from "FractionalNitroPreview" /* 14220 */;
-import OrbBadgePreview from "OrbBadgePreview" /* 14223 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14216 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14217 */;
+import FractionalNitroPreview from "FractionalNitroPreview" /* 14218 */;
+import OrbBadgePreview from "OrbBadgePreview" /* 14221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

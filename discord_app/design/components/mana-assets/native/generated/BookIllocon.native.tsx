@@ -1,20 +1,20 @@
-// === Module 13635: BookIllocon ===
+// === Module 13633: BookIllocon ===
 
-// Module 13635 (BookIllocon)
+// Module 13633 (BookIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
+import _modDef13634 from "module_13634" /* 13634 */;
+import _modDef13635 from "module_13635" /* 13635 */;
 import _modDef13636 from "module_13636" /* 13636 */;
-import _modDef13637 from "module_13637" /* 13637 */;
-import _modDef13638 from "module_13638" /* 13638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13636 }, 3: null };
-const obj2 = { uri: _modDef13636 };
-obj[2] = { uri: _modDef13637 };
-const obj3 = { uri: _modDef13637 };
-obj[3] = { uri: _modDef13638 };
+let obj = { 1: null, 2: { uri: _modDef13634 }, 3: null };
+const obj2 = { uri: _modDef13634 };
+obj[2] = { uri: _modDef13635 };
+const obj3 = { uri: _modDef13635 };
+obj[3] = { uri: _modDef13636 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
 

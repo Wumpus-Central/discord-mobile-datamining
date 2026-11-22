@@ -1,11 +1,11 @@
-// === Module 12435: AppealIngestionModal ===
+// === Module 12442: AppealIngestionModal ===
 
-// Module 12435 (AppealIngestionModal)
+// Module 12442 (AppealIngestionModal)
 import nativeDefault from "native" /* 575 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12434 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12441 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -62,10 +62,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj2 = {
         headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+          return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
         },
         render() {
-          return closure_2_12(flag(12436), { isDsaEligible, isCoppa, isDeveloperClassification });
+          return closure_2_12(flag(12443), { isDsaEligible, isCoppa, isDeveloperClassification });
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
         impressionProperties
@@ -74,10 +74,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj4 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj4.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj4.render = function render() {
-        return closure_2_12(flag(12445), { isDsaEligible });
+        return closure_2_12(flag(12452), { isDsaEligible });
       };
       obj4.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL;
       obj4.impressionProperties = impressionProperties;
@@ -85,10 +85,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj6 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj6.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj6.render = function render() {
-        return closure_2_12(flag(12447), { isDsaEligible });
+        return closure_2_12(flag(12454), { isDsaEligible });
       };
       obj6.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION;
       obj6.impressionProperties = impressionProperties;
@@ -96,10 +96,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj8 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj8.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj8.render = function render() {
-        return closure_1_12(isCoppa(12449), {});
+        return closure_1_12(isCoppa(12456), {});
       };
       obj8.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
       obj8.impressionProperties = impressionProperties;
@@ -107,10 +107,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj10 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5504).Text, { variant: "body-md/normal", children: "add" });
       };
       obj10.render = function render() {
-        return closure_1_12(isCoppa(12451), {});
+        return closure_1_12(isCoppa(12458), {});
       };
       obj10.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_THANKS;
       obj10.impressionProperties = impressionProperties;
@@ -250,7 +250,7 @@ export function AppealIngestionModalScreen(children) {
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(12419).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(12426).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }

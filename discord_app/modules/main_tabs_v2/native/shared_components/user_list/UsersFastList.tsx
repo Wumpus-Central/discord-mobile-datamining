@@ -12,8 +12,8 @@ import ClientThemesOverrides from "ClientThemesOverrides" /* 8570 */;
 import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 9658 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
 import UserRowDefault from "UserRow" /* 9661 */;
-import GroupDMRowDefault from "GroupDMRow" /* 13842 */;
-import ChannelRowDefault from "ChannelRow" /* 13844 */;
+import GroupDMRowDefault from "GroupDMRow" /* 13840 */;
+import ChannelRowDefault from "ChannelRow" /* 13842 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

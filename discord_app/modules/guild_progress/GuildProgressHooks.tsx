@@ -1,6 +1,6 @@
-// === Module 13360: GuildProgressHooks ===
+// === Module 13358: GuildProgressHooks ===
 
-// Module 13360 (GuildProgressHooks)
+// Module 13358 (GuildProgressHooks)
 import applyDefault from "apply" /* 12 */;
 import canViewInviteModal from "canViewInviteModal" /* 7589 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4843 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
 import GuildStore from "GuildStore" /* 4784 */;
-import LayerStore from "LayerStore" /* 13361 */;
+import LayerStore from "LayerStore" /* 13359 */;
 import MessageStore from "MessageStore" /* 5964 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 

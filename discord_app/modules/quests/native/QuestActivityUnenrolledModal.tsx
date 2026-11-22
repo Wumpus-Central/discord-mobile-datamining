@@ -11,8 +11,8 @@ import HeaderActionButton from "HeaderActionButton" /* 7029 */;
 import _modDef7032 from "module_7032" /* 7032 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import QuestActionCreators from "QuestActionCreators" /* 9959 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13759 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16504 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13757 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16502 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj5 = quest(8427);
   const questTaskDetails = quest(9958).useQuestTaskDetails(quest);
   let obj6 = quest(9958);
-  const obj7 = quest(13756);
+  const obj7 = quest(13754);
   const items1 = [getOrFetchApplication];
   const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({ quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(6561).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
   const memo = noop.useMemo(() => {
@@ -105,7 +105,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj9 = quest(4975);
   const isQuestAccessSuspended = quest(9958).useIsQuestAccessSuspended();
   const obj10 = quest(9958);
-  trackQuestContentClickedWithImpression = quest(16397).useTrackQuestContentClickedWithImpression();
+  trackQuestContentClickedWithImpression = quest(16395).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({ questId: quest.id, questContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: AnalyticsTypes.QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
@@ -125,7 +125,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const items4 = [tmp18Result, ];
   const obj18 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  obj18.children = closure_11(checked(13752), size);
+  obj18.children = closure_11(checked(13750), size);
   items4[1] = closure_11(closure_7, obj18);
   obj15.children = items4;
   obj14.children = closure_12(closure_7, obj15);

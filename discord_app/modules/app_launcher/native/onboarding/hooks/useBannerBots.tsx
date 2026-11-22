@@ -1,9 +1,9 @@
-// === Module 12935: useBannerBots ===
+// === Module 12933: useBannerBots ===
 
-// Module 12935 (useBannerBots)
+// Module 12933 (useBannerBots)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12915 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12913 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ export function useBannerBots(context) {
   context = context.context;
   let first1;
   let obj = (function useAppsMap(context) {
-    const apps = first1(12936).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+    const apps = first1(12934).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
     items = [apps];
     return React.useMemo(() => {
       const map = new Map();
@@ -24,11 +24,11 @@ export function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(12936).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  let obj2 = first1(12936);
+  let apps = first1(12934).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  let obj2 = first1(12934);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
-    const commands = first1(12936).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
+    const commands = first1(12934).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
     items = [commands];
     return React.useMemo(() => {
       const map = new Map();
@@ -61,8 +61,8 @@ export function useBannerBots(context) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(12908).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(12908);
+  const activityApplications = first1(12906).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12906);
   items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   value = null;

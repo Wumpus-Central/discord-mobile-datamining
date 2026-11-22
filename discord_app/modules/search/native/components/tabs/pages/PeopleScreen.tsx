@@ -1,12 +1,12 @@
 // === Module 18796: PeopleScreen ===
 
 // Module 18796 (PeopleScreen)
-import TrackingDefault from "Tracking" /* 13220 */;
+import TrackingDefault from "Tracking" /* 13218 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13228 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13226 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 const require = globalThis.__r;
 

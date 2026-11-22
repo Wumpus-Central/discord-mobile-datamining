@@ -1,10 +1,10 @@
-// === Module 14648: InstantInviteEmptyState ===
+// === Module 14646: InstantInviteEmptyState ===
 
-// Module 14648 (InstantInviteEmptyState)
+// Module 14646 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 575 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 7249 */;
 import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8054 */;
-import _modDef14649 from "module_14649" /* 14649 */;
+import _modDef14647 from "module_14647" /* 14647 */;
 import noop from "module_19" /* 19 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 8053 */;
 
@@ -28,7 +28,7 @@ export default function InstantInviteEmptyState(link) {
   items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef14649, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef14647, title: null, body: null };
   const intl = stateFromStores(1112).intl;
   obj3.title = intl.string(stateFromStores(1112).t.tQc0l8);
   const intl2 = stateFromStores(1112).intl;

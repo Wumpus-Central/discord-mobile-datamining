@@ -1,6 +1,6 @@
-// === Module 16961: ChangeLogModal ===
+// === Module 16959: ChangeLogModal ===
 
-// Module 16961 (ChangeLogModal)
+// Module 16959 (ChangeLogModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import FastImageDefault from "FastImage" /* 5600 */;
@@ -12,7 +12,7 @@ import openMediaModal from "openMediaModal" /* 8217 */;
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8796 */;
 import common_VideoDefault from "common/Video" /* 9254 */;
 import _modDef11379 from "module_11379" /* 11379 */;
-import _modDef16962 from "module_16962" /* 16962 */;
+import _modDef16960 from "module_16960" /* 16960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      items = [closure_7(_modDef16962, obj4), ];
+      items = [closure_7(_modDef16960, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };

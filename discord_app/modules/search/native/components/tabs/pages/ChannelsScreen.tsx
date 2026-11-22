@@ -3,11 +3,11 @@
 // Module 18804 (ChannelsScreen)
 import util from "util" /* 1112 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
-import TrackingDefault from "Tracking" /* 13220 */;
+import TrackingDefault from "Tracking" /* 13218 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5657 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13226 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13224 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 const require = globalThis.__r;
 

@@ -1,14 +1,14 @@
-// === Module 12721: CheckpointIntroScreen ===
+// === Module 12719: CheckpointIntroScreen ===
 
-// Module 12721 (CheckpointIntroScreen)
+// Module 12719 (CheckpointIntroScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import _modDef3440 from "module_3440" /* 3440 */;
 import CheckpointScreenDefault from "CheckpointScreen" /* 12509 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
-import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12722 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12723 */;
+import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12720 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12721 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -127,7 +127,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12724), obj8);
+    tmp20Result = closure_11(tmp2(12722), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;

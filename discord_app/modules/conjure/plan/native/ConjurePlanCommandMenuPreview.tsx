@@ -6,7 +6,7 @@ import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12162 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

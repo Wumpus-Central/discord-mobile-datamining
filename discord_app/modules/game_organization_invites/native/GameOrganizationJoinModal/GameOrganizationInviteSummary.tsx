@@ -1,6 +1,6 @@
-// === Module 12239: GameOrganizationInviteSummary ===
+// === Module 12246: GameOrganizationInviteSummary ===
 
-// Module 12239 (GameOrganizationInviteSummary)
+// Module 12246 (GameOrganizationInviteSummary)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2639 from "module_2639" /* 2639 */;

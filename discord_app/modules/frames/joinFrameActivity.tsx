@@ -1,8 +1,8 @@
-// === Module 12197: joinFrameActivity ===
+// === Module 12204: joinFrameActivity ===
 
-// Module 12197 (joinFrameActivity)
+// Module 12204 (joinFrameActivity)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 12178 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 12185 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

@@ -1,6 +1,6 @@
-// === Module 20045: FormRoleColorPicker ===
+// === Module 20042: FormRoleColorPicker ===
 
-// Module 20045 (FormRoleColorPicker)
+// Module 20042 (FormRoleColorPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import noop from "module_19" /* 19 */;
@@ -29,9 +29,9 @@ export default function FormRoleColorPicker(color) {
   }, items);
   const obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = closure_6();
-  obj.leading = jsx(onChange(15842), { color, style: tmp.rowColorBlock, onSelect: callback });
+  obj.leading = jsx(onChange(15840), { color, style: tmp.rowColorBlock, onSelect: callback });
   const obj2 = { color, style: tmp.rowColorBlock, onSelect: callback };
-  const tmp3 = onChange(15111);
+  const tmp3 = onChange(15109);
   obj.label = color(1089).int2hex(color);
   obj.disabled = flag;
   obj.onPress = callback;

@@ -9,7 +9,7 @@ import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnable
 import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6892 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
 import Tracking from "Tracking" /* 8461 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 12483 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 12490 */;
 import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 18575 */;
 import HangoutWindowExperiment from "HangoutWindowExperiment" /* 18576 */;
 import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 18578 */;

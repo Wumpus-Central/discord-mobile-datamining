@@ -3,7 +3,7 @@
 // Module 19426 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 5633 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13666 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13664 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

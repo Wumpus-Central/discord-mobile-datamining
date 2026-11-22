@@ -1,6 +1,6 @@
-// === Module 14448: UserProfileActivity ===
+// === Module 14446: UserProfileActivity ===
 
-// Module 14448 (UserProfileActivity)
+// Module 14446 (UserProfileActivity)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -13,12 +13,12 @@ import MaskedLinkUtils from "MaskedLinkUtils" /* 7255 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8060 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8136 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 10623 */;
-import UserActivitySpotify from "UserActivitySpotify" /* 12176 */;
-import UserProfileActivityButtons from "UserProfileActivityButtons" /* 14492 */;
+import UserActivitySpotify from "UserActivitySpotify" /* 12183 */;
+import UserProfileActivityButtons from "UserProfileActivityButtons" /* 14490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 14449 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 14447 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
@@ -727,7 +727,7 @@ function VoiceCallActivityCard(arg0) {
   ({ isInChannel, style } = arg0);
   const tmp = closure_24();
   const tmp5 = stateFromStores(5529)(channel);
-  const tmp4 = stateFromStores(14486)(channel);
+  const tmp4 = stateFromStores(14484)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -742,9 +742,9 @@ function VoiceCallActivityCard(arg0) {
   let obj2 = channel(504);
   const tmp9 = stateFromStores(7520);
   ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7520)(stateFromStores(7539).USER_PROFILE_VOICE_ACTIVITY_CARD));
-  const tmp11 = stateFromStores(14476)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
+  const tmp11 = stateFromStores(14474)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
   closure_3 = tmp11;
-  stateFromStores(14477)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(14475)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
@@ -772,7 +772,7 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_21(tmp2(14498), obj7), ];
+    const items3 = [closure_21(tmp2(14496), obj7), ];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
@@ -789,7 +789,7 @@ function VoiceCallActivityCard(arg0) {
       const obj11 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj12.children = closure_21(tmp2(13526), obj13);
+      obj12.children = closure_21(tmp2(13524), obj13);
       const items4 = [closure_21(closure_7, obj12), tmp5];
       obj11.children = items4;
       obj9.children = closure_22(channel(5504).Text, obj11);
@@ -798,7 +798,7 @@ function VoiceCallActivityCard(arg0) {
       const obj14 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj15.children = closure_21(tmp2(13526), obj16);
+      obj15.children = closure_21(tmp2(13524), obj16);
       const items5 = [closure_21(closure_7, obj15), tmp5];
       obj14.children = items5;
       tmp13Result = closure_22(channel(5504).Text, obj14);
@@ -831,7 +831,7 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_22(closure_7, obj6), ];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_21(channel(14492).VoiceChannelButtons, obj21);
+    items7[1] = closure_21(channel(14490).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_22(tmp14, obj5);
   }

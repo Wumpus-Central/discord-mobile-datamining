@@ -1,9 +1,9 @@
-// === Module 12449: AppealIngestionRequestSent ===
+// === Module 12456: AppealIngestionRequestSent ===
 
-// Module 12449 (AppealIngestionRequestSent)
+// Module 12456 (AppealIngestionRequestSent)
 import FastImageDefault from "FastImage" /* 5600 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12444 */;
-import _modDef12450 from "module_12450" /* 12450 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12451 */;
+import _modDef12457 from "module_12457" /* 12457 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -30,7 +30,7 @@ export default function AppealIngestionRequestSent() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef12450;
+  obj4.source = _modDef12457;
   obj4.style = tmp.checkboxPng;
   items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };

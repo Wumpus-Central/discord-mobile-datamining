@@ -1,6 +1,6 @@
-// === Module 14497: VoicePanelStreamPreview ===
+// === Module 14495: VoicePanelStreamPreview ===
 
-// Module 14497 (VoicePanelStreamPreview)
+// Module 14495 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 575 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11084 */;

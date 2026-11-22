@@ -1,13 +1,13 @@
-// === Module 13842: GroupDMRow ===
+// === Module 13840: GroupDMRow ===
 
-// Module 13842 (GroupDMRow)
+// Module 13840 (GroupDMRow)
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import useChannelNameDefault from "useChannelName" /* 5529 */;
 import TableRow from "TableRow" /* 7045 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7335 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10124 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 13843 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 13841 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

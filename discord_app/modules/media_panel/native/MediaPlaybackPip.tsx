@@ -9,7 +9,7 @@ import safeTransitionToDefault from "safeTransitionTo" /* 6867 */;
 import PlayIcon2 from "PlayIcon" /* 7208 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
 import PauseIcon from "PauseIcon" /* 11840 */;
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15783 */;
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

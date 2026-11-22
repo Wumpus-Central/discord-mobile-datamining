@@ -1,7 +1,7 @@
 // === Module 18402: FrameRenderTarget ===
 
 // Module 18402 (FrameRenderTarget)
-import FramePoolManagerDefault from "FramePoolManager" /* 15754 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 15752 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

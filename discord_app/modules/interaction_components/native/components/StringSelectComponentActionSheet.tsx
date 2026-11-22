@@ -1,6 +1,6 @@
-// === Module 12345: StringSelectComponentActionSheet ===
+// === Module 12352: StringSelectComponentActionSheet ===
 
-// Module 12345 (StringSelectComponentActionSheet)
+// Module 12352 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 2117 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
@@ -26,8 +26,8 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(12346);
-  let tmp3 = first(noop.useState(new Set(selectionActionComponent(12346).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let obj = selectionActionComponent(12353);
+  let tmp3 = first(noop.useState(new Set(selectionActionComponent(12353).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
   items = [selectionActionComponent];
@@ -111,7 +111,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null
   };
-  let set = new Set(selectionActionComponent(12346).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  let set = new Set(selectionActionComponent(12353).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -136,5 +136,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12347), obj2);
+  return tmp9(onSubmit(12354), obj2);
 };

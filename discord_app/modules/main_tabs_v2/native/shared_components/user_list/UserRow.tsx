@@ -21,9 +21,9 @@ import BoostGemIcon from "BoostGemIcon" /* 9370 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10251 */;
 import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10252 */;
 import XLargeIcon from "XLargeIcon" /* 10273 */;
-import ActivityStatusDefault from "ActivityStatus" /* 13509 */;
-import ActionButtonDefault from "ActionButton" /* 13823 */;
-import CrownIcon from "CrownIcon" /* 13824 */;
+import ActivityStatusDefault from "ActivityStatus" /* 13507 */;
+import ActionButtonDefault from "ActionButton" /* 13821 */;
+import CrownIcon from "CrownIcon" /* 13822 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
@@ -83,7 +83,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1358);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "r" };
+  let obj = { lineHeight: "Array" };
 }
 let closure_18 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
 let createStyles = fn(4913);
@@ -192,7 +192,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "r" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {

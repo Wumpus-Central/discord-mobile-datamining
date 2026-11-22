@@ -1,6 +1,6 @@
-// === Module 12209: InvalidLink ===
+// === Module 12216: InvalidLink ===
 
-// Module 12209 (InvalidLink)
+// Module 12216 (InvalidLink)
 import shared from "shared" /* 4920 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import _mod7786 from "module_7786" /* 7786 */;
@@ -19,7 +19,7 @@ export function getInvalidLinkSource(theme) {
       return require("module_11929");
     },
     darker() {
-      return require("module_12210");
+      return require("module_12217");
     },
     light() {
       return require("module_11930");
@@ -33,7 +33,7 @@ export function useInvalidLinkSource() {
       return require("module_11929");
     },
     darker() {
-      return require("module_12210");
+      return require("module_12217");
     },
     light() {
       return require("module_11930");
@@ -47,7 +47,7 @@ export function InvalidLink(arg0) {
       return require("module_11929");
     },
     darker() {
-      return require("module_12210");
+      return require("module_12217");
     },
     light() {
       return require("module_11930");
@@ -59,7 +59,7 @@ export function InvalidLink(arg0) {
       return require("module_11929");
     },
     darker() {
-      return require("module_12210");
+      return require("module_12217");
     },
     light() {
       return require("module_11930");

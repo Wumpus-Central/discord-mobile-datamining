@@ -1,6 +1,6 @@
-// === Module 12180: isInviteActive ===
+// === Module 12187: isInviteActive ===
 
-// Module 12180 (isInviteActive)
+// Module 12187 (isInviteActive)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import RequestToStreamNonGamesExperimentDefault from "RequestToStreamNonGamesExperiment" /* 8529 */;

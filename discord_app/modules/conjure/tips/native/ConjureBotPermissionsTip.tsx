@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(12298).ConjurePublishActionContext);
+  dependencyMap = noop.useContext(projectId(12305).ConjurePublishActionContext);
   let obj = { icon: projectId(10133).ShieldIcon, children: null };
   const intl = projectId(1112).intl;
   const obj2 = { onReview: null };

@@ -1,6 +1,6 @@
-// === Module 12282: useConjureSharedProjectAppChannel ===
+// === Module 12289: useConjureSharedProjectAppChannel ===
 
-// Module 12282 (useConjureSharedProjectAppChannel)
+// Module 12289 (useConjureSharedProjectAppChannel)
 import conjureSharedProjectHome from "conjureSharedProjectHome" /* 11974 */;
 import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 11975 */;
 import noop from "module_19" /* 19 */;

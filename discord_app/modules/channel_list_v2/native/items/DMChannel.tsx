@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5646 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8009 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import useCallA11yStateDefault from "useCallA11yState" /* 17552 */;
 import ChannelItemDefault from "ChannelItem" /* 17636 */;
 import noop from "module_19" /* 19 */;

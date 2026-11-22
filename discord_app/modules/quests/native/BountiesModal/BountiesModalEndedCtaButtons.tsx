@@ -1,6 +1,6 @@
-// === Module 16366: BountiesModalEndedCtaButtons ===
+// === Module 16364: BountiesModalEndedCtaButtons ===
 
-// Module 16366 (BountiesModalEndedCtaButtons)
+// Module 16364 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import QuestContent from "QuestContent" /* 6563 */;

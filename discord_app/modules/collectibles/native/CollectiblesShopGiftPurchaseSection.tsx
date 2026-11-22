@@ -1,6 +1,6 @@
-// === Module 13914: CollectiblesShopGiftPurchaseSection ===
+// === Module 13912: CollectiblesShopGiftPurchaseSection ===
 
-// Module 13914 (CollectiblesShopGiftPurchaseSection)
+// Module 13912 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;

@@ -1,6 +1,6 @@
-// === Module 13529: NoMutualFriends ===
+// === Module 13527: NoMutualFriends ===
 
-// Module 13529 (NoMutualFriends)
+// Module 13527 (NoMutualFriends)
 import shared from "shared" /* 4920 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import _mod7786 from "module_7786" /* 7786 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getNoMutualFriendsSource(theme) {
   return _mod7786.getIllustrationSource(theme, {
     dark() {
-      return require("module_13530");
+      return require("module_13528");
     },
     darker() {
-      return require("module_13531");
+      return require("module_13529");
     },
     light() {
-      return require("module_13532");
+      return require("module_13530");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useNoMutualFriendsSource() {
   const obj = shared;
   return _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13530");
+      return require("module_13528");
     },
     darker() {
-      return require("module_13531");
+      return require("module_13529");
     },
     light() {
-      return require("module_13532");
+      return require("module_13530");
     }
   });
 }
@@ -44,25 +44,25 @@ export function NoMutualFriends(arg0) {
   const obj = shared;
   const illustrationSource = _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13530");
+      return require("module_13528");
     },
     darker() {
-      return require("module_13531");
+      return require("module_13529");
     },
     light() {
-      return require("module_13532");
+      return require("module_13530");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_13530");
+      return require("module_13528");
     },
     darker() {
-      return require("module_13531");
+      return require("module_13529");
     },
     light() {
-      return require("module_13532");
+      return require("module_13530");
     }
   };
   const merged = Object.assign(arg0);

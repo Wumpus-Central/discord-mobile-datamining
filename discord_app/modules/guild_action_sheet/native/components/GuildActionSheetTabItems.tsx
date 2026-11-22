@@ -1,6 +1,6 @@
-// === Module 15197: GuildActionSheetTabItems ===
+// === Module 15195: GuildActionSheetTabItems ===
 
-// Module 15197 (GuildActionSheetTabItems)
+// Module 15195 (GuildActionSheetTabItems)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
 import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6546 */;
@@ -8,8 +8,8 @@ import NotificationSettingsModalActionCreatorsDefault from "NotificationSettings
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
 import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 8055 */;
-import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15198 */;
-import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15199 */;
+import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15196 */;
+import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15197 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
@@ -25,9 +25,9 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
-  let canAccessSettings = guild(15177).useGuildActionSheetPermissions(guild).canAccessSettings;
+  let canAccessSettings = guild(15175).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = canAccessSettings(8749)(guild.id).total;
-  let obj = guild(15177);
+  let obj = guild(15175);
   items = [GuildChannelStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
@@ -109,7 +109,7 @@ export default function GuildActionSheetTabItems(guild) {
     canAccessSettings = closure_12(tmp(7591).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
-  items2[4] = closure_12(canAccessSettings(15200), { guild });
+  items2[4] = closure_12(canAccessSettings(15198), { guild });
   obj4.children = items2;
   return closure_13(guild(6545).ButtonGroup, obj4);
 };

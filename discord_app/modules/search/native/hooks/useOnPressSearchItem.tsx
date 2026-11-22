@@ -7,14 +7,14 @@ import LinkingDefault from "Linking" /* 5592 */;
 import ToastUtils from "ToastUtils" /* 5594 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7255 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13199 */;
-import TrackingDefault from "Tracking" /* 13220 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13224 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13197 */;
+import TrackingDefault from "Tracking" /* 13218 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 8343 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -546,11 +546,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13199).delayUntilNavigationComplete(() => {
+      const result = searchContext(13197).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(13199);
+      let obj2 = searchContext(13197);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

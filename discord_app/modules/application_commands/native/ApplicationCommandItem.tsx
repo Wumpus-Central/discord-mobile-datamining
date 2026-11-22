@@ -1,8 +1,8 @@
-// === Module 13272: ApplicationCommandItem ===
+// === Module 13270: ApplicationCommandItem ===
 
-// Module 13272 (ApplicationCommandItem)
+// Module 13270 (ApplicationCommandItem)
 import nativeDefault from "native" /* 575 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13093 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13091 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;
 

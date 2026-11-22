@@ -1,6 +1,6 @@
-// === Module 12534: ? ===
+// === Module 12532: ? ===
 
-// Module 12534
+// Module 12532
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/sfx/summary-reveal.mp3.js");

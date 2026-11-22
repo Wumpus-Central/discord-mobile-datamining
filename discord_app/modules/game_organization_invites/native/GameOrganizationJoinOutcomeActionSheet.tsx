@@ -1,11 +1,11 @@
-// === Module 12253: GameOrganizationJoinOutcomeActionSheet ===
+// === Module 12260: GameOrganizationJoinOutcomeActionSheet ===
 
-// Module 12253 (GameOrganizationJoinOutcomeActionSheet)
+// Module 12260 (GameOrganizationJoinOutcomeActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7515 */;
 import PromoSheet from "PromoSheet" /* 11225 */;
-import useGameOrganizationJoinOutcome from "useGameOrganizationJoinOutcome" /* 12246 */;
+import useGameOrganizationJoinOutcome from "useGameOrganizationJoinOutcome" /* 12253 */;
 import noop from "module_19" /* 19 */;
 
 const useGameOrganizationJoinOutcomeDefault = useGameOrganizationJoinOutcome;

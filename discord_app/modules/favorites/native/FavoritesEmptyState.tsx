@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 11226 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 13709 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13882 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 13707 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

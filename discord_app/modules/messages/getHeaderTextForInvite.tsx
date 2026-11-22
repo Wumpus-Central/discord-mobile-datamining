@@ -1,6 +1,6 @@
-// === Module 14296: getHeaderTextForInvite ===
+// === Module 14294: getHeaderTextForInvite ===
 
-// Module 14296 (getHeaderTextForInvite)
+// Module 14294 (getHeaderTextForInvite)
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 

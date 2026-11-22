@@ -1,16 +1,16 @@
-// === Module 20087: ContentInventoryManager ===
+// === Module 20084: ContentInventoryManager ===
 
-// Module 20087 (ContentInventoryManager)
+// Module 20084 (ContentInventoryManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import ContentInventoryExperiments from "ContentInventoryExperiments" /* 14973 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 20088 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 14971 */;
+import ContentInventoryFeature from "ContentInventoryFeature" /* 20085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6689 */;
 import IdleStore from "IdleStore" /* 6645 */;
 import WindowStore from "WindowStore" /* 6646 */;
-import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 12487 */;
+import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 12494 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 9775 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
@@ -373,7 +373,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(14584).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(14582).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handlePostConnectionOpen, CONNECTION_CLOSED: handleConnectionClosed, WINDOW_FOCUS: handleUpdatePollingState, IDLE: handleUpdatePollingState, CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: handleUpdatePollingState, CONTENT_INVENTORY_MANUAL_REFRESH: handleManualRefresh, CONTENT_INVENTORY_INBOX_STALE: handleInboxStale, SPOTIFY_NEW_TRACK: handleSpotifyNewTrack, GAME_PROFILE_OPEN: handleFetchGameProfileFeed };

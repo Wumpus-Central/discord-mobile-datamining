@@ -1,6 +1,6 @@
-// === Module 13036: AppLauncherChoicesOption ===
+// === Module 13034: AppLauncherChoicesOption ===
 
-// Module 13036 (AppLauncherChoicesOption)
+// Module 13034 (AppLauncherChoicesOption)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -62,7 +62,7 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj3.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(13037, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
+    obj2.openLazy(asyncRequireImpl(13035, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
   const tmp = closure_6();
   const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);

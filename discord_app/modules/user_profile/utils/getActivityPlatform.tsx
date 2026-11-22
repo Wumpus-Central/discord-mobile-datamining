@@ -1,15 +1,15 @@
-// === Module 14472: getActivityPlatform ===
+// === Module 14470: getActivityPlatform ===
 
-// Module 14472 (getActivityPlatform)
+// Module 14470 (getActivityPlatform)
 import Constants from "Constants" /* 1071 */;
 import PlatformsDefault from "Platforms" /* 6691 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8999 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13523 */;
-import isOnXboxDefault from "isOnXbox" /* 14458 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 14459 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 14471 */;
-import isOnMetaQuestDefault from "isOnMetaQuest" /* 14473 */;
-import isOnMetaHorizonDefault from "isOnMetaHorizon" /* 14474 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13521 */;
+import isOnXboxDefault from "isOnXbox" /* 14456 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 14457 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 14469 */;
+import isOnMetaQuestDefault from "isOnMetaQuest" /* 14471 */;
+import isOnMetaHorizonDefault from "isOnMetaHorizon" /* 14472 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

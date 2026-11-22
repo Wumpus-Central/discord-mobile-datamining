@@ -1,6 +1,6 @@
-// === Module 13647: CreationIntent ===
+// === Module 13645: CreationIntent ===
 
-// Module 13647 (CreationIntent)
+// Module 13645 (CreationIntent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -10,9 +10,9 @@ import Text_Text from "Text/Text" /* 5504 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7017 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13590 */;
-import ChairIllocon from "ChairIllocon" /* 13648 */;
-import WorldIllocon from "WorldIllocon" /* 13652 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13588 */;
+import ChairIllocon from "ChairIllocon" /* 13646 */;
+import WorldIllocon from "WorldIllocon" /* 13650 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -112,7 +112,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), , ];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(13180);
+  const tmp13 = trigger(13178);
   const obj9 = { Icon: null, message: null, onPress: null };
   if (closure_14) {
     obj9.Icon = ChairIllocon.ChairIllocon;
@@ -128,10 +128,10 @@ export default function CreationIntent(arg0) {
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = closure_11(trigger(13180), obj10);
+    items4[1] = closure_11(trigger(13178), obj10);
     obj8.children = items4;
     let tmp15 = obj8;
-    const tmp12Result = trigger(13180);
+    const tmp12Result = trigger(13178);
   } else {
     obj9.Icon = WorldIllocon.WorldIllocon;
     const intl3 = util.intl;
@@ -146,10 +146,10 @@ export default function CreationIntent(arg0) {
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = closure_11(trigger(13180), obj11);
+    items5[1] = closure_11(trigger(13178), obj11);
     obj8.children = items5;
     tmp15 = obj8;
-    const tmp12Result2 = trigger(13180);
+    const tmp12Result2 = trigger(13178);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp15);
   items3[1] = closure_11(ref, obj7);

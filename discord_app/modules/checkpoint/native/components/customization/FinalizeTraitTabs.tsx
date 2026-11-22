@@ -1,14 +1,14 @@
-// === Module 12797: FinalizeTraitTabs ===
+// === Module 12795: FinalizeTraitTabs ===
 
-// Module 12797 (FinalizeTraitTabs)
+// Module 12795 (FinalizeTraitTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import CheckpointPressable from "CheckpointPressable" /* 12734 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 12741 */;
+import CheckpointPressable from "CheckpointPressable" /* 12732 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 12739 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
@@ -336,7 +336,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
           showNitroLockedToastDefault(closure_5);
         } else if (closure_8) {
           const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12798, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12796, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
         } else if (null != moreTabOption) {
           onSelectOption(tmp3);
         }
@@ -346,7 +346,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       handleTabLayout("more", nativeEvent);
     };
     const obj6 = { color: tmp15, size: "xs" };
-    obj3.trailing = str(tmp2(12799).ChevronSmallDownIcon, obj6);
+    obj3.trailing = str(tmp2(12797).ChevronSmallDownIcon, obj6);
     items2[1] = str(ref2, obj3);
     obj2.children = items2;
     obj.children = tmp20(tmp21, obj2);

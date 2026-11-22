@@ -4,10 +4,10 @@
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
-import Tracking from "Tracking" /* 12490 */;
+import Tracking from "Tracking" /* 12126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -60,7 +60,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
               const obj4 = { stats: statsFromServerResult, globalStats: closure_1_0(6339).globalStatsFromServer(body.global_stats), character: null, compactAssets: null, availability: null };
               ({ character: obj2.character, compact_assets: obj2.compactAssets, availability } = body);
               if (availability == null) {
-                availability = closure_1_0(12493).CheckpointAvailability.FULL;
+                availability = closure_1_0(12129).CheckpointAvailability.FULL;
               }
               obj4.availability = availability;
               return obj4;
@@ -393,7 +393,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(12492).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12128).CheckpointFetchStates;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

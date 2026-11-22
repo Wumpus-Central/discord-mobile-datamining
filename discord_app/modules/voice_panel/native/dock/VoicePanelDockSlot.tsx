@@ -11,7 +11,7 @@ import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11775 */;
 import VoicePanelDockGlow from "VoicePanelDockGlow" /* 17982 */;
 import useVoicePanelDockMicLiveDefault from "useVoicePanelDockMicLive" /* 18039 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16473 */;
+import QuestDockStore from "QuestDockStore" /* 16471 */;
 
 const _modDef1653 = _mod1653;
 
@@ -314,7 +314,7 @@ function VoicePanelDockSlotContent(width) {
   return metroImportDefault(VoicePanelStateContextDefault.Provider, obj4);
 }
 const StyleSheet = fn(17).StyleSheet;
-const useVoicePanelDockState = fn(13312).useVoicePanelDockState;
+const useVoicePanelDockState = fn(13310).useVoicePanelDockState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const slot = StyleSheet.create({ slot: { position: "absolute", left: 0, bottom: 0 } });
@@ -359,9 +359,9 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePa
 
 export default noop.memo(function VoicePanelDockSlot(placement) {
   placement = placement.placement;
-  const isMobileRTCV2Enabled = placement(12829).useIsMobileRTCV2Enabled("VoicePanelDockSlot");
+  const isMobileRTCV2Enabled = placement(12827).useIsMobileRTCV2Enabled("VoicePanelDockSlot");
   const tmp2 = useVoicePanelDockState();
-  const obj = placement(12829);
+  const obj = placement(12827);
   const drawerWidth = placement(11954).useDrawerWidth({ whileSliding: "wider" });
   let width = useBaseAppContainerDimensionsDefault().width;
   placement(504);

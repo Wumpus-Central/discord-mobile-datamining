@@ -1,6 +1,6 @@
-// === Module 16051: AccountConfirmPasswordSetting ===
+// === Module 16049: AccountConfirmPasswordSetting ===
 
-// Module 16051 (AccountConfirmPasswordSetting)
+// Module 16049 (AccountConfirmPasswordSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import UserSettingsConfirmPassword from "UserSettingsConfirmPassword" /* 7413 */;

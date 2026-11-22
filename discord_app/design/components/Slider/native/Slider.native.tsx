@@ -1,6 +1,6 @@
-// === Module 14504: Slider ===
+// === Module 14502: Slider ===
 
-// Module 14504 (Slider)
+// Module 14502 (Slider)
 import nativeDefault from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5129 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5130 */;

@@ -2,7 +2,7 @@
 
 // Module 17438 (VEVOOSlider)
 import nativeDefault from "native" /* 575 */;
-import Slider from "Slider" /* 14504 */;
+import Slider from "Slider" /* 14502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 19678: FavoriteManager ===
+// === Module 19675: FavoriteManager ===
 
-// Module 19678 (FavoriteManager)
+// Module 19675 (FavoriteManager)
 import FavoritesUtils from "FavoritesUtils" /* 4787 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 11219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

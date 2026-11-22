@@ -1,6 +1,6 @@
-// === Module 15689: ActivitySessionAnalytics ===
+// === Module 15687: ActivitySessionAnalytics ===
 
-// Module 15689 (ActivitySessionAnalytics)
+// Module 15687 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import v1 from "v1" /* 1268 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
@@ -22,7 +22,7 @@ import QuestStore from "QuestStore" /* 8404 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
 import UserStore from "UserStore" /* 1386 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15690 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15688 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 
 require = fn;

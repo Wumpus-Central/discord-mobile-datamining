@@ -1,6 +1,6 @@
-// === Module 12204: useCanFulfillStreamRequest ===
+// === Module 12211: useCanFulfillStreamRequest ===
 
-// Module 12204 (useCanFulfillStreamRequest)
+// Module 12211 (useCanFulfillStreamRequest)
 import ActivityTypes from "ActivityTypes" /* 5652 */;
 import RunningGameStore from "RunningGameStore" /* 2139 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;

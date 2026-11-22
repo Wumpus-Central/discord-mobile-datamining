@@ -1,16 +1,16 @@
-// === Module 16568: QuestDockContentCollapsed ===
+// === Module 16566: QuestDockContentCollapsed ===
 
-// Module 16568 (QuestDockContentCollapsed)
+// Module 16566 (QuestDockContentCollapsed)
 import _mod1653 from "module_1653" /* 1653 */;
 import spring_spring from "spring/spring" /* 5514 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16476 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16474 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
 
 require = fn;
 const QuestDockMode = fn(6558).QuestDockMode;
-let closure_5 = fn(16475).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_5 = fn(16473).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);
 let obj = { questDockContentCollapsed: null };

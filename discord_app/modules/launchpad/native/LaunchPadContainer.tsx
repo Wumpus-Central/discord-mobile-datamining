@@ -7,7 +7,7 @@ import spring_spring from "spring/spring" /* 5514 */;
 import OverlayViewDefault from "OverlayView" /* 5867 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10598 */;
 import useLaunchPadTypeDefault from "useLaunchPadType" /* 11934 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12903 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12901 */;
 import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 17520 */;
 import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19115 */;
 import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19116 */;

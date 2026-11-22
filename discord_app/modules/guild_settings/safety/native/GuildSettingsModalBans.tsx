@@ -1,6 +1,6 @@
-// === Module 19882: GuildSettingsModalBans ===
+// === Module 19879: GuildSettingsModalBans ===
 
-// Module 19882 (GuildSettingsModalBans)
+// Module 19879 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;

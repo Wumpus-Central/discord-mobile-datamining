@@ -24,7 +24,7 @@ import GroupPlusIcon from "GroupPlusIcon" /* 11056 */;
 import ChatViewDefault from "ChatView" /* 11741 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 12061 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 12063 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 13229 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 13227 */;
 import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18802 */;
 import useOnMessageSendDefault from "useOnMessageSend" /* 18864 */;
 import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18865 */;
@@ -463,7 +463,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
-          obj2.channel = { id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "fill" };
+          obj2.channel = { id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
           obj.dispatch(obj2);
         };
       }

@@ -7,11 +7,11 @@ import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15989 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15987 */;
 import SettingRendererTypes from "SettingRendererTypes" /* 19027 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15987 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15985 */;
 
 require = fn;
 function SettingHeaderBadge(badge) {

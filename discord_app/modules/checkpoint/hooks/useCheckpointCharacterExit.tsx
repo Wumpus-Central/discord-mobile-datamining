@@ -1,6 +1,6 @@
-// === Module 12541: useCheckpointCharacterExit ===
+// === Module 12539: useCheckpointCharacterExit ===
 
-// Module 12541 (useCheckpointCharacterExit)
+// Module 12539 (useCheckpointCharacterExit)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;

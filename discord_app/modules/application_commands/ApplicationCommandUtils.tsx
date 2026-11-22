@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F124907 */ function() { ... });
+                      mapped = choices.map(/* F124920 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F92810 */ function() { ... });
+                      mapped1 = options.map(/* F92819 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);

@@ -2,14 +2,14 @@
 
 // Module 17974 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 575 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 15972 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 15970 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 11684 */;
 
 const _modDef1653 = tmp2(1653);
 const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16476);
 ({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_BUTTON_HIT_SLOP: metroImportDefault, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

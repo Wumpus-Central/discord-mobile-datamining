@@ -1,6 +1,6 @@
-// === Module 13846: ChannelLongPressActionSheet ===
+// === Module 13844: ChannelLongPressActionSheet ===
 
-// Module 13846 (ChannelLongPressActionSheet)
+// Module 13844 (ChannelLongPressActionSheet)
 import router_utils from "router_utils" /* 1098 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -30,15 +30,15 @@ import markChannelUnreadDefault from "markChannelUnread" /* 11237 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 11251 */;
 import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11825 */;
 import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11837 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12290 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 12291 */;
-import openFavoritesGuildMoveToCategoryActionSheetDefault from "openFavoritesGuildMoveToCategoryActionSheet" /* 13865 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 13868 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 13871 */;
-import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 13872 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 13874 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 13875 */;
-import closeFrameDefault from "closeFrame" /* 13877 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12297 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 12298 */;
+import openFavoritesGuildMoveToCategoryActionSheetDefault from "openFavoritesGuildMoveToCategoryActionSheet" /* 13863 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 13866 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 13869 */;
+import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 13870 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 13872 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 13873 */;
+import closeFrameDefault from "closeFrame" /* 13875 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6440 */;
@@ -418,7 +418,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13847, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13845, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -784,7 +784,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj43.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13873, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13871, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);

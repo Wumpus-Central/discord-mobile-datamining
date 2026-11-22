@@ -1,23 +1,23 @@
-// === Module 16459: OrbsArcadeRewardShelf ===
+// === Module 16457: OrbsArcadeRewardShelf ===
 
-// Module 16459 (OrbsArcadeRewardShelf)
+// Module 16457 (OrbsArcadeRewardShelf)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import useCountdownDefault from "useCountdown" /* 8956 */;
 import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9553 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16424 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16425 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 16433 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16434 */;
-import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16439 */;
-import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16442 */;
-import OrbsArcadeWindowUtils from "OrbsArcadeWindowUtils" /* 16451 */;
-import ChestLogoSpotIllustration from "ChestLogoSpotIllustration" /* 16460 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16422 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16423 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 16431 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16432 */;
+import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16437 */;
+import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16440 */;
+import OrbsArcadeWindowUtils from "OrbsArcadeWindowUtils" /* 16449 */;
+import ChestLogoSpotIllustration from "ChestLogoSpotIllustration" /* 16458 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16423 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16421 */;
 
 require = fn;
 function OrbsArcadeClaimableRewardsShelfContent(rewards) {

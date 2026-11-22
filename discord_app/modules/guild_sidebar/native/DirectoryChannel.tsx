@@ -3,7 +3,7 @@
 // Module 17723 (DirectoryChannel)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;

@@ -6,7 +6,7 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import HapticUtils from "HapticUtils" /* 5129 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import Pressables from "Pressables" /* 7030 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15823 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15821 */;
 import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 17193 */;
 import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 17194 */;
 import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 17196 */;

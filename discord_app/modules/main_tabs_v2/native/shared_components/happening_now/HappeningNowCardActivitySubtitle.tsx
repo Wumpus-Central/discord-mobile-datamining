@@ -6,8 +6,8 @@ import useChannelNameDefault from "useChannelName" /* 5529 */;
 import ActivityTypes from "ActivityTypes" /* 5652 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8009 */;
 import isStreamingDefault from "isStreaming" /* 8215 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13523 */;
-import HappeningNowCard from "HappeningNowCard" /* 16702 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13521 */;
+import HappeningNowCard from "HappeningNowCard" /* 16700 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 
@@ -31,7 +31,7 @@ export function HappeningNowVoiceCardSubtitle(voiceState) {
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(16702).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  obj2.children = jsx(voiceState(16700).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
   return <View style={tmp.cardDetails}>{null}</View>;
 }
 export function HappeningNowActivityCardSubtitle(activity) {

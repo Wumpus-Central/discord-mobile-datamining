@@ -1,6 +1,6 @@
-// === Module 16010: AccountEmailSetting ===
+// === Module 16008: AccountEmailSetting ===
 
-// Module 16010 (AccountEmailSetting)
+// Module 16008 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7342 */;

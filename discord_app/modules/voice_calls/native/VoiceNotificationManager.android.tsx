@@ -1,6 +1,6 @@
-// === Module 15664: VoiceNotificationManager ===
+// === Module 15662: VoiceNotificationManager ===
 
-// Module 15664 (VoiceNotificationManager)
+// Module 15662 (VoiceNotificationManager)
 import nativeDefault from "native" /* 575 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8452 */;
 import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11062 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "s", connectionState: "context", selfMute: false, deafened: "sunrise", isPushToTalk: "sunrise_over_mountains", embeddedActivity: "sparkler", isStreaming: "fireworks" };
+    obj.state = { channelId: "s", connectionState: "container", selfMute: false, deafened: "palm_tree", isPushToTalk: "leafless_tree", embeddedActivity: "bare", isStreaming: "barren" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       state = RTCConnectionStore.getState();
@@ -144,8 +144,8 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(13522)(name);
-            const tmp16Result = tmp16(13522);
+            str2 = " - " + tmp16(13520)(name);
+            const tmp16Result = tmp16(13520);
           }
           let obj4 = obj2;
           const obj3 = RTCConnectionUtilsDefault;
@@ -183,7 +183,7 @@ class VoiceNotificationManager {
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = result;
-          obj4 = obj4(15665);
+          obj4 = obj4(15663);
           result = obj4.shouldAcquireCallWifiLock();
           obj.acquireWifiLock = result;
           tmp16 = tmp16(8452);
@@ -220,7 +220,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "s", connectionState: "context", selfMute: false, deafened: "sunrise", isPushToTalk: "sunrise_over_mountains", embeddedActivity: "sparkler", isStreaming: "fireworks" };
+obj2.state = { channelId: "s", connectionState: "container", selfMute: false, deafened: "palm_tree", isPushToTalk: "leafless_tree", embeddedActivity: "bare", isStreaming: "barren" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   state = RTCConnectionStore.getState();
@@ -339,8 +339,8 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(13522)(name);
-        const tmp16Result = tmp16(13522);
+        str2 = " - " + tmp16(13520)(name);
+        const tmp16Result = tmp16(13520);
       }
       let obj4 = obj2;
       const obj3 = RTCConnectionUtilsDefault;
@@ -378,7 +378,7 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = result;
-      obj4 = obj4(15665);
+      obj4 = obj4(15663);
       result = obj4.shouldAcquireCallWifiLock();
       obj.acquireWifiLock = result;
       tmp16 = tmp16(8452);

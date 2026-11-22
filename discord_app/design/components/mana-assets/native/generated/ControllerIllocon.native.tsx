@@ -1,20 +1,20 @@
-// === Module 13623: ControllerIllocon ===
+// === Module 13621: ControllerIllocon ===
 
-// Module 13623 (ControllerIllocon)
+// Module 13621 (ControllerIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
+import _modDef13622 from "module_13622" /* 13622 */;
+import _modDef13623 from "module_13623" /* 13623 */;
 import _modDef13624 from "module_13624" /* 13624 */;
-import _modDef13625 from "module_13625" /* 13625 */;
-import _modDef13626 from "module_13626" /* 13626 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13624 }, 3: null };
-const obj2 = { uri: _modDef13624 };
-obj[2] = { uri: _modDef13625 };
-const obj3 = { uri: _modDef13625 };
-obj[3] = { uri: _modDef13626 };
+let obj = { 1: null, 2: { uri: _modDef13622 }, 3: null };
+const obj2 = { uri: _modDef13622 };
+obj[2] = { uri: _modDef13623 };
+const obj3 = { uri: _modDef13623 };
+obj[3] = { uri: _modDef13624 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ControllerIllocon.native.tsx");
 

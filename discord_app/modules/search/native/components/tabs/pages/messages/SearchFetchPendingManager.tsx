@@ -2,7 +2,7 @@
 
 // Module 18809 (SearchFetchPendingManager)
 import useInitialValueDefault from "useInitialValue" /* 5492 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13199 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
 import noop from "module_19" /* 19 */;
 
 let closure_3 = function SearchFetchPendingManager() {

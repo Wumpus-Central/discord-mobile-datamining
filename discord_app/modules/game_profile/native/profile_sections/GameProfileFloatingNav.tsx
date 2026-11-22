@@ -7,7 +7,7 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import native from "native" /* 7600 */;
 import YouBannerDecorations from "YouBannerDecorations" /* 9945 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 13778 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 13776 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -145,7 +145,7 @@ function FloatingNav(navigation) {
           }, tab);
         })
     };
-    items7[1] = closure_7(tmp4(13778).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(13776).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;

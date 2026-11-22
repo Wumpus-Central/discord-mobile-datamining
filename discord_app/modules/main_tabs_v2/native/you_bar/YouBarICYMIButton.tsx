@@ -4,13 +4,13 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import RootNavigationRef from "RootNavigationRef" /* 5090 */;
-import FlashIcon from "FlashIcon" /* 14467 */;
+import FlashIcon from "FlashIcon" /* 14465 */;
 import YouBarButtonDefault from "YouBarButton" /* 17971 */;
 import useICYMITabBadgeDefault from "useICYMITabBadge" /* 17973 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16478).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16476).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };

@@ -8,7 +8,7 @@ import Stack_Stack from "Stack/Stack" /* 5929 */;
 import RowButton from "RowButton" /* 7711 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10093 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13061 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13059 */;
 import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19221 */;
 import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19224 */;
 import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19340 */;

@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5594 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12220 */;
-import RecentBuildOverrides from "RecentBuildOverrides" /* 12223 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12227 */;
+import RecentBuildOverrides from "RecentBuildOverrides" /* 12230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -211,7 +211,7 @@ export default noop.memo(function BuildOverridesScreen() {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[stateFromStores(undefined, 12220).DEVICE_FIELD];
+      tmp = overrides[stateFromStores(undefined, 12227).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -220,17 +220,17 @@ export default noop.memo(function BuildOverridesScreen() {
   dependencyMap = tmp5[1];
   let obj = stateFromStores(504);
   let obj2 = noop;
-  [arr2, asyncGeneratorStep] = first1(noop.useState(stateFromStores(12223).getRecentDeviceBuildOverrides), 2);
+  [arr2, asyncGeneratorStep] = first1(noop.useState(stateFromStores(12230).getRecentDeviceBuildOverrides), 2);
   const tmp8 = first1(noop.useState(false), 2);
   first1 = tmp8[0];
   noop = tmp8[1];
-  const tmp7 = first1(noop.useState(stateFromStores(12223).getRecentDeviceBuildOverrides), 2);
+  const tmp7 = first1(noop.useState(stateFromStores(12230).getRecentDeviceBuildOverrides), 2);
   [tmp11, ScrollView] = first1(noop.useState(false), 2);
   const tmp10 = first1(noop.useState(false), 2);
   [tmp13, BuildOverrideStore] = first1(noop.useState(), 2);
   const trimmed = first.id.trim();
   let str2 = "Discord Android";
-  if ("discord_ios" === stateFromStores(12220).DEVICE_FIELD) {
+  if ("discord_ios" === stateFromStores(12227).DEVICE_FIELD) {
     str2 = "Discord iOS";
   }
   const items1 = [stateFromStores];
@@ -273,7 +273,7 @@ export default noop.memo(function BuildOverridesScreen() {
   let tmp18Result = null != stateFromStores;
   if (tmp18Result) {
     let obj5 = { children: null };
-    let obj6 = { icon: tmp16(tmp3(14368).RefreshIcon, {}), label: "Refresh override", onPress: tmp3(12220).refreshBuildOverride, arrow: true };
+    let obj6 = { icon: tmp16(tmp3(14366).RefreshIcon, {}), label: "Refresh override", onPress: tmp3(12227).refreshBuildOverride, arrow: true };
     const items3 = [tmp16(tmp3(7045).TableRow, obj6), ];
     let obj7 = {
       icon: tmp16(tmp3(5620).TrashIcon, { color: "text-feedback-critical" }),
@@ -356,7 +356,7 @@ export default noop.memo(function BuildOverridesScreen() {
   obj14.children = items5;
   items4[1] = closure_10(stateFromStores(5929).Stack, obj14);
   if (0 === arr2.length) {
-    const obj16 = { icon: tmp16(tmp3(14368).RefreshIcon, {}), label: "No recent builds", subLabel: "Your recent builds will appear here after you apply an override." };
+    const obj16 = { icon: tmp16(tmp3(14366).RefreshIcon, {}), label: "No recent builds", subLabel: "Your recent builds will appear here after you apply an override." };
     let mapped = tmp16(tmp3(7045).TableRow, obj16);
   } else {
     mapped = arr2.map((id) => {

@@ -13,7 +13,7 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 7520 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 10432 */;
-import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13714 */;
+import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13712 */;
 import useAppFrameDefault from "useAppFrame" /* 17513 */;
 import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17533 */;
 import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18041 */;
@@ -183,7 +183,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1112).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1112).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(15971).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(15969).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(7030).PressableOpacity, obj3), , ];
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1112).intl;

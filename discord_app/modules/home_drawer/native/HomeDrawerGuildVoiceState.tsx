@@ -9,7 +9,7 @@ import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11084 */;
-import AvatarPile from "AvatarPile" /* 14488 */;
+import AvatarPile from "AvatarPile" /* 14486 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;

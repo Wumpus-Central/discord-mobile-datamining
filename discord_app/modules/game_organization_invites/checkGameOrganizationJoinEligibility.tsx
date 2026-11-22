@@ -1,10 +1,10 @@
-// === Module 12229: checkGameOrganizationJoinEligibility ===
+// === Module 12236: checkGameOrganizationJoinEligibility ===
 
-// Module 12229 (checkGameOrganizationJoinEligibility)
-import withGameOrganizationJoinFlowPendingDefault from "withGameOrganizationJoinFlowPending" /* 12231 */;
+// Module 12236 (checkGameOrganizationJoinEligibility)
+import withGameOrganizationJoinFlowPendingDefault from "withGameOrganizationJoinFlowPending" /* 12238 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 12230 */;
+import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 12237 */;
 import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11895 */;
 
 const require = fn;

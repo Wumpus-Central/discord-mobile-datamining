@@ -6,8 +6,8 @@ import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import _modDef1488 from "module_1488" /* 1488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14993 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17041 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14991 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17039 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {

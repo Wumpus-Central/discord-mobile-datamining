@@ -1,14 +1,14 @@
-// === Module 13657: InstantInviteRow ===
+// === Module 13655: InstantInviteRow ===
 
-// Module 13657 (InstantInviteRow)
+// Module 13655 (InstantInviteRow)
 import nativeDefault from "native" /* 575 */;
 import InstantInviteUtils from "InstantInviteUtils" /* 8054 */;
-import InviteQueue from "InviteQueue" /* 13658 */;
+import InviteQueue from "InviteQueue" /* 13656 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 8053 */;
 import GuildStore from "GuildStore" /* 4784 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13191 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13189 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const InviteQueueDefault = InviteQueue;

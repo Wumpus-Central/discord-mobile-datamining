@@ -1,6 +1,6 @@
-// === Module 12208: AcceptGuildTemplate ===
+// === Module 12215: AcceptGuildTemplate ===
 
-// Module 12208 (AcceptGuildTemplate)
+// Module 12215 (AcceptGuildTemplate)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
@@ -12,11 +12,11 @@ import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4821 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7020 */;
 import _modDef7615 from "module_7615" /* 7615 */;
 import FormDividerDefault from "FormDivider" /* 7713 */;
-import InvalidLink from "InvalidLink" /* 12209 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 12211 */;
-import _modDef12216 from "module_12216" /* 12216 */;
-import _modDef12217 from "module_12217" /* 12217 */;
-import RolePillDefault from "RolePill" /* 12218 */;
+import InvalidLink from "InvalidLink" /* 12216 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 12218 */;
+import _modDef12223 from "module_12223" /* 12223 */;
+import _modDef12224 from "module_12224" /* 12224 */;
+import RolePillDefault from "RolePill" /* 12225 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 6407 */;
 
@@ -143,9 +143,9 @@ function Channels(channels) {
       if (isGuildVocalChannelType(type)) {
         let tmp10Result = _modDef7615;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef12216;
+        tmp10Result = _modDef12223;
       } else {
-        tmp10Result = _modDef12217;
+        tmp10Result = _modDef12224;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];

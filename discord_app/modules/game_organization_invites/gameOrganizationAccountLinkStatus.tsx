@@ -1,6 +1,6 @@
-// === Module 12227: gameOrganizationAccountLinkStatus ===
+// === Module 12234: gameOrganizationAccountLinkStatus ===
 
-// Module 12227 (gameOrganizationAccountLinkStatus)
+// Module 12234 (gameOrganizationAccountLinkStatus)
 import useAuthorizationApp from "useAuthorizationApp" /* 7523 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;

@@ -1,9 +1,9 @@
-// === Module 14364: ConjureDevicePermissionSettingsSheet ===
+// === Module 14362: ConjureDevicePermissionSettingsSheet ===
 
-// Module 14364 (ConjureDevicePermissionSettingsSheet)
+// Module 14362 (ConjureDevicePermissionSettingsSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4190 from "module_4190" /* 4190 */;
-import useConjureDevicePermissionSettingsDefault from "useConjureDevicePermissionSettings" /* 14365 */;
+import useConjureDevicePermissionSettingsDefault from "useConjureDevicePermissionSettings" /* 14363 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
     children: settings.map((permission) => {
       permission = permission.permission;
       const decision = permission.decision;
-      const obj = { label: _undefined(12303).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null };
+      const obj = { label: _undefined(12310).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null };
       let stringResult;
       if (null == decision) {
         const intl = _undefined(1112).intl;
@@ -47,7 +47,7 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
       obj.onValueChange = function onValueChange(arg0) {
         return permission(permission, arg0);
       };
-      return jsx(_undefined(7556).TableSwitchRow, { label: _undefined(12303).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null }, permission);
+      return jsx(_undefined(7556).TableSwitchRow, { label: _undefined(12310).getConjureDevicePermissionLabel(permission), subLabel: null, value: null, onValueChange: null }, permission);
     })
   });
   obj.children = <View style={tmp.content}>{null}</View>;

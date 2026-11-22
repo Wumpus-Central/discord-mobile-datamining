@@ -1,6 +1,6 @@
-// === Module 20065: GuildSettingsModalOfficialMessages ===
+// === Module 20062: GuildSettingsModalOfficialMessages ===
 
-// Module 20065 (GuildSettingsModalOfficialMessages)
+// Module 20062 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import Text_Text from "Text/Text" /* 5504 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6891 */;
 import HeaderActionButton from "HeaderActionButton" /* 7029 */;
-import _modDef16689 from "module_16689" /* 16689 */;
+import _modDef16687 from "module_16687" /* 16687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -46,7 +46,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(refs).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef671(selectedColor).alpha(refs).hex();
-  const items2 = [application_id(native.Avatar, { source: _modDef16689 }), ];
+  const items2 = [application_id(native.Avatar, { source: _modDef16687 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "body-md/semibold", lineClamp: 1, children: null };

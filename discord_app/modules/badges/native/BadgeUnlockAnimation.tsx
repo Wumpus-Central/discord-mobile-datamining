@@ -1,14 +1,14 @@
-// === Module 14014: BadgeUnlockAnimation ===
+// === Module 14012: BadgeUnlockAnimation ===
 
-// Module 14014 (BadgeUnlockAnimation)
+// Module 14012 (BadgeUnlockAnimation)
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import shared from "shared" /* 4920 */;
 import timing_timing from "timing/timing" /* 5123 */;
-import BadgeUtils from "BadgeUtils" /* 13992 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14007 */;
-import useTimeoutDefault from "useTimeout" /* 14017 */;
+import BadgeUtils from "BadgeUtils" /* 13990 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14005 */;
+import useTimeoutDefault from "useTimeout" /* 14015 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -336,7 +336,7 @@ export default function BadgeUnlockAnimation(badge) {
   const tmp2Result14 = require("module_1653");
   FALLBACK_BADGE_COLOR = require("useBadgeColor").useBadgeColor(badgeUnlockArt.rasterUrl);
   if (FALLBACK_BADGE_COLOR == null) {
-    FALLBACK_BADGE_COLOR = tmp2(14015).FALLBACK_BADGE_COLOR;
+    FALLBACK_BADGE_COLOR = tmp2(14013).FALLBACK_BADGE_COLOR;
   }
   const items5 = [FALLBACK_BADGE_COLOR];
   const memo = noop.useMemo(() => ({ fill: FALLBACK_BADGE_COLOR }), items5);

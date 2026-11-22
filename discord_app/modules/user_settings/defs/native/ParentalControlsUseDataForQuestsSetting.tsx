@@ -3,8 +3,8 @@
 // Module 17399 (ParentalControlsUseDataForQuestsSetting)
 import util from "util" /* 1112 */;
 import _modDef2824 from "module_2824" /* 2824 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16119 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16123 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16117 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16121 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 8335 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 12333: GuildCapUpsellHooks ===
+// === Module 12340: GuildCapUpsellHooks ===
 
-// Module 12333 (GuildCapUpsellHooks)
+// Module 12340 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
 import HotspotStore2 from "HotspotStore" /* 8038 */;

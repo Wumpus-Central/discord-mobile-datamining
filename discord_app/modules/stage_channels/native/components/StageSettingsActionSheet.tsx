@@ -1,6 +1,6 @@
-// === Module 14841: StageSettingsActionSheet ===
+// === Module 14839: StageSettingsActionSheet ===
 
-// Module 14841 (StageSettingsActionSheet)
+// Module 14839 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4770 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;

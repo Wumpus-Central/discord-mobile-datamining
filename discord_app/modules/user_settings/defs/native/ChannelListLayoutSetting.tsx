@@ -1,6 +1,6 @@
-// === Module 16950: ChannelListLayoutSetting ===
+// === Module 16948: ChannelListLayoutSetting ===
 
-// Module 16950 (ChannelListLayoutSetting)
+// Module 16948 (ChannelListLayoutSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5574 */;

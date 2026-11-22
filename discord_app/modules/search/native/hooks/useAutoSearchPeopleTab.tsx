@@ -3,13 +3,13 @@
 // Module 18831 (useAutoSearchPeopleTab)
 import apply from "apply" /* 12 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9651 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13199 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13224 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 require = fn;
-let closure_5 = fn(13215).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(13213).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
@@ -28,8 +28,8 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
     if (!closure_1) {
       const debounceResult = apply.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          closure_1(13224).searchPeopleTab(searchContext, searchQueryString);
-          const obj = closure_1(13224);
+          closure_1(13222).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(13222);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -37,6 +37,6 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
   }, items1);
   const items2 = [searchContext];
   const effect2 = noop.useEffect(() => () => {
-    closure_1(13224).cleanupPeopleTab(searchContext);
+    closure_1(13222).cleanupPeopleTab(searchContext);
   }, items2);
 }

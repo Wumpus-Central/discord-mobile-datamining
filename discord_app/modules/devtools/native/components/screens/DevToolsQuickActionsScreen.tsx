@@ -1,6 +1,6 @@
-// === Module 17087: DevToolsQuickActionsScreen ===
+// === Module 17085: DevToolsQuickActionsScreen ===
 
-// Module 17087 (DevToolsQuickActionsScreen)
+// Module 17085 (DevToolsQuickActionsScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import UserSettings from "UserSettings" /* 4738 */;
@@ -8,17 +8,17 @@ import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /*
 import dismissible_content from "dismissible_content" /* 4746 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5826 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import NUFActionCreators from "NUFActionCreators" /* 13612 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13702 */;
-import requestReviewModalDefault from "requestReviewModal" /* 14979 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15647 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 16997 */;
-import OverridePremiumTypeActions from "OverridePremiumTypeActions" /* 17109 */;
+import NUFActionCreators from "NUFActionCreators" /* 13610 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13700 */;
+import requestReviewModalDefault from "requestReviewModal" /* 14977 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15645 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 16995 */;
+import OverridePremiumTypeActions from "OverridePremiumTypeActions" /* 17107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1387 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
@@ -44,7 +44,7 @@ function handleReducedMotionChange(arg0) {
 }
 function launchPasskeyPromoSheet() {
   ModalActionCreatorsDefault.pop();
-  asyncRequireImpl(17104, dependencyMap.paths).then((result) => {
+  asyncRequireImpl(17102, dependencyMap.paths).then((result) => {
     result = result.default.openPasskeyUpsellPromoSheet();
   });
 }
@@ -65,7 +65,7 @@ function handleResetDoubleTapState() {
 }
 function launchTotpSetupSuccess() {
   ModalActionCreatorsDefault.pop();
-  items = [asyncRequireImpl(16053, dependencyMap.paths), asyncRequireImpl(16055, dependencyMap.paths)];
+  items = [asyncRequireImpl(16051, dependencyMap.paths), asyncRequireImpl(16053, dependencyMap.paths)];
   Promise.all(items).then((result) => {
     const iter = result[Symbol.iterator]();
     let nextResult;
@@ -158,7 +158,7 @@ let closure_36 = async function _handleShowAppRatingModal() {
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const ThemeTypes = fn(1071).ThemeTypes;
-const NewUserTypes = fn(13613).NewUserTypes;
+const NewUserTypes = fn(13611).NewUserTypes;
 const PremiumConstants = fn(1388);
 ({ PREMIUM_TYPE_OVERRIDE_OPTIONS: closure_19, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_20 } = PremiumConstants);
 const VIBING_WUMPUS_MODAL_KEY = fn(11782).VIBING_WUMPUS_MODAL_KEY;
@@ -172,7 +172,7 @@ obj2.content = { padding: nativeDefault.space.PX_16 };
 let closure_26 = createStyles.createStyles(obj2);
 function launchMFA() {
   ModalActionCreatorsDefault.pop();
-  asyncRequireImpl(17088, dependencyMap.paths).then((openMFAModal) => {
+  asyncRequireImpl(17086, dependencyMap.paths).then((openMFAModal) => {
     const obj = { ticket: "ticket", methods: null };
     items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     obj.methods = items;
@@ -218,7 +218,7 @@ export default function DevToolsQuickActionsScreen() {
   [][0] = locale;
   const stateFromStores = locale(504).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
   if (tmp11) {
-    return closure_23(locale(17108).default, {});
+    return closure_23(locale(17106).default, {});
   } else {
     let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
     const items5 = [tmp.content, ];
@@ -242,9 +242,9 @@ export default function DevToolsQuickActionsScreen() {
       str = "(using system theme)";
     }
     const obj8 = { title: "Appearance", hasIcons: true, children: null };
-    const obj9 = { label: str, disabled: usingSystemTheme, icon: closure_23(locale(16674).ThemeLightIcon, {}), value: locale(4920).isThemeLight(stateFromStoresObject.theme), onValueChange: handleThemeChange };
+    const obj9 = { label: str, disabled: usingSystemTheme, icon: closure_23(locale(16672).ThemeLightIcon, {}), value: locale(4920).isThemeLight(stateFromStoresObject.theme), onValueChange: handleThemeChange };
     const items7 = [closure_23(locale(7556).TableSwitchRow, obj9), ];
-    const obj10 = { label: "Reduced Motion", icon: closure_23(locale(16733).AccessibilityIcon, {}), value: stateFromStores, onValueChange: handleReducedMotionChange };
+    const obj10 = { label: "Reduced Motion", icon: closure_23(locale(16731).AccessibilityIcon, {}), value: stateFromStores, onValueChange: handleReducedMotionChange };
     items7[1] = closure_23(locale(7556).TableSwitchRow, obj10);
     obj8.children = items7;
     items6[2] = closure_24(locale(7348).TableRowGroup, obj8);
@@ -284,7 +284,7 @@ export default function DevToolsQuickActionsScreen() {
     const intl2 = locale(1112).intl;
     obj17.label = intl2.string(locale(1112).t.yoWDXU);
     obj17.onPress = handleNewUserOnboarding;
-    obj17.icon = closure_23(locale(16981).WrenchIcon, {});
+    obj17.icon = closure_23(locale(16979).WrenchIcon, {});
     obj17.trailing = closure_23(locale(7058).TableRowArrow, {});
     items8[2] = closure_23(locale(7045).TableRow, obj17);
     const obj18 = { label: "Launch MFA Challenge Modal", subLabel: "Dismisses dev tools when launching.", onPress: launchMFA, icon: closure_23(locale(7386).KeyIcon, {}), trailing: closure_23(locale(7058).TableRowArrow, {}) };
@@ -393,7 +393,7 @@ export default function DevToolsQuickActionsScreen() {
         label: "Launch Checkpoint with fake data",
         subLabel: "Use mock stats in place of your own",
         onPress() {
-              return locale(12497).openCheckpoint("devtools", locale(14608).CheckpointMocks.FAKE_DATA);
+              return locale(12497).openCheckpoint("devtools", locale(14606).CheckpointMocks.FAKE_DATA);
             },
         icon: tmp5Result,
         trailing: closure_23(locale(7058).TableRowArrow, {})
@@ -407,7 +407,7 @@ export default function DevToolsQuickActionsScreen() {
         label: "Launch Checkpoint with No Personal Data",
         subLabel: "Use the no-shared-data flow with null stats",
         onPress() {
-              return locale(12497).openCheckpoint("devtools", locale(14608).CheckpointMocks.GLOBAL_STATS);
+              return locale(12497).openCheckpoint("devtools", locale(14606).CheckpointMocks.GLOBAL_STATS);
             },
         icon: tmp5Result,
         trailing: closure_23(locale(7058).TableRowArrow, {})
@@ -420,7 +420,7 @@ export default function DevToolsQuickActionsScreen() {
         label: "Launch Checkpoint with Zero Data",
         subLabel: "Use mock stats with every stat at zero",
         onPress() {
-              return locale(12497).openCheckpoint("devtools", locale(14608).CheckpointMocks.ZERO_STATS);
+              return locale(12497).openCheckpoint("devtools", locale(14606).CheckpointMocks.ZERO_STATS);
             },
         icon: tmp5Result,
         trailing: closure_23(locale(7058).TableRowArrow, {})
@@ -428,7 +428,7 @@ export default function DevToolsQuickActionsScreen() {
       isCheckpointEnabled = closure_23(locale(7045).TableRow, obj27);
     }
     items8[12] = isCheckpointEnabled;
-    const obj28 = { label: "Test captcha", onPress: locale(17110).showCaptchaTestModal, icon: closure_23(locale(7386).KeyIcon, {}), trailing: closure_23(locale(7058).TableRowArrow, {}) };
+    const obj28 = { label: "Test captcha", onPress: locale(17108).showCaptchaTestModal, icon: closure_23(locale(7386).KeyIcon, {}), trailing: closure_23(locale(7058).TableRowArrow, {}) };
     items8[13] = closure_23(locale(7045).TableRow, obj28);
     const obj29 = {
       label: "Ignored Profile Speedbump Suppression",
@@ -441,14 +441,14 @@ export default function DevToolsQuickActionsScreen() {
         }
     };
     items8[14] = closure_23(locale(7556).TableSwitchRow, obj29);
-    const obj30 = { label: "Show App Rating Modal", subLabel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.", onPress: handleShowAppRatingModal, icon: closure_23(locale(16981).WrenchIcon, {}) };
+    const obj30 = { label: "Show App Rating Modal", subLabel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.", onPress: handleShowAppRatingModal, icon: closure_23(locale(16979).WrenchIcon, {}) };
     items8[15] = closure_23(locale(7045).TableRow, obj30);
     obj14.children = items8;
     items6[6] = closure_24(locale(7348).TableRowGroup, obj14);
     const obj31 = { size: tmp7(575).space.PX_16 };
     items6[7] = closure_23(locale(1186).Spacer, obj31);
     const obj32 = {
-      icon: closure_23(locale(16981).WrenchIcon, {}),
+      icon: closure_23(locale(16979).WrenchIcon, {}),
       label: "Force Native Crash",
       onPress() {
           return showDevWidget(1241).crash();
@@ -459,7 +459,7 @@ export default function DevToolsQuickActionsScreen() {
     let isIOSResult = locale(1378).isIOS();
     if (isIOSResult) {
       const obj33 = {
-        icon: closure_23(locale(16981).WrenchIcon, {}),
+        icon: closure_23(locale(16979).WrenchIcon, {}),
         label: "Simulate App Hang",
         subLabel: "Blocks the main thread forever. Background the app for 5+ seconds to let the system watchdog kill it.",
         onPress() {
@@ -471,7 +471,7 @@ export default function DevToolsQuickActionsScreen() {
     const obj34 = { title: "Crash Actions", hasIcons: true, children: null };
     items9[1] = isIOSResult;
     const obj35 = {
-      icon: closure_23(locale(16981).WrenchIcon, {}),
+      icon: closure_23(locale(16979).WrenchIcon, {}),
       label: "Force JS Crash",
       onPress() {
           const error = new Error("Force JS Crash");
@@ -480,7 +480,7 @@ export default function DevToolsQuickActionsScreen() {
     };
     items9[2] = closure_23(locale(7045).TableRow, obj35);
     const obj36 = {
-      icon: closure_23(locale(16981).WrenchIcon, {}),
+      icon: closure_23(locale(16979).WrenchIcon, {}),
       label: "Force JS Boundary Crash",
       onPress() {
           asyncGeneratorStep(true);
@@ -488,7 +488,7 @@ export default function DevToolsQuickActionsScreen() {
     };
     items9[3] = closure_23(locale(7045).TableRow, obj36);
     const obj37 = {
-      icon: closure_23(locale(16981).WrenchIcon, {}),
+      icon: closure_23(locale(16979).WrenchIcon, {}),
       label: "Force libdiscore Crash",
       onPress() {
           locale(1364).crash();
@@ -496,7 +496,7 @@ export default function DevToolsQuickActionsScreen() {
     };
     items9[4] = closure_23(locale(7045).TableRow, obj37);
     const obj38 = {
-      icon: closure_23(locale(16981).WrenchIcon, {}),
+      icon: closure_23(locale(16979).WrenchIcon, {}),
       label: "Force libdiscore Store Crash",
       subLabel: "Dispatches LIBDISCORE_SIMULATE_CRASH to NoteStore",
       onPress() {
@@ -505,7 +505,7 @@ export default function DevToolsQuickActionsScreen() {
     };
     items9[5] = closure_23(locale(7045).TableRow, obj38);
     const obj39 = {
-      icon: closure_23(locale(16981).WrenchIcon, {}),
+      icon: closure_23(locale(16979).WrenchIcon, {}),
       label: "Force libdiscore Store Error",
       subLabel: "Dispatches LIBDISCORE_SIMULATE_STORE_ERROR with socket reset",
       onPress() {
@@ -527,7 +527,7 @@ export default function DevToolsQuickActionsScreen() {
       const items10 = [closure_23(locale(1186).Spacer, obj41), ];
       const obj42 = { title: "Memory Actions", hasIcons: true, children: null };
       const obj43 = {
-        icon: closure_23(locale(16981).WrenchIcon, {}),
+        icon: closure_23(locale(16979).WrenchIcon, {}),
         label: "Trigger Memory Warning",
         subLabel: "Simulates a memory warning to test cache-eviction behavior (e.g. SDWebImage).",
         onPress() {

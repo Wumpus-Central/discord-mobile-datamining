@@ -47,7 +47,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1186).AvatarSizes.NORMAL, status: "done", isMobileOnline: true, isVROnline: null, statusStyle: "header" };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1186).AvatarSizes.NORMAL, status: "done", isMobileOnline: true, isVROnline: null, statusStyle: "primary" };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();

@@ -1,8 +1,8 @@
-// === Module 12385: ConjureRemoveFromServerForm ===
+// === Module 12392: ConjureRemoveFromServerForm ===
 
-// Module 12385 (ConjureRemoveFromServerForm)
+// Module 12392 (ConjureRemoveFromServerForm)
 import _modDef4190 from "module_4190" /* 4190 */;
-import useConjureRemoveFromServerDefault from "useConjureRemoveFromServer" /* 12386 */;
+import useConjureRemoveFromServerDefault from "useConjureRemoveFromServer" /* 12393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -77,7 +77,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   let tmp6Result = null;
   if (optionalItems.length > 0) {
     let obj = { items: [], optionalItems };
-    tmp6Result = closure_4(tmp(12384), obj);
+    tmp6Result = closure_4(tmp(12391), obj);
   }
   children[1] = tmp6Result;
   children[2] = notes.map((children) => closure_1_4(onRemoved(dependencyMap[6]).Text, { variant: "body-sm/normal", color: "text-muted", children }, children));

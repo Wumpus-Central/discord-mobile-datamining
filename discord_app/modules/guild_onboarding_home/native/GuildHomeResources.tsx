@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13141 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13139 */;
 import useResourceChannelsDefault from "useResourceChannels" /* 18205 */;
 import _modDef18213 from "module_18213" /* 18213 */;
 import noop from "module_19" /* 19 */;
@@ -42,7 +42,7 @@ function ResourceChannelRow(channelId) {
     first = forumPostMediaProperties[0];
   }
   const obj6 = channelId(8621);
-  let flag = channelId(12878).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  let flag = channelId(12876).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
   const tmp11 = stateFromStores(18212)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
@@ -122,7 +122,7 @@ function ResourceChannelRow(channelId) {
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_11(tmp2(12878).ForumPostMediaThumbnail, obj17);
+              tmp19Result6 = closure_11(tmp2(12876).ForumPostMediaThumbnail, obj17);
               const tmp2Result2 = tmp2(8621);
             }
           }

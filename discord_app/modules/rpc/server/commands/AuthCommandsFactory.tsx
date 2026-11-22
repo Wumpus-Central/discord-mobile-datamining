@@ -1,6 +1,6 @@
-// === Module 15742: AuthCommandsFactory ===
+// === Module 15740: AuthCommandsFactory ===
 
-// Module 15742 (AuthCommandsFactory)
+// Module 15740 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import RPCErrorDefault from "RPCError" /* 6909 */;

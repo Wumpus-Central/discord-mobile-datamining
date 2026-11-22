@@ -1,6 +1,6 @@
-// === Module 13949: PremiumGiftPurchaseSuccess ===
+// === Module 13947: PremiumGiftPurchaseSuccess ===
 
-// Module 13949 (PremiumGiftPurchaseSuccess)
+// Module 13947 (PremiumGiftPurchaseSuccess)
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5594 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 6347 */;

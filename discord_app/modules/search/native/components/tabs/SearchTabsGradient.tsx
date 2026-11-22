@@ -3,7 +3,7 @@
 // Module 18828 (SearchTabsGradient)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
-import TabsGradientDefault from "TabsGradient" /* 13716 */;
+import TabsGradientDefault from "TabsGradient" /* 13714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

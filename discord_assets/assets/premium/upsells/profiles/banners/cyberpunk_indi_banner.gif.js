@@ -1,6 +1,6 @@
-// === Module 15919: ? ===
+// === Module 15917: ? ===
 
-// Module 15919
+// Module 15917
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/upsells/profiles/banners/cyberpunk_indi_banner.gif.js");

@@ -1,9 +1,9 @@
-// === Module 19628: AppStoreConsentReinstatement ===
+// === Module 19624: AppStoreConsentReinstatement ===
 
-// Module 19628 (AppStoreConsentReinstatement)
+// Module 19624 (AppStoreConsentReinstatement)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 7989 */;
-import AppStoreConsentReinstateEndpointExperiment from "AppStoreConsentReinstateEndpointExperiment" /* 19629 */;
+import AppStoreConsentReinstateEndpointExperiment from "AppStoreConsentReinstateEndpointExperiment" /* 19625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5576 */;
 import UserStore from "UserStore" /* 1386 */;

@@ -3,7 +3,7 @@
 // Module 12502 (useCheckpointMusic)
 import _mod17 from "module_17" /* 17 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c3, useRef: closure_4 } = noop);

@@ -106,7 +106,7 @@ export default function DateOfBirthGateModal(source) {
     obj6.headerLeft = NavigatorHeader.getHeaderBackButton(fn);
     obj6.render = function render() {
       const obj = { onClose: source(19431).onGateClose };
-      return closure_1_6(closure_1_1(14697), obj);
+      return closure_1_6(closure_1_1(14695), obj);
     };
     obj2[NSFWGateGuild.NSFWGateGuild] = obj6;
     return obj2;

@@ -2,7 +2,7 @@
 
 // Module 19335 (useConsoleConnectingInfo)
 import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 10853 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 13822 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 13820 */;
 import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 19336 */;
 import getConsoleColorDefault from "getConsoleColor" /* 19338 */;
 import GameConsoleStore from "GameConsoleStore" /* 5655 */;

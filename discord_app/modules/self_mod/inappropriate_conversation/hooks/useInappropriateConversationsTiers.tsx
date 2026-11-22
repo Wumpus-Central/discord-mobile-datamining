@@ -1,6 +1,6 @@
-// === Module 13880: useInappropriateConversationsTiers ===
+// === Module 13878: useInappropriateConversationsTiers ===
 
-// Module 13880 (useInappropriateConversationsTiers)
+// Module 13878 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
 import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11789 */;
 import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11790 */;

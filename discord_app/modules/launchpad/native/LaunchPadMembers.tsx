@@ -5,7 +5,7 @@ import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import GuildChannelUserListDefault from "GuildChannelUserList" /* 12045 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 13060 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 13058 */;
 import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 18800 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -42,7 +42,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "channel_id", type: 16192376236573344000000000000000000000000000000000000000000000000000000000000000000 };
+    return { channelId: "channel", type: null };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

@@ -1,6 +1,6 @@
-// === Module 13783: conjureProjectGroups ===
+// === Module 13781: conjureProjectGroups ===
 
-// Module 13783 (conjureProjectGroups)
+// Module 13781 (conjureProjectGroups)
 import conjureServerProject from "conjureServerProject" /* 6838 */;
 import size from "module_2" /* 2 */;
 

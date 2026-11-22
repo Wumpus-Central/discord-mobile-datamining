@@ -1,12 +1,12 @@
-// === Module 15780: FramesNativeManager ===
+// === Module 15778: FramesNativeManager ===
 
-// Module 15780 (FramesNativeManager)
+// Module 15778 (FramesNativeManager)
 import util from "util" /* 1112 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;
 import leaveFrame from "leaveFrame" /* 6953 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15778 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15776 */;
 import FramesStore from "FramesStore" /* 6623 */;
-import FramesManager from "FramesManager" /* 15781 */;
+import FramesManager from "FramesManager" /* 15779 */;
 
 require = fn;
 const PlatformUtils = fn(1358);

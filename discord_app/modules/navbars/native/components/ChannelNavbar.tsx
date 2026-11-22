@@ -1,6 +1,6 @@
-// === Module 13730: ChannelNavbar ===
+// === Module 13728: ChannelNavbar ===
 
-// Module 13730 (ChannelNavbar)
+// Module 13728 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -13,7 +13,7 @@ import useChannelName from "useChannelName" /* 5529 */;
 import Pressables from "Pressables" /* 7030 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
 import isStreamingDefault from "isStreaming" /* 8215 */;
-import ActivityStatusDefault from "ActivityStatus" /* 13509 */;
+import ActivityStatusDefault from "ActivityStatus" /* 13507 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

@@ -1,6 +1,6 @@
-// === Module 13129: DMMessageStickerGreeting ===
+// === Module 13127: DMMessageStickerGreeting ===
 
-// Module 13129 (DMMessageStickerGreeting)
+// Module 13127 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import StickersActionCreators from "StickersActionCreators" /* 11369 */;
@@ -60,8 +60,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1112).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1112).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(13131).useShowConvoStarterInDM(channel);
-  const TextResult = Text(13131);
+  const showConvoStarterInDM = Text(13129).useShowConvoStarterInDM(channel);
+  const TextResult = Text(13129);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(items2, () => {

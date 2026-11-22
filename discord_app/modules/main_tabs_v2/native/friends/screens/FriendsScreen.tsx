@@ -9,7 +9,7 @@ import SendMessageIcon from "SendMessageIcon" /* 5611 */;
 import TableRow from "TableRow" /* 7045 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
 import NoResultsDefault from "NoResults" /* 10094 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16496 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16494 */;
 import _modDef18079 from "module_18079" /* 18079 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 8360 */;

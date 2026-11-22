@@ -1,10 +1,10 @@
-// === Module 12234: GameOrganizationCantJoinActionSheet ===
+// === Module 12241: GameOrganizationCantJoinActionSheet ===
 
-// Module 12234 (GameOrganizationCantJoinActionSheet)
+// Module 12241 (GameOrganizationCantJoinActionSheet)
 import _modDef2639 from "module_2639" /* 2639 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import transitionToGuild from "transitionToGuild" /* 6835 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12235 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12242 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
 

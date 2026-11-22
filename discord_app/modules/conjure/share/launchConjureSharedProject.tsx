@@ -1,6 +1,6 @@
-// === Module 12276: launchConjureSharedProject ===
+// === Module 12283: launchConjureSharedProject ===
 
-// Module 12276 (launchConjureSharedProject)
+// Module 12283 (launchConjureSharedProject)
 import openFrameDefault from "openFrame" /* 10688 */;
 import size from "module_2" /* 2 */;
 

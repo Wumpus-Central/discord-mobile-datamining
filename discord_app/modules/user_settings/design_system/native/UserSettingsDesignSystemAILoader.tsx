@@ -4,7 +4,7 @@
 import Text_Text from "Text/Text" /* 5504 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import Card from "Card" /* 7047 */;
-import AILoader from "AILoader" /* 15221 */;
+import AILoader from "AILoader" /* 15219 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 16363: BountiesScrollEndCard ===
+// === Module 16361: BountiesScrollEndCard ===
 
-// Module 16363 (BountiesScrollEndCard)
+// Module 16361 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
@@ -8,10 +8,10 @@ import timing_timing from "timing/timing" /* 5123 */;
 import timingPresets from "timingPresets" /* 5126 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8947 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16323 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 16324 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 16364 */;
-import BountiesModalEndedCtaButtonsDefault from "BountiesModalEndedCtaButtons" /* 16366 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16321 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 16322 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 16362 */;
+import BountiesModalEndedCtaButtonsDefault from "BountiesModalEndedCtaButtons" /* 16364 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 

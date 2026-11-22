@@ -3,7 +3,7 @@
 // Module 19191 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12188 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12195 */;
 import noop from "module_19" /* 19 */;
 import LocalActivityStore from "LocalActivityStore" /* 6921 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;

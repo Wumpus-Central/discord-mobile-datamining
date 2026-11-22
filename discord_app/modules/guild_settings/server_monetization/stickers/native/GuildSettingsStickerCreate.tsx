@@ -1,6 +1,6 @@
-// === Module 19791: GuildSettingsStickerCreate ===
+// === Module 19788: GuildSettingsStickerCreate ===
 
-// Module 19791 (GuildSettingsStickerCreate)
+// Module 19788 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
@@ -212,17 +212,17 @@ export default function GuildSettingsStickerCreate(stickerId) {
                   c4 = 0;
                   closure_1_18.current = false;
                   closure_1_19(false);
-                  const result = closure_2_0(19792).showGuildSettingsStickerError();
+                  const result = closure_2_0(19789).showGuildSettingsStickerError();
                   c5 = 3;
-                  closure_2_0(19792);
+                  closure_2_0(19789);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
                   v2();
-                  const result1 = closure_2_0(19792).showGuildSettingsStickerSuccess();
+                  const result1 = closure_2_0(19789).showGuildSettingsStickerSuccess();
                   c4 = 0;
-                  closure_2_0(19792);
+                  closure_2_0(19789);
                 }
                 return value;
               });
@@ -485,7 +485,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp35Result = tmp35(first, obj18);
   } else {
-    tmp35Result = tmp35(tmp34(19793).StickerPlusIcon, { size: "lg" });
+    tmp35Result = tmp35(tmp34(19790).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp35Result;
   items4[1] = onPressEmoji(stickerId(7030).PressableHighlight, obj16);

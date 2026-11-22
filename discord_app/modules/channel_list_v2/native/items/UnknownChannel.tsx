@@ -6,7 +6,7 @@ import util from "util" /* 1112 */;
 import useChannelNameDefault from "useChannelName" /* 5529 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import ChannelItemDefault from "ChannelItem" /* 17636 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13908: openGiftModal ===
+// === Module 13906: openGiftModal ===
 
-// Module 13908 (openGiftModal)
+// Module 13906 (openGiftModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import size from "module_2" /* 2 */;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/openGiftM
 export const ShopGiftModalKey = "Shop Gift Modal";
 export function openShopGiftModal(items1) {
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = items1);
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13909, dependencyMap.paths), { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin }, c3, navigationParams);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13907, dependencyMap.paths), { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin }, c3, navigationParams);
 }
 export function closeShopGiftModal() {
   ModalActionCreatorsDefault.popWithKey(c3);

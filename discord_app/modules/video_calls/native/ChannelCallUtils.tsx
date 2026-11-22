@@ -11,7 +11,7 @@ import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
 import _modDef11007 from "module_11007" /* 11007 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12059 */;
-import _modDef14844 from "module_14844" /* 14844 */;
+import _modDef14842 from "module_14842" /* 14842 */;
 import _modDef19379 from "module_19379" /* 19379 */;
 import _modDef19380 from "module_19380" /* 19380 */;
 import noop from "module_19" /* 19 */;
@@ -136,7 +136,7 @@ export function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef14844;
+  obj.icon = _modDef14842;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -147,7 +147,7 @@ export function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef14844;
+  obj.icon = _modDef14842;
   obj.onPress = function onPress() {
     items = [closure_1_7];
     const json = require("LogAggregator").stringify(items);

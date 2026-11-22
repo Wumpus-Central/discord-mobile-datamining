@@ -7,15 +7,15 @@ import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
 import native from "native" /* 4974 */;
 import ExpressionPickerDefault from "ExpressionPicker" /* 11274 */;
 import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11773 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12948 */;
-import getEmojiTextDefault from "getEmojiText" /* 13301 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12946 */;
+import getEmojiTextDefault from "getEmojiText" /* 13299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(12906).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12904).KEYBOARD_ANIMATION_CONFIG;
 let jsx = fn(21).jsx;
 let closure_7 = { code: "(function ExpressionPickerKeyboardTsx1(){let[bottomSheetIndex]=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;})" };
 let closure_8 = { code: "(function ExpressionPickerKeyboardTsx2(){let[bottomSheetExpandingOrExpanded,maximum,minimum]=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};})" };

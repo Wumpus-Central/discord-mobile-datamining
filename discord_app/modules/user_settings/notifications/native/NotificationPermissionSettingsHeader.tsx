@@ -1,6 +1,6 @@
-// === Module 16893: NotificationPermissionSettingsHeader ===
+// === Module 16891: NotificationPermissionSettingsHeader ===
 
-// Module 16893 (NotificationPermissionSettingsHeader)
+// Module 16891 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, NOOP: closure_6 } = Constants);
-const NotificationPermissionConstants = fn(13282);
+const NotificationPermissionConstants = fn(13280);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: closure_10 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/user_settings/notifications/n
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13283).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13281).useCanSeePushNotificationNudge();
   items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {

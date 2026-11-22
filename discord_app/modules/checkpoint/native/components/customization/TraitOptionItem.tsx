@@ -1,6 +1,6 @@
-// === Module 12787: TraitOptionItem ===
+// === Module 12785: TraitOptionItem ===
 
-// Module 12787 (TraitOptionItem)
+// Module 12785 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4975 */;
 import FastImageDefault from "FastImage" /* 5600 */;

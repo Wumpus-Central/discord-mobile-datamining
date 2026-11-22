@@ -1,9 +1,9 @@
-// === Module 13525: VoiceActivityStatus ===
+// === Module 13523: VoiceActivityStatus ===
 
-// Module 13525 (VoiceActivityStatus)
+// Module 13523 (VoiceActivityStatus)
 import util from "util" /* 1112 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 13517 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 13526 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 13515 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 13524 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

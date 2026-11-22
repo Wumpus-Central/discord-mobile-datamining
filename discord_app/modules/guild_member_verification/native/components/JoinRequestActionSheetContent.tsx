@@ -29,9 +29,9 @@ function OpenInterviewButton(arg0) {
     return tmp2;
   }, items1);
   const obj = interviewChannelId(504);
-  const joinRequestButtonActions = interviewChannelId(13546).useJoinRequestButtonActions(joinRequest, interviewChannelId);
+  const joinRequestButtonActions = interviewChannelId(13544).useJoinRequestButtonActions(joinRequest, interviewChannelId);
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const obj2 = interviewChannelId(13546);
+  const obj2 = interviewChannelId(13544);
   if (!obj3.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     const obj4 = { variant: "secondary", size: "md", icon: null, text: null, onPress: null, disabled: null };
     const obj5 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "sm" };
@@ -103,9 +103,9 @@ let closure_12 = noop.memo(function JoinRequestActionSheetHeader(user) {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(14522).PrimaryInfo, obj10), ];
+    const items4 = [closure_8(tmp6(14520).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(14628), obj11);
+    items4[1] = closure_8(joinRequest(14626), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
     items2[1] = closure_8(joinRequest(9050), obj7);
@@ -254,10 +254,10 @@ let closure_15 = noop.memo(function JoinRequestActionSheetApplicationActions(joi
   const callback = noop.useCallback(() => {
     openJoinRequestActionSheetDefault(joinRequest);
   }, items);
-  const joinRequestButtonActions = joinRequest(13546).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
+  const joinRequestButtonActions = joinRequest(13544).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
   ({ submitting, approveRequest, rejectRequest, handleOpenInterview } = joinRequestButtonActions);
   const obj2 = { variant: "primary", icon: null, label: null, onPress: null, disabled: null };
-  const obj = joinRequest(13546);
+  const obj = joinRequest(13544);
   obj2.icon = closure_8(joinRequest(7340).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl = joinRequest(1112).intl;
   obj2.label = intl.string(joinRequest(1112).t.BzjDQJ);

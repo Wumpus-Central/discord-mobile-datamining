@@ -7,7 +7,7 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 7676 */;
-import BaseChannelItem from "BaseChannelItem" /* 13250 */;
+import BaseChannelItem from "BaseChannelItem" /* 13248 */;
 import _modDef17637 from "module_17637" /* 17637 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -89,7 +89,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(13250).BaseChannelIcon, obj10);
+    return state(tmp9(13248).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -104,7 +104,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1186).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 7 };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1186).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 0 };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;

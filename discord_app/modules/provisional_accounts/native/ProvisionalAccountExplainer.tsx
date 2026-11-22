@@ -1,9 +1,9 @@
-// === Module 13539: ProvisionalAccountExplainer ===
+// === Module 13537: ProvisionalAccountExplainer ===
 
-// Module 13539 (ProvisionalAccountExplainer)
+// Module 13537 (ProvisionalAccountExplainer)
 import nativeDefault from "native" /* 575 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7563 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13540 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13538 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -27,7 +27,7 @@ export function ChatProvisionalAccountExplainerCard(iconSize) {
   c1 = "body-sm/semibold";
   items = [iconSize, "body-sm/semibold"];
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  const provisionalAccountExplanationText = iconSize(13541).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
+  const provisionalAccountExplanationText = iconSize(13539).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   const obj2 = { style: null, children: null };
   const items1 = [tmp.chatContainer, style];
   obj2.style = items1;
@@ -47,9 +47,9 @@ export function UserProfileProvisionalAccountExplainerCard(iconSize) {
   items = [iconSize, "body-md/semibold"];
   ({ style, userId } = iconSize);
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  const provisionalAccountExplanationText = iconSize(13541).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
+  const provisionalAccountExplanationText = iconSize(13539).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   const obj2 = { style, title: null, titleIcon: null, children: null };
-  const obj = iconSize(13541);
+  const obj = iconSize(13539);
   const intl = iconSize(1112).intl;
   obj2.title = intl.string(iconSize(1112).t.Iyka0U);
   obj2.titleIcon = closure_5(iconSize(7225).CircleErrorIcon, { size: "xs", color: "text-default" });

@@ -6,7 +6,7 @@ import useNavigation from "useNavigation" /* 1500 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
 import _modDef8565 from "module_8565" /* 8565 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14061 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14059 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

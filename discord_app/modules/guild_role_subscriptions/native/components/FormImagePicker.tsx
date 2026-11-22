@@ -1,6 +1,6 @@
-// === Module 20010: FormImagePicker ===
+// === Module 20007: FormImagePicker ===
 
-// Module 20010 (FormImagePicker)
+// Module 20007 (FormImagePicker)
 import nativeDefault from "native" /* 575 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1447 */;
 import FastImageDefault from "FastImage" /* 5600 */;

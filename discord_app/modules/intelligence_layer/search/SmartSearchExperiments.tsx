@@ -1,6 +1,6 @@
-// === Module 13239: SmartSearchExperiments ===
+// === Module 13237: SmartSearchExperiments ===
 
-// Module 13239 (SmartSearchExperiments)
+// Module 13237 (SmartSearchExperiments)
 import ConversationExperiments from "ConversationExperiments" /* 8629 */;
 import GuildStore from "GuildStore" /* 4784 */;
 

@@ -1,6 +1,6 @@
-// === Module 12778: FriendsAnimation ===
+// === Module 12776: FriendsAnimation ===
 
-// Module 12778 (FriendsAnimation)
+// Module 12776 (FriendsAnimation)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;

@@ -1,6 +1,6 @@
-// === Module 16232: FamilyCenterModalCancel ===
+// === Module 16230: FamilyCenterModalCancel ===
 
-// Module 16232 (FamilyCenterModalCancel)
+// Module 16230 (FamilyCenterModalCancel)
 import nativeDefault from "native" /* 575 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
@@ -19,7 +19,7 @@ function FamilyCenterModalCancelScreen(otherUser) {
     otherUser(5594).presentFailedToast(intl.string(otherUser(1112).t.R0RpRX));
   }, []);
   const tmp2 = cancelLinkRequest(9137)();
-  const familyCenterActions = otherUser(12460).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+  const familyCenterActions = otherUser(12467).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   cancelLinkRequest = familyCenterActions.cancelLinkRequest;
   const isCancelLoading = familyCenterActions.isCancelLoading;
   items = [cancelLinkRequest, otherUser.id];
@@ -31,14 +31,14 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const obj3 = { children: null };
   const obj4 = { style: tmp.header, children: null };
   const obj5 = { otherUser, iconSrc: null };
-  const obj = otherUser(12460);
+  const obj = otherUser(12467);
   obj5.iconSrc = cancelLinkRequest(7032);
-  const items1 = [closure_5(cancelLinkRequest(16227), obj5), , ];
+  const items1 = [closure_5(cancelLinkRequest(16225), obj5), , ];
   const obj6 = { style: tmp.headerText, variant: "body-lg/semibold", children: null };
   let intl = otherUser(1112).intl;
   obj6.children = intl.string(cancelLinkRequest(2824).HynllX);
   items1[1] = closure_5(otherUser(5504).Text, obj6);
-  items1[2] = closure_5(cancelLinkRequest(16194), { user: otherUser });
+  items1[2] = closure_5(cancelLinkRequest(16192), { user: otherUser });
   obj4.children = items1;
   obj3.children = closure_6(View, obj4);
   const items2 = [closure_5(otherUser(7813).ModalContent, obj3), ];
@@ -56,7 +56,7 @@ function FamilyCenterModalCancelScreen(otherUser) {
   items3[1] = closure_5(otherUser(5511).Button, obj10);
   obj8.children = items3;
   obj7.children = closure_6(otherUser(6545).ButtonGroup, obj8);
-  items2[1] = closure_5(otherUser(12242).ModalFooter, obj7);
+  items2[1] = closure_5(otherUser(12249).ModalFooter, obj7);
   obj2.children = items2;
   return closure_6(otherUser(7811).ModalScreen, obj2);
 }

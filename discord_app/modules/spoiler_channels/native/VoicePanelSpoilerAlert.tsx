@@ -1,6 +1,6 @@
-// === Module 14695: VoicePanelSpoilerAlert ===
+// === Module 14693: VoicePanelSpoilerAlert ===
 
-// Module 14695 (VoicePanelSpoilerAlert)
+// Module 14693 (VoicePanelSpoilerAlert)
 import util from "util" /* 1112 */;
 import AlertModal from "AlertModal" /* 5866 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;

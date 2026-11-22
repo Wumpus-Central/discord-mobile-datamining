@@ -1,15 +1,15 @@
-// === Module 15180: GameOrganizationInviteActionSheet ===
+// === Module 15178: GameOrganizationInviteActionSheet ===
 
-// Module 15180 (GameOrganizationInviteActionSheet)
+// Module 15178 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef2639 from "module_2639" /* 2639 */;
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8065 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 15181 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 15182 */;
-import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 15183 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 15184 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 15179 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 15180 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 15181 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 15182 */;
 import noop from "module_19" /* 19 */;
-import GameOrganizationStore from "GameOrganizationStore" /* 15125 */;
+import GameOrganizationStore from "GameOrganizationStore" /* 15123 */;
 
 const require = fn;
 function Loading() {
@@ -38,8 +38,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId));
   const tmp5 = useLinkedGameOrganizationInviteSenderDefault(guildId);
-  const data = guildId(15178).useLinkedGameOrganization(guildId).data;
-  const obj = guildId(15178);
+  const data = guildId(15176).useLinkedGameOrganization(guildId).data;
+  const obj = guildId(15176);
   items = [GameOrganizationStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GameOrganizationStore.getDisplayNounByGuildId(guildId), items1);

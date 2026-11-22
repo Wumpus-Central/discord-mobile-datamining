@@ -1,6 +1,6 @@
-// === Module 12888: ForumPostTypingUsers ===
+// === Module 12886: ForumPostTypingUsers ===
 
-// Module 12888 (ForumPostTypingUsers)
+// Module 12886 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef1653 from "module_1653" /* 1653 */;

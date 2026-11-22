@@ -1,7 +1,7 @@
-// === Module 13480: GuildBoostingSubscribeButton ===
+// === Module 13478: GuildBoostingSubscribeButton ===
 
-// Module 13480 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 13430 */;
+// Module 13478 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 13428 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 8744 */;

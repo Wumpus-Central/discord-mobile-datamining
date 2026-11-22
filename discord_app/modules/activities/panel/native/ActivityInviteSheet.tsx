@@ -6,10 +6,10 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import InviteTargetTypes from "InviteTargetTypes" /* 7267 */;
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8065 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 13190 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 13188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13191 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13189 */;
 
 require = fn;
 function Loading() {
@@ -154,14 +154,14 @@ export default function ActivityInviteSheet(activity) {
   obj4.title = intl.string(activity(1112).t["OzOM/q"]);
   obj3.header = closure_12(activity(7515).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(14644).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(14642).AppCrash, title: tmp6 };
     let tmp19Result = closure_12(tmp11(1186).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_12(Loading, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(13190).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(13188).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1112).intl;
     obj8.placeholder = intl2.string(tmp11(1112).t.iI1gMg);
     obj7.children = closure_12(tmp11(7427).SearchBar, obj8);

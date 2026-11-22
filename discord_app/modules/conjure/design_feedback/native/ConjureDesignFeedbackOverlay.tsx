@@ -64,7 +64,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(6998).inspectConjurePreviewPoint(closure_1_0, projectId(14731).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(6998).inspectConjurePreviewPoint(closure_1_0, projectId(14729).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {

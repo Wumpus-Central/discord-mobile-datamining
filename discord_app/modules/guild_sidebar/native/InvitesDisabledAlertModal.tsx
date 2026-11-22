@@ -1,6 +1,6 @@
-// === Module 13154: InvitesDisabledAlertModal ===
+// === Module 13152: InvitesDisabledAlertModal ===
 
-// Module 13154 (InvitesDisabledAlertModal)
+// Module 13152 (InvitesDisabledAlertModal)
 import util from "util" /* 1112 */;
 import AlertModal from "AlertModal" /* 5866 */;
 import noop from "module_19" /* 19 */;

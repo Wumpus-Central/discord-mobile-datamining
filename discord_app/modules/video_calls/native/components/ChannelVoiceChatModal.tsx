@@ -1,6 +1,6 @@
-// === Module 13873: ChannelVoiceChatModal ===
+// === Module 13871: ChannelVoiceChatModal ===
 
-// Module 13873 (ChannelVoiceChatModal)
+// Module 13871 (ChannelVoiceChatModal)
 import native from "native" /* 4974 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5085 */;
 import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5115 */;

@@ -1,12 +1,12 @@
-// === Module 13954: TieredTenureBadgePerkCard ===
+// === Module 13952: TieredTenureBadgePerkCard ===
 
-// Module 13954 (TieredTenureBadgePerkCard)
+// Module 13952 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import BadgeId from "BadgeId" /* 8070 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13989 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 14021 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13987 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 14019 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 

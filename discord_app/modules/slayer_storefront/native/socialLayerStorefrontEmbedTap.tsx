@@ -1,6 +1,6 @@
-// === Module 12332: socialLayerStorefrontEmbedTap ===
+// === Module 12339: socialLayerStorefrontEmbedTap ===
 
-// Module 12332 (socialLayerStorefrontEmbedTap)
+// Module 12339 (socialLayerStorefrontEmbedTap)
 import storefrontCodedLink from "storefrontCodedLink" /* 11965 */;
 import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11966 */;
 import SocialLayerStorefrontMobileMultiSkuEmbedExperiment from "SocialLayerStorefrontMobileMultiSkuEmbedExperiment" /* 11967 */;

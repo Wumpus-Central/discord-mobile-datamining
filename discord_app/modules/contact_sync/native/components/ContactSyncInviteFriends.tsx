@@ -1,13 +1,13 @@
-// === Module 13608: ContactSyncInviteFriends ===
+// === Module 13606: ContactSyncInviteFriends ===
 
-// Module 13608 (ContactSyncInviteFriends)
+// Module 13606 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import showShareActionSheet from "showShareActionSheet" /* 9718 */;
-import _modDef13609 from "module_13609" /* 13609 */;
+import _modDef13607 from "module_13607" /* 13607 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -33,7 +33,7 @@ export default function ContactSyncInviteFriends() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef13609;
+  obj4.source = _modDef13607;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

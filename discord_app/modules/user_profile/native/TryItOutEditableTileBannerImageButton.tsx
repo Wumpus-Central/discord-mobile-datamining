@@ -1,6 +1,6 @@
-// === Module 15949: TryItOutEditableTileBannerImageButton ===
+// === Module 15947: TryItOutEditableTileBannerImageButton ===
 
-// Module 15949 (TryItOutEditableTileBannerImageButton)
+// Module 15947 (TryItOutEditableTileBannerImageButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,9 +8,9 @@ import AvatarUtils from "AvatarUtils" /* 1412 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import useDisplayProfileDefault from "useDisplayProfile" /* 8072 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15940 */;
-import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 15950 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15951 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15938 */;
+import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 15948 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15949 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8132 */;

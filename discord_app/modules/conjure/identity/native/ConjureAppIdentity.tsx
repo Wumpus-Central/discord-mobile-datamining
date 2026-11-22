@@ -8,7 +8,7 @@ import FastImageDefault from "FastImage" /* 5600 */;
 import Card from "Card" /* 7047 */;
 import ImagePickerDefault from "ImagePicker" /* 8475 */;
 import UploadIcon from "UploadIcon" /* 9487 */;
-import MagicWandIcon from "MagicWandIcon" /* 12322 */;
+import MagicWandIcon from "MagicWandIcon" /* 12329 */;
 import ImagePlusIcon from "ImagePlusIcon" /* 18277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

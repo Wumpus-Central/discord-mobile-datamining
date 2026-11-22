@@ -1,6 +1,6 @@
-// === Module 12905: AppLauncherKeyboard ===
+// === Module 12903: AppLauncherKeyboard ===
 
-// Module 12905 (AppLauncherKeyboard)
+// Module 12903 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1498 */;
@@ -11,11 +11,11 @@ import BottomSheetModal from "BottomSheetModal" /* 5145 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
 import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11773 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12907 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12916 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12917 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12948 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12951 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12905 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12914 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12915 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12946 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12949 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12906).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12904).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(4913);

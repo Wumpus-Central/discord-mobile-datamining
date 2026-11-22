@@ -1,6 +1,6 @@
-// === Module 14333: getCoverImageFromActivity ===
+// === Module 14331: getCoverImageFromActivity ===
 
-// Module 14333 (getCoverImageFromActivity)
+// Module 14331 (getCoverImageFromActivity)
 import Constants from "Constants" /* 2144 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 6917 */;
 import size from "module_2" /* 2 */;

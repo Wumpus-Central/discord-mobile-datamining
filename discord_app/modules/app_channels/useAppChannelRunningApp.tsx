@@ -1,6 +1,6 @@
-// === Module 13893: useAppChannelRunningApp ===
+// === Module 13891: useAppChannelRunningApp ===
 
-// Module 13893 (useAppChannelRunningApp)
+// Module 13891 (useAppChannelRunningApp)
 import FramesStore from "FramesStore" /* 6623 */;
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export default function useAppChannelRunningApp(arg0) {
     return tmp4;
   }, items1);
   let obj = require("initialize");
-  let tmp4 = stateFromStores(13894)(stateFromStores);
+  let tmp4 = stateFromStores(13892)(stateFromStores);
   const items2 = [FramesStore];
   const items3 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {

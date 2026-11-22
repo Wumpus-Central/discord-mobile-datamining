@@ -1,6 +1,6 @@
-// === Module 12862: ApplicationCommandOptionValueParser ===
+// === Module 12860: ApplicationCommandOptionValueParser ===
 
-// Module 12862 (ApplicationCommandOptionValueParser)
+// Module 12860 (ApplicationCommandOptionValueParser)
 import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import Server from "Server" /* 2117 */;

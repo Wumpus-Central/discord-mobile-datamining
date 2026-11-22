@@ -1,6 +1,6 @@
-// === Module 14413: MediaSlider ===
+// === Module 14411: MediaSlider ===
 
-// Module 14413 (MediaSlider)
+// Module 14411 (MediaSlider)
 import applyDefault from "apply" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

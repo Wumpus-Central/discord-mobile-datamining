@@ -1,10 +1,10 @@
-// === Module 12386: useConjureRemoveFromServer ===
+// === Module 12393: useConjureRemoveFromServer ===
 
-// Module 12386 (useConjureRemoveFromServer)
+// Module 12393 (useConjureRemoveFromServer)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12387 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12394 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -109,7 +109,7 @@ export default function useConjureRemoveFromServer(arg0) {
             obj4.alsoRemovePreviewBot = alsoRemovePreviewBot;
             c3 = 2;
             c4 = 1;
-            const obj5 = { value: closure_0(12310).unpublishProject(projectId, obj4), done: false };
+            const obj5 = { value: closure_0(12317).unpublishProject(projectId, obj4), done: false };
             return obj5;
           }
         } else {

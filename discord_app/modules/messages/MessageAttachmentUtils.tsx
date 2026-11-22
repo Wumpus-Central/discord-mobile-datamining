@@ -1,6 +1,6 @@
-// === Module 12881: MessageAttachmentUtils ===
+// === Module 12879: MessageAttachmentUtils ===
 
-// Module 12881 (MessageAttachmentUtils)
+// Module 12879 (MessageAttachmentUtils)
 import util from "util" /* 1112 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8224 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 8229 */;

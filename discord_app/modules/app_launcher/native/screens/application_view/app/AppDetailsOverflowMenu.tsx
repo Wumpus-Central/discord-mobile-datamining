@@ -1,6 +1,6 @@
-// === Module 13000: AppDetailsOverflowMenu ===
+// === Module 12998: AppDetailsOverflowMenu ===
 
-// Module 13000 (AppDetailsOverflowMenu)
+// Module 12998 (AppDetailsOverflowMenu)
 import ToastUtils from "ToastUtils" /* 5594 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ export default function AppDetailsOverflowMenu(application) {
   const onAddAppMenuClick = application.onAddAppMenuClick;
   dependencyMap = application(10674).getInstallAppProps(application);
   let obj = application(10674);
-  const tmp3 = onAddAppMenuClick(13001);
+  const tmp3 = onAddAppMenuClick(12999);
   let tmp3Result = tmp3(application(10674).getInstallableApplication(application));
   if (tmp3Result) {
     tmp3Result = null != onAddAppMenuClick;
@@ -28,7 +28,7 @@ export default function AppDetailsOverflowMenu(application) {
     obj3.action = function action() {
       return onAddAppMenuClick({ installAppProps });
     };
-    obj3.IconComponent = tmp(13002).CirclePlusIcon;
+    obj3.IconComponent = tmp(13000).CirclePlusIcon;
     items.push(obj3);
   }
   const DeveloperMode = tmp(4738).DeveloperMode;

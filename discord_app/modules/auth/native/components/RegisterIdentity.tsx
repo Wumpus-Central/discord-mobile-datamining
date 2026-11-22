@@ -57,7 +57,7 @@ function RegisterIdentityBase(inputMode) {
             obj4.actionType = constants2.SUBMITTED;
             React6(obj4);
             if (inputMode === tmp3(tmp31[18]).PhoneOrEmailSelectorForceMode.EMAIL) {
-              const obj5 = { email, phoneToken: "Array" };
+              const obj5 = { email, phoneToken: "r" };
               closure_1_10(obj5);
               const tmp26 = metroImportDefault();
               if (null != tmp26) {

@@ -1,6 +1,6 @@
-// === Module 13321: ChatInputGuardWrapper ===
+// === Module 13319: ChatInputGuardWrapper ===
 
-// Module 13321 (ChatInputGuardWrapper)
+// Module 13319 (ChatInputGuardWrapper)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4832 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4851 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
@@ -18,7 +18,7 @@ import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const isThread = fn(4766).isThread;
-const TextAreaCta = fn(12827).TextAreaCta;
+const TextAreaCta = fn(12825).TextAreaCta;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
 let closure_14 = fn(7420).PHONE_VERIFICATION_MODAL_KEY;

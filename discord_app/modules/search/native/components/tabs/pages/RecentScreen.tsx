@@ -6,19 +6,19 @@ import Text_Text from "Text/Text" /* 5504 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
 import Pressables from "Pressables" /* 7030 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13199 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13202 */;
-import SearchUtils from "SearchUtils" /* 13206 */;
-import TrackingDefault from "Tracking" /* 13220 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13224 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16128 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13197 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13200 */;
+import SearchUtils from "SearchUtils" /* 13204 */;
+import TrackingDefault from "Tracking" /* 13218 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6641 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13226 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13224 */;
 import SearchHistoryStore from "SearchHistoryStore" /* 18733 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 require = fn;
 function ClearAllHistory(searchContext) {
@@ -60,7 +60,7 @@ function ViewAll(onJumpToMedia) {
 }
 const SearchConstants = fn(8576);
 ({ EMPTY_SEARCH_QUERY_STRING: closure_10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13215).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13213).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {

@@ -1,9 +1,9 @@
-// === Module 13064: AppLauncherChannelOption ===
+// === Module 13062: AppLauncherChannelOption ===
 
-// Module 13064 (AppLauncherChannelOption)
+// Module 13062 (AppLauncherChannelOption)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 13065 */;
+import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 13063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -62,7 +62,7 @@ export default function AppLauncherChannelOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(13065, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(13063, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onChannelPress(channel) {

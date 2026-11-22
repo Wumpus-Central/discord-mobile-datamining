@@ -168,13 +168,13 @@ function QuestActivityButtonInner(quest) {
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult6 = require("module_1653");
-  obj6.source = require("module_16440");
+  obj6.source = require("module_16438");
   obj5.children = closure_9(require("LottieAnimationView"), obj6);
   const items10 = [closure_9(sharedValue, obj5), , , ];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
   const obj8 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp26 = require("LottieAnimationView");
-  obj8.icon = require("module_13799");
+  obj8.icon = require("module_13797");
   obj8.onPress = callback;
   const intl = tmp(tmp2[23]).intl;
   obj8.accessibilityLabel = intl.string(require("util").t.JALI2K);

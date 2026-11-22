@@ -48,7 +48,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   const obj4 = { style: tmp.handleWrapper, pointerEvents: "none", children: closure_7(View, { style: tmp.handle }) };
   items = [closure_7(View, obj4), , ];
   const obj6 = { style: tmp.info, children: null };
-  const items1 = [closure_7(setMode(16362), { isCompleted: isClaimed, totalSeconds: playable.rewardTimerSeconds, remainingSeconds: tmp4.remainingSeconds }), ];
+  const items1 = [closure_7(setMode(16360), { isCompleted: isClaimed, totalSeconds: playable.rewardTimerSeconds, remainingSeconds: tmp4.remainingSeconds }), ];
   const obj8 = { style: tmp.titleGroup, children: null };
   const obj9 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 1.25, style: tmp.textShadow, children: null };
   if (isClaimed) {

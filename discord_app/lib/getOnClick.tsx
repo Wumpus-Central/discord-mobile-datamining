@@ -17,7 +17,7 @@ import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNati
 import QuestUtils from "QuestUtils" /* 9955 */;
 import storefrontCodedLink from "storefrontCodedLink" /* 11965 */;
 import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12032 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12192 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
@@ -73,7 +73,7 @@ let closure_18 = async function _openInviteModal() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "analyticsLocations", invite_instance_id };
+            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "add", invite_instance_id };
             c3 = 1;
             c2 = 1;
             const obj6 = { value: DispatcherDefault.dispatch(obj5), done: false };
@@ -306,7 +306,7 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "analyticsLocations" };
+            result = { applicationId: "disabled", skuId: "isArray" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -319,7 +319,7 @@ export default function getOnClick(assetURL) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -402,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14705, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14703, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;

@@ -7,7 +7,7 @@ import useToken from "useToken" /* 5477 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8952 */;
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 12060 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 13062 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 13060 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

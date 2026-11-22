@@ -1,7 +1,7 @@
 // === Module 18832: useAutoTrackSearchTabCountsViewedAnalytics ===
 
 // Module 18832 (useAutoTrackSearchTabCountsViewedAnalytics)
-import TrackingDefault from "Tracking" /* 13220 */;
+import TrackingDefault from "Tracking" /* 13218 */;
 import noop from "module_19" /* 19 */;
 
 const SearchTabs = fn(8576).SearchTabs;

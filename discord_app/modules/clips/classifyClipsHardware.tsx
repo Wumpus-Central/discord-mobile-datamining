@@ -1,6 +1,6 @@
-// === Module 20079: classifyClipsHardware ===
+// === Module 20076: classifyClipsHardware ===
 
-// Module 20079 (classifyClipsHardware)
+// Module 20076 (classifyClipsHardware)
 import ClipsConstants from "ClipsConstants" /* 8441 */;
 import size from "module_2" /* 2 */;
 

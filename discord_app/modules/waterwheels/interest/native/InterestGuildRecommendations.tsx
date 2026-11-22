@@ -1,6 +1,6 @@
-// === Module 19613: InterestGuildRecommendations ===
+// === Module 19609: InterestGuildRecommendations ===
 
-// Module 19613 (InterestGuildRecommendations)
+// Module 19609 (InterestGuildRecommendations)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;

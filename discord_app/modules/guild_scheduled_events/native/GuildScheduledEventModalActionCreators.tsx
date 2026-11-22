@@ -15,7 +15,7 @@ import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 7581 */;
 import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 7588 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
 import ReportModals from "ReportModals" /* 10176 */;
-import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 14683 */;
+import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 14681 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -332,7 +332,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
                 openRsvpPicker(guildScheduledEvent, recurrenceId) {
                   guildId(guild_id[15]).openLazy(id(guild_id[14])(guild_id[26], guild_id.paths), "GuildEventRsvpPickerActionSheet", { event: guildScheduledEvent, recurrenceId, guildId, onRsvp }, "stack");
                 },
-                onRsvp: "analyticsLocations"
+                onRsvp: "alignItems"
               });
             }
       };
@@ -356,7 +356,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
             obj2.label = intl2.string(tmp3(tmp4[23]).t.cK1GGY);
             obj2.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8029, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet: "r" }, colors);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8029, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet: "Array" }, colors);
             };
             items.push(obj2);
           }
@@ -428,7 +428,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
               onPress() {
                           ({ id, guild_id } = closure_0);
                           const lazyResult = noop.lazy(() => event(paths[14])(paths[19], paths.paths));
-                          useAlertStore.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="r" />);
+                          useAlertStore.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="Array" />);
                         }
             };
             items.push(obj7);

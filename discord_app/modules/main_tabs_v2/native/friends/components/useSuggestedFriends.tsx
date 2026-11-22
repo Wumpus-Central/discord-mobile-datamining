@@ -7,7 +7,7 @@ import noop from "module_19" /* 19 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 8362 */;
 
 const require = fn;
-const SuggestedFriendSource = fn(13607).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13605).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 

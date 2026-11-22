@@ -1,6 +1,6 @@
-// === Module 14492: UserProfileActivityButtons ===
+// === Module 14490: UserProfileActivityButtons ===
 
-// Module 14492 (UserProfileActivityButtons)
+// Module 14490 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -16,10 +16,10 @@ import authorizeConnectionDefault from "authorizeConnection" /* 7024 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7280 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
 import isStreamingDefault from "isStreaming" /* 8215 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12192 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 14493 */;
-import getActivityJoinability from "getActivityJoinability" /* 14494 */;
-import getStreamURLDefault from "getStreamURL" /* 14495 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12199 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 14491 */;
+import getActivityJoinability from "getActivityJoinability" /* 14492 */;
+import getStreamURLDefault from "getStreamURL" /* 14493 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
@@ -158,7 +158,7 @@ export function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(13523)(activity)) {
+  if (sync_id(13521)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };

@@ -1,6 +1,6 @@
-// === Module 19611: InterestGuildsAPI ===
+// === Module 19607: InterestGuildsAPI ===
 
-// Module 19611 (InterestGuildsAPI)
+// Module 19607 (InterestGuildsAPI)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

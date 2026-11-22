@@ -2,8 +2,8 @@
 
 // Module 18872 (IncomingRequestRowActions)
 import _modDef1653 from "module_1653" /* 1653 */;
-import _modDef14303 from "module_14303" /* 14303 */;
-import _modDef16228 from "module_16228" /* 16228 */;
+import _modDef14301 from "module_14301" /* 14301 */;
+import _modDef16226 from "module_16226" /* 16226 */;
 import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17563 */;
 import noop from "module_19" /* 19 */;
 
@@ -248,9 +248,9 @@ export function IncomingRequestRowActions(user) {
   const tmp2Result6 = require("module_1653");
   const tmp39 = c6;
   const tmp40 = c4;
-  const items13 = [c5(require("IconButton").IconButton, { size: "sm", variant: "tertiary", icon: _modDef16228, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
-  const obj9 = { size: "sm", variant: "tertiary", icon: _modDef16228, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
-  items13[1] = c5(require("IconButton").IconButton, { size: "sm", variant: "active", icon: _modDef14303, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
+  const items13 = [c5(require("IconButton").IconButton, { size: "sm", variant: "tertiary", icon: _modDef16226, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
+  const obj9 = { size: "sm", variant: "tertiary", icon: _modDef16226, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  items13[1] = c5(require("IconButton").IconButton, { size: "sm", variant: "active", icon: _modDef14301, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
   obj8.children = items13;
   obj7.children = c6(require("Stack/Stack").Stack, obj8);
   const items14 = [c5(_modDef1653.View, obj7), ];
@@ -273,7 +273,7 @@ export function IncomingRequestRowActions(user) {
   if (animate) {
     tmp45 = animatedStyle3;
   }
-  const obj10 = { size: "sm", variant: "active", icon: _modDef14303, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  const obj10 = { size: "sm", variant: "active", icon: _modDef14301, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
   obj13.children = c5(_modDef1653.View, {
     style: tmp45,
     onLayout: function handleWaveLayout(nativeEvent) {

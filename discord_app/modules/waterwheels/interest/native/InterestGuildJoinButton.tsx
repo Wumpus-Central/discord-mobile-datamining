@@ -105,7 +105,7 @@ export default function InterestGuildJoinButton(guildId) {
   const items1 = [guildId];
   let stateFromStores = guildId(504).useStateFromStores(items, () => GuildMembershipStore.isMember(guildId), items1);
   let obj = guildId(504);
-  const currentUserGuildJoinRequest = guildId(13344).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(13342).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;

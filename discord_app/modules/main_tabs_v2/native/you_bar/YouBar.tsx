@@ -31,7 +31,7 @@ import UserStore from "UserStore" /* 1386 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16476);
 ({ YOU_BAR_HEIGHT: closure_10, YOU_BAR_PADDING: closure_11, YOU_BAR_SPRING_CONFIG: closure_12, YOU_BAR_AVATAR_LARGE_SIZE: map1, YOU_BAR_AVATAR_SIZE: closure_14, YOU_BAR_BUTTON_HIT_SLOP: closure_15 } = YouBarConstants);
 const ME = fn(1071).ME;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
@@ -439,7 +439,7 @@ let closure_26 = noop.memo(function YouBar() {
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj13.style = items15;
     const obj14 = { style: tmp.dockRim };
-    obj13.children = closure_18(tmp27(13309), obj14);
+    obj13.children = closure_18(tmp27(13307), obj14);
     tmp52Result4 = closure_18(tmp27(1653).View, obj13);
   }
   children[1] = tmp52Result4;

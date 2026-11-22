@@ -1,6 +1,6 @@
-// === Module 17114: DevToolsRevenuePlaygroundScreen ===
+// === Module 17112: DevToolsRevenuePlaygroundScreen ===
 
-// Module 17114 (DevToolsRevenuePlaygroundScreen)
+// Module 17112 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -9,10 +9,12 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import TableRow from "TableRow" /* 7045 */;
 import TableRowArrow from "TableRowArrow" /* 7058 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7551 */;
 import TableSwitchRow from "TableSwitchRow" /* 7556 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9110 */;
 import IAPUtils from "IAPUtils" /* 9287 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12222 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12229 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -665,7 +667,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17115, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17113, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
@@ -684,7 +686,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17115, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17113, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });
@@ -750,6 +752,23 @@ function PaymentFlowTest() {
   };
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
+function NitroHalfSheetBypass() {
+  let obj = {
+    title: "Nitro half-sheet",
+    hasIcons: false,
+    children: closure_1_17(TableRow.TableRow, {
+      label: "Open Nitro plan selection half-sheet",
+      onPress() {
+        const obj = { analyticsLocation: {}, analyticsLocations: null, premiumType: null };
+        items = [AnalyticsLocationDefault.DEV_TOOLS];
+        obj.analyticsLocations = items;
+        obj.premiumType = TIER_2.TIER_2;
+        openPremiumPlanSelectionActionSheetDefault(obj);
+      }
+    })
+  };
+  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+}
 function Orbs() {
   const obj = {
     title: "Orbs",
@@ -757,7 +776,7 @@ function Orbs() {
     children: closure_1_17(TableRow.TableRow, {
       label: "Test Orbs Flow",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[36], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[38], paths.paths));
       },
       trailing: closure_1_17(TableRowArrow.TableRowArrow, {})
     })
@@ -771,7 +790,7 @@ function RevenueSmokeTests() {
     children: closure_1_17(TableRow.TableRow, {
       label: "Test all purchasing flows",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[37], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[39], paths.paths));
       },
       trailing: closure_1_17(TableRowArrow.TableRowArrow, {})
     })
@@ -785,7 +804,7 @@ function GuildPowerups() {
     children: closure_1_17(TableRow.TableRow, {
       label: "Guild Powerups",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[38], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[40], paths.paths));
       },
       trailing: closure_1_17(TableRowArrow.TableRowArrow, {})
     })
@@ -800,7 +819,7 @@ function GuildTagBadges() {
       label: "Badge gallery",
       subLabel: "Preview all native badge kinds across sizes and tints",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[39], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[41], paths.paths));
       },
       trailing: closure_1_17(TableRowArrow.TableRowArrow, {})
     })
@@ -827,7 +846,7 @@ let result = size.fileFinishedImporting("modules/devtools/native/components/scre
 export default function DevToolsRevenuePlaygroundScreen() {
   const tmp = closure_25();
   const obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
-  items = [closure_1_17(TrialOfferSheetExample, {}), closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 }), closure_1_17(PremiumToggles, {}), , , , , , , , , , , , , , ];
+  items = [closure_1_17(TrialOfferSheetExample, {}), closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 }), closure_1_17(PremiumToggles, {}), , , , , , , , , , , , , , , , ];
   const obj2 = { size: nativeDefault.space.PX_16 };
   items[3] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[4] = closure_1_17(ForceMockIAP, {});
@@ -836,19 +855,22 @@ export default function DevToolsRevenuePlaygroundScreen() {
   items[6] = closure_1_17(PaymentFlowTest, {});
   const obj4 = { size: nativeDefault.space.PX_16 };
   items[7] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[8] = closure_1_17(Orbs, {});
+  items[8] = closure_1_17(NitroHalfSheetBypass, {});
   const obj5 = { size: nativeDefault.space.PX_16 };
   items[9] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[10] = closure_1_17(RevenueSmokeTests, {});
+  items[10] = closure_1_17(Orbs, {});
   const obj6 = { size: nativeDefault.space.PX_16 };
   items[11] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[12] = closure_1_17(GuildPowerups, {});
+  items[12] = closure_1_17(RevenueSmokeTests, {});
   const obj7 = { size: nativeDefault.space.PX_16 };
   items[13] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[14] = closure_1_17(GuildTagBadges, {});
+  items[14] = closure_1_17(GuildPowerups, {});
   const obj8 = { size: nativeDefault.space.PX_16 };
   items[15] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[16] = closure_1_17(FriendAnniversary, {});
+  items[16] = closure_1_17(GuildTagBadges, {});
+  const obj9 = { size: nativeDefault.space.PX_16 };
+  items[17] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
+  items[18] = closure_1_17(FriendAnniversary, {});
   obj.children = items;
   return collapsedCategories(ScrollView, obj);
 };

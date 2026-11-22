@@ -3,7 +3,7 @@
 // Module 19094 (BloonsTDBattlesAccountLinkUpsellBottomSheet)
 import _modDef3702 from "module_3702" /* 3702 */;
 import GameIconDefault from "GameIcon" /* 7526 */;
-import CutoutableAvatarImageDefault from "CutoutableAvatarImage" /* 14489 */;
+import CutoutableAvatarImageDefault from "CutoutableAvatarImage" /* 14487 */;
 import AccountLinkManager from "AccountLinkManager" /* 19088 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -31,8 +31,8 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
       const obj4 = { align: "flex-start", direction: "vertical", spacing: 24, style: accountLinkBottomSheetStyles.content, children: null };
       const obj5 = { game: getOrFetchApplication, size: tmp(7526).GameIconSizes.LARGE };
       const items1 = [closure_6(GameIconDefault, obj5), closure_6(tmp(19099).UnionOrbsIcon, {}), ];
-      const obj6 = { guildId: "a", user: stateFromStores, size: "context", "aria-label": "chorro" };
-      obj6.size = tmp(14489).AvatarSizes.XXLARGE;
+      const obj6 = { guildId: "a", user: stateFromStores, size: "container", "aria-label": "Notifications" };
+      obj6.size = tmp(14487).AvatarSizes.XXLARGE;
       let username;
       if (stateFromStores != null) {
         username = stateFromStores.username;

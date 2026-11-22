@@ -1,19 +1,19 @@
-// === Module 14075: NitroWumpusFlightLeft3dIllustration ===
+// === Module 14073: NitroWumpusFlightLeft3dIllustration ===
 
-// Module 14075 (NitroWumpusFlightLeft3dIllustration)
+// Module 14073 (NitroWumpusFlightLeft3dIllustration)
 import assetHelpers from "assetHelpers" /* 7357 */;
+import _modDef14074 from "module_14074" /* 14074 */;
+import _modDef14075 from "module_14075" /* 14075 */;
 import _modDef14076 from "module_14076" /* 14076 */;
-import _modDef14077 from "module_14077" /* 14077 */;
-import _modDef14078 from "module_14078" /* 14078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14076 }, 3: null };
-let obj2 = { uri: _modDef14076 };
-obj[2] = { uri: _modDef14077 };
-const obj3 = { uri: _modDef14077 };
-obj[3] = { uri: _modDef14078 };
+let obj = { 1: null, 2: { uri: _modDef14074 }, 3: null };
+let obj2 = { uri: _modDef14074 };
+obj[2] = { uri: _modDef14075 };
+const obj3 = { uri: _modDef14075 };
+obj[3] = { uri: _modDef14076 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusFlightLeft3dIllustration.native.tsx");
 

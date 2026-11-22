@@ -1,8 +1,8 @@
-// === Module 13555: ChannelSafeAreaBottom ===
+// === Module 13553: ChannelSafeAreaBottom ===
 
-// Module 13555 (ChannelSafeAreaBottom)
-import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop" /* 13556 */;
-import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated" /* 13557 */;
+// Module 13553 (ChannelSafeAreaBottom)
+import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop" /* 13554 */;
+import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated" /* 13555 */;
 import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 11764 */;
 import size from "module_2" /* 2 */;
 

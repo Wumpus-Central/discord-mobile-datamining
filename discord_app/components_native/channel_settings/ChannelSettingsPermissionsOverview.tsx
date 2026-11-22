@@ -9,8 +9,8 @@ import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
 import TableRow from "TableRow" /* 7045 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
 import RoleLabel from "RoleLabel" /* 11268 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 13857 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16718 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 13855 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16716 */;
 import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 18950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -127,7 +127,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14368).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14366).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1112).intl;
   obj6.label = intl2.string(channel(1112).t.NVwuHq);
   obj6.onPress = callback;

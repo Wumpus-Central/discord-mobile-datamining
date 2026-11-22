@@ -1,15 +1,15 @@
-// === Module 13207: SearchTokens ===
+// === Module 13205: SearchTokens ===
 
-// Module 13207 (SearchTokens)
+// Module 13205 (SearchTokens)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import useChannelName from "useChannelName" /* 5529 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6556 */;
-import QueryTokenizer from "QueryTokenizer" /* 13205 */;
-import SearchTokensUtils from "SearchTokensUtils" /* 13211 */;
-import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 13212 */;
+import QueryTokenizer from "QueryTokenizer" /* 13203 */;
+import SearchTokensUtils from "SearchTokensUtils" /* 13209 */;
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 13210 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4843 */;
@@ -17,8 +17,8 @@ import RelationshipStore from "RelationshipStore" /* 4855 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 import StreamerModeStore from "StreamerModeStore" /* 4970 */;
 import UserStore from "UserStore" /* 1386 */;
-import SearchRecentMessageStore from "SearchRecentMessageStore" /* 13208 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13209 */;
+import SearchRecentMessageStore from "SearchRecentMessageStore" /* 13206 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13207 */;
 
 require = fn;
 function getShortcuts() {
@@ -284,7 +284,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(13210);
+    obj2 = replaced(13208);
   }
   return flag;
 }

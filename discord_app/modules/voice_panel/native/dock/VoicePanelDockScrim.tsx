@@ -1,11 +1,11 @@
-// === Module 13714: VoicePanelDockScrim ===
+// === Module 13712: VoicePanelDockScrim ===
 
-// Module 13714 (VoicePanelDockScrim)
+// Module 13712 (VoicePanelDockScrim)
 import nativeDefault from "native" /* 575 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5083 */;
 import useToken from "useToken" /* 5477 */;
 import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11767 */;
-import ChatInputScrimGradient from "ChatInputScrimGradient" /* 13127 */;
+import ChatInputScrimGradient from "ChatInputScrimGradient" /* 13125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

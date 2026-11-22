@@ -1,6 +1,6 @@
-// === Module 13524: StageChannelRichPresenceUtils ===
+// === Module 13522: StageChannelRichPresenceUtils ===
 
-// Module 13524 (StageChannelRichPresenceUtils)
+// Module 13522 (StageChannelRichPresenceUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

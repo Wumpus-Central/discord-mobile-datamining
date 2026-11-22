@@ -1,6 +1,6 @@
-// === Module 14315: socialLayerStorefrontEmbedColors ===
+// === Module 14313: socialLayerStorefrontEmbedColors ===
 
-// Module 14315 (socialLayerStorefrontEmbedColors)
+// Module 14313 (socialLayerStorefrontEmbedColors)
 import nativeDefault from "native" /* 575 */;
 import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 12544: CheckpointCharacterStage ===
+// === Module 12542: CheckpointCharacterStage ===
 
-// Module 12544 (CheckpointCharacterStage)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12545 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 12711 */;
+// Module 12542 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12543 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 12709 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 require = fn;
 function CheckpointCharacterStage(stage) {

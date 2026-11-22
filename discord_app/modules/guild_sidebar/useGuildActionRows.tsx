@@ -3,8 +3,8 @@
 // Module 17780 (useGuildActionRows)
 import useIsNewMemberDefault from "useIsNewMember" /* 6686 */;
 import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6827 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13243 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13404 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13241 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13402 */;
 import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6684 */;

@@ -7,8 +7,8 @@ import UserUtils from "UserUtils" /* 4969 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import _modDef7778 from "module_7778" /* 7778 */;
 import BotTagDefault from "BotTag" /* 10387 */;
-import ActivityStatusDefault from "ActivityStatus" /* 13509 */;
-import _modDef14110 from "module_14110" /* 14110 */;
+import ActivityStatusDefault from "ActivityStatus" /* 13507 */;
+import _modDef14108 from "module_14108" /* 14108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14110, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14108, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }

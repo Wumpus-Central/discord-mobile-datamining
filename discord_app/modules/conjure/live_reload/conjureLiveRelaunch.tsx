@@ -1,6 +1,6 @@
-// === Module 12311: conjureLiveRelaunch ===
+// === Module 12318: conjureLiveRelaunch ===
 
-// Module 12311 (conjureLiveRelaunch)
+// Module 12318 (conjureLiveRelaunch)
 import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 6998 */;
 import size from "module_2" /* 2 */;
 

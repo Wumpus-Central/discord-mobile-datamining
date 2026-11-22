@@ -1,6 +1,6 @@
-// === Module 12985: useFetchDeveloperActivityShelfItems ===
+// === Module 12983: useFetchDeveloperActivityShelfItems ===
 
-// Module 12985 (useFetchDeveloperActivityShelfItems)
+// Module 12983 (useFetchDeveloperActivityShelfItems)
 import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10629 */;
 import noop from "module_19" /* 19 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5556 */;

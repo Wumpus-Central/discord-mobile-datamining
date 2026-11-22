@@ -10,7 +10,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import LinkingDefault from "Linking" /* 5592 */;
 import ButtonGroup from "ButtonGroup" /* 6545 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12427 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12434 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

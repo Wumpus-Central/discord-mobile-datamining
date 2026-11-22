@@ -9,7 +9,7 @@ import Stack_Stack from "Stack/Stack" /* 5929 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7034 */;
 import ChatIcon from "ChatIcon" /* 7672 */;
 import TextIcon from "TextIcon" /* 7681 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13882 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

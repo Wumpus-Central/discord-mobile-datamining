@@ -151,7 +151,7 @@ export default function EditGuildEventWhere(guild) {
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "Array" };
+        const obj = { entityType, scheduledEndTime: "r" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef2168(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -173,7 +173,7 @@ export default function EditGuildEventWhere(guild) {
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef2168(guildEvent.scheduledStartTime);
         if (obj2 == null) {

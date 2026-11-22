@@ -1,13 +1,13 @@
-// === Module 19554: JankSessionManager ===
+// === Module 19550: JankSessionManager ===
 
-// Module 19554 (JankSessionManager)
+// Module 19550 (JankSessionManager)
 import LoggerDefault from "Logger" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 1353 */;
 import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 17522 */;
 import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17528 */;
 import getJankSurfaceName from "getJankSurfaceName" /* 17529 */;
-import JankNavigationReporterDefault from "JankNavigationReporter" /* 19555 */;
-import attachJankPanelReportersDefault from "attachJankPanelReporters" /* 19556 */;
+import JankNavigationReporterDefault from "JankNavigationReporter" /* 19551 */;
+import attachJankPanelReportersDefault from "attachJankPanelReporters" /* 19552 */;
 import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 8254 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 

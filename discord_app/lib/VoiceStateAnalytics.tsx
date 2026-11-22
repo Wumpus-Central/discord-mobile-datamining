@@ -1,6 +1,6 @@
-// === Module 15049: VoiceStateAnalytics ===
+// === Module 15047: VoiceStateAnalytics ===
 
-// Module 15049 (VoiceStateAnalytics)
+// Module 15047 (VoiceStateAnalytics)
 import apply from "apply" /* 12 */;
 import VoiceStateStore from "VoiceStateStore" /* 5561 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5657 */;

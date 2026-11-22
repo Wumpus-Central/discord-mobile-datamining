@@ -1,6 +1,6 @@
-// === Module 12729: useIsCheckpointWide ===
+// === Module 12727: useIsCheckpointWide ===
 
-// Module 12729 (useIsCheckpointWide)
+// Module 12727 (useIsCheckpointWide)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import size from "module_2" /* 2 */;
 

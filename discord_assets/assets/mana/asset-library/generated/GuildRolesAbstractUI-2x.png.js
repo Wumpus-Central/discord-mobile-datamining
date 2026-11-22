@@ -1,6 +1,6 @@
-// === Module 12258: ? ===
+// === Module 12265: ? ===
 
-// Module 12258
+// Module 12265
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GuildRolesAbstractUI-2x.png.js");

@@ -7,7 +7,7 @@ import native from "native" /* 1186 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
 import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11015 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 13822 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 13820 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

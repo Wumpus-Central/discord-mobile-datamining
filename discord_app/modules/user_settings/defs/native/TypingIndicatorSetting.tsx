@@ -1,23 +1,23 @@
-// === Module 16762: TypingIndicatorSetting ===
+// === Module 16760: TypingIndicatorSetting ===
 
-// Module 16762 (TypingIndicatorSetting)
+// Module 16760 (TypingIndicatorSetting)
 import util from "util" /* 1112 */;
 import _modDef4192 from "module_4192" /* 4192 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4743 */;
 import dismissible_content from "dismissible_content" /* 4746 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12833 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16020 */;
-import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 16763 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12831 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16018 */;
+import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 16761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const TypingIndicatorSetting = "TypingIndicatorSetting";
-let DismissibleBadgeUtils = fn(16021);
+let DismissibleBadgeUtils = fn(16019);
 let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(fn(4746).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE, function useCanShowLaunchBadge() {
   return !CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
 });
-DismissibleBadgeUtils = fn(16021);
+DismissibleBadgeUtils = fn(16019);
 let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(fn(4746).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE, function useCanShowNewPresetsBadge() {
   return CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
 });
@@ -28,14 +28,14 @@ const route = SettingBuilders.createRoute({
     return intl.string(_modDef4192["pT+BVM"]);
   },
   parent: null,
-  IconComponent: fn(16764).ChatDotsIcon,
+  IconComponent: fn(16762).ChatDotsIcon,
   useTrailing() {
     const obj = CustomTypingIndicatorNewPresetsExperiment;
     const DismissibleContent = dismissible_content.DismissibleContent;
     return <tmp2 dismissibleContent={obj.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled ? DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE : DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE} newPremiumStyle />;
   },
   usePreNavigationAction() {
-    enabled = enabled(16763).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    enabled = enabled(16761).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
     const tmp = closure_6();
     closure_1 = tmp;
     const tmp2 = closure_7();

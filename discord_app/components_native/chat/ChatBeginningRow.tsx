@@ -1,6 +1,6 @@
-// === Module 13356: ChatBeginningRow ===
+// === Module 13354: ChatBeginningRow ===
 
-// Module 13356 (ChatBeginningRow)
+// Module 13354 (ChatBeginningRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -45,12 +45,12 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import openGroupDMAddMembers from "openGroupDMAddMembers" /* 12059 */;
 import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 12071 */;
 import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 12077 */;
-import _modDef13358 from "module_13358" /* 13358 */;
-import ChannelAccessInfoDefault from "ChannelAccessInfo" /* 13359 */;
-import _modDef13492 from "module_13492" /* 13492 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13493 */;
-import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 13496 */;
-import PortalAccessibilityWorkaroundViewDefault from "PortalAccessibilityWorkaroundView" /* 13548 */;
+import _modDef13356 from "module_13356" /* 13356 */;
+import ChannelAccessInfoDefault from "ChannelAccessInfo" /* 13357 */;
+import _modDef13490 from "module_13490" /* 13490 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13491 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 13494 */;
+import PortalAccessibilityWorkaroundViewDefault from "PortalAccessibilityWorkaroundView" /* 13546 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -179,7 +179,7 @@ function LinkManageButtons(arg0) {
     items = [, ];
     ({ ctaButton: arr[0], subtitle: arr[1] } = tmp);
     obj3.style = items;
-    const obj4 = { source: _modDef13358, size: native.IconSizes.REFRESH_SMALL_16, color: token };
+    const obj4 = { source: _modDef13356, size: native.IconSizes.REFRESH_SMALL_16, color: token };
     const items1 = [closure_44(native.Icon, obj4), ];
     const obj5 = { style: null, variant: "body-sm/medium", color: "text-link", children: null };
     const items2 = [, ];
@@ -301,7 +301,7 @@ function ChatBeginningRowThread(channel) {
   const obj = channel(7734);
   const appliedTags = channel(11247).useAppliedTags(channel);
   const obj2 = channel(11247);
-  const isGameInvitesPost = channel(12892).useIsGameInvitesPost(channel);
+  const isGameInvitesPost = channel(12890).useIsGameInvitesPost(channel);
   channel(504);
   [][0] = ForumPostMessagesStore;
   let tmp10Result = null;
@@ -410,7 +410,7 @@ function ChatBeginningRowGuild(guild) {
 function DMSpamButton(channel) {
   channel = channel.channel;
   const user = channel.user;
-  const dMMessageToReport = channel(13487).useDMMessageToReport(channel, user.id, true === user.bot);
+  const dMMessageToReport = channel(13485).useDMMessageToReport(channel, user.id, true === user.bot);
   const message = dMMessageToReport.message;
   if (!channel.showingSpamBanner) {
     if (dMMessageToReport.isReportable) {
@@ -443,7 +443,7 @@ function DeauthorizeAppButton(application) {
       let obj2 = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
       const intl = tmp2(1112).intl;
       obj2.text = intl.string(tmp2(1112).t.xUqheM);
-      let obj3 = { size: tmp2(1186).Icon.Sizes.SMALL, source: _modDef13492, style: tmp.appDMButtonIcon };
+      let obj3 = { size: tmp2(1186).Icon.Sizes.SMALL, source: _modDef13490, style: tmp.appDMButtonIcon };
       obj2.icon = closure_44(tmp2(1186).Icon, obj3);
       obj2.onPress = function onPress() {
         useAlertStore.openAlert("confirm-delete-authed-app", closure_2_44(UserSettingsAuthedAppDeleteWarningModalDefault, {
@@ -538,7 +538,7 @@ function MuteAppButton(channel) {
         ToastActionCreatorsDefault.open("NOTIFICATIONS_UNMUTED", obj2);
       } else {
         const obj3 = { channel };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13497, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj3);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13495, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj3);
         const tmpResult2 = ActionSheetActionCreatorsDefault;
       }
     };
@@ -577,9 +577,9 @@ function ChatBeginningRowDM(channel) {
   if (id == null) {
     id = closure_30;
   }
-  let tmp4Result = user(13489)(id);
+  let tmp4Result = user(13487)(id);
   id = tmp4Result;
-  const tmp4 = user(13489);
+  const tmp4 = user(13487);
   items = [AuthorizedAppsStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     id = undefined;
@@ -605,11 +605,11 @@ function ChatBeginningRowDM(channel) {
   if (tmp4Result != null) {
     id1 = tmp4Result.id;
   }
-  const tmp2Result = user(13498);
-  ({ project, isOwned } = user(13498)(id1, user.bot));
-  const tmp2ResultResult = user(13498)(id1, user.bot);
+  const tmp2Result = user(13496);
+  ({ project, isOwned } = user(13496)(id1, user.bot));
+  const tmp2ResultResult = user(13496)(id1, user.bot);
   let items3 = [user, channel];
-  const isEmptyMessageRequestChat = channel(13499).useIsEmptyMessageRequestChat(channel.id);
+  const isEmptyMessageRequestChat = channel(13497).useIsEmptyMessageRequestChat(channel.id);
   const effect = authorizedAppsFetchState.useEffect(() => {
     let guild_id;
     ({ id, getAvatarURL } = user);
@@ -688,7 +688,7 @@ function ChatBeginningRowDM(channel) {
     let tmp19Result4 = null;
     if (user.isProvisional) {
       let obj12 = { style: tmp.provisionalAccountExplainer, userId: user.id, iconSize: 14 };
-      tmp19Result4 = closure_44(tmp7(13539).ChatProvisionalAccountExplainerCard, obj12);
+      tmp19Result4 = closure_44(tmp7(13537).ChatProvisionalAccountExplainerCard, obj12);
     }
     items5[4] = tmp19Result4;
     let tmp22Result;
@@ -712,7 +712,7 @@ function ChatBeginningRowDM(channel) {
                   user(6429).popWithKey(closure_1_42);
                 }
             };
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13500, dependencyMap.paths), "MutualGuildsActionSheet", obj2);
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13498, dependencyMap.paths), "MutualGuildsActionSheet", obj2);
           }
         }
         const substr = stateFromStores.slice(0, num2);
@@ -727,7 +727,7 @@ function ChatBeginningRowDM(channel) {
                   return closure_1_44(user(dependencyMap[103]), obj, guild.id);
                 })
         };
-        const items6 = [closure_44(tmp7(13538).GuildIconPile, obj14), ];
+        const items6 = [closure_44(tmp7(13536).GuildIconPile, obj14), ];
         let obj15 = { style: tmp.mutualGuildsLabel, variant: "body-sm/medium", color: "text-default", children: null };
         let intl5 = tmp7(1112).intl;
         const obj16 = { count: stateFromStores.length };
@@ -745,7 +745,7 @@ function ChatBeginningRowDM(channel) {
       let tmp19Result5 = null;
       if (isEmptyMessageRequestChat) {
         const obj18 = { style: tmp.dmEmptyChat };
-        tmp19Result5 = closure_44(tmp2(13543), obj18);
+        tmp19Result5 = closure_44(tmp2(13541), obj18);
       }
       const obj19 = { children: null };
       items5[7] = tmp19Result5;
@@ -873,7 +873,7 @@ function ChatBeginningRowDM(channel) {
           } else {
             tmp4Result2 = null;
             if (constants8.PENDING_OUTGOING === stateFromStores) {
-              const obj14 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "HermesInternal" };
+              const obj14 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "add" };
               const intl9 = util.intl;
               obj14.text = intl9.string(util.t.xMH6vD);
               tmp4Result2 = closure_2_44(components_Button_Button.Button, obj14);
@@ -894,7 +894,7 @@ function ChatBeginningRowDM(channel) {
     }
     const tmp2Result4 = tmp2(4969);
   }
-  const tmp7Result = channel(13499);
+  const tmp7Result = channel(13497);
 }
 function ChatBeginningRowButton(style) {
   const obj = { style: style.style, children: closure_1_44(RowButton.RowButton, { onPress, icon: closure_1_44(RowButton.RowButton.Icon, { IconComponent, variant: iconVariant }), label: title, subLabel: subtitle, trailing }) };
@@ -1099,7 +1099,7 @@ function ChatBeginningRowGroupDM(channel) {
     let tmp21Result4 = null;
     if (channel.hasFlag(ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) {
       const obj15 = { channelId: channel.id };
-      tmp21Result4 = closure_44(tmp2(13544), obj15);
+      tmp21Result4 = closure_44(tmp2(13542), obj15);
     }
     const obj16 = { children: null };
     items6[2] = tmp21Result4;
@@ -1119,9 +1119,9 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_25, AnalyticsPages: closure_26, AnalyticsSections: closure_27, ChannelSettingsSections: closure_28, ChannelTypes: closure_29, EMPTY_STRING_SNOWFLAKE_ID: closure_30, GuildSettingsSections: closure_31, HelpdeskArticles: closure_32, InstantInviteSources: items, Permissions: closure_34, RelationshipTypes: closure_35, UPLOAD_MEDIUM_SIZE: closure_36, WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_37 } = Constants);
 const ChannelFlags = fn(4769).ChannelFlags;
 const number = fn(12062).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const GuildProgressConstants = fn(13357);
+const GuildProgressConstants = fn(13355);
 ({ AnalyticsActions: closure_40, AnalyticsSetupTypes: closure_41 } = GuildProgressConstants);
-let closure_42 = fn(13330).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_42 = fn(13328).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 let closure_43 = fn(11813).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_44, Fragment: closure_45, jsxs: closure_46 } = jsxProd);

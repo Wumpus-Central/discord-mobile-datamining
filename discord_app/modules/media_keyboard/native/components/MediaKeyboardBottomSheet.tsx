@@ -12,7 +12,7 @@ import HapticUtils from "HapticUtils" /* 5129 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5130 */;
 import BottomSheetModalDefault from "BottomSheetModal" /* 5145 */;
 import useMountEffectDefault from "useMountEffect" /* 5474 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12949 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

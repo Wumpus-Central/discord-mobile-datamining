@@ -1,6 +1,6 @@
-// === Module 12130: useReportToModHooks ===
+// === Module 12137: useReportToModHooks ===
 
-// Module 12130 (useReportToModHooks)
+// Module 12137 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6889 */;
 import UserActionCreators from "UserActionCreators" /* 6954 */;

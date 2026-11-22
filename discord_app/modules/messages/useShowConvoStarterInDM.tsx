@@ -1,6 +1,6 @@
-// === Module 13131: useShowConvoStarterInDM ===
+// === Module 13129: useShowConvoStarterInDM ===
 
-// Module 13131 (useShowConvoStarterInDM)
+// Module 13129 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
 import ChannelConstants from "ChannelConstants" /* 4769 */;
 import MessageRequestStore from "MessageRequestStore" /* 6634 */;

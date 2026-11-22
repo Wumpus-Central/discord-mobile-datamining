@@ -8,7 +8,7 @@ import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 12061 */;
-import TrackingDefault from "Tracking" /* 13220 */;
+import TrackingDefault from "Tracking" /* 13218 */;
 import SearchList from "SearchList" /* 18742 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -16,8 +16,8 @@ import GuildMemberStore from "GuildMemberStore" /* 4825 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 import UserStore from "UserStore" /* 1386 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 13227 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 13225 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 require = fn;
 function SearchableMembersScreen(searchContext) {
@@ -34,8 +34,8 @@ function SearchableMembersScreen(searchContext) {
   let bound;
   const analyticsLocations = guildId(7520)().analyticsLocations;
   const tmp = closure_21();
-  dependencyMap = searchContext(13206).getSearchContextId(searchContext);
-  let obj = searchContext(13206);
+  dependencyMap = searchContext(13204).getSearchContextId(searchContext);
+  let obj = searchContext(13204);
   items = [contentContainerStyles];
   const stateFromStores = searchContext(563).useStateFromStores(items, () => SearchMemberTabStore.getResults(closure_3));
   closure_129_0 = searchContext;
@@ -353,7 +353,7 @@ export default noop.memo(function MembersScreen(searchContext) {
       tmp24Result = jsx(tmp2(18802), { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp14, wrapperStyle: tmp.promoBanner });
     }
     obj4.listHeaderContent = tmp24Result;
-    obj3.children = jsx(tmp2(13060), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp5(2018).dismissGlobalKeyboard, disableBottomSafeZone: null, insetEnd: null, listHeaderContent: null });
+    obj3.children = jsx(tmp2(13058), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp5(2018).dismissGlobalKeyboard, disableBottomSafeZone: null, insetEnd: null, listHeaderContent: null });
     obj2.children = <View style={tmp.container}>{null}</View>;
     return jsx(tmp5(7520).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   } else if (constants3.THREAD === type) {

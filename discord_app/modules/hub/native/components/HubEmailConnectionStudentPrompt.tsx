@@ -1,6 +1,6 @@
-// === Module 13680: HubEmailConnectionStudentPrompt ===
+// === Module 13678: HubEmailConnectionStudentPrompt ===
 
-// Module 13680 (HubEmailConnectionStudentPrompt)
+// Module 13678 (HubEmailConnectionStudentPrompt)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import TextStyles from "TextStyles" /* 6407 */;
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13671).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13669).HubEmailConnectionSteps;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -40,7 +40,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const obj = onClose(1500);
   const obj6 = { source: null };
   const tmp2 = invite(7503);
-  obj6.source = invite(13681);
+  obj6.source = invite(13679);
   obj5.leading = closure_6(invite(5600), obj6);
   obj5.trailing = invite(7503).Arrow;
   const intl2 = onClose(1112).intl;
@@ -56,7 +56,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const tmp3 = invite(5600);
   const obj8 = { source: null };
   const tmp4 = invite(7503);
-  obj8.source = invite(13682);
+  obj8.source = invite(13680);
   obj7.leading = closure_6(invite(5600), obj8);
   obj7.trailing = invite(7503).Arrow;
   const intl4 = onClose(1112).intl;
@@ -65,5 +65,5 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   items[2] = closure_6(tmp4, obj7);
   obj3.children = items;
   obj2.children = closure_7(View, obj3);
-  return closure_6(onClose(13679).HubEmailConnectionScreen, obj2);
+  return closure_6(onClose(13677).HubEmailConnectionScreen, obj2);
 };

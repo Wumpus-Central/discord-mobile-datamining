@@ -1,6 +1,6 @@
-// === Module 16664: AutomaticGainControlSetting ===
+// === Module 16662: AutomaticGainControlSetting ===
 
-// Module 16664 (AutomaticGainControlSetting)
+// Module 16662 (AutomaticGainControlSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;

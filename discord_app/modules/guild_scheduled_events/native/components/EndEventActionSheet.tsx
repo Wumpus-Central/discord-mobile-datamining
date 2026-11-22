@@ -1,6 +1,6 @@
-// === Module 14691: EndEventActionSheet ===
+// === Module 14689: EndEventActionSheet ===
 
-// Module 14691 (EndEventActionSheet)
+// Module 14689 (EndEventActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7573 */;
@@ -61,7 +61,7 @@ export default function EndEventActionSheet(channel) {
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(14692), obj2);
+    return closure_5(activeEvent(14690), obj2);
   }
   let obj = channel(8017);
 };

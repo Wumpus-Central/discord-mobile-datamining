@@ -15,7 +15,7 @@ import IconButton from "IconButton" /* 7591 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
 import ICYMITypes from "ICYMITypes" /* 10037 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10043 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 16314 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 16312 */;
 import NativeICYMIUtils from "NativeICYMIUtils" /* 18104 */;
 import ICYMIStoreUtils from "ICYMIStoreUtils" /* 18122 */;
 import AnnouncementMessageRowDefault from "AnnouncementMessageRow" /* 18128 */;
@@ -44,7 +44,7 @@ const require = globalThis.__r;
 const util = LeftBackIconWithBadge(1112);
 const Pressables = LeftBackIconWithBadge(7030);
 const XSmallIcon = LeftBackIconWithBadge(7151);
-const BackIconWithBadge = LeftBackIconWithBadge(15971);
+const BackIconWithBadge = LeftBackIconWithBadge(15969);
 const notifications_Notifications = LeftBackIconWithBadge(18040);
 require = fn;
 function SettingsButton() {

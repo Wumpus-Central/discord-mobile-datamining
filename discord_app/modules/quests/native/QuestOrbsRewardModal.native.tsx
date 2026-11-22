@@ -1,6 +1,6 @@
-// === Module 13761: QuestOrbsRewardModal ===
+// === Module 13759: QuestOrbsRewardModal ===
 
-// Module 13761 (QuestOrbsRewardModal)
+// Module 13759 (QuestOrbsRewardModal)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
@@ -9,9 +9,9 @@ import FastImageDefault from "FastImage" /* 5600 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;
 import OrbsIcon from "OrbsIcon" /* 8958 */;
+import _modDef13760 from "module_13760" /* 13760 */;
+import _modDef13761 from "module_13761" /* 13761 */;
 import _modDef13762 from "module_13762" /* 13762 */;
-import _modDef13763 from "module_13763" /* 13763 */;
-import _modDef13764 from "module_13764" /* 13764 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -57,7 +57,7 @@ function StaticOrb() {
   const obj2 = { source: null, style: null, fadeDuration: 0 };
   const obj3 = { uri: null };
   const tmp = closure_25();
-  obj3.uri = _modDef13762;
+  obj3.uri = _modDef13760;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = gesture(FastImageDefault, obj2);
@@ -102,7 +102,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = gesture(React5, obj2);
   }
   const items1 = [tmp13, , ];
-  const obj3 = { uri: _modDef13763, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef13761, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb, ];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -121,7 +121,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj3.animate = tmp19;
   items1[1] = gesture(closure_24, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef13764, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
+    const obj5 = { uri: _modDef13762, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
     tmp15Result = gesture(closure_24, obj5);
   }
   items1[2] = tmp15Result;

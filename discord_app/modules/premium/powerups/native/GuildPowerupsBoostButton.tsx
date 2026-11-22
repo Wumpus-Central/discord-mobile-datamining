@@ -1,6 +1,6 @@
-// === Module 13479: GuildPowerupsBoostButton ===
+// === Module 13477: GuildPowerupsBoostButton ===
 
-// Module 13479 (GuildPowerupsBoostButton)
+// Module 13477 (GuildPowerupsBoostButton)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -38,7 +38,7 @@ export function GuildPowerupsBoostButton(guildId) {
   let tmp10 = null;
   if (null != stateFromStores) {
     const obj4 = { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED };
-    tmp10 = jsx(tmp5(13480), { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED });
+    tmp10 = jsx(tmp5(13478), { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED });
   }
   return tmp10;
 }

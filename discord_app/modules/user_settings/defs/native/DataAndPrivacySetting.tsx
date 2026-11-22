@@ -2,8 +2,8 @@
 
 // Module 17358 (DataAndPrivacySetting)
 import util from "util" /* 1112 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 16157 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 16160 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 16155 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 16158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: fn(13819).ShieldLockIcon,
+  IconComponent: fn(13817).ShieldLockIcon,
   screen: {
     route: fn(1071).UserSettingsSections.DATA_AND_PRIVACY,
     getComponent() {

@@ -5,7 +5,7 @@ import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
 import navigateToThreadCreation from "navigateToThreadCreation" /* 11646 */;
-import _modDef13729 from "module_13729" /* 13729 */;
+import _modDef13727 from "module_13727" /* 13727 */;
 import ChannelSettingsModal from "ChannelSettingsModal" /* 18922 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -32,7 +32,7 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1112).intl;
     obj2.accessibilityLabel = intl.string(tmp(1112).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13729;
+    obj2.source = _modDef13727;
     tmp5 = closure_9(tmp(8561).HeaderIconButton, obj2);
   }
   return tmp5;

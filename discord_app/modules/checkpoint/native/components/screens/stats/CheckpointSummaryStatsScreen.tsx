@@ -1,6 +1,6 @@
-// === Module 12781: CheckpointSummaryStatsScreen ===
+// === Module 12779: CheckpointSummaryStatsScreen ===
 
-// Module 12781 (CheckpointSummaryStatsScreen)
+// Module 12779 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -20,14 +20,14 @@ import UnknownGameIcon from "UnknownGameIcon" /* 7977 */;
 import FlagIcon from "FlagIcon" /* 10269 */;
 import CheckpointScreen from "CheckpointScreen" /* 12509 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12723 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12729 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12751 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12757 */;
-import CheckpointRecapCard from "CheckpointRecapCard" /* 12782 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12721 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12727 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12749 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12755 */;
+import CheckpointRecapCard from "CheckpointRecapCard" /* 12780 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 const GuildIconDefault = GuildIcon;
 const CheckpointScreenDefault = CheckpointScreen;

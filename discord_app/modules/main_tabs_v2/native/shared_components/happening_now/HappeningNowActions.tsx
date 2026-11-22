@@ -8,9 +8,9 @@ import FastImageDefault from "FastImage" /* 5600 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 7746 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13164 */;
-import _modDef13729 from "module_13729" /* 13729 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 16702 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13162 */;
+import _modDef13727 from "module_13727" /* 13727 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 16700 */;
 import _modDef17613 from "module_17613" /* 17613 */;
 import _modDef17614 from "module_17614" /* 17614 */;
 import _modDef17615 from "module_17615" /* 17615 */;
@@ -21,7 +21,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16701);
+const HappeningNowConstants = fn(16699);
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, InstantInviteSources: closure_10 } = Constants);
@@ -133,7 +133,7 @@ export function HappeningNowStudentHubAddServer(guildId) {
     }
     tmp4 = null != guild && null != defaultChannel;
   }, items);
-  obj.imageSource = _modDef13729;
+  obj.imageSource = _modDef13727;
   obj.onPress = callback;
   const intl = guildId(1112).intl;
   obj.text = intl.string(guildId(1112).t.emRpdS);

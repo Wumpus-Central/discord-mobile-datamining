@@ -1,6 +1,6 @@
-// === Module 12278: ConjureProjectAboutSheet ===
+// === Module 12285: ConjureProjectAboutSheet ===
 
-// Module 12278 (ConjureProjectAboutSheet)
+// Module 12285 (ConjureProjectAboutSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
@@ -9,14 +9,14 @@ import Text_Text from "Text/Text" /* 5504 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
 import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11972 */;
-import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 12277 */;
-import useConjureSharedProjectDefault from "useConjureSharedProject" /* 12279 */;
-import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 12280 */;
-import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 12283 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 12284 */;
-import useConjureProjectCreator from "useConjureProjectCreator" /* 12285 */;
-import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 12287 */;
-import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 12289 */;
+import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 12284 */;
+import useConjureSharedProjectDefault from "useConjureSharedProject" /* 12286 */;
+import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 12287 */;
+import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 12290 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 12291 */;
+import useConjureProjectCreator from "useConjureProjectCreator" /* 12292 */;
+import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 12294 */;
+import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 12296 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -161,7 +161,7 @@ export default function ConjureProjectAboutSheet(arg0) {
           return obj5;
         } else {
           if (value) {
-            v1(5127).hideActionSheet(tmp4(12277).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+            v1(5127).hideActionSheet(tmp4(12284).CONJURE_PROJECT_ABOUT_SHEET_KEY);
             const obj = v1(5127);
           }
           dependencyMap = 3;

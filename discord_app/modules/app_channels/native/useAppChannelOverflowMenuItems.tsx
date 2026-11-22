@@ -1,6 +1,6 @@
-// === Module 14359: useAppChannelOverflowMenuItems ===
+// === Module 14357: useAppChannelOverflowMenuItems ===
 
-// Module 14359 (useAppChannelOverflowMenuItems)
+// Module 14357 (useAppChannelOverflowMenuItems)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5557 */;
@@ -8,9 +8,9 @@ import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
 import ShieldIcon from "ShieldIcon" /* 10133 */;
 import FlagIcon from "FlagIcon" /* 10269 */;
 import DoorExitIcon from "DoorExitIcon" /* 10368 */;
-import closeFrameDefault from "closeFrame" /* 13877 */;
-import restartFrames from "restartFrames" /* 14362 */;
-import RefreshIcon from "RefreshIcon" /* 14368 */;
+import closeFrameDefault from "closeFrame" /* 13875 */;
+import restartFrames from "restartFrames" /* 14360 */;
+import RefreshIcon from "RefreshIcon" /* 14366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,16 +23,16 @@ function useAppChannelAppActions(channel) {
   items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const memo = bot.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id }), items);
-  const tmp5 = application_id(14355)(application_id, memo);
+  const tmp5 = application_id(14353)(application_id, memo);
   dependencyMap = tmp5;
   const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(channel);
   bot = undefined;
   if (appChannelApplication != null) {
     bot = appChannelApplication.bot;
   }
-  const tmp8 = application_id(14360)(application_id);
+  const tmp8 = application_id(14358)(application_id);
   closure_4 = tmp8;
-  const tmp9 = application_id(14361)(application_id).length > 0;
+  const tmp9 = application_id(14359)(application_id).length > 0;
   closure_5 = tmp9;
   const items1 = [application_id, bot, channel, tmp8, tmp5, tmp9];
   return bot.useMemo(() => {
@@ -60,7 +60,7 @@ function useAppChannelAppActions(channel) {
       if (null != appName) {
         fn3 = null;
         if (closure_5) {
-          fn3 = () => application_id(14363)({ applicationId, appName });
+          fn3 = () => application_id(14361)({ applicationId, appName });
         }
       }
     }
@@ -75,7 +75,7 @@ function useAppChannelAppActions(channel) {
     obj.appInfo = fn4;
     let fn5 = null;
     if (null != application_id) {
-      fn5 = () => application_id(14366)(applicationId, closure_0, "app_channel_header_mobile");
+      fn5 = () => application_id(14364)(applicationId, closure_0, "app_channel_header_mobile");
     }
     obj.report = fn5;
     return obj;

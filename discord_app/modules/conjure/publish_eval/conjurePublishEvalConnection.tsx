@@ -1,6 +1,6 @@
-// === Module 12318: conjurePublishEvalConnection ===
+// === Module 12325: conjurePublishEvalConnection ===
 
-// Module 12318 (conjurePublishEvalConnection)
+// Module 12325 (conjurePublishEvalConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import v1 from "v1" /* 1268 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6939 */;

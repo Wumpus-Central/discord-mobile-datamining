@@ -2,7 +2,7 @@
 
 // Module 19207 (FramePanelFocusedView)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10622 */;
-import FrameStackLevel from "FrameStackLevel" /* 15756 */;
+import FrameStackLevel from "FrameStackLevel" /* 15754 */;
 import FrameRenderTargetDefault from "FrameRenderTarget" /* 18402 */;
 import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18700 */;
 import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19188 */;

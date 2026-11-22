@@ -6,13 +6,13 @@ import AtIcon from "AtIcon" /* 7690 */;
 import CalendarIcon from "CalendarIcon" /* 8048 */;
 import TrackingConstants from "TrackingConstants" /* 8575 */;
 import AttachmentIcon from "AttachmentIcon" /* 10109 */;
-import RobotIcon from "RobotIcon" /* 12172 */;
-import UserIcon from "UserIcon" /* 12354 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 13083 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13199 */;
-import SearchTokens from "SearchTokens" /* 13207 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13224 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15054 */;
+import RobotIcon from "RobotIcon" /* 12179 */;
+import UserIcon from "UserIcon" /* 12361 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 13081 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13197 */;
+import SearchTokens from "SearchTokens" /* 13205 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15052 */;
 import CalendarMinusIcon from "CalendarMinusIcon" /* 18717 */;
 import SearchConstants from "SearchConstants" /* 8576 */;
 import Constants from "Constants" /* 1071 */;
@@ -213,7 +213,7 @@ export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   items = [];
-  const keys = Object.keys(items(13207));
+  const keys = Object.keys(items(13205));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

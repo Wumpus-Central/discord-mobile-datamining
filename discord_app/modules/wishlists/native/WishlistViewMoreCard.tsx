@@ -1,10 +1,10 @@
-// === Module 13939: WishlistViewMoreCard ===
+// === Module 13937: WishlistViewMoreCard ===
 
-// Module 13939 (WishlistViewMoreCard)
+// Module 13937 (WishlistViewMoreCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import WishlistItemCardDefault from "WishlistItemCard" /* 13934 */;
+import WishlistItemCardDefault from "WishlistItemCard" /* 13932 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

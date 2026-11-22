@@ -1,6 +1,6 @@
-// === Module 12152: useVoteReactors ===
+// === Module 12159: useVoteReactors ===
 
-// Module 12152 (useVoteReactors)
+// Module 12159 (useVoteReactors)
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5495 */;
 import MessageReactionsStore from "MessageReactionsStore" /* 8457 */;
 

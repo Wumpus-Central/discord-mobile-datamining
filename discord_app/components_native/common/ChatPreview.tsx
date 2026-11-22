@@ -1,6 +1,6 @@
-// === Module 14353: ChatPreview ===
+// === Module 14351: ChatPreview ===
 
-// Module 14353 (ChatPreview)
+// Module 14351 (ChatPreview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
@@ -30,7 +30,7 @@ import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11989 */;
 import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 12026 */;
 import contentHandlers2 from "contentHandlers" /* 12027 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 12122 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 12814 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 12812 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import ActionSheetStore from "ActionSheetStore" /* 5128 */;
@@ -291,9 +291,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 1206.494,
-        selectedChannelId: 966.313,
-        tapLinkData: -3.225
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623"
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

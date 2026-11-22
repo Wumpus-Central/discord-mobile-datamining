@@ -1,19 +1,19 @@
-// === Module 19964: AvatarLokyExample ===
+// === Module 19961: AvatarLokyExample ===
 
-// Module 19964 (AvatarLokyExample)
+// Module 19961 (AvatarLokyExample)
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef19965 from "module_19965" /* 19965 */;
-import _modDef19966 from "module_19966" /* 19966 */;
-import _modDef19967 from "module_19967" /* 19967 */;
+import _modDef19962 from "module_19962" /* 19962 */;
+import _modDef19963 from "module_19963" /* 19963 */;
+import _modDef19964 from "module_19964" /* 19964 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19965 }, 3: null };
-let obj2 = { uri: _modDef19965 };
-obj[2] = { uri: _modDef19966 };
-const obj3 = { uri: _modDef19966 };
-obj[3] = { uri: _modDef19967 };
+let obj = { 1: null, 2: { uri: _modDef19962 }, 3: null };
+let obj2 = { uri: _modDef19962 };
+obj[2] = { uri: _modDef19963 };
+const obj3 = { uri: _modDef19963 };
+obj[3] = { uri: _modDef19964 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarLokyExample.native.tsx");
 

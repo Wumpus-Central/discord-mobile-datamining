@@ -1,6 +1,6 @@
-// === Module 14759: SocialSdkGameResolver ===
+// === Module 14757: SocialSdkGameResolver ===
 
-// Module 14759 (SocialSdkGameResolver)
+// Module 14757 (SocialSdkGameResolver)
 import DetectableGameStore from "DetectableGameStore" /* 2158 */;
 
 const SdkCanonicalGameResolutionType = { UNRESOLVED: 0, [0]: "UNRESOLVED", MATCHES_DETECTED: 1, [1]: "MATCHES_DETECTED", DIFFERS: 2, [2]: "DIFFERS" };

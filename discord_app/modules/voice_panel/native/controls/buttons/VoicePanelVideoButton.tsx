@@ -3,7 +3,7 @@
 // Module 19358 (VoicePanelVideoButton)
 import CameraRive from "CameraRive" /* 5044 */;
 import VideoIcon from "VideoIcon" /* 11126 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 14510 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 14508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ export default function VideoButton(arg0) {
     element.style = isVideoEnabled ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (videoBlocked) {
       const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-      memo = jsx(tmp3(14394).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
+      memo = jsx(tmp3(14392).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
     return jsx(tmp(19347), { onPress: tmp6, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });

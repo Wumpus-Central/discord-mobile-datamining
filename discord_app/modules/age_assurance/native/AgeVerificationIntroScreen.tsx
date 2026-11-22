@@ -1,6 +1,6 @@
-// === Module 12425: AgeVerificationIntroScreen ===
+// === Module 12432: AgeVerificationIntroScreen ===
 
-// Module 12425 (AgeVerificationIntroScreen)
+// Module 12432 (AgeVerificationIntroScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
@@ -52,7 +52,7 @@ export default function GetStartedScreen(onComplete) {
   const items1 = [closure_8(closure_5, obj5), , ];
   const obj10 = { hasIcons: true, children: null };
   const obj9 = modalSessionId(6411);
-  const ageVerificationGetStartedSteps = modalSessionId(12426).getAgeVerificationGetStartedSteps(modalSessionId);
+  const ageVerificationGetStartedSteps = modalSessionId(12433).getAgeVerificationGetStartedSteps(modalSessionId);
   obj10.children = ageVerificationGetStartedSteps.map((children, index) => {
     const description = children.description;
     const obj = { index: index + 1, tip: closure_1_7(modalSessionId(5504).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
@@ -135,7 +135,7 @@ export default function GetStartedScreen(onComplete) {
       }
     }
   });
-  const obj11 = modalSessionId(12426);
+  const obj11 = modalSessionId(12433);
   const obj14 = {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
@@ -143,7 +143,7 @@ export default function GetStartedScreen(onComplete) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   };
-  obj17.icon = closure_7(modalSessionId(12427).LinkExternalSmallIcon, { color: initiateAgeVerification(575).colors.WHITE });
+  obj17.icon = closure_7(modalSessionId(12434).LinkExternalSmallIcon, { color: initiateAgeVerification(575).colors.WHITE });
   obj17.loading = initiateAgeVerification.loading;
   obj16.children = closure_7(modalSessionId(5511).Button, obj17);
   obj15.children = closure_7(closure_5, obj16);

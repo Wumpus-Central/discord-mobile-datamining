@@ -1,6 +1,6 @@
-// === Module 15907: UserPrimaryGuildListBottomSheet ===
+// === Module 15905: UserPrimaryGuildListBottomSheet ===
 
-// Module 15907 (UserPrimaryGuildListBottomSheet)
+// Module 15905 (UserPrimaryGuildListBottomSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import GuildIconDefault from "GuildIcon" /* 7322 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import Form from "Form" /* 7709 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 13815 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 13813 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -22,7 +22,7 @@ function ChatToast(message) {
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, children: name };

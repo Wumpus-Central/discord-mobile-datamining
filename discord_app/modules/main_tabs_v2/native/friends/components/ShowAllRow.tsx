@@ -6,7 +6,7 @@ import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import TableRow from "TableRow" /* 7045 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 15287 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 15285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4949 */;
 import FastImageDefault from "FastImage" /* 5600 */;
-import _modDef13145 from "module_13145" /* 13145 */;
+import _modDef13143 from "module_13143" /* 13143 */;
 import _modDef17878 from "module_17878" /* 17878 */;
 import _modDef17879 from "module_17879" /* 17879 */;
 import _modDef17880 from "module_17880" /* 17880 */;
@@ -35,7 +35,7 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef13145;
+      tmp4 = _modDef13143;
     }
   }
   let tmp9 = null;

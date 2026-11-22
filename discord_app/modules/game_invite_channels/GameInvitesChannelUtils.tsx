@@ -1,6 +1,6 @@
-// === Module 12892: GameInvitesChannelUtils ===
+// === Module 12890: GameInvitesChannelUtils ===
 
-// Module 12892 (GameInvitesChannelUtils)
+// Module 12890 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
 import ActivityTypes from "ActivityTypes" /* 5652 */;
 import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6672 */;

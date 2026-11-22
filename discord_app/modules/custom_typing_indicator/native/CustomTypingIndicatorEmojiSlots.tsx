@@ -1,6 +1,6 @@
-// === Module 16769: CustomTypingIndicatorEmojiSlots ===
+// === Module 16767: CustomTypingIndicatorEmojiSlots ===
 
-// Module 16769 (CustomTypingIndicatorEmojiSlots)
+// Module 16767 (CustomTypingIndicatorEmojiSlots)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import _mod1653 from "module_1653" /* 1653 */;
@@ -8,7 +8,7 @@ import spring_spring from "spring/spring" /* 5514 */;
 import springPresets from "springPresets" /* 5515 */;
 import EmojiDefault from "Emoji" /* 7496 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9063 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12850 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,7 +133,7 @@ function CustomTypingIndicatorEmojiSlot(index) {
 const EmojiIntention = fn(1389).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
-let items = [fn(16770).EmojiAngryFaceWithHornsIcon, fn(16772).EmojiColdFaceIcon, fn(16774).EmojiCowboyHatFaceIcon, fn(16776).EmojiCryingFaceIcon, fn(16778).EmojiDisguisedFaceIcon, fn(16780).EmojiFaceVomitingIcon, fn(16782).EmojiFaceWithMonocleIcon, fn(16784).EmojiFaceWithSpiralEyesIcon, fn(16786).EmojiMeltingFaceIcon, fn(16788).EmojiMoneyMouthFaceIcon, fn(16790).EmojiNerdFaceIcon, fn(16792).EmojiPartyingFaceIcon, fn(16794).EmojiSalutingFaceIcon, fn(16796).EmojiSkullIcon, fn(16798).EmojiSmilingFaceWithHornsIcon, fn(16800).EmojiSmilingFaceWithSunglassesIcon, fn(16802).EmojiSquintingFaceWithTongueIcon, fn(16804).EmojiUpsideDownFaceIcon, fn(16806).EmojiWoozyFaceIcon, fn(16808).EmojiZanyFaceIcon, fn(16810).EmojiRollingOnTheFloorLaughingIcon, fn(16812).EmojiSmilingFaceWithHeartsIcon];
+let items = [fn(16768).EmojiAngryFaceWithHornsIcon, fn(16770).EmojiColdFaceIcon, fn(16772).EmojiCowboyHatFaceIcon, fn(16774).EmojiCryingFaceIcon, fn(16776).EmojiDisguisedFaceIcon, fn(16778).EmojiFaceVomitingIcon, fn(16780).EmojiFaceWithMonocleIcon, fn(16782).EmojiFaceWithSpiralEyesIcon, fn(16784).EmojiMeltingFaceIcon, fn(16786).EmojiMoneyMouthFaceIcon, fn(16788).EmojiNerdFaceIcon, fn(16790).EmojiPartyingFaceIcon, fn(16792).EmojiSalutingFaceIcon, fn(16794).EmojiSkullIcon, fn(16796).EmojiSmilingFaceWithHornsIcon, fn(16798).EmojiSmilingFaceWithSunglassesIcon, fn(16800).EmojiSquintingFaceWithTongueIcon, fn(16802).EmojiUpsideDownFaceIcon, fn(16804).EmojiWoozyFaceIcon, fn(16806).EmojiZanyFaceIcon, fn(16808).EmojiRollingOnTheFloorLaughingIcon, fn(16810).EmojiSmilingFaceWithHeartsIcon];
 const createStyles = fn(4913);
 let closure_9 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 let closure_11 = { code: "(function CustomTypingIndicatorEmojiSlotsTsx1(){let[withSpring,interpolate,pressed,PLACEHOLDER_EMOJI_ACTIVE_SCALE,ON_PRESS_SPRING]=this.__closure;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};})" };

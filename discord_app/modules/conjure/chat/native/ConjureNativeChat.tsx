@@ -159,8 +159,8 @@ export default function ConjureNativeChat(projectId) {
   const tmp7 = num(18417)(projectId);
   let tmp8 = num(18418)(projectId);
   let obj = projectId(504);
-  const pendingConjurePublishEval = projectId(12314).usePendingConjurePublishEval(projectId);
-  let obj2 = projectId(12314);
+  const pendingConjurePublishEval = projectId(12321).usePendingConjurePublishEval(projectId);
+  let obj2 = projectId(12321);
   const conjureRemixStartedAt = projectId(18418).useConjureRemixStartedAt(projectId);
   const obj4 = stateFromStores1;
   const items1 = [stateFromStores, projectId];
@@ -820,8 +820,8 @@ export default function ConjureNativeChat(projectId) {
   }
   let conjureTurnStartedAtResult;
   if (null != tmp101) {
-    conjureTurnStartedAtResult = tmp2(13775).conjureTurnStartedAt(tmp101);
-    const tmp2Result20 = tmp2(13775);
+    conjureTurnStartedAtResult = tmp2(13773).conjureTurnStartedAt(tmp101);
+    const tmp2Result20 = tmp2(13773);
   }
   const items54 = [memo7];
   let tmp105;
@@ -989,7 +989,7 @@ export default function ConjureNativeChat(projectId) {
   }
   const tmp20Result20 = stateFromStores(obj4.useState(false), 2);
   const obj7 = { style: tmp.container, children: null };
-  const conjureControlActive = projectId(14732).useConjureControlActive(projectId);
+  const conjureControlActive = projectId(14730).useConjureControlActive(projectId);
   const items62 = [c15(num(18441), { thinking: stateFromStores3, bleedBottom: num(1628)().bottom }), , ];
   const obj14 = { style: tmp.transcriptArea, onTouchEnd: callback21, onTouchCancel: callback20, children: null };
   const obj15 = { value: callback19, children: null };
@@ -1199,7 +1199,7 @@ export default function ConjureNativeChat(projectId) {
   const obj33 = { style: tmp.bottomStack, onLayout: callback3, children: null };
   const obj34 = { projectId, thinking: stateFromStores3, turnStartedAt: conjureTurnStartedAtResult, remixStartedAt: conjureRemixStartedAt, compacting: stateFromStores4, saving: stateFromStores5, recalling: null, activity: null, projectUsage: null, connLabel: null, controlling: null, connFailed: null, thinkingOpen: null, onToggleThinking: null, queuedCount: null };
   let tmp142 = "loading" === chatEmptyStateResult;
-  const tmp2Result22 = projectId(14732);
+  const tmp2Result22 = projectId(14730);
   if (tmp142) {
     tmp142 = 0 === memo.length;
   }

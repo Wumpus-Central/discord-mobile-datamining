@@ -20,9 +20,9 @@ import showSimpleActionSheet from "showSimpleActionSheet" /* 7550 */;
 import Form from "Form" /* 7709 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 11219 */;
 import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 11251 */;
-import _modDef12217 from "module_12217" /* 12217 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 13891 */;
-import _modDef16704 from "module_16704" /* 16704 */;
+import _modDef12224 from "module_12224" /* 12224 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 13889 */;
+import _modDef16702 from "module_16702" /* 16702 */;
 import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17663 */;
 import _modDef17667 from "module_17667" /* 17667 */;
 import noop from "module_19" /* 19 */;
@@ -394,7 +394,7 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef12217;
+      obj2.icon = _modDef12224;
       obj2.onPress = function onPress() {
         closure_1_1(17663).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
       };
@@ -402,7 +402,7 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef16704;
+      obj3.icon = _modDef16702;
       obj3.onPress = function onPress() {
         closure_1_1(17663).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };

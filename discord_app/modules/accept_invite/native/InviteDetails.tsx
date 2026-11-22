@@ -1,6 +1,6 @@
-// === Module 13670: InviteDetails ===
+// === Module 13668: InviteDetails ===
 
-// Module 13670 (InviteDetails)
+// Module 13668 (InviteDetails)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -10,11 +10,11 @@ import UserUtilsDefault from "UserUtils" /* 4969 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import GuildBadgeDefault from "GuildBadge" /* 7325 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 8437 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 13572 */;
-import InviteRolesListDefault from "InviteRolesList" /* 13672 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 13570 */;
+import InviteRolesListDefault from "InviteRolesList" /* 13670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 13285 */;
+import MultiAccountStore from "MultiAccountStore" /* 13283 */;
 import UserRecord from "UserRecord" /* 1405 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -62,7 +62,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: 5166551507907631000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: "has" };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
         obj3.size = native.AvatarSizes.XLARGE;
@@ -283,7 +283,7 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, InviteStates: closure_10 } = Constants);
-let closure_11 = fn(13671).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(13669).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(4913);

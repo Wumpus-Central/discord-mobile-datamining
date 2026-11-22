@@ -6,7 +6,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import useAlertStore from "useAlertStore" /* 5862 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6529 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7280 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14695 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14693 */;
 import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 19349 */;
 import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 19352 */;
 import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 19353 */;

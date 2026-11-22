@@ -2,12 +2,13 @@
 
 // Module 17180 (PhoenixLaunchState)
 import LoggerDefault from "Logger" /* 3 */;
+import LaunchClient2 from "LaunchClient" /* 17179 */;
 import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17181 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
-let closure_9 = async function _readPhoenixLaunchState() {
+require = fn;
+let closure_8 = async function _readPhoenixLaunchState() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -49,8 +50,8 @@ let closure_9 = async function _readPhoenixLaunchState() {
         if (1 === tmp7) {
           c3 = 0;
           closure_128_3 = closure_2;
-          closure_129_8 = null;
-          closure_129_6.error("Failed to read the launch client", closure_128_3);
+          closure_129_7 = null;
+          closure_129_5.error("Failed to read the launch client", closure_128_3);
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
@@ -58,7 +59,7 @@ let closure_9 = async function _readPhoenixLaunchState() {
           closure_128_0 = value;
           hasPhoenix2 = closure_128_0.hasPhoenix;
           client = closure_128_0.client;
-          closure_129_0(closure_129_2[5]).batchUpdates(() => state.setState({ hasPhoenix, shouldLaunchPhoenix: closure_1_2 === c5 }));
+          closure_129_0(closure_129_2[5]).batchUpdates(() => state.setState({ hasPhoenix, shouldLaunchPhoenix: closure_1_2 === closure_0(closure_2[6]).LaunchClient.PHOENIX }));
           c3 = 0;
           const obj = closure_129_0(closure_129_2[5]);
         }
@@ -79,7 +80,32 @@ let closure_9 = async function _readPhoenixLaunchState() {
     }
   }
 };
-let closure_10 = async function _setShouldLaunchPhoenix(arg0) {
+function storeLaunchClient() {
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_10 = async function _storeLaunchClient() {
+  closure_2 = tmp5;
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  if (null == NativePhoenixLaunchModuleDefault) {
+    return false;
+  }
+  await NativePhoenixLaunchModuleDefault.setClient(closure_0);
+  closure_129_1 = value;
+  if (closure_129_1) {
+    closure_130_0(closure_130_2[5]).batchUpdates(() => state.setState({ shouldLaunchPhoenix: closure_1_0 === closure_0(closure_2[6]).LaunchClient.PHOENIX }));
+    closure_130_0(closure_130_2[5]);
+  }
+  return closure_129_1;
+};
+let closure_11 = async function _setShouldLaunchPhoenix(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -106,65 +132,59 @@ let closure_10 = async function _setShouldLaunchPhoenix(arg0) {
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
-          closure_129_0 = shouldLaunchPhoenix;
-          if (null != NativePhoenixLaunchModuleDefault) {
-            c4 = 1;
-            let str = "legacy";
-            if (shouldLaunchPhoenix) {
-              str = phoenix;
-            }
-            c5 = 2;
-            c6 = 1;
-            const obj4 = { value: NativePhoenixLaunchModuleDefault.setClient(str), done: false };
-            return obj4;
+          c4 = 1;
+          let tmp16 = storeLaunchClient;
+          const LaunchClient = LaunchClient2.LaunchClient;
+          if (closure_0) {
+            let LEGACY = LaunchClient.PHOENIX;
+          } else {
+            LEGACY = LaunchClient.LEGACY;
           }
+          tmp16 = tmp16(LEGACY);
+          c5 = 2;
+          c6 = 1;
         }
       } else {
         if (1 === tmp7) {
           c4 = 0;
-          closure_129_1 = closure_3;
-          closure_130_6.error("Failed to set the launch client", closure_129_1);
+          closure_129_0 = closure_3;
+          closure_130_5.error("Failed to set the launch client", closure_129_0);
+          c6 = 3;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          if (value) {
-            closure_130_0(closure_130_2[5]).batchUpdates(() => state.setState({ shouldLaunchPhoenix }));
-            const obj = closure_130_0(closure_130_2[5]);
-          }
           c4 = 0;
         }
         c4 = 0;
         c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj = { value, done: true };
+        return obj;
       }
-      c6 = 3;
-    } catch (tmp21) {
-      closure_3 = tmp21;
+    } catch (tmp19) {
+      closure_3 = tmp19;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp21;
+        throw tmp19;
       } else {
         c5 = tmp;
       }
     }
   }
 };
-const phoenix = "phoenix";
-let closure_6 = new LoggerDefault("PhoenixLaunchState");
+let closure_5 = new LoggerDefault("PhoenixLaunchState");
 const identity = fn(1257);
-let closure_7 = identity.createWithEqualityFn(() => ({ hasPhoenix: false, shouldLaunchPhoenix: false }));
-let c8 = null;
+let closure_6 = identity.createWithEqualityFn(() => ({ hasPhoenix: false, shouldLaunchPhoenix: false }));
+let c7 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/phoenix_launch/native/PhoenixLaunchState.tsx");
 
 export function useIsPhoenixInstalled() {
   const effect = noop.useEffect(() => {
-    if (closure_8 == null) {
-      closure_8 = (function readPhoenixLaunchState() {
+    if (closure_7 == null) {
+      closure_7 = (function readPhoenixLaunchState() {
         const self = this;
-        const apply = closure_1_9.apply;
+        const apply = closure_1_8.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -174,14 +194,15 @@ export function useIsPhoenixInstalled() {
       })();
     }
   }, []);
-  return closure_7((hasPhoenix) => hasPhoenix.hasPhoenix);
+  return closure_6((hasPhoenix) => hasPhoenix.hasPhoenix);
 }
 export function useShouldLaunchPhoenix() {
-  return closure_7((shouldLaunchPhoenix) => shouldLaunchPhoenix.shouldLaunchPhoenix);
+  return closure_6((shouldLaunchPhoenix) => shouldLaunchPhoenix.shouldLaunchPhoenix);
 }
+export { storeLaunchClient };
 export function setShouldLaunchPhoenix() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

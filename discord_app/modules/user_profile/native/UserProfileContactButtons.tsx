@@ -1,6 +1,6 @@
-// === Module 14635: UserProfileContactButtons ===
+// === Module 14633: UserProfileContactButtons ===
 
-// Module 14635 (UserProfileContactButtons)
+// Module 14633 (UserProfileContactButtons)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
@@ -9,7 +9,7 @@ import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7740 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 10247 */;
 import navigateToLastChannelDefault from "navigateToLastChannel" /* 12108 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 14376 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 14374 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 
@@ -47,8 +47,8 @@ function FriendRequestButton(user) {
   dependencyMap = { location: newestAnalyticsLocation };
   let obj = user(8135);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14526).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14526);
+  const gameFriendsForUser = user(14524).useGameFriendsForUser(user.id);
+  const tmp3Result = user(14524);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -61,7 +61,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(14636).UserClockIcon;
+          let UserPlusIcon = tmp3(14634).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(5603).UserPlusIcon;
         }

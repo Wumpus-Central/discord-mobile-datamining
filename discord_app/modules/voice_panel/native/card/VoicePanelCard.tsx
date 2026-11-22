@@ -1119,7 +1119,7 @@ function AnimatedWrapper(arg0) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const Pressable = get_ActivityIndicator.Pressable;
-const StreamVolumeMovedStore = fn(14506);
+const StreamVolumeMovedStore = fn(14504);
 ({ clearStreamVolumeMovedHint: closure_11, consumeStreamVolumeMovedHint: closure_12 } = StreamVolumeMovedStore);
 const VoicePanelConstants = fn(11750);
 ({ VoicePanelCTACard: map1, VoicePanelModes: closure_14, MODE_CHANGE_PHYSICS: closure_15, SPEAKING_PHYSICS: closure_16, VoicePanelCardItemType: closure_17 } = VoicePanelConstants);
@@ -1489,7 +1489,7 @@ let closure_48 = { code: "(function VoicePanelCardTsx10(){let[focused]=this.__cl
 let closure_49 = { code: "(function VoicePanelCardTsx11(focusedId,previous){let[scheduleOnRN,handleFocusedParticipantChange]=this.__closure;if(focusedId===previous)return;scheduleOnRN(handleFocusedParticipantChange,focusedId);})" };
 let closure_50 = { code: "(function VoicePanelCardTsx12(){let[mode,focused,sharedTransitionState]=this.__closure;return{mode:mode.get(),focused:focused.get(),transitionState:sharedTransitionState.get()};})" };
 let closure_51 = { code: "(function VoicePanelCardTsx13(props,previous){let[cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,scheduleOnRN,cleanUp,id]=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{scheduleOnRN(cleanUp);}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}})" };
-let closure_52 = { isSelf: false, hasVideo: false, user: { id: "r" } };
+let closure_52 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
 let items = [{ code: "(function layoutTransitionFunction_VoicePanelCardTsx14(values,physics,disableAnimation=false){let[withSpring]=this.__closure;const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5514).withSpring];
 let closure_129_0;
 [tmp14, tmp15] = items;

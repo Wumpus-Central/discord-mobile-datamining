@@ -23,7 +23,7 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   const intl2 = channel(1112).intl;
   obj2.subLabel = intl2.string(channel(1112).t.PDUCIN);
   const tmp2 = analyticsSection(7324);
-  obj2.icon = jsx(channel(7057).TableRowIcon, { IconComponent: channel(15054).ChannelListMagnifyingGlassIcon });
+  obj2.icon = jsx(channel(7057).TableRowIcon, { IconComponent: channel(15052).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
   obj.children = jsx(channel(7045).TableRow, { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true });
   return <tmp2 style={channel.style}>{null}</tmp2>;

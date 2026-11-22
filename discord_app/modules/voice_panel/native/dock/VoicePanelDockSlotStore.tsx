@@ -1,6 +1,6 @@
-// === Module 13312: VoicePanelDockSlotStore ===
+// === Module 13310: VoicePanelDockSlotStore ===
 
-// Module 13312 (VoicePanelDockSlotStore)
+// Module 13310 (VoicePanelDockSlotStore)
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
 

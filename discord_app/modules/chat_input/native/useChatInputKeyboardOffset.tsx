@@ -1,6 +1,6 @@
-// === Module 13303: useChatInputKeyboardOffset ===
+// === Module 13301: useChatInputKeyboardOffset ===
 
-// Module 13303 (useChatInputKeyboardOffset)
+// Module 13301 (useChatInputKeyboardOffset)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;

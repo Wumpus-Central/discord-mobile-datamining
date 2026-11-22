@@ -8,7 +8,7 @@ import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5574 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 10364 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 11125 */;
 import BellZIcon from "BellZIcon" /* 11701 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 16723 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 16721 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;

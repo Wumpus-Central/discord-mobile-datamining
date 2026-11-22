@@ -1,6 +1,6 @@
-// === Module 19609: useInterestPickerCatalog ===
+// === Module 19605: useInterestPickerCatalog ===
 
-// Module 19609 (useInterestPickerCatalog)
+// Module 19605 (useInterestPickerCatalog)
 import InterestPickerCatalogs from "InterestPickerCatalogs" /* 17833 */;
 import noop from "module_19" /* 19 */;
 

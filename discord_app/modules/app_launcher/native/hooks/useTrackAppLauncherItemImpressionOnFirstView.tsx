@@ -1,6 +1,6 @@
-// === Module 12970: useTrackAppLauncherItemImpressionOnFirstView ===
+// === Module 12968: useTrackAppLauncherItemImpressionOnFirstView ===
 
-// Module 12970 (useTrackAppLauncherItemImpressionOnFirstView)
+// Module 12968 (useTrackAppLauncherItemImpressionOnFirstView)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import useTrackImpression from "useTrackImpression" /* 5930 */;
 import noop from "module_19" /* 19 */;

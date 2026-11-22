@@ -1,9 +1,9 @@
-// === Module 13772: conjureHomeProjectState ===
+// === Module 13770: conjureHomeProjectState ===
 
-// Module 13772 (conjureHomeProjectState)
+// Module 13770 (conjureHomeProjectState)
 import conjureUnread from "conjureUnread" /* 6935 */;
 import conjureProjectMute from "conjureProjectMute" /* 6936 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 12312 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 12319 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 import ReadStateStore from "ReadStateStore" /* 6619 */;
 import ConjureChatStore from "ConjureChatStore" /* 6925 */;

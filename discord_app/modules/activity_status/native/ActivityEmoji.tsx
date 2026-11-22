@@ -1,6 +1,6 @@
-// === Module 13527: ActivityEmoji ===
+// === Module 13525: ActivityEmoji ===
 
-// Module 13527 (ActivityEmoji)
+// Module 13525 (ActivityEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import EmojiDefault from "Emoji" /* 7496 */;
 import noop from "module_19" /* 19 */;

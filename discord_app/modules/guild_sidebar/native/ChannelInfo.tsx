@@ -2,8 +2,8 @@
 
 // Module 17745 (ChannelInfo)
 import StageMediaHooks from "StageMediaHooks" /* 6533 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12929 */;
-import Badges from "Badges" /* 14464 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12927 */;
+import Badges from "Badges" /* 14462 */;
 import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17638 */;
 import showChannelBadgeDefault from "showChannelBadge" /* 17746 */;
 import ChannelBadgeDefault from "ChannelBadge" /* 17747 */;

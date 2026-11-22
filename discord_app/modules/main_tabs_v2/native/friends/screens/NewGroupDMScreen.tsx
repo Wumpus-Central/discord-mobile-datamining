@@ -13,7 +13,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15034 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15032 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -189,7 +189,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(12199)(closure_128_3);
+                            v3(12206)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }

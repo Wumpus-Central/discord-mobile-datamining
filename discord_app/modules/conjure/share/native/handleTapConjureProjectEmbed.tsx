@@ -1,9 +1,9 @@
-// === Module 12275: handleTapConjureProjectEmbed ===
+// === Module 12282: handleTapConjureProjectEmbed ===
 
-// Module 12275 (handleTapConjureProjectEmbed)
+// Module 12282 (handleTapConjureProjectEmbed)
 import openFrameDefault from "openFrame" /* 10688 */;
 import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11973 */;
-import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12276 */;
+import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11970 */;

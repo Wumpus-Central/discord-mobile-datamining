@@ -1,6 +1,6 @@
-// === Module 13245: useEventsButtonProps ===
+// === Module 13243: useEventsButtonProps ===
 
-// Module 13245 (useEventsButtonProps)
+// Module 13243 (useEventsButtonProps)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7286 */;
@@ -41,7 +41,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(13246, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
+    obj.openLazy(asyncRequireImpl(13244, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1112).intl;
@@ -51,13 +51,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1112).intl;
     name = intl.string(tmp(1112).t.tlopTM);
   }
-  let mode = tmp(13250).ChannelModes.DEFAULT;
+  let mode = tmp(13248).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(13250).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(13248).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

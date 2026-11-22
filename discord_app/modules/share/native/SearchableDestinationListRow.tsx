@@ -35,7 +35,7 @@ export default function SearchableDestinationListRow(result) {
       const merged2 = Object.assign(merged);
       obj2.channel = record;
       obj2.onPress = fn;
-      return jsx(onPressDestination(13842), {});
+      return jsx(onPressDestination(13840), {});
     } else {
       if (tmp2(10063).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
         if (tmp2(10063).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
@@ -46,7 +46,7 @@ export default function SearchableDestinationListRow(result) {
       const merged3 = Object.assign(merged);
       obj3.channel = record;
       obj3.onPress = fn;
-      return jsx(onPressDestination(13844), {});
+      return jsx(onPressDestination(13842), {});
     }
   }
 };

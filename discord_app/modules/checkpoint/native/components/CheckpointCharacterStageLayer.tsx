@@ -1,9 +1,9 @@
-// === Module 12542: CheckpointCharacterStageLayer ===
+// === Module 12540: CheckpointCharacterStageLayer ===
 
-// Module 12542 (CheckpointCharacterStageLayer)
+// Module 12540 (CheckpointCharacterStageLayer)
 import usePrevious from "usePrevious" /* 6417 */;
-import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12543 */;
-import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 12544 */;
+import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12541 */;
+import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 12542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

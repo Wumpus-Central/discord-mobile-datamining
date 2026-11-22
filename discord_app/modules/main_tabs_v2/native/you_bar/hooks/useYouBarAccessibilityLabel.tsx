@@ -3,10 +3,10 @@
 // Module 17948 (useYouBarAccessibilityLabel)
 import util from "util" /* 1112 */;
 import UserUtils from "UserUtils" /* 4969 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13511 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 13512 */;
-import isGameActivityDefault from "isGameActivity" /* 13518 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 13520 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13509 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 13510 */;
+import isGameActivityDefault from "isGameActivity" /* 13516 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 13518 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import PermissionStore from "PermissionStore" /* 4845 */;

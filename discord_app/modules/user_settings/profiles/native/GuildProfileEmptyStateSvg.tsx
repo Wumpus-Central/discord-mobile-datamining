@@ -1,6 +1,6 @@
-// === Module 15963: GuildProfileEmptyStateSvg ===
+// === Module 15961: GuildProfileEmptyStateSvg ===
 
-// Module 15963 (GuildProfileEmptyStateSvg)
+// Module 15961 (GuildProfileEmptyStateSvg)
 import inlineStyles from "inlineStyles" /* 7865 */;
 import noop from "module_19" /* 19 */;
 

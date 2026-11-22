@@ -1,6 +1,6 @@
-// === Module 14239: OrbCheckoutModalComponents ===
+// === Module 14237: OrbCheckoutModalComponents ===
 
-// Module 14239 (OrbCheckoutModalComponents)
+// Module 14237 (OrbCheckoutModalComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import shared from "shared" /* 4920 */;
@@ -12,10 +12,10 @@ import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6859 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7225 */;
 import OrbsIcon from "OrbsIcon" /* 8958 */;
 import SKUPreviewDefault from "SKUPreview" /* 8980 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13911 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13913 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14237 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14241 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13909 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13911 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14235 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14239 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8075 */;
 import SKUStore from "SKUStore" /* 6674 */;
@@ -78,7 +78,7 @@ export function OrbCheckoutOrderSummary(skuId) {
   if (obj.useOrbCheckoutModalContext().isOrdersCheckout) {
     const tmp4 = orbPriceAmount;
   }
-  obj = skuId(14237);
+  obj = skuId(14235);
   items = [SKUStore];
   const items1 = [skuId];
   const stateFromStores = skuId(563).useStateFromStores(items, () => SKUStore.get(skuId), items1);
@@ -95,7 +95,7 @@ export function OrbCheckoutOrderSummary(skuId) {
     tmp8 = isFractionalPremiumSku(skuId);
   }
   const tmp2Result3 = skuId(563);
-  const mobileCheckoutFlow = skuId(14240).getMobileCheckoutFlow({ sku: stateFromStores, product: stateFromStores1, usesCollectiblesDetails: tmp8 });
+  const mobileCheckoutFlow = skuId(14238).getMobileCheckoutFlow({ sku: stateFromStores, product: stateFromStores1, usesCollectiblesDetails: tmp8 });
   const obj2 = { style: tmp.topRowWrapper, children: null };
   const obj3 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
   const intl = tmp2(1112).intl;
@@ -145,7 +145,7 @@ export function OrbCheckoutPaymentSourceDetails(orbAmount) {
 }
 export function OrbCheckoutLegalFinePrint() {
   const tmp = closure_12();
-  skuId = skuId(14237).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(14235).useOrbCheckoutModalContext().skuId;
   items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_10(skuId(5504).Text, { style: tmp.disclaimer, variant: "footnote/normal", color: "interactive-text-active", children: memo });

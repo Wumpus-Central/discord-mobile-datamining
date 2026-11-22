@@ -15,7 +15,7 @@ import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9749
 import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9750 */;
 import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9751 */;
 import GuildProfileGamesDefault from "GuildProfileGames" /* 9764 */;
-import GuildProfileTraitsDefault from "GuildProfileTraits" /* 13809 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 13807 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
 

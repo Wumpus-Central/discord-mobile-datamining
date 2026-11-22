@@ -1,6 +1,6 @@
-// === Module 15396: WarningCircle ===
+// === Module 15394: WarningCircle ===
 
-// Module 15396 (WarningCircle)
+// Module 15394 (WarningCircle)
 import inlineStyles from "inlineStyles" /* 7865 */;
 import noop from "module_19" /* 19 */;
 

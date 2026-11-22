@@ -1,6 +1,6 @@
-// === Module 16544: VideoQuestModalContentCompleted ===
+// === Module 16542: VideoQuestModalContentCompleted ===
 
-// Module 16544 (VideoQuestModalContentCompleted)
+// Module 16542 (VideoQuestModalContentCompleted)
 import nativeDefault from "native" /* 575 */;
 import QuestTypes from "QuestTypes" /* 6561 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
@@ -8,8 +8,8 @@ import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessA
 import showShareActionSheet from "showShareActionSheet" /* 9718 */;
 import AssetUtils from "AssetUtils" /* 9972 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9982 */;
-import VideoQuestModalCloseButtonDefault from "VideoQuestModalCloseButton" /* 16534 */;
-import VideoQuestModalRewardDefault from "VideoQuestModalReward" /* 16535 */;
+import VideoQuestModalCloseButtonDefault from "VideoQuestModalCloseButton" /* 16532 */;
+import VideoQuestModalRewardDefault from "VideoQuestModalReward" /* 16533 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,10 +23,10 @@ let closure_9 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: fals
 const createStyles = fn(4913);
 let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGrow: 1, flexShrink: 1 }, closeButton: { opacity: 0.5 }, scroll: { flexGrow: 1, flexShrink: 1 }, scrollContent: { flexGrow: 1 }, content: { padding: nativeDefault.space.PX_16 }, contentRewardsAnimatedWrapper: { flexGrow: 1, flexShrink: 0 }, contentRewardsWrapper: null, contentRewards: null, contentRewardsCopy: null, contentEndCardHeader: null, contentEndCardHeaderCopy: null, contentEndCard: null, image: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
-obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(16518).COMPLETION_GLOW_CLEARANCE };
+obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(16516).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(16518).COMPLETION_GLOW_CLEARANCE };
+let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(16516).COMPLETION_GLOW_CLEARANCE };
 obj.contentEndCardHeader = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentEndCardHeaderCopy = { flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
@@ -110,7 +110,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const layoutEffect = obj2.useLayoutEffect(() => {
     _undefined(_undefined3[17]).applyOrientationLock("PORTRAIT");
   }, []);
-  const height = tmp5(10598)(obj2.useContext(tmp2(16476).QuestDockGestureContext).windowDimensions).height;
+  const height = tmp5(10598)(obj2.useContext(tmp2(16474).QuestDockGestureContext).windowDimensions).height;
   let str = "md";
   if (height >= 760) {
     let str2 = "lg";
@@ -122,9 +122,9 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const tmp2Result7 = require("utils/QuestUtils");
   ({ height: height2, ref, onLayout } = useMeasuredLayoutDefault());
   if (height2 == null) {
-    height2 = tmp2(16518).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
+    height2 = tmp2(16516).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
   }
-  const sum = height2 + tmp2(16518).COMPLETION_GLOW_CLEARANCE;
+  const sum = height2 + tmp2(16516).COMPLETION_GLOW_CLEARANCE;
   const sum1 = sum + tmp5(575).space.PX_16;
   const obj7 = { align: "center", direction: "horizontal", justify: "space-between", style: tmp.content, children: null };
   const obj8 = { variant: "heading-xs/semibold", color: "text-subtle", style: tmp.headerContentCopy, children: null };
@@ -156,7 +156,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         obj14.text = intl3.string(tmp2(1112).t.cfY4PE);
         let tmp5Result;
         if (isQuestAccessSuspended) {
-          tmp5Result = tmp5(16504);
+          tmp5Result = tmp5(16502);
         }
         obj14.onPressDisabled = tmp5Result;
         tmp28Result = closure_7(tmp2(5511).Button, obj14);

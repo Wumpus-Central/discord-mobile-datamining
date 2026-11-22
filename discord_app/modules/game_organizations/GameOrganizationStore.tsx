@@ -1,6 +1,6 @@
-// === Module 15125: GameOrganizationStore ===
+// === Module 15123: GameOrganizationStore ===
 
-// Module 15125 (GameOrganizationStore)
+// Module 15123 (GameOrganizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GameOrganizationModels from "GameOrganizationModels" /* 11897 */;

@@ -1,7 +1,7 @@
-// === Module 14570: WidgetEmptyStateSuggestionUtils ===
+// === Module 14568: WidgetEmptyStateSuggestionUtils ===
 
-// Module 14570 (WidgetEmptyStateSuggestionUtils)
-import ApplicationWidgetConstants from "ApplicationWidgetConstants" /* 14571 */;
+// Module 14568 (WidgetEmptyStateSuggestionUtils)
+import ApplicationWidgetConstants from "ApplicationWidgetConstants" /* 14569 */;
 import size from "module_2" /* 2 */;
 
 ({ MARVEL_RIVALS_APPLICATION_ID: c2, WUTHERING_WAVES_APPLICATION_ID: c3 } = ApplicationWidgetConstants);

@@ -1,6 +1,6 @@
-// === Module 19887: GuildSettingsModalCommunity ===
+// === Module 19884: GuildSettingsModalCommunity ===
 
-// Module 19887 (GuildSettingsModalCommunity)
+// Module 19884 (GuildSettingsModalCommunity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;

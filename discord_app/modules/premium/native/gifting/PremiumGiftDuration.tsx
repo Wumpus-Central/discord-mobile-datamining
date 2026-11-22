@@ -1,6 +1,6 @@
-// === Module 13945: PremiumGiftDuration ===
+// === Module 13943: PremiumGiftDuration ===
 
-// Module 13945 (PremiumGiftDuration)
+// Module 13943 (PremiumGiftDuration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4975 */;

@@ -7,7 +7,7 @@ import PermissionStore from "PermissionStore" /* 4845 */;
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(12401).AutomodTriggerType;
+const AutomodTriggerType = fn(12408).AutomodTriggerType;
 const Constants = fn(1071);
 ({ GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);

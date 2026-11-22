@@ -1,6 +1,6 @@
-// === Module 12489: onTapCheckpointCard ===
+// === Module 12496: onTapCheckpointCard ===
 
-// Module 12489 (onTapCheckpointCard)
+// Module 12496 (onTapCheckpointCard)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 

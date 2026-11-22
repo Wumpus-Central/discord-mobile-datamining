@@ -1,11 +1,11 @@
-// === Module 20012: GuildSettingsRoleSubscriptionContainer ===
+// === Module 20009: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 20012 (GuildSettingsRoleSubscriptionContainer)
-import ErrorBlockDefault from "ErrorBlock" /* 13085 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16618 */;
-import WarningNoticeDefault from "WarningNotice" /* 19937 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 19987 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20004 */;
+// Module 20009 (GuildSettingsRoleSubscriptionContainer)
+import ErrorBlockDefault from "ErrorBlock" /* 13083 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16616 */;
+import WarningNoticeDefault from "WarningNotice" /* 19934 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 19984 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20001 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
 

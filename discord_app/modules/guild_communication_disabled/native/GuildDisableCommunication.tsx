@@ -1,6 +1,6 @@
-// === Module 12372: GuildDisableCommunication ===
+// === Module 12379: GuildDisableCommunication ===
 
-// Module 12372 (GuildDisableCommunication)
+// Module 12379 (GuildDisableCommunication)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -116,7 +116,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(12373);
+            const obj4 = tmp4(12380);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };

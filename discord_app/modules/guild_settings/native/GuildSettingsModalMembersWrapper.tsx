@@ -1,6 +1,6 @@
-// === Module 19881: GuildSettingsModalMembersWrapper ===
+// === Module 19878: GuildSettingsModalMembersWrapper ===
 
-// Module 19881 (GuildSettingsModalMembersWrapper)
+// Module 19878 (GuildSettingsModalMembersWrapper)
 import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 6884 */;
 import noop from "module_19" /* 19 */;
 

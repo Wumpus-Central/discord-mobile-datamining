@@ -1,25 +1,25 @@
-// === Module 12875: ForumPostGridBody ===
+// === Module 12873: ForumPostGridBody ===
 
-// Module 12875 (ForumPostGridBody)
+// Module 12873 (ForumPostGridBody)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8621 */;
 import _modDef11660 from "module_11660" /* 11660 */;
-import _modDef12876 from "module_12876" /* 12876 */;
-import _modDef12877 from "module_12877" /* 12877 */;
-import ForumPostMedia from "ForumPostMedia" /* 12878 */;
+import _modDef12874 from "module_12874" /* 12874 */;
+import _modDef12875 from "module_12875" /* 12875 */;
+import ForumPostMedia from "ForumPostMedia" /* 12876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GIFIcon() {
   const tmp = closure_8();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12876, disableColor: true, style: closure_8().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12874, disableColor: true, style: closure_8().gifIcon });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12877, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12875, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
@@ -164,7 +164,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp14Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12882).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12880).ForumPostAppliedTagPills, obj5);
     tmp14Result = closure_6(View, obj4);
   }
   items6[1] = tmp14Result;

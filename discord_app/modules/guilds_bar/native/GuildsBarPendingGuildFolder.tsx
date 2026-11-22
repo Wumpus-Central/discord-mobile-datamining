@@ -1,7 +1,7 @@
 // === Module 17885: GuildsBarPendingGuildFolder ===
 
 // Module 17885 (GuildsBarPendingGuildFolder)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12274 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12281 */;
 import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 17865 */;
 import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17872 */;
 import noop from "module_19" /* 19 */;
@@ -55,7 +55,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
       const result1 = closure_1(6511).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: true, config: "/assets/images/platforms", externalChildren: 255, children: 255 };
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: true, config: "/assets/images/platforms", externalChildren: 24, children: 24 };
   const obj3 = id(1653);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
@@ -73,5 +73,5 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   }
   obj4.externalChildren = tmp8Result;
   obj4.children = jsx(id(10346).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: true, config: "/assets/images/platforms", externalChildren: 255, children: 255 });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: true, config: "/assets/images/platforms", externalChildren: 24, children: 24 });
 });

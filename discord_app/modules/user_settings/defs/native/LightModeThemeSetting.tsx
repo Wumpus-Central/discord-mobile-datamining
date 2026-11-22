@@ -1,9 +1,9 @@
-// === Module 16710: LightModeThemeSetting ===
+// === Module 16708: LightModeThemeSetting ===
 
-// Module 16710 (LightModeThemeSetting)
+// Module 16708 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16711 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16709 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
 require = fn;

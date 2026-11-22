@@ -14,7 +14,7 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 5924 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
 import useChatWidthDefault from "useChatWidth" /* 11952 */;
-import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13714 */;
+import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13712 */;
 import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17518 */;
 import getJankSurfaceName from "getJankSurfaceName" /* 17529 */;
 import ChannelDetailsDefault from "ChannelDetails" /* 18709 */;

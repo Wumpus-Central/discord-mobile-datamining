@@ -6,7 +6,7 @@ import QuestTypes from "QuestTypes" /* 6561 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9099 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10505 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 15854 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 15852 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ const Constants = fn(1071);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const EXPIRING_SOON_SHEET = fn(15854).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
+const EXPIRING_SOON_SHEET = fn(15852).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiringPromoSheet.tsx");
 

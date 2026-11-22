@@ -1,6 +1,6 @@
-// === Module 14328: getRemoteJoinFooterLabel ===
+// === Module 14326: getRemoteJoinFooterLabel ===
 
-// Module 14328 (getRemoteJoinFooterLabel)
+// Module 14326 (getRemoteJoinFooterLabel)
 import util from "util" /* 1112 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7074 */;
 import size from "module_2" /* 2 */;

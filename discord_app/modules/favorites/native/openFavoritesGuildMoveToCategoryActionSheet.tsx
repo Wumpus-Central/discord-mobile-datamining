@@ -1,6 +1,6 @@
-// === Module 13865: openFavoritesGuildMoveToCategoryActionSheet ===
+// === Module 13863: openFavoritesGuildMoveToCategoryActionSheet ===
 
-// Module 13865 (openFavoritesGuildMoveToCategoryActionSheet)
+// Module 13863 (openFavoritesGuildMoveToCategoryActionSheet)
 import Constants from "Constants" /* 1071 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 11219 */;
 import size from "module_2" /* 2 */;

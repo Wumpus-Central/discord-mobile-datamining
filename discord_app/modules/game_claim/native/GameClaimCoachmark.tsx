@@ -11,7 +11,7 @@ import Pressables from "Pressables" /* 7030 */;
 import Card from "Card" /* 7047 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10233 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12427 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12434 */;
 import GameClaimCardStack from "GameClaimCardStack" /* 17705 */;
 import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17706 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

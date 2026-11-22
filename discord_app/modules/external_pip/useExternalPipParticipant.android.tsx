@@ -5,7 +5,7 @@ import participantHasVideo from "participantHasVideo" /* 10739 */;
 import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19164 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15022 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15020 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
@@ -45,7 +45,7 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
 }
 const ParticipantTypes = fn(5563).ParticipantTypes;
 const VoicePanelModes = fn(11750).VoicePanelModes;
-let closure_9 = { participantType: "Path", selectedParticipantId: "text", selectedParticipantSpeaking: 0, selectedParticipantStreamId: null, selectedParticipantUserId: -1 };
+let closure_9 = { participantType: "Path", selectedParticipantId: "content", selectedParticipantSpeaking: 0, selectedParticipantStreamId: null, selectedParticipantUserId: -1 };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");

@@ -1,6 +1,6 @@
-// === Module 14586: UserProfileRecentActivityCard ===
+// === Module 14584: UserProfileRecentActivityCard ===
 
-// Module 14586 (UserProfileRecentActivityCard)
+// Module 14584 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
@@ -17,11 +17,11 @@ import utils from "utils" /* 8010 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8996 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9765 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9774 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14451 */;
-import BadgesAll from "Badges" /* 14464 */;
-import TrendingType from "TrendingType" /* 14469 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14476 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14477 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14449 */;
+import BadgesAll from "Badges" /* 14462 */;
+import TrendingType from "TrendingType" /* 14467 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14474 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14475 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -308,7 +308,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "r" };
+          obj8 = { title: "Array" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

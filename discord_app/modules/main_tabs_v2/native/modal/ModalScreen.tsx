@@ -118,6 +118,6 @@ export default function Modal(route) {
   const tmpResult = useTrackImpressionDefault;
   const tmp12Result = modal(1378);
   items4[1] = modal(1378).isIOS() && closure_9(modal(18406).PortalKeyboardRenderer, { portal: false });
-  obj6.children = closure_10(modal(15821).SafeAreaProvider, { children: items4 });
+  obj6.children = closure_10(modal(15819).SafeAreaProvider, { children: items4 });
   return closure_9(closure_6, obj6);
 };

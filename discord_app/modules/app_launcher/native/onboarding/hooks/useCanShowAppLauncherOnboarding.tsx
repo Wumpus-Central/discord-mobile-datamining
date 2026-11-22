@@ -1,14 +1,14 @@
-// === Module 12913: useCanShowAppLauncherOnboarding ===
+// === Module 12911: useCanShowAppLauncherOnboarding ===
 
-// Module 12913 (useCanShowAppLauncherOnboarding)
+// Module 12911 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
 import UserStore from "UserStore" /* 1386 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12914 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12915 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12912 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12913 */;
 
 const require = fn;
 const BuiltInSectionId = fn(5937).BuiltInSectionId;

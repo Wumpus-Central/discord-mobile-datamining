@@ -1,10 +1,10 @@
-// === Module 13193: GuildDirectoryRow ===
+// === Module 13191: GuildDirectoryRow ===
 
-// Module 13193 (GuildDirectoryRow)
+// Module 13191 (GuildDirectoryRow)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import GuildIconDefault from "GuildIcon" /* 7322 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13169 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

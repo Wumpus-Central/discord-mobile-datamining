@@ -1,6 +1,6 @@
-// === Module 13673: InviteError ===
+// === Module 13671: InviteError ===
 
-// Module 13673 (InviteError)
+// Module 13671 (InviteError)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -12,8 +12,8 @@ import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import GuildIcon from "GuildIcon" /* 7322 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 13676 */;
-import _modDef13677 from "module_13677" /* 13677 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 13674 */;
+import _modDef13675 from "module_13675" /* 13675 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -22,7 +22,7 @@ require = fn;
 function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_10();
-  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 13674 : 13675);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 13672 : 13673);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -80,7 +80,7 @@ function InviteDisabledError(onPressClose) {
     const obj4 = { children: null };
     const obj5 = { style: tmp.disabledView, children: null };
     const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef13677 };
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef13675 };
     items = [metroImportDefault(native.Icon, obj6), ];
     const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
     const obj3 = { id: null, icon: null, size: 64, canAnimate: false };

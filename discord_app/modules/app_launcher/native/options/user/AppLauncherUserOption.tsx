@@ -1,14 +1,14 @@
-// === Module 13058: AppLauncherUserOption ===
+// === Module 13056: AppLauncherUserOption ===
 
-// Module 13058 (AppLauncherUserOption)
+// Module 13056 (AppLauncherUserOption)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 13048 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 13051 */;
-import UsernameTextDefault from "UsernameText" /* 13056 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 13059 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 13046 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 13049 */;
+import UsernameTextDefault from "UsernameText" /* 13054 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 13057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -67,7 +67,7 @@ export default function AppLauncherUserOption(option) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(13059, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
+    obj2.openLazy(asyncRequireImpl(13057, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onUserPress(user) {
@@ -87,7 +87,7 @@ export default function AppLauncherUserOption(option) {
     const obj3 = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1186).AvatarSizes.REFRESH_MEDIUM_32 };
     let tmp9Result = tmp9(tmp2(1186).Avatar, obj3);
   } else {
-    const obj4 = { icon: tmp9(tmp2(13052).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    const obj4 = { icon: tmp9(tmp2(13050).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj4);
     const tmp10Result = AppLauncherOptionIconDefault;
   }

@@ -120,7 +120,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1112).intl;
   obj10.text = intl3.string(_modDef2920.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(12468).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj10.icon = closure_7(markAsDismissed(12475).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
   obj9.children = closure_7(markAsDismissed(5511).Button, obj10);
   items2[2] = closure_7(View, obj9);

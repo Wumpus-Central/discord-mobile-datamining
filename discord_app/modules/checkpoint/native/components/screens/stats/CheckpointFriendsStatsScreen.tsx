@@ -1,11 +1,11 @@
-// === Module 12773: CheckpointFriendsStatsScreen ===
+// === Module 12771: CheckpointFriendsStatsScreen ===
 
-// Module 12773 (CheckpointFriendsStatsScreen)
+// Module 12771 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -24,7 +24,7 @@ obj2.sidekick = { gap: nativeDefault.space.PX_32 };
 let obj4 = { gap: nativeDefault.space.PX_32 };
 obj2.sidekickDetails = { gap: nativeDefault.space.PX_24 };
 let obj5 = { gap: nativeDefault.space.PX_24 };
-obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12729).CHECKPOINT_WIDE_MAX_WIDTH };
+obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12727).CHECKPOINT_WIDE_MAX_WIDTH };
 obj2.wideScenePane = { width: "50%", alignSelf: "stretch", alignItems: "center", justifyContent: "center", paddingRight: PX_32 };
 obj2.wideCopy = { width: "50%", paddingLeft: PX_32, paddingVertical: fn(5969).CHECKPOINT_NAV_HEIGHT };
 obj2.wideTransition = { position: "absolute", top: 0, left: PX_32, right: 0, bottom: 0, justifyContent: "center" };
@@ -301,7 +301,7 @@ export default function CheckpointFriendsStatsScreen(arg0) {
       }
       let tmp35Result7 = tmp35Result6;
     } else {
-      const obj25 = { animationState, sidekickUser: null, firstUser: null, secondUser: null, twoFriends: null, isReducedMotion: null, artboardFrame: "disabled" };
+      const obj25 = { animationState, sidekickUser: null, firstUser: null, secondUser: null, twoFriends: null, isReducedMotion: null, artboardFrame: "add" };
       let user3;
       if (stateFromStores1 != null) {
         user3 = stateFromStores1.user;

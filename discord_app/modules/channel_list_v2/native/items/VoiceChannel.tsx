@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8009 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12929 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12927 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8320 */;

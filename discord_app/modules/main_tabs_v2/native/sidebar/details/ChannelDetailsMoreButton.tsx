@@ -3,7 +3,7 @@
 // Module 18839 (ChannelDetailsMoreButton)
 import _modDef8028 from "module_8028" /* 8028 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8564 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

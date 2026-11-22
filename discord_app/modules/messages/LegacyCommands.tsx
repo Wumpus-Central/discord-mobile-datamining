@@ -1,6 +1,6 @@
-// === Module 12865: LegacyCommands ===
+// === Module 12863: LegacyCommands ===
 
-// Module 12865 (LegacyCommands)
+// Module 12863 (LegacyCommands)
 import UserSettings from "UserSettings" /* 4738 */;
 import ReactionUtils from "ReactionUtils" /* 4857 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;

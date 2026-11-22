@@ -109,7 +109,7 @@ function ThinkingIndicator(line) {
   return closure_9(ref2, obj3);
 }
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(15222).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(15220).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4913);

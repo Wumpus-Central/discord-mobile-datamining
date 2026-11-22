@@ -3,8 +3,8 @@
 // Module 19363 (VoicePanelDrawerToggleButton)
 import nativeDefault from "native" /* 575 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12799 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 14194 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 14192 */;
 import useDrawerToggleDefault from "useDrawerToggle" /* 19333 */;
 import VoicePanelStyles from "VoicePanelStyles" /* 19346 */;
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19347 */;

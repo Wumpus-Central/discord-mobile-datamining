@@ -23,8 +23,8 @@ import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers
 import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 10427 */;
 import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11962 */;
 import MessagesHandlers from "MessagesHandlers" /* 11987 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12820 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 12821 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12818 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12819 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

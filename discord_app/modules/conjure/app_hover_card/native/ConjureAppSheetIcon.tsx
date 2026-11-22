@@ -1,6 +1,6 @@
-// === Module 12284: ConjureAppSheetIcon ===
+// === Module 12291: ConjureAppSheetIcon ===
 
-// Module 12284 (ConjureAppSheetIcon)
+// Module 12291 (ConjureAppSheetIcon)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import FastImageDefault from "FastImage" /* 5600 */;

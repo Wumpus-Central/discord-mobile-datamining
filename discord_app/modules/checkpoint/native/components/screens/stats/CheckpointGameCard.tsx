@@ -1,6 +1,6 @@
-// === Module 12769: CheckpointGameCard ===
+// === Module 12767: CheckpointGameCard ===
 
-// Module 12769 (CheckpointGameCard)
+// Module 12767 (CheckpointGameCard)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import Text_Text from "Text/Text" /* 5504 */;

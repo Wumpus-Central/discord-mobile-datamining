@@ -1,6 +1,6 @@
-// === Module 13747: convertRouteToNavigation ===
+// === Module 13745: convertRouteToNavigation ===
 
-// Module 13747 (convertRouteToNavigation)
+// Module 13745 (convertRouteToNavigation)
 import Constants from "Constants" /* 1071 */;
 import ChannelConstants from "ChannelConstants" /* 4769 */;
 import matchPathCompat from "matchPathCompat" /* 4951 */;
@@ -10,7 +10,7 @@ import RootNavigationRef from "RootNavigationRef" /* 5090 */;
 import useChatLayout from "useChatLayout" /* 5092 */;
 import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6657 */;
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 8578 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12290 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12297 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -103,7 +103,7 @@ export function convertRouteToNavigation(pathname) {
                   const tmpResult26 = NavigationRouteUtils;
                 }
                 if (tmp18) {
-                  const obj11 = { channelId, guildId, messageId, subRouteId: tmp15, replaceChannelAndFixRoot: "fill" };
+                  const obj11 = { channelId, guildId, messageId, subRouteId: tmp15, replaceChannelAndFixRoot: "fileBytes" };
                   NavigationRouteUtils.navigateToChannel(obj11);
                   const tmpResult27 = NavigationRouteUtils;
                 }

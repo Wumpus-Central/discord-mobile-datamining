@@ -63,8 +63,8 @@ export default noop.memo(function TextChannel(subtitle) {
   if (unread) {
     tmp12 = !flag;
   }
-  const tmp8ResultResult = arr4(16723)(channel, { unread: tmp12 });
-  const tmp8Result = arr4(16723);
+  const tmp8ResultResult = arr4(16721)(channel, { unread: tmp12 });
+  const tmp8Result = arr4(16721);
   const isChannelSpoilerGated = channel(6439).useIsChannelSpoilerGated(channel);
   const tmp2Result8 = channel(6439);
   const fontScale = channel(5519).useFontScale();
@@ -74,7 +74,7 @@ export default noop.memo(function TextChannel(subtitle) {
   const tmp17 = arr4(19134)();
   const tmp2Result10 = channel(504);
   ({ isSubscriptionGated, needSubscriptionToAccess } = arr4(5947)(channel.id));
-  arr4 = tmp8(12929)(channel);
+  arr4 = tmp8(12927)(channel);
   if (null != tmp8ResultResult) {
     if (!isChannelSpoilerGated) {
       const obj5 = { channel, message: tmp8ResultResult, color: "text-muted", muted: flag, layout: tmp2(5574).ChannelListLayoutTypes.COMPACT };

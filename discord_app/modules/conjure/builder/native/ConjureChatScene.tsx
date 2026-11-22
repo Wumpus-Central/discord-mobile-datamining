@@ -14,9 +14,9 @@ import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 6943 */;
 import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 6996 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 7101 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 12291 */;
-import useFrameBySurfaceDefault from "useFrameBySurface" /* 14355 */;
-import restartFrames from "restartFrames" /* 14362 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 12298 */;
+import useFrameBySurfaceDefault from "useFrameBySurface" /* 14353 */;
+import restartFrames from "restartFrames" /* 14360 */;
 import ConjureGlobalScreenContextDefault from "ConjureGlobalScreenContext" /* 18234 */;
 import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18235 */;
 import conjureStandaloneScenes from "conjureStandaloneScenes" /* 18240 */;
@@ -395,8 +395,8 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_130_16;
           obj7.onClose = function onClose() {
-            const result = c0(12299).repairConjureGuildHints(closure_1_4, closure_1_16);
-            const obj = c0(12299);
+            const result = c0(12306).repairConjureGuildHints(closure_1_4, closure_1_16);
+            const obj = c0(12306);
             result.finally(() => application(6933).getProject(closure_1_1)).catch(() => {
 
             });
@@ -637,7 +637,7 @@ export default function ConjureChatScene(guildId) {
       let fn;
       if (closure_20) {
         if (closure_26) {
-          fn = (color) => closure_1_16(closure_1_0(12799).ChevronSmallDownIcon, { size: "xs", color });
+          fn = (color) => closure_1_16(closure_1_0(12797).ChevronSmallDownIcon, { size: "xs", color });
         }
       }
       obj.renderTrailingIcon = fn;
@@ -753,7 +753,7 @@ export default function ConjureChatScene(guildId) {
         const obj8 = { text: null, icon: null };
         const intl2 = closure_0(1112).intl;
         obj8.text = intl2.string(projectId(4190).qqlUiW);
-        obj8.icon = closure_0(16489).UndoIcon;
+        obj8.icon = closure_0(16487).UndoIcon;
         projectId(5595).open("CONJURE_VERSION_RESTORING", obj8);
         c5 = 2;
         projectId(5595);
@@ -789,7 +789,7 @@ export default function ConjureChatScene(guildId) {
           const obj16 = { title: null };
           obj16.title = closure_0(18360).versionTitle(closure_130_0.subject).short;
           obj13.text = intl3.formatToPlainString(projectId(4190).Z4n6LX, obj16);
-          obj13.icon = closure_0(16489).UndoIcon;
+          obj13.icon = closure_0(16487).UndoIcon;
           projectId(5595).open("CONJURE_VERSION_RESTORED", obj13);
           closure_0(18360);
           projectId(5595);
@@ -985,7 +985,7 @@ export default function ConjureChatScene(guildId) {
         if (tmp105) {
           tmp137Result = null;
           if (setFrameSurface(stateFromStores)) {
-            const obj12 = { IconComponent: tmp(13866).PaperPlusIcon, onPress: callback3, accessibilityLabel: null };
+            const obj12 = { IconComponent: tmp(13864).PaperPlusIcon, onPress: callback3, accessibilityLabel: null };
             let intl2 = tmp(1112).intl;
             obj12.accessibilityLabel = intl2.string(tmp4(4190).XWgAfc);
             tmp137Result = tmp137(tmp4(18393), obj12);
@@ -1116,7 +1116,7 @@ export default function ConjureChatScene(guildId) {
       const obj29 = { projectId, transcriptTopInset: tmp11, onRestoreVersion: callback6, hidden: tmp66 };
       obj28.children = tmp137(tmp4(18415), obj29);
       obj27.children = tmp137(tmp(18312).ConjureFileMentionProjectContext.Provider, obj28);
-      obj26.children = tmp137(tmp(12298).ConjurePublishActionContext.Provider, obj27);
+      obj26.children = tmp137(tmp(12305).ConjurePublishActionContext.Provider, obj27);
       items49[2] = tmp137(tmp4(1653).View, obj26);
       obj21.children = items49;
       items48[3] = tmp132(availability, obj21);

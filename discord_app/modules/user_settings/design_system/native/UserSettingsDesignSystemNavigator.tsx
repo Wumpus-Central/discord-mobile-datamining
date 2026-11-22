@@ -13,8 +13,8 @@ import _mod7102 from "module_7102" /* 7102 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
 import ModalScreen from "ModalScreen" /* 7811 */;
 import ModalContent from "ModalContent" /* 7813 */;
-import ModalFooter from "ModalFooter" /* 12242 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 15286 */;
+import ModalFooter from "ModalFooter" /* 12249 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 15284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

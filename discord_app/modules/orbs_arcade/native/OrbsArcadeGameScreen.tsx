@@ -6,7 +6,7 @@ import Link from "Link" /* 1501 */;
 import leaveFrame from "leaveFrame" /* 6953 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6623 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16423 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16421 */;
 
 require = fn;
 const View = fn(17).View;

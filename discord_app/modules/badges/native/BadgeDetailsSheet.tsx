@@ -1,6 +1,6 @@
-// === Module 13990: BadgeDetailsSheet ===
+// === Module 13988: BadgeDetailsSheet ===
 
-// Module 13990 (BadgeDetailsSheet)
+// Module 13988 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import timing_timing from "timing/timing" /* 5123 */;
@@ -8,16 +8,16 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import Text_Text from "Text/Text" /* 5504 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13989 */;
-import BadgeUtils from "BadgeUtils" /* 13992 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14007 */;
-import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 14013 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13987 */;
+import BadgeUtils from "BadgeUtils" /* 13990 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14005 */;
+import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 14011 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import UserStore from "UserStore" /* 1386 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13991 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13989 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
 
 const _modDef1653 = _mod1653;

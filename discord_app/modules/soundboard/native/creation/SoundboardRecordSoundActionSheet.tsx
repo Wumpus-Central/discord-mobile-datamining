@@ -1,6 +1,6 @@
-// === Module 19801: SoundboardRecordSoundActionSheet ===
+// === Module 19798: SoundboardRecordSoundActionSheet ===
 
-// Module 19801 (SoundboardRecordSoundActionSheet)
+// Module 19798 (SoundboardRecordSoundActionSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -9,8 +9,8 @@ import components_Button_Button from "components/Button/Button" /* 5511 */;
 import ActionSheet from "ActionSheet" /* 7553 */;
 import useAccessibilityPressDefault from "useAccessibilityPress" /* 7784 */;
 import utils_TimeUtils from "utils/TimeUtils" /* 8492 */;
-import SoundboardRecordingWaveformDefault from "SoundboardRecordingWaveform" /* 19802 */;
-import showSoundboardSoundEditModalDefault from "showSoundboardSoundEditModal" /* 19803 */;
+import SoundboardRecordingWaveformDefault from "SoundboardRecordingWaveform" /* 19799 */;
+import showSoundboardSoundEditModalDefault from "showSoundboardSoundEditModal" /* 19800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -116,7 +116,7 @@ function stopSoundboardRecording(arg0, items, arg2) {
 }
 const View = fn(17).View;
 const NativePermissionTypes = fn(6496).NativePermissionTypes;
-const VoiceMessageConstants = fn(12826);
+const VoiceMessageConstants = fn(12824);
 ({ VOICE_RECORDING_MAX_DB: closure_9, VOICE_RECORDING_MIN_DURATION_MILLIS: closure_10, WAVEFORM_WAVE_MAX_VALUE: closure_11 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -459,7 +459,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
       c1 = false;
       mediaEngine = mediaEngine.getMediaEngine();
       mediaEngine.removeListener(guildId(5679).MediaEngineEvent.VoiceActivity, callback);
-      closure_2 = guildId(13121).generateBase64EncodedWaveform(items);
+      closure_2 = guildId(13119).generateBase64EncodedWaveform(items);
       new Promise((arg0) => {
         closure_0 = arg0;
         const reachedLimit = setTimeout(() => closure_0({ uri: "", durationSecs: 0, waveform, waveformLevels: items, reachedLimit }), 5000);
@@ -469,7 +469,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
           closure_0({ uri, durationSecs: arg1 / 1000, waveform, waveformLevels: items, reachedLimit });
         });
       });
-      const obj2 = guildId(13121);
+      const obj2 = guildId(13119);
     }
   }, items4);
   let tmp18 = !tmp3;

@@ -1,6 +1,6 @@
-// === Module 13410: useCalculatePowerupCardStatus ===
+// === Module 13408: useCalculatePowerupCardStatus ===
 
-// Module 13410 (useCalculatePowerupCardStatus)
+// Module 13408 (useCalculatePowerupCardStatus)
 import util from "util" /* 1112 */;
 import _modDef2856 from "module_2856" /* 2856 */;
 import noop from "module_19" /* 19 */;

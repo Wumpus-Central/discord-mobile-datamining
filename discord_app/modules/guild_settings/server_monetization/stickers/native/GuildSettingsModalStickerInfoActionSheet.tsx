@@ -1,7 +1,7 @@
-// === Module 19797: GuildSettingsModalStickerInfoActionSheet ===
+// === Module 19794: GuildSettingsModalStickerInfoActionSheet ===
 
-// Module 19797 (GuildSettingsModalStickerInfoActionSheet)
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 19789 */;
+// Module 19794 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 19786 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -191,12 +191,12 @@ export function useAuthWebsocket(callback, arg1) {
                     request.body = obj8;
                     const postResult = HTTP.post(request);
                     HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F141892 */ function() { ... });
-                      return /* F141893 */ function() { ... };
+                      closure_0 = closure_1_3(/* F141909 */ function() { ... });
+                      return /* F141910 */ function() { ... };
                     })()).catch(() => closure_1_11());
                     const nextPromise = HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F141892 */ function() { ... });
-                      return /* F141893 */ function() { ... };
+                      closure_0 = closure_1_3(/* F141909 */ function() { ... });
+                      return /* F141910 */ function() { ... };
                     })());
                   }
                   c4 = 3;

@@ -4,7 +4,7 @@
 import useAuthorizationApp from "useAuthorizationApp" /* 7523 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14993 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14991 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
 import ConsentStore from "ConsentStore" /* 6427 */;
 import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 19087 */;

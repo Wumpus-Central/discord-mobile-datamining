@@ -1,6 +1,6 @@
-// === Module 12296: conjurePreviewModes ===
+// === Module 12303: conjurePreviewModes ===
 
-// Module 12296 (conjurePreviewModes)
+// Module 12303 (conjurePreviewModes)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
 import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 6944 */;
 import size from "module_2" /* 2 */;

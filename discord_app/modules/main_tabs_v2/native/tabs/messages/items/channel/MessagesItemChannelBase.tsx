@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5646 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5651 */;
 import ReadStateStore from "ReadStateStore" /* 6619 */;
@@ -71,7 +71,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Array", activities: "analyticsLocations" };
+      obj3 = { status: "disabled", activities: "isArray" };
     }
     return obj3;
   });

@@ -1,13 +1,13 @@
-// === Module 19710: AssetChooser ===
+// === Module 19707: AssetChooser ===
 
-// Module 19710 (AssetChooser)
+// Module 19707 (AssetChooser)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import Pressables from "Pressables" /* 7030 */;
-import _modDef19711 from "module_19711" /* 19711 */;
-import _modDef19712 from "module_19712" /* 19712 */;
+import _modDef19708 from "module_19708" /* 19708 */;
+import _modDef19709 from "module_19709" /* 19709 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef19711;
+    tmp9Result = _modDef19708;
   }
   items = [metroImportDefault(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef19712 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19709 };
     obj4.children = metroImportDefault(FastImageDefault, obj5);
     tmp5Result = metroImportDefault(React4, obj4);
     const tmp9Result2 = FastImageDefault;

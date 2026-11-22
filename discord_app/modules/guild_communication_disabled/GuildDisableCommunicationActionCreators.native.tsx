@@ -1,6 +1,6 @@
-// === Module 12370: GuildDisableCommunicationActionCreators ===
+// === Module 12377: GuildDisableCommunicationActionCreators ===
 
-// Module 12370 (GuildDisableCommunicationActionCreators)
+// Module 12377 (GuildDisableCommunicationActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
@@ -17,14 +17,14 @@ export function openDisableCommunication(userId) {
   const user = UserStore.getUser(userId.userId);
   if (null != user) {
     const obj2 = { guildId, user, cancelButtonCallback };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12371, dependencyMap.paths), obj2);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12378, dependencyMap.paths), obj2);
   }
 }
 export function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(12374, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(12381, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

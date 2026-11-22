@@ -1,6 +1,6 @@
-// === Module 14210: ClearAfterOptionsActionSheet ===
+// === Module 14208: ClearAfterOptionsActionSheet ===
 
-// Module 14210 (ClearAfterOptionsActionSheet)
+// Module 14208 (ClearAfterOptionsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
@@ -41,7 +41,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   const intl2 = util.intl;
   obj3.title = intl2.string(util.t.E45wvP);
   obj3.defaultValue = initialValue;
-  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(14211)(value) }, value));
+  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(14209)(value) }, value));
   items = [closure_7(TableRadioGroup.TableRadioGroup, obj3), ];
   const obj4 = { style: tmp.buttonWrapper, children: null };
   const obj5 = {

@@ -1,6 +1,6 @@
-// === Module 12851: SlowModeIndicator ===
+// === Module 12849: SlowModeIndicator ===
 
-// Module 12851 (SlowModeIndicator)
+// Module 12849 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 8389 */;
 import _slicedToArray from "module_32" /* 32 */;

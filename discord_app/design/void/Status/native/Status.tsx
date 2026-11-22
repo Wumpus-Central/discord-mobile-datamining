@@ -1,21 +1,21 @@
-// === Module 15399: Status ===
+// === Module 15397: Status ===
 
-// Module 15399 (Status)
+// Module 15397 (Status)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import spring_spring from "spring/spring" /* 5514 */;
 import FastImageDefault from "FastImage" /* 5600 */;
-import EllipsisDefault from "Ellipsis" /* 15385 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15397 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15398 */;
+import EllipsisDefault from "Ellipsis" /* 15383 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15395 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15396 */;
+import _modDef15398 from "module_15398" /* 15398 */;
+import _modDef15399 from "module_15399" /* 15399 */;
 import _modDef15400 from "module_15400" /* 15400 */;
 import _modDef15401 from "module_15401" /* 15401 */;
 import _modDef15402 from "module_15402" /* 15402 */;
 import _modDef15403 from "module_15403" /* 15403 */;
 import _modDef15404 from "module_15404" /* 15404 */;
-import _modDef15405 from "module_15405" /* 15405 */;
-import _modDef15406 from "module_15406" /* 15406 */;
-import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 15407 */;
+import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 15405 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1187).STATUS_PADDING;
 const StatusTypes = fn(1071).StatusTypes;
-const ChannelAnimationConstants = fn(14490);
+const ChannelAnimationConstants = fn(14488);
 ({ TYPING_ENTERING: metroImportDefault, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -85,23 +85,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef15400;
+    let tmp4Result = _modDef15398;
   } else if (flag2) {
-    tmp4Result = _modDef15401;
+    tmp4Result = _modDef15399;
   } else if (flag) {
-    tmp4Result = _modDef15402;
+    tmp4Result = _modDef15400;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef15403;
+    tmp4Result = _modDef15401;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef15404;
+    tmp4Result = _modDef15402;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef15406;
+        tmp4Result = _modDef15404;
       }
     }
-    tmp4Result = _modDef15405;
+    tmp4Result = _modDef15403;
   }
   obj2.source = tmp4Result;
   obj.children = refs(FastImageDefault, obj2);
@@ -212,23 +212,23 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1653;
   if (streaming) {
-    let tmp3Result2 = _modDef15400;
+    let tmp3Result2 = _modDef15398;
   } else if (flag2) {
-    tmp3Result2 = _modDef15401;
+    tmp3Result2 = _modDef15399;
   } else if (flag) {
-    tmp3Result2 = _modDef15402;
+    tmp3Result2 = _modDef15400;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef15403;
+    tmp3Result2 = _modDef15401;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef15404;
+    tmp3Result2 = _modDef15402;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef15406;
+        tmp3Result2 = _modDef15404;
       }
     }
-    tmp3Result2 = _modDef15405;
+    tmp3Result2 = _modDef15403;
   }
   obj6.source = tmp3Result2;
   obj5.children = refs(FastImageDefault, obj6);

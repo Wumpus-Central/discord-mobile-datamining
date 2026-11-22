@@ -1,6 +1,6 @@
-// === Module 12782: CheckpointRecapCard ===
+// === Module 12780: CheckpointRecapCard ===
 
-// Module 12782 (CheckpointRecapCard)
+// Module 12780 (CheckpointRecapCard)
 import nativeDefault from "native" /* 575 */;
 import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6335 */;
 import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12506 */;

@@ -10,7 +10,7 @@ import Pressables from "Pressables" /* 7030 */;
 import ReactionIcon from "ReactionIcon" /* 9489 */;
 import PencilIcon from "PencilIcon" /* 11242 */;
 import _modDef11660 from "module_11660" /* 11660 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12162 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;

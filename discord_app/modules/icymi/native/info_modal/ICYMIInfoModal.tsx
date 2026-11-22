@@ -44,7 +44,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
           const intl = extendedOnboarding(1112).intl;
           obj.text = intl.string(extendedOnboarding(1112).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(15642).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(15640).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             closure_1_1(6429).pop();
           };
@@ -67,7 +67,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
           const intl = extendedOnboarding(1112).intl;
           obj.text = intl.string(extendedOnboarding(1112).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(15642).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(15640).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             closure_1_1(6429).pop();
           };
@@ -86,7 +86,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
       const intl = extendedOnboarding(1112).intl;
       obj.text = intl.string(extendedOnboarding(1112).t["5Wxrcd"]);
       obj.onPress = function onPress() {
-        const ICYMIAnalytics = extendedOnboarding(15642).ICYMIAnalytics;
+        const ICYMIAnalytics = extendedOnboarding(15640).ICYMIAnalytics;
         const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "guilds" });
         closure_1_1(6429).pop();
       };
@@ -104,7 +104,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     let obj2 = { screens: navigatorScreens, steps: tmp4, initialRouteName: null };
     let ICYMIInfoScreens = tmp(18106).ICYMIInfoScreens;
     obj2.initialRouteName = skipIntro ? ICYMIInfoScreens.TOPICS_CLOUD : ICYMIInfoScreens.DEFAULT;
-    jsx(tmp(12269).StepModal, { screens: navigatorScreens, steps: tmp4, initialRouteName: null });
+    jsx(tmp(12276).StepModal, { screens: navigatorScreens, steps: tmp4, initialRouteName: null });
   } else {
     let obj3 = { screens: navigatorScreens, initialRouteName: tmp(18106).ICYMIInfoScreens.DEFAULT };
     return jsx(tmp(12043).Modal, { screens: navigatorScreens, initialRouteName: tmp(18106).ICYMIInfoScreens.DEFAULT });

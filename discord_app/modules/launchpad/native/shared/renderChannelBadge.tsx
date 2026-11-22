@@ -5,7 +5,7 @@ import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import NumberUtils from "NumberUtils" /* 2025 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import NewBadgeDefault from "NewBadge" /* 13152 */;
+import NewBadgeDefault from "NewBadge" /* 13150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -6,7 +6,7 @@ import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import _modDef10947 from "module_10947" /* 10947 */;
-import AppIconUtils from "AppIconUtils" /* 14049 */;
+import AppIconUtils from "AppIconUtils" /* 14047 */;
 import _modDef19058 from "module_19058" /* 19058 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;

@@ -1,15 +1,15 @@
-// === Module 15952: EditableTileAvatarButton ===
+// === Module 15950: EditableTileAvatarButton ===
 
-// Module 15952 (EditableTileAvatarButton)
+// Module 15950 (EditableTileAvatarButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import RecentAvatarUtils from "RecentAvatarUtils" /* 8912 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15940 */;
-import SpinAnimationDefault from "SpinAnimation" /* 15946 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15951 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15938 */;
+import SpinAnimationDefault from "SpinAnimation" /* 15944 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15949 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8132 */;

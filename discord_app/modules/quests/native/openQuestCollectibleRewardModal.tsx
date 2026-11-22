@@ -1,6 +1,6 @@
-// === Module 13766: openQuestCollectibleRewardModal ===
+// === Module 13764: openQuestCollectibleRewardModal ===
 
-// Module 13766 (openQuestCollectibleRewardModal)
+// Module 13764 (openQuestCollectibleRewardModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;

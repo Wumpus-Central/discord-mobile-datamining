@@ -9,14 +9,14 @@ import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5085 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7373 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8564 */;
-import _modDef13492 from "module_13492" /* 13492 */;
+import _modDef13490 from "module_13490" /* 13490 */;
 import AppFrameContainerDefault from "AppFrameContainer" /* 18888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function RequestsSettingsModalButton(onPress) {
   const obj = { isModal: true, children: null };
-  const obj2 = { source: _modDef13492, onPress: onPress.onPress, accessibilityLabel: null };
+  const obj2 = { source: _modDef13490, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = React4(HeaderShared.HeaderIconButton, obj2);

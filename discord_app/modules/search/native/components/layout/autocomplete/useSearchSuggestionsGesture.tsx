@@ -3,7 +3,7 @@
 // Module 18710 (useSearchSuggestionsGesture)
 import _mod1653 from "module_1653" /* 1653 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13199 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

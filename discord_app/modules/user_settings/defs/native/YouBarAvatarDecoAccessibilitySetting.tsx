@@ -1,9 +1,9 @@
-// === Module 16817: YouBarAvatarDecoAccessibilitySetting ===
+// === Module 16815: YouBarAvatarDecoAccessibilitySetting ===
 
-// Module 16817 (YouBarAvatarDecoAccessibilitySetting)
+// Module 16815 (YouBarAvatarDecoAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15647 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15645 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
 require = fn;

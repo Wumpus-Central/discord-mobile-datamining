@@ -1,6 +1,6 @@
-// === Module 12309: conjureVoiceChannelPin ===
+// === Module 12316: conjureVoiceChannelPin ===
 
-// Module 12309 (conjureVoiceChannelPin)
+// Module 12316 (conjureVoiceChannelPin)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 6939 */;
 import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 11251 */;

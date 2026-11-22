@@ -1,9 +1,9 @@
-// === Module 12872: ForumPostPinIcon ===
+// === Module 12870: ForumPostPinIcon ===
 
-// Module 12872 (ForumPostPinIcon)
+// Module 12870 (ForumPostPinIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import _modDef12873 from "module_12873" /* 12873 */;
+import _modDef12871 from "module_12871" /* 12871 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,8 +21,8 @@ const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPost
 
 export default function ForumPostPinIcon(containerStyle) {
   const tmp = closure_5();
-  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12873, style: tmp.pinIcon }) };
+  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12871, style: tmp.pinIcon }) };
   items = [tmp.pin, containerStyle.containerStyle];
   obj.style = items;
-  return <View style={null}>{jsx(native.Icon, { source: _modDef12873, style: tmp.pinIcon })}</View>;
+  return <View style={null}>{jsx(native.Icon, { source: _modDef12871, style: tmp.pinIcon })}</View>;
 };

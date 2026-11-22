@@ -12,8 +12,8 @@ import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7076 */;
 import ModalRegistryDefault from "ModalRegistry" /* 19045 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15032 */;
-import PermissionVADStore from "PermissionVADStore" /* 15638 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15030 */;
+import PermissionVADStore from "PermissionVADStore" /* 15636 */;
 import AlertStore from "AlertStore" /* 10529 */;
 
 const require = globalThis.__r;
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "disabled", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "fill", renderKey: "channel", props: "justifyContent" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "disabled", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "fill", renderKey: "channel", props: "justifyContent" };
       }
     }
   });

@@ -3,7 +3,7 @@
 // Module 17653 (ChannelListStickyHeader)
 import nativeDefault from "native" /* 575 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 9755 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15121 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15119 */;
 import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17624 */;
 import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17652 */;
 import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17654 */;
@@ -193,7 +193,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp25Result6 = null;
   if (flag) {
     const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
-    tmp25Result6 = closure_6(tmp2(13153), obj16);
+    tmp25Result6 = closure_6(tmp2(13151), obj16);
   }
   items7[1] = tmp25Result6;
   if (tmp25Result7) {

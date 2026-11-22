@@ -1,9 +1,9 @@
-// === Module 16998: StaffBadgeIcon ===
+// === Module 16996: StaffBadgeIcon ===
 
-// Module 16998 (StaffBadgeIcon)
+// Module 16996 (StaffBadgeIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod16999 from "module_16999" /* 16999 */;
+import _mod16997 from "module_16997" /* 16997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function StaffBadgeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16999, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16997, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

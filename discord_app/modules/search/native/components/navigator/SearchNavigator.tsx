@@ -3,7 +3,7 @@
 // Module 18987 (SearchNavigator)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
 import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 8650 */;
-import TrackingDefault from "Tracking" /* 13220 */;
+import TrackingDefault from "Tracking" /* 13218 */;
 import AppFrameContainerDefault from "AppFrameContainer" /* 18888 */;
 import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18982 */;
 import noop from "module_19" /* 19 */;
@@ -110,7 +110,7 @@ export default noop.memo(function SearchNavigator(route) {
       return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(14351).default;
+      return searchContext(14349).default;
     }
   });
   obj3.children = items1;

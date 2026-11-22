@@ -5,11 +5,11 @@ import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import _modDef3152 from "module_3152" /* 3152 */;
 import openNotificationSettingsDefault from "openNotificationSettings" /* 10865 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13283 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13281 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13281 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13279 */;
 import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17420 */;
 
 require = fn;
@@ -127,7 +127,7 @@ function SystemNotifPermissionHeader() {
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 let closure_10 = fn(6496).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13282);
+const NotificationPermissionConstants = fn(13280);
 ({ EventActionLocation: closure_11, EventActionType: closure_12, NotificationNudgeAnalyticsAction: map1, NotificationNudgeSurface: closure_14 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -170,8 +170,8 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13284).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13284);
+            const result = node(13282).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13282);
           }
           v2(true);
           c2 = 0;

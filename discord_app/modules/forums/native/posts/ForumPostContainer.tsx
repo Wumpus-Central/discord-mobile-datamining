@@ -1,6 +1,6 @@
-// === Module 12889: ForumPostContainer ===
+// === Module 12887: ForumPostContainer ===
 
-// Module 12889 (ForumPostContainer)
+// Module 12887 (ForumPostContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import Card from "Card" /* 7047 */;

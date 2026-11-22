@@ -1,6 +1,6 @@
-// === Module 13888: getChannelListRecord ===
+// === Module 13886: getChannelListRecord ===
 
-// Module 13888 (getChannelListRecord)
+// Module 13886 (getChannelListRecord)
 import FavoritesUtils from "FavoritesUtils" /* 4787 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4843 */;

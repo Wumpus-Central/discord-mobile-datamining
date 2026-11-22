@@ -1,12 +1,12 @@
-// === Module 16507: QuestBottomSheetHeader ===
+// === Module 16505: QuestBottomSheetHeader ===
 
-// Module 16507 (QuestBottomSheetHeader)
+// Module 16505 (QuestBottomSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
 import QuestTypes from "QuestTypes" /* 6561 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8427 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 16506 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 16504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -34,8 +34,8 @@ export default function QuestBottomSheetHeader(arg0) {
   let isScreenReaderEnabled;
   let ref;
   let tmp = closure_9();
-  const questCreative = isScreenReaderEnabled(16508).useQuestCreative(quest);
-  let obj = isScreenReaderEnabled(16508);
+  const questCreative = isScreenReaderEnabled(16506).useQuestCreative(quest);
+  let obj = isScreenReaderEnabled(16506);
   closure_129_0 = quest;
   closure_129_1 = step;
   closure_129_2 = undefined;
@@ -50,14 +50,14 @@ export default function QuestBottomSheetHeader(arg0) {
   closure_129_11 = undefined;
   const userStatus = quest.userStatus;
   let completedAt;
-  let obj2 = isScreenReaderEnabled(16472);
+  let obj2 = isScreenReaderEnabled(16470);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   closure_129_2 = tmp7;
   const gameTitle = quest.config.messages.gameTitle;
   closure_129_3 = gameTitle;
-  const actionSheetPressHandler = isScreenReaderEnabled(16472).useActionSheetPressHandler(questCreative);
+  const actionSheetPressHandler = isScreenReaderEnabled(16470).useActionSheetPressHandler(questCreative);
   const questTaskDetails = isScreenReaderEnabled(9958).useQuestTaskDetails(quest);
   const tmp2Result = isScreenReaderEnabled(9958);
   const hasWatchVideoTasksResult = isScreenReaderEnabled(8427).hasWatchVideoTasks(quest);
@@ -74,9 +74,9 @@ export default function QuestBottomSheetHeader(arg0) {
   const memo = noop.useMemo(() => QuestTaskUtils.hasStreamOnDesktopTask({ quest: isScreenReaderEnabled }), items);
   closure_129_8 = memo;
   const tmp2Result11 = isScreenReaderEnabled(9958);
-  const hasWatchVideoOnMobileTasks = isScreenReaderEnabled(16469).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = isScreenReaderEnabled(16467).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_9 = hasWatchVideoOnMobileTasks;
-  const tmp2Result12 = isScreenReaderEnabled(16469);
+  const tmp2Result12 = isScreenReaderEnabled(16467);
   const items1 = [UserStore];
   const stateFromStores = isScreenReaderEnabled(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const tmp2Result13 = isScreenReaderEnabled(504);

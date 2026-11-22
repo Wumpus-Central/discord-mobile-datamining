@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "analyticsLocations"
+    animation: "add"
   },
   {
     check(arg0) {

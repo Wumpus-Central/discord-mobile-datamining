@@ -1,9 +1,9 @@
-// === Module 13468: useGameServerPerk ===
+// === Module 13466: useGameServerPerk ===
 
-// Module 13468 (useGameServerPerk)
+// Module 13466 (useGameServerPerk)
 import util from "util" /* 1112 */;
 import _modDef3312 from "module_3312" /* 3312 */;
-import _modDef13470 from "module_13470" /* 13470 */;
+import _modDef13468 from "module_13468" /* 13468 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 8750 */;
 
@@ -39,8 +39,8 @@ export default function useGameServerPerk(guildId) {
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef13470;
-        obj.staticImageUrl = _modDef13470;
+        obj.animatedImageUrl = _modDef13468;
+        obj.staticImageUrl = _modDef13468;
         tmp = obj;
       }
     }

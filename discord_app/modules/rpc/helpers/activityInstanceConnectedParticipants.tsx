@@ -1,6 +1,6 @@
-// === Module 15679: activityInstanceConnectedParticipants ===
+// === Module 15677: activityInstanceConnectedParticipants ===
 
-// Module 15679 (activityInstanceConnectedParticipants)
+// Module 15677 (activityInstanceConnectedParticipants)
 import transformUserDefault from "transformUser" /* 6907 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -12,7 +12,7 @@ const Constants = fn(6354);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_AUTHENTICATED_SCOPE];
-const CONTEXT_MENU_ICON_NAMES = fn(15680);
+const CONTEXT_MENU_ICON_NAMES = fn(15678);
 const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1071).RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {
   scope: obj,
   handler() {

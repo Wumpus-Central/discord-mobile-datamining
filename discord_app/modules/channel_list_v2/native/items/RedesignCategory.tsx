@@ -9,8 +9,8 @@ import CircleXIcon from "CircleXIcon" /* 7231 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7479 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7551 */;
 import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 12000 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13845 */;
-import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 13881 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
+import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 13879 */;
 import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 17627 */;
 import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 17628 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(13709).PlusMediumIcon;
+    Icon = trailingAction(13707).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , , ];
@@ -244,7 +244,7 @@ export function CategoryChannel(channel) {
   colors = nativeDefault.colors;
   const obj7 = {};
   const merged1 = Object.assign(merged);
-  obj7.icon = closure_12(channel(12799).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
+  obj7.icon = closure_12(channel(12797).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
   obj7.accessibilityState = { expanded: !collapsed2 };
   return renderCategoryItem(obj7);
 }
@@ -268,7 +268,7 @@ export function RecentlyActiveCategory(guildId) {
   colors = stateFromStores(575).colors;
   obj3 = {};
   const merged1 = Object.assign(merged);
-  obj3.icon = closure_12(tmp2(12799).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : obj4 });
+  obj3.icon = closure_12(tmp2(12797).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : obj4 });
   obj3.accessibilityState = { expanded: !collapsed };
   return renderCategoryItem(obj3);
 }

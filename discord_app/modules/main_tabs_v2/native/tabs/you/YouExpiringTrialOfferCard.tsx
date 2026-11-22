@@ -9,7 +9,7 @@ import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import useCountdownDefault from "useCountdown" /* 8956 */;
 import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 18919 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 15001 */;
+import NoticeStore from "NoticeStore" /* 14999 */;
 
 const require = fn;
 const View = fn(17).View;

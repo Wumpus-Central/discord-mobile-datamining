@@ -1,8 +1,8 @@
-// === Module 12917: AppLauncherOnboardingLayer ===
+// === Module 12915: AppLauncherOnboardingLayer ===
 
-// Module 12917 (AppLauncherOnboardingLayer)
+// Module 12915 (AppLauncherOnboardingLayer)
 import nativeDefault from "native" /* 575 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12918 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12916 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

@@ -1,8 +1,8 @@
-// === Module 15261: ToggleButton ===
+// === Module 15259: ToggleButton ===
 
-// Module 15261 (ToggleButton)
+// Module 15259 (ToggleButton)
 import BaseTextButton from "BaseTextButton" /* 5512 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 15262 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 15260 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

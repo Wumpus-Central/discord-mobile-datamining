@@ -1,6 +1,6 @@
-// === Module 16022: SettingsAgeGroupScreen ===
+// === Module 16020: SettingsAgeGroupScreen ===
 
-// Module 16022 (SettingsAgeGroupScreen)
+// Module 16020 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
@@ -8,8 +8,8 @@ import _modDef3444 from "module_3444" /* 3444 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;
-import SettingLayoutDefault from "SettingLayout" /* 15985 */;
-import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16023 */;
+import SettingLayoutDefault from "SettingLayout" /* 15983 */;
+import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(15981).useIsAgeNoticeSettingsEnabled();
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(15979).useIsAgeNoticeSettingsEnabled();
   items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

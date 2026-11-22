@@ -1,7 +1,7 @@
 // === Module 19195: MinimizeActivityButton ===
 
 // Module 19195 (MinimizeActivityButton)
-import _modDef12800 from "module_12800" /* 12800 */;
+import _modDef12798 from "module_12798" /* 12798 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -22,19 +22,19 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
   if (undefined !== activityName) {
     if ("" !== activityName) {
       const obj2 = { style: tmp2.buttonParent, children: null };
-      const obj3 = { icon: _modDef12800, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true };
+      const obj3 = { icon: _modDef12798, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true };
       const intl2 = setMode(1112).intl;
       obj3.accessibilityLabel = intl2.string(setMode(1112).t.brPQ5U);
       obj3.onPress = callback;
       obj3.text = activityName;
-      obj2.children = jsx(setMode(5511).Button, { icon: _modDef12800, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
+      obj2.children = jsx(setMode(5511).Button, { icon: _modDef12798, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
       let tmp3 = <View style={tmp2.buttonParent}>{null}</View>;
     }
     return tmp3;
   }
-  const obj = { icon: _modDef12800, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 };
+  const obj = { icon: _modDef12798, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 };
   const intl = setMode(1112).intl;
   obj.accessibilityLabel = intl.string(setMode(1112).t.brPQ5U);
   obj.onPress = callback;
-  tmp3 = jsx(setMode(7591).IconButton, { icon: _modDef12800, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
+  tmp3 = jsx(setMode(7591).IconButton, { icon: _modDef12798, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
 });

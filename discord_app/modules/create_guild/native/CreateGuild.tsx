@@ -1,6 +1,6 @@
-// === Module 13192: CreateGuild ===
+// === Module 13190: CreateGuild ===
 
-// Module 13192 (CreateGuild)
+// Module 13190 (CreateGuild)
 import nativeDefault from "native" /* 575 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +59,7 @@ export default function CreateGuild(arg0) {
   }
   obj4.children = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(5504).Text, obj4);
-  items1[2] = closure_7(ref(12211), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[2] = closure_7(ref(12218), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj6 = { clearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1112).intl;
   obj6.label = intl3.string(isScreenReaderEnabled(1112).t.dBih7e);

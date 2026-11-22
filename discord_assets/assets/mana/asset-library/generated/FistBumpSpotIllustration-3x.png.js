@@ -1,6 +1,6 @@
-// === Module 14040: ? ===
+// === Module 14038: ? ===
 
-// Module 14040
+// Module 14038
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-3x.png.js");

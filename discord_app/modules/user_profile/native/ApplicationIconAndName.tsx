@@ -1,6 +1,6 @@
-// === Module 13540: ApplicationIconAndName ===
+// === Module 13538: ApplicationIconAndName ===
 
-// Module 13540 (ApplicationIconAndName)
+// Module 13538 (ApplicationIconAndName)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;

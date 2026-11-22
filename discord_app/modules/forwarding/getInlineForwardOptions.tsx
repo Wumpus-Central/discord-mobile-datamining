@@ -1,6 +1,6 @@
-// === Module 12481: getInlineForwardOptions ===
+// === Module 12488: getInlineForwardOptions ===
 
-// Module 12481 (getInlineForwardOptions)
+// Module 12488 (getInlineForwardOptions)
 import Constants from "Constants" /* 1071 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 5953 */;
 import size from "module_2" /* 2 */;

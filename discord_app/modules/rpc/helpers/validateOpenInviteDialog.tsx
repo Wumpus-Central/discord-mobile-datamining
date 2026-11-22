@@ -1,6 +1,6 @@
-// === Module 15699: validateOpenInviteDialog ===
+// === Module 15697: validateOpenInviteDialog ===
 
-// Module 15699 (validateOpenInviteDialog)
+// Module 15697 (validateOpenInviteDialog)
 import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6625 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6626 */;
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 6903 */;

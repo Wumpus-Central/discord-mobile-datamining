@@ -1,8 +1,8 @@
-// === Module 13401: useGuildPowerupsNewBadge ===
+// === Module 13399: useGuildPowerupsNewBadge ===
 
-// Module 13401 (useGuildPowerupsNewBadge)
+// Module 13399 (useGuildPowerupsNewBadge)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4747 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13396 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 8331 */;
@@ -64,7 +64,7 @@ export function useAutoDismissGuildPowerupsNewBadge(guildId) {
   items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let obj = require("initialize");
-  const tmp2Result = num(13396)(guildId, stateFromStores);
+  const tmp2Result = num(13394)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

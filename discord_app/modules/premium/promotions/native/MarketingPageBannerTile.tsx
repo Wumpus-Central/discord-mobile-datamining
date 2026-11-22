@@ -70,9 +70,9 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj3.properties = { component_type: componentType, component_id: componentId, promotion_id: promotionId };
   useTrackImpressionDefault(obj3);
   const tmp2Result = useTrackImpressionDefault;
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13953).useFormatStringWithCommonPremiumParams(bannerFields.body);
-  const tmp4Result = helpArticleLinkProps(13953);
-  helpArticleLinkProps = helpArticleLinkProps(13953).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13951).useFormatStringWithCommonPremiumParams(bannerFields.body);
+  const tmp4Result = helpArticleLinkProps(13951);
+  helpArticleLinkProps = helpArticleLinkProps(13951).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj4 = { style: null, children: null };
   items = [tmp.container, style];
   obj4.style = items;

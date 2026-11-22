@@ -7,7 +7,7 @@ import ObscureMediaModels from "ObscureMediaModels" /* 8229 */;
 import CirclePlayIcon from "CirclePlayIcon" /* 9818 */;
 import AttachmentPreview from "AttachmentPreview" /* 11193 */;
 import generated_SpoilerIcon from "generated/SpoilerIcon" /* 11656 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12881 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

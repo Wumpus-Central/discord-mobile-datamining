@@ -6,7 +6,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;
 

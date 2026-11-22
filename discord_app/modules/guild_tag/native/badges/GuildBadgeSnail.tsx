@@ -1,8 +1,8 @@
-// === Module 15171: GuildBadgeSnail ===
+// === Module 15169: GuildBadgeSnail ===
 
-// Module 15171 (GuildBadgeSnail)
+// Module 15169 (GuildBadgeSnail)
 import inlineStyles from "inlineStyles" /* 7865 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15133 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15131 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

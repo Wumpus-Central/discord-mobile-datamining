@@ -1,6 +1,6 @@
-// === Module 12746: CheckpointVoiceStatsScreen ===
+// === Module 12744: CheckpointVoiceStatsScreen ===
 
-// Module 12746 (CheckpointVoiceStatsScreen)
+// Module 12744 (CheckpointVoiceStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import _modDef3440 from "module_3440" /* 3440 */;
@@ -8,14 +8,14 @@ import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6339 */;
 import CheckpointScreenDefault from "CheckpointScreen" /* 12509 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12729 */;
-import _modDef12747 from "module_12747" /* 12747 */;
-import _modDef12748 from "module_12748" /* 12748 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12749 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12750 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12752 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12727 */;
+import _modDef12745 from "module_12745" /* 12745 */;
+import _modDef12746 from "module_12746" /* 12746 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12747 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12748 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12750 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -107,8 +107,8 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj4 = { animatedUri: null, staticUri: null, style: null };
   const tmp4Result = stateFromStores1(6339);
-  obj4.animatedUri = _modDef12747;
-  obj4.staticUri = _modDef12748;
+  obj4.animatedUri = _modDef12745;
+  obj4.staticUri = _modDef12746;
   const items3 = [tmp.image, ];
   let tmp16 = wideText;
   if (wideText) {

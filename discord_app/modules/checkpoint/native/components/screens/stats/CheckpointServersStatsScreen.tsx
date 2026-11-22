@@ -1,6 +1,6 @@
-// === Module 12756: CheckpointServersStatsScreen ===
+// === Module 12754: CheckpointServersStatsScreen ===
 
-// Module 12756 (CheckpointServersStatsScreen)
+// Module 12754 (CheckpointServersStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _modDef3408 from "module_3408" /* 3408 */;
 import _modDef3440 from "module_3440" /* 3440 */;
@@ -8,16 +8,16 @@ import GuildIconDefault from "GuildIcon" /* 7322 */;
 import CheckpointScreen from "CheckpointScreen" /* 12509 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
-import _modDef12725 from "module_12725" /* 12725 */;
-import _modDef12726 from "module_12726" /* 12726 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12729 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12757 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12758 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12759 */;
-import CheckpointTruncatedTextDefault from "CheckpointTruncatedText" /* 12761 */;
+import _modDef12723 from "module_12723" /* 12723 */;
+import _modDef12724 from "module_12724" /* 12724 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12727 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12755 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12756 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12757 */;
+import CheckpointTruncatedTextDefault from "CheckpointTruncatedText" /* 12759 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 const require = globalThis.__r;
 const CheckpointScreenDefault = CheckpointScreen;
@@ -141,8 +141,8 @@ obj2.guildIcon = size1;
 const size2 = { width: 64, height: 64, borderRadius: nativeDefault.radii.none };
 obj2.globalGuildIcon = size2;
 let obj13 = { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_12 };
-obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12729).CHECKPOINT_WIDE_MAX_WIDTH };
-let obj14 = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12729).CHECKPOINT_WIDE_MAX_WIDTH };
+obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12727).CHECKPOINT_WIDE_MAX_WIDTH };
+let obj14 = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12727).CHECKPOINT_WIDE_MAX_WIDTH };
 obj2.wideHeader = { width: "50%", paddingRight: nativeDefault.space.PX_32 };
 obj2.wideGuildsScroll = { flexGrow: 0, width: "50%", alignSelf: "stretch" };
 const obj16 = { flexGrow: 1, justifyContent: "center", paddingTop: CHECKPOINT_NAV_HEIGHT, paddingBottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_32, paddingRight: null };
@@ -187,7 +187,7 @@ export default function CheckpointServersStatsScreen() {
       const obj4 = { style: tmp.heading, children: null };
       const obj5 = { style: tmp.title, children: null };
       const obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_9(tmp2(12464).ServerIcon, obj6), ];
+      const items1 = [closure_9(tmp2(12471).ServerIcon, obj6), ];
       const obj7 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
       const intl3 = tmp2(1112).intl;
       const tmp18 = CheckpointTextDefault;
@@ -241,8 +241,8 @@ export default function CheckpointServersStatsScreen() {
   const obj12 = { style: tmp.globalHeading, children: null };
   const obj13 = { animatedUri: null, staticUri: null, style: null };
   let obj = require("initialize");
-  obj13.animatedUri = _modDef12725;
-  obj13.staticUri = _modDef12726;
+  obj13.animatedUri = _modDef12723;
+  obj13.staticUri = _modDef12724;
   obj13.style = tmp.globe;
   const items5 = [closure_9(CheckpointApngPlayerDefault, obj13), ];
   const obj14 = { isStepHeading: true, children: null };

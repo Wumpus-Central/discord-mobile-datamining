@@ -1,12 +1,12 @@
-// === Module 16203: FamilyCenterActivityPurchaseRow ===
+// === Module 16201: FamilyCenterActivityPurchaseRow ===
 
-// Module 16203 (FamilyCenterActivityPurchaseRow)
+// Module 16201 (FamilyCenterActivityPurchaseRow)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import PriceUtils from "PriceUtils" /* 6856 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8915 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16204 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16205 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16202 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16203 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15956: UserProfileWidgetReorderActionSheet ===
+// === Module 15954: UserProfileWidgetReorderActionSheet ===
 
-// Module 15956 (UserProfileWidgetReorderActionSheet)
+// Module 15954 (UserProfileWidgetReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6864 */;
 import WidgetUtils from "WidgetUtils" /* 10217 */;

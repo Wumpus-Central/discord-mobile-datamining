@@ -1,6 +1,6 @@
-// === Module 13942: GiftingSKUCardsGrid ===
+// === Module 13940: GiftingSKUCardsGrid ===
 
-// Module 13942 (GiftingSKUCardsGrid)
+// Module 13940 (GiftingSKUCardsGrid)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;

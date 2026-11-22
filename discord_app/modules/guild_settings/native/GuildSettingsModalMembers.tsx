@@ -8,7 +8,7 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6887 */;
 import sortByMatchScore from "sortByMatchScore" /* 10063 */;
-import RolePillDefault from "RolePill" /* 12218 */;
+import RolePillDefault from "RolePill" /* 12225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -92,7 +92,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(13857), obj4);
+    return closure_15(guildMember(13855), obj4);
   }
   const obj = guild(1500);
 });

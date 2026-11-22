@@ -1,6 +1,6 @@
-// === Module 13146: DoubleTapToReactChatInputBanner ===
+// === Module 13144: DoubleTapToReactChatInputBanner ===
 
-// Module 13146 (DoubleTapToReactChatInputBanner)
+// Module 13144 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -16,7 +16,7 @@ import Pressables from "Pressables" /* 7030 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;
 import EmojiDefault from "Emoji" /* 7496 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 8709 */;
-import renderChannelBadge from "renderChannelBadge" /* 13147 */;
+import renderChannelBadge from "renderChannelBadge" /* 13145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -152,7 +152,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13253, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13251, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     _undefined2(ContentDismissActionType.TAKE_ACTION);
   }, items4);
   const callback2 = obj.useCallback(() => {

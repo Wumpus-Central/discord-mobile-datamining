@@ -6,7 +6,7 @@ import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUps
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17041 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17039 */;
 
 const require = fn;
 const View = fn(17).View;

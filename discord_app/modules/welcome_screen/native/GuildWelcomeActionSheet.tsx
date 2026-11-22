@@ -1,18 +1,18 @@
-// === Module 13570: GuildWelcomeActionSheet ===
+// === Module 13568: GuildWelcomeActionSheet ===
 
-// Module 13570 (GuildWelcomeActionSheet)
+// Module 13568 (GuildWelcomeActionSheet)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import WelcomeScreenActionCreators from "WelcomeScreenActionCreators" /* 13569 */;
+import WelcomeScreenActionCreators from "WelcomeScreenActionCreators" /* 13567 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6573 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
-import WelcomeScreenStore from "WelcomeScreenStore" /* 13567 */;
+import WelcomeScreenStore from "WelcomeScreenStore" /* 13565 */;
 import TextStyles_mod from "TextStyles" /* 6407 */;
 
 require = fn;
@@ -122,8 +122,8 @@ class WelcomeChannelRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const NO_WELCOME_SCREEN = fn(13567).NO_WELCOME_SCREEN;
-const WELCOME_SCREEN_TYPE = fn(13571).WELCOME_SCREEN_TYPE;
+const NO_WELCOME_SCREEN = fn(13565).NO_WELCOME_SCREEN;
+const WELCOME_SCREEN_TYPE = fn(13569).WELCOME_SCREEN_TYPE;
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, Fonts, Routes: closure_14 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
@@ -230,8 +230,8 @@ export default function GuildWelcomeActionSheet(guildId) {
     if (null != welcomeScreen) {
       const obj3 = { startExpanded: true, children: null };
       const obj4 = { contentContainerStyle: tmp.container, children: null };
-      const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(13572).Sizes.MEDIUM, textScale: 2 };
-      const items9 = [closure_17(onHide(13572), obj5), , , , ];
+      const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(13570).Sizes.MEDIUM, textScale: 2 };
+      const items9 = [closure_17(onHide(13570), obj5), , , , ];
       const obj6 = { style: tmp.header, variant: "heading-xl/semibold", color: "text-default", children: null };
       const intl = tmp2(1112).intl;
       const obj7 = {
@@ -246,7 +246,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       items9[2] = closure_17(tmp2(5504).Text, obj8);
       const obj9 = { style: tmp.channelsTitle, variant: "body-sm/medium", color: "text-default", children: null };
       const intl2 = tmp2(1112).intl;
-      const tmp17 = onHide(13572);
+      const tmp17 = onHide(13570);
       obj9.children = intl2.string(tmp2(1112).t["haj5+i"]).toUpperCase();
       items9[3] = closure_17(tmp2(5504).Text, obj9);
       let welcome_channels = welcomeScreen.welcome_channels;

@@ -1,6 +1,6 @@
-// === Module 12951: AppLauncherNavigator ===
+// === Module 12949: AppLauncherNavigator ===
 
-// Module 12951 (AppLauncherNavigator)
+// Module 12949 (AppLauncherNavigator)
 import nativeDefault from "native" /* 575 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

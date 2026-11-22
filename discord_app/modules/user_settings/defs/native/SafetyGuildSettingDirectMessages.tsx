@@ -5,7 +5,7 @@ import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
 import common_AlertDefault from "common/Alert" /* 5932 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16118 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16116 */;
 import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 17366 */;
 import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 17372 */;
 import GuildStore from "GuildStore" /* 4784 */;

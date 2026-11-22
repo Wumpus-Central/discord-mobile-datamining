@@ -1,12 +1,12 @@
-// === Module 13847: GroupDMInviteManagementScreen ===
+// === Module 13845: GroupDMInviteManagementScreen ===
 
-// Module 13847 (GroupDMInviteManagementScreen)
+// Module 13845 (GroupDMInviteManagementScreen)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
-import InstantInviteDefault from "InstantInvite" /* 13848 */;
+import InstantInviteDefault from "InstantInvite" /* 13846 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -113,12 +113,12 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp12 = jsx(channelId(7190).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(13863), darkSource: tmp4(13864), title: null, body: null };
+    let obj2 = { lightSource: tmp4(13861), darkSource: tmp4(13862), title: null, body: null };
     const intl = channelId(1112).intl;
     obj2.title = intl.string(channelId(1112).t["+nLJkZ"]);
     const intl2 = channelId(1112).intl;
     obj2.body = intl2.string(channelId(1112).t.F53CAc);
-    tmp12 = jsx(channelId(1186).EmptyState, { lightSource: tmp4(13863), darkSource: tmp4(13864), title: null, body: null });
+    tmp12 = jsx(channelId(1186).EmptyState, { lightSource: tmp4(13861), darkSource: tmp4(13862), title: null, body: null });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
     tmp12 = jsx(channelId(7490).FlashList, { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 });

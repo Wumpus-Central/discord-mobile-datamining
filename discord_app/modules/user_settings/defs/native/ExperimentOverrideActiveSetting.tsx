@@ -2,8 +2,8 @@
 
 // Module 17191 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15823 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16144 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15821 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16142 */;
 import DevToolsContent from "DevToolsContent" /* 17192 */;
 import ExperimentStore from "ExperimentStore" /* 5530 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
@@ -16,7 +16,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(17004).BeakerIcon,
+  IconComponent: fn(17002).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
     items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);

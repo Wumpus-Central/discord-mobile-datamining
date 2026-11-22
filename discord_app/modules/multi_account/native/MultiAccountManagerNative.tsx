@@ -1,13 +1,13 @@
-// === Module 19578: MultiAccountManagerNative ===
+// === Module 19574: MultiAccountManagerNative ===
 
-// Module 19578 (MultiAccountManagerNative)
+// Module 19574 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import Constants2 from "Constants" /* 13286 */;
+import Constants2 from "Constants" /* 13284 */;
 import Constants from "Constants" /* 1071 */;
-import MultiAccountManager from "MultiAccountManager" /* 19580 */;
+import MultiAccountManager from "MultiAccountManager" /* 19576 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants2.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -21,7 +21,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj.cancelled = false;
   obj.push = function push() {
     obj = ModalActionCreatorsDefault;
-    obj.pushLazy(obj(2119)(19579, dependencyMap.paths), {}, c7);
+    obj.pushLazy(obj(2119)(19575, dependencyMap.paths), {}, c7);
     if (obj.cancelled) {
       ModalActionCreatorsDefault.popWithKey(c7);
       const tmpResult = ModalActionCreatorsDefault;
@@ -54,7 +54,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(2119)(19579, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(2119)(19575, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -120,7 +120,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { text: null, icon: null };
     const intl = obj(1112).intl;
     obj2.text = intl.formatToPlainString(obj(1112).t.wx7O3L, { username: user.username });
-    obj2.icon = obj(19581).ArrowsLeftRightIcon;
+    obj2.icon = obj(19577).ArrowsLeftRightIcon;
     obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", obj2);
   }, 100);
 };
@@ -129,7 +129,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { text: null, icon: null };
   const intl = obj(1112).intl;
   obj2.text = intl.string(obj(1112).t.pqvKWA);
-  obj2.icon = obj(19581).ArrowsLeftRightIcon;
+  obj2.icon = obj(19577).ArrowsLeftRightIcon;
   obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

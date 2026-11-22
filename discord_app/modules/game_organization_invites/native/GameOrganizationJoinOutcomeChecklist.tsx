@@ -1,13 +1,13 @@
-// === Module 12251: GameOrganizationJoinOutcomeChecklist ===
+// === Module 12258: GameOrganizationJoinOutcomeChecklist ===
 
-// Module 12251 (GameOrganizationJoinOutcomeChecklist)
+// Module 12258 (GameOrganizationJoinOutcomeChecklist)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import ClockIcon from "ClockIcon" /* 5622 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7225 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7532 */;
-import useGameOrganizationJoinOutcome from "useGameOrganizationJoinOutcome" /* 12246 */;
+import useGameOrganizationJoinOutcome from "useGameOrganizationJoinOutcome" /* 12253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

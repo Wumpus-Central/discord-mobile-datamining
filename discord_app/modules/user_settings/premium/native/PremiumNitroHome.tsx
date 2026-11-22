@@ -19,7 +19,7 @@ import PremiumPerkCardDefault from "PremiumPerkCard" /* 9375 */;
 import useScrollToSectionDefault from "useScrollToSection" /* 9403 */;
 import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 9404 */;
 import MarketingPageBannerTileDefault from "MarketingPageBannerTile" /* 9405 */;
-import PremiumPerkCarouselDefault from "PremiumPerkCarousel" /* 14048 */;
+import PremiumPerkCarouselDefault from "PremiumPerkCarousel" /* 14046 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -93,7 +93,7 @@ function NewTab(arg0) {
   const items1 = [tmp12, closure_16(require("TieredTenureBadgePerkCard").TieredTenureBadgePerkCard, {}), , , , , ];
   let tmp15Result = null;
   if (isEligibleSenderForReferralProgram) {
-    const obj8 = { onLayout: useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM), children: closure_16(tmp2(14025).ReferralProgramPerkCard, {}) };
+    const obj8 = { onLayout: useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM), children: closure_16(tmp2(14023).ReferralProgramPerkCard, {}) };
     tmp15Result = closure_16(closure_5, obj8);
   }
   items1[2] = tmp15Result;
@@ -157,7 +157,7 @@ function PerksTab(extraBottomHeight) {
     const obj4 = { title: null, perks: null, onItemChange: null };
     const intl2 = tmp2(1112).intl;
     obj4.title = intl2.string(tmp2(1112).t["+vt7w9"]);
-    const tmp9Result = tmp9(14048);
+    const tmp9Result = tmp9(14046);
     if (tmp2Result.isAppIconsSupported()) {
       const items5 = [premiumPerkCard.customAppIcons];
       let items6 = items5;
@@ -175,7 +175,7 @@ function PerksTab(extraBottomHeight) {
     };
     items4[1] = closure_16(tmp9Result, obj4);
     const obj5 = { title: null, perks: null, onItemChange: null };
-    tmp2Result = tmp2(14049);
+    tmp2Result = tmp2(14047);
     const intl3 = tmp2(1112).intl;
     obj5.title = intl3.string(tmp2(1112).t.LgHbnL);
     const items8 = [, , , , ];
@@ -184,9 +184,9 @@ function PerksTab(extraBottomHeight) {
     obj5.onItemChange = function onItemChange(arg0) {
       return closure_0(closure_21.CAROUSEL_SECTION_NAME_3, arg0);
     };
-    items4[2] = closure_16(tmp9(14048), obj5);
+    items4[2] = closure_16(tmp9(14046), obj5);
     const obj6 = { title: null, perks: null, onItemChange: null };
-    const tmp9Result3 = tmp9(14048);
+    const tmp9Result3 = tmp9(14046);
     const intl4 = tmp2(1112).intl;
     obj6.title = intl4.string(tmp2(1112).t.LTaxu9);
     if (fractionalState === tmp11.FP_ONLY) {
@@ -208,7 +208,7 @@ function PerksTab(extraBottomHeight) {
       obj2.children = items4;
       return closure_17(closure_6, obj2);
     }
-    tmp9Result4 = tmp9(14048);
+    tmp9Result4 = tmp9(14046);
   }
   tmp10 = PremiumPerkCarouselDefault;
 }
@@ -380,8 +380,8 @@ export default function PremiumNitroHome(onClose) {
   const tmpResult18 = require("shared");
   const isThemeDarkResult = require("shared").isThemeDark(theme);
   const tmpResult19 = require("shared");
-  const tmp6Result = navigation(14063);
-  const tmp6ResultResult = navigation(14063)(tmp19.endsAt, require("useFPDurationLeft").CountDownMessageTypes.ENDS_IN);
+  const tmp6Result = navigation(14061);
+  const tmp6ResultResult = navigation(14061)(tmp19.endsAt, require("useFPDurationLeft").CountDownMessageTypes.ENDS_IN);
   isEligibleSenderForReferralProgram = require("useIsEligibleSenderForReferralProgram").useIsEligibleSenderForReferralProgram();
   const items7 = [isEligibleSenderForReferralProgram];
   const effect2 = obj5.useEffect(() => {
@@ -427,12 +427,12 @@ export default function PremiumNitroHome(onClose) {
   obj11.style = items9;
   const obj12 = { style: tmp5.background, source: null };
   const tmpResult21 = require("usePromotionMarketingSurface");
-  obj12.source = navigation(14064);
+  obj12.source = navigation(14062);
   const items10 = [closure_16(navigation(5600), obj12), closure_16(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }), , , ];
   let tmp24Result = tmp19.fractionalState !== FractionalPremiumStates.NONE && !isInReverseTrial;
   if (tmp24Result) {
     const obj13 = { countdownText: tmp6ResultResult };
-    tmp24Result = closure_16(tmp6(14065), obj13);
+    tmp24Result = closure_16(tmp6(14063), obj13);
   }
   items10[2] = tmp24Result;
   const obj14 = { style: tmp5.tabContent, children: null };

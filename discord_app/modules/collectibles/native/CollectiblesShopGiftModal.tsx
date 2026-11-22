@@ -1,15 +1,15 @@
-// === Module 13909: CollectiblesShopGiftModal ===
+// === Module 13907: CollectiblesShopGiftModal ===
 
-// Module 13909 (CollectiblesShopGiftModal)
+// Module 13907 (CollectiblesShopGiftModal)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Navigator from "Navigator" /* 7092 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
 import generated_NoResults from "generated/NoResults" /* 8186 */;
-import openGiftModal from "openGiftModal" /* 13908 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13911 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13914 */;
+import openGiftModal from "openGiftModal" /* 13906 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13909 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13912 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8075 */;
 

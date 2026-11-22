@@ -120,7 +120,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     items4[2] = closure_12(closure_4, obj8);
     const obj11 = { grow: true, icon: null, text: null, onPress: null };
     const obj12 = { size: "sm", color: tmp11(575).colors.WHITE };
-    obj11.icon = closure_11(markAsDismissed(12468).GiftIcon, obj12);
+    obj11.icon = closure_11(markAsDismissed(12475).GiftIcon, obj12);
     const intl = markAsDismissed(1112).intl;
     obj11.text = intl.string(markAsDismissed(1112).t.Ve9Ge6);
     obj11.onPress = tmp17;

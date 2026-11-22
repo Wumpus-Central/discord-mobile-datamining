@@ -1,6 +1,6 @@
-// === Module 14314: getSocialLayerStorefrontSkuEmbedDetails ===
+// === Module 14312: getSocialLayerStorefrontSkuEmbedDetails ===
 
-// Module 14314 (getSocialLayerStorefrontSkuEmbedDetails)
+// Module 14312 (getSocialLayerStorefrontSkuEmbedDetails)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1112 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6847 */;

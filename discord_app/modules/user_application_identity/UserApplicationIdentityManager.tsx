@@ -1,6 +1,6 @@
-// === Module 20164: UserApplicationIdentityManager ===
+// === Module 20161: UserApplicationIdentityManager ===
 
-// Module 20164 (UserApplicationIdentityManager)
+// Module 20161 (UserApplicationIdentityManager)
 import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 10334 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 

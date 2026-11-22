@@ -1,6 +1,6 @@
-// === Module 16502: useAdRefreshLoop ===
+// === Module 16500: useAdRefreshLoop ===
 
-// Module 16502 (useAdRefreshLoop)
+// Module 16500 (useAdRefreshLoop)
 import _mod19 from "module_19" /* 19 */;
 import QuestConstants from "QuestConstants" /* 6558 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 6651 */;

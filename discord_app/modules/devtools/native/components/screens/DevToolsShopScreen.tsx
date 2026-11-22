@@ -1,6 +1,6 @@
-// === Module 17154: DevToolsShopScreen ===
+// === Module 17152: DevToolsShopScreen ===
 
-// Module 17154 (DevToolsShopScreen)
+// Module 17152 (DevToolsShopScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4746 */;
@@ -10,8 +10,8 @@ import TableRow from "TableRow" /* 7045 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
 import TableSwitchRow from "TableSwitchRow" /* 7556 */;
 import FormSwitch from "FormSwitch" /* 7557 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17037 */;
-import DevSettingsActions from "DevSettingsActions" /* 17122 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17035 */;
+import DevSettingsActions from "DevSettingsActions" /* 17120 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5507 */;
 

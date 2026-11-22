@@ -2,7 +2,7 @@
 
 // Module 18418 (useConjureRemixNotice)
 import _modDef4190 from "module_4190" /* 4190 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 12293 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 12300 */;
 import noop from "module_19" /* 19 */;
 import ConjureRemixStore from "ConjureRemixStore" /* 6981 */;
 

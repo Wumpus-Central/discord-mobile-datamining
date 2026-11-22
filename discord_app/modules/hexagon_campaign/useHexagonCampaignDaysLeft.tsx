@@ -1,6 +1,6 @@
-// === Module 15879: useHexagonCampaignDaysLeft ===
+// === Module 15877: useHexagonCampaignDaysLeft ===
 
-// Module 15879 (useHexagonCampaignDaysLeft)
+// Module 15877 (useHexagonCampaignDaysLeft)
 import DurationsDefault from "Durations" /* 1088 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4941 */;
 import noop from "module_19" /* 19 */;

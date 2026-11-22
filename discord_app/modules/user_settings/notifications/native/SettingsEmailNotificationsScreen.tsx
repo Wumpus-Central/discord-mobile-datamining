@@ -1,12 +1,12 @@
-// === Module 16903: SettingsEmailNotificationsScreen ===
+// === Module 16901: SettingsEmailNotificationsScreen ===
 
-// Module 16903 (SettingsEmailNotificationsScreen)
+// Module 16901 (SettingsEmailNotificationsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 16905 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 16903 */;
 import noop from "module_19" /* 19 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 15018 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 15016 */;
 
 require = fn;
 const MobileUserSettings = fn(8712).MobileUserSettings;

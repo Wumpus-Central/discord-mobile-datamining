@@ -1,6 +1,6 @@
-// === Module 19541: LabelLayoutComponent ===
+// === Module 19537: LabelLayoutComponent ===
 
-// Module 19541 (LabelLayoutComponent)
+// Module 19537 (LabelLayoutComponent)
 import Server from "Server" /* 2117 */;
 import Input from "Input" /* 7222 */;
 import ComponentStateContext from "ComponentStateContext" /* 8248 */;

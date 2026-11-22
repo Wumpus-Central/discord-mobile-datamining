@@ -1,6 +1,6 @@
-// === Module 14326: SpotifyApplicationRecord ===
+// === Module 14324: SpotifyApplicationRecord ===
 
-// Module 14326 (SpotifyApplicationRecord)
+// Module 14324 (SpotifyApplicationRecord)
 import ApplicationRecord from "ApplicationRecord" /* 2142 */;
 import Platforms from "Platforms" /* 6691 */;
 

@@ -1,6 +1,6 @@
-// === Module 14263: CollectiblesEditUserProfileListItems ===
+// === Module 14261: CollectiblesEditUserProfileListItems ===
 
-// Module 14263 (CollectiblesEditUserProfileListItems)
+// Module 14261 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -15,7 +15,7 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8915 */;
 import CollectiblesBadges from "CollectiblesBadges" /* 8949 */;
-import _modDef14264 from "module_14264" /* 14264 */;
+import _modDef14262 from "module_14262" /* 14262 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -79,7 +79,7 @@ export function EditCollectiblesListItemNone(asDefault) {
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  items = [metroImportDefault(native.Icon, { source: _modDef14264, size: native.IconSizes.LARGE }), ];
+  items = [metroImportDefault(native.Icon, { source: _modDef14262, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -111,7 +111,7 @@ export function EditCollectiblesListItemShop(analyticsSource) {
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_7(analyticsSource(1186).Icon, { source: analyticsLocations(14265), size: analyticsSource(1186).IconSizes.LARGE }), , ];
+  const items1 = [closure_7(analyticsSource(1186).Icon, { source: analyticsLocations(14263), size: analyticsSource(1186).IconSizes.LARGE }), , ];
   const obj3 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1112).intl;
   obj3.children = intl.string(analyticsSource(1112).t.pWG4ze);

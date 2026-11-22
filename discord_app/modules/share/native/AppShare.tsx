@@ -1,6 +1,6 @@
-// === Module 20206: AppShare ===
+// === Module 20204: AppShare ===
 
-// Module 20206 (AppShare)
+// Module 20204 (AppShare)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import useMountEffectDefault from "useMountEffect" /* 5474 */;
@@ -9,8 +9,8 @@ import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7802 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8268 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 9719 */;
-import ShareScreenDefault from "ShareScreen" /* 15113 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 15644 */;
+import ShareScreenDefault from "ShareScreen" /* 15111 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 15642 */;
 import AppToastContainerDefault from "AppToastContainer" /* 19110 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,9 +21,9 @@ const require = globalThis.__r;
 require = fn;
 fn(17).BackHandler;
 const AnalyticsTrackingStore = fn(8254);
-const ShareStore = fn(15637);
+const ShareStore = fn(15635);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-let closure_8 = fn(13286).MultiAccountSwitchLocation;
+let closure_8 = fn(13284).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const share = "share";
@@ -60,8 +60,8 @@ export default function AppShare(targetUserId) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_0(13289);
-        closure_0(13289).switchAccount(targetUserId, false, constants.SHARE_EXTENSION).then(() => {
+        const obj = closure_0(13287);
+        closure_0(13287).switchAccount(targetUserId, false, constants.SHARE_EXTENSION).then(() => {
           closure_1_3(true);
         });
       }, 18);

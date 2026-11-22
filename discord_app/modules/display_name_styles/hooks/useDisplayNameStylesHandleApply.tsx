@@ -1,6 +1,6 @@
-// === Module 16741: useDisplayNameStylesHandleApply ===
+// === Module 16739: useDisplayNameStylesHandleApply ===
 
-// Module 16741 (useDisplayNameStylesHandleApply)
+// Module 16739 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -107,8 +107,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           closure_128_0 = undefined;
                           closure_128_1 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(15853).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj6 = displayNameStyles(15853);
+                            const result = displayNameStyles(15851).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj6 = displayNameStyles(15851);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -182,9 +182,9 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             items = [constants2.DISPLAY_NAME_STYLE];
                             obj15.perks = items;
                             obj15.content = displayNameStyles(6561).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                            obj15.contentSurface = displayNameStyles(15854).HexagonCampaignContentSurface.USER_PROFILE;
-                            const result2 = displayNameStyles(15854).trackHexagonCampaignPerkAction(obj15);
-                            const obj = displayNameStyles(15854);
+                            obj15.contentSurface = displayNameStyles(15852).HexagonCampaignContentSurface.USER_PROFILE;
+                            const result2 = displayNameStyles(15852).trackHexagonCampaignPerkAction(obj15);
+                            const obj = displayNameStyles(15852);
                           }
                           c3 = 0;
                           closure_1_12.current = false;
@@ -193,8 +193,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj16 = { font_name: displayNameStyles(1396).DisplayNameFont[closure_2], effect_name: displayNameStyles(1397).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1255).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj16);
                       if (closure_129_1) {
-                        const result3 = displayNameStyles(15853).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj12 = displayNameStyles(15853);
+                        const result3 = displayNameStyles(15851).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj12 = displayNameStyles(15851);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();

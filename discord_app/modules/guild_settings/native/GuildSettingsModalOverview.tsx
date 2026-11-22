@@ -1,6 +1,6 @@
-// === Module 19706: GuildSettingsModalOverview ===
+// === Module 19703: GuildSettingsModalOverview ===
 
-// Module 19706 (GuildSettingsModalOverview)
+// Module 19703 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
@@ -25,7 +25,7 @@ import Form from "Form" /* 7709 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
 import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 10421 */;
 import openChannelPickerDefault from "openChannelPicker" /* 11730 */;
-import AssetChooserDefault from "AssetChooser" /* 19710 */;
+import AssetChooserDefault from "AssetChooser" /* 19707 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
@@ -138,8 +138,8 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (null != systemChannel !== null != id) {
-          const result = applyArgumentsResult(19707).trackServerHubToggleSetting(guild.id, applyArgumentsResult(19707).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
-          const obj2 = applyArgumentsResult(19707);
+          const result = applyArgumentsResult(19704).trackServerHubToggleSetting(guild.id, applyArgumentsResult(19704).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
+          const obj2 = applyArgumentsResult(19704);
         }
       };
       if (systemChannel == null) {

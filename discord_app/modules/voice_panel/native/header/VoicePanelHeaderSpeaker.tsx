@@ -7,7 +7,7 @@ import dismissible_content from "dismissible_content" /* 4746 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4945 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9670 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 13822 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 13820 */;
 import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19200 */;
 import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19258 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -245,7 +245,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "Array" };
+        const obj = { onPress, ref: "r" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

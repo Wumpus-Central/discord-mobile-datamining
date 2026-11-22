@@ -7,9 +7,9 @@ import Text_Text from "Text/Text" /* 5504 */;
 import useAlertStore from "useAlertStore" /* 5862 */;
 import AlertModal from "AlertModal" /* 5866 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
-import ConjureRemovedItemsDefault from "ConjureRemovedItems" /* 12384 */;
-import useConjureRemoveFromServer from "useConjureRemoveFromServer" /* 12386 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12387 */;
+import ConjureRemovedItemsDefault from "ConjureRemovedItems" /* 12391 */;
+import useConjureRemoveFromServer from "useConjureRemoveFromServer" /* 12393 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -89,7 +89,7 @@ function ConjureRemoveFromServerAlert(target) {
   let tmp5Result = null;
   if (optionalItems.length > 0) {
     let obj5 = { items: [], optionalItems };
-    tmp5Result = closure_6(tmp(12384), obj5);
+    tmp5Result = closure_6(tmp(12391), obj5);
   }
   items = [tmp5Result, notes.map((children) => closure_1_6(_undefined(dependencyMap[12]).Text, { variant: "body-sm/normal", color: "text-muted", children }, children)), ];
   let tmp5Result2 = null;

@@ -1,7 +1,7 @@
-// === Module 14390: ConjureAppChannelMembersSheet ===
+// === Module 14388: ConjureAppChannelMembersSheet ===
 
-// Module 14390 (ConjureAppChannelMembersSheet)
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14389 */;
+// Module 14388 (ConjureAppChannelMembersSheet)
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14387 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 

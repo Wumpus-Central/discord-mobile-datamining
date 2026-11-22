@@ -1,12 +1,12 @@
-// === Module 19894: EnableCommunityModal ===
+// === Module 19891: EnableCommunityModal ===
 
-// Module 19894 (EnableCommunityModal)
+// Module 19891 (EnableCommunityModal)
 import util from "util" /* 1112 */;
 import Navigator from "Navigator" /* 7092 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 7101 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19893 */;
-import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 19895 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19890 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 19892 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19896), {});
+          return closure_1_4(closure_1_1(19893), {});
         }
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
@@ -50,7 +50,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19908), {});
+          return closure_1_4(closure_1_1(19905), {});
         }
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
@@ -59,7 +59,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19909), {});
+          return closure_1_4(closure_1_1(19906), {});
         }
       }
     };

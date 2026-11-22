@@ -10,7 +10,7 @@ import ChannelUtils from "ChannelUtils" /* 5948 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import conjureProjectMute from "conjureProjectMute" /* 6936 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12387 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12394 */;
 import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18301 */;
 import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 18390 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

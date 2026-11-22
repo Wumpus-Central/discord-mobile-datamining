@@ -4,8 +4,8 @@
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
-import UserIcon from "UserIcon" /* 12354 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12799 */;
+import UserIcon from "UserIcon" /* 12361 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(12464).ServerIcon,
+        IconComponent: target(12471).ServerIcon,
         action() {
           return dependencyMap(label.id);
         }

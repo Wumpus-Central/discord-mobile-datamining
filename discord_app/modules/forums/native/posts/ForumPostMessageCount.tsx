@@ -1,6 +1,6 @@
-// === Module 12887: ForumPostMessageCount ===
+// === Module 12885: ForumPostMessageCount ===
 
-// Module 12887 (ForumPostMessageCount)
+// Module 12885 (ForumPostMessageCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;

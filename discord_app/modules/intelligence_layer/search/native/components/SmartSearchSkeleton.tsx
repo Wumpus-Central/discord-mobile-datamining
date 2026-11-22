@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(15222);
+const AILoaderConstants = fn(15220);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_6 } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -60,7 +60,7 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   }, items);
   let obj = { style: tmp.block, children: null };
   let obj2 = { style: tmp.header, children: null };
-  const items1 = [closure_7(reducedMotion(15221).AILoader, { size: 12, color: "interactive-text-default" }), closure_7(reducedMotion(15225).AIShimmer, { text: memo, variant: "body-sm/semibold", color: "interactive-text-default", delay: memo1.shimmerDelayMs, initialDelay: memo1.shimmerInitialDelayMs, duration: memo1.shimmerDurationMs, style: tmp.label })];
+  const items1 = [closure_7(reducedMotion(15219).AILoader, { size: 12, color: "interactive-text-default" }), closure_7(reducedMotion(15223).AIShimmer, { text: memo, variant: "body-sm/semibold", color: "interactive-text-default", delay: memo1.shimmerDelayMs, initialDelay: memo1.shimmerInitialDelayMs, duration: memo1.shimmerDurationMs, style: tmp.label })];
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
   const obj4 = { style: tmp.skeletons, children: null };

@@ -1,7 +1,7 @@
 // === Module 17683: GuildPowerupsBoostToUnlockCoachmark ===
 
 // Module 17683 (GuildPowerupsBoostToUnlockCoachmark)
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 13386 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 13384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

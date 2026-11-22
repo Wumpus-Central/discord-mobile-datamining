@@ -1,6 +1,6 @@
-// === Module 15702: getEmbeddedActivityPopoutWindowKey ===
+// === Module 15700: getEmbeddedActivityPopoutWindowKey ===
 
-// Module 15702 (getEmbeddedActivityPopoutWindowKey)
+// Module 15700 (getEmbeddedActivityPopoutWindowKey)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import PopoutWindowStore from "PopoutWindowStore" /* 6457 */;

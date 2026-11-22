@@ -13,11 +13,11 @@ import Pressables from "Pressables" /* 7030 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
 import TestModeUtils from "TestModeUtils" /* 9320 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10834 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12927 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12955 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 13012 */;
-import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 13019 */;
-import _modDef13734 from "module_13734" /* 13734 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12925 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12953 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 13010 */;
+import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 13017 */;
+import _modDef13732 from "module_13732" /* 13732 */;
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19289 */;
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19290 */;
 import useActivityUsersDefault from "useActivityUsers" /* 19291 */;
@@ -67,7 +67,7 @@ function ParticipantsText(arg0) {
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
-  const items1 = [timestampProducer(native.Icon, { source: _modDef13734, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
+  const items1 = [timestampProducer(native.Icon, { source: _modDef13732, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
   const obj4 = { lineClamp: 1, style: tmp.participantsText, variant: "footnote/medium", color: "text-overlay-light", children: null };
   if (action === useActivityShelfItem.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;

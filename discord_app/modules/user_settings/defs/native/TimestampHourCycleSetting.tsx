@@ -1,6 +1,6 @@
-// === Module 16881: TimestampHourCycleSetting ===
+// === Module 16879: TimestampHourCycleSetting ===
 
-// Module 16881 (TimestampHourCycleSetting)
+// Module 16879 (TimestampHourCycleSetting)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import UserSettings from "UserSettings" /* 4738 */;

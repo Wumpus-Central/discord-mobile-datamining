@@ -1,15 +1,15 @@
-// === Module 20078: clips/ClipsManager ===
+// === Module 20075: clips/ClipsManager ===
 
-// Module 20078 (clips/ClipsManager)
+// Module 20075 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5679 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
-import ClipsExperiment from "ClipsExperiment" /* 14556 */;
-import isClipsEnabled from "isClipsEnabled" /* 14880 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20080 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20081 */;
+import ClipsExperiment from "ClipsExperiment" /* 14554 */;
+import isClipsEnabled from "isClipsEnabled" /* 14878 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20077 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;

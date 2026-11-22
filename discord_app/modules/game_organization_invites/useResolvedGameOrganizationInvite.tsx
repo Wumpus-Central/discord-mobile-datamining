@@ -1,6 +1,6 @@
-// === Module 12235: useResolvedGameOrganizationInvite ===
+// === Module 12242: useResolvedGameOrganizationInvite ===
 
-// Module 12235 (useResolvedGameOrganizationInvite)
+// Module 12242 (useResolvedGameOrganizationInvite)
 import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11895 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 12989: useAppsInThisServer ===
+// === Module 12987: useAppsInThisServer ===
 
-// Module 12989 (useAppsInThisServer)
+// Module 12987 (useAppsInThisServer)
 import applyDefault from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;

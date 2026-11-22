@@ -1,6 +1,6 @@
-// === Module 13481: useFetchGuildBoostSlots ===
+// === Module 13479: useFetchGuildBoostSlots ===
 
-// Module 13481 (useFetchGuildBoostSlots)
+// Module 13479 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 16321: BountiesModalConstants ===
+// === Module 16319: BountiesModalConstants ===
 
-// Module 16321 (BountiesModalConstants)
+// Module 16319 (BountiesModalConstants)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getBountyVideoEndPeekScale_BountiesModalConstantsTsx1(progress,targetScale){return 1+(targetScale-1)*progress;})" }];

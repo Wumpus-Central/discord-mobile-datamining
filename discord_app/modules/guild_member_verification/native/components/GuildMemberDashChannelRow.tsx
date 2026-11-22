@@ -44,7 +44,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(hasOwnProperty.CHANNEL(id, StaticChannelRoute.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(13250).ChannelModes;
+  const ChannelModes = tmp2(13248).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   let obj2 = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
   let obj = id(17729);
@@ -56,9 +56,9 @@ export default function GuildMemberDashChannelRow(arg0) {
   const intl2 = tmp2(1112).intl;
   obj3.name = intl2.string(id(1112).t["9Oq93m"]);
   obj3.mode = tmp7;
-  obj2.name = jsx(id(13250).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(13250);
-  obj2.icon = jsx(id(13250).BaseChannelIcon, { mode: tmp7, IconComponent: id(7038).GroupIcon });
+  obj2.name = jsx(id(13248).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(13248);
+  obj2.icon = jsx(id(13248).BaseChannelIcon, { mode: tmp7, IconComponent: id(7038).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj9 = { style: null, textStyle: null, value: null };

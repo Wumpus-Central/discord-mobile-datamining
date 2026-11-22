@@ -3,7 +3,7 @@
 // Module 19289 (ActivityShelfItemBackground)
 import FastImageDefault from "FastImage" /* 5600 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
-import BrokenImageDefault from "BrokenImage" /* 12954 */;
+import BrokenImageDefault from "BrokenImage" /* 12952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

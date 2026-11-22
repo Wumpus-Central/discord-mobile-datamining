@@ -205,7 +205,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   const callback2 = obj3.useCallback(() => {
     coachmark(false);
   }, items9);
-  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: null, expandedChildren: "\u{1F469}\u200D\u{1F9B3}", children: true };
+  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: null, expandedChildren: "\u{1F469}", children: true };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1112).intl;
   obj8.label = intl.string(_modDef3440["8hclXY"]);

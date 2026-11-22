@@ -1,6 +1,6 @@
-// === Module 16199: FamilyCenterTopUsersBottomSheet ===
+// === Module 16197: FamilyCenterTopUsersBottomSheet ===
 
-// Module 16199 (FamilyCenterTopUsersBottomSheet)
+// Module 16197 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import _modDef2824 from "module_2824" /* 2824 */;
@@ -24,7 +24,7 @@ function UserRow(userActivity) {
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow.TableRow, obj2);
   }

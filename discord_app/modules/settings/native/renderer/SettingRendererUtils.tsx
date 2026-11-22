@@ -1,6 +1,6 @@
-// === Module 15989: SettingRendererUtils ===
+// === Module 15987: SettingRendererUtils ===
 
-// Module 15989 (SettingRendererUtils)
+// Module 15987 (SettingRendererUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1071 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
@@ -9,9 +9,9 @@ import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7245 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7411 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;
-import SettingHookHarness from "SettingHookHarness" /* 15824 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 15826 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 15990 */;
+import SettingHookHarness from "SettingHookHarness" /* 15822 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 15824 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 15988 */;
 import SettingRendererConstants from "SettingRendererConstants" /* 11938 */;
 import size from "module_2" /* 2 */;
 
@@ -59,7 +59,7 @@ export function getSettingTitle(id) {
   return cachedSettingTitle;
 }
 export function getSettingSearchableTitles() {
-  const entries = Object.entries(items(15826).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(15824).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -80,7 +80,7 @@ export function getSettingSearchableTitles() {
 export function getSettingScreens() {
   items = [];
   set = new Set();
-  const entries = Object.entries(items(15826).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(15824).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -95,7 +95,7 @@ export function getSettingScreens() {
 }
 export function getDesignSystemScreens() {
   items = [];
-  const entries = Object.entries(items(15826).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(15824).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;

@@ -8,7 +8,7 @@ import getInitialNavigationState from "getInitialNavigationState" /* 5091 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13616 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13614 */;
 import CheersSpotIllustration from "CheersSpotIllustration" /* 17845 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -189,7 +189,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   }, items1);
   const tmp7 = selectedGuildId(5930);
   const isScreenLandscape = navigation(8150).useIsScreenLandscape();
-  navigation(16480);
+  navigation(16478);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

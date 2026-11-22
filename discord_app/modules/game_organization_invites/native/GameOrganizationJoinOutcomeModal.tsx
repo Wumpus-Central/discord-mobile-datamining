@@ -1,6 +1,6 @@
-// === Module 12245: GameOrganizationJoinOutcomeModal ===
+// === Module 12252: GameOrganizationJoinOutcomeModal ===
 
-// Module 12245 (GameOrganizationJoinOutcomeModal)
+// Module 12252 (GameOrganizationJoinOutcomeModal)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
@@ -9,10 +9,10 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import ModalScreen from "ModalScreen" /* 7811 */;
 import ModalContent from "ModalContent" /* 7813 */;
-import ModalFooter from "ModalFooter" /* 12242 */;
-import useGameOrganizationJoinOutcomeDefault from "useGameOrganizationJoinOutcome" /* 12246 */;
-import HighFiveSpotIllustration from "HighFiveSpotIllustration" /* 12247 */;
-import GameOrganizationJoinOutcomeChecklistDefault from "GameOrganizationJoinOutcomeChecklist" /* 12251 */;
+import ModalFooter from "ModalFooter" /* 12249 */;
+import useGameOrganizationJoinOutcomeDefault from "useGameOrganizationJoinOutcome" /* 12253 */;
+import HighFiveSpotIllustration from "HighFiveSpotIllustration" /* 12254 */;
+import GameOrganizationJoinOutcomeChecklistDefault from "GameOrganizationJoinOutcomeChecklist" /* 12258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

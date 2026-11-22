@@ -1,6 +1,6 @@
-// === Module 14758: ExternalStreamingStore ===
+// === Module 14756: ExternalStreamingStore ===
 
-// Module 14758 (ExternalStreamingStore)
+// Module 14756 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;

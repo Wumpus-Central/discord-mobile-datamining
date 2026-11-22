@@ -1,10 +1,10 @@
-// === Module 14549: ConjureServerWidgetUpsell ===
+// === Module 14547: ConjureServerWidgetUpsell ===
 
-// Module 14549 (ConjureServerWidgetUpsell)
+// Module 14547 (ConjureServerWidgetUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useConjureServerWidgetUpsell from "useConjureServerWidgetUpsell" /* 14550 */;
-import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 14559 */;
+import useConjureServerWidgetUpsell from "useConjureServerWidgetUpsell" /* 14548 */;
+import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 14557 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -13,7 +13,7 @@ function ServerWidgetUpsellCard(cardStyle) {
   ({ userId, widget } = cardStyle);
   ({ guildId, onDismiss } = cardStyle);
   const tmp = closure_7();
-  const conjureServerWidgetUpsellDetails = widget(14550).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
+  const conjureServerWidgetUpsellDetails = widget(14548).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
   if (null == conjureServerWidgetUpsellDetails) {
     return null;
   } else {
@@ -37,7 +37,7 @@ function ServerWidgetUpsellCard(cardStyle) {
     let tmp10Result = null;
     if (null != creator) {
       const obj10 = { creator, guildId };
-      tmp10Result = closure_5(onDismiss(12287), obj10);
+      tmp10Result = closure_5(onDismiss(12294), obj10);
     }
     items1[2] = tmp10Result;
     obj5.children = items1;
@@ -66,7 +66,7 @@ function ServerWidgetUpsellCard(cardStyle) {
     obj14.children = closure_5(onDismiss(10275), obj15);
     return closure_5(View, obj14);
   }
-  const obj = widget(14550);
+  const obj = widget(14548);
 }
 function ServerWidgetUpsellForUser(userId) {
   userId = userId.userId;

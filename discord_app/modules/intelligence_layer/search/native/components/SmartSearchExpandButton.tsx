@@ -29,9 +29,9 @@ export default noop.memo(function SmartSearchExpandButton(arg0) {
   ({ isCollapsed, onPress } = arg0);
   const tmp3 = closure_10(onPress(18793).useSearchHostSurfaceColor());
   if (isCollapsed) {
-    let ChevronSmallUpIcon = onPress(12799).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = onPress(12797).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = onPress(14194).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = onPress(14192).ChevronSmallUpIcon;
   }
   items = [onPress];
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };

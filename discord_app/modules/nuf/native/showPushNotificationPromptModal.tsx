@@ -2,8 +2,8 @@
 
 // Module 17503 (showPushNotificationPromptModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13281 */;
-import NUFConstants from "NUFConstants" /* 13613 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13279 */;
+import NUFConstants from "NUFConstants" /* 13611 */;
 import size from "module_2" /* 2 */;
 
 const PermissionStateType = PushNotificationPermissionStore.PermissionStateType;
@@ -24,5 +24,5 @@ export function showPushNotificationPromptModal(onComplete) {
       onComplete();
     }
   };
-  const result = onComplete(13284).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  const result = onComplete(13282).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 }

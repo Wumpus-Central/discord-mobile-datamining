@@ -1,6 +1,6 @@
-// === Module 12343: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 12350: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 12343 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 12350 (ConnectionsRoleMessageBadgeActionSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -27,7 +27,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;
 import GuildRoleStore from "GuildRoleStore" /* 4819 */;
 import GuildStore from "GuildStore" /* 4784 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12344 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12351 */;
 
 require = fn;
 function PopoutCheck(arg0) {

@@ -1,6 +1,6 @@
-// === Module 17125: SimpleRequestOTPActionSheet ===
+// === Module 17123: SimpleRequestOTPActionSheet ===
 
-// Module 17125 (SimpleRequestOTPActionSheet)
+// Module 17123 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;
@@ -265,7 +265,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(13915)(obj6);
+  closure_8 = tmp(13913)(obj6);
   const items5 = [product];
   let obj4 = selectedSkuId(11918);
   const obj7 = { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } };

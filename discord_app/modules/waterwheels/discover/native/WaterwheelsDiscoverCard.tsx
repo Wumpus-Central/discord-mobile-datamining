@@ -10,7 +10,7 @@ import FastImageDefault from "FastImage" /* 5600 */;
 import GameControllerIcon from "GameControllerIcon" /* 7040 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 9755 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
-import ServerIcon from "ServerIcon" /* 12464 */;
+import ServerIcon from "ServerIcon" /* 12471 */;
 import useChannelListWidthDefault from "useChannelListWidth" /* 17539 */;
 import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17806 */;
 import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 17807 */;
@@ -505,7 +505,7 @@ function GamePoster(game) {
     const obj8 = { rank: game.l30Rank };
     obj7.text = intl3.formatToPlainString(tmp2(1112).t.UA6RoE, obj8);
     obj6.type = obj7;
-    obj6.icon = tmp2(13805).FireIcon;
+    obj6.icon = tmp2(13803).FireIcon;
     obj5.children = closure_11(tmp2(7061).Badge, obj6);
     tmp9Result = closure_11(closure_7, obj5);
   }

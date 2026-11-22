@@ -1,9 +1,9 @@
-// === Module 13935: CollectiblesWishlistItemCard ===
+// === Module 13933: CollectiblesWishlistItemCard ===
 
-// Module 13935 (CollectiblesWishlistItemCard)
+// Module 13933 (CollectiblesWishlistItemCard)
 import SKUPreview from "SKUPreview" /* 8980 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 13936 */;
+import SentGiftsStore from "SentGiftsStore" /* 13934 */;
 
 require = fn;
 let closure_4 = fn(8079).transformSKUToCollectiblesItem;

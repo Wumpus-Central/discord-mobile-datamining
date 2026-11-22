@@ -7,8 +7,8 @@ import native from "native" /* 1186 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16630 */;
-import EmojiIconDefault from "EmojiIcon" /* 16644 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16628 */;
+import EmojiIconDefault from "EmojiIcon" /* 16642 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -208,7 +208,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj44 = { children: null };
     items6[2] = tmp8Result5;
     obj12.children = items6;
-    obj11.children = closure_9(tmp4(16641).SeparatedList, obj12);
+    obj11.children = closure_9(tmp4(16639).SeparatedList, obj12);
     items3[1] = closure_8(closure_6, obj11);
     const obj45 = {
       onPress: function handleShowAllPerks() {

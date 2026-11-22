@@ -124,7 +124,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "b\u011Bh" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "live" };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -132,7 +132,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "b\u011Bh" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "live" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;

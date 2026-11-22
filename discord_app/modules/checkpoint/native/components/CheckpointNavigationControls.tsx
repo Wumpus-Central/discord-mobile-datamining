@@ -1,6 +1,6 @@
-// === Module 12730: CheckpointNavigationControls ===
+// === Module 12728: CheckpointNavigationControls ===
 
-// Module 12730 (CheckpointNavigationControls)
+// Module 12728 (CheckpointNavigationControls)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -11,17 +11,17 @@ import CheckpointCardColors from "CheckpointCardColors" /* 5993 */;
 import ShareIcon from "ShareIcon" /* 10137 */;
 import RetryIcon from "RetryIcon" /* 10343 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
-import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12543 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12729 */;
-import useCheckpointPressSoundDefault from "useCheckpointPressSound" /* 12731 */;
-import _modDef12732 from "module_12732" /* 12732 */;
-import CheckpointButton from "CheckpointButton" /* 12733 */;
-import _modDef12735 from "module_12735" /* 12735 */;
-import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 12736 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 12738 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 12741 */;
+import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12541 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12727 */;
+import useCheckpointPressSoundDefault from "useCheckpointPressSound" /* 12729 */;
+import _modDef12730 from "module_12730" /* 12730 */;
+import CheckpointButton from "CheckpointButton" /* 12731 */;
+import _modDef12733 from "module_12733" /* 12733 */;
+import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 12734 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 12736 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 12739 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 
 require = fn;
 function handleHomeControlsLayout(height) {
@@ -31,7 +31,7 @@ function HomeControls(onStart) {
   const tmp = closure_16();
   _require = tmp;
   const tmp4 = useIsCheckpointWideDefault();
-  let obj = { source: _modDef12732, onPress: onStart.onStart };
+  let obj = { source: _modDef12730, onPress: onStart.onStart };
   items = [tmp.homeControls, ];
   let wideHomeControls = tmp4;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
@@ -103,7 +103,7 @@ function BackButton(disabled) {
   }
   const obj2 = { source: null, onPress: null, disabled: null };
   obj = useToken;
-  obj2.source = _modDef12735;
+  obj2.source = _modDef12733;
   obj2.onPress = disabled.onPress;
   obj2.disabled = flag;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj2));
@@ -120,7 +120,7 @@ function ReplayButton(arg0) {
   ({ onPress, color, style } = arg0);
   const obj = { source: null, onPress: null };
   const tmp = closure_16();
-  obj.source = _modDef12732;
+  obj.source = _modDef12730;
   obj.onPress = onPress;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
   const obj2 = { onPressIn, onPress: onPressWithSound, accessibilityLabel: null, style: null, children: null };
@@ -140,7 +140,7 @@ function NextButton(disabled) {
   }
   const obj2 = { source: null, onPress: null, disabled: null };
   obj = useToken;
-  obj2.source = _modDef12732;
+  obj2.source = _modDef12730;
   obj2.onPress = onPress;
   obj2.disabled = disabled;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj2));
@@ -155,7 +155,7 @@ function NextButton(disabled) {
 }
 function DoneButton(onPress) {
   const tmp = closure_16();
-  const obj = { source: _modDef12732, onPress: onPress.onPress };
+  const obj = { source: _modDef12730, onPress: onPress.onPress };
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
   const obj2 = { onPressIn, onPress: onPressWithSound, accessibilityLabel: null, style: null, children: null };
   const intl = util.intl;
@@ -325,7 +325,7 @@ function RouteControls(arg0) {
   let checkpointRouteBlockedTrait;
   ({ isLastRoute, onSave, onReplay, onShare } = arg0);
   const tmp = closure_16();
-  const tmp4 = checkpointRouteBlockedTrait(12538)();
+  const tmp4 = checkpointRouteBlockedTrait(12536)();
   checkpointRouteBlockedTrait = onNext(6336).getCheckpointRouteBlockedTrait(activeRoute, tmp4);
   if (null != checkpointRouteBlockedTrait) {
     const nitroLockedMessage = onNext(6336).getNitroLockedMessage(checkpointRouteBlockedTrait);

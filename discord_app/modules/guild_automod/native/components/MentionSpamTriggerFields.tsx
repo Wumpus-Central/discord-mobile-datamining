@@ -1,13 +1,13 @@
-// === Module 19735: MentionSpamTriggerFields ===
+// === Module 19732: MentionSpamTriggerFields ===
 
-// Module 19735 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19718 */;
+// Module 19732 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12401);
+const Constants = fn(12408);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

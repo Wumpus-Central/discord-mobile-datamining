@@ -8,7 +8,7 @@ import UserPlusIcon from "UserPlusIcon" /* 5603 */;
 import ChatIcon from "ChatIcon" /* 7672 */;
 import SettingsIcon from "SettingsIcon" /* 10371 */;
 import VideoIcon2 from "VideoIcon" /* 11126 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14510 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14508 */;
 import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17991 */;
 import MobilePhoneXIcon from "MobilePhoneXIcon" /* 17992 */;
 import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 17994 */;

@@ -6,7 +6,7 @@ import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 19047 
 import _modDef19048 from "module_19048" /* 19048 */;
 import _modDef19049 from "module_19049" /* 19049 */;
 import noop from "module_19" /* 19 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15032 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15030 */;
 
 require = fn;
 const jsx = fn(21).jsx;

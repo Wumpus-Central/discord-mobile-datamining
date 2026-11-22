@@ -1,6 +1,6 @@
-// === Module 13669: useEaseInEaseOutLayoutAnimations ===
+// === Module 13667: useEaseInEaseOutLayoutAnimations ===
 
-// Module 13669 (useEaseInEaseOutLayoutAnimations)
+// Module 13667 (useEaseInEaseOutLayoutAnimations)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -19,7 +19,7 @@ export default function useEaseInEaseOutLayoutAnimations() {
   const items1 = [stateFromStores];
   return noop.useMemo(() => {
     if (obj.isAndroid()) {
-      return { entering: "disabled", exiting: "isArray", layout: "isArray" };
+      return { entering: "fill", exiting: "channel", layout: "justifyContent" };
     } else {
       const ReduceMotion = _mod1653.ReduceMotion;
       const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
@@ -52,7 +52,7 @@ export function useTriggeredLayoutTransition() {
   if (tmp3) {
     layout = noop.useMemo(() => {
       if (obj.isAndroid()) {
-        return { entering: "disabled", exiting: "isArray", layout: "isArray" };
+        return { entering: "fill", exiting: "channel", layout: "justifyContent" };
       } else {
         const ReduceMotion = _mod1653.ReduceMotion;
         const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;

@@ -1,6 +1,6 @@
-// === Module 14397: ScheduledMessageCardActionButtons ===
+// === Module 14395: ScheduledMessageCardActionButtons ===
 
-// Module 14397 (ScheduledMessageCardActionButtons)
+// Module 14395 (ScheduledMessageCardActionButtons)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1112 */;
 import SendMessageIcon from "SendMessageIcon" /* 5611 */;

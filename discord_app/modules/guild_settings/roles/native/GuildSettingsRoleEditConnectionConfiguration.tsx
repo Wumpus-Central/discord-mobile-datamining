@@ -1,6 +1,6 @@
-// === Module 19865: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 19862: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 19865 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 19862 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -14,7 +14,7 @@ import TableRow from "TableRow" /* 7045 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
 import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12005 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19866 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19863 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ function Header(arg0) {
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -58,7 +58,7 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
         tmp11 = application_id(native.Avatar, obj3);
       }
       let name1;
@@ -175,7 +175,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19866).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19863).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -183,9 +183,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(19866);
-  const tmpResult = metadataField(19866);
-  str1 = metadataField(19866).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19863);
+  const tmpResult = metadataField(19863);
+  str1 = metadataField(19863).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -299,7 +299,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     };
     return onInputValueChange(metadataField(7556).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19866).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19863).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);

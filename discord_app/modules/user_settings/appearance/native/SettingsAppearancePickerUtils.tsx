@@ -1,6 +1,6 @@
-// === Module 16706: SettingsAppearancePickerUtils ===
+// === Module 16704: SettingsAppearancePickerUtils ===
 
-// Module 16706 (SettingsAppearancePickerUtils)
+// Module 16704 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1229 */;

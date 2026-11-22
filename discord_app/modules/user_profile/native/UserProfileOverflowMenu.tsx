@@ -1,6 +1,6 @@
-// === Module 14418: UserProfileOverflowMenu ===
+// === Module 14416: UserProfileOverflowMenu ===
 
-// Module 14418 (UserProfileOverflowMenu)
+// Module 14416 (UserProfileOverflowMenu)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
@@ -12,11 +12,11 @@ import CallActionCreatorsDefault from "CallActionCreators" /* 7739 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
 import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 12049 */;
 import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 12081 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12999 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 14419 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 14428 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14432 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 14437 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12997 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 14417 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 14426 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14430 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 14435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
@@ -307,7 +307,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14434, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14432, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile: callback1 };
               ActionSheetActionCreatorsDefault.hideActionSheet();

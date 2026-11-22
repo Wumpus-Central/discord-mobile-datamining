@@ -1,6 +1,6 @@
-// === Module 16828: AnimateStickersSetting ===
+// === Module 16826: AnimateStickersSetting ===
 
-// Module 16828 (AnimateStickersSetting)
+// Module 16826 (AnimateStickersSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import noop from "module_19" /* 19 */;

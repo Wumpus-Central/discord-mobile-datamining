@@ -2,7 +2,7 @@
 
 // Module 19178 (applyActivityOrientationLock)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2145 */;
-import applyOrientationLock from "applyOrientationLock" /* 13765 */;
+import applyOrientationLock from "applyOrientationLock" /* 13763 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");

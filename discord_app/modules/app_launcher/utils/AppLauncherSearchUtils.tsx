@@ -1,18 +1,18 @@
-// === Module 12936: AppLauncherSearchUtils ===
+// === Module 12934: AppLauncherSearchUtils ===
 
-// Module 12936 (AppLauncherSearchUtils)
+// Module 12934 (AppLauncherSearchUtils)
 import Server from "Server" /* 2117 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5528 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 10441 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 10674 */;
-import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12938 */;
-import ArraySearch from "ArraySearch" /* 12939 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12940 */;
+import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12936 */;
+import ArraySearch from "ArraySearch" /* 12937 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 10438 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 10437 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12937 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12935 */;
 
 const require = globalThis.__r;
 
@@ -135,7 +135,7 @@ function sortCommandsAlpha(displayName, displayName2) {
 }
 const ApplicationCommandIndexStore = fn(10436);
 ({ appLauncherOnlyCompareNames: metroImportDefault, getSection: closure_8, useContextIndexState: closure_9, useUserIndexState: closure_10 } = ApplicationCommandIndexStore);
-const FetchState = fn(12937).FetchState;
+const FetchState = fn(12935).FetchState;
 const BuiltInSectionId = fn(5937).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(5938).COMMAND_SENTINEL;
 const size = fn(2);

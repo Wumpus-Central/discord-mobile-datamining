@@ -1,10 +1,10 @@
-// === Module 12126: CheckpointCharacterImage ===
+// === Module 12133: CheckpointCharacterImage ===
 
-// Module 12126 (CheckpointCharacterImage)
+// Module 12133 (CheckpointCharacterImage)
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5990 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7802 */;
 import showSharePreparingModal from "showSharePreparingModal" /* 9723 */;
-import NativeCheckpointCharacterImageModuleDefault from "NativeCheckpointCharacterImageModule" /* 12127 */;
+import NativeCheckpointCharacterImageModuleDefault from "NativeCheckpointCharacterImageModule" /* 12134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

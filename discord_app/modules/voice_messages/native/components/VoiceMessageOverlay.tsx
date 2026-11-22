@@ -1,6 +1,6 @@
-// === Module 13558: VoiceMessageOverlay ===
+// === Module 13556: VoiceMessageOverlay ===
 
-// Module 13558 (VoiceMessageOverlay)
+// Module 13556 (VoiceMessageOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
@@ -14,10 +14,10 @@ import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
 import LegacyTokens from "LegacyTokens" /* 6555 */;
 import useRefValueDefault from "useRefValue" /* 7018 */;
 import inlineStyles from "inlineStyles" /* 7865 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13101 */;
-import useVoiceMessageBottomInsetDefault from "useVoiceMessageBottomInset" /* 13124 */;
-import _modDef13559 from "module_13559" /* 13559 */;
-import VoiceMessageChatDefault from "VoiceMessageChat" /* 13560 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13099 */;
+import useVoiceMessageBottomInsetDefault from "useVoiceMessageBottomInset" /* 13122 */;
+import _modDef13557 from "module_13557" /* 13557 */;
+import VoiceMessageChatDefault from "VoiceMessageChat" /* 13558 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -303,7 +303,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result }), ];
-  const obj4 = { style: null, source: _modDef13559 };
+  const obj4 = { style: null, source: _modDef13557 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -313,10 +313,10 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12825).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12826).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12823).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12824).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1071).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12827).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12825).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1653 = module_1653_mod;

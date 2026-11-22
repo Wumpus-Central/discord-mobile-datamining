@@ -1,6 +1,6 @@
-// === Module 13916: UnifiedGiftModalSuccessScreen ===
+// === Module 13914: UnifiedGiftModalSuccessScreen ===
 
-// Module 13916 (UnifiedGiftModalSuccessScreen)
+// Module 13914 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
@@ -30,7 +30,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     onClose();
     if (null != giftBadgeProgress) {
       const obj2 = { giftBadgeProgress: tmp2 };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13928, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13926, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];
@@ -39,7 +39,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  const tmp4 = giftBadgeProgress(13917).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
+  const tmp4 = giftBadgeProgress(13915).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
   const tmp8 = onClose(5932);
   const items2 = [closure_5(onClose(5600), { source: tmp4, style: tmp.image }), , , ];
   const obj3 = { variant: "heading-lg/semibold", style: tmp.title, children: null };

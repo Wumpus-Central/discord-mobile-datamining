@@ -1,6 +1,6 @@
-// === Module 15004: GuildFriendshipStore ===
+// === Module 15002: GuildFriendshipStore ===
 
-// Module 15004 (GuildFriendshipStore)
+// Module 15002 (GuildFriendshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;

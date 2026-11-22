@@ -1,12 +1,12 @@
-// === Module 14347: SafetySystemNotificationEmbed ===
+// === Module 14345: SafetySystemNotificationEmbed ===
 
-// Module 14347 (SafetySystemNotificationEmbed)
+// Module 14345 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1071 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 7808 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8245 */;
-import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 14345 */;
-import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 14346 */;
+import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 14343 */;
+import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 14344 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;

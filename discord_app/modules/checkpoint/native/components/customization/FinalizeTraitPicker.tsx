@@ -1,6 +1,6 @@
-// === Module 12785: FinalizeTraitPicker ===
+// === Module 12783: FinalizeTraitPicker ===
 
-// Module 12785 (FinalizeTraitPicker)
+// Module 12783 (FinalizeTraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3440 from "module_3440" /* 3440 */;
@@ -8,12 +8,12 @@ import Text_Text from "Text/Text" /* 5504 */;
 import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6013 */;
 import CheckpointTrait from "CheckpointTrait" /* 6014 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6336 */;
-import TraitOptionItem from "TraitOptionItem" /* 12787 */;
-import TraitPicker from "TraitPicker" /* 12788 */;
-import useTraitPicker from "useTraitPicker" /* 12791 */;
-import useLastColorwayIdByOutfitIdDefault from "useLastColorwayIdByOutfitId" /* 12795 */;
-import useLastMoreTabOptionDefault from "useLastMoreTabOption" /* 12796 */;
-import FinalizeTraitTabs from "FinalizeTraitTabs" /* 12797 */;
+import TraitOptionItem from "TraitOptionItem" /* 12785 */;
+import TraitPicker from "TraitPicker" /* 12786 */;
+import useTraitPicker from "useTraitPicker" /* 12789 */;
+import useLastColorwayIdByOutfitIdDefault from "useLastColorwayIdByOutfitId" /* 12793 */;
+import useLastMoreTabOptionDefault from "useLastMoreTabOption" /* 12794 */;
+import FinalizeTraitTabs from "FinalizeTraitTabs" /* 12795 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,8 +84,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(4913);
-let obj2 = { message: { paddingHorizontal: fn(12786).CONTENT_INSET }, description: null };
-let obj3 = { paddingHorizontal: fn(12786).CONTENT_INSET };
+let obj2 = { message: { paddingHorizontal: fn(12784).CONTENT_INSET }, description: null };
+let obj3 = { paddingHorizontal: fn(12784).CONTENT_INSET };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -4,7 +4,7 @@
 import Text_Text from "Text/Text" /* 5504 */;
 import Pressables from "Pressables" /* 7030 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7565 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 12799 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 12797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

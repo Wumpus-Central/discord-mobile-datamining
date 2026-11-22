@@ -101,9 +101,9 @@ export function ShopCategory(category) {
   dependencyMap = category(1500).useNavigation();
   const unpublishedAt = category.unpublishedAt;
   let obj = category(1500);
-  const filteredAndSortedProducts = category(16388).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
+  const filteredAndSortedProducts = category(16386).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj2 = category(16388);
+  let obj2 = category(16386);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
   const collectiblesShopDeepLinkProps = category(17283).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);

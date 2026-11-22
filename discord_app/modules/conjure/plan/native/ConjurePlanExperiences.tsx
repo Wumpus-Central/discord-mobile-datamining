@@ -227,7 +227,7 @@ function ComponentSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { frame: fn(7040).GameControllerIcon, overlay_widget: fn(18271).WindowTopIcon, user_widget: fn(13052).UserCircleIcon, bot: fn(12172).RobotIcon, commands: fn(12172).RobotIcon, automod: fn(10133).ShieldIcon };
+let obj = { frame: fn(7040).GameControllerIcon, overlay_widget: fn(18271).WindowTopIcon, user_widget: fn(13050).UserCircleIcon, bot: fn(12179).RobotIcon, commands: fn(12179).RobotIcon, automod: fn(10133).ShieldIcon };
 const createStyles = fn(4913);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };

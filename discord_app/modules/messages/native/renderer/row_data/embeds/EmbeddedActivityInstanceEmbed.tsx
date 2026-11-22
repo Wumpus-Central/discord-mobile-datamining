@@ -1,15 +1,15 @@
-// === Module 14323: EmbeddedActivityInstanceEmbed ===
+// === Module 14321: EmbeddedActivityInstanceEmbed ===
 
-// Module 14323 (EmbeddedActivityInstanceEmbed)
+// Module 14321 (EmbeddedActivityInstanceEmbed)
 import util from "util" /* 1112 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6659 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12804 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12805 */;
-import getPlayInContext from "getPlayInContext" /* 12806 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12807 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12999 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 14306 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 14324 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12802 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12803 */;
+import getPlayInContext from "getPlayInContext" /* 12804 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12805 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12997 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 14304 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 14322 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

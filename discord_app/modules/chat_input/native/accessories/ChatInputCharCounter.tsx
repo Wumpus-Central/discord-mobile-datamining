@@ -1,6 +1,6 @@
-// === Module 13308: ChatInputCharCounter ===
+// === Module 13306: ChatInputCharCounter ===
 
-// Module 13308 (ChatInputCharCounter)
+// Module 13306 (ChatInputCharCounter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;

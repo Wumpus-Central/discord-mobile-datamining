@@ -1,12 +1,12 @@
-// === Module 19814: GuildSettingsServerTagUpsellCard ===
+// === Module 19811: GuildSettingsServerTagUpsellCard ===
 
-// Module 19814 (GuildSettingsServerTagUpsellCard)
+// Module 19811 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import Powerups from "Powerups" /* 8001 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13379 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13411 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13414 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13377 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13409 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13412 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 8331 */;
 

@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import SoundboardIcon from "SoundboardIcon" /* 13419 */;
+import SoundboardIcon from "SoundboardIcon" /* 13417 */;
 import useSoundboardConfig from "useSoundboardConfig" /* 18014 */;
 import VoicePanelStyles from "VoicePanelStyles" /* 19346 */;
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19347 */;

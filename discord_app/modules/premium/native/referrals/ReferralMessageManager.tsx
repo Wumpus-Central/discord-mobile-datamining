@@ -1,10 +1,10 @@
-// === Module 20105: ReferralMessageManager ===
+// === Module 20102: ReferralMessageManager ===
 
-// Module 20105 (ReferralMessageManager)
+// Module 20102 (ReferralMessageManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import MessageTypes from "MessageTypes" /* 1087 */;
 import UserOfferActionCreators from "UserOfferActionCreators" /* 8864 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19575 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19571 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;
 import UserOfferStore from "UserOfferStore" /* 8847 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;

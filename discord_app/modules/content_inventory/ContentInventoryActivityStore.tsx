@@ -1,6 +1,6 @@
-// === Module 14453: ContentInventoryActivityStore ===
+// === Module 14451: ContentInventoryActivityStore ===
 
-// Module 14453 (ContentInventoryActivityStore)
+// Module 14451 (ContentInventoryActivityStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

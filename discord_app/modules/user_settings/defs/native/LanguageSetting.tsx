@@ -1,6 +1,6 @@
-// === Module 16829: LanguageSetting ===
+// === Module 16827: LanguageSetting ===
 
-// Module 16829 (LanguageSetting)
+// Module 16827 (LanguageSetting)
 import util from "util" /* 1112 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 

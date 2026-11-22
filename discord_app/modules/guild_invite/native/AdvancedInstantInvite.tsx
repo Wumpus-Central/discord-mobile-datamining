@@ -1,6 +1,6 @@
-// === Module 20071: AdvancedInstantInvite ===
+// === Module 20068: AdvancedInstantInvite ===
 
-// Module 20071 (AdvancedInstantInvite)
+// Module 20068 (AdvancedInstantInvite)
 import util from "util" /* 1112 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -67,7 +67,7 @@ export default function AdvancedInstantInvite(maxAge) {
     if (tmp) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
-      obj.openLazy(asyncRequireImpl(20074, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(20071, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];

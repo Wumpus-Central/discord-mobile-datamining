@@ -1,11 +1,11 @@
-// === Module 14380: HomeChannelHeader ===
+// === Module 14378: HomeChannelHeader ===
 
-// Module 14380 (HomeChannelHeader)
+// Module 14378 (HomeChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import _modDef13733 from "module_13733" /* 13733 */;
+import _modDef13731 from "module_13731" /* 13731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/h
 
 export default noop.memo(function HomeChannelHeader() {
   const obj = { style: closure_6().container, children: null };
-  items = [React4(native.Icon, { source: _modDef13733, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
+  items = [React4(native.Icon, { source: _modDef13731, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
   const obj3 = { variant: "heading-lg/semibold", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.Ym2Ri6);

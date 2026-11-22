@@ -275,13 +275,13 @@ function CreateThreadViewInner(screenIndex) {
     const obj17 = { children: null };
     const obj18 = { style: tmp.typingWrapper, children: null };
     const obj19 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj18.children = closure_13(tmp11(12851), obj19);
+    obj18.children = closure_13(tmp11(12849), obj19);
     obj17.children = closure_13(closure_6, obj18);
     tmp22Result2 = closure_13(tmp2(5491).LayerScope, obj17);
   }
   items5[2] = tmp22Result2;
-  items5[3] = closure_13(parentChannel(12823), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
-  items5[4] = closure_13(parentChannel(13555), { channelId: parentChannel.id });
+  items5[3] = closure_13(parentChannel(12821), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
+  items5[4] = closure_13(parentChannel(13553), { channelId: parentChannel.id });
   obj6.children = items5;
   items3[1] = closure_14(closure_6, obj6);
   obj5.children = items3;

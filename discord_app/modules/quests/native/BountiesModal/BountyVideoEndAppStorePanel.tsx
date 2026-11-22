@@ -1,6 +1,6 @@
-// === Module 16372: BountyVideoEndAppStorePanel ===
+// === Module 16370: BountyVideoEndAppStorePanel ===
 
-// Module 16372 (BountyVideoEndAppStorePanel)
+// Module 16370 (BountyVideoEndAppStorePanel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;

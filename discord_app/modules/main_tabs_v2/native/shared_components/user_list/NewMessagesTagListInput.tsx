@@ -1,6 +1,6 @@
-// === Module 13230: NewMessagesTagListInput ===
+// === Module 13228: NewMessagesTagListInput ===
 
-// Module 13230 (NewMessagesTagListInput)
+// Module 13228 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;

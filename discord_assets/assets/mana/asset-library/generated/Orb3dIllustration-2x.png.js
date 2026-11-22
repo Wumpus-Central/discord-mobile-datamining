@@ -1,6 +1,6 @@
-// === Module 14029: ? ===
+// === Module 14027: ? ===
 
-// Module 14029
+// Module 14027
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/Orb3dIllustration-2x.png.js");

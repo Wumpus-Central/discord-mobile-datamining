@@ -1,10 +1,10 @@
-// === Module 12490: Tracking ===
+// === Module 12126: Tracking ===
 
-// Module 12490 (Tracking)
+// Module 12126 (Tracking)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
-import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12491 */;
+import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12127 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -53,7 +53,7 @@ export function trackCheckpoint2026CharacterChoiceSelected(trait_type, option_id
   const merged = Object.assign(CheckpointSessionAnalyticsManagerDefault.getAnalyticsProperties());
   obj.track(AnalyticEvents.CHECKPOINT_2026_CHARACTER_CHOICE_SELECTED, obj2);
 }
-export function trackCheckpoint2026GiftCtaClicked(id) {
+export function trackCheckpoint2026GiftCTAClicked(id) {
   const obj2 = { other_user_id: id, step_name: null };
   const obj = AnalyticsUtilsDefault;
   obj2.step_name = CheckpointSessionAnalyticsManagerDefault.getStepName();
@@ -80,4 +80,16 @@ export function trackCheckpoint2026MuteToggled(isMuted) {
   obj2.is_muted = isMuted;
   const merged = Object.assign(CheckpointSessionAnalyticsManagerDefault.getAnalyticsProperties());
   obj.track(AnalyticEvents.CHECKPOINT_2026_MUTE_TOGGLED, obj2);
+}
+export function trackCheckpoint2026CharacterSaveClicked() {
+  AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_2026_CHARACTER_SAVE_CLICKED);
+}
+export function trackCheckpoint2026CharacterShareClicked() {
+  AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_2026_CHARACTER_SHARE_CLICKED);
+}
+export function trackCheckpoint2026CardSaveClicked(checkpoint_card_type) {
+  AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_2026_CARD_SAVE_CLICKED, { checkpoint_card_type });
+}
+export function trackCheckpoint2026CardShareClicked(checkpoint_card_type) {
+  AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_2026_CARD_SHARE_CLICKED, { checkpoint_card_type });
 }

@@ -7,7 +7,7 @@ import util from "util" /* 1112 */;
 import _modDef2643 from "module_2643" /* 2643 */;
 import useToken from "useToken" /* 5477 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import CompassIcon from "CompassIcon" /* 17014 */;
+import CompassIcon from "CompassIcon" /* 17012 */;
 import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 17826 */;
 import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17829 */;
 import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17872 */;
@@ -56,7 +56,7 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
   const obj4 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(() => ({ onPress }), []);
   const items1 = [React5(GuildsBarSeparatorDefault, {}), ];
-  const obj5 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "switch", expandedChildren: null, children: null };
+  const obj5 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "center", expandedChildren: 8, children: 2 };
   const intl = util.intl;
   obj5.label = intl.string(_modDef2643.zFl2A4);
   obj5.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});

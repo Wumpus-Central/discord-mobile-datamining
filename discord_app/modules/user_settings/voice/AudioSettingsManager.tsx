@@ -6,7 +6,7 @@ import Storage2 from "Storage" /* 510 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4743 */;
 import AudioSettingsUtils from "AudioSettingsUtils" /* 5815 */;
 import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 5816 */;
-import AudioSettingsPending from "AudioSettingsPending" /* 15365 */;
+import AudioSettingsPending from "AudioSettingsPending" /* 15363 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GameConsoleStore from "GameConsoleStore" /* 5655 */;
 import SoundboardStore from "SoundboardStore" /* 5961 */;
@@ -120,7 +120,7 @@ function handleSetLocalMute(arg0) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(15365).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(15363).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -192,7 +192,7 @@ function handleSetLocalSoundboardMute(userId) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(15365).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(15363).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -282,7 +282,7 @@ let closure_12 = apply.debounce(() => {
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
     closure_0 = arg0;
-    let result = closure_0(15365).drainPendingAudioSettings((arg0, arg1, arg2) => {
+    let result = closure_0(15363).drainPendingAudioSettings((arg0, arg1, arg2) => {
       let diff;
       const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
       flag = false;

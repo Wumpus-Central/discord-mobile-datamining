@@ -2,7 +2,7 @@
 
 // Module 19424 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20172 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20169 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -122,6 +122,7 @@ const obj = {
   ParentalConsentWarningManager: null,
   ParticipantFocusManager: null,
   MobileGiftIntentCardManager: null,
+  PhoenixRolloutManager: null,
   PromotionsManager: null,
   ProximitySensorManager: null,
   PushNotificationCacheManager: null,
@@ -642,6 +643,13 @@ obj.MobileGiftIntentCardManager = {
   },
   neverLoadBeforeConnectionOpen: true,
   hasStoreChangeListeners: true
+};
+obj.PhoenixRolloutManager = {
+  actions: ["POST_CONNECTION_OPEN"],
+  inlineRequire() {
+    return require("PhoenixRolloutManager").default;
+  },
+  neverLoadBeforeConnectionOpen: true
 };
 obj.PromotionsManager = {
   actions: ["POST_CONNECTION_OPEN", "EXPERIMENTS_FETCH_SUCCESS", "IAP_PURCHASE_PRODUCT_SUCCESS", "GPLAY_PURCHASE_VERIFIED", "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS", "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", "BILLING_REFERRAL_RESOLVE_SUCCESS", "VIRTUAL_CURRENCY_REDEEM_SUCCESS"],

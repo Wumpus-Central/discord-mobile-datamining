@@ -1,6 +1,6 @@
-// === Module 16243: AuthorizedAppsSetting ===
+// === Module 16241: AuthorizedAppsSetting ===
 
-// Module 16243 (AuthorizedAppsSetting)
+// Module 16241 (AuthorizedAppsSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import KeyIcon from "KeyIcon" /* 7386 */;

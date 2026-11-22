@@ -1,10 +1,10 @@
-// === Module 14609: CheckpointTestingOptions ===
+// === Module 14607: CheckpointTestingOptions ===
 
-// Module 14609 (CheckpointTestingOptions)
+// Module 14607 (CheckpointTestingOptions)
 import _modDef3442 from "module_3442" /* 3442 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_2 = fn(14607).getCheckpointMitigationMock;
+let closure_2 = fn(14605).getCheckpointMitigationMock;
 const items = [
   {
     id: "open",
@@ -39,7 +39,7 @@ items[1] = {
     const result = UNAVAILABLE(12500).resetCheckpointProgress();
     const obj = UNAVAILABLE(12500);
     const intl = UNAVAILABLE(1112).intl;
-    const result1 = UNAVAILABLE(14610).showCheckpointTestingToast(intl.string(UNAVAILABLE(1112).t.i4jeWR), "success");
+    const result1 = UNAVAILABLE(14608).showCheckpointTestingToast(intl.string(UNAVAILABLE(1112).t.i4jeWR), "success");
   }
 };
 let obj3 = { id: "reset-character", label: _modDef3442.Q9JHSs, action: null };
@@ -112,7 +112,7 @@ obj3.action = function action() {
   return applyArgumentsResult;
 };
 items[2] = obj3;
-fn(14608).CheckpointMocks.FAKE_DATA;
+fn(14606).CheckpointMocks.FAKE_DATA;
 items[3] = {
   id: "open-fake-data",
   label: _modDef3442.kPBZ5M,
@@ -123,7 +123,7 @@ items[3] = {
     return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
   }
 };
-fn(14608).CheckpointMocks.GLOBAL_STATS;
+fn(14606).CheckpointMocks.GLOBAL_STATS;
 items[4] = {
   id: "open-global-stats",
   label: _modDef3442.UwiUbM,
@@ -134,7 +134,7 @@ items[4] = {
     return UNAVAILABLE(12497).openCheckpoint("qa_menu", {});
   }
 };
-fn(14608).CheckpointMocks.ZERO_STATS;
+fn(14606).CheckpointMocks.ZERO_STATS;
 items[5] = {
   id: "open-zero-stats",
   label: _modDef3442.BYW9oX,
@@ -146,7 +146,7 @@ items[5] = {
   }
 };
 const items1 = [...items];
-const UNAVAILABLE = fn(14608).CheckpointMocks.UNAVAILABLE;
+const UNAVAILABLE = fn(14606).CheckpointMocks.UNAVAILABLE;
 const obj2 = {
   id: "reset-progress",
   label: _modDef3442.HYMZmZ,
@@ -154,7 +154,7 @@ const obj2 = {
     const result = UNAVAILABLE(12500).resetCheckpointProgress();
     const obj = UNAVAILABLE(12500);
     const intl = UNAVAILABLE(1112).intl;
-    const result1 = UNAVAILABLE(14610).showCheckpointTestingToast(intl.string(UNAVAILABLE(1112).t.i4jeWR), "success");
+    const result1 = UNAVAILABLE(14608).showCheckpointTestingToast(intl.string(UNAVAILABLE(1112).t.i4jeWR), "success");
   }
 };
 const items2 = [

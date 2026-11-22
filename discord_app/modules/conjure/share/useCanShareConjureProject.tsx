@@ -1,7 +1,7 @@
 // === Module 18281: useCanShareConjureProject ===
 
 // Module 18281 (useCanShareConjureProject)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 12312 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 12319 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 

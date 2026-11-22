@@ -4,7 +4,7 @@
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16896 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16894 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 
@@ -21,8 +21,8 @@ export default function SettingsOverviewScreen() {
   const tmp2 = mapleSyrup1Enabled;
   const staffOrDeveloperSettingPredicate = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[8]).useStaffOrDeveloperSettingPredicate();
   let obj2 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[8]);
-  items = [enabled];
-  const stateFromStores = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[9]).useStateFromStores(items, () => enabled.locale);
+  items = [LocaleStore];
+  const stateFromStores = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[9]).useStateFromStores(items, () => tmp12.locale);
   let obj3 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[9]);
   mapleSyrup1Enabled = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[10]).useMapleSyrup1Enabled("SettingsOverviewScreen");
   let obj4 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[10]);
@@ -30,15 +30,25 @@ export default function SettingsOverviewScreen() {
   let obj5 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[10]);
   const isPhoenixInstalled = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[11]).useIsPhoenixInstalled();
   let obj6 = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[11]);
-  let tmp9 = !staffOrDeveloperSettingPredicate;
+  const tmp9 = null != staffOrDeveloperSettingPredicate(mapleSyrup1Enabled[12]).useConfig({ location: "SettingsOverviewScreen" }, { autoTrackExposure: false }).forcedClient;
+  staffOrDeveloperSettingPredicate(mapleSyrup1Enabled[13]);
+  let tmp11 = !staffOrDeveloperSettingPredicate;
   if (!staffOrDeveloperSettingPredicate) {
-    tmp9 = isPhoenixInstalled;
+    tmp11 = isPhoenixInstalled;
   }
-  enabled = staffOrDeveloperSettingPredicate;
-  if (!staffOrDeveloperSettingPredicate) {
-    enabled = obj7.useConfig({ location: "SettingsOverviewScreen" }, { autoTrackExposure: tmp9 }).enabled;
+  if (tmp11) {
+    tmp11 = !tmp9;
   }
-  let items1 = [hasPremiumSubscriptionToDisplay, staffOrDeveloperSettingPredicate, stateFromStores, mapleSyrup1Enabled, mapleSyrup3Enabled, enabled];
+  let tmp13 = !tmp9;
+  if (!tmp9) {
+    let tmp14 = staffOrDeveloperSettingPredicate;
+    if (!staffOrDeveloperSettingPredicate) {
+      tmp14 = tmp12;
+    }
+    tmp13 = tmp14;
+  }
+  LocaleStore = tmp13;
+  let items1 = [hasPremiumSubscriptionToDisplay, staffOrDeveloperSettingPredicate, stateFromStores, mapleSyrup1Enabled, mapleSyrup3Enabled, tmp13];
   const node = mapleSyrup3Enabled.useMemo(() => {
     const obj2 = { label: null, settings: null };
     const intl = util.intl;
@@ -135,7 +145,7 @@ export default function SettingsOverviewScreen() {
     const intl8 = util.intl;
     obj12.label = intl8.string(util.t.H8h6wu);
     let PHOENIX_LAUNCH = null;
-    if (enabled) {
+    if (closure_4) {
       PHOENIX_LAUNCH = MobileUserSettings.PHOENIX_LAUNCH;
     }
     const obj13 = { sections: null };
@@ -145,5 +155,5 @@ export default function SettingsOverviewScreen() {
     obj13.sections = items1;
     return obj.createList(obj13);
   }, items1);
-  return jsx(tmp(tmp2[14]).SearchableSettingsList, { node });
+  return jsx(tmp(tmp2[15]).SearchableSettingsList, { node });
 };

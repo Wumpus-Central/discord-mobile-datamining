@@ -34,8 +34,8 @@ export default function ConjureMentionSuggestions(arg0) {
       obj.title = intl.string(_modDef4190.Vb3sUg);
       obj.children = found.map((user) => {
         closure_0 = user;
-        const obj = { icon: closure_1_3(projectId(fileThumbnail[8]).Avatar, { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null };
-        const obj2 = { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "r" };
+        const obj = { icon: closure_1_3(projectId(fileThumbnail[8]).Avatar, { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null };
+        const obj2 = { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "Array" };
         obj.label = projectId(fileThumbnail[9]).getName(user.user);
         obj.subLabel = user.user.username;
         obj.onPress = function onPress() {

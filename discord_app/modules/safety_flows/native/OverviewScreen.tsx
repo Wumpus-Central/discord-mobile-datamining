@@ -1,7 +1,7 @@
-// === Module 20143: OverviewScreen ===
+// === Module 20140: OverviewScreen ===
 
-// Module 20143 (OverviewScreen)
-import SafetyFlowsUtils from "SafetyFlowsUtils" /* 20145 */;
+// Module 20140 (OverviewScreen)
+import SafetyFlowsUtils from "SafetyFlowsUtils" /* 20142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewS
 
 export default function OverviewScreen() {
   let tmp = closure_6();
-  task = task(20144).useSafetyFlowTask().task;
-  let obj = task(20144);
+  task = task(20141).useSafetyFlowTask().task;
+  let obj = task(20141);
   const navigation = task(1500).useNavigation();
   items = [task, navigation];
   const callback = noop.useCallback(() => {
@@ -47,7 +47,7 @@ export default function OverviewScreen() {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type, index) => {
-        const obj = { tip: task(20139).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+        const obj = { tip: task(20136).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
         return closure_1_4(navigation(11807), obj, task_type.task_type);
       });
     }
@@ -65,14 +65,14 @@ export default function OverviewScreen() {
   obj8.children = closure_5(task(5929).Stack, obj3);
   const items3 = [closure_4(task(7813).ModalContent, obj8), ];
   const obj10 = { children: null };
-  const items4 = [closure_4(navigation(20146), {}), ];
+  const items4 = [closure_4(navigation(20143), {}), ];
   const obj11 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1112).intl;
   obj11.text = intl4.string(navigation(3120).Ks6opt);
   obj11.onPress = callback;
   items4[1] = closure_4(task(10121).ModalActionButton, obj11);
   obj10.children = items4;
-  items3[1] = closure_5(task(12242).ModalFooter, obj10);
+  items3[1] = closure_5(task(12249).ModalFooter, obj10);
   obj7.children = items3;
   return closure_5(task(7811).ModalScreen, obj7);
 };

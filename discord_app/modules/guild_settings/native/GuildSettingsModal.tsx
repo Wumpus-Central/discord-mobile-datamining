@@ -1,6 +1,6 @@
-// === Module 19694: GuildSettingsModal ===
+// === Module 19691: GuildSettingsModal ===
 
-// Module 19694 (GuildSettingsModal)
+// Module 19691 (GuildSettingsModal)
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;

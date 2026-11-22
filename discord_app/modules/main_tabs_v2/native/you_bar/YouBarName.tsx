@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9454 */;
 import GuildTagDefault from "GuildTag" /* 9743 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12799 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13511 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 13512 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13509 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 13510 */;
 import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17969 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
@@ -65,7 +65,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(13509), obj6);
+    let tmp9Result = closure_11(stateFromStores(13507), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -74,7 +74,7 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(13527), obj7);
+      tmp11Result2 = closure_11(stateFromStores(13525), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };

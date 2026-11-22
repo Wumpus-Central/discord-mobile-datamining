@@ -1,6 +1,6 @@
-// === Module 13817: GuildProfileCTA ===
+// === Module 13815: GuildProfileCTA ===
 
-// Module 13817 (GuildProfileCTA)
+// Module 13815 (GuildProfileCTA)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4949 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6516 */;

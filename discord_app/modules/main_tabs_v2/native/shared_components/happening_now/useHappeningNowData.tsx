@@ -10,7 +10,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 14988 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 14986 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6633 */;
 import StageInstanceStore from "StageInstanceStore" /* 4767 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8143 */;
@@ -35,7 +35,7 @@ let GuildScheduledEventStore = fn(6633);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const MemberListRowTypes = fn(6919).MemberListRowTypes;
 let closure_20 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(16701).HappeningNowItem;
+const HappeningNowItem = fn(16699).HappeningNowItem;
 const Constants = fn(1071);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: closure_31, StatusTypes: closure_32 } = Constants);
 let items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
@@ -306,7 +306,7 @@ export default function useHappeningNowData(has, guildId) {
                         if (closure_2_3) {
                           const found = embeddedActivitiesForChannel.filter((userIds) => {
                             items = [...userIds.userIds];
-                            return items.some(/* F141707 */ function() { ... });
+                            return items.some(/* F141724 */ function() { ... });
                           });
                           closure_1_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId, voiceState, guildId: set1, activity }));
                         } else {

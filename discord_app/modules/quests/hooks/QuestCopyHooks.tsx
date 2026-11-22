@@ -1,6 +1,6 @@
-// === Module 13756: QuestCopyHooks ===
+// === Module 13754: QuestCopyHooks ===
 
-// Module 13756 (QuestCopyHooks)
+// Module 13754 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import NumberUtils from "NumberUtils" /* 2025 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
@@ -14,7 +14,7 @@ import hooks_QuestHooks from "hooks/QuestHooks" /* 9958 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9977 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9982 */;
 import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 10778 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 13758 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 13756 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ import UserStore from "UserStore" /* 1386 */;
 
 const util = v1votF6(1112);
 const utils_QuestUtils = v1votF6(8425);
-const SponsoredQuestUtils = v1votF6(13757);
+const SponsoredQuestUtils = v1votF6(13755);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);

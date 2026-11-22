@@ -5,7 +5,7 @@ import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperimen
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15035 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15033 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
 import VoiceStateStore from "VoiceStateStore" /* 5561 */;
 

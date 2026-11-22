@@ -1,10 +1,10 @@
-// === Module 12813: createChannelStream ===
+// === Module 12811: createChannelStream ===
 
-// Module 12813 (createChannelStream)
+// Module 12811 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UnlinkedGamePlayerPlaceholders from "UnlinkedGamePlayerPlaceholders" /* 8697 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 12814 */;
-import tryInjectMessage from "tryInjectMessage" /* 12815 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 12812 */;
+import tryInjectMessage from "tryInjectMessage" /* 12813 */;
 import PushFeedbackStore from "PushFeedbackStore" /* 11904 */;
 import EditMessageStore from "EditMessageStore" /* 8381 */;
 import UploadStore from "UploadStore" /* 8531 */;

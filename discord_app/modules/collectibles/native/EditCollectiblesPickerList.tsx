@@ -1,6 +1,6 @@
-// === Module 14267: EditCollectiblesPickerList ===
+// === Module 14265: EditCollectiblesPickerList ===
 
-// Module 14267 (EditCollectiblesPickerList)
+// Module 14265 (EditCollectiblesPickerList)
 import Text_Text from "Text/Text" /* 5504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4913);
-let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(14262).GUTTER_SIZE, paddingBottom: 5 } };
+let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(14260).GUTTER_SIZE, paddingBottom: 5 } };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(function DefaultHeader(children) {
   return timestampProducer(hasOwnProperty, { style: closure_9().header, children: timestampProducer(Text_Text.Heading, { variant: "heading-xs/medium", color: "mobile-text-heading-primary", children: children.header }) });
@@ -51,7 +51,7 @@ export function EditCollectiblesPickerList(sections) {
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(14262).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(14260).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });

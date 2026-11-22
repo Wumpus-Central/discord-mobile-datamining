@@ -167,7 +167,7 @@ function PreviewItem(overState) {
   const memo = noop.useMemo(() => {
     if ("convert-after" === c1) {
       if (null != c0) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Path", name: "Array", color: "analyticsLocations", expanded: null, children: null };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Path", name: "Array", color: "add", expanded: null, children: true };
         items = [tmp2];
         element.children = items;
         return element;
@@ -422,7 +422,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "/assets/design/components/Icon/native/redesign/generated/images", dragRegion: 24, windowSize: 24, dropComplete: null, listInsets: "80139ae0e2b501617462c705b80c97d5" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "/assets/images/platforms", dragRegion: 500, windowSize: 500, dropComplete: null, listInsets: "59966e5b844184ad532c25b89628277b" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

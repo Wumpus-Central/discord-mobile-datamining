@@ -1,6 +1,6 @@
-// === Module 14012: BadgeArtImage ===
+// === Module 14010: BadgeArtImage ===
 
-// Module 14012 (BadgeArtImage)
+// Module 14010 (BadgeArtImage)
 import DurationsDefault from "Durations" /* 1088 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import TimeUtils from "TimeUtils" /* 5662 */;

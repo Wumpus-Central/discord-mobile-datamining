@@ -5,7 +5,7 @@ import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
-import ShopIcon from "ShopIcon" /* 13009 */;
+import ShopIcon from "ShopIcon" /* 13007 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 

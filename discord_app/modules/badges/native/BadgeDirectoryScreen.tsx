@@ -1,9 +1,9 @@
-// === Module 14009: BadgeDirectoryScreen ===
+// === Module 14007: BadgeDirectoryScreen ===
 
-// Module 14009 (BadgeDirectoryScreen)
+// Module 14007 (BadgeDirectoryScreen)
 import nativeDefault from "native" /* 575 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 14008 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 14006 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 

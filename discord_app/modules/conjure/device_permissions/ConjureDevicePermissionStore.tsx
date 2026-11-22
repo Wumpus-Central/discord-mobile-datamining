@@ -1,6 +1,6 @@
-// === Module 12302: ConjureDevicePermissionStore ===
+// === Module 12309: ConjureDevicePermissionStore ===
 
-// Module 12302 (ConjureDevicePermissionStore)
+// Module 12309 (ConjureDevicePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

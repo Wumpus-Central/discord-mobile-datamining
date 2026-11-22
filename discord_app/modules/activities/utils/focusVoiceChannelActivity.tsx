@@ -1,6 +1,6 @@
-// === Module 12201: focusVoiceChannelActivity ===
+// === Module 12208: focusVoiceChannelActivity ===
 
-// Module 12201 (focusVoiceChannelActivity)
+// Module 12208 (focusVoiceChannelActivity)
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
 

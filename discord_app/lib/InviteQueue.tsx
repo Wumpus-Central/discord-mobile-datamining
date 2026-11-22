@@ -1,6 +1,6 @@
-// === Module 13658: InviteQueue ===
+// === Module 13656: InviteQueue ===
 
-// Module 13658 (InviteQueue)
+// Module 13656 (InviteQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;

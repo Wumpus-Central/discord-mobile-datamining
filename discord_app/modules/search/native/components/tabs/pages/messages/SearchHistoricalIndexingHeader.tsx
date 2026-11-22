@@ -1,7 +1,7 @@
 // === Module 18810: SearchHistoricalIndexingHeader ===
 
 // Module 18810 (SearchHistoricalIndexingHeader)
-import TrackingDefault from "Tracking" /* 13220 */;
+import TrackingDefault from "Tracking" /* 13218 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 

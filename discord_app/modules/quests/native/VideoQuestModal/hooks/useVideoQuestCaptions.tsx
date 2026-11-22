@@ -1,6 +1,6 @@
-// === Module 16531: useVideoQuestCaptions ===
+// === Module 16529: useVideoQuestCaptions ===
 
-// Module 16531 (useVideoQuestCaptions)
+// Module 16529 (useVideoQuestCaptions)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,9 +28,9 @@ export (quest) => {
       value = HTTP.get(obj);
       value.then((text) => {
         try {
-          closure_1_2(url(16532).parseVtt(text.text).cues);
+          closure_1_2(url(16530).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
-          const obj = url(16532);
+          const obj = url(16530);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }
@@ -39,9 +39,9 @@ export (quest) => {
       });
       const nextPromise = value.then((text) => {
         try {
-          closure_1_2(url(16532).parseVtt(text.text).cues);
+          closure_1_2(url(16530).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
-          const obj = url(16532);
+          const obj = url(16530);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }

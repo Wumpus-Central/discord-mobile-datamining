@@ -19,7 +19,7 @@ import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import PresenceStore from "PresenceStore" /* 5651 */;
-import TypingStore from "TypingStore" /* 12831 */;
+import TypingStore from "TypingStore" /* 12829 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
 
 require = fn;
@@ -85,7 +85,7 @@ function UserResult(user) {
   obj5.style = items4;
   const tmp2Result5 = renderChannelPressableWrapperDefault;
   const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), , ];
-  const obj7 = { user, guildId: "Button", isMobileOnline, isVROnline, status: null, streaming: "8fe9f8851734812c3784cd78f71ec27f", style: "zh-TW.messages.8fe9f8851734812c3784cd78f71ec27f.compiled.messages", size: "jsona", animate: "ConjureAppPictureInPicture", typing: null, autoStatusCutout: null };
+  const obj7 = { user, guildId: "Button", isMobileOnline, isVROnline, status: null, streaming: "913a5e1b2754c1df27088bf73bf21aff", style: "sv-SE.messages.913a5e1b2754c1df27088bf73bf21aff.compiled.messages", size: "jsona", animate: "ConjureAppPictureInPicture", typing: null, autoStatusCutout: null };
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;
@@ -146,7 +146,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(16723)(channel, { unread });
+  obj4.lastMessage = channel(16721)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

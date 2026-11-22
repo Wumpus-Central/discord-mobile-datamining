@@ -1,6 +1,6 @@
-// === Module 14195: SuperReactionLocalImageAnimation ===
+// === Module 14193: SuperReactionLocalImageAnimation ===
 
-// Module 14195 (SuperReactionLocalImageAnimation)
+// Module 14193 (SuperReactionLocalImageAnimation)
 import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4871 */;
 import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 5497 */;
 import noop from "module_19" /* 19 */;

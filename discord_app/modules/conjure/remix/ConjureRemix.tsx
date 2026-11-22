@@ -1,10 +1,10 @@
-// === Module 12292: ConjureRemix ===
+// === Module 12299: ConjureRemix ===
 
-// Module 12292 (ConjureRemix)
+// Module 12299 (ConjureRemix)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6940 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 12293 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 12300 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import Dispatcher from "Dispatcher" /* 572 */;

@@ -1,6 +1,6 @@
-// === Module 19861: GuildSettingsRoleEditPermissions ===
+// === Module 19858: GuildSettingsRoleEditPermissions ===
 
-// Module 19861 (GuildSettingsRoleEditPermissions)
+// Module 19858 (GuildSettingsRoleEditPermissions)
 import nativeDefault from "native" /* 575 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -78,7 +78,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
       onClick: function handleTemplateOpen() {
           metroImportDefault.dismiss();
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19862, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
+          obj.openLazy(asyncRequireImpl(19859, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
         },
       accessibilityRole: "button"
     };
@@ -101,7 +101,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(19859), { role }), , , ];
+  const children = [closure_14(role(19856), { role }), , , ];
   const obj7 = {
     children: closure_14(guild(7427).SearchBar, {
       size: "md",

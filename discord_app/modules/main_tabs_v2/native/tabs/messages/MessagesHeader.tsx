@@ -8,7 +8,7 @@ import _modDef5604 from "module_5604" /* 5604 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7096 */;
 import _modDef7429 from "module_7429" /* 7429 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13061 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13059 */;
 import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17548 */;
 import noop from "module_19" /* 19 */;
 

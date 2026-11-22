@@ -5,7 +5,7 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import _mod7490 from "module_7490" /* 7490 */;
-import _mod13903 from "module_13903" /* 13903 */;
+import _mod13901 from "module_13901" /* 13901 */;
 import MessagesItemChannelBase from "MessagesItemChannelBase" /* 17551 */;
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17560 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -74,7 +74,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod13903.useRecyclingState(false);
+  [tmp2, tmp3] = _mod13901.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

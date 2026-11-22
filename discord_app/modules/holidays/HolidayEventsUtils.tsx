@@ -1,6 +1,6 @@
-// === Module 19531: HolidayEventsUtils ===
+// === Module 19527: HolidayEventsUtils ===
 
-// Module 19531 (HolidayEventsUtils)
+// Module 19527 (HolidayEventsUtils)
 import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 19525 */;
 import size from "module_2" /* 2 */;
 
@@ -33,13 +33,9 @@ export default {
     const timestamp = Date.now();
     return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs && isExperimentEligible;
   },
-  getAppSpinnerSources() {
+  isHolidayHappening() {
     const timestamp = Date.now();
-    let appSpinnerSources = null;
-    if (tmp4) {
-      appSpinnerSources = HolidayEventsConfigDefault.appSpinnerSources;
-    }
-    return appSpinnerSources;
+    return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs;
   },
   getLoadingTips() {
     const timestamp = Date.now();

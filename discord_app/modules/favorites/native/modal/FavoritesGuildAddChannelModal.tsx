@@ -1,6 +1,6 @@
-// === Module 13883: FavoritesGuildAddChannelModal ===
+// === Module 13881: FavoritesGuildAddChannelModal ===
 
-// Module 13883 (FavoritesGuildAddChannelModal)
+// Module 13881 (FavoritesGuildAddChannelModal)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -24,7 +24,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   dependencyMap = undefined;
   let height;
   const tmp = closure_11();
-  first(13885)(parentId.source);
+  first(13883)(parentId.source);
   [first, dependencyMap] = noop.useState([]);
   const callback = noop.useCallback((arg0) => {
     closure_2(arg0);
@@ -81,8 +81,8 @@ export default function FavoritesGuildAddChannelModal(parentId) {
             obj8.parentId = parentId;
             parentId(11219).addFavoriteChannels(obj8);
             const obj2 = parentId(11219);
-            const result = parentId(13882).closeFavoritesGuildAddChannelModal();
-            const obj4 = parentId(13882);
+            const result = parentId(13880).closeFavoritesGuildAddChannelModal();
+            const obj4 = parentId(13880);
           } else {
             const intl = parentId(1112).intl;
             parentId(5594).presentError(intl.string(parentId(1112).t.R0RpRX));
@@ -107,10 +107,10 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   };
   let obj2 = { title: null, onClose: null };
   const tmp2 = first;
-  const tmp4 = first(13884)();
+  const tmp4 = first(13882)();
   let intl = parentId(1112).intl;
   obj2.title = intl.string(first(3802).Rp35U1);
-  obj2.onClose = parentId(13882).closeFavoritesGuildAddChannelModal;
+  obj2.onClose = parentId(13880).closeFavoritesGuildAddChannelModal;
   const items2 = [closure_9(first(10080), obj2), ];
   let obj3 = { style: tmp.container, children: null };
   const items3 = [closure_9(first(9659), { absolute: true }), , ];
@@ -125,7 +125,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   items3[1] = closure_9(first(10081), obj4);
   let obj5 = { isVisible: first.length > 0, floatingBackgroundColor: tmp.container.backgroundColor, text: null, onPress: null };
   const tmp14 = first(10081);
-  obj5.text = parentId(13886).getFavoritesAddButtonLabel(first.length);
+  obj5.text = parentId(13884).getFavoritesAddButtonLabel(first.length);
   obj5.onPress = callback1;
   items3[2] = closure_9(parentId(10120).ModalFloatingAction, obj5);
   obj3.children = items3;

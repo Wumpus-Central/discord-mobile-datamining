@@ -1,6 +1,6 @@
-// === Module 14628: UserProfileMutuals ===
+// === Module 14626: UserProfileMutuals ===
 
-// Module 14628 (UserProfileMutuals)
+// Module 14626 (UserProfileMutuals)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import noop from "module_19" /* 19 */;
@@ -27,8 +27,8 @@ export default function UserProfileMutuals(user) {
   const userProfileAnalyticsContext = user(8135).useUserProfileAnalyticsContext();
   ({ context: c2, trackUserProfileAction: c3 } = userProfileAnalyticsContext);
   let obj = user(8135);
-  ({ mutualFriends, mutualGuilds } = guildId(13501)(user));
-  if (guildId(14444)(user)) {
+  ({ mutualFriends, mutualGuilds } = guildId(13499)(user));
+  if (guildId(14442)(user)) {
     let tmp7 = null != mutualFriends;
     if (tmp7) {
       tmp7 = mutualFriends.length > 0;
@@ -53,7 +53,7 @@ export default function UserProfileMutuals(user) {
         onPress() {
               const MUTUAL_FRIENDS = UserProfileSections.MUTUAL_FRIENDS;
               _undefined2({ action: "PRESS_SECTION", section: MUTUAL_FRIENDS });
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13508, dependencyMap.paths), "UserProfileMutualsActionSheet", {
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13506, dependencyMap.paths), "UserProfileMutualsActionSheet", {
                 user,
                 section: MUTUAL_FRIENDS,
                 guildId,
@@ -74,9 +74,9 @@ export default function UserProfileMutuals(user) {
             },
         children: null
       };
-      const obj4 = { size: tmp2(1186).AvatarSizes.SIZE_16, totalCount: mapped.length, names: mapped.map((username) => username.username), children: mapped.map((user) => closure_1_6(user(_undefined[16]).Avatar, { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" }, user.id)) };
-      items = [closure_6(tmp2(14488).AvatarPile, obj4), ];
-      const obj5 = { variant, color, children: tmp5(13528)(mutualFriends.length) };
+      const obj4 = { size: tmp2(1186).AvatarSizes.SIZE_16, totalCount: mapped.length, names: mapped.map((username) => username.username), children: mapped.map((user) => closure_1_6(user(_undefined[16]).Avatar, { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" }, user.id)) };
+      items = [closure_6(tmp2(14486).AvatarPile, obj4), ];
+      const obj5 = { variant, color, children: tmp5(13526)(mutualFriends.length) };
       items[1] = closure_6(tmp2(5504).Text, obj5);
       obj3.children = items;
       tmp9Result = closure_7(tmp2(7030).PressableOpacity, obj3);
@@ -101,7 +101,7 @@ export default function UserProfileMutuals(user) {
         onPress() {
               const MUTUAL_GUILDS = UserProfileSections.MUTUAL_GUILDS;
               _undefined2({ action: "PRESS_SECTION", section: MUTUAL_GUILDS });
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13508, dependencyMap.paths), "UserProfileMutualsActionSheet", {
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13506, dependencyMap.paths), "UserProfileMutualsActionSheet", {
                 user,
                 section: MUTUAL_GUILDS,
                 guildId,
@@ -133,10 +133,10 @@ export default function UserProfileMutuals(user) {
                   return closure_1_6(guildId(_undefined[20]), obj, guild.id);
                 })
         };
-        tmp21 = closure_6(tmp2(13538).GuildIconPile, obj8);
+        tmp21 = closure_6(tmp2(13536).GuildIconPile, obj8);
       }
       const items2 = [tmp21, ];
-      const obj9 = { variant, color, children: tmp5(13503)(mutualGuilds.length) };
+      const obj9 = { variant, color, children: tmp5(13501)(mutualGuilds.length) };
       items2[1] = closure_6(tmp2(5504).Text, obj9);
       obj7.children = items2;
       tmp9Result2 = closure_7(tmp2(7030).PressableOpacity, obj7);
@@ -147,5 +147,5 @@ export default function UserProfileMutuals(user) {
   } else {
     return null;
   }
-  const tmp6 = guildId(13501)(user);
+  const tmp6 = guildId(13499)(user);
 };

@@ -1,6 +1,6 @@
-// === Module 19693: NewTermsModal ===
+// === Module 19690: NewTermsModal ===
 
-// Module 19693 (NewTermsModal)
+// Module 19690 (NewTermsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;

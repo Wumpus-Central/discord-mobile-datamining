@@ -1,10 +1,10 @@
-// === Module 12271: GameOrganizationJoinActionSheet ===
+// === Module 12278: GameOrganizationJoinActionSheet ===
 
-// Module 12271 (GameOrganizationJoinActionSheet)
+// Module 12278 (GameOrganizationJoinActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 12228 */;
-import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 12272 */;
+import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 12235 */;
+import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 12279 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import UserStore from "UserStore" /* 1386 */;

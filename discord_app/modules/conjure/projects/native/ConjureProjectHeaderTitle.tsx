@@ -7,7 +7,7 @@ import _modDef4190 from "module_4190" /* 4190 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import Pressables from "Pressables" /* 7030 */;
 import Badge from "Badge" /* 7061 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13789 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13787 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

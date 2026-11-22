@@ -3,17 +3,17 @@
 // Module 0 (Discord)
 import TTITracker from "TTITracker" /* 9 */;
 import _mod17 from "module_17" /* 17 */;
-import isTTITest from "isTTITest" /* 15631 */;
-import installSystrace from "installSystrace" /* 15632 */;
+import isTTITest from "isTTITest" /* 15629 */;
+import installSystrace from "installSystrace" /* 15630 */;
 import logAppStart from "logAppStart" /* 1 */;
 import fast_connect from "fast_connect" /* 15 */;
-import polyfills from "polyfills" /* 15437 */;
+import polyfills from "polyfills" /* 15435 */;
 import checkEnv from "checkEnv" /* 16 */;
 import SentryUtils from "SentryUtils" /* 1241 */;
 import size from "module_2" /* 2 */;
 
 let GenerateInvite = require;
-let f20265 = dependencyMap;
+let f20263 = dependencyMap;
 const polyfillsEnd = TTITracker.default.imports.polyfillsEnd;
 polyfillsEnd.record();
 const sentryEnd = TTITracker.default.imports.sentryEnd;
@@ -22,87 +22,87 @@ if (isTTITest.isTTITest) {
   installSystrace.installSystrace();
 }
 const AppRegistry = _mod17.AppRegistry;
-AppRegistry.registerComponent("Discord", () => GenerateInvite(f20265[9]).default);
+AppRegistry.registerComponent("Discord", () => GenerateInvite(f20263[9]).default);
 const runnable = AppRegistry.getRunnable("Discord");
 AppRegistry.registerRunnable("Discord", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f20265[10]).default("Main", () => {
+  return GenerateInvite(f20263[10]).default("Main", () => {
     closure_2(...closure_0);
   });
 });
-AppRegistry.registerComponent("Share", () => GenerateInvite(f20265[11]).default);
+AppRegistry.registerComponent("Share", () => GenerateInvite(f20263[11]).default);
 const runnable2 = AppRegistry.getRunnable("Share");
 AppRegistry.registerRunnable("Share", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f20265[10]).default("Share", () => closure_3(...closure_0));
+  return GenerateInvite(f20263[10]).default("Share", () => closure_3(...closure_0));
 });
 GenerateInvite = "BackgroundSync";
-f20265 = () => GenerateInvite(f20265[13]);
+f20263 = () => GenerateInvite(f20263[13]);
 AppRegistry.registerHeadlessTask("BackgroundSync", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 if (isTTITest.isTTITest) {
   GenerateInvite = "TTITestAction";
-  f20265 = () => GenerateInvite(f20265[14]);
+  f20263 = () => GenerateInvite(f20263[14]);
   AppRegistry.registerHeadlessTask("TTITestAction", () => {
-    closure_0 = GenerateInvite(f20265[12]).default;
-    return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+    closure_0 = GenerateInvite(f20263[12]).default;
+    return (arg0) => closure_0(GenerateInvite, f20263, arg0);
   });
 }
 GenerateInvite = "Disconnect";
-f20265 = () => GenerateInvite(f20265[15]);
+f20263 = () => GenerateInvite(f20263[15]);
 AppRegistry.registerHeadlessTask("Disconnect", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "MarkAsRead";
-f20265 = () => GenerateInvite(f20265[16]);
+f20263 = () => GenerateInvite(f20263[16]);
 AppRegistry.registerHeadlessTask("MarkAsRead", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "MuteAction";
-f20265 = () => GenerateInvite(f20265[17]);
+f20263 = () => GenerateInvite(f20263[17]);
 AppRegistry.registerHeadlessTask("MuteAction", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "ToggleDeafen";
-f20265 = () => GenerateInvite(f20265[18]);
+f20263 = () => GenerateInvite(f20263[18]);
 AppRegistry.registerHeadlessTask("ToggleDeafen", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "ToggleSelfMute";
-f20265 = () => GenerateInvite(f20265[19]);
+f20263 = () => GenerateInvite(f20263[19]);
 AppRegistry.registerHeadlessTask("ToggleSelfMute", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "DismissCallAction";
-f20265 = () => GenerateInvite(f20265[20]);
+f20263 = () => GenerateInvite(f20263[20]);
 AppRegistry.registerHeadlessTask("DismissCallAction", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "DirectReply";
-f20265 = () => GenerateInvite(f20265[21]);
+f20263 = () => GenerateInvite(f20263[21]);
 AppRegistry.registerHeadlessTask("DirectReply", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "SelectVoiceChannel";
-f20265 = () => GenerateInvite(f20265[22]);
+f20263 = () => GenerateInvite(f20263[22]);
 AppRegistry.registerHeadlessTask("SelectVoiceChannel", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 GenerateInvite = "GenerateInvite";
-f20265 = () => GenerateInvite(f20265[23]);
+f20263 = () => GenerateInvite(f20263[23]);
 AppRegistry.registerHeadlessTask("GenerateInvite", () => {
-  closure_0 = GenerateInvite(f20265[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20265, arg0);
+  closure_0 = GenerateInvite(f20263[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20263, arg0);
 });
 const result = size.fileFinishedImporting("index.native.tsx");
 
@@ -1474,7 +1474,7 @@ function global() {
   };
   closure_131_2 = obj3;
   self.ErrorUtils = obj3;
-  // Metro registry: 20220 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
+  // Metro registry: 20218 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
   __r(119);
   return __r(0);
 }
@@ -2788,7 +2788,7 @@ function matchIdentifierAtIndex(arg0, arg1) {
   return closure_1_7.apply(undefined, items);
 }
 
-function f24633() {
+function f24631() {
   class Parser {
     constructor(arg0, arg1) {
       obj = {};
@@ -4305,7 +4305,7 @@ function crc32(arg0, arg1, arg2, arg3) {
   return ~tmp5;
 }
 
-function f63870(str) {
+function f63871(str) {
   let sum4;
   let num = 0;
   let num2 = 0;
@@ -4405,7 +4405,7 @@ function f63870(str) {
   return buf8;
 }
 
-function f63871(subarray) {
+function f63872(subarray) {
   if (subarray.length < 65534) {
     if (!subarray.subarray) {
       if (!subarray.subarray) {
@@ -4429,7 +4429,7 @@ function f63871(subarray) {
   }
 }
 
-function f63872(str) {
+function f63873(str) {
   const buf8 = new closure_1_0(closure_1_1[0]).Buf8(str.length);
   for (let num = 0; num < length; num = num + 1) {
     buf8[num] = str.charCodeAt(num);
@@ -4437,7 +4437,7 @@ function f63872(str) {
   return buf8;
 }
 
-function f63873(arg0, arg1) {
+function f63874(arg0, arg1) {
   let sum2;
   let length = arg1;
   if (!arg1) {
@@ -4547,7 +4547,7 @@ function f63873(arg0, arg1) {
   }
 }
 
-function f63874(arg0, arg1) {
+function f63875(arg0, arg1) {
   let length = arg1;
   if (!arg1) {
     length = arg0.length;
@@ -4787,7 +4787,7 @@ function fetch(arg0, arg1) {
   });
 }
 
-function f77857(message, name) {
+function f77866(message, name) {
   const error = { message, name, stack: Error(message).stack };
 }
 
@@ -4795,7 +4795,7 @@ function get() {
   return closure_1_0.name;
 }
 
-function f80211(arg0, arg1, str) {
+function f80220(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -4813,7 +4813,7 @@ function f80211(arg0, arg1, str) {
   return "";
 }
 
-function f80213(arg0, arg1) {
+function f80222(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -4862,7 +4862,7 @@ function f80213(arg0, arg1) {
   }
 }
 
-function f80214(arg0, arg1) {
+function f80223(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -4911,7 +4911,7 @@ function f80214(arg0, arg1) {
   }
 }
 
-function f80215(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f80224(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -4931,7 +4931,7 @@ function f80215(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f80216(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f80225(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -4951,7 +4951,7 @@ function f80216(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f80299(arg0, arg1, str) {
+function f80308(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -4969,7 +4969,7 @@ function f80299(arg0, arg1, str) {
   return "";
 }
 
-function f80301(arg0, arg1) {
+function f80310(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -5018,7 +5018,7 @@ function f80301(arg0, arg1) {
   }
 }
 
-function f80302(arg0, arg1) {
+function f80311(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -5067,7 +5067,7 @@ function f80302(arg0, arg1) {
   }
 }
 
-function f80303(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f80312(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -5087,7 +5087,7 @@ function f80303(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f80304(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f80313(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -5107,7 +5107,7 @@ function f80304(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f81290(key10009) {
+function f81299(key10009) {
   const call = hasOwnProperty.call;
   let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(closure_1_0, key10009);
   if (tmp2) {
@@ -5207,11 +5207,11 @@ function encodeLL(arg0, width, height, arg3, arg4, depth, arg6, arg7) {
   return closure_1_5(obj, width, height, arg6, arg7);
 }
 
-function f82935(arg0, arg1) {
+function f82944(arg0, arg1) {
   return arg1[1].lastUsedMs - arg0[1].lastUsedMs;
 }
 
-function f93169(timestamp_ms, timestamp_ms2) {
+function f93178(timestamp_ms, timestamp_ms2) {
   return timestamp_ms.timestamp_ms - timestamp_ms2.timestamp_ms;
 }
 
@@ -5241,7 +5241,7 @@ function touchList(arg0, arg1) {
   }
 }
 
-function f97147() {
+function f97156() {
   closure_1_0._zod.run = closure_1_0._zod.parse;
 }
 
@@ -5366,7 +5366,7 @@ function runChecks(memo, arg1, arg2) {
 function handleCanaryResult(arg0, arg1, arg2) {
 }
 
-function f97150(value, skipChecks) {
+function f97159(value, skipChecks) {
   closure_0 = value;
   if (skipChecks.skipChecks) {
     const _zod4 = closure_0._zod;
@@ -5449,11 +5449,11 @@ function f97150(value, skipChecks) {
   }
 }
 
-function f101543() {
+function f101552() {
   let hasFlagResult = "Preview" === closure_1_7;
   if (!hasFlagResult) {
-    hasFlagResult = closure_2_0(closure_2_2[32]).hasFlag(closure_1_3.flags, closure_2_20.EPHEMERAL);
-    const obj = closure_2_0(closure_2_2[32]);
+    hasFlagResult = closure_2_0(closure_2_2[33]).hasFlag(closure_1_3.flags, closure_2_20.EPHEMERAL);
+    const obj = closure_2_0(closure_2_2[33]);
   }
   const items = [];
   if (hasFlagResult) {
@@ -5461,8 +5461,8 @@ function f101543() {
   }
   let tmp22 = closure_1_13;
   if (closure_1_13) {
-    tmp22 = !closure_2_0(closure_2_2[32]).hasFlag(closure_1_3.flags, closure_2_20.EPHEMERAL);
-    const obj2 = closure_2_0(closure_2_2[32]);
+    tmp22 = !closure_2_0(closure_2_2[33]).hasFlag(closure_1_3.flags, closure_2_20.EPHEMERAL);
+    const obj2 = closure_2_0(closure_2_2[33]);
   }
   if (!tmp22) {
     items.push(closure_1_14, closure_1_15, closure_1_16, closure_1_33, closure_1_35, closure_1_39, closure_1_20, closure_1_21, closure_1_22, closure_1_23, closure_1_24, closure_1_19, closure_1_31, closure_1_29, closure_1_34);
@@ -5470,23 +5470,23 @@ function f101543() {
   if (obj3.hasFlag(closure_1_3.flags, closure_2_20.EPHEMERAL)) {
     items.push(closure_1_17, closure_1_16, closure_1_32, closure_1_36, closure_1_37, closure_1_38);
   }
-  obj3 = closure_2_0(closure_2_2[32]);
+  obj3 = closure_2_0(closure_2_2[33]);
   return new Set(items);
 }
 
-function f101544(id) {
+function f101553(id) {
   return id.id === closure_1_6.source.id;
 }
 
-function f101545(arg0) {
+function f101554(arg0) {
   return !closure_1_40.has(arg0);
 }
 
-function f101546(arr) {
+function f101555(arr) {
   return arr.filter((item) => set.has(item));
 }
 
-function f101547(arg0) {
+function f101556(arg0) {
   return arg0.length > 0;
 }
 
@@ -5585,7 +5585,7 @@ function blobReach(peak, radius, bound) {
   return num;
 }
 
-function f121452() {
+function f121465() {
   return {
     navigate(arg0, arg1) {
       const navigation = closure_1_0.navigation;
@@ -5602,11 +5602,11 @@ function f121452() {
   };
 }
 
-function f121453() {
+function f121466() {
   return { emit: closure_1_0.navigation.emit };
 }
 
-function f121564(offset) {
+function f121577(offset) {
   let tmp2 = closure_1_0;
   if (closure_1_0) {
     const obj2 = { timingFunction: tmp };
@@ -5694,7 +5694,7 @@ function _loop() {
   children1.push(closure_2_4(items, closure_1_1 + 1, closure_1_4, closure_1_3));
 }
 
-function f123908(arg0, count) {
+function f123921(arg0, count) {
   return arg0 + count.count + count.descendants;
 }
 
@@ -5705,30 +5705,30 @@ function ot(str) {
   return closure_1_38(closure_1_38({}, found[0]), found[1]);
 }
 
-function f126506() {
+function f126519() {
   return closure_1_0;
 }
 
-function f131012(soft_deleted) {
+function f131025(soft_deleted) {
   return !soft_deleted.soft_deleted;
 }
 
-function f131013(soft_deleted) {
+function f131026(soft_deleted) {
   return soft_deleted.soft_deleted;
 }
 
-function f135449(arg0) {
+function f135465(arg0) {
   closure_1_8.setRequestHeader(arg0, closure_1_6[arg0]);
 }
 
-function f136343(arr) {
+function f136359(arr) {
   return arr.every((item) => {
     const ipV6 = regex.regex.ipV6;
     return ipV6.test(item);
   });
 }
 
-function f136344(arg0, tldBlacklist) {
+function f136360(arg0, tldBlacklist) {
   const _Array = Array;
   if (tldBlacklist.tldBlacklist) {
     if (!isArray(tldBlacklist.tldBlacklist)) {
@@ -5754,7 +5754,7 @@ function f136344(arg0, tldBlacklist) {
   }
 }
 
-function f136345(arg0, arg1, arg2) {
+function f136361(arg0, arg1, arg2) {
   let tmp14;
   let obj = arg1;
   let tmp = arg2;
@@ -7365,7 +7365,7 @@ function t(options) {
   this.options = options;
 }
 
-function f136672(lastyear, lastmonth) {
+function f136688(lastyear, lastmonth) {
   let length;
   const self = this;
   const options = this.options;
@@ -7998,12 +7998,12 @@ function get() {
   return this.yearinfo.nmdaymask;
 }
 
-function f136685() {
+function f136701() {
   const items = [closure_1_7(this.yearlen), 0, this.yearlen];
   return items;
 }
 
-function f136686(arg0, arg1) {
+function f136702(arg0, arg1) {
   const yearlen = this.yearlen;
   if (typeof closure_1_8 === "function") {
     const items = [];
@@ -8039,7 +8039,7 @@ function f136686(arg0, arg1) {
   }
 }
 
-function f136687(arg0, arg1, arg2) {
+function f136703(arg0, arg1, arg2) {
   const self = this;
   const sum = this.yearlen + 7;
   if (typeof closure_1_8 === "function") {
@@ -8111,7 +8111,7 @@ function f136687(arg0, arg1, arg2) {
   }
 }
 
-function f136688(arg0, arg1, arg2) {
+function f136704(arg0, arg1, arg2) {
   const yearlen = this.yearlen;
   if (typeof closure_1_8 === "function") {
     const items = [];
@@ -8164,7 +8164,7 @@ function f136688(arg0, arg1, arg2) {
   }
 }
 
-function f136689(arg0, arg1, arg2, arg3) {
+function f136705(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg2;
   closure_2 = arg3;
@@ -8186,7 +8186,7 @@ function f136689(arg0, arg1, arg2, arg3) {
   obj = closure_4;
 }
 
-function f136690(arg0, arg1, arg2, arg3) {
+function f136706(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg3;
@@ -8215,7 +8215,7 @@ function f136690(arg0, arg1, arg2, arg3) {
   }
 }
 
-function f136691(hour, minute, arg2, arg3) {
+function f136707(hour, minute, arg2, arg3) {
   if (typeof closure_1_49 === "function") {
     let num = arg3;
     const obj = { hour, minute, second: arg2 };
@@ -8230,7 +8230,7 @@ function f136691(hour, minute, arg2, arg3) {
   }
 }
 
-function f136692(arg0) {
+function f136708(arg0) {
   const self = this;
   if (closure_1_39.YEARLY === arg0) {
     const ydayset = self.ydayset;
@@ -8248,7 +8248,7 @@ function f136692(arg0) {
   }
 }
 
-function f136693(arg0) {
+function f136709(arg0) {
   const self = this;
   if (closure_1_39.HOURLY === arg0) {
     const htimeset = self.htimeset;
@@ -8719,11 +8719,11 @@ function t(arg0, arg1) {
   const tmp4 = closure_1_38({}, closure_1_70);
 }
 
-function f136695(arg0, arg1) {
+function f136711(arg0, arg1) {
   return closure_1_47(arg0, arg1);
 }
 
-function f136696(arg0, arg1) {
+function f136712(arg0, arg1) {
   let tmp = arg1;
   if (undefined === arg1) {
     tmp = closure_1_41;
@@ -8732,17 +8732,17 @@ function f136696(arg0, arg1) {
   return new.target;
 }
 
-function f136697(arg0) {
+function f136713(arg0) {
   const tmp2 = closure_1_0.parseString(arg0) || undefined;
   new closure_1_0(tmp2);
   return Object.create(closure_1_0.prototype);
 }
 
-function f136698(arg0) {
+function f136714(arg0) {
   return closure_1_68(arg0, this.options);
 }
 
-function f136699(arg0, arg1) {
+function f136715(arg0, arg1) {
   let _cacheGetResult = this._cache;
   if (_cacheGetResult) {
     const _cache = tmp._cache;
@@ -8751,14 +8751,14 @@ function f136699(arg0, arg1) {
   return _cacheGetResult;
 }
 
-function f136700(arg0, arg1, arg2) {
+function f136716(arg0, arg1, arg2) {
   if (this._cache) {
     const _cache = tmp._cache;
     return _cache._cacheAdd(arg0, arg1, arg2);
   }
 }
 
-function f136701(iterator) {
+function f136717(iterator) {
   const self = this;
   if (iterator) {
     if (typeof closure_1_40 === "function") {
@@ -8789,7 +8789,7 @@ function f136701(iterator) {
   }
 }
 
-function f136702(getTime, getTime2, arg2, iterator) {
+function f136718(getTime, getTime2, arg2, iterator) {
   let flag = arg2;
   if (undefined === arg2) {
     flag = false;
@@ -8859,7 +8859,7 @@ function f136702(getTime, getTime2, arg2, iterator) {
   }
 }
 
-function f136703(getTime, arg1) {
+function f136719(getTime, arg1) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -8896,7 +8896,7 @@ function f136703(getTime, arg1) {
   }
 }
 
-function f136704(getTime, arg1) {
+function f136720(getTime, arg1) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -8933,24 +8933,24 @@ function f136704(getTime, arg1) {
   }
 }
 
-function f136705() {
+function f136721() {
   return this.all().length;
 }
 
-function f136706() {
+function f136722() {
   return closure_1_56(this.origOptions);
 }
 
-function f136707(arg0, arg1, arg2) {
+function f136723(arg0, arg1, arg2) {
   new closure_1_45(this, arg0, arg1, arg2);
   return new.target.toString();
 }
 
-function f136708() {
+function f136724() {
   return closure_1_48(this);
 }
 
-function f136709() {
+function f136725() {
   new closure_1_0(this.origOptions);
   return Object.create(closure_1_0.prototype);
 }
@@ -8980,7 +8980,7 @@ function e(arg0) {
   return callResult;
 }
 
-function f136711(accept) {
+function f136727(accept) {
   ({ _rrule, _exrule, _rdate, _exdate } = this);
   let after = accept;
   let before = _exrule;
@@ -9111,43 +9111,43 @@ function f136711(accept) {
   tzidResult = this.tzid();
 }
 
-function f136712(arg0) {
+function f136728(arg0) {
   closure_1_77(arg0, this._rrule);
 }
 
-function f136713(arg0) {
+function f136729(arg0) {
   closure_1_77(arg0, this._exrule);
 }
 
-function f136714(arg0) {
+function f136730(arg0) {
   closure_1_78(arg0, this._rdate);
 }
 
-function f136715(arg0) {
+function f136731(arg0) {
   closure_1_78(arg0, this._exdate);
 }
 
-function f136716() {
+function f136732() {
   const _rrule = this._rrule;
   return _rrule.map((item) => closure_1_74(item.toString()));
 }
 
-function f136717() {
+function f136733() {
   const _exrule = this._exrule;
   return _exrule.map((item) => closure_1_74(item.toString()));
 }
 
-function f136718() {
+function f136734() {
   const _rdate = this._rdate;
   return _rdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f136719() {
+function f136735() {
   const _exdate = this._exdate;
   return _exdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f136720() {
+function f136736() {
   const self = this;
   closure_0 = [];
   let _dtstart = !length;
@@ -9257,11 +9257,11 @@ function f136720() {
   }
 }
 
-function f136721() {
+function f136737() {
   return this.valueOf().join("\n");
 }
 
-function f136722() {
+function f136738() {
   const self = this;
   const _cache = this._cache;
   const obj2 = Object.create(closure_1_1.prototype);
@@ -9292,14 +9292,14 @@ function f136722() {
   return callResult;
 }
 
-function f138388() {
+function f138404() {
 }
 
-function f138389(gameId) {
+function f138405(gameId) {
   return gameId.gameId;
 }
 
-function f138390(tags) {
+function f138406(tags) {
   tags = tags.tags;
   if (tags == null) {
     tags = [];
@@ -9307,11 +9307,11 @@ function f138390(tags) {
   return tags;
 }
 
-function f138391(arg0) {
+function f138407(arg0) {
   return arg0.toString();
 }
 
-function f138392(arg0, comment) {
+function f138408(arg0, comment) {
   comment = comment.comment;
   let num;
   if (comment != null) {
@@ -9323,7 +9323,7 @@ function f138392(arg0, comment) {
   return arg0 + num;
 }
 
-function f138755(channelId) {
+function f138771(channelId) {
   let result = closure_3_22.canWithPartialContext(closure_3_31.CONNECT, { channelId: channelId.channel_id });
   if (result) {
     const channel_id = channelId.channel_id;
@@ -9355,7 +9355,7 @@ function f138755(channelId) {
   const obj = { channelId: channelId.channel_id };
 }
 
-function f138756(id) {
+function f138772(id) {
   const user = closure_3_26.getUser(id);
   if (null != user) {
     if (user.bot) {
@@ -9381,23 +9381,23 @@ function f138756(id) {
   }
 }
 
-function f138757(userId) {
+function f138773(userId) {
   userId = userId.userId;
   closure_1_10(userId, closure_3_23.getPrimaryActivity(userId, closure_2_1), userId);
 }
 
-function f138758(event) {
+function f138774(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: true });
 }
 
-function f138759(event) {
+function f138775(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: false });
 }
 
-function f139429(arg0) {
+function f139445(arg0) {
   return closure_2_0.deleteMessage(closure_1_1, closure_1_0, arg0);
 }
 
-function f140381(arg0) {
+function f140398(arg0) {
   return closure_1_0[arg0];
 }

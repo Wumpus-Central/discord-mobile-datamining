@@ -1,6 +1,6 @@
-// === Module 13822: getConsoleIcon ===
+// === Module 13820: getConsoleIcon ===
 
-// Module 13822 (getConsoleIcon)
+// Module 13820 (getConsoleIcon)
 import Constants from "Constants" /* 1071 */;
 import CallConstants from "CallConstants" /* 5563 */;
 import _modDef7082 from "module_7082" /* 7082 */;

@@ -32,7 +32,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "disabled", borderRadius: false },
+      style: { aspectRatio: "description", borderRadius: false },
       disableTransition: true,
       onPress() {
             return closure_1_8();

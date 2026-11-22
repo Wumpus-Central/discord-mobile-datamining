@@ -8,7 +8,7 @@ import common_AlertDefault from "common/Alert" /* 5932 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16118 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16116 */;
 import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 17366 */;
 import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 17374 */;
 import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17375 */;

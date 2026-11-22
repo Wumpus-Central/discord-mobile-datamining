@@ -30,7 +30,7 @@ export default noop.memo(function PinsScreen() {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(13155).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(13153).useChannelDetailsSearchContext(channelId, stateFromStores);
   const obj4 = { style: closure_7().container, children: jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS }) };
   return <View style={closure_7().container}>{jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS })}</View>;
 });

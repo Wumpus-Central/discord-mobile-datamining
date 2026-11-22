@@ -1,10 +1,10 @@
-// === Module 12853: RefreshChatInputCoachmark ===
+// === Module 12851: RefreshChatInputCoachmark ===
 
-// Module 12853 (RefreshChatInputCoachmark)
+// Module 12851 (RefreshChatInputCoachmark)
 import util from "util" /* 1112 */;
 import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5066 */;
 import useCoachmark from "useCoachmark" /* 9087 */;
-import _modDef12854 from "module_12854" /* 12854 */;
+import _modDef12852 from "module_12852" /* 12852 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ export function useRefreshChatInputCoachmark(disabled) {
         closure_1_0(constants.USER_DISMISS);
       };
       if (reducedMotion.enabled) {
-        const obj2 = { type: "image", src: _modDef12854, aspectRatio: "16/9" };
+        const obj2 = { type: "image", src: _modDef12852, aspectRatio: "16/9" };
         let obj3 = obj2;
       } else {
         obj3 = { type: "rive", rive: OmnibuttonCoachmarkRive.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };

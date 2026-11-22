@@ -14,7 +14,7 @@ import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6637 
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7740 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10251 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15061 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15059 */;
 import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17563 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -445,7 +445,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15061)({ payload: closure_1(5628)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(15059)({ payload: closure_1(5628)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {

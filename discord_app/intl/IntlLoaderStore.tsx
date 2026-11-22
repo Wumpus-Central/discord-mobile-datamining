@@ -322,14 +322,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "y",
-    error: "id",
-    localeData: "style",
+    error: "channel",
+    localeData: "user",
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "disabled", error: "isArray" });
+        closure_0({ isLoading: false, inProgressLocale: "description", error: "isArray" });
       }
     },
     setLoadingFailed(error, arg1) {

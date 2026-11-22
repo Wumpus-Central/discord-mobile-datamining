@@ -23,7 +23,7 @@ import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment
 import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11752 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11754 */;
 import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11759 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14510 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14508 */;
 import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19178 */;
 import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 19220 */;
 import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19221 */;

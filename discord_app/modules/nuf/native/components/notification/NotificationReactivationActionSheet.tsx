@@ -1,17 +1,17 @@
-// === Module 19624: NotificationReactivationActionSheet ===
+// === Module 19620: NotificationReactivationActionSheet ===
 
-// Module 19624 (NotificationReactivationActionSheet)
+// Module 19620 (NotificationReactivationActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import FastImageDefault from "FastImage" /* 5600 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13283 */;
-import _modDef19625 from "module_19625" /* 19625 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13281 */;
+import _modDef19621 from "module_19621" /* 19621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(13282).EventActionType;
+const EventActionType = fn(13280).EventActionType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -39,13 +39,13 @@ export default function NotificationReactivationActionSheet(location) {
     });
   }, items);
   const callback1 = noop.useCallback(() => {
-    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" });
-    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" });
+    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.image, source: _modDef19625, resizeMode: "contain" };
+  const obj3 = { style: tmp.image, source: _modDef19621, resizeMode: "contain" };
   const items2 = [closure_7(FastImageDefault, obj3), , , ];
   const obj4 = { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: null };
   const intl = _location(1112).intl;

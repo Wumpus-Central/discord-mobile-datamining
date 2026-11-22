@@ -1,6 +1,6 @@
-// === Module 12463: useAgeSpecificText ===
+// === Module 12470: useAgeSpecificText ===
 
-// Module 12463 (useAgeSpecificText)
+// Module 12470 (useAgeSpecificText)
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9137 */;
 import size from "module_2" /* 2 */;
 

@@ -9,7 +9,7 @@ import ButtonConstants from "ButtonConstants" /* 5517 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6537 */;
 import FastList from "FastList" /* 7449 */;
 import ChannelListState from "ChannelListState" /* 8321 */;
-import Divider from "Divider" /* 13151 */;
+import Divider from "Divider" /* 13149 */;
 import CategoryChannel from "CategoryChannel" /* 17625 */;
 import ThreadChannelDefault from "ThreadChannel" /* 17633 */;
 import VoiceUsers from "VoiceUsers" /* 17641 */;
@@ -404,7 +404,7 @@ export function renderChannelListItem(arg0) {
         const guildActionSection1 = guildChannels.getGuildActionSection();
         let tmp46Result = null;
         if (row < guildActionSection1.getRows().length - 1) {
-          tmp46Result = closure_18(selectedChannelId(13151), {});
+          tmp46Result = closure_18(selectedChannelId(13149), {});
         }
         const obj19 = { children: null };
         items[1] = tmp46Result;
@@ -428,7 +428,7 @@ export function renderChannelListItem(arg0) {
         const guildActionSection2 = guildChannels.getGuildActionSection();
         let tmp31Result = null;
         if (row < guildActionSection2.getRows().length - 1) {
-          tmp31Result = closure_18(selectedChannelId(13151), {});
+          tmp31Result = closure_18(selectedChannelId(13149), {});
         }
         const obj25 = { children: null };
         items1[1] = tmp31Result;

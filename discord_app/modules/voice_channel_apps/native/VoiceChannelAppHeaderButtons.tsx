@@ -3,7 +3,7 @@
 // Module 19264 (VoiceChannelAppHeaderButtons)
 import _modDef4288 from "module_4288" /* 4288 */;
 import _modDef10369 from "module_10369" /* 10369 */;
-import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 13879 */;
+import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 13877 */;
 import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19200 */;
 import noop from "module_19" /* 19 */;
 

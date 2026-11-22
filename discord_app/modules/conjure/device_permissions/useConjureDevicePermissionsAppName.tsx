@@ -1,6 +1,6 @@
-// === Module 14360: useConjureDevicePermissionsAppName ===
+// === Module 14358: useConjureDevicePermissionsAppName ===
 
-// Module 14360 (useConjureDevicePermissionsAppName)
+// Module 14358 (useConjureDevicePermissionsAppName)
 import isConjureApplicationDefault from "isConjureApplication" /* 6632 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;

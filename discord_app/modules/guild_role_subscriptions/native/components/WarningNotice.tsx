@@ -1,6 +1,6 @@
-// === Module 19937: WarningNotice ===
+// === Module 19934: WarningNotice ===
 
-// Module 19937 (WarningNotice)
+// Module 19934 (WarningNotice)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;

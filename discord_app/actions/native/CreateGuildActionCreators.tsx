@@ -1,6 +1,6 @@
-// === Module 13700: CreateGuildActionCreators ===
+// === Module 13698: CreateGuildActionCreators ===
 
-// Module 13700 (CreateGuildActionCreators)
+// Module 13698 (CreateGuildActionCreators)
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 
 const require = fn;

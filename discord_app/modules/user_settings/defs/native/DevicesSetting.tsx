@@ -1,9 +1,9 @@
-// === Module 16262: DevicesSetting ===
+// === Module 16260: DevicesSetting ===
 
-// Module 16262 (DevicesSetting)
+// Module 16260 (DevicesSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import LaptopPhoneIcon from "LaptopPhoneIcon" /* 16263 */;
+import LaptopPhoneIcon from "LaptopPhoneIcon" /* 16261 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 

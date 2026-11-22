@@ -3,8 +3,8 @@
 // Module 9100 (PremiumModal)
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import UserSettingsPremiumDefault from "UserSettingsPremium" /* 9101 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14150 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14166 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14148 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

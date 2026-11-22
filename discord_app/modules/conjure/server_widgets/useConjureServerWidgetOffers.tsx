@@ -1,16 +1,16 @@
-// === Module 14552: useConjureServerWidgetOffers ===
+// === Module 14550: useConjureServerWidgetOffers ===
 
-// Module 14552 (useConjureServerWidgetOffers)
+// Module 14550 (useConjureServerWidgetOffers)
 import BackoffDefault from "Backoff" /* 559 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6961 */;
-import ConjureServerWidgetActionCreators from "ConjureServerWidgetActionCreators" /* 14553 */;
-import useAddableWidgets from "useAddableWidgets" /* 14555 */;
+import ConjureServerWidgetActionCreators from "ConjureServerWidgetActionCreators" /* 14551 */;
+import useAddableWidgets from "useAddableWidgets" /* 14553 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10332 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14551 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14549 */;
 
 const require = globalThis.__r;
 
@@ -79,7 +79,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                       closure_129_0 = undefined;
                       if (dependencyMap()) {
                         c6 = 3;
-                        const obj5 = { value: { v: "r" }, done: true };
+                        const obj5 = { value: { v: "Array" }, done: true };
                         return obj5;
                       } else {
                         c4 = 1;
@@ -132,7 +132,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                         return obj10;
                       } else if (closure_130_0()) {
                         c6 = 3;
-                        const obj11 = { value: { v: "r" }, done: true };
+                        const obj11 = { value: { v: "Array" }, done: true };
                         return obj11;
                       } else {
                         c4 = 2;
@@ -364,7 +364,7 @@ export default function useConjureServerWidgetOffers() {
       let arr2 = stateFromStores4[application_id];
       let found1;
       if (arr2 != null) {
-        found1 = arr2.find((status) => status.status === stateFromStores2(14554).ApplicationWidgetConfigStatus.PUBLISHED);
+        found1 = arr2.find((status) => status.status === stateFromStores2(14552).ApplicationWidgetConfigStatus.PUBLISHED);
       }
       let tmp6 = found1;
       let result = null != guild_id;

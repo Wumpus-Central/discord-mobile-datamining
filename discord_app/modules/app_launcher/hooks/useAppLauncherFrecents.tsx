@@ -1,12 +1,12 @@
-// === Module 12986: useAppLauncherFrecents ===
+// === Module 12984: useAppLauncherFrecents ===
 
-// Module 12986 (useAppLauncherFrecents)
+// Module 12984 (useAppLauncherFrecents)
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7012 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10682 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
 import UserStore from "UserStore" /* 1386 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12987 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12985 */;
 
 const require = fn;
 function useFrecentApps(onlyActivityApps) {

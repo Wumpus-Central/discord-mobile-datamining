@@ -6,7 +6,7 @@ import _modDef1653 from "module_1653" /* 1653 */;
 import Suspender from "Suspender" /* 5891 */;
 import useRefValueDefault from "useRefValue" /* 7018 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13135 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13133 */;
 import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19373 */;
 import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19385 */;
 import _slicedToArray from "module_32" /* 32 */;

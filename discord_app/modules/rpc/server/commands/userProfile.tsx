@@ -1,10 +1,10 @@
-// === Module 15725: commands/userProfile ===
+// === Module 15723: commands/userProfile ===
 
-// Module 15725 (commands/userProfile)
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15673 */;
-import createSocketGateDefault from "createSocketGate" /* 15701 */;
-import getFrameProfileContextDefault from "getFrameProfileContext" /* 15726 */;
-import userProfile from "userProfile" /* 15727 */;
+// Module 15723 (commands/userProfile)
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15671 */;
+import createSocketGateDefault from "createSocketGate" /* 15699 */;
+import getFrameProfileContextDefault from "getFrameProfileContext" /* 15724 */;
+import userProfile from "userProfile" /* 15725 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -109,7 +109,7 @@ let closure_6 = async function _openUserProfileForSocket(arg0) {
 const RPCCommands = fn(1071).RPCCommands;
 let closure_4 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15680);
+const CONTEXT_MENU_ICON_NAMES = fn(15678);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
   scope: fn(6354).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {

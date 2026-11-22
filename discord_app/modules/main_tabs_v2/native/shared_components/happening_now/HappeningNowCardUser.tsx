@@ -9,7 +9,7 @@ import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(16701).HappeningNowCardTrackingType;
+let closure_7 = fn(16699).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1186).AvatarSizes.LARGE;

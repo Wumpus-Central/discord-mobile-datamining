@@ -1,13 +1,13 @@
-// === Module 16297: useQuestHomeHeader ===
+// === Module 16295: useQuestHomeHeader ===
 
-// Module 16297 (useQuestHomeHeader)
+// Module 16295 (useQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
-import QuestsIcon from "QuestsIcon" /* 13798 */;
+import QuestsIcon from "QuestsIcon" /* 13796 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   const tmp3 = balance;
   balance = balance(9428).useFetchVirtualCurrencyBalance().balance;
   let obj = balance(9428);
-  const orbBalanceEntrypoint = balance(16298).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  const orbBalanceEntrypoint = balance(16296).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
@@ -67,7 +67,7 @@ function FiltersButton(setSelectedSortMethod) {
   }
   items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16313, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16311, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_9(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;

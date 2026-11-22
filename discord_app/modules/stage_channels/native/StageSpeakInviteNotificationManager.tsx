@@ -1,6 +1,6 @@
-// === Module 19666: StageSpeakInviteNotificationManager ===
+// === Module 19663: StageSpeakInviteNotificationManager ===
 
-// Module 19666 (StageSpeakInviteNotificationManager)
+// Module 19663 (StageSpeakInviteNotificationManager)
 import util from "util" /* 1112 */;
 import useChannelName from "useChannelName" /* 5529 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5950 */;

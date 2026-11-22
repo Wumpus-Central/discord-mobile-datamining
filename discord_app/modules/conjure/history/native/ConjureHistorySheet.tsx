@@ -365,7 +365,7 @@ function HistoryTabs(onChange) {
   });
   let intl = onChange(1112).intl;
   obj3.accessibilityLabel = intl.string(_modDef4190["/2GnYy"]);
-  obj3.children = closure_7(onChange(13533).Tabs, { state: segmentedControlState });
+  obj3.children = closure_7(onChange(13531).Tabs, { state: segmentedControlState });
   return closure_7(View, obj3);
 }
 const View = fn(17).View;
@@ -615,7 +615,7 @@ export default function ConjureHistorySheet(projectId) {
         [obj2.minimumDate, obj2.maximumDate] = items;
         obj3.onSubmit = (arg0) => {
           const bound = Math.min(closure_1_1, Math.max(closure_1_0, arg0.valueOf()));
-          closure_1_8(bound, bound, /* F138978 */ function() { ... });
+          closure_1_8(bound, bound, /* F138994 */ function() { ... });
         };
         obj.openLazy(closure_0(paths[27])(paths[26], paths.paths), "ConjureHistoryRewindTime", obj3, "stack");
       }, 0);

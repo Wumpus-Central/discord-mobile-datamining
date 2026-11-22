@@ -1,6 +1,6 @@
-// === Module 12952: AppLauncherHomeScreen ===
+// === Module 12950: AppLauncherHomeScreen ===
 
-// Module 12952 (AppLauncherHomeScreen)
+// Module 12950 (AppLauncherHomeScreen)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -25,26 +25,26 @@ import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground"
 import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11135 */;
 import MessagePreviewParagraph from "MessagePreviewParagraph" /* 11144 */;
 import AppLauncherContext from "AppLauncherContext" /* 12106 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12921 */;
-import FrecencySection from "FrecencySection" /* 12922 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12926 */;
-import ApplicationDirectoryActionCreators from "ApplicationDirectoryActionCreators" /* 12940 */;
-import HeroMedia from "HeroMedia" /* 12953 */;
-import BrokenImageDefault from "BrokenImage" /* 12954 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12955 */;
-import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12957 */;
-import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12968 */;
-import ExpandableList from "ExpandableList" /* 12977 */;
-import InThisServerSection from "InThisServerSection" /* 12979 */;
-import ApplicationDirectoryCollectionType from "ApplicationDirectoryCollectionType" /* 12990 */;
-import ApplicationCollectionFlags from "ApplicationCollectionFlags" /* 12993 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12919 */;
+import FrecencySection from "FrecencySection" /* 12920 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12924 */;
+import ApplicationDirectoryActionCreators from "ApplicationDirectoryActionCreators" /* 12938 */;
+import HeroMedia from "HeroMedia" /* 12951 */;
+import BrokenImageDefault from "BrokenImage" /* 12952 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12953 */;
+import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12955 */;
+import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12966 */;
+import ExpandableList from "ExpandableList" /* 12975 */;
+import InThisServerSection from "InThisServerSection" /* 12977 */;
+import ApplicationDirectoryCollectionType from "ApplicationDirectoryCollectionType" /* 12988 */;
+import ApplicationCollectionFlags from "ApplicationCollectionFlags" /* 12991 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import DevSettingsStore from "DevSettingsStore" /* 5507 */;
-import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 12942 */;
+import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 12940 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12914 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12912 */;
 
 require = fn;
 function AppRowLabel(renderedName) {
@@ -164,7 +164,7 @@ function ActivityRow(section) {
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     let obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12926), obj3);
+    tmp5 = closure_19(onPress(12924), obj3);
   }
   items = [section];
   const items1 = [section, onPress];
@@ -193,7 +193,7 @@ function ActivityItemTuple(arg0) {
   items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "analyticsLocations" };
+      return { width: "disabled", height: "isArray" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -328,7 +328,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "analyticsLocations" };
+      return { width: "disabled", height: "isArray" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -503,7 +503,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(12946).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const APP_LAUNCHER_IN_TEXT = fn(12944).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 const createStyles = fn(4913);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 }, topBackgroundFill: null, sectionHeader: null, list: null, searchBarContainer: null, divider: null, appRowLabelWithPromotedContainer: null, appRowLabelWithPromotedTextContainer: null, promotedLabel: null, activityItemContainer: null, activityImageContainer: null, activityDetailsContainer: null, activityItemTupleContainer: null, activityItemTupleShelfItemContainer: null, activityItemImage: null, submittingOverlay: null };
 let rect = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
@@ -747,7 +747,7 @@ export default function AppLauncherHomeScreen(route) {
         if (arr.length % 2 === 1) {
           const obj2 = { type: null, shelfItem1: null, shelfItem2: null, sectionName: "activities", shelfItem1SectionPosition: null, shelfItem2SectionPosition: null, sectionOverallPosition: 0, isLastTuple: false };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(12957).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(12955).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -755,7 +755,7 @@ export default function AppLauncherHomeScreen(route) {
           items.push(obj2);
         }
         items[items.length - 1].isLastTuple = true;
-        const obj5 = { type: tmp8(12957).AppLauncherHomeListItemType.SECTION_HEADER, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
+        const obj5 = { type: tmp8(12955).AppLauncherHomeListItemType.SECTION_HEADER, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
         const intl = tmp8(1112).intl;
         obj5.section = intl.string(tmp8(1112).t.aeuOoh);
         ({ length: obj3.numItems, length: obj3.numVisibleItems } = arr);
@@ -913,11 +913,11 @@ export default function AppLauncherHomeScreen(route) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(12991).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(12989).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(12991);
+                const tmpResult = found1(12989);
               }
-              const obj3 = { application: type.application, showsPromoted: found1(1404).hasFlag(type.flags, found1(12992).ApplicationCollectionItemFlags.PROMOTED), overrideImageUrl: collectionItemAssetUrl, sectionPosition };
+              const obj3 = { application: type.application, showsPromoted: found1(1404).hasFlag(type.flags, found1(12990).ApplicationCollectionItemFlags.PROMOTED), overrideImageUrl: collectionItemAssetUrl, sectionPosition };
               return obj3;
             }
           });
@@ -938,7 +938,7 @@ export default function AppLauncherHomeScreen(route) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
             if (type.type === found1(10683).ApplicationDirectoryCollectionItemType.APPLICATION) {
-              const obj = { application: type.application, showsPromoted: found1(1404).hasFlag(type.flags, found1(12992).ApplicationCollectionItemFlags.PROMOTED) };
+              const obj = { application: type.application, showsPromoted: found1(1404).hasFlag(type.flags, found1(12990).ApplicationCollectionItemFlags.PROMOTED) };
               return obj;
             }
           });
@@ -1317,7 +1317,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected: function onViewAllInThisServer() {
-          const found = memo.find((type) => type.type === context(12957).AppLauncherHomeListItemType.VIEW_ALL);
+          const found = memo.find((type) => type.type === context(12955).AppLauncherHomeListItemType.VIEW_ALL);
           let mapped;
           if (found != null) {
             const applications = found.applications;

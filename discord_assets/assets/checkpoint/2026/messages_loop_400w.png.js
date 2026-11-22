@@ -1,6 +1,6 @@
-// === Module 12754: ? ===
+// === Module 12752: ? ===
 
-// Module 12754
+// Module 12752
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js");

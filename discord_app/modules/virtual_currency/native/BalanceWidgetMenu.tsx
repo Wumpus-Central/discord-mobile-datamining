@@ -1,6 +1,6 @@
-// === Module 17127: BalanceWidgetMenu ===
+// === Module 17125: BalanceWidgetMenu ===
 
-// Module 17127 (BalanceWidgetMenu)
+// Module 17125 (BalanceWidgetMenu)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import dismissible_content from "dismissible_content" /* 4746 */;
@@ -13,7 +13,7 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import _mod9566 from "module_9566" /* 9566 */;
 import QuestUtils from "QuestUtils" /* 9955 */;
 import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11612 */;
-import useOrbBalanceEntrypoint from "useOrbBalanceEntrypoint" /* 16298 */;
+import useOrbBalanceEntrypoint from "useOrbBalanceEntrypoint" /* 16296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ class OrbsOnboardingMenuDismissibleContent {
           const obj2 = QuestUtils;
           obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         };
-        obj.trailing = closure_11(closure_1(17128), {});
+        obj.trailing = closure_11(closure_1(17126), {});
         return closure_11(closure_12, obj);
       } else {
         return null;
@@ -71,7 +71,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
   let str;
   str = str(9566).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   let obj = str(9566);
-  const isOrbWalletEntrypointEnabled = str(16298).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
+  const isOrbWalletEntrypointEnabled = str(16296).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
   items = [str, isOrbWalletEntrypointEnabled];
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -111,11 +111,11 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     obj3.openCtaObject = AnalyticsLocationDefault.ORB_WALLET_OPEN_FROM_PROFILE;
     let result = useOrbBalanceEntrypoint.openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, obj3);
   }, items);
-  str(16298);
+  str(16296);
   if (isOrbWalletEntrypointEnabled) {
     let obj3 = { ref: orbWalletEntryRowRef.orbWalletEntryRowRef, collapsable: false, children: null };
     let obj4 = { balance: str, notificationType: tmp6, onPress: callback };
-    obj3.children = jsx(tmp(17129).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
+    obj3.children = jsx(tmp(17127).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
     let tmp7Result = <View ref={orbWalletEntryRowRef.orbWalletEntryRowRef} collapsable={false}>{null}</View>;
   } else {
     let intl = tmp(1112).intl;
@@ -174,9 +174,9 @@ export { OrbsOnboardingMenuDismissibleContent };
 export function useOpenOrbWalletFromYouScreen() {
   balance = balance(9566).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   const obj = balance(9566);
-  const isOrbWalletEntrypointEnabled = balance(16298).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
+  const isOrbWalletEntrypointEnabled = balance(16296).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
   items = [balance, isOrbWalletEntrypointEnabled];
-  const obj2 = balance(16298);
+  const obj2 = balance(16296);
   return {
     balance,
     isOrbchievementsEnabled: isOrbWalletEntrypointEnabled,

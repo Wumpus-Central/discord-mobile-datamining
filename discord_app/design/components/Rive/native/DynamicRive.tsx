@@ -1,6 +1,6 @@
-// === Module 13114: DynamicRive ===
+// === Module 13112: DynamicRive ===
 
-// Module 13114 (DynamicRive)
+// Module 13112 (DynamicRive)
 import BaseRive from "BaseRive" /* 4982 */;
 import RiveErrorBoundary from "RiveErrorBoundary" /* 5035 */;
 import noop from "module_19" /* 19 */;

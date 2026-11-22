@@ -1,6 +1,6 @@
-// === Module 12392: showKickConfirmModal ===
+// === Module 12399: showKickConfirmModal ===
 
-// Module 12392 (showKickConfirmModal)
+// Module 12399 (showKickConfirmModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/guild_moderation/native/showK
 
 export default function showKickConfirmModal(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12393, dependencyMap.paths), merged);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12400, dependencyMap.paths), merged);
 };

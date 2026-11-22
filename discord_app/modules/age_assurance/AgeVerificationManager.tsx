@@ -7,7 +7,7 @@ import ChannelMessagesDefault from "ChannelMessages" /* 6389 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6411 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7993 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12456 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12463 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6640 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import MessageStore from "MessageStore" /* 5964 */;

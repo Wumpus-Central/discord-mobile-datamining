@@ -1,6 +1,6 @@
-// === Module 19534: IAPManager ===
+// === Module 19530: IAPManager ===
 
-// Module 19534 (IAPManager)
+// Module 19530 (IAPManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 const prototype = function IAPManager() {

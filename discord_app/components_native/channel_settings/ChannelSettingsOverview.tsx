@@ -44,8 +44,8 @@ import GroupPlusIcon from "GroupPlusIcon" /* 11056 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 11251 */;
 import AvailableForumTagDefault from "AvailableForumTag" /* 11664 */;
 import threadActionSheets from "threadActionSheets" /* 11669 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 13868 */;
-import TableSliderRow from "TableSliderRow" /* 14503 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 13866 */;
+import TableSliderRow from "TableSliderRow" /* 14501 */;
 import SecondsSliderUtils from "SecondsSliderUtils" /* 18926 */;
 import RegionActionCreatorsDefault from "RegionActionCreators" /* 18927 */;
 import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 18928 */;
@@ -420,7 +420,7 @@ class ChannelSettingsOverview extends PureComponent {
                 closure_128_6 = tmp2(6865).conjureChannelAppId(closure_128_1);
                 if (tmp65 != guild2) {
                   if (tmp65 != closure_128_6) {
-                    const conjureServerApp = tmp2(12382).loadConjureServerApp(guild2.id, closure_128_6);
+                    const conjureServerApp = tmp2(12389).loadConjureServerApp(guild2.id, closure_128_6);
                     tmp65 = closure_128_5;
                     conjureServerApp.then((app) => {
                       if (null == app) {
@@ -432,7 +432,7 @@ class ChannelSettingsOverview extends PureComponent {
                       }
                       return tmp6;
                     }, closure_128_5);
-                    const obj9 = tmp2(12382);
+                    const obj9 = tmp2(12389);
                   }
                 }
                 closure_128_5();
@@ -755,7 +755,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
       obj2.maxValue = length.length - 1;
       obj2.onChange = self.handleSlowmodeChange;
       obj2.formatValue = formatSlowmodeCooldown;
-      obj.children = closure_1_47(tmp8(14503).TableSliderRow, obj2);
+      obj.children = closure_1_47(tmp8(14501).TableSliderRow, obj2);
       items.push(closure_1_47(tmp8(7348).TableRowGroup, obj, "slowmode-section"));
       return items;
     } else {
@@ -1254,7 +1254,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
-      tmpResult = closure_47(GridSquareIcon(14837).ListViewIcon, {});
+      tmpResult = closure_47(GridSquareIcon(14835).ListViewIcon, {});
     }
     obj3.icon = tmpResult;
     obj3.onPress = function onPress() {

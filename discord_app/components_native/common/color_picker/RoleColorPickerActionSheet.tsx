@@ -3,8 +3,8 @@
 // Module 17869 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15840 */;
-import ColorBlockDefault from "ColorBlock" /* 15842 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15838 */;
+import ColorBlockDefault from "ColorBlock" /* 15840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

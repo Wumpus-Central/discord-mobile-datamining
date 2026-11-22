@@ -1,13 +1,13 @@
-// === Module 16380: BountiesNuxPromoSheet ===
+// === Module 16378: BountiesNuxPromoSheet ===
 
-// Module 16380 (BountiesNuxPromoSheet)
+// Module 16378 (BountiesNuxPromoSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import PromoSheet from "PromoSheet" /* 11225 */;
-import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 16379 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 16381 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 16377 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 16379 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

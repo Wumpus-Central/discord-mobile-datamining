@@ -1,6 +1,6 @@
-// === Module 15795: SessionAdManager ===
+// === Module 15793: SessionAdManager ===
 
-// Module 15795 (SessionAdManager)
+// Module 15793 (SessionAdManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;

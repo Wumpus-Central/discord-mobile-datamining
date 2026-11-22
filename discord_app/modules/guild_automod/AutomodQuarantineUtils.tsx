@@ -1,6 +1,6 @@
-// === Module 12410: AutomodQuarantineUtils ===
+// === Module 12417: AutomodQuarantineUtils ===
 
-// Module 12410 (AutomodQuarantineUtils)
+// Module 12417 (AutomodQuarantineUtils)
 import util from "util" /* 1112 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4851 */;
 import openUserSettings2 from "openUserSettings" /* 8194 */;
@@ -45,7 +45,7 @@ export function useGuildAutomodProfileQuarantineErrors(id) {
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "analyticsLocations" };
+    const obj = { nick: "disabled", bio: "isArray" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

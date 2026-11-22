@@ -1,6 +1,6 @@
-// === Module 13409: GuildPowerupsBottomSheet ===
+// === Module 13407: GuildPowerupsBottomSheet ===
 
-// Module 13409 (GuildPowerupsBottomSheet)
+// Module 13407 (GuildPowerupsBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -14,22 +14,22 @@ import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 7998 */;
 import Powerups from "Powerups" /* 8001 */;
 import GameServerConstants from "GameServerConstants" /* 8333 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13387 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13393 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13404 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13410 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13411 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13412 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13414 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13415 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 13417 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13418 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 13424 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13425 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13426 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13431 */;
-import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 13435 */;
-import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 13437 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13385 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13391 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13402 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13408 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13409 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13410 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13412 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13413 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 13415 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13416 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 13422 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13423 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13424 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13429 */;
+import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 13433 */;
+import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 13435 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 8332 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,6 +1,6 @@
-// === Module 16017: AgeNoticePromoSheet ===
+// === Module 16015: AgeNoticePromoSheet ===
 
-// Module 16017 (AgeNoticePromoSheet)
+// Module 16015 (AgeNoticePromoSheet)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
 import _modDef3476 from "module_3476" /* 3476 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
 import openUserSettings from "openUserSettings" /* 8194 */;
-import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 16016 */;
+import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 16014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   const tmp = closure_10();
   const isVerifiedTeen = dismissOnce(6411).useIsVerifiedTeen();
   let obj = dismissOnce(6411);
-  dismissOnce = dismissOnce(16018).useDismissOnce(markAsDismissed.markAsDismissed);
+  dismissOnce = dismissOnce(16016).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -82,8 +82,8 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(16018);
-  obj5.source = tmp14(16019);
+  let obj2 = dismissOnce(16016);
+  obj5.source = tmp14(16017);
   obj5.style = tmp.illustration;
   obj4.illustration = closure_8(tmp14(5600), obj5);
   const intl2 = tmp2(1112).intl;

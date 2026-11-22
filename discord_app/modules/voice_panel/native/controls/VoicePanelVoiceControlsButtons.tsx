@@ -29,8 +29,8 @@ import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11040 */
 import GroupPlusIcon from "GroupPlusIcon" /* 11056 */;
 import speakOnStageDefault from "speakOnStage" /* 11722 */;
 import _modDef11799 from "module_11799" /* 11799 */;
-import SoundboardIcon from "SoundboardIcon" /* 13419 */;
-import _modDef14844 from "module_14844" /* 14844 */;
+import SoundboardIcon from "SoundboardIcon" /* 13417 */;
+import _modDef14842 from "module_14842" /* 14842 */;
 import useCanInviteMembers from "useCanInviteMembers" /* 17986 */;
 import useInviteMembersCallback from "useInviteMembersCallback" /* 17987 */;
 import _modDef18005 from "module_18005" /* 18005 */;
@@ -403,7 +403,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f133849 = () => f133849(!VIDEO);
+          const f133863 = () => f133863(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -465,7 +465,7 @@ export function ToggleShowActivitiesDebugOverlay() {
   items = [ChannelCallLifecycleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14844 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14842 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });

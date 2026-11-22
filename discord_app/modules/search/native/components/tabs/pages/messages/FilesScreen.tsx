@@ -1,7 +1,7 @@
 // === Module 18813: FilesScreen ===
 
 // Module 18813 (FilesScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13199 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13197 */;
 import BaseMessagesScreen from "BaseMessagesScreen" /* 18808 */;
 import noop from "module_19" /* 19 */;
 

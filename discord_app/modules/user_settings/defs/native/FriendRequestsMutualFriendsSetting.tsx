@@ -1,11 +1,11 @@
-// === Module 16278: FriendRequestsMutualFriendsSetting ===
+// === Module 16276: FriendRequestsMutualFriendsSetting ===
 
-// Module 16278 (FriendRequestsMutualFriendsSetting)
+// Module 16276 (FriendRequestsMutualFriendsSetting)
 import util from "util" /* 1112 */;
 import FlagUtilsAll from "FlagUtils" /* 1404 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16118 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

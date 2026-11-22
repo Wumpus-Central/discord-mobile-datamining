@@ -1,6 +1,6 @@
-// === Module 16374: BountiesModalContent ===
+// === Module 16372: BountiesModalContent ===
 
-// Module 16374 (BountiesModalContent)
+// Module 16372 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import timing_timing from "timing/timing" /* 5123 */;
@@ -12,8 +12,8 @@ import AnalyticsActions from "AnalyticsActions" /* 8421 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 9999 */;
 import VideoQuestUtils from "VideoQuestUtils" /* 10615 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13759 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16317 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13757 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16315 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -414,7 +414,7 @@ function BountiesModalContentWithAppStore(arg0) {
 const View = fn(17).View;
 const QuestConstants = fn(6558);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16321);
+const BountiesModalConstants = fn(16319);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

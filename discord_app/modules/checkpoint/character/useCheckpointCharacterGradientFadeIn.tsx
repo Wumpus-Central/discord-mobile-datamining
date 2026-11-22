@@ -1,7 +1,7 @@
-// === Module 12719: useCheckpointCharacterGradientFadeIn ===
+// === Module 12717: useCheckpointCharacterGradientFadeIn ===
 
-// Module 12719 (useCheckpointCharacterGradientFadeIn)
-import _mod12720 from "module_12720" /* 12720 */;
+// Module 12717 (useCheckpointCharacterGradientFadeIn)
+import _mod12718 from "module_12718" /* 12718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -44,7 +44,7 @@ export function useCheckpointCharacterGradientFadeIn(dataBinding) {
       let _requestAnimationFrame = requestAnimationFrame;
       function handleAnimationFrame() {
         const bound = Math.max(Math.min(Date.now() - closure_0, hasOwnProperty), 0);
-        closure_3(_mod12720.easeOutCubic(bound, 0, 1, hasOwnProperty));
+        closure_3(_mod12718.easeOutCubic(bound, 0, 1, hasOwnProperty));
         if (bound < hasOwnProperty) {
           const _requestAnimationFrame = requestAnimationFrame;
           closure_1 = requestAnimationFrame(handleAnimationFrame);

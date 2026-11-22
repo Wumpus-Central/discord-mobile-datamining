@@ -3,7 +3,7 @@
 // Module 18943 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import InstantInvite from "InstantInvite" /* 13848 */;
+import InstantInvite from "InstantInvite" /* 13846 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelSettingsStore from "ChannelSettingsStore" /* 11252 */;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7432);
-const _modDef13863 = tmp2(13863);
-const _modDef13864 = tmp2(13864);
+const _modDef13861 = tmp2(13861);
+const _modDef13862 = tmp2(13862);
 const InstantInviteSelfMeasurerDefault = tmp2(18944);
 require = fn;
 const View = fn(17).View;
@@ -105,7 +105,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef13863, darkSource: _modDef13864, title: null, body: null };
+      const obj5 = { lightSource: _modDef13861, darkSource: _modDef13862, title: null, body: null };
       const intl = tmpResult(1112).intl;
       obj5.title = intl.string(tmpResult(1112).t["+nLJkZ"]);
       const intl2 = tmpResult(1112).intl;

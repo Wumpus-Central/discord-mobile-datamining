@@ -9,7 +9,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7499 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
-import ShopIcon from "ShopIcon" /* 13009 */;
+import ShopIcon from "ShopIcon" /* 13007 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 

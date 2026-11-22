@@ -17,7 +17,7 @@ export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(13328).useIsMessageRequestRestrictedViewer();
+  const isMessageRequestRestrictedViewer = channelId(13326).useIsMessageRequestRestrictedViewer();
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });

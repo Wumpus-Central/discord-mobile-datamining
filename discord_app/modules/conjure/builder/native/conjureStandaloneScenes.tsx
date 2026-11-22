@@ -4,7 +4,7 @@
 import Constants from "Constants" /* 1071 */;
 import router_utils from "router_utils" /* 1098 */;
 import ChannelConstants from "ChannelConstants" /* 4769 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12290 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12297 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

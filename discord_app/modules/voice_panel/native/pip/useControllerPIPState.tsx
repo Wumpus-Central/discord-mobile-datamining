@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import FramesStore from "FramesStore" /* 6623 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15022 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15020 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ export function useControllerPIPState(channelId) {
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
   let obj = require("module_1653");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const ref = noop.useRef({ id: "dispatch", mode: "isArray", width: false, height: null, containerHeight: "sku", showSecondaryPIP: null, scale: sharedValue });
+  const ref = noop.useRef({ id: "disabled", mode: "isArray", width: false, height: null, containerHeight: "box-none", showSecondaryPIP: null, scale: sharedValue });
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
   closure_129_0 = channelId;

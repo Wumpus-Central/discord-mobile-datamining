@@ -1,12 +1,12 @@
-// === Module 14834: MemberVerificationAlertUpdate ===
+// === Module 14832: MemberVerificationAlertUpdate ===
 
-// Module 14834 (MemberVerificationAlertUpdate)
+// Module 14832 (MemberVerificationAlertUpdate)
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import LinkingDefault from "Linking" /* 5592 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import common_AlertDefault from "common/Alert" /* 5932 */;
-import _modDef14835 from "module_14835" /* 14835 */;
+import _modDef14833 from "module_14833" /* 14833 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef14835;
+  obj2.source = _modDef14833;
   obj2.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

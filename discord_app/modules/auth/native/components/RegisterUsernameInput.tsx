@@ -6,8 +6,8 @@ import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7225 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15285 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16003 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15283 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16001 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -141,7 +141,7 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(16003).NameValidationState.ERROR) {
+  if (type === tmp14(16001).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

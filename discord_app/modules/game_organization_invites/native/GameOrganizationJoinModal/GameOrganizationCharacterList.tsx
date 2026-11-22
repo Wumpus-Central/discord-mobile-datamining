@@ -1,6 +1,6 @@
-// === Module 12241: GameOrganizationCharacterList ===
+// === Module 12248: GameOrganizationCharacterList ===
 
-// Module 12241 (GameOrganizationCharacterList)
+// Module 12248 (GameOrganizationCharacterList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2639 from "module_2639" /* 2639 */;

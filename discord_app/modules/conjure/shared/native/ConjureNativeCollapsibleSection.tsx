@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7565 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12799 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

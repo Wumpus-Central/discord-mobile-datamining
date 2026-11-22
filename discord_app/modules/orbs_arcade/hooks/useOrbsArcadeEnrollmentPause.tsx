@@ -1,6 +1,6 @@
-// === Module 16449: useOrbsArcadeEnrollmentPause ===
+// === Module 16447: useOrbsArcadeEnrollmentPause ===
 
-// Module 16449 (useOrbsArcadeEnrollmentPause)
+// Module 16447 (useOrbsArcadeEnrollmentPause)
 import DurationsDefault from "Durations" /* 1088 */;
 import DateUtils from "DateUtils" /* 4735 */;
 import useIntervalDefault from "useInterval" /* 8957 */;

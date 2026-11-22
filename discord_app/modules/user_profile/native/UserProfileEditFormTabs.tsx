@@ -1,6 +1,6 @@
-// === Module 15954: UserProfileEditFormTabs ===
+// === Module 15952: UserProfileEditFormTabs ===
 
-// Module 15954 (UserProfileEditFormTabs)
+// Module 15952 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
@@ -9,10 +9,10 @@ import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6958 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8197 */;
 import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 10199 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 14562 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 14626 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15953 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 15955 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 14560 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 14624 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15951 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 15953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9425 */;

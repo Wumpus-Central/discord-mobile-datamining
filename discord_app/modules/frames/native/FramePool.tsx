@@ -6,7 +6,7 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10622 */;
 import makeIframeIdDefault from "makeIframeId" /* 10788 */;
 import WebViewContext from "WebViewContext" /* 10814 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 15754 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 15752 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6623 */;
@@ -46,7 +46,7 @@ function PooledFrame(frame) {
       return obj;
     });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(15754).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(15752).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };
   const tmp = iframeId(noop.useState(() => ({ iframeId: makeIframeIdDefault(), proxyTicket })), 2);
   if (syncExternalStore == null) {

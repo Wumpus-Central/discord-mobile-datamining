@@ -1,6 +1,6 @@
-// === Module 16391: usePurchasedProductsSort ===
+// === Module 16389: usePurchasedProductsSort ===
 
-// Module 16391 (usePurchasedProductsSort)
+// Module 16389 (usePurchasedProductsSort)
 import _mod19 from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8090 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 12768: CheckpointGamesStatsScreen ===
+// === Module 12766: CheckpointGamesStatsScreen ===
 
-// Module 12768 (CheckpointGamesStatsScreen)
+// Module 12766 (CheckpointGamesStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,16 +8,16 @@ import _modDef3440 from "module_3440" /* 3440 */;
 import CheckpointScreen from "CheckpointScreen" /* 12509 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
-import _modDef12725 from "module_12725" /* 12725 */;
-import _modDef12726 from "module_12726" /* 12726 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 12729 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12750 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12751 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12757 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12759 */;
-import CheckpointGameCard from "CheckpointGameCard" /* 12769 */;
+import _modDef12723 from "module_12723" /* 12723 */;
+import _modDef12724 from "module_12724" /* 12724 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12727 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12748 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12749 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12755 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12757 */;
+import CheckpointGameCard from "CheckpointGameCard" /* 12767 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 import CheckpointConstants from "CheckpointConstants" /* 5969 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4913 */;
@@ -138,7 +138,7 @@ function GlobalGames(gameStats) {
   obj.containerStyle = items;
   let obj2 = { style: tmp.header, children: null };
   let obj3 = { style: tmp.globalHeading, children: null };
-  let obj4 = { animatedUri: _modDef12725, staticUri: _modDef12726, style: tmp.globe };
+  let obj4 = { animatedUri: _modDef12723, staticUri: _modDef12724, style: tmp.globe };
   let items1 = [closure_8(CheckpointApngPlayerDefault, obj4), ];
   const obj5 = { isStepHeading: true, children: null };
   let intl = gameStats(1112).intl;

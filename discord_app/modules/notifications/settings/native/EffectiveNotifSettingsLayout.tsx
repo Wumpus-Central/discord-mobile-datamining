@@ -8,7 +8,7 @@ import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCr
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14938 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14936 */;
 
 require = fn;
 function EffectiveSettingsHeader() {

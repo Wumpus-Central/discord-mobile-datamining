@@ -7,7 +7,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8571 */;
 import ChannelListLayout from "ChannelListLayout" /* 11130 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13421 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13419 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;
 

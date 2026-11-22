@@ -1,6 +1,6 @@
-// === Module 12127: NativeCheckpointCharacterImageModule ===
+// === Module 12134: NativeCheckpointCharacterImageModule ===
 
-// Module 12127 (NativeCheckpointCharacterImageModule)
+// Module 12134 (NativeCheckpointCharacterImageModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 12967: useBottomSheetFlashListBottomViewabilityInset ===
+// === Module 12965: useBottomSheetFlashListBottomViewabilityInset ===
 
-// Module 12967 (useBottomSheetFlashListBottomViewabilityInset)
+// Module 12965 (useBottomSheetFlashListBottomViewabilityInset)
 import applyDefault from "apply" /* 12 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11773 */;

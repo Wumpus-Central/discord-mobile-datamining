@@ -1,6 +1,6 @@
-// === Module 14202: UserProfilePrimaryInfo ===
+// === Module 14200: UserProfilePrimaryInfo ===
 
-// Module 14202 (UserProfilePrimaryInfo)
+// Module 14200 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -17,9 +17,9 @@ import GuildTagDefault from "GuildTag" /* 9743 */;
 import captureAdUserAction from "captureAdUserAction" /* 9961 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9964 */;
 import BotTagDefault from "BotTag" /* 10387 */;
-import BadgeUtils from "BadgeUtils" /* 13992 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14007 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 14008 */;
+import BadgeUtils from "BadgeUtils" /* 13990 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14005 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 14006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;

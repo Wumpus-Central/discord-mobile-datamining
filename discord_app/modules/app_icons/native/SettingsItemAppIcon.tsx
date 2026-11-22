@@ -1,11 +1,11 @@
-// === Module 16941: SettingsItemAppIcon ===
+// === Module 16939: SettingsItemAppIcon ===
 
-// Module 16941 (SettingsItemAppIcon)
+// Module 16939 (SettingsItemAppIcon)
 import nativeDefault from "native" /* 575 */;
 import AppIconTypes from "AppIconTypes" /* 4939 */;
 import ClydeIcon from "ClydeIcon" /* 9604 */;
-import AppIconUtils from "AppIconUtils" /* 14049 */;
-import AppIconDefault from "AppIcon" /* 16412 */;
+import AppIconUtils from "AppIconUtils" /* 14047 */;
+import AppIconDefault from "AppIcon" /* 16410 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

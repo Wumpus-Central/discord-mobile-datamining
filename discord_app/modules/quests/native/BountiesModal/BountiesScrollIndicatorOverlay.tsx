@@ -1,10 +1,10 @@
-// === Module 16357: BountiesScrollIndicatorOverlay ===
+// === Module 16355: BountiesScrollIndicatorOverlay ===
 
-// Module 16357 (BountiesScrollIndicatorOverlay)
+// Module 16355 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
-import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 16358 */;
+import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 16356 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -73,7 +73,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F140992 */ function() { ... }, num);
+            let timeout = setTimeout(/* F141009 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

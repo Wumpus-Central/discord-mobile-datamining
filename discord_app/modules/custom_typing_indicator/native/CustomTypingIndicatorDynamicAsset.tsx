@@ -1,6 +1,6 @@
-// === Module 12839: CustomTypingIndicatorDynamicAsset ===
+// === Module 12837: CustomTypingIndicatorDynamicAsset ===
 
-// Module 12839 (CustomTypingIndicatorDynamicAsset)
+// Module 12837 (CustomTypingIndicatorDynamicAsset)
 import FastImageDefault from "FastImage" /* 5600 */;
 import noop from "module_19" /* 19 */;
 

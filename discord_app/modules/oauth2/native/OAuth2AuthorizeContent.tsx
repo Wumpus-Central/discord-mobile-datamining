@@ -1,6 +1,6 @@
-// === Module 14729: OAuth2AuthorizeContent ===
+// === Module 14727: OAuth2AuthorizeContent ===
 
-// Module 14729 (OAuth2AuthorizeContent)
+// Module 14727 (OAuth2AuthorizeContent)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;

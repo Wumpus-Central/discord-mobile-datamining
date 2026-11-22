@@ -17,8 +17,8 @@ import _modDef7250 from "module_7250" /* 7250 */;
 import setCustomStatusDefault from "setCustomStatus" /* 9060 */;
 import removeCustomStatusDefault from "removeCustomStatus" /* 9062 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9063 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 14197 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 14199 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 14195 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 14197 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -268,7 +268,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14210, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14208, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "body-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[30]).Text, obj19);

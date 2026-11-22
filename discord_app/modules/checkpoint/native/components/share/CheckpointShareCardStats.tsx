@@ -11,7 +11,7 @@ import ChatIcon from "ChatIcon" /* 7672 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 7977 */;
 import ReactionIcon from "ReactionIcon" /* 9489 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 11011 */;
-import ServerIcon from "ServerIcon" /* 12464 */;
+import ServerIcon from "ServerIcon" /* 12471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

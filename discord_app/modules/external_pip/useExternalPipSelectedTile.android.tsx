@@ -3,7 +3,7 @@
 // Module 19236 (useExternalPipSelectedTile)
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15022 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15020 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
 
 const require = fn;

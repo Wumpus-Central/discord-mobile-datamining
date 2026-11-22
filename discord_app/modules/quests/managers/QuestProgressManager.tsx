@@ -1,6 +1,6 @@
-// === Module 20169: QuestProgressManager ===
+// === Module 20166: QuestProgressManager ===
 
-// Module 20169 (QuestProgressManager)
+// Module 20166 (QuestProgressManager)
 import DurationsDefault from "Durations" /* 1088 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6446 */;

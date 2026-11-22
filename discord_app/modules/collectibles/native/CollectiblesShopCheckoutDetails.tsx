@@ -1,6 +1,6 @@
-// === Module 13911: CollectiblesShopCheckoutDetails ===
+// === Module 13909: CollectiblesShopCheckoutDetails ===
 
-// Module 13911 (CollectiblesShopCheckoutDetails)
+// Module 13909 (CollectiblesShopCheckoutDetails)
 import nativeDefault from "native" /* 575 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1074 */;
 import util from "util" /* 1112 */;
@@ -20,7 +20,7 @@ import _modDef9551 from "module_9551" /* 9551 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9552 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9562 */;
 import getProductName from "getProductName" /* 9574 */;
-import _modDef13912 from "module_13912" /* 13912 */;
+import _modDef13910 from "module_13910" /* 13910 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef13912 };
+    const obj3 = { uri: _modDef13910 };
     obj2.source = obj3;
     obj2.accessibilityLabel = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;

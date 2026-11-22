@@ -1,6 +1,6 @@
-// === Module 13102: MediaKeyboardButtonIcon ===
+// === Module 13100: MediaKeyboardButtonIcon ===
 
-// Module 13102 (MediaKeyboardButtonIcon)
+// Module 13100 (MediaKeyboardButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 5100 */;

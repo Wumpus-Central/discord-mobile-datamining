@@ -3,11 +3,11 @@
 // Module 17474 (useUsernameRegistrationStep)
 import util from "util" /* 1112 */;
 import Link from "Link" /* 1501 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16003 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16001 */;
 import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16006 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16004 */;
 
 const require = globalThis.__r;
 

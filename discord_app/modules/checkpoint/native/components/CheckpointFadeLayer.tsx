@@ -1,6 +1,6 @@
-// === Module 12543: CheckpointFadeLayer ===
+// === Module 12541: CheckpointFadeLayer ===
 
-// Module 12543 (CheckpointFadeLayer)
+// Module 12541 (CheckpointFadeLayer)
 import _mod1653 from "module_1653" /* 1653 */;
 import timing_timing from "timing/timing" /* 5123 */;
 import useStableCallbackDefault from "useStableCallback" /* 7392 */;

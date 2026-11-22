@@ -1,6 +1,6 @@
-// === Module 13336: ChatInputGuardSpamMessageRequest ===
+// === Module 13334: ChatInputGuardSpamMessageRequest ===
 
-// Module 13336 (ChatInputGuardSpamMessageRequest)
+// Module 13334 (ChatInputGuardSpamMessageRequest)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -18,13 +18,13 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj2 = channel(504);
-  dependencyMap = channel(13337).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(13335).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(13337);
-  const messageRequestActions = channel(13329).useMessageRequestActions({
+  const obj3 = channel(13335);
+  const messageRequestActions = channel(13327).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -43,7 +43,7 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
     tmp7 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(13329);
+  const obj4 = channel(13327);
   const obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
@@ -77,5 +77,5 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   };
   obj6.buttonSecondaryDisabled = tmp7;
   obj6.buttonSecondaryLoading = isUserProfileLoading;
-  return jsx(navigation(13335), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
+  return jsx(navigation(13333), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
 });

@@ -1,6 +1,6 @@
-// === Module 13266: ApplicationCommandDiscovery ===
+// === Module 13264: ApplicationCommandDiscovery ===
 
-// Module 13266 (ApplicationCommandDiscovery)
+// Module 13264 (ApplicationCommandDiscovery)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -12,9 +12,9 @@ import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5565 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
 import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10444 */;
 import _modDef11401 from "module_11401" /* 11401 */;
-import ApplicationSectionHeader from "ApplicationSectionHeader" /* 13268 */;
-import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 13269 */;
-import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 13270 */;
+import ApplicationSectionHeader from "ApplicationSectionHeader" /* 13266 */;
+import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 13267 */;
+import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 13268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, SectionList: metroImportDefault } = get_ActivityIndicator);
 const ApplicationCommandConstants = fn(5937);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(13267).ITEM_HEIGHT;
+const ITEM_HEIGHT = fn(13265).ITEM_HEIGHT;
 const AUTOCOMPLETE_ROW_HEIGHT = fn(11261).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
@@ -308,7 +308,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const section = item.section;
     let found;
     if (item.inputType === ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER) {
-      return filteredSectionId(onHeightChange(13271), {});
+      return filteredSectionId(onHeightChange(13269), {});
     } else {
       found = sectionDescriptors.find((id) => id.id === item.applicationId);
       const obj = {
@@ -324,7 +324,7 @@ export default function ApplicationCommandDiscovery(channel) {
         showIcon: item.applicationId !== section.section.id,
         guildId: found.guild_id
       };
-      return filteredSectionId(onHeightChange(13272), obj);
+      return filteredSectionId(onHeightChange(13270), obj);
     }
   };
   obj9.renderSectionHeader = function renderSectionHeader(section) {

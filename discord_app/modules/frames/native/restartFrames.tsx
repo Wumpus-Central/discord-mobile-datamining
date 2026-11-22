@@ -1,6 +1,6 @@
-// === Module 14362: restartFrames ===
+// === Module 14360: restartFrames ===
 
-// Module 14362 (restartFrames)
+// Module 14360 (restartFrames)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10622 */;
 import FramesStore from "FramesStore" /* 6623 */;
 

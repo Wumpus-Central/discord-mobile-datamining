@@ -7,7 +7,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const FastImageDefault = tmp13(5600);
-const getReactNativeSVGImageSourceDefault = tmp13(14491);
+const getReactNativeSVGImageSourceDefault = tmp13(14489);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);

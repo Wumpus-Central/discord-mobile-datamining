@@ -1,9 +1,9 @@
-// === Module 16484: WreathIcon ===
+// === Module 16482: WreathIcon ===
 
-// Module 16484 (WreathIcon)
+// Module 16482 (WreathIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod16485 from "module_16485" /* 16485 */;
+import _mod16483 from "module_16483" /* 16483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export default function WreathIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16485, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16483, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
 };

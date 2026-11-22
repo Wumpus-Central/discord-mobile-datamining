@@ -1,6 +1,6 @@
-// === Module 15955: UserProfileWidgetEditingHeader ===
+// === Module 15953: UserProfileWidgetEditingHeader ===
 
-// Module 15955 (UserProfileWidgetEditingHeader)
+// Module 15953 (UserProfileWidgetEditingHeader)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
@@ -38,7 +38,7 @@ export default function UserProfileWidgetEditingHeader() {
   obj5.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: stateFromStores, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId: stateFromStores, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14576, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14574, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items1[1] = closure_7(stateFromStores(5511).Button, obj5);
   const obj7 = { ref, size: "sm", variant: "secondary", icon: null, accessibilityLabel: null, disabled: null, onPress: null };
@@ -48,7 +48,7 @@ export default function UserProfileWidgetEditingHeader() {
   obj7.accessibilityLabel = intl3.string(stateFromStores(1112).t.tm1WHd);
   obj7.disabled = obj2.useBoardWidgets(stateFromStores).length < 2;
   obj7.onPress = function onPress() {
-    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15956, dependencyMap.paths), "UserProfileWidgetReorderActionSheet", { returnFocusRef: ref });
+    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15954, dependencyMap.paths), "UserProfileWidgetReorderActionSheet", { returnFocusRef: ref });
   };
   items1[2] = closure_7(stateFromStores(7591).IconButton, obj7);
   obj3.children = items1;

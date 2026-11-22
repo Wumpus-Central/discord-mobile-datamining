@@ -3,9 +3,9 @@
 // Module 17504 (RedesignNotificationModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13283 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13284 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13595 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13281 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13282 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13593 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,8 +46,8 @@ class RedesignNotificationModal {
   }
 }
 const View = fn(17).View;
-const PermissionStateType = fn(13281).PermissionStateType;
-const NotificationPermissionConstants = fn(13282);
+const PermissionStateType = fn(13279).PermissionStateType;
+const NotificationPermissionConstants = fn(13280);
 ({ EventActionLocation: closure_6, EventActionType: metroImportDefault } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;

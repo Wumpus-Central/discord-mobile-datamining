@@ -1,9 +1,9 @@
-// === Module 16261: UserSettingsAuthedAppPermissions ===
+// === Module 16259: UserSettingsAuthedAppPermissions ===
 
-// Module 16261 (UserSettingsAuthedAppPermissions)
+// Module 16259 (UserSettingsAuthedAppPermissions)
 import Text_Text from "Text/Text" /* 5504 */;
 import disclosures from "disclosures" /* 7007 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16255 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

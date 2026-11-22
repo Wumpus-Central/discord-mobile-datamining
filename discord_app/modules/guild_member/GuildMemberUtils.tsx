@@ -1,6 +1,6 @@
-// === Module 12365: GuildMemberUtils ===
+// === Module 12372: GuildMemberUtils ===
 
-// Module 12365 (GuildMemberUtils)
+// Module 12372 (GuildMemberUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;

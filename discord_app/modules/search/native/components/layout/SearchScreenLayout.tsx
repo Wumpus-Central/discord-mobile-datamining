@@ -5,7 +5,7 @@ import AppFreezerDefault from "AppFreezer" /* 18160 */;
 import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18722 */;
 import AutocompleteScreenDefault from "AutocompleteScreen" /* 18833 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13213 */;
+import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 const require = fn;
 function SearchFreezeContainer(visible) {

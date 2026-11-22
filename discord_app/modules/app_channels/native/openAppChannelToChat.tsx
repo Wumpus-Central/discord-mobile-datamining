@@ -1,6 +1,6 @@
-// === Module 13875: openAppChannelToChat ===
+// === Module 13873: openAppChannelToChat ===
 
-// Module 13875 (openAppChannelToChat)
+// Module 13873 (openAppChannelToChat)
 import transitionToChannel from "transitionToChannel" /* 5646 */;
 import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 8578 */;
 import size from "module_2" /* 2 */;

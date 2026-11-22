@@ -1,12 +1,12 @@
-// === Module 13304: ChatInputRightActions ===
+// === Module 13302: ChatInputRightActions ===
 
-// Module 13304 (ChatInputRightActions)
+// Module 13302 (ChatInputRightActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import native from "native" /* 4974 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13107 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 13108 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13109 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13105 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 13106 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,11 +99,11 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Path", shouldShowThread: "2026-03-acom-modify-dark-launch" });
+  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Path", shouldShowThread: "Lietuvi\u0161kai" });
   return metroImportDefault(_modDef1653.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12827).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12825).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4913);

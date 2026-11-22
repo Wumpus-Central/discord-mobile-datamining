@@ -1,6 +1,6 @@
-// === Module 13722: ForumPlatformHooks ===
+// === Module 13720: ForumPlatformHooks ===
 
-// Module 13722 (ForumPlatformHooks)
+// Module 13720 (ForumPlatformHooks)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;
 import RootNavigationRef from "RootNavigationRef" /* 5090 */;
 import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 8624 */;

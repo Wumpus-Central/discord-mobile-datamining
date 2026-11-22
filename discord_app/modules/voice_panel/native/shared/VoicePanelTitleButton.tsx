@@ -16,7 +16,7 @@ import _modDef7621 from "module_7621" /* 7621 */;
 import _modDef7641 from "module_7641" /* 7641 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 11011 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 13819 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 13817 */;
 import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17998 */;
 import QuestActivityButtonDefault from "QuestActivityButton" /* 19196 */;
 import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19251 */;

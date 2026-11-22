@@ -1,6 +1,6 @@
-// === Module 12770: CheckpointGameTimeStatsScreen ===
+// === Module 12768: CheckpointGameTimeStatsScreen ===
 
-// Module 12770 (CheckpointGameTimeStatsScreen)
+// Module 12768 (CheckpointGameTimeStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -12,14 +12,14 @@ import CalendarIcon from "CalendarIcon" /* 8048 */;
 import CheckpointScreenDefault from "CheckpointScreen" /* 12509 */;
 import CheckpointTextDefault from "CheckpointText" /* 12510 */;
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12512 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 12729 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12749 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12750 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12751 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12752 */;
-import _modDef12771 from "module_12771" /* 12771 */;
-import _modDef12772 from "module_12772" /* 12772 */;
-import CheckpointStore from "CheckpointStore" /* 12492 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12727 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12747 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12748 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12749 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12750 */;
+import _modDef12769 from "module_12769" /* 12769 */;
+import _modDef12770 from "module_12770" /* 12770 */;
+import CheckpointStore from "CheckpointStore" /* 12128 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4913 */;
 import size from "module_2" /* 2 */;
@@ -107,8 +107,8 @@ export default function CheckpointGameTimeStatsScreen() {
   const tmp5Result = CheckpointStatsUtils;
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result5 = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef12771;
-  obj7.staticUri = _modDef12772;
+  obj7.animatedUri = _modDef12769;
+  obj7.staticUri = _modDef12770;
   const items2 = [tmp.image, ];
   let wideImage = tmp4;
   if (tmp4) {

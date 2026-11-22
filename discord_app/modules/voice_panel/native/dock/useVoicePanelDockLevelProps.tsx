@@ -1,6 +1,6 @@
-// === Module 13311: useVoicePanelDockLevelProps ===
+// === Module 13309: useVoicePanelDockLevelProps ===
 
-// Module 13311 (useVoicePanelDockLevelProps)
+// Module 13309 (useVoicePanelDockLevelProps)
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const DEFAULT_VAD_THRESHOLD = fn(2131).DEFAULT_VAD_THRESHOLD;
-let closure_9 = fn(13312).VoicePanelDockHiddenContext;
+let closure_9 = fn(13310).VoicePanelDockHiddenContext;
 const InputModes = fn(1071).InputModes;
 let closure_11 = { tween: true, riseDurationMs: 90, fallDurationMs: 180, tweenFrameRate: 20 };
 const size = fn(2);
@@ -19,8 +19,8 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVo
 
 export function useVoicePanelDockGlowLevelProps() {
   const context = noop.useContext(closure_9);
-  const shouldAnimateSpeakerLevels = num2(12829).useShouldAnimateSpeakerLevels("VoicePanelDock");
-  const obj2 = num2(12829);
+  const shouldAnimateSpeakerLevels = num2(12827).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  const obj2 = num2(12827);
   items = [SelectedChannelStore, ChannelStore];
   const stateFromStores = num2(504).useStateFromStores(items, () => channel.getChannel(voiceChannelId.getVoiceChannelId()));
   const obj3 = num2(504);

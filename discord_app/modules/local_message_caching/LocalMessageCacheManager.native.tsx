@@ -1,6 +1,6 @@
-// === Module 15798: LocalMessageCacheManager ===
+// === Module 15796: LocalMessageCacheManager ===
 
-// Module 15798 (LocalMessageCacheManager)
+// Module 15796 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -9,7 +9,7 @@ import _modDef2168 from "module_2168" /* 2168 */;
 import DateUtils from "DateUtils" /* 4735 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
 import createMessageDefault from "createMessage" /* 8446 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 12175 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 12182 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 4856 */;
@@ -261,10 +261,10 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const SendMessageOptionsStore = fn(12132);
+const SendMessageOptionsStore = fn(12139);
 const Constants = fn(1071);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(15799);
+const MutexUtils = fn(15797);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";

@@ -1,6 +1,6 @@
-// === Module 19878: GuildSettingsModalTemplate ===
+// === Module 19875: GuildSettingsModalTemplate ===
 
-// Module 19878 (GuildSettingsModalTemplate)
+// Module 19875 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -16,8 +16,8 @@ import CircleXIcon2 from "CircleXIcon" /* 7231 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7532 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
 import native from "native" /* 7600 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12205 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19879 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12212 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12205);
+                const obj2 = guildTemplate(12212);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19880)(guildTemplate.code);
+  const tmp3 = guildTemplate(19877)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

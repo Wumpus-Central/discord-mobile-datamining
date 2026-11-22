@@ -1,15 +1,15 @@
-// === Module 16073: AccountSmsBackupSetting ===
+// === Module 16071: AccountSmsBackupSetting ===
 
-// Module 16073 (AccountSmsBackupSetting)
+// Module 16071 (AccountSmsBackupSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import PhoneActionCreators from "PhoneActionCreators" /* 7422 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 16062 */;
-import account_MFAUtils from "account/MFAUtils" /* 16067 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16070 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 16060 */;
+import account_MFAUtils from "account/MFAUtils" /* 16065 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16068 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -98,7 +98,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(15980).useIsTOTPEnabled
+  usePredicate: fn(15978).useIsTOTPEnabled
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

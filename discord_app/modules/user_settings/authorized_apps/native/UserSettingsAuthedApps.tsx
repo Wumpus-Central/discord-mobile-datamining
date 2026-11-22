@@ -1,6 +1,6 @@
-// === Module 16255: UserSettingsAuthedApps ===
+// === Module 16253: UserSettingsAuthedApps ===
 
-// Module 16255 (UserSettingsAuthedApps)
+// Module 16253 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -10,7 +10,7 @@ import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreat
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
 import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 7754 */;
 import GlobeEarthIcon from "GlobeEarthIcon" /* 7766 */;
-import EmbedIcon from "EmbedIcon" /* 14726 */;
+import EmbedIcon from "EmbedIcon" /* 14724 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
 

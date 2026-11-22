@@ -11,9 +11,9 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 4808 */;
 import timeRequireDefault from "timeRequire" /* 8285 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15434 */;
-import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20176 */;
-import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20177 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15432 */;
+import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20173 */;
+import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20174 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
@@ -702,8 +702,8 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15648).updateSaturation(closure_0(4914).default.saturation);
-            obj = closure_0(15648);
+            closure_0(15646).updateSaturation(closure_0(4914).default.saturation);
+            obj = closure_0(15646);
             closure_0(19112).updateVisualRefresh(true);
             const obj2 = closure_0(19112);
             closure_0(19113).updateTheme(closure_0(1191).default.theme);

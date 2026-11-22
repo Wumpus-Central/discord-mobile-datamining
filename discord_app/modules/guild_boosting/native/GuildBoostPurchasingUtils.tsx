@@ -1,6 +1,6 @@
-// === Module 13430: GuildBoostPurchasingUtils ===
+// === Module 13428: GuildBoostPurchasingUtils ===
 
-// Module 13430 (GuildBoostPurchasingUtils)
+// Module 13428 (GuildBoostPurchasingUtils)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5861 */;

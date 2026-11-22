@@ -8,7 +8,7 @@ import ChatInputUtils from "ChatInputUtils" /* 5098 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10538 */;
 import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 10857 */;
 import StartupProfiler from "StartupProfiler" /* 11978 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15284 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15282 */;
 import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17444 */;
 import AutoAnalytics from "AutoAnalytics" /* 18849 */;
 import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18902 */;

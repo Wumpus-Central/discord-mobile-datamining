@@ -52,7 +52,7 @@ import ThermalUtilsDefault from "ThermalUtils" /* 5850 */;
 import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 5852 */;
 import DaveMessageValidator from "DaveMessageValidator" /* 5859 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
-import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15048 */;
+import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5661 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5671 */;

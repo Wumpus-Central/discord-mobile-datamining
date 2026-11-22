@@ -1,6 +1,6 @@
-// === Module 12802: useCheckpointCompletionSurvey ===
+// === Module 12800: useCheckpointCompletionSurvey ===
 
-// Module 12802 (useCheckpointCompletionSurvey)
+// Module 12800 (useCheckpointCompletionSurvey)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import QualtricsActionCreators from "QualtricsActionCreators" /* 6483 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 6490 */;

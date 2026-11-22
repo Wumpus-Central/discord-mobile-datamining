@@ -1,6 +1,6 @@
-// === Module 12440: ClassificationMessageEvidence ===
+// === Module 12447: ClassificationMessageEvidence ===
 
-// Module 12440 (ClassificationMessageEvidence)
+// Module 12447 (ClassificationMessageEvidence)
 import openMediaModal from "openMediaModal" /* 8217 */;
 import RowGeneratorDefault from "RowGenerator" /* 8669 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -39,10 +39,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj3.useStateFromStores(items1, () => ref(4920).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(12441));
+    let assetSource = resolveAssetSource(tmp11(12448));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(12442));
+    assetSource = resolveAssetSource(tmp11(12449));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];

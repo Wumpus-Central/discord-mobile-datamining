@@ -1,6 +1,6 @@
-// === Module 15188: GuildAntiRaidReportModal ===
+// === Module 15186: GuildAntiRaidReportModal ===
 
-// Module 15188 (GuildAntiRaidReportModal)
+// Module 15186 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
@@ -75,7 +75,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15189);
+const GuildReportRaidModalConstants = fn(15187);
 ({ getReportRaidHelpArticleURL: metroImportDefault, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -125,9 +125,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(12361).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(12361);
-            tmp2(12361).handleReportRaid(guildId);
+            const result = tmp2(12368).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(12368);
+            tmp2(12368).handleReportRaid(guildId);
             const intl = tmp2(1112).intl;
             c1 = 1;
             dependencyMap = 1;

@@ -1,6 +1,6 @@
-// === Module 13001: useCanInstallApplication ===
+// === Module 12999: useCanInstallApplication ===
 
-// Module 13001 (useCanInstallApplication)
+// Module 12999 (useCanInstallApplication)
 import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10684 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
