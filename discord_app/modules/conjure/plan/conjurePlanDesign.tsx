@@ -1,9 +1,9 @@
-// === Module 18558: conjurePlanDesign ===
+// === Module 18560: conjurePlanDesign ===
 
-// Module 18558 (conjurePlanDesign)
+// Module 18560 (conjurePlanDesign)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
-import conjurePlanTags from "conjurePlanTags" /* 18559 */;
+import conjurePlanTags from "conjurePlanTags" /* 18561 */;
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};

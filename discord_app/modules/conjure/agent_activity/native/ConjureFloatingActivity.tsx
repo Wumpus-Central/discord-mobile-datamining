@@ -1,6 +1,6 @@
-// === Module 18611: ConjureFloatingActivity ===
+// === Module 18613: ConjureFloatingActivity ===
 
-// Module 18611 (ConjureFloatingActivity)
+// Module 18613 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import _modDef4190 from "module_4190" /* 4190 */;
@@ -76,7 +76,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(18553), obj6);
+      obj5.children = closure_6(tmp13(18555), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -99,7 +99,7 @@ export default function ConjureFloatingActivity(agents) {
     const intl2 = tmp2(1112).intl;
     obj12.accessibilityLabel = intl2.string(tmp13(4190).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(15261).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(15263).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;

@@ -1,8 +1,8 @@
-// === Module 14562: AddWidgetButtonConfig ===
+// === Module 14564: AddWidgetButtonConfig ===
 
-// Module 14562 (AddWidgetButtonConfig)
+// Module 14564 (AddWidgetButtonConfig)
 import util from "util" /* 1112 */;
-import SampleGameWidgetData from "SampleGameWidgetData" /* 14563 */;
+import SampleGameWidgetData from "SampleGameWidgetData" /* 14565 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 
 require = fn;

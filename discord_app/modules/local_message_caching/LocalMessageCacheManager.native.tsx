@@ -1,6 +1,6 @@
-// === Module 15796: LocalMessageCacheManager ===
+// === Module 15798: LocalMessageCacheManager ===
 
-// Module 15796 (LocalMessageCacheManager)
+// Module 15798 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -264,7 +264,7 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
 const SendMessageOptionsStore = fn(12139);
 const Constants = fn(1071);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(15797);
+const MutexUtils = fn(15799);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";

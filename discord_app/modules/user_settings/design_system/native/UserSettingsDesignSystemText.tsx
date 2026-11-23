@@ -1,6 +1,6 @@
-// === Module 17203: UserSettingsDesignSystemText ===
+// === Module 17205: UserSettingsDesignSystemText ===
 
-// Module 17203 (UserSettingsDesignSystemText)
+// Module 17205 (UserSettingsDesignSystemText)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5477 */;
 import Text_Text from "Text/Text" /* 5504 */;

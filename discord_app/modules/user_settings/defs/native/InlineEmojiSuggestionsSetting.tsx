@@ -1,6 +1,6 @@
-// === Module 16877: InlineEmojiSuggestionsSetting ===
+// === Module 16879: InlineEmojiSuggestionsSetting ===
 
-// Module 16877 (InlineEmojiSuggestionsSetting)
+// Module 16879 (InlineEmojiSuggestionsSetting)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import UserSettings from "UserSettings" /* 4738 */;

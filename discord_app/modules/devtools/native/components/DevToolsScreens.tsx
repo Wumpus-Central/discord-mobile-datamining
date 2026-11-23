@@ -1,34 +1,34 @@
-// === Module 16999: DevToolsScreens ===
+// === Module 17001: DevToolsScreens ===
 
-// Module 16999 (DevToolsScreens)
+// Module 17001 (DevToolsScreens)
 import DevToolsExperimentsScreen from "DevToolsExperimentsScreen" /* 12337 */;
-import DevToolsAnalyticsScreen from "DevToolsAnalyticsScreen" /* 17000 */;
-import openBuildOverridesSettings from "openBuildOverridesSettings" /* 17001 */;
-import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 17004 */;
-import DevToolsLocalMessageCache from "DevToolsLocalMessageCache" /* 17005 */;
-import DevToolsGeneratedTestUsersScreen from "DevToolsGeneratedTestUsersScreen" /* 17006 */;
-import DevToolsDataStorageScreen from "DevToolsDataStorageScreen" /* 17032 */;
-import UserSettingsDesignSystemsScreen from "UserSettingsDesignSystemsScreen" /* 17033 */;
-import DevToolsDismissableContentsScreen from "DevToolsDismissableContentsScreen" /* 17034 */;
-import GameCommunityUpsellDevTools from "GameCommunityUpsellDevTools" /* 17038 */;
-import IntlTestingSettingsPage from "IntlTestingSettingsPage" /* 17041 */;
-import DevToolsOTATestScreen from "DevToolsOTATestScreen" /* 17076 */;
-import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 17079 */;
-import DevToolsBountyQaScreen from "DevToolsBountyQaScreen" /* 17084 */;
-import DevToolsQuickActionsScreen from "DevToolsQuickActionsScreen" /* 17085 */;
-import DevToolsRevenuePlaygroundScreen from "DevToolsRevenuePlaygroundScreen" /* 17112 */;
-import DevToolsCampaignsScreen from "DevToolsCampaignsScreen" /* 17136 */;
-import UserSettingsSurveyChangelogOverride from "UserSettingsSurveyChangelogOverride" /* 17141 */;
-import DevToolsTogglesScreen from "DevToolsTogglesScreen" /* 17143 */;
-import DevToolsComponentsTestingScreen from "DevToolsComponentsTestingScreen" /* 17145 */;
-import DevToolsShopScreen from "DevToolsShopScreen" /* 17152 */;
-import CollectiblesTool from "CollectiblesTool" /* 17153 */;
-import SlayerStorefrontDevTools from "SlayerStorefrontDevTools" /* 17155 */;
-import DevToolsActionSheetsScreen from "DevToolsActionSheetsScreen" /* 17156 */;
-import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 17163 */;
-import DevToolsPerformanceTestingScreen from "DevToolsPerformanceTestingScreen" /* 17164 */;
-import DevToolsInAppNotificationTestingScreen from "DevToolsInAppNotificationTestingScreen" /* 17165 */;
-import DevToolsDisplayNameEffectsBenchmarkScreen from "DevToolsDisplayNameEffectsBenchmarkScreen" /* 17166 */;
+import DevToolsAnalyticsScreen from "DevToolsAnalyticsScreen" /* 17002 */;
+import openBuildOverridesSettings from "openBuildOverridesSettings" /* 17003 */;
+import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 17006 */;
+import DevToolsLocalMessageCache from "DevToolsLocalMessageCache" /* 17007 */;
+import DevToolsGeneratedTestUsersScreen from "DevToolsGeneratedTestUsersScreen" /* 17008 */;
+import DevToolsDataStorageScreen from "DevToolsDataStorageScreen" /* 17034 */;
+import UserSettingsDesignSystemsScreen from "UserSettingsDesignSystemsScreen" /* 17035 */;
+import DevToolsDismissableContentsScreen from "DevToolsDismissableContentsScreen" /* 17036 */;
+import GameCommunityUpsellDevTools from "GameCommunityUpsellDevTools" /* 17040 */;
+import IntlTestingSettingsPage from "IntlTestingSettingsPage" /* 17043 */;
+import DevToolsOTATestScreen from "DevToolsOTATestScreen" /* 17078 */;
+import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 17081 */;
+import DevToolsBountyQaScreen from "DevToolsBountyQaScreen" /* 17086 */;
+import DevToolsQuickActionsScreen from "DevToolsQuickActionsScreen" /* 17087 */;
+import DevToolsRevenuePlaygroundScreen from "DevToolsRevenuePlaygroundScreen" /* 17114 */;
+import DevToolsCampaignsScreen from "DevToolsCampaignsScreen" /* 17138 */;
+import UserSettingsSurveyChangelogOverride from "UserSettingsSurveyChangelogOverride" /* 17143 */;
+import DevToolsTogglesScreen from "DevToolsTogglesScreen" /* 17145 */;
+import DevToolsComponentsTestingScreen from "DevToolsComponentsTestingScreen" /* 17147 */;
+import DevToolsShopScreen from "DevToolsShopScreen" /* 17154 */;
+import CollectiblesTool from "CollectiblesTool" /* 17155 */;
+import SlayerStorefrontDevTools from "SlayerStorefrontDevTools" /* 17157 */;
+import DevToolsActionSheetsScreen from "DevToolsActionSheetsScreen" /* 17158 */;
+import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 17165 */;
+import DevToolsPerformanceTestingScreen from "DevToolsPerformanceTestingScreen" /* 17166 */;
+import DevToolsInAppNotificationTestingScreen from "DevToolsInAppNotificationTestingScreen" /* 17167 */;
+import DevToolsDisplayNameEffectsBenchmarkScreen from "DevToolsDisplayNameEffectsBenchmarkScreen" /* 17168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -91,14 +91,14 @@ const obj3 = {
 };
 obj.experiments = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(17002).BeakerIcon,
+  Icon: fn(17004).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   }
 };
 const obj4 = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(17002).BeakerIcon,
+  Icon: fn(17004).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   }
@@ -153,28 +153,28 @@ const obj7 = {
 };
 obj.dataStorage = {
   headerTitle: "Data Storage",
-  Icon: fn(16955).FileUpIcon,
+  Icon: fn(16957).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   }
 };
 const obj8 = {
   headerTitle: "Data Storage",
-  Icon: fn(16955).FileUpIcon,
+  Icon: fn(16957).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   }
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(16665).PaintPaletteIcon,
+  Icon: fn(16667).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   }
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(16665).PaintPaletteIcon,
+  Icon: fn(16667).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   }
@@ -321,14 +321,14 @@ const obj19 = {
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(16755).EyeDropperIcon,
+  Icon: fn(16757).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   }
 };
 const obj20 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(16755).EyeDropperIcon,
+  Icon: fn(16757).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   }
@@ -391,14 +391,14 @@ const obj24 = {
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(17012).CompassIcon,
+  Icon: fn(17014).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   }
 };
 const obj25 = {
   headerTitle: "Action Sheets",
-  Icon: fn(17012).CompassIcon,
+  Icon: fn(17014).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   }
@@ -448,7 +448,7 @@ const obj28 = {
 };
 obj29.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(16665).PaintPaletteIcon,
+  Icon: fn(16667).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   }

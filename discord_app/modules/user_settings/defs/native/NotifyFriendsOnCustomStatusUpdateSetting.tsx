@@ -1,12 +1,12 @@
-// === Module 17406: NotifyFriendsOnCustomStatusUpdateSetting ===
+// === Module 17408: NotifyFriendsOnCustomStatusUpdateSetting ===
 
-// Module 17406 (NotifyFriendsOnCustomStatusUpdateSetting)
+// Module 17408 (NotifyFriendsOnCustomStatusUpdateSetting)
 import util from "util" /* 1112 */;
 import _modDef2992 from "module_2992" /* 2992 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;
-import NotifyFriendsOnCustomStatusUpdateUtils from "NotifyFriendsOnCustomStatusUpdateUtils" /* 17407 */;
-import NotifyFriendsOnCustomStatusUpdateExperiment from "NotifyFriendsOnCustomStatusUpdateExperiment" /* 17408 */;
+import NotifyFriendsOnCustomStatusUpdateUtils from "NotifyFriendsOnCustomStatusUpdateUtils" /* 17409 */;
+import NotifyFriendsOnCustomStatusUpdateExperiment from "NotifyFriendsOnCustomStatusUpdateExperiment" /* 17410 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;
 import size from "module_2" /* 2 */;
 

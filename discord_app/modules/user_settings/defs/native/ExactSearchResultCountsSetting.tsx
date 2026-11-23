@@ -1,6 +1,6 @@
-// === Module 16726: ExactSearchResultCountsSetting ===
+// === Module 16728: ExactSearchResultCountsSetting ===
 
-// Module 16726 (ExactSearchResultCountsSetting)
+// Module 16728 (ExactSearchResultCountsSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;

@@ -1,9 +1,9 @@
-// === Module 16820: ToastDurationSetting ===
+// === Module 16822: ToastDurationSetting ===
 
-// Module 16820 (ToastDurationSetting)
+// Module 16822 (ToastDurationSetting)
 import util from "util" /* 1112 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 13000 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16716 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16718 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 

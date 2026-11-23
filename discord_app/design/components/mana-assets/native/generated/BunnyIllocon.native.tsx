@@ -1,20 +1,20 @@
-// === Module 18517: BunnyIllocon ===
+// === Module 18519: BunnyIllocon ===
 
-// Module 18517 (BunnyIllocon)
+// Module 18519 (BunnyIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18518 from "module_18518" /* 18518 */;
-import _modDef18519 from "module_18519" /* 18519 */;
 import _modDef18520 from "module_18520" /* 18520 */;
+import _modDef18521 from "module_18521" /* 18521 */;
+import _modDef18522 from "module_18522" /* 18522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18518 }, 3: null };
-const obj2 = { uri: _modDef18518 };
-obj[2] = { uri: _modDef18519 };
-const obj3 = { uri: _modDef18519 };
-obj[3] = { uri: _modDef18520 };
+let obj = { 1: null, 2: { uri: _modDef18520 }, 3: null };
+const obj2 = { uri: _modDef18520 };
+obj[2] = { uri: _modDef18521 };
+const obj3 = { uri: _modDef18521 };
+obj[3] = { uri: _modDef18522 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BunnyIllocon.native.tsx");
 

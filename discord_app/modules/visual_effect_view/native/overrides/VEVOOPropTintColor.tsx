@@ -1,13 +1,13 @@
-// === Module 17439: VEVOOPropTintColor ===
+// === Module 17441: VEVOOPropTintColor ===
 
-// Module 17439 (VEVOOPropTintColor)
+// Module 17441 (VEVOOPropTintColor)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import FormSwitch from "FormSwitch" /* 7557 */;
 import Form from "Form" /* 7709 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15838 */;
-import VEVOO from "VEVOO" /* 17436 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15840 */;
+import VEVOO from "VEVOO" /* 17438 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -120,7 +120,7 @@ export default noop.memo(function VEVOOPropTintColor() {
     }
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(17438), {
+  obj7.subLabel = closure_8(backgroundColor(17440), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

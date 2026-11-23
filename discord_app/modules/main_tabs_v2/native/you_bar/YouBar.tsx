@@ -1,6 +1,6 @@
-// === Module 17941: YouBar ===
+// === Module 17943: YouBar ===
 
-// Module 17941 (YouBar)
+// Module 17943 (YouBar)
 import apply from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -17,11 +17,11 @@ import openUserSettings from "openUserSettings" /* 8194 */;
 import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9951 */;
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11770 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 12109 */;
-import YouBarBackgroundDefault from "YouBarBackground" /* 17963 */;
-import YouBarUserDefault from "YouBarUser" /* 17965 */;
-import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 17974 */;
-import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 17975 */;
-import ConnectionBannerDefault from "ConnectionBanner" /* 17976 */;
+import YouBarBackgroundDefault from "YouBarBackground" /* 17965 */;
+import YouBarUserDefault from "YouBarUser" /* 17967 */;
+import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 17976 */;
+import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 17977 */;
+import ConnectionBannerDefault from "ConnectionBanner" /* 17978 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
@@ -31,7 +31,7 @@ import UserStore from "UserStore" /* 1386 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(16476);
+const YouBarConstants = fn(16478);
 ({ YOU_BAR_HEIGHT: closure_10, YOU_BAR_PADDING: closure_11, YOU_BAR_SPRING_CONFIG: closure_12, YOU_BAR_AVATAR_LARGE_SIZE: map1, YOU_BAR_AVATAR_SIZE: closure_14, YOU_BAR_BUTTON_HIT_SLOP: closure_15 } = YouBarConstants);
 const ME = fn(1071).ME;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
@@ -397,7 +397,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp52Result = tmp34;
   if (null != nameplate) {
     const obj6 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
-    tmp52Result = closure_18(tmp27(17964), obj6);
+    tmp52Result = closure_18(tmp27(17966), obj6);
   }
   items12[1] = tmp52Result;
   const obj7 = { gesture: memo3, children: null };
@@ -421,12 +421,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj11 = { hasNameplate: tmp34, canUnpin: tmp28.canPin };
-    let tmp52Result3 = closure_18(tmp27(17970), obj11);
+    let tmp52Result3 = closure_18(tmp27(17972), obj11);
   } else {
     tmp52Result3 = null;
     if (tmp26) {
       const obj12 = { hasNameplate: tmp34 };
-      tmp52Result3 = closure_18(tmp27(17972), obj12);
+      tmp52Result3 = closure_18(tmp27(17974), obj12);
     }
   }
   const items13 = [tmp52Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];

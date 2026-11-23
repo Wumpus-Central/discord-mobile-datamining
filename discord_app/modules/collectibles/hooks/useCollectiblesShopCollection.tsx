@@ -1,6 +1,6 @@
-// === Module 17336: useCollectiblesShopCollection ===
+// === Module 17338: useCollectiblesShopCollection ===
 
-// Module 17336 (useCollectiblesShopCollection)
+// Module 17338 (useCollectiblesShopCollection)
 import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9898 */;
 import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9899 */;
 import noop from "module_19" /* 19 */;

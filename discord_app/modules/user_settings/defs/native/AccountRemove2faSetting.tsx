@@ -1,10 +1,10 @@
-// === Module 16064: AccountRemove2faSetting ===
+// === Module 16066: AccountRemove2faSetting ===
 
-// Module 16064 (AccountRemove2faSetting)
+// Module 16066 (AccountRemove2faSetting)
 import util from "util" /* 1112 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import account_MFAUtils from "account/MFAUtils" /* 16065 */;
-import MfaFactorUtils from "MfaFactorUtils" /* 16066 */;
+import account_MFAUtils from "account/MFAUtils" /* 16067 */;
+import MfaFactorUtils from "MfaFactorUtils" /* 16068 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -200,8 +200,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16065).use2FARemoveDisableReason,
-  usePredicate: fn(15978).useIsTOTPEnabled
+  useDescription: fn(16067).use2FARemoveDisableReason,
+  usePredicate: fn(15980).useIsTOTPEnabled
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

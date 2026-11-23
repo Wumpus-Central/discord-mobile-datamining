@@ -1,6 +1,6 @@
-// === Module 19609: InterestGuildRecommendations ===
+// === Module 19611: InterestGuildRecommendations ===
 
-// Module 19609 (InterestGuildRecommendations)
+// Module 19611 (InterestGuildRecommendations)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
@@ -10,10 +10,10 @@ import Text_Text from "Text/Text" /* 5504 */;
 import GuildIconDefault from "GuildIcon" /* 7322 */;
 import ClipViewDefault from "ClipView" /* 9023 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 9755 */;
-import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 17813 */;
-import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 17816 */;
-import InterestGuildActions from "InterestGuildActions" /* 17817 */;
-import InterestGhostDefault from "InterestGhost" /* 17841 */;
+import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 17815 */;
+import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 17818 */;
+import InterestGuildActions from "InterestGuildActions" /* 17819 */;
+import InterestGhostDefault from "InterestGhost" /* 17843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 4764 */;

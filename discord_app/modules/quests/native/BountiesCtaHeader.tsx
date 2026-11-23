@@ -1,6 +1,6 @@
-// === Module 16390: BountiesCtaHeader ===
+// === Module 16392: BountiesCtaHeader ===
 
-// Module 16390 (BountiesCtaHeader)
+// Module 16392 (BountiesCtaHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -11,12 +11,12 @@ import AdCreativeType from "AdCreativeType" /* 6565 */;
 import AnalyticsActions from "AnalyticsActions" /* 8421 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import common_Video from "common/Video" /* 9254 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16315 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 16317 */;
-import _modDef16369 from "module_16369" /* 16369 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 16377 */;
-import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 16392 */;
-import _modDef16393 from "module_16393" /* 16393 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16317 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 16319 */;
+import _modDef16371 from "module_16371" /* 16371 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 16379 */;
+import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 16394 */;
+import _modDef16395 from "module_16395" /* 16395 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -27,7 +27,7 @@ function StarfieldBackground() {
   items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, style: null, resizeMode: "cover", muted: true, disableFocus: true, paused: null, importantForAccessibility: "no-hide-descendants" };
-  obj2.source = { uri: _modDef16369 };
+  obj2.source = { uri: _modDef16371 };
   obj2.style = timestampProducer.absoluteFillObject;
   obj2.paused = stateFromStores;
   return application_id(common_Video.VideoComponent, obj2);
@@ -93,8 +93,8 @@ function BountiesCtaHeaderInner(bounties) {
   }
   const tmp = closure_18();
   let tmp8Result2 = null != footer;
-  const bountiesEntryPointButtonVariant = bounties(16391).getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
-  let obj = bounties(16391);
+  const bountiesEntryPointButtonVariant = bounties(16393).getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
+  let obj = bounties(16393);
   items = [AdContentSeenStore];
   const items1 = [bounties];
   const stateFromStores = bounties(504).useStateFromStores(items, () => bounties.some((id) => !closure_1_9.hasSeen(bounties(closure_1_2[18]).AdCreativeType.BOUNTY, id.id)), items1);
@@ -155,7 +155,7 @@ function BountiesCtaHeaderInner(bounties) {
     obj6.children = items5;
     let tmp8Result = closure_13(closure_7, obj6);
   } else {
-    const obj15 = { uri: _modDef16393, style: null, children: null };
+    const obj15 = { uri: _modDef16395, style: null, children: null };
     const items8 = [tmp.header, , ];
     let headerWithFooter = tmp8Result2;
     if (tmp8Result2) {
@@ -274,7 +274,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesCtaHeader.tsx");
 
 export default noop.memo(function BountiesCtaHeader(bounties) {
-  const tmp2 = bounties(16394)();
+  const tmp2 = bounties(16396)();
   const containerRef = tmp2.containerRef;
   bounties = bounties.bounties;
   const isEmptyOrCompleted = bounties.isEmptyOrCompleted;
@@ -284,8 +284,8 @@ export default noop.memo(function BountiesCtaHeader(bounties) {
   }
   dependencyMap = _objectWithoutProperties(bounties, closure_3);
   if (!tmp3) {
-    const bountyCarouselEmptyStateAnalytics = containerRef(16395).useBountyCarouselEmptyStateAnalytics(null);
-    const obj2 = { theme: containerRef(15869).ThemeTypes.DARK, children: null };
+    const bountyCarouselEmptyStateAnalytics = containerRef(16397).useBountyCarouselEmptyStateAnalytics(null);
+    const obj2 = { theme: containerRef(15871).ThemeTypes.DARK, children: null };
     if (tmp3) {
       const obj3 = { containerRef };
       let tmp9Result = closure_12(BountiesEmptyCard, obj3);

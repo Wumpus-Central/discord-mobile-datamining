@@ -1,6 +1,6 @@
-// === Module 15905: UserPrimaryGuildListBottomSheet ===
+// === Module 15907: UserPrimaryGuildListBottomSheet ===
 
-// Module 15905 (UserPrimaryGuildListBottomSheet)
+// Module 15907 (UserPrimaryGuildListBottomSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;

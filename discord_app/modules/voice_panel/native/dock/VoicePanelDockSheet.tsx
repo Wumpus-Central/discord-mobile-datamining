@@ -1,12 +1,12 @@
-// === Module 19242: VoicePanelDockSheet ===
+// === Module 19244: VoicePanelDockSheet ===
 
-// Module 19242 (VoicePanelDockSheet)
+// Module 19244 (VoicePanelDockSheet)
 import _mod1653 from "module_1653" /* 1653 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11775 */;
-import VoicePanelDockDefault from "VoicePanelDock" /* 17984 */;
-import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19243 */;
+import VoicePanelDockDefault from "VoicePanelDock" /* 17986 */;
+import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19245 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;

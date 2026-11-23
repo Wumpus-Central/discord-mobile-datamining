@@ -1,6 +1,6 @@
-// === Module 19002: MessageRequestMutualServers ===
+// === Module 19004: MessageRequestMutualServers ===
 
-// Module 19002 (MessageRequestMutualServers)
+// Module 19004 (MessageRequestMutualServers)
 import GuildIconDefault from "GuildIcon" /* 7322 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  const mutualGuildsForMessageRequests = iconSize(19003).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = iconSize(19005).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1112).intl;

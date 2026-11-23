@@ -1,6 +1,6 @@
-// === Module 19834: GuildSettingsRolesStore ===
+// === Module 19836: GuildSettingsRolesStore ===
 
-// Module 19834 (GuildSettingsRolesStore)
+// Module 19836 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
@@ -12,12 +12,12 @@ import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4822 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5942 */;
 import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13286 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 19829 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 19835 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 19831 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 19837 */;
 import GuildRoleStore from "GuildRoleStore" /* 4819 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 7995 */;
 import Constants from "Constants" /* 1071 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19836 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19838 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 

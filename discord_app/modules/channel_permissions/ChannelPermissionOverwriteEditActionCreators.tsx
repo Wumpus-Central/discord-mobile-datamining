@@ -1,13 +1,13 @@
-// === Module 18959: ChannelPermissionOverwriteEditActionCreators ===
+// === Module 18961: ChannelPermissionOverwriteEditActionCreators ===
 
-// Module 18959 (ChannelPermissionOverwriteEditActionCreators)
+// Module 18961 (ChannelPermissionOverwriteEditActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
-import ChannelPermissionOverwriteEditUtils from "ChannelPermissionOverwriteEditUtils" /* 18955 */;
+import ChannelPermissionOverwriteEditUtils from "ChannelPermissionOverwriteEditUtils" /* 18957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import ChannelPermissionOverwriteEditStore from "ChannelPermissionOverwriteEditStore" /* 18954 */;
+import ChannelPermissionOverwriteEditStore from "ChannelPermissionOverwriteEditStore" /* 18956 */;
 
 require = fn;
 function dispatchEditFailure(channelId, overwriteId, mutations) {
@@ -344,7 +344,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                     const readyEdits = c5.getReadyEdits(closure_2_0, closure_2_1);
                     if (0 === readyEdits.length) {
                       c7 = 3;
-                      const obj4 = { value: { v: "Array" }, done: true };
+                      const obj4 = { value: { v: "r" }, done: true };
                       return obj4;
                     } else {
                       const mapped = readyEdits.map((editId) => ({ flagKey: String(editId.flag), editId: editId.editId }));
@@ -352,8 +352,8 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                       const channel = tmp50.getChannel(closure_2_0);
                       let channelPermissionOverwrite;
                       if (null != channel) {
-                        channelPermissionOverwrite = closure_0(18955).getChannelPermissionOverwrite(channel, closure_2_1);
-                        const obj10 = closure_0(18955);
+                        channelPermissionOverwrite = closure_0(18957).getChannelPermissionOverwrite(channel, closure_2_1);
+                        const obj10 = closure_0(18957);
                       }
                       if (null == channelPermissionOverwrite) {
                         c6 = 1;
@@ -365,7 +365,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                         while (closure_0 !== undefined) {
                           c5 = 1;
                           ({ flag, value } = nextResult);
-                          let obj11 = closure_0(18955);
+                          let obj11 = closure_0(18957);
                           channelPermissionOverwrite = obj11.applyChannelPermissionOverwriteEdit(channelPermissionOverwrite, flag, value);
                           c5 = 0;
                           continue;
@@ -389,7 +389,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                     return obj7;
                   } else {
                     c7 = 3;
-                    const obj8 = { value: { v: "Array" }, done: true };
+                    const obj8 = { value: { v: "r" }, done: true };
                     return obj8;
                   }
                 } else if (2 === tmp8) {
@@ -555,7 +555,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
     }
   }
 };
-let closure_6 = fn(18954).getChannelPermissionOverwriteResourceKey;
+let closure_6 = fn(18956).getChannelPermissionOverwriteResourceKey;
 let closure_7 = 0;
 const set = new Set();
 const size = fn(2);

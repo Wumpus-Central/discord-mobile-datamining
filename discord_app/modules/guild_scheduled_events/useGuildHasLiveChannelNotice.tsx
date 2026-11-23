@@ -1,6 +1,6 @@
-// === Module 17698: useGuildHasLiveChannelNotice ===
+// === Module 17700: useGuildHasLiveChannelNotice ===
 
-// Module 17698 (useGuildHasLiveChannelNotice)
+// Module 17700 (useGuildHasLiveChannelNotice)
 import StageChannelParticipants from "StageChannelParticipants" /* 6537 */;
 import noop from "module_19" /* 19 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6534 */;
@@ -9,7 +9,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5657 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 17699 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 17701 */;
 
 require = fn;
 let closure_11 = fn(4768).GuildScheduledEventEntityTypes;

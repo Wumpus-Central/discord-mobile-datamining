@@ -1,6 +1,6 @@
-// === Module 17604: HappeningNowAvatarStack ===
+// === Module 17606: HappeningNowAvatarStack ===
 
-// Module 17604 (HappeningNowAvatarStack)
+// Module 17606 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef1653 from "module_1653" /* 1653 */;
@@ -247,7 +247,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(17605).TypingIndicator, obj11);
+      obj10.children = tmp31(tmp6(17607).TypingIndicator, obj11);
       tmp31Result2 = tmp31(tmp30(1653).View, obj10);
     }
     items13[1] = tmp31Result2;

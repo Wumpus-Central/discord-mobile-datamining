@@ -1,6 +1,6 @@
-// === Module 15890: EditProfileEffectActionSheet ===
+// === Module 15892: EditProfileEffectActionSheet ===
 
-// Module 15890 (EditProfileEffectActionSheet)
+// Module 15892 (EditProfileEffectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
@@ -8,7 +8,7 @@ import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8073 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8909 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8910 */;
 import useShopProductItems from "useShopProductItems" /* 8913 */;
-import EditProfileEffectSection from "EditProfileEffectSection" /* 15892 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 15894 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8090 */;

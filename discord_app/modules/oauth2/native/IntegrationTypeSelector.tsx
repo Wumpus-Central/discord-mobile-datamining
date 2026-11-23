@@ -1,6 +1,6 @@
-// === Module 14713: IntegrationTypeSelector ===
+// === Module 14715: IntegrationTypeSelector ===
 
-// Module 14713 (IntegrationTypeSelector)
+// Module 14715 (IntegrationTypeSelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;

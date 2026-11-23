@@ -1,6 +1,6 @@
-// === Module 17410: NotifyFriendsOnProfileUpdateUtils ===
+// === Module 17412: NotifyFriendsOnProfileUpdateUtils ===
 
-// Module 17410 (NotifyFriendsOnProfileUpdateUtils)
+// Module 17412 (NotifyFriendsOnProfileUpdateUtils)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import UserSettings from "UserSettings" /* 4738 */;

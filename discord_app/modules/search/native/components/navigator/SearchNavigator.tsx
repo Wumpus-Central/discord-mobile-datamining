@@ -1,16 +1,16 @@
-// === Module 18987: SearchNavigator ===
+// === Module 18989: SearchNavigator ===
 
-// Module 18987 (SearchNavigator)
+// Module 18989 (SearchNavigator)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
 import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 8650 */;
 import TrackingDefault from "Tracking" /* 13218 */;
-import AppFrameContainerDefault from "AppFrameContainer" /* 18888 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18982 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 18890 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_4 = fn(8575).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(18735).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18737).SearchNavigatorScreens;
 const SearchTypes = fn(1071).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -46,7 +46,7 @@ export default noop.memo(function SearchNavigator(route) {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(18988).default;
+        return searchContext(18990).default;
       }
     }),
     closure_7(closure_9.Screen, {
@@ -65,7 +65,7 @@ export default noop.memo(function SearchNavigator(route) {
         return obj;
       },
       getComponent() {
-        return searchContext(18983).default;
+        return searchContext(18985).default;
       }
     }),
 
@@ -75,7 +75,7 @@ export default noop.memo(function SearchNavigator(route) {
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(18988).default;
+      return searchContext(18990).default;
     }
   };
   const obj6 = {
@@ -94,7 +94,7 @@ export default noop.memo(function SearchNavigator(route) {
       return obj;
     },
     getComponent() {
-      return searchContext(18983).default;
+      return searchContext(18985).default;
     }
   };
   const tmp3 = AppFrameContainerDefault;

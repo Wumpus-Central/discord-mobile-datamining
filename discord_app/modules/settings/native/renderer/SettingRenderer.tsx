@@ -1,6 +1,6 @@
-// === Module 15986: SettingRenderer ===
+// === Module 15988: SettingRenderer ===
 
-// Module 15986 (SettingRenderer)
+// Module 15988 (SettingRenderer)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
@@ -19,15 +19,15 @@ import TableSwitchRow from "TableSwitchRow" /* 7556 */;
 import FormSwitch from "FormSwitch" /* 7557 */;
 import ClydeIcon from "ClydeIcon" /* 9604 */;
 import VolumeSliderDefault from "VolumeSlider" /* 10980 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15987 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 15989 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15990 */;
-import Tracking from "Tracking" /* 15991 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15989 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 15991 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15992 */;
+import Tracking from "Tracking" /* 15993 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15985 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15987 */;
 import GuildStore from "GuildStore" /* 4784 */;
 
 const GuildIconDefault = GuildIcon;
@@ -499,8 +499,8 @@ let closure_26 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(15989).useHighlightSettingItem(setting);
-  let obj = trailing(15989);
+  let highlightSettingItem = trailing(15991).useHighlightSettingItem(setting);
+  let obj = trailing(15991);
   items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;

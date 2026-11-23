@@ -1,6 +1,6 @@
-// === Module 19804: useSoundboardSoundLocalPreview ===
+// === Module 19806: useSoundboardSoundLocalPreview ===
 
-// Module 19804 (useSoundboardSoundLocalPreview)
+// Module 19806 (useSoundboardSoundLocalPreview)
 import SoundboardActionCreators from "SoundboardActionCreators" /* 6830 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

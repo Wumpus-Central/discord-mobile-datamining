@@ -1,12 +1,12 @@
-// === Module 18883: FriendRequestsScreen ===
+// === Module 18885: FriendRequestsScreen ===
 
-// Module 18883 (FriendRequestsScreen)
+// Module 18885 (FriendRequestsScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import useAlertStore from "useAlertStore" /* 5862 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18051 */;
-import getPendingRelationshipIds from "getPendingRelationshipIds" /* 18885 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18053 */;
+import getPendingRelationshipIds from "getPendingRelationshipIds" /* 18887 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6636 */;
@@ -84,9 +84,9 @@ export default function FriendRequestsScreen() {
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = analyticsLocations(563);
-  gameRelationshipsByType = analyticsLocations(14524).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = analyticsLocations(14524);
-  gameRelationshipsByType1 = analyticsLocations(14524).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+  gameRelationshipsByType = analyticsLocations(14526).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+  let obj3 = analyticsLocations(14526);
+  gameRelationshipsByType1 = analyticsLocations(14526).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
     const set = new Set();
@@ -105,7 +105,7 @@ export default function FriendRequestsScreen() {
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
-  let obj4 = analyticsLocations(14524);
+  let obj4 = analyticsLocations(14526);
   const items5 = [ignoredUserIds];
   const items6 = [ignoredUserIds, gameRelationshipsByType, gameRelationshipsByType1, pendingIncomingIds, pendingOutgoingIds, spamIds];
   const stateFromStores = analyticsLocations(563).useStateFromStores(items5, () => {
@@ -311,7 +311,7 @@ export default function FriendRequestsScreen() {
       stringResult = intl4.string(tmp4(1112).t["yvzX/Z"]);
     }
     const obj17 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-    WumpusCouchSpotIllustration = tmp4(16494).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp4(16496).WumpusCouchSpotIllustration;
     obj17.illustration = WumpusCouchSpotIllustration;
     obj16.children = tmp32(tmp2(10094), obj17);
     tmp32(tmp33, obj16);

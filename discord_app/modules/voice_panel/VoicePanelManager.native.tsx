@@ -1,6 +1,6 @@
-// === Module 20072: VoicePanelManager ===
+// === Module 20074: VoicePanelManager ===
 
-// Module 20072 (VoicePanelManager)
+// Module 20074 (VoicePanelManager)
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10855 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;

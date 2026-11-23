@@ -1,6 +1,6 @@
-// === Module 15011: SharedSpacesWarningStore ===
+// === Module 15013: SharedSpacesWarningStore ===
 
-// Module 15011 (SharedSpacesWarningStore)
+// Module 15013 (SharedSpacesWarningStore)
 import DurationsDefault from "Durations" /* 1088 */;
 
 const require = globalThis.__r;

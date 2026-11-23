@@ -1,6 +1,6 @@
-// === Module 17383: InGameDMsSetting ===
+// === Module 17385: InGameDMsSetting ===
 
-// Module 17383 (InGameDMsSetting)
+// Module 17385 (InGameDMsSetting)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import UserSettings from "UserSettings" /* 4738 */;

@@ -9,7 +9,7 @@ import UserSettings from "UserSettings" /* 4738 */;
 import ActivityTypes from "ActivityTypes" /* 5652 */;
 import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8121 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 13521 */;
-import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 14759 */;
+import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 14761 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import SpotifyStore from "SpotifyStore" /* 6896 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;

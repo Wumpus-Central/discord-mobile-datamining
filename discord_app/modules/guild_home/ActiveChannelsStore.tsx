@@ -1,6 +1,6 @@
-// === Module 14986: ActiveChannelsStore ===
+// === Module 14988: ActiveChannelsStore ===
 
-// Module 14986 (ActiveChannelsStore)
+// Module 14988 (ActiveChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;

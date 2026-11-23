@@ -1,6 +1,6 @@
-// === Module 16601: QuestDockPlayableBody ===
+// === Module 16603: QuestDockPlayableBody ===
 
-// Module 16601 (QuestDockPlayableBody)
+// Module 16603 (QuestDockPlayableBody)
 import QuestTypes from "QuestTypes" /* 6561 */;
 import AdCreativeType from "AdCreativeType" /* 6565 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
@@ -32,18 +32,18 @@ export default noop.memo(function QuestDockPlayableBody() {
     closure_4 = tmp19;
     const tmp25 = getQuestImpressionId();
     recordPlayableLaunchResult(9961).captureAdUserAction({ type: recordPlayableLaunchResult(9964).AdUserActionType.CLICK_INTERNAL, adCreativeType: recordPlayableLaunchResult(6565).AdCreativeType.PLAYABLE, adCreativeId: questDockPlayable.id, questContentCTA: recordPlayableLaunchResult(8430).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: recordPlayableLaunchResult(6561).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: recordPlayableLaunchResult(6561).QuestContent.QUEST_BAR_MOBILE, impressionId: tmp25 });
-    recordPlayableLaunchResult = recordPlayableLaunchResult(16602).recordPlayableLaunch(questDockPlayable, tmp25);
+    recordPlayableLaunchResult = recordPlayableLaunchResult(16604).recordPlayableLaunch(questDockPlayable, tmp25);
     closure_132_0 = recordPlayableLaunchResult;
     constants = 1;
     setRestingQuestDockMode(constants.COLLAPSED);
-    const tmp52 = recordPlayableLaunchResult(16602);
+    const tmp52 = recordPlayableLaunchResult(16604);
     const completePlayableLaunch = tmp52.completePlayableLaunch;
     yield completePlayableLaunch(12199).launch({ applicationId: questDockPlayable.applicationId, analyticsLocations });
     if (1 === tmp7) {
       constants = 0;
-      const result = recordPlayableLaunchResult(16602).completePlayableLaunch(closure_132_0, false);
+      const result = recordPlayableLaunchResult(16604).completePlayableLaunch(closure_132_0, false);
       c7 = 3;
-      recordPlayableLaunchResult(16602);
+      recordPlayableLaunchResult(16604);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;

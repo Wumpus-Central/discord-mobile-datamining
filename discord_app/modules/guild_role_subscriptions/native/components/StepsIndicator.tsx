@@ -1,6 +1,6 @@
-// === Module 20045: components/StepsIndicator ===
+// === Module 20047: components/StepsIndicator ===
 
-// Module 20045 (components/StepsIndicator)
+// Module 20047 (components/StepsIndicator)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import timing_timing from "timing/timing" /* 5123 */;

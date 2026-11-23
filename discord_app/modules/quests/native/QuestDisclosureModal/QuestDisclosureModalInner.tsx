@@ -1,6 +1,6 @@
-// === Module 16493: QuestDisclosureModalInner ===
+// === Module 16495: QuestDisclosureModalInner ===
 
-// Module 16493 (QuestDisclosureModalInner)
+// Module 16495 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1071 */;
 import Text_Text from "Text/Text" /* 5504 */;

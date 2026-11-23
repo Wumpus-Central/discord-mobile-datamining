@@ -1,6 +1,6 @@
-// === Module 18619: ConjureNativeComposer ===
+// === Module 18621: ConjureNativeComposer ===
 
-// Module 18619 (ConjureNativeComposer)
+// Module 18621 (ConjureNativeComposer)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
@@ -18,22 +18,22 @@ import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12855 */
 import ChatInputParser from "ChatInputParser" /* 12859 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13099 */;
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13106 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 16312 */;
-import FileUpIcon from "FileUpIcon" /* 16955 */;
-import conjureStoredAttachments2 from "conjureStoredAttachments" /* 18314 */;
-import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 18338 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 18430 */;
-import conjureMentions from "conjureMentions" /* 18470 */;
-import StopIcon from "StopIcon" /* 18499 */;
-import conjurePickedFiles from "conjurePickedFiles" /* 18591 */;
-import conjureComposerPills from "conjureComposerPills" /* 18620 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 18621 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 16314 */;
+import FileUpIcon from "FileUpIcon" /* 16957 */;
+import conjureStoredAttachments2 from "conjureStoredAttachments" /* 18316 */;
+import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 18340 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 18432 */;
+import conjureMentions from "conjureMentions" /* 18472 */;
+import StopIcon from "StopIcon" /* 18501 */;
+import conjurePickedFiles from "conjurePickedFiles" /* 18593 */;
+import conjureComposerPills from "conjureComposerPills" /* 18622 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 18623 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 6977 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 18432 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 18434 */;
 
 const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
@@ -581,7 +581,7 @@ export default function ConjureNativeComposer(projectId) {
             projectId = callback6;
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: projectId(18591).pickConjurePhotos("mixed", projectId(18276).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
+            const obj5 = { value: projectId(18593).pickConjurePhotos("mixed", projectId(18278).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

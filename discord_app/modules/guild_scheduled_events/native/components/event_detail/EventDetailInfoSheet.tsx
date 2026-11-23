@@ -1,6 +1,6 @@
-// === Module 14685: EventDetailInfoSheet ===
+// === Module 14687: EventDetailInfoSheet ===
 
-// Module 14685 (EventDetailInfoSheet)
+// Module 14687 (EventDetailInfoSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;

@@ -1,6 +1,6 @@
-// === Module 17543: HomeDrawerSubtitleStore ===
+// === Module 17545: HomeDrawerSubtitleStore ===
 
-// Module 17543 (HomeDrawerSubtitleStore)
+// Module 17545 (HomeDrawerSubtitleStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 19471: DeclarativeSystemNotifPermissionManager ===
+// === Module 19473: DeclarativeSystemNotifPermissionManager ===
 
-// Module 19471 (DeclarativeSystemNotifPermissionManager)
-import DeclarativeSystemNotifPermissionActionCreators from "DeclarativeSystemNotifPermissionActionCreators" /* 17423 */;
+// Module 19473 (DeclarativeSystemNotifPermissionManager)
+import DeclarativeSystemNotifPermissionActionCreators from "DeclarativeSystemNotifPermissionActionCreators" /* 17425 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// === Module 18256: useConjurePublishReview ===
+// === Module 18258: useConjurePublishReview ===
 
-// Module 18256 (useConjurePublishReview)
+// Module 18258 (useConjurePublishReview)
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 7734 */;
-import conjurePublishReview from "conjurePublishReview" /* 18252 */;
-import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18257 */;
-import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18260 */;
-import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18261 */;
+import conjurePublishReview from "conjurePublishReview" /* 18254 */;
+import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18259 */;
+import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18262 */;
+import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18263 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -147,8 +147,8 @@ export default function useConjurePublishReview(id, arg1) {
   const trimmed = str.trim();
   let result = null;
   if (tmp14) {
-    result = tmp3(18266).conjureProjectNameError(trimmed);
-    const tmp3Result = tmp3(18266);
+    result = tmp3(18268).conjureProjectNameError(trimmed);
+    const tmp3Result = tmp3(18268);
   }
   isProjectOwner = result;
   const tmp11 = stateFromStores(saving.useState(false), 2);

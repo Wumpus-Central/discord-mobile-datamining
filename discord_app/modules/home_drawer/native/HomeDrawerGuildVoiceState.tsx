@@ -1,6 +1,6 @@
-// === Module 17895: HomeDrawerGuildVoiceState ===
+// === Module 17897: HomeDrawerGuildVoiceState ===
 
-// Module 17895 (HomeDrawerGuildVoiceState)
+// Module 17897 (HomeDrawerGuildVoiceState)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;

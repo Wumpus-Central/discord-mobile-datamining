@@ -6,7 +6,7 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useCommandDiscoveryManager = module_560.create(() => ({ initialSectionId: "Array" }));
+const useCommandDiscoveryManager = module_560.create(() => ({ initialSectionId: "r" }));
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export { useCommandDiscoveryManager };

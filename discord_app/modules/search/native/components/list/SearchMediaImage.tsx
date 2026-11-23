@@ -1,6 +1,6 @@
-// === Module 18761: SearchMediaImage ===
+// === Module 18763: SearchMediaImage ===
 
-// Module 18761 (SearchMediaImage)
+// Module 18763 (SearchMediaImage)
 import ImageWarningIcon from "ImageWarningIcon" /* 7682 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8223 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 8229 */;

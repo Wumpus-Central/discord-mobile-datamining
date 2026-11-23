@@ -1,8 +1,8 @@
-// === Module 18607: ConjureServerChangeButtons ===
+// === Module 18609: ConjureServerChangeButtons ===
 
-// Module 18607 (ConjureServerChangeButtons)
-import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet" /* 18297 */;
-import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert" /* 18299 */;
+// Module 18609 (ConjureServerChangeButtons)
+import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet" /* 18299 */;
+import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert" /* 18301 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ export default function ConjureServerChangeButtons(projectId) {
   ({ change, current, onReply } = projectId);
   dependencyMap = undefined;
   action = undefined;
-  const iter = onReply(18608)(projectId, change);
+  const iter = onReply(18610)(projectId, change);
   ({ project: c2, action } = iter);
   let done = iter.done;
   const keep_label = change.keep_label;

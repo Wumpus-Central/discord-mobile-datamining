@@ -1,6 +1,6 @@
-// === Module 17685: useGuildPowerupsBoostAction ===
+// === Module 17687: useGuildPowerupsBoostAction ===
 
-// Module 17685 (useGuildPowerupsBoostAction)
+// Module 17687 (useGuildPowerupsBoostAction)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
 import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 13427 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

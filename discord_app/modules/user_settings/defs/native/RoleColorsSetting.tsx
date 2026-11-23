@@ -1,9 +1,9 @@
-// === Module 16735: RoleColorsSetting ===
+// === Module 16737: RoleColorsSetting ===
 
-// Module 16735 (RoleColorsSetting)
+// Module 16737 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15645 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15647 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 

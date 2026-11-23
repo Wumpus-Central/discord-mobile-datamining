@@ -1,6 +1,6 @@
-// === Module 19805: SoundboardSoundCreationPreview ===
+// === Module 19807: SoundboardSoundCreationPreview ===
 
-// Module 19805 (SoundboardSoundCreationPreview)
+// Module 19807 (SoundboardSoundCreationPreview)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import timing_timing from "timing/timing" /* 5123 */;
@@ -174,7 +174,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(19797).loadSoundboardAudioPreview(c4, closure_2_0(19797).WAVEFORM_BAR_COUNT);
+      await closure_2_0(19799).loadSoundboardAudioPreview(c4, closure_2_0(19799).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {

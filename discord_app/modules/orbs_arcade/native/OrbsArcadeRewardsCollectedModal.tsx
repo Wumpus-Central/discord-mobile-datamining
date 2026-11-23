@@ -1,6 +1,6 @@
-// === Module 16444: OrbsArcadeRewardsCollectedModal ===
+// === Module 16446: OrbsArcadeRewardsCollectedModal ===
 
-// Module 16444 (OrbsArcadeRewardsCollectedModal)
+// Module 16446 (OrbsArcadeRewardsCollectedModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -16,9 +16,9 @@ import useAvatarDecorationPreviewSizes from "useAvatarDecorationPreviewSizes" /*
 import useHandleUseNow from "useHandleUseNow" /* 9419 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9552 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11918 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16423 */;
-import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16437 */;
-import openOrbsArcadeRewardsCollectedModal from "openOrbsArcadeRewardsCollectedModal" /* 16443 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16425 */;
+import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16439 */;
+import openOrbsArcadeRewardsCollectedModal from "openOrbsArcadeRewardsCollectedModal" /* 16445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -258,7 +258,7 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
     const obj9 = { variant: "tertiary", icon: tmp4(10274), accessibilityLabel: null, onPress: null };
     const intl3 = tmp2(1112).intl;
     obj9.accessibilityLabel = intl3.string(tmp2(1112).t.cpT0Cq);
-    obj9.onPress = tmp2(16443).closeOrbsArcadeRewardsCollectedModal;
+    obj9.onPress = tmp2(16445).closeOrbsArcadeRewardsCollectedModal;
     obj8.children = closure_10(tmp2(7591).IconButton, obj9);
     const items4 = [closure_10(closure_6, obj8), , ];
     const obj10 = { style: tmp.pager, ref, onLayout, children: null };
@@ -319,7 +319,7 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
       tmp28Result4 = closure_10(tmp27, obj13);
     }
     const items5 = [tmp28Result4, ];
-    if (tmp13.type === tmp2(16423).OrbsArcadeRewardType.COLLECTIBLE) {
+    if (tmp13.type === tmp2(16425).OrbsArcadeRewardType.COLLECTIBLE) {
       const obj16 = { reward: tmp13 };
       let tmp28Result5 = closure_10(CollectibleRewardPrimaryAction, obj16, tmp13.id);
     } else {

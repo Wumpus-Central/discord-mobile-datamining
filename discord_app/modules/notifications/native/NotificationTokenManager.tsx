@@ -1,6 +1,6 @@
-// === Module 15653: NotificationTokenManager ===
+// === Module 15655: NotificationTokenManager ===
 
-// Module 15653 (NotificationTokenManager)
+// Module 15655 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
@@ -11,12 +11,12 @@ import PlatformUtils from "PlatformUtils" /* 1378 */;
 import _modDef3152 from "module_3152" /* 3152 */;
 import PushNotificationDefault from "PushNotification" /* 10861 */;
 import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 13282 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15654 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15660 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15661 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15656 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15662 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15663 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import MultiAccountStore from "MultiAccountStore" /* 13283 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14893 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14895 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 import size from "module_2" /* 2 */;
@@ -100,8 +100,8 @@ const prototype = NotificationTokenManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
   if (obj.isAndroid()) {
-    self._denylistUnsubscribe = tmp(15657).initializeClientNotifDenylist();
-    const tmpResult = tmp(15657);
+    self._denylistUnsubscribe = tmp(15659).initializeClientNotifDenylist();
+    const tmpResult = tmp(15659);
   }
   if (null != self.token) {
     self.handleToken(self.token);

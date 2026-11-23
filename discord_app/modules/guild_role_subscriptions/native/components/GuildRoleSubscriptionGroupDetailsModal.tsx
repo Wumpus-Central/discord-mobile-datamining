@@ -1,19 +1,19 @@
-// === Module 20004: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 20006: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 20004 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 20006 (GuildRoleSubscriptionGroupDetailsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
 import TextArea from "TextArea" /* 7461 */;
-import FormSeparatorDefault from "FormSeparator" /* 16620 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20001 */;
-import FormStylesDefault from "FormStyles" /* 20006 */;
-import FormImagePicker from "FormImagePicker" /* 20007 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20008 */;
+import FormSeparatorDefault from "FormSeparator" /* 16622 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20003 */;
+import FormStylesDefault from "FormStyles" /* 20008 */;
+import FormImagePicker from "FormImagePicker" /* 20009 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20005 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20007 */;
 
 require = fn;
 class Content {
@@ -55,7 +55,7 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16608);
+const GuildRoleSubscriptionsConstants = fn(16610);
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1071).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);

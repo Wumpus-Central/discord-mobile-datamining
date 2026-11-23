@@ -1,6 +1,6 @@
-// === Module 15818: ThemedStatusBar ===
+// === Module 15820: ThemedStatusBar ===
 
-// Module 15818 (ThemedStatusBar)
+// Module 15820 (ThemedStatusBar)
 import initialize from "initialize" /* 504 */;
 import shared from "shared" /* 4920 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;

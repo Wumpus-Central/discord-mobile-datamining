@@ -1,12 +1,12 @@
-// === Module 18224: GuildSettingsModalMemberApplications ===
+// === Module 18226: GuildSettingsModalMemberApplications ===
 
-// Module 18224 (GuildSettingsModalMemberApplications)
+// Module 18226 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4949 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18225 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18227 */;
 import noop from "module_19" /* 19 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6527 */;
 

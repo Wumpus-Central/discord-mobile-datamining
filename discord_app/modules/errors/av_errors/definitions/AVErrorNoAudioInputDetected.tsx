@@ -1,8 +1,8 @@
-// === Module 20105: AVErrorNoAudioInputDetected ===
+// === Module 20107: AVErrorNoAudioInputDetected ===
 
-// Module 20105 (AVErrorNoAudioInputDetected)
+// Module 20107 (AVErrorNoAudioInputDetected)
 import AVError from "AVError" /* 5843 */;
-import AVErrorContext from "AVErrorContext" /* 20106 */;
+import AVErrorContext from "AVErrorContext" /* 20108 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;

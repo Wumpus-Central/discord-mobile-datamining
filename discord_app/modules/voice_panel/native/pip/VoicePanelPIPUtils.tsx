@@ -1,6 +1,6 @@
-// === Module 19164: VoicePanelPIPUtils ===
+// === Module 19166: VoicePanelPIPUtils ===
 
-// Module 19164 (VoicePanelPIPUtils)
+// Module 19166 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 575 */;
 import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5558 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
@@ -13,7 +13,7 @@ require = fn;
 const VoicePanelConstants = fn(11750);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(19165);
+const VoicePanelPIPConstants = fn(19167);
 ({ VoicePanelPIPModes: metroImportDefault, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;

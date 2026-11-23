@@ -1,6 +1,6 @@
-// === Module 18720: SearchFilterButton ===
+// === Module 18722: SearchFilterButton ===
 
-// Module 18720 (SearchFilterButton)
+// Module 18722 (SearchFilterButton)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

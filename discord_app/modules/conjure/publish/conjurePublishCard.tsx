@@ -1,6 +1,6 @@
-// === Module 18419: conjurePublishCard ===
+// === Module 18421: conjurePublishCard ===
 
-// Module 18419 (conjurePublishCard)
+// Module 18421 (conjurePublishCard)
 import _modDef4190 from "module_4190" /* 4190 */;
 import size from "module_2" /* 2 */;
 
@@ -19,19 +19,30 @@ export function isPublishCardLive(reason, arg1) {
   }
 }
 export function isConjurePublishCtaVisible(publish, cta) {
-  let tmp = null != publish;
-  if (tmp) {
+  state = undefined;
+  if (publish != null) {
+    state = publish.state;
+  }
+  let tmp2 = "action_needed" === state;
+  if (!tmp2) {
+    let state1;
+    if (publish != null) {
+      state1 = publish.state;
+    }
+    tmp2 = "publishing" === state1;
+  }
+  if (tmp2) {
     let newUiUnpublished = publish.status;
     if (null == newUiUnpublished) {
-      tmp = tmp2;
+      tmp2 = tmp4;
     } else if ("new_ui" === cta.reason) {
       newUiUnpublished = newUiUnpublished.newUiUnpublished;
-      let tmp4 = true === newUiUnpublished;
+      let tmp6 = true === newUiUnpublished;
     } else {
-      tmp4 = "not_live" === newUiUnpublished.publishState;
+      tmp6 = "not_live" === newUiUnpublished.publishState;
     }
   }
-  return tmp;
+  return tmp2;
 }
 export function livePublishCardMessageId(arg0, arg1) {
   let diff = arg0.length - 1;

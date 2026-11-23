@@ -1,9 +1,9 @@
-// === Module 18404: ConjureDesignFeedbackOverlay ===
+// === Module 18406: ConjureDesignFeedbackOverlay ===
 
-// Module 18404 (ConjureDesignFeedbackOverlay)
+// Module 18406 (ConjureDesignFeedbackOverlay)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
-import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 18405 */;
+import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 18407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,14 +57,14 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5127).hideActionSheet(projectId(18405).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        size(5127).hideActionSheet(projectId(18407).CONJURE_DESIGN_REMARK_SHEET_KEY);
         const obj = size(5127);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(6998).inspectConjurePreviewPoint(closure_1_0, projectId(14729).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(6998).inspectConjurePreviewPoint(closure_1_0, projectId(14731).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {

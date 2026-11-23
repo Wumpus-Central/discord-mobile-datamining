@@ -1,6 +1,6 @@
-// === Module 19619: NotificationsManager ===
+// === Module 19621: NotificationsManager ===
 
-// Module 19619 (NotificationsManager)
+// Module 19621 (NotificationsManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import _modDef2168 from "module_2168" /* 2168 */;
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(19620, dependencyMap.paths), gesture, obj3);
+    obj2.openLazy(asyncRequireImpl(19622, dependencyMap.paths), gesture, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {

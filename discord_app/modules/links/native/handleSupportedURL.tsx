@@ -1,6 +1,6 @@
-// === Module 15059: handleSupportedURL ===
+// === Module 15061: handleSupportedURL ===
 
-// Module 15059 (handleSupportedURL)
+// Module 15061 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -27,9 +27,9 @@ import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/
 import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12464 */;
 import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13614 */;
 import BountyActionCreators from "BountyActionCreators" /* 13749 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15068 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15101 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15206 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15070 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15103 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15208 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6633 */;
@@ -49,7 +49,7 @@ const NativePermissionTypes = fn(6496).NativePermissionTypes;
 let closure_22 = fn(10696).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(8336).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5630).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15060).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15062).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8712).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -202,7 +202,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "has" };
+      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "<string:285212953>" };
       const obj30 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj25.navigationSettings = obj30;
       rootNavigationRef1(inviteCode[31])(obj25);
@@ -249,7 +249,7 @@ export default function handleSupportedURL(payload) {
                 ({ guildId, skuId } = payload);
                 c2 = 1;
                 dependencyMap = 1;
-                const obj4 = { value: tmp3(9408).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15067).default()), done: false };
+                const obj4 = { value: tmp3(9408).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15069).default()), done: false };
                 return obj4;
               } else {
                 const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
@@ -359,7 +359,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15072, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15074, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[46]);
             const tmp3 = payload(inviteCode[46]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;

@@ -1,21 +1,21 @@
-// === Module 19232: useControllerPIPState ===
+// === Module 19234: useControllerPIPState ===
 
-// Module 19232 (useControllerPIPState)
+// Module 19234 (useControllerPIPState)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
 import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 7466 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18036 */;
-import useSelfHasVideoDefault from "useSelfHasVideo" /* 19234 */;
-import calculatePIPStateDefault from "calculatePIPState" /* 19235 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18038 */;
+import useSelfHasVideoDefault from "useSelfHasVideo" /* 19236 */;
+import calculatePIPStateDefault from "calculatePIPState" /* 19237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import FramesStore from "FramesStore" /* 6623 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15020 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15022 */;
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19236);
+const useExternalPipSelectedTileDefault = tmp6(19238);
 require = fn;
 const VoicePanelModes = fn(11750).VoicePanelModes;
 const ActivityPanelModes = fn(5539).ActivityPanelModes;
@@ -37,7 +37,7 @@ export function useControllerPIPState(channelId) {
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
   let obj = require("module_1653");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const ref = noop.useRef({ id: "disabled", mode: "isArray", width: false, height: null, containerHeight: "box-none", showSecondaryPIP: null, scale: sharedValue });
+  const ref = noop.useRef({ id: "displayName", mode: "isArray", width: false, height: null, containerHeight: "\u{1F481}\u{1F3FB}", showSecondaryPIP: true, scale: sharedValue });
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
   closure_129_0 = channelId;

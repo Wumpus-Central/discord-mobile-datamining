@@ -83,7 +83,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1358);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "Array" };
+  let obj = { lineHeight: "r" };
 }
 let closure_18 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
 let createStyles = fn(4913);

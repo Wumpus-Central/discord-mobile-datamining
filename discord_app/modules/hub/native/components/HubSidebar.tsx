@@ -1,6 +1,6 @@
-// === Module 17725: HubSidebar ===
+// === Module 17727: HubSidebar ===
 
-// Module 17725 (HubSidebar)
+// Module 17727 (HubSidebar)
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5646 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
@@ -64,7 +64,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(17726);
+  guild(17728);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -73,8 +73,8 @@ export default function HubSidebar(guild) {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(17727), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(17012).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(17729), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(17014).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1112).intl;
     obj6.label = intl.string(tmp(1112).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {

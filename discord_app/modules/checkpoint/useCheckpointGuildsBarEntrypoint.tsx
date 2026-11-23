@@ -1,6 +1,6 @@
-// === Module 17919: useCheckpointGuildsBarEntrypoint ===
+// === Module 17921: useCheckpointGuildsBarEntrypoint ===
 
-// Module 17919 (useCheckpointGuildsBarEntrypoint)
+// Module 17921 (useCheckpointGuildsBarEntrypoint)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

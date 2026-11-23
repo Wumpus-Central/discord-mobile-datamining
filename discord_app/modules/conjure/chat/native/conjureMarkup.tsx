@@ -1,9 +1,9 @@
-// === Module 18311: conjureMarkup ===
+// === Module 18313: conjureMarkup ===
 
-// Module 18311 (conjureMarkup)
+// Module 18313 (conjureMarkup)
 import MarkupUtilsDefault from "MarkupUtils" /* 5637 */;
-import conjureFileMentions from "conjureFileMentions" /* 18312 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 18313 */;
+import conjureFileMentions from "conjureFileMentions" /* 18314 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 18315 */;
 import noop from "module_19" /* 19 */;
 import apply from "apply" /* 12 */;
 

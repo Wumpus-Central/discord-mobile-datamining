@@ -1,6 +1,6 @@
-// === Module 15971: ProfileCustomizationProfileSelector ===
+// === Module 15973: ProfileCustomizationProfileSelector ===
 
-// Module 15971 (ProfileCustomizationProfileSelector)
+// Module 15973 (ProfileCustomizationProfileSelector)
 import nativeDefault from "native" /* 575 */;
 import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5865 */;
 import GuildIconDefault from "GuildIcon" /* 7322 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(15972).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_4 = fn(15974).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };

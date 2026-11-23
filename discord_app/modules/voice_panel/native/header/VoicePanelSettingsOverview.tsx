@@ -1,6 +1,6 @@
-// === Module 18000: VoicePanelSettingsOverview ===
+// === Module 18002: VoicePanelSettingsOverview ===
 
-// Module 18000 (VoicePanelSettingsOverview)
+// Module 18002 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -25,10 +25,10 @@ import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10961 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 11251 */;
 import ShieldLockIcon from "ShieldLockIcon" /* 13817 */;
-import _modDef14842 from "module_14842" /* 14842 */;
-import WrenchIcon from "WrenchIcon" /* 16979 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17998 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 18001 */;
+import _modDef14844 from "module_14844" /* 14844 */;
+import WrenchIcon from "WrenchIcon" /* 16981 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18000 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 18003 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
@@ -132,7 +132,7 @@ function ShareActivityLogsButton() {
       const tmpResult2 = showShareActionSheet;
     }
   }, []);
-  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14842 }), label: null, trailing: null };
+  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14844 }), label: null, trailing: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
   obj.trailing = collapsedCategories(TableRowArrow.TableRowArrow, {});
@@ -145,7 +145,7 @@ function ActivityDebugToggle() {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
   }, []);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14842 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14844 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
   obj2.value = stateFromStores;
@@ -250,7 +250,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18002, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18004, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

@@ -1,20 +1,20 @@
-// === Module 18529: ButterflyIllocon ===
+// === Module 18531: ButterflyIllocon ===
 
-// Module 18529 (ButterflyIllocon)
+// Module 18531 (ButterflyIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18530 from "module_18530" /* 18530 */;
-import _modDef18531 from "module_18531" /* 18531 */;
 import _modDef18532 from "module_18532" /* 18532 */;
+import _modDef18533 from "module_18533" /* 18533 */;
+import _modDef18534 from "module_18534" /* 18534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18530 }, 3: null };
-const obj2 = { uri: _modDef18530 };
-obj[2] = { uri: _modDef18531 };
-const obj3 = { uri: _modDef18531 };
-obj[3] = { uri: _modDef18532 };
+let obj = { 1: null, 2: { uri: _modDef18532 }, 3: null };
+const obj2 = { uri: _modDef18532 };
+obj[2] = { uri: _modDef18533 };
+const obj3 = { uri: _modDef18533 };
+obj[3] = { uri: _modDef18534 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 

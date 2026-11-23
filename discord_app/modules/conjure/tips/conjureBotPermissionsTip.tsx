@@ -1,18 +1,22 @@
-// === Module 18461: conjureBotPermissionsTip ===
+// === Module 18463: conjureBotPermissionsTip ===
 
-// Module 18461 (conjureBotPermissionsTip)
+// Module 18463 (conjureBotPermissionsTip)
 import size from "module_2" /* 2 */;
 
 function resolveBotPermissionsTip(publish) {
   publish = publish.publish;
   let str = null;
   if (null != publish.turn) {
-    let tmp = null != publish && !publish.publishing;
-    if (tmp) {
-      tmp = "review_permissions" === publish.action;
+    state = undefined;
+    if (publish != null) {
+      state = publish.state;
+    }
+    let tmp2 = "action_needed" === state;
+    if (tmp2) {
+      tmp2 = "review_permissions" === publish.action;
     }
     str = null;
-    if (tmp) {
+    if (tmp2) {
       str = "hint";
     }
   }
@@ -20,12 +24,16 @@ function resolveBotPermissionsTip(publish) {
 }
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureBotPermissionsTip.tsx");
 
-export function isBotPermissionsReviewPending(publishing) {
-  let tmp = null != publishing && !publishing.publishing;
-  if (tmp) {
-    tmp = "review_permissions" === publishing.action;
+export function isBotPermissionsReviewPending(state) {
+  state = undefined;
+  if (state != null) {
+    state = state.state;
   }
-  return tmp;
+  let tmp2 = "action_needed" === state;
+  if (tmp2) {
+    tmp2 = "review_permissions" === state.action;
+  }
+  return tmp2;
 }
 export { resolveBotPermissionsTip };
 export const CONJURE_BOT_PERMISSIONS_TIP_BASE = { id: "bot_permissions", priority: 3, resolve: resolveBotPermissionsTip };

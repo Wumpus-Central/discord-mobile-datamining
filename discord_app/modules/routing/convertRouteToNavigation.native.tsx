@@ -103,7 +103,7 @@ export function convertRouteToNavigation(pathname) {
                   const tmpResult26 = NavigationRouteUtils;
                 }
                 if (tmp18) {
-                  const obj11 = { channelId, guildId, messageId, subRouteId: tmp15, replaceChannelAndFixRoot: "fileBytes" };
+                  const obj11 = { channelId, guildId, messageId, subRouteId: tmp15, replaceChannelAndFixRoot: "find" };
                   NavigationRouteUtils.navigateToChannel(obj11);
                   const tmpResult27 = NavigationRouteUtils;
                 }

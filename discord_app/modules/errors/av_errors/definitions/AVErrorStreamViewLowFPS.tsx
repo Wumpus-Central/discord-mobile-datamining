@@ -1,11 +1,11 @@
-// === Module 20108: AVErrorStreamViewLowFPS ===
+// === Module 20110: AVErrorStreamViewLowFPS ===
 
-// Module 20108 (AVErrorStreamViewLowFPS)
+// Module 20110 (AVErrorStreamViewLowFPS)
 import StreamQualityUtils from "StreamQualityUtils" /* 5836 */;
 import AVError from "AVError" /* 5843 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
-import AVErrorContext from "AVErrorContext" /* 20106 */;
-import AVErrorUtils from "AVErrorUtils" /* 20109 */;
+import AVErrorContext from "AVErrorContext" /* 20108 */;
+import AVErrorUtils from "AVErrorUtils" /* 20111 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

@@ -1,6 +1,6 @@
-// === Module 17704: GameClaimCoachmark ===
+// === Module 17706: GameClaimCoachmark ===
 
-// Module 17704 (GameClaimCoachmark)
+// Module 17706 (GameClaimCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -12,8 +12,8 @@ import Card from "Card" /* 7047 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10233 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12434 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 17705 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17706 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 17707 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17708 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 18293: useConjureProjects ===
+// === Module 18295: useConjureProjects ===
 
-// Module 18293 (useConjureProjects)
+// Module 18295 (useConjureProjects)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;

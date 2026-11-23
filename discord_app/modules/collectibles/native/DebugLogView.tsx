@@ -1,6 +1,6 @@
-// === Module 17332: DebugLogView ===
+// === Module 17334: DebugLogView ===
 
-// Module 17332 (DebugLogView)
+// Module 17334 (DebugLogView)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import noop from "module_19" /* 19 */;

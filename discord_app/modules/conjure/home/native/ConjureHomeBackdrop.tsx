@@ -1,6 +1,6 @@
-// === Module 18642: ConjureHomeBackdrop ===
+// === Module 18644: ConjureHomeBackdrop ===
 
-// Module 18642 (ConjureHomeBackdrop)
+// Module 18644 (ConjureHomeBackdrop)
 import nativeDefault from "native" /* 575 */;
 import useTheme from "useTheme" /* 5122 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;

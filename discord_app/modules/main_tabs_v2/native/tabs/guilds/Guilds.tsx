@@ -1,6 +1,6 @@
-// === Module 17532: guilds/Guilds ===
+// === Module 17534: guilds/Guilds ===
 
-// Module 17532 (guilds/Guilds)
+// Module 17534 (guilds/Guilds)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
@@ -21,11 +21,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 
 export default noop.memo(function GuildsOnly() {
-  const trackTabPerformance = enabled(17533).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
-  let obj = enabled(17533);
+  const trackTabPerformance = enabled(17535).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+  let obj = enabled(17535);
   const tmp5 = isChatBesideChannelList(5085)();
   const isEligibleForQuests = enabled(9950).getIsEligibleForQuests();
-  const GuildsRenderExperiment = enabled(17534).GuildsRenderExperiment;
+  const GuildsRenderExperiment = enabled(17536).GuildsRenderExperiment;
   enabled = GuildsRenderExperiment.useConfig({ location: "GuildsOnly" }).enabled;
   isChatBesideChannelList = undefined;
   dependencyMap = undefined;
@@ -105,16 +105,16 @@ export default noop.memo(function GuildsOnly() {
   }
   if (!enabled) {
     const obj3 = { gradient: tmp5, children: null };
-    const items1 = [closure_8(tmp4(17535), {}), closure_8(tmp4(17941), {}), closure_8(tmp4(17981), { placement: "channel-list" }), , ];
+    const items1 = [closure_8(tmp4(17537), {}), closure_8(tmp4(17943), {}), closure_8(tmp4(17983), { placement: "channel-list" }), , ];
     let tmp10Result = isEligibleForQuests;
     if (isEligibleForQuests) {
-      tmp10Result = closure_8(tmp4(16563), {});
+      tmp10Result = closure_8(tmp4(16565), {});
     }
     const obj4 = { children: null };
     items1[3] = tmp10Result;
-    items1[4] = closure_8(tmp(17517).BackgroundChatHost, {});
+    items1[4] = closure_8(tmp(17519).BackgroundChatHost, {});
     obj4.children = items1;
-    obj3.children = closure_9(tmp(16477).QuestDockExternalCoordinationContextProvider, obj4);
+    obj3.children = closure_9(tmp(16479).QuestDockExternalCoordinationContextProvider, obj4);
     let tmp10Result2 = closure_8(tmp(4974).ThemeContextProvider, obj3);
   } else {
     tmp10Result2 = null;

@@ -1,6 +1,6 @@
-// === Module 19485: embeddedAppShimKeybinds ===
+// === Module 19487: embeddedAppShimKeybinds ===
 
-// Module 19485 (embeddedAppShimKeybinds)
+// Module 19487 (embeddedAppShimKeybinds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/shim_host/embeddedAppShimKeybinds.native.tsx");

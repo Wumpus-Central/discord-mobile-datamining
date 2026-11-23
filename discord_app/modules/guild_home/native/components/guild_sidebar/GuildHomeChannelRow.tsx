@@ -1,6 +1,6 @@
-// === Module 17721: GuildHomeChannelRow ===
+// === Module 17723: GuildHomeChannelRow ===
 
-// Module 17721 (GuildHomeChannelRow)
+// Module 17723 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import BaseChannelItemDefault from "BaseChannelItem" /* 13248 */;
@@ -42,6 +42,6 @@ export default function GuildHomeChannelRow(selected) {
   obj2.name = intl2.string(tmp5(1112).t.VbpLyU);
   obj2.mode = DEFAULT;
   obj.name = jsx(tmp5(13248).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15050).SignPostIcon });
+  obj.icon = jsx(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15052).SignPostIcon });
   return <tmp7 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

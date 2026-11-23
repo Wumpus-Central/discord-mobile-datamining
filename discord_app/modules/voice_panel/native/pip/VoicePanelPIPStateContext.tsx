@@ -3,7 +3,7 @@
 // Module 11759 (VoicePanelPIPStateContext)
 import noop from "module_19" /* 19 */;
 
-let size = { id: "disabled", mode: "isArray", width: false, height: null, containerHeight: "box-none", showSecondaryPIP: null, scale: null };
+let size = { id: "displayName", mode: "isArray", width: false, height: null, containerHeight: "\u{1F481}\u{1F3FB}", showSecondaryPIP: true, scale: null };
 const ReanimatedHelperTypes = fn(7450);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);

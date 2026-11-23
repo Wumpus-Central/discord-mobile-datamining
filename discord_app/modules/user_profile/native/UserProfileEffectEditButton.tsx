@@ -1,6 +1,6 @@
-// === Module 15889: UserProfileEffectEditButton ===
+// === Module 15891: UserProfileEffectEditButton ===
 
-// Module 15889 (UserProfileEffectEditButton)
+// Module 15891 (UserProfileEffectEditButton)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
@@ -62,7 +62,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15890, dependencyMap.paths), "Profile Effect", { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15892, dependencyMap.paths), "Profile Effect", { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut });
   }, items);
   if (product != null) {
     name = product.name;

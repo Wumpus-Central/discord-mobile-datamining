@@ -1,6 +1,6 @@
-// === Module 18608: useConjureServerChangeButtons ===
+// === Module 18610: useConjureServerChangeButtons ===
 
-// Module 18608 (useConjureServerChangeButtons)
+// Module 18610 (useConjureServerChangeButtons)
 import _modDef4190 from "module_4190" /* 4190 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import ConjureChatStore from "ConjureChatStore" /* 6925 */;

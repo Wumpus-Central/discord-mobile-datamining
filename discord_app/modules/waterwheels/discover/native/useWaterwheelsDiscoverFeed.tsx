@@ -1,9 +1,9 @@
-// === Module 17803: useWaterwheelsDiscoverFeed ===
+// === Module 17805: useWaterwheelsDiscoverFeed ===
 
-// Module 17803 (useWaterwheelsDiscoverFeed)
+// Module 17805 (useWaterwheelsDiscoverFeed)
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10043 */;
-import useWaterwheelsCardEligibilityDefault from "useWaterwheelsCardEligibility" /* 17804 */;
-import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 17809 */;
+import useWaterwheelsCardEligibilityDefault from "useWaterwheelsCardEligibility" /* 17806 */;
+import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 17811 */;
 import noop from "module_19" /* 19 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import ICYMIStore from "ICYMIStore" /* 10033 */;
@@ -37,8 +37,8 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
   const items1 = [EMPTY_DISCOVER_SNAPSHOT, tmp3];
   const memo = noop.useMemo(() => WaterwheelsDiscoverFeedState.selectWaterwheelsDiscoverEntries(EMPTY_DISCOVER_SNAPSHOT, closure_1), items1);
   const obj = EMPTY_DISCOVER_SNAPSHOT(504);
-  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17809);
-  return { snapshot: EMPTY_DISCOVER_SNAPSHOT, entries: memo, status: EMPTY_DISCOVER_SNAPSHOT(17809).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length), retry: requestWaterwheelsDiscover };
+  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17811);
+  return { snapshot: EMPTY_DISCOVER_SNAPSHOT, entries: memo, status: EMPTY_DISCOVER_SNAPSHOT(17811).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length), retry: requestWaterwheelsDiscover };
 };
 export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot) {
   _require = enabled;
@@ -94,7 +94,7 @@ export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot)
           if (!InterestPickerSessionStore.isPickerOpen()) {
             function requestWhenReady() {
               const obj2 = { enabled, visible, snapshot: discoverSnapshot.getDiscoverSnapshot(), hasRequestInFlight: null, isPickerOpen: null };
-              const obj = enabled(17809);
+              const obj = enabled(17811);
               obj2.hasRequestInFlight = visible(10043).hasDiscoverRequestInFlight();
               obj2.isPickerOpen = InterestPickerSessionStore.isPickerOpen();
               if (obj.shouldRequestWaterwheelsDiscover(obj2)) {

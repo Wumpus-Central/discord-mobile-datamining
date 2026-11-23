@@ -1,6 +1,6 @@
-// === Module 15668: RPCServerManager ===
+// === Module 15670: RPCServerManager ===
 
-// Module 15668 (RPCServerManager)
+// Module 15670 (RPCServerManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -11,10 +11,10 @@ import QuestTaskUtils from "QuestTaskUtils" /* 8427 */;
 import RPCHelpers from "RPCHelpers" /* 10804 */;
 import transformMessage from "transformMessage" /* 10805 */;
 import getRemoteIconURLDefault from "getRemoteIconURL" /* 10806 */;
-import frameDeepLinks from "frameDeepLinks" /* 14763 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15669 */;
-import useThermalState from "useThermalState" /* 15675 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15677 */;
+import frameDeepLinks from "frameDeepLinks" /* 14765 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15671 */;
+import useThermalState from "useThermalState" /* 15677 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15679 */;
 import _slicedToArray from "module_32" /* 32 */;
 import QuestStore from "QuestStore" /* 8404 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -121,7 +121,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, (socket) => {
-          obj = obj(15674);
+          obj = obj(15676);
           if (obj.isGuildVoiceSocket(socket.socket)) {
             channel = channel.getChannel(channelId);
             let type;
@@ -248,7 +248,7 @@ class RPCServerManager {
       if (subscriptions.some((evt) => {
         let tmp = evt.evt === constants2.FRAME_DEEP_LINK;
         if (tmp) {
-          obj = obj(14763);
+          obj = obj(14765);
           tmp = obj.getFrameDeepLinkChannelId(getSocketFrameDefault(evt.socket)) === channelId;
         }
         return tmp;
@@ -259,7 +259,7 @@ class RPCServerManager {
           const rpcServer = tmp.rpcServer;
           const obj2 = { hash: takeFrameDeepLinkResult };
           const result = rpcServer.dispatchToSubscriptions(constants3.FRAME_DEEP_LINK, function targetsChannelFrame(socket) {
-            obj = obj(14763);
+            obj = obj(14765);
             return obj.getFrameDeepLinkChannelId(getSocketFrameDefault(socket.socket)) === channelId;
           }, obj2);
         }

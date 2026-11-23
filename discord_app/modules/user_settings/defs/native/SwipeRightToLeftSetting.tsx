@@ -1,6 +1,6 @@
-// === Module 16880: SwipeRightToLeftSetting ===
+// === Module 16882: SwipeRightToLeftSetting ===
 
-// Module 16880 (SwipeRightToLeftSetting)
+// Module 16882 (SwipeRightToLeftSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;

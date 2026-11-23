@@ -1,9 +1,9 @@
-// === Module 18721: SearchScreenLayout ===
+// === Module 18723: SearchScreenLayout ===
 
-// Module 18721 (SearchScreenLayout)
-import AppFreezerDefault from "AppFreezer" /* 18160 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18722 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 18833 */;
+// Module 18723 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 18162 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18724 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 18835 */;
 import noop from "module_19" /* 19 */;
 import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 

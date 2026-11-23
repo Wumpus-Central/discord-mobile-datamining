@@ -1,6 +1,6 @@
-// === Module 19799: SoundboardRecordingWaveform ===
+// === Module 19801: SoundboardRecordingWaveform ===
 
-// Module 19799 (SoundboardRecordingWaveform)
+// Module 19801 (SoundboardRecordingWaveform)
 import nativeDefault from "native" /* 575 */;
 import spring_spring from "spring/spring" /* 5514 */;
 import springPresets from "springPresets" /* 5515 */;

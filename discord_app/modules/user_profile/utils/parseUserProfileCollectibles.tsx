@@ -14,7 +14,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "fill", profileEffect: "channel", profileFrame: "justifyContent" };
+    return { collectibles: "np", profileEffect: "channelId", profileFrame: "getCurrentUser" };
   } else {
     items = [];
     collectibles = collectibles.collectibles;

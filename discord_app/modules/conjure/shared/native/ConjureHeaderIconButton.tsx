@@ -1,6 +1,6 @@
-// === Module 18393: ConjureHeaderIconButton ===
+// === Module 18395: ConjureHeaderIconButton ===
 
-// Module 18393 (ConjureHeaderIconButton)
+// Module 18395 (ConjureHeaderIconButton)
 import ClipView from "ClipView" /* 9023 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,12 +23,13 @@ const result = size.fileFinishedImporting("modules/conjure/shared/native/Conjure
 
 export default function ConjureHeaderIconButton(ref) {
   ({ IconComponent, disabled, badge, badgeSize } = ref);
-  ({ onPress, accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState } = ref);
+  ({ onPress, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, accessibilityState, dimmed } = ref);
   if (badgeSize === undefined) {
     badgeSize = 8;
   }
   const tmp = closure_7(badgeSize);
   items = [badgeSize];
+  let disabledIcon = true === disabled;
   const memo = noop.useMemo(() => {
     const point = { shape: ClipView.CutoutShape.Circle, x: null, y: null, size: badgeSize + 4 };
     const diff = 24 - badgeSize;
@@ -38,16 +39,18 @@ export default function ConjureHeaderIconButton(ref) {
     items = [point];
     return items;
   }, items);
-  const obj = { ref: ref.ref, accessibilityRole: "button", accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, onPress, activeOpacity: 0.6, androidRippleConfig, style: tmp.button, children: null };
+  if (!disabledIcon) {
+    disabledIcon = true === dimmed;
+  }
+  const obj = { ref: ref.ref, accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, onPress, activeOpacity: 0.6, androidRippleConfig, style: tmp.button, children: null };
   if (null != badge) {
     const obj2 = { style: tmp.icon, children: null };
     const obj3 = { cutouts: memo, style: null, children: null };
     const items1 = [tmp.icon, ];
-    let disabledIcon2 = true === disabled;
-    if (disabledIcon2) {
-      disabledIcon2 = tmp.disabledIcon;
+    if (disabledIcon) {
+      disabledIcon = tmp.disabledIcon;
     }
-    items1[1] = disabledIcon2;
+    items1[1] = disabledIcon;
     obj3.style = items1;
     obj3.children = closure_5(IconComponent, {});
     const items2 = [closure_5(ClipViewDefault, obj3), ];
@@ -57,12 +60,12 @@ export default function ConjureHeaderIconButton(ref) {
     let tmp3Result = closure_6(View, obj2);
   } else {
     const items3 = [tmp.icon, ];
-    let disabledIcon = true === disabled;
+    let disabledIcon2 = disabledIcon;
     if (disabledIcon) {
-      disabledIcon = tmp.disabledIcon;
+      disabledIcon2 = tmp.disabledIcon;
     }
     const obj5 = { style: null, children: null };
-    items3[1] = disabledIcon;
+    items3[1] = disabledIcon2;
     obj5.style = items3;
     obj5.children = closure_5(IconComponent, {});
     tmp3Result = closure_5(View, obj5);

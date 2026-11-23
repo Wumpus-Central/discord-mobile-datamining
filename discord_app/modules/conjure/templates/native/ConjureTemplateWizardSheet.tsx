@@ -1,13 +1,13 @@
-// === Module 18653: ConjureTemplateWizardSheet ===
+// === Module 18655: ConjureTemplateWizardSheet ===
 
-// Module 18653 (ConjureTemplateWizardSheet)
+// Module 18655 (ConjureTemplateWizardSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import ConjureCreateErrors from "ConjureCreateErrors" /* 6937 */;
 import TableRadioRow from "TableRadioRow" /* 7349 */;
-import ConjureTemplateWizard from "ConjureTemplateWizard" /* 18656 */;
+import ConjureTemplateWizard from "ConjureTemplateWizard" /* 18658 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.action = { flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
-let obj9 = { shield: fn(18654).ChatShieldIcon, hammer: fn(12401).HammerIcon, group: fn(7038).GroupIcon };
+let obj9 = { shield: fn(18656).ChatShieldIcon, hammer: fn(12401).HammerIcon, group: fn(7038).GroupIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/templates/native/ConjureTemplateWizardSheet.tsx");
 
@@ -66,7 +66,7 @@ export default function ConjureTemplateWizardSheet(template) {
   let obj = template;
   let result3 = dependencyMap;
   items = [first, closure_8];
-  const stateFromStores = template(504).useStateFromStores(items, () => template(18656).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"));
+  const stateFromStores = template(504).useStateFromStores(items, () => template(18658).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"));
   let obj2 = template(504);
   [tmp4, c6] = stateFromStores.useState(0);
   [first, closure_8] = stateFromStores.useState(() => {
@@ -115,7 +115,7 @@ export default function ConjureTemplateWizardSheet(template) {
           const obj = { templateId: _true.id };
           closure_10(current, obj);
           first3(current, dependencyMap);
-          const result = template(18656).startConjureTemplateWizard(current, _true);
+          const result = template(18658).startConjureTemplateWizard(current, _true);
           return result.then((result) => {
             if (!c0) {
               c11(result);
@@ -163,7 +163,7 @@ export default function ConjureTemplateWizardSheet(template) {
   if (tmp25) {
     tmp25 = null != stateFromStores1;
   }
-  guildId(18658)(first2, template.id, tmp25);
+  guildId(18660)(first2, template.id, tmp25);
   if (stateFromStores2) {
     stateFromStores2 = null == tmp21;
   }
@@ -183,14 +183,14 @@ export default function ConjureTemplateWizardSheet(template) {
       onCreated(first2, current);
     }
   }, items5);
-  const tmp24 = guildId(18658);
-  const conjureWizardIntroResult = obj(18656).conjureWizardIntro(tmp21);
-  const objResult6 = obj(18656);
-  let result = obj(18656).conjureWizardServerCopy(tmp21);
-  const objResult7 = obj(18656);
-  result1 = obj(18656).conjureWizardQuestions(tmp21);
-  const objResult8 = obj(18656);
-  const result2 = obj(18656).conjureTemplateWizardSteps(result1, first1);
+  const tmp24 = guildId(18660);
+  const conjureWizardIntroResult = obj(18658).conjureWizardIntro(tmp21);
+  const objResult6 = obj(18658);
+  let result = obj(18658).conjureWizardServerCopy(tmp21);
+  const objResult7 = obj(18658);
+  result1 = obj(18658).conjureWizardQuestions(tmp21);
+  const objResult8 = obj(18658);
+  const result2 = obj(18658).conjureTemplateWizardSteps(result1, first1);
   const tmp31 = result2[Math.min(Math, tmp4, result2.length - 1)];
   length = result2.length;
   let tmp32;
@@ -455,7 +455,7 @@ export default function ConjureTemplateWizardSheet(template) {
         obj20.text = intl5.string(tmp23(4190)["5iv8MF"]);
         let tmp56 = null == first2 || null == first;
         if (!tmp56) {
-          obj = obj(18656);
+          obj = obj(18658);
           result3 = obj.isConjureWizardComplete(result1, first3);
           tmp56 = !result3;
         }
@@ -477,8 +477,8 @@ export default function ConjureTemplateWizardSheet(template) {
         if (!tmp48) {
           let tmp55 = typeof tmp31 === "object";
           if (typeof tmp31 === "object") {
-            tmp55 = !obj(18656).canLeaveConjureWizardQuestion(tmp32, str);
-            const objResult10 = obj(18656);
+            tmp55 = !obj(18658).canLeaveConjureWizardQuestion(tmp32, str);
+            const objResult10 = obj(18658);
           }
           tmp48 = tmp55;
         }

@@ -1,6 +1,6 @@
-// === Module 17298: CollectiblesCoachmarkScrollDismissContext ===
+// === Module 17300: CollectiblesCoachmarkScrollDismissContext ===
 
-// Module 17298 (CollectiblesCoachmarkScrollDismissContext)
+// Module 17300 (CollectiblesCoachmarkScrollDismissContext)
 import noop from "module_19" /* 19 */;
 
 const NOOP = fn(1082).NOOP;

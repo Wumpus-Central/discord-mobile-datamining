@@ -1,6 +1,6 @@
-// === Module 18391: ConjureChatHeader ===
+// === Module 18393: ConjureChatHeader ===
 
-// Module 18391 (ConjureChatHeader)
+// Module 18393 (ConjureChatHeader)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8563 */;

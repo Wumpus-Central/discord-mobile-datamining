@@ -1,6 +1,6 @@
-// === Module 17726: HubUnreadUtils ===
+// === Module 17728: HubUnreadUtils ===
 
-// Module 17726 (HubUnreadUtils)
+// Module 17728 (HubUnreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GuildDirectoryUtils from "GuildDirectoryUtils" /* 13158 */;
 import GuildDirectoryStore from "GuildDirectoryStore" /* 13166 */;

@@ -1,6 +1,6 @@
-// === Module 15285: AvatarDuoPile ===
+// === Module 15287: AvatarDuoPile ===
 
-// Module 15285 (AvatarDuoPile)
+// Module 15287 (AvatarDuoPile)
 import ClipView from "ClipView" /* 9023 */;
 import Pile from "Pile" /* 10126 */;
 import ListUtils from "ListUtils" /* 12293 */;

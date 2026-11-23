@@ -1,6 +1,6 @@
-// === Module 18002: SecureFramesCallVerificationBottomSheet ===
+// === Module 18004: SecureFramesCallVerificationBottomSheet ===
 
-// Module 18002 (SecureFramesCallVerificationBottomSheet)
+// Module 18004 (SecureFramesCallVerificationBottomSheet)
 import SecureFramesTracking from "SecureFramesTracking" /* 9710 */;
 import showShareActionSheet from "showShareActionSheet" /* 9718 */;
 import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9732 */;

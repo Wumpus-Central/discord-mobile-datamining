@@ -1,6 +1,6 @@
-// === Module 17123: SimpleRequestOTPActionSheet ===
+// === Module 17125: SimpleRequestOTPActionSheet ===
 
-// Module 17123 (SimpleRequestOTPActionSheet)
+// Module 17125 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;

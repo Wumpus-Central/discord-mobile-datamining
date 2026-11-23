@@ -468,12 +468,12 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
                     obj11.disabled = message.author.id === id1;
                     obj16 = obj11;
                   } else if (isInParty) {
-                    const obj12 = { label: null, disabled: true, footerLabel: "Boolean" };
+                    const obj12 = { label: null, disabled: true, footerLabel: "Array" };
                     const intl10 = tmp4(1112).intl;
                     obj12.label = intl10.string(tmp4(1112).t.KC26NR);
                     obj16 = obj12;
                   } else if (isAskToJoin) {
-                    const obj13 = { label: "Path", disabled: null, footerLabel: "VIBING_WUMPUS" };
+                    const obj13 = { label: "Path", disabled: null, footerLabel: "always" };
                     const intl9 = tmp4(1112).intl;
                     const obj14 = { username: message.author.globalName, appName: name_override };
                     obj13.footerLabel = intl9.formatToPlainString(tmp4(1112).t.gYVkSW, obj14);
@@ -487,7 +487,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
                         obj16 = obj15;
                       }
                     }
-                    obj16 = { label: "Path", disabled: null, footerLabel: "VIBING_WUMPUS" };
+                    obj16 = { label: "Path", disabled: null, footerLabel: "always" };
                     const intl7 = tmp4(1112).intl;
                     obj16.footerLabel = intl7.string(tmp4(1112).t.OAB5TK);
                   }
@@ -615,7 +615,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
               return null;
             }
           }
-          const obj20 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "Path", ctaButtonIsLoading: "Array", footerLabel: "Promise", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "add", maxPartySize: "type", partyMemberAvatarURIs: "registerAsset", partySizeText: null, platformIconKeys: "user", coverImageUrl: null, detailsText: null, title: 213 };
+          const obj20 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "Path", ctaButtonIsLoading: "Array", footerLabel: "Promise", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "__closure", maxPartySize: "paddingHorizontal", partyMemberAvatarURIs: "radii", partySizeText: false, platformIconKeys: false, coverImageUrl: false, detailsText: false, title: false };
           const intl = tmp4(1112).intl;
           obj20.headerText = intl.string(tmp4(1112).t.pkq6Vq);
           if (contentClassificationVisibility === tmp4(12802).ContentClassificationVisibility.BLOCK_UNDERAGE) {

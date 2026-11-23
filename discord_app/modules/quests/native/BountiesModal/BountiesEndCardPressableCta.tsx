@@ -1,6 +1,6 @@
-// === Module 16362: BountiesEndCardPressableCta ===
+// === Module 16364: BountiesEndCardPressableCta ===
 
-// Module 16362 (BountiesEndCardPressableCta)
+// Module 16364 (BountiesEndCardPressableCta)
 import nativeDefault from "native" /* 575 */;
 import QuestContent from "QuestContent" /* 6563 */;
 import AdCreativeType from "AdCreativeType" /* 6565 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(16363).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(16365).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4913);

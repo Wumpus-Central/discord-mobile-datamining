@@ -1,6 +1,6 @@
-// === Module 17920: useIsCheckpointOpen ===
+// === Module 17922: useIsCheckpointOpen ===
 
-// Module 17920 (useIsCheckpointOpen)
+// Module 17922 (useIsCheckpointOpen)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;
 import CheckpointModalConstants from "CheckpointModalConstants" /* 12498 */;
 import size from "module_2" /* 2 */;

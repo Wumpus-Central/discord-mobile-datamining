@@ -1,6 +1,6 @@
-// === Module 19538: FileUploadActionComponent ===
+// === Module 19540: FileUploadActionComponent ===
 
-// Module 19538 (FileUploadActionComponent)
+// Module 19540 (FileUploadActionComponent)
 import util from "util" /* 1112 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 5968 */;
 import FileSizeUtils from "FileSizeUtils" /* 6355 */;
@@ -11,7 +11,7 @@ import IconButton from "IconButton" /* 7591 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10453 */;
 import AttachmentPreview from "AttachmentPreview" /* 11193 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11620 */;
-import FileUpIcon from "FileUpIcon" /* 16955 */;
+import FileUpIcon from "FileUpIcon" /* 16957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

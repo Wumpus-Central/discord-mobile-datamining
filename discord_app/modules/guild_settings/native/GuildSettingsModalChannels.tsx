@@ -1,6 +1,6 @@
-// === Module 17664: GuildSettingsModalChannels ===
+// === Module 17666: GuildSettingsModalChannels ===
 
-// Module 17664 (GuildSettingsModalChannels)
+// Module 17666 (GuildSettingsModalChannels)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
@@ -22,16 +22,16 @@ import FavoritesActionCreators from "FavoritesActionCreators" /* 11219 */;
 import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 11251 */;
 import _modDef12224 from "module_12224" /* 12224 */;
 import ChannelSortingUtils from "ChannelSortingUtils" /* 13889 */;
-import _modDef16702 from "module_16702" /* 16702 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17663 */;
-import _modDef17667 from "module_17667" /* 17667 */;
+import _modDef16704 from "module_16704" /* 16704 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17665 */;
+import _modDef17669 from "module_17669" /* 17669 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
-import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 17662 */;
+import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 17664 */;
 import TextStyles_mod from "TextStyles" /* 6407 */;
 
 require = fn;
@@ -106,7 +106,7 @@ function ChannelItem(isFavoritesGuild) {
   if (stateFromStores) {
     tmp7Result2 = null;
     if (sortingEnabled) {
-      const obj10 = { source: tmp13(17665), style: actionIconStyle };
+      const obj10 = { source: tmp13(17667), style: actionIconStyle };
       tmp7Result2 = closure_16(channel(7709).FormRow.Icon, obj10);
     }
   }
@@ -257,7 +257,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(17665), style: actionIconStyle };
+      const obj6 = { source: tmp11(17667), style: actionIconStyle };
       tmp3Result = closure_1_16(native.Icon, obj6);
     }
   }
@@ -385,9 +385,9 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef17667;
+        obj.icon = _modDef17669;
         obj.onPress = function onPress() {
-          closure_1_1(17663).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(17665).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
@@ -396,15 +396,15 @@ class GuildSettingsModalChannels extends PureComponent3 {
       obj2.label = intl2.string(util.t.nIfr0Y);
       obj2.icon = _modDef12224;
       obj2.onPress = function onPress() {
-        closure_1_1(17663).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
+        closure_1_1(17665).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
       };
       items.push(obj2);
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef16702;
+      obj3.icon = _modDef16704;
       obj3.onPress = function onPress() {
-        closure_1_1(17663).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(17665).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };

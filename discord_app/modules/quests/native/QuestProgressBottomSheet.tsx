@@ -1,6 +1,6 @@
-// === Module 19199: QuestProgressBottomSheet ===
+// === Module 19201: QuestProgressBottomSheet ===
 
-// Module 19199 (QuestProgressBottomSheet)
+// Module 19201 (QuestProgressBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
@@ -66,7 +66,7 @@ function QuestProgressBottomSheet(quest) {
   let obj5 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: quest(6561).QuestContent.RUNNING_ACTIVITY };
   const isQuestAccessSuspended = quest(9958).useIsQuestAccessSuspended();
   const tmpResult5 = quest(9958);
-  const tmpResult6 = quest(16507);
+  const tmpResult6 = quest(16509);
   const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({ quest, questContent: quest(6561).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: quest(6561).QuestContent.RUNNING_ACTIVITY });
   ({ isClaiming, claim } = questRewardClaimHandler);
   items = [claim];
@@ -190,7 +190,7 @@ function QuestProgressBottomSheet(quest) {
   const tmp6Result4 = claim(13750);
   obj14.sourceQuestContent = quest(6561).QuestContent.RUNNING_ACTIVITY;
   obj14.children = contextMenuButton;
-  items5[1] = closure_11(claim(16535), obj14);
+  items5[1] = closure_11(claim(16537), obj14);
   obj12.children = items5;
   items3[3] = closure_12(closure_5, obj12);
   obj7.children = items3;
@@ -232,7 +232,7 @@ function QuestProgressBottomSheet(quest) {
   let tmp6Result6;
   if (isQuestAccessSuspended) {
     if (tmp14) {
-      tmp6Result6 = tmp6(16502);
+      tmp6Result6 = tmp6(16504);
     }
   }
   const obj20 = { handleDisabled: true, startExpanded: true, children: null };

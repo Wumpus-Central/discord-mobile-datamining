@@ -1,12 +1,12 @@
-// === Module 19495: feedback/FeedbackManager ===
+// === Module 19497: feedback/FeedbackManager ===
 
-// Module 19495 (feedback/FeedbackManager)
+// Module 19497 (feedback/FeedbackManager)
 import apply from "apply" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettings from "UserSettings" /* 4738 */;
-import FeedbackConfig from "FeedbackConfig" /* 19497 */;
+import FeedbackConfig from "FeedbackConfig" /* 19499 */;
 import HotspotStore from "hotspot/HotspotStore" /* 8039 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19496 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19498 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 require = fn;

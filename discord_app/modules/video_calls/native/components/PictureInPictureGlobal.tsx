@@ -1,6 +1,6 @@
-// === Module 19038: PictureInPictureGlobal ===
+// === Module 19040: PictureInPictureGlobal ===
 
-// Module 19038 (PictureInPictureGlobal)
+// Module 19040 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 575 */;
 import native2 from "native" /* 1186 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
@@ -12,7 +12,7 @@ import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6629 */;
 import isChannelFocused from "isChannelFocused" /* 6652 */;
 import transitionToActivityDefault from "transitionToActivity" /* 10635 */;
 import PictureInPictureDefault from "PictureInPicture" /* 10649 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19039 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;

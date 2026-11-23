@@ -1,6 +1,6 @@
-// === Module 19278: useCameraEncodeError ===
+// === Module 19280: useCameraEncodeError ===
 
-// Module 19278 (useCameraEncodeError)
+// Module 19280 (useCameraEncodeError)
 import AVError from "AVError" /* 5843 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AVErrorStore from "AVErrorStore" /* 10721 */;

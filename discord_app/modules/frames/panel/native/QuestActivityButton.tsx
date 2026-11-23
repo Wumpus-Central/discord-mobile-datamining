@@ -1,6 +1,6 @@
-// === Module 19196: QuestActivityButton ===
+// === Module 19198: QuestActivityButton ===
 
-// Module 19196 (QuestActivityButton)
+// Module 19198 (QuestActivityButton)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import timing_timing from "timing/timing" /* 5123 */;
@@ -10,7 +10,7 @@ import QuestMatchingUtils from "QuestMatchingUtils" /* 10618 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import QuestStore from "QuestStore" /* 8404 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19197 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19199 */;
 import module_1653 from "module_1653" /* 1653 */;
 
 require = fn;
@@ -43,10 +43,10 @@ function QuestActivityButtonInner(quest) {
     }
     if (null == enrolledAt) {
       const obj2 = { questId: _undefined.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19198, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19200, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
       const obj4 = { questId: _undefined.id };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19199, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19201, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
     }
   }, items1);
   let result = 2 * Math.PI;
@@ -168,7 +168,7 @@ function QuestActivityButtonInner(quest) {
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult6 = require("module_1653");
-  obj6.source = require("module_16438");
+  obj6.source = require("module_16440");
   obj5.children = closure_9(require("LottieAnimationView"), obj6);
   const items10 = [closure_9(sharedValue, obj5), , , ];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
@@ -258,7 +258,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj2 = { questId: memo.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19198, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19200, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

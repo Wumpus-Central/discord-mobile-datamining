@@ -1,6 +1,6 @@
-// === Module 18832: useAutoTrackSearchTabCountsViewedAnalytics ===
+// === Module 18834: useAutoTrackSearchTabCountsViewedAnalytics ===
 
-// Module 18832 (useAutoTrackSearchTabCountsViewedAnalytics)
+// Module 18834 (useAutoTrackSearchTabCountsViewedAnalytics)
 import TrackingDefault from "Tracking" /* 13218 */;
 import noop from "module_19" /* 19 */;
 

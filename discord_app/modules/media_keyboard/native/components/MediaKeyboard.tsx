@@ -1,6 +1,6 @@
-// === Module 18408: MediaKeyboard ===
+// === Module 18410: MediaKeyboard ===
 
-// Module 18408 (MediaKeyboard)
+// Module 18410 (MediaKeyboard)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import ChatInputUtils from "ChatInputUtils" /* 5098 */;
@@ -14,8 +14,8 @@ import PollsIcon from "PollsIcon" /* 11623 */;
 import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 11625 */;
 import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 11627 */;
 import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 13069 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 18411 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 18412 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 18413 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 18414 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8467 */;
 

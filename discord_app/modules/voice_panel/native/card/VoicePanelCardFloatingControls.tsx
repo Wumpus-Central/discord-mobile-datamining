@@ -1,6 +1,6 @@
-// === Module 19294: VoicePanelCardFloatingControls ===
+// === Module 19296: VoicePanelCardFloatingControls ===
 
-// Module 19294 (VoicePanelCardFloatingControls)
+// Module 19296 (VoicePanelCardFloatingControls)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -25,16 +25,16 @@ import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10626 */;
 import VoiceXIcon from "VoiceXIcon" /* 10981 */;
 import _modDef11086 from "module_11086" /* 11086 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19200 */;
-import useStableParticipant from "useStableParticipant" /* 19250 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19252 */;
-import _modDef19254 from "module_19254" /* 19254 */;
-import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 19279 */;
-import _modDef19295 from "module_19295" /* 19295 */;
-import _modDef19296 from "module_19296" /* 19296 */;
-import StageModeratorIcon from "StageModeratorIcon" /* 19297 */;
-import _modDef19300 from "module_19300" /* 19300 */;
-import _modDef19301 from "module_19301" /* 19301 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19202 */;
+import useStableParticipant from "useStableParticipant" /* 19252 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19254 */;
+import _modDef19256 from "module_19256" /* 19256 */;
+import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 19281 */;
+import _modDef19297 from "module_19297" /* 19297 */;
+import _modDef19298 from "module_19298" /* 19298 */;
+import StageModeratorIcon from "StageModeratorIcon" /* 19299 */;
+import _modDef19302 from "module_19302" /* 19302 */;
+import _modDef19303 from "module_19303" /* 19303 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
@@ -45,7 +45,7 @@ const require = globalThis.__r;
 const useVoicePanelCardUserStateIconsDefault = useVoicePanelCardUserStateIcons;
 const module_1653_mod = _mod1653;
 
-const useIsVoicePanelParticipantFocusableDefault = tmp(19228);
+const useIsVoicePanelParticipantFocusableDefault = tmp(19230);
 require = fn;
 function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
@@ -76,13 +76,13 @@ function StreamIcon(voicePlatform) {
   VoicePanelCardFloatingControlsTsx1.__workletHash = 5506814510669;
   VoicePanelCardFloatingControlsTsx1.__initData = tmp4;
   const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelCardFloatingControlsTsx1);
-  let tmp2Result = _modDef19254;
+  let tmp2Result = _modDef19256;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef19295;
+    tmp2Result = _modDef19297;
   } else if (voicePlatform === constants2.MOBILE) {
     tmp2Result = _modDef11086;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef19296;
+    tmp2Result = _modDef19298;
   }
   const obj2 = { source: tmp2Result, style: null };
   const items2 = [tmp.iconWithoutBackground, animatedStyle];
@@ -261,10 +261,10 @@ let closure_32 = noop.memo(function CloseButton(participant) {
   }, items);
   let obj2 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp2 = useControlsHideStyles(controlsHidden, closure_27);
-  obj2.icon = guildId(19299);
+  obj2.icon = guildId(19301);
   obj2.onPress = callback;
-  const tmp6 = guildId(19200);
-  let result = participant(19250).isStableActivityParticipant(participant);
+  const tmp6 = guildId(19202);
+  let result = participant(19252).isStableActivityParticipant(participant);
   const intl = participant(1112).intl;
   const string = intl.string;
   const t = participant(1112).t;
@@ -325,7 +325,7 @@ let closure_34 = noop.memo(function CardFocusButton(participantId) {
   const obj3 = { style: tmp5.topRightButton, hideStyles: useControlsHideStyles(_mod1653.useDerivedValue(VoicePanelCardFloatingControlsTsx3), closure_27), layout, children: null };
   const obj4 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp11 = useControlsHideStyles(_mod1653.useDerivedValue(VoicePanelCardFloatingControlsTsx3), closure_27);
-  obj4.icon = _modDef19300;
+  obj4.icon = _modDef19302;
   obj4.onPress = callback;
   obj4.accessibilityLabel = stringResult;
   obj3.children = closure_1_16(VoicePanelIconButtonDefault, obj4);
@@ -496,7 +496,7 @@ let closure_42 = noop.memo(function RingingIcon(controlsHidden) {
   }
   const obj6 = { style: tmp28, pointerEvents: "none", children: null };
   const tmp2Result2 = _mod1653;
-  obj6.children = closure_1_16(native.Icon, { source: _modDef19301, size: native.IconSizes.SMALL_20, style: tmp.ringingIcon });
+  obj6.children = closure_1_16(native.Icon, { source: _modDef19303, size: native.IconSizes.SMALL_20, style: tmp.ringingIcon });
   obj5.children = closure_1_16(module_1653.View, obj6);
   return closure_1_16(module_1653.View, obj5);
 });
@@ -537,7 +537,7 @@ let closure_44 = noop.memo(function UserTagChiplet(arg0) {
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(19302), obj);
+      let tmp9 = closure_16(tmp(19304), obj);
     }
     return tmp9;
   }
@@ -858,9 +858,9 @@ export default noop.memo(function FloatingControls(arg0) {
     stateFromStores = tmp8;
   }
   if (stateFromStores) {
-    const obj6 = { controlsHidden: derivedValue, participantId: participant.id, targetName: label, isActivityParticipant: tmp4(19250).isStableActivityParticipant(participant), layout };
+    const obj6 = { controlsHidden: derivedValue, participantId: participant.id, targetName: label, isActivityParticipant: tmp4(19252).isStableActivityParticipant(participant), layout };
     stateFromStores = closure_16(closure_34, obj6);
-    const tmp4Result4 = tmp4(19250);
+    const tmp4Result4 = tmp4(19252);
   }
   children[2] = stateFromStores;
   children[3] = tmp16;

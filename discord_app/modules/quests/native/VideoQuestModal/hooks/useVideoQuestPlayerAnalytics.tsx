@@ -1,6 +1,6 @@
-// === Module 16518: useVideoQuestPlayerAnalytics ===
+// === Module 16520: useVideoQuestPlayerAnalytics ===
 
-// Module 16518 (useVideoQuestPlayerAnalytics)
+// Module 16520 (useVideoQuestPlayerAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 6365 */;
 import MetricEvents from "MetricEvents" /* 6370 */;
 import QuestTypes from "QuestTypes" /* 6561 */;
@@ -11,8 +11,8 @@ import AnalyticsActions from "AnalyticsActions" /* 8421 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import AdDataUtils from "AdDataUtils" /* 8431 */;
 import VideoQuestUtils from "VideoQuestUtils" /* 10615 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16327 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 16338 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16329 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 16340 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import NetworkStore from "NetworkStore" /* 5794 */;

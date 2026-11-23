@@ -1,6 +1,6 @@
-// === Module 19419: RestrictedHoursModal ===
+// === Module 19421: RestrictedHoursModal ===
 
-// Module 19419 (RestrictedHoursModal)
+// Module 19421 (RestrictedHoursModal)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import timing_timing from "timing/timing" /* 5123 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5504 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 5924 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6425 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7020 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19418 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 19422 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19420 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 19424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -145,7 +145,7 @@ function RestrictedHoursScreen(visible) {
   const obj12 = { source: null, resizeMode: "cover", style: null };
   const obj10 = { style: tmp.backgroundFill, pointerEvents: "none" };
   const tmp6Result2 = require("module_1653");
-  obj12.source = require("module_19421");
+  obj12.source = require("module_19423");
   obj12.style = tmp.sunbeamGradient;
   obj11.children = closure_7(require("FastImage"), obj12);
   items9[1] = closure_7(require("module_1653").View, obj11);

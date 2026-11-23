@@ -1,6 +1,6 @@
-// === Module 14887: InputEvent ===
+// === Module 14889: InputEvent ===
 
-// Module 14887 (InputEvent)
+// Module 14889 (InputEvent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pass_the_controller/InputEvent.tsx");

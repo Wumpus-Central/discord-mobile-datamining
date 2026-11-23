@@ -1,11 +1,11 @@
-// === Module 18767: PollBadge ===
+// === Module 18769: PollBadge ===
 
-// Module 18767 (PollBadge)
+// Module 18769 (PollBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import _modDef18768 from "module_18768" /* 18768 */;
+import _modDef18770 from "module_18770" /* 18770 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function PollBadge(style) {
   const obj = { style: null, children: null };
   items = [tmp.container, style.style];
   obj.style = items;
-  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef18768 }), ];
+  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef18770 }), ];
   const obj3 = { style: tmp.text, variant: "body-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RgIi2B);

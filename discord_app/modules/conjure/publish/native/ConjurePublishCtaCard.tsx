@@ -1,13 +1,13 @@
-// === Module 18601: ConjurePublishCtaCard ===
+// === Module 18603: ConjurePublishCtaCard ===
 
-// Module 18601 (ConjurePublishCtaCard)
+// Module 18603 (ConjurePublishCtaCard)
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import useConjurePublishActionDefault from "useConjurePublishAction" /* 12305 */;
-import useConjureStartPublishDefault from "useConjureStartPublish" /* 18251 */;
-import conjurePublishCard from "conjurePublishCard" /* 18419 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 18602 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 18253 */;
+import conjurePublishCard from "conjurePublishCard" /* 18421 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 18604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,11 +15,11 @@ function PublishCta(publish) {
   publish = publish.publish;
   closure_0 = useConjureStartPublishDefault(publish.projectId, publish);
   const obj = { text: publish.label, variant: "primary", size: "sm", loading: null, onPress: null };
-  let publishing = publish.publishing;
-  if (publishing) {
-    publishing = !publish.showsProgress;
+  let tmp2 = "publishing" === publish.state;
+  if (tmp2) {
+    tmp2 = !publish.showsProgress;
   }
-  obj.loading = publishing;
+  obj.loading = tmp2;
   obj.onPress = function onPress() {
     return closure_0("card");
   };

@@ -1,19 +1,19 @@
-// === Module 15073: QrLoginSpotIllustration ===
+// === Module 15075: QrLoginSpotIllustration ===
 
-// Module 15073 (QrLoginSpotIllustration)
+// Module 15075 (QrLoginSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef15074 from "module_15074" /* 15074 */;
-import _modDef15075 from "module_15075" /* 15075 */;
 import _modDef15076 from "module_15076" /* 15076 */;
+import _modDef15077 from "module_15077" /* 15077 */;
+import _modDef15078 from "module_15078" /* 15078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15074 }, 3: null };
-let obj2 = { uri: _modDef15074 };
-obj[2] = { uri: _modDef15075 };
-const obj3 = { uri: _modDef15075 };
-obj[3] = { uri: _modDef15076 };
+let obj = { 1: null, 2: { uri: _modDef15076 }, 3: null };
+let obj2 = { uri: _modDef15076 };
+obj[2] = { uri: _modDef15077 };
+const obj3 = { uri: _modDef15077 };
+obj[3] = { uri: _modDef15078 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx");
 

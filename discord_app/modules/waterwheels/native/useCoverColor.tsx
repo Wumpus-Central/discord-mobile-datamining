@@ -1,6 +1,6 @@
-// === Module 17822: useCoverColor ===
+// === Module 17824: useCoverColor ===
 
-// Module 17822 (useCoverColor)
+// Module 17824 (useCoverColor)
 import _modDef671 from "module_671" /* 671 */;
 import privDefault from "priv" /* 1454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,12 +1,12 @@
-// === Module 15896: EditProfileFrameSection ===
+// === Module 15898: EditProfileFrameSection ===
 
-// Module 15896 (EditProfileFrameSection)
+// Module 15898 (EditProfileFrameSection)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9032 */;
 import useCollectibleListLayout from "useCollectibleListLayout" /* 14260 */;
 import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14261 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 15895 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 15897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

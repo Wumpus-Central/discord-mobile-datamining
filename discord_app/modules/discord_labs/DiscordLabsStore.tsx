@@ -1,10 +1,10 @@
-// === Module 14966: DiscordLabsStore ===
+// === Module 14968: DiscordLabsStore ===
 
-// Module 14966 (DiscordLabsStore)
+// Module 14968 (DiscordLabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DiscordLabsDefinitions from "DiscordLabsDefinitions" /* 14967 */;
+import DiscordLabsDefinitions from "DiscordLabsDefinitions" /* 14969 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -146,7 +146,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
         [tmp] = item;
         return tmp !== labId;
       }));
-      const f107300 = (arg0) => {
+      const f107277 = (arg0) => {
         currentUser = currentUser.getCurrentUser();
         let enabled;
         if (currentUser != null) {
@@ -164,7 +164,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
       const found = keys.filter((item) => {
         let tmp2 = !tmp;
         if (null == closure_10[item]) {
-          tmp2 = f107301(item);
+          tmp2 = f107278(item);
         }
         return tmp2;
       });
@@ -195,7 +195,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
     }
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
-    const f107300 = (arg0) => {
+    const f107277 = (arg0) => {
       currentUser = currentUser.getCurrentUser();
       let enabled;
       if (currentUser != null) {
@@ -212,7 +212,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
     const found = keys.filter((item) => {
       let tmp2 = !tmp;
       if (null == closure_10[item]) {
-        tmp2 = f107301(item);
+        tmp2 = f107278(item);
       }
       return tmp2;
     });
@@ -224,12 +224,12 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
     return flag;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const f107301 = () => true;
+    const f107278 = () => true;
     const keys = Object.keys(closure_11);
     const found = keys.filter((item) => {
       let tmp2 = !tmp;
       if (null == closure_10[item]) {
-        tmp2 = f107301(item);
+        tmp2 = f107278(item);
       }
       return tmp2;
     });

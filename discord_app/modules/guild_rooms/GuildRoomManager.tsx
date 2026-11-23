@@ -1,6 +1,6 @@
-// === Module 19520: GuildRoomManager ===
+// === Module 19522: GuildRoomManager ===
 
-// Module 19520 (GuildRoomManager)
+// Module 19522 (GuildRoomManager)
 import GuildRoomActionCreators from "GuildRoomActionCreators" /* 6459 */;
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 6492 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

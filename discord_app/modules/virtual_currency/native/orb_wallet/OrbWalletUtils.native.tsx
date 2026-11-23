@@ -1,6 +1,6 @@
-// === Module 16300: OrbWalletUtils ===
+// === Module 16302: OrbWalletUtils ===
 
-// Module 16300 (OrbWalletUtils)
+// Module 16302 (OrbWalletUtils)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;

@@ -1,6 +1,6 @@
-// === Module 17435: DevWidget ===
+// === Module 17437: DevWidget ===
 
-// Module 17435 (DevWidget)
+// Module 17437 (DevWidget)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
@@ -10,8 +10,8 @@ import springPresets from "springPresets" /* 5515 */;
 import Pressables from "Pressables" /* 7030 */;
 import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11771 */;
 import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12901 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 16996 */;
-import VEVOODefault from "VEVOO" /* 17436 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 16998 */;
+import VEVOODefault from "VEVOO" /* 17438 */;
 import noop from "module_19" /* 19 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8422 */;
 

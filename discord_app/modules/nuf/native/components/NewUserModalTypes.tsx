@@ -1,6 +1,6 @@
-// === Module 19598: NewUserModalTypes ===
+// === Module 19600: NewUserModalTypes ===
 
-// Module 19598 (NewUserModalTypes)
+// Module 19600 (NewUserModalTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserModalTypes.tsx");

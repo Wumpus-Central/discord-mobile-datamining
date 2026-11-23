@@ -1,6 +1,6 @@
-// === Module 19625: AppStoreConsentReinstateEndpointExperiment ===
+// === Module 19627: AppStoreConsentReinstateEndpointExperiment ===
 
-// Module 19625 (AppStoreConsentReinstateEndpointExperiment)
+// Module 19627 (AppStoreConsentReinstateEndpointExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

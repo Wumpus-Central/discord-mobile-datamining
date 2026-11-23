@@ -1,6 +1,6 @@
-// === Module 19467: ConjureBackgroundFramesManager ===
+// === Module 19469: ConjureBackgroundFramesManager ===
 
-// Module 19467 (ConjureBackgroundFramesManager)
+// Module 19469 (ConjureBackgroundFramesManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 

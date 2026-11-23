@@ -1,9 +1,9 @@
-// === Module 17630: FavoritesGuildCategoryActionSheet ===
+// === Module 17632: FavoritesGuildCategoryActionSheet ===
 
-// Module 17630 (FavoritesGuildCategoryActionSheet)
+// Module 17632 (FavoritesGuildCategoryActionSheet)
 import ToastUtils from "ToastUtils" /* 5594 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
-import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 17631 */;
+import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 17633 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4765 */;
 

@@ -1,6 +1,6 @@
-// === Module 18096: ICYMICustomScoresGuildScreen ===
+// === Module 18098: ICYMICustomScoresGuildScreen ===
 
-// Module 18096 (ICYMICustomScoresGuildScreen)
+// Module 18098 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import ChannelListState from "ChannelListState" /* 8321 */;
 import ICYMIUtils from "ICYMIUtils" /* 10042 */;
 import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18098 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18100 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelListStore from "ChannelListStore" /* 8319 */;

@@ -1,6 +1,6 @@
-// === Module 16229: FamilyCenterModalDecline ===
+// === Module 16231: FamilyCenterModalDecline ===
 
-// Module 16229 (FamilyCenterModalDecline)
+// Module 16231 (FamilyCenterModalDecline)
 import nativeDefault from "native" /* 575 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
@@ -33,12 +33,12 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   const obj5 = { otherUser, iconSrc: null };
   const obj = otherUser(12467);
   obj5.iconSrc = declineLinkRequest(7032);
-  const items1 = [closure_5(declineLinkRequest(16225), obj5), , ];
+  const items1 = [closure_5(declineLinkRequest(16227), obj5), , ];
   const obj6 = { style: tmp.headerText, variant: "body-lg/semibold", children: null };
   let intl = otherUser(1112).intl;
   obj6.children = intl.string(declineLinkRequest(2824).teIRCR);
   items1[1] = closure_5(otherUser(5504).Text, obj6);
-  items1[2] = closure_5(declineLinkRequest(16192), { user: otherUser });
+  items1[2] = closure_5(declineLinkRequest(16194), { user: otherUser });
   obj4.children = items1;
   const items2 = [closure_6(View, obj4), ];
   const obj7 = { style: tmp.body, children: null };

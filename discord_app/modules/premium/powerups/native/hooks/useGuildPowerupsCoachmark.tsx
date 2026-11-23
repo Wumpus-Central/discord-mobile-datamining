@@ -1,12 +1,12 @@
-// === Module 17684: useGuildPowerupsCoachmark ===
+// === Module 17686: useGuildPowerupsCoachmark ===
 
-// Module 17684 (useGuildPowerupsCoachmark)
+// Module 17686 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 575 */;
 import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 13409 */;
 import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13410 */;
 import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13412 */;
-import _modDef17686 from "module_17686" /* 17686 */;
-import _modDef17687 from "module_17687" /* 17687 */;
+import _modDef17688 from "module_17688" /* 17688 */;
+import _modDef17689 from "module_17689" /* 17689 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import GuildStore from "GuildStore" /* 4784 */;
@@ -163,7 +163,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef17686;
+              let str = _modDef17688;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -224,7 +224,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj12.renderImgComponent = function renderImgComponent() {
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef17687;
+              guildPowerupBannerImage = _modDef17689;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             items = [, ];

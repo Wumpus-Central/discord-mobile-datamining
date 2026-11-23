@@ -214,14 +214,14 @@ export default noop.memo(function BotUserProfileContent(user) {
           obj27.channelId = id1;
           obj27.showUserProfile = showUserProfileActionSheet;
           obj27.style = items8;
-          items10[1] = closure_9(tmp(14510), obj27);
+          items10[1] = closure_9(tmp(14512), obj27);
           obj28.children = items10;
           tmp41Result = closure_10(closure_11, obj28);
-          const tmpResult12 = tmp(14510);
+          const tmpResult12 = tmp(14512);
         }
         items9[2] = tmp41Result;
         const obj29 = { userId: user.id, onBack: showUserProfileActionSheet };
-        items9[3] = closure_9(tmp(14513), obj29);
+        items9[3] = closure_9(tmp(14515), obj29);
         obj23.children = items9;
         tmp41Result2 = closure_10(tmp28, obj23);
       }

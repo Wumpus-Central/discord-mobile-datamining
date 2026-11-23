@@ -1,12 +1,12 @@
-// === Module 17930: GuildsBarCreateJoinButton ===
+// === Module 17932: GuildsBarCreateJoinButton ===
 
-// Module 17930 (GuildsBarCreateJoinButton)
+// Module 17932 (GuildsBarCreateJoinButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 13000 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17872 */;
-import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 17931 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17874 */;
+import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 17933 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
@@ -130,12 +130,12 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       obj = closure_1_0(dependencyMap[11]);
     }
   }), []);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "center", expandedChildren: 8, children: 2 };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 4, expandedChildren: 0, children: 0 };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
   obj4.expandedChildren = jsx(HomeDrawerAddServerRow.HomeDrawerAddServerRowExpandedChildren, {});
   colors = nativeDefault.colors;
   obj4.children = jsx(CirclePlusIcon.CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "center", expandedChildren: 8, children: 2 });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 4, expandedChildren: 0, children: 0 });
   return <View style={tmp.stretch}>{null}</View>;
 });

@@ -1,6 +1,6 @@
-// === Module 17722: GuildActionRows ===
+// === Module 17724: GuildActionRows ===
 
-// Module 17722 (GuildActionRows)
+// Module 17724 (GuildActionRows)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
@@ -78,7 +78,7 @@ export function GuildRolesAndChannelsRow(guild) {
   }
   obj5.name = jsx(guild(13248).BaseChannelName, { name: string2Result, mode: SELECTED });
   const tmp2Result = tmp2(13248);
-  obj5.icon = jsx(guild(13248).BaseChannelIcon, { mode: SELECTED, IconComponent: guild(15052).ChannelListMagnifyingGlassIcon });
+  obj5.icon = jsx(guild(13248).BaseChannelIcon, { mode: SELECTED, IconComponent: guild(15054).ChannelListMagnifyingGlassIcon });
   obj5.channelInfo = tmp11;
   return <tmp2Result onPress={callback} style={tmp.container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} channelInfo={null} />;
 }

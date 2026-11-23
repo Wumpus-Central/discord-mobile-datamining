@@ -1,6 +1,6 @@
-// === Module 18855: getGamePlatform ===
+// === Module 18857: getGamePlatform ===
 
-// Module 18855 (getGamePlatform)
+// Module 18857 (getGamePlatform)
 import ActivityTypes from "ActivityTypes" /* 5652 */;
 import ActivityGamePlatforms2 from "ActivityGamePlatforms" /* 7074 */;
 import isOnXboxDefault from "isOnXbox" /* 14456 */;

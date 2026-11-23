@@ -1,13 +1,13 @@
-// === Module 15815: ErrorBoundary ===
+// === Module 15817: ErrorBoundary ===
 
-// Module 15815 (ErrorBoundary)
+// Module 15817 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
-import AppCrash from "AppCrash" /* 14642 */;
+import AppCrash from "AppCrash" /* 14644 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -6,9 +6,9 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5679 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
-import InputEvent from "InputEvent" /* 14887 */;
-import InputHostDefault from "InputHost" /* 14888 */;
-import InputGuestDefault from "InputGuest" /* 14891 */;
+import InputEvent from "InputEvent" /* 14889 */;
+import InputHostDefault from "InputHost" /* 14890 */;
+import InputGuestDefault from "InputGuest" /* 14893 */;
 import RunningGameStore from "RunningGameStore" /* 2139 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
@@ -98,7 +98,7 @@ function stopGuest(streamKey) {
   }
   return flag;
 }
-let closure_7 = fn(14879).isPassTheControllerBlocked;
+let closure_7 = fn(14881).isPassTheControllerBlocked;
 const Constants = fn(1071);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
 const StreamTypes = fn(6397).StreamTypes;
@@ -206,7 +206,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 const rTCConnection = RTCConnectionStore.getRTCConnection();
                 tmp50 = null;
                 if (null != rTCConnection) {
-                  const inputConnection = new inputConnection1(14880).InputConnection(rTCConnection, AuthenticationStore.getId());
+                  const inputConnection = new inputConnection1(14882).InputConnection(rTCConnection, AuthenticationStore.getId());
                   closure_129_0 = inputConnection;
                   function h() {
                     if (c13 === inputConnection1) {
@@ -220,7 +220,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                       }
                     }
                   }
-                  inputConnection.on(inputConnection1(14887).InputEvent.Disconnect, h);
+                  inputConnection.on(inputConnection1(14889).InputEvent.Disconnect, h);
                   inputConnection.connect();
                   inputConnection1 = inputConnection;
                   tmp50 = inputConnection;
@@ -269,7 +269,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection2 = RTCConnectionStore.getRTCConnection();
             tmp15 = null;
             if (null != rTCConnection2) {
-              inputConnection1 = new inputConnection1(14880).InputConnection(rTCConnection2, AuthenticationStore.getId());
+              inputConnection1 = new inputConnection1(14882).InputConnection(rTCConnection2, AuthenticationStore.getId());
               h = function h() {
                 if (c13 === inputConnection1) {
                   if (null != c15) {
@@ -282,7 +282,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                   }
                 }
               };
-              inputConnection1.on(inputConnection1(14887).InputEvent.Disconnect, h);
+              inputConnection1.on(inputConnection1(14889).InputEvent.Disconnect, h);
               inputConnection1.connect();
               tmp15 = inputConnection1;
             }

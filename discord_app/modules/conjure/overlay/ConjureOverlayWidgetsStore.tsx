@@ -1,10 +1,10 @@
-// === Module 14954: ConjureOverlayWidgetsStore ===
+// === Module 14956: ConjureOverlayWidgetsStore ===
 
-// Module 14954 (ConjureOverlayWidgetsStore)
+// Module 14956 (ConjureOverlayWidgetsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureOverlayApps from "conjureOverlayApps" /* 14961 */;
-import LayoutStore from "LayoutStore" /* 14955 */;
+import conjureOverlayApps from "conjureOverlayApps" /* 14963 */;
+import LayoutStore from "LayoutStore" /* 14957 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 
 require = fn;
@@ -79,7 +79,7 @@ function markServerListStale(guildId) {
   const arraySpreadResult = HermesBuiltin.arraySpread(closure_9, 0);
 }
 const OverlayWidgets = fn(1071).OverlayWidgets;
-const OVERLAY_V3_LAYOUT_ID = fn(14958).OVERLAY_V3_LAYOUT_ID;
+const OVERLAY_V3_LAYOUT_ID = fn(14960).OVERLAY_V3_LAYOUT_ID;
 let items = [];
 let closure_7 = items;
 let closure_8 = items;

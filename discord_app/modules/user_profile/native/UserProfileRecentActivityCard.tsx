@@ -1,6 +1,6 @@
-// === Module 14584: UserProfileRecentActivityCard ===
+// === Module 14586: UserProfileRecentActivityCard ===
 
-// Module 14584 (UserProfileRecentActivityCard)
+// Module 14586 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
@@ -308,7 +308,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "Array" };
+          obj8 = { title: "r" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

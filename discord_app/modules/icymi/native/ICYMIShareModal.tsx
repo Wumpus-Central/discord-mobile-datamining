@@ -1,6 +1,6 @@
-// === Module 18141: ICYMIShareModal ===
+// === Module 18143: ICYMIShareModal ===
 
-// Module 18141 (ICYMIShareModal)
+// Module 18143 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5488 */;
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18142).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18144).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

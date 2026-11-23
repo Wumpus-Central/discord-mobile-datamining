@@ -1,6 +1,6 @@
-// === Module 18827: SearchTabsTransitionGroup ===
+// === Module 18829: SearchTabsTransitionGroup ===
 
-// Module 18827 (SearchTabsTransitionGroup)
+// Module 18829 (SearchTabsTransitionGroup)
 import _modDef1653 from "module_1653" /* 1653 */;
 import native from "native" /* 4974 */;
 import Tabs_Tabs from "Tabs/Tabs" /* 13531 */;

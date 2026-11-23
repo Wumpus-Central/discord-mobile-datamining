@@ -1,9 +1,9 @@
-// === Module 17524: getJankScreenName ===
+// === Module 17526: getJankScreenName ===
 
-// Module 17524 (getJankScreenName)
+// Module 17526 (getJankScreenName)
 import RootNavigationRef from "RootNavigationRef" /* 5090 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 17526 */;
-import JankScreenConstants from "JankScreenConstants" /* 17525 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 17528 */;
+import JankScreenConstants from "JankScreenConstants" /* 17527 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {

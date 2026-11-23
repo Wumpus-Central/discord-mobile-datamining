@@ -1,6 +1,6 @@
-// === Module 17251: UserSettingsDesignSystemPile ===
+// === Module 17253: UserSettingsDesignSystemPile ===
 
-// Module 17251 (UserSettingsDesignSystemPile)
+// Module 17253 (UserSettingsDesignSystemPile)
 import native from "native" /* 1186 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -10,7 +10,7 @@ import GuildIconDefault from "GuildIcon" /* 7322 */;
 import ClipView from "ClipView" /* 9023 */;
 import Pile from "Pile" /* 10126 */;
 import ListUtils from "ListUtils" /* 12293 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 15285 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 15287 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -111,7 +111,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1415).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15285).AvatarDuoPile, obj3);
+      items[1] = closure_5(size(15287).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_6(size(5929).Stack, obj, children);
     })
@@ -126,7 +126,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1415).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15285).AvatarDuoPile, obj3);
+      items[1] = closure_5(size(15287).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_6(size(5929).Stack, obj, children);
     })

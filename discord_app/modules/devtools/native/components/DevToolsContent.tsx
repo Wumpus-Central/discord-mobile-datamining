@@ -1,15 +1,15 @@
-// === Module 17192: DevToolsContent ===
+// === Module 17194: DevToolsContent ===
 
-// Module 17192 (DevToolsContent)
+// Module 17194 (DevToolsContent)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import HapticUtils from "HapticUtils" /* 5129 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import Pressables from "Pressables" /* 7030 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15821 */;
-import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 17193 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 17194 */;
-import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 17196 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15823 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 17195 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 17196 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 17198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BuildOverrideStore from "BuildOverrideStore" /* 11894 */;

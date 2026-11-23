@@ -1,6 +1,6 @@
-// === Module 18726: useSuggestedSearches ===
+// === Module 18728: useSuggestedSearches ===
 
-// Module 18726 (useSuggestedSearches)
+// Module 18728 (useSuggestedSearches)
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13219 */;
 import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13221 */;
 import noop from "module_19" /* 19 */;

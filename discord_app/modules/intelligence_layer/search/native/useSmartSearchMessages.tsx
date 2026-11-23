@@ -1,6 +1,6 @@
-// === Module 18823: useSmartSearchMessages ===
+// === Module 18825: useSmartSearchMessages ===
 
-// Module 18823 (useSmartSearchMessages)
+// Module 18825 (useSmartSearchMessages)
 import SmartSearchUtils from "SmartSearchUtils" /* 13200 */;
 import SmartSearchTypes from "SmartSearchTypes" /* 13202 */;
 import noop from "module_19" /* 19 */;

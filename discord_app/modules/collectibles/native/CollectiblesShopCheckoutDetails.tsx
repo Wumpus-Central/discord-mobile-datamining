@@ -274,7 +274,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
     tmp4 = importDefault;
   }
-  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(575).space.PX_16, backgroundColor: "__workletHash" } };
+  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(575).space.PX_16, backgroundColor: "__closure" } };
   return obj;
 });
 createStyles = fn(4913);

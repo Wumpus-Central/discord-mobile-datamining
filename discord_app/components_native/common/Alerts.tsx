@@ -1,6 +1,6 @@
-// === Module 19044: Alerts ===
+// === Module 19046: Alerts ===
 
-// Module 19044 (Alerts)
+// Module 19046 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
@@ -9,11 +9,11 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import OverlayViewDefault from "OverlayView" /* 5867 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 5924 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7076 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19045 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19047 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15030 */;
-import PermissionVADStore from "PermissionVADStore" /* 15636 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15032 */;
+import PermissionVADStore from "PermissionVADStore" /* 15638 */;
 import AlertStore from "AlertStore" /* 10529 */;
 
 const require = globalThis.__r;
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "fill", renderKey: "channel", props: "justifyContent" });
+let closure_23 = Object.freeze({ renderAlert: "np", renderKey: "channelId", props: "getCurrentUser" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "fill", renderKey: "channel", props: "justifyContent" };
+        return { renderAlert: "np", renderKey: "channelId", props: "getCurrentUser" };
       }
     }
   });

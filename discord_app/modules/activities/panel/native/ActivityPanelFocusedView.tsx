@@ -1,13 +1,13 @@
-// === Module 19188: ActivityPanelFocusedView ===
+// === Module 19190: ActivityPanelFocusedView ===
 
-// Module 19188 (ActivityPanelFocusedView)
+// Module 19190 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10783 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18235 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19181 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18237 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19183 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
@@ -342,7 +342,7 @@ class BaseActivityPanelFocusedView {
 }
 const ActivityPanelConstants = fn(5539);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8, ActivityPanelModes: closure_9 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19034);
+const ActivityPanelNativeConstants = fn(19036);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12 } = ActivityPanelNativeConstants);
 let ThemeTypes = fn(1071).ThemeTypes;
 const IS_IOS = fn(11750).IS_IOS;

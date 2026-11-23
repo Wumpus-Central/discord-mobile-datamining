@@ -20,7 +20,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import DetectableGameStore from "DetectableGameStore" /* 2158 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 14756 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 14758 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
 import SessionsStore from "SessionsStore" /* 5656 */;
 

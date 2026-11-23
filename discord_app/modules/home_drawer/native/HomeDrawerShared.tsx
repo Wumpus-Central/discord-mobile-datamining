@@ -1,6 +1,6 @@
-// === Module 17884: HomeDrawerShared ===
+// === Module 17886: HomeDrawerShared ===
 
-// Module 17884 (HomeDrawerShared)
+// Module 17886 (HomeDrawerShared)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

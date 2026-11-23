@@ -1,13 +1,13 @@
-// === Module 19425: AcceptInviteManager ===
+// === Module 19427: AcceptInviteManager ===
 
-// Module 19425 (AcceptInviteManager)
+// Module 19427 (AcceptInviteManager)
 import router_utils from "router_utils" /* 1098 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 8437 */;
 import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9881 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 19427 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 19429 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;
@@ -135,7 +135,7 @@ const prototype = function AcceptInviteManager() {
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19426, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19428, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }

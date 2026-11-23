@@ -1,12 +1,12 @@
-// === Module 15843: SaturationValueColorPicker ===
+// === Module 15845: SaturationValueColorPicker ===
 
-// Module 15843 (SaturationValueColorPicker)
+// Module 15845 (SaturationValueColorPicker)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 15841 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 15843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

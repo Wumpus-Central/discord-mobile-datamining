@@ -1,6 +1,6 @@
-// === Module 16228: FamilyCenterModalAccept ===
+// === Module 16230: FamilyCenterModalAccept ===
 
-// Module 16228 (FamilyCenterModalAccept)
+// Module 16230 (FamilyCenterModalAccept)
 import nativeDefault from "native" /* 575 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
@@ -31,12 +31,12 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   const obj = otherUser(12467);
   obj5.iconSrc = acceptLinkRequest(5610);
   obj5.iconStyles = tmp.icon;
-  const items1 = [closure_5(acceptLinkRequest(16225), obj5), , ];
+  const items1 = [closure_5(acceptLinkRequest(16227), obj5), , ];
   const obj6 = { style: tmp.headerText, variant: "body-lg/semibold", children: null };
   let intl = otherUser(1112).intl;
   obj6.children = intl.string(acceptLinkRequest(2824).rlNJwZ);
   items1[1] = closure_5(otherUser(5504).Text, obj6);
-  items1[2] = closure_5(acceptLinkRequest(16192), { user: otherUser });
+  items1[2] = closure_5(acceptLinkRequest(16194), { user: otherUser });
   obj4.children = items1;
   const items2 = [closure_6(View, obj4), closure_5(acceptLinkRequest(12469), {}), ];
   const obj7 = { style: tmp.disclaimer, variant: "body-xs/normal", color: "text-default", children: null };

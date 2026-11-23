@@ -1,6 +1,6 @@
-// === Module 19286: ActivityAccessibilityLayer ===
+// === Module 19288: ActivityAccessibilityLayer ===
 
-// Module 19286 (ActivityAccessibilityLayer)
+// Module 19288 (ActivityAccessibilityLayer)
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5143 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5923 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 17818: WaterwheelsDiscoverCard ===
+// === Module 17820: WaterwheelsDiscoverCard ===
 
-// Module 17818 (WaterwheelsDiscoverCard)
+// Module 17820 (WaterwheelsDiscoverCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2643 from "module_2643" /* 2643 */;
@@ -11,11 +11,11 @@ import GameControllerIcon from "GameControllerIcon" /* 7040 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 9755 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
 import ServerIcon from "ServerIcon" /* 12471 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 17539 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17806 */;
-import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 17807 */;
-import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17808 */;
-import selectDiscoverServerAction from "selectDiscoverServerAction" /* 17819 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 17541 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17808 */;
+import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 17809 */;
+import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17810 */;
+import selectDiscoverServerAction from "selectDiscoverServerAction" /* 17821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2140 */;
@@ -495,7 +495,7 @@ function GamePoster(game) {
     const obj = { type: WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME, value: { game_id: game.gameId } };
     return onAction(obj, "identity");
   };
-  const items3 = [closure_11(game(17820).GameCoverFromURLs, { gameId: game.gameId, name: game.name, coverUrl: game.coverUrl, iconGame: stateFromStores, width: 114, aspectRatio: 0.6909090909090909 }), ];
+  const items3 = [closure_11(game(17822).GameCoverFromURLs, { gameId: game.gameId, name: game.name, coverUrl: game.coverUrl, iconGame: stateFromStores, width: 114, aspectRatio: 0.6909090909090909 }), ];
   let tmp9Result = null;
   if (null != game.l30Rank) {
     const obj5 = { style: tmp.posterRank, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };

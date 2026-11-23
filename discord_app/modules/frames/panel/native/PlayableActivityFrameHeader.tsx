@@ -1,6 +1,6 @@
-// === Module 19209: PlayableActivityFrameHeader ===
+// === Module 19211: PlayableActivityFrameHeader ===
 
-// Module 19209 (PlayableActivityFrameHeader)
+// Module 19211 (PlayableActivityFrameHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import leaveFrame from "leaveFrame" /* 6953 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;
 import IconButton from "IconButton" /* 7591 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 19189 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 19191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,9 +38,9 @@ export default function PlayableActivityFrameHeader(arg0) {
   ({ frameId: require, playable } = arg0);
   let setMode;
   const tmp = closure_9();
-  const tmp4 = setMode(19210)(playable.id);
+  const tmp4 = setMode(19212)(playable.id);
   let isClaimed = tmp4.isClaimed;
-  const context = noop.useContext(setMode(19204));
+  const context = noop.useContext(setMode(19206));
   setMode = context.setMode;
   ({ wrapperOffset, pipState } = context);
   const obj2 = { gesture: ActivityPanelHeader.useBaseActivityPanelHeaderContent({ landscape: false, setMode, wrapperOffset, pipState }).gesture, children: null };
@@ -48,7 +48,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   const obj4 = { style: tmp.handleWrapper, pointerEvents: "none", children: closure_7(View, { style: tmp.handle }) };
   items = [closure_7(View, obj4), , ];
   const obj6 = { style: tmp.info, children: null };
-  const items1 = [closure_7(setMode(16360), { isCompleted: isClaimed, totalSeconds: playable.rewardTimerSeconds, remainingSeconds: tmp4.remainingSeconds }), ];
+  const items1 = [closure_7(setMode(16362), { isCompleted: isClaimed, totalSeconds: playable.rewardTimerSeconds, remainingSeconds: tmp4.remainingSeconds }), ];
   const obj8 = { style: tmp.titleGroup, children: null };
   const obj9 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 1.25, style: tmp.textShadow, children: null };
   if (isClaimed) {

@@ -1,6 +1,6 @@
-// === Module 18025: SoundboardHooks ===
+// === Module 18027: SoundboardHooks ===
 
-// Module 18025 (SoundboardHooks)
+// Module 18027 (SoundboardHooks)
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(18018);
+const SoundboardStyleConstants = fn(18020);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");

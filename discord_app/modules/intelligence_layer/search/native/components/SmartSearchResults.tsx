@@ -1,9 +1,9 @@
-// === Module 18782: SmartSearchResults ===
+// === Module 18784: SmartSearchResults ===
 
-// Module 18782 (SmartSearchResults)
+// Module 18784 (SmartSearchResults)
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13219 */;
 import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13221 */;
-import SmartSearchCitation from "SmartSearchCitation" /* 18784 */;
+import SmartSearchCitation from "SmartSearchCitation" /* 18786 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

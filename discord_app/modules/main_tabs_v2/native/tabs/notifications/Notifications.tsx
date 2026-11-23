@@ -1,6 +1,6 @@
-// === Module 18040: notifications/Notifications ===
+// === Module 18042: notifications/Notifications ===
 
-// Module 18040 (notifications/Notifications)
+// Module 18042 (notifications/Notifications)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import native from "native" /* 4974 */;
@@ -14,13 +14,13 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 10432 */;
 import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13712 */;
-import useAppFrameDefault from "useAppFrame" /* 17513 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17533 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18041 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18042 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18043 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18047 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 18048 */;
+import useAppFrameDefault from "useAppFrame" /* 17515 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17535 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18043 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18044 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18045 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18049 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 18050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -183,7 +183,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1112).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1112).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(15969).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(15971).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(7030).PressableOpacity, obj3), , ];
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1112).intl;

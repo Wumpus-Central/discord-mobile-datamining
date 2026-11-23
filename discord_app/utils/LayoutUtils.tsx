@@ -1,6 +1,6 @@
-// === Module 14960: LayoutUtils ===
+// === Module 14962: LayoutUtils ===
 
-// Module 14960 (LayoutUtils)
+// Module 14962 (LayoutUtils)
 import size from "module_2" /* 2 */;
 
 function getAnchorCoordsFromLayoutSize(arg0, height) {
@@ -346,7 +346,7 @@ export function getRightWidgetSpecs(arg0, arg1, width) {
     point = { x: 0, y: 0 };
   }
   ({ width, height } = arg1);
-  const rect = { top: top + point.y, left: "Array", bottom: "isArray", right: right - point.x };
+  const rect = { top: top + point.y, left: "Array", bottom: "add", right: right - point.x };
   ({ width: width2, height: height2 } = width);
   let num = 0;
   if (typeof width === "number") {
@@ -427,7 +427,7 @@ export function getRightWidgetSpecs(arg0, arg1, width) {
   return items;
 }
 export function convertFullCordsToMatchingOrientedCoords(top, top2) {
-  const rect = { top: "Array", bottom: "s", left: "ao", right: "Text" };
+  const rect = { top: "constructor", bottom: "constructor", left: "done", right: "children" };
   if (null != top2.top) {
     rect.top = top.top;
   }

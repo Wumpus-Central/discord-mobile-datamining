@@ -1,6 +1,6 @@
-// === Module 18590: MaximizeIcon ===
+// === Module 18592: MaximizeIcon ===
 
-// Module 18590 (MaximizeIcon)
+// Module 18592 (MaximizeIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5599 */;
 import _mod12817 from "module_12817" /* 12817 */;

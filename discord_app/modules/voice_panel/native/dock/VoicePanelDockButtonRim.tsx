@@ -1,6 +1,6 @@
-// === Module 18037: VoicePanelDockButtonRim ===
+// === Module 18039: VoicePanelDockButtonRim ===
 
-// Module 18037 (VoicePanelDockButtonRim)
+// Module 18039 (VoicePanelDockButtonRim)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5123 */;
 import useToken from "useToken" /* 5477 */;

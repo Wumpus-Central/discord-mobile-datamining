@@ -1,16 +1,16 @@
-// === Module 18953: ChannelSettingsPermissionsOverrides ===
+// === Module 18955: ChannelSettingsPermissionsOverrides ===
 
-// Module 18953 (ChannelSettingsPermissionsOverrides)
+// Module 18955 (ChannelSettingsPermissionsOverrides)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4770 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
 import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 12079 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18574 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelPermissionOverwriteEditStore from "ChannelPermissionOverwriteEditStore" /* 18954 */;
+import ChannelPermissionOverwriteEditStore from "ChannelPermissionOverwriteEditStore" /* 18956 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildRoleStore from "GuildRoleStore" /* 4819 */;
 import GuildStore from "GuildStore" /* 4784 */;
@@ -328,7 +328,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
       children: permissions.map((description, index) => {
         ({ title, flag } = description);
         const tmp = closure_1_8(flag);
-        const obj = { variant: "body-xs/medium", color: "text-subtle", children: channelId(18578).renderDescription(description.description) };
+        const obj = { variant: "body-xs/medium", color: "text-subtle", children: channelId(18580).renderDescription(description.description) };
         items = [closure_2_20(channelId(5504).Text, obj), ];
         let tmp5Result = null;
         if (false !== tmp) {
@@ -339,13 +339,13 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           }
         }
         items[1] = tmp5Result;
-        const obj2 = channelId(18578);
+        const obj2 = channelId(18580);
         const tmp3Result = closure_2_22(closure_2_21, { children: items });
         const tmp6Result = channelId(1378);
         const obj4 = { accessible: channelId(1378).isAndroid() || undefined, disabled: false !== tmp, label: title, subLabel: tmp3Result, trailing: null };
         const obj5 = { channelId, overwriteId, flag, permissionTitle: title, savedValue: null, disabled: null, onValueChange: null };
         const tmp10 = channelId(1378).isAndroid() || undefined;
-        obj5.savedValue = channelId(18955).getChannelPermissionOverwriteValue(permissionOverwrites.permissionOverwrites[overwriteId], flag);
+        obj5.savedValue = channelId(18957).getChannelPermissionOverwriteValue(permissionOverwrites.permissionOverwrites[overwriteId], flag);
         obj5.disabled = false !== tmp;
         obj5.onValueChange = onValueChange;
         obj4.trailing = closure_2_20(closure_2_24, obj5);

@@ -1,6 +1,6 @@
-// === Module 19238: useExternalPIPModeRestore ===
+// === Module 19240: useExternalPIPModeRestore ===
 
-// Module 19238 (useExternalPIPModeRestore)
+// Module 19240 (useExternalPIPModeRestore)
 import noop from "module_19" /* 19 */;
 
 const VoicePanelModes = fn(11750).VoicePanelModes;

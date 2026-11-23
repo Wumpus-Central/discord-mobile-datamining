@@ -1,6 +1,6 @@
-// === Module 14686: EventDetailRsvpSheet ===
+// === Module 14688: EventDetailRsvpSheet ===
 
-// Module 14686 (EventDetailRsvpSheet)
+// Module 14688 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import BottomSheetModal from "BottomSheetModal" /* 5145 */;
@@ -9,7 +9,7 @@ import FastImageDefault from "FastImage" /* 5600 */;
 import Form from "Form" /* 7709 */;
 import StageSparkleDefault from "StageSparkle" /* 8035 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
-import _modDef14687 from "module_14687" /* 14687 */;
+import _modDef14689 from "module_14689" /* 14689 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5651 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -21,7 +21,7 @@ function EmptyDisplay(arg0) {
   const obj = { style: null, children: null };
   items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef14687 };
+  const obj2 = { icon: _modDef14689 };
   const items1 = [metroImportDefault(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React5(View, obj);
@@ -46,7 +46,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef14687, style: tmp.remainingUsersIcon };
+  const obj3 = { source: _modDef14689, style: tmp.remainingUsersIcon };
   obj2.children = metroImportDefault(FastImageDefault, obj3);
   obj.leading = metroImportDefault(View, obj2);
   const intl = util.intl;

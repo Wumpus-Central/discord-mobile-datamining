@@ -1,6 +1,6 @@
-// === Module 17731: useConjureGuildUnreadSummary ===
+// === Module 17733: useConjureGuildUnreadSummary ===
 
-// Module 17731 (useConjureGuildUnreadSummary)
+// Module 17733 (useConjureGuildUnreadSummary)
 import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6619 */;

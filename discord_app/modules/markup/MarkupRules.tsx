@@ -18,7 +18,7 @@ import MarkupListRuleDefault from "MarkupListRule" /* 8804 */;
 import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8805 */;
 import TimestampUtils from "TimestampUtils" /* 8821 */;
 import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8823 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 15045 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 15047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

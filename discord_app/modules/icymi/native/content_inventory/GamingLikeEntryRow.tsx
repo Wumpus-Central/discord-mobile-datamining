@@ -1,6 +1,6 @@
-// === Module 18140: GamingLikeEntryRow ===
+// === Module 18142: GamingLikeEntryRow ===
 
-// Module 18140 (GamingLikeEntryRow)
+// Module 18142 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import utils from "utils" /* 8010 */;
@@ -69,7 +69,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(18091);
+const createICYMIStyles = fn(18093);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -144,7 +144,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(18141, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(18143, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

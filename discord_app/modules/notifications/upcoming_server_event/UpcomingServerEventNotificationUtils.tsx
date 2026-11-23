@@ -1,6 +1,6 @@
-// === Module 16934: UpcomingServerEventNotificationUtils ===
+// === Module 16936: UpcomingServerEventNotificationUtils ===
 
-// Module 16934 (UpcomingServerEventNotificationUtils)
+// Module 16936 (UpcomingServerEventNotificationUtils)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import UserSettings from "UserSettings" /* 4738 */;

@@ -1,6 +1,6 @@
-// === Module 18644: conjureHomeShowcaseTiles ===
+// === Module 18646: conjureHomeShowcaseTiles ===
 
-// Module 18644 (conjureHomeShowcaseTiles)
+// Module 18646 (conjureHomeShowcaseTiles)
 import _modDef4190 from "module_4190" /* 4190 */;
 import size from "module_2" /* 2 */;
 

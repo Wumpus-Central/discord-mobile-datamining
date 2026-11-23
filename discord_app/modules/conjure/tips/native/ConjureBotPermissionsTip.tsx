@@ -1,8 +1,8 @@
-// === Module 18456: ConjureBotPermissionsTip ===
+// === Module 18458: ConjureBotPermissionsTip ===
 
-// Module 18456 (ConjureBotPermissionsTip)
+// Module 18458 (ConjureBotPermissionsTip)
 import _modDef4190 from "module_4190" /* 4190 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 18457 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 18459 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -74,7 +74,7 @@ function BotPermissionsHint(projectId) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(18461).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(18463).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

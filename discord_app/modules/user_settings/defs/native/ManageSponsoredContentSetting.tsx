@@ -1,6 +1,6 @@
-// === Module 17355: ManageSponsoredContentSetting ===
+// === Module 17357: ManageSponsoredContentSetting ===
 
-// Module 17355 (ManageSponsoredContentSetting)
+// Module 17357 (ManageSponsoredContentSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import _modDef2276 from "module_2276" /* 2276 */;

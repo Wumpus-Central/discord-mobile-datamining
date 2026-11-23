@@ -1,13 +1,13 @@
-// === Module 17968: YouBarName ===
+// === Module 17970: YouBarName ===
 
-// Module 17968 (YouBarName)
+// Module 17970 (YouBarName)
 import nativeDefault from "native" /* 575 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9454 */;
 import GuildTagDefault from "GuildTag" /* 9743 */;
 import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 13509 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 13510 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17969 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17971 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

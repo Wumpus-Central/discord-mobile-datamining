@@ -1,6 +1,6 @@
-// === Module 18539: ? ===
+// === Module 18541: ? ===
 
-// Module 18539
+// Module 18541
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-2x.png.js");

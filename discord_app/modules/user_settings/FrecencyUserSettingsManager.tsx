@@ -1,6 +1,6 @@
-// === Module 19513: FrecencyUserSettingsManager ===
+// === Module 19515: FrecencyUserSettingsManager ===
 
-// Module 19513 (FrecencyUserSettingsManager)
+// Module 19515 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1088 */;
 import frecency_user_settings from "frecency_user_settings" /* 1231 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1232 */;

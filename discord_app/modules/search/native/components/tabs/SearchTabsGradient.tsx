@@ -1,6 +1,6 @@
-// === Module 18828: SearchTabsGradient ===
+// === Module 18830: SearchTabsGradient ===
 
-// Module 18828 (SearchTabsGradient)
+// Module 18830 (SearchTabsGradient)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import TabsGradientDefault from "TabsGradient" /* 13714 */;

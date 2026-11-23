@@ -1,7 +1,7 @@
-// === Module 18241: useConjurePreviewAddBotPrompt ===
+// === Module 18243: useConjurePreviewAddBotPrompt ===
 
-// Module 18241 (useConjurePreviewAddBotPrompt)
-import conjurePreviewAddBotPromptConnection from "conjurePreviewAddBotPromptConnection" /* 14741 */;
+// Module 18243 (useConjurePreviewAddBotPrompt)
+import conjurePreviewAddBotPromptConnection from "conjurePreviewAddBotPromptConnection" /* 14743 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -84,10 +84,10 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
           c3 = 0;
           closure_128_4(false);
           if (obj.conjurePreviewBotAdded(closure_128_0)) {
-            const result = tmp3(14741).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
-            const obj2 = tmp3(14741);
+            const result = tmp3(14743).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
+            const obj2 = tmp3(14743);
           }
-          obj = tmp3(14741);
+          obj = tmp3(14743);
         }
         c3 = 0;
         closure_128_4(false);

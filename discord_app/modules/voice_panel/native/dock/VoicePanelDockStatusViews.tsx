@@ -1,6 +1,6 @@
-// === Module 18009: VoicePanelDockStatusViews ===
+// === Module 18011: VoicePanelDockStatusViews ===
 
-// Module 18009 (VoicePanelDockStatusViews)
+// Module 18011 (VoicePanelDockStatusViews)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
@@ -25,7 +25,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-let closure_13 = fn(18008).useDockUserPlayingSoundboardId;
+let closure_13 = fn(18010).useDockUserPlayingSoundboardId;
 const VoicePanelDockConstants = fn(11768);
 ({ DOCK_FADE_TIMING: closure_14, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
@@ -184,11 +184,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_19();
-  const tmp4Result = guildId(18010)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const tmp4Result = guildId(18012)(channelId(575).Shadow.SHADOW_MEDIUM);
   const context = noop.useContext(guildId(11749));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(18010);
+  const tmp4 = guildId(18012);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -222,7 +222,7 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(18011);
+    const tmp2Result = tmp2(18013);
     obj6.size = tmp5(7322).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
     obj5.children = closure_16(tmp2(7322), obj6);
@@ -240,9 +240,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1186).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_16(tmp5(1186).Avatar, obj10);
-      obj7.children = closure_16(tmp2(18011), obj9);
+      obj7.children = closure_16(tmp2(18013), obj9);
       tmp13 = closure_16(View, obj7);
-      const tmp2Result4 = tmp2(18011);
+      const tmp2Result4 = tmp2(18013);
     }
   }
   return tmp13;

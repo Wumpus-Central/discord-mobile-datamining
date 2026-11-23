@@ -1,6 +1,6 @@
-// === Module 17806: entry_data/ErrorBoundary ===
+// === Module 17808: entry_data/ErrorBoundary ===
 
-// Module 17806 (entry_data/ErrorBoundary)
+// Module 17808 (entry_data/ErrorBoundary)
 import _modAll19 from "module_19" /* 19 */;
 
 const PureComponent = _modAll19.PureComponent;

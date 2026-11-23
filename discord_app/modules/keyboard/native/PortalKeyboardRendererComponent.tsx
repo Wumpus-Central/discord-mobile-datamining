@@ -1,6 +1,6 @@
-// === Module 18407: PortalKeyboardRendererComponent ===
+// === Module 18409: PortalKeyboardRendererComponent ===
 
-// Module 18407 (PortalKeyboardRendererComponent)
+// Module 18409 (PortalKeyboardRendererComponent)
 import useBackPressHandler from "useBackPressHandler" /* 5924 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6843 */;
 import noop from "module_19" /* 19 */;
@@ -57,10 +57,10 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
         return jsx(chatInputRef(12903), { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(10676).AppLauncherEntrypoint.TEXT });
       } else if (tmp(1626).KeyboardTypes.MEDIA === type) {
         const obj3 = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(18408), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(18410), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else if (tmp(1626).KeyboardTypes.EXPRESSION === type) {
         let obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(18414), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(18416), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else {
         return null;
       }

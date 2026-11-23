@@ -1,6 +1,6 @@
-// === Module 19343: VoicePanelVisualEffectView ===
+// === Module 19345: VoicePanelVisualEffectView ===
 
-// Module 19343 (VoicePanelVisualEffectView)
+// Module 19345 (VoicePanelVisualEffectView)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;

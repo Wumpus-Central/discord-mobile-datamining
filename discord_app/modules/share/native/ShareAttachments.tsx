@@ -1,6 +1,6 @@
-// === Module 15115: ShareAttachments ===
+// === Module 15117: ShareAttachments ===
 
-// Module 15115 (ShareAttachments)
+// Module 15117 (ShareAttachments)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;

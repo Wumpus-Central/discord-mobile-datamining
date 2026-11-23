@@ -1,6 +1,6 @@
-// === Module 16293: defs/QuestHomeSetting ===
+// === Module 16295: defs/QuestHomeSetting ===
 
-// Module 16293 (defs/QuestHomeSetting)
+// Module 16295 (defs/QuestHomeSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import QuestContent from "QuestContent" /* 6563 */;

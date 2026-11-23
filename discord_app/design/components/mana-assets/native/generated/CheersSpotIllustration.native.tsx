@@ -1,19 +1,19 @@
-// === Module 17845: CheersSpotIllustration ===
+// === Module 17847: CheersSpotIllustration ===
 
-// Module 17845 (CheersSpotIllustration)
+// Module 17847 (CheersSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef17846 from "module_17846" /* 17846 */;
-import _modDef17847 from "module_17847" /* 17847 */;
 import _modDef17848 from "module_17848" /* 17848 */;
+import _modDef17849 from "module_17849" /* 17849 */;
+import _modDef17850 from "module_17850" /* 17850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17846 }, 3: null };
-let obj2 = { uri: _modDef17846 };
-obj[2] = { uri: _modDef17847 };
-const obj3 = { uri: _modDef17847 };
-obj[3] = { uri: _modDef17848 };
+let obj = { 1: null, 2: { uri: _modDef17848 }, 3: null };
+let obj2 = { uri: _modDef17848 };
+obj[2] = { uri: _modDef17849 };
+const obj3 = { uri: _modDef17849 };
+obj[3] = { uri: _modDef17850 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CheersSpotIllustration.native.tsx");
 

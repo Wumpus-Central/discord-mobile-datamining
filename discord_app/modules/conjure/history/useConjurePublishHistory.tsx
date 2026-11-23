@@ -1,10 +1,10 @@
-// === Module 18370: useConjurePublishHistory ===
+// === Module 18372: useConjurePublishHistory ===
 
-// Module 18370 (useConjurePublishHistory)
+// Module 18372 (useConjurePublishHistory)
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import _modDef4190 from "module_4190" /* 4190 */;
-import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 18371 */;
+import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 18373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

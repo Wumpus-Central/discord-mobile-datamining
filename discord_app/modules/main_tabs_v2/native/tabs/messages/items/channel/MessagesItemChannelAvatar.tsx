@@ -1,6 +1,6 @@
-// === Module 17554: MessagesItemChannelAvatar ===
+// === Module 17556: MessagesItemChannelAvatar ===
 
-// Module 17554 (MessagesItemChannelAvatar)
+// Module 17556 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 575 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10124 */;
 import noop from "module_19" /* 19 */;
@@ -105,7 +105,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "27280044ce9f3757cd4c92026be2b7b9", style: "hi.messages.27280044ce9f3757cd4c92026be2b7b9.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "a0f392fd1783f2092007b3d046af1539", style: "zh-CN.messages.a0f392fd1783f2092007b3d046af1539.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -116,7 +116,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1186).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "27280044ce9f3757cd4c92026be2b7b9", style: "hi.messages.27280044ce9f3757cd4c92026be2b7b9.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
+      tmp11Result = jsx(tmp3(1186).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "a0f392fd1783f2092007b3d046af1539", style: "zh-CN.messages.a0f392fd1783f2092007b3d046af1539.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
     }
   }
   return tmp11Result;

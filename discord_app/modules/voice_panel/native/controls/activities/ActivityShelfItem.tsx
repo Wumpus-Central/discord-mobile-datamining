@@ -1,6 +1,6 @@
-// === Module 19292: ActivityShelfItem ===
+// === Module 19294: ActivityShelfItem ===
 
-// Module 19292 (ActivityShelfItem)
+// Module 19294 (ActivityShelfItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -18,10 +18,10 @@ import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12953 */;
 import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 13010 */;
 import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 13017 */;
 import _modDef13732 from "module_13732" /* 13732 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19289 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19290 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19291 */;
-import _modDef19293 from "module_19293" /* 19293 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19291 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19292 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19293 */;
+import _modDef19295 from "module_19295" /* 19295 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -162,7 +162,7 @@ export default function ActivityShelfItem(arg0) {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef19293, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef19295, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

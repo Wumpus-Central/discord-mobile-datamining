@@ -1,6 +1,6 @@
-// === Module 15386: NewTag ===
+// === Module 15388: NewTag ===
 
-// Module 15386 (NewTag)
+// Module 15388 (NewTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;

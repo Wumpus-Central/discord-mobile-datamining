@@ -1,10 +1,10 @@
-// === Module 19559: MessageCodedLinkManager ===
+// === Module 19561: MessageCodedLinkManager ===
 
-// Module 19559 (MessageCodedLinkManager)
+// Module 19561 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 5631 */;
-import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 19567 */;
-import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 19570 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19571 */;
+import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 19569 */;
+import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 19572 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 8052 */;
 import InviteStore from "InviteStore" /* 5632 */;
@@ -169,7 +169,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj3 = { value, done: true };
                                                         return obj3;
                                                       } else {
-                                                        const useGameOrganizationInviteFetch = tmp4(19569).useGameOrganizationInviteFetch;
+                                                        const useGameOrganizationInviteFetch = tmp4(19571).useGameOrganizationInviteFetch;
                                                         items = [code];
                                                         v1 = 1;
                                                         dependencyMap = 1;
@@ -387,7 +387,7 @@ function resolveMessageCodedLinks(content) {
                                                             const obj3 = { value, done: true };
                                                             return obj3;
                                                           } else {
-                                                            const useGameOrganizationInviteFetch = tmp4(19569).useGameOrganizationInviteFetch;
+                                                            const useGameOrganizationInviteFetch = tmp4(19571).useGameOrganizationInviteFetch;
                                                             items = [code];
                                                             v1 = 1;
                                                             dependencyMap = 1;

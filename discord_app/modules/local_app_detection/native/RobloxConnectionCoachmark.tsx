@@ -1,6 +1,6 @@
-// === Module 19060: RobloxConnectionCoachmark ===
+// === Module 19062: RobloxConnectionCoachmark ===
 
-// Module 19060 (RobloxConnectionCoachmark)
+// Module 19062 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -18,7 +18,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6689 */;
 import UserStore from "UserStore" /* 1386 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14991 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14993 */;
 
 require = fn;
 function RobloxIcon(theme) {
@@ -132,7 +132,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 };
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(14992).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(14994).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

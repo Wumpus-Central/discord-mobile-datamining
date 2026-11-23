@@ -1,9 +1,9 @@
-// === Module 18990: ContextMenuCommandNavigator ===
+// === Module 18992: ContextMenuCommandNavigator ===
 
-// Module 18990 (ContextMenuCommandNavigator)
+// Module 18992 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 575 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
-import AppFrameContainerDefault from "AppFrameContainer" /* 18888 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 18890 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -57,7 +57,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(18991).default;
+    return closure_0(18993).default;
   };
   items = [
     closure_4(Screen, obj4),
@@ -72,7 +72,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(18993).default;
+        return closure_0(18995).default;
       }
     })
   ];

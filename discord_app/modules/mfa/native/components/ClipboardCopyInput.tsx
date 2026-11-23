@@ -1,6 +1,6 @@
-// === Module 17098: ClipboardCopyInput ===
+// === Module 17100: ClipboardCopyInput ===
 
-// Module 17098 (ClipboardCopyInput)
+// Module 17100 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2118 */;

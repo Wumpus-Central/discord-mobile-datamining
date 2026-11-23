@@ -1,6 +1,6 @@
-// === Module 19752: AuditLogUtils ===
+// === Module 19754: AuditLogUtils ===
 
-// Module 19752 (AuditLogUtils)
+// Module 19754 (AuditLogUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
@@ -13,8 +13,8 @@ import UserUtilsDefault from "UserUtils" /* 4969 */;
 import useChannelName from "useChannelName" /* 5529 */;
 import TimeUtils from "TimeUtils" /* 5662 */;
 import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8054 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19715 */;
-import GuildFeedItemTypes from "GuildFeedItemTypes" /* 19753 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19717 */;
+import GuildFeedItemTypes from "GuildFeedItemTypes" /* 19755 */;
 import EmojiStore from "EmojiStore" /* 6573 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7471 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6684 */;
@@ -24,7 +24,7 @@ import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildRoleStore from "GuildRoleStore" /* 4819 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1386 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19750 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19752 */;
 
 require = fn;
 function getPermissionChanges(oldValue, newValue) {
@@ -241,7 +241,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(19751).AuditLogChange;
+const AuditLogChange = fn(19753).AuditLogChange;
 const Constants = fn(1071);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;

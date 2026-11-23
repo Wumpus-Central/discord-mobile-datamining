@@ -1,6 +1,6 @@
-// === Module 15875: useHexagonCampaignDisplayNameStyleToggle ===
+// === Module 15877: useHexagonCampaignDisplayNameStyleToggle ===
 
-// Module 15875 (useHexagonCampaignDisplayNameStyleToggle)
+// Module 15877 (useHexagonCampaignDisplayNameStyleToggle)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4941 */;
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6342 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8909 */;

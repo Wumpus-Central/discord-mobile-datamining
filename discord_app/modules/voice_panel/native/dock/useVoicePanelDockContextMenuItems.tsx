@@ -1,6 +1,6 @@
-// === Module 17985: useVoicePanelDockContextMenuItems ===
+// === Module 17987: useVoicePanelDockContextMenuItems ===
 
-// Module 17985 (useVoicePanelDockContextMenuItems)
+// Module 17987 (useVoicePanelDockContextMenuItems)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import util from "util" /* 1112 */;
 import _modDef3376 from "module_3376" /* 3376 */;
@@ -8,11 +8,11 @@ import UserPlusIcon from "UserPlusIcon" /* 5603 */;
 import ChatIcon from "ChatIcon" /* 7672 */;
 import SettingsIcon from "SettingsIcon" /* 10371 */;
 import VideoIcon2 from "VideoIcon" /* 11126 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14508 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17991 */;
-import MobilePhoneXIcon from "MobilePhoneXIcon" /* 17992 */;
-import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 17994 */;
-import ActivitiesIcon from "ActivitiesIcon" /* 17996 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14510 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17993 */;
+import MobilePhoneXIcon from "MobilePhoneXIcon" /* 17994 */;
+import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 17996 */;
+import ActivitiesIcon from "ActivitiesIcon" /* 17998 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

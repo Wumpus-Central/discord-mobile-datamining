@@ -1,6 +1,6 @@
-// === Module 19310: VoicePanelSystemUIManager ===
+// === Module 19312: VoicePanelSystemUIManager ===
 
-// Module 19310 (VoicePanelSystemUIManager)
+// Module 19312 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
 import HomeIndicatorDefault from "HomeIndicator" /* 10606 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;

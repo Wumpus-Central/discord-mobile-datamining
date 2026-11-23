@@ -1,6 +1,6 @@
-// === Module 14523: UserProfileGameFriendActionSheet ===
+// === Module 14525: UserProfileGameFriendActionSheet ===
 
-// Module 14523 (UserProfileGameFriendActionSheet)
+// Module 14525 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 10247 */;

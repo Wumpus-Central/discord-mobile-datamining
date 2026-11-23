@@ -1,6 +1,6 @@
-// === Module 18550: ConjureTaskOutcome ===
+// === Module 18552: ConjureTaskOutcome ===
 
-// Module 18550 (ConjureTaskOutcome)
+// Module 18552 (ConjureTaskOutcome)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import ConjureDuration from "ConjureDuration" /* 12328 */;

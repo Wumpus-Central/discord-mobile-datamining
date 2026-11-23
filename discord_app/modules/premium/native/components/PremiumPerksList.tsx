@@ -1,6 +1,6 @@
-// === Module 17119: PremiumPerksList ===
+// === Module 17121: PremiumPerksList ===
 
-// Module 17119 (PremiumPerksList)
+// Module 17121 (PremiumPerksList)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import noop from "module_19" /* 19 */;

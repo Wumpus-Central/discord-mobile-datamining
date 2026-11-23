@@ -1,6 +1,6 @@
-// === Module 18802: GroupDMNitroUpsellBanner ===
+// === Module 18804: GroupDMNitroUpsellBanner ===
 
-// Module 18802 (GroupDMNitroUpsellBanner)
+// Module 18804 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
@@ -12,7 +12,7 @@ import _modDef8840 from "module_8840" /* 8840 */;
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 12060 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 12063 */;
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 12067 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18803 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;

@@ -1,6 +1,6 @@
-// === Module 16584: useQuestDockAcceptQuest ===
+// === Module 16586: useQuestDockAcceptQuest ===
 
-// Module 16584 (useQuestDockAcceptQuest)
+// Module 16586 (useQuestDockAcceptQuest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 8404 */;

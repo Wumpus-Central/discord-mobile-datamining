@@ -1,6 +1,6 @@
-// === Module 17815: InterestGuildProfileBanner ===
+// === Module 17817: InterestGuildProfileBanner ===
 
-// Module 17815 (InterestGuildProfileBanner)
+// Module 17817 (InterestGuildProfileBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4776 */;

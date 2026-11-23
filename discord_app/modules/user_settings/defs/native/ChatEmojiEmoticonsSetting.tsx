@@ -1,6 +1,6 @@
-// === Module 16874: ChatEmojiEmoticonsSetting ===
+// === Module 16876: ChatEmojiEmoticonsSetting ===
 
-// Module 16874 (ChatEmojiEmoticonsSetting)
+// Module 16876 (ChatEmojiEmoticonsSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;

@@ -1,6 +1,6 @@
-// === Module 20204: AppShare ===
+// === Module 20206: AppShare ===
 
-// Module 20204 (AppShare)
+// Module 20206 (AppShare)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import useMountEffectDefault from "useMountEffect" /* 5474 */;
@@ -9,9 +9,9 @@ import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7802 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8268 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 9719 */;
-import ShareScreenDefault from "ShareScreen" /* 15111 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 15642 */;
-import AppToastContainerDefault from "AppToastContainer" /* 19110 */;
+import ShareScreenDefault from "ShareScreen" /* 15113 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 15644 */;
+import AppToastContainerDefault from "AppToastContainer" /* 19112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 fn(17).BackHandler;
 const AnalyticsTrackingStore = fn(8254);
-const ShareStore = fn(15635);
+const ShareStore = fn(15637);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_8 = fn(13284).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
@@ -120,7 +120,7 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_9(tmp9(7190).SceneLoadingIndicator, {}), , , ];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_9(tmp9(19037).ActionSheetContainer, obj5);
+    items5[1] = closure_9(tmp9(19039).ActionSheetContainer, obj5);
     items5[2] = closure_9(AppToastContainerDefault, { appChrome: false });
     items5[3] = closure_9(tmp9(5866).AlertModalContainer, {});
     obj3.children = items5;

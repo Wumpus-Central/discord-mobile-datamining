@@ -1,6 +1,6 @@
-// === Module 16282: PremiumTabBadgeCopy ===
+// === Module 16284: PremiumTabBadgeCopy ===
 
-// Module 16282 (PremiumTabBadgeCopy)
+// Module 16284 (PremiumTabBadgeCopy)
 import util from "util" /* 1112 */;
 import MarketingStringFormat from "MarketingStringFormat" /* 9199 */;
 import size from "module_2" /* 2 */;

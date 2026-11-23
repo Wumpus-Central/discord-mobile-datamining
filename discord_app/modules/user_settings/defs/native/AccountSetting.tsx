@@ -1,6 +1,6 @@
-// === Module 15974: AccountSetting ===
+// === Module 15976: AccountSetting ===
 
-// Module 15974 (AccountSetting)
+// Module 15976 (AccountSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import UserCircleIcon from "UserCircleIcon" /* 13050 */;

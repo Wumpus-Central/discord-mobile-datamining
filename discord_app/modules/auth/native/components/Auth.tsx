@@ -1,6 +1,6 @@
-// === Module 17445: Auth ===
+// === Module 17447: Auth ===
 
-// Module 17445 (Auth)
+// Module 17447 (Auth)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
@@ -10,13 +10,13 @@ import StackNavigator from "StackNavigator" /* 7153 */;
 import BackgroundImageDefault from "BackgroundImage" /* 7316 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7372 */;
 import WideAuthScrollContext from "WideAuthScrollContext" /* 7395 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 17446 */;
-import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 17452 */;
-import RegistrationUtils from "RegistrationUtils" /* 17457 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 17500 */;
-import _mod17501 from "module_17501" /* 17501 */;
-import AuthManagerDefault from "AuthManager" /* 17502 */;
-import useOrientationLockDefault from "useOrientationLock" /* 17511 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 17448 */;
+import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 17454 */;
+import RegistrationUtils from "RegistrationUtils" /* 17459 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 17502 */;
+import _mod17503 from "module_17503" /* 17503 */;
+import AuthManagerDefault from "AuthManager" /* 17504 */;
+import useOrientationLockDefault from "useOrientationLock" /* 17513 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MultiAccountStore from "MultiAccountStore" /* 13283 */;
@@ -64,7 +64,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod17501;
+  obj3.backgroundImageSource = _mod17503;
   const children = [closure_9(BackgroundImageDefault, obj3), , ];
   let tmp18Result = null;
   if (tmp5) {
@@ -145,7 +145,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17447);
+let RegistrationStepsUtils = fn(17449);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {

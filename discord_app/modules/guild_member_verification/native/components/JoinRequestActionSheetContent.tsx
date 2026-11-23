@@ -1,6 +1,6 @@
-// === Module 18227: JoinRequestActionSheetContent ===
+// === Module 18229: JoinRequestActionSheetContent ===
 
-// Module 18227 (JoinRequestActionSheetContent)
+// Module 18229 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -11,7 +11,7 @@ import CircleXIcon from "CircleXIcon" /* 7231 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7532 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
 import HourglassIcon from "HourglassIcon" /* 10346 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18225 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18227 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 
@@ -103,9 +103,9 @@ let closure_12 = noop.memo(function JoinRequestActionSheetHeader(user) {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(14520).PrimaryInfo, obj10), ];
+    const items4 = [closure_8(tmp6(14522).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(14626), obj11);
+    items4[1] = closure_8(joinRequest(14628), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
     items2[1] = closure_8(joinRequest(9050), obj7);
@@ -433,7 +433,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(18228), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(18230), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

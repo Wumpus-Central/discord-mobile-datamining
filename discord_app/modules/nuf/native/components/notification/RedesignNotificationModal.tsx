@@ -1,6 +1,6 @@
-// === Module 17504: RedesignNotificationModal ===
+// === Module 17506: RedesignNotificationModal ===
 
-// Module 17504 (RedesignNotificationModal)
+// Module 17506 (RedesignNotificationModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13281 */;

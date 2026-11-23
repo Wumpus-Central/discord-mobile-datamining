@@ -1,11 +1,11 @@
-// === Module 16988: DiskUsageManager ===
+// === Module 16990: DiskUsageManager ===
 
-// Module 16988 (DiskUsageManager)
+// Module 16990 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import NativeClientInfoModule from "NativeClientInfoModule" /* 1356 */;
 import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 8451 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16989 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16991 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1386 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;

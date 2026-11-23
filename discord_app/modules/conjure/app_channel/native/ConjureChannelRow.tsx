@@ -1,12 +1,12 @@
-// === Module 17730: ConjureChannelRow ===
+// === Module 17732: ConjureChannelRow ===
 
-// Module 17730 (ConjureChannelRow)
+// Module 17732 (ConjureChannelRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import BaseChannelItemDefault from "BaseChannelItem" /* 13248 */;
-import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 17731 */;
-import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 17732 */;
+import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 17733 */;
+import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 17734 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 16402: applyHexagonCampaignPerks ===
+// === Module 16404: applyHexagonCampaignPerks ===
 
-// Module 16402 (applyHexagonCampaignPerks)
+// Module 16404 (applyHexagonCampaignPerks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1386 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15634 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15636 */;
 
 const require = fn;
 let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
@@ -91,11 +91,11 @@ let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
   }
   const obj17 = {};
   obj17[closure_131_5.CLIENT_THEME] = () => {
-    dependencyMap(16405).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
+    dependencyMap(16407).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
     return Promise.resolve(true);
   };
   obj17[closure_131_5.APP_ICON] = () => dependencyMap(14047).setAppIcon(dependencyMap(4939).LimitedTimeAppIconIds.HEXAGON, closure_1_2, { showErrorToast: false });
-  obj17[closure_131_5.DISPLAY_NAME_STYLE] = () => dependencyMap(16408).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
+  obj17[closure_131_5.DISPLAY_NAME_STYLE] = () => dependencyMap(16410).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
   closure_130_10 = obj17;
   closure_130_11 = { previousPerkValues, premiumType: closure_130_2, isThemeSynced: closure_130_3, analyticsLocations: closure_130_4 };
   items = [];

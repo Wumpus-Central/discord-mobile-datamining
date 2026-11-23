@@ -1,20 +1,20 @@
-// === Module 18537: SpiderIllocon ===
+// === Module 18539: SpiderIllocon ===
 
-// Module 18537 (SpiderIllocon)
+// Module 18539 (SpiderIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18538 from "module_18538" /* 18538 */;
-import _modDef18539 from "module_18539" /* 18539 */;
 import _modDef18540 from "module_18540" /* 18540 */;
+import _modDef18541 from "module_18541" /* 18541 */;
+import _modDef18542 from "module_18542" /* 18542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18538 }, 3: null };
-const obj2 = { uri: _modDef18538 };
-obj[2] = { uri: _modDef18539 };
-const obj3 = { uri: _modDef18539 };
-obj[3] = { uri: _modDef18540 };
+let obj = { 1: null, 2: { uri: _modDef18540 }, 3: null };
+const obj2 = { uri: _modDef18540 };
+obj[2] = { uri: _modDef18541 };
+const obj3 = { uri: _modDef18541 };
+obj[3] = { uri: _modDef18542 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SpiderIllocon.native.tsx");
 

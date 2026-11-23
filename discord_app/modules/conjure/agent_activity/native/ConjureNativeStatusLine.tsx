@@ -1,6 +1,6 @@
-// === Module 18459: ConjureNativeStatusLine ===
+// === Module 18461: ConjureNativeStatusLine ===
 
-// Module 18459 (ConjureNativeStatusLine)
+// Module 18461 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import MagicWandIcon from "MagicWandIcon" /* 12329 */;

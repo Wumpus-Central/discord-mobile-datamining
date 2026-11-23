@@ -81,7 +81,7 @@ function OpenCriticReview(url) {
     opencritic = reviews.opencritic;
   }
   if (opencritic == null) {
-    opencritic = { topCriticRating: "fill", topCriticRatingCount: "channel", tier: "justifyContent" };
+    opencritic = { topCriticRating: "np", topCriticRatingCount: "channelId", tier: "getCurrentUser" };
   }
   ({ tier, topCriticRating } = opencritic);
   if (topCriticRating == null) {

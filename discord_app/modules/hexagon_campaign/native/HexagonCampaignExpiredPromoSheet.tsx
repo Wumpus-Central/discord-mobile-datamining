@@ -1,6 +1,6 @@
-// === Module 19100: HexagonCampaignExpiredPromoSheet ===
+// === Module 19102: HexagonCampaignExpiredPromoSheet ===
 
-// Module 19100 (HexagonCampaignExpiredPromoSheet)
+// Module 19102 (HexagonCampaignExpiredPromoSheet)
 import _modDef4597 from "module_4597" /* 4597 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -185,10 +185,10 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
   noop = noop.useCallback(() => {
-    const obj = closure_0(15852);
+    const obj = closure_0(15854);
     const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(6561).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8430).QuestContentCTA.LEARN_MORE });
     const obj2 = { content: closure_0(6561).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8430).QuestContentCTA.LEARN_MORE };
-    const result1 = closure_0(15872).openHexagonCampaignLearnMore();
+    const result1 = closure_0(15874).openHexagonCampaignLearnMore();
   }, []);
   let obj3 = { illustration: jsx(require("BundleAbstractUI").BundleAbstractUI, { accessible: false }), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;

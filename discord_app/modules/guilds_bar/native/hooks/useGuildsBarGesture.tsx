@@ -1,6 +1,6 @@
-// === Module 17862: useGuildsBarGesture ===
+// === Module 17864: useGuildsBarGesture ===
 
-// Module 17862 (useGuildsBarGesture)
+// Module 17864 (useGuildsBarGesture)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
@@ -17,7 +17,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import SortedGuildStore from "SortedGuildStore" /* 6550 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17863 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17865 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -244,7 +244,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "description", positionPercentage: false };
+    sectionItemFromPosition = { item: "disabled", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -277,7 +277,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6550).GuildsNodeType;
-const GuildsBarConstants = fn(17860);
+const GuildsBarConstants = fn(17862);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -592,7 +592,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "disabled", overSpecs: "isArray" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Path" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -992,7 +992,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("module_1653");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(16477).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(16479).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [dragDropInProgress, dragRegion, gestureState, callback3, state, callback4, callback2, callback1, listInsets, scrollPosition, scrollerRef, windowSize, gesture];
   const onFastListScroll = obj4.useCallback(() => {
     const gestureState = GuildsBarDnDStore.getState().gestureState;

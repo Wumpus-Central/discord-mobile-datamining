@@ -1,17 +1,17 @@
-// === Module 17918: CheckpointGuildsBarEntrypoint ===
+// === Module 17920: CheckpointGuildsBarEntrypoint ===
 
-// Module 17918 (CheckpointGuildsBarEntrypoint)
+// Module 17920 (CheckpointGuildsBarEntrypoint)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3440 from "module_3440" /* 3440 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17872 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 17884 */;
-import _modDef17921 from "module_17921" /* 17921 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17874 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 17886 */;
+import _modDef17923 from "module_17923" /* 17923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17863 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17865 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const CHECKPOINT_PRIMARY = fn(5969).CHECKPOINT_PRIMARY;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(17860).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(17862).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
@@ -94,7 +94,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
           } else {
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: tmp4(12497).openCheckpoint(tmp4(17919).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
+            const obj5 = { value: tmp4(12497).openCheckpoint(tmp4(17921).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -188,7 +188,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     const intl2 = util.intl;
     obj.description = intl2.string(_modDef3440.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef17921, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef17923, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
@@ -205,7 +205,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   const callback2 = obj3.useCallback(() => {
     coachmark(false);
   }, items9);
-  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: null, expandedChildren: "\u{1F469}", children: true };
+  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: null, expandedChildren: "\u{1F9CF}", children: true };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1112).intl;
   obj8.label = intl.string(_modDef3440["8hclXY"]);

@@ -1,6 +1,6 @@
-// === Module 18401: useConjureControlBar ===
+// === Module 18403: useConjureControlBar ===
 
-// Module 18401 (useConjureControlBar)
+// Module 18403 (useConjureControlBar)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureChatStore from "ConjureChatStore" /* 6925 */;

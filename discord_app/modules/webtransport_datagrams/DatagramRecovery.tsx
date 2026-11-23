@@ -1,6 +1,6 @@
-// === Module 14886: DatagramRecovery ===
+// === Module 14888: DatagramRecovery ===
 
-// Module 14886 (DatagramRecovery)
+// Module 14888 (DatagramRecovery)
 import BackoffDefault from "Backoff" /* 559 */;
 import size from "module_2" /* 2 */;
 

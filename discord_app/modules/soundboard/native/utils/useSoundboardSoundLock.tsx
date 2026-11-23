@@ -1,6 +1,6 @@
-// === Module 18028: useSoundboardSoundLock ===
+// === Module 18030: useSoundboardSoundLock ===
 
-// Module 18028 (useSoundboardSoundLock)
+// Module 18030 (useSoundboardSoundLock)
 import util from "util" /* 1112 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;

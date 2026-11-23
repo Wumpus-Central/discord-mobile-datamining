@@ -1,6 +1,6 @@
-// === Module 17608: HappeningNowCardVoice ===
+// === Module 17610: HappeningNowCardVoice ===
 
-// Module 17608 (HappeningNowCardVoice)
+// Module 17610 (HappeningNowCardVoice)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
@@ -34,7 +34,7 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(16699).HappeningNowCardTrackingType;
+let closure_8 = fn(16701).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

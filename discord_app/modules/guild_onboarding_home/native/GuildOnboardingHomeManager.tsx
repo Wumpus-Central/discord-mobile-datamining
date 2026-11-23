@@ -1,6 +1,6 @@
-// === Module 19516: GuildOnboardingHomeManager ===
+// === Module 19518: GuildOnboardingHomeManager ===
 
-// Module 19516 (GuildOnboardingHomeManager)
+// Module 19518 (GuildOnboardingHomeManager)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -91,7 +91,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(19517, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(19519, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);

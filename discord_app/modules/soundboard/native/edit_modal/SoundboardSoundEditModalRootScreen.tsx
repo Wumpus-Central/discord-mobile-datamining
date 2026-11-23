@@ -1,6 +1,6 @@
-// === Module 19802: SoundboardSoundEditModalRootScreen ===
+// === Module 19804: SoundboardSoundEditModalRootScreen ===
 
-// Module 19802 (SoundboardSoundEditModalRootScreen)
+// Module 19804 (SoundboardSoundEditModalRootScreen)
 import nativeDefault from "native" /* 575 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9063 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -83,7 +83,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
               obj5.localSource = tmp90;
               obj5.durationMs = durationMs;
               obj5.trim = trim;
-              ref.current = emojiId(19796).createSoundboardSound(obj5);
+              ref.current = emojiId(19798).createSoundboardSound(obj5);
               c6 = 3;
               c7 = 1;
               const obj8 = { value: ref.current, done: false };

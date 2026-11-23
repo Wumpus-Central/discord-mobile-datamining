@@ -1,12 +1,12 @@
-// === Module 14548: useConjureServerWidgetUpsell ===
+// === Module 14550: useConjureServerWidgetUpsell ===
 
-// Module 14548 (useConjureServerWidgetUpsell)
+// Module 14550 (useConjureServerWidgetUpsell)
 import Storage3 from "Storage" /* 510 */;
-import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 14550 */;
+import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 14552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
-import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14549 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14551 */;
 
 const require = globalThis.__r;
 

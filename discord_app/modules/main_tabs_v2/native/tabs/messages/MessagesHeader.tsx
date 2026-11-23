@@ -1,6 +1,6 @@
-// === Module 17547: MessagesHeader ===
+// === Module 17549: MessagesHeader ===
 
-// Module 17547 (MessagesHeader)
+// Module 17549 (MessagesHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import ButtonConstants from "ButtonConstants" /* 5517 */;
@@ -9,7 +9,7 @@ import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7096 */;
 import _modDef7429 from "module_7429" /* 7429 */;
 import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13059 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17548 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17550 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

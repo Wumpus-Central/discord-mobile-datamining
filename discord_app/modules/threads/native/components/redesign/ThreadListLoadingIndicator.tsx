@@ -1,6 +1,6 @@
-// === Module 18821: ThreadListLoadingIndicator ===
+// === Module 18823: ThreadListLoadingIndicator ===
 
-// Module 18821 (ThreadListLoadingIndicator)
+// Module 18823 (ThreadListLoadingIndicator)
 import MessageLoadingSpinnerDefault from "MessageLoadingSpinner" /* 10732 */;
 import noop from "module_19" /* 19 */;
 

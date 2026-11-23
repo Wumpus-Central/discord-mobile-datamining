@@ -1,15 +1,15 @@
-// === Module 18471: ConjureMessageAuthor ===
+// === Module 18473: ConjureMessageAuthor ===
 
-// Module 18471 (ConjureMessageAuthor)
+// Module 18473 (ConjureMessageAuthor)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import Pressables from "Pressables" /* 7030 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 18472 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 18473 */;
-import _modDef18476 from "module_18476" /* 18476 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 18474 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 18475 */;
+import _modDef18478 from "module_18478" /* 18478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,7 +60,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(4913);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, agentAvatar: null };
-let size = { width: fn(18459).MESSAGE_AVATAR_SIZE, height: fn(18459).MESSAGE_AVATAR_SIZE, borderRadius: fn(18459).MESSAGE_AVATAR_SIZE / 2 };
+let size = { width: fn(18461).MESSAGE_AVATAR_SIZE, height: fn(18461).MESSAGE_AVATAR_SIZE, borderRadius: fn(18461).MESSAGE_AVATAR_SIZE / 2 };
 obj2.agentAvatar = size;
 const metroImportDefault = createStyles.createStyles(obj2);
 size = fn(2);
@@ -118,7 +118,7 @@ export function ConjureUserAvatar(size) {
 export function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef18476;
+  obj.source = _modDef18478;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 }

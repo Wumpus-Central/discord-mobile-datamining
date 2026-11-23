@@ -1,6 +1,6 @@
-// === Module 14596: UserProfilePrivacyNotice ===
+// === Module 14598: UserProfilePrivacyNotice ===
 
-// Module 14596 (UserProfilePrivacyNotice)
+// Module 14598 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;

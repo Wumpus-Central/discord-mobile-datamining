@@ -1,6 +1,6 @@
-// === Module 19836: EnhancedRoleColorConstants ===
+// === Module 19838: EnhancedRoleColorConstants ===
 
-// Module 19836 (EnhancedRoleColorConstants)
+// Module 19838 (EnhancedRoleColorConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/constants/EnhancedRoleColorConstants.tsx");

@@ -1,6 +1,6 @@
-// === Module 14861: VoiceMemberList ===
+// === Module 14863: VoiceMemberList ===
 
-// Module 14861 (VoiceMemberList)
+// Module 14863 (VoiceMemberList)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
@@ -9,8 +9,8 @@ import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
 import _modDef11055 from "module_11055" /* 11055 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12059 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 14857 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 14863 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 14859 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 14865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -141,13 +141,13 @@ function VoiceSectionRow(arg0) {
         },
       isActionSheet
     };
-    return closure_21(tmp2(14862), obj2);
+    return closure_21(tmp2(14864), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(14863), obj3);
+    return closure_21(tmp2(14865), obj3);
   }
   let obj = isActionSheet(10736);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -364,7 +364,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(14862);
+                tmp4 = tmp4(14864);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

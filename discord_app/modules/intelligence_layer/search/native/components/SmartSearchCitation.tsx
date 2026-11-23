@@ -1,7 +1,7 @@
-// === Module 18784: SmartSearchCitation ===
+// === Module 18786: SmartSearchCitation ===
 
-// Module 18784 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18785 */;
+// Module 18786 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18787 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

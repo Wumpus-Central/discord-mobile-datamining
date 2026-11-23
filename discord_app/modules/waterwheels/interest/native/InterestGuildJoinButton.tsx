@@ -1,6 +1,6 @@
-// === Module 17816: InterestGuildJoinButton ===
+// === Module 17818: InterestGuildJoinButton ===
 
-// Module 17816 (InterestGuildJoinButton)
+// Module 17818 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef2643 from "module_2643" /* 2643 */;
 import useGetIsMountedDefault from "useGetIsMounted" /* 8205 */;

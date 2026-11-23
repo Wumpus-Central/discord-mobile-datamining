@@ -1,13 +1,13 @@
-// === Module 16517: VideoQuestPlayer ===
+// === Module 16519: VideoQuestPlayer ===
 
-// Module 16517 (VideoQuestPlayer)
+// Module 16519 (VideoQuestPlayer)
 import ClientInfoUtils from "ClientInfoUtils" /* 1377 */;
 import QuestActionCreators from "QuestActionCreators" /* 9959 */;
 import AssetUtils from "AssetUtils" /* 9972 */;
 import VideoQuestUtils from "VideoQuestUtils" /* 10615 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16327 */;
-import SimpleMuxWrapper from "SimpleMuxWrapper" /* 16520 */;
-import VideoQuestCaptions from "VideoQuestCaptions" /* 16528 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16329 */;
+import SimpleMuxWrapper from "SimpleMuxWrapper" /* 16522 */;
+import VideoQuestCaptions from "VideoQuestCaptions" /* 16530 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import VideoQuestUIStore from "VideoQuestUIStore" /* 8406 */;
@@ -18,7 +18,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(16327).PlayerState;
+export const PlayerState = fn(16329).PlayerState;
 export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;

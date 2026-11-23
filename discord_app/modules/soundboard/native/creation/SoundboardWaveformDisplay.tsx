@@ -1,6 +1,6 @@
-// === Module 19806: SoundboardWaveformDisplay ===
+// === Module 19808: SoundboardWaveformDisplay ===
 
-// Module 19806 (SoundboardWaveformDisplay)
+// Module 19808 (SoundboardWaveformDisplay)
 import nativeDefault from "native" /* 575 */;
 import downsampleWaveformDefault from "downsampleWaveform" /* 13120 */;
 import noop from "module_19" /* 19 */;

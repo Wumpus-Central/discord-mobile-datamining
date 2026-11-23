@@ -1,6 +1,6 @@
-// === Module 17651: RedesignGuildHeader ===
+// === Module 17653: RedesignGuildHeader ===
 
-// Module 17651 (RedesignGuildHeader)
+// Module 17653 (RedesignGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
@@ -16,10 +16,10 @@ import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8571 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10093 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15119 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17624 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17652 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17653 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15121 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17626 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17654 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17655 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import ActionSheetStore from "ActionSheetStore" /* 5128 */;
@@ -206,7 +206,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6), ];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(17691), {});
+      tmp28Result = closure_13(tmp(17693), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;

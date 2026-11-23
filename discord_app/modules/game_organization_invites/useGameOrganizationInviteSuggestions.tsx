@@ -1,6 +1,6 @@
-// === Module 15179: useGameOrganizationInviteSuggestions ===
+// === Module 15181: useGameOrganizationInviteSuggestions ===
 
-// Module 15179 (useGameOrganizationInviteSuggestions)
+// Module 15181 (useGameOrganizationInviteSuggestions)
 import InstantInviteUtils from "InstantInviteUtils" /* 8054 */;
 import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 13188 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

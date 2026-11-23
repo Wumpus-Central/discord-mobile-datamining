@@ -1,10 +1,10 @@
-// === Module 16615: GuildRoleSubscriptionsHooks ===
+// === Module 16617: GuildRoleSubscriptionsHooks ===
 
-// Module 16615 (GuildRoleSubscriptionsHooks)
+// Module 16617 (GuildRoleSubscriptionsHooks)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 6875 */;
 import useRequestDefault from "useRequest" /* 13075 */;
-import subscriptionUtils from "subscriptionUtils" /* 16617 */;
+import subscriptionUtils from "subscriptionUtils" /* 16619 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

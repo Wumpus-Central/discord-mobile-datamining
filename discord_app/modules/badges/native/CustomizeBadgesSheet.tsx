@@ -1,6 +1,6 @@
-// === Module 15880: CustomizeBadgesSheet ===
+// === Module 15882: CustomizeBadgesSheet ===
 
-// Module 15880 (CustomizeBadgesSheet)
+// Module 15882 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -32,8 +32,8 @@ import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10505 */;
 import BadgeManagementExperimentDefault from "BadgeManagementExperiment" /* 13955 */;
 import BadgeUtils from "BadgeUtils" /* 13990 */;
 import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 14009 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14591 */;
-import BadgeGrid from "BadgeGrid" /* 15881 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14593 */;
+import BadgeGrid from "BadgeGrid" /* 15883 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8132 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -154,7 +154,7 @@ let size = { position: "absolute", top: nativeDefault.space.PX_8, end: nativeDef
 obj10.indicator = size;
 obj10.iconHidden = { opacity: 0.3 };
 let closure_18 = createStyles.createStyles(obj10);
-let items = [{ code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})" }, fn(15881).BADGE_GRID_COLUMNS, fn(15881).BADGE_GRID_GAP];
+let items = [{ code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})" }, fn(15883).BADGE_GRID_COLUMNS, fn(15883).BADGE_GRID_GAP];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -381,7 +381,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx3.__workletHash = 7747025592280;
     CustomizeBadgesSheetTsx3.__initData = tmp23;
     const animatedReaction = tmp2(1653).useAnimatedReaction(CustomizeBadgesSheetTsx2, CustomizeBadgesSheetTsx3);
-    let items4 = [items15, orderShared, tileSize, tmp2(15881).BADGE_GRID_GAP, tmp2(1653).clamp, sharedValue2, tmp2(15881).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(14591).moveBadgeInDisplayOrder, badge_id, tmp2(1706).scheduleOnRN, tmp2(5129).triggerHapticFeedback, tmp2(5129).HapticFeedbackTypes];
+    let items4 = [items15, orderShared, tileSize, tmp2(15883).BADGE_GRID_GAP, tmp2(1653).clamp, sharedValue2, tmp2(15883).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(14593).moveBadgeInDisplayOrder, badge_id, tmp2(1706).scheduleOnRN, tmp2(5129).triggerHapticFeedback, tmp2(5129).HapticFeedbackTypes];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -967,12 +967,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp5Result17 = require("Sheet/BottomSheet");
   badgeTileSize = require("BadgeGrid").getBadgeTileSize(bottomSheetWidth);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(15881).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(15883).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(15881).BADGE_GRID_GAP;
+    num = result + diff * tmp5(15883).BADGE_GRID_GAP;
   }
   const tmp5Result18 = require("BadgeGrid");
   animatedRef = require("module_1653").useAnimatedRef();
@@ -1085,8 +1085,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const intl3 = tmp5(1112).intl;
       obj7.children = intl3.string(tmp5(1112).t.JrOki0);
       obj6.children = memo2(tmp5(5504).Text, obj7);
-      tmp56 = memo2(tmp2(15882), obj6);
-      const tmp2Result = tmp2(15882);
+      tmp56 = memo2(tmp2(15884), obj6);
+      const tmp2Result = tmp2(15884);
     }
     const items22 = [tmp56, ];
     const obj8 = { accessibilityRole: "list", style: null, children: null };

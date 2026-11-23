@@ -1,6 +1,6 @@
-// === Module 17183: BuildOverridesScreen ===
+// === Module 17185: BuildOverridesScreen ===
 
-// Module 17183 (BuildOverridesScreen)
+// Module 17185 (BuildOverridesScreen)
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5594 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
@@ -308,13 +308,13 @@ export default noop.memo(function BuildOverridesScreen() {
   let obj9 = { icon: trimmed(stateFromStores(7388).MobilePhoneIcon, {}), label: "Project", subLabel: str2 };
   const items6 = [trimmed(stateFromStores(7349).TableRadioRow, { value: "branch", label: "Branch name", icon: trimmed(stateFromStores(9041).TagIcon, {}) }), ];
   const obj11 = { value: "branch", label: "Branch name", icon: trimmed(stateFromStores(9041).TagIcon, {}) };
-  items6[1] = trimmed(stateFromStores(7349).TableRadioRow, { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(17184).HashmarkIcon, {}) });
+  items6[1] = trimmed(stateFromStores(7349).TableRadioRow, { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(17186).HashmarkIcon, {}) });
   obj10.children = items6;
   items5[1] = closure_10(stateFromStores(7347).TableRadioGroup, obj10);
   if ("branch" === first.type) {
     let HashmarkIcon = tmp3(9041).TagIcon;
   } else {
-    HashmarkIcon = tmp3(17184).HashmarkIcon;
+    HashmarkIcon = tmp3(17186).HashmarkIcon;
   }
   const obj13 = { leadingIcon: HashmarkIcon, label: null, value: null, onChange: null, placeholder: null, autoCapitalize: "none", autoCorrect: false, autoComplete: "off" };
   let str7 = "Commit SHA";
@@ -369,7 +369,7 @@ export default noop.memo(function BuildOverridesScreen() {
       if ("branch" === id.type) {
         let tmp4Result = trimmed(stateFromStores(9041).TagIcon, {});
       } else {
-        tmp4Result = trimmed(stateFromStores(17184).HashmarkIcon, {});
+        tmp4Result = trimmed(stateFromStores(17186).HashmarkIcon, {});
       }
       const obj = { icon: tmp4Result, arrow: !tmp3, label: id.id, subLabel: null, disabled: null, onPress: null };
       let str = "Active";
@@ -402,7 +402,7 @@ export default noop.memo(function BuildOverridesScreen() {
   if (null != stateFromStores) {
     tmp24 = str2;
   }
-  const obj12 = { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(17184).HashmarkIcon, {}) };
+  const obj12 = { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(17186).HashmarkIcon, {}) };
   const obj15 = {
     text: "Apply override",
     disabled: tmp22,

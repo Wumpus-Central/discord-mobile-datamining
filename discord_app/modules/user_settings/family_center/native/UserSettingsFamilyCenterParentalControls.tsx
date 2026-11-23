@@ -1,6 +1,6 @@
-// === Module 16233: UserSettingsFamilyCenterParentalControls ===
+// === Module 16235: UserSettingsFamilyCenterParentalControls ===
 
-// Module 16233 (UserSettingsFamilyCenterParentalControls)
+// Module 16235 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2824 from "module_2824" /* 2824 */;
@@ -51,12 +51,12 @@ export default function FamilyCenterParentalControlsSettings() {
   }
   dependencyMap = tmp12;
   const tmp2Result = stackNavigation(7414);
-  const selectedTeenUser = stackNavigation(16193).useSelectedTeenUser();
+  const selectedTeenUser = stackNavigation(16195).useSelectedTeenUser();
   let id;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
   }
-  const tmp15 = selectedSubPage(16212)();
+  const tmp15 = selectedSubPage(16214)();
   closure_4 = tmp15;
   ref = id.useRef(false);
   items = [true === autoOpenCreate, id, stackNavigation];
@@ -99,21 +99,21 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "disabled", headerRight: "isArray" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "Path" });
   }, items1);
   const obj2 = { label: null, id: null, page: null };
   let intl = tmp2(1112).intl;
   obj2.label = intl.string(stackNavigation(1112).t["+o1pDZ"]);
   obj2.id = FamilyCenterSubPages.CONTENT_AND_SOCIAL;
-  obj2.page = closure_8(selectedSubPage(16234), {});
+  obj2.page = closure_8(selectedSubPage(16236), {});
   const items2 = [obj2, ];
   const obj3 = { label: null, id: null, page: null };
   const intl2 = tmp2(1112).intl;
   obj3.label = intl2.string(stackNavigation(1112).t.OAuOHD);
   obj3.id = FamilyCenterSubPages.DATA_AND_PRIVACY;
-  obj3.page = closure_8(selectedSubPage(16235), {});
+  obj3.page = closure_8(selectedSubPage(16237), {});
   items2[1] = obj3;
-  const tmp2Result3 = stackNavigation(16193);
+  const tmp2Result3 = stackNavigation(16195);
   const tmp2Result4 = stackNavigation(7586);
   const segmentedControlState = tmp2Result4.useSegmentedControlState({
     items: items2,
@@ -128,7 +128,7 @@ export default function FamilyCenterParentalControlsSettings() {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { bottom: true, style: tmp.content, children: null };
     const obj8 = { readOnly: tmp15 };
-    obj7.children = closure_8(tmp5(16236), obj8);
+    obj7.children = closure_8(tmp5(16238), obj8);
     obj6.children = closure_8(tmp2(7017).SafeAreaPaddingView, obj7);
     obj5.children = closure_8(ref, obj6);
     let obj9 = obj5;

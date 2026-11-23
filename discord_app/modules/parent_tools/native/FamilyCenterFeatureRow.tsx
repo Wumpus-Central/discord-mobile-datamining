@@ -1,6 +1,6 @@
-// === Module 16185: FamilyCenterFeatureRow ===
+// === Module 16187: FamilyCenterFeatureRow ===
 
-// Module 16185 (FamilyCenterFeatureRow)
+// Module 16187 (FamilyCenterFeatureRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2824 from "module_2824" /* 2824 */;
@@ -11,10 +11,10 @@ import EyeIcon from "EyeIcon" /* 7237 */;
 import TableRowGroup from "TableRowGroup" /* 7348 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 12470 */;
 import _modDef13245 from "module_13245" /* 13245 */;
-import _modDef14650 from "module_14650" /* 14650 */;
-import QrCodeIcon from "QrCodeIcon" /* 16182 */;
-import _modDef16186 from "module_16186" /* 16186 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 16187 */;
+import _modDef14652 from "module_14652" /* 14652 */;
+import QrCodeIcon from "QrCodeIcon" /* 16184 */;
+import _modDef16188 from "module_16188" /* 16188 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 16189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default function FamilyCenterFeatureRows() {
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2824["+pi4Yt"]), intl6.string(_modDef2824["1xPTwE"]));
-  obj4.icon = _modDef16186;
+  obj4.icon = _modDef16188;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2824["001l3m"]);
@@ -55,7 +55,7 @@ export default function FamilyCenterFeatureRows() {
   obj5.header = intl8.string(_modDef2824.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef14650, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef14652, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
   obj6.header = intl9.string(_modDef2824.hhOuMe);
   obj6.description = ageSpecificText2;

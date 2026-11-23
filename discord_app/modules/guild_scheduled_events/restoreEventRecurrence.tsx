@@ -1,6 +1,6 @@
-// === Module 14681: restoreEventRecurrence ===
+// === Module 14683: restoreEventRecurrence ===
 
-// Module 14681 (restoreEventRecurrence)
+// Module 14683 (restoreEventRecurrence)
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7573 */;
 import size from "module_2" /* 2 */;
 

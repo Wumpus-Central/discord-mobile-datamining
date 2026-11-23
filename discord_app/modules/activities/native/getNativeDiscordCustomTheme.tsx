@@ -1,6 +1,6 @@
-// === Module 15763: getNativeDiscordCustomTheme ===
+// === Module 15765: getNativeDiscordCustomTheme ===
 
-// Module 15763 (getNativeDiscordCustomTheme)
+// Module 15765 (getNativeDiscordCustomTheme)
 import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import shared from "shared" /* 4920 */;

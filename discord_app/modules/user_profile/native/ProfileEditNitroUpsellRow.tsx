@@ -1,6 +1,6 @@
-// === Module 15837: ProfileEditNitroUpsellRow ===
+// === Module 15839: ProfileEditNitroUpsellRow ===
 
-// Module 15837 (ProfileEditNitroUpsellRow)
+// Module 15839 (ProfileEditNitroUpsellRow)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8545 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8547 */;

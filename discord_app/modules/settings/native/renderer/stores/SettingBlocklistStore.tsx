@@ -1,6 +1,6 @@
-// === Module 15823: SettingBlocklistStore ===
+// === Module 15825: SettingBlocklistStore ===
 
-// Module 15823 (SettingBlocklistStore)
+// Module 15825 (SettingBlocklistStore)
 import ZustandStore from "ZustandStore" /* 5102 */;
 import size from "module_2" /* 2 */;
 

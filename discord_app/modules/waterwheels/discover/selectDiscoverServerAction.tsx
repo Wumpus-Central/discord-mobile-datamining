@@ -1,6 +1,6 @@
-// === Module 17819: selectDiscoverServerAction ===
+// === Module 17821: selectDiscoverServerAction ===
 
-// Module 17819 (selectDiscoverServerAction)
+// Module 17821 (selectDiscoverServerAction)
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
 import size from "module_2" /* 2 */;
 

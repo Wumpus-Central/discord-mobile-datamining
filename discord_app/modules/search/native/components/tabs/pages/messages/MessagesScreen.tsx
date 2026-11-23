@@ -1,8 +1,8 @@
-// === Module 18822: MessagesScreen ===
+// === Module 18824: MessagesScreen ===
 
-// Module 18822 (MessagesScreen)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18785 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 18808 */;
+// Module 18824 (MessagesScreen)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18787 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 18810 */;
 import noop from "module_19" /* 19 */;
 import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 

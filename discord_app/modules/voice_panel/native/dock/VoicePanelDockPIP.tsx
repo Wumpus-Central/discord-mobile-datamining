@@ -1,6 +1,6 @@
-// === Module 19314: VoicePanelDockPIP ===
+// === Module 19316: VoicePanelDockPIP ===
 
-// Module 19314 (VoicePanelDockPIP)
+// Module 19316 (VoicePanelDockPIP)
 import util from "util" /* 1112 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
@@ -13,11 +13,11 @@ import NicknameUtilsDefault from "NicknameUtils" /* 5943 */;
 import StreamActionCreators from "StreamActionCreators" /* 6456 */;
 import ScreenIcon from "ScreenIcon" /* 9904 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19316 */;
-import VoicePanelDockPIPOverlay from "VoicePanelDockPIPOverlay" /* 19317 */;
-import useVoicePanelDockPIPStreamDefault from "useVoicePanelDockPIPStream" /* 19320 */;
-import useShowVoicePanelDockVideoPIPDefault from "useShowVoicePanelDockVideoPIP" /* 19322 */;
-import useShowStreamWithTimeoutDefault from "useShowStreamWithTimeout" /* 19323 */;
+import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19318 */;
+import VoicePanelDockPIPOverlay from "VoicePanelDockPIPOverlay" /* 19319 */;
+import useVoicePanelDockPIPStreamDefault from "useVoicePanelDockPIPStream" /* 19322 */;
+import useShowVoicePanelDockVideoPIPDefault from "useShowVoicePanelDockVideoPIP" /* 19324 */;
+import useShowStreamWithTimeoutDefault from "useShowStreamWithTimeout" /* 19325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
@@ -169,7 +169,7 @@ function renderVoicePanelDockPIP(arg0, arg1, transitionState, transitionCleanUp)
   return state(closure_23, { transitionState, transitionCleanUp }, arg0);
 }
 const VoicePanelModes = fn(11750).VoicePanelModes;
-const VoicePanelPIPConstants = fn(19165);
+const VoicePanelPIPConstants = fn(19167);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_8, VoicePanelPIPModes: closure_9 } = VoicePanelPIPConstants);
 const DOCK_FADE_TIMING = fn(11768).DOCK_FADE_TIMING;
 const ParticipantTypes = fn(5563).ParticipantTypes;
@@ -260,18 +260,18 @@ let closure_23 = noop.memo(function VoicePanelDockPIP(transitionCleanUp) {
   const tmp15Result = sharedValue(noop.useState(tmp18), 2);
   if (tmp15Result[0] !== tmp18) {
     tmp15Result[1](tmp18);
-    tmp17(tmp4(19317).VoicePanelDockPIPOverlayModes.HIDDEN);
+    tmp17(tmp4(19319).VoicePanelDockPIPOverlayModes.HIDDEN);
   }
   if (!tmp12) {
-    HIDDEN = tmp4(19317).VoicePanelDockPIPOverlayModes.HIDDEN;
+    HIDDEN = tmp4(19319).VoicePanelDockPIPOverlayModes.HIDDEN;
   }
   closure_129_10 = HIDDEN;
   let tmp22 = tmp11;
   if (null == streamKey && tmp7) {
-    tmp22 = HIDDEN === tmp4(19317).VoicePanelDockPIPOverlayModes.VOLUME;
+    tmp22 = HIDDEN === tmp4(19319).VoicePanelDockPIPOverlayModes.VOLUME;
   }
   if (tmp22) {
-    const CONTROLS = tmp4(19317).VoicePanelDockPIPOverlayModes.CONTROLS;
+    const CONTROLS = tmp4(19319).VoicePanelDockPIPOverlayModes.CONTROLS;
     closure_129_10 = CONTROLS;
     HIDDEN = CONTROLS;
   }
@@ -406,7 +406,7 @@ let closure_23 = noop.memo(function VoicePanelDockPIP(transitionCleanUp) {
     if (tmp48) {
       tmp53 = ownerId;
     }
-    const voicePanelDockWatchPromptActions = tmp4(19315).useVoicePanelDockWatchPromptActions(tmp53, streamKey, tmp49);
+    const voicePanelDockWatchPromptActions = tmp4(19317).useVoicePanelDockWatchPromptActions(tmp53, streamKey, tmp49);
     const handleWatch = voicePanelDockWatchPromptActions.handleWatch;
     closure_130_9 = handleWatch;
     const handleDismiss = voicePanelDockWatchPromptActions.handleDismiss;
@@ -525,7 +525,7 @@ let closure_23 = noop.memo(function VoicePanelDockPIP(transitionCleanUp) {
     obj4.showContent = tmp58;
     obj4.mainTileAccessibilityProps = memo;
     obj4.mainTileRef = ref;
-    obj4.dragEnabled = HIDDEN !== tmp4(19317).VoicePanelDockPIPOverlayModes.VOLUME;
+    obj4.dragEnabled = HIDDEN !== tmp4(19319).VoicePanelDockPIPOverlayModes.VOLUME;
     obj4.resizeEnabled = tmp12;
     obj4.onMainTileTap = callback2;
     obj4.onStreamReady = tmp8.onStreamReady;
@@ -543,29 +543,29 @@ let closure_23 = noop.memo(function VoicePanelDockPIP(transitionCleanUp) {
           obj5.isConnecting = isConnecting;
           obj5.hideContent = isWatching;
           obj5.visible = !showStream;
-          tmp62Result = closure_13(tmp(19315), obj5);
-          const tmpResult6 = tmp(19315);
+          tmp62Result = closure_13(tmp(19317), obj5);
+          const tmpResult6 = tmp(19317);
         }
       }
     }
     const items11 = [tmp62Result, ];
     let str = "stream";
-    const tmp4Result13 = tmp4(19315);
+    const tmp4Result13 = tmp4(19317);
     if (tmp11) {
       str = "video";
     }
     let obj6 = { children: null };
     let obj7 = { kind: str, ownerId: stateFromStores, mode: HIDDEN, onToggleVolume: callback3, onInteractionStart: callback, onInteractionEnd: callback1, onStopWatching: callback4, onOpenCall: callback5 };
-    items11[1] = closure_13(tmp(19317), obj7);
+    items11[1] = closure_13(tmp(19319), obj7);
     obj6.children = items11;
     obj4.controlsOverlay = closure_15(closure_14, obj6);
-    const tmpResult7 = tmp(19317);
+    const tmpResult7 = tmp(19319);
     const pIPState2 = tmp4(11759).usePIPState();
     let id = pIPState2.id;
     closure_131_0 = id;
     const channelId3 = obj.useContext(tmp(11749)).channelId;
     closure_131_1 = channelId3;
-    let tmp67 = tmp(19227)();
+    let tmp67 = tmp(19229)();
     const tmp4Result14 = tmp4(11759);
     const items12 = [tmp13];
     const items13 = [channelId3, id];
@@ -595,11 +595,11 @@ let closure_23 = noop.memo(function VoicePanelDockPIP(transitionCleanUp) {
       tmp70 = stateFromStores2;
     }
     const tmp4Result15 = tmp4(504);
-    const panelLayoutCommitted = tmp4(19324).usePIPTileHandoff().panelLayoutCommitted;
+    const panelLayoutCommitted = tmp4(19326).usePIPTileHandoff().panelLayoutCommitted;
     importDefault = panelLayoutCommitted;
     const tmp71 = transitionCleanUp.transitionState === tmp4(4974).TransitionStates.YEETED;
     dependencyMap = tmp71;
-    const tmp4Result16 = tmp4(19324);
+    const tmp4Result16 = tmp4(19326);
     [tmp73, tmp74] = tmp15(obj.useState(pIPState), 2);
     const tmp15Result11 = tmp15(obj.useState(tmp70), 2);
     const first2 = tmp15Result11[0];
@@ -756,7 +756,7 @@ let closure_23 = noop.memo(function VoicePanelDockPIP(transitionCleanUp) {
     let obj9 = {};
     const merged = Object.assign(tmp116);
     obj9.opacity = derivedValue;
-    obj8.children = closure_13(tmp4(19324).VoicePanelPIPTiles, obj9);
+    obj8.children = closure_13(tmp4(19326).VoicePanelPIPTiles, obj9);
     return closure_13(tmp4(11759).VoicePanelPIPStateContext.Provider, obj8);
   } else {
     let intl = tmp4(1112).intl;
@@ -772,14 +772,14 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePa
 
 export default noop.memo(function VoicePanelDockPIPProvider() {
   const channelId = noop.useContext(channelId2(11749)).channelId;
-  let tmp2 = channelId2(19320)(channelId);
-  const tmp3 = channelId2(19322)(channelId);
+  let tmp2 = channelId2(19322)(channelId);
+  const tmp3 = channelId2(19324)(channelId);
   let id;
   channelId2 = undefined;
   const pIPState = id(11759).usePIPState();
   id = pIPState.id;
   channelId2 = noop.useContext(channelId2(11749)).channelId;
-  let tmp6 = channelId2(19227)();
+  let tmp6 = channelId2(19229)();
   const obj = id(11759);
   items = [ChannelRTCStore];
   const items1 = [channelId2, id];

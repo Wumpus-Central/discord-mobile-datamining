@@ -1,9 +1,9 @@
-// === Module 17334: CollectiblesShopViewAllCategoryItemsScreen ===
+// === Module 17336: CollectiblesShopViewAllCategoryItemsScreen ===
 
-// Module 17334 (CollectiblesShopViewAllCategoryItemsScreen)
+// Module 17336 (CollectiblesShopViewAllCategoryItemsScreen)
 import useNavigation from "useNavigation" /* 1500 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7414 */;
-import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 17335 */;
+import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 17337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

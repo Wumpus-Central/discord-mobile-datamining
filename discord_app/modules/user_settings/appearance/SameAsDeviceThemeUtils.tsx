@@ -1,6 +1,6 @@
-// === Module 16407: SameAsDeviceThemeUtils ===
+// === Module 16409: SameAsDeviceThemeUtils ===
 
-// Module 16407 (SameAsDeviceThemeUtils)
+// Module 16409 (SameAsDeviceThemeUtils)
 import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
 import shared from "shared" /* 4920 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4941 */;

@@ -1,9 +1,9 @@
-// === Module 14579: UserProfileActivityTab ===
+// === Module 14581: UserProfileActivityTab ===
 
-// Module 14579 (UserProfileActivityTab)
+// Module 14581 (UserProfileActivityTab)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 14584 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 14586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,13 +84,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14580)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14582)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(14583);
+        const tmp7 = user(14585);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -125,5 +125,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(14580)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(14582)({ userId: user.id, currentUserId: currentUser.id, guildId });
 };

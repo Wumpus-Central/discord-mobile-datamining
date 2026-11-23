@@ -301,7 +301,7 @@ export default function CheckpointFriendsStatsScreen(arg0) {
       }
       let tmp35Result7 = tmp35Result6;
     } else {
-      const obj25 = { animationState, sidekickUser: null, firstUser: null, secondUser: null, twoFriends: null, isReducedMotion: null, artboardFrame: "add" };
+      const obj25 = { animationState, sidekickUser: null, firstUser: null, secondUser: null, twoFriends: null, isReducedMotion: null, artboardFrame: "disabled" };
       let user3;
       if (stateFromStores1 != null) {
         user3 = stateFromStores1.user;

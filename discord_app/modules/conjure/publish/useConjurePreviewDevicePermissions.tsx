@@ -1,6 +1,6 @@
-// === Module 18260: useConjurePreviewDevicePermissions ===
+// === Module 18262: useConjurePreviewDevicePermissions ===
 
-// Module 18260 (useConjurePreviewDevicePermissions)
+// Module 18262 (useConjurePreviewDevicePermissions)
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 
 const require = globalThis.__r;

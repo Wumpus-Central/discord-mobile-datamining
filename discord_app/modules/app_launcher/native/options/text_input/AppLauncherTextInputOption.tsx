@@ -117,7 +117,7 @@ export default function AppLauncherTextInputOption(initialValue) {
   const obj5 = { style: null, children: null };
   const items3 = [inputStyles.padding, tmp.content];
   obj5.style = items3;
-  const obj6 = { ref, autoFocus: false, value, style: null, selectionColor: "Array", maxLength: "off", autoComplete: null, onChangeText: null, onSelectionChange: null, onFocus: null, onBlur: null, onEndEditing: "center", textAlignVertical: "default", returnKeyType: true, multiline: null, keyboardType: null, onPressIn: 414.685 };
+  const obj6 = { ref, autoFocus: false, value, style: null, selectionColor: "Array", maxLength: "off", autoComplete: null, onChangeText: null, onSelectionChange: null, onFocus: null, onBlur: null, onEndEditing: "center", textAlignVertical: "default", returnKeyType: true, multiline: null, keyboardType: null, onPressIn: 360 };
   const items4 = [inputStyles.text, tmp.stringOptionInput];
   obj6.style = items4;
   let maxLength;

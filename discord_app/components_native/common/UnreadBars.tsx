@@ -1,6 +1,6 @@
-// === Module 17933: UnreadBars ===
+// === Module 17935: UnreadBars ===
 
-// Module 17933 (UnreadBars)
+// Module 17935 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;

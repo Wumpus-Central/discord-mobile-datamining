@@ -1,6 +1,6 @@
-// === Module 17295: HeroBlockOrbsArcadeHeader ===
+// === Module 17297: HeroBlockOrbsArcadeHeader ===
 
-// Module 17295 (HeroBlockOrbsArcadeHeader)
+// Module 17297 (HeroBlockOrbsArcadeHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import shared from "shared" /* 4920 */;
@@ -11,7 +11,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import QuestContent from "QuestContent" /* 6563 */;
 import inlineStyles from "inlineStyles" /* 7865 */;
 import QuestUtils from "QuestUtils" /* 9955 */;
-import _modDef17296 from "module_17296" /* 17296 */;
+import _modDef17298 from "module_17298" /* 17298 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -219,7 +219,7 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
   const obj22 = { source: null, style: null, accessible: false };
   const obj23 = { uri: null };
   const tmp2Result2 = require("useFontScale");
-  obj23.uri = require("module_17297");
+  obj23.uri = require("module_17299");
   obj22.source = obj23;
   obj22.style = tmp.image;
   tmp25Result = closure_10(require("FastImage"), obj22);
@@ -235,7 +235,7 @@ const jsxProd = fn(21);
 let c13 = 289;
 const PX_16 = nativeDefault.space.PX_16;
 const AssetUtils = fn(9972);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef17296);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef17298);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };

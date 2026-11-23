@@ -1,6 +1,6 @@
-// === Module 18034: VoicePanelDockPTTButton ===
+// === Module 18036: VoicePanelDockPTTButton ===
 
-// Module 18034 (VoicePanelDockPTTButton)
+// Module 18036 (VoicePanelDockPTTButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import timing_timing from "timing/timing" /* 5123 */;

@@ -1,6 +1,6 @@
-// === Module 14616: useTrackUserProfileWishlistView ===
+// === Module 14618: useTrackUserProfileWishlistView ===
 
-// Module 14616 (useTrackUserProfileWishlistView)
+// Module 14618 (useTrackUserProfileWishlistView)
 import noop from "module_19" /* 19 */;
 import WishlistStore from "WishlistStore" /* 8983 */;
 import size from "module_2" /* 2 */;

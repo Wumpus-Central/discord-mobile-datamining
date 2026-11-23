@@ -1,11 +1,11 @@
-// === Module 16638: GuildRoleSubscriptionCard ===
+// === Module 16640: GuildRoleSubscriptionCard ===
 
-// Module 16638 (GuildRoleSubscriptionCard)
+// Module 16640 (GuildRoleSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16628 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 16641 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 16644 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16630 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 16643 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 16646 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export function Content(arg0) {
   const obj7 = { children: null };
   const intl = guildId(1112).intl;
   obj7.children = intl.string(guildId(1112).t["DJ+bGu"]);
-  items = [closure_6(SectionTitle, obj7), closure_6(guildId(1186).Spacer, { size: 8 }), closure_6(guildId(16640).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  items = [closure_6(SectionTitle, obj7), closure_6(guildId(1186).Spacer, { size: 8 }), closure_6(guildId(16642).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , , ];
   let tmp5Result = null;
@@ -92,5 +92,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(16639).SeparatedList, obj5);
+  return closure_8(guildId(16641).SeparatedList, obj5);
 }

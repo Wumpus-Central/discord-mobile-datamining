@@ -1,6 +1,6 @@
-// === Module 17619: MessagesItemAddFriendsWidget ===
+// === Module 17621: MessagesItemAddFriendsWidget ===
 
-// Module 17619 (MessagesItemAddFriendsWidget)
+// Module 17621 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import RootNavigationRef from "RootNavigationRef" /* 5090 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5504 */;
 import Pressables from "Pressables" /* 7030 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7262 */;
 import IconActionButtonDefault from "IconActionButton" /* 14356 */;
-import _modDef15063 from "module_15063" /* 15063 */;
-import _modDef17620 from "module_17620" /* 17620 */;
+import _modDef15065 from "module_15065" /* 15065 */;
+import _modDef17622 from "module_17622" /* 17622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -260,12 +260,12 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.children = metroImportDefault(Text_Text.Text, obj3);
   items = [metroImportDefault(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15063, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15065, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef17620;
+  obj6.source = _modDef17622;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

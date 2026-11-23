@@ -1,6 +1,6 @@
-// === Module 19872: GuildSettingsModalInstantInvites ===
+// === Module 19874: GuildSettingsModalInstantInvites ===
 
-// Module 19872 (GuildSettingsModalInstantInvites)
+// Module 19874 (GuildSettingsModalInstantInvites)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -13,7 +13,7 @@ import TableCheckboxRow from "TableCheckboxRow" /* 7335 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8763 */;
 import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8765 */;
 import InstantInvite from "InstantInvite" /* 13846 */;
-import _modDef14804 from "module_14804" /* 14804 */;
+import _modDef14806 from "module_14806" /* 14806 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11101 */;

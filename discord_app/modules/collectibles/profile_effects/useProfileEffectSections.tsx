@@ -1,6 +1,6 @@
-// === Module 15891: useProfileEffectSections ===
+// === Module 15893: useProfileEffectSections ===
 
-// Module 15891 (useProfileEffectSections)
+// Module 15893 (useProfileEffectSections)
 import util from "util" /* 1112 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;
 import _slicedToArray from "module_32" /* 32 */;

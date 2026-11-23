@@ -1,12 +1,12 @@
-// === Module 18986: ChannelSecondaryViewChatNavigator ===
+// === Module 18988: ChannelSecondaryViewChatNavigator ===
 
-// Module 18986 (ChannelSecondaryViewChatNavigator)
+// Module 18988 (ChannelSecondaryViewChatNavigator)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
 import ChannelContainer from "ChannelContainer" /* 11098 */;
 import ChatViewDefault from "ChatView" /* 11741 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 18406 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 18408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

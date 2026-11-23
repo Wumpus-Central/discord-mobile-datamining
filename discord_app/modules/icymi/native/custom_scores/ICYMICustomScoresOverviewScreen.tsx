@@ -1,6 +1,6 @@
-// === Module 18095: ICYMICustomScoresOverviewScreen ===
+// === Module 18097: ICYMICustomScoresOverviewScreen ===
 
-// Module 18095 (ICYMICustomScoresOverviewScreen)
+// Module 18097 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;

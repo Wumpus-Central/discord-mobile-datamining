@@ -1,6 +1,6 @@
-// === Module 16189: FamilyCenterActivityCard ===
+// === Module 16191: FamilyCenterActivityCard ===
 
-// Module 16189 (FamilyCenterActivityCard)
+// Module 16191 (FamilyCenterActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -14,13 +14,13 @@ import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9137 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 9139 */;
 import _modDef9364 from "module_9364" /* 9364 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 12470 */;
-import _modDef16190 from "module_16190" /* 16190 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16192 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 16193 */;
-import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal" /* 16195 */;
-import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 16196 */;
-import FamilyCenterActivitySectionDefault from "FamilyCenterActivitySection" /* 16199 */;
-import FamilyCenterSettingsControlsDefault from "FamilyCenterSettingsControls" /* 16206 */;
+import _modDef16192 from "module_16192" /* 16192 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16194 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 16195 */;
+import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal" /* 16197 */;
+import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 16198 */;
+import FamilyCenterActivitySectionDefault from "FamilyCenterActivitySection" /* 16201 */;
+import FamilyCenterSettingsControlsDefault from "FamilyCenterSettingsControls" /* 16208 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -45,7 +45,7 @@ function FamilyCenterActivityCardPrefaceText() {
   let tmp14 = null;
   const ageSpecificText1 = obj6.useAgeSpecificText(intl3.string(_modDef2824.n6LOrh), intl4.string(_modDef2824.JNLpDZ));
   if (!tmp4) {
-    const obj8 = { color: tmp.icon.color, source: _modDef16190, style: tmp.icon };
+    const obj8 = { color: tmp.icon.color, source: _modDef16192, style: tmp.icon };
     tmp14 = React5(native.Icon, obj8);
   }
   items = [tmp14, , ];

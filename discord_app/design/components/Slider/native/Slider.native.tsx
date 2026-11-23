@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(4913);
-let obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
+const obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, disabled: { opacity: 0.5 }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
 let obj4 = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -53,83 +53,116 @@ export function Slider(maxValue) {
     num = 100;
   }
   const step = maxValue.step;
-  ({ onChange: importDefault, formatValue, startIcon, endIcon } = maxValue);
-  dependencyMap = undefined;
-  ({ onChangeEnd, disabled, accessibilityLabel, accessibilityHint, testID } = maxValue);
+  ({ onChange: importDefault, onChangeEnd: dependencyMap, formatValue, disabled, startIcon, endIcon } = maxValue);
+  _slicedToArray = undefined;
+  noop = undefined;
+  ({ accessibilityLabel, accessibilityHint, testID } = maxValue);
   const tmp = closure_8();
-  let tmp2 = defaultValue;
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  _slicedToArray = tmp5[1];
+  let tmp6 = defaultValue;
   if (defaultValue == null) {
-    tmp2 = minValue;
+    tmp6 = minValue;
   }
-  let tmp4 = first;
+  let tmp7 = first;
   if (first == null) {
-    tmp4 = defaultValue;
+    tmp7 = defaultValue;
   }
-  if (tmp4 == null) {
-    tmp4 = minValue;
+  if (tmp7 == null) {
+    tmp7 = minValue;
   }
-  [tmp6, tmp7] = noop.useState(tmp4);
-  const tmp3Result3 = _slicedToArray(noop.useState(first), 2);
-  if (first !== tmp3Result3[0]) {
-    tmp3Result3[1](first);
+  let obj = step(4974);
+  [tmp9, tmp10] = noop.useState(tmp7);
+  const tmp4Result3 = _slicedToArray(noop.useState(first), 2);
+  if (first !== tmp4Result3[0]) {
+    tmp4Result3[1](first);
     if (null != first) {
-      tmp7(first);
+      tmp10(first);
     }
   }
-  items = [tmp6, tmp7];
-  const tmp3Result4 = _slicedToArray(items, 2);
-  dependencyMap = tmp3Result4[1];
-  const obj2 = { style: tmp.container, children: null };
-  let tmp14 = null;
+  items = [tmp9, tmp10];
+  const tmp4Result4 = _slicedToArray(items, 2);
+  noop = tmp4Result4[1];
+  let num2 = 16;
+  if (tmp5[0]) {
+    num2 = 16;
+    if (!disabled) {
+      num2 = 20;
+    }
+  }
+  const items1 = [tmp.container, ];
+  let disabled1 = null;
+  if (disabled) {
+    disabled1 = tmp.disabled;
+  }
+  const obj3 = { style: items1, children: null };
+  items1[1] = disabled1;
+  let tmp18 = null;
   if (null != startIcon) {
-    const obj3 = { style: tmp.startIcon, children: startIcon };
-    tmp14 = closure_6(View, obj3);
+    const obj4 = { style: tmp.startIcon, children: startIcon };
+    tmp18 = closure_6(View, obj4);
   }
-  const items1 = [tmp14, , ];
-  const obj4 = { style: tmp.slider, value: null, minimumValue: null, maximumValue: null, step: null, disabled: null, onValueChange: null, onSlidingComplete: null, minimumTrackTintColor: null, maximumTrackTintColor: null, tapToSeek: true, accessibilityLabel: null, accessibilityHint: null, accessibilityValue: null, testID: null, onResponderGrant: null };
-  const tmp3Result = _slicedToArray(noop.useState(tmp4), 2);
+  const items2 = [tmp18, , ];
+  const obj5 = { style: tmp.slider, value: null, minimumValue: null, maximumValue: null, step: null, disabled: null, onValueChange: null, onSlidingStart: null, onSlidingComplete: null, thumbImage: null, thumbSize: null, minimumTrackTintColor: null, maximumTrackTintColor: null, tapToSeek: true, accessibilityLabel: null, accessibilityHint: null, accessibilityValue: null, testID: null, onResponderGrant: null };
+  const tmp4Result = _slicedToArray(noop.useState(tmp7), 2);
   if (first == null) {
-    first = _slicedToArray(noop.useState(tmp2), 1)[0];
+    first = tmp4(noop.useState(tmp6), 1)[0];
   }
-  obj4.value = first;
-  obj4.minimumValue = minValue;
-  obj4.maximumValue = num;
-  obj4.step = step;
-  obj4.disabled = disabled;
-  obj4.onValueChange = function handleValueChange(arg0) {
+  obj5.value = first;
+  obj5.minimumValue = minValue;
+  obj5.maximumValue = num;
+  obj5.step = step;
+  obj5.disabled = disabled;
+  obj5.onValueChange = function handleValueChange(arg0) {
     if (null != step) {
       const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     }
-    closure_2(arg0);
+    closure_4(arg0);
     if (closure_1_1 != null) {
       closure_1_1(arg0);
     }
   };
-  obj4.onSlidingComplete = onChangeEnd;
-  obj4.minimumTrackTintColor = tmp.minimumTrackTintColor.backgroundColor;
-  obj4.maximumTrackTintColor = tmp.maximumTrackTintColor.backgroundColor;
-  obj4.accessibilityLabel = accessibilityLabel;
-  obj4.accessibilityHint = accessibilityHint;
-  let tmp19;
-  if (null != formatValue) {
-    const obj5 = { text: formatValue(tmp3Result4[0]) };
-    tmp19 = obj5;
+  obj5.onSlidingStart = function onSlidingStart() {
+    return closure_3(true);
+  };
+  obj5.onSlidingComplete = function handleSlidingComplete(arg0) {
+    closure_3(false);
+    if (dependencyMap != null) {
+      tmp2(arg0);
+    }
+  };
+  const tmp21 = _modDef10970;
+  if (tmp2Result.isThemeDark(obj.useThemeContext().theme)) {
+    let tmp2Result3 = tmp2(14503);
+  } else {
+    tmp2Result3 = tmp2(14504);
   }
-  obj4.accessibilityValue = tmp19;
-  obj4.testID = testID;
-  const tmp18 = _modDef10970;
+  obj5.thumbImage = tmp2Result3;
+  obj5.thumbSize = 1.625 * num2;
+  obj5.minimumTrackTintColor = tmp.minimumTrackTintColor.backgroundColor;
+  obj5.maximumTrackTintColor = tmp.maximumTrackTintColor.backgroundColor;
+  obj5.accessibilityLabel = accessibilityLabel;
+  obj5.accessibilityHint = accessibilityHint;
+  let tmp23;
+  if (null != formatValue) {
+    const obj6 = { text: formatValue(tmp4Result4[0]) };
+    tmp23 = obj6;
+  }
+  obj5.accessibilityValue = tmp23;
+  obj5.testID = testID;
+  tmp2Result = step(5078);
   let fn;
-  if (obj6.isAndroid()) {
+  if (tmp2Result4.isAndroid()) {
     fn = () => true;
   }
-  obj4.onResponderGrant = fn;
-  items1[1] = closure_6(tmp18, obj4);
-  let tmp16Result = null;
+  obj5.onResponderGrant = fn;
+  items2[1] = closure_6(tmp21, obj5);
+  let tmp20Result = null;
   if (null != endIcon) {
     const obj7 = { style: tmp.endIcon, children: endIcon };
-    tmp16Result = closure_6(View, obj7);
+    tmp20Result = closure_6(View, obj7);
   }
-  items1[2] = tmp16Result;
-  obj2.children = items1;
-  return closure_7(View, obj2);
+  items2[2] = tmp20Result;
+  obj3.children = items2;
+  return closure_7(View, obj3);
 }

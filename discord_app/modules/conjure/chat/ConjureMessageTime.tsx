@@ -1,6 +1,6 @@
-// === Module 18472: ConjureMessageTime ===
+// === Module 18474: ConjureMessageTime ===
 
-// Module 18472 (ConjureMessageTime)
+// Module 18474 (ConjureMessageTime)
 import DateUtils from "DateUtils" /* 4735 */;
 import size from "module_2" /* 2 */;
 

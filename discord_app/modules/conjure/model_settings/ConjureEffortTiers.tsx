@@ -1,16 +1,16 @@
-// === Module 18341: ConjureEffortTiers ===
+// === Module 18343: ConjureEffortTiers ===
 
-// Module 18341 (ConjureEffortTiers)
+// Module 18343 (ConjureEffortTiers)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 18342 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 18344 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
 let obj = { simple: _modDef4190.Mqb8mc, balanced: _modDef4190.zCZfA6, complex: _modDef4190["8l2atm"] };
-const CONJURE_MODEL_TIERS = fn(18343).CONJURE_MODEL_TIERS;
+const CONJURE_MODEL_TIERS = fn(18345).CONJURE_MODEL_TIERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 

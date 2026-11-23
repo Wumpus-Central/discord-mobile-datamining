@@ -1,6 +1,6 @@
-// === Module 18705: useAppChannelClosed ===
+// === Module 18707: useAppChannelClosed ===
 
-// Module 18705 (useAppChannelClosed)
+// Module 18707 (useAppChannelClosed)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

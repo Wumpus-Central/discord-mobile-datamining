@@ -1,13 +1,13 @@
-// === Module 18038: VoicePanelDockPTTFloatingContent ===
+// === Module 18040: VoicePanelDockPTTFloatingContent ===
 
-// Module 18038 (VoicePanelDockPTTFloatingContent)
+// Module 18040 (VoicePanelDockPTTFloatingContent)
 import native from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import shared from "shared" /* 4920 */;
 import useThemeDefault from "useTheme" /* 5122 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5481 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 11011 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 18010 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 18012 */;
 import noop from "module_19" /* 19 */;
 
 const nativeDefault = native;

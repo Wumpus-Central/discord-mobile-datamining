@@ -1,6 +1,6 @@
-// === Module 18280: useIsConjureProjectLive ===
+// === Module 18282: useIsConjureProjectLive ===
 
-// Module 18280 (useIsConjureProjectLive)
+// Module 18282 (useIsConjureProjectLive)
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 
 const require = fn;

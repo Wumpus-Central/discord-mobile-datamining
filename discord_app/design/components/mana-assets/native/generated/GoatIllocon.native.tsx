@@ -1,20 +1,20 @@
-// === Module 18509: GoatIllocon ===
+// === Module 18511: GoatIllocon ===
 
-// Module 18509 (GoatIllocon)
+// Module 18511 (GoatIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18510 from "module_18510" /* 18510 */;
-import _modDef18511 from "module_18511" /* 18511 */;
 import _modDef18512 from "module_18512" /* 18512 */;
+import _modDef18513 from "module_18513" /* 18513 */;
+import _modDef18514 from "module_18514" /* 18514 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18510 }, 3: null };
-const obj2 = { uri: _modDef18510 };
-obj[2] = { uri: _modDef18511 };
-const obj3 = { uri: _modDef18511 };
-obj[3] = { uri: _modDef18512 };
+let obj = { 1: null, 2: { uri: _modDef18512 }, 3: null };
+const obj2 = { uri: _modDef18512 };
+obj[2] = { uri: _modDef18513 };
+const obj3 = { uri: _modDef18513 };
+obj[3] = { uri: _modDef18514 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
 

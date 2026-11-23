@@ -1,6 +1,6 @@
-// === Module 17982: VoicePanelDockGlow ===
+// === Module 17984: VoicePanelDockGlow ===
 
-// Module 17982 (VoicePanelDockGlow)
+// Module 17984 (VoicePanelDockGlow)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import ColorUtils from "ColorUtils" /* 4910 */;

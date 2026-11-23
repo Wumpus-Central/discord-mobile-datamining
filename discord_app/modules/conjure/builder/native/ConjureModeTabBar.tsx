@@ -1,6 +1,6 @@
-// === Module 18395: ConjureModeTabBar ===
+// === Module 18397: ConjureModeTabBar ===
 
-// Module 18395 (ConjureModeTabBar)
+// Module 18397 (ConjureModeTabBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _mod1653 from "module_1653" /* 1653 */;

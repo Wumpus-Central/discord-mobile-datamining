@@ -1,6 +1,6 @@
-// === Module 17988: useVoicePanelScreenshareToggle ===
+// === Module 17990: useVoicePanelScreenshareToggle ===
 
-// Module 17988 (useVoicePanelScreenshareToggle)
+// Module 17990 (useVoicePanelScreenshareToggle)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import useAlertStore from "useAlertStore" /* 5862 */;

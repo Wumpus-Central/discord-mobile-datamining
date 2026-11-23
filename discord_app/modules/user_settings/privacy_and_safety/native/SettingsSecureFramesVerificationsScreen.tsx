@@ -1,6 +1,6 @@
-// === Module 17346: SettingsSecureFramesVerificationsScreen ===
+// === Module 17348: SettingsSecureFramesVerificationsScreen ===
 
-// Module 17346 (SettingsSecureFramesVerificationsScreen)
+// Module 17348 (SettingsSecureFramesVerificationsScreen)
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9707 */;
@@ -105,7 +105,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
     navigation.setOptions(obj);
   });
   const obj4 = navigation(4969);
-  secureFramesUserVerifiedKeys = userId(17342).useSecureFramesUserVerifiedKeys(userId);
+  secureFramesUserVerifiedKeys = userId(17344).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -126,7 +126,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
   }, items2);
   const obj6 = { style: tmp.list, children: null };
   const obj7 = { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null };
-  const obj5 = userId(17342);
+  const obj5 = userId(17344);
   obj7.ListFooterComponent = <View style={tmp.listFooter}><ClearVerificationsListFooter userId={userId} /></View>;
   obj6.children = jsx(userId(7490).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
   return <View style={tmp.list}>{null}</View>;

@@ -1,6 +1,6 @@
-// === Module 17539: useChannelListWidth ===
+// === Module 17541: useChannelListWidth ===
 
-// Module 17539 (useChannelListWidth)
+// Module 17541 (useChannelListWidth)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import useChatLayoutDefault from "useChatLayout" /* 5092 */;

@@ -1,6 +1,6 @@
-// === Module 20121: AVErrorVideoStreamSenderReadyTimeoutNoStream ===
+// === Module 20123: AVErrorVideoStreamSenderReadyTimeoutNoStream ===
 
-// Module 20121 (AVErrorVideoStreamSenderReadyTimeoutNoStream)
+// Module 20123 (AVErrorVideoStreamSenderReadyTimeoutNoStream)
 import AVError from "AVError" /* 5843 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import VideoStreamStore from "VideoStreamStore" /* 6628 */;

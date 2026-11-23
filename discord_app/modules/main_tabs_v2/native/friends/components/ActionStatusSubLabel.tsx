@@ -1,6 +1,6 @@
-// === Module 18077: ActionStatusSubLabel ===
+// === Module 18079: ActionStatusSubLabel ===
 
-// Module 18077 (ActionStatusSubLabel)
+// Module 18079 (ActionStatusSubLabel)
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;

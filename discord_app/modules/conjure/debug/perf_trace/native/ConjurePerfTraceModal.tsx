@@ -1,15 +1,15 @@
-// === Module 18664: ConjurePerfTraceModal ===
+// === Module 18666: ConjurePerfTraceModal ===
 
-// Module 18664 (ConjurePerfTraceModal)
+// Module 18666 (ConjurePerfTraceModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7565 */;
-import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 18665 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 18666 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 18668 */;
-import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 18669 */;
+import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 18667 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 18668 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 18670 */;
+import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 18671 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 6968 */;
 
@@ -20,7 +20,7 @@ function WaterfallRow(node) {
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(18665).usePerfCategoryColors();
+  const perfCategoryColors = node(18667).usePerfCategoryColors();
   if (collapsed) {
     let ChevronSmallDownIcon = tmp2(7565).ChevronSmallRightIcon;
   } else {
@@ -64,7 +64,7 @@ function WaterfallRow(node) {
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop, ];
-  let obj = node(18665);
+  let obj = node(18667);
   items1[1] = { paddingLeft: node.depth * selected(575).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -124,7 +124,7 @@ function WaterfallRow(node) {
   const obj11 = { variant: "body-xs/semibold", color: "text-strong", children: node.service };
   const obj12 = { variant: "body-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation };
   const obj5 = { paddingLeft: node.depth * selected(575).space.PX_12 };
-  obj16.children = node(18666).perfNodeDuration(node);
+  obj16.children = node(18668).perfNodeDuration(node);
   items2[7] = tmp13(node(5504).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), , ];
@@ -141,8 +141,8 @@ function WaterfallRow(node) {
     const obj21 = { paddingLeft: node.depth * selected(575).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(18666);
-    obj20.children = tmp2(18666).perfNodeSections(node).map((item) => {
+    const tmp2Result2 = tmp2(18668);
+    obj20.children = tmp2(18668).perfNodeSections(node).map((item) => {
       ({ title, rows } = item);
       let obj = { style: detail.detail, children: null };
       let tmp3 = null;
@@ -174,7 +174,7 @@ function WaterfallRow(node) {
       return React6(timestampProducer, obj, title);
     });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(18666).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(18668).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -264,9 +264,9 @@ function Waterfall(trace) {
   if (0 !== trace.dropped) {
     const obj10 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(18666).formatSpanCount(trace.dropped) + " not recorded";
+    obj10.children = "" + tmp4(18668).formatSpanCount(trace.dropped) + " not recorded";
     tmp8Result2 = closure_8(tmp4(5504).Text, obj10);
-    const tmp4Result = tmp4(18666);
+    const tmp4Result = tmp4(18668);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;

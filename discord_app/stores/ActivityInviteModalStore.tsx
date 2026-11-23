@@ -1,6 +1,6 @@
-// === Module 15021: ActivityInviteModalStore ===
+// === Module 15023: ActivityInviteModalStore ===
 
-// Module 15021 (ActivityInviteModalStore)
+// Module 15023 (ActivityInviteModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;

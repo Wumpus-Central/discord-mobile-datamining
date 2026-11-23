@@ -1,6 +1,6 @@
-// === Module 19927: GuildSettingsAnalyticsCard ===
+// === Module 19929: GuildSettingsAnalyticsCard ===
 
-// Module 19927 (GuildSettingsAnalyticsCard)
+// Module 19929 (GuildSettingsAnalyticsCard)
 import nativeDefault from "native" /* 575 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       const obj8 = { size: "xxs", color: description(575).colors.TEXT_FEEDBACK_CRITICAL, accessible: true, accessibilityLabel: null };
       const intl3 = tmp4(1112).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1112).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(19928).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(19930).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "body-xs/normal", color: "text-subtle", children: subtext };

@@ -1,6 +1,6 @@
-// === Module 19340: useControlsHiddenPresentation ===
+// === Module 19342: useControlsHiddenPresentation ===
 
-// Module 19340 (useControlsHiddenPresentation)
+// Module 19342 (useControlsHiddenPresentation)
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import native from "native" /* 4974 */;

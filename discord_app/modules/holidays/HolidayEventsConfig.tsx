@@ -1,7 +1,7 @@
-// === Module 19525: HolidayEventsConfig ===
+// === Module 19527: HolidayEventsConfig ===
 
-// Module 19525 (HolidayEventsConfig)
-import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment" /* 19526 */;
+// Module 19527 (HolidayEventsConfig)
+import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment" /* 19528 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

@@ -1,8 +1,8 @@
-// === Module 18044: NotificationCenterActionSheet ===
+// === Module 18046: NotificationCenterActionSheet ===
 
-// Module 18044 (NotificationCenterActionSheet)
+// Module 18046 (NotificationCenterActionSheet)
 import SavedMessagesTypes from "SavedMessagesTypes" /* 11680 */;
-import MentionActionCreatorsDefault from "MentionActionCreators" /* 18045 */;
+import MentionActionCreatorsDefault from "MentionActionCreators" /* 18047 */;
 import noop from "module_19" /* 19 */;
 import RecentMentionsStore from "RecentMentionsStore" /* 6665 */;
 
@@ -71,13 +71,13 @@ export default function NotificationCenterActionSheet() {
   const intl4 = roleFilter(1112).intl;
   obj7.subLabel = intl4.string(roleFilter(1112).t.jYgZa4);
   const obj6 = { IconComponent: roleFilter(7690).AtIcon, source: everyoneFilter(13292) };
-  obj7.icon = closure_6(roleFilter(7555).ActionSheetRow.Icon, { IconComponent: roleFilter(11239).BellIcon, source: everyoneFilter(18046) });
+  obj7.icon = closure_6(roleFilter(7555).ActionSheetRow.Icon, { IconComponent: roleFilter(11239).BellIcon, source: everyoneFilter(18048) });
   items2[1] = closure_6(roleFilter(7555).ActionSheetSwitchRow, obj7);
   obj4.children = items2;
   const items3 = [closure_7(roleFilter(7555).ActionSheetRow.Group, obj4), ];
   const obj9 = { hasIcons: true, children: null };
   const obj10 = { icon: null, label: null, onPress: null, arrow: true };
-  const obj8 = { IconComponent: roleFilter(11239).BellIcon, source: everyoneFilter(18046) };
+  const obj8 = { IconComponent: roleFilter(11239).BellIcon, source: everyoneFilter(18048) };
   obj10.icon = closure_6(roleFilter(7555).ActionSheetRow.Icon, { IconComponent: roleFilter(11692).BookmarkIcon });
   const intl5 = roleFilter(1112).intl;
   obj10.label = intl5.string(roleFilter(1112).t["2pAkDA"]);

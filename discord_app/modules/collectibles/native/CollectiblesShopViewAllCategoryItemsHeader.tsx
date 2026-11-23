@@ -1,6 +1,6 @@
-// === Module 17337: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 17339: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 17337 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 17339 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1112 */;
 import useNavigation from "useNavigation" /* 1500 */;
 import FastImageDefault from "FastImage" /* 5600 */;

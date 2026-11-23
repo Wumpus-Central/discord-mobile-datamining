@@ -1,6 +1,6 @@
-// === Module 15847: UserProfileEditBannerButton ===
+// === Module 15849: UserProfileEditBannerButton ===
 
-// Module 15847 (UserProfileEditBannerButton)
+// Module 15849 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
 import Pressables from "Pressables" /* 7030 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
@@ -11,7 +11,7 @@ import UserProfileBannerDefault from "UserProfileBanner" /* 8202 */;
 import PencilIcon from "PencilIcon" /* 11242 */;
 import noop from "module_19" /* 19 */;
 
-const EditButtonDefault = tmp(15848);
+const EditButtonDefault = tmp(15850);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;

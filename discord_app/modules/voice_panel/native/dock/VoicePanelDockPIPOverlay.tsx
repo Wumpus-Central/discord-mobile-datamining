@@ -1,6 +1,6 @@
-// === Module 19317: VoicePanelDockPIPOverlay ===
+// === Module 19319: VoicePanelDockPIPOverlay ===
 
-// Module 19317 (VoicePanelDockPIPOverlay)
+// Module 19319 (VoicePanelDockPIPOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import timing_timing from "timing/timing" /* 5123 */;
@@ -34,7 +34,7 @@ function StreamVolumeSlider(stacked) {
   items = [handleVolumeChange];
   const obj = { Icon: null };
   const callback = noop.useCallback((arg0) => handleVolumeChange(PerceptualVolumeUtils.perceptualToAmplitude(arg0)), items);
-  obj.Icon = handleVolumeChange(19318).VoiceLowIcon;
+  obj.Icon = handleVolumeChange(19320).VoiceLowIcon;
   const tmp9 = closure_9(VolumeIcon, obj);
   const tmp10 = closure_9(VolumeIcon, { Icon: handleVolumeChange(7034).VoiceNormalIcon });
   const obj3 = { style: stacked ? tmp.stackedSlider : tmp.slider, children: null };
@@ -269,13 +269,13 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         stringResult = string(t.q3O3J8);
       }
       obj10.accessibilityLabel = stringResult;
-      items10[1] = closure_9(tmp2(19200), obj10);
+      items10[1] = closure_9(tmp2(19202), obj10);
       obj7.children = items10;
       const items11 = [closure_10(tmp2Result7, obj7), ];
       const items12 = [, , ];
       ({ row: arr13[0], bottomRow: arr13[1] } = tmp);
       let rowEnd = null;
-      const tmp2Result9 = tmp2(19200);
+      const tmp2Result9 = tmp2(19202);
       if (tmp24) {
         rowEnd = tmp.rowEnd;
       }
@@ -287,23 +287,23 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         const obj12 = { icon: tmp2(7035), onPress: onToggleVolume, accessibilityLabel: null };
         const intl2 = tmp12(1112).intl;
         obj12.accessibilityLabel = intl2.string(tmp12(1112).t.pEAl4b);
-        tmp29Result5 = closure_9(tmp2(19200), obj12);
-        const tmp2Result11 = tmp2(19200);
+        tmp29Result5 = closure_9(tmp2(19202), obj12);
+        const tmp2Result11 = tmp2(19202);
       }
       const obj13 = { children: null };
       const items13 = [tmp29Result5, ];
       const obj14 = { icon: null, onPress: null, accessibilityLabel: null };
       const tmp2Result10 = tmp2(7324);
-      obj14.icon = tmp2(16353);
+      obj14.icon = tmp2(16355);
       obj14.onPress = onOpenCall;
       const intl3 = tmp12(1112).intl;
       obj14.accessibilityLabel = intl3.string(tmp2(3376).MPtef8);
-      items13[1] = closure_9(tmp2(19200), obj14);
+      items13[1] = closure_9(tmp2(19202), obj14);
       obj11.children = items13;
       items11[1] = closure_10(tmp2Result10, obj11);
       obj13.children = items11;
       tmp44Result = closure_10(closure_11, obj13);
-      const tmp2Result12 = tmp2(19200);
+      const tmp2Result12 = tmp2(19202);
     }
     obj5.children = tmp44Result;
     let str2 = "controls";

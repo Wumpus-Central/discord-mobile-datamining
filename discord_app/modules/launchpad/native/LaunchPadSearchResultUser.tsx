@@ -1,19 +1,19 @@
-// === Module 19141: LaunchPadSearchResultUser ===
+// === Module 19143: LaunchPadSearchResultUser ===
 
-// Module 19141 (LaunchPadSearchResultUser)
+// Module 19143 (LaunchPadSearchResultUser)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
 import isStreamingDefault from "isStreaming" /* 8215 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17917 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18754 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 18755 */;
-import renderChannelContentDefault from "renderChannelContent" /* 18757 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 19130 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 19131 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 19132 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17919 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18756 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 18757 */;
+import renderChannelContentDefault from "renderChannelContent" /* 18759 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 19132 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 19133 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 19134 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
@@ -85,7 +85,7 @@ function UserResult(user) {
   obj5.style = items4;
   const tmp2Result5 = renderChannelPressableWrapperDefault;
   const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), , ];
-  const obj7 = { user, guildId: "Button", isMobileOnline, isVROnline, status: null, streaming: "913a5e1b2754c1df27088bf73bf21aff", style: "sv-SE.messages.913a5e1b2754c1df27088bf73bf21aff.compiled.messages", size: "jsona", animate: "ConjureAppPictureInPicture", typing: null, autoStatusCutout: null };
+  const obj7 = { user, guildId: "Button", isMobileOnline, isVROnline, status: null, streaming: "2729fa208c62e46e0b72396f606417db", style: "hr.messages.2729fa208c62e46e0b72396f606417db.compiled.messages", size: "jsona", animate: "ConjureAppPictureInPicture", typing: null, autoStatusCutout: null };
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;
@@ -146,7 +146,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(16721)(channel, { unread });
+  obj4.lastMessage = channel(16723)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

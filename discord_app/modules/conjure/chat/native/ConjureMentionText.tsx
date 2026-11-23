@@ -1,10 +1,10 @@
-// === Module 18480: ConjureMentionText ===
+// === Module 18482: ConjureMentionText ===
 
-// Module 18480 (ConjureMentionText)
+// Module 18482 (ConjureMentionText)
 import UserUtils from "UserUtils" /* 4969 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 18313 */;
-import conjureMentions from "conjureMentions" /* 18470 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 18477 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 18315 */;
+import conjureMentions from "conjureMentions" /* 18472 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 18479 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 

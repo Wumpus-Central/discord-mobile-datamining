@@ -1,6 +1,6 @@
-// === Module 17254: DesignSystemBadgeSetting ===
+// === Module 17256: DesignSystemBadgeSetting ===
 
-// Module 17254 (DesignSystemBadgeSetting)
+// Module 17256 (DesignSystemBadgeSetting)
 import Constants from "Constants" /* 1071 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;

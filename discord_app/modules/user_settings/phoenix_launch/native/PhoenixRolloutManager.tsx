@@ -1,8 +1,8 @@
-// === Module 19638: PhoenixRolloutManager ===
+// === Module 19640: PhoenixRolloutManager ===
 
-// Module 19638 (PhoenixRolloutManager)
+// Module 19640 (PhoenixRolloutManager)
 import LoggerDefault from "Logger" /* 3 */;
-import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17181 */;
+import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17183 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;

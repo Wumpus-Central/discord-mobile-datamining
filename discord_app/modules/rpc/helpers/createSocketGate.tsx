@@ -1,6 +1,6 @@
-// === Module 15699: createSocketGate ===
+// === Module 15701: createSocketGate ===
 
-// Module 15699 (createSocketGate)
+// Module 15701 (createSocketGate)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const size = fn(2);

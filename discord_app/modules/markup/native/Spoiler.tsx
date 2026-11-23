@@ -167,7 +167,7 @@ Spoiler.prototype["render"] = function render() {
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F87921 */ function() { ... });
+                        obj.children = Children.map(props.props.children, /* F87894 */ function() { ... });
                         items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);

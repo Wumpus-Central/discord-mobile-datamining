@@ -1,13 +1,13 @@
-// === Module 17761: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 17763: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 17761 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 17763 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1112 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5141 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
-import _modDef17762 from "module_17762" /* 17762 */;
+import _modDef17764 from "module_17764" /* 17764 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null
   };
-  const obj2 = { source: _modDef17762 };
+  const obj2 = { source: _modDef17764 };
   items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

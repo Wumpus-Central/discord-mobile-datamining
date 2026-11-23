@@ -1,6 +1,6 @@
-// === Module 15302: UpscaleSmallCapturedFramesExperiment ===
+// === Module 15304: UpscaleSmallCapturedFramesExperiment ===
 
-// Module 15302 (UpscaleSmallCapturedFramesExperiment)
+// Module 15304 (UpscaleSmallCapturedFramesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

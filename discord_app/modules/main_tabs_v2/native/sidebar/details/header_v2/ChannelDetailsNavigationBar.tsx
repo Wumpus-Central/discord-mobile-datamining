@@ -1,6 +1,6 @@
-// === Module 18838: ChannelDetailsNavigationBar ===
+// === Module 18840: ChannelDetailsNavigationBar ===
 
-// Module 18838 (ChannelDetailsNavigationBar)
+// Module 18840 (ChannelDetailsNavigationBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
@@ -12,7 +12,7 @@ import ChannelDetailsUtils from "ChannelDetailsUtils" /* 12080 */;
 import useSearchContext from "useSearchContext" /* 13153 */;
 import TrackingDefault from "Tracking" /* 13218 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 13843 */;
-import ChannelDetailsSearchBarDefault from "ChannelDetailsSearchBar" /* 18711 */;
+import ChannelDetailsSearchBarDefault from "ChannelDetailsSearchBar" /* 18713 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4846 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;

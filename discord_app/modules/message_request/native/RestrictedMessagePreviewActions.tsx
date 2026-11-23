@@ -1,6 +1,6 @@
-// === Module 19020: RestrictedMessagePreviewActions ===
+// === Module 19022: RestrictedMessagePreviewActions ===
 
-// Module 19020 (RestrictedMessagePreviewActions)
+// Module 19022 (RestrictedMessagePreviewActions)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
@@ -136,7 +136,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp18 = null;
     formatResult = null;
   } else if (constants2.PENDING_OUTGOING === stateFromStores) {
-    const obj11 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "a" };
+    const obj11 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "Boolean" };
     const intl3 = tmp2(tmp3[20]).intl;
     obj11.text = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
     tmp19 = closure_9(tmp2(tmp3[19]).Button, obj11);

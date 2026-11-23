@@ -1,6 +1,6 @@
-// === Module 17352: PinotMemberSetting ===
+// === Module 17354: PinotMemberSetting ===
 
-// Module 17352 (PinotMemberSetting)
+// Module 17354 (PinotMemberSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1071 */;

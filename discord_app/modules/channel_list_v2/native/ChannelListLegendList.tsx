@@ -1,8 +1,8 @@
-// === Module 17775: ChannelListLegendList ===
+// === Module 17777: ChannelListLegendList ===
 
-// Module 17775 (ChannelListLegendList)
+// Module 17777 (ChannelListLegendList)
 import FastList from "FastList" /* 7449 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 17776 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 17778 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "description", positionPercentage: false };
+let closure_8 = { item: "disabled", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = { code: "(function ChannelListLegendListTsx1(event){let[scrollPosValue,onScrollWorklet,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){scheduleOnRN(onScroll);}})" };
 const size = fn(2);

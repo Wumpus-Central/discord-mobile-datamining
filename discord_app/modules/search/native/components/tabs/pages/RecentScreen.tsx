@@ -1,6 +1,6 @@
-// === Module 18732: RecentScreen ===
+// === Module 18734: RecentScreen ===
 
-// Module 18732 (RecentScreen)
+// Module 18734 (RecentScreen)
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
@@ -11,13 +11,13 @@ import SmartSearchUtils from "SmartSearchUtils" /* 13200 */;
 import SearchUtils from "SearchUtils" /* 13204 */;
 import TrackingDefault from "Tracking" /* 13218 */;
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16126 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16128 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6641 */;
 import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13224 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 18733 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 18735 */;
 import SearchQueryStore from "SearchQueryStore" /* 13211 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15835: UserProfileUpsellButton ===
+// === Module 15837: UserProfileUpsellButton ===
 
-// Module 15835 (UserProfileUpsellButton)
+// Module 15837 (UserProfileUpsellButton)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10459 */;
 import noop from "module_19" /* 19 */;

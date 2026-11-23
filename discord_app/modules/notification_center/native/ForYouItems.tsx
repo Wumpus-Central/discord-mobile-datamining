@@ -1,6 +1,6 @@
-// === Module 18055: ForYouItems ===
+// === Module 18057: ForYouItems ===
 
-// Module 18055 (ForYouItems)
+// Module 18057 (ForYouItems)
 import nativeDefault from "native" /* 575 */;
 import _mod674 from "module_674" /* 674 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
@@ -11,17 +11,17 @@ import parseURLDefault from "parseURL" /* 5628 */;
 import CustomMarkupAll from "CustomMarkup" /* 5933 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6637 */;
 import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13538 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15059 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18053 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 18054 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18070 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18071 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18072 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18073 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18074 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 18080 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18081 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 18082 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15061 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18055 */;
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 18056 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18072 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18073 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18074 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18075 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18076 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 18082 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18083 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 18084 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ import ApplicationStore from "ApplicationStore" /* 2164 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import UserStore from "UserStore" /* 1386 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18049 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18051 */;
 
 require = fn;
 function ForYouFooter(loading) {
@@ -481,7 +481,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(18051).deleteNotificationCenterItem(tmp3);
+        yield tmp3(18053).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

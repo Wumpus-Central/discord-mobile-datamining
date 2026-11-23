@@ -1,6 +1,6 @@
-// === Module 18912: useOwnsAnyBadge ===
+// === Module 18914: useOwnsAnyBadge ===
 
-// Module 18912 (useOwnsAnyBadge)
+// Module 18914 (useOwnsAnyBadge)
 import useBadgesDefault from "useBadges" /* 8198 */;
 import UserStore from "UserStore" /* 1386 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;

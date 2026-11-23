@@ -1,6 +1,6 @@
-// === Module 16357: BountiesModalAdvertiserCta ===
+// === Module 16359: BountiesModalAdvertiserCta ===
 
-// Module 16357 (BountiesModalAdvertiserCta)
+// Module 16359 (BountiesModalAdvertiserCta)
 import QuestContent from "QuestContent" /* 6563 */;
 import AdCreativeType from "AdCreativeType" /* 6565 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
@@ -79,8 +79,8 @@ export default function BountiesModalAdvertiserCta(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.assign({ visible: 0 }));
   let animatedStyle;
-  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(16321).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj = animatedStyle(16321);
+  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(16323).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
+  let obj = animatedStyle(16323);
   items = [c4];
   let num = 0;
   const stateFromStores = animatedStyle(504).useStateFromStores(items, () => _undefined2.useReducedMotion);
@@ -121,7 +121,7 @@ export default function BountiesModalAdvertiserCta(visible) {
     return <BountiesModalAdvertiserCtaContent />;
   }, items3);
   const tmp2Result = animatedStyle(1653);
-  const tmp2Result2 = animatedStyle(16322);
+  const tmp2Result2 = animatedStyle(16324);
   const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5126).timingStandard, exitTiming: animatedStyle(5126).timingFast });
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {

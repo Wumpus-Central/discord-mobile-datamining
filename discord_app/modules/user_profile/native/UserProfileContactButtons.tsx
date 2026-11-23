@@ -1,6 +1,6 @@
-// === Module 14633: UserProfileContactButtons ===
+// === Module 14635: UserProfileContactButtons ===
 
-// Module 14633 (UserProfileContactButtons)
+// Module 14635 (UserProfileContactButtons)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
@@ -47,8 +47,8 @@ function FriendRequestButton(user) {
   dependencyMap = { location: newestAnalyticsLocation };
   let obj = user(8135);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14524).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14524);
+  const gameFriendsForUser = user(14526).useGameFriendsForUser(user.id);
+  const tmp3Result = user(14526);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -61,7 +61,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(14634).UserClockIcon;
+          let UserPlusIcon = tmp3(14636).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(5603).UserPlusIcon;
         }

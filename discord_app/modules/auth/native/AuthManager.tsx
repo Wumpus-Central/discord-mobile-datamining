@@ -1,12 +1,12 @@
-// === Module 17502: AuthManager ===
+// === Module 17504: AuthManager ===
 
-// Module 17502 (AuthManager)
+// Module 17504 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import transitionToGuild from "transitionToGuild" /* 6835 */;
 import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 8455 */;
 import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13282 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17509 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17511 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 
@@ -79,8 +79,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(17503).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(17503);
+          const result = applyArgumentsResult(17505).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(17505);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;

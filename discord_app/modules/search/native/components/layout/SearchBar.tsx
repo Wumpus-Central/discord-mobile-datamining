@@ -1,6 +1,6 @@
-// === Module 18713: layout/SearchBar ===
+// === Module 18715: layout/SearchBar ===
 
-// Module 18713 (layout/SearchBar)
+// Module 18715 (layout/SearchBar)
 import util from "util" /* 1112 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
 import useChannelName from "useChannelName" /* 5529 */;

@@ -1,10 +1,10 @@
-// === Module 15968: SettingsHeaderBackButton ===
+// === Module 15970: SettingsHeaderBackButton ===
 
-// Module 15968 (SettingsHeaderBackButton)
+// Module 15970 (SettingsHeaderBackButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Pressables from "Pressables" /* 7030 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 15969 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 15971 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

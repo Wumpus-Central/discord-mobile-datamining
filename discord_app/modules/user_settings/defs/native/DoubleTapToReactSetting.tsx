@@ -1,6 +1,6 @@
-// === Module 17385: DoubleTapToReactSetting ===
+// === Module 17387: DoubleTapToReactSetting ===
 
-// Module 17385 (DoubleTapToReactSetting)
+// Module 17387 (DoubleTapToReactSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;

@@ -1,9 +1,9 @@
-// === Module 17343: SecureFramesPersistentCodesSetting ===
+// === Module 17345: SecureFramesPersistentCodesSetting ===
 
-// Module 17343 (SecureFramesPersistentCodesSetting)
+// Module 17345 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 17344 */;
+import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 17346 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5672 */;
 
 require = fn;

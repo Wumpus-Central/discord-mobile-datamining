@@ -1,8 +1,8 @@
-// === Module 15966: useMaybeFetchCollectiblesRecommendations ===
+// === Module 15968: useMaybeFetchCollectiblesRecommendations ===
 
-// Module 15966 (useMaybeFetchCollectiblesRecommendations)
+// Module 15968 (useMaybeFetchCollectiblesRecommendations)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesRecommendationActionCreators from "CollectiblesRecommendationActionCreators" /* 15967 */;
+import CollectiblesRecommendationActionCreators from "CollectiblesRecommendationActionCreators" /* 15969 */;
 import UserStore from "UserStore" /* 1386 */;
 import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 14255 */;
 import size from "module_2" /* 2 */;

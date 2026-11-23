@@ -1,6 +1,6 @@
-// === Module 19765: EmptyServerSettingsAuditLog ===
+// === Module 19767: EmptyServerSettingsAuditLog ===
 
-// Module 19765 (EmptyServerSettingsAuditLog)
+// Module 19767 (EmptyServerSettingsAuditLog)
 import shared from "shared" /* 4920 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import _mod7786 from "module_7786" /* 7786 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getEmptyServerSettingsAuditLogSource(theme) {
   return _mod7786.getIllustrationSource(theme, {
     dark() {
-      return require("module_19766");
+      return require("module_19768");
     },
     darker() {
-      return require("module_19767");
+      return require("module_19769");
     },
     light() {
-      return require("module_19768");
+      return require("module_19770");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useEmptyServerSettingsAuditLogSource() {
   const obj = shared;
   return _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19766");
+      return require("module_19768");
     },
     darker() {
-      return require("module_19767");
+      return require("module_19769");
     },
     light() {
-      return require("module_19768");
+      return require("module_19770");
     }
   });
 }
@@ -44,25 +44,25 @@ export function EmptyServerSettingsAuditLog(arg0) {
   const obj = shared;
   const illustrationSource = _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19766");
+      return require("module_19768");
     },
     darker() {
-      return require("module_19767");
+      return require("module_19769");
     },
     light() {
-      return require("module_19768");
+      return require("module_19770");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_19766");
+      return require("module_19768");
     },
     darker() {
-      return require("module_19767");
+      return require("module_19769");
     },
     light() {
-      return require("module_19768");
+      return require("module_19770");
     }
   };
   const merged = Object.assign(arg0);

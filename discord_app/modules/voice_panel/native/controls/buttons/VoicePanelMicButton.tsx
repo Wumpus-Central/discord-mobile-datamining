@@ -1,6 +1,6 @@
-// === Module 19345: VoicePanelMicButton ===
+// === Module 19347: VoicePanelMicButton ===
 
-// Module 19345 (VoicePanelMicButton)
+// Module 19347 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import HapticUtils from "HapticUtils" /* 5129 */;

@@ -1,11 +1,11 @@
-// === Module 18683: ConjureDebugGitSection ===
+// === Module 18685: ConjureDebugGitSection ===
 
-// Module 18683 (ConjureDebugGitSection)
+// Module 18685 (ConjureDebugGitSection)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import AlertModal from "AlertModal" /* 5866 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 18678 */;
-import ConjureDebugGit from "ConjureDebugGit" /* 18690 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 18680 */;
+import ConjureDebugGit from "ConjureDebugGit" /* 18692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ obj2.restartAgentRow = { flexDirection: "row", flexWrap: "wrap", alignItems: "ce
 obj2.clearAlarm = { flexShrink: 1 };
 obj2.disabled = { opacity: 0.5 };
 let closure_9 = createStyles.createStyles(obj2);
-let obj5 = { checkout: fn(7675).FolderIcon, edit: fn(11242).PencilIcon, remote: fn(13765).CloudIcon, commits: fn(18684).ListNumberedIcon, calendar: fn(8048).CalendarIcon, save: fn(18686).SaveIcon, objects: fn(12471).ServerIcon, download: fn(18688).CloudDownloadIcon, size: fn(10943).SpeedometerIcon, file: fn(11148).FileIcon };
+let obj5 = { checkout: fn(7675).FolderIcon, edit: fn(11242).PencilIcon, remote: fn(13765).CloudIcon, commits: fn(18686).ListNumberedIcon, calendar: fn(8048).CalendarIcon, save: fn(18688).SaveIcon, objects: fn(12471).ServerIcon, download: fn(18690).CloudDownloadIcon, size: fn(10943).SpeedometerIcon, file: fn(11148).FileIcon };
 let obj6 = { ok: null, warning: null, error: null, ahead: null, behind: null };
 let items = [fn(7532).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
 obj6.ok = items;
@@ -31,9 +31,9 @@ let items1 = [fn(7763).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
 obj6.warning = items1;
 let items2 = [fn(7231).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
 obj6.error = items2;
-let items3 = [fn(17194).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
+let items3 = [fn(17196).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
 obj6.ahead = items3;
-let items4 = [fn(17196).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
+let items4 = [fn(17198).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
 obj6.behind = items4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugGitSection.tsx");

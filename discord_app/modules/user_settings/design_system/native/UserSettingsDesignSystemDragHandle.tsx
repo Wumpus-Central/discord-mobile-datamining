@@ -1,6 +1,6 @@
-// === Module 17264: UserSettingsDesignSystemDragHandle ===
+// === Module 17266: UserSettingsDesignSystemDragHandle ===
 
-// Module 17264 (UserSettingsDesignSystemDragHandle)
+// Module 17266 (UserSettingsDesignSystemDragHandle)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import Text_Text from "Text/Text" /* 5504 */;

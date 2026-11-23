@@ -1,11 +1,11 @@
-// === Module 18385: conjureChatMoreSections ===
+// === Module 18387: conjureChatMoreSections ===
 
-// Module 18385 (conjureChatMoreSections)
+// Module 18387 (conjureChatMoreSections)
 import _modDef4190 from "module_4190" /* 4190 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
 import conjureProjectMute from "conjureProjectMute" /* 6936 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18301 */;
-import conjureProjectActions from "conjureProjectActions" /* 18388 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18303 */;
+import conjureProjectActions from "conjureProjectActions" /* 18390 */;
 import size from "module_2" /* 2 */;
 
 const isProjectOwner = ConjureProjectStore.isProjectOwner;
@@ -34,7 +34,7 @@ export function conjureChatMoreSections(project) {
     const entry = { kind: "switch", key: "annotate", label: null, IconComponent: null, value: null, disabled: null, subLabel: null, closesOnEnable: true, onValueChange: null };
     const intl15 = tmp2(1112).intl;
     entry.label = intl15.string(_modDef4190["6GOFLB"]);
-    entry.IconComponent = tmp2(18386).ExperimentalDirectSelectIcon;
+    entry.IconComponent = tmp2(18388).ExperimentalDirectSelectIcon;
     ({ active: obj15.value, busy: obj15.disabled } = annotate);
     let stringResult;
     if (annotate.busy) {
@@ -112,7 +112,7 @@ export function conjureChatMoreSections(project) {
     const obj7 = { kind: "action", key: "import", label: null, IconComponent: null, onPress: null };
     const intl9 = tmp2(1112).intl;
     obj7.label = intl9.string(_modDef4190.rWGY3e);
-    obj7.IconComponent = tmp2(16955).FileUpIcon;
+    obj7.IconComponent = tmp2(16957).FileUpIcon;
     obj7.onPress = function onPress() {
       return conjureProjectActions.importConjureProject(project);
     };
@@ -123,7 +123,7 @@ export function conjureChatMoreSections(project) {
     const obj8 = { kind: "action", key: "debug", label: null, IconComponent: null, onPress: null };
     const intl10 = tmp2(1112).intl;
     obj8.label = intl10.string(_modDef4190["Q4FN+H"]);
-    obj8.IconComponent = tmp2(17187).BugIcon;
+    obj8.IconComponent = tmp2(17189).BugIcon;
     obj8.onPress = onDebug;
     items3.push(obj8);
   }
@@ -131,7 +131,7 @@ export function conjureChatMoreSections(project) {
     const obj9 = { kind: "action", key: "connect-tool", label: null, IconComponent: null, onPress: null };
     const intl11 = tmp2(1112).intl;
     obj9.label = intl11.string(_modDef4190.yOIql5);
-    obj9.IconComponent = tmp2(18352).LinkPlusIcon;
+    obj9.IconComponent = tmp2(18354).LinkPlusIcon;
     obj9.onPress = onConnectTool;
     items3.push(obj9);
   }

@@ -1,13 +1,13 @@
-// === Module 16573: QuestDockBountyIllustration ===
+// === Module 16575: QuestDockBountyIllustration ===
 
-// Module 16573 (QuestDockBountyIllustration)
+// Module 16575 (QuestDockBountyIllustration)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 4974 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9967 */;
-import QuestDockHooks from "QuestDockHooks" /* 16470 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 16574 */;
-import _modDef16575 from "module_16575" /* 16575 */;
+import QuestDockHooks from "QuestDockHooks" /* 16472 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 16576 */;
+import _modDef16577 from "module_16577" /* 16577 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 
@@ -85,7 +85,7 @@ function QuestDock3DOrbsIllustration() {
   const obj3 = { source: null, style: null, resizeMode: "contain", enableAnimation: null, paused: null, accessible: false };
   const obj4 = { uri: null };
   obj2 = QuestDockHooks;
-  obj4.uri = _modDef16575;
+  obj4.uri = _modDef16577;
   obj3.source = obj4;
   obj3.style = tmp.fill;
   obj3.enableAnimation = !stateFromStores;
@@ -109,7 +109,7 @@ class QuestDockBountyOrbIllustration {
 }
 const View = fn(17).View;
 const QuestsExperimentLocations = fn(6558).QuestsExperimentLocations;
-const QuestDockConstants = fn(16473);
+const QuestDockConstants = fn(16475);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);

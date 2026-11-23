@@ -1,6 +1,6 @@
-// === Module 19445: VoicePermissionManager ===
+// === Module 19447: VoicePermissionManager ===
 
-// Module 19445 (VoicePermissionManager)
+// Module 19447 (VoicePermissionManager)
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5950 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7795 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6536 */;

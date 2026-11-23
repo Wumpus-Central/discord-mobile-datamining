@@ -1,6 +1,6 @@
-// === Module 18904: YouScreenUserProfileContent ===
+// === Module 18906: YouScreenUserProfileContent ===
 
-// Module 18904 (YouScreenUserProfileContent)
+// Module 18906 (YouScreenUserProfileContent)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import dismissible_content from "dismissible_content" /* 4746 */;
@@ -15,26 +15,26 @@ import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 14200 */;
 import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 14206 */;
 import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 14211 */;
 import UserProfileActivityDefault from "UserProfileActivity" /* 14446 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 14513 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14525 */;
-import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 14526 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14528 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14529 */;
-import UserProfileWidgetsBoardTabDefault from "UserProfileWidgetsBoardTab" /* 14545 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14579 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14595 */;
-import UserProfileConnections from "UserProfileConnections" /* 14598 */;
-import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 14603 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14609 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14618 */;
-import BalanceWidgetMenu from "BalanceWidgetMenu" /* 17125 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 17949 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18912 */;
-import useIsNitroBadgeAutoUnhiddenDefault from "useIsNitroBadgeAutoUnhidden" /* 18913 */;
-import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark" /* 18914 */;
-import OrbWalletProfileIntroductionCoachmarkDefault from "OrbWalletProfileIntroductionCoachmark" /* 18915 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18918 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18920 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 14515 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14527 */;
+import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 14528 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14530 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14531 */;
+import UserProfileWidgetsBoardTabDefault from "UserProfileWidgetsBoardTab" /* 14547 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14581 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14597 */;
+import UserProfileConnections from "UserProfileConnections" /* 14600 */;
+import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 14605 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14611 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14620 */;
+import BalanceWidgetMenu from "BalanceWidgetMenu" /* 17127 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 17951 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18914 */;
+import useIsNitroBadgeAutoUnhiddenDefault from "useIsNitroBadgeAutoUnhidden" /* 18915 */;
+import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark" /* 18916 */;
+import OrbWalletProfileIntroductionCoachmarkDefault from "OrbWalletProfileIntroductionCoachmark" /* 18917 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18920 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18922 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;
@@ -264,7 +264,7 @@ const useIsContentShown = fn(4754).useIsContentShown;
 const UserProfileSections = fn(8069).UserProfileSections;
 let UserProfileThemeTypes = fn(7564).UserProfileThemeTypes;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
-let closure_12 = fn(15829).UserProfileEditAutoFocusElement;
+let closure_12 = fn(15831).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);

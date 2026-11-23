@@ -1,6 +1,6 @@
-// === Module 18013: VoicePanelDockControls ===
+// === Module 18015: VoicePanelDockControls ===
 
-// Module 18013 (VoicePanelDockControls)
+// Module 18015 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HapticUtils from "HapticUtils" /* 5129 */;
@@ -10,10 +10,10 @@ import _modDef8615 from "module_8615" /* 8615 */;
 import VoiceActionUtils from "VoiceActionUtils" /* 11009 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import _modDef13418 from "module_13418" /* 13418 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 18010 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 18014 */;
-import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18034 */;
-import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 18037 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 18012 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 18016 */;
+import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18036 */;
+import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 18039 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;

@@ -1,6 +1,6 @@
-// === Module 19324: VoicePanelPIP ===
+// === Module 19326: VoicePanelPIP ===
 
-// Module 19324 (VoicePanelPIP)
+// Module 19326 (VoicePanelPIP)
 import util from "util" /* 1112 */;
 import _mod1706 from "module_1706" /* 1706 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
@@ -13,9 +13,9 @@ import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11754 */;
 import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11757 */;
 import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11759 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19164 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19233 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19241 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19166 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19235 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19243 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import FramesStore from "FramesStore" /* 6623 */;
@@ -471,7 +471,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F141746 */ function() { ... });
+          found = allTouches.filter(/* F141724 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);
@@ -1136,7 +1136,7 @@ let StyleSheet = get_ActivityIndicator.StyleSheet;
 const VoicePanelConstants = fn(11750);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11748).VoicePanelControlsModes;
-const VoicePanelPIPConstants = fn(19165);
+const VoicePanelPIPConstants = fn(19167);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_12, VoicePanelPIPModes: map1 } = VoicePanelPIPConstants);
 const ActivityPanelModes = fn(5539).ActivityPanelModes;
 const isLaunched = fn(6624).isLaunched;

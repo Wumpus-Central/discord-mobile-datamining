@@ -1,6 +1,6 @@
-// === Module 19347: VoicePanelAnimatedButtonWrapper ===
+// === Module 19349: VoicePanelAnimatedButtonWrapper ===
 
-// Module 19347 (VoicePanelAnimatedButtonWrapper)
+// Module 19349 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import timing_timing from "timing/timing" /* 5123 */;

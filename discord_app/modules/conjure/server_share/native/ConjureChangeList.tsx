@@ -1,6 +1,6 @@
-// === Module 18298: ConjureChangeList ===
+// === Module 18300: ConjureChangeList ===
 
-// Module 18298 (ConjureChangeList)
+// Module 18300 (ConjureChangeList)
 import nativeDefault from "native" /* 575 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { bots: fn(12179).RobotIcon, channels: fn(7704).AppsIcon, test_app: fn(17002).BeakerIcon, profile_widget: fn(7848).IdCardIcon, overlay: fn(7040).GameControllerIcon, automod: fn(10133).ShieldIcon, collaboration: fn(7038).GroupIcon, only_you: fn(12361).UserIcon, location: fn(12329).MagicWandIcon, server: fn(12471).ServerIcon, settings: fn(10371).SettingsIcon };
+let obj = { bots: fn(12179).RobotIcon, channels: fn(7704).AppsIcon, test_app: fn(17004).BeakerIcon, profile_widget: fn(7848).IdCardIcon, overlay: fn(7040).GameControllerIcon, automod: fn(10133).ShieldIcon, collaboration: fn(7038).GroupIcon, only_you: fn(12361).UserIcon, location: fn(12329).MagicWandIcon, server: fn(12471).ServerIcon, settings: fn(10371).SettingsIcon };
 const createStyles = fn(4913);
 let obj3 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, rowText: { flex: 1 } };
 let closure_7 = createStyles.createStyles(obj3);

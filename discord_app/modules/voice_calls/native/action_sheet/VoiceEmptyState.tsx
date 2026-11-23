@@ -1,12 +1,12 @@
-// === Module 14858: VoiceEmptyState ===
+// === Module 14860: VoiceEmptyState ===
 
-// Module 14858 (VoiceEmptyState)
+// Module 14860 (VoiceEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef14859 from "module_14859" /* 14859 */;
-import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 14860 */;
+import _modDef14861 from "module_14861" /* 14861 */;
+import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 14862 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 6407 */;
 
@@ -43,8 +43,8 @@ export default function VoiceEmptyState(channel) {
   obj4.title = intl.string(util.t["/HABZo"]);
   const intl2 = util.intl;
   obj4.body = intl2.string(util.t["5Jy2FY"]);
-  obj4.lightSource = _modDef14859;
-  obj4.darkSource = _modDef14859;
+  obj4.lightSource = _modDef14861;
+  obj4.darkSource = _modDef14861;
   ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
   obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
   const items1 = [React4(native.ThemedEmptyState, obj4), React4(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button })];

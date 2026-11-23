@@ -1,6 +1,6 @@
-// === Module 19385: VoicePanelControlsAppLauncher ===
+// === Module 19387: VoicePanelControlsAppLauncher ===
 
-// Module 19385 (VoicePanelControlsAppLauncher)
+// Module 19387 (VoicePanelControlsAppLauncher)
 import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import _modDef1653 from "module_1653" /* 1653 */;

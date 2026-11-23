@@ -1,6 +1,6 @@
-// === Module 17981: VoicePanelDockSlot ===
+// === Module 17983: VoicePanelDockSlot ===
 
-// Module 17981 (VoicePanelDockSlot)
+// Module 17983 (VoicePanelDockSlot)
 import _mod1653 from "module_1653" /* 1653 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5094 */;
 import spring_spring from "spring/spring" /* 5514 */;
@@ -8,10 +8,10 @@ import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10598 */
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11770 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11775 */;
-import VoicePanelDockGlow from "VoicePanelDockGlow" /* 17982 */;
-import useVoicePanelDockMicLiveDefault from "useVoicePanelDockMicLive" /* 18039 */;
+import VoicePanelDockGlow from "VoicePanelDockGlow" /* 17984 */;
+import useVoicePanelDockMicLiveDefault from "useVoicePanelDockMicLive" /* 18041 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16471 */;
+import QuestDockStore from "QuestDockStore" /* 16473 */;
 
 const _modDef1653 = _mod1653;
 
@@ -142,7 +142,7 @@ function VoicePanelDockSlotDock(micLive) {
       const items12 = [StyleSheet.absoluteFill, animatedStyle];
       obj5.style = items12;
       obj5.onLayout = callback;
-      obj5.children = metroImportDefault(tmp(17984), { isInSlot: true });
+      obj5.children = metroImportDefault(tmp(17986), { isInSlot: true });
       items11[1] = metroImportDefault(tmp(1653).View, obj5);
       const obj6 = { style: null, pointerEvents: "none", children: null };
       const items13 = [StyleSheet.absoluteFill, ];

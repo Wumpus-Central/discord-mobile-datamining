@@ -1,6 +1,6 @@
-// === Module 17881: InvitesDisabledBadge ===
+// === Module 17883: InvitesDisabledBadge ===
 
-// Module 17881 (InvitesDisabledBadge)
+// Module 17883 (InvitesDisabledBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef13675 from "module_13675" /* 13675 */;

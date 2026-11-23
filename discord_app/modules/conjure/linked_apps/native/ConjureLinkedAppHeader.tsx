@@ -1,12 +1,12 @@
-// === Module 18334: ConjureLinkedAppHeader ===
+// === Module 18336: ConjureLinkedAppHeader ===
 
-// Module 18334 (ConjureLinkedAppHeader)
+// Module 18336 (ConjureLinkedAppHeader)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import AppsIcon from "AppsIcon" /* 7704 */;
 import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13787 */;
-import conjureLinkedAppData from "conjureLinkedAppData" /* 18333 */;
-import ConjureLinkedAppConnectorDefault from "ConjureLinkedAppConnector" /* 18335 */;
+import conjureLinkedAppData from "conjureLinkedAppData" /* 18335 */;
+import ConjureLinkedAppConnectorDefault from "ConjureLinkedAppConnector" /* 18337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

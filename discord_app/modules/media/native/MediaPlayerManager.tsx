@@ -1,6 +1,6 @@
-// === Module 15781: MediaPlayerManager ===
+// === Module 15783: MediaPlayerManager ===
 
-// Module 15781 (MediaPlayerManager)
+// Module 15783 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -18,7 +18,7 @@ import ChannelStore from "ChannelStore" /* 4762 */;
 import MessageStore from "MessageStore" /* 5964 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15782 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15784 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 import size from "module_2" /* 2 */;
@@ -36,12 +36,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "Promise",
-    canAccessMedia: "description",
+    canAccessMedia: "disabled",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: "Lietuvi\u0161kai",
+    showPip: "Suomi",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
@@ -286,7 +286,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "description", rate: false, isPlaying: false, wasPipClosedByUser: "pinching_hand_tone2" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "GUILD_SUBSCRIPTIONS_FLUSH" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

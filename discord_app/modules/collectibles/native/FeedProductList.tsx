@@ -1,7 +1,7 @@
-// === Module 17313: FeedProductList ===
+// === Module 17315: FeedProductList ===
 
-// Module 17313 (FeedProductList)
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 17315 */;
+// Module 17315 (FeedProductList)
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 17317 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(17314).useCardLayout();
+  const cardLayout = num(17316).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   items = [];
   num = 0;

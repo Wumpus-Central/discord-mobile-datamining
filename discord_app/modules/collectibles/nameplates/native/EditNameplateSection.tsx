@@ -1,11 +1,11 @@
-// === Module 15901: EditNameplateSection ===
+// === Module 15903: EditNameplateSection ===
 
-// Module 15901 (EditNameplateSection)
+// Module 15903 (EditNameplateSection)
 import utils from "utils" /* 2109 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import useCollectibleListLayout from "useCollectibleListLayout" /* 14260 */;
 import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14261 */;
-import useNameplateSections from "useNameplateSections" /* 15900 */;
+import useNameplateSections from "useNameplateSections" /* 15902 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15760: crossPlatformRPCEventHandlers ===
+// === Module 15762: crossPlatformRPCEventHandlers ===
 
-// Module 15760 (crossPlatformRPCEventHandlers)
+// Module 15762 (crossPlatformRPCEventHandlers)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
@@ -10,11 +10,11 @@ import transformUserDefault from "transformUser" /* 6907 */;
 import RPCErrorDefault from "RPCError" /* 6909 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10801 */;
 import RPCHelpers from "RPCHelpers" /* 10804 */;
-import frameDeepLinks from "frameDeepLinks" /* 14763 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15669 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15670 */;
-import guildVoice from "guildVoice" /* 15674 */;
-import transformApplicationDefault from "transformApplication" /* 15761 */;
+import frameDeepLinks from "frameDeepLinks" /* 14765 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15671 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15672 */;
+import guildVoice from "guildVoice" /* 15676 */;
+import transformApplicationDefault from "transformApplication" /* 15763 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import RunningGameStore from "RunningGameStore" /* 2139 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
@@ -144,8 +144,8 @@ obj4.validation = function validation(string) {
 obj4.handler = function handler(args) {
   const channel_id = args.args.channel_id;
   if (obj.isGuildVoiceSocket(args.socket)) {
-    const guildVoiceChannel = tmp(15674).getGuildVoiceChannel(channel_id);
-    const tmpResult = tmp(15674);
+    const guildVoiceChannel = tmp(15676).getGuildVoiceChannel(channel_id);
+    const tmpResult = tmp(15676);
   }
   if (null == ChannelStore.getChannel(channel_id)) {
     let obj2 = { errorCode: constants3.INVALID_CHANNEL };
@@ -172,7 +172,7 @@ obj4.handler = function handler(args) {
       }
     };
   }
-  obj = channel_id(15674);
+  obj = channel_id(15676);
   tmp = channel_id;
 };
 obj2[RPCEvents.VOICE_STATE_CREATE] = obj4;
@@ -191,8 +191,8 @@ obj6.validation = function validation(string) {
 obj6.handler = function handler(args) {
   const channel_id = args.args.channel_id;
   if (obj.isGuildVoiceSocket(args.socket)) {
-    const guildVoiceChannel = tmp(15674).getGuildVoiceChannel(channel_id);
-    const tmpResult = tmp(15674);
+    const guildVoiceChannel = tmp(15676).getGuildVoiceChannel(channel_id);
+    const tmpResult = tmp(15676);
   }
   if (null == ChannelStore.getChannel(channel_id)) {
     let obj2 = { errorCode: constants3.INVALID_CHANNEL };
@@ -216,11 +216,11 @@ obj6.handler = function handler(args) {
       }
     };
   }
-  obj = channel_id(15674);
+  obj = channel_id(15676);
   tmp = channel_id;
 };
 obj2[RPCEvents.VOICE_STATE_DELETE] = obj6;
-let CONTEXT_MENU_ICON_NAMES = fn(15678);
+let CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj9 = { scope: null, handler: null };
 const obj10 = {};
 const items3 = [fn(6913).OAuth2Scopes.RPC, fn(6913).OAuth2Scopes.RPC_VOICE_READ, fn(6913).OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -229,8 +229,8 @@ obj9.scope = obj10;
 obj9.handler = function handler(args) {
   const channel_id = args.args.channel_id;
   if (obj.isGuildVoiceSocket(args.socket)) {
-    const guildVoiceChannel = tmp(15674).getGuildVoiceChannel(channel_id);
-    const tmpResult = tmp(15674);
+    const guildVoiceChannel = tmp(15676).getGuildVoiceChannel(channel_id);
+    const tmpResult = tmp(15676);
   }
   if (null == ChannelStore.getChannel(channel_id)) {
     let obj2 = { errorCode: constants3.INVALID_CHANNEL };
@@ -255,7 +255,7 @@ obj9.handler = function handler(args) {
       }
     };
   }
-  obj = channel_id(15674);
+  obj = channel_id(15676);
   tmp = channel_id;
 };
 obj2[RPCEvents.VOICE_STATE_UPDATE] = CONTEXT_MENU_ICON_NAMES.createRPCEvent(RPCEvents.VOICE_STATE_UPDATE, obj9);
@@ -343,7 +343,7 @@ const obj13 = { scope: fn(6913).OAuth2Scopes.RPC, validation: messageEventsValid
 obj2[RPCEvents.MESSAGE_UPDATE] = { scope: fn(6913).OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
 const obj14 = { scope: fn(6913).OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
 obj2[RPCEvents.MESSAGE_DELETE] = { scope: fn(6913).OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj17 = { scope: null, handler: null };
 const obj18 = {};
 const items5 = [fn(6913).OAuth2Scopes.RPC, fn(6913).OAuth2Scopes.RPC_VOICE_READ, RPC_LOCAL_SCOPE];
@@ -351,7 +351,7 @@ obj18[RPC_SCOPE_CONFIG.ANY] = items5;
 obj17.scope = obj18;
 obj17.handler = speakingEvents;
 obj2[RPCEvents.SPEAKING_START] = CONTEXT_MENU_ICON_NAMES.createRPCEvent(RPCEvents.SPEAKING_START, obj17);
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj20 = { scope: null, handler: null };
 const obj21 = {};
 const items6 = [fn(6913).OAuth2Scopes.RPC, fn(6913).OAuth2Scopes.RPC_VOICE_READ, RPC_LOCAL_SCOPE];
@@ -365,7 +365,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(15669).validateEventSubscription(socket, session_id);
+    const result = socket(15671).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       const participantsForEventSubscription = ConjureVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
@@ -426,7 +426,7 @@ obj26.handler = function handler() {
 
 };
 obj2[RPCEvents.GAME_SPECTATE] = obj26;
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj29 = { scope: null, handler: null };
 const obj30 = {};
 const items9 = [fn(6913).OAuth2Scopes.RPC, RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
@@ -470,7 +470,7 @@ const obj37 = {
   }
 };
 obj2[RPCEvents.ACTIVITY_PIP_MODE_UPDATE] = obj37;
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj39 = {
   scope: "Array",
   handler() {
@@ -517,8 +517,8 @@ const obj41 = {
 const items13 = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj41.scope = { [RPC_SCOPE_CONFIG.ANY]: items13 };
 obj2[RPCEvents.FRAME_DEEP_LINK] = obj41;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(15677).activityInstanceConnectedParticipantsUpdateEvent;
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(15679).activityInstanceConnectedParticipantsUpdateEvent;
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj43 = {
   scope: null,
   handler() {
@@ -555,7 +555,7 @@ obj47.handler = function handler() {
 
 };
 obj2[RPCEvents.NOTIFICATION_CREATE] = obj47;
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj23 = {
   scope: fn(6913).OAuth2Scopes.RPC,
   handler() {
@@ -580,7 +580,7 @@ obj2[RPCEvents.RELATIONSHIP_UPDATE] = CONTEXT_MENU_ICON_NAMES.createRPCEvent(RPC
     deserializeResult = deserializer.deserialize(num);
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj52 = { scope: null, handler: null };
 const obj53 = {};
 const items18 = [RPC_LOCAL_SCOPE, fn(6913).OAuth2Scopes.IDENTIFY];
@@ -605,7 +605,7 @@ obj52.handler = function handler() {
   };
 };
 obj2[RPCEvents.CURRENT_USER_UPDATE] = CONTEXT_MENU_ICON_NAMES.createRPCEvent(RPCEvents.CURRENT_USER_UPDATE, obj52);
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj55 = { scope: null, handler: null };
 const obj56 = {};
 const items19 = [fn(6913).OAuth2Scopes.IDENTIFY, fn(6913).OAuth2Scopes.GUILDS_MEMBERS_READ];
@@ -631,7 +631,7 @@ obj55.handler = function handler(args) {
   };
 };
 obj2[RPCEvents.CURRENT_GUILD_MEMBER_UPDATE] = CONTEXT_MENU_ICON_NAMES.createRPCEvent(RPCEvents.CURRENT_GUILD_MEMBER_UPDATE, obj55);
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 const obj58 = {
   scope: null,
   handler() {

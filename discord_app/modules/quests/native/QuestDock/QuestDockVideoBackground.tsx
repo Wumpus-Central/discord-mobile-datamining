@@ -1,6 +1,6 @@
-// === Module 16588: QuestDockVideoBackground ===
+// === Module 16590: QuestDockVideoBackground ===
 
-// Module 16588 (QuestDockVideoBackground)
+// Module 16590 (QuestDockVideoBackground)
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
@@ -9,10 +9,10 @@ import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2023 *
 import LinearGradientDefault from "LinearGradient" /* 5468 */;
 import spring_spring from "spring/spring" /* 5514 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10598 */;
-import QuestDockUtils from "QuestDockUtils" /* 16472 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16474 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16562 */;
-import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 16589 */;
+import QuestDockUtils from "QuestDockUtils" /* 16474 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16476 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16564 */;
+import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 16591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -55,7 +55,7 @@ get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, Pressable: closure_6, StyleSheet, View: metroImportDefault } = get_ActivityIndicator);
 const QuestConstants = fn(6558);
 ({ QuestDockMode: closure_9, QuestsExperimentLocations: closure_10 } = QuestConstants);
-const QuestDockConstants = fn(16473);
+const QuestDockConstants = fn(16475);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_11, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_12 } = QuestDockConstants);
 const VerticalGradient = fn(1071).VerticalGradient;
 const jsxProd = fn(21);
@@ -218,7 +218,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
   }
   const tmp24 = _slicedToArray(noop.useState("active" !== c5.currentState), 2);
   const isAndroidResult = require("PlatformUtils").isAndroid();
-  const QuestBarAndroidVideoExperiment = tmp4(16590).QuestBarAndroidVideoExperiment;
+  const QuestBarAndroidVideoExperiment = tmp4(16592).QuestBarAndroidVideoExperiment;
   if (isRendered) {
     let tmp32 = !isAndroidResult;
     if (isAndroidResult) {

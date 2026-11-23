@@ -1,6 +1,6 @@
-// === Module 18080: ForYouShowAllRow ===
+// === Module 18082: ForYouShowAllRow ===
 
-// Module 18080 (ForYouShowAllRow)
+// Module 18082 (ForYouShowAllRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -11,9 +11,9 @@ import useFontScale from "useFontScale" /* 5519 */;
 import Pressables from "Pressables" /* 7030 */;
 import _modDef7508 from "module_7508" /* 7508 */;
 import ChannelListLayout from "ChannelListLayout" /* 11130 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 15285 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18075 */;
-import ChannelWrapper from "ChannelWrapper" /* 18076 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 15287 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18077 */;
+import ChannelWrapper from "ChannelWrapper" /* 18078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -104,7 +104,7 @@ export function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: "user" };
+        const obj = { user: user.user, guildId: "Array", size: 1375732218 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

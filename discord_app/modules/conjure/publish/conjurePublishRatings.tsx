@@ -1,6 +1,6 @@
-// === Module 18618: conjurePublishRatings ===
+// === Module 18620: conjurePublishRatings ===
 
-// Module 18618 (conjurePublishRatings)
+// Module 18620 (conjurePublishRatings)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishRatings.tsx");

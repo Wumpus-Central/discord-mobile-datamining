@@ -1,6 +1,6 @@
-// === Module 17857: FavoritesGuildSidebarHeader ===
+// === Module 17859: FavoritesGuildSidebarHeader ===
 
-// Module 17857 (FavoritesGuildSidebarHeader)
+// Module 17859 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3802 from "module_3802" /* 3802 */;
@@ -58,7 +58,7 @@ function PlaceholderRows() {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(17716).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17718).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(4913);

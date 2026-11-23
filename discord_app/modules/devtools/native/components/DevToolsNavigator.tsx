@@ -1,12 +1,12 @@
-// === Module 15821: DevToolsNavigator ===
+// === Module 15823: DevToolsNavigator ===
 
-// Module 15821 (DevToolsNavigator)
+// Module 15823 (DevToolsNavigator)
 import Types from "Types" /* 5097 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 15822 */;
-import DevToolsContentDefault from "DevToolsContent" /* 17192 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 15824 */;
+import DevToolsContentDefault from "DevToolsContent" /* 17194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -63,8 +63,8 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
   ,
 
   ];
-  let merged = Object.assign(tmp(16999).DevToolsScreens);
-  let merged1 = Object.assign(tmp(16999).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17001).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17001).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;

@@ -1,6 +1,6 @@
-// === Module 17438: VEVOOSlider ===
+// === Module 17440: VEVOOSlider ===
 
-// Module 17438 (VEVOOSlider)
+// Module 17440 (VEVOOSlider)
 import nativeDefault from "native" /* 575 */;
 import Slider from "Slider" /* 14502 */;
 import noop from "module_19" /* 19 */;

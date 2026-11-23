@@ -1,6 +1,6 @@
-// === Module 18275: ConjureAppIdentity ===
+// === Module 18277: ConjureAppIdentity ===
 
-// Module 18275 (ConjureAppIdentity)
+// Module 18277 (ConjureAppIdentity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
@@ -9,7 +9,7 @@ import Card from "Card" /* 7047 */;
 import ImagePickerDefault from "ImagePicker" /* 8475 */;
 import UploadIcon from "UploadIcon" /* 9487 */;
 import MagicWandIcon from "MagicWandIcon" /* 12329 */;
-import ImagePlusIcon from "ImagePlusIcon" /* 18277 */;
+import ImagePlusIcon from "ImagePlusIcon" /* 18279 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 15121: useMessageRequestPrivacyOption ===
+// === Module 15123: useMessageRequestPrivacyOption ===
 
-// Module 15121 (useMessageRequestPrivacyOption)
+// Module 15123 (useMessageRequestPrivacyOption)
 import UserSettings from "UserSettings" /* 4738 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
 import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13330 */;

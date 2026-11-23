@@ -1,13 +1,13 @@
-// === Module 16116: useParentalControlSettings ===
+// === Module 16118: useParentalControlSettings ===
 
-// Module 16116 (useParentalControlSettings)
+// Module 16118 (useParentalControlSettings)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8233 */;
 import useUserLinks from "useUserLinks" /* 9136 */;
 import useSelectedTeen from "useSelectedTeen" /* 9138 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16117 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16120 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16119 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16122 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 8338 */;
@@ -111,7 +111,7 @@ export function useDefaultGuildsRestricted() {
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
   const selectedTeen = controlledSetting(9138).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16117).ParentalControlledFriendSourceFlags;
+  const ParentalControlledFriendSourceFlags = controlledSetting(16119).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;

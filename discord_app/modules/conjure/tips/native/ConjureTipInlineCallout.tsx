@@ -1,6 +1,6 @@
-// === Module 18602: ConjureTipInlineCallout ===
+// === Module 18604: ConjureTipInlineCallout ===
 
-// Module 18602 (ConjureTipInlineCallout)
+// Module 18604 (ConjureTipInlineCallout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import XSmallIcon from "XSmallIcon" /* 7151 */;

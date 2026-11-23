@@ -1,13 +1,13 @@
-// === Module 19593: TouchableUploadAvatar ===
+// === Module 19595: TouchableUploadAvatar ===
 
-// Module 19593 (TouchableUploadAvatar)
+// Module 19595 (TouchableUploadAvatar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import Pressables from "Pressables" /* 7030 */;
 import _modDef13727 from "module_13727" /* 13727 */;
-import _modDef15071 from "module_15071" /* 15071 */;
+import _modDef15073 from "module_15073" /* 15073 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef15071;
+    let tmp3 = _modDef15073;
   } else {
     tmp3 = avatarSource;
   }

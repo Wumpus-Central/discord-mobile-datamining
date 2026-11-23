@@ -1,6 +1,6 @@
-// === Module 18624: ConjureHomeLanding ===
+// === Module 18626: ConjureHomeLanding ===
 
-// Module 18624 (ConjureHomeLanding)
+// Module 18626 (ConjureHomeLanding)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -30,7 +30,7 @@ obj2.hero = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.sp
 obj2.badgeRow = { flexDirection: "row" };
 let obj6 = { marginBottom: null };
 const diff = nativeDefault.space.PX_48 - PX_32;
-obj6.marginBottom = diff - fn(18625).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
+obj6.marginBottom = diff - fn(18627).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
 obj2.carousel = obj6;
 let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 obj2.showcase = { gap: nativeDefault.space.PX_16 };
@@ -231,7 +231,7 @@ export default function ConjureHomeLanding(focusRequest) {
                     closure_0 = fn;
                     function check() {
                       const messages = ref.getMessages(closure_0);
-                      if (messages.some(/* F141963 */ function() { ... })) {
+                      if (messages.some(/* F141941 */ function() { ... })) {
                         ref.removeChangeListener(check);
                         const _clearTimeout = clearTimeout;
                         clearTimeout(timerId);

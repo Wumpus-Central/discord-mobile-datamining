@@ -1,6 +1,6 @@
-// === Module 18997: MessageRequestsScreenWithTabs ===
+// === Module 18999: MessageRequestsScreenWithTabs ===
 
-// Module 18997 (MessageRequestsScreenWithTabs)
+// Module 18999 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import SegmentedControlState from "SegmentedControlState" /* 7586 */;
@@ -8,8 +8,8 @@ import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 10432 */;
 import SegmentedControl from "SegmentedControl" /* 11278 */;
 import SegmentedControlPages from "SegmentedControlPages" /* 13534 */;
-import MessageRequestListDefault from "MessageRequestList" /* 18998 */;
-import SpamMessageListDefault from "SpamMessageList" /* 19014 */;
+import MessageRequestListDefault from "MessageRequestList" /* 19000 */;
+import SpamMessageListDefault from "SpamMessageList" /* 19016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

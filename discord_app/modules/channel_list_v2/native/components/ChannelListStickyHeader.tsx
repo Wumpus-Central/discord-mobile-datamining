@@ -1,12 +1,12 @@
-// === Module 17653: ChannelListStickyHeader ===
+// === Module 17655: ChannelListStickyHeader ===
 
-// Module 17653 (ChannelListStickyHeader)
+// Module 17655 (ChannelListStickyHeader)
 import nativeDefault from "native" /* 575 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 9755 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15119 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17624 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17652 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17654 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15121 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17626 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17654 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17656 */;
 import noop from "module_19" /* 19 */;
 import module_1653 from "module_1653" /* 1653 */;
 
@@ -185,7 +185,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [closure_7(closure_8, obj3), ];
   let tmp25Result5 = null;
   if (isFavoritesGuildIdResult) {
-    tmp25Result5 = closure_6(tmp6(17668).FavoritesGuildHeaderActionButton, {});
+    tmp25Result5 = closure_6(tmp6(17670).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp25Result5;
   obj15.children = items6;
@@ -199,7 +199,7 @@ export default function ChannelListStickyHeader(guild) {
   if (tmp25Result7) {
     const obj17 = { style: tmp.joinButton, children: null };
     const obj18 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
-    obj17.children = closure_6(tmp2(17672), obj18);
+    obj17.children = closure_6(tmp2(17674), obj18);
     tmp25Result7 = closure_6(closure_4, obj17);
   }
   items7[2] = tmp25Result7;
@@ -207,7 +207,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp25Result8 = null;
   if (flag3) {
     const obj20 = { targetRef: ref, guild };
-    tmp25Result8 = closure_6(tmp2(17673), obj20);
+    tmp25Result8 = closure_6(tmp2(17675), obj20);
   }
   items7[4] = tmp25Result8;
   obj14.children = items7;

@@ -1,6 +1,6 @@
-// === Module 17932: GuildsBarUnreadBars ===
+// === Module 17934: GuildsBarUnreadBars ===
 
-// Module 17932 (GuildsBarUnreadBars)
+// Module 17934 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import FastList from "FastList" /* 7449 */;
@@ -217,14 +217,14 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
 }
 const View = fn(17).View;
 const GuildsNodeType = fn(6550).GuildsNodeType;
-const GuildsBarConstants = fn(17860);
+const GuildsBarConstants = fn(17862);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16476);
+const YouBarConstants = fn(16478);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "disabled", afterItem: "isArray" };
+let closure_17 = { beforeItem: "Array", afterItem: "Path" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
 let closure_20 = { code: "(function GuildsBarUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})" };
 let closure_21 = { code: "(function GuildsBarUnreadBarsTsx2(position,lastPosition){let[scheduleOnRN,debouncedUpdate]=this.__closure;if(position!==lastPosition){scheduleOnRN(debouncedUpdate);}})" };

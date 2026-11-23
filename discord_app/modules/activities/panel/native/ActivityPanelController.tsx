@@ -1,6 +1,6 @@
-// === Module 19177: ActivityPanelController ===
+// === Module 19179: ActivityPanelController ===
 
-// Module 19177 (ActivityPanelController)
+// Module 19179 (ActivityPanelController)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2145 */;
 import ChatInputUtils from "ChatInputUtils" /* 5098 */;
 import transitionToChannel from "transitionToChannel" /* 5646 */;
@@ -8,7 +8,7 @@ import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators"
 import DeviceOrientation from "DeviceOrientation" /* 9431 */;
 import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10671 */;
 import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 10784 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19178 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19180 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
@@ -356,6 +356,6 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   let obj = mode(504);
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(19181)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(19183)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

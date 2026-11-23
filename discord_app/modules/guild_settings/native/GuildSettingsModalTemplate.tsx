@@ -1,6 +1,6 @@
-// === Module 19875: GuildSettingsModalTemplate ===
+// === Module 19877: GuildSettingsModalTemplate ===
 
-// Module 19875 (GuildSettingsModalTemplate)
+// Module 19877 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -17,7 +17,7 @@ import CircleCheckIcon from "CircleCheckIcon" /* 7532 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
 import native from "native" /* 7600 */;
 import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12212 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19876 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19877)(guildTemplate.code);
+  const tmp3 = guildTemplate(19879)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

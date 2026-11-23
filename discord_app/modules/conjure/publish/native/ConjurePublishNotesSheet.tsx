@@ -1,12 +1,12 @@
-// === Module 18496: ConjurePublishNotesSheet ===
+// === Module 18498: ConjurePublishNotesSheet ===
 
-// Module 18496 (ConjurePublishNotesSheet)
+// Module 18498 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
 import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11731 */;
-import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 18497 */;
+import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 18499 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

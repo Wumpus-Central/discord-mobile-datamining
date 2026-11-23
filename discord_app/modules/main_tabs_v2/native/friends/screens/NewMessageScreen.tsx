@@ -1,6 +1,6 @@
-// === Module 18863: NewMessageScreen ===
+// === Module 18865: NewMessageScreen ===
 
-// Module 18863 (NewMessageScreen)
+// Module 18865 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
@@ -25,9 +25,9 @@ import ChatViewDefault from "ChatView" /* 11741 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 12061 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 12063 */;
 import NewMessageUserListDefault from "NewMessageUserList" /* 13227 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18802 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 18864 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18865 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18804 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 18866 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -243,7 +243,7 @@ function ChatPreview(channelId) {
   const obj4 = { portal: null };
   const obj3 = { guildId, channelId, chatInputRef: noop.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
   obj4.portal = channelId(1378).isAndroid();
-  items2[1] = closure_17(channelId(18406).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(18408).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -463,7 +463,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
-          obj2.channel = { id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
+          obj2.channel = { id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "add" };
           obj.dispatch(obj2);
         };
       }

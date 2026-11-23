@@ -1,11 +1,11 @@
-// === Module 17268: UserSettingsDesignSystemAIShimmer ===
+// === Module 17270: UserSettingsDesignSystemAIShimmer ===
 
-// Module 17268 (UserSettingsDesignSystemAIShimmer)
+// Module 17270 (UserSettingsDesignSystemAIShimmer)
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
 import Card from "Card" /* 7047 */;
-import AIShimmer from "AIShimmer" /* 15223 */;
+import AIShimmer from "AIShimmer" /* 15225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

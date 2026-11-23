@@ -1,11 +1,11 @@
-// === Module 17633: ThreadChannel ===
+// === Module 17635: ThreadChannel ===
 
-// Module 17633 (ThreadChannel)
+// Module 17635 (ThreadChannel)
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5646 */;
 import inlineStyles from "inlineStyles" /* 7865 */;
 import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11216 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17634 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17636 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

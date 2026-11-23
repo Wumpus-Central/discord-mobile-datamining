@@ -1,6 +1,6 @@
-// === Module 17697: channel_list_v2/ChannelListUtils ===
+// === Module 17699: channel_list_v2/ChannelListUtils ===
 
-// Module 17697 (channel_list_v2/ChannelListUtils)
+// Module 17699 (channel_list_v2/ChannelListUtils)
 import Constants from "Constants" /* 1071 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
 import ChannelListState from "ChannelListState" /* 8321 */;

@@ -1,6 +1,6 @@
-// === Module 17702: GuildLiveChannelNotice ===
+// === Module 17704: GuildLiveChannelNotice ===
 
-// Module 17702 (GuildLiveChannelNotice)
+// Module 17704 (GuildLiveChannelNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -390,8 +390,8 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(17701).useActiveEventOrStageInstanceChannel(guild.id);
-  let obj = activeEventOrStageInstanceChannel(17701);
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(17703).useActiveEventOrStageInstanceChannel(guild.id);
+  let obj = activeEventOrStageInstanceChannel(17703);
   const guildActiveEvent = activeEventOrStageInstanceChannel(8017).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(8017);
   items = [StageInstanceStore];

@@ -1,6 +1,6 @@
-// === Module 16912: CommunityActivityAlertsSetting ===
+// === Module 16914: CommunityActivityAlertsSetting ===
 
-// Module 16912 (CommunityActivityAlertsSetting)
+// Module 16914 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11101 */;
@@ -31,7 +31,7 @@ const route = SettingBuilders.createRoute({
 SettingBuilders = fn(11937);
 const obj4 = {};
 const merged = Object.assign(route);
-obj4.parent = fn(16894).MobileNotifSettings.NOTIF_CATEGORY_SERVERS;
+obj4.parent = fn(16896).MobileNotifSettings.NOTIF_CATEGORY_SERVERS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");

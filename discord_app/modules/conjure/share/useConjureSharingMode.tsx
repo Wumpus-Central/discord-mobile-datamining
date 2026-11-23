@@ -1,6 +1,6 @@
-// === Module 18262: useConjureSharingMode ===
+// === Module 18264: useConjureSharingMode ===
 
-// Module 18262 (useConjureSharingMode)
+// Module 18264 (useConjureSharingMode)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,6 +1,6 @@
-// === Module 18834: SearchAutocompleteStore ===
+// === Module 18836: SearchAutocompleteStore ===
 
-// Module 18834 (SearchAutocompleteStore)
+// Module 18836 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;

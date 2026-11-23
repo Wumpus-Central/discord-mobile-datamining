@@ -1,15 +1,15 @@
-// === Module 18988: SearchNavigatorScreen ===
+// === Module 18990: SearchNavigatorScreen ===
 
-// Module 18988 (SearchNavigatorScreen)
+// Module 18990 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5094 */;
 import Pressables from "Pressables" /* 7030 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7099 */;
 import ThemedGradientDefault from "ThemedGradient" /* 9659 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 18712 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 18721 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 18989 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 18714 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 18723 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 18991 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,10 +31,10 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(18710).useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(18712).useSearchSuggestionsGesture(searchContext);
   ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
   items = [navigation.goBack, tmp.back];
-  let obj = navigation(18710);
+  let obj = navigation(18712);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -57,8 +57,8 @@ export default function SearchNavigatorScreen(navigation) {
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj5.children = items3;
   obj4.children = closure_6(View, obj5);
-  obj3.children = closure_5(navigation(17940).NonCollapsableGestureDetector, obj4);
-  items1[1] = closure_5(navigation(18710).SearchSuggestionsProvider, obj3);
+  obj3.children = closure_5(navigation(17942).NonCollapsableGestureDetector, obj4);
+  items1[1] = closure_5(navigation(18712).SearchSuggestionsProvider, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 };

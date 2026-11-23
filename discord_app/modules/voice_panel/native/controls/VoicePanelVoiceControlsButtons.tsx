@@ -1,6 +1,6 @@
-// === Module 19374: VoicePanelVoiceControlsButtons ===
+// === Module 19376: VoicePanelVoiceControlsButtons ===
 
-// Module 19374 (VoicePanelVoiceControlsButtons)
+// Module 19376 (VoicePanelVoiceControlsButtons)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
@@ -30,14 +30,14 @@ import GroupPlusIcon from "GroupPlusIcon" /* 11056 */;
 import speakOnStageDefault from "speakOnStage" /* 11722 */;
 import _modDef11799 from "module_11799" /* 11799 */;
 import SoundboardIcon from "SoundboardIcon" /* 13417 */;
-import _modDef14842 from "module_14842" /* 14842 */;
-import useCanInviteMembers from "useCanInviteMembers" /* 17986 */;
-import useInviteMembersCallback from "useInviteMembersCallback" /* 17987 */;
-import _modDef18005 from "module_18005" /* 18005 */;
-import _modDef18006 from "module_18006" /* 18006 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 18014 */;
-import useHideSelfVideoDefault from "useHideSelfVideo" /* 19377 */;
-import ChannelCallUtils from "ChannelCallUtils" /* 19378 */;
+import _modDef14844 from "module_14844" /* 14844 */;
+import useCanInviteMembers from "useCanInviteMembers" /* 17988 */;
+import useInviteMembersCallback from "useInviteMembersCallback" /* 17989 */;
+import _modDef18007 from "module_18007" /* 18007 */;
+import _modDef18008 from "module_18008" /* 18008 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 18016 */;
+import useHideSelfVideoDefault from "useHideSelfVideo" /* 19379 */;
+import ChannelCallUtils from "ChannelCallUtils" /* 19380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
@@ -216,7 +216,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(19375).SelfStreamAndVideoAlertType;
+let closure_16 = fn(19377).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5658).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -318,7 +318,7 @@ export function DeafenSwitch() {
   items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef18006 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef18008 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -403,7 +403,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f133863 = () => f133863(!VIDEO);
+          const f133841 = () => f133841(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -465,7 +465,7 @@ export function ToggleShowActivitiesDebugOverlay() {
   items = [ChannelCallLifecycleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14842 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14844 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
@@ -480,7 +480,7 @@ export function VoiceSettingsButton(guildId) {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: closure_18(guildId(7057).TableRowIcon, { IconComponent: guildId(10371).SettingsIcon, source: _modDef18005 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: closure_18(guildId(7057).TableRowIcon, { IconComponent: guildId(10371).SettingsIcon, source: _modDef18007 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1112).intl;
   obj.label = intl.string(guildId(1112).t.dsXapM);
   const intl2 = guildId(1112).intl;

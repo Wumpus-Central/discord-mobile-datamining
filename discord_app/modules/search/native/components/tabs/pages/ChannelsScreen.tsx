@@ -1,6 +1,6 @@
-// === Module 18804: ChannelsScreen ===
+// === Module 18806: ChannelsScreen ===
 
-// Module 18804 (ChannelsScreen)
+// Module 18806 (ChannelsScreen)
 import util from "util" /* 1112 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
 import TrackingDefault from "Tracking" /* 13218 */;

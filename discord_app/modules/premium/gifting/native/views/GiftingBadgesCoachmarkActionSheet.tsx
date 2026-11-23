@@ -1,6 +1,6 @@
-// === Module 19071: GiftingBadgesCoachmarkActionSheet ===
+// === Module 19073: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 19071 (GiftingBadgesCoachmarkActionSheet)
+// Module 19073 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef2920 from "module_2920" /* 2920 */;
@@ -11,7 +11,7 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import BadgeId from "BadgeId" /* 8070 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 9465 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 9484 */;
-import _modDef19072 from "module_19072" /* 19072 */;
+import _modDef19074 from "module_19074" /* 19074 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
 
@@ -100,7 +100,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef19072 };
+  const obj5 = { uri: _modDef19074 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);

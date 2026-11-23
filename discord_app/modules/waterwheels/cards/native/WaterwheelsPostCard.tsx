@@ -1,6 +1,6 @@
-// === Module 17807: WaterwheelsPostCard ===
+// === Module 17809: WaterwheelsPostCard ===
 
-// Module 17807 (WaterwheelsPostCard)
+// Module 17809 (WaterwheelsPostCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
@@ -12,7 +12,7 @@ import FastImageDefault from "FastImage" /* 5600 */;
 import LinkIcon from "LinkIcon" /* 5609 */;
 import PlatformsDefault from "Platforms" /* 6691 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
-import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17808 */;
+import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

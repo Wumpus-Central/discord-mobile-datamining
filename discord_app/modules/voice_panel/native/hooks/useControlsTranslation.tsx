@@ -1,6 +1,6 @@
-// === Module 19342: useControlsTranslation ===
+// === Module 19344: useControlsTranslation ===
 
-// Module 19342 (useControlsTranslation)
+// Module 19344 (useControlsTranslation)
 import _mod1653 from "module_1653" /* 1653 */;
 import spring_spring from "spring/spring" /* 5514 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;

@@ -1,13 +1,13 @@
-// === Module 18605: ConjurePublishScheduleProposalCard ===
+// === Module 18607: ConjurePublishScheduleProposalCard ===
 
-// Module 18605 (ConjurePublishScheduleProposalCard)
+// Module 18607 (ConjurePublishScheduleProposalCard)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import Stack_Stack from "Stack/Stack" /* 5929 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18303 */;
-import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 18606 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18305 */;
+import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 18608 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

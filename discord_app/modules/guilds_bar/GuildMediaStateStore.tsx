@@ -1,13 +1,13 @@
-// === Module 14988: GuildMediaStateStore ===
+// === Module 14990: GuildMediaStateStore ===
 
-// Module 14988 (GuildMediaStateStore)
+// Module 14990 (GuildMediaStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 14989 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 14991 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6633 */;
 import StageInstanceStore from "StageInstanceStore" /* 4767 */;

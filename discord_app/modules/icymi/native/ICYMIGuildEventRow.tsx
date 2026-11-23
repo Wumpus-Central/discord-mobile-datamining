@@ -1,6 +1,6 @@
-// === Module 18153: ICYMIGuildEventRow ===
+// === Module 18155: ICYMIGuildEventRow ===
 
-// Module 18153 (ICYMIGuildEventRow)
+// Module 18155 (ICYMIGuildEventRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import transitionToGuild from "transitionToGuild" /* 6835 */;
@@ -75,7 +75,7 @@ function ICYMIGuildEventRow(event) {
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(18132);
+  const tmp2Result3 = guild(18134);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;
@@ -165,7 +165,7 @@ let GuildScheduledEventStore = fn(6633);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(18091);
+const createICYMIStyles = fn(18093);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin, marginLeft: marginHorizontal.margin + marginHorizontal.inset }, card: { marginTop: nativeDefault.space.PX_12 }, title: null, timeAndUserPillContainer: null, separator: null, eventsChannelIcon: null, infoContainer: null, locationContainer: null };
   const obj2 = { marginTop: nativeDefault.space.PX_12 };

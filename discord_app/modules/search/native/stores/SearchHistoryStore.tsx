@@ -1,6 +1,6 @@
-// === Module 18733: SearchHistoryStore ===
+// === Module 18735: SearchHistoryStore ===
 
-// Module 18733 (SearchHistoryStore)
+// Module 18735 (SearchHistoryStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

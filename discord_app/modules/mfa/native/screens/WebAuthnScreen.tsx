@@ -1,16 +1,16 @@
-// === Module 17091: WebAuthnScreen ===
+// === Module 17093: WebAuthnScreen ===
 
-// Module 17091 (WebAuthnScreen)
+// Module 17093 (WebAuthnScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 6437 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 7377 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 17092 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 17094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const buttonDefault = tmp15(17095);
+const buttonDefault = tmp15(17097);
 require = fn;
 function AndroidAuthRadioGroup(setAuthenticator) {
   setAuthenticator = setAuthenticator.setAuthenticator;
@@ -86,7 +86,7 @@ export default function WebAuthnScreen(arg0) {
   obj3.headerText = intl.string(finish(1112).t.saHocI);
   const intl2 = finish(1112).intl;
   obj3.subtitle = intl2.string(finish(1112).t.YpMrqM);
-  obj3.headerImage = challenge(finish(16085).KeyImage, {});
+  obj3.headerImage = challenge(finish(16087).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };

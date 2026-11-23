@@ -1,6 +1,6 @@
-// === Module 14863: VoiceMemberUser ===
+// === Module 14865: VoiceMemberUser ===
 
-// Module 14863 (VoiceMemberUser)
+// Module 14865 (VoiceMemberUser)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;
@@ -285,7 +285,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
       const obj11 = { style: tmp4.row, children: null };
       let tmp21Result = null;
       if (user.isSpectating) {
-        const obj12 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14869), style: tmp20 };
+        const obj12 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14871), style: tmp20 };
         tmp21Result = closure_12(tmp2(1186).Icon, obj12);
       }
       const items4 = [tmp21Result, , , , ];
@@ -293,7 +293,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
         items4[1] = null;
         let tmp21Result5 = null;
         if (tmp15) {
-          const obj13 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14866), style: tmp20 };
+          const obj13 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14868), style: tmp20 };
           tmp21Result5 = closure_12(tmp2(1186).Icon, obj13);
         }
         items4[2] = tmp21Result5;
@@ -309,18 +309,18 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
           tmp24Result = closure_13(tmp25, obj11);
         } else {
           if (localVideoDisabled) {
-            const obj15 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14867), style: tmp4.voiceStatusIconMargin, disableColor: true };
+            const obj15 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14869), style: tmp4.voiceStatusIconMargin, disableColor: true };
             let obj16 = obj15;
           } else {
-            obj16 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14868), style: tmp20 };
+            obj16 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14870), style: tmp20 };
           }
           closure_12(tmp2(1186).Icon, obj16);
         }
       } else {
         if (tmp2Result.isThemeDark(stateFromStores1)) {
-          let tmp7Result = channel(14864);
+          let tmp7Result = channel(14866);
         } else {
-          tmp7Result = channel(14865);
+          tmp7Result = channel(14867);
         }
         const obj17 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: tmp7Result, style: tmp4.voiceStatusIconMargin, color: tmp20.tintColor, disableColor: localMute };
         closure_12(tmp2(1186).Icon, obj17);

@@ -1,6 +1,6 @@
-// === Module 18238: useUserApplicationWidgetData ===
+// === Module 18240: useUserApplicationWidgetData ===
 
-// Module 18238 (useUserApplicationWidgetData)
+// Module 18240 (useUserApplicationWidgetData)
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8073 */;
 import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10334 */;
 import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 10335 */;

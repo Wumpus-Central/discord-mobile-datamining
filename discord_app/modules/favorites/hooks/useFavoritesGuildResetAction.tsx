@@ -1,6 +1,6 @@
-// === Module 17657: useFavoritesGuildResetAction ===
+// === Module 17659: useFavoritesGuildResetAction ===
 
-// Module 17657 (useFavoritesGuildResetAction)
+// Module 17659 (useFavoritesGuildResetAction)
 import router_utils from "router_utils" /* 1098 */;
 import util from "util" /* 1112 */;
 import _modDef3802 from "module_3802" /* 3802 */;

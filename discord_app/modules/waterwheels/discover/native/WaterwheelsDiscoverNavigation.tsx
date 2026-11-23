@@ -1,9 +1,9 @@
-// === Module 17826: WaterwheelsDiscoverNavigation ===
+// === Module 17828: WaterwheelsDiscoverNavigation ===
 
-// Module 17826 (WaterwheelsDiscoverNavigation)
+// Module 17828 (WaterwheelsDiscoverNavigation)
 import transitionToGuild from "transitionToGuild" /* 6835 */;
 import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 10041 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17827 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17829 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
 
 require = fn;

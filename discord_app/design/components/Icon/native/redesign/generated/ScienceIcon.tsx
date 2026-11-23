@@ -1,6 +1,6 @@
-// === Module 18117: ScienceIcon ===
+// === Module 18119: ScienceIcon ===
 
-// Module 18117 (ScienceIcon)
+// Module 18119 (ScienceIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5599 */;
 import _mod12336 from "module_12336" /* 12336 */;

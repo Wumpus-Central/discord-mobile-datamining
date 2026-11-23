@@ -1,6 +1,6 @@
-// === Module 18949: ChannelSettingsPermissionsOverview ===
+// === Module 18951: ChannelSettingsPermissionsOverview ===
 
-// Module 18949 (ChannelSettingsPermissionsOverview)
+// Module 18951 (ChannelSettingsPermissionsOverview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -10,8 +10,8 @@ import TableRow from "TableRow" /* 7045 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
 import RoleLabel from "RoleLabel" /* 11268 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 13855 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16716 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 18950 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16718 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 18952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

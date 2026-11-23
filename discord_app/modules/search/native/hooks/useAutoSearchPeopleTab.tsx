@@ -1,6 +1,6 @@
-// === Module 18831: useAutoSearchPeopleTab ===
+// === Module 18833: useAutoSearchPeopleTab ===
 
-// Module 18831 (useAutoSearchPeopleTab)
+// Module 18833 (useAutoSearchPeopleTab)
 import apply from "apply" /* 12 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9651 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;

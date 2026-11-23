@@ -1,6 +1,6 @@
-// === Module 15086: ActivateDeviceModalActionCreators ===
+// === Module 15088: ActivateDeviceModalActionCreators ===
 
-// Module 15086 (ActivateDeviceModalActionCreators)
+// Module 15088 (ActivateDeviceModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/activate_device/native/Activa
 
 export default {
   showModal(userCode) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15087, dependencyMap.paths), { userCode }, ACTIVATE_DEVICE_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15089, dependencyMap.paths), { userCode }, ACTIVATE_DEVICE_MODAL_KEY);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(ACTIVATE_DEVICE_MODAL_KEY);

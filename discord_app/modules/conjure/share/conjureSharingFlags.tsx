@@ -1,6 +1,6 @@
-// === Module 18265: conjureSharingFlags ===
+// === Module 18267: conjureSharingFlags ===
 
-// Module 18265 (conjureSharingFlags)
+// Module 18267 (conjureSharingFlags)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
 import size from "module_2" /* 2 */;
 

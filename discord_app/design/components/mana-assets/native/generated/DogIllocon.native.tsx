@@ -1,20 +1,20 @@
-// === Module 18533: DogIllocon ===
+// === Module 18535: DogIllocon ===
 
-// Module 18533 (DogIllocon)
+// Module 18535 (DogIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18534 from "module_18534" /* 18534 */;
-import _modDef18535 from "module_18535" /* 18535 */;
 import _modDef18536 from "module_18536" /* 18536 */;
+import _modDef18537 from "module_18537" /* 18537 */;
+import _modDef18538 from "module_18538" /* 18538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18534 }, 3: null };
-const obj2 = { uri: _modDef18534 };
-obj[2] = { uri: _modDef18535 };
-const obj3 = { uri: _modDef18535 };
-obj[3] = { uri: _modDef18536 };
+let obj = { 1: null, 2: { uri: _modDef18536 }, 3: null };
+const obj2 = { uri: _modDef18536 };
+obj[2] = { uri: _modDef18537 };
+const obj3 = { uri: _modDef18537 };
+obj[3] = { uri: _modDef18538 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 17450: Welcome ===
+// === Module 17452: Welcome ===
 
-// Module 17450 (Welcome)
+// Module 17452 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
@@ -15,10 +15,10 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 7373 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8268 */;
 import GuildInviteIconDefault from "GuildInviteIcon" /* 13570 */;
 import _modDef14307 from "module_14307" /* 14307 */;
-import _mod15071 from "module_15071" /* 15071 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17447 */;
+import _mod15073 from "module_15073" /* 15073 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17449 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 17451 */;
+import AgeGateStore from "AgeGateStore" /* 17453 */;
 import ExperimentStore from "ExperimentStore" /* 5530 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 8052 */;
 import UserRecord from "UserRecord" /* 1405 */;
@@ -111,7 +111,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15071 }), , ];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15073 }), , ];
   const obj4 = { style: tmp4.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
   if (tmp3) {

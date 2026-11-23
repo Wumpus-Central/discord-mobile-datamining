@@ -1,10 +1,10 @@
-// === Module 18108: GuildDiscoveryCategoryActionCreators ===
+// === Module 18110: GuildDiscoveryCategoryActionCreators ===
 
-// Module 18108 (GuildDiscoveryCategoryActionCreators)
+// Module 18110 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18109 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18111 */;
 
 const require = globalThis.__r;
 

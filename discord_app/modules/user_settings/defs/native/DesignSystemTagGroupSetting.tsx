@@ -1,6 +1,6 @@
-// === Module 17252: DesignSystemTagGroupSetting ===
+// === Module 17254: DesignSystemTagGroupSetting ===
 
-// Module 17252 (DesignSystemTagGroupSetting)
+// Module 17254 (DesignSystemTagGroupSetting)
 import Constants from "Constants" /* 1071 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;

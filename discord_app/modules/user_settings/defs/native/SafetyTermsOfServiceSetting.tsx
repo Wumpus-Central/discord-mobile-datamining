@@ -1,6 +1,6 @@
-// === Module 17369: SafetyTermsOfServiceSetting ===
+// === Module 17371: SafetyTermsOfServiceSetting ===
 
-// Module 17369 (SafetyTermsOfServiceSetting)
+// Module 17371 (SafetyTermsOfServiceSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import LinkingDefault from "Linking" /* 5592 */;

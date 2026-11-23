@@ -1,6 +1,6 @@
-// === Module 19253: VoicePanelTitleButton ===
+// === Module 19255: VoicePanelTitleButton ===
 
-// Module 19253 (VoicePanelTitleButton)
+// Module 19255 (VoicePanelTitleButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5504 */;
@@ -17,10 +17,10 @@ import _modDef7641 from "module_7641" /* 7641 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 11011 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import ShieldLockIcon from "ShieldLockIcon" /* 13817 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17998 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19196 */;
-import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19251 */;
-import _modDef19254 from "module_19254" /* 19254 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18000 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19198 */;
+import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19253 */;
+import _modDef19256 from "module_19256" /* 19256 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import StageInstanceStore from "StageInstanceStore" /* 4767 */;
@@ -71,7 +71,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef19254;
+  obj2.icon = _modDef19256;
   obj2.onPress = onPress;
   return React6(native.HeaderButton, obj2);
 }
@@ -203,7 +203,7 @@ export default noop.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(19250)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(19252)(derivedStateFromSharedValue, channelId, guildId);
   items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

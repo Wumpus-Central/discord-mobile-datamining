@@ -1,7 +1,7 @@
-// === Module 19235: calculatePIPState ===
+// === Module 19237: calculatePIPState ===
 
-// Module 19235 (calculatePIPState)
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19164 */;
+// Module 19237 (calculatePIPState)
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19166 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
 
 require = fn;

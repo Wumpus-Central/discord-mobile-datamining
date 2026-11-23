@@ -1,11 +1,11 @@
-// === Module 16123: SensitiveContentFiltersNotices ===
+// === Module 16125: SensitiveContentFiltersNotices ===
 
-// Module 16123 (SensitiveContentFiltersNotices)
+// Module 16125 (SensitiveContentFiltersNotices)
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
 import LinkingDefault from "Linking" /* 5592 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15981 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15983 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export function SensitiveContentFiltersTeenNotice() {
   let obj = require("AgeNoticeSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isAgeNoticeSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(16114).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(16116).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1112).t.EUo0yj,

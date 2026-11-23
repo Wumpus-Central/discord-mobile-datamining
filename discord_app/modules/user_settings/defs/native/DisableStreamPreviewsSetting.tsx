@@ -1,6 +1,6 @@
-// === Module 17357: DisableStreamPreviewsSetting ===
+// === Module 17359: DisableStreamPreviewsSetting ===
 
-// Module 17357 (DisableStreamPreviewsSetting)
+// Module 17359 (DisableStreamPreviewsSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;

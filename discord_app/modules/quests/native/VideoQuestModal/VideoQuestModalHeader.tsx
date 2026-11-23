@@ -1,6 +1,6 @@
-// === Module 16536: VideoQuestModalHeader ===
+// === Module 16538: VideoQuestModalHeader ===
 
-// Module 16536 (VideoQuestModalHeader)
+// Module 16538 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 575 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8427 */;
 import noop from "module_19" /* 19 */;
@@ -28,8 +28,8 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(16511).useVideoQuestModalContext().quest;
-  let obj = quest(16511);
+  quest = quest(16513).useVideoQuestModalContext().quest;
+  let obj = quest(16513);
   const questTaskDetails = quest(9958).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -77,7 +77,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj7.children = gamePublisher;
   items1[1] = closure_5(quest(5504).Text, obj7);
   obj4.children = items1;
-  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16532), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16534), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;
   return closure_6(View, obj3);
 };

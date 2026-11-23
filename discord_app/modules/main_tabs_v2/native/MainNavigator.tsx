@@ -1,6 +1,6 @@
-// === Module 17442: MainNavigator ===
+// === Module 17444: MainNavigator ===
 
-// Module 17442 (MainNavigator)
+// Module 17444 (MainNavigator)
 import PlatformUtils2 from "PlatformUtils" /* 1378 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1498 */;
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;
@@ -8,13 +8,13 @@ import ChatInputUtils from "ChatInputUtils" /* 5098 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10538 */;
 import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 10857 */;
 import StartupProfiler from "StartupProfiler" /* 11978 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15282 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17444 */;
-import AutoAnalytics from "AutoAnalytics" /* 18849 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18902 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 19114 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19145 */;
-import AppComponents from "AppComponents" /* 19147 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15284 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17446 */;
+import AutoAnalytics from "AutoAnalytics" /* 18851 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18904 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 19116 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19147 */;
+import AppComponents from "AppComponents" /* 19149 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -83,7 +83,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17443).StackNavigationAnimationSettings;
+let closure_7 = fn(17445).StackNavigationAnimationSettings;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

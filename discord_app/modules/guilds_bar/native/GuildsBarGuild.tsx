@@ -1,15 +1,15 @@
-// === Module 17891: GuildsBarGuild ===
+// === Module 17893: GuildsBarGuild ===
 
-// Module 17891 (GuildsBarGuild)
+// Module 17893 (GuildsBarGuild)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import GuildIcon from "GuildIcon" /* 7322 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17864 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17872 */;
-import isGuildsBarGuildDataEqualDefault from "isGuildsBarGuildDataEqual" /* 17903 */;
-import useGuildsBarBadgesDefault from "useGuildsBarBadges" /* 17904 */;
-import usePreloadedGuildAssetDefault from "usePreloadedGuildAsset" /* 17910 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 17911 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17866 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17874 */;
+import isGuildsBarGuildDataEqualDefault from "isGuildsBarGuildDataEqual" /* 17905 */;
+import useGuildsBarBadgesDefault from "useGuildsBarBadges" /* 17906 */;
+import usePreloadedGuildAssetDefault from "usePreloadedGuildAsset" /* 17912 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 17913 */;
 import noop from "module_19" /* 19 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6664 */;
@@ -22,8 +22,8 @@ const require = globalThis.__r;
 require = fn;
 const GuildRecord = fn(4780);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(17863).useItemDragState;
-const TRANSITION_PHYSICS = fn(17860).TRANSITION_PHYSICS;
+const useItemDragState = fn(17865).useItemDragState;
+const TRANSITION_PHYSICS = fn(17862).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
@@ -119,7 +119,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
               const obj2 = c1(1255);
             }
           }
-          c1(17827)(_undefined);
+          c1(17829)(_undefined);
         }
       }
       const obj3 = { title: null, body: null };
@@ -290,12 +290,12 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   if (enableHome) {
     if (!flag2) {
       const obj10 = { guildId, onActiveHookChange: callback };
-      tmp28Result = closure_16(tmp4(17892), obj10);
+      tmp28Result = closure_16(tmp4(17894), obj10);
     }
   }
   obj8.expandedChildren = tmp28Result;
   if (isUnavailable) {
-    const obj11 = { source: tmp4(17914), style: tmp.guildIcon };
+    const obj11 = { source: tmp4(17916), style: tmp.guildIcon };
     let tmp28Result2 = closure_16(tmp4(5600), obj11);
     const tmp4Result3 = tmp4(5600);
   } else if (null != tmp15) {

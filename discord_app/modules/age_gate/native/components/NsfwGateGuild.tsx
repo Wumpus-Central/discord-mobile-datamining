@@ -1,6 +1,6 @@
-// === Module 14695: NsfwGateGuild ===
+// === Module 14697: NsfwGateGuild ===
 
-// Module 14695 (NsfwGateGuild)
+// Module 14697 (NsfwGateGuild)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10442 */;
@@ -62,7 +62,7 @@ export default function NsfwGateGuild(guildId) {
   const items1 = [closure_10(currentUser(7316), {}), , , , , ];
   const obj4 = { source: null, style: null };
   const formatResult = intl3.format(guildId(1112).t.Z12LNW, obj);
-  obj4.source = currentUser(14696);
+  obj4.source = currentUser(14698);
   obj4.style = tmp.image;
   items1[1] = closure_10(currentUser(5600), obj4);
   items1[2] = closure_10(guildId(5504).Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult });

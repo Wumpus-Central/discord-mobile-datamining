@@ -1,6 +1,6 @@
-// === Module 19831: GuildSettingsRoleCreateModalActionCreators ===
+// === Module 19833: GuildSettingsRoleCreateModalActionCreators ===
 
-// Module 19831 (GuildSettingsRoleCreateModalActionCreators)
+// Module 19833 (GuildSettingsRoleCreateModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/roles/native/G
 
 export default {
   open() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19832, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19834, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);

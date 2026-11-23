@@ -1,6 +1,6 @@
-// === Module 16878: TextAndMediaSyncSetting ===
+// === Module 16880: TextAndMediaSyncSetting ===
 
-// Module 16878 (TextAndMediaSyncSetting)
+// Module 16880 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5826 */;

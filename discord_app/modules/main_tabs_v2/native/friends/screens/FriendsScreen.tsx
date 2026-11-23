@@ -1,6 +1,6 @@
-// === Module 18857: FriendsScreen ===
+// === Module 18859: FriendsScreen ===
 
-// Module 18857 (FriendsScreen)
+// Module 18859 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
@@ -9,8 +9,8 @@ import SendMessageIcon from "SendMessageIcon" /* 5611 */;
 import TableRow from "TableRow" /* 7045 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
 import NoResultsDefault from "NoResults" /* 10094 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16494 */;
-import _modDef18079 from "module_18079" /* 18079 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16496 */;
+import _modDef18081 from "module_18081" /* 18081 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 8360 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18079, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef18081, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18079 };
+      const obj8 = { source: _modDef18081 };
       obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
       obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

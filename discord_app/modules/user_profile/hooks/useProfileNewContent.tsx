@@ -1,6 +1,6 @@
-// === Module 14585: useProfileNewContent ===
+// === Module 14587: useProfileNewContent ===
 
-// Module 14585 (useProfileNewContent)
+// Module 14587 (useProfileNewContent)
 import ProfileReadStateUtils from "ProfileReadStateUtils" /* 6965 */;
 import ProfileReadStateSection from "ProfileReadStateSection" /* 6966 */;
 import WishlistStore from "WishlistStore" /* 8983 */;
@@ -36,17 +36,17 @@ export default function useProfileNewContent(id) {
         id = currentUser.id;
       }
       if (id.id !== id) {
-        const firstWishlistId = UserProfileStore.getFirstWishlistId(tmp7.id);
+        const firstWishlistId = UserProfileStore.getFirstWishlistId(tmp8.id);
         if (null == firstWishlistId) {
           return null;
         } else {
-          const wishlistSettings = UserProfileStore.getWishlistSettings(tmp7.id, firstWishlistId);
-          profileReadStateSectionAckedAt = UserProfileStore.getProfileReadStateSectionAckedAt(tmp7.id, ProfileReadStateSection.ProfileReadStateSection.WISHLIST);
-          let tmp6 = null;
-          if (obj.hasWishlistBeenUpdatedSinceAcked(wishlistSettings, profileReadStateSectionAckedAt)) {
-            tmp6 = firstWishlistId;
+          const wishlistSettings = UserProfileStore.getWishlistSettings(tmp8.id, firstWishlistId);
+          profileReadStateSectionAckedAt = UserProfileStore.getProfileReadStateSectionAckedAt(tmp8.id, ProfileReadStateSection.ProfileReadStateSection.WISHLIST);
+          let tmp7 = null;
+          if (obj2.hasWishlistBeenUpdatedSinceAcked(wishlistSettings, profileReadStateSectionAckedAt)) {
+            tmp7 = firstWishlistId;
           }
-          return tmp6;
+          return tmp7;
         }
       }
     }

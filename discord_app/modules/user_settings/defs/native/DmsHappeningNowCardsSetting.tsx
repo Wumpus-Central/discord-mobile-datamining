@@ -1,6 +1,6 @@
-// === Module 16725: DmsHappeningNowCardsSetting ===
+// === Module 16727: DmsHappeningNowCardsSetting ===
 
-// Module 16725 (DmsHappeningNowCardsSetting)
+// Module 16727 (DmsHappeningNowCardsSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;

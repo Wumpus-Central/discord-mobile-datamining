@@ -1,6 +1,6 @@
-// === Module 18866: NewGroupDMScreen ===
+// === Module 18868: NewGroupDMScreen ===
 
-// Module 18866 (NewGroupDMScreen)
+// Module 18868 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -8,12 +8,12 @@ import ToastUtils from "ToastUtils" /* 5594 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
 import HeaderShared from "HeaderShared" /* 8561 */;
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12064 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18865 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15032 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15034 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
 import UserStore from "UserStore" /* 1386 */;
 

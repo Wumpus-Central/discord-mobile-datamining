@@ -1,6 +1,6 @@
-// === Module 19290: ActivityShelfItemSummary ===
+// === Module 19292: ActivityShelfItemSummary ===
 
-// Module 19290 (ActivityShelfItemSummary)
+// Module 19292 (ActivityShelfItemSummary)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef1653 from "module_1653" /* 1653 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5504 */;
 import ButtonPill from "ButtonPill" /* 5522 */;
 import ButtonEllipsis from "ButtonEllipsis" /* 5524 */;
 import UserSummaryItemDefault from "UserSummaryItem" /* 11076 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19291 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

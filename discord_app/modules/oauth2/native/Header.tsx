@@ -1,6 +1,6 @@
-// === Module 14726: oauth2/Header ===
+// === Module 14728: oauth2/Header ===
 
-// Module 14726 (oauth2/Header)
+// Module 14728 (oauth2/Header)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;

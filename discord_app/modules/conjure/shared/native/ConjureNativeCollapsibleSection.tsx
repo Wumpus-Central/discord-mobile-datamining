@@ -1,6 +1,6 @@
-// === Module 18554: ConjureNativeCollapsibleSection ===
+// === Module 18556: ConjureNativeCollapsibleSection ===
 
-// Module 18554 (ConjureNativeCollapsibleSection)
+// Module 18556 (ConjureNativeCollapsibleSection)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7565 */;

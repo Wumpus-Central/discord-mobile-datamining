@@ -1,6 +1,6 @@
-// === Module 18347: ConjurePrivateLinkSection ===
+// === Module 18349: ConjurePrivateLinkSection ===
 
-// Module 18347 (ConjurePrivateLinkSection)
+// Module 18349 (ConjurePrivateLinkSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -11,7 +11,7 @@ import useAlertStore from "useAlertStore" /* 5862 */;
 import AlertModal from "AlertModal" /* 5866 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
 import showShareActionSheet from "showShareActionSheet" /* 9718 */;
-import conjureShareLinkMaxAges from "conjureShareLinkMaxAges" /* 18348 */;
+import conjureShareLinkMaxAges from "conjureShareLinkMaxAges" /* 18350 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ export default function ConjurePrivateLinkSection(project) {
   first1 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [value, dependencyMap] = noop.useState(project(18348).CONJURE_SHARE_LINK_DEFAULT_MAX_AGE);
+  [value, dependencyMap] = noop.useState(project(18350).CONJURE_SHARE_LINK_DEFAULT_MAX_AGE);
   [first1, _slicedToArray] = noop.useState(null);
   const tmp = closure_10();
   [tmp9, c5] = noop.useState(false);
@@ -49,7 +49,7 @@ export default function ConjurePrivateLinkSection(project) {
   const callback = noop.useCallback(first1(function*() {
     _undefined(true);
     closure_6(false);
-    yield closure_0(18349).mintConjureShareLink(project.id, first);
+    yield closure_0(18351).mintConjureShareLink(project.id, first);
     if (1 === tmp7) {
       dependencyMap = 0;
       closure_129_6(true);
@@ -60,7 +60,7 @@ export default function ConjurePrivateLinkSection(project) {
       throw value;
     } else if (arg0 !== 2) {
       closure_128_0 = value;
-      closure_129_4(tmp3(18350)(closure_129_0.application_id, closure_129_0.name, closure_128_0));
+      closure_129_4(tmp3(18352)(closure_129_0.application_id, closure_129_0.name, closure_128_0));
       dependencyMap = 0;
     }
     return value;
@@ -103,14 +103,14 @@ export default function ConjurePrivateLinkSection(project) {
     obj2.title = intl.string(_modDef4190.eMlOXz);
     const prop = conjureShareLinkMaxAges.CONJURE_SHARE_LINK_MAX_AGES;
     obj2.options = prop.map((value) => {
-      const obj = { value, label: project(18348).conjureShareLinkMaxAgeLabel(value) };
+      const obj = { value, label: project(18350).conjureShareLinkMaxAgeLabel(value) };
       return obj;
     });
     obj2.value = value;
     obj2.onChange = function onChange(arg0) {
       return dependencyMap(arg0);
     };
-    obj.openLazy(asyncRequireImpl(18351, dependencyMap.paths), "ConjurePrivateLinkMaxAge", obj2, "stack");
+    obj.openLazy(asyncRequireImpl(18353, dependencyMap.paths), "ConjurePrivateLinkMaxAge", obj2, "stack");
   }, items2);
   const items4 = [first1];
   const callback3 = noop.useCallback(() => {
@@ -158,7 +158,7 @@ export default function ConjurePrivateLinkSection(project) {
   obj2.label = intl3.string(value(4190).eMlOXz);
   let obj4 = { text: null };
   let obj3 = { IconComponent: project(5622).ClockIcon };
-  obj4.text = project(18348).conjureShareLinkMaxAgeLabel(value);
+  obj4.text = project(18350).conjureShareLinkMaxAgeLabel(value);
   obj2.trailing = callback1(project(7045).TableRow.TrailingText, obj4);
   let tmp21 = tmp9;
   if (!tmp9) {
@@ -168,8 +168,8 @@ export default function ConjurePrivateLinkSection(project) {
   obj2.onPress = callback2;
   const items6 = [callback1(project(7045).TableRow, obj2), , , ];
   const obj6 = { icon: null, label: null, disabled: null, onPress: null };
-  let obj5 = project(18348);
-  obj6.icon = callback1(project(7057).TableRowIcon, { IconComponent: project(18352).LinkPlusIcon });
+  let obj5 = project(18350);
+  obj6.icon = callback1(project(7057).TableRowIcon, { IconComponent: project(18354).LinkPlusIcon });
   let intl4 = tmp2(1112).intl;
   obj6.label = intl4.string(value(4190).wELODD);
   let tmp22 = tmp9;

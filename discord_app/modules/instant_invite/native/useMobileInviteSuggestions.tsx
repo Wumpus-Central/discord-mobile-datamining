@@ -1,6 +1,6 @@
-// === Module 14640: useMobileInviteSuggestions ===
+// === Module 14642: useMobileInviteSuggestions ===
 
-// Module 14640 (useMobileInviteSuggestions)
+// Module 14642 (useMobileInviteSuggestions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,13 +1,13 @@
-// === Module 19269: VoicePanelCardView ===
+// === Module 19271: VoicePanelCardView ===
 
-// Module 19269 (VoicePanelCardView)
+// Module 19271 (VoicePanelCardView)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4922 */;
 import native from "native" /* 4974 */;
 import Suspender from "Suspender" /* 5891 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19270 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
@@ -285,7 +285,7 @@ get_ActivityIndicator = fn(17);
 const VoicePanelConstants = fn(11750);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11748).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19165).VoicePanelPIPModes;
+let VoicePanelPIPModes = fn(19167).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11753).EDGE_GUTTER;
 const isUserParticipant = fn(5563).isUserParticipant;
 const jsx = fn(21).jsx;

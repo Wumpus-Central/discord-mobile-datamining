@@ -1,6 +1,6 @@
-// === Module 19828: GuildSettingsModalRolesStore ===
+// === Module 19830: GuildSettingsModalRolesStore ===
 
-// Module 19828 (GuildSettingsModalRolesStore)
+// Module 19830 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;

@@ -1,6 +1,6 @@
-// === Module 18232: ConjureStandaloneScreen ===
+// === Module 18234: ConjureStandaloneScreen ===
 
-// Module 18232 (ConjureStandaloneScreen)
+// Module 18234 (ConjureStandaloneScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
@@ -9,11 +9,11 @@ import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
 import GuildIcon from "GuildIcon" /* 7322 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8563 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 18233 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 18240 */;
-import ConjureHomeLandingDefault from "ConjureHomeLanding" /* 18624 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 18646 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 18662 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 18235 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 18242 */;
+import ConjureHomeLandingDefault from "ConjureHomeLanding" /* 18626 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 18648 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 18664 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;
@@ -59,7 +59,7 @@ function GlobalChatScene(projectId) {
     }
     return result;
   }, items1);
-  return closure_11(fallbackGuildId(18233), { guildId, projectId, entryPoint, onExit });
+  return closure_11(fallbackGuildId(18235), { guildId, projectId, entryPoint, onExit });
 }
 function RoutedProjectOpener(request) {
   request = request.request;

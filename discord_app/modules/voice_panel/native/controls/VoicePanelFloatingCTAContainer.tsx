@@ -1,6 +1,6 @@
-// === Module 19339: VoicePanelFloatingCTAContainer ===
+// === Module 19341: VoicePanelFloatingCTAContainer ===
 
-// Module 19339 (VoicePanelFloatingCTAContainer)
+// Module 19341 (VoicePanelFloatingCTAContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import native from "native" /* 4974 */;
@@ -9,9 +9,9 @@ import RowButton from "RowButton" /* 7711 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10093 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13059 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19221 */;
-import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19224 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19340 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19223 */;
+import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19226 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19342 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

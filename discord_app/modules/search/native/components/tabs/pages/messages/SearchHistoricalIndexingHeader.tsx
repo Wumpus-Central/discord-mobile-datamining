@@ -1,6 +1,6 @@
-// === Module 18810: SearchHistoricalIndexingHeader ===
+// === Module 18812: SearchHistoricalIndexingHeader ===
 
-// Module 18810 (SearchHistoricalIndexingHeader)
+// Module 18812 (SearchHistoricalIndexingHeader)
 import TrackingDefault from "Tracking" /* 13218 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;

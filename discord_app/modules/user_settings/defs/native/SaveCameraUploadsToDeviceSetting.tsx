@@ -1,6 +1,6 @@
-// === Module 16871: SaveCameraUploadsToDeviceSetting ===
+// === Module 16873: SaveCameraUploadsToDeviceSetting ===
 
-// Module 16871 (SaveCameraUploadsToDeviceSetting)
+// Module 16873 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5826 */;

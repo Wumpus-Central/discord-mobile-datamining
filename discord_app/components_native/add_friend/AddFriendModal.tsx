@@ -1,6 +1,6 @@
-// === Module 15062: AddFriendModal ===
+// === Module 15064: AddFriendModal ===
 
-// Module 15062 (AddFriendModal)
+// Module 15064 (AddFriendModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;

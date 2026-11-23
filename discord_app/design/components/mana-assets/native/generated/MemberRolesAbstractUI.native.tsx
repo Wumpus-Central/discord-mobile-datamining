@@ -1,19 +1,19 @@
-// === Module 19842: MemberRolesAbstractUI ===
+// === Module 19844: MemberRolesAbstractUI ===
 
-// Module 19842 (MemberRolesAbstractUI)
+// Module 19844 (MemberRolesAbstractUI)
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef19843 from "module_19843" /* 19843 */;
-import _modDef19844 from "module_19844" /* 19844 */;
 import _modDef19845 from "module_19845" /* 19845 */;
+import _modDef19846 from "module_19846" /* 19846 */;
+import _modDef19847 from "module_19847" /* 19847 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19843 }, 3: null };
-let obj2 = { uri: _modDef19843 };
-obj[2] = { uri: _modDef19844 };
-const obj3 = { uri: _modDef19844 };
-obj[3] = { uri: _modDef19845 };
+let obj = { 1: null, 2: { uri: _modDef19845 }, 3: null };
+let obj2 = { uri: _modDef19845 };
+obj[2] = { uri: _modDef19846 };
+const obj3 = { uri: _modDef19846 };
+obj[3] = { uri: _modDef19847 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MemberRolesAbstractUI.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 17521: ChannelScreenAnimatedFrame ===
+// === Module 17523: ChannelScreenAnimatedFrame ===
 
-// Module 17521 (ChannelScreenAnimatedFrame)
+// Module 17523 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;

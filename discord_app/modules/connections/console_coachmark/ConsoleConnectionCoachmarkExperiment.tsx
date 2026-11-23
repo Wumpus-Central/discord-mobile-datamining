@@ -1,6 +1,6 @@
-// === Module 18894: ConsoleConnectionCoachmarkExperiment ===
+// === Module 18896: ConsoleConnectionCoachmarkExperiment ===
 
-// Module 18894 (ConsoleConnectionCoachmarkExperiment)
+// Module 18896 (ConsoleConnectionCoachmarkExperiment)
 import initialize from "initialize" /* 504 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6689 */;
 import ConsentStore from "ConsentStore" /* 6427 */;

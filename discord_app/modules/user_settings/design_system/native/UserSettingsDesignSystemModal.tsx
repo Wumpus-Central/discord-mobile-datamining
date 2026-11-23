@@ -1,6 +1,6 @@
-// === Module 17245: UserSettingsDesignSystemModal ===
+// === Module 17247: UserSettingsDesignSystemModal ===
 
-// Module 17245 (UserSettingsDesignSystemModal)
+// Module 17247 (UserSettingsDesignSystemModal)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
@@ -13,7 +13,7 @@ import ModalActionButton from "ModalActionButton" /* 10121 */;
 import Modal from "Modal" /* 12043 */;
 import ModalFooter from "ModalFooter" /* 12249 */;
 import StepModal from "StepModal" /* 12276 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 15284 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 15286 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

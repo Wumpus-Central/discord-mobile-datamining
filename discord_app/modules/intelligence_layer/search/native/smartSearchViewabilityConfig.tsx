@@ -1,6 +1,6 @@
-// === Module 18824: smartSearchViewabilityConfig ===
+// === Module 18826: smartSearchViewabilityConfig ===
 
-// Module 18824 (smartSearchViewabilityConfig)
+// Module 18826 (smartSearchViewabilityConfig)
 import SearchConstants from "SearchConstants" /* 8576 */;
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13219 */;
 import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13221 */;

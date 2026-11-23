@@ -1,11 +1,11 @@
-// === Module 15878: UserProfileBadgesEditButton ===
+// === Module 15880: UserProfileBadgesEditButton ===
 
-// Module 15878 (UserProfileBadgesEditButton)
+// Module 15880 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import BadgeUtils from "BadgeUtils" /* 13990 */;
 import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 14009 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15879 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15881 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9425 */;

@@ -1,6 +1,6 @@
-// === Module 17835: InterestGamePicker ===
+// === Module 17837: InterestGamePicker ===
 
-// Module 17835 (InterestGamePicker)
+// Module 17837 (InterestGamePicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
@@ -16,13 +16,13 @@ import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
 import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8826 */;
 import useGame2 from "useGame" /* 9053 */;
 import useGameRecordsDefault from "useGameRecords" /* 10215 */;
-import GameCoverDefault from "GameCover" /* 17820 */;
-import InterestPickerPerformance from "InterestPickerPerformance" /* 17824 */;
-import InterestTileEdgeDefault from "InterestTileEdge" /* 17836 */;
-import useInterestGameSearchDefault from "useInterestGameSearch" /* 17837 */;
-import useInterestRowVisibilityDefault from "useInterestRowVisibility" /* 17838 */;
-import InterestSearchShadowDefault from "InterestSearchShadow" /* 17840 */;
-import InterestGameTrayDefault from "InterestGameTray" /* 17842 */;
+import GameCoverDefault from "GameCover" /* 17822 */;
+import InterestPickerPerformance from "InterestPickerPerformance" /* 17826 */;
+import InterestTileEdgeDefault from "InterestTileEdge" /* 17838 */;
+import useInterestGameSearchDefault from "useInterestGameSearch" /* 17839 */;
+import useInterestRowVisibilityDefault from "useInterestRowVisibility" /* 17840 */;
+import InterestSearchShadowDefault from "InterestSearchShadow" /* 17842 */;
+import InterestGameTrayDefault from "InterestGameTray" /* 17844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
@@ -33,7 +33,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, PixelRatio: closure_6, Pressable: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17821);
+const InterestGamePickerConstants = fn(17823);
 ({ FOOTER_BORDER_WIDTH: closure_11, GRID_COLUMNS: closure_12, GRID_GAP: map1, MAX_SELECTIONS: closure_14, MIN_SELECTIONS: closure_15, SCREEN_HORIZONTAL_PADDING: closure_16, GRID_SELECTED_BORDER_WIDTH: closure_17, GRID_SELECTED_GAP_WIDTH: closure_18, TILE_ASPECT_RATIO: closure_19, TRAY_ENTER_MS: closure_20, TRAY_EXIT_MS: closure_21 } = InterestGamePickerConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
@@ -261,7 +261,7 @@ export default function InterestGamePicker(catalog) {
       const obj2 = {};
       const merged = Object.assign(_undefined2);
       const merged1 = Object.assign(arg0);
-      obj2.sample_rate = c0(17824).COVER_LOAD_SAMPLE_RATE;
+      obj2.sample_rate = c0(17826).COVER_LOAD_SAMPLE_RATE;
       return c1(1255).track(callback.WATERWHEELS_INTEREST_COVER_LOADED, obj2);
     }, (arg0) => {
       const merged = Object.assign(_undefined2);
@@ -858,7 +858,7 @@ export default function InterestGamePicker(catalog) {
             items = [, ];
             ({ screen: arr[0], tileWrapper: arr[1] } = gridRow);
             obj2.style = items;
-            const items1 = [callback1(c1(17841), obj2), callback1(c1(17836), { radius })];
+            const items1 = [callback1(c1(17843), obj2), callback1(c1(17838), { radius })];
             obj.children = items1;
             return closure_24(c8, obj, arg1);
           })

@@ -1,6 +1,6 @@
-// === Module 17955: ManageAccountsModal ===
+// === Module 17957: ManageAccountsModal ===
 
-// Module 17955 (ManageAccountsModal)
+// Module 17957 (ManageAccountsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -118,7 +118,7 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_18(tmp(16716).CircleMinusIcon, obj4);
+    obj3.children = closure_18(tmp(16718).CircleMinusIcon, obj4);
     return closure_18(tmp(7030).PressableOpacity, obj3);
   }
   let obj2 = user(504);
@@ -274,7 +274,7 @@ const View = fn(17).View;
 const MultiAccountTokenStatus = fn(13283).MultiAccountTokenStatus;
 let Constants = fn(13284);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_12, MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
-const ManageAccountsScreens = fn(17956).ManageAccountsScreens;
+const ManageAccountsScreens = fn(17958).ManageAccountsScreens;
 Constants = fn(1071);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
@@ -361,7 +361,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(17480), {
+        return closure_1_18(isEditing(17482), {
           handleLogin(login, password, undelete) {
             isEditing(6425).login({ login, password, undelete });
           },
@@ -386,7 +386,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(17479), { isMultiAccount: true });
+        return closure_1_18(isEditing(17481), { isMultiAccount: true });
       }
     })
   ];

@@ -1,11 +1,11 @@
-// === Module 18179: NavigationTTIRegionDebugOverlay ===
+// === Module 18181: NavigationTTIRegionDebugOverlay ===
 
-// Module 18179 (NavigationTTIRegionDebugOverlay)
+// Module 18181 (NavigationTTIRegionDebugOverlay)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 10427 */;
 import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 10429 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18177 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 15202: GuildProgressBar ===
+// === Module 15204: GuildProgressBar ===
 
-// Module 15202 (GuildProgressBar)
+// Module 15204 (GuildProgressBar)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5123 */;
 import timingPresets from "timingPresets" /* 5126 */;

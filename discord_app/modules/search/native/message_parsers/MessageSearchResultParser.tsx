@@ -1,12 +1,12 @@
-// === Module 18785: MessageSearchResultParser ===
+// === Module 18787: MessageSearchResultParser ===
 
-// Module 18785 (MessageSearchResultParser)
+// Module 18787 (MessageSearchResultParser)
 import apply from "apply" /* 12 */;
 import MessageRecord from "MessageRecord" /* 4856 */;
 
 require = fn;
 let closure_3 = fn(8576).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(18786).CachedSearchResultParser;
+fn(18788).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -21,9 +21,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(18787).analyze(tokenizedQueryContent));
+      set = new Set(set(18789).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(18787).shouldHighlight(item, set));
+      const found = parts.find((item) => set(18789).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -43,7 +43,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(18787);
+      const obj = set(18789);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {

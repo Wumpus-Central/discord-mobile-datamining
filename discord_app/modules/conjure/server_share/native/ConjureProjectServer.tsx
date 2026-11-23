@@ -1,9 +1,9 @@
-// === Module 18291: ConjureProjectServer ===
+// === Module 18293: ConjureProjectServer ===
 
-// Module 18291 (ConjureProjectServer)
-import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet" /* 18297 */;
-import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert" /* 18299 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18301 */;
+// Module 18293 (ConjureProjectServer)
+import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet" /* 18299 */;
+import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert" /* 18301 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18303 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4784 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
@@ -35,7 +35,7 @@ export default function ConjureProjectServer(projectId) {
     return name;
   }, items3);
   const obj3 = projectId(504);
-  const tmp6 = projectId(18292).useConjureProjectServerCandidates(projectId).length > 0;
+  const tmp6 = projectId(18294).useConjureProjectServerCandidates(projectId).length > 0;
   if (null != stateFromStores) {
     if (isProjectOwner(stateFromStores)) {
       let stringResult;

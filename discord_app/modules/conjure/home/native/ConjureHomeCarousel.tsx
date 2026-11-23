@@ -1,16 +1,16 @@
-// === Module 18625: ConjureHomeCarousel ===
+// === Module 18627: ConjureHomeCarousel ===
 
-// Module 18625 (ConjureHomeCarousel)
+// Module 18627 (ConjureHomeCarousel)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;
-import LocalSvgDefault from "LocalSvg" /* 16308 */;
-import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 18628 */;
-import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 18629 */;
-import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 18637 */;
+import LocalSvgDefault from "LocalSvg" /* 16310 */;
+import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 18630 */;
+import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 18631 */;
+import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 18639 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4914 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
@@ -28,7 +28,7 @@ let closure_10 = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
-let obj = { games: fn(7040).GameControllerIcon, apps: fn(7704).AppsIcon, profile_widget: fn(18626).WidgetsIcon, overlay_widget: fn(9904).ScreenIcon, automod: fn(10133).ShieldIcon, chat_bot: fn(12179).RobotIcon };
+let obj = { games: fn(7040).GameControllerIcon, apps: fn(7704).AppsIcon, profile_widget: fn(18628).WidgetsIcon, overlay_widget: fn(9904).ScreenIcon, automod: fn(10133).ShieldIcon, chat_bot: fn(12179).RobotIcon };
 const createStyles = fn(4913);
 let obj2 = { carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" }, item: null, promptRow: null, avatar: null, bubble: null, card: null, thumbnail: null, footer: null, categoryIcon: null, footerText: null };
 const rect = { position: "absolute", top: 0, left: 0, width: 240, gap: nativeDefault.space.PX_12 };

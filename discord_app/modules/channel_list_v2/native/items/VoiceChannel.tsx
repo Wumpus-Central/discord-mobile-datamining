@@ -1,6 +1,6 @@
-// === Module 17752: VoiceChannel ===
+// === Module 17754: VoiceChannel ===
 
-// Module 17752 (VoiceChannel)
+// Module 17754 (VoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8009 */;

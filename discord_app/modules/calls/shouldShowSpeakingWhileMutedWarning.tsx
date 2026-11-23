@@ -1,6 +1,6 @@
-// === Module 19219: shouldShowSpeakingWhileMutedWarning ===
+// === Module 19221: shouldShowSpeakingWhileMutedWarning ===
 
-// Module 19219 (shouldShowSpeakingWhileMutedWarning)
+// Module 19221 (shouldShowSpeakingWhileMutedWarning)
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5950 */;
 import size from "module_2" /* 2 */;
 

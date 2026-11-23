@@ -1,6 +1,6 @@
-// === Module 17595: HappeningNowCardActivity ===
+// === Module 17597: HappeningNowCardActivity ===
 
-// Module 17595 (HappeningNowCardActivity)
+// Module 17597 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
@@ -8,10 +8,10 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ColorUtils from "ColorUtils" /* 4910 */;
 import ActivityTypes from "ActivityTypes" /* 5652 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11084 */;
-import useLiveStageData from "useLiveStageData" /* 17593 */;
-import _modDef17596 from "module_17596" /* 17596 */;
-import _modDef17597 from "module_17597" /* 17597 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 17604 */;
+import useLiveStageData from "useLiveStageData" /* 17595 */;
+import _modDef17598 from "module_17598" /* 17598 */;
+import _modDef17599 from "module_17599" /* 17599 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 17606 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 4767 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -177,7 +177,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result4 = items[userId % items.length];
     } else {
-      tmp2Result4 = tmp2(17606);
+      tmp2Result4 = tmp2(17608);
     }
   }
 }
@@ -199,13 +199,13 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16699);
+const HappeningNowConstants = fn(16701);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef17596, _modDef17597];
+let items = [_modDef17598, _modDef17599];
 const createStyles = fn(4913);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };

@@ -1,14 +1,14 @@
-// === Module 19372: VoicePanelControlsDrawer ===
+// === Module 19374: VoicePanelControlsDrawer ===
 
-// Module 19372 (VoicePanelControlsDrawer)
+// Module 19374 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import Suspender from "Suspender" /* 5891 */;
 import useRefValueDefault from "useRefValue" /* 7018 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13133 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19373 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19385 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19375 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19387 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -181,7 +181,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19369), obj4);
+    tmp32 = closure_9(tmp(19371), obj4);
   }
   const items9 = [tmp32, , , ];
   let tmp36 = !tmp6;

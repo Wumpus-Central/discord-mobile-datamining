@@ -1,6 +1,6 @@
-// === Module 19041: BurstReactionAnimationContainer ===
+// === Module 19043: BurstReactionAnimationContainer ===
 
-// Module 19041 (BurstReactionAnimationContainer)
+// Module 19043 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 4974 */;

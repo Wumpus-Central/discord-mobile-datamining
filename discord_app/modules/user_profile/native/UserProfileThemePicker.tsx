@@ -1,6 +1,6 @@
-// === Module 15887: UserProfileThemePicker ===
+// === Module 15889: UserProfileThemePicker ===
 
-// Module 15887 (UserProfileThemePicker)
+// Module 15889 (UserProfileThemePicker)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import util from "util" /* 1112 */;

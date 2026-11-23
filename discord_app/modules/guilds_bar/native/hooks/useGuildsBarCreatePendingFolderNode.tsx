@@ -1,6 +1,6 @@
-// === Module 17935: useGuildsBarCreatePendingFolderNode ===
+// === Module 17937: useGuildsBarCreatePendingFolderNode ===
 
-// Module 17935 (useGuildsBarCreatePendingFolderNode)
+// Module 17937 (useGuildsBarCreatePendingFolderNode)
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6526 */;
 import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12281 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ export default function useGuildsBarCreatePendingFolderNode() {
     }
   }, items2);
   if (arr2.length > 0) {
-    const obj3 = { folderId: tmp2(17936).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
+    const obj3 = { folderId: tmp2(17938).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
     const intl = tmp2(1112).intl;
     obj3.folderName = intl.string(tmp2(1112).t["scsU+l"]);
     obj3.expanded = stateFromStores1;

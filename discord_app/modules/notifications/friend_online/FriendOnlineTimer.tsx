@@ -1,13 +1,13 @@
-// === Module 20081: FriendOnlineTimer ===
+// === Module 20083: FriendOnlineTimer ===
 
-// Module 20081 (FriendOnlineTimer)
+// Module 20083 (FriendOnlineTimer)
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import UserSettings from "UserSettings" /* 4738 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;
-import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 20082 */;
+import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 20084 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
 
 require = fn;

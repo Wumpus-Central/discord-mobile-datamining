@@ -1,6 +1,6 @@
-// === Module 18843: ChannelDetailsTopic ===
+// === Module 18845: ChannelDetailsTopic ===
 
-// Module 18843 (ChannelDetailsTopic)
+// Module 18845 (ChannelDetailsTopic)
 import _modDef1653 from "module_1653" /* 1653 */;
 import UserUtilsDefault from "UserUtils" /* 4969 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5637 */;
@@ -284,7 +284,7 @@ let obj = { hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, 
 const PlatformUtils = fn(1378);
 let obj3 = null;
 if (!PlatformUtils.isAndroid()) {
-  obj3 = { lineHeight: "Array" };
+  obj3 = { lineHeight: "r" };
 }
 let merged = Object.assign(obj3);
 obj.topicText = { paddingVertical: 5 };

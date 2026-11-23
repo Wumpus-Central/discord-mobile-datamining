@@ -1,6 +1,6 @@
-// === Module 17708: AccountLinkBanner ===
+// === Module 17710: AccountLinkBanner ===
 
-// Module 17708 (AccountLinkBanner)
+// Module 17710 (AccountLinkBanner)
 import nativeDefault from "native" /* 575 */;
 import ButtonConstants from "ButtonConstants" /* 5517 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;

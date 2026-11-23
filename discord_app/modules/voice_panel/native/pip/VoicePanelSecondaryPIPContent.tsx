@@ -1,6 +1,6 @@
-// === Module 19329: VoicePanelSecondaryPIPContent ===
+// === Module 19331: VoicePanelSecondaryPIPContent ===
 
-// Module 19329 (VoicePanelSecondaryPIPContent)
+// Module 19331 (VoicePanelSecondaryPIPContent)
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10093 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import noop from "module_19" /* 19 */;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 const _modDef1653 = tmp(1653);
 const isVoiceEmbeddedActivityDefault = tmp(5560);
 const EmbeddedActivityViewDefault = tmp(10783);
-const FrameRenderTargetDefault = tmp(18402);
-const getActivityContainerPIPStylesSpecDefault = tmp(19185);
+const FrameRenderTargetDefault = tmp(18404);
+const getActivityContainerPIPStylesSpecDefault = tmp(19187);
 const require = fn;
 const ActivityPanelModes = fn(5539).ActivityPanelModes;
 const FramesConstants = fn(6624);

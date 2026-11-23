@@ -1,10 +1,10 @@
-// === Module 18673: ConjureDebugLogsTab ===
+// === Module 18675: ConjureDebugLogsTab ===
 
-// Module 18673 (ConjureDebugLogsTab)
+// Module 18675 (ConjureDebugLogsTab)
 import nativeDefault from "native" /* 575 */;
 import _modDef4190 from "module_4190" /* 4190 */;
-import ConjureDebugJson from "ConjureDebugJson" /* 18674 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 18675 */;
+import ConjureDebugJson from "ConjureDebugJson" /* 18676 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 18677 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugLogStore from "ConjureDebugLogStore" /* 6973 */;
@@ -47,7 +47,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  let ts = tmp6(18667).formatClockTime(entry.ts);
+  let ts = tmp6(18669).formatClockTime(entry.ts);
   if (ts == null) {
     ts = entry.ts;
   }

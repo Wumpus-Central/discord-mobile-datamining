@@ -1,6 +1,6 @@
-// === Module 16541: useVideoExternallyPaused ===
+// === Module 16543: useVideoExternallyPaused ===
 
-// Module 16541 (useVideoExternallyPaused)
+// Module 16543 (useVideoExternallyPaused)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;

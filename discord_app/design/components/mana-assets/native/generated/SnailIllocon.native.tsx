@@ -1,20 +1,20 @@
-// === Module 18505: SnailIllocon ===
+// === Module 18507: SnailIllocon ===
 
-// Module 18505 (SnailIllocon)
+// Module 18507 (SnailIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18506 from "module_18506" /* 18506 */;
-import _modDef18507 from "module_18507" /* 18507 */;
 import _modDef18508 from "module_18508" /* 18508 */;
+import _modDef18509 from "module_18509" /* 18509 */;
+import _modDef18510 from "module_18510" /* 18510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18506 }, 3: null };
-const obj2 = { uri: _modDef18506 };
-obj[2] = { uri: _modDef18507 };
-const obj3 = { uri: _modDef18507 };
-obj[3] = { uri: _modDef18508 };
+let obj = { 1: null, 2: { uri: _modDef18508 }, 3: null };
+const obj2 = { uri: _modDef18508 };
+obj[2] = { uri: _modDef18509 };
+const obj3 = { uri: _modDef18509 };
+obj[3] = { uri: _modDef18510 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SnailIllocon.native.tsx");
 

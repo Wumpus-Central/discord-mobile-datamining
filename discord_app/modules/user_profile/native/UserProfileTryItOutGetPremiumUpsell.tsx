@@ -1,10 +1,10 @@
-// === Module 15946: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 15948: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 15946 (UserProfileTryItOutGetPremiumUpsell)
+// Module 15948 (UserProfileTryItOutGetPremiumUpsell)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9099 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10505 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15942 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15944 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

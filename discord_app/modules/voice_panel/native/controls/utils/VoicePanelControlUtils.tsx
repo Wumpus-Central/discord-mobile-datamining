@@ -1,6 +1,6 @@
-// === Module 19334: VoicePanelControlUtils ===
+// === Module 19336: VoicePanelControlUtils ===
 
-// Module 19334 (VoicePanelControlUtils)
+// Module 19336 (VoicePanelControlUtils)
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10093 */;
 
 const items = [{ code: "(function getDrawerSpec_VoicePanelControlUtilsTsx1(height,top){let[roundToNearestPixel]=this.__closure;const maxHeight=height-top;return{minHeight:roundToNearestPixel(maxHeight*0.65),maxHeight:maxHeight};})" }, roundToNearestPixelDefault];

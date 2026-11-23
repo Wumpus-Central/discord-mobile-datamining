@@ -1,6 +1,6 @@
-// === Module 16292: PremiumGiftingSetting ===
+// === Module 16294: PremiumGiftingSetting ===
 
-// Module 16292 (PremiumGiftingSetting)
+// Module 16294 (PremiumGiftingSetting)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2185 */;

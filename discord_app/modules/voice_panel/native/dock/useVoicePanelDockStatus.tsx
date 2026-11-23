@@ -1,6 +1,6 @@
-// === Module 19243: useVoicePanelDockStatus ===
+// === Module 19245: useVoicePanelDockStatus ===
 
-// Module 19243 (useVoicePanelDockStatus)
+// Module 19245 (useVoicePanelDockStatus)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1386 */;
 import VoiceStateStore from "VoiceStateStore" /* 5561 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(18008);
+const VoicePanelDockStatusStore = fn(18010);
 ({ releaseDockStatus: closure_12, initDockStatus: map1, setDockActiveSpeakers: closure_14, setDockHasStreamers: closure_15, showVoiceMoment: closure_16 } = VoicePanelDockStatusStore);
 const ParticipantTypes = fn(5563).ParticipantTypes;
 let result = fn(5963).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;

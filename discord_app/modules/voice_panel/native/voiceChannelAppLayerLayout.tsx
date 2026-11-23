@@ -1,6 +1,6 @@
-// === Module 19308: voiceChannelAppLayerLayout ===
+// === Module 19310: voiceChannelAppLayerLayout ===
 
-// Module 19308 (voiceChannelAppLayerLayout)
+// Module 19310 (voiceChannelAppLayerLayout)
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11755 */;
 
 const items = [{ code: "(function getVoiceChannelAppLayerInsets_voiceChannelAppLayerLayoutTsx1({safeArea:safeArea,edgeGutter:edgeGutter,controlsHeight:controlsHeight,keyboardHeight:keyboardHeight}){let[calculateVoicePanelHeaderSpecs,EDGE_GUTTER]=this.__closure;const{height:top}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);const aboveControls=controlsHeight+Math.max(safeArea.bottom,EDGE_GUTTER);return{top:top,bottom:Math.max(aboveControls,keyboardHeight)};})" }, calculateVoicePanelHeaderSpecsDefault, fn(11753).EDGE_GUTTER];

@@ -303,7 +303,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F89991 */ function() { ... });
+                      let found = prop.filter(/* F89965 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -314,7 +314,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F89992 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F89966 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);

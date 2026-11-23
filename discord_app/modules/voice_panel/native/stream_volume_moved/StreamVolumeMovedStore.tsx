@@ -1,6 +1,6 @@
-// === Module 14504: StreamVolumeMovedStore ===
+// === Module 14506: StreamVolumeMovedStore ===
 
-// Module 14504 (StreamVolumeMovedStore)
+// Module 14506 (StreamVolumeMovedStore)
 import ZustandStore from "ZustandStore" /* 5102 */;
 import size from "module_2" /* 2 */;
 

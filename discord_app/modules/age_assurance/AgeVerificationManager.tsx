@@ -1,6 +1,6 @@
-// === Module 19437: AgeVerificationManager ===
+// === Module 19439: AgeVerificationManager ===
 
-// Module 19437 (AgeVerificationManager)
+// Module 19439 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1093 */;
 import ChannelMessagesDefault from "ChannelMessages" /* 6389 */;

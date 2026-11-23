@@ -1,7 +1,7 @@
-// === Module 19333: useDrawerToggle ===
+// === Module 19335: useDrawerToggle ===
 
-// Module 19333 (useDrawerToggle)
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17991 */;
+// Module 19335 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17993 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

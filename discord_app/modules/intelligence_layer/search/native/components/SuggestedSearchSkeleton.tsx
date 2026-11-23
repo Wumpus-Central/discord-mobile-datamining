@@ -1,6 +1,6 @@
-// === Module 18795: SuggestedSearchSkeleton ===
+// === Module 18797: SuggestedSearchSkeleton ===
 
-// Module 18795 (SuggestedSearchSkeleton)
+// Module 18797 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import timing_timing from "timing/timing" /* 5123 */;

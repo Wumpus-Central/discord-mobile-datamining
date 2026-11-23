@@ -1,6 +1,6 @@
-// === Module 15892: EditProfileEffectSection ===
+// === Module 15894: EditProfileEffectSection ===
 
-// Module 15892 (EditProfileEffectSection)
+// Module 15894 (EditProfileEffectSection)
 import FastImageDefault from "FastImage" /* 5600 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import useProfileEffectDefault from "useProfileEffect" /* 8179 */;
@@ -8,7 +8,7 @@ import ProfileEffectDefault from "ProfileEffect" /* 9013 */;
 import _modDef9033 from "module_9033" /* 9033 */;
 import useCollectibleListLayout from "useCollectibleListLayout" /* 14260 */;
 import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14261 */;
-import useProfileEffectSections from "useProfileEffectSections" /* 15891 */;
+import useProfileEffectSections from "useProfileEffectSections" /* 15893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

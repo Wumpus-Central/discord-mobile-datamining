@@ -1,11 +1,11 @@
-// === Module 16279: PremiumSetting ===
+// === Module 16281: PremiumSetting ===
 
-// Module 16279 (PremiumSetting)
+// Module 16281 (PremiumSetting)
 import util from "util" /* 1112 */;
 import PremiumUtils from "PremiumUtils" /* 2173 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 9105 */;
 import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9312 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16280 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16282 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;

@@ -1,6 +1,6 @@
-// === Module 18901: CustomTypingIndicatorProfileCoachmark ===
+// === Module 18903: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 18901 (CustomTypingIndicatorProfileCoachmark)
+// Module 18903 (CustomTypingIndicatorProfileCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import user from "user" /* 1399 */;

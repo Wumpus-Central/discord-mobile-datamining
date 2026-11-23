@@ -1,6 +1,6 @@
-// === Module 18783: SmartSearchTip ===
+// === Module 18785: SmartSearchTip ===
 
-// Module 18783 (SmartSearchTip)
+// Module 18785 (SmartSearchTip)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;

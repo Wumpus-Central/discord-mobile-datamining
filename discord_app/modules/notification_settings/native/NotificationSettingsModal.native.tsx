@@ -1,6 +1,6 @@
-// === Module 20064: NotificationSettingsModal ===
+// === Module 20066: NotificationSettingsModal ===
 
-// Module 20064 (NotificationSettingsModal)
+// Module 20066 (NotificationSettingsModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -35,7 +35,7 @@ import ChannelStore from "ChannelStore" /* 4762 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7477 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
 import GuildStore from "GuildStore" /* 4784 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19681 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19683 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -504,7 +504,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_29(closure_1_1(20065), { guildId: guildId.guildId, navigation });
+      return closure_1_29(closure_1_1(20067), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };

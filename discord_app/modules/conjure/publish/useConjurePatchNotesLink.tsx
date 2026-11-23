@@ -1,6 +1,6 @@
-// === Module 18495: useConjurePatchNotesLink ===
+// === Module 18497: useConjurePatchNotesLink ===
 
-// Module 18495 (useConjurePatchNotesLink)
+// Module 18497 (useConjurePatchNotesLink)
 import router_utils from "router_utils" /* 1098 */;
 import useConjurePublishAction from "useConjurePublishAction" /* 12305 */;
 import noop from "module_19" /* 19 */;

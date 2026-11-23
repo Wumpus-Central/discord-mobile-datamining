@@ -1,6 +1,6 @@
-// === Module 18567: ApplicationAssetType ===
+// === Module 18569: ApplicationAssetType ===
 
-// Module 18567 (ApplicationAssetType)
+// Module 18569 (ApplicationAssetType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationAssetType.tsx");

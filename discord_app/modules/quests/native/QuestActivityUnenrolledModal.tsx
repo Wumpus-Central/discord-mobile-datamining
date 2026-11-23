@@ -1,6 +1,6 @@
-// === Module 19198: QuestActivityUnenrolledModal ===
+// === Module 19200: QuestActivityUnenrolledModal ===
 
-// Module 19198 (QuestActivityUnenrolledModal)
+// Module 19200 (QuestActivityUnenrolledModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
@@ -12,12 +12,12 @@ import _modDef7032 from "module_7032" /* 7032 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8430 */;
 import QuestActionCreators from "QuestActionCreators" /* 9959 */;
 import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13757 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16502 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 8404 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19197 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19199 */;
 
 require = fn;
 function QuestActivityUnenrolledModalInner(quest) {
@@ -105,7 +105,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj9 = quest(4975);
   const isQuestAccessSuspended = quest(9958).useIsQuestAccessSuspended();
   const obj10 = quest(9958);
-  trackQuestContentClickedWithImpression = quest(16395).useTrackQuestContentClickedWithImpression();
+  trackQuestContentClickedWithImpression = quest(16397).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({ questId: quest.id, questContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: AnalyticsTypes.QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });

@@ -1,6 +1,6 @@
-// === Module 18617: ConjurePublishEvalCard ===
+// === Module 18619: ConjurePublishEvalCard ===
 
-// Module 18617 (ConjurePublishEvalCard)
+// Module 18619 (ConjurePublishEvalCard)
 import nativeDefault from "native" /* 575 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4975 */;
@@ -41,7 +41,7 @@ function ScoreRow(dimension) {
   const obj2 = { style: tmp.scoreRow, children: null };
   items = [closure_5(dimension(5504).Text, { variant: "body-sm/medium", color: "text-default", children: result }), ];
   const obj3 = { style: tmp.stars, accessibilityRole: "radiogroup", accessibilityLabel: result, children: null };
-  const prop = dimension(18618).CONJURE_PUBLISH_RATINGS;
+  const prop = dimension(18620).CONJURE_PUBLISH_RATINGS;
   obj3.children = prop.map((score) => hasOwnProperty(ScoreStar, { dimension, score, value, disabled, onChange }, score));
   items[1] = closure_5(closure_4, obj3);
   obj2.children = items;

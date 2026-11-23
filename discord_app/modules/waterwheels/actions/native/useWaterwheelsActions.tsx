@@ -1,6 +1,6 @@
-// === Module 17800: useWaterwheelsActions ===
+// === Module 17802: useWaterwheelsActions ===
 
-// Module 17800 (useWaterwheelsActions)
+// Module 17802 (useWaterwheelsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
@@ -8,7 +8,7 @@ import openPrivacySettingsDefault from "openPrivacySettings" /* 7803 */;
 import GameActionCreators from "GameActionCreators" /* 9054 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
 import NotificationUtilsDefault from "NotificationUtils" /* 13288 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 17801 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 17803 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2140 */;

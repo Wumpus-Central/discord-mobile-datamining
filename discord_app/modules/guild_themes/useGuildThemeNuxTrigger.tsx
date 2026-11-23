@@ -1,6 +1,6 @@
-// === Module 17680: guild_themes/useGuildThemeNuxTrigger ===
+// === Module 17682: guild_themes/useGuildThemeNuxTrigger ===
 
-// Module 17680 (guild_themes/useGuildThemeNuxTrigger)
+// Module 17682 (guild_themes/useGuildThemeNuxTrigger)
 import dismissible_content from "dismissible_content" /* 4746 */;
 import GuildThemeResolver from "GuildThemeResolver" /* 5116 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9080 */;

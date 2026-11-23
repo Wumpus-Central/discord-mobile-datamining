@@ -1,6 +1,6 @@
-// === Module 18017: ExpressionPickerStore ===
+// === Module 18019: ExpressionPickerStore ===
 
-// Module 18017 (ExpressionPickerStore)
+// Module 18019 (ExpressionPickerStore)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1227 */;
 import uniqueIdDefault from "uniqueId" /* 5931 */;
 import identity_mod from "module_1257" /* 1257 */;
@@ -170,7 +170,7 @@ export function toggleExpressionPicker(activeView, activeViewType, activeChannel
 }
 export function setExpressionPickerView(activeView) {
   _require = activeView;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false, showSelectedEmojiPackId: "add" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false, showSelectedEmojiPackId: "displayName" }));
 }
 export function setShowEmojiPacks(showEmojiPacks) {
   _require = showEmojiPacks;

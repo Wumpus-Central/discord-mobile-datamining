@@ -1,6 +1,6 @@
-// === Module 19738: useGuildBotApplications ===
+// === Module 19740: useGuildBotApplications ===
 
-// Module 19738 (useGuildBotApplications)
+// Module 19740 (useGuildBotApplications)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8004 */;
 import noop from "module_19" /* 19 */;

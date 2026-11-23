@@ -1,34 +1,36 @@
-// === Module 18446: conjureLiveBehindTip ===
+// === Module 18448: conjureLiveBehindTip ===
 
-// Module 18446 (conjureLiveBehindTip)
-import conjurePublishCard from "conjurePublishCard" /* 18419 */;
-import conjureTipImpressions from "conjureTipImpressions" /* 18447 */;
+// Module 18448 (conjureLiveBehindTip)
+import conjurePublishCard from "conjurePublishCard" /* 18421 */;
+import conjureTipImpressions from "conjureTipImpressions" /* 18449 */;
 import size from "module_2" /* 2 */;
 
 function resolveLiveBehindTip(draftHasText) {
   ({ turn, publish } = draftHasText);
   if (null != turn) {
     if (!draftHasText.draftHasText) {
-      if (null != publish) {
-        if (!publish.publishing) {
-          if (publish.isUpdate) {
-            if (null == publish.disabledReason) {
-              if (tmp >= c3) {
-                if (null == turn.publishCta) {
-                  conjureTipImpressions;
-                  let tmp8 = "hint";
-                } else {
-                  conjurePublishCard;
-                }
+      state = undefined;
+      if (publish != null) {
+        state = publish.state;
+      }
+      if ("action_needed" === state) {
+        if (publish.isUpdate) {
+          if (null == publish.disabledReason) {
+            if (tmp >= c3) {
+              if (null == turn.publishCta) {
+                conjureTipImpressions;
+                let tmp9 = "hint";
+              } else {
+                conjurePublishCard;
               }
-              return tmp8;
             }
+            return tmp9;
           }
         }
       }
     }
   }
-  tmp8 = null;
+  tmp9 = null;
 }
 const live_behind = "live_behind";
 let c3 = 120000;

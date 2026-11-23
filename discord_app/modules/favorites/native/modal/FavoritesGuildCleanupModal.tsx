@@ -1,6 +1,6 @@
-// === Module 17658: FavoritesGuildCleanupModal ===
+// === Module 17660: FavoritesGuildCleanupModal ===
 
-// Module 17658 (FavoritesGuildCleanupModal)
+// Module 17660 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3802 from "module_3802" /* 3802 */;
@@ -17,7 +17,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1628)().bottom);
-  const tmp4 = loading(17659)(closeCleanup);
+  const tmp4 = loading(17661)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };

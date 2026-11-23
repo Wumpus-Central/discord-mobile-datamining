@@ -1,9 +1,9 @@
-// === Module 19594: RedesignNewUserManager ===
+// === Module 19596: RedesignNewUserManager ===
 
-// Module 19594 (RedesignNewUserManager)
+// Module 19596 (RedesignNewUserManager)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;
 import RootNavigationRef from "RootNavigationRef" /* 5090 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19595 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19597 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4756 */;

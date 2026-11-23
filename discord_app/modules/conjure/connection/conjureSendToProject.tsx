@@ -1,6 +1,6 @@
-// === Module 18296: conjureSendToProject ===
+// === Module 18298: conjureSendToProject ===
 
-// Module 18296 (conjureSendToProject)
+// Module 18298 (conjureSendToProject)
 import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

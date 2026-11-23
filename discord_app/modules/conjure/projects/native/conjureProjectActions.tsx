@@ -1,6 +1,6 @@
-// === Module 18388: conjureProjectActions ===
+// === Module 18390: conjureProjectActions ===
 
-// Module 18388 (conjureProjectActions)
+// Module 18390 (conjureProjectActions)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import ToastUtils from "ToastUtils" /* 5594 */;
@@ -11,8 +11,8 @@ import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
 import conjureProjectMute from "conjureProjectMute" /* 6936 */;
 import ClipboardUtils from "ClipboardUtils" /* 7545 */;
 import conjureRemoveApp from "conjureRemoveApp" /* 12394 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18301 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 18390 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 18303 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 18392 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
 
@@ -88,7 +88,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1112).intl;
-          await tmp3(18389).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4190).Owerd3));
+          await tmp3(18391).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4190).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1112).intl;

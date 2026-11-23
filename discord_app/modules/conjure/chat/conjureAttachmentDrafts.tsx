@@ -1,10 +1,10 @@
-// === Module 18430: conjureAttachmentDrafts ===
+// === Module 18432: conjureAttachmentDrafts ===
 
-// Module 18430 (conjureAttachmentDrafts)
+// Module 18432 (conjureAttachmentDrafts)
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18276 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18316 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18278 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18318 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 

@@ -1,6 +1,6 @@
-// === Module 18704: FrameSurfaceState ===
+// === Module 18706: FrameSurfaceState ===
 
-// Module 18704 (FrameSurfaceState)
+// Module 18706 (FrameSurfaceState)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7020 */;

@@ -1,6 +1,6 @@
-// === Module 20080: NativeNotificationsManager ===
+// === Module 20082: NativeNotificationsManager ===
 
-// Module 20080 (NativeNotificationsManager)
+// Module 20082 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import PushNotificationDefault from "PushNotification" /* 10861 */;

@@ -1,16 +1,16 @@
-// === Module 19433: DateOfBirthGateModal ===
+// === Module 19435: DateOfBirthGateModal ===
 
-// Module 19433 (DateOfBirthGateModal)
+// Module 19435 (DateOfBirthGateModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import NavigatorHeader from "NavigatorHeader" /* 7095 */;
-import ageGateNavigationCallbacks from "ageGateNavigationCallbacks" /* 19431 */;
-import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 19434 */;
-import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 19436 */;
+import ageGateNavigationCallbacks from "ageGateNavigationCallbacks" /* 19433 */;
+import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 19436 */;
+import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 19438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const AgeGateSource = fn(1096).AgeGateSource;
-const AgeGate = fn(19430).ExistingUserAgeGateScreens;
+const AgeGate = fn(19432).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/DateOfBirthGateModal.tsx");
@@ -44,7 +44,7 @@ export default function DateOfBirthGateModal(source) {
         }
         let obj2 = { onSuccess: fn, onClose: null, source: null };
         obj = source(1378);
-        obj2.onClose = source(19431).onGateClose;
+        obj2.onClose = source(19433).onGateClose;
         obj2.source = tmp;
         return jsx(ExistingUserAgeGateDefault, { onSuccess: fn, onClose: null, source: null });
       }
@@ -90,7 +90,7 @@ export default function DateOfBirthGateModal(source) {
       impressionProperties: { existing_user: true },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(17491), {});
+        return closure_1_6(closure_1_1(17493), {});
       }
     };
     const obj6 = { headerTitle: ageGateNavigationCallbacks.renderHeaderTitle, headerLeft: null, render: null };
@@ -100,13 +100,13 @@ export default function DateOfBirthGateModal(source) {
       impressionProperties: { existing_user: true },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(17491), {});
+        return closure_1_6(closure_1_1(17493), {});
       }
     };
     obj6.headerLeft = NavigatorHeader.getHeaderBackButton(fn);
     obj6.render = function render() {
-      const obj = { onClose: source(19431).onGateClose };
-      return closure_1_6(closure_1_1(14695), obj);
+      const obj = { onClose: source(19433).onGateClose };
+      return closure_1_6(closure_1_1(14697), obj);
     };
     obj2[NSFWGateGuild.NSFWGateGuild] = obj6;
     return obj2;

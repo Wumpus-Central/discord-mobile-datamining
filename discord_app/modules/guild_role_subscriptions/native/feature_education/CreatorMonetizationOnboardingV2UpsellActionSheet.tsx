@@ -1,13 +1,13 @@
-// === Module 17766: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 17768: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 17766 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 17768 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1112 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5141 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import components_Button_Button from "components/Button/Button" /* 5511 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
-import _modDef17767 from "module_17767" /* 17767 */;
+import _modDef17769 from "module_17769" /* 17769 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17767 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17769 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress: function handleCheckItOut() {

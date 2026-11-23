@@ -1,6 +1,6 @@
-// === Module 17235: DesignSystemsTooltipSetting ===
+// === Module 17237: DesignSystemsTooltipSetting ===
 
-// Module 17235 (DesignSystemsTooltipSetting)
+// Module 17237 (DesignSystemsTooltipSetting)
 import Constants from "Constants" /* 1071 */;
 import SettingsConstants from "SettingsConstants" /* 8712 */;
 import SettingBuilders from "SettingBuilders" /* 11937 */;

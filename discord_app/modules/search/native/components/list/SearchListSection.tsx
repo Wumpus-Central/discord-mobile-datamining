@@ -1,6 +1,6 @@
-// === Module 18777: SearchListSection ===
+// === Module 18779: SearchListSection ===
 
-// Module 18777 (SearchListSection)
+// Module 18779 (SearchListSection)
 import Text_Text from "Text/Text" /* 5504 */;
 import Pressables from "Pressables" /* 7030 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7565 */;

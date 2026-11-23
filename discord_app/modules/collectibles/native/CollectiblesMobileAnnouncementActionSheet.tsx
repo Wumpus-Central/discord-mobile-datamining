@@ -1,6 +1,6 @@
-// === Module 19073: CollectiblesMobileAnnouncementActionSheet ===
+// === Module 19075: CollectiblesMobileAnnouncementActionSheet ===
 
-// Module 19073 (CollectiblesMobileAnnouncementActionSheet)
+// Module 19075 (CollectiblesMobileAnnouncementActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 5504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
-import _modDef19074 from "module_19074" /* 19074 */;
-import _modDef19075 from "module_19075" /* 19075 */;
+import _modDef19076 from "module_19076" /* 19076 */;
+import _modDef19077 from "module_19077" /* 19077 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -55,7 +55,7 @@ function CatEarsBackdrop() {
   obj4.style = items3;
   const obj5 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const obj6 = { uri: null };
-  obj6.uri = _modDef19074;
+  obj6.uri = _modDef19076;
   obj5.source = obj6;
   obj5.style = tmp.mascotImage;
   obj4.children = React5(FastImageDefault, obj5);
@@ -130,7 +130,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   let obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  const obj4 = { uri: _modDef19075 };
+  const obj4 = { uri: _modDef19077 };
   obj3.source = obj4;
   obj3.style = tmp.framePreviewImage;
   const items3 = [closure_8(FastImageDefault, obj3), , , ];
@@ -147,7 +147,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl3 = markAsDismissed(1112).intl;
   obj8.text = intl3.string(markAsDismissed(1112).t.MkVbBY);
   items4[1] = closure_8(FeatureRow, obj8);
-  const obj9 = { icon: closure_8(markAsDismissed(19076).ShopIllocon, { size: 32 }), text: null };
+  const obj9 = { icon: closure_8(markAsDismissed(19078).ShopIllocon, { size: 32 }), text: null };
   const intl4 = markAsDismissed(1112).intl;
   obj9.text = intl4.string(markAsDismissed(1112).t["/4bQuG"]);
   items4[2] = closure_8(FeatureRow, obj9);

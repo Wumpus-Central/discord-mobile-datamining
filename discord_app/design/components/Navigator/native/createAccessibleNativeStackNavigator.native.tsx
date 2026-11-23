@@ -1,6 +1,6 @@
-// === Module 15282: createAccessibleNativeStackNavigator ===
+// === Module 15284: createAccessibleNativeStackNavigator ===
 
-// Module 15282 (createAccessibleNativeStackNavigator)
+// Module 15284 (createAccessibleNativeStackNavigator)
 import Link from "Link" /* 1501 */;
 import Navigator from "Navigator" /* 7092 */;
 import NativeStackNavigator from "NativeStackNavigator" /* 8638 */;

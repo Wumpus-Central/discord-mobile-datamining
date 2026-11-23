@@ -1,6 +1,6 @@
-// === Module 18983: SearchNavigatorPreviewScreen ===
+// === Module 18985: SearchNavigatorPreviewScreen ===
 
-// Module 18983 (SearchNavigatorPreviewScreen)
+// Module 18985 (SearchNavigatorPreviewScreen)
 import TrackingDefault from "Tracking" /* 13218 */;
 import noop from "module_19" /* 19 */;
 

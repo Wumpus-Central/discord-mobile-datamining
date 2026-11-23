@@ -1,11 +1,11 @@
-// === Module 17317: FeaturedCategorySubblock ===
+// === Module 17319: FeaturedCategorySubblock ===
 
-// Module 17317 (FeaturedCategorySubblock)
+// Module 17319 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 17312 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 17314 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8075 */;
 
@@ -47,8 +47,8 @@ export default function _default(subblock) {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  let obj6 = { onChange: subblock(17299).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  let obj5 = subblock(17299);
+  let obj6 = { onChange: subblock(17301).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj5 = subblock(17301);
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1112).intl;
   obj7.accessibilityLabel = intl.formatToPlainString(subblock(1112).t.FNtLb3, { category: subblock.name });

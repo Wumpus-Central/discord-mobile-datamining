@@ -1,14 +1,14 @@
-// === Module 19341: VoicePanelConsoleStatus ===
+// === Module 19343: VoicePanelConsoleStatus ===
 
-// Module 19341 (VoicePanelConsoleStatus)
+// Module 19343 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import native from "native" /* 4974 */;
 import NativeViewDefault from "NativeView" /* 7324 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19335 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19340 */;
-import useControlsTranslationDefault from "useControlsTranslation" /* 19342 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19337 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19342 */;
+import useControlsTranslationDefault from "useControlsTranslation" /* 19344 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

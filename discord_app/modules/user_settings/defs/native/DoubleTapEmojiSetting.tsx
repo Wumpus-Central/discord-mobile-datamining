@@ -1,6 +1,6 @@
-// === Module 17384: DoubleTapEmojiSetting ===
+// === Module 17386: DoubleTapEmojiSetting ===
 
-// Module 17384 (DoubleTapEmojiSetting)
+// Module 17386 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;

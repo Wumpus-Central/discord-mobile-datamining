@@ -1,6 +1,6 @@
-// === Module 14739: conjureWorkerFetch ===
+// === Module 14741: conjureWorkerFetch ===
 
-// Module 14739 (conjureWorkerFetch)
+// Module 14741 (conjureWorkerFetch)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

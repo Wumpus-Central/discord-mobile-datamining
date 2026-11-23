@@ -1,6 +1,6 @@
-// === Module 17368: useAuthorizedSlayerApplications ===
+// === Module 17370: useAuthorizedSlayerApplications ===
 
-// Module 17368 (useAuthorizedSlayerApplications)
+// Module 17370 (useAuthorizedSlayerApplications)
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7012 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;

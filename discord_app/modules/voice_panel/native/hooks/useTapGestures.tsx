@@ -1,6 +1,6 @@
-// === Module 19277: useTapGestures ===
+// === Module 19279: useTapGestures ===
 
-// Module 19277 (useTapGestures)
+// Module 19279 (useTapGestures)
 import _mod1706 from "module_1706" /* 1706 */;
 import timing_timing from "timing/timing" /* 5123 */;
 import HapticUtils from "HapticUtils" /* 5129 */;

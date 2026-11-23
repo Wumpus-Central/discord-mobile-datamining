@@ -1,12 +1,12 @@
-// === Module 17772: ChannelsEmpty ===
+// === Module 17774: ChannelsEmpty ===
 
-// Module 17772 (ChannelsEmpty)
+// Module 17774 (ChannelsEmpty)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 7746 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 7994 */;
-import _modDef17773 from "module_17773" /* 17773 */;
-import _modDef17774 from "module_17774" /* 17774 */;
+import _modDef17775 from "module_17775" /* 17775 */;
+import _modDef17776 from "module_17776" /* 17776 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 
@@ -50,13 +50,13 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const obj = guild(563);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  const obj2 = guild(16478);
-  items4[1] = { paddingBottom: guild(16478).useYouBarTotalHeight(16) };
+  const obj2 = guild(16480);
+  items4[1] = { paddingBottom: guild(16480).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef17773, disableColor: true };
+    const obj7 = { source: _modDef17775, disableColor: true };
     obj6.icon = closure_7(tmp2(1186).Icon, obj7);
     const intl = tmp2(1112).intl;
     obj6.label = intl.string(tmp2(1112).t["Yhi9/N"]);
@@ -67,8 +67,8 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const items5 = [canCustomizeGuild, ];
   const obj8 = { style: tmp.content, children: null };
   const obj9 = { source: null };
-  const obj4 = { paddingBottom: guild(16478).useYouBarTotalHeight(16) };
-  obj9.source = _modDef17774;
+  const obj4 = { paddingBottom: guild(16480).useYouBarTotalHeight(16) };
+  obj9.source = _modDef17776;
   const items6 = [closure_7(FastImageDefault, obj9), , , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-sm/semibold", style: null, children: null };
   const items7 = [, ];

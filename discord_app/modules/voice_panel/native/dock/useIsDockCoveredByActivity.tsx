@@ -1,7 +1,7 @@
-// === Module 19227: useIsDockCoveredByActivity ===
+// === Module 19229: useIsDockCoveredByActivity ===
 
-// Module 19227 (useIsDockCoveredByActivity)
-import ActivityPanelUtils from "ActivityPanelUtils" /* 19176 */;
+// Module 19229 (useIsDockCoveredByActivity)
+import ActivityPanelUtils from "ActivityPanelUtils" /* 19178 */;
 import FramesStore from "FramesStore" /* 6623 */;
 
 require = fn;

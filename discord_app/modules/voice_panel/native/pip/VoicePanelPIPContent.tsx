@@ -1,6 +1,6 @@
-// === Module 19325: VoicePanelPIPContent ===
+// === Module 19327: VoicePanelPIPContent ===
 
-// Module 19325 (VoicePanelPIPContent)
+// Module 19327 (VoicePanelPIPContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
@@ -13,10 +13,10 @@ import NativeViewDefault from "NativeView" /* 7324 */;
 import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 10734 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
 import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 11752 */;
-import useUserTileBackgroundDefault from "useUserTileBackground" /* 19161 */;
-import VideoActionCreators from "VideoActionCreators" /* 19162 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19164 */;
-import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 19229 */;
+import useUserTileBackgroundDefault from "useUserTileBackground" /* 19163 */;
+import VideoActionCreators from "VideoActionCreators" /* 19164 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19166 */;
+import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 19231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
@@ -697,7 +697,7 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp23 = closure_21(tmp2(19326).StreamEnded, obj3);
+    let tmp23 = closure_21(tmp2(19328).StreamEnded, obj3);
   } else {
     tmp23 = null;
     if (stateFromStores !== tmp17.FAILED) {
@@ -753,7 +753,7 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11750).VoicePanelModes;
-const VoicePanelPIPModes = fn(19165).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19167).VoicePanelPIPModes;
 const Constants = fn(1071);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 const CallConstants = fn(5563);

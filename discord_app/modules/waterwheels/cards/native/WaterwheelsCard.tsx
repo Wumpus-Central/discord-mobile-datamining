@@ -1,11 +1,11 @@
-// === Module 17805: WaterwheelsCard ===
+// === Module 17807: WaterwheelsCard ===
 
-// Module 17805 (WaterwheelsCard)
+// Module 17807 (WaterwheelsCard)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import FastImageDefault from "FastImage" /* 5600 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10051 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17806 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 17808 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6689 */;
 import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13279 */;
@@ -118,7 +118,7 @@ function WaterwheelsCardContent(card) {
       if (type === tmp2(10051).WaterwheelsActionType.OPEN_CONNECTION) {
         const obj12 = { style: tmp.card, children: null };
         const obj13 = { post: layout, action, onAction: handleAction };
-        obj12.children = closure_10(onAction(17807), obj13);
+        obj12.children = closure_10(onAction(17809), obj13);
         let tmp25Result = closure_10(closure_5, obj12);
       } else {
         const obj14 = { style: tmp.card, children: null };

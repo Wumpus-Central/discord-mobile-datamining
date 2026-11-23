@@ -15,11 +15,4 @@ export function isConjureLive(publishState) {
   }
   return tmp;
 }
-export function canPublish(publishState) {
-  let tmp = "nothing_built" !== publishState;
-  if (tmp) {
-    tmp = "live_auto_synced" !== publishState;
-  }
-  return tmp;
-}
 export const CONJURE_PUBLISH_PROGRESS_STAGES = ["preparing", "approval", "approved_by_grant", "setup", "build", "deploy", "discord", "activating"];

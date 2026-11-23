@@ -1,6 +1,6 @@
-// === Module 18174: StandaloneChannelScreen ===
+// === Module 18176: StandaloneChannelScreen ===
 
-// Module 18174 (StandaloneChannelScreen)
+// Module 18176 (StandaloneChannelScreen)
 import nativeDefault from "native" /* 575 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8563 */;

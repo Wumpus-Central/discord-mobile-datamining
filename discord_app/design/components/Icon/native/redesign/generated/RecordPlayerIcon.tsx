@@ -1,9 +1,9 @@
-// === Module 17028: RecordPlayerIcon ===
+// === Module 17030: RecordPlayerIcon ===
 
-// Module 17028 (RecordPlayerIcon)
+// Module 17030 (RecordPlayerIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod17029 from "module_17029" /* 17029 */;
+import _mod17031 from "module_17031" /* 17031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function RecordPlayerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17029, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17031, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

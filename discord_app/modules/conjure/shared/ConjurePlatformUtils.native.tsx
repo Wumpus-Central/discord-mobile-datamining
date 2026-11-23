@@ -9,9 +9,9 @@ import conjurePreviewSurface from "conjurePreviewSurface" /* 6943 */;
 import ApplicationUtils from "ApplicationUtils" /* 10695 */;
 import PushNotificationDefault from "PushNotification" /* 10861 */;
 import restartFrames from "restartFrames" /* 14360 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 14728 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 14730 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 14731 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 14730 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 14732 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 14733 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ActionSheetStore from "ActionSheetStore" /* 5128 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
@@ -300,7 +300,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "Array" };
+              let obj10 = { uploadToken: "r" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -640,7 +640,7 @@ const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(14730);
+const conjurePreviewControlLease = fn(14732);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -743,7 +743,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(14736);
+const conjurePreviewOperationSurfaces = fn(14738);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;

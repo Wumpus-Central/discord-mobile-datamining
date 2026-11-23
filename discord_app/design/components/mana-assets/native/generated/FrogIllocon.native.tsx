@@ -1,20 +1,20 @@
-// === Module 18513: FrogIllocon ===
+// === Module 18515: FrogIllocon ===
 
-// Module 18513 (FrogIllocon)
+// Module 18515 (FrogIllocon)
 import FastImageDefault from "FastImage" /* 5600 */;
 import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef18514 from "module_18514" /* 18514 */;
-import _modDef18515 from "module_18515" /* 18515 */;
 import _modDef18516 from "module_18516" /* 18516 */;
+import _modDef18517 from "module_18517" /* 18517 */;
+import _modDef18518 from "module_18518" /* 18518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18514 }, 3: null };
-const obj2 = { uri: _modDef18514 };
-obj[2] = { uri: _modDef18515 };
-const obj3 = { uri: _modDef18515 };
-obj[3] = { uri: _modDef18516 };
+let obj = { 1: null, 2: { uri: _modDef18516 }, 3: null };
+const obj2 = { uri: _modDef18516 };
+obj[2] = { uri: _modDef18517 };
+const obj3 = { uri: _modDef18517 };
+obj[3] = { uri: _modDef18518 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
 

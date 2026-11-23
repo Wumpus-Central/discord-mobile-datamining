@@ -1,6 +1,6 @@
-// === Module 19459: ChannelResyncManager ===
+// === Module 19461: ChannelResyncManager ===
 
-// Module 19459 (ChannelResyncManager)
+// Module 19461 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;

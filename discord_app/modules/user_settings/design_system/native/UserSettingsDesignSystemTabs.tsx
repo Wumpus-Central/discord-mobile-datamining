@@ -1,6 +1,6 @@
-// === Module 17226: UserSettingsDesignSystemTabs ===
+// === Module 17228: UserSettingsDesignSystemTabs ===
 
-// Module 17226 (UserSettingsDesignSystemTabs)
+// Module 17228 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7597 */;

@@ -1,6 +1,6 @@
-// === Module 19808: showGuildSettingsModalSoundboardSoundInfoActionSheet ===
+// === Module 19810: showGuildSettingsModalSoundboardSoundInfoActionSheet ===
 
-// Module 19808 (showGuildSettingsModalSoundboardSoundInfoActionSheet)
+// Module 19810 (showGuildSettingsModalSoundboardSoundInfoActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/server_monetiz
 
 export function showGuildSettingsModalSoundboardSoundInfoActionSheet(arg0) {
   ({ guildId, soundId } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19809, dependencyMap.paths), c3, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19811, dependencyMap.paths), c3, {
     guildId,
     soundId,
     hideActionSheet() {

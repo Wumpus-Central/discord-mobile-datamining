@@ -1,10 +1,10 @@
-// === Module 18594: useConjureSafetyAlertsChannelPick ===
+// === Module 18596: useConjureSafetyAlertsChannelPick ===
 
-// Module 18594 (useConjureSafetyAlertsChannelPick)
+// Module 18596 (useConjureSafetyAlertsChannelPick)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
 import ConjureUtils from "ConjureUtils" /* 6865 */;
 import conjureAppInServer from "conjureAppInServer" /* 6955 */;
-import ConjureClarification from "ConjureClarification" /* 18422 */;
+import ConjureClarification from "ConjureClarification" /* 18424 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import GuildMemberStore from "GuildMemberStore" /* 4825 */;

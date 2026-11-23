@@ -1,6 +1,6 @@
-// === Module 20029: ChannelSelectorActionSheet ===
+// === Module 20031: ChannelSelectorActionSheet ===
 
-// Module 20029 (ChannelSelectorActionSheet)
+// Module 20031 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
@@ -25,7 +25,7 @@ function ChannelRow(channel) {
   ({ selected, guild, start, end } = channel);
   let str = onChannelSelected(5529)(channel);
   items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(16645).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(16647).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);

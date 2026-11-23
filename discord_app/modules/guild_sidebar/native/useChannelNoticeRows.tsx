@@ -1,6 +1,6 @@
-// === Module 17782: useChannelNoticeRows ===
+// === Module 17784: useChannelNoticeRows ===
 
-// Module 17782 (useChannelNoticeRows)
+// Module 17784 (useChannelNoticeRows)
 import dismissible_content from "dismissible_content" /* 4746 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4945 */;
 import _slicedToArray from "module_32" /* 32 */;

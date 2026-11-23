@@ -15,7 +15,7 @@ import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 7581 */;
 import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 7588 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8051 */;
 import ReportModals from "ReportModals" /* 10176 */;
-import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 14681 */;
+import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 14683 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4762 */;

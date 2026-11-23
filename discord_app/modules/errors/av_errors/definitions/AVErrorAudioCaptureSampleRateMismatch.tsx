@@ -1,9 +1,9 @@
-// === Module 20118: AVErrorAudioCaptureSampleRateMismatch ===
+// === Module 20120: AVErrorAudioCaptureSampleRateMismatch ===
 
-// Module 20118 (AVErrorAudioCaptureSampleRateMismatch)
+// Module 20120 (AVErrorAudioCaptureSampleRateMismatch)
 import DurationsDefault from "Durations" /* 1088 */;
 import AVError from "AVError" /* 5843 */;
-import AVErrorContext from "AVErrorContext" /* 20106 */;
+import AVErrorContext from "AVErrorContext" /* 20108 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5671 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;

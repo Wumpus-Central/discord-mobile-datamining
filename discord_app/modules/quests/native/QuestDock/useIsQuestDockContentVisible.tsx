@@ -1,10 +1,10 @@
-// === Module 16574: useIsQuestDockContentVisible ===
+// === Module 16576: useIsQuestDockContentVisible ===
 
-// Module 16574 (useIsQuestDockContentVisible)
+// Module 16576 (useIsQuestDockContentVisible)
 import initialize from "initialize" /* 504 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16562 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16564 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16471 */;
+import QuestDockStore from "QuestDockStore" /* 16473 */;
 
 require = fn;
 const QuestDockMode = fn(6558).QuestDockMode;

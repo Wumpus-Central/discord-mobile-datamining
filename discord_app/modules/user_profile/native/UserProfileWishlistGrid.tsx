@@ -1,6 +1,6 @@
-// === Module 14609: UserProfileWishlistGrid ===
+// === Module 14611: UserProfileWishlistGrid ===
 
-// Module 14609 (UserProfileWishlistGrid)
+// Module 14611 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -585,7 +585,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14617, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14619, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items15);
   const callback1 = obj12.useCallback(() => {

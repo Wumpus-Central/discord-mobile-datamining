@@ -1,6 +1,6 @@
-// === Module 14564: UserProfileApplicationWidgetPreview ===
+// === Module 14566: UserProfileApplicationWidgetPreview ===
 
-// Module 14564 (UserProfileApplicationWidgetPreview)
+// Module 14566 (UserProfileApplicationWidgetPreview)
 import nativeDefault from "native" /* 575 */;
 import useApplicationWidgetLayoutRendererPropsDefault from "useApplicationWidgetLayoutRendererProps" /* 10330 */;
 import _slicedToArray from "module_32" /* 32 */;

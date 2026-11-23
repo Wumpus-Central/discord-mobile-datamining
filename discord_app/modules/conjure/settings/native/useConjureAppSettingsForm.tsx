@@ -1,14 +1,14 @@
-// === Module 18305: useConjureAppSettingsForm ===
+// === Module 18307: useConjureAppSettingsForm ===
 
-// Module 18305 (useConjureAppSettingsForm)
+// Module 18307 (useConjureAppSettingsForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
 import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11731 */;
-import conjureSettingValues from "conjureSettingValues" /* 14745 */;
-import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 18306 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 18325 */;
+import conjureSettingValues from "conjureSettingValues" /* 14747 */;
+import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 18308 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 18327 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -46,9 +46,9 @@ function ConjureChannelSettingRow(guildId) {
       let obj2 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp5Result;
       if (null != hint) {
-        let obj3 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(18310).conjureLinkedNodes(hint, "body-xs/medium") };
+        let obj3 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(18312).conjureLinkedNodes(hint, "body-xs/medium") };
         tmp5Result = closure_12(tmp(5504).Text, obj3);
-        const tmpResult3 = tmp(18310);
+        const tmpResult3 = tmp(18312);
       }
       obj2.subLabel = tmp5Result;
       obj2.disabled = disabled;
@@ -98,18 +98,18 @@ function ConjurePickerSettingRow(guildId) {
   c4 = undefined;
   closure_5 = undefined;
   ({ disabled, fallback } = guildId);
-  let tmp3 = def(18306)(guildId, def);
-  const result = guildId(18306).conjureSettingPickedIds(value);
+  let tmp3 = def(18308)(guildId, def);
+  const result = guildId(18308).conjureSettingPickedIds(value);
   c3 = result;
-  let obj = guildId(18306);
+  let obj = guildId(18308);
   let tmp5 = null;
   if ("user" === def.type) {
     tmp5 = guildId;
   }
-  const conjureMemberRequests = guildId(18307).useConjureMemberRequests(tmp5, result);
+  const conjureMemberRequests = guildId(18309).useConjureMemberRequests(tmp5, result);
   if (null != guildId) {
     if (null != tmp3) {
-      const withSavedPicksResult = tmp4(18306).withSavedPicks(tmp3, value, (id) => ({ id, label: id }));
+      const withSavedPicksResult = tmp4(18308).withSavedPicks(tmp3, value, (id) => ({ id, label: id }));
       c4 = withSavedPicksResult;
       closure_5 = tmp11;
       if (true === def.multiple) {
@@ -130,9 +130,9 @@ function ConjurePickerSettingRow(guildId) {
       const obj4 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp9Result;
       if (null != hint) {
-        const obj5 = { variant: "body-xs/medium", color: "text-subtle", children: tmp4(18310).conjureLinkedNodes(hint, "body-xs/medium") };
+        const obj5 = { variant: "body-xs/medium", color: "text-subtle", children: tmp4(18312).conjureLinkedNodes(hint, "body-xs/medium") };
         tmp9Result = closure_12(tmp4(5504).Text, obj5);
-        const tmp4Result2 = tmp4(18310);
+        const tmp4Result2 = tmp4(18312);
       }
       const obj6 = { hasIcons: false, children: null };
       obj4.subLabel = tmp9Result;

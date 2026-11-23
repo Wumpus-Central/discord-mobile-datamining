@@ -1,6 +1,6 @@
-// === Module 20028: FormChannelPicker ===
+// === Module 20030: FormChannelPicker ===
 
-// Module 20028 (FormChannelPicker)
+// Module 20030 (FormChannelPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import useChannelNameDefault from "useChannelName" /* 5529 */;
@@ -21,8 +21,8 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp5Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp(16645).getChannelIconComponentOrDefault(stateFromStores);
-    const tmpResult = tmp(16645);
+    let TextIcon = tmp(16647).getChannelIconComponentOrDefault(stateFromStores);
+    const tmpResult = tmp(16647);
   } else {
     TextIcon = tmp(7681).TextIcon;
   }
@@ -43,7 +43,7 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(20029, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(20031, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
   return jsx(channelId(7045).TableRow, { icon: jsx(channelId(7045).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null });
 };

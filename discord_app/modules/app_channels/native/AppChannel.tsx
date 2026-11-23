@@ -1,6 +1,6 @@
-// === Module 18695: AppChannel ===
+// === Module 18697: AppChannel ===
 
-// Module 18695 (AppChannel)
+// Module 18697 (AppChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
@@ -14,9 +14,9 @@ import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 6996 
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 8578 */;
 import useChannelContentGate from "useChannelContentGate" /* 11742 */;
 import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11871 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 18398 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 18704 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18706 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 18400 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18706 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18708 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,7 +171,7 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(18696).useConjureFrameUpdateAvailable;
+let closure_5 = fn(18698).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(4913);

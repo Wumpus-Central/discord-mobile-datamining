@@ -16,7 +16,7 @@ import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
 import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 8344 */;
 import MessageQueue from "MessageQueue" /* 8526 */;
 import canEditMessageDefault from "canEditMessage" /* 12181 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15042 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15044 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ImpersonateStore from "ImpersonateStore" /* 4818 */;
 import EphemeralMessageStore from "EphemeralMessageStore" /* 5965 */;

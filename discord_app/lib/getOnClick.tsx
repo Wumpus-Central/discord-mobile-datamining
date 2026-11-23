@@ -306,7 +306,7 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "disabled", skuId: "isArray" };
+            result = { applicationId: "Array", skuId: "Path" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -402,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14703, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14705, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;

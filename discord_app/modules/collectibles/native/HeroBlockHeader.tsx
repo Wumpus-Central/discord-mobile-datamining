@@ -1,6 +1,6 @@
-// === Module 17292: HeroBlockHeader ===
+// === Module 17294: HeroBlockHeader ===
 
-// Module 17292 (HeroBlockHeader)
+// Module 17294 (HeroBlockHeader)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import QuestContent from "QuestContent" /* 6563 */;
@@ -176,9 +176,9 @@ export default function HeroBlockHeader(heroBlock) {
     return closure_9(closure_8, obj50);
   } else {
     if (tmpResult.isThemeDark(tmp4)) {
-      let tmp3Result = tmp3(17293);
+      let tmp3Result = tmp3(17295);
     } else {
-      tmp3Result = tmp3(17294);
+      tmp3Result = tmp3(17296);
     }
     tmpResult = tmp(4920);
   }

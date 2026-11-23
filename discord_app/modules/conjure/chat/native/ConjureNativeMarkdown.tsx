@@ -1,11 +1,11 @@
-// === Module 18372: ConjureNativeMarkdown ===
+// === Module 18374: ConjureNativeMarkdown ===
 
-// Module 18372 (ConjureNativeMarkdown)
+// Module 18374 (ConjureNativeMarkdown)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5504 */;
-import conjureMarkup from "conjureMarkup" /* 18311 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 18373 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 18374 */;
+import conjureMarkup from "conjureMarkup" /* 18313 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 18375 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 18376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

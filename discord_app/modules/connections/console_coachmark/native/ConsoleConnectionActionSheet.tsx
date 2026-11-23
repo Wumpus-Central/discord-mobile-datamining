@@ -1,6 +1,6 @@
-// === Module 18895: ConsoleConnectionActionSheet ===
+// === Module 18897: ConsoleConnectionActionSheet ===
 
-// Module 18895 (ConsoleConnectionActionSheet)
+// Module 18897 (ConsoleConnectionActionSheet)
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
 import PlatformsDefault from "Platforms" /* 6691 */;
@@ -26,7 +26,7 @@ function connectXbox() {
 const PlatformTypes = fn(1071).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(18896).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
+let items = [fn(18898).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/native/ConsoleConnectionActionSheet.tsx");
 

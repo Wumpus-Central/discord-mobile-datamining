@@ -1,6 +1,6 @@
-// === Module 19384: StreamVolumeMovedNotice ===
+// === Module 19386: StreamVolumeMovedNotice ===
 
-// Module 19384 (StreamVolumeMovedNotice)
+// Module 19386 (StreamVolumeMovedNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import dismissible_content from "dismissible_content" /* 4746 */;
@@ -17,7 +17,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 const require = globalThis.__r;
 
 require = fn;
-const showStreamVolumeMovedHint = fn(14504).showStreamVolumeMovedHint;
+const showStreamVolumeMovedHint = fn(14506).showStreamVolumeMovedHint;
 const VoicePanelControlsModes = fn(11748).VoicePanelControlsModes;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
 const jsx = fn(21).jsx;
