@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 88,
   height: 80,
   scales: [2, 3],
-  hash: "0b8a6fa235bbde823695fe5cdeccf7e4",
-  name: "channel_setup_light",
+  hash: "47e53f4c1a010a8a023be6a3f87eb4e2",
+  name: "channel_setup",
   type: "png",
 });

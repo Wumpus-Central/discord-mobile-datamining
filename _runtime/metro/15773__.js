@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
+  httpServerLocation: "/assets/images/native",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4d2adea177cc0cf5fd8e4a93e093db12",
-  name: "mic",
+  hash: "d63daceced7ceb0d84c7aba817626689",
+  name: "ic_call_status_yellow_24px",
   type: "png",
 });

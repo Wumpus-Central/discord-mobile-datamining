@@ -6,10 +6,10 @@ require = fn;
 const noop = fn(19);
 ({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: closure_6 } = noop);
 
-export function useRiveProperty(instance, device, f33647) {
+export function useRiveProperty(instance, device, f33649) {
   closure_0 = instance;
   closure_1 = device;
-  closure_2 = f33647;
+  closure_2 = f33649;
   let tmp = hasOwnProperty(undefined);
   items = [instance, device];
   const disposableMemo = _mod5019.useDisposableMemo(

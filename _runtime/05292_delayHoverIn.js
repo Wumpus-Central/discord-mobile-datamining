@@ -135,7 +135,7 @@ export default function _default(delayHoverOut) {
           timestamp: null,
           touches: null,
           changedTouches: null,
-          force: "Promise",
+          force: "a",
         };
         ({ x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = arg0);
         const _Date = Date;
@@ -175,7 +175,7 @@ export default function _default(delayHoverOut) {
                 timestamp: null,
                 touches: null,
                 changedTouches: null,
-                force: "Promise",
+                force: "a",
               };
               ({ x: obj4.locationX, y: obj4.locationY, absoluteX: obj4.pageX, absoluteY: obj4.pageY } = arg0);
               const _Date2 = Date;
@@ -206,7 +206,7 @@ export default function _default(delayHoverOut) {
           timestamp: null,
           touches: null,
           changedTouches: null,
-          force: "Promise",
+          force: "a",
         };
         ({ x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = arg0);
         const _Date = Date;
@@ -248,7 +248,7 @@ export default function _default(delayHoverOut) {
               timestamp: Date.now(),
               touches: [],
               changedTouches: [],
-              force: "Promise",
+              force: "a",
             };
             const obj2 = { nativeEvent: null };
             const obj3 = {};
@@ -271,7 +271,7 @@ export default function _default(delayHoverOut) {
             timestamp: null,
             touches: null,
             changedTouches: null,
-            force: "Promise",
+            force: "a",
           };
           ({ x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = arg0);
           const _Date = Date;
@@ -314,7 +314,7 @@ export default function _default(delayHoverOut) {
               timestamp: Date.now(),
               touches: [],
               changedTouches: [],
-              force: "Promise",
+              force: "a",
             };
             const obj2 = { nativeEvent: null };
             const obj3 = {};
@@ -337,7 +337,7 @@ export default function _default(delayHoverOut) {
             timestamp: null,
             touches: null,
             changedTouches: null,
-            force: "Promise",
+            force: "a",
           };
           ({ x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = arg0);
           const _Date = Date;
@@ -402,7 +402,7 @@ export default function _default(delayHoverOut) {
       timestamp: Date.now(),
       touches: [],
       changedTouches: [],
-      force: "Promise",
+      force: "a",
     });
     if (closure_13.current) {
       if (unstable_pressDelay) {
@@ -426,7 +426,7 @@ export default function _default(delayHoverOut) {
                 timestamp: null,
                 touches: null,
                 changedTouches: null,
-                force: "Promise",
+                force: "a",
               };
               ({ x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = closure_0);
               const _Date = Date;
@@ -460,7 +460,7 @@ export default function _default(delayHoverOut) {
             timestamp: null,
             touches: null,
             changedTouches: null,
-            force: "Promise",
+            force: "a",
           };
           ({ x: obj3.locationX, y: obj3.locationY, absoluteX: obj3.pageX, absoluteY: obj3.pageY } = locationX);
           let _Date = Date;
@@ -492,7 +492,7 @@ export default function _default(delayHoverOut) {
       timestamp: Date.now(),
       touches: [],
       changedTouches: [],
-      force: "Promise",
+      force: "a",
     };
   };
   obj7.onPressOut = function onPressOut(arg0) {
@@ -514,7 +514,7 @@ export default function _default(delayHoverOut) {
               timestamp: null,
               touches: null,
               changedTouches: null,
-              force: "Promise",
+              force: "a",
             };
             ({ x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = arg0);
             const _Date = Date;
@@ -547,7 +547,7 @@ export default function _default(delayHoverOut) {
           timestamp: null,
           touches: null,
           changedTouches: null,
-          force: "Promise",
+          force: "a",
         };
         ({ x: obj4.locationX, y: obj4.locationY, absoluteX: obj4.pageX, absoluteY: obj4.pageY } = arg0);
         const _Date2 = Date;

@@ -57,10 +57,10 @@ class StackView {
     obj1 = {
       routes: [],
       previousState: "y",
-      openingRouteKeys: "BULK_ACK",
-      closingRouteKeys: null,
-      replacingRouteKeys: null,
-      descriptors: null,
+      openingRouteKeys: "column",
+      closingRouteKeys: "hidden",
+      replacingRouteKeys: "subject",
+      descriptors: "body",
     };
     obj1.openingRouteKeys = [];
     obj1.closingRouteKeys = [];

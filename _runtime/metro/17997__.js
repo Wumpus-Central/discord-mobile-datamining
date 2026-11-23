@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "04284dcfb33cab4ac93ceefb6696c6d5",
-  name: "ActivitiesIcon",
+  hash: "726a6162987ac31e9ff3daafd465ccca",
+  name: "MobilePhoneShareIcon",
   type: "png",
 });

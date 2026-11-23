@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "66946e5f24d9f7d485f69d93acc2bd06",
-  name: "CloudDownloadIcon",
+  hash: "fd7a05931e4df085da6e8b62ffa48f48",
+  name: "SaveIcon",
   type: "png",
 });

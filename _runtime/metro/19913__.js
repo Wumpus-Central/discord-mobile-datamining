@@ -1,6 +1,15 @@
 // _runtime/metro/19913__.js
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import arrayReduce from "../05747_arrayReduce.js";
+import words from "../19914_words.js";
+import deburr from "../19918_deburr.js";
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
+let closure_2 = RegExp("['\u2019]", "g");
+
+export default function createCompounder(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const tmp = arrayReduce;
+    const tmp2 = words;
+    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
+  };
 }

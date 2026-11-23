@@ -1,6 +1,4 @@
 // _runtime/metro/19921__.js
-const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
+import _mod19922 from "19922__.js";
 
-export default function hasUnicode(arg0) {
-  return regex.test(arg0);
-}
+export default _mod19922("toUpperCase");

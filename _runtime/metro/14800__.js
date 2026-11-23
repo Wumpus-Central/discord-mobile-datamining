@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 424,
   height: 254,
   scales: [1],
-  hash: "16c887e8a2a3597bff0b1e42c0c69934",
-  name: "top_perk_vanity_url",
+  hash: "616e0e1297b795db059112c52470eab4",
+  name: "top_perk_streaming_quality",
   type: "png",
 });

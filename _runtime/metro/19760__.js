@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "93179a968b4cfa174507b1708e979f98",
-  name: "HomeIcon",
+  hash: "452e4649130bf55bccef66e38e059a6a",
+  name: "ListBulletsIcon",
   type: "png",
 });

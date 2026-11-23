@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 180,
   height: 160,
   scales: [1],
-  hash: "8bacf7b488464e86cb440cbf88ee8d5d",
-  name: "img_verify_phone_light_theme",
+  hash: "39e83a7f9fd6f4ad0c8041d592ca008c",
+  name: "img_verify_phone_dark_theme",
   type: "png",
 });

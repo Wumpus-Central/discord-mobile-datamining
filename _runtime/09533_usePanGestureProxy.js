@@ -23,7 +23,7 @@ export (onConfigurePanGesture) => {
     const Gesture = LegacyBaseButton.Gesture;
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     c0 = withTestIdResult;
-    const obj = { onBegin: "Array", onStart: "channel", onUpdate: "HTTP", onEnd: "useStateFromStores", onFinalize: "HermesInternal" };
+    const obj = { onBegin: "Array", onStart: "channel", onUpdate: "paddingHorizontal", onEnd: "value", onFinalize: "HermesInternal" };
     c1 = obj;
     withTestIdResult.onBegin = (onBegin) => {
       c1.onBegin = onBegin;

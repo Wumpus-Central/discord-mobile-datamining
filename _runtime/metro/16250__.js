@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/consoles",
-  width: 85,
-  height: 70,
+  width: 84,
+  height: 46,
   scales: [2, 3],
-  hash: "f2b2ae790fb60abfa40be44fab4eb6fc",
-  name: "ps_relink_upsell",
+  hash: "1dc3d638940bcdf9b267c8229f603041",
+  name: "xbox_upsell",
   type: "png",
 });

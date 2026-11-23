@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b3429e38ab32663de7a271eafbda6e13",
-  name: "ChannelListMagnifyingGlassIcon",
+  hash: "ebf39623cd7d642af1c5756d58046968",
+  name: "SignPostIcon",
   type: "png",
 });
