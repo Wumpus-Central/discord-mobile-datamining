@@ -90,7 +90,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5127).hideActionSheet(projectId(18405).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        size(5127).hideActionSheet(projectId(18407).CONJURE_DESIGN_REMARK_SHEET_KEY);
         const obj = size(5127);
       }
     };
@@ -100,7 +100,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     () => () => {
       const result = projectId(6998).inspectConjurePreviewPoint(
         closure_1_0,
-        projectId(14729).CONJURE_INSPECT_CLEAR_POINT,
+        projectId(14731).CONJURE_INSPECT_CLEAR_POINT,
       );
     },
     items1,

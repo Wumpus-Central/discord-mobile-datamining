@@ -28,11 +28,11 @@ import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/ge
 import speakOnStageDefault from "../../../stage_channels/native/speakOnStage.tsx";
 import _modDef11799 from "../../../../../_runtime/metro/11799__.js";
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
-import _modDef14842 from "../../../../../_runtime/metro/14842__.js";
+import _modDef14844 from "../../../../../_runtime/metro/14844__.js";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
-import _modDef18005 from "../../../../../_runtime/metro/18005__.js";
-import _modDef18006 from "../../../../../_runtime/metro/18006__.js";
+import _modDef18007 from "../../../../../_runtime/metro/18007__.js";
+import _modDef18008 from "../../../../../_runtime/metro/18008__.js";
 import useSoundboardConfigDefault from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -222,7 +222,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(19375).SelfStreamAndVideoAlertType;
+let closure_16 = fn(19377).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5658).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -342,7 +342,7 @@ export function DeafenSwitch() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-    source: _modDef18006,
+    source: _modDef18008,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -436,7 +436,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f133863 = () => f133863(!VIDEO);
+          const f133841 = () => f133841(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -504,7 +504,7 @@ export function ToggleShowActivitiesDebugOverlay() {
     showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
   );
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14842 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef14844 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
@@ -521,7 +521,7 @@ export function VoiceSettingsButton(guildId) {
   }, items);
   const obj = {
     onPress: callback,
-    icon: closure_18(guildId(7057).TableRowIcon, { IconComponent: guildId(10371).SettingsIcon, source: _modDef18005 }),
+    icon: closure_18(guildId(7057).TableRowIcon, { IconComponent: guildId(10371).SettingsIcon, source: _modDef18007 }),
     label: null,
     subLabel: null,
     trailing: null,

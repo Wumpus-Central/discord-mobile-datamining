@@ -96,14 +96,14 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  const actionsForDisplayType = displayType(16194).useActionsForDisplayType(displayType);
-  const obj = displayType(16194);
-  const actionTotalsForDisplayType = displayType(16194).useActionTotalsForDisplayType(displayType);
+  const actionsForDisplayType = displayType(16196).useActionsForDisplayType(displayType);
+  const obj = displayType(16196);
+  const actionTotalsForDisplayType = displayType(16196).useActionTotalsForDisplayType(displayType);
   const callback = noop.useCallback(() => {
     const intl = displayType(1112).intl;
     displayType(5594).presentFailedToast(intl.string(loadMore(2824).Wu8BK2));
   }, []);
-  const obj2 = displayType(16194);
+  const obj2 = displayType(16196);
   const familyCenterActions = displayType(12467).useFamilyCenterActions({ onError: callback });
   const loadMore = familyCenterActions.loadMore;
   const tmp7 = _slicedToArray(noop.useState(closure_7), 2);
@@ -122,7 +122,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const obj6 = { displayType };
     const items1 = [
       closure_9(FamilyCenterActivitySectionHeader, obj6),
-      substr.map((action) => closure_1_9(loadMore(16200), { action }, action.event_id)),
+      substr.map((action) => closure_1_9(loadMore(16202), { action }, action.event_id)),
     ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;

@@ -892,14 +892,14 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp59Result = closure_27(tmp43(19122), obj9);
+    tmp59Result = closure_27(tmp43(19124), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19129).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19131).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -932,13 +932,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19129).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19131).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(17192), {});
+    tmp59Result2 = closure_27(tmp43(17194), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19142), {});
+    tmp59Result2 = closure_27(tmp43(19144), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19143), {});
+    tmp59Result2 = closure_27(tmp43(19145), {});
   }
   tmp56 = str.trim().length > 0;
 });

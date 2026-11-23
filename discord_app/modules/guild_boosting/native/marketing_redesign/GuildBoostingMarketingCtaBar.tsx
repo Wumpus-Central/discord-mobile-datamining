@@ -196,7 +196,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     children: null,
   };
   const tmp4Result = first(5468);
-  const items5 = [closure_12(first(14771), { guild }), , ,];
+  const items5 = [closure_12(first(14773), { guild }), , ,];
   const obj9 = { style: tmp.headerContent, children: null };
   const obj10 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
   const intl = guild(1112).intl;
@@ -286,8 +286,8 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   items6[4] = closure_12(first(13478), obj20);
   obj9.children = items6;
   items5[1] = closure_13(memo, obj9);
-  items5[2] = closure_12(first(14774), { style: tmp.headerStars });
-  items5[3] = closure_12(first(14775), { style: tmp.headerWave });
+  items5[2] = closure_12(first(14776), { style: tmp.headerStars });
+  items5[3] = closure_12(first(14777), { style: tmp.headerWave });
   obj8.children = items5;
   obj7.children = closure_13(tmp4Result3, obj8);
   const items14 = [closure_12(tmp4Result, obj7)];
@@ -311,7 +311,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
       };
       utils_openGiftModal.openGiftModal(obj3);
     };
-    const obj25 = { size: guild(1186).Icon.Sizes.SMALL, source: tmp4(14776), style: tmp.giftIcon };
+    const obj25 = { size: guild(1186).Icon.Sizes.SMALL, source: tmp4(14778), style: tmp.giftIcon };
     obj24.icon = closure_12(guild(1186).Icon, obj25);
     let obj26 = obj24;
   } else {

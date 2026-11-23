@@ -59,9 +59,9 @@ class DatagramConnectionRecovery {
               connection2.off(DatagramEvent.DatagramEvent.Disconnect, disconnect);
             };
             let connection2 = acquireResult.connection;
-            connection2.on(acquireResult(14883).DatagramEvent.Connect, connect);
+            connection2.on(acquireResult(14885).DatagramEvent.Connect, connect);
             const connection3 = acquireResult.connection;
-            connection3.on(acquireResult(14883).DatagramEvent.Disconnect, disconnect);
+            connection3.on(acquireResult(14885).DatagramEvent.Disconnect, disconnect);
             items = [];
             HermesBuiltin.arraySpread(acquireResult.subscribers, 0);
             for (const item10010 of items) {

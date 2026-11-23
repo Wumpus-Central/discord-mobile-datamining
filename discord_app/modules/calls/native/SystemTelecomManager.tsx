@@ -321,7 +321,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(15650);
+      obj = obj(15652);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -429,7 +429,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(15651);
+        obj = obj(15653);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -610,7 +610,7 @@ prototype["startCall"] = function startCall(arg0) {
                 tmp29(8453).setRequestedBy("call:" + obj6.uuid);
                 const obj10 = tmp29(8453);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(15649);
+                  const obj2 = tmp3(15651);
                   ({ uuid, handle } = obj6);
                   const tmp42Result = tmp5(5529);
                   const startOutgoingCallResult = obj2.startOutgoingCall(
@@ -619,14 +619,14 @@ prototype["startCall"] = function startCall(arg0) {
                     tmp5(5529).computeChannelName(obj6.channel, UserStore, RelationshipStore),
                     obj6.video,
                   );
-                  tmp3(15649).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(15651).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(15651);
+                obj11 = tmp5(15653);
               }
             }
           }

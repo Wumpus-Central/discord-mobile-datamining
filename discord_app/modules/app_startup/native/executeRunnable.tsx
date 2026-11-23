@@ -5,7 +5,7 @@ import PauseGatewaySocketAll from "../../gateway/PauseGatewaySocket.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-const NativeAppStartup = fn(19396);
+const NativeAppStartup = fn(19398);
 ({ init: hasOwnProperty, applicationReady: closure_6 } = NativeAppStartup);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_startup/native/executeRunnable.tsx");

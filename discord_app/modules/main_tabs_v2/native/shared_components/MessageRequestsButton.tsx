@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import IconActionButton from "IconActionButton.tsx";
-import _modDef14672 from "../../../../../_runtime/metro/14672__.js";
-import _mod17549 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _modDef14674 from "../../../../../_runtime/metro/14674__.js";
+import _mod17551 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -30,7 +30,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return metroImportDefault(_mod17549.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod17551.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return React5(View, obj3);
   } else {
     const obj6 = {
-      source: _modDef14672,
+      source: _modDef14674,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
       buttonText: null,

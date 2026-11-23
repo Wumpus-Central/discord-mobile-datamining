@@ -595,7 +595,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result8 = tmp4(9510);
       }
     } else {
-      const obj42 = { style: tmp13.avatar, guildId: "r", size: "gradient.end", user: "*0.95" };
+      const obj42 = { style: tmp13.avatar, guildId: "r", size: "Promise", user: null };
       const AvatarSizes = tmp(1186).AvatarSizes;
       obj42.size = tmp12 ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj42.user = recipientUser;

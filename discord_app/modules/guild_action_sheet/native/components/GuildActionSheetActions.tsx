@@ -323,7 +323,7 @@ export function GuildUnreadAction(guild) {
 }
 export function GuildActionSheetPrimaryActions(guild) {
   guild = guild.guild;
-  let obj = guild(15175);
+  let obj = guild(15177);
   const tmp3 = useCanCreateAnEventDefault(guild.id);
   items = [GuildRoleStore];
   const items1 = [];
@@ -391,8 +391,8 @@ export function GuildActionSheetGameOrganizationActions(guild) {
   if (tmp3) {
     id = guild.id;
   }
-  const data = guild(15176).useLinkedGameOrganization(id).data;
-  let obj = guild(15176);
+  const data = guild(15178).useLinkedGameOrganization(id).data;
+  let obj = guild(15178);
   items = [GameOrganizationStore];
   const items1 = [guild.id];
   const stateFromStores = guild(504).useStateFromStores(
@@ -421,7 +421,7 @@ export function GuildActionSheetGameOrganizationActions(guild) {
     obj2.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15178, dependencyMap.paths),
+        asyncRequireImpl(15180, dependencyMap.paths),
         "GameOrganizationInviteActionSheet",
         { guildId: guild.id },
       );
@@ -447,7 +447,7 @@ export function GuildActionSheetDirectoryActions(guild) {
   items.push(closure_22(ChangeIdentityOption, { guild, user: currentUser }));
   items.push(closure_22(RestrictedGuildPrivacyOption, { guild }));
   const tmp4 = closure_8(guild, currentUser);
-  const messageRequestPrivacyOption = guild(15121).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(15123).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -483,7 +483,7 @@ export function GuildActionSheetDirectoryActions(guild) {
     };
     t = items.push(closure_22(tmp9(7555).ActionSheetRow, obj3));
   }
-  let obj = guild(15121);
+  let obj = guild(15123);
 }
 export function GuildActionSheetSecondaryActions(guild) {
   guild = guild.guild;
@@ -513,7 +513,7 @@ export function GuildActionSheetSecondaryActions(guild) {
   items.push(closure_22(HideMutedChannelsOption, { guild }));
   items.push(closure_22(RestrictedGuildPrivacyOption, { guild }));
   const obj3 = guild(6663);
-  const messageRequestPrivacyOption = guild(15121).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(15123).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -594,7 +594,7 @@ export function GuildActionSheetSecondaryActions(guild) {
     };
     t = items.push(closure_22(tmp3(7555).ActionSheetRow, obj9));
   }
-  const tmp3Result = guild(15121);
+  const tmp3Result = guild(15123);
 }
 export function GuildDeveloperOptionAction(guild) {
   guild = guild.guild;

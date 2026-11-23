@@ -13,7 +13,7 @@ import LockIcon from "../../../design/components/Icon/native/redesign/generated/
 import TrophyIcon from "../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import _modDef11373 from "../../../../_runtime/metro/11373__.js";
-import _modDef18031 from "../../../../_runtime/metro/18031__.js";
+import _modDef18033 from "../../../../_runtime/metro/18033__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -48,13 +48,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef18031;
+    tmp6 = _modDef18033;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef18031;
+    tmp6 = _modDef18033;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -115,7 +115,7 @@ function SoundboardCategoryScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(18017).setSearchQuery;
+const setSearchQuery = fn(18019).setSearchQuery;
 const Constants = fn(1071);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);

@@ -356,7 +356,7 @@ export function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "add", source: 1359020034, params };
+              const obj = { text, parsedMessage, tts: "add", source: 1359020033, params };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -372,7 +372,7 @@ export function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                const obj = { text, parsedMessage, tts: "add", source: 1090584578, params };
+                const obj = { text, parsedMessage, tts: "add", source: 1359020033, params };
                 chatInputSendMessage(obj);
               },
             };
@@ -383,7 +383,7 @@ export function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "add", source: true, params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "add", source: "<string:1090584577>", params };
         chatInputSendMessage(obj7);
       }
     }

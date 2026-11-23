@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx
 import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
 import _modDef14301 from "../../../../../../_runtime/metro/14301__.js";
-import _modDef16226 from "../../../../../../_runtime/metro/16226__.js";
+import _modDef16228 from "../../../../../../_runtime/metro/16228__.js";
 import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -279,7 +279,7 @@ export function IncomingRequestRowActions(user) {
     c5(require("IconButton").IconButton, {
       size: "sm",
       variant: "tertiary",
-      icon: _modDef16226,
+      icon: _modDef16228,
       onPress: callback1,
       accessibilityLabel: ignoreRequestAccessibilityLabel,
       maxFontSizeMultiplier: 2,
@@ -288,7 +288,7 @@ export function IncomingRequestRowActions(user) {
   const obj9 = {
     size: "sm",
     variant: "tertiary",
-    icon: _modDef16226,
+    icon: _modDef16228,
     onPress: callback1,
     accessibilityLabel: ignoreRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,

@@ -13,7 +13,7 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19236);
+const useExternalPipSelectedTileDefault = tmp6(19238);
 require = fn;
 const VoicePanelModes = fn(11750).VoicePanelModes;
 const ActivityPanelModes = fn(5539).ActivityPanelModes;
@@ -40,12 +40,12 @@ export function useControllerPIPState(channelId) {
   let obj = require("../../../../../_runtime/metro/01653__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
   const ref = noop.useRef({
-    id: "disabled",
+    id: "displayName",
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "box-none",
-    showSecondaryPIP: null,
+    containerHeight: "\u{1F481}\u{1F3FB}",
+    showSecondaryPIP: true,
     scale: sharedValue,
   });
   const obj2 = require("VoicePanelPIPScaleCache");

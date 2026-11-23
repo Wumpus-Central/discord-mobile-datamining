@@ -599,7 +599,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "alignItems",
+      fetchError: "channel",
     };
     value4 = obj;
   }

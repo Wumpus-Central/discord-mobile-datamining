@@ -127,7 +127,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, (socket) => {
-          obj = obj(15674);
+          obj = obj(15676);
           if (obj.isGuildVoiceSocket(socket.socket)) {
             channel = channel.getChannel(channelId);
             let type;
@@ -281,7 +281,7 @@ class RPCServerManager {
         subscriptions.some((evt) => {
           let tmp = evt.evt === constants2.FRAME_DEEP_LINK;
           if (tmp) {
-            obj = obj(14763);
+            obj = obj(14765);
             tmp = obj.getFrameDeepLinkChannelId(getSocketFrameDefault(evt.socket)) === channelId;
           }
           return tmp;
@@ -295,7 +295,7 @@ class RPCServerManager {
           const result = rpcServer.dispatchToSubscriptions(
             constants3.FRAME_DEEP_LINK,
             function targetsChannelFrame(socket) {
-              obj = obj(14763);
+              obj = obj(14765);
               return obj.getFrameDeepLinkChannelId(getSocketFrameDefault(socket.socket)) === channelId;
             },
             obj2,

@@ -36,8 +36,8 @@ export default function VideoButton(arg0) {
   let isVideoEnabled;
   let color;
   ({ props, wrapperSpecs } = arg0);
-  const voicePanelButtonStyles = isVideoEnabled(19346).useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp5 = color(17989)(noop.useContext(color(11749)).channelId, "VoicePanelVideoButton");
+  const voicePanelButtonStyles = isVideoEnabled(19348).useVoicePanelButtonStyles(wrapperSpecs);
+  const tmp5 = color(17991)(noop.useContext(color(11749)).channelId, "VoicePanelVideoButton");
   isVideoEnabled = tmp5.isVideoEnabled;
   ({ videoSupported, videoBlocked } = tmp5);
   if (videoSupported) {
@@ -79,7 +79,7 @@ export default function VideoButton(arg0) {
       memo = jsx(tmp3(14392).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
-    return jsx(tmp(19347), {
+    return jsx(tmp(19349), {
       onPress: tmp6,
       disabled: null,
       props: null,
@@ -88,6 +88,6 @@ export default function VideoButton(arg0) {
       children: null,
     });
   }
-  const obj2 = isVideoEnabled(19346);
+  const obj2 = isVideoEnabled(19348);
   tmp = color;
 }

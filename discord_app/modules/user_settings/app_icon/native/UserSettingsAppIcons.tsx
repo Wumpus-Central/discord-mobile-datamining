@@ -62,7 +62,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             c7 = 2;
             c8 = 1;
             const obj6 = {
-              value: stateFromStores(15851).ensureHexagonCampaignEnrollment(constants.APP_ICON),
+              value: stateFromStores(15853).ensureHexagonCampaignEnrollment(constants.APP_ICON),
               done: false,
             };
             return obj6;
@@ -82,7 +82,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             const obj7 = { value, done: true };
             return obj7;
           } else if (value) {
-            const tmp51 = stateFromStores(15851);
+            const tmp51 = stateFromStores(15853);
             dependencyMap = tmp51;
             closure_1 = tmp51.saveHexagonCampaignPreviousAppIcon;
             c7 = 3;
@@ -132,15 +132,15 @@ export default noop.memo(function UserSettingsAppIcons() {
           return obj16;
         } else {
           if (value) {
-            const result = stateFromStores(15851).markHexagonCampaignPerkApplied(constants.APP_ICON);
-            const obj = stateFromStores(15851);
+            const result = stateFromStores(15853).markHexagonCampaignPerkApplied(constants.APP_ICON);
+            const obj = stateFromStores(15853);
             const obj17 = { perks: null, content: null, contentSurface: null };
             items = [constants.APP_ICON];
             obj17.perks = items;
             obj17.content = stateFromStores(6561).QuestContent.APP_ICON_SETTINGS;
-            obj17.contentSurface = stateFromStores(15852).HexagonCampaignContentSurface.APP_ICON_PICKER;
-            const result1 = stateFromStores(15852).trackHexagonCampaignPerkAction(obj17);
-            const obj2 = stateFromStores(15852);
+            obj17.contentSurface = stateFromStores(15854).HexagonCampaignContentSurface.APP_ICON_PICKER;
+            const result1 = stateFromStores(15854).trackHexagonCampaignPerkAction(obj17);
+            const obj2 = stateFromStores(15854);
           }
           c5 = 0;
           closure_132_7(null);

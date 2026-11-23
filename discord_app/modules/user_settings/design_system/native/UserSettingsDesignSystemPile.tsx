@@ -126,7 +126,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1415).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15285).AvatarDuoPile, obj3);
+      items[1] = closure_5(size(15287).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_6(size(5929).Stack, obj, children);
     }),
@@ -141,7 +141,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1415).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15285).AvatarDuoPile, obj3);
+      items[1] = closure_5(size(15287).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_6(size(5929).Stack, obj, children);
     }),

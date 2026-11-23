@@ -34,7 +34,7 @@ class DaveRecipientTracker {
       lingerCount: 0,
       lingerTotalDuration: 0,
       lingerMaxDuration: 0,
-      lingerMaxCause: "displayName",
+      lingerMaxCause: "done",
     };
     set = new Set();
     merged[4] = set;

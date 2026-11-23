@@ -40,11 +40,11 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
     items1,
   );
   const obj = EMPTY_DISCOVER_SNAPSHOT(504);
-  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17809);
+  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17811);
   return {
     snapshot: EMPTY_DISCOVER_SNAPSHOT,
     entries: memo,
-    status: EMPTY_DISCOVER_SNAPSHOT(17809).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
+    status: EMPTY_DISCOVER_SNAPSHOT(17811).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
     retry: requestWaterwheelsDiscover,
   };
 }
@@ -110,7 +110,7 @@ export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot)
                 hasRequestInFlight: null,
                 isPickerOpen: null,
               };
-              const obj = enabled(17809);
+              const obj = enabled(17811);
               obj2.hasRequestInFlight = visible(10043).hasDiscoverRequestInFlight();
               obj2.isPickerOpen = InterestPickerSessionStore.isPickerOpen();
               if (obj.shouldRequestWaterwheelsDiscover(obj2)) {

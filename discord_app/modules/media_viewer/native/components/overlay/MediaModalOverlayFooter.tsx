@@ -20,9 +20,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(4913);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "disabled" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "channel" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
-  drawerHeader: { backgroundColor: "Array" },
+  drawerHeader: { backgroundColor: "r" },
   messagePreviewContainer: { marginLeft: 6 },
   thumbnailsContainer: { paddingTop: 8 },
 };

@@ -136,7 +136,7 @@ export default function ActivityShareLinkModal(applicationId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_0 = value.filter(tmp2(1254).isNotNullish);
-            closure_128_1 = tmp2(15706).resolveActivityShareMessageContent(
+            closure_128_1 = tmp2(15708).resolveActivityShareMessageContent(
               closure_129_4,
               closure_129_15,
               closure_129_13,
@@ -210,7 +210,7 @@ export default function ActivityShareLinkModal(applicationId) {
                 };
               })(),
             );
-            let obj5 = tmp2(15706);
+            let obj5 = tmp2(15708);
             let obj7 = { text: null };
             const intl = tmp2(1112).intl;
             const obj8 = { applicationName: closure_129_15.name };
@@ -218,8 +218,8 @@ export default function ActivityShareLinkModal(applicationId) {
             tmp3(5595).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
             closure_129_5(true, closure_129_8);
             let obj6 = tmp3(5595);
-            const result = tmp2(15704).closeActivityShareLinkModal();
-            const obj9 = tmp2(15704);
+            const result = tmp2(15706).closeActivityShareLinkModal();
+            const obj9 = tmp2(15706);
           }
           c3 = 3;
           let obj = { value, done: true };

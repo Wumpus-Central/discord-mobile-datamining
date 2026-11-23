@@ -279,7 +279,7 @@ obj = {
       interactionId: applicationId.id,
       customId: applicationId.customId,
       channelId: applicationId.channelId,
-      modalKey: "fileBytes",
+      modalKey: "find",
     };
     if (null != nonce) {
       if (null != dependencyMap[nonce]) {

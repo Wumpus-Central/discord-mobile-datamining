@@ -11,7 +11,7 @@ function ServerWidgetUpsellCard(cardStyle) {
   ({ userId, widget } = cardStyle);
   ({ guildId, onDismiss } = cardStyle);
   const tmp = closure_7();
-  const conjureServerWidgetUpsellDetails = widget(14548).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
+  const conjureServerWidgetUpsellDetails = widget(14550).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
   if (null == conjureServerWidgetUpsellDetails) {
     return null;
   } else {
@@ -64,7 +64,7 @@ function ServerWidgetUpsellCard(cardStyle) {
     obj14.children = closure_5(onDismiss(10275), obj15);
     return closure_5(View, obj14);
   }
-  const obj = widget(14548);
+  const obj = widget(14550);
 }
 function ServerWidgetUpsellForUser(userId) {
   userId = userId.userId;

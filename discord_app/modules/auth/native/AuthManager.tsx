@@ -77,8 +77,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(17503).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(17503);
+          const result = applyArgumentsResult(17505).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(17505);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;

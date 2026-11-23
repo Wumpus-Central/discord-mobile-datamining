@@ -208,14 +208,14 @@ export default function PollAnswerInput(answer) {
     blurOnSubmit: false,
     style: null,
     selectionColor: "channel",
-    textContentType: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    maxLength: true,
-    returnKeyType: true,
-    required: true,
-    autoCorrect: true,
-    "aria-invalid": true,
+    textContentType: "HFU_MAU",
+    accessibilityLabel: "next",
+    accessibilityHint: "makeEmptyTitleError",
+    maxLength: "J90oLW",
+    returnKeyType: "allow_labels",
+    required: "numSelections",
+    autoCorrect: "col",
+    "aria-invalid": "sa",
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

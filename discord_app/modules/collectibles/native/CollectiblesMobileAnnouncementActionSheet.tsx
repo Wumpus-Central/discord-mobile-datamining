@@ -8,8 +8,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import _modDef19074 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
-import _modDef19075 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import _modDef19076 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
+import _modDef19077 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const _modDef1653 = _mod1653;
@@ -58,7 +58,7 @@ function CatEarsBackdrop() {
     importantForAccessibility: "no-hide-descendants",
   };
   const obj6 = { uri: null };
-  obj6.uri = _modDef19074;
+  obj6.uri = _modDef19076;
   obj5.source = obj6;
   obj5.style = tmp.mascotImage;
   obj4.children = React5(FastImageDefault, obj5);
@@ -168,7 +168,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
   };
-  const obj4 = { uri: _modDef19075 };
+  const obj4 = { uri: _modDef19077 };
   obj3.source = obj4;
   obj3.style = tmp.framePreviewImage;
   const items3 = [closure_8(FastImageDefault, obj3), , ,];
@@ -191,7 +191,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl3 = markAsDismissed(1112).intl;
   obj8.text = intl3.string(markAsDismissed(1112).t.MkVbBY);
   items4[1] = closure_8(FeatureRow, obj8);
-  const obj9 = { icon: closure_8(markAsDismissed(19076).ShopIllocon, { size: 32 }), text: null };
+  const obj9 = { icon: closure_8(markAsDismissed(19078).ShopIllocon, { size: 32 }), text: null };
   const intl4 = markAsDismissed(1112).intl;
   obj9.text = intl4.string(markAsDismissed(1112).t["/4bQuG"]);
   items4[2] = closure_8(FeatureRow, obj9);

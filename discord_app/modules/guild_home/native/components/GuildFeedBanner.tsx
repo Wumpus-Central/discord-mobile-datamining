@@ -213,16 +213,16 @@ function GuildFeedBanner(guild) {
     return closure_11(tmp18, obj4);
   } else {
     if (tmp2Result6.isThemeDark(tmp10)) {
-      let tmp8Result2 = tmp8(18201);
+      let tmp8Result2 = tmp8(18203);
     } else {
-      tmp8Result2 = tmp8(18202);
+      tmp8Result2 = tmp8(18204);
     }
     tmp2Result6 = tmp2(4920);
   }
   const tmp2Result5 = require("useDrawerWidth");
 }
 const View = fn(17).View;
-const GuildFeedConstants = fn(18200);
+const GuildFeedConstants = fn(18202);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_8 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1071).GuildFeatures;

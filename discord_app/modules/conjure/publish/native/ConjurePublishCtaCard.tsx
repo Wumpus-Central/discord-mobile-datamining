@@ -13,11 +13,11 @@ function PublishCta(publish) {
   publish = publish.publish;
   closure_0 = useConjureStartPublishDefault(publish.projectId, publish);
   const obj = { text: publish.label, variant: "primary", size: "sm", loading: null, onPress: null };
-  let publishing = publish.publishing;
-  if (publishing) {
-    publishing = !publish.showsProgress;
+  let tmp2 = "publishing" === publish.state;
+  if (tmp2) {
+    tmp2 = !publish.showsProgress;
   }
-  obj.loading = publishing;
+  obj.loading = tmp2;
   obj.onPress = function onPress() {
     return closure_0("card");
   };

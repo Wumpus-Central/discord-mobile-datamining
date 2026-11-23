@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 let obj = {
   bots: fn(12179).RobotIcon,
   channels: fn(7704).AppsIcon,
-  test_app: fn(17002).BeakerIcon,
+  test_app: fn(17004).BeakerIcon,
   profile_widget: fn(7848).IdCardIcon,
   overlay: fn(7040).GameControllerIcon,
   automod: fn(10133).ShieldIcon,

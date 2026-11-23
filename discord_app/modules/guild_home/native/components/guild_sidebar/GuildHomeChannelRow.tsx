@@ -55,7 +55,7 @@ export default function GuildHomeChannelRow(selected) {
   obj2.name = intl2.string(tmp5(1112).t.VbpLyU);
   obj2.mode = DEFAULT;
   obj.name = jsx(tmp5(13248).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15050).SignPostIcon });
+  obj.icon = jsx(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15052).SignPostIcon });
   return (
     <tmp7
       onPress={callback}

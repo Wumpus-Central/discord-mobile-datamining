@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/conjure/managed_copy/native/C
 export default function ConjureDownstreamUpdatesSwitch(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_8();
-  const conjureDownstreamUpdates = projectId(18259).useConjureDownstreamUpdates(projectId);
+  const conjureDownstreamUpdates = projectId(18261).useConjureDownstreamUpdates(projectId);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
   [][0] = projectId;

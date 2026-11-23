@@ -2677,11 +2677,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: {
-    embeddedAppSDK: true,
-    request: "resolve",
-    response: "Object",
-  },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channelId", response: "" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

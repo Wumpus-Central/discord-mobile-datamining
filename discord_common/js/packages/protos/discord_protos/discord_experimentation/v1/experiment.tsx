@@ -99,6 +99,14 @@ const obj9 = {
 };
 const obj10 = { DEFAULT: 0, [0]: "DEFAULT", OFF: 1, [1]: "OFF", OVERRIDES_ONLY: 2, [2]: "OVERRIDES_ONLY" };
 const obj11 = {
+  STICKY: 0,
+  [0]: "STICKY",
+  RANDOM_PER_CHECK: 1,
+  [1]: "RANDOM_PER_CHECK",
+  LEGACY_HASH: 2,
+  [2]: "LEGACY_HASH",
+};
+const obj12 = {
   LEVEL_UNSPECIFIED: 0,
   [0]: "LEVEL_UNSPECIFIED",
   ORGANIZATION: 1,
@@ -106,8 +114,8 @@ const obj11 = {
   SQUAD: 2,
   [2]: "SQUAD",
 };
-const obj12 = { FISCAL_PERIOD_UNSPECIFIED: 0, [0]: "FISCAL_PERIOD_UNSPECIFIED", H1: 1, [1]: "H1", H2: 2, [2]: "H2" };
-const obj13 = {
+const obj13 = { FISCAL_PERIOD_UNSPECIFIED: 0, [0]: "FISCAL_PERIOD_UNSPECIFIED", H1: 1, [1]: "H1", H2: 2, [2]: "H2" };
+const obj14 = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   CONTROL: 1,
@@ -117,7 +125,7 @@ const obj13 = {
   OVERRIDE: 3,
   [3]: "OVERRIDE",
 };
-const obj14 = {
+const obj15 = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   FULL: 1,
@@ -127,8 +135,8 @@ const obj14 = {
   OFF: 3,
   [3]: "OFF",
 };
-const obj15 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ENABLED: 1, [1]: "ENABLED", DISABLED: 2, [2]: "DISABLED" };
-const obj16 = {
+const obj16 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ENABLED: 1, [1]: "ENABLED", DISABLED: 2, [2]: "DISABLED" };
+const obj17 = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   ACTIVE: 1,
@@ -140,7 +148,7 @@ const obj16 = {
   PRESERVED: 4,
   [4]: "PRESERVED",
 };
-const obj17 = {
+const obj18 = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   DRAFT: 1,
@@ -156,7 +164,7 @@ const obj17 = {
   CANCELED: 6,
   [6]: "CANCELED",
 };
-const obj18 = {
+const obj19 = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   PENDING: 1,
@@ -170,7 +178,7 @@ const obj18 = {
   AWAITING_FINAL_HEALTH_CHECK: 5,
   [5]: "AWAITING_FINAL_HEALTH_CHECK",
 };
-const obj19 = {
+const obj20 = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   DRAFT: 1,
@@ -189,7 +197,7 @@ const obj19 = {
 const MessageType = fn(1196).MessageType;
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -246,7 +254,7 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-        return closure_1_25;
+        return closure_1_26;
       },
     };
     items[15] = {
@@ -263,7 +271,7 @@ class Experiment$Type extends MessageType {
       name: "phase",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.Phase", obj19];
+        items = ["discord_protos.discord_experimentation.v1.Phase", obj20];
         return items;
       },
     };
@@ -390,7 +398,7 @@ class Experiment$Type extends MessageType {
       name: "number_line_settings",
       kind: "message",
       T() {
-        return closure_1_22;
+        return closure_1_23;
       },
     };
     items[44] = {
@@ -415,23 +423,32 @@ class Experiment$Type extends MessageType {
       },
     };
     items[46] = { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 };
-    items[47] = { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 };
+    items[47] = {
+      no: 56,
+      name: "feature_flag_assignment",
+      kind: "enum",
+      T() {
+        items = ["discord_protos.discord_experimentation.v1.Experiment.FeatureFlagAssignment", obj11];
+        return items;
+      },
+    };
+    items[48] = { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 };
     obj = { no: 52, name: "holdout_scope", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_24;
+        return closure_1_25;
       }
     }
     obj.T = T;
-    items[48] = obj;
-    items[49] = { no: 54, name: "opt_out_of_official_holdout", kind: "scalar", T: 8 };
-    items[50] = { no: 55, name: "official_holdout_opt_out_reason", kind: "scalar", T: 9 };
-    items[51] = {
+    items[49] = obj;
+    items[50] = { no: 54, name: "opt_out_of_official_holdout", kind: "scalar", T: 8 };
+    items[51] = { no: 55, name: "official_holdout_opt_out_reason", kind: "scalar", T: 9 };
+    items[52] = {
       no: 51,
       name: "change_source",
       kind: "message",
       T() {
-        return closure_1_23;
+        return closure_1_24;
       },
     };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.Experiment", items, T);
@@ -476,6 +493,7 @@ prototype["create"] = function create(partialSettings) {
     isManaged: false,
     eligibilityPersistence: 0,
     isFeatureFlag: false,
+    featureFlagAssignment: 0,
     isOfficialHoldout: false,
     optOutOfOfficialHoldout: false,
     officialHoldoutOptOutReason: "",
@@ -607,7 +625,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (0 < id.variations.length) {
     do {
       let tagResult14 = tag.tag(15, _mod1196.WireType.LengthDelimited);
-      let internalBinaryWriteResult4 = closure_25.internalBinaryWrite(
+      let internalBinaryWriteResult4 = closure_26.internalBinaryWrite(
         id.variations[num15],
         tagResult14.fork(),
         writeUnknownFields,
@@ -836,14 +854,14 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   }
   if (id.numberLineSettings) {
     const tagResult43 = tag.tag(43, _mod1196.WireType.LengthDelimited);
-    const joined15 = closure_22
+    const joined15 = closure_23
       .internalBinaryWrite(
         id.numberLineSettings,
         tag.tag(43, _mod1196.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult12 = closure_22.internalBinaryWrite(
+    const internalBinaryWriteResult12 = closure_23.internalBinaryWrite(
       id.numberLineSettings,
       tag.tag(43, _mod1196.WireType.LengthDelimited).fork(),
       writeUnknownFields,
@@ -868,16 +886,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     tag.tag(49, _mod1196.WireType.Varint).bool(id.isFeatureFlag);
     const tagResult46 = tag.tag(49, _mod1196.WireType.Varint);
   }
+  if (0 !== id.featureFlagAssignment) {
+    tag.tag(56, _mod1196.WireType.Varint).int32(id.featureFlagAssignment);
+    const tagResult47 = tag.tag(56, _mod1196.WireType.Varint);
+  }
   if (false !== id.isOfficialHoldout) {
     tag.tag(50, _mod1196.WireType.Varint).bool(id.isOfficialHoldout);
-    const tagResult47 = tag.tag(50, _mod1196.WireType.Varint);
+    const tagResult48 = tag.tag(50, _mod1196.WireType.Varint);
   }
   if (id.holdoutScope) {
-    const tagResult48 = tag.tag(52, _mod1196.WireType.LengthDelimited);
-    const joined17 = closure_24
+    const tagResult49 = tag.tag(52, _mod1196.WireType.LengthDelimited);
+    const joined17 = closure_25
       .internalBinaryWrite(id.holdoutScope, tag.tag(52, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields)
       .join();
-    const internalBinaryWriteResult14 = closure_24.internalBinaryWrite(
+    const internalBinaryWriteResult14 = closure_25.internalBinaryWrite(
       id.holdoutScope,
       tag.tag(52, _mod1196.WireType.LengthDelimited).fork(),
       writeUnknownFields,
@@ -885,18 +907,18 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   }
   if (false !== id.optOutOfOfficialHoldout) {
     tag.tag(54, _mod1196.WireType.Varint).bool(id.optOutOfOfficialHoldout);
-    const tagResult49 = tag.tag(54, _mod1196.WireType.Varint);
+    const tagResult50 = tag.tag(54, _mod1196.WireType.Varint);
   }
   if ("" !== id.officialHoldoutOptOutReason) {
     tag.tag(55, _mod1196.WireType.LengthDelimited).string(id.officialHoldoutOptOutReason);
-    const tagResult50 = tag.tag(55, _mod1196.WireType.LengthDelimited);
+    const tagResult51 = tag.tag(55, _mod1196.WireType.LengthDelimited);
   }
   if (id.changeSource) {
-    const tagResult51 = tag.tag(51, _mod1196.WireType.LengthDelimited);
-    const joined18 = closure_23
+    const tagResult52 = tag.tag(51, _mod1196.WireType.LengthDelimited);
+    const joined18 = closure_24
       .internalBinaryWrite(id.changeSource, tag.tag(51, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields)
       .join();
-    const internalBinaryWriteResult15 = closure_23.internalBinaryWrite(
+    const internalBinaryWriteResult15 = closure_24.internalBinaryWrite(
       id.changeSource,
       tag.tag(51, _mod1196.WireType.LengthDelimited).fork(),
       writeUnknownFields,
@@ -1048,7 +1070,7 @@ const tmp9 = new "AWAITING_MANUAL_APPROVAL"(
   Experiment_NumberLineSettings_Mode,
   obj2,
 );
-let closure_22 = tmp9;
+let closure_23 = tmp9;
 const MessageType3 = fn(1196).MessageType;
 class Experiment_ChangeSource$Type extends MessageType3 {
   constructor() {
@@ -1217,7 +1239,7 @@ let tmp10 = new "AWAITING_MANUAL_APPROVAL"(
   Experiment_NumberLineSettings_Mode,
   obj2,
 );
-let closure_23 = tmp10;
+let closure_24 = tmp10;
 const MessageType4 = fn(1196).MessageType;
 class HoldoutScope$Type extends MessageType4 {
   constructor() {
@@ -1226,7 +1248,7 @@ class HoldoutScope$Type extends MessageType4 {
       name: "level",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.HoldoutScope.Level", obj11];
+        items = ["discord_protos.discord_experimentation.v1.HoldoutScope.Level", obj12];
         return items;
       },
     };
@@ -1237,7 +1259,7 @@ class HoldoutScope$Type extends MessageType4 {
       name: "fiscal_half",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj12];
+        items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj13];
         return items;
       },
     };
@@ -1330,7 +1352,7 @@ const items2 = [
     name: "level",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.HoldoutScope.Level", obj11];
+      items = ["discord_protos.discord_experimentation.v1.HoldoutScope.Level", obj12];
       return items;
     },
   },
@@ -1339,7 +1361,7 @@ const items2 = [
     name: "fiscal_half",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj12];
+      items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj13];
       return items;
     },
   },
@@ -1362,7 +1384,7 @@ const tmp11 = new "AWAITING_MANUAL_APPROVAL"(
   Experiment_NumberLineSettings_Mode,
   obj2,
 );
-let closure_24 = tmp11;
+let closure_25 = tmp11;
 const MessageType5 = fn(1196).MessageType;
 class Variation$Type extends MessageType5 {
   constructor() {
@@ -1376,14 +1398,14 @@ class Variation$Type extends MessageType5 {
       kind: "message",
       repeat: 1,
       T() {
-        return closure_1_26;
+        return closure_1_27;
       },
     };
     obj = { no: 5, name: "type", kind: "enum", T: null };
     class T {
       constructor() {
         items = ["discord_protos.discord_experimentation.v1.Variation.Type"];
-        items[1] = closure_1_15;
+        items[1] = closure_1_16;
         return items;
       }
     }
@@ -1433,7 +1455,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         obj.targetAllocation = pos.int32();
       } else if (4 === tmp5) {
         let buckets = obj.buckets;
-        let arr = buckets.push(closure_26.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+        let arr = buckets.push(closure_27.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (5 === tmp5) {
         obj.type = pos.int32();
       } else if (6 === tmp5) {
@@ -1488,7 +1510,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
   if (0 < id.buckets.length) {
     do {
       let tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_26.internalBinaryWrite(
+      let internalBinaryWriteResult = closure_27.internalBinaryWrite(
         id.buckets[num4],
         tagResult3.fork(),
         writeUnknownFields,
@@ -1544,7 +1566,7 @@ const items3 = [
     kind: "message",
     repeat: 1,
     T() {
-      return closure_1_26;
+      return closure_1_27;
     },
   },
   {
@@ -1552,7 +1574,7 @@ const items3 = [
     name: "type",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Variation.Type", obj13];
+      items = ["discord_protos.discord_experimentation.v1.Variation.Type", obj14];
       return items;
     },
   },
@@ -1584,7 +1606,7 @@ const tmp12 = new "AWAITING_MANUAL_APPROVAL"(
   Experiment_NumberLineSettings_Mode,
   obj2,
 );
-let closure_25 = tmp12;
+let closure_26 = tmp12;
 const MessageType6 = fn(1196).MessageType;
 class Bucket$Type extends MessageType6 {
   constructor() {
@@ -1596,7 +1618,7 @@ class Bucket$Type extends MessageType6 {
       name: "type",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj16];
+        items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj17];
         return items;
       },
     };
@@ -1604,7 +1626,7 @@ class Bucket$Type extends MessageType6 {
     class T {
       constructor() {
         items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum"];
-        items[1] = closure_1_16;
+        items[1] = closure_1_17;
         return items;
       }
     }
@@ -1615,7 +1637,7 @@ class Bucket$Type extends MessageType6 {
       name: "exposure_mode",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj15];
+        items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj16];
         return items;
       },
     };
@@ -1721,7 +1743,7 @@ const items4 = [
     name: "type",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj16];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj17];
       return items;
     },
   },
@@ -1730,7 +1752,7 @@ const items4 = [
     name: "assignment_mode",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum", obj14];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum", obj15];
       return items;
     },
   },
@@ -1739,7 +1761,7 @@ const items4 = [
     name: "exposure_mode",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj15];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj16];
       return items;
     },
   },
@@ -1761,7 +1783,7 @@ let tmp13 = new "AWAITING_MANUAL_APPROVAL"(
   Experiment_NumberLineSettings_Mode,
   obj2,
 );
-let closure_26 = tmp13;
+let closure_27 = tmp13;
 const MessageType7 = fn(1196).MessageType;
 class Bucket_AllocationAssignmentMode$Type extends MessageType7 {
   constructor() {
@@ -2182,7 +2204,7 @@ class LifecyclePlan_MeasurementPlan$Type extends MessageType11 {
       name: "status",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
+        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj18, "PLAN_STATUS_"];
         return items;
       },
     };
@@ -2290,12 +2312,12 @@ const items7 = [
     name: "status",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj18, "PLAN_STATUS_"];
       return items;
     },
   },
 ];
-const obj25 = {
+const obj26 = {
   no: 2,
   name: "ramp_steps",
   kind: "message",
@@ -2304,7 +2326,7 @@ const obj25 = {
     return lifecyclePlan_RolloutPlanType;
   },
 };
-items7[1] = obj25;
+items7[1] = obj26;
 const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Type(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.MeasurementPlan",
   items7,
@@ -2338,6 +2360,7 @@ const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Typ
   obj17,
   obj18,
   obj19,
+  obj20,
   experimentType,
   tmp9,
   tmp10,
@@ -2354,7 +2377,7 @@ const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Typ
   items7,
   new.target,
   exports,
-  obj25,
+  obj26,
   undefined,
 );
 const MessageType12 = fn(1196).MessageType;
@@ -2365,7 +2388,7 @@ class LifecyclePlan_RolloutPlan$Type extends MessageType12 {
       name: "status",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
+        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj18, "PLAN_STATUS_"];
         return items;
       },
     };
@@ -2473,12 +2496,12 @@ const items8 = [
     name: "status",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj18, "PLAN_STATUS_"];
       return items;
     },
   },
 ];
-const obj27 = {
+const obj28 = {
   no: 2,
   name: "ramp_steps",
   kind: "message",
@@ -2487,7 +2510,7 @@ const obj27 = {
     return lifecyclePlan_RolloutPlanType;
   },
 };
-items8[1] = obj27;
+items8[1] = obj28;
 const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan",
   items8,
@@ -2521,6 +2544,7 @@ const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type
   obj17,
   obj18,
   obj19,
+  obj20,
   experimentType,
   tmp9,
   tmp10,
@@ -2537,7 +2561,7 @@ const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type
   items8,
   new.target,
   exports,
-  obj27,
+  obj28,
   undefined,
   8,
   7,
@@ -2552,7 +2576,7 @@ class LifecyclePlan_RampStep$Type extends MessageType13 {
       kind: "message",
       repeat: 1,
       T() {
-        return closure_1_32;
+        return closure_1_33;
       },
     };
     items = [, , , , , ,];
@@ -2579,7 +2603,7 @@ class LifecyclePlan_RampStep$Type extends MessageType13 {
       name: "status",
       kind: "enum",
       T() {
-        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
+        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj19, "STEP_STATUS_"];
         return items;
       },
     };
@@ -2627,7 +2651,7 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let variationBuckets = obj.variationBuckets;
-        let arr = variationBuckets.push(closure_32.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+        let arr = variationBuckets.push(closure_33.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (2 === tmp5) {
         let Duration2 = duration.Duration;
         obj.holdDuration = Duration2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.holdDuration);
@@ -2676,7 +2700,7 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationBucke
   if (0 < variationBuckets.variationBuckets.length) {
     do {
       let tagResult = tag.tag(1, _mod1196.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_32.internalBinaryWrite(
+      let internalBinaryWriteResult = closure_33.internalBinaryWrite(
         variationBuckets.variationBuckets[num],
         tagResult.fork(),
         writeUnknownFields,
@@ -2767,7 +2791,7 @@ const items9 = [
     kind: "message",
     repeat: 1,
     T() {
-      return closure_1_32;
+      return closure_1_33;
     },
   },
   {
@@ -2792,7 +2816,7 @@ const items9 = [
     name: "status",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj19, "STEP_STATUS_"];
       return items;
     },
   },
@@ -2805,7 +2829,7 @@ const items9 = [
     },
   },
 ];
-const obj29 = {
+const obj30 = {
   no: 7,
   name: "paused_duration",
   kind: "message",
@@ -2813,7 +2837,7 @@ const obj29 = {
     return require("duration").Duration;
   },
 };
-items9[6] = obj29;
+items9[6] = obj30;
 const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep",
   items9,
@@ -2847,6 +2871,7 @@ const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type(
   obj17,
   obj18,
   obj19,
+  obj20,
   experimentType,
   tmp9,
   tmp10,
@@ -2863,7 +2888,7 @@ const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type(
   lifecyclePlan_MeasurementPlanType,
   new.target,
   exports,
-  obj29,
+  obj30,
   undefined,
   8,
   7,
@@ -2882,7 +2907,7 @@ class LifecyclePlan_VariationBuckets$Type extends MessageType14 {
       kind: "message",
       repeat: 1,
       T() {
-        return closure_1_26;
+        return closure_1_27;
       },
     };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.VariationBuckets", items, new.target);
@@ -2915,7 +2940,7 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         obj.variationId = pos.int32();
       } else if (2 === tmp5) {
         let buckets = obj.buckets;
-        let arr = buckets.push(closure_26.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+        let arr = buckets.push(closure_27.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -2952,7 +2977,7 @@ prototype14["internalBinaryWrite"] = function internalBinaryWrite(variationId, t
   if (0 < variationId.buckets.length) {
     do {
       let tagResult1 = tag.tag(2, _mod1196.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_26.internalBinaryWrite(
+      let internalBinaryWriteResult = closure_27.internalBinaryWrite(
         variationId.buckets[num2],
         tagResult1.fork(),
         writeUnknownFields,
@@ -2973,16 +2998,16 @@ prototype14["internalBinaryWrite"] = function internalBinaryWrite(variationId, t
   return tag;
 };
 const items10 = [{ no: 1, name: "variation_id", kind: "scalar", T: 5 }];
-const obj30 = {
+const obj31 = {
   no: 2,
   name: "buckets",
   kind: "message",
   repeat: 1,
   T() {
-    return closure_1_26;
+    return closure_1_27;
   },
 };
-items10[1] = obj30;
+items10[1] = obj31;
 let tmp21 = new "internalBinaryRead"(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.VariationBuckets",
   items10,
@@ -3016,6 +3041,7 @@ let tmp21 = new "internalBinaryRead"(
   obj17,
   obj18,
   obj19,
+  obj20,
   experimentType,
   tmp9,
   tmp10,
@@ -3032,13 +3058,13 @@ let tmp21 = new "internalBinaryRead"(
   lifecyclePlan_MeasurementPlanType,
   lifecyclePlan_RolloutPlanType,
   exports,
-  obj30,
+  obj31,
   undefined,
   8,
   7,
   6,
 );
-let closure_32 = tmp21;
+let closure_33 = tmp21;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx",
@@ -3054,15 +3080,16 @@ export const Experiment_Type = obj7;
 export const Experiment_CustomUnitPrefix = obj8;
 export const Experiment_ExposurePointId = obj9;
 export const Experiment_EligibilityPersistence = obj10;
-export const HoldoutScope_Level = obj11;
-export const HoldoutScope_FiscalPeriod = obj12;
-export const Variation_Type = obj13;
-export const Bucket_AllocationAssignmentMode_Enum = obj14;
-export const Bucket_AllocationExposureMode_Enum = obj15;
-export const Bucket_Type = obj16;
-export const LifecyclePlan_PlanStatus = obj17;
-export const LifecyclePlan_StepStatus = obj18;
-export const Phase = obj19;
+export const Experiment_FeatureFlagAssignment = obj11;
+export const HoldoutScope_Level = obj12;
+export const HoldoutScope_FiscalPeriod = obj13;
+export const Variation_Type = obj14;
+export const Bucket_AllocationAssignmentMode_Enum = obj15;
+export const Bucket_AllocationExposureMode_Enum = obj16;
+export const Bucket_Type = obj17;
+export const LifecyclePlan_PlanStatus = obj18;
+export const LifecyclePlan_StepStatus = obj19;
+export const Phase = obj20;
 export const Experiment = experimentType;
 export const Experiment_NumberLineSettings = tmp9;
 export const Experiment_ChangeSource = tmp10;

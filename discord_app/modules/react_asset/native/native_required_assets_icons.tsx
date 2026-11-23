@@ -59,22 +59,22 @@ import _modDef12817 from "../../../../_runtime/metro/12817__.js";
 import _modDef13051 from "../../../../_runtime/metro/13051__.js";
 import _modDef13352 from "../../../../_runtime/metro/13352__.js";
 import _modDef14367 from "../../../../_runtime/metro/14367__.js";
-import _modDef15051 from "../../../../_runtime/metro/15051__.js";
 import _modDef15053 from "../../../../_runtime/metro/15053__.js";
-import _modDef16272 from "../../../../_runtime/metro/16272__.js";
-import _modDef16462 from "../../../../_runtime/metro/16462__.js";
-import _modDef16611 from "../../../../_runtime/metro/16611__.js";
-import _modDef17603 from "../../../../_runtime/metro/17603__.js";
-import _modDef17978 from "../../../../_runtime/metro/17978__.js";
+import _modDef15055 from "../../../../_runtime/metro/15055__.js";
+import _modDef16274 from "../../../../_runtime/metro/16274__.js";
+import _modDef16464 from "../../../../_runtime/metro/16464__.js";
+import _modDef16613 from "../../../../_runtime/metro/16613__.js";
+import _modDef17605 from "../../../../_runtime/metro/17605__.js";
 import _modDef17980 from "../../../../_runtime/metro/17980__.js";
-import _modDef18272 from "../../../../_runtime/metro/18272__.js";
-import _modDef19760 from "../../../../_runtime/metro/19760__.js";
-import _modDef20186 from "../../../../_runtime/metro/20186__.js";
-import _modDef20187 from "../../../../_runtime/metro/20187__.js";
+import _modDef17982 from "../../../../_runtime/metro/17982__.js";
+import _modDef18274 from "../../../../_runtime/metro/18274__.js";
+import _modDef19762 from "../../../../_runtime/metro/19762__.js";
 import _modDef20188 from "../../../../_runtime/metro/20188__.js";
 import _modDef20189 from "../../../../_runtime/metro/20189__.js";
 import _modDef20190 from "../../../../_runtime/metro/20190__.js";
 import _modDef20191 from "../../../../_runtime/metro/20191__.js";
+import _modDef20192 from "../../../../_runtime/metro/20192__.js";
+import _modDef20193 from "../../../../_runtime/metro/20193__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_icons.tsx");
@@ -85,25 +85,25 @@ export const NATIVE_REQUIRED_ASSETS_ICONS = {
   ArrowAngleLeftUpIcon: _modDef12170,
   ArrowAngleRightUpIcon: _modDef10079,
   ArrowLargeLeftIcon: _modDef7100,
-  ArrowLargeRightIcon: _modDef20186,
+  ArrowLargeRightIcon: _modDef20188,
   AttachmentIcon: _modDef10110,
   BellZIcon: _modDef11702,
   BoostGemIcon: _modDef9371,
-  ChannelListMagnifyingGlassIcon: _modDef15053,
+  ChannelListMagnifyingGlassIcon: _modDef15055,
   CheckmarkLargeIcon: _modDef7341,
   ChatXIcon: _modDef13352,
   CheckmarkSmallIcon: _modDef7500,
   ChevronSmallDownIcon: _modDef12798,
   ChevronSmallRightIcon: _modDef7059,
-  CircleErrorIcon: _modDef20187,
-  CircleInformationIcon: _modDef20188,
-  CircleQuestionIcon: _modDef16462,
-  ClipsIcon: _modDef16272,
+  CircleErrorIcon: _modDef20189,
+  CircleInformationIcon: _modDef20190,
+  CircleQuestionIcon: _modDef16464,
+  ClipsIcon: _modDef16274,
   ClockWarningIcon: _modDef12398,
-  ConnectionAverageIcon: _modDef20189,
-  ConnectionBadIcon: _modDef20190,
-  ConnectionFineIcon: _modDef17980,
-  ConnectionUnknownIcon: _modDef17978,
+  ConnectionAverageIcon: _modDef20191,
+  ConnectionBadIcon: _modDef20192,
+  ConnectionFineIcon: _modDef17982,
+  ConnectionUnknownIcon: _modDef17980,
   DownloadIcon: _modDef5616,
   EyeIcon: _modDef7238,
   EyeSlashIcon: _modDef7236,
@@ -111,8 +111,8 @@ export const NATIVE_REQUIRED_ASSETS_ICONS = {
   GifIcon: _modDef8883,
   GroupIcon: _modDef7039,
   HandRequestSpeakIcon: _modDef10925,
-  HomeIcon: _modDef19760,
-  ImageBrokenIcon: _modDef20191,
+  HomeIcon: _modDef19762,
+  ImageBrokenIcon: _modDef20193,
   ImageIcon: _modDef7657,
   ImageWarningIcon: _modDef7658,
   LinkIcon: _modDef5610,
@@ -138,14 +138,14 @@ export const NATIVE_REQUIRED_ASSETS_ICONS = {
   RobotIcon: _modDef12180,
   ScreenIcon: _modDef9905,
   ShieldIcon: _modDef10134,
-  SignPostIcon: _modDef15051,
+  SignPostIcon: _modDef15053,
   SlashBoxIcon: _modDef12105,
-  SpotifyNeutralIcon: _modDef17603,
+  SpotifyNeutralIcon: _modDef17605,
   StageIcon: _modDef7621,
   StickerIcon: _modDef11129,
   SuperReactionIcon: _modDef9079,
   ThreadIcon: _modDef7638,
-  TicketIcon: _modDef16611,
+  TicketIcon: _modDef16613,
   TopicsIcon: _modDef12116,
   UserCheckIcon: _modDef8875,
   UserCircleIcon: _modDef13051,
@@ -153,7 +153,7 @@ export const NATIVE_REQUIRED_ASSETS_ICONS = {
   VoiceXIcon: _modDef10982,
   WarningIcon: _modDef7764,
   WindowLaunchIcon: _modDef10140,
-  WindowTopIcon: _modDef18272,
+  WindowTopIcon: _modDef18274,
   XSmallIcon: _modDef7152,
   XboxNeutralIcon: _modDef9799,
 };

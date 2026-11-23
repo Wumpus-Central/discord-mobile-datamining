@@ -21,7 +21,7 @@ export default function MobileSurvey() {
     if (null != combined) {
       const obj2 = { type: "survey", promotion_id: tmp.id };
       AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
-      stateFromStores(17142).surveySeen(tmp.key);
+      stateFromStores(17144).surveySeen(tmp.key);
       const _HermesInternal = HermesInternal;
       combined = "mobile-survey-" + tmp.key;
       const obj4 = stateFromStores(5862);
@@ -33,7 +33,7 @@ export default function MobileSurvey() {
       obj7.icon = closure_1_6(stateFromStores(10139).WindowLaunchIcon, obj8);
       obj7.onPress = function onPress() {
         LinkingDefault.openURL(combined.url);
-        stateFromStores(17142).surveyHide(combined.key, false);
+        stateFromStores(17144).surveyHide(combined.key, false);
       };
       items = [closure_1_6(stateFromStores(5866).AlertActionButton, obj7)];
       if (null != tmp.secondary_cta) {
@@ -45,7 +45,7 @@ export default function MobileSurvey() {
           variant: "secondary",
           text: secondary_cta,
           onPress() {
-            return stateFromStores(17142).surveyHide(combined.key, true);
+            return stateFromStores(17144).surveyHide(combined.key, true);
           },
         };
         items[1] = closure_1_6(tmp13, obj15);
@@ -58,7 +58,7 @@ export default function MobileSurvey() {
       }
       const intl = stateFromStores(1112).intl;
       secondary_cta = intl.string(stateFromStores(1112).t.f3Pet9);
-      const obj3 = stateFromStores(17142);
+      const obj3 = stateFromStores(17144);
     }
   }, items1);
   return null;

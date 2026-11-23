@@ -12,7 +12,7 @@ import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import useShouldShowChooseAccountDefault from "../../../multi_account/useShouldShowChooseAccount.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod17501 from "../../../../../_runtime/metro/17501__.js";
+import _mod17503 from "../../../../../_runtime/metro/17503__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod17501;
+  obj3.backgroundImageSource = _mod17503;
   const children = [closure_9(BackgroundImageDefault, obj3), ,];
   let tmp18Result = null;
   if (tmp5) {
@@ -170,7 +170,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17447);
+let RegistrationStepsUtils = fn(17449);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(

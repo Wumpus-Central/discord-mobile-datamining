@@ -82,7 +82,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         metroImportDefault.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(19859, dependencyMap.paths),
+          asyncRequireImpl(19861, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -95,7 +95,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(18574).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(18576).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,7 +108,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(19856), { role }), , ,];
+  const children = [closure_14(role(19858), { role }), , ,];
   const obj7 = {
     children: closure_14(guild(7427).SearchBar, {
       size: "md",

@@ -423,7 +423,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(17991).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(17993).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -433,7 +433,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(17991).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(17993).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }

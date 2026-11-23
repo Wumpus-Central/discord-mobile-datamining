@@ -19,17 +19,17 @@ export default function FormEmojiPicker(emoji) {
     emojiId = onChange(4859).convertSurrogateToName(emojiName, false);
     let obj = onChange(4859);
   }
-  const emojiByIdOrName = guildId(16643).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(16645).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
     allEmojiNamesString = tmp3(4863).getAllEmojiNamesString(emojiByIdOrName);
     const tmp3Result = tmp3(4863);
   }
   const intl = tmp3(1112).intl;
-  let obj2 = guildId(16643);
+  let obj2 = guildId(16645);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(16642), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(16644), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;

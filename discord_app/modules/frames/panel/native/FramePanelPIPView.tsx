@@ -13,7 +13,7 @@ const FramesConstants = fn(6624);
   FrameLayoutModes: closure_6,
   getPipOrientationLockStateForFrame: metroImportDefault,
 } = FramesConstants);
-let closure_8 = fn(19034).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(19036).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");

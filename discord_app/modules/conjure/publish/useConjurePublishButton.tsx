@@ -12,74 +12,63 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
   items = [guildId, platform, busy];
   const memo = noop.useMemo(() => ({ guildId, platform, busy }), items);
   const tmp4 = useConjurePublishActionDefault(arg0, memo);
+  let str;
+  if (tmp4 != null) {
+    str = tmp4.state;
+  }
+  if (str == null) {
+    str = "hidden";
+  }
+  let tmp5 = "up_to_date" === str;
+  if (!tmp5) {
+    tmp5 = "auto_synced" === str;
+  }
   const obj = {
     publishOptions: memo,
     publish: tmp4,
-    publishing: null,
+    state: str,
     variant: null,
     text: null,
     indicator: null,
+    hint: null,
     pendingChanges: null,
   };
-  let publishing;
-  if (tmp4 != null) {
-    publishing = tmp4.publishing;
+  let str3 = "primary";
+  if (tmp5) {
+    str3 = "secondary";
   }
-  obj.publishing = true === publishing;
-  let tmp6 = null != tmp4 && tmp4.upToDate;
-  if (tmp6) {
-    tmp6 = "publish" === tmp4.action;
-  }
-  if (tmp6) {
-    tmp6 = !tmp4.awaitingApproval;
-  }
-  let str2 = "primary";
-  if (tmp6) {
-    str2 = "secondary";
-  }
-  obj.variant = str2;
-  if (null == tmp4) {
+  obj.variant = str3;
+  if (tmp5) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef4190["120EFN"]);
+    let stringResult = intl2.string(_modDef4190.kAfbEN);
   } else {
-    let tmp7 = null != tmp4 && tmp4.upToDate;
-    if (tmp7) {
-      tmp7 = "publish" === tmp4.action;
+    stringResult = undefined;
+    if (tmp4 != null) {
+      stringResult = tmp4.label;
     }
-    if (tmp7) {
-      tmp7 = !tmp4.awaitingApproval;
+    if (stringResult == null) {
+      const intl = util.intl;
+      stringResult = intl.string(_modDef4190["120EFN"]);
     }
-    if (tmp7) {
-      if (!tmp4.publishing) {
-        const intl = util.intl;
-        label = intl.string(_modDef4190.kAfbEN);
-      }
-    }
-    label = tmp4.label;
   }
-  obj.text = label;
-  let tmp10 = null;
-  if (null != tmp4) {
-    let str4 = "publishing";
-    if (!tmp4.publishing) {
-      let tmp11 = null != tmp4 && tmp4.upToDate;
-      if (tmp11) {
-        tmp11 = "publish" === tmp4.action;
-      }
-      if (tmp11) {
-        tmp11 = !tmp4.awaitingApproval;
-      }
-      let tmp12 = "unpublished";
-      if (tmp11) {
-        tmp12 = null;
-      }
-      str4 = tmp12;
+  obj.text = stringResult;
+  let str4 = "publishing";
+  if ("publishing" !== str) {
+    let str6 = null;
+    if ("action_needed" === str) {
+      str6 = "unpublished";
     }
-    tmp10 = str4;
+    str4 = str6;
   }
-  obj.indicator = tmp10;
-  let tmp13 = null != tmp4;
-  if (tmp13) {
+  obj.indicator = str4;
+  let stringResult1 = null;
+  if ("auto_synced" === str) {
+    const intl3 = util.intl;
+    stringResult1 = intl3.string(_modDef4190.W4LzCY);
+  }
+  obj.hint = stringResult1;
+  let tmp11 = null != tmp4;
+  if (tmp11) {
     let isUpdate = tmp4.isUpdate;
     if (!isUpdate) {
       const status = tmp4.status;
@@ -89,8 +78,8 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
       }
       isUpdate = "not_live" === publishState;
     }
-    tmp13 = isUpdate;
+    tmp11 = isUpdate;
   }
-  obj.pendingChanges = tmp13;
+  obj.pendingChanges = tmp11;
   return obj;
 }

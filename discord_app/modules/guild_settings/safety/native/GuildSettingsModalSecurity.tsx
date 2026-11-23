@@ -109,7 +109,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(16063);
+  obj11.source = stateFromStores(16065);
   obj11.style = tmp.image;
   const items6 = [closure_12(stateFromStores(5600), obj11)];
   const obj12 = { style: tmp.infoWrapper, children: null };

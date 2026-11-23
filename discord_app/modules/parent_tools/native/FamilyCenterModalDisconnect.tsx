@@ -111,7 +111,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   let tmp28Result = requiresParentalConsent;
   if (requiresParentalConsent) {
     const obj13 = { style: tmp.warning, text: ageSpecificText1 };
-    tmp28Result = closure_6(tmp3(16174), obj13);
+    tmp28Result = closure_6(tmp3(16176), obj13);
   }
   const obj14 = { children: null };
   items4[1] = tmp28Result;
@@ -123,8 +123,8 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   });
   const obj16 = { spacing: nativeDefault.space.PX_12, children: null };
   const items5 = [
-    closure_6(otherUser(14722).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }),
-    closure_6(otherUser(14722).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 }),
+    closure_6(otherUser(14724).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }),
+    closure_6(otherUser(14724).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 }),
   ];
   obj16.children = items5;
   items4[3] = closure_7(otherUser(5929).Stack, obj16);

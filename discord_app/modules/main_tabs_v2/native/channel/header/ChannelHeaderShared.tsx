@@ -133,8 +133,8 @@ function UserAvatar(user) {
     status: "done",
     isMobileOnline: true,
     isVROnline: null,
-    style: "primary",
-    autoStatusCutout: null,
+    style: "secondary",
+    autoStatusCutout: true,
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {

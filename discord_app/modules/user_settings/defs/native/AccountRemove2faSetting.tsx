@@ -198,8 +198,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16065).use2FARemoveDisableReason,
-  usePredicate: fn(15978).useIsTOTPEnabled,
+  useDescription: fn(16067).use2FARemoveDisableReason,
+  usePredicate: fn(15980).useIsTOTPEnabled,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

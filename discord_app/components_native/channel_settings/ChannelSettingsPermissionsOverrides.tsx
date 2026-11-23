@@ -357,7 +357,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
         const obj = {
           variant: "body-xs/medium",
           color: "text-subtle",
-          children: channelId(18578).renderDescription(description.description),
+          children: channelId(18580).renderDescription(description.description),
         };
         items = [closure_2_20(channelId(5504).Text, obj)];
         let tmp5Result = null;
@@ -369,7 +369,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           }
         }
         items[1] = tmp5Result;
-        const obj2 = channelId(18578);
+        const obj2 = channelId(18580);
         const tmp3Result = closure_2_22(closure_2_21, { children: items });
         const tmp6Result = channelId(1378);
         const obj4 = {
@@ -389,7 +389,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           onValueChange: null,
         };
         const tmp10 = channelId(1378).isAndroid() || undefined;
-        obj5.savedValue = channelId(18955).getChannelPermissionOverwriteValue(
+        obj5.savedValue = channelId(18957).getChannelPermissionOverwriteValue(
           permissionOverwrites.permissionOverwrites[overwriteId],
           flag,
         );

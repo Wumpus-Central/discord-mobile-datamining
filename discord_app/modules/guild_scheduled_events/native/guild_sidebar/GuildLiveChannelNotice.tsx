@@ -522,10 +522,10 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(17701).useActiveEventOrStageInstanceChannel(
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(17703).useActiveEventOrStageInstanceChannel(
     guild.id,
   );
-  let obj = activeEventOrStageInstanceChannel(17701);
+  let obj = activeEventOrStageInstanceChannel(17703);
   const guildActiveEvent = activeEventOrStageInstanceChannel(8017).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(8017);
   items = [StageInstanceStore];

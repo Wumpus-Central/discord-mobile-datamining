@@ -11,7 +11,7 @@ import TableCheckboxRow from "../../../design/components/TableRow/native/TableCh
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef14804 from "../../../../_runtime/metro/14804__.js";
+import _modDef14806 from "../../../../_runtime/metro/14806__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";

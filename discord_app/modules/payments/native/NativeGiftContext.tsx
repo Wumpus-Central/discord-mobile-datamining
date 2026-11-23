@@ -277,7 +277,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "Path", planSelection: "container", giftInfo: "Notifications" };
+    let obj6 = { orderId: "a", planId: "Path", planSelection: "container", giftInfo: "sv-FI" };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);

@@ -2,12 +2,12 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "disabled",
+  id: "displayName",
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: "box-none",
-  showSecondaryPIP: null,
+  containerHeight: "\u{1F481}\u{1F3FB}",
+  showSecondaryPIP: true,
   scale: null,
 };
 const ReanimatedHelperTypes = fn(7450);

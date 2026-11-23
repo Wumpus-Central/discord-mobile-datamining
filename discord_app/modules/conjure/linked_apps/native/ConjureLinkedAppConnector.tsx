@@ -138,7 +138,7 @@ export default function ConjureLinkedAppConnector(flow) {
   if ("gets" === flow) {
     let obj6 = { style: tmp.headStart, children: null };
     let obj7 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj6.children = closure_6(tmp2(18336).ChevronSmallLeftIcon, obj7);
+    obj6.children = closure_6(tmp2(18338).ChevronSmallLeftIcon, obj7);
     let tmp15Result = closure_6(closure_4, obj6);
   } else {
     tmp15Result = null;

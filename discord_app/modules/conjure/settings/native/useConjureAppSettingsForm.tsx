@@ -51,10 +51,10 @@ function ConjureChannelSettingRow(guildId) {
         let obj3 = {
           variant: "body-xs/medium",
           color: "text-subtle",
-          children: tmp(18310).conjureLinkedNodes(hint, "body-xs/medium"),
+          children: tmp(18312).conjureLinkedNodes(hint, "body-xs/medium"),
         };
         tmp5Result = closure_12(tmp(5504).Text, obj3);
-        const tmpResult3 = tmp(18310);
+        const tmpResult3 = tmp(18312);
       }
       obj2.subLabel = tmp5Result;
       obj2.disabled = disabled;
@@ -111,18 +111,18 @@ function ConjurePickerSettingRow(guildId) {
   c4 = undefined;
   closure_5 = undefined;
   ({ disabled, fallback } = guildId);
-  let tmp3 = def(18306)(guildId, def);
-  const result = guildId(18306).conjureSettingPickedIds(value);
+  let tmp3 = def(18308)(guildId, def);
+  const result = guildId(18308).conjureSettingPickedIds(value);
   c3 = result;
-  let obj = guildId(18306);
+  let obj = guildId(18308);
   let tmp5 = null;
   if ("user" === def.type) {
     tmp5 = guildId;
   }
-  const conjureMemberRequests = guildId(18307).useConjureMemberRequests(tmp5, result);
+  const conjureMemberRequests = guildId(18309).useConjureMemberRequests(tmp5, result);
   if (null != guildId) {
     if (null != tmp3) {
-      const withSavedPicksResult = tmp4(18306).withSavedPicks(tmp3, value, (id) => ({ id, label: id }));
+      const withSavedPicksResult = tmp4(18308).withSavedPicks(tmp3, value, (id) => ({ id, label: id }));
       c4 = withSavedPicksResult;
       closure_5 = tmp11;
       if (true === def.multiple) {
@@ -146,10 +146,10 @@ function ConjurePickerSettingRow(guildId) {
         const obj5 = {
           variant: "body-xs/medium",
           color: "text-subtle",
-          children: tmp4(18310).conjureLinkedNodes(hint, "body-xs/medium"),
+          children: tmp4(18312).conjureLinkedNodes(hint, "body-xs/medium"),
         };
         tmp9Result = closure_12(tmp4(5504).Text, obj5);
-        const tmp4Result2 = tmp4(18310);
+        const tmp4Result2 = tmp4(18312);
       }
       const obj6 = { hasIcons: false, children: null };
       obj4.subLabel = tmp9Result;

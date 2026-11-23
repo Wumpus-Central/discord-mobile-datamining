@@ -370,7 +370,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
       borderWidth: 2,
       borderColor: BORDER_FEEDBACK_CRITICAL,
       marginHorizontal: tmp4(575).space.PX_16,
-      backgroundColor: "__workletHash",
+      backgroundColor: "__closure",
     },
   };
   return obj;

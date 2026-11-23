@@ -96,7 +96,7 @@ function stopGuest(streamKey) {
   }
   return flag;
 }
-let closure_7 = fn(14879).isPassTheControllerBlocked;
+let closure_7 = fn(14881).isPassTheControllerBlocked;
 const Constants = fn(1071);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
 const StreamTypes = fn(6397).StreamTypes;
@@ -203,7 +203,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 const rTCConnection = RTCConnectionStore.getRTCConnection();
                 tmp50 = null;
                 if (null != rTCConnection) {
-                  const inputConnection = new inputConnection1(14880).InputConnection(
+                  const inputConnection = new inputConnection1(14882).InputConnection(
                     rTCConnection,
                     AuthenticationStore.getId(),
                   );
@@ -232,7 +232,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                       }
                     }
                   }
-                  inputConnection.on(inputConnection1(14887).InputEvent.Disconnect, h);
+                  inputConnection.on(inputConnection1(14889).InputEvent.Disconnect, h);
                   inputConnection.connect();
                   inputConnection1 = inputConnection;
                   tmp50 = inputConnection;
@@ -281,7 +281,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection2 = RTCConnectionStore.getRTCConnection();
             tmp15 = null;
             if (null != rTCConnection2) {
-              inputConnection1 = new inputConnection1(14880).InputConnection(
+              inputConnection1 = new inputConnection1(14882).InputConnection(
                 rTCConnection2,
                 AuthenticationStore.getId(),
               );
@@ -309,7 +309,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                   }
                 }
               };
-              inputConnection1.on(inputConnection1(14887).InputEvent.Disconnect, h);
+              inputConnection1.on(inputConnection1(14889).InputEvent.Disconnect, h);
               inputConnection1.connect();
               tmp15 = inputConnection1;
             }

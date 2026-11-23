@@ -126,12 +126,12 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
               const obj4 = { value, done: true };
               return obj4;
             } else if (extendedOnboarding) {
-              const ICYMIAnalytics = tmp2(15640).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(15642).ICYMIAnalytics;
               const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "overview" });
               dependencyMap(true);
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(18108).maybeFetchGuildDiscoveryCategories(), done: false };
+              const obj5 = { value: tmp2(18110).maybeFetchGuildDiscoveryCategories(), done: false };
               return obj5;
             } else {
               v1(6429).pop();
@@ -190,7 +190,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   let obj5 = { source: null, style: null };
   const obj6 = { uri: null };
   let obj = extendedOnboarding(1500);
-  obj6.uri = navigation(18110);
+  obj6.uri = navigation(18112);
   obj5.source = obj6;
   obj5.style = tmp.bgImage;
   const items5 = [closure_9(navigation(5600), obj5)];
@@ -202,15 +202,15 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj9 = { style: tmp.header, children: null };
   const obj8 = { marginTop: top + navigation(575).space.PX_12 };
   if (tmp5 === ThemeTypes.LIGHT) {
-    let tmp2Result = tmp2(18111);
+    let tmp2Result = tmp2(18113);
   } else {
-    tmp2Result = tmp2(18112);
+    tmp2Result = tmp2(18114);
   }
   const items7 = [closure_9(navigation(5600), { source: { uri: tmp2Result }, style: tmp.headerImg }), , ,];
   const obj11 = { source: null, style: null };
   const obj10 = { source: { uri: tmp2Result }, style: tmp.headerImg };
   const tmp17 = navigation(5600);
-  obj11.source = navigation(18113);
+  obj11.source = navigation(18115);
   obj11.style = tmp.flashIcon;
   items7[1] = closure_9(navigation(5600), obj11);
   const obj12 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

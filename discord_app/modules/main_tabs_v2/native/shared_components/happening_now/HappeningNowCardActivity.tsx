@@ -7,8 +7,8 @@ import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import ActivityTypes from "../../../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef17596 from "../../../../../../_runtime/metro/17596__.js";
-import _modDef17597 from "../../../../../../_runtime/metro/17597__.js";
+import _modDef17598 from "../../../../../../_runtime/metro/17598__.js";
+import _modDef17599 from "../../../../../../_runtime/metro/17599__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
@@ -178,7 +178,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result4 = items[userId % items.length];
     } else {
-      tmp2Result4 = tmp2(17606);
+      tmp2Result4 = tmp2(17608);
     }
   }
 }
@@ -200,7 +200,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16699);
+const HappeningNowConstants = fn(16701);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: metroImportDefault,
@@ -211,7 +211,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef17596, _modDef17597];
+let items = [_modDef17598, _modDef17599];
 const createStyles = fn(4913);
 let obj = {
   content: { flexShrink: 1, gap: 2 },

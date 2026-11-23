@@ -344,14 +344,14 @@ export default noop.memo(function BuildOverridesScreen() {
   items6[1] = trimmed(stateFromStores(7349).TableRadioRow, {
     value: "id",
     label: "Commit SHA",
-    icon: trimmed(stateFromStores(17184).HashmarkIcon, {}),
+    icon: trimmed(stateFromStores(17186).HashmarkIcon, {}),
   });
   obj10.children = items6;
   items5[1] = closure_10(stateFromStores(7347).TableRadioGroup, obj10);
   if ("branch" === first.type) {
     let HashmarkIcon = tmp3(9041).TagIcon;
   } else {
-    HashmarkIcon = tmp3(17184).HashmarkIcon;
+    HashmarkIcon = tmp3(17186).HashmarkIcon;
   }
   const obj13 = {
     leadingIcon: HashmarkIcon,
@@ -419,7 +419,7 @@ export default noop.memo(function BuildOverridesScreen() {
       if ("branch" === id.type) {
         let tmp4Result = trimmed(stateFromStores(9041).TagIcon, {});
       } else {
-        tmp4Result = trimmed(stateFromStores(17184).HashmarkIcon, {});
+        tmp4Result = trimmed(stateFromStores(17186).HashmarkIcon, {});
       }
       const obj = { icon: tmp4Result, arrow: !tmp3, label: id.id, subLabel: null, disabled: null, onPress: null };
       let str = "Active";
@@ -457,7 +457,7 @@ export default noop.memo(function BuildOverridesScreen() {
   if (null != stateFromStores) {
     tmp24 = str2;
   }
-  const obj12 = { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(17184).HashmarkIcon, {}) };
+  const obj12 = { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(17186).HashmarkIcon, {}) };
   const obj15 = {
     text: "Apply override",
     disabled: tmp22,

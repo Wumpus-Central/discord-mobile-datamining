@@ -39,7 +39,7 @@ function NoCover(arg0) {
   const tmp10 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp10[1];
   let tmp11 = null != iconURL && iconURL !== tmp10[0];
-  const tmp12 = tmp4(17822)(gameId, iconURL1);
+  const tmp12 = tmp4(17824)(gameId, iconURL1);
   let tmp13 = !compact;
   if (!compact) {
     tmp13 = tmp11;
@@ -123,9 +123,9 @@ function NoCover(arg0) {
       num3 = 2;
     }
     obj10.maxLines = num3;
-    obj9.children = React5(tmp4(17823), obj10);
+    obj9.children = React5(tmp4(17825), obj10);
     tmp25Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(17823);
+    const tmp4Result = tmp4(17825);
   }
   items1[3] = tmp25Result;
   obj.children = items1;
@@ -269,7 +269,7 @@ function GameCoverImage(gameId) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(17821).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(17823).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
@@ -323,7 +323,7 @@ let obj4 = {
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 let merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(17822).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(17824).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = {
   position: "absolute",

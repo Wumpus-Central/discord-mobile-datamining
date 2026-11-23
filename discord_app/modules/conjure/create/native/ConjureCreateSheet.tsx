@@ -420,7 +420,7 @@ export default function ConjureCreateSheet(guildId) {
                 const obj7 = tmp3(5127);
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: guildId(18389).pickConjureArchive(), done: false };
+                const obj6 = { value: guildId(18391).pickConjureArchive(), done: false };
                 return obj6;
               }
             }
@@ -444,12 +444,12 @@ export default function ConjureCreateSheet(guildId) {
               closure_128_0 = value;
               dependencyMap = 0;
               if (null != closure_128_0) {
-                closure_128_1 = guildId(18389).describeConjureArchiveRejection(closure_128_0);
+                closure_128_1 = guildId(18391).describeConjureArchiveRejection(closure_128_0);
                 if (null != closure_128_1) {
                   guildId(5594).presentError(closure_128_1);
                   const obj2 = guildId(5594);
                 }
-                const obj12 = guildId(18389);
+                const obj12 = guildId(18391);
               }
               c3 = 3;
               c4 = 1;

@@ -13,7 +13,7 @@ import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
 import _modDef14307 from "../../../../../_runtime/metro/14307__.js";
-import _mod15071 from "../../../../../_runtime/metro/15071__.js";
+import _mod15073 from "../../../../../_runtime/metro/15073__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -116,7 +116,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15071 }), ,];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15073 }), ,];
   const obj4 = {
     style: tmp4.header,
     lineClamp: null,

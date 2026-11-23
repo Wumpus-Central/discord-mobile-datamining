@@ -10,7 +10,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import BoostingActionCreators from "../../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../../../components_native/common/SequencedLottieAnimationView.tsx";
-import _mod14821 from "../../../../../_runtime/metro/14821__.js";
+import _mod14823 from "../../../../../_runtime/metro/14823__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -125,9 +125,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(14822);
+    let tmp8Result = tmp8(14824);
   } else {
-    tmp8Result = tmp8(14823);
+    tmp8Result = tmp8(14825);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

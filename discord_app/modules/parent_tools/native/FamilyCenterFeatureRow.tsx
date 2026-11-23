@@ -9,9 +9,9 @@ import EyeIcon from "../../../design/components/Icon/native/redesign/generated/E
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import _modDef13245 from "../../../../_runtime/metro/13245__.js";
-import _modDef14650 from "../../../../_runtime/metro/14650__.js";
+import _modDef14652 from "../../../../_runtime/metro/14652__.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import _modDef16186 from "../../../../_runtime/metro/16186__.js";
+import _modDef16188 from "../../../../_runtime/metro/16188__.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -48,7 +48,7 @@ export default function FamilyCenterFeatureRows() {
     intl5.string(_modDef2824["+pi4Yt"]),
     intl6.string(_modDef2824["1xPTwE"]),
   );
-  obj4.icon = _modDef16186;
+  obj4.icon = _modDef16188;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2824["001l3m"]);
@@ -59,7 +59,7 @@ export default function FamilyCenterFeatureRows() {
   obj5.header = intl8.string(_modDef2824.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef14650, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef14652, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
   obj6.header = intl9.string(_modDef2824.hhOuMe);
   obj6.description = ageSpecificText2;

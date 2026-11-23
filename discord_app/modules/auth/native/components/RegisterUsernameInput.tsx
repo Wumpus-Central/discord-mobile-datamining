@@ -65,7 +65,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(17448);
+const RegistrationUIStore = fn(17450);
 ({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
@@ -158,7 +158,7 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(16001).NameValidationState.ERROR) {
+  if (type === tmp14(16003).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

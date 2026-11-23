@@ -302,7 +302,7 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
     const obj9 = { variant: "tertiary", icon: tmp4(10274), accessibilityLabel: null, onPress: null };
     const intl3 = tmp2(1112).intl;
     obj9.accessibilityLabel = intl3.string(tmp2(1112).t.cpT0Cq);
-    obj9.onPress = tmp2(16443).closeOrbsArcadeRewardsCollectedModal;
+    obj9.onPress = tmp2(16445).closeOrbsArcadeRewardsCollectedModal;
     obj8.children = closure_10(tmp2(7591).IconButton, obj9);
     const items4 = [closure_10(closure_6, obj8), ,];
     const obj10 = { style: tmp.pager, ref, onLayout, children: null };
@@ -363,7 +363,7 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
       tmp28Result4 = closure_10(tmp27, obj13);
     }
     const items5 = [tmp28Result4];
-    if (tmp13.type === tmp2(16423).OrbsArcadeRewardType.COLLECTIBLE) {
+    if (tmp13.type === tmp2(16425).OrbsArcadeRewardType.COLLECTIBLE) {
       const obj16 = { reward: tmp13 };
       let tmp28Result5 = closure_10(CollectibleRewardPrimaryAction, obj16, tmp13.id);
     } else {

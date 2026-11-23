@@ -177,7 +177,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(SuggestedColors, obj12);
-  items3[2] = sharedValue2(tmp16(15842), {
+  items3[2] = sharedValue2(tmp16(15844), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,

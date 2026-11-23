@@ -125,7 +125,7 @@ function WaterwheelsCardContent(card) {
       if (type === tmp2(10051).WaterwheelsActionType.OPEN_CONNECTION) {
         const obj12 = { style: tmp.card, children: null };
         const obj13 = { post: layout, action, onAction: handleAction };
-        obj12.children = closure_10(onAction(17807), obj13);
+        obj12.children = closure_10(onAction(17809), obj13);
         let tmp25Result = closure_10(closure_5, obj12);
       } else {
         const obj14 = { style: tmp.card, children: null };

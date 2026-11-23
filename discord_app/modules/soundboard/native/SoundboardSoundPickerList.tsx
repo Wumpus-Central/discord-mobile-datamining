@@ -15,7 +15,7 @@ import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/vie
 import chunkDefault from "../../../../_runtime/11331_chunk.js";
 import _modDef11373 from "../../../../_runtime/metro/11373__.js";
 import SoundButton from "SoundButton.tsx";
-import _modDef18031 from "../../../../_runtime/metro/18031__.js";
+import _modDef18033 from "../../../../_runtime/metro/18033__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -95,7 +95,7 @@ function SoundPickerButtonRow(section) {
   let obj = section(504);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(18018);
+const SoundboardStyleConstants = fn(18020);
 ({
   SOUND_ROW_HORIZONTAL_PADDING,
   SOUNDS_PER_ROW: closure_6,
@@ -361,7 +361,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         };
         let tmp8Result = metroImportDefault(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef18031, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef18033, style: currentUser.sectionIcon };
         tmp8Result = metroImportDefault(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const obj5 = { source: _modDef11373, style: currentUser.sectionIcon };

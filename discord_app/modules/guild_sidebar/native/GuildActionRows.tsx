@@ -102,7 +102,7 @@ export function GuildRolesAndChannelsRow(guild) {
   const tmp2Result = tmp2(13248);
   obj5.icon = jsx(guild(13248).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(15052).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(15054).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (

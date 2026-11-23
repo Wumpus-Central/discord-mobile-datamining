@@ -18,7 +18,7 @@ import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(17536).computeMaxX;
+let computeMaxX = fn(17538).computeMaxX;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const GestureConstants = fn(11769);
 ({

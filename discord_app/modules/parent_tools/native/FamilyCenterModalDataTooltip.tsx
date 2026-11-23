@@ -81,7 +81,7 @@ let obj = {
   [USER_INTERACTION]: fn(7672).ChatIcon,
   [USER_CALLED]: fn(12473).PhoneIcon,
   [USER_ADD]: fn(5598).FriendsIcon,
-  [GUILD_ADD]: fn(14783).ServerGridIcon,
+  [GUILD_ADD]: fn(14785).ServerGridIcon,
   [GUILD_INTERACTION]: fn(7674).ThreadIcon,
   [PURCHASES]: fn(7854).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(5622).ClockIcon,

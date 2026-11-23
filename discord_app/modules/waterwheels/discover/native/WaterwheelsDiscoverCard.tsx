@@ -559,7 +559,7 @@ function GamePoster(game) {
     return onAction(obj, "identity");
   };
   const items3 = [
-    closure_11(game(17820).GameCoverFromURLs, {
+    closure_11(game(17822).GameCoverFromURLs, {
       gameId: game.gameId,
       name: game.name,
       coverUrl: game.coverUrl,

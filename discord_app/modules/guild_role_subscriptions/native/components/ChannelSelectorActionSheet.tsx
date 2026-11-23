@@ -23,7 +23,7 @@ function ChannelRow(channel) {
   ({ selected, guild, start, end } = channel);
   let str = onChannelSelected(5529)(channel);
   items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(16645).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(16647).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);

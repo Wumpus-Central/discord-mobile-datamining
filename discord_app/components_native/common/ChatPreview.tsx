@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Promise",
           shouldInitialScroll: "Array",
-          animated: 0,
-          scrollPosition: 1,
-          focusTargetId: 4,
+          animated: 6.183,
+          scrollPosition: 1.683,
+          focusTargetId: 0,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {

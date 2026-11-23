@@ -36,16 +36,16 @@ const module_1653 = _mod1653;
 
 const closeVoicePanelsDefault = tmp2(10623);
 const calculateVoicePanelHeaderSpecsDefault = tmp2(11755);
-const useControlsLockDefault = tmp2(19240);
-const useControlsHoverGestureDefault = tmp2(19246);
-const VoicePanelHeaderDefault = tmp2(19247);
-const VoicePanelCardViewDefault = tmp2(19269);
-const VoicePanelPreJoinContentDefault = tmp2(19303);
-const VoicePanelVoiceChannelAppDefault = tmp2(19307);
-const VoicePanelSystemUIManagerDefault = tmp2(19310);
-const VoicePanelAccessibilityViewDefault = tmp2(19311);
-const VoicePanelDismissableContentDefault = tmp2(19312);
-const VoicePanelControlsDefault = tmp2(19332);
+const useControlsLockDefault = tmp2(19242);
+const useControlsHoverGestureDefault = tmp2(19248);
+const VoicePanelHeaderDefault = tmp2(19249);
+const VoicePanelCardViewDefault = tmp2(19271);
+const VoicePanelPreJoinContentDefault = tmp2(19305);
+const VoicePanelVoiceChannelAppDefault = tmp2(19309);
+const VoicePanelSystemUIManagerDefault = tmp2(19312);
+const VoicePanelAccessibilityViewDefault = tmp2(19313);
+const VoicePanelDismissableContentDefault = tmp2(19314);
+const VoicePanelControlsDefault = tmp2(19334);
 require = fn;
 function NOOP() {}
 function log() {
@@ -2689,12 +2689,12 @@ export default noop.memo(function VoicePanelUI() {
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19242).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19244).VoicePanelContentWithDock, obj23);
     }
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
     const obj24 = { children: null };
-    items37[2] = closure_18(tmp2(isDockEnabled ? 19314 : 19324), {});
+    items37[2] = closure_18(tmp2(isDockEnabled ? 19316 : 19326), {});
     tmp2 = VoicePanelControlsDefault;
     const obj25 = { gestureState: sharedValue4 };
     tmp105Result3 = closure_18(tmp2, obj25);

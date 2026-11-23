@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef14802 from "../../../../../_runtime/metro/14802__.js";
+import _modDef14804 from "../../../../../_runtime/metro/14804__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ let obj2 = {
   wrapper: {
     alignSelf: "center",
     marginTop: 50,
-    marginBottom: fn(14769).VISIBILITY_OFFSET,
+    marginBottom: fn(14771).VISIBILITY_OFFSET,
     maxWidth: 800,
     paddingHorizontal: 16,
     width: "100%",
@@ -37,7 +37,7 @@ let obj2 = {
 let obj3 = {
   alignSelf: "center",
   marginTop: 50,
-  marginBottom: fn(14769).VISIBILITY_OFFSET,
+  marginBottom: fn(14771).VISIBILITY_OFFSET,
   maxWidth: 800,
   paddingHorizontal: 16,
   width: "100%",
@@ -217,7 +217,7 @@ export default function GuildBoostingMarketingFaq() {
           children: getQuestion.getQuestion(),
         }),
       ];
-      const obj4 = { source: _modDef14802, style: null };
+      const obj4 = { source: _modDef14804, style: null };
       const items2 = [closure_0.questionIcon];
       let questionIconExpanded = tmp;
       if (tmp) {

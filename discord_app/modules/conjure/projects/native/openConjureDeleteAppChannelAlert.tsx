@@ -42,7 +42,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(18929)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(18931)(conjureServerApp), done: false };
                 return obj4;
               }
             }

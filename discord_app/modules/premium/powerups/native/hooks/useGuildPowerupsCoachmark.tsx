@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import useGetGuildPowerupBannerImage from "../../hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsBoostGemDefault from "../GuildPowerupsBoostGem.tsx";
 import GuildPowerupsImageDefault from "../GuildPowerupsImage.tsx";
-import _modDef17686 from "../../../../../../discord_assets/assets/premium/powerups/level_background.png.js";
-import _modDef17687 from "../../../../../../discord_assets/assets/powerups/server-theme-powerup-static.png.js";
+import _modDef17688 from "../../../../../../discord_assets/assets/premium/powerups/level_background.png.js";
+import _modDef17689 from "../../../../../../discord_assets/assets/powerups/server-theme-powerup-static.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -178,7 +178,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef17686;
+              let str = _modDef17688;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -251,7 +251,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
               true,
             );
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef17687;
+              guildPowerupBannerImage = _modDef17689;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             items = [,];

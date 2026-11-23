@@ -17,7 +17,7 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(17860);
+const GuildsBarConstants = fn(17862);
 ({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1071).EMPTY_NUX_SERVER;
 const MODE_CHANGE_PHYSICS = fn(9420).MODE_CHANGE_PHYSICS;
@@ -168,7 +168,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const intl2 = tmp(1112).intl;
     obj17.children = intl2.string(tmp(1112).t["3S2xmm"]);
     obj16.title = closure_11(tmp(5504).Text, obj17);
-    obj15.children = closure_11(tmp(17884).HomeDrawerSharedItem, obj16);
+    obj15.children = closure_11(tmp(17886).HomeDrawerSharedItem, obj16);
     tmp21Result = closure_11(tmp3(7324), obj15);
     const tmp3Result4 = tmp3(7324);
   }

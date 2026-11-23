@@ -87,7 +87,7 @@ function FriendsNavigator() {
         return obj;
       },
       getComponent() {
-        return closure_0(18857).default;
+        return closure_0(18859).default;
       },
     }),
     ,
@@ -106,7 +106,7 @@ function FriendsNavigator() {
   obj5.title = intl.string(require("util").t.jD1qzM);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(18863).default;
+    return closure_0(18865).default;
   };
   items[1] = closure_4(closure_6.Screen, obj4);
   const obj6 = { name: "gdm", options: null, getComponent: null };
@@ -115,7 +115,7 @@ function FriendsNavigator() {
   obj7.title = intl2.string(require("util").t["3hF1W4"]);
   obj6.options = obj7;
   obj6.getComponent = function getComponent() {
-    return closure_0(18866).default;
+    return closure_0(18868).default;
   };
   items[2] = closure_4(closure_6.Screen, obj6);
   const obj8 = { name: "add-friend", options: null, getComponent: null };
@@ -124,7 +124,7 @@ function FriendsNavigator() {
   obj9.title = intl3.string(require("util").t.w5uwoI);
   obj8.options = obj9;
   obj8.getComponent = function getComponent() {
-    return closure_0(18867).default;
+    return closure_0(18869).default;
   };
   items[3] = closure_4(closure_6.Screen, obj8);
   const obj10 = { name: "add-friends", options: null, getComponent: null };
@@ -133,7 +133,7 @@ function FriendsNavigator() {
   obj11.title = intl4.string(require("util").t.zIJnA6);
   obj10.options = obj11;
   obj10.getComponent = function getComponent() {
-    return closure_0(18868).default;
+    return closure_0(18870).default;
   };
   items[4] = closure_4(closure_6.Screen, obj10);
   const obj12 = { name: "username-search", options: null, getComponent: null };
@@ -142,7 +142,7 @@ function FriendsNavigator() {
   obj13.title = intl5.string(require("util").t.QzVsOs);
   obj12.options = obj13;
   obj12.getComponent = function getComponent() {
-    return closure_0(18879).default;
+    return closure_0(18881).default;
   };
   items[5] = closure_4(closure_6.Screen, obj12);
   const obj14 = { name: "suggested-friends", options: null, getComponent: null };
@@ -151,7 +151,7 @@ function FriendsNavigator() {
   obj15.title = intl6.string(require("util").t["1uAmCw"]);
   obj14.options = obj15;
   obj14.getComponent = function getComponent() {
-    return closure_0(18880).default;
+    return closure_0(18882).default;
   };
   items[6] = closure_4(closure_6.Screen, obj14);
   const obj16 = { name: "requests-settings", options: null, getComponent: null };
@@ -160,7 +160,7 @@ function FriendsNavigator() {
   obj17.title = intl7.string(require("util").t.XT4hVl);
   obj16.options = obj17;
   obj16.getComponent = function getComponent() {
-    return closure_0(18881).default;
+    return closure_0(18883).default;
   };
   items[7] = closure_4(closure_6.Screen, obj16);
   items[8] = closure_4(closure_6.Screen, {
@@ -180,7 +180,7 @@ function FriendsNavigator() {
       return obj;
     },
     getComponent() {
-      return closure_0(18883).default;
+      return closure_0(18885).default;
     },
   });
   const obj19 = { name: "spam-requests", options: null, getComponent: null };
@@ -189,7 +189,7 @@ function FriendsNavigator() {
   obj20.title = intl8.string(require("util").t.oHVeHc);
   obj19.options = obj20;
   obj19.getComponent = function getComponent() {
-    return closure_0(18886).default;
+    return closure_0(18888).default;
   };
   items[9] = closure_4(closure_6.Screen, obj19);
   const obj21 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -198,7 +198,7 @@ function FriendsNavigator() {
   obj22.title = intl9.string(require("util").t.tFY5Zb);
   obj21.options = obj22;
   obj21.getComponent = function getComponent() {
-    return closure_0(18887).default;
+    return closure_0(18889).default;
   };
   items[10] = closure_4(closure_6.Screen, obj21);
   obj2.children = items;

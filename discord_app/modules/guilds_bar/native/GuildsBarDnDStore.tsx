@@ -16,7 +16,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "description",
+    overSpecs: "disabled",
     dropSpecs: "isArray",
     dragRegion: require("../../../../_runtime/metro/01653__.js").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
+      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "add" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -124,7 +124,7 @@ export function useItemDragState(guildId, flag) {
       if (null == dropSpecs) {
         const obj2 = {
           isDragTarget: false,
-          dragState: "description",
+          dragState: "disabled",
           overState: "isArray",
           itemSize: null,
           dragDropInProgress,

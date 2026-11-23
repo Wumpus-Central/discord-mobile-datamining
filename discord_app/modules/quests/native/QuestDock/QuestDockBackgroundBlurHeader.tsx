@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const QuestDockMode = fn(6558).QuestDockMode;
-const QuestDockConstants = fn(16473);
+const QuestDockConstants = fn(16475);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -488,7 +488,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp71Result = tmp71(tmp7(16579), obj10);
+      let tmp71Result = tmp71(tmp7(16581), obj10);
     }
     const items20 = [tmp71Result, ,];
     let tmp71Result2 = children;
@@ -530,7 +530,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     let tmp74Result = !flag;
     if (!flag) {
       const obj18 = { children: null };
-      const items27 = [tmp68Result, tmp71(tmp7(16581), {})];
+      const items27 = [tmp68Result, tmp71(tmp7(16583), {})];
       obj18.children = items27;
       tmp74Result = closure_14(closure_13, obj18);
     }
@@ -609,7 +609,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj9.children = items20;
     return closure_14(tmp7(1653).View, obj9);
   }
-  tmp71Result = tmp71(tmp7(16544), {
+  tmp71Result = tmp71(tmp7(16546), {
     layoutAnimatedStyle: animatedStyle5,
     opacityAnimatedStyle: animatedStyle6,
     layoutAnimation: questDockHeaderLayoutAnimation,

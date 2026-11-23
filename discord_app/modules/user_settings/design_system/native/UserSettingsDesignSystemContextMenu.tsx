@@ -9,9 +9,9 @@ import _modDef8704 from "../../../../../_runtime/metro/08704__.js";
 import _modDef12006 from "../../../../../_runtime/metro/12006__.js";
 import _modDef12011 from "../../../../../_runtime/metro/12011__.js";
 import _modDef13727 from "../../../../../_runtime/metro/13727__.js";
-import _modDef14836 from "../../../../../_runtime/metro/14836__.js";
-import _modDef17229 from "../../../../../_runtime/metro/17229__.js";
-import _modDef17230 from "../../../../../_runtime/metro/17230__.js";
+import _modDef14838 from "../../../../../_runtime/metro/14838__.js";
+import _modDef17231 from "../../../../../_runtime/metro/17231__.js";
+import _modDef17232 from "../../../../../_runtime/metro/17232__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,9 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant:
-              -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002053837551692066,
-            action: 36924234065951600000,
+            variant: true,
+            action: "attachEvents",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -75,9 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant:
-            -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002053837551692066,
-          action: 36924234065951600000,
+          variant: true,
+          action: "attachEvents",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -113,12 +111,12 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
   _modDef13727,
-  _modDef14836,
+  _modDef14838,
   _modDef8704,
   _modDef12011,
   _modDef5623,
-  _modDef17229,
-  _modDef17230,
+  _modDef17231,
+  _modDef17232,
   _modDef12006,
 ];
 let closure_8 = [

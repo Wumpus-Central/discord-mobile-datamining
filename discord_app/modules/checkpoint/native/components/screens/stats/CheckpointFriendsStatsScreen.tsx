@@ -387,7 +387,7 @@ export default function CheckpointFriendsStatsScreen(arg0) {
         secondUser: null,
         twoFriends: null,
         isReducedMotion: null,
-        artboardFrame: "add",
+        artboardFrame: "disabled",
       };
       let user3;
       if (stateFromStores1 != null) {

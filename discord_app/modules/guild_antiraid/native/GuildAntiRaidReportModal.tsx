@@ -90,7 +90,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15187);
+const GuildReportRaidModalConstants = fn(15189);
 ({
   getReportRaidHelpArticleURL: metroImportDefault,
   getReportRaidTypeLabel: closure_8,

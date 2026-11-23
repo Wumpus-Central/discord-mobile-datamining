@@ -177,7 +177,7 @@ function resolveMessageCodedLinks(content) {
                                                           return obj3;
                                                         } else {
                                                           const useGameOrganizationInviteFetch =
-                                                            tmp4(19569).useGameOrganizationInviteFetch;
+                                                            tmp4(19571).useGameOrganizationInviteFetch;
                                                           items = [code];
                                                           v1 = 1;
                                                           dependencyMap = 1;
@@ -423,7 +423,7 @@ function resolveMessageCodedLinks(content) {
                                                               return obj3;
                                                             } else {
                                                               const useGameOrganizationInviteFetch =
-                                                                tmp4(19569).useGameOrganizationInviteFetch;
+                                                                tmp4(19571).useGameOrganizationInviteFetch;
                                                               items = [code];
                                                               v1 = 1;
                                                               dependencyMap = 1;

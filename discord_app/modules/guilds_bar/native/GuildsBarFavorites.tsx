@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(17827)(closure_1_5);
+        closure_1_1(17829)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(17654)();
+        closure_1_1(17656)();
       },
     }),
     [],
@@ -66,8 +66,8 @@ export default noop.memo(function GuildsBarFavorites() {
     onAccessibilityAction,
     label: null,
     externalChildren: null,
-    expandedChildren: null,
-    children: "quest_open_game_link",
+    expandedChildren: false,
+    children: true,
   };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
@@ -90,7 +90,7 @@ export default noop.memo(function GuildsBarFavorites() {
     onAccessibilityAction,
     label: null,
     externalChildren: null,
-    expandedChildren: null,
-    children: "quest_open_game_link",
+    expandedChildren: false,
+    children: true,
   });
 });

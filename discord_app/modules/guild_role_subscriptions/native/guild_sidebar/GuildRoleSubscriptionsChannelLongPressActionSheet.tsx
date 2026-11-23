@@ -7,7 +7,7 @@ import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _modDef13733 from "../../../../../_runtime/metro/13733__.js";
 import ChannelActionSheetUtils from "../../../channel/native/ChannelActionSheetUtils.tsx";
-import _modDef17620 from "../../../../../_runtime/metro/17620__.js";
+import _modDef17622 from "../../../../../_runtime/metro/17622__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,7 +38,7 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2)];
   const obj5 = { leading: null, label: null, onPress: null };
   const obj4 = { disableColor: true, source: _modDef13733 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef17620 });
+  obj5.leading = closure_5(native.Icon, { source: _modDef17622 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

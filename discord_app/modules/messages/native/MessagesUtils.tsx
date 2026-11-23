@@ -283,7 +283,13 @@ export function getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpRes
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "a" };
+          const obj3 = {
+            sourceType: "embed",
+            source: tmp8,
+            mediaType: "image",
+            mediaUrl: tmp8.url,
+            contentType: "Array",
+          };
           return obj3;
         }
       }

@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef15063 from "../../../../../../../_runtime/metro/15063__.js";
-import _modDef17620 from "../../../../../../../_runtime/metro/17620__.js";
+import _modDef15065 from "../../../../../../../_runtime/metro/15065__.js";
+import _modDef17622 from "../../../../../../../_runtime/metro/17622__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -306,7 +306,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   const obj5 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef15063,
+    source: _modDef15065,
     onPress: handleShare,
     accessibilityLabel: null,
   };
@@ -314,7 +314,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5)];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef17620;
+  obj6.source = _modDef17622;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
   Pressable: metroImportDefault,
   View: closure_8,
 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17821);
+const InterestGamePickerConstants = fn(17823);
 ({
   FOOTER_BORDER_WIDTH: closure_11,
   GRID_COLUMNS: closure_12,
@@ -454,7 +454,7 @@ export default function InterestGamePicker(catalog) {
           const obj2 = {};
           const merged = Object.assign(_undefined2);
           const merged1 = Object.assign(arg0);
-          obj2.sample_rate = c0(17824).COVER_LOAD_SAMPLE_RATE;
+          obj2.sample_rate = c0(17826).COVER_LOAD_SAMPLE_RATE;
           return c1(1255).track(callback.WATERWHEELS_INTEREST_COVER_LOADED, obj2);
         },
         (arg0) => {
@@ -1140,7 +1140,7 @@ export default function InterestGamePicker(catalog) {
             items = [,];
             ({ screen: arr[0], tileWrapper: arr[1] } = gridRow);
             obj2.style = items;
-            const items1 = [callback1(c1(17841), obj2), callback1(c1(17836), { radius })];
+            const items1 = [callback1(c1(17843), obj2), callback1(c1(17838), { radius })];
             obj.children = items1;
             return closure_24(c8, obj, arg1);
           }),

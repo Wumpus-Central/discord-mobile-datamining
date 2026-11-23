@@ -59,7 +59,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(15832, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(15834, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;

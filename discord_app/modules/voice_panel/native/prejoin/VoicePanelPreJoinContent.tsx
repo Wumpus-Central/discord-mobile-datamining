@@ -260,7 +260,7 @@ function ActivityInfo(activity) {
     const obj9 = { style: tmp.previewImage, children: null };
     const tmp2Result = tmp2(7324);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(19289), obj10);
+    obj9.children = closure_25(tmp2(19291), obj10);
     const items7 = [closure_25(tmp2(7324), obj9)];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
     const tmp2Result3 = tmp2(7324);
@@ -566,7 +566,7 @@ const MODE_CHANGE_PHYSICS = fn(11750).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11753).EDGE_GUTTER;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(15013).VoiceChannelWarningSurfaces;
+const constants4 = fn(15015).VoiceChannelWarningSurfaces;
 const Features = fn(5658).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -861,7 +861,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11749));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(18036)(channelId);
+  const tmp2 = guildId(18038)(channelId);
   dependencyMap = tmp2;
   items = [
     SortedVoiceStateStore,
@@ -911,7 +911,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(19306).areVoicePanelPreJoinContentPropsEqual,
+    channelId(19308).areVoicePanelPreJoinContentPropsEqual,
   );
   return closure_25(channelId(4974).TransitionItem, { item: stateFromStores, renderItem });
 });

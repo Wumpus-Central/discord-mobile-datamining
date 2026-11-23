@@ -123,7 +123,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14580)({
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14582)({
     userId: user.id,
     currentUserId: currentUser.id,
     guildId,
@@ -133,7 +133,7 @@ export default function UserProfileActivityTab(user) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(14583);
+        const tmp7 = user(14585);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -170,5 +170,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(14580)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(14582)({ userId: user.id, currentUserId: currentUser.id, guildId });
 }

@@ -91,9 +91,9 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       let tmp11 = "none" !== placement && obtainableOrbRewards > 0;
       if (tmp11) {
         tmp11 =
-          orbShopProducts.length >= tmp(16383).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(16385).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         const tmp12 =
-          orbShopProducts.length >= tmp(16383).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(16385).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
       }
       if (!tmp11) {
         const obj2 = { style: tmp3.container, children: null };

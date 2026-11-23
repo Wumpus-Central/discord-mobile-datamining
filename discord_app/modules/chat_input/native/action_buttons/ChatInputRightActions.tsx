@@ -121,7 +121,7 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "Path",
-    shouldShowThread: "Lietuvi\u0161kai",
+    shouldShowThread: "Suomi",
   });
   return metroImportDefault(_modDef1653.View, obj2);
 }

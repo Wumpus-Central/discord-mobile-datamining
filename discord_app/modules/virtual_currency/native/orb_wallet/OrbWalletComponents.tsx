@@ -16,7 +16,7 @@ import _modDef13008 from "../../../../../_runtime/metro/13008__.js";
 import _modDef13797 from "../../../../../_runtime/metro/13797__.js";
 import VirtualCurrencyAnalyticsUtil from "../../VirtualCurrencyAnalyticsUtil.tsx";
 import OrbWalletUtils from "OrbWalletUtils.native.tsx";
-import _modDef16303 from "../../../../../discord_assets/assets/orbs/balance_widget_card_asset.png.js";
+import _modDef16305 from "../../../../../discord_assets/assets/orbs/balance_widget_card_asset.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,9 +39,9 @@ function OrbWalletPremiumHeaderInlineText(arg0) {
   return refs(React4, obj);
 }
 function OrbWalletNitroUpsellTag() {
-  orbWalletAnalyticsPage = orbWalletAnalyticsPage(16300).useOrbWalletAnalyticsPage();
-  let obj = orbWalletAnalyticsPage(16300);
-  openNitroCheckoutFromOrbWallet = orbWalletAnalyticsPage(16300).useOpenNitroCheckoutFromOrbWallet(
+  orbWalletAnalyticsPage = orbWalletAnalyticsPage(16302).useOrbWalletAnalyticsPage();
+  let obj = orbWalletAnalyticsPage(16302);
+  openNitroCheckoutFromOrbWallet = orbWalletAnalyticsPage(16302).useOpenNitroCheckoutFromOrbWallet(
     openNitroCheckoutFromOrbWallet(7539).ORB_WALLET_HEADER_NITRO_UPSELL_CTA,
   );
   items = [orbWalletAnalyticsPage, openNitroCheckoutFromOrbWallet];
@@ -149,7 +149,7 @@ export function OrbBalanceHeader(arg0) {
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.headerAssetSlot, importantForAccessibility: "no-hide-descendants", children: null };
   const obj3 = { source: null, style: null, resizeMode: "contain" };
-  const obj4 = { uri: _modDef16303 };
+  const obj4 = { uri: _modDef16305 };
   obj3.source = obj4;
   obj3.style = tmp.headerAsset;
   obj2.children = refs(FastImageDefault, obj3);
@@ -282,8 +282,8 @@ export function OrbChallengesCard(title) {
 }
 export function OrbWalletFooter() {
   const tmp = closure_13();
-  orbWalletAnalyticsPage = orbWalletAnalyticsPage(16300).useOrbWalletAnalyticsPage();
-  let obj = orbWalletAnalyticsPage(16300);
+  orbWalletAnalyticsPage = orbWalletAnalyticsPage(16302).useOrbWalletAnalyticsPage();
+  let obj = orbWalletAnalyticsPage(16302);
   const totalRedeemed = orbWalletAnalyticsPage(9566).useFetchVirtualCurrencyTotalRedeemed().totalRedeemed;
   items = [orbWalletAnalyticsPage];
   const items1 = [orbWalletAnalyticsPage];

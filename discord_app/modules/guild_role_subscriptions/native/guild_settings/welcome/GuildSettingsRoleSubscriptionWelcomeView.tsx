@@ -110,7 +110,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(19937, dependencyMap.paths),
+      asyncRequireImpl(19939, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -249,9 +249,9 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const React5 = fn(16608).CREATOR_REVENUE_PORTAL_URL;
+const React5 = fn(16610).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1071).GuildSettingsSections;
-const refs = fn(19933).CreatorMonetizationOnboardingMarketingSection;
+const refs = fn(19935).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(4913);

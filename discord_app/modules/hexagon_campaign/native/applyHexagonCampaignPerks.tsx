@@ -94,7 +94,7 @@ let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
   }
   const obj17 = {};
   obj17[closure_131_5.CLIENT_THEME] = () => {
-    dependencyMap(16405).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
+    dependencyMap(16407).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
     return Promise.resolve(true);
   };
   obj17[closure_131_5.APP_ICON] = () =>
@@ -102,7 +102,7 @@ let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
       showErrorToast: false,
     });
   obj17[closure_131_5.DISPLAY_NAME_STYLE] = () =>
-    dependencyMap(16408).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
+    dependencyMap(16410).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
   closure_130_10 = obj17;
   closure_130_11 = {
     previousPerkValues,

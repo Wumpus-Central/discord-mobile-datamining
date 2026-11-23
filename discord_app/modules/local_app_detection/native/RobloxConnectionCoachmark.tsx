@@ -156,7 +156,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-    appInstalled.isAppInstalled(stateFromStores(14992).DetectableAppNames.ROBLOX),
+    appInstalled.isAppInstalled(stateFromStores(14994).DetectableAppNames.ROBLOX),
   );
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];

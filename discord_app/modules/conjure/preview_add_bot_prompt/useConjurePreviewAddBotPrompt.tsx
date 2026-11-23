@@ -87,10 +87,10 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
             c3 = 0;
             closure_128_4(false);
             if (obj.conjurePreviewBotAdded(closure_128_0)) {
-              const result = tmp3(14741).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
-              const obj2 = tmp3(14741);
+              const result = tmp3(14743).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
+              const obj2 = tmp3(14743);
             }
-            obj = tmp3(14741);
+            obj = tmp3(14743);
           }
           c3 = 0;
           closure_128_4(false);

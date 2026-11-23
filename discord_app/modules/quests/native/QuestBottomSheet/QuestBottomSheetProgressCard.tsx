@@ -198,7 +198,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
     tmp7 = isQuestProgressing;
   }
   obj5.loading = !tmp7;
-  const items2 = [defaultRewardName(isQuestProgressing(16516), obj5)];
+  const items2 = [defaultRewardName(isQuestProgressing(16518), obj5)];
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj6 = { style: tmp.instructionsText, variant: "body-sm/semibold", color: "text-subtle", children: memo };
@@ -241,7 +241,7 @@ export function QuestBottomSheetProgressCardWatchTask(quest) {
   );
   const obj = quest(9958);
   let isHeroVideoSupportedResult = null != memo;
-  const obj2 = quest(16508);
+  const obj2 = quest(16510);
   const obj3 = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   if (isHeroVideoSupportedResult) {
     isHeroVideoSupportedResult = tmp2(9955).isHeroVideoSupported(memo.mimetype);
@@ -257,7 +257,7 @@ export function QuestBottomSheetProgressCardWatchTask(quest) {
   } else {
     YsCuyF = tmp2(1112).t["74KqrR"];
   }
-  const watchTaskPressHandler = quest(16508).useWatchTaskPressHandler({
+  const watchTaskPressHandler = quest(16510).useWatchTaskPressHandler({
     questId: quest.id,
     sourceQuestContent: quest.sourceQuestContent,
   });

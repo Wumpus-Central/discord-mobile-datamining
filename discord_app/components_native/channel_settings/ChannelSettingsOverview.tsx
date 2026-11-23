@@ -127,7 +127,7 @@ const ChannelRecord = fn(4766);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(4780).isGuildNSFW;
-let closure_25 = fn(18925).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(18927).ChannelSettingsAutoFocusElement;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_26,
@@ -941,7 +941,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(18931).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(18933).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1405,11 +1405,11 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(7045).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(4772).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(18939).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(18941).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
-      tmpResult = closure_47(GridSquareIcon(14835).ListViewIcon, {});
+      tmpResult = closure_47(GridSquareIcon(14837).ListViewIcon, {});
     }
     obj3.icon = tmpResult;
     obj3.onPress = function onPress() {
@@ -1768,7 +1768,7 @@ prototype["renderCategory"] = function renderCategory() {
         const obj = self(5529);
       }
       const obj2 = {
-        icon: closure_47(tmp7(17671).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(17673).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,

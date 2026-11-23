@@ -31,11 +31,11 @@ let obj5 = {
   checkout: fn(7675).FolderIcon,
   edit: fn(11242).PencilIcon,
   remote: fn(13765).CloudIcon,
-  commits: fn(18684).ListNumberedIcon,
+  commits: fn(18686).ListNumberedIcon,
   calendar: fn(8048).CalendarIcon,
-  save: fn(18686).SaveIcon,
+  save: fn(18688).SaveIcon,
   objects: fn(12471).ServerIcon,
-  download: fn(18688).CloudDownloadIcon,
+  download: fn(18690).CloudDownloadIcon,
   size: fn(10943).SpeedometerIcon,
   file: fn(11148).FileIcon,
 };
@@ -46,9 +46,9 @@ let items1 = [fn(7763).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
 obj6.warning = items1;
 let items2 = [fn(7231).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
 obj6.error = items2;
-let items3 = [fn(17194).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
+let items3 = [fn(17196).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
 obj6.ahead = items3;
-let items4 = [fn(17196).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
+let items4 = [fn(17198).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
 obj6.behind = items4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugGitSection.tsx");

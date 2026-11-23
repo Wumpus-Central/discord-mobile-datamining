@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../../../actions/native/CreateChannelModalActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef17773 from "../../../../../../../_runtime/metro/17773__.js";
-import _modDef17774 from "../../../../../../../_runtime/metro/17774__.js";
+import _modDef17775 from "../../../../../../../_runtime/metro/17775__.js";
+import _modDef17776 from "../../../../../../../_runtime/metro/17776__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../../../stores/PermissionStore.tsx";
 
@@ -63,13 +63,13 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const obj = guild(563);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper];
-  const obj2 = guild(16478);
-  items4[1] = { paddingBottom: guild(16478).useYouBarTotalHeight(16) };
+  const obj2 = guild(16480);
+  items4[1] = { paddingBottom: guild(16480).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef17773, disableColor: true };
+    const obj7 = { source: _modDef17775, disableColor: true };
     obj6.icon = closure_7(tmp2(1186).Icon, obj7);
     const intl = tmp2(1112).intl;
     obj6.label = intl.string(tmp2(1112).t["Yhi9/N"]);
@@ -80,8 +80,8 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const items5 = [canCustomizeGuild];
   const obj8 = { style: tmp.content, children: null };
   const obj9 = { source: null };
-  const obj4 = { paddingBottom: guild(16478).useYouBarTotalHeight(16) };
-  obj9.source = _modDef17774;
+  const obj4 = { paddingBottom: guild(16480).useYouBarTotalHeight(16) };
+  obj9.source = _modDef17776;
   const items6 = [closure_7(FastImageDefault, obj9), , ,];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-sm/semibold", style: null, children: null };
   const items7 = [,];

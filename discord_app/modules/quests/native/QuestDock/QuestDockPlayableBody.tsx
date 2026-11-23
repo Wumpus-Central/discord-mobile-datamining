@@ -41,11 +41,11 @@ export default noop.memo(function QuestDockPlayableBody() {
         sourceQuestContent: recordPlayableLaunchResult(6561).QuestContent.QUEST_BAR_MOBILE,
         impressionId: tmp25,
       });
-      recordPlayableLaunchResult = recordPlayableLaunchResult(16602).recordPlayableLaunch(questDockPlayable, tmp25);
+      recordPlayableLaunchResult = recordPlayableLaunchResult(16604).recordPlayableLaunch(questDockPlayable, tmp25);
       closure_132_0 = recordPlayableLaunchResult;
       constants = 1;
       setRestingQuestDockMode(constants.COLLAPSED);
-      const tmp52 = recordPlayableLaunchResult(16602);
+      const tmp52 = recordPlayableLaunchResult(16604);
       const completePlayableLaunch = tmp52.completePlayableLaunch;
       yield completePlayableLaunch(12199).launch({
         applicationId: questDockPlayable.applicationId,
@@ -53,9 +53,9 @@ export default noop.memo(function QuestDockPlayableBody() {
       });
       if (1 === tmp7) {
         constants = 0;
-        const result = recordPlayableLaunchResult(16602).completePlayableLaunch(closure_132_0, false);
+        const result = recordPlayableLaunchResult(16604).completePlayableLaunch(closure_132_0, false);
         c7 = 3;
-        recordPlayableLaunchResult(16602);
+        recordPlayableLaunchResult(16604);
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;

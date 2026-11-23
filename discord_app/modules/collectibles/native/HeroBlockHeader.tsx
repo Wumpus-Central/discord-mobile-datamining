@@ -245,9 +245,9 @@ export default function HeroBlockHeader(heroBlock) {
     return closure_9(closure_8, obj50);
   } else {
     if (tmpResult.isThemeDark(tmp4)) {
-      let tmp3Result = tmp3(17293);
+      let tmp3Result = tmp3(17295);
     } else {
-      tmp3Result = tmp3(17294);
+      tmp3Result = tmp3(17296);
     }
     tmpResult = tmp(4920);
   }

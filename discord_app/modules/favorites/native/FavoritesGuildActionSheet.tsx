@@ -36,7 +36,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj5.onPress = function onPress() {
     onClose();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(17658, dependencyMap.paths),
+      asyncRequireImpl(17660, dependencyMap.paths),
       undefined,
       "FavoritesGuildCleanupModal",
     );

@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(16297).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(16299).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
@@ -179,10 +179,10 @@ export function useOrbBalanceEntrypoint(location) {
     obj.useVirtualCurrencyMobileEnabled().enabled;
   _require = tmp3;
   let obj2 = require("OrbchievementsExperiment");
-  const orbChallengeUnreadState = tmp(16301).useOrbChallengeUnreadState({ enabled: tmp3 });
+  const orbChallengeUnreadState = tmp(16303).useOrbChallengeUnreadState({ enabled: tmp3 });
   items = [tmp3];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  const tmpResult = tmp(16301);
+  const tmpResult = tmp(16303);
   return {
     isOrbchievementsEnabled: tmp3,
     hasUnreadUpdate,

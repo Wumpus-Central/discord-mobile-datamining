@@ -59,7 +59,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   obj3.accessibilityLabel = intl.string(user(1112).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(15938).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(15940).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
   const intl2 = user(1112).intl;
   obj3.accessibilityHint = intl2.string(user(1112).t["4lAcxv"]);
@@ -92,5 +92,5 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
     return closure_7(user(7030).PressableHighlight, obj3);
   }
   STATIC = tmp2(9455).EffectDisplayType.STATIC;
-  const obj5 = user(15938);
+  const obj5 = user(15940);
 }

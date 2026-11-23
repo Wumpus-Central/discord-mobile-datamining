@@ -62,7 +62,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -130,11 +130,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "add" };
     let first = obj3;
   } else {
     first = mapped[0];
@@ -182,7 +182,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -250,7 +250,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "disabled", levelPowerup: "isArray" };
     }
   });
 }

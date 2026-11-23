@@ -19,7 +19,7 @@ const require = globalThis.__r;
 require = fn;
 fn(17).BackHandler;
 const AnalyticsTrackingStore = fn(8254);
-const ShareStore = fn(15635);
+const ShareStore = fn(15637);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_8 = fn(13284).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
@@ -126,7 +126,7 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_9(tmp9(7190).SceneLoadingIndicator, {}), , ,];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_9(tmp9(19037).ActionSheetContainer, obj5);
+    items5[1] = closure_9(tmp9(19039).ActionSheetContainer, obj5);
     items5[2] = closure_9(AppToastContainerDefault, { appChrome: false });
     items5[3] = closure_9(tmp9(5866).AlertModalContainer, {});
     obj3.children = items5;

@@ -669,13 +669,13 @@ export function initSentry() {
               tunnel: `/error-reporting-proxy/${str2}`,
               autoInitializeNativeSdk: false,
               beforeSend,
-              dist: "35620700000000",
+              dist: "35720000000000",
               dsn: SentryStaffDsn,
               environment: ReleaseChannel,
               tracesSampleRate: 0,
               sampleRate: 1,
               ignoreErrors,
-              release: "discord_android@356.7.0-2+356207",
+              release: "discord_android@357.0.0-2+357200",
               tracePropagationTargets: null,
               integrations: null,
               beforeBreadcrumb: null,
@@ -710,7 +710,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35620700000000");
+            _mod674.setTag("buildNumber", "35720000000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

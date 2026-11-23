@@ -42,7 +42,7 @@ function ScoreRow(dimension) {
   const obj2 = { style: tmp.scoreRow, children: null };
   items = [closure_5(dimension(5504).Text, { variant: "body-sm/medium", color: "text-default", children: result })];
   const obj3 = { style: tmp.stars, accessibilityRole: "radiogroup", accessibilityLabel: result, children: null };
-  const prop = dimension(18618).CONJURE_PUBLISH_RATINGS;
+  const prop = dimension(18620).CONJURE_PUBLISH_RATINGS;
   obj3.children = prop.map((score) =>
     hasOwnProperty(ScoreStar, { dimension, score, value, disabled, onChange }, score),
   );

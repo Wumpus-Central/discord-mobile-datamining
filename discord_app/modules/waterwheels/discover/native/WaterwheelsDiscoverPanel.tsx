@@ -50,7 +50,7 @@ function WaterwheelsDiscoverFeed(enabled) {
   }, []);
   let obj = require("useYouBarTotalHeight");
   let waterwheelsActions = require("useWaterwheelsActions").useWaterwheelsActions(callback);
-  let tmp10 = joiningGuildIds(17803)(enabled);
+  let tmp10 = joiningGuildIds(17805)(enabled);
   ({ snapshot, entries } = tmp10);
   ({ status, retry } = tmp10);
   items = [entries];
@@ -73,7 +73,7 @@ function WaterwheelsDiscoverFeed(enabled) {
   }, items);
   const items1 = [joiningGuildIds, memo];
   const memo1 = memo.useMemo(() => ({ joiningGuildIds, serverRunStartKeys: memo }), items1);
-  const tmp13 = joiningGuildIds(17810)(snapshot.loadId, entries);
+  const tmp13 = joiningGuildIds(17812)(snapshot.loadId, entries);
   const trackAction = tmp13.trackAction;
   ({ visible, viewabilityConfigCallbackPairs } = tmp13);
   let obj2 = require("useWaterwheelsActions");
@@ -206,10 +206,10 @@ function WaterwheelsDiscoverFeed(enabled) {
           callback1(closure_0, type, arg1);
         },
       };
-      obj5.footerAction = closure_1_10(closure_0(17818).ServerActionButton, obj8);
-      obj3.content = closure_1_10(first(17813), obj5);
+      obj5.footerAction = closure_1_10(closure_0(17820).ServerActionButton, obj8);
+      obj3.content = closure_1_10(first(17815), obj5);
       obj2.showActionSheet(obj3);
-      const tmp10 = first(17813);
+      const tmp10 = first(17815);
     } catch (err) {}
   }, items3);
   const items4 = [memo, callback1, callback2, joiningGuildIds];
@@ -234,7 +234,7 @@ function WaterwheelsDiscoverFeed(enabled) {
     const items6 = [tmp.feed, memo2.contentContainer];
     obj4.style = items6;
     let obj5 = { status, onRetry: retry, retryAfterAt: snapshot.retryAfterAt };
-    obj4.children = closure_10(tmp9(17825), obj5);
+    obj4.children = closure_10(tmp9(17827), obj5);
     let obj6 = obj4;
   } else {
     obj6 = { style: tmp.feed, children: null };
@@ -254,7 +254,7 @@ function WaterwheelsDiscoverFeed(enabled) {
     let tmp19Result;
     if ("error" === snapshot.status) {
       const obj13 = { onRetry: retry, retryAfterAt: snapshot.retryAfterAt };
-      tmp19Result = closure_10(tmp2(17825).WaterwheelsDiscoverRefreshError, obj13);
+      tmp19Result = closure_10(tmp2(17827).WaterwheelsDiscoverRefreshError, obj13);
     }
     obj7.ListHeaderComponent = tmp19Result;
     ({ contentContainer: obj8.contentContainerStyle, scrollIndicator: obj8.scrollIndicatorInsets } = memo2);
@@ -318,12 +318,12 @@ export default function WaterwheelsDiscoverPanel(style) {
   const tmp7 = gateReady;
   if (waterwheelsDiscoverEnabled) {
     const obj4 = { style: tmp.content, children: null };
-    const items2 = [closure_10(tmp7(17828), {})];
+    const items2 = [closure_10(tmp7(17830), {})];
     const obj5 = { enabled: waterwheelsDiscoverEnabled };
     items2[1] = closure_10(WaterwheelsDiscoverFeed, obj5, stateFromStoresObject.userId);
     obj4.children = items2;
     tmp9 = closure_11(View, obj4);
   }
   obj3.children = tmp9;
-  return closure_10(gateReady(17570), obj3);
+  return closure_10(gateReady(17572), obj3);
 }

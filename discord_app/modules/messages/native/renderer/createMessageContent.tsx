@@ -1484,7 +1484,11 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp14Result76 = tmp14(tmp5[55]);
     }
-    parseMessageMarkupResult = { content: "Promise", hasSpoilerEmbeds: "board", hasBailedAst: null };
+    parseMessageMarkupResult = {
+      content: "Promise",
+      hasSpoilerEmbeds: "installation",
+      hasBailedAst: "2026-11-apex-launch-latch",
+    };
     const tmp14Result70 = tmp14(tmp5[45]);
   }
   const obj4 = message(tmp5[39]);

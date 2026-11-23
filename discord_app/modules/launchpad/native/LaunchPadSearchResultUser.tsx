@@ -99,8 +99,8 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "913a5e1b2754c1df27088bf73bf21aff",
-    style: "sv-SE.messages.913a5e1b2754c1df27088bf73bf21aff.compiled.messages",
+    streaming: "2729fa208c62e46e0b72396f606417db",
+    style: "hr.messages.2729fa208c62e46e0b72396f606417db.compiled.messages",
     size: "jsona",
     animate: "ConjureAppPictureInPicture",
     typing: null,
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(16721)(channel, { unread });
+  obj4.lastMessage = channel(16723)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

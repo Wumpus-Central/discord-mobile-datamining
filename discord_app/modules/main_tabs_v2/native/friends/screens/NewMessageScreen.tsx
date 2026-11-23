@@ -259,7 +259,7 @@ function ChatPreview(channelId) {
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
   obj4.portal = channelId(1378).isAndroid();
-  items2[1] = closure_17(channelId(18406).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(18408).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -508,7 +508,7 @@ export default function NewMessageScreen(navigation) {
           obj2.channel = {
             id: navigation(6843).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "isArray",
+            parent_id: "add",
           };
           obj.dispatch(obj2);
         };

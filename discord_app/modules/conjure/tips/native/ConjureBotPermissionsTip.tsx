@@ -75,7 +75,7 @@ function BotPermissionsHint(projectId) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(18461).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(18463).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

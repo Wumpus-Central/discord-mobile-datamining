@@ -3,8 +3,8 @@ import MarkupRulesDefault from "../../markup/MarkupRules.tsx";
 import combineMarkupRules from "../../markup/combineMarkupRules.tsx";
 import MarkupParser from "../../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
-const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(18772).createSearchResultLinkPreviewReactRules()];
-const MarkupSearchResultLinkPreviewReactRules = fn(18772);
+const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(18774).createSearchResultLinkPreviewReactRules()];
+const MarkupSearchResultLinkPreviewReactRules = fn(18774);
 const importDefaultResultResult = combineMarkupRules(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");

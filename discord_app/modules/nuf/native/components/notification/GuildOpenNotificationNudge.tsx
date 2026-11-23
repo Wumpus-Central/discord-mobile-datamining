@@ -69,7 +69,7 @@ export function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(16889);
+  let obj2 = stateFromStores3(16891);
   const canSeePushNotificationNudge = stateFromStores(13281).useCanSeePushNotificationNudge();
   let obj3 = stateFromStores(13281);
   const items1 = [UserGuildSettingsStore];
@@ -177,7 +177,7 @@ export function useGuildOpenNudge() {
         PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET,
       );
       const obj3 = { guildId: stateFromStores, markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18162, dependencyMap.paths), c16, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18164, dependencyMap.paths), c16, obj3);
     }
   }, items6);
   const tmpResult2 = stateFromStores(9080);

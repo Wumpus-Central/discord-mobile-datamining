@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(17651).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(17653).useRedesignGuildHeaderHeight(banner);
   height = height(1494)({ ignoreKeyboard: true }).height;
-  const tmp2 = height(17539)();
+  const tmp2 = height(17541)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(17651);
+  const obj = redesignGuildHeaderHeight(17653);
   const fontScale = redesignGuildHeaderHeight(5519).useFontScale();
   closure_4 = tmp4;
   const top = height(1628)().top;

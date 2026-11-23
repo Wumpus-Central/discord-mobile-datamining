@@ -10,7 +10,7 @@ const RPCCommands = fn(1071).RPCCommands;
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 const obj2 = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15678);
+let CONTEXT_MENU_ICON_NAMES = fn(15680);
 obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_DEVICE_PERMISSIONS,
   {
@@ -26,7 +26,7 @@ obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15680);
 obj2[RPCCommands.REQUEST_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.REQUEST_DEVICE_PERMISSIONS,
   {
@@ -35,7 +35,7 @@ obj2[RPCCommands.REQUEST_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPC
       ({ socket: require, args: importDefault } = arg0);
       return (async () => {
         value = {};
-        ({ frame, iframeId } = v1(15670)(require));
+        ({ frame, iframeId } = v1(15672)(require));
         await v1(12308)({ applicationId: frame.applicationId, iframeId, permissions: permissions.permissions });
         value.permissions = value;
         return value;

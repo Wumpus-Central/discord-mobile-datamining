@@ -7,7 +7,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(17314).useCardLayout();
+  const cardLayout = num(17316).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   items = [];
   num = 0;

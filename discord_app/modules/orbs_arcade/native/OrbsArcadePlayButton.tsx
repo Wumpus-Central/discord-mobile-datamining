@@ -127,7 +127,7 @@ export default function OrbsArcadePlayButton(game) {
         variant: "primary",
         text: null,
         disabled: true,
-        onPress: "Boolean",
+        onPress: "Array",
       };
       const intl3 = tmp5(tmp3[6]).intl;
       const obj4 = { count: tmp5(tmp3[18]).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
@@ -138,7 +138,7 @@ export default function OrbsArcadePlayButton(game) {
         variant: "primary",
         text: null,
         disabled: true,
-        onPress: "Boolean",
+        onPress: "Array",
       });
       const tmp5Result3 = tmp5(tmp3[18]);
     }
@@ -151,7 +151,7 @@ export default function OrbsArcadePlayButton(game) {
       variant: "primary",
       text: null,
       disabled: true,
-      onPress: "Boolean",
+      onPress: "Array",
     };
     if (null != result.timeUntilNextRound) {
       const intl2 = tmp5(tmp3[6]).intl;
@@ -171,7 +171,7 @@ export default function OrbsArcadePlayButton(game) {
       variant: "primary",
       text: null,
       disabled: true,
-      onPress: "Boolean",
+      onPress: "Array",
     });
   } else if (canAffordPlay) {
     const obj7 = {

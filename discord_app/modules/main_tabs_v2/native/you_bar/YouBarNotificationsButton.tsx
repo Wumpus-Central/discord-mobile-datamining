@@ -7,7 +7,7 @@ import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 const _modDef1653 = tmp2(1653);
 const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16476);
+const YouBarConstants = fn(16478);
 ({
   YOU_BAR_SPRING_CONFIG: closure_6,
   YOU_BAR_BUTTON_HIT_SLOP: metroImportDefault,
@@ -136,7 +136,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   const obj6 = { style: tmp.iconContainer, children: null };
   const tmp16Result = closure_8(onLongPress(11239).BellIcon, obj2);
   const items4 = [
-    closure_8(onLongPress(17971).YouBarButtonIcon, {
+    closure_8(onLongPress(17973).YouBarButtonIcon, {
       icon: closure_8(onLongPress(11239).BellIcon, obj2),
       hasBadge: stateFromStores > 0 && 0 === value,
       badgeStyle: tmp.overdueReminderDot,
@@ -162,5 +162,5 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   obj4.onLongPress = onLongPress;
   obj4.hitSlop = hitSlop;
   obj5.children = closure_8(onLongPress(7591).IconButton, obj4);
-  return closure_8(onLongPress(17971).YouBarButtonContainer, obj5);
+  return closure_8(onLongPress(17973).YouBarButtonContainer, obj5);
 });

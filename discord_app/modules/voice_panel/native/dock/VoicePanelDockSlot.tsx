@@ -140,7 +140,7 @@ function VoicePanelDockSlotDock(micLive) {
       const items12 = [StyleSheet.absoluteFill, animatedStyle];
       obj5.style = items12;
       obj5.onLayout = callback;
-      obj5.children = metroImportDefault(tmp(17984), { isInSlot: true });
+      obj5.children = metroImportDefault(tmp(17986), { isInSlot: true });
       items11[1] = metroImportDefault(tmp(1653).View, obj5);
       const obj6 = { style: null, pointerEvents: "none", children: null };
       const items13 = [StyleSheet.absoluteFill];

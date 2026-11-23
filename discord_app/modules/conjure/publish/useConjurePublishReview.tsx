@@ -149,8 +149,8 @@ export default function useConjurePublishReview(id, arg1) {
   const trimmed = str.trim();
   let result = null;
   if (tmp14) {
-    result = tmp3(18266).conjureProjectNameError(trimmed);
-    const tmp3Result = tmp3(18266);
+    result = tmp3(18268).conjureProjectNameError(trimmed);
+    const tmp3Result = tmp3(18268);
   }
   isProjectOwner = result;
   const tmp11 = stateFromStores(saving.useState(false), 2);

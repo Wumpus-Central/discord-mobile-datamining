@@ -27,7 +27,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
       areStatesEqual: tmp,
       getStateFromStores: getCurrentUser,
       prevDeps: "Boolean",
-      state: "__workletHash",
+      state: "channel",
     };
     tmp2.current = obj;
   }

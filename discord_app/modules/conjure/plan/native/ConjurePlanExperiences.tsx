@@ -269,7 +269,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   frame: fn(7040).GameControllerIcon,
-  overlay_widget: fn(18271).WindowTopIcon,
+  overlay_widget: fn(18273).WindowTopIcon,
   user_widget: fn(13050).UserCircleIcon,
   bot: fn(12179).RobotIcon,
   commands: fn(12179).RobotIcon,

@@ -89,14 +89,14 @@ const obj3 = {
 };
 obj.experiments = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(17002).BeakerIcon,
+  Icon: fn(17004).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   },
 };
 const obj4 = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(17002).BeakerIcon,
+  Icon: fn(17004).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   },
@@ -151,28 +151,28 @@ const obj7 = {
 };
 obj.dataStorage = {
   headerTitle: "Data Storage",
-  Icon: fn(16955).FileUpIcon,
+  Icon: fn(16957).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   },
 };
 const obj8 = {
   headerTitle: "Data Storage",
-  Icon: fn(16955).FileUpIcon,
+  Icon: fn(16957).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   },
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(16665).PaintPaletteIcon,
+  Icon: fn(16667).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(16665).PaintPaletteIcon,
+  Icon: fn(16667).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
@@ -319,14 +319,14 @@ const obj19 = {
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(16755).EyeDropperIcon,
+  Icon: fn(16757).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
 };
 const obj20 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(16755).EyeDropperIcon,
+  Icon: fn(16757).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
@@ -389,14 +389,14 @@ const obj24 = {
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(17012).CompassIcon,
+  Icon: fn(17014).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
 };
 const obj25 = {
   headerTitle: "Action Sheets",
-  Icon: fn(17012).CompassIcon,
+  Icon: fn(17014).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
@@ -446,7 +446,7 @@ const obj28 = {
 };
 obj29.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(16665).PaintPaletteIcon,
+  Icon: fn(16667).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   },

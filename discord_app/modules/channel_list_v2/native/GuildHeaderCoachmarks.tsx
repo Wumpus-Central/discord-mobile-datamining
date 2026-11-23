@@ -20,12 +20,12 @@ export default function GuildHeaderCoachmarks(arg0) {
     () => PermissionStore.can(Permissions.MANAGE_GUILD, guild),
     items1,
   );
-  stateFromStores(17674)(guild.id);
+  stateFromStores(17676)(guild.id);
   const obj = guild(504);
   const tmp6 = stateFromStores(13402)(guild.id);
   const tmp8 = stateFromStores(13395)(guild.id);
   const items2 = [stateFromStores, guild.premiumProgressBarEnabled];
-  const tmp7 = stateFromStores(17681)();
+  const tmp7 = stateFromStores(17683)();
   const memo = noop.useMemo(() => {
     let tmp = stateFromStores;
     if (stateFromStores) {
@@ -64,12 +64,12 @@ export default function GuildHeaderCoachmarks(arg0) {
   }
   if (guild(4746).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
     const obj5 = { targetRef, guild, markAsDismissed: tmp15 };
-    return jsx(tmp4(17682), { targetRef, guild, markAsDismissed: tmp15 });
+    return jsx(tmp4(17684), { targetRef, guild, markAsDismissed: tmp15 });
   } else if (guild(4746).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
     let tmp19 = null;
     if (null != tmp8) {
       const obj6 = { guildId: guild.id, powerup: tmp8, targetRef, markAsDismissed: tmp12Result[1] };
-      tmp19 = jsx(tmp4(17683), { guildId: guild.id, powerup: tmp8, targetRef, markAsDismissed: tmp12Result[1] });
+      tmp19 = jsx(tmp4(17685), { guildId: guild.id, powerup: tmp8, targetRef, markAsDismissed: tmp12Result[1] });
     }
     return tmp19;
   } else {

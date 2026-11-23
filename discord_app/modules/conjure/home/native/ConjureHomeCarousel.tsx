@@ -29,7 +29,7 @@ const PX_24 = nativeDefault.space.PX_24;
 let obj = {
   games: fn(7040).GameControllerIcon,
   apps: fn(7704).AppsIcon,
-  profile_widget: fn(18626).WidgetsIcon,
+  profile_widget: fn(18628).WidgetsIcon,
   overlay_widget: fn(9904).ScreenIcon,
   automod: fn(10133).ShieldIcon,
   chat_bot: fn(12179).RobotIcon,

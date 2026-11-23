@@ -9,8 +9,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(19712).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(19714);
+const useAutomodRulesList = fn(19714).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(19716);
 ({ useAutomodEditingRuleActions: metroImportDefault, useAutomodEditingRuleState: closure_8 } =
   GuildSettingsAutomodRuleStore);
 const MAX_RULE_NAME_LENGTH = fn(12408).MAX_RULE_NAME_LENGTH;

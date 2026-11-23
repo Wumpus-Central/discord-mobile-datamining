@@ -81,7 +81,7 @@ export default function InterestGuildProfileSheet(guildId) {
   }
   obj6.footerHeight = sum;
   obj6.safeAreaBottom = bottom;
-  interestGuildProfileSheetLayout = guildId(17814).getInterestGuildProfileSheetLayout(obj6);
+  interestGuildProfileSheetLayout = guildId(17816).getInterestGuildProfileSheetLayout(obj6);
   closure_12 = c9(bottom, interestGuildProfileSheetLayout.reservedBottom);
   onLayout = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);

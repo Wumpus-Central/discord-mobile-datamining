@@ -13,9 +13,9 @@ import ScreenIcon from "../../../design/components/Icon/native/redesign/generate
 import _modDef10878 from "../../../../_runtime/metro/10878__.js";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef17907 from "../../../../_runtime/metro/17907__.js";
-import _modDef17908 from "../../../../_runtime/metro/17908__.js";
 import _modDef17909 from "../../../../_runtime/metro/17909__.js";
+import _modDef17910 from "../../../../_runtime/metro/17910__.js";
+import _modDef17911 from "../../../../_runtime/metro/17911__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,13 +27,13 @@ function getMediaIcon(activeEvent) {
     const obj3 = { icon: StageIcon.StageIcon, source: _modDef7619 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef17907 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef17909 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef17908 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef17910 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef17909 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef17911 };
     tmp6 = obj6;
   } else {
     tmp6 = null;

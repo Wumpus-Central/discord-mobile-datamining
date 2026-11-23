@@ -26,9 +26,9 @@ export (quest) => {
       value = HTTP.get(obj);
       value.then((text) => {
         try {
-          closure_1_2(url(16530).parseVtt(text.text).cues);
+          closure_1_2(url(16532).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
-          const obj = url(16530);
+          const obj = url(16532);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }
@@ -37,9 +37,9 @@ export (quest) => {
       });
       const nextPromise = value.then((text) => {
         try {
-          closure_1_2(url(16530).parseVtt(text.text).cues);
+          closure_1_2(url(16532).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
-          const obj = url(16530);
+          const obj = url(16532);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }

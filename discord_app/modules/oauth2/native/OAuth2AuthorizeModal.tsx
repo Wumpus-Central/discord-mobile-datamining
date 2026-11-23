@@ -126,7 +126,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(14727), obj13);
+  obj12.children = closure_5(sharedValue(14729), obj13);
   items6[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items6;
   return closure_6(View, obj3);

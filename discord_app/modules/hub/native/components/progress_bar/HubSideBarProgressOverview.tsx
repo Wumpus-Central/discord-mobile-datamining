@@ -44,7 +44,7 @@ export default function HubSidebarProgressOverview(guild) {
       subtitle: formatToPlainStringResult,
       percentComplete: bound,
     };
-    return jsx(tmp(15201).GuildProgressOverviewView, {
+    return jsx(tmp(15203).GuildProgressOverviewView, {
       onPress: function handlePress() {
         ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13578, dependencyMap.paths), React3, {
           guild,

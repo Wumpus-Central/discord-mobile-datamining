@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/BurgerIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod17023 from "../../../../../../../_runtime/metro/17023__.js";
+import _mod17025 from "../../../../../../../_runtime/metro/17025__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function BurgerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17023, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17025, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

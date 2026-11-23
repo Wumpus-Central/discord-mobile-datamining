@@ -29,13 +29,13 @@ let items = [
 const obj6 = { order: 100, predicate: fn(9139).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 items[1] = {
   order: 150,
-  predicate: fn(16114).shouldShowAgeNoticeUnconfirmedNotice,
-  Component: fn(16114).ContentFiltersUnconfirmedNotice,
+  predicate: fn(16116).shouldShowAgeNoticeUnconfirmedNotice,
+  Component: fn(16116).ContentFiltersUnconfirmedNotice,
 };
 const obj7 = {
   order: 150,
-  predicate: fn(16114).shouldShowAgeNoticeUnconfirmedNotice,
-  Component: fn(16114).ContentFiltersUnconfirmedNotice,
+  predicate: fn(16116).shouldShowAgeNoticeUnconfirmedNotice,
+  Component: fn(16116).ContentFiltersUnconfirmedNotice,
 };
 items[2] = {
   order: 200,
@@ -75,7 +75,7 @@ items[3] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(16123).SensitiveContentFiltersTeenNotice,
+  Component: fn(16125).SensitiveContentFiltersTeenNotice,
 };
 obj5.SENSITIVE_CONTENT_FILTERS = items;
 const obj9 = {
@@ -88,7 +88,7 @@ const obj9 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(16123).SensitiveContentFiltersTeenNotice,
+  Component: fn(16125).SensitiveContentFiltersTeenNotice,
 };
 const items1 = [
   { order: 100, predicate: fn(9139).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },

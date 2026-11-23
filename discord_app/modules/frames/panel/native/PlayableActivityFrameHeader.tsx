@@ -67,9 +67,9 @@ export default function PlayableActivityFrameHeader(arg0) {
   ({ frameId: require, playable } = arg0);
   let setMode;
   const tmp = closure_9();
-  const tmp4 = setMode(19210)(playable.id);
+  const tmp4 = setMode(19212)(playable.id);
   let isClaimed = tmp4.isClaimed;
-  const context = noop.useContext(setMode(19204));
+  const context = noop.useContext(setMode(19206));
   setMode = context.setMode;
   ({ wrapperOffset, pipState } = context);
   const obj2 = {
@@ -86,7 +86,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   items = [closure_7(View, obj4), ,];
   const obj6 = { style: tmp.info, children: null };
   const items1 = [
-    closure_7(setMode(16360), {
+    closure_7(setMode(16362), {
       isCompleted: isClaimed,
       totalSeconds: playable.rewardTimerSeconds,
       remainingSeconds: tmp4.remainingSeconds,

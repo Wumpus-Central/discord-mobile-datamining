@@ -61,7 +61,7 @@ function GlobalChatScene(projectId) {
     },
     items1,
   );
-  return closure_11(fallbackGuildId(18233), { guildId, projectId, entryPoint, onExit });
+  return closure_11(fallbackGuildId(18235), { guildId, projectId, entryPoint, onExit });
 }
 function RoutedProjectOpener(request) {
   request = request.request;

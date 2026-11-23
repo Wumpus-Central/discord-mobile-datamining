@@ -7,7 +7,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ConjureMessageTime from "../ConjureMessageTime.tsx";
 import ConjureMessageActionSheet from "ConjureMessageActionSheet.tsx";
-import _modDef18476 from "../../../../../_runtime/metro/18476__.js";
+import _modDef18478 from "../../../../../_runtime/metro/18478__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -71,9 +71,9 @@ let obj2 = {
   agentAvatar: null,
 };
 let size = {
-  width: fn(18459).MESSAGE_AVATAR_SIZE,
-  height: fn(18459).MESSAGE_AVATAR_SIZE,
-  borderRadius: fn(18459).MESSAGE_AVATAR_SIZE / 2,
+  width: fn(18461).MESSAGE_AVATAR_SIZE,
+  height: fn(18461).MESSAGE_AVATAR_SIZE,
+  borderRadius: fn(18461).MESSAGE_AVATAR_SIZE / 2,
 };
 obj2.agentAvatar = size;
 const metroImportDefault = createStyles.createStyles(obj2);
@@ -138,7 +138,7 @@ export function ConjureUserAvatar(size) {
 export function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef18476;
+  obj.source = _modDef18478;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 }

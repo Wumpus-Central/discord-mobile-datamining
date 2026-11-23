@@ -53,7 +53,7 @@ export default noop.memo(function Messages(style) {
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
-    tmp4(17569).DmGdmListRenderTriggerPoint,
+    tmp4(17571).DmGdmListRenderTriggerPoint,
   );
   const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
@@ -120,12 +120,12 @@ export default noop.memo(function Messages(style) {
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items2 = [closure_5(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp24Result = closure_5(tmp(17572), {});
+    let tmp24Result = closure_5(tmp(17574), {});
   } else {
     if ("legend" === list) {
-      let tmp27 = 17577;
+      let tmp27 = 17579;
     } else {
-      tmp27 = "flash" === list ? 17621 : 17622;
+      tmp27 = "flash" === list ? 17623 : 17624;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);

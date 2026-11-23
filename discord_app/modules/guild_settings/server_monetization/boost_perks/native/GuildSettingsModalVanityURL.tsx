@@ -8,7 +8,7 @@ import TextInput from "../../../../../design/components/TextInput/native/TextInp
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef19871 from "../../../../../../_runtime/metro/19871__.js";
+import _modDef19873 from "../../../../../../_runtime/metro/19873__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -136,12 +136,12 @@ prototype["render"] = function render() {
   ({ isEditing, vanityURLCode } = this.state);
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
-      const obj2 = { variant: "body-sm/medium", color: "text-muted", children: null };
-      const intl6 = util.intl;
-      const obj3 = { url: getInviteURLDefault(vanityURLCode) };
-      obj2.children = intl6.format(util.t.FcGpNU, obj3);
-      const tmp24 = getInviteURLDefault(vanityURLCode);
-      const tmp = React5(Text_Text.Text, obj2);
+      const obj = { variant: "body-sm/medium", color: "text-muted", children: null };
+      const intl = util.intl;
+      const obj2 = { url: getInviteURLDefault(vanityURLCode) };
+      obj.children = intl.format(util.t.FcGpNU, obj2);
+      const tmp4 = getInviteURLDefault(vanityURLCode);
+      const tmp = React5(Text_Text.Text, obj);
     }
   }
   if (isEditing) {
@@ -154,14 +154,14 @@ prototype["render"] = function render() {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.GUILD_WEB_PAGE_VANITY_URL);
     }
-    let tmp17Result = true === hasItem;
-    if (tmp17Result) {
+    let tmp22Result = true === hasItem;
+    if (tmp22Result) {
       let hasItem1;
       if (guild != null) {
         const features2 = guild.features;
         hasItem1 = features2.has(GuildFeatures.VANITY_URL);
       }
-      tmp17Result = true !== hasItem1;
+      tmp22Result = true !== hasItem1;
     }
     const obj4 = { style: null, children: null };
     items = [styles.wrapper, self.props.contentContainerStyle];
@@ -177,31 +177,31 @@ prototype["render"] = function render() {
     const items1 = [React5(TextInput.TextInput, obj6)];
     const obj7 = { style: styles.hints, children: null };
     const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
-    const intl2 = util.intl;
-    obj8.children = intl2.string(util.t.IhWDcu);
+    const intl3 = util.intl;
+    obj8.children = intl3.string(util.t.IhWDcu);
     const items2 = [React5(Text_Text.Text, obj8), , , ,];
     const obj9 = { variant: "body-sm/medium", color: "text-muted", children: null };
-    const intl3 = util.intl;
-    obj9.children = intl3.string(util.t["1mRkFr"]);
+    const intl4 = util.intl;
+    obj9.children = intl4.string(util.t["1mRkFr"]);
     items2[1] = React5(Text_Text.Text, obj9);
     const obj10 = { variant: "body-sm/medium", color: "text-muted", children: null };
-    const intl4 = util.intl;
-    obj10.children = intl4.string(util.t["eH/HMz"]);
+    const intl5 = util.intl;
+    obj10.children = intl5.string(util.t["eH/HMz"]);
     items2[2] = React5(Text_Text.Text, obj10);
-    if (tmp17Result) {
+    if (tmp22Result) {
       const obj11 = { variant: "body-sm/medium", color: "text-muted", children: null };
-      const intl5 = util.intl;
-      obj11.children = intl5.string(util.t.o3kmm3);
-      tmp17Result = React5(Text_Text.Text, obj11);
+      const intl6 = util.intl;
+      obj11.children = intl6.string(util.t.o3kmm3);
+      tmp22Result = React5(Text_Text.Text, obj11);
     }
-    items2[3] = tmp17Result;
+    items2[3] = tmp22Result;
     items2[4] = tmp;
     obj7.children = items2;
     items1[1] = React6(View, obj7);
     obj5.children = items1;
     const items3 = [React6(View, obj5)];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef19871, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef19873, style: styles.image, resizeMode: "contain" };
     obj12.children = React5(FastImageDefault, obj13);
     items3[1] = React5(View, obj12);
     obj4.children = items3;
@@ -210,8 +210,8 @@ prototype["render"] = function render() {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
   } else {
-    const intl = util.intl;
-    combined = intl.string(util.t["FaXGO/"]);
+    const intl2 = util.intl;
+    combined = intl2.string(util.t["FaXGO/"]);
   }
 };
 const size = fn(2);

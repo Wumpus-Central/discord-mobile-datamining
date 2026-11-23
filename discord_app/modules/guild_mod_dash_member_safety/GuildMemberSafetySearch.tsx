@@ -25,7 +25,7 @@ let obj = {
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "add",
   selectedSourceInviteCode: "channel_id",
-  selectedSort: "concat",
+  selectedSort: "length",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -45,7 +45,7 @@ class GuildMemberSafetySearch {
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "add",
       selectedSourceInviteCode: "channel_id",
-      selectedSort: "concat",
+      selectedSort: "length",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -75,7 +75,7 @@ prototype["reset"] = function reset() {
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "add",
     selectedSourceInviteCode: "channel_id",
-    selectedSort: "concat",
+    selectedSort: "length",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -103,7 +103,7 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "add",
       selectedSourceInviteCode: "channel_id",
-      selectedSort: "concat",
+      selectedSort: "length",
     };
     const _Set = Set;
     const set = new Set();
@@ -301,7 +301,7 @@ export function getDefaultSearchState() {
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "add",
     selectedSourceInviteCode: "channel_id",
-    selectedSort: "concat",
+    selectedSort: "length",
   };
   return obj;
 }

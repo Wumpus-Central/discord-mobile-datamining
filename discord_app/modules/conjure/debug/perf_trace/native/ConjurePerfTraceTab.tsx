@@ -30,7 +30,7 @@ function PerfTraceRow(arg0) {
     variant: "primary",
     onPress() {
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(18664, dependencyMap.paths),
+        asyncRequireImpl(18666, dependencyMap.paths),
         { projectId, traceId: trace.id },
         "CONJURE_PERF_TRACE_MODAL",
       );
@@ -41,7 +41,7 @@ function PerfTraceRow(arg0) {
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(18670);
+  const tmp9 = trace(18672);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   items = [
     closure_8(tmp9, obj5),
@@ -324,7 +324,7 @@ export default function ConjurePerfTraceTab(projectId) {
 }
 export function openPerfTrace(projectId, traceId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(18664, dependencyMap.paths),
+    asyncRequireImpl(18666, dependencyMap.paths),
     { projectId, traceId },
     "CONJURE_PERF_TRACE_MODAL",
   );

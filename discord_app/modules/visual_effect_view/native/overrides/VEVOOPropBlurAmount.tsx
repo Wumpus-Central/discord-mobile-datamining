@@ -67,7 +67,7 @@ export default noop.memo(function VEVOOPropBlurAmount() {
     },
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(17438), {
+  obj.subLabel = jsx(first(17440), {
     disabled: !tmp3,
     disabledOpacity: !tmp3,
     initialValue: noop.useRef(first),

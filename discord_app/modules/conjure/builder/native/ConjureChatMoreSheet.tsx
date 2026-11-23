@@ -45,7 +45,7 @@ function MoreRow(row) {
     return jsx(row(7045).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(18383);
+const conjureDesignFeedbackStore = fn(18385);
 ({
   enterConjureDesignFeedback: c3,
   exitConjureDesignFeedback: closure_4,
@@ -62,8 +62,8 @@ export default function ConjureChatMoreSheet(canAnnotate) {
   const id = merged.project.id;
   const isConjureProjectMuted = id(6936).useIsConjureProjectMuted(id);
   const obj = id(6936);
-  const conjureControlActive = id(14730).useConjureControlActive(id);
-  const obj2 = id(14730);
+  const conjureControlActive = id(14732).useConjureControlActive(id);
+  const obj2 = id(14732);
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.muted = isConjureProjectMuted;
@@ -83,7 +83,7 @@ export default function ConjureChatMoreSheet(canAnnotate) {
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(18385).conjureChatMoreSections(obj4);
+  const result = id(18387).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1112).intl;
   obj6.dismissAccessibilityLabel = intl.string(_modDef4190.OsD9T0);

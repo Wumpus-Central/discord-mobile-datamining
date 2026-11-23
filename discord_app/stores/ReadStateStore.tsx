@@ -3231,7 +3231,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: true, isExplicitUserAction: "/assets/images/platforms", trackAnalytics: 255 });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: "rtc_participants", isExplicitUserAction: 46, trackAnalytics: "dynamic_config_size_limit_override" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);

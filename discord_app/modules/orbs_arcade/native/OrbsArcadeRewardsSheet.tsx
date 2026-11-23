@@ -61,19 +61,19 @@ export default function OrbsArcadeRewardsSheet(gameId) {
     let obj9 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeRewardsSheet",
-      location: tmp(16431).OrbsArcadeCtaLocation.REWARDS_SHEET,
+      location: tmp(16433).OrbsArcadeCtaLocation.REWARDS_SHEET,
       surface: gameId.surface,
       primaryAction: null,
       secondaryAction: null,
       style: null,
     };
     const tmp10 = OrbsArcadeSheetActionsDefault;
-    const result = tmp(16422).hasOrbsArcadeUnclaimedRewards(stateFromStores1);
-    const OrbsArcadeSheetPrimaryAction = tmp(16441).OrbsArcadeSheetPrimaryAction;
+    const result = tmp(16424).hasOrbsArcadeUnclaimedRewards(stateFromStores1);
+    const OrbsArcadeSheetPrimaryAction = tmp(16443).OrbsArcadeSheetPrimaryAction;
     obj9.primaryAction = result ? OrbsArcadeSheetPrimaryAction.CLAIM : OrbsArcadeSheetPrimaryAction.PLAY;
-    const tmpResult = tmp(16422);
-    const result1 = tmp(16422).hasOrbsArcadeUnlockedRewards(stateFromStores1);
-    let OrbsArcadeSheetSecondaryAction = tmp(16441).OrbsArcadeSheetSecondaryAction;
+    const tmpResult = tmp(16424);
+    const result1 = tmp(16424).hasOrbsArcadeUnlockedRewards(stateFromStores1);
+    let OrbsArcadeSheetSecondaryAction = tmp(16443).OrbsArcadeSheetSecondaryAction;
     const obj10 = { spacing: 0, children: null };
     obj9.secondaryAction = result1 ? OrbsArcadeSheetSecondaryAction.CLOSE : OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY;
     actionsContainer = actionsContainer.actionsContainer;
@@ -84,7 +84,7 @@ export default function OrbsArcadeRewardsSheet(gameId) {
     OrbsArcadeSheetSecondaryAction = closure_5(tmp(5929).Stack, obj10);
     obj7.children = OrbsArcadeSheetSecondaryAction;
     closure_4(tmp(7553).ActionSheet, obj7);
-    const tmpResult2 = tmp(16422);
+    const tmpResult2 = tmp(16424);
   }
   const obj3 = gameId(504);
 }

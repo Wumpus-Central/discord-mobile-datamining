@@ -10,7 +10,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef16636 from "../../../../../_runtime/metro/16636__.js";
+import _modDef16638 from "../../../../../_runtime/metro/16638__.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -87,7 +87,7 @@ function WhatYouLose(subscription) {
     numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
   });
   const obj10 = { variant: "body-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef16636;
+  obj13.source = _modDef16638;
   obj13.style = tmp.cactus;
   items2[6] = refs(FastImageDefault, obj13);
   obj7.children = items2;
@@ -338,7 +338,7 @@ let createStyles = fn(4913);
 let obj2 = {
   container: { flex: 1 },
   body: { marginVertical: 24, marginHorizontal: 16 },
-  heroImage: { width: "100%", height: "__d", aspectRatio: "<string:2353406737>" },
+  heroImage: { width: "100%", height: "WireType", aspectRatio: "<string:2353406737>" },
   footer: { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 },
 };
 let closure_13 = createStyles.createStyles(obj2);

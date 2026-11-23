@@ -6,7 +6,7 @@ import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "../../../guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx";
 import HomeDrawerShared from "../../../home_drawer/native/HomeDrawerShared.tsx";
-import _modDef17921 from "../../../../../_runtime/metro/17921__.js";
+import _modDef17923 from "../../../../../_runtime/metro/17923__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx";
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const CHECKPOINT_PRIMARY = fn(5969).CHECKPOINT_PRIMARY;
 const ContentDismissActionType = fn(4759).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(17860).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(17862).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
@@ -107,7 +107,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
             } else {
               c1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(12497).openCheckpoint(tmp4(17919).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
+              const obj5 = { value: tmp4(12497).openCheckpoint(tmp4(17921).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -224,7 +224,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     const intl2 = util.intl;
     obj.description = intl2.string(_modDef3440.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef17921, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef17923, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
@@ -249,7 +249,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     overState: "y",
     config: memo1,
     label: null,
-    expandedChildren: "\u{1F469}",
+    expandedChildren: "\u{1F9CF}",
     children: true,
   };
   const tmpResult2 = require("useCoachmark");

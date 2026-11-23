@@ -8,7 +8,7 @@ const VoicePanelControlsConstants = fn(11748);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = {
   channelId: "context-not-initialized",
-  channelType: "fileBytes",
+  channelType: "find",
   connected: true,
   contentDimensions: true,
   controlsSpecs: true,
@@ -60,12 +60,12 @@ const obj = {
   sheetExitProgress: null,
   showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   showFloatingCTA: null,
-  streamOutputSinkStack: "\u{1F578}\uFE0F",
-  windowDimensions: 7,
-  wrapperDimensions: 298,
-  useReducedMotion: "M2 4H1V5H2V4Z",
-  wrapperOffset: "white",
-  pipHandoff: "opacity",
+  streamOutputSinkStack: "\u{1F41F}",
+  windowDimensions: 6,
+  wrapperDimensions: 313,
+  useReducedMotion: "onTapPreviewSharedClientTheme",
+  wrapperOffset: 1090584577,
+  pipHandoff: 126446,
 };
 let ReanimatedHelperTypes = fn(7450);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);
@@ -115,7 +115,7 @@ obj.dockPressProgress = ReanimatedHelperTypes.createFakeSharedValue(0);
 ReanimatedHelperTypes = fn(7450);
 obj.dockPressed = ReanimatedHelperTypes.createFakeSharedValue(false);
 obj.dockPTTMeasureHostRef = { current: null };
-obj.dismissToPIPGestureRef = { current: "Array" };
+obj.dismissToPIPGestureRef = { current: "r" };
 ReanimatedHelperTypes = fn(7450);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7450);

@@ -5,7 +5,7 @@ import SharedCaptchaUtils from "../../modules/captcha/SharedCaptchaUtils.tsx";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import siteKeyDefault from "../../../_runtime/19414_siteKey.js";
+import siteKeyDefault from "../../../_runtime/19416_siteKey.js";
 import NativeCaptchaManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCaptchaManagerModule.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";

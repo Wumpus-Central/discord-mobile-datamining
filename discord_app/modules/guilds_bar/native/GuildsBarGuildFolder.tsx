@@ -243,15 +243,15 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
   }
 }
 const GuildsNodeType = fn(6550).GuildsNodeType;
-const GuildsBarDnDStore = fn(17863);
+const GuildsBarDnDStore = fn(17865);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(17868);
+let GuildsBarConstants = fn(17870);
 ({
   DEFAULT_FOLDER_COLOR: closure_12,
   isDefaultFolderColor: map1,
   normalizeFolderColor: closure_14,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(17860);
+GuildsBarConstants = fn(17862);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -815,7 +815,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   let tmp28Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp28Result2 = closure_17(tmp3(17883), obj11);
+    tmp28Result2 = closure_17(tmp3(17885), obj11);
   }
   obj9.expandedChildren = tmp28Result2;
   obj9.children = closure_17(tmp(4974).TransitionGroup, {

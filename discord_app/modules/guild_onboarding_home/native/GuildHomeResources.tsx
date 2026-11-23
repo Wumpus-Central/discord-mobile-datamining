@@ -5,7 +5,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef18213 from "../../../../_runtime/metro/18213__.js";
+import _modDef18215 from "../../../../_runtime/metro/18215__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -43,7 +43,7 @@ function ResourceChannelRow(channelId) {
   }
   const obj6 = channelId(8621);
   let flag = channelId(12876).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(18212)(firstResult);
+  const tmp11 = stateFromStores(18214)(firstResult);
   const tmp12 =
     null != stateFromStores &&
     null == stateFromStores2.first() &&
@@ -199,7 +199,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1112).intl;
     obj3.children = intl.string(guildId(1112).t.owvC9U);
     items = [closure_11(guildId(5504).Text, obj3), ,];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef18213 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef18215 };
     items[1] = closure_11(FastImageDefault, obj4);
     const obj5 = {
       onPress() {

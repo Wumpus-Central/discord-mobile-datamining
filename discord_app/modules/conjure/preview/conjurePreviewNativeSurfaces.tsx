@@ -65,7 +65,7 @@ function answerFor(cmd) {
       if (obj2.hasConjurePreviewGameCapture(applicationId)) {
         if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
           const obj3 = { result: null, answered: "returned the selected game capture" };
-          obj = obj(14732);
+          obj = obj(14734);
           conjurePreviewGameCapture = obj.readConjurePreviewGameCapture(applicationId);
           obj3.result = conjurePreviewGameCapture;
           let obj4 = obj3;
@@ -252,8 +252,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel", answered: "<string:27297859>" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel", answered: "<string:27297859>" }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel", answered: true }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel", answered: true }),
 };
 let closure_7 = {
   drain() {

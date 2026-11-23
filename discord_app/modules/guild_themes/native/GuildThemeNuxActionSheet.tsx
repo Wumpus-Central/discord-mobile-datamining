@@ -43,8 +43,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = noop.useState(guildId(17676).getInitialGuildThemeNuxSelection);
-  const tmp4 = _slicedToArray(noop.useState(guildId(17676).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = noop.useState(guildId(17678).getInitialGuildThemeNuxSelection);
+  const tmp4 = _slicedToArray(noop.useState(guildId(17678).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = noop.useState(false);
@@ -193,7 +193,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj3.onDismiss = callback3;
   obj3.contentStyles = tmp.container;
   const items7 = [
-    closure_10(markAsDismissed(17677), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+    closure_10(markAsDismissed(17679), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
     ,
     ,
     ,

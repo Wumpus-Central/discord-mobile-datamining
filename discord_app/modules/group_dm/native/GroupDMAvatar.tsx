@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Dismisses dev tools when launching.",
+      animate: "center",
     };
     obj12.animate = animate;
     if (null == users) {

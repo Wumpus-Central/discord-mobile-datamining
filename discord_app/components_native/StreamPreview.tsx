@@ -55,7 +55,7 @@ const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = {
   flex: 1,
   width: "100%",
-  height: "__d",
+  height: "WireType",
   aspectRatio: true,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };

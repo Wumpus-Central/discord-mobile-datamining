@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Promise",
-  notifCenterActive: "board",
-  notifCenterTabFocused: null,
+  notifCenterActive: "installation",
+  notifCenterTabFocused: "2026-11-apex-launch-latch",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "board",
-      notifCenterTabFocused: null,
+      notifCenterActive: "installation",
+      notifCenterTabFocused: "2026-11-apex-launch-latch",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "board",
-      notifCenterTabFocused: null,
+      notifCenterActive: "installation",
+      notifCenterTabFocused: "2026-11-apex-launch-latch",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "board",
-      notifCenterTabFocused: null,
+      notifCenterActive: "installation",
+      notifCenterTabFocused: "2026-11-apex-launch-latch",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

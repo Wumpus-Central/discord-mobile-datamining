@@ -9,7 +9,7 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import BadgeId from "../../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef19072 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef19074 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -98,7 +98,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef19072 };
+  const obj5 = { uri: _modDef19074 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);

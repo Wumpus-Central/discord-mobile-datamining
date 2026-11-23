@@ -331,8 +331,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       sku_id: skuId,
       guild_id: true,
       application_id: true,
-      cta_type: 0.016,
-      location_stack: 0.023,
+      cta_type: "attachEvents",
+      location_stack: null,
     };
     let applicationId;
     if (stateFromStores != null) {
@@ -967,7 +967,7 @@ obj.hero = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "application" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "HermesInternal" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
   height: fn(9592).MOBILE_HERO_HEIGHT_PX,

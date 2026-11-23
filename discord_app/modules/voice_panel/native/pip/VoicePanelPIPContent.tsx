@@ -748,7 +748,7 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp23 = closure_21(tmp2(19326).StreamEnded, obj3);
+    let tmp23 = closure_21(tmp2(19328).StreamEnded, obj3);
   } else {
     tmp23 = null;
     if (stateFromStores !== tmp17.FAILED) {
@@ -811,7 +811,7 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11750).VoicePanelModes;
-const VoicePanelPIPModes = fn(19165).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19167).VoicePanelPIPModes;
 const Constants = fn(1071);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 const CallConstants = fn(5563);

@@ -222,7 +222,7 @@ export function resetPendingBadgeSettings() {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "channel",
-    pendingBadgeHiddenBadges: "set",
+    pendingBadgeHiddenBadges: "toLowerCase",
   });
 }
 export function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {

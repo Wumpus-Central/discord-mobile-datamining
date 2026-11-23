@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 export default function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
   const obj = {
-    imageSource: markAsDismissed(17765),
+    imageSource: markAsDismissed(17767),
     header: null,
     body: null,
     cta: null,
@@ -34,8 +34,8 @@ export default function IAPUpsellActionSheet(arg0) {
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(17764), {
-    imageSource: markAsDismissed(17765),
+  return jsx(markAsDismissed(17766), {
+    imageSource: markAsDismissed(17767),
     header: null,
     body: null,
     cta: null,

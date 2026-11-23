@@ -13,8 +13,8 @@ import QuestDockGestureContext from "QuestDockGestureContext.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "../QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import QuestDockCreativeContext from "QuestDockCreativeContext.tsx";
 import QuestGameLogotypeDefault from "../QuestGameLogotype.tsx";
-import _modDef16576 from "../../../../../_runtime/metro/16576__.js";
-import _modDef16577 from "../../../../../_runtime/metro/16577__.js";
+import _modDef16578 from "../../../../../_runtime/metro/16578__.js";
+import _modDef16579 from "../../../../../_runtime/metro/16579__.js";
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -135,7 +135,7 @@ function QuestDockOrbAmountCopy(orbCount) {
 }
 const View = fn(17).View;
 const QuestDockMode = fn(6558).QuestDockMode;
-const QuestDockConstants = fn(16473);
+const QuestDockConstants = fn(16475);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_6, QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT } = QuestDockConstants);
 const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
@@ -196,12 +196,12 @@ export default noop.memo(function QuestDockUnenrolledHeader(squareAsset) {
   }
   const orbCount = squareAsset.orbCount;
   let questCreative;
-  const questDockQuest = questCreative(16506).useQuestDockQuest();
-  let obj = questCreative(16506);
-  questCreative = questCreative(16506).useQuestCreative(questDockQuest);
-  let obj2 = questCreative(16506);
+  const questDockQuest = questCreative(16508).useQuestDockQuest();
+  let obj = questCreative(16508);
+  questCreative = questCreative(16508).useQuestCreative(questDockQuest);
+  let obj2 = questCreative(16508);
   items = [questCreative];
-  const obj3 = questCreative(16470);
+  const obj3 = questCreative(16472);
   const callback = noop.useCallback(() => {
     const obj2 = { creative: questCreative, isTargetedDisclosure: true, trackingCtx: null };
     const obj = QuestDisclosureModalActionCreatorsDefault;
@@ -212,7 +212,7 @@ export default noop.memo(function QuestDockUnenrolledHeader(squareAsset) {
     };
     obj.showModal(obj2);
   }, items);
-  const actionSheetPressHandler = questCreative(16470).useActionSheetPressHandler(questCreative);
+  const actionSheetPressHandler = questCreative(16472).useActionSheetPressHandler(questCreative);
   const tmp8 = useThemeDefault();
   if (obj4.isThemeDark(tmp8)) {
     let LIGHT = ThemeTypes.DARK;
@@ -223,9 +223,9 @@ export default noop.memo(function QuestDockUnenrolledHeader(squareAsset) {
   }
   const tmp11 = closure_13();
   obj4 = questCreative(4920);
-  const questGameLogotypeAssetUrl = questCreative(16467).useQuestGameLogotypeAssetUrl(questDockQuest);
+  const questGameLogotypeAssetUrl = questCreative(16469).useQuestGameLogotypeAssetUrl(questDockQuest);
   if ("bountyIllustration" === str2) {
-    let tmp16 = closure_8(tmp(16573).QuestDockBountyOrbIllustration, {});
+    let tmp16 = closure_8(tmp(16575).QuestDockBountyOrbIllustration, {});
     let tmp15 = closure_8;
   } else {
     if ("orbAmount" === str2) {
@@ -272,9 +272,9 @@ export default noop.memo(function QuestDockUnenrolledHeader(squareAsset) {
     tmp15Result4 = tmp15(QuestDockRewardLogotype, obj11);
   } else {
     if (LIGHT === tmp10.DARK) {
-      let tmp7Result3 = _modDef16576;
+      let tmp7Result3 = _modDef16578;
     } else {
-      tmp7Result3 = _modDef16577;
+      tmp7Result3 = _modDef16579;
     }
     const obj12 = { source: tmp7Result3, resizeMode: "contain", style: tmp11.wreathImage };
     tmp15Result3 = tmp15(FastImageDefault, obj12);
@@ -283,7 +283,7 @@ export default noop.memo(function QuestDockUnenrolledHeader(squareAsset) {
   }
   const questBarHeroBlurhash = questDockQuest.config.assets.questBarHeroBlurhash;
   const obj7 = { assetUrl: questGameLogotypeAssetUrl, height: 36, maxWidth: 120, style: tmp11.logo };
-  const tmpResult = questCreative(16467);
+  const tmpResult = questCreative(16469);
   const obj13 = {
     blurHash: questBarHeroBlurhash,
     collapsedContent: tmp16,
@@ -295,7 +295,7 @@ export default noop.memo(function QuestDockUnenrolledHeader(squareAsset) {
   };
   let prop;
   if ("bountyIllustration" === str2) {
-    prop = tmp(16573).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH;
+    prop = tmp(16575).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH;
   }
   obj13.secondaryContentWidth = prop;
   obj13.onDisclosurePress = callback;

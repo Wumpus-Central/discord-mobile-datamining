@@ -215,8 +215,8 @@ obj4.primaryCardText = { flex: 1, gap: nativeDefault.space.PX_4 };
 const obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj4.primaryCardCloseButton = { position: "absolute", top: nativeDefault.space.PX_4, end: nativeDefault.space.PX_4 };
 let closure_15 = createStyles.createStyles(obj4);
-let size = { asset: fn(16306), width: 56, height: 37 };
-const size1 = { asset: fn(16307), width: 50, height: 37 };
+let size = { asset: fn(16308), width: 56, height: 37 };
+const size1 = { asset: fn(16309), width: 50, height: 37 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletCards.tsx");
 
@@ -237,7 +237,7 @@ export function getWalletPrimaryCardType(isPremiumSubscriber, balance) {
   return NITRO_UPSELL;
 }
 export function useOrbWalletPrimaryCard(balance) {
-  let obj = orbWalletAnalyticsPage(16300);
+  let obj = orbWalletAnalyticsPage(16302);
   orbWalletAnalyticsPage = obj.useOrbWalletAnalyticsPage();
   const isPremiumSubscriber = orbWalletAnalyticsPage(14202).useIsPremiumSubscriber(PremiumTypes.TIER_2);
   obj2 = orbWalletAnalyticsPage(14202);
@@ -292,7 +292,7 @@ export function useOrbWalletPrimaryCard(balance) {
   let tmpResult = orbWalletAnalyticsPage(9080);
   analyticsLocations = NITRO_UPSELL(7520)(NITRO_UPSELL(7539).ORB_WALLET_PRIMARY_CARD).analyticsLocations;
   const tmp18 = NITRO_UPSELL(7520);
-  const openNitroCheckoutFromOrbWallet = orbWalletAnalyticsPage(16300).useOpenNitroCheckoutFromOrbWallet(
+  const openNitroCheckoutFromOrbWallet = orbWalletAnalyticsPage(16302).useOpenNitroCheckoutFromOrbWallet(
     NITRO_UPSELL(7539).ORB_WALLET_PRIMARY_CARD_NITRO_UPSELL_CTA,
   );
   if (NITRO_UPSELL === obj.SHOP_ORBS) {

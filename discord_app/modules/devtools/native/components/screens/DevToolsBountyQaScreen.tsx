@@ -211,7 +211,7 @@ export default function DevToolsBountyQaScreen() {
       label: "Reset and re-serve",
       subLabel:
         "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-      icon: closure_8(stateFromStores(16487).UndoIcon, {}),
+      icon: closure_8(stateFromStores(16489).UndoIcon, {}),
       onPress: function handleResetAndRefresh() {
         const self = this;
         const apply = closure_2.apply;
@@ -229,7 +229,7 @@ export default function DevToolsBountyQaScreen() {
     label: "Reset and re-serve",
     subLabel:
       "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-    icon: closure_8(stateFromStores(16487).UndoIcon, {}),
+    icon: closure_8(stateFromStores(16489).UndoIcon, {}),
     onPress: function handleResetAndRefresh() {
       const self = this;
       const apply = closure_2.apply;
@@ -244,7 +244,7 @@ export default function DevToolsBountyQaScreen() {
   items6[1] = closure_8(stateFromStores(7045).TableRow, {
     label: "Refresh Organic Serve",
     subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-    icon: closure_8(stateFromStores(16485).RedoIcon, {}),
+    icon: closure_8(stateFromStores(16487).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
       const questToDeliver = stateFromStores(9959).fetchQuestToDeliver(
         stateFromStores(6561).AdPlacement.MOBILE_HOME_DOCK_AREA,

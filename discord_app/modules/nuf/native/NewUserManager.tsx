@@ -33,7 +33,7 @@ let obj2 = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(19581).openAddAvatarModal,
+  transitionToStep: fn(19583).openAddAvatarModal,
 };
 const items = [obj2, , , , ,];
 let obj3 = {

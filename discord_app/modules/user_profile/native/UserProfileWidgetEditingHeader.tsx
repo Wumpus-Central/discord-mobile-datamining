@@ -43,7 +43,7 @@ export default function UserProfileWidgetEditingHeader() {
     });
     const obj2 = { userId: stateFromStores, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14574, dependencyMap.paths),
+      asyncRequireImpl(14576, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };
@@ -64,7 +64,7 @@ export default function UserProfileWidgetEditingHeader() {
   obj7.disabled = obj2.useBoardWidgets(stateFromStores).length < 2;
   obj7.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15954, dependencyMap.paths),
+      asyncRequireImpl(15956, dependencyMap.paths),
       "UserProfileWidgetReorderActionSheet",
       { returnFocusRef: ref },
     );

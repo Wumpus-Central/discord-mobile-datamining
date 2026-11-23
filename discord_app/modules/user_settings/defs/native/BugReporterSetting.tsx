@@ -16,7 +16,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(17187).BugIcon,
+  IconComponent: fn(17189).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });

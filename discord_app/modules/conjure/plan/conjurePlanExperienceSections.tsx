@@ -149,7 +149,7 @@ export function conjurePlanRequirementGroups(proposal, guild) {
     key: "intents",
     caption: _modDef4190["7TKfpj"],
     names: proposal.privileged_intents,
-    label: guildPermissionSpecMap(18565).formatConjurePlanRequirementLabel,
+    label: guildPermissionSpecMap(18567).formatConjurePlanRequirementLabel,
   };
   return items.flatMap((names) => {
     names = names.names;

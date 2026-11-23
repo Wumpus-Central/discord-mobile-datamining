@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/CatIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef18522 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-1x.png.js";
-import _modDef18523 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js";
-import _modDef18524 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-3x.png.js";
+import _modDef18524 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-1x.png.js";
+import _modDef18525 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js";
+import _modDef18526 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18522 }, 3: null };
-const obj2 = { uri: _modDef18522 };
-obj[2] = { uri: _modDef18523 };
-const obj3 = { uri: _modDef18523 };
-obj[3] = { uri: _modDef18524 };
+let obj = { 1: null, 2: { uri: _modDef18524 }, 3: null };
+const obj2 = { uri: _modDef18524 };
+obj[2] = { uri: _modDef18525 };
+const obj3 = { uri: _modDef18525 };
+obj[3] = { uri: _modDef18526 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");
 

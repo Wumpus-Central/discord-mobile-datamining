@@ -173,9 +173,9 @@ function StatusText(status) {
       ringing = dm2.ringing;
     }
     obj5.ringing = ringing;
-    let tmp53Result = closure_11(tmp26(18009).DockUserTitle, obj5);
+    let tmp53Result = closure_11(tmp26(18011).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_11(tmp26(18009).DockChannelTitle, {});
+    tmp53Result = closure_11(tmp26(18011).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_11(c5, obj4)];
@@ -530,10 +530,10 @@ function StatusLayer(exit) {
     }
     obj4.dimmed = tmp35;
     obj4.entered = tmp12[0];
-    let tmp32Result = tmp32(tmp2(18009).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(18011).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(18009).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(18011).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue5(_modDef1653.View, obj3)];
@@ -553,7 +553,7 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(18008);
+const VoicePanelDockStatusStore = fn(18010);
 ({ useDockHasStreamers: closure_9, useDockSubject: closure_10 } = VoicePanelDockStatusStore);
 const VoicePanelDockConstants = fn(11768);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);

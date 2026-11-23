@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GRID_COVER_HAIRLINE_WIDTH = fn(17821).GRID_COVER_HAIRLINE_WIDTH;
+const GRID_COVER_HAIRLINE_WIDTH = fn(17823).GRID_COVER_HAIRLINE_WIDTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(4913);
 let closure_4 = createStyles.createStyles((borderRadius) => {

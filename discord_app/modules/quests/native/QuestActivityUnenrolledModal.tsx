@@ -123,7 +123,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj9 = quest(4975);
   const isQuestAccessSuspended = quest(9958).useIsQuestAccessSuspended();
   const obj10 = quest(9958);
-  trackQuestContentClickedWithImpression = quest(16395).useTrackQuestContentClickedWithImpression();
+  trackQuestContentClickedWithImpression = quest(16397).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({

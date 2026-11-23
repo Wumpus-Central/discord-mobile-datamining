@@ -23,7 +23,7 @@ import StageChannelUnifiedCallExperiment from "../../../stage_channels/StageChan
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
 import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
-import _modDef14842 from "../../../../../_runtime/metro/14842__.js";
+import _modDef14844 from "../../../../../_runtime/metro/14844__.js";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators.tsx";
 import getChannelInfoSubtitleDefault from "../utils/getChannelInfoSubtitle.tsx";
@@ -140,7 +140,7 @@ function ShareActivityLogsButton() {
     onPress: callback,
     icon: collapsedCategories(TableRowIcon.TableRowIcon, {
       IconComponent: WrenchIcon.WrenchIcon,
-      source: _modDef14842,
+      source: _modDef14844,
     }),
     label: null,
     trailing: null,
@@ -161,7 +161,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef14842,
+    source: _modDef14844,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -312,7 +312,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18002, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18004, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

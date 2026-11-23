@@ -6,7 +6,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef17637 from "../../../../_runtime/metro/17637__.js";
+import _modDef17639 from "../../../../_runtime/metro/17639__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -63,7 +63,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef17637;
+      let tmp12 = _modDef17639;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -118,7 +118,7 @@ function DMChannelIcon(userId) {
     status,
     isMobileOnline,
     isVROnline,
-    statusStyle: 0,
+    statusStyle: 7,
   };
   const items4 = [tmp.avatarStatus];
   if (avatarStatusSelected) {

@@ -10,7 +10,7 @@ const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "description", _screensBeforeDispatch: "isArray" });
+    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "disabled", _screensBeforeDispatch: "isArray" });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -108,6 +108,6 @@ let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigatio
 
 export default Object.assign({
   _isAttached: false,
-  _routeKeyAtDispatch: "description",
+  _routeKeyAtDispatch: "disabled",
   _screensBeforeDispatch: "isArray",
 });

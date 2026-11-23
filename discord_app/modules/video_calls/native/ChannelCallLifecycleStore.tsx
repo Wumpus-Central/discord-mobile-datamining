@@ -13,23 +13,23 @@ let obj = {};
 let size = {
   x: "Array",
   y: "s",
-  width: "ao",
-  height: "Text",
+  width: "channel",
+  height: "useSharedValue",
   screenOrientation: fn(9431).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: "<string:25848320>",
-  isInitialized: "<string:31807488>",
-  isVisible: "<string:1372934400>",
+  hasUserInteractedSinceOrientationChange: 2674,
+  isInitialized: 38144,
+  isVisible: 2047955200,
 };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
-  width: "ao",
-  height: "Text",
+  width: "channel",
+  height: "useSharedValue",
   screenOrientation: fn(9431).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: "<string:25848320>",
-  isInitialized: "<string:31807488>",
-  isVisible: "<string:1372934400>",
+  hasUserInteractedSinceOrientationChange: 2674,
+  isInitialized: 38144,
+  isVisible: 2047955200,
 };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;
