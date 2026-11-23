@@ -330,7 +330,7 @@ function handleCatchall(items, value, value, abortEarly, value2, inst, arg6) {
                 if (undefined === dependencyMap) {
                   if (!issues.issues.length) {
                     const issues1 = exports.issues;
-                    const obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Send Gift" };
+                    const obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Force Native Crash" };
                     const items1 = [closure_0];
                     obj.path = items1;
                     issues1.push(obj);
@@ -375,7 +375,7 @@ function handleCatchall(items, value, value, abortEarly, value2, inst, arg6) {
                 tmp5 = length;
                 if (!runResult.issues.length) {
                   let issues1 = iter.issues;
-                  let obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Send Gift" };
+                  let obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Force Native Crash" };
                   let items2 = [tmp6];
                   obj.path = items2;
                   let arr4 = issues1.push(obj);
@@ -2386,7 +2386,7 @@ if (self2) {
                     if (undefined === optin) {
                       if (!issues.issues.length) {
                         const issues1 = iter.issues;
-                        const obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Send Gift" };
+                        const obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Force Native Crash" };
                         const items1 = [iter];
                         obj.path = items1;
                         issues1.push(obj);
@@ -2419,7 +2419,7 @@ if (self2) {
                   if (undefined === optin) {
                     if (!runResult.issues.length) {
                       let issues1 = iter.issues;
-                      let obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Send Gift" };
+                      let obj = { code: "invalid_type", expected: "nonoptional", input: "Array", path: "Force Native Crash" };
                       let items1 = [iter];
                       obj.path = items1;
                       issues1.push(obj);

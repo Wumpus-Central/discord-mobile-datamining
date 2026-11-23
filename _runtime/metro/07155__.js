@@ -59,7 +59,7 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj1 = { routes: [], previousState: "y", openingRouteKeys: "BULK_ACK", closingRouteKeys: null, replacingRouteKeys: null, descriptors: null };
+    obj1 = { routes: [], previousState: "y", openingRouteKeys: "column", closingRouteKeys: "hidden", replacingRouteKeys: "subject", descriptors: "body" };
     obj1.openingRouteKeys = [];
     obj1.closingRouteKeys = [];
     obj1.replacingRouteKeys = [];

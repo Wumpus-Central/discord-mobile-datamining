@@ -50,7 +50,7 @@ function initializeContext(target) {
   if (processors == null) {
     processors = {};
   }
-  const obj = { processors, metadataRegistry: null, target: null, unrepresentable: null, override: null, io: null, counter: 0, seen: null, sharedDefsExtractedFor: "Boolean", sharedEmitDoneFor: "disabled", cycles: null, reused: null, intersections: null, deferred: null, external: null };
+  const obj = { processors, metadataRegistry: null, target: null, unrepresentable: null, override: null, io: null, counter: 0, seen: null, sharedDefsExtractedFor: "Boolean", sharedEmitDoneFor: "id", cycles: "join", reused: "data", intersections: "join", deferred: "default", external: "join" };
   let metadata;
   if (target != null) {
     metadata = target.metadata;

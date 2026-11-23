@@ -1,15 +1,16 @@
 // === Module 15587: ? ===
 
 // Module 15587
-import _mod15585 from "module_15585" /* 15585 */;
+import _mod15588 from "module_15588" /* 15588 */;
 
 
-export default (arg0, arg1) => {
-  const tmp = _mod15585(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = _mod15588(tmp);
+    }
   }
-  return tmp3;
+  return num;
 };

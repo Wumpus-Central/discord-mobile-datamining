@@ -99,7 +99,7 @@ export function sendXMLHttpRequest(request, arg1) {
     }
     obj = {};
   };
-  let f125342 = () => {
+  let f125320 = () => {
     items = [...arguments];
     if (!responseHeaders) {
       try {
@@ -133,7 +133,7 @@ export function sendXMLHttpRequest(request, arg1) {
     }
     c9 = arg0;
   };
-  f125342 = () => {
+  f125320 = () => {
     items = [...arguments];
     if (!responseHeaders) {
       try {
@@ -164,7 +164,7 @@ export function sendXMLHttpRequest(request, arg1) {
     const uint8Array = new Uint8Array(substr);
     closure_1.onChunk(uint8Array, closure_14);
   };
-  f125342 = () => {
+  f125320 = () => {
     items = [...arguments];
     if (!responseHeaders) {
       try {
@@ -178,7 +178,7 @@ export function sendXMLHttpRequest(request, arg1) {
     }
   };
   function onData(arg0) {
-    f125342(arg0);
+    f125320(arg0);
     return !c3;
   }
   closure_17 = request.method.toUpperCase();

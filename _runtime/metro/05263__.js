@@ -9,7 +9,7 @@ export function useGestureEventHandler(arg0, memoizedGestureCallbacks, disableRe
   closure_0 = arg0;
   closure_1 = memoizedGestureCallbacks;
   useMemo = disableReanimated;
-  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
+  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
   closure_3 = tmp;
   items = [arg0, memoizedGestureCallbacks, , , , ];
   ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);

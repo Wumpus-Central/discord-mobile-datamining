@@ -425,7 +425,7 @@ let items = [
                   upload.__dispatch("loadstart", obj9);
                 }
               }
-              obj2 = { data: "disabled", contentType: "isArray" };
+              obj2 = { data: "Array", contentType: "Path" };
             } else {
               self.__dispatch("loadstart");
               const _setTimeout = setTimeout;

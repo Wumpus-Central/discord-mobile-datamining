@@ -1,101 +1,40 @@
 // === Module 15582: ? ===
 
 // Module 15582
-let c0 = false;
+import _mod15543 from "module_15543" /* 15543 */;
+import _mod15545 from "module_15545" /* 15545 */;
+import _mod15561 from "module_15561" /* 15561 */;
+import _mod15583 from "module_15583" /* 15583 */;
+import _mod15584 from "module_15584" /* 15584 */;
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15541)(arg0);
-    const tmp4 = closure_0(15583)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(15587)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+let closure_2 = _mod15545([].push);
+
+export default (arg0, arg1) => {
+  const tmp = _mod15543(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod15561;
+    let tmp14Result = tmp14(_mod15583, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod15561(tmp, key10010);
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15541)(arg0);
-    const tmp4 = closure_0(15583)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
+    if (!tmp2) {
+      continue;
     } else {
-      let sum = closure_0(15587)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod15561(tmp, tmp7)) {
+      let tmp5Result = _mod15584;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
       }
     }
   }
+  return items;
 };
