@@ -1,23 +1,23 @@
-// === Module 19665: StageSpeakInviteNotificationManager ===
+// === Module 19708: StageSpeakInviteNotificationManager ===
 
-// Module 19665 (StageSpeakInviteNotificationManager)
+// Module 19708 (StageSpeakInviteNotificationManager)
 import util from "util" /* 1112 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5950 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10855 */;
-import PushNotificationDefault from "PushNotification" /* 10861 */;
-import NotificationTextUtils from "NotificationTextUtils" /* 11106 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11113 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11115 */;
-import VoicePanelStore from "VoicePanelStore" /* 6495 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6677 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10130 */;
+import PushNotificationDefault from "PushNotification" /* 10136 */;
+import NotificationTextUtils from "NotificationTextUtils" /* 10459 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10482 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10484 */;
+import VoicePanelStore from "VoicePanelStore" /* 6839 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 import UserStore from "UserStore" /* 1386 */;
-import StageInstanceStore from "StageInstanceStore" /* 4767 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import StageInstanceStore from "StageInstanceStore" /* 4771 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 const InAppNotificationTypes = fn(1071).InAppNotificationTypes;

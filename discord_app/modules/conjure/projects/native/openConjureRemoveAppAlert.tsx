@@ -1,15 +1,15 @@
-// === Module 18392: openConjureRemoveAppAlert ===
+// === Module 18431: openConjureRemoveAppAlert ===
 
-// Module 18392 (openConjureRemoveAppAlert)
+// Module 18431 (openConjureRemoveAppAlert)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import useAlertStore from "useAlertStore" /* 5862 */;
-import AlertModal from "AlertModal" /* 5866 */;
-import Stack_Stack from "Stack/Stack" /* 5929 */;
-import ConjureRemovedItemsDefault from "ConjureRemovedItems" /* 12391 */;
-import useConjureRemoveFromServer from "useConjureRemoveFromServer" /* 12393 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12394 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import useAlertStore from "useAlertStore" /* 5922 */;
+import AlertModal from "AlertModal" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 5989 */;
+import ConjureRemovedItemsDefault from "ConjureRemovedItems" /* 12290 */;
+import useConjureRemoveFromServer from "useConjureRemoveFromServer" /* 12292 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -63,11 +63,11 @@ function ConjureRemoveFromServerAlert(target) {
           if (null == closure_128_0) {
             const _Error = Error;
             const intl = tmp2(1112).intl;
-            const error = new Error(intl.string(tmp5(4190).PJ2Fkn));
+            const error = new Error(intl.string(tmp5(4192).PJ2Fkn));
             throw error;
           } else {
             const obj6 = { text: closure_128_0, variant: "success" };
-            tmp5(5595).open("CONJURE_APP_REMOVED", obj6);
+            tmp5(5599).open("CONJURE_APP_REMOVED", obj6);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -83,26 +83,26 @@ function ConjureRemoveFromServerAlert(target) {
   const obj = { title: null, content: null, extraContent: null, actions: null };
   const tmp4 = closure_9();
   let obj2 = require("ConjureRemovedItems");
-  const formatWithAppTagResult = require("ConjureRemovedItems").formatWithAppTag(_modDef4190.x6FvsZ, target.appName);
+  const formatWithAppTagResult = require("ConjureRemovedItems").formatWithAppTag(_modDef4192.x6FvsZ, target.appName);
   obj.title = require("conjureRemoveApp").conjureTitleWithAppTag(closure_6(require("Text/Text").Text, { variant: "heading-lg/semibold", color: "none", style: tmp4.title, children: formatWithAppTagResult }));
   obj.content = tmp3.body;
   let tmp5Result = null;
   if (optionalItems.length > 0) {
     let obj5 = { items: [], optionalItems };
-    tmp5Result = closure_6(tmp(12391), obj5);
+    tmp5Result = closure_6(tmp(12290), obj5);
   }
   items = [tmp5Result, notes.map((children) => closure_1_6(_undefined(dependencyMap[12]).Text, { variant: "body-sm/normal", color: "text-muted", children }, children)), ];
   let tmp5Result2 = null;
   if (null != error) {
     let obj6 = { variant: "body-sm/medium", color: "text-feedback-critical", children: error };
-    tmp5Result2 = closure_6(tmp6(5504).Text, obj6);
+    tmp5Result2 = closure_6(tmp6(5508).Text, obj6);
   }
   items[2] = tmp5Result2;
   obj.extraContent = closure_7(require("Stack/Stack").Stack, { spacing: 12, children: items });
   const obj7 = { children: null };
   const obj8 = { variant: "destructive", text: null, onPress: null };
   let intl = tmp6(1112).intl;
-  obj8.text = intl.string(_modDef4190.BGF8VT);
+  obj8.text = intl.string(_modDef4192.BGF8VT);
   obj8.onPress = function remove() {
     const self = this;
     const apply = closure_1.apply;
@@ -153,10 +153,10 @@ function ConjureDeleteProjectInServerAlert(arg0) {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             importDefault(null);
-            const obj5 = tmp3(6933);
+            const obj5 = tmp3(7541);
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp3(6933).deleteProject(id.id).catch(() => null), done: false };
+            const obj4 = { value: tmp3(7541).deleteProject(id.id).catch(() => null), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -174,7 +174,7 @@ function ConjureDeleteProjectInServerAlert(arg0) {
           }
           if (true !== ok) {
             const intl = tmp3(1112).intl;
-            closure_128_1 = intl.string(tmp2(4190)["0XDHob"]);
+            closure_128_1 = intl.string(tmp2(4192)["0XDHob"]);
             closure_129_1(closure_128_1);
             const _Error = Error;
             const error = new Error(closure_128_1);
@@ -198,7 +198,7 @@ function ConjureDeleteProjectInServerAlert(arg0) {
   let obj3 = { title: null, content: null, extraContent: null, actions: null };
   let intl = util.intl;
   let obj4 = { name: target.projectName };
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef4190.CJBhb2, { name: target.projectName });
+  const formatToPlainStringResult = intl.formatToPlainString(_modDef4192.CJBhb2, { name: target.projectName });
   obj3.title = conjureRemoveApp.conjureTitleWithAppTag(closure_6(Text_Text.Text, { variant: "heading-lg/semibold", color: "none", style: tmp.title, children: formatToPlainStringResult }));
   const obj6 = { variant: "heading-lg/semibold", color: "none", style: tmp.title, children: formatToPlainStringResult };
   obj3.content = conjureRemoveApp.conjureDeleteProjectBody(target, otherTargets);
@@ -219,7 +219,7 @@ function ConjureDeleteProjectInServerAlert(arg0) {
   const obj10 = { children: null };
   const obj11 = { variant: "destructive", text: null, onPress: null };
   const intl2 = util.intl;
-  obj11.text = intl2.string(_modDef4190.aC42bN);
+  obj11.text = intl2.string(_modDef4192.aC42bN);
   obj11.onPress = function submit() {
     const self = this;
     const apply = closure_2.apply;
@@ -241,7 +241,7 @@ function ConjureDeleteProjectInServerAlert(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureRemoveAppAlert.tsx");

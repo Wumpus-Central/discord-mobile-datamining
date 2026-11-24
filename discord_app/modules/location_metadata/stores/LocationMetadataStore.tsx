@@ -1,9 +1,9 @@
-// === Module 10628: LocationMetadataStore ===
+// === Module 9861: LocationMetadataStore ===
 
-// Module 10628 (LocationMetadataStore)
+// Module 9861 (LocationMetadataStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CountryCodeUtils from "CountryCodeUtils" /* 5577 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 5581 */;
 import size from "module_2" /* 2 */;
 
 ({ getDefaultCountryCode: closure_0, getCountryCodeByAlpha2: closure_1 } = CountryCodeUtils);

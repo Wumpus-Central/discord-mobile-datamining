@@ -1,10 +1,10 @@
-// === Module 18301: openConjureMakePersonalAlert ===
+// === Module 18340: openConjureMakePersonalAlert ===
 
-// Module 18301 (openConjureMakePersonalAlert)
-import _modDef4190 from "module_4190" /* 4190 */;
-import useAlertStore from "useAlertStore" /* 5862 */;
-import ConjureChangeListDefault from "ConjureChangeList" /* 18300 */;
-import useConjureMakePersonalDefault from "useConjureMakePersonal" /* 18302 */;
+// Module 18340 (openConjureMakePersonalAlert)
+import _modDef4192 from "module_4192" /* 4192 */;
+import useAlertStore from "useAlertStore" /* 5922 */;
+import ConjureChangeListDefault from "ConjureChangeList" /* 18339 */;
+import useConjureMakePersonalDefault from "useConjureMakePersonal" /* 18341 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,10 +56,10 @@ function ConjureMakePersonalAlert(project) {
             const error = new Error("make personal failed");
             throw error;
           } else {
-            tmp5(5127).hideAllActionSheets();
-            const obj = tmp5(5127);
+            tmp5(5131).hideAllActionSheets();
+            const obj = tmp5(5131);
             const obj7 = { text: closure_128_0, variant: "success" };
-            tmp5(5595).open("CONJURE_MADE_PERSONAL", obj7);
+            tmp5(5599).open("CONJURE_MADE_PERSONAL", obj7);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -76,25 +76,25 @@ function ConjureMakePersonalAlert(project) {
   ({ appName, rows } = tmp3);
   let obj = { title: null, extraContent: null, actions: null };
   const intl = require("util").intl;
-  obj.title = intl.formatToPlainString(_modDef4190.cAxBIL, { app: appName });
+  obj.title = intl.formatToPlainString(_modDef4192.cAxBIL, { app: appName });
   items = [closure_4(ConjureChangeListDefault, { rows }), , ];
   let tmp4Result = null;
   if (null != keptChannels) {
     const obj2 = { variant: "body-sm/normal", color: "text-muted", children: keptChannels };
-    tmp4Result = closure_4(tmp5(5504).Text, obj2);
+    tmp4Result = closure_4(tmp5(5508).Text, obj2);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = null;
   if (null != error) {
     let obj3 = { variant: "body-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
-    tmp4Result2 = closure_4(tmp5(5504).Text, obj3);
+    tmp4Result2 = closure_4(tmp5(5508).Text, obj3);
   }
   items[2] = tmp4Result2;
   obj.extraContent = closure_5(require("Stack/Stack").Stack, { spacing: 12, children: items });
   let obj4 = { children: null };
   let obj5 = { variant: "destructive", text: null, onPress: null };
   const intl2 = tmp5(1112).intl;
-  obj5.text = intl2.string(_modDef4190.ErhKil);
+  obj5.text = intl2.string(_modDef4192.ErhKil);
   obj5.onPress = function submit() {
     const self = this;
     const apply = closure_1.apply;

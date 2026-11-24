@@ -1,6 +1,6 @@
-// === Module 10020: AppFreezeStore ===
+// === Module 8730: AppFreezeStore ===
 
-// Module 10020 (AppFreezeStore)
+// Module 8730 (AppFreezeStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -25,7 +25,7 @@ export default module_560.create((arg0) => {
               items = [closure_1_0];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
-              const set = new Set(items);
+              set = new Set(items);
               obj.lockKeys = set;
               tmp12 = obj;
             }

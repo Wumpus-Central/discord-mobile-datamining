@@ -1,8 +1,8 @@
-// === Module 19799: SoundboardAudioNative ===
+// === Module 19842: SoundboardAudioNative ===
 
-// Module 19799 (SoundboardAudioNative)
+// Module 19842 (SoundboardAudioNative)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DeviceUtils from "DeviceUtils" /* 4870 */;
+import DeviceUtils from "DeviceUtils" /* 4874 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

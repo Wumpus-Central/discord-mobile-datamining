@@ -1,19 +1,19 @@
-// === Module 7360: EnvelopeOpenSpotIllustration ===
+// === Module 7138: EnvelopeOpenSpotIllustration ===
 
-// Module 7360 (EnvelopeOpenSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef7361 from "module_7361" /* 7361 */;
-import _modDef7362 from "module_7362" /* 7362 */;
-import _modDef7363 from "module_7363" /* 7363 */;
+// Module 7138 (EnvelopeOpenSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef7139 from "module_7139" /* 7139 */;
+import _modDef7140 from "module_7140" /* 7140 */;
+import _modDef7141 from "module_7141" /* 7141 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7361 }, 3: null };
-let obj2 = { uri: _modDef7361 };
-obj[2] = { uri: _modDef7362 };
-const obj3 = { uri: _modDef7362 };
-obj[3] = { uri: _modDef7363 };
+let obj = { 1: null, 2: { uri: _modDef7139 }, 3: null };
+let obj2 = { uri: _modDef7139 };
+obj[2] = { uri: _modDef7140 };
+const obj3 = { uri: _modDef7140 };
+obj[3] = { uri: _modDef7141 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeOpenSpotIllustration.native.tsx");
 

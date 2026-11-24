@@ -1,28 +1,28 @@
-// === Module 16115: FamilyCenterSettingsNotice ===
+// === Module 16148: FamilyCenterSettingsNotice ===
 
-// Module 16115 (FamilyCenterSettingsNotice)
+// Module 16148 (FamilyCenterSettingsNotice)
 import _modDef2824 from "module_2824" /* 2824 */;
-import LayerActionCreators from "LayerActionCreators" /* 8116 */;
-import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 9140 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15983 */;
+import LayerActionCreators from "LayerActionCreators" /* 6229 */;
+import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 9016 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(6504).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7707).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(9136).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(8070).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  const obj = activeLinkUserIds(9136);
+  const obj = activeLinkUserIds(8070);
   obj2.label = _modDef2824.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function handleMessageParentClick() {
     openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
       const intl = activeLinkUserIds(1112).intl;
-      return activeLinkUserIds(5594).presentFailedToast(intl.formatToPlainString(_modDef2824.D1BwNC, { count: length.length }));
+      return activeLinkUserIds(5598).presentFailedToast(intl.formatToPlainString(_modDef2824.D1BwNC, { count: length.length }));
     });
   };
   obj2.count = activeLinkUserIds.length;

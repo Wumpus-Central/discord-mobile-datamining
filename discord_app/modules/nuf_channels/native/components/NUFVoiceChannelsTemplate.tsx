@@ -1,11 +1,11 @@
-// === Module 14856: NUFVoiceChannelsTemplate ===
+// === Module 8318: NUFVoiceChannelsTemplate ===
 
-// Module 14856 (NUFVoiceChannelsTemplate)
+// Module 8318 (NUFVoiceChannelsTemplate)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2018 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6529 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 14849 */;
-import NUFTemplateDefault from "NUFTemplate" /* 14857 */;
-import _modDef14858 from "module_14858" /* 14858 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6671 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 8311 */;
+import NUFTemplateDefault from "NUFTemplate" /* 8319 */;
+import _modDef8320 from "module_8320" /* 8320 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -20,7 +20,7 @@ export default function NUFVoiceChannelsTemplate(channel) {
   obj.title = intl.string(channel(1112).t.w5HAll);
   const intl2 = channel(1112).intl;
   obj.description = intl2.string(channel(1112).t.Ww4hhq);
-  obj.imageSrc = _modDef14858;
+  obj.imageSrc = _modDef8320;
   const intl3 = channel(1112).intl;
   obj.CTALabel = intl3.string(channel(1112).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {

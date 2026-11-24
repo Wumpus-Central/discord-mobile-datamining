@@ -1,13 +1,13 @@
-// === Module 11976: loadConjureSharedProject ===
+// === Module 11855: loadConjureSharedProject ===
 
-// Module 11976 (loadConjureSharedProject)
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6659 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
-import conjureProjectLink from "conjureProjectLink" /* 8899 */;
+// Module 11855 (loadConjureSharedProject)
+import conjureProjectLink from "conjureProjectLink" /* 5661 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7541 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11970 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11847 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -364,7 +364,7 @@ export default function loadConjureSharedProject(arg0) {
     resetSessionLoads();
     obj2 = { session: ConjureActionCreators.currentSession(), loading: null, backoffs: null, ticketOnlyProjectIds: null };
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     obj2.loading = set;
     const _Map = Map;
     const map = new Map();

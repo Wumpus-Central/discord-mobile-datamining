@@ -1,9 +1,9 @@
-// === Module 10137: ShareIcon ===
+// === Module 12658: ShareIcon ===
 
-// Module 10137 (ShareIcon)
+// Module 12658 (ShareIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod10138 from "module_10138" /* 10138 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod8455 from "module_8455" /* 8455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ShareIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10138, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8455, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

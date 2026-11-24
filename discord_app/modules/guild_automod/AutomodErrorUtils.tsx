@@ -1,8 +1,8 @@
-// === Module 8676: AutomodErrorUtils ===
+// === Module 8089: AutomodErrorUtils ===
 
-// Module 8676 (AutomodErrorUtils)
+// Module 8089 (AutomodErrorUtils)
 import util from "util" /* 1112 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 require = fn;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {

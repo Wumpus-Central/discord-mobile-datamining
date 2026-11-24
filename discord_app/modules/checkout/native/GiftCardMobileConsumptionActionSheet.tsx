@@ -1,18 +1,18 @@
-// === Module 14054: GiftCardMobileConsumptionActionSheet ===
+// === Module 13733: GiftCardMobileConsumptionActionSheet ===
 
-// Module 14054 (GiftCardMobileConsumptionActionSheet)
+// Module 13733 (GiftCardMobileConsumptionActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _modDef2473 from "module_2473" /* 2473 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, illustration: null, body: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -58,20 +58,20 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items2;
   const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
-  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(14055).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(13734).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj5 = { variant: "body-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1112).intl;
   obj5.children = intl.string(_modDef2473.V3DI1E);
-  items3[1] = closure_6(markAsDismissed(5504).Text, obj5);
+  items3[1] = closure_6(markAsDismissed(5508).Text, obj5);
   const obj6 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
   const intl2 = markAsDismissed(1112).intl;
   obj6.text = intl2.string(_modDef2473.YZePWx);
   obj6.onPress = function onPress() {
     return closure_3(ContentDismissActionType.USER_DISMISS);
   };
-  items3[2] = closure_6(markAsDismissed(5511).Button, obj6);
+  items3[2] = closure_6(markAsDismissed(5515).Button, obj6);
   obj3.children = items3;
-  obj2.children = closure_7(markAsDismissed(5929).Stack, obj3);
+  obj2.children = closure_7(markAsDismissed(5989).Stack, obj3);
   obj.children = closure_6(View, obj2);
-  return closure_6(markAsDismissed(5141).BottomSheet, obj);
+  return closure_6(markAsDismissed(5145).BottomSheet, obj);
 };

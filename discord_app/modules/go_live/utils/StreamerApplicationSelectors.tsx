@@ -1,10 +1,10 @@
-// === Module 8059: StreamerApplicationSelectors ===
+// === Module 8258: StreamerApplicationSelectors ===
 
-// Module 8059 (StreamerApplicationSelectors)
+// Module 8258 (StreamerApplicationSelectors)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import ActivityTypes from "ActivityTypes" /* 5652 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8060 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
+import ActivityTypes from "ActivityTypes" /* 5889 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8259 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
 
 const require = globalThis.__r;
 

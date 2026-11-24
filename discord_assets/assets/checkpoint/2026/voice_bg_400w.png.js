@@ -1,6 +1,6 @@
-// === Module 12745: ? ===
+// === Module 12664: ? ===
 
-// Module 12745
+// Module 12664
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js");

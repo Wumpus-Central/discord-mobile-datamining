@@ -1,6 +1,6 @@
-// === Module 14018: BadgeTierGrid ===
+// === Module 13686: BadgeTierGrid ===
 
-// Module 14018 (BadgeTierGrid)
+// Module 13686 (BadgeTierGrid)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, grid: null, row: null, item: null, progressLabel: null, icon: null, dimmedIcon: null, subtitleRow: null, centeredText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.grid = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -41,7 +41,7 @@ export default function BadgeTierGrid(badge) {
     let intl = badge(1112).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1112).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(5504).Text, obj2);
+    isViewingOtherUser = closure_4(badge(5508).Text, obj2);
   }
   items = [isViewingOtherUser, ];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };
@@ -49,8 +49,8 @@ export default function BadgeTierGrid(badge) {
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(11331);
-  obj4.children = isViewingOtherUser(11331)(tiers, 3).map((arr) => React4(View, {
+  const tmp9 = isViewingOtherUser(9632);
+  obj4.children = isViewingOtherUser(9632)(tiers, 3).map((arr) => React4(View, {
     style: row.row,
     collapsable: false,
     children: arr.map((owned) => {
@@ -63,7 +63,7 @@ export default function BadgeTierGrid(badge) {
       if (complex_icon_static_url == null) {
         complex_icon_static_url = owned.complex_icon_static_url;
       }
-      const tierRowSubtitle = badge(13990).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
+      const tierRowSubtitle = badge(9729).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
       const intl = badge(1112).intl;
       const t = badge(1112).t;
       items = [owned.name, tierRowSubtitle, intl.string(owned ? t.sTFApF : t.uHtDcT)];
@@ -84,8 +84,8 @@ export default function BadgeTierGrid(badge) {
         }
         items1[1] = dimmedIcon;
         obj4.style = items1;
-        tmp9Result = closure_2_4(isViewingOtherUser(14010), obj4);
-        const tmp11 = isViewingOtherUser(14010);
+        tmp9Result = closure_2_4(isViewingOtherUser(9715), obj4);
+        const tmp11 = isViewingOtherUser(9715);
       }
       const items2 = [tmp9Result, , ];
       let tmp13Result = null != owned.name;
@@ -95,7 +95,7 @@ export default function BadgeTierGrid(badge) {
           str = "text-default";
         }
         const obj5 = { variant: "body-sm/semibold", color: str, style: item.centeredText, children: owned.name };
-        tmp13Result = closure_2_4(badge(5504).Text, obj5);
+        tmp13Result = closure_2_4(badge(5508).Text, obj5);
       }
       items2[1] = tmp13Result;
       let tmp5Result = "" !== tierRowSubtitle;
@@ -104,7 +104,7 @@ export default function BadgeTierGrid(badge) {
         let tmp15 = !owned;
         if (!owned) {
           const obj7 = { size: "xxs", color: isViewingOtherUser(575).colors.ICON_MUTED };
-          tmp15 = closure_2_4(badge(7695).LockIcon, obj7);
+          tmp15 = closure_2_4(badge(7035).LockIcon, obj7);
         }
         const items3 = [tmp15, ];
         let str2 = "text-muted";
@@ -112,7 +112,7 @@ export default function BadgeTierGrid(badge) {
           str2 = "text-default";
         }
         const obj8 = { variant: "body-sm/normal", color: str2, style: item.centeredText, children: tierRowSubtitle };
-        items3[1] = closure_2_4(badge(5504).Text, obj8);
+        items3[1] = closure_2_4(badge(5508).Text, obj8);
         obj6.children = items3;
         tmp5Result = closure_2_5(closure_3, obj6);
       }

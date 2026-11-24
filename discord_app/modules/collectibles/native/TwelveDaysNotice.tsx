@@ -1,11 +1,11 @@
-// === Module 17332: TwelveDaysNotice ===
+// === Module 17370: TwelveDaysNotice ===
 
-// Module 17332 (TwelveDaysNotice)
+// Module 17370 (TwelveDaysNotice)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import LinearGradientDefault from "LinearGradient" /* 5468 */;
-import useTrackImpression from "useTrackImpression" /* 5930 */;
+import LinearGradientDefault from "LinearGradient" /* 5472 */;
+import useTrackImpression from "useTrackImpression" /* 5990 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,17 +17,17 @@ function NoticeGradient() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const colors = ["rgba(14, 56, 100, 0.7)", "rgba(6, 138, 185, 0.7)"];
-const TextVariantsFlat = fn(5505).TextVariantsFlat;
+const TextVariantsFlat = fn(5509).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
   lineHeight = found.lineHeight;
 }
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { nagbar: null, nagbarContent: null, nagbarText: null, indexNotice: null, indexNoticeIcon: null, indexNoticeCopy: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, overflow: "hidden" };
 obj2.nagbar = rect;
@@ -39,7 +39,7 @@ obj2.indexNoticeIcon = { height: lineHeight, justifyContent: "center" };
 let obj4 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.indexNoticeCopy = { flex: 1, gap: nativeDefault.space.PX_4 };
 let closure_12 = createStyles.createStyles(obj2);
-let items = [fn(4746).DismissibleContent.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR];
+let items = [fn(4750).DismissibleContent.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR];
 let closure_14 = [];
 const constants = { SHOP_HOME: "shop_home", COLLECTION_INDEX: "collection_index" };
 const size = fn(2);

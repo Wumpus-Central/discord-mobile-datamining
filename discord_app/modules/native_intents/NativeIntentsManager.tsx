@@ -1,21 +1,21 @@
-// === Module 20132: NativeIntentsManager ===
+// === Module 20175: NativeIntentsManager ===
 
-// Module 20132 (NativeIntentsManager)
+// Module 20175 (NativeIntentsManager)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import UserUtilsDefault from "UserUtils" /* 4969 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import getChannelIcon from "getChannelIcon" /* 14296 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 20133 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 20134 */;
+import UserUtilsDefault from "UserUtils" /* 4973 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import getChannelIcon from "getChannelIcon" /* 14329 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 20176 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 20177 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 function indexingEnabled() {
@@ -198,7 +198,7 @@ function setChannelActivity(channelId) {
         }
       }
       HermesBuiltin.arraySpread(items1, 1);
-      const set = new Set(items);
+      set = new Set(items);
       const items3 = [];
       HermesBuiltin.arraySpread(set, 0);
       const CHANNELResult = gesture.CHANNEL(channel.guild_id, channel.id);

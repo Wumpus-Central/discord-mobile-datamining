@@ -1,12 +1,12 @@
-// === Module 8457: MessageReactionsStore ===
+// === Module 12083: MessageReactionsStore ===
 
-// Module 8457 (MessageReactionsStore)
+// Module 12083 (MessageReactionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8458 */;
-import LurkingStore from "LurkingStore" /* 4846 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8950 */;
+import LurkingStore from "LurkingStore" /* 4850 */;
 import UserRecord from "UserRecord" /* 1405 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 import UserStore from "UserStore" /* 1386 */;
 
 function handleReaction(userId) {

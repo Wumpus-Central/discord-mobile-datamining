@@ -1,10 +1,10 @@
-// === Module 8965: CollectiblesSequencedOfferPromotionUtils ===
+// === Module 11108: CollectiblesSequencedOfferPromotionUtils ===
 
-// Module 8965 (CollectiblesSequencedOfferPromotionUtils)
-import StorefrontTypes from "StorefrontTypes" /* 6854 */;
-import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8963 */;
-import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8966 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8927 */;
+// Module 11108 (CollectiblesSequencedOfferPromotionUtils)
+import StorefrontTypes from "StorefrontTypes" /* 7469 */;
+import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 11106 */;
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 11109 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 10982 */;
 import size from "module_2" /* 2 */;
 
 function isSequencedOfferRewardAvailable(rewardStatus) {
@@ -40,7 +40,7 @@ function isSequencedOfferRewardAvailable(rewardStatus) {
   return tmp;
 }
 ({ doesStorefrontPromotionCoverSku: c2, getCollectiblesCollectionSequencedOffer: c3 } = StorefrontPromotionRecord);
-const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesSequencedOfferPromotionUtils.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesSequencedOfferPromotionUtils.tsx");
 
 export function isOrbsBackPromotion(rewardConfig) {
   let actionType;
@@ -78,4 +78,26 @@ export function getSequencedOfferPromotionForCollectiblesProduct(skuId, includeB
     tmp5 = null;
   }
   return tmp5;
+}
+export function getActiveSequencedOfferPromotion(arr, arg1, arg2) {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  let found;
+  if (arr != null) {
+    found = arr.find((item) => {
+      const tmp = React3(item);
+      let result = null != tmp;
+      if (result) {
+        result = tmp.collectionId === closure_0;
+      }
+      if (result) {
+        result = CollectiblesPromoPriceUtils.isStorefrontPromotionActive(item, closure_1);
+      }
+      return result;
+    });
+  }
+  if (found == null) {
+    found = null;
+  }
+  return found;
 }

@@ -97,7 +97,7 @@ prototype["emit"] = function emit() {
         self.changeSentinel = self.changeSentinel + 1;
         let num2 = 0;
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         const _Set2 = Set;
         if (self.changedStores.size > 0) {
           const sum = num2 + 1;
@@ -163,7 +163,7 @@ prototype["emitNonReactOnce"] = function emitNonReactOnce(arg0, arg1) {
   closure_1 = arg0;
   const timestamp = Date.now();
   let changedStores = this.changedStores;
-  const set = new Set();
+  set = new Set();
   this.changedStores = set;
   let item = changedStores.forEach((_changeCallbacks) => {
     set.add(_changeCallbacks);
@@ -211,7 +211,7 @@ prototype["emitReactOnce"] = function emitReactOnce() {
     const serializer = LastFewActionsAll;
     logger.verbose(combined, serializer.serialize());
   }
-  const set = new Set();
+  set = new Set();
 };
 let merged = Object.assign({ changedStores: null, reactChangedStores: null, changeSentinel: 0, isBatchEmitting: false, isDispatching: false, isPaused: false, pauseTimer: null });
 merged[0] = new Set();

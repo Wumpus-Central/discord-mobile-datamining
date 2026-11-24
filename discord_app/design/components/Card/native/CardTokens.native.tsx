@@ -1,6 +1,6 @@
-// === Module 7048: CardTokens ===
+// === Module 6020: CardTokens ===
 
-// Module 7048 (CardTokens)
+// Module 6020 (CardTokens)
 import nativeDefault from "native" /* 575 */;
 import size from "module_2" /* 2 */;
 

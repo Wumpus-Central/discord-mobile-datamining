@@ -1,16 +1,16 @@
-// === Module 8343: ConversationPreviewStore ===
+// === Module 8164: ConversationPreviewStore ===
 
-// Module 8343 (ConversationPreviewStore)
+// Module 8164 (ConversationPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1454 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8341 */;
-import ConversationsUtils from "ConversationsUtils" /* 8342 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8162 */;
+import ConversationsUtils from "ConversationsUtils" /* 8163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -109,8 +109,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(5537).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(5537).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5541).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5541).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -220,7 +220,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       } else {
         const _Set = Set;
         items = [str];
-        const set = new Set(items);
+        set = new Set(items);
         const result = map1.set(conversationId, set);
       }
     }

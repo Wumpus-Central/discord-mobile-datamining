@@ -1,9 +1,9 @@
-// === Module 8971: CollectiblesCollectionSalePromotionUtils ===
+// === Module 11136: CollectiblesCollectionSalePromotionUtils ===
 
-// Module 8971 (CollectiblesCollectionSalePromotionUtils)
-import StorefrontTypes from "StorefrontTypes" /* 6854 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8927 */;
-import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8963 */;
+// Module 11136 (CollectiblesCollectionSalePromotionUtils)
+import StorefrontTypes from "StorefrontTypes" /* 7469 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 10982 */;
+import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 11106 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = StorefrontPromotionRecord.getCollectiblesCollectionSale;

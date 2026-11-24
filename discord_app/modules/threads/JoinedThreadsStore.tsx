@@ -1,11 +1,11 @@
-// === Module 4847: JoinedThreadsStore ===
+// === Module 4851: JoinedThreadsStore ===
 
-// Module 4847 (JoinedThreadsStore)
+// Module 4851 (JoinedThreadsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4766 */;
-import MuteTimersDefault from "MuteTimers" /* 4848 */;
+import ChannelRecord from "ChannelRecord" /* 4770 */;
+import MuteTimersDefault from "MuteTimers" /* 4852 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -28,7 +28,7 @@ function storeThread(channel) {
     navigation.clearTimer(id);
     if (true === obj[id].muted) {
       const _Set2 = Set;
-      const set = new Set(set2);
+      set = new Set(set2);
       set2 = set;
       set.add(id);
       if (navigation.setTimer(id, tmp10.muteConfig, () => {
@@ -61,7 +61,7 @@ function handleThreadListSyncOrSearchFinish(guildId) {
       closure_5.clearTimer(id);
       if (true === obj[id].muted) {
         const _Set2 = Set;
-        const set = new Set(set2);
+        set = new Set(set2);
         set2 = set;
         set.add(id);
         if (closure_5.setTimer(id, tmp2.muteConfig, () => {
@@ -240,7 +240,7 @@ obj = {
       navigation.clearTimer(id);
       if (true === obj[id].muted) {
         const _Set2 = Set;
-        const set = new Set(set2);
+        set = new Set(set2);
         set2 = set;
         set.add(id);
         if (navigation.setTimer(id, tmp24.muteConfig, () => {
@@ -270,7 +270,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "Array" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;
@@ -318,7 +318,7 @@ obj = {
           let muteConfig = obj[id];
           closure_5.clearTimer(id);
           if (true === muteConfig.muted) {
-            const set = new tmp15.Set(set2);
+            set = new tmp15.Set(set2);
             set2 = set;
             set.add(id);
             muteConfig = muteConfig.muteConfig;

@@ -1,9 +1,9 @@
-// === Module 7747: PinotDiscoverable ===
+// === Module 8389: PinotDiscoverable ===
 
-// Module 7747 (PinotDiscoverable)
+// Module 8389 (PinotDiscoverable)
 import util from "util" /* 1112 */;
-import _modDef3508 from "module_3508" /* 3508 */;
-import PinotConstants from "PinotConstants" /* 7748 */;
+import _modDef3510 from "module_3510" /* 3510 */;
+import PinotConstants from "PinotConstants" /* 8390 */;
 import size from "module_2" /* 2 */;
 
 const PinotDiscoverableOption = { ALL_CONTENT: "all_content", SUMMARIES: "summaries", MESSAGES: "messages", NONE: "none" };
@@ -14,7 +14,7 @@ const dependencyMap = { [PinotDiscoverableOption.ALL_CONTENT]: 0, [PinotDiscover
 const result = size.fileFinishedImporting("modules/pinot/PinotDiscoverable.tsx");
 
 export { PinotDiscoverableOption };
-export const PINOT_DISCOVERABLE_OPTION_LABELS = { [ALL_CONTENT]: _modDef3508.QsbbMS, [SUMMARIES]: util.t.q21fUr, [MESSAGES]: util.t.OIgYlQ, [NONE]: util.t.PoWNfe };
+export const PINOT_DISCOVERABLE_OPTION_LABELS = { [ALL_CONTENT]: _modDef3510.QsbbMS, [SUMMARIES]: util.t.q21fUr, [MESSAGES]: util.t.OIgYlQ, [NONE]: util.t.PoWNfe };
 export function getPinotDiscoverableFlags(arg0, serverFlags) {
   if (arg0 === obj.NONE) {
     let tmp3 = dependencyMap[arg0];

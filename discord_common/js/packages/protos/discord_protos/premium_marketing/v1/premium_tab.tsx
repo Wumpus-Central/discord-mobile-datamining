@@ -1,10 +1,10 @@
-// === Module 9153: premium_tab ===
+// === Module 9031: premium_tab ===
 
-// Module 9153 (premium_tab)
+// Module 9031 (premium_tab)
 import _mod1196 from "module_1196" /* 1196 */;
-import localized_string from "localized_string" /* 9150 */;
-import theme_aware_asset from "theme_aware_asset" /* 9154 */;
-import tab_gradient_colors from "tab_gradient_colors" /* 9155 */;
+import localized_string from "localized_string" /* 9028 */;
+import theme_aware_asset from "theme_aware_asset" /* 9032 */;
+import tab_gradient_colors from "tab_gradient_colors" /* 9033 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 10058: showSearchableDestinationListModal ===
+// === Module 8800: showSearchableDestinationListModal ===
 
-// Module 10058 (showSearchableDestinationListModal)
-import ChatInputUtils from "ChatInputUtils" /* 5098 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7373 */;
+// Module 8800 (showSearchableDestinationListModal)
+import ChatInputUtils from "ChatInputUtils" /* 5102 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7183 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");

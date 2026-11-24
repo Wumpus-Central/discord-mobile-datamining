@@ -1,16 +1,16 @@
-// === Module 18725: useSmartSearchStatus ===
+// === Module 18766: useSmartSearchStatus ===
 
-// Module 18725 (useSmartSearchStatus)
-import SmartSearchUtils from "SmartSearchUtils" /* 13200 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13201 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13202 */;
+// Module 18766 (useSmartSearchStatus)
+import SmartSearchUtils from "SmartSearchUtils" /* 13114 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13115 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13116 */;
 
 const require = globalThis.__r;
 
 require = fn;
 SmartSearchResultsStoreDefault;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchStatus.tsx");
+const result = size.fileFinishedImporting("modules/intelligence_layer/search/useSmartSearchStatus.tsx");
 
 export function useSmartSearchStatus(memo) {
   _require = memo;

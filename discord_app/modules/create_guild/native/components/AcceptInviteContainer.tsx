@@ -1,19 +1,19 @@
-// === Module 13664: AcceptInviteContainer ===
+// === Module 13574: AcceptInviteContainer ===
 
-// Module 13664 (AcceptInviteContainer)
+// Module 13574 (AcceptInviteContainer)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 7095 */;
+import NavigatorHeader from "NavigatorHeader" /* 7065 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import InviteStore from "InviteStore" /* 5632 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import InviteStore from "InviteStore" /* 5636 */;
 
 require = fn;
 const ThemeTypes = fn(1071).ThemeTypes;
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { flex: { flex: 1 }, paddingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -69,7 +69,7 @@ export default function AcceptInviteContainer(code) {
           }
           const roles = invite.roles;
           flag = roles.some((id) => !set.has(id.id));
-          const set = new Set(roles2);
+          set = new Set(roles2);
         }
       }
     }

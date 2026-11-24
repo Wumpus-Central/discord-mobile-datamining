@@ -1,7 +1,7 @@
-// === Module 8313: GuildMemberSafetySearchUtils ===
+// === Module 8141: GuildMemberSafetySearchUtils ===
 
-// Module 8313 (GuildMemberSafetySearchUtils)
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8314 */;
+// Module 8141 (GuildMemberSafetySearchUtils)
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8042 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");

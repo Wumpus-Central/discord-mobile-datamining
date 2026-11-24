@@ -1,9 +1,9 @@
-// === Module 7735: ChannelSettingsPermissionsActionCreators ===
+// === Module 8386: ChannelSettingsPermissionsActionCreators ===
 
-// Module 7735 (ChannelSettingsPermissionsActionCreators)
+// Module 8386 (ChannelSettingsPermissionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 7736 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
+import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 8387 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

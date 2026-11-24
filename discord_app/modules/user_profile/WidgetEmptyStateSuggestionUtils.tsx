@@ -1,7 +1,7 @@
-// === Module 14570: WidgetEmptyStateSuggestionUtils ===
+// === Module 14838: WidgetEmptyStateSuggestionUtils ===
 
-// Module 14570 (WidgetEmptyStateSuggestionUtils)
-import ApplicationWidgetConstants from "ApplicationWidgetConstants" /* 14571 */;
+// Module 14838 (WidgetEmptyStateSuggestionUtils)
+import ApplicationWidgetConstants from "ApplicationWidgetConstants" /* 14839 */;
 import size from "module_2" /* 2 */;
 
 ({ MARVEL_RIVALS_APPLICATION_ID: c2, WUTHERING_WAVES_APPLICATION_ID: c3 } = ApplicationWidgetConstants);
@@ -11,7 +11,7 @@ export function getWidgetEmptyStateSuggestions(addableWidgets) {
   addableWidgets = addableWidgets.addableWidgets;
   const prop = addableWidgets.applicationAffinityData;
   items = [];
-  const set = new Set();
+  set = new Set();
   let WANT_TO_PLAY_GAMES = Date.now();
   let found = prop.filter((item) => {
     ({ isConnected, lastPlayedAt } = item);

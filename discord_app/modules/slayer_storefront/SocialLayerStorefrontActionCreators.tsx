@@ -1,12 +1,12 @@
-// === Module 9408: SocialLayerStorefrontActionCreators ===
+// === Module 9267: SocialLayerStorefrontActionCreators ===
 
-// Module 9408 (SocialLayerStorefrontActionCreators)
+// Module 9267 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8925 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6849 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9171 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7464 */;
 
 const require = globalThis.__r;
 
@@ -736,13 +736,10 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
                 const _Date2 = Date;
               }
               c3 = 1;
-              DispatcherDefault.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
-              const HTTP = require("HTTPUtils").HTTP;
-              const obj5 = { url: constants.SOCIAL_LAYER_STOREFRONT_CONFIG, rejectWithError: true };
               c4 = 2;
               c5 = 1;
-              const obj8 = { value: HTTP.get(obj5), done: false };
-              return obj8;
+              const obj5 = { value: DispatcherDefault.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" }), done: false };
+              return obj5;
             } else {
               const _Date = Date;
             }
@@ -752,7 +749,24 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
         if (1 === tmp7) {
           c3 = 0;
           closure_130_1(closure_130_2[5]).dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
-          const obj6 = closure_130_1(closure_130_2[5]);
+          const obj9 = closure_130_1(closure_130_2[5]);
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            const HTTP = closure_130_0(closure_130_2[8]).HTTP;
+            const obj7 = { url: closure_130_6.SOCIAL_LAYER_STOREFRONT_CONFIG, rejectWithError: true, retries: 3 };
+            c4 = 3;
+            c5 = 1;
+            const obj8 = { value: HTTP.get(obj7), done: false };
+            return obj8;
+          }
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
@@ -782,17 +796,17 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
             let obj = { version: body.announcement_modal_config.version, applicationId: body.announcement_modal_config.application_id };
             closure_129_2 = obj;
           }
-          const obj9 = { type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS", config: null };
-          const obj10 = { promotionalSkuIds: body.promotional_sku_ids, storefronts: closure_129_1, announcementModalConfig: closure_129_2 };
-          obj9.config = obj10;
-          closure_130_1(closure_130_2[5]).dispatch(obj9);
+          const obj11 = { type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS", config: null };
+          const obj12 = { promotionalSkuIds: body.promotional_sku_ids, storefronts: closure_129_1, announcementModalConfig: closure_129_2 };
+          obj11.config = obj12;
+          closure_130_1(closure_130_2[5]).dispatch(obj11);
           c3 = 0;
           const obj2 = closure_130_1(closure_130_2[5]);
         }
         c3 = 0;
         c5 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
+        const obj13 = { value, done: true };
+        return obj13;
       }
       c5 = 3;
     } catch (tmp35) {

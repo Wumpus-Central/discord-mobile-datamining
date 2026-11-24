@@ -1,8 +1,8 @@
-// === Module 6987: conjureBrowserSessionsConnection ===
+// === Module 7583: conjureBrowserSessionsConnection ===
 
-// Module 6987 (conjureBrowserSessionsConnection)
+// Module 7583 (conjureBrowserSessionsConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6939 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7547 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/browser_streams/conjureBrowserSessionsConnection.tsx");

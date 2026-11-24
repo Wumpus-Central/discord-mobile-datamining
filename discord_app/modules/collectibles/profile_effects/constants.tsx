@@ -1,6 +1,6 @@
-// === Module 9015: constants ===
+// === Module 9331: constants ===
 
-// Module 9015 (constants)
+// Module 9331 (constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");

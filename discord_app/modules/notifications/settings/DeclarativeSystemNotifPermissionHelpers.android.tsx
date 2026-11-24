@@ -1,16 +1,16 @@
-// === Module 17423: DeclarativeSystemNotifPermissionHelpers ===
+// === Module 17461: DeclarativeSystemNotifPermissionHelpers ===
 
-// Module 17423 (DeclarativeSystemNotifPermissionHelpers)
+// Module 17461 (DeclarativeSystemNotifPermissionHelpers)
 import _mod17 from "module_17" /* 17 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1377 */;
-import DeviceUtils from "DeviceUtils" /* 4870 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7371 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15656 */;
-import NotifSettings from "NotifSettings" /* 15657 */;
+import DeviceUtils from "DeviceUtils" /* 4874 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7181 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15677 */;
+import NotifSettings from "NotifSettings" /* 15678 */;
 import size from "module_2" /* 2 */;
 
 function refreshSystemNotifPermissions() {
-  const tmp = settings(15663);
+  const tmp = settings(15684);
   let androidNotifChannelStates;
   if (tmp != null) {
     const getAndroidNotifChannelStates = tmp.getAndroidNotifChannelStates;
@@ -21,7 +21,7 @@ function refreshSystemNotifPermissions() {
   if (null != androidNotifChannelStates) {
     items = [];
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     let iter = androidNotifChannelStates[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -36,9 +36,9 @@ function refreshSystemNotifPermissions() {
       }
       continue;
     }
-    settings = androidNotifChannelStates(15660).getAssignedNotifSettingsAndMappings().settings;
+    settings = androidNotifChannelStates(15681).getAssignedNotifSettingsAndMappings().settings;
     const _Map = Map;
-    const obj2 = androidNotifChannelStates(15660);
+    const obj2 = androidNotifChannelStates(15681);
     const _Object = Object;
     const entries = Object.entries(obj);
     let found = entries.filter((item) => {

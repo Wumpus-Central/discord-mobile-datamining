@@ -1,7 +1,7 @@
-// === Module 18220: useSubscribeToGuildMemberUpdates ===
+// === Module 18259: useSubscribeToGuildMemberUpdates ===
 
-// Module 18220 (useSubscribeToGuildMemberUpdates)
-import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 12046 */;
+// Module 18259 (useSubscribeToGuildMemberUpdates)
+import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 11938 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

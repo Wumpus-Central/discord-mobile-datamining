@@ -1,6 +1,6 @@
-// === Module 9426: UserProfileWYSIWYGEditingExperiment ===
+// === Module 9297: UserProfileWYSIWYGEditingExperiment ===
 
-// Module 9426 (UserProfileWYSIWYGEditingExperiment)
+// Module 9297 (UserProfileWYSIWYGEditingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 
@@ -11,8 +11,8 @@ obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileWYSIWYGEditingExperiment.tsx");
 
-export function useIsEligibleForUserProfileWYSIWYGEditing(AutomodQuarantineUtils) {
-  return closure_0.useConfig({ location: AutomodQuarantineUtils }).enabled;
+export function useIsEligibleForUserProfileWYSIWYGEditing(useOpenProfileSettings) {
+  return closure_0.useConfig({ location: useOpenProfileSettings }).enabled;
 }
 export function getIsEligibleForUserProfileWYSIWYGEditing(location) {
   return closure_0.getConfig({ location }).enabled;

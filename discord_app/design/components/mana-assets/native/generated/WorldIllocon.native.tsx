@@ -1,20 +1,20 @@
-// === Module 13650: WorldIllocon ===
+// === Module 13564: WorldIllocon ===
 
-// Module 13650 (WorldIllocon)
-import FastImageDefault from "FastImage" /* 5600 */;
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef13651 from "module_13651" /* 13651 */;
-import _modDef13652 from "module_13652" /* 13652 */;
-import _modDef13653 from "module_13653" /* 13653 */;
+// Module 13564 (WorldIllocon)
+import FastImageDefault from "FastImage" /* 5604 */;
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef13565 from "module_13565" /* 13565 */;
+import _modDef13566 from "module_13566" /* 13566 */;
+import _modDef13567 from "module_13567" /* 13567 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13651 }, 3: null };
-const obj2 = { uri: _modDef13651 };
-obj[2] = { uri: _modDef13652 };
-const obj3 = { uri: _modDef13652 };
-obj[3] = { uri: _modDef13653 };
+let obj = { 1: null, 2: { uri: _modDef13565 }, 3: null };
+const obj2 = { uri: _modDef13565 };
+obj[2] = { uri: _modDef13566 };
+const obj3 = { uri: _modDef13566 };
+obj[3] = { uri: _modDef13567 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WorldIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function WorldIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7357).getAssetSource(obj);
+  obj.source = num(7135).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

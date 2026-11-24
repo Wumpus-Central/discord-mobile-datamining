@@ -1,29 +1,30 @@
-// === Module 6456: StreamActionCreators ===
+// === Module 8278: StreamActionCreators ===
 
-// Module 6456 (StreamActionCreators)
+// Module 8278 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5836 */;
-import ChannelUtils from "ChannelUtils" /* 5948 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6432 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 6459 */;
-import transitionToStreamDefault from "transitionToStream" /* 6493 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6529 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7739 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5902 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6009 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6671 */;
+import ChannelUtils from "ChannelUtils" /* 6675 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6690 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7716 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8281 */;
+import transitionToStreamDefault from "transitionToStream" /* 8307 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 5655 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 6457 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 6458 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
+import GameConsoleStore from "GameConsoleStore" /* 5726 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8279 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8280 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5903 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 const require = globalThis.__r;
 
@@ -81,7 +82,7 @@ function watchStream(stream, forceMultiple) {
     }
   }
 }
-let closure_19 = async function _fetchStreamPreview() {
+let closure_20 = async function _fetchStreamPreview() {
   closure_1 = arg1;
   closure_2 = arg2;
   c7 = 0;
@@ -134,7 +135,7 @@ let closure_19 = async function _fetchStreamPreview() {
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
               HTTP = obj6(1284).HTTP;
-              const request = { url: closure_2_13.STREAM_PREVIEW(HTTPResult), query: null, oldFormErrors: true, rejectWithError: null };
+              const request = { url: closure_2_14.STREAM_PREVIEW(HTTPResult), query: null, oldFormErrors: true, rejectWithError: null };
               const obj9 = { version: null };
               timestamp = Date.now();
               obj9.version = timestamp;
@@ -152,20 +153,20 @@ let closure_19 = async function _fetchStreamPreview() {
             c6 = 0;
             closure_131_3 = closure_5;
             if (429 === closure_131_3.status) {
-              closure_131_2 = closure_131_3.body.retry_after * closure_132_1(closure_132_2[20]).Millis.SECOND;
+              closure_131_2 = closure_131_3.body.retry_after * closure_132_1(closure_132_2[21]).Millis.SECOND;
             }
             const obj10 = { type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: closure_131_0, retryAfter: closure_131_2 };
-            closure_132_1(closure_132_2[12]).dispatch(obj10);
-            const obj4 = closure_132_1(closure_132_2[12]);
+            closure_132_1(closure_132_2[13]).dispatch(obj10);
+            const obj4 = closure_132_1(closure_132_2[13]);
           } else if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_131_1 = value;
             const obj11 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: closure_131_0, previewURL: closure_131_1.body.url };
-            closure_132_1(closure_132_2[12]).dispatch(obj11);
+            closure_132_1(closure_132_2[13]).dispatch(obj11);
             c6 = 0;
-            const obj = closure_132_1(closure_132_2[12]);
+            const obj = closure_132_1(closure_132_2[13]);
           }
           c6 = 0;
           c8 = 3;
@@ -185,8 +186,8 @@ let closure_19 = async function _fetchStreamPreview() {
     }
   })();
 };
-let closure_20 = async function _notifyStreamStart(arg0) {
-  await TrackedHTTPUtilsDefault.post({ url: closure_2_13.STREAM_NOTIFY(closure_0), oldFormErrors: true, trackedActionData: { event: require("discord_common/AnalyticsUtils").NetworkActionNames.STREAM_NOTIFY }, rejectWithError: true });
+let closure_21 = async function _notifyStreamStart(arg0) {
+  await TrackedHTTPUtilsDefault.post({ url: closure_2_14.STREAM_NOTIFY(closure_0), oldFormErrors: true, trackedActionData: { event: require("discord_common/AnalyticsUtils").NetworkActionNames.STREAM_NOTIFY }, rejectWithError: true });
   if (1 === tmp6) {
     c4 = 0;
     c1 = 3;
@@ -199,8 +200,8 @@ let closure_20 = async function _notifyStreamStart(arg0) {
   return value;
 };
 const Constants = fn(1071);
-({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6397).StreamTypes;
+({ Endpoints: closure_14, AppContext: closure_15, PopoutWindowKeys: closure_16 } = Constants);
+const StreamTypes = fn(6688).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -270,7 +271,7 @@ export function closeStream(encodeStreamKeyResult1, arg1) {
 }
 export function fetchStreamPreview() {
   const self = this;
-  const apply = closure_19.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -283,7 +284,7 @@ export function setLayout(layout) {
 }
 export function notifyStreamStart() {
   const self = this;
-  const apply = closure_20.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -293,16 +294,37 @@ export function notifyStreamStart() {
 }
 export function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
-    const obj = StreamQualityUtils;
-    const result = obj.trackStreamSettingsUpdate(noTrack.preset, noTrack.resolution, noTrack.frameRate, noTrack.soundshareEnabled);
+    state = ApplicationStreamingSettingsStore.getState();
+    const obj3 = StreamQualityUtils;
+    let preset = noTrack.preset;
+    if (preset == null) {
+      preset = state.preset;
+    }
+    let resolution = noTrack.resolution;
+    if (resolution == null) {
+      resolution = state.resolution;
+    }
+    let fps = noTrack.frameRate;
+    if (fps == null) {
+      fps = state.fps;
+    }
+    let soundshareEnabled = noTrack.soundshareEnabled;
+    if (soundshareEnabled == null) {
+      soundshareEnabled = state.soundshareEnabled;
+    }
+    let streamDrawingEnabled = noTrack.streamDrawingEnabled;
+    if (streamDrawingEnabled == null) {
+      streamDrawingEnabled = state.streamDrawingEnabled;
+    }
+    const result = obj3.trackStreamSettingsUpdate(preset, resolution, fps, soundshareEnabled, streamDrawingEnabled);
   }
   const merged = Object.assign(noTrack);
   DispatcherDefault.dispatch({ type: "STREAM_UPDATE_SETTINGS" });
-  const obj3 = { type: "STREAM_UPDATE_SETTINGS" };
+  const obj2 = { type: "STREAM_UPDATE_SETTINGS" };
 }
 export function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: state.STREAM(encodeStreamKeyResult), body: { region: preferredRegion }, oldFormErrors: true, rejectWithError: true };
+  const request = { url: gesture.STREAM(encodeStreamKeyResult), body: { region: preferredRegion }, oldFormErrors: true, rejectWithError: true };
   HTTP.patch(request);
 }
 export function stopOwnStream(arg0) {
@@ -347,15 +369,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(6493)(closure_1_1);
+          closure_1(8307)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5948).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5948);
+          closure_0(6675).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6675);
         }
       }
     };

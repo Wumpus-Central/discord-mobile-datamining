@@ -1,8 +1,8 @@
-// === Module 18811: SearchFetchPendingManager ===
+// === Module 18853: SearchFetchPendingManager ===
 
-// Module 18811 (SearchFetchPendingManager)
-import useInitialValueDefault from "useInitialValue" /* 5492 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
+// Module 18853 (SearchFetchPendingManager)
+import useInitialValueDefault from "useInitialValue" /* 5496 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13111 */;
 import noop from "module_19" /* 19 */;
 
 let closure_3 = function SearchFetchPendingManager() {
@@ -42,7 +42,7 @@ export function useSearchFetchPendingManager(searchContext) {
     if (typeof closure_3 === "function") {
       const obj = Object.create(closure_3.prototype);
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       obj.pending = set;
       obj.add = function add(arg0) {
         const pending = obj.pending;

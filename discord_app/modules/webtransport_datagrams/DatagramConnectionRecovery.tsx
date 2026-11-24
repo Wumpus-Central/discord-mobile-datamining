@@ -1,8 +1,8 @@
-// === Module 14887: DatagramConnectionRecovery ===
+// === Module 14924: DatagramConnectionRecovery ===
 
-// Module 14887 (DatagramConnectionRecovery)
-import DatagramEvent from "DatagramEvent" /* 14885 */;
-import DatagramRecoveryDefault from "DatagramRecovery" /* 14888 */;
+// Module 14924 (DatagramConnectionRecovery)
+import DatagramEvent from "DatagramEvent" /* 14922 */;
+import DatagramRecoveryDefault from "DatagramRecovery" /* 14925 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/webtransport_datagrams/DatagramConnectionRecovery.tsx");
@@ -61,9 +61,9 @@ class DatagramConnectionRecovery {
               connection2.off(DatagramEvent.DatagramEvent.Disconnect, disconnect);
             };
             let connection2 = acquireResult.connection;
-            connection2.on(acquireResult(14885).DatagramEvent.Connect, connect);
+            connection2.on(acquireResult(14922).DatagramEvent.Connect, connect);
             const connection3 = acquireResult.connection;
-            connection3.on(acquireResult(14885).DatagramEvent.Disconnect, disconnect);
+            connection3.on(acquireResult(14922).DatagramEvent.Disconnect, disconnect);
             items = [];
             HermesBuiltin.arraySpread(acquireResult.subscribers, 0);
             for (const item10010 of items) {

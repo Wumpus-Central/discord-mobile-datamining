@@ -1,15 +1,15 @@
-// === Module 17930: GuildsBarItemEmptyNUX ===
+// === Module 17966: GuildsBarItemEmptyNUX ===
 
-// Module 17930 (GuildsBarItemEmptyNUX)
+// Module 17966 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import transitionToGuild from "transitionToGuild" /* 6835 */;
-import NativeViewDefault from "NativeView" /* 7324 */;
-import _modDef9815 from "module_9815" /* 9815 */;
-import usePressabilityDefault from "usePressability" /* 17875 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import NativeViewDefault from "NativeView" /* 6929 */;
+import transitionToGuild from "transitionToGuild" /* 8459 */;
+import _modDef8660 from "module_8660" /* 8660 */;
+import usePressabilityDefault from "usePressability" /* 17913 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
 
 const require = globalThis.__r;
 
@@ -19,13 +19,13 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(17862);
+const GuildsBarConstants = fn(17900);
 ({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1071).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(9420).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(9288).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_13 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = { root: { alignSelf: "stretch", paddingLeft: hitSlop.left, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING }, container: { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width }, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };
@@ -96,7 +96,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const obj11 = { style: tmp5.icon, source: null, resizeMode: "contain" };
   const obj7 = require("module_1653");
   const obj8 = { onPress: handlePress };
-  obj11.source = _modDef9815;
+  obj11.source = _modDef8660;
   items6[1] = closure_11(FastImageDefault, obj11);
   const obj12 = { style: tmp5.guildIndicator, children: closure_11(require("GuildsBarAnimatedItemWrapper").UnreadIndicator, { selected: true === stateFromStores }) };
   items6[2] = closure_11(closure_5, obj12);
@@ -116,10 +116,10 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const obj17 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: null };
     const intl2 = tmp(1112).intl;
     obj17.children = intl2.string(tmp(1112).t["3S2xmm"]);
-    obj16.title = closure_11(tmp(5504).Text, obj17);
-    obj15.children = closure_11(tmp(17886).HomeDrawerSharedItem, obj16);
-    tmp21Result = closure_11(tmp3(7324), obj15);
-    const tmp3Result4 = tmp3(7324);
+    obj16.title = closure_11(tmp(5508).Text, obj17);
+    obj15.children = closure_11(tmp(17924).HomeDrawerSharedItem, obj16);
+    tmp21Result = closure_11(tmp3(6929), obj15);
+    const tmp3Result4 = tmp3(6929);
   }
   items7[1] = tmp21Result;
   obj14.children = items7;

@@ -1,9 +1,9 @@
-// === Module 6860: OrderConstraintUtils ===
+// === Module 7472: OrderConstraintUtils ===
 
-// Module 6860 (OrderConstraintUtils)
+// Module 7472 (OrderConstraintUtils)
 import util from "util" /* 1112 */;
-import PaymentConstants from "PaymentConstants" /* 5630 */;
-import OrderConstants from "OrderConstants" /* 6861 */;
+import PaymentConstants from "PaymentConstants" /* 5634 */;
+import OrderConstants from "OrderConstants" /* 7473 */;
 import size from "module_2" /* 2 */;
 
 function isSpendingLimitReasonCode(reason_code) {

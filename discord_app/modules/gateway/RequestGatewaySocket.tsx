@@ -1,6 +1,6 @@
-// === Module 8453: RequestGatewaySocket ===
+// === Module 10215: RequestGatewaySocket ===
 
-// Module 8453 (RequestGatewaySocket)
+// Module 10215 (RequestGatewaySocket)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -135,7 +135,7 @@ export function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(8266).requestSafeIdleCallback(() => {
+  combined(10216).requestSafeIdleCallback(() => {
     if (map.has(combined)) {
       const obj3 = { bridge_token: combined, cleared_after: null };
       const _performance = performance;
@@ -154,7 +154,7 @@ export function startBridgeTo(arg0) {
       const result = map.set(combined, diff);
     }
   }, { timeout: 5000 });
-  let obj2 = combined(8266);
+  let obj2 = combined(10216);
 }
 export { stopRequest };
 export function withRequest() {

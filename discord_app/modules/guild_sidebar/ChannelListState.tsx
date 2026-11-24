@@ -1,35 +1,35 @@
-// === Module 8321: ChannelListState ===
+// === Module 8145: ChannelListState ===
 
-// Module 8321 (ChannelListState)
+// Module 8145 (ChannelListState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import ChannelListUtils from "ChannelListUtils" /* 5949 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6889 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8328 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
+import ChannelListUtils from "ChannelListUtils" /* 6676 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7498 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8152 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ChannelStatusStore from "ChannelStatusStore" /* 8322 */;
-import GatedChannelStore from "GatedChannelStore" /* 4817 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6633 */;
-import ImpersonateStore from "ImpersonateStore" /* 4818 */;
-import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 8323 */;
-import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 8324 */;
-import NewChannelsStore from "NewChannelsStore" /* 8325 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6618 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7483 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8320 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import ReadStateStore from "ReadStateStore" /* 6619 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5657 */;
-import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 8326 */;
+import ChannelStatusStore from "ChannelStatusStore" /* 8146 */;
+import GatedChannelStore from "GatedChannelStore" /* 4821 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5649 */;
+import ImpersonateStore from "ImpersonateStore" /* 4822 */;
+import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 8147 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 8148 */;
+import NewChannelsStore from "NewChannelsStore" /* 8149 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6805 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4851 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7348 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8144 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5728 */;
+import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 8150 */;
 
 require = fn;
 function computeSubtitle(type, arg1, arg2) {
@@ -223,12 +223,12 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-const ChannelRecord = fn(4766);
+const ChannelRecord = fn(4770);
 ({ ChannelRecordBase: closure_14, isGuildReadableType: closure_15, isThread: closure_16, THREADED_CHANNEL_TYPES: closure_17 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(8327).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(8151).ChannelListGuildActionRow;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = Constants);
-const ChannelFlags = fn(4769).ChannelFlags;
+const ChannelFlags = fn(4773).ChannelFlags;
 const Permissions = fn(1082).Permissions;
 let c34 = "placeholder-channel-id";
 const keyExtractor = { CannotShow: 1, [1]: "CannotShow", DoNotShow: 2, [2]: "DoNotShow", WouldShowIfUncollapsed: 3, [3]: "WouldShowIfUncollapsed", Show: 4, [4]: "Show" };
@@ -243,7 +243,7 @@ let items = [String(ChannelListGuildActionRow.GUILD_DIRECTORY)];
 let set = new Set(items);
 class ChannelListImpl {
   constructor(arg0, arg1, arg2) {
-    merged = Object.assign({ sortedNamedCategories: null, sections: null, rows: null, firstVoiceChannel: "Array", allChannelsById: 0, version: "asc" });
+    merged = Object.assign({ sortedNamedCategories: null, sections: null, rows: null, firstVoiceChannel: "Array", allChannelsById: 0, version: "updateConnectionMuteDeaf" });
     merged.id = global;
     obj = closure_25;
     merged.hideMutedChannels = closure_25.isGuildCollapsed(merged.id);

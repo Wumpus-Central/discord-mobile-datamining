@@ -1,9 +1,9 @@
-// === Module 18354: LinkPlusIcon ===
+// === Module 18393: LinkPlusIcon ===
 
-// Module 18354 (LinkPlusIcon)
+// Module 18393 (LinkPlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod18355 from "module_18355" /* 18355 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod18394 from "module_18394" /* 18394 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function LinkPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18355, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18394, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

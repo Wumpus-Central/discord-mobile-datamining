@@ -1,13 +1,13 @@
-// === Module 20082: NativeNotificationsManager ===
+// === Module 20125: NativeNotificationsManager ===
 
-// Module 20082 (NativeNotificationsManager)
+// Module 20125 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import PushNotificationDefault from "PushNotification" /* 10861 */;
-import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10864 */;
+import PushNotificationDefault from "PushNotification" /* 10136 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10139 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6664 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;

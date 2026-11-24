@@ -1,9 +1,9 @@
-// === Module 17377: DefaultDMSettingsExperiment ===
+// === Module 17415: DefaultDMSettingsExperiment ===
 
-// Module 17377 (DefaultDMSettingsExperiment)
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5575 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6411 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6416 */;
+// Module 17415 (DefaultDMSettingsExperiment)
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5579 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6699 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6704 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");

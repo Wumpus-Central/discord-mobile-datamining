@@ -1,6 +1,6 @@
-// === Module 10535: useNavigatorBackHandler ===
+// === Module 11270: useNavigatorBackHandler ===
 
-// Module 10535 (useNavigatorBackHandler)
+// Module 11270 (useNavigatorBackHandler)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

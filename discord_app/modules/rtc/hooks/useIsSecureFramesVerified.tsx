@@ -1,12 +1,12 @@
-// === Module 9688: useIsSecureFramesVerified ===
+// === Module 8520: useIsSecureFramesVerified ===
 
-// Module 9688 (useIsSecureFramesVerified)
-import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
+// Module 8520 (useIsSecureFramesVerified)
+import StreamKeyUtils from "StreamKeyUtils" /* 6690 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
-import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9689 */;
-import TransientKeyStore from "TransientKeyStore" /* 9690 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9691 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 8521 */;
+import TransientKeyStore from "TransientKeyStore" /* 8522 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 8523 */;
 
 require = fn;
 const size = fn(2);

@@ -1,15 +1,15 @@
-// === Module 8283: ReadStates ===
+// === Module 8123: ReadStates ===
 
-// Module 8283 (ReadStates)
+// Module 8123 (ReadStates)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4791 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import ReadStateStore from "ReadStateStore" /* 6619 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
 
-const ReadStateTypes = fn(6553).ReadStateTypes;
+const ReadStateTypes = fn(6042).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -77,7 +77,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const _Object = Object;
       const keys = Object.keys(ChannelStore.getMutablePrivateChannels());
       const _Set = Set;
-      const set = new Set(keys);
+      set = new Set(keys);
       const sorted = applyDefault(keys).sort(SnowflakeUtilsDefault.compare);
       const obj11 = applyDefault(keys);
       let str = sorted.reverse().value()[0];

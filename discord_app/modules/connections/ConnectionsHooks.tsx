@@ -1,12 +1,12 @@
-// === Module 8296: ConnectionsHooks ===
+// === Module 8135: ConnectionsHooks ===
 
-// Module 8296 (ConnectionsHooks)
+// Module 8135 (ConnectionsHooks)
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import PlatformsDefault from "Platforms" /* 6691 */;
+import PlatformsDefault from "Platforms" /* 6052 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6689 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7336 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1071);
 ({ ACTIVITY_PLATFORM_TYPES: metroImportDefault, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(8297).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(8136).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -101,7 +101,7 @@ export function usePlatforms() {
   };
   const items2 = [stateFromStores];
   memo = noop.useMemo(() => {
-    const set = new Set();
+    set = new Set();
     const item = stateFromStores.forEach((type) => set.add(type.type));
     return set;
   }, items2);
@@ -134,7 +134,7 @@ export function useEmptyStatePlatforms() {
   closure_129_0 = false;
   items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(8299).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(8138).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {

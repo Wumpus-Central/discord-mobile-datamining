@@ -1,8 +1,8 @@
-// === Module 8273: ExtendedMemoryLru ===
+// === Module 8113: ExtendedMemoryLru ===
 
-// Module 8273 (ExtendedMemoryLru)
-import Lru from "Lru" /* 8274 */;
-import IterableAll from "Iterable" /* 8275 */;
+// Module 8113 (ExtendedMemoryLru)
+import Lru from "Lru" /* 8114 */;
+import IterableAll from "Iterable" /* 8115 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

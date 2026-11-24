@@ -1,15 +1,15 @@
-// === Module 8858: PremiumSubscriptionOfferUtil ===
+// === Module 9231: PremiumSubscriptionOfferUtil ===
 
-// Module 8858 (PremiumSubscriptionOfferUtil)
+// Module 9231 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import Server from "Server" /* 2117 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 8859 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8861 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8862 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8863 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8864 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8866 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 8995 */;
+import hooks_usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer" /* 9018 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 9019 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 9174 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9232 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 9233 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;
@@ -31,7 +31,7 @@ function getDiscountInfo(active_discount_id) {
           if (gesture !== active_discount_id) {
             if (colors !== active_discount_id) {
               if (state !== active_discount_id) {
-                if (dependencyMap !== active_discount_id) {
+                if (set !== active_discount_id) {
                   if (timestampProducer === active_discount_id) {
                     const obj4 = { duration: 1, percentage: 20, discountId: active_discount_id };
                     return obj4;
@@ -91,7 +91,7 @@ const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionOf
 export function useIsInPremiumOfferExperience() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   const hasActiveTrial = PremiumSubscriptionTrialUtil.useHasActiveTrial();
-  usePremiumDiscountOffer;
+  hooks_usePremiumDiscountOffer;
   if (typeof useHasDiscountApplied === "function") {
     items = [SubscriptionStore];
     const stateFromStores = initialize.useStateFromStores(items, () => SubscriptionStore.getPremiumTypeSubscription());
@@ -132,7 +132,7 @@ export function useFetchChurnUserDiscountOffer(arg0) {
   const tmp3 = useDiscountOfferDefault(collapsedCategories);
   const tmp4 = useDiscountOfferDefault(closure_1_19);
   const tmp5 = useDiscountOfferDefault(closure_1_11);
-  const tmp6 = useDiscountOfferDefault(dependencyMap);
+  const tmp6 = useDiscountOfferDefault(set);
   [tmp8, require] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [tmp10, tmp11] = noop.useState(false);

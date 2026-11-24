@@ -1,12 +1,12 @@
-// === Module 6485: surveyFetch ===
+// === Module 7724: surveyFetch ===
 
-// Module 6485 (surveyFetch)
+// Module 7724 (surveyFetch)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import TypeUtils from "TypeUtils" /* 4774 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6432 */;
+import TypeUtils from "TypeUtils" /* 4778 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6009 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

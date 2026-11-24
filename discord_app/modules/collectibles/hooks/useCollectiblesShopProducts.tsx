@@ -1,16 +1,16 @@
-// === Module 9897: useCollectiblesShopProducts ===
+// === Module 11453: useCollectiblesShopProducts ===
 
-// Module 9897 (useCollectiblesShopProducts)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8167 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9898 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9899 */;
+// Module 11453 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6184 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 11456 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 11457 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 11459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8969 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8168 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 8076 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 8077 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11135 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 11454 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 6186 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 6187 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ function useAbsentIds(arg0) {
     return tmp;
   });
   const someResult = mapped.some((item) => !first.has(item));
-  let set = first;
+  set = first;
   if (someResult) {
     const _Set = Set;
     items = [];

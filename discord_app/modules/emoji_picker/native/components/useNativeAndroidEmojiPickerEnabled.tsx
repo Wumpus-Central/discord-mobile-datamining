@@ -1,8 +1,8 @@
-// === Module 11283: useNativeAndroidEmojiPickerEnabled ===
+// === Module 9441: useNativeAndroidEmojiPickerEnabled ===
 
-// Module 11283 (useNativeAndroidEmojiPickerEnabled)
+// Module 9441 (useNativeAndroidEmojiPickerEnabled)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4808 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4812 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

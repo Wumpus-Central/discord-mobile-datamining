@@ -1,9 +1,9 @@
-// === Module 13743: RouteManager ===
+// === Module 13653: RouteManager ===
 
-// Module 13743 (RouteManager)
+// Module 13653 (RouteManager)
 import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 673 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
-import KeybindRouterStore from "KeybindRouterStore" /* 13744 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
+import KeybindRouterStore from "KeybindRouterStore" /* 13654 */;
 
 let obj2 = fn;
 const Routes = fn(1071).Routes;
@@ -34,7 +34,7 @@ class RouteManager {
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(13745);
+          obj = obj2(13655);
           if (!obj.convertRouteToNavigation(pathname)) {
             obj2(1098).replaceWith(Routes.ME);
             const tmp2Result = obj2(1098);
@@ -192,7 +192,7 @@ obj2.handleConnectionChange = function handleConnectionChange() {
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(13745);
+      obj = obj2(13655);
       if (!obj.convertRouteToNavigation(pathname)) {
         obj2(1098).replaceWith(Routes.ME);
         const tmp2Result = obj2(1098);

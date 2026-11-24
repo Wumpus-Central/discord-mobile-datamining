@@ -1,6 +1,6 @@
-// === Module 10001: AppStoreOverlayCategoryMessages ===
+// === Module 9792: AppStoreOverlayCategoryMessages ===
 
-// Module 10001 (AppStoreOverlayCategoryMessages)
+// Module 9792 (AppStoreOverlayCategoryMessages)
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 

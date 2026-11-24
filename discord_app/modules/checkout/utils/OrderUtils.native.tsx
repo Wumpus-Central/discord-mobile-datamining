@@ -1,6 +1,6 @@
-// === Module 9248: OrderUtils ===
+// === Module 9129: OrderUtils ===
 
-// Module 9248 (OrderUtils)
+// Module 9129 (OrderUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -89,7 +89,7 @@ let closure_4 = async function _discardDraftOrder(arg0) {
     }
   }
 };
-const OrderStatus = fn(5630).OrderStatus;
+const OrderStatus = fn(5634).OrderStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/utils/OrderUtils.native.tsx");
 

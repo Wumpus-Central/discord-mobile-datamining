@@ -1,11 +1,11 @@
-// === Module 18647: ConjureHomeTargetPicker ===
+// === Module 18688: ConjureHomeTargetPicker ===
 
-// Module 18647 (ConjureHomeTargetPicker)
+// Module 18688 (ConjureHomeTargetPicker)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import UserIcon from "UserIcon" /* 12361 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9675 */;
+import UserIcon from "UserIcon" /* 12259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(12471).ServerIcon,
+        IconComponent: target(11300).ServerIcon,
         action() {
           return dependencyMap(label.id);
         }
@@ -63,7 +63,7 @@ export default function ConjureHomeTargetPicker(target) {
     ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
     const obj = { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef4190.Lyx6pW, { name });
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef4192.Lyx6pW, { name });
     obj.accessibilityActions = accessibilityActions;
     obj.onAccessibilityAction = onAccessibilityAction;
     return jsx(components_Button_Button.Button, { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null });

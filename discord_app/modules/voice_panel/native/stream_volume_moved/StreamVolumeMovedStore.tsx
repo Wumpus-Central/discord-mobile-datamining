@@ -1,7 +1,7 @@
-// === Module 14506: StreamVolumeMovedStore ===
+// === Module 14775: StreamVolumeMovedStore ===
 
-// Module 14506 (StreamVolumeMovedStore)
-import ZustandStore from "ZustandStore" /* 5102 */;
+// Module 14775 (StreamVolumeMovedStore)
+import ZustandStore from "ZustandStore" /* 5106 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ hintStreamKey: null, scrollToStreamVolumeUserId: null, coachmarkUserId: null }));

@@ -1,6 +1,6 @@
-// === Module 8697: UnlinkedGamePlayerPlaceholders ===
+// === Module 12730: UnlinkedGamePlayerPlaceholders ===
 
-// Module 8697 (UnlinkedGamePlayerPlaceholders)
+// Module 12730 (UnlinkedGamePlayerPlaceholders)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
@@ -39,7 +39,7 @@ export function isUnlinkedGamePlayerPlaceholder(linkedLobby, items1) {
   return isProvisional;
 }
 export function getFirstMessagePerAuthor(unlinkedGamePlayerPlaceholders) {
-  const set = new Set();
+  set = new Set();
   items = [];
   const iter = unlinkedGamePlayerPlaceholders[Symbol.iterator]();
   const nextResult = iter.next();

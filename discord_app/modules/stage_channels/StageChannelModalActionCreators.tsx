@@ -1,14 +1,14 @@
-// === Module 7280: StageChannelModalActionCreators ===
+// === Module 7701: StageChannelModalActionCreators ===
 
-// Module 7280 (StageChannelModalActionCreators)
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 6497 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6529 */;
+// Module 7701 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6671 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 7702 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 
 const require = fn;
 let closure_10 = async function _connectOrLurkStage(arg0) {
@@ -199,15 +199,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(6497).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(7702).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(6497);
+    const obj2 = flag2(7702);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(6497).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(6497);
+      flag2(7702).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(7702);
     }
   }
 }

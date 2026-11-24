@@ -1,6 +1,6 @@
-// === Module 8367: PostTTIScheduler ===
+// === Module 8189: PostTTIScheduler ===
 
-// Module 8367 (PostTTIScheduler)
+// Module 8189 (PostTTIScheduler)
 import size from "module_2" /* 2 */;
 
 const obj = {

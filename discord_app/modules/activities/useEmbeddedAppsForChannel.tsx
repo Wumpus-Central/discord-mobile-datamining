@@ -1,11 +1,11 @@
-// === Module 12927: useEmbeddedAppsForChannel ===
+// === Module 12846: useEmbeddedAppsForChannel ===
 
-// Module 12927 (useEmbeddedAppsForChannel)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6864 */;
+// Module 12846 (useEmbeddedAppsForChannel)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7389 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
 import UserStore from "UserStore" /* 1386 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ function useEmbeddedApps(arr, arg1) {
   let mapped = arr.map((applicationId) => applicationId.applicationId);
   const tmp2 = useGetOrFetchApplicationsDefault(mapped);
   dependencyMap = tmp2;
-  const set = new Set([]);
+  set = new Set([]);
   const iter = arr[Symbol.iterator]();
   while (iter !== undefined) {
     let userIds = iter.next().userIds;
@@ -68,7 +68,7 @@ function useEmbeddedApps(arr, arg1) {
     return mapped.filter(closure_0(closure_2[7]).isNotNullish);
   }, items2);
 }
-const NO_ACTIVITIES = fn(4761).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(4765).NO_ACTIVITIES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 

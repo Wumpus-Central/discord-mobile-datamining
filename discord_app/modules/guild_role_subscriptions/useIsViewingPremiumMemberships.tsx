@@ -1,10 +1,10 @@
-// === Module 13730: useIsViewingPremiumMemberships ===
+// === Module 13640: useIsViewingPremiumMemberships ===
 
-// Module 13730 (useIsViewingPremiumMemberships)
+// Module 13640 (useIsViewingPremiumMemberships)
 import Constants from "Constants" /* 1071 */;
-import ChannelConstants from "ChannelConstants" /* 4769 */;
-import _mod4957 from "module_4957" /* 4957 */;
-import RouteUtils from "RouteUtils" /* 4964 */;
+import ChannelConstants from "ChannelConstants" /* 4773 */;
+import _mod4961 from "module_4961" /* 4961 */;
+import RouteUtils from "RouteUtils" /* 4968 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -13,5 +13,5 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useI
 
 export default function useIsViewingPremiumMemberships() {
   const RouteParam = RouteUtils.RouteParam;
-  return null != _mod4957.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  return null != _mod4961.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
 };

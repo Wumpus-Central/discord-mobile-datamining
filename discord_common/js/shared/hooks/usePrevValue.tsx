@@ -1,6 +1,6 @@
-// === Module 8026: usePrevValue ===
+// === Module 8482: usePrevValue ===
 
-// Module 8026 (usePrevValue)
+// Module 8482 (usePrevValue)
 import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

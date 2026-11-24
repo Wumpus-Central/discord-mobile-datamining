@@ -1,8 +1,8 @@
-// === Module 9570: OrderSigningDeferral ===
+// === Module 11115: OrderSigningDeferral ===
 
-// Module 9570 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9571 */;
-import StripeNextAction from "StripeNextAction" /* 9572 */;
+// Module 11115 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 11116 */;
+import StripeNextAction from "StripeNextAction" /* 11117 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -94,7 +94,7 @@ let closure_5 = async function _performSigningDeferralAction(arg0) {
     }
   }
 };
-const OrderStatus = fn(5630).OrderStatus;
+const OrderStatus = fn(5634).OrderStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/OrderSigningDeferral.tsx");
 

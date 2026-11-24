@@ -1,9 +1,9 @@
-// === Module 12124: ReportToModStore ===
+// === Module 12056: ReportToModStore ===
 
-// Module 12124 (ReportToModStore)
+// Module 12056 (ReportToModStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
 
 function handleSelectedGuildChange() {
   let lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
@@ -82,7 +82,7 @@ const reportToModStore = new ReportToModStore(DispatcherDefault, {
     channelId = channelId.channelId;
     if (null == closure_3.reportedMessages[channelId]) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       closure_3.reportedMessages[channelId] = set;
     }
     closure_3.reportedMessages[channelId].add(channelId.messageId);
@@ -107,7 +107,7 @@ const reportToModStore = new ReportToModStore(DispatcherDefault, {
   },
   GUILD_SETTINGS_LOADED_BANS_BATCH: function handleGuildBansLoaded(guildId) {
     ({ bans, userIds } = guildId);
-    let set;
+    set = undefined;
     if (guildId.guildId === c1) {
       const _Set = Set;
       set = new Set(bans.map((user) => {

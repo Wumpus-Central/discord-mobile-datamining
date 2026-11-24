@@ -1,17 +1,17 @@
-// === Module 8314: ApplicationCommandUtils ===
+// === Module 8042: ApplicationCommandUtils ===
 
-// Module 8314 (ApplicationCommandUtils)
+// Module 8042 (ApplicationCommandUtils)
 import applyDefault from "apply" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1082 */;
 import Server from "Server" /* 2117 */;
-import ChannelRecord from "ChannelRecord" /* 4766 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5565 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
-import DraftStore from "DraftStore" /* 8315 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8317 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5937 */;
+import ChannelRecord from "ChannelRecord" /* 4770 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5569 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
+import DraftStore from "DraftStore" /* 7976 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8043 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6947 */;
 import Constants from "Constants" /* 1071 */;
 import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F124898 */ function() { ... });
+                      mapped = choices.map(/* F124887 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F92794 */ function() { ... });
+                      mapped1 = options.map(/* F92236 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -436,7 +436,8 @@ export { buildCommand };
 export function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
   return applyDefault.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
-    return buildSubCommands({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions });
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
+    return buildSubCommands(obj);
   });
 }
 export function applicationPermissionsList(arr) {

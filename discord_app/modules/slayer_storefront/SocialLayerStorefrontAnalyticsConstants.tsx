@@ -1,6 +1,6 @@
-// === Module 9591: SocialLayerStorefrontAnalyticsConstants ===
+// === Module 11500: SocialLayerStorefrontAnalyticsConstants ===
 
-// Module 9591 (SocialLayerStorefrontAnalyticsConstants)
+// Module 11500 (SocialLayerStorefrontAnalyticsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontAnalyticsConstants.tsx");

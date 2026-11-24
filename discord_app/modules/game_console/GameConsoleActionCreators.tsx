@@ -1,15 +1,15 @@
-// === Module 11018: GameConsoleActionCreators ===
+// === Module 10367: GameConsoleActionCreators ===
 
-// Module 11018 (GameConsoleActionCreators)
+// Module 10367 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5815 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11019 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5876 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 10368 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
-import SessionsStore from "SessionsStore" /* 5656 */;
-import GameConsoleStore from "GameConsoleStore" /* 5655 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import SessionsStore from "SessionsStore" /* 5727 */;
+import GameConsoleStore from "GameConsoleStore" /* 5726 */;
 
 require = fn;
 function disconnectRemote() {

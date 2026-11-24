@@ -1,7 +1,7 @@
-// === Module 5758: DaveRecipientTracker ===
+// === Module 5821: DaveRecipientTracker ===
 
-// Module 5758 (DaveRecipientTracker)
-import TimeUtils from "TimeUtils" /* 5662 */;
+// Module 5821 (DaveRecipientTracker)
+import TimeUtils from "TimeUtils" /* 5701 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/rtc/DaveRecipientTracker.tsx");
@@ -14,7 +14,7 @@ class DaveRecipientTracker {
       TimeStampProducer = closure_0(closure_1[0]).TimeStampProducer;
     }
     merged = Object.assign({ mode: "none", modeSince: 0, summary: null, hasGroup: false, recipients: null, newestRoster: null, resetSinceInstall: false, voiceStateUsers: null, connectedUsers: null, everPresent: null, openLingers: null, prepared: null, prepareSeq: 0, submitted: null, earlyExecutes: null });
-    merged[2] = { encryptedDuration: 0, mirrorUncertainCount: 0, lingerCount: 0, lingerTotalDuration: 0, lingerMaxDuration: 0, lingerMaxCause: "done" };
+    merged[2] = { encryptedDuration: 0, mirrorUncertainCount: 0, lingerCount: 0, lingerTotalDuration: 0, lingerMaxDuration: 0, lingerMaxCause: "channel_id" };
     set = new Set();
     merged[4] = set;
     set1 = new Set();
@@ -56,7 +56,7 @@ prototype["mlsMessageProcessed"] = function mlsMessageProcessed(arg0, arg1, prot
   if (arg1) {
     self.hasGroup = true;
     const _Set = Set;
-    const set = new Set(items);
+    set = new Set(items);
     self.newestRoster = set;
     self.prepare(arg0, protocolVersion);
     if (0 === arg0) {
@@ -196,7 +196,7 @@ prototype["execute"] = function execute(arg0, arg1) {
       if (0 === value.protocolVersion) {
         self.hasGroup = false;
         const _Set2 = Set;
-        const set = new Set();
+        set = new Set();
         self.recipients = set;
         self.setMode("passthrough");
       } else {

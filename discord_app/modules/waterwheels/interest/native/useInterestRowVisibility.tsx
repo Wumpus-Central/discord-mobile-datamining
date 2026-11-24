@@ -1,6 +1,6 @@
-// === Module 17840: useInterestRowVisibility ===
+// === Module 17878: useInterestRowVisibility ===
 
-// Module 17840 (useInterestRowVisibility)
+// Module 17878 (useInterestRowVisibility)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

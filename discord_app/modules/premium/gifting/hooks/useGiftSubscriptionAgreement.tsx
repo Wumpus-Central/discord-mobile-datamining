@@ -1,6 +1,6 @@
-// === Module 11912: useGiftSubscriptionAgreement ===
+// === Module 11787: useGiftSubscriptionAgreement ===
 
-// Module 11912 (useGiftSubscriptionAgreement)
+// Module 11787 (useGiftSubscriptionAgreement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,20 +14,20 @@ export default function useGiftSubscriptionAgreement(code) {
   if (code != null) {
     code = code.code;
   }
-  let isResolvingAgreement = code(11911).needsGiftSubscriptionAgreement(code);
+  let isResolvingAgreement = code(11786).needsGiftSubscriptionAgreement(code);
   const tmp3 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp3[1];
   items = [code, isResolvingAgreement];
   const effect = noop.useEffect(() => {
     closure_0 = async function _lookUpOnOpen(arg0) {
-      await closure_2_1(11906).resolveGiftCode(closure_0, { withSubscriptionPlan: true, withGiftSubscriptionAgreement: true });
+      await closure_2_1(11781).resolveGiftCode(closure_0, { withSubscriptionPlan: true, withGiftSubscriptionAgreement: true });
       if (1 === tmp7) {
         c4 = 0;
         closure_129_0 = closure_3;
-        const result = isResolvingAgreement(11906).reportUnexpectedGiftCodeError(closure_129_0);
+        const result = isResolvingAgreement(11781).reportUnexpectedGiftCodeError(closure_129_0);
         tmp3(true);
         c6 = 3;
-        isResolvingAgreement(11906);
+        isResolvingAgreement(11781);
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;

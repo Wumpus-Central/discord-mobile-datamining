@@ -1,6 +1,6 @@
-// === Module 8004: GuildSettingsFetchActionCreators ===
+// === Module 8441: GuildSettingsFetchActionCreators ===
 
-// Module 8004 (GuildSettingsFetchActionCreators)
+// Module 8441 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

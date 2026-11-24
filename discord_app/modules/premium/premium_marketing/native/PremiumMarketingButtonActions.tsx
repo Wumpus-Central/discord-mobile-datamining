@@ -1,16 +1,16 @@
-// === Module 9406: PremiumMarketingButtonActions ===
+// === Module 9265: PremiumMarketingButtonActions ===
 
-// Module 9406 (PremiumMarketingButtonActions)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8074 */;
-import ProductIds from "ProductIds" /* 8170 */;
-import openUserSettings from "openUserSettings" /* 8194 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9110 */;
-import cta_button from "cta_button" /* 9152 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 9407 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 9409 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 9465 */;
-import PromotionsStore from "PromotionsStore" /* 9143 */;
+// Module 9265 (PremiumMarketingButtonActions)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6184 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
+import openUserSettings from "openUserSettings" /* 7968 */;
+import premium_ProductIds from "premium/ProductIds" /* 8972 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 8975 */;
+import cta_button from "cta_button" /* 9030 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 9266 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 9268 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10968 */;
+import PromotionsStore from "PromotionsStore" /* 9021 */;
 
 const require = globalThis.__r;
 
@@ -98,7 +98,7 @@ export function getButtonActionHandler(giftModalDestination) {
             const result = showMarketingMomentRewardScreen.showMarketingMomentRewardScreen(length[0]);
             const tmp3Result = showMarketingMomentRewardScreen;
           }
-          tmp5 = productId === ProductIds.ProductIds.PREMIUM_TIER_2_MONTHLY || productId === ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
+          tmp5 = productId === premium_ProductIds.ProductIds.PREMIUM_TIER_2_MONTHLY || productId === premium_ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
         }
       };
       require("openPremiumPlanSelectionActionSheet")(obj);

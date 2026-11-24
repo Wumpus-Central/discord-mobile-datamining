@@ -1,6 +1,6 @@
-// === Module 15058: findCodedLinkUrlsUsingRegex ===
+// === Module 5640: findCodedLinkUrls ===
 
-// Module 15058 (findCodedLinkUrlsUsingRegex)
+// Module 5640 (findCodedLinkUrls)
 import ip from "ip" /* 1380 */;
 
 function trimTrailingPunctuation(str) {
@@ -10,9 +10,9 @@ const regExp = new RegExp("(?:(?:(?:https?:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*
 const re1 = /`{3,}[\s\S]*?(?:`{3,}|$)|(`{1,2})[^`]+\1(?!`)/g;
 const re2 = /[.,;:?'*_~|]+$/;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrlsUsingRegex.tsx");
+const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrls.tsx");
 
-export default function findCodedLinkUrlsUsingRegex(str) {
+export default function findCodedLinkUrls(str) {
   str = str.replaceAll(re1, " ");
   const match = str.match(regExp);
   let mapped;

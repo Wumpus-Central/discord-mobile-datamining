@@ -1,9 +1,9 @@
-// === Module 19625: ParentalConsentManager ===
+// === Module 19669: ParentalConsentManager ===
 
-// Module 19625 (ParentalConsentManager)
+// Module 19669 (ParentalConsentManager)
 import Constants from "Constants" /* 1071 */;
-import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 7989 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 7937 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 import size from "module_2" /* 2 */;
 
 const AppStates = Constants.AppStates;
@@ -13,20 +13,20 @@ class ParentalConsentManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       CONNECTION_OPEN_SUPPLEMENTAL() {
-            const result = applyArgumentsResult(19626).isAppStoreConsentReinstatementEnabledForSession();
-            const obj = applyArgumentsResult(19626);
-            const result1 = applyArgumentsResult(7989).beginAppStoreAgeSignalReport(result);
-            const obj2 = applyArgumentsResult(7989);
-            const result2 = applyArgumentsResult(19626).beginAppStoreConsentReinstatement();
+            const result = applyArgumentsResult(19670).isAppStoreConsentReinstatementEnabledForSession();
+            const obj = applyArgumentsResult(19670);
+            const result1 = applyArgumentsResult(7937).beginAppStoreAgeSignalReport(result);
+            const obj2 = applyArgumentsResult(7937);
+            const result2 = applyArgumentsResult(19670).beginAppStoreConsentReinstatement();
           },
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult(7989).startPendingAppStoreAgeSignalReport();
+            return applyArgumentsResult(7937).startPendingAppStoreAgeSignalReport();
           },
       APP_STATE_UPDATE(arg0) {
             return applyArgumentsResult.handleAppStateUpdate(arg0);
           },
       LOGOUT() {
-            return applyArgumentsResult(19626).cancelAppStoreConsentReinstatement();
+            return applyArgumentsResult(19670).cancelAppStoreConsentReinstatement();
           }
     };
     return applyArgumentsResult;

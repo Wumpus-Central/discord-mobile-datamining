@@ -1,19 +1,19 @@
-// === Module 7293: ImpersonateActionCreators ===
+// === Module 6890: ImpersonateActionCreators ===
 
-// Module 7293 (ImpersonateActionCreators)
+// Module 6890 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 4824 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
-import ImpersonateStore from "ImpersonateStore" /* 4818 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 4828 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
+import ImpersonateStore from "ImpersonateStore" /* 4822 */;
 
 require = fn;
 function updateImpersonating(guildId, type) {
@@ -47,7 +47,7 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1071);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(4769).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4773).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
@@ -75,7 +75,7 @@ export function stopImpersonating(guildId) {
   DispatcherDefault.dispatch({ type: "IMPERSONATE_STOP", guildId });
 }
 export function updateImpersonatedChannels(guildId, items1, items2) {
-  const set = new Set(UserGuildSettingsStore.getOptedInChannels(guildId));
+  set = new Set(UserGuildSettingsStore.getOptedInChannels(guildId));
   const item = items1.forEach((item) => set.add(item));
   const item1 = items2.forEach((item) => set.delete(item));
   updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, optInChannels: set });

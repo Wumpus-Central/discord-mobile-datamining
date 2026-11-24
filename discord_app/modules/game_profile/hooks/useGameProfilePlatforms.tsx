@@ -1,19 +1,19 @@
-// === Module 9911: useGameProfilePlatforms ===
+// === Module 14056: useGameProfilePlatforms ===
 
-// Module 9911 (useGameProfilePlatforms)
+// Module 14056 (useGameProfilePlatforms)
 import util from "util" /* 1112 */;
-import PlatformType from "PlatformType" /* 8997 */;
+import PlatformType from "PlatformType" /* 8617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let items = [fn(8997).PlatformType.DESKTOP, "mobile", fn(8997).PlatformType.XBOX, fn(8997).PlatformType.PLAYSTATION, fn(8997).PlatformType.NINTENDO, fn(8997).PlatformType.ROBLOX];
+let items = [fn(8617).PlatformType.DESKTOP, "mobile", fn(8617).PlatformType.XBOX, fn(8617).PlatformType.PLAYSTATION, fn(8617).PlatformType.NINTENDO, fn(8617).PlatformType.ROBLOX];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfilePlatforms.tsx");
 
 export default function useGameProfilePlatforms(platforms) {
   items = [platforms.platforms];
   return noop.useMemo(() => {
-    const set = new Set(platforms.platforms);
+    set = new Set(platforms.platforms);
     let hasItem = set.has(PlatformType.PlatformType.MACOS);
     if (!hasItem) {
       hasItem = set.has(PlatformType.PlatformType.LINUX);

@@ -1,14 +1,14 @@
-// === Module 7396: AuthHeader ===
+// === Module 7206: AuthHeader ===
 
-// Module 7396 (AuthHeader)
+// Module 7206 (AuthHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6407 */;
+import TextStyles from "TextStyles" /* 6696 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const obj2 = { header: null };
 const obj3 = {};
 const merged = Object.assign(TextStyles(fn(1071).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

@@ -1,9 +1,9 @@
-// === Module 17041: MobileGameCommunitiesStore ===
+// === Module 17075: MobileGameCommunitiesStore ===
 
-// Module 17041 (MobileGameCommunitiesStore)
+// Module 17075 (MobileGameCommunitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6834 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 8794 */;
 
 require = fn;
 let guildGameIds = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
@@ -26,7 +26,7 @@ prototype["initialize"] = function initialize(guilds) {
     });
     obj.lastFetchedAt = guilds.lastFetchedAt;
     const _Set = Set;
-    const set = new Set(guilds.lastFetchedGameIds);
+    set = new Set(guilds.lastFetchedGameIds);
     obj.lastFetchedGameIds = set;
     const _Set2 = Set;
     const set1 = new Set(guilds.dismissedGuildIds);
@@ -91,7 +91,7 @@ prototype["DEV_clearDismissedGuilds"] = function DEV_clearDismissedGuilds() {
 };
 prototype["DEV_clearState"] = function DEV_clearState() {
   const obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
-  const set = new Set();
+  set = new Set();
   obj.dismissedGuildIds = new Set();
   obj.guildGameIds = {};
   this.emitChange();
@@ -129,7 +129,7 @@ const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefa
   },
   LOGOUT: function handleLogout() {
     const obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
-    const set = new Set();
+    set = new Set();
     obj.dismissedGuildIds = new Set();
     obj.guildGameIds = {};
   }

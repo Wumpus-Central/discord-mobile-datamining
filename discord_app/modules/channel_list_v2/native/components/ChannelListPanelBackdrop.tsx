@@ -1,10 +1,10 @@
-// === Module 17572: ChannelListPanelBackdrop ===
+// === Module 17610: ChannelListPanelBackdrop ===
 
-// Module 17572 (ChannelListPanelBackdrop)
+// Module 17610 (ChannelListPanelBackdrop)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import QuestHooks from "QuestHooks" /* 16469 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17544 */;
+import QuestHooks from "QuestHooks" /* 16502 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17582 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const DM_WIDTH = fn(1071).DM_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

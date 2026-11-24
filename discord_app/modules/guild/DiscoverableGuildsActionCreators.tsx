@@ -1,10 +1,10 @@
-// === Module 9936: DiscoverableGuildsActionCreators ===
+// === Module 14076: DiscoverableGuildsActionCreators ===
 
-// Module 9936 (DiscoverableGuildsActionCreators)
+// Module 14076 (DiscoverableGuildsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9935 */;
+import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 14075 */;
 
 require = fn;
 let closure_7 = async function _requestGuilds(arg0) {
@@ -127,7 +127,7 @@ let closure_8 = async function _fetchDiscoverableGuilds(arg0) {
             let _Set = Set;
             let tmp31 = new.target;
             let tmp32 = new.target;
-            let set = new Set();
+            set = new Set();
             closure_2 = dependencyMap;
             closure_1 = dependencyMap[Symbol.iterator]();
             while (closure_1 !== undefined) {

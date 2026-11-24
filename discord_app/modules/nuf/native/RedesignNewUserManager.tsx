@@ -1,14 +1,14 @@
-// === Module 19596: RedesignNewUserManager ===
+// === Module 19640: RedesignNewUserManager ===
 
-// Module 19596 (RedesignNewUserManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5089 */;
-import RootNavigationRef from "RootNavigationRef" /* 5090 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19597 */;
+// Module 19640 (RedesignNewUserManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5093 */;
+import RootNavigationRef from "RootNavigationRef" /* 5094 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4756 */;
-import NewUserStore from "NewUserStore" /* 7264 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4760 */;
+import NewUserStore from "NewUserStore" /* 5722 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 function isBlockedByVerification() {
@@ -37,7 +37,7 @@ function isNewUserModalInStack() {
   }
   return someResult;
 }
-const ContactSyncModalStore = fn(13582);
+const ContactSyncModalStore = fn(13496);
 ({ initialize: closure_4, ContactSyncModes: hasOwnProperty } = ContactSyncModalStore);
 const prototype = function RedesignNewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

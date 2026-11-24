@@ -1,12 +1,12 @@
-// === Module 11075: StageSectionHeader ===
+// === Module 10424: StageSectionHeader ===
 
-// Module 11075 (StageSectionHeader)
+// Module 10424 (StageSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import _modDef7516 from "module_7516" /* 7516 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import _modDef7382 from "module_7382" /* 7382 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, audience: null };
 let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.audience = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: nativeDefault.radii.xs };
@@ -67,7 +67,7 @@ export default function StageSectionHeader(children) {
   items3[1] = tmp8Result;
   const obj6 = { style: tmp.collapseButton, children: null };
   const obj7 = { style: animatedStyle, children: null };
-  obj7.children = timestampProducer(native.Icon, { source: _modDef7516, style: tmp.collapseIcon });
+  obj7.children = timestampProducer(native.Icon, { source: _modDef7382, style: tmp.collapseIcon });
   obj6.children = timestampProducer(_modDef1653.View, obj7);
   items3[2] = timestampProducer(React4, obj6);
   obj3.children = items3;

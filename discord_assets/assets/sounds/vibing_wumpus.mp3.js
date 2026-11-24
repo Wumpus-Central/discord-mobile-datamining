@@ -1,6 +1,6 @@
-// === Module 10889: ? ===
+// === Module 10163: ? ===
 
-// Module 10889
+// Module 10163
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/sounds/vibing_wumpus.mp3.js");

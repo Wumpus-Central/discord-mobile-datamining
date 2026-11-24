@@ -1,11 +1,11 @@
-// === Module 10220: SuggestedGameHooks ===
+// === Module 14398: SuggestedGameHooks ===
 
-// Module 10220 (SuggestedGameHooks)
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10219 */;
+// Module 14398 (SuggestedGameHooks)
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2140 */;
-import WidgetStore from "WidgetStore" /* 10207 */;
+import WidgetStore from "WidgetStore" /* 14390 */;
 
 const require = globalThis.__r;
 

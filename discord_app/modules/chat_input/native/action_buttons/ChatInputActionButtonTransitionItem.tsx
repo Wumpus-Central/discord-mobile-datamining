@@ -1,11 +1,11 @@
-// === Module 13106: ChatInputActionButtonTransitionItem ===
+// === Module 13024: ChatInputActionButtonTransitionItem ===
 
-// Module 13106 (ChatInputActionButtonTransitionItem)
+// Module 13024 (ChatInputActionButtonTransitionItem)
 import _modDef1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import native from "native" /* 4974 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13107 */;
+import native from "native" /* 4978 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13025 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -103,7 +103,7 @@ function BounceTransitionItem(state) {
   return jsx(_modDef1653.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12825).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12744).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "(function ChatInputActionButtonTransitionItemTsx1(finished){let[scheduleOnRN,cleanup]=this.__closure;if(finished===true){scheduleOnRN(cleanup);}})" };

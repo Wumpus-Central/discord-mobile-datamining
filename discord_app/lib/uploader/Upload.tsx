@@ -1,12 +1,12 @@
-// === Module 8469: Upload ===
+// === Module 7985: Upload ===
 
-// Module 8469 (Upload)
+// Module 7985 (Upload)
 import applyDefault from "apply" /* 12 */;
 import _mod568 from "module_568" /* 568 */;
 import v1 from "v1" /* 1268 */;
-import UploadUtils from "UploadUtils" /* 8442 */;
-import UploadPlatform from "UploadPlatform" /* 8445 */;
-import FileUtilsAll from "FileUtils" /* 8470 */;
+import UploadPlatform from "UploadPlatform" /* 7986 */;
+import UploadUtils from "UploadUtils" /* 7987 */;
+import FileUtilsAll from "FileUtils" /* 7991 */;
 import size from "module_2" /* 2 */;
 
 const EventEmitter = _mod568.EventEmitter;

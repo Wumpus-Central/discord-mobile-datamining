@@ -1,14 +1,14 @@
-// === Module 13221: SmartSearchAnalyticsManager ===
+// === Module 13141: SmartSearchAnalyticsManager ===
 
-// Module 13221 (SmartSearchAnalyticsManager)
+// Module 13141 (SmartSearchAnalyticsManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
-import SearchUtils from "SearchUtils" /* 13204 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13198 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5887 */;
+import SearchUtils from "SearchUtils" /* 13118 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13112 */;
 
 require = fn;
 function getCitationCompositionProperties(citations) {
-  const set = new Set();
+  set = new Set();
   items = [];
   const items1 = [];
   const items2 = [];
@@ -35,7 +35,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const re5 = /\s+/;
 class SmartSearchAnalyticsManager {
   constructor() {
-    merged = Object.assign({ rowVisibilityState: null, dwellStartTime: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
+    merged = Object.assign({ rowVisibilityState: null, pendingDwell: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
     merged[0] = { isRowViewable: false, isTabActive: false, isNavigationFocused: false, isAppActive: true, currentAnswer: null };
     return merged;
   }
@@ -58,6 +58,7 @@ prototype["setAnswer"] = function setAnswer(currentAnswer, getSessionId) {
 };
 prototype["resetSession"] = function resetSession(getSessionId) {
   this.updateVisibility({ currentAnswer: null }, getSessionId);
+  this.pendingDwell = null;
   this.lastShownAnswerKey = null;
   this.lastShownSuggestionKey = null;
   this.parentSuggestedSearch = null;
@@ -74,14 +75,12 @@ prototype["updateVisibility"] = function updateVisibility(arg0, getSessionId) {
     if (tmp3) {
       tmp3 = null != obj.currentAnswer;
     }
-    if (null != self.dwellStartTime) {
+    if (null != self.pendingDwell) {
       if (!tmp3) {
         const _performance = performance;
-        self.dwellStartTime = null;
-        if (null != rowVisibilityState.currentAnswer) {
-          const obj2 = { smartSearchQuery: rowVisibilityState.currentAnswer.smartSearchQuery, dwellDurationMs: tmp10 };
-          const result = self.trackSmartSearchAnswerDwelled(obj2, getSessionId);
-        }
+        self.pendingDwell = null;
+        const obj2 = { contextualProperties: self.pendingDwell.contextualProperties, dwellDurationMs: performance.now() - self.pendingDwell.startTime };
+        const result = self.trackSmartSearchAnswerDwelled(obj2);
       } else {
         const currentAnswer = obj.currentAnswer;
         let requestKey;
@@ -99,12 +98,15 @@ prototype["updateVisibility"] = function updateVisibility(arg0, getSessionId) {
       tmp3 = null != obj.currentAnswer;
     }
     if (tmp3) {
-      tmp3 = null == self.dwellStartTime;
+      tmp3 = null == self.pendingDwell;
     }
     if (tmp3) {
+      const obj3 = { startTime: null, contextualProperties: null };
       const _performance2 = performance;
-      self.dwellStartTime = performance.now();
-      const result1 = self.trackSmartSearchAnswerShownDeduped(obj.currentAnswer, getSessionId);
+      obj3.startTime = performance.now();
+      obj3.contextualProperties = self.getContextualProperties(obj.currentAnswer.smartSearchQuery, getSessionId);
+      self.pendingDwell = obj3;
+      const result1 = self.trackSmartSearchAnswerShownDeduped(obj.currentAnswer, self.pendingDwell.contextualProperties);
     }
   }
 };
@@ -220,29 +222,28 @@ prototype["trackSuggestedSearchesShownDeduped"] = function trackSuggestedSearche
     AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SUGGESTED_SEARCHES_SHOWN, obj2);
   }
 };
-prototype["trackSmartSearchAnswerShownDeduped"] = function trackSmartSearchAnswerShownDeduped(currentAnswer, getSessionId) {
-  const self = this;
+prototype["trackSmartSearchAnswerShownDeduped"] = function trackSmartSearchAnswerShownDeduped(currentAnswer, contextualProperties) {
   ({ smartSearchQuery, answerText, presentedCitations } = currentAnswer);
   if (this.lastShownAnswerKey !== smartSearchQuery.requestKey) {
-    self.lastShownAnswerKey = smartSearchQuery.requestKey;
+    tmp.lastShownAnswerKey = smartSearchQuery.requestKey;
     const str = answerText.trim();
     const parts = str.split(re5);
     const _Boolean = Boolean;
     const obj2 = {};
-    const merged = Object.assign(self.getContextualProperties(smartSearchQuery, getSessionId));
+    const merged = Object.assign(contextualProperties);
     const merged1 = Object.assign(getCitationCompositionProperties(presentedCitations));
     obj2.num_citations_presented = presentedCitations.length;
     obj2.answer_length = str.length;
     obj2.num_answer_words = parts.filter(Boolean).length;
     obj2.search_query_length = smartSearchQuery.searchQueryString.trim().length;
-    obj2.has_keyword_results = tmp;
+    obj2.has_keyword_results = tmp2;
     AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_SHOWN, obj2);
   }
 };
-prototype["trackSmartSearchAnswerDwelled"] = function trackSmartSearchAnswerDwelled(arg0, getSessionId) {
-  ({ smartSearchQuery, dwellDurationMs } = arg0);
+prototype["trackSmartSearchAnswerDwelled"] = function trackSmartSearchAnswerDwelled(arg0) {
+  ({ contextualProperties, dwellDurationMs } = arg0);
   const obj2 = {};
-  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getSessionId));
+  const merged = Object.assign(contextualProperties);
   obj2.dwell_duration_ms = Math.round(dwellDurationMs);
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_DWELLED, obj2);
 };
@@ -253,7 +254,7 @@ prototype["trackSmartSearchFeedbackGiven"] = function trackSmartSearchFeedbackGi
   obj2.is_positive_feedback = hasPositiveFeedback;
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_FEEDBACK_GIVEN, obj2);
 };
-let merged = Object.assign({ rowVisibilityState: null, dwellStartTime: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
+let merged = Object.assign({ rowVisibilityState: null, pendingDwell: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
 merged[0] = { isRowViewable: false, isTabActive: false, isNavigationFocused: false, isAppActive: true, currentAnswer: null };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchAnalyticsManager.tsx");

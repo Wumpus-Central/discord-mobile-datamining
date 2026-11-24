@@ -1,8 +1,8 @@
-// === Module 9019: ProfileEffectLayer ===
+// === Module 9335: ProfileEffectLayer ===
 
-// Module 9019 (ProfileEffectLayer)
-import FastImageDefault from "FastImage" /* 5600 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9016 */;
+// Module 9335 (ProfileEffectLayer)
+import FastImageDefault from "FastImage" /* 5604 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9332 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

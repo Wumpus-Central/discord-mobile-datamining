@@ -1,12 +1,12 @@
-// === Module 13958: PremiumPerkGates ===
+// === Module 9680: PremiumPerkGates ===
 
-// Module 13958 (PremiumPerkGates)
+// Module 9680 (PremiumPerkGates)
 import PerksStateUtils from "PerksStateUtils" /* 1392 */;
 import user2 from "user" /* 1399 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
-import FileSizeUtils from "FileSizeUtils" /* 6355 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8443 */;
-import ProductCatalog from "ProductCatalog" /* 13959 */;
+import FileSizeUtils from "FileSizeUtils" /* 5672 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7988 */;
+import ProductCatalog from "ProductCatalog" /* 9681 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
 import size from "module_2" /* 2 */;
 
@@ -57,8 +57,8 @@ export function hasBoostDiscount(stateFromStores) {
 export function canUseAnimatedAvatar(user) {
   return ProductCatalog.canUserUse(user2.Perk.ANIMATED_AVATAR, user);
 }
-export function canInstallPremiumApplications(stateFromStores) {
-  return ProductCatalog.canUserUse(user2.Perk.INSTALL_PREMIUM_APPLICATIONS, stateFromStores);
+export function canInstallPremiumApplications(currentUser) {
+  return ProductCatalog.canUserUse(user2.Perk.INSTALL_PREMIUM_APPLICATIONS, currentUser);
 }
 export function canUseIncreasedMessageLength(currentUser) {
   return ProductCatalog.canUserUse(user2.Perk.INCREASED_MESSAGE_LENGTH, currentUser);
@@ -69,8 +69,8 @@ export function canUseIncreasedGuildCap(currentUser) {
 export function canRedeemPremiumPerks(currentUser) {
   return PremiumTypeUtils.isPremiumExactly(currentUser, React2.TIER_2);
 }
-export function canUsePremiumProfileCustomization(stateFromStores) {
-  return ProductCatalog.canUserUse(user2.Perk.PROFILE_PREMIUM_FEATURES, stateFromStores);
+export function canUsePremiumProfileCustomization(currentUser) {
+  return ProductCatalog.canUserUse(user2.Perk.PROFILE_PREMIUM_FEATURES, currentUser);
 }
 export function canUsePremiumAppIcons(currentUser) {
   return ProductCatalog.canUserUse(user2.Perk.APP_ICONS, currentUser);
@@ -83,12 +83,42 @@ export function canUseClientThemes(currentUser) {
 }
 export function canStreamQuality(MID, currentUser) {
   if (MID === obj.HIGH) {
-    let canUserUseResult = ProductCatalog.canUserUse(user2.Perk.STREAM_HIGH_QUALITY, currentUser);
+    let premiumType;
+    if (currentUser != null) {
+      premiumType = currentUser.premiumType;
+    }
+    let isPremiumAtLeastResult = PremiumTypeUtils.isPremiumAtLeast(premiumType, React2.TIER_2);
+    if (!isPremiumAtLeastResult) {
+      let hasFreePremiumResult;
+      if (currentUser != null) {
+        hasFreePremiumResult = currentUser.hasFreePremium();
+      }
+      isPremiumAtLeastResult = true === hasFreePremiumResult;
+    }
+    if (isPremiumAtLeastResult) {
+      isPremiumAtLeastResult = ProductCatalog.canUserUse(user2.Perk.STREAM_HIGH_QUALITY, currentUser);
+      const tmp5Result = ProductCatalog;
+    }
+    let isPremiumAtLeastResult1 = isPremiumAtLeastResult;
   } else {
-    obj = ProductCatalog;
-    canUserUseResult = obj.canUserUse(user2.Perk.STREAM_MID_QUALITY, currentUser);
+    let premiumType1;
+    if (currentUser != null) {
+      premiumType1 = currentUser.premiumType;
+    }
+    isPremiumAtLeastResult1 = PremiumTypeUtils.isPremiumAtLeast(premiumType1, React2.TIER_1);
+    if (!isPremiumAtLeastResult1) {
+      let hasFreePremiumResult1;
+      if (currentUser != null) {
+        hasFreePremiumResult1 = currentUser.hasFreePremium();
+      }
+      isPremiumAtLeastResult1 = true === hasFreePremiumResult1;
+    }
+    if (isPremiumAtLeastResult1) {
+      isPremiumAtLeastResult1 = ProductCatalog.canUserUse(user2.Perk.STREAM_MID_QUALITY, currentUser);
+      const tmp12Result = ProductCatalog;
+    }
   }
-  return canUserUseResult;
+  return isPremiumAtLeastResult1;
 }
 export function canUseQuestOrbMultiplier(isFractionalPremiumWithNoStandardSub) {
   let isPremiumExactlyResult = null != isFractionalPremiumWithNoStandardSub && !isFractionalPremiumWithNoStandardSub.isFractionalPremiumWithNoStandardSub();

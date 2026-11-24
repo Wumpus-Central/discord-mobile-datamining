@@ -1,9 +1,9 @@
-// === Module 18281: ConjurePublishRemixRow ===
+// === Module 18320: ConjurePublishRemixRow ===
 
-// Module 18281 (ConjurePublishRemixRow)
+// Module 18320 (ConjurePublishRemixRow)
 import nativeDefault from "native" /* 575 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import ChevronLargeDownIcon from "ChevronLargeDownIcon" /* 14790 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import ChevronLargeDownIcon from "ChevronLargeDownIcon" /* 14620 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_16 }, label: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_16 };
 obj2.label = { flexShrink: 1, gap: nativeDefault.space.PX_4 };
@@ -29,14 +29,14 @@ export default function ConjurePublishRemixRow(remix) {
   const setValue = iter.setValue;
   const canChange = iter.canChange;
   const intl = options(setValue[5]).intl;
-  const stringResult = intl.string(require("module_4190")["Z/NFcQ"]);
+  const stringResult = intl.string(require("module_4192")["Z/NFcQ"]);
   c4 = stringResult;
   items = [options, value, setValue];
   const memo = canChange.useMemo(() => options.map((label) => {
     const obj = { label: label.label, trailingIndicator: null, action: null };
     let CheckmarkLargeIcon;
     if (label.value === closure_1) {
-      CheckmarkLargeIcon = options(7340).CheckmarkLargeIcon;
+      CheckmarkLargeIcon = options(7060).CheckmarkLargeIcon;
     }
     obj.trailingIndicator = CheckmarkLargeIcon;
     obj.action = function action() {

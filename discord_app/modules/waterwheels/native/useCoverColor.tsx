@@ -1,6 +1,6 @@
-// === Module 17824: useCoverColor ===
+// === Module 17862: useCoverColor ===
 
-// Module 17824 (useCoverColor)
+// Module 17862 (useCoverColor)
 import _modDef671 from "module_671" /* 671 */;
 import privDefault from "priv" /* 1454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -160,7 +160,7 @@ function fetchCoverColor(arg0, uri) {
     return obj2.pending;
   }
 }
-const sum = fn(4920).WCAGContrastRatios.Text + 0.3;
+const sum = fn(4924).WCAGContrastRatios.Text + 0.3;
 let closure_7 = new privDefault({ max: 256 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/native/useCoverColor.tsx");

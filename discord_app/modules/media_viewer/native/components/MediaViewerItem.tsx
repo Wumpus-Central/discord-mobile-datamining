@@ -1,10 +1,10 @@
-// === Module 10591: MediaViewerItem ===
+// === Module 13981: MediaViewerItem ===
 
-// Module 10591 (MediaViewerItem)
+// Module 13981 (MediaViewerItem)
 import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8218 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 10593 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8664 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 13983 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,14 +1,14 @@
-// === Module 6641: SearchMessageStore ===
+// === Module 6827: SearchMessageStore ===
 
-// Module 6641 (SearchMessageStore)
+// Module 6827 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ReactionUtils from "ReactionUtils" /* 4857 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6349 */;
+import ReactionUtils from "ReactionUtils" /* 4861 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5666 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 
 require = fn;
 function handleReaction(optimistic) {
@@ -133,7 +133,7 @@ prototype2["getTotalCount"] = function getTotalCount(searchTabFetchId) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -148,7 +148,7 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -163,7 +163,7 @@ prototype2["getIsIndexing"] = function getIsIndexing(searchTabFetchId) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -178,7 +178,7 @@ prototype2["getIsHistoricalIndexing"] = function getIsHistoricalIndexing(searchT
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -193,7 +193,7 @@ prototype2["getDocumentsIndexed"] = function getDocumentsIndexed(searchTabFetchI
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -208,7 +208,7 @@ prototype2["getIsFetching"] = function getIsFetching(arg0) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -223,7 +223,7 @@ prototype2["getError"] = function getError(arg0) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -238,7 +238,7 @@ prototype2["getMessages"] = function getMessages(arg0) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -253,7 +253,7 @@ prototype2["getCursor"] = function getCursor(searchTabFetchId) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -268,7 +268,7 @@ prototype2["getAnalyticsId"] = function getAnalyticsId(arg0) {
     if (typeof SearchState === "function") {
       const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -290,7 +290,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {
@@ -310,7 +310,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {
@@ -340,7 +340,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {
@@ -359,7 +359,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {

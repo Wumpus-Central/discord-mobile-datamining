@@ -1,11 +1,11 @@
-// === Module 4846: LurkingStore ===
+// === Module 4850: LurkingStore ===
 
-// Module 4846 (LurkingStore)
+// Module 4850 (LurkingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecord from "GuildRecord" /* 4780 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildRecord from "GuildRecord" /* 4784 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
@@ -103,7 +103,7 @@ const lurkingStore = new LurkingStore(DispatcherDefault, {
   },
   GUILD_STOP_LURKING: function handleGuildStopLurking(ignoredGuildIds) {
     ignoredGuildIds = ignoredGuildIds.ignoredGuildIds;
-    let set;
+    set = undefined;
     if (ignoredGuildIds == null) {
       ignoredGuildIds = [];
     }

@@ -1,12 +1,12 @@
-// === Module 10244: UserProfileAddTagActionSheet ===
+// === Module 14420: UserProfileAddTagActionSheet ===
 
-// Module 10244 (UserProfileAddTagActionSheet)
+// Module 14420 (UserProfileAddTagActionSheet)
 import nativeDefault from "native" /* 575 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6958 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7335 */;
-import TableRowGroup from "TableRowGroup" /* 7348 */;
-import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 10200 */;
-import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 10201 */;
+import TableRowGroup from "TableRowGroup" /* 6014 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6045 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7055 */;
+import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 14383 */;
+import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 14384 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -38,7 +38,7 @@ function RadioTagSection(section) {
   const intl = section(1112).intl;
   obj2.label = intl.string(section(1112).t.PoWNfe);
   obj2.value = none;
-  items = [closure_6(section(7349).TableRadioRow, obj2), ];
+  items = [closure_6(section(7127).TableRadioRow, obj2), ];
   const tags1 = section.tags;
   items[1] = tags1.map((value) => {
     const widgetGameTagMetadata = section(dependencyMap[10]).getWidgetGameTagMetadata(value);
@@ -50,7 +50,7 @@ function RadioTagSection(section) {
     return tmp3;
   });
   obj.children = items;
-  return closure_7(section(7347).TableRadioGroup, obj);
+  return closure_7(section(7125).TableRadioGroup, obj);
 }
 function CheckboxTagSection(arg0) {
   ({ section, currentTags: require, onTagsChange: importDefault } = arg0);
@@ -74,12 +74,12 @@ function CheckboxTagSection(arg0) {
   });
   return closure_6(TableRowGroup.TableRowGroup, obj);
 }
-let closure_5 = fn(8069).TrackUserProfileEditActions;
+let closure_5 = fn(6011).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const none = "none";
 let closure_9 = [];
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

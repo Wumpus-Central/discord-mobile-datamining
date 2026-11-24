@@ -1,7 +1,7 @@
-// === Module 7076: KeyboardAwareView ===
+// === Module 6922: KeyboardAwareView ===
 
-// Module 7076 (KeyboardAwareView)
-import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7077 */;
+// Module 6922 (KeyboardAwareView)
+import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 6923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1496 */;
@@ -29,14 +29,14 @@ export default noop.memo(function KeyboardAwareView(keyboardHeightOffset) {
   _require = num;
   let systemKeyboardHeight = require("useSystemKeyboardHeight").getSystemKeyboardHeight();
   if (0 === systemKeyboardHeight) {
-    let keyboardType = tmp(5100).getKeyboardType();
+    let keyboardType = tmp(5104).getKeyboardType();
     let num2 = 0;
     if (keyboardType !== tmp(1626).KeyboardTypes.SYSTEM) {
-      num2 = tmp(5489).getCustomKeyboardHeight();
-      const tmpResult3 = tmp(5489);
+      num2 = tmp(5493).getCustomKeyboardHeight();
+      const tmpResult3 = tmp(5493);
     }
     systemKeyboardHeight = num2;
-    const tmpResult = tmp(5100);
+    const tmpResult = tmp(5104);
   }
   const ref = noop.useRef(Math.max(0, systemKeyboardHeight + num));
   importDefault = ref;
@@ -46,14 +46,14 @@ export default noop.memo(function KeyboardAwareView(keyboardHeightOffset) {
   const effect = noop.useEffect(() => subscribeToKeyboardUIStore(function keyboardHeightUpdater() {
     let systemKeyboardHeight = c0(2021).getSystemKeyboardHeight();
     if (0 === systemKeyboardHeight) {
-      const keyboardType = c0(5100).getKeyboardType();
+      const keyboardType = c0(5104).getKeyboardType();
       let num = 0;
       if (keyboardType !== c0(1626).KeyboardTypes.SYSTEM) {
-        num = c0(5489).getCustomKeyboardHeight();
-        const tmp2Result2 = c0(5489);
+        num = c0(5493).getCustomKeyboardHeight();
+        const tmp2Result2 = c0(5493);
       }
       systemKeyboardHeight = num;
-      const tmp2Result = c0(5100);
+      const tmp2Result = c0(5104);
     }
     const bound = Math.max(0, systemKeyboardHeight + closure_1_0);
     if (ref.current !== bound) {

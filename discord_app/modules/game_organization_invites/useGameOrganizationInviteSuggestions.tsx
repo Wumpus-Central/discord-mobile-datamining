@@ -1,13 +1,13 @@
-// === Module 15181: useGameOrganizationInviteSuggestions ===
+// === Module 15202: useGameOrganizationInviteSuggestions ===
 
-// Module 15181 (useGameOrganizationInviteSuggestions)
-import InstantInviteUtils from "InstantInviteUtils" /* 8054 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 13188 */;
+// Module 15202 (useGameOrganizationInviteSuggestions)
+import InstantInviteUtils from "InstantInviteUtils" /* 10286 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 10301 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13189 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 10299 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -76,11 +76,11 @@ export default function useGameOrganizationInviteSuggestions() {
               c3 = 2;
               const obj5 = { omitUserIds: null };
               const _Set = Set;
-              const set = new Set();
+              set = new Set();
               obj5.omitUserIds = set;
               c4 = 3;
               c5 = 1;
-              const obj6 = { value: closure_2_0(13188).loadInviteSuggestions(obj5), done: false };
+              const obj6 = { value: closure_2_0(10301).loadInviteSuggestions(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
@@ -117,8 +117,8 @@ export default function useGameOrganizationInviteSuggestions() {
             c3 = 0;
             tmp4(false);
             if ("" !== tmp31.current) {
-              const result = closure_2_0(13188).searchInviteSuggestions(tmp31.current);
-              const obj = closure_2_0(13188);
+              const result = closure_2_0(10301).searchInviteSuggestions(tmp31.current);
+              const obj = closure_2_0(10301);
             }
             c5 = 3;
             return { value: "HermesInternal", done: null };

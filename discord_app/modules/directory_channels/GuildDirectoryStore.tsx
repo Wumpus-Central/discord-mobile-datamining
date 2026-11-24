@@ -1,10 +1,10 @@
-// === Module 13166: GuildDirectoryStore ===
+// === Module 13084: GuildDirectoryStore ===
 
-// Module 13166 (GuildDirectoryStore)
+// Module 13084 (GuildDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 13158 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 13159 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 13076 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 13077 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;
@@ -152,7 +152,7 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
         obj3.delete(guildId);
       }
       const _Set = Set;
-      const set = new Set(dependencyMap4[channelId]);
+      set = new Set(dependencyMap4[channelId]);
       dependencyMap4[channelId] = set;
       dependencyMap[channelId] = merged;
       const _Object = Object;
@@ -267,7 +267,7 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
   },
   GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: function handleFetchAdminEntries(channelId) {
     const entries = channelId.entries;
-    const set = new Set();
+    set = new Set();
     const item = entries.forEach((item) => {
       set.add(GuildDirectoryUtils.guildDirectoryEntryFromServer(item).guildId);
     });

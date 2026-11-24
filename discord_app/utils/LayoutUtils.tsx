@@ -1,6 +1,6 @@
-// === Module 14962: LayoutUtils ===
+// === Module 15001: LayoutUtils ===
 
-// Module 14962 (LayoutUtils)
+// Module 15001 (LayoutUtils)
 import size from "module_2" /* 2 */;
 
 function getAnchorCoordsFromLayoutSize(arg0, height) {
@@ -259,7 +259,7 @@ export function getLeftWidgetSpecs(arg0, arg1, width) {
     point = { x: 0, y: 0 };
   }
   ({ width, height } = arg1);
-  const rect = { top: top + point.y, left: left + point.x, bottom: "r", right: "isArray" };
+  const rect = { top: top + point.y, left: left + point.x, bottom: "r", right: "delete" };
   ({ width: width2, height: height2 } = width);
   let num = 0;
   if (typeof width === "number") {
@@ -346,7 +346,7 @@ export function getRightWidgetSpecs(arg0, arg1, width) {
     point = { x: 0, y: 0 };
   }
   ({ width, height } = arg1);
-  const rect = { top: top + point.y, left: "Array", bottom: "add", right: right - point.x };
+  const rect = { top: top + point.y, left: "Array", bottom: "analyticsLocations", right: right - point.x };
   ({ width: width2, height: height2 } = width);
   let num = 0;
   if (typeof width === "number") {
@@ -427,7 +427,7 @@ export function getRightWidgetSpecs(arg0, arg1, width) {
   return items;
 }
 export function convertFullCordsToMatchingOrientedCoords(top, top2) {
-  const rect = { top: "constructor", bottom: "constructor", left: "done", right: "children" };
+  const rect = { top: "Array", bottom: "s", left: "channel_id", right: "channel_id" };
   if (null != top2.top) {
     rect.top = top.top;
   }

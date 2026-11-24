@@ -1,21 +1,21 @@
-// === Module 20034: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 20077: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 20034 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 20077 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
-import common_AlertDefault from "common/Alert" /* 5932 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
+import common_AlertDefault from "common/Alert" /* 5992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4868 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4872 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, SectionList: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" }, emojiList: { flexGrow: 0 }, emojiListContent: null, emojiImage: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 obj2.emojiListContent = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingVertical: nativeDefault.space.PX_24 };
@@ -65,7 +65,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   const stateFromStores = guildId(onClose[9]).useStateFromStores(items, () => SubscriptionRoleStore.getSubscriptionRoles(guildId));
   [first, closure_8] = noop.useState(initialTierEmojiIds);
   const items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
-  let set = noop.useMemo(() => {
+  set = noop.useMemo(() => {
     if (null == subscriptionRoleId) {
       const _Set2 = Set;
       set = new Set();

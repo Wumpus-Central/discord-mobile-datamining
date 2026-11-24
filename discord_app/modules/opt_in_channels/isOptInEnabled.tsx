@@ -1,9 +1,9 @@
-// === Module 6663: isOptInEnabled ===
+// === Module 6849: isOptInEnabled ===
 
-// Module 6663 (isOptInEnabled)
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
+// Module 6849 (isOptInEnabled)
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;

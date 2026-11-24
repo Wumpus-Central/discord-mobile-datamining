@@ -1,6 +1,6 @@
-// === Module 6984: ConjureVoiceChannelPinStore ===
+// === Module 7580: ConjureVoiceChannelPinStore ===
 
-// Module 6984 (ConjureVoiceChannelPinStore)
+// Module 7580 (ConjureVoiceChannelPinStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

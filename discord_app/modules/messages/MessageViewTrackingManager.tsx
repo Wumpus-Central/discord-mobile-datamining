@@ -1,13 +1,13 @@
-// === Module 10409: MessageViewTrackingManager ===
+// === Module 11834: MessageViewTrackingManager ===
 
-// Module 10409 (MessageViewTrackingManager)
+// Module 11834 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1071 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import privDefault from "priv" /* 1454 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 import size from "module_2" /* 2 */;
 
 function getAnalyticsConfig(type) {
@@ -30,15 +30,9 @@ function getAnalyticsConfig(type) {
   } else if (tmp.VOICE_INVITE_EMBED === type) {
     const obj19 = { event: discord_common_AnalyticsUtils.ImpressionNames.VOICE_INVITE_EMBED, properties: null };
     const obj20 = { impression_type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
-    ({ inviteCode: obj3.invite_code, inviteGuildId: obj3.invite_guild_id, inviteChannelId: obj3.invite_channel_id, inviteInstanceId: obj3.invite_instance_id, hasActiveStream: obj3.has_active_stream, treatmentRendered } = type);
-    const INVITE_EMBED = AnalyticsLocationDefault.INVITE_EMBED;
-    if (treatmentRendered) {
-      items = [INVITE_EMBED, AnalyticsLocationDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
-      let items1 = items;
-    } else {
-      items1 = [INVITE_EMBED];
-    }
-    obj20.location_stack = items1;
+    ({ inviteCode: obj3.invite_code, inviteGuildId: obj3.invite_guild_id, inviteChannelId: obj3.invite_channel_id, inviteInstanceId: obj3.invite_instance_id, hasActiveStream: obj3.has_active_stream } = type);
+    items = [AnalyticsLocationDefault.INVITE_EMBED];
+    obj20.location_stack = items;
     obj19.properties = obj20;
     return obj19;
   } else {
@@ -133,7 +127,7 @@ prototype["handleMessageListVisibilityChange"] = function handleMessageListVisib
   const keys = Object.keys(self.currentlyVisibleMessageTimers);
   if (keys.length > 0) {
     const _Set = Set;
-    const set = new Set(items.map(getMessageViewKey));
+    set = new Set(items.map(getMessageViewKey));
     const iter = keys[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {

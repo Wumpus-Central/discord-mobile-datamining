@@ -1,7 +1,7 @@
-// === Module 8165: useMaybeFetchEquippedCollectibleProducts ===
+// === Module 14674: useMaybeFetchEquippedCollectibleProducts ===
 
-// Module 8165 (useMaybeFetchEquippedCollectibleProducts)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8167 */;
+// Module 14674 (useMaybeFetchEquippedCollectibleProducts)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 11457 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 

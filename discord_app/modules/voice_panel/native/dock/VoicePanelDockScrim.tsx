@@ -1,17 +1,17 @@
-// === Module 13712: VoicePanelDockScrim ===
+// === Module 13622: VoicePanelDockScrim ===
 
-// Module 13712 (VoicePanelDockScrim)
+// Module 13622 (VoicePanelDockScrim)
 import nativeDefault from "native" /* 575 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5083 */;
-import useToken from "useToken" /* 5477 */;
-import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11767 */;
-import ChatInputScrimGradient from "ChatInputScrimGradient" /* 13125 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5087 */;
+import useToken from "useToken" /* 5481 */;
+import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11657 */;
+import ChatInputScrimGradient from "ChatInputScrimGradient" /* 13043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
-let closure_4 = fn(11768).getVoicePanelDockButtonsTop;
+let closure_4 = fn(11658).getVoicePanelDockButtonsTop;
 const jsx = fn(21).jsx;
 const scrim = StyleSheet.create({ scrim: { position: "absolute", left: 0, right: 0, bottom: 0 } });
 const size = fn(2);

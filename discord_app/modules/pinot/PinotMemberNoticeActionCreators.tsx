@@ -1,6 +1,6 @@
-// === Module 11860: PinotMemberNoticeActionCreators ===
+// === Module 11738: PinotMemberNoticeActionCreators ===
 
-// Module 11860 (PinotMemberNoticeActionCreators)
+// Module 11738 (PinotMemberNoticeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

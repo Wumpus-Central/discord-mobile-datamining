@@ -1,6 +1,6 @@
-// === Module 8142: BadgeDirectoryActionCreators ===
+// === Module 6262: BadgeDirectoryActionCreators ===
 
-// Module 8142 (BadgeDirectoryActionCreators)
+// Module 6262 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1386 */;

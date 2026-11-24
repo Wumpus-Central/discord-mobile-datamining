@@ -1,9 +1,9 @@
-// === Module 7977: UnknownGameIcon ===
+// === Module 7925: UnknownGameIcon ===
 
-// Module 7977 (UnknownGameIcon)
+// Module 7925 (UnknownGameIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod7978 from "module_7978" /* 7978 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod7926 from "module_7926" /* 7926 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UnknownGameIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7978, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7926, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

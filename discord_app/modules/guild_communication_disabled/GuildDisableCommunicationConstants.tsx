@@ -1,6 +1,6 @@
-// === Module 4827: GuildDisableCommunicationConstants ===
+// === Module 4831: GuildDisableCommunicationConstants ===
 
-// Module 4827 (GuildDisableCommunicationConstants)
+// Module 4831 (GuildDisableCommunicationConstants)
 import util from "util" /* 1112 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2187 */;
 

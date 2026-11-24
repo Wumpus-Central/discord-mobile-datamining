@@ -1,7 +1,7 @@
-// === Module 17942: NonCollapsableGestureDetector ===
+// === Module 17978: NonCollapsableGestureDetector ===
 
-// Module 17942 (NonCollapsableGestureDetector)
-import LegacyBaseButton from "LegacyBaseButton" /* 5173 */;
+// Module 17978 (NonCollapsableGestureDetector)
+import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

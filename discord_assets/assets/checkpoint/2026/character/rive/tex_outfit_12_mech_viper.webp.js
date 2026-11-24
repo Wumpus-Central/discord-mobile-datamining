@@ -1,6 +1,6 @@
-// === Module 12667: ? ===
+// === Module 12587: ? ===
 
-// Module 12667
+// Module 12587
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_12_mech_viper.webp.js");

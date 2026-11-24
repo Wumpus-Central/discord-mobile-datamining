@@ -1,23 +1,9 @@
-// === Module 17431: RedesignSettingsFriendActivityTitleScreen ===
+// === Module 17469: RedesignSettingsFriendActivityTitleScreen ===
 
-// Module 17431 (RedesignSettingsFriendActivityTitleScreen)
-import SettingBuilders from "SettingBuilders" /* 11937 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17420 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17421 */;
-import noop from "module_19" /* 19 */;
+// Module 17469 (RedesignSettingsFriendActivityTitleScreen)
+import RedesignSettingsCategoryFriendsActivityScreenDefault from "RedesignSettingsCategoryFriendsActivityScreen" /* 17468 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsFriendActivityTitleScreen.tsx");
 
-export default noop.memo(function RedesignSettingsFriendActivityTitleScreen() {
-  const node = noop.useMemo(() => {
-    const obj2 = { sections: null };
-    const obj = SettingBuilders;
-    items = [MobileNotifSettingsRouteBuilders.buildFriendActivityTitleSettingsSection()];
-    obj2.sections = items;
-    return obj.createList(obj2);
-  }, []);
-  return jsx(SystemNotifPermissionLayoutDefault, { node, category: "222_social" });
-});
+export default RedesignSettingsCategoryFriendsActivityScreenDefault;

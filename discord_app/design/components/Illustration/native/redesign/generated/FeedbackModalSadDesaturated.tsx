@@ -1,9 +1,9 @@
-// === Module 10559: FeedbackModalSadDesaturated ===
+// === Module 12025: FeedbackModalSadDesaturated ===
 
-// Module 10559 (FeedbackModalSadDesaturated)
-import shared from "shared" /* 4920 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import _mod7786 from "module_7786" /* 7786 */;
+// Module 12025 (FeedbackModalSadDesaturated)
+import shared from "shared" /* 4924 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import _mod8425 from "module_8425" /* 8425 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,55 +14,55 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalSadDesaturated.tsx");
 
 export function getFeedbackModalSadDesaturatedSource(theme) {
-  return _mod7786.getIllustrationSource(theme, {
+  return _mod8425.getIllustrationSource(theme, {
     dark() {
-      return require("module_10560");
+      return require("module_12026");
     },
     darker() {
-      return require("module_10561");
+      return require("module_12027");
     },
     light() {
-      return require("module_10562");
+      return require("module_12028");
     }
   });
 }
 export function useFeedbackModalSadDesaturatedSource() {
   const obj = shared;
-  return _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8425.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10560");
+      return require("module_12026");
     },
     darker() {
-      return require("module_10561");
+      return require("module_12027");
     },
     light() {
-      return require("module_10562");
+      return require("module_12028");
     }
   });
 }
 export function FeedbackModalSadDesaturated(arg0) {
   const obj = shared;
-  const illustrationSource = _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8425.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10560");
+      return require("module_12026");
     },
     darker() {
-      return require("module_10561");
+      return require("module_12027");
     },
     light() {
-      return require("module_10562");
+      return require("module_12028");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_10560");
+      return require("module_12026");
     },
     darker() {
-      return require("module_10561");
+      return require("module_12027");
     },
     light() {
-      return require("module_10562");
+      return require("module_12028");
     }
   };
   const merged = Object.assign(arg0);

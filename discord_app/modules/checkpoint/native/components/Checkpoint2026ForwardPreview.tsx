@@ -1,64 +1,60 @@
-// === Module 10115: Checkpoint2026ForwardPreview ===
+// === Module 13942: Checkpoint2026ForwardPreview ===
 
-// Module 10115 (Checkpoint2026ForwardPreview)
-import FastImageDefault from "FastImage" /* 5600 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5990 */;
-import noop from "module_19" /* 19 */;
+// Module 13942 (Checkpoint2026ForwardPreview)
+import jsxProd from "jsxProd" /* 21 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6296 */;
+import CheckpointExperiments from "CheckpointExperiments" /* 6643 */;
+import useCheckpointCharacterImagesDefault from "useCheckpointCharacterImages" /* 12439 */;
+import ExperimentalCheckpointIcon from "ExperimentalCheckpointIcon" /* 13943 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import createStyles from "createStyles" /* 4917 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4913);
-let obj2 = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
-let obj3 = { transform: null };
+const nativeDefault = tmp4(575);
+const _modDef1653 = tmp4(1653);
+const CheckpointCharacterCompositeDefault = tmp4(12436);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
+let obj = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
+let obj2 = { transform: null };
 let items = [{ translateY: -2 }];
-obj3.transform = items;
-obj2.layer = obj3;
-let closure_7 = createStyles.createStyles(obj2);
-const size = fn(2);
+obj2.transform = items;
+obj.layer = obj2;
+let closure_6 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/Checkpoint2026ForwardPreview.tsx");
 
 export default function Checkpoint2026ForwardPreview(checkpointData) {
   checkpointData = checkpointData.checkpointData;
-  const tmp = closure_7();
-  _require = tmp;
+  let layer = closure_6();
+  let tmp7Result = dependencyMap;
   const character = checkpointData.character;
-  const isCheckpointCardEnabled = require("CheckpointExperiments").useIsCheckpointCardEnabled("Checkpoint2026ForwardPreview");
-  let obj = require("CheckpointExperiments");
-  const tmp2 = _require;
-  items = [character];
-  const memo = noop.useMemo(() => {
-    if (null != character) {
-      let characterLayerUrls = checkpoint_CheckpointMessageComponentUtils.getCharacterLayerUrls(tmp, 56);
-    } else {
-      characterLayerUrls = [];
-    }
-    return characterLayerUrls;
-  }, items);
+  const isCheckpointCardEnabled = CheckpointExperiments.useIsCheckpointCardEnabled("Checkpoint2026ForwardPreview");
+  const obj2 = CheckpointCardColors;
   if (!isCheckpointCardEnabled) {
     return null;
   } else {
     const obj3 = { style: null, children: null };
-    const items1 = [tmp.preview, ];
+    items = [layer.preview, ];
     const obj4 = { backgroundColor: obj2.getCardColors(checkpointData.cardColorPalette).secondaryBackgroundColor };
-    items1[1] = obj4;
-    obj3.style = items1;
+    items[1] = obj4;
+    obj3.style = items;
     if (null != character) {
-      let mapped = memo.map((uri) => {
-        const obj = { source: { uri }, style: null };
-        items = [absoluteFill.absoluteFill, layer.layer];
-        obj.style = items;
-        return jsx(FastImageDefault, { source: { uri }, style: null }, uri);
-      });
+      const obj5 = { style: null, children: null };
+      const items1 = [absoluteFill.absoluteFill, , ];
+      layer = layer.layer;
+      items1[1] = layer;
+      items1[2] = tmp6;
+      obj5.style = items1;
+      const obj6 = { images: tmp5 };
+      tmp7Result = <tmp4 images={tmp5} />;
+      obj5.children = tmp7Result;
+      let tmp7Result3 = jsx(_modDef1653.View, { style: null, children: null });
     } else {
-      const obj5 = { color: character(575).colors.BLACK };
-      mapped = jsx(tmp2(10116).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
+      const obj7 = { color: nativeDefault.colors.BLACK };
+      tmp7Result3 = jsx(ExperimentalCheckpointIcon.ExperimentalCheckpointIcon, { color: nativeDefault.colors.BLACK });
     }
-    obj3.children = mapped;
-    <closure_5 style={null}>{null}</closure_5>;
+    obj3.children = tmp7Result3;
+    <React4 style={null}>{null}</React4>;
   }
-  obj2 = require("CheckpointCardColors");
+  tmp5 = useCheckpointCharacterImagesDefault(character, 56);
 };

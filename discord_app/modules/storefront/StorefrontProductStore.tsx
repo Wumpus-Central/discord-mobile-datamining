@@ -1,9 +1,9 @@
-// === Module 8168: StorefrontProductStore ===
+// === Module 11454: StorefrontProductStore ===
 
-// Module 8168 (StorefrontProductStore)
+// Module 11454 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GenericIAPStore from "GenericIAPStore" /* 8169 */;
+import GenericIAPStore from "GenericIAPStore" /* 8971 */;
 
 require = fn;
 function handleNativeStorefront() {
@@ -179,7 +179,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function handleProductsWithSkusFetchSuccess(arg0) {
     ({ productIds, products } = arg0);
     const fetchedAt = Date.now();
-    const set = new Set();
+    set = new Set();
     const item = products.forEach((id) => {
       set.add(id.id);
       closure_2[id.id] = { state: "success", product: id, fetchedAt, includePricing: true };

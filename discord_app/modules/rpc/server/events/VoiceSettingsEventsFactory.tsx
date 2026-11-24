@@ -1,8 +1,8 @@
-// === Module 15768: VoiceSettingsEventsFactory ===
+// === Module 15796: VoiceSettingsEventsFactory ===
 
-// Module 15768 (VoiceSettingsEventsFactory)
+// Module 15796 (VoiceSettingsEventsFactory)
 import Constants2 from "Constants" /* 1071 */;
-import Constants from "Constants" /* 6354 */;
+import Constants from "Constants" /* 5671 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

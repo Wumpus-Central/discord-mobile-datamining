@@ -1,9 +1,9 @@
-// === Module 16018: useDismissOnce ===
+// === Module 16051: useDismissOnce ===
 
-// Module 16018 (useDismissOnce)
+// Module 16051 (useDismissOnce)
 import noop from "module_19" /* 19 */;
 
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/useDismissOnce.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 7575: ScheduleUtils ===
+// === Module 8325: ScheduleUtils ===
 
-// Module 7575 (ScheduleUtils)
+// Module 8325 (ScheduleUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import apply from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import DateUtils from "DateUtils" /* 4735 */;
-import m from "m" /* 7577 */;
+import DateUtils from "DateUtils" /* 4739 */;
+import m from "m" /* 8327 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -90,16 +90,16 @@ function getValidWeekends(toDate) {
   }
   return tmp5;
 }
-const RecurrenceOptions = fn(7576).RecurrenceOptions;
-const GuildScheduledEventsConstants = fn(4768);
+const RecurrenceOptions = fn(8326).RecurrenceOptions;
+const GuildScheduledEventsConstants = fn(4772);
 ({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: closure_6 } = GuildScheduledEventsConstants);
-let items = [fn(7577).RRule.MO.weekday, fn(7577).RRule.TU.weekday, fn(7577).RRule.WE.weekday, fn(7577).RRule.TH.weekday, fn(7577).RRule.FR.weekday];
-let items1 = [fn(7577).RRule.SU.weekday, fn(7577).RRule.MO.weekday, fn(7577).RRule.TU.weekday, fn(7577).RRule.WE.weekday, fn(7577).RRule.TH.weekday];
-let items2 = [fn(7577).RRule.TU.weekday, fn(7577).RRule.WE.weekday, fn(7577).RRule.TH.weekday, fn(7577).RRule.FR.weekday, fn(7577).RRule.SA.weekday];
-let items3 = [fn(7577).RRule.SA.weekday, fn(7577).RRule.SU.weekday];
-const items4 = [fn(7577).RRule.FR.weekday, fn(7577).RRule.SA.weekday];
-const items5 = [fn(7577).RRule.SU.weekday, fn(7577).RRule.MO.weekday];
-const items6 = [fn(7577).RRule.SU.weekday, fn(7577).RRule.MO.weekday, fn(7577).RRule.TU.weekday, fn(7577).RRule.WE.weekday, fn(7577).RRule.TH.weekday, fn(7577).RRule.FR.weekday, fn(7577).RRule.SA.weekday];
+let items = [fn(8327).RRule.MO.weekday, fn(8327).RRule.TU.weekday, fn(8327).RRule.WE.weekday, fn(8327).RRule.TH.weekday, fn(8327).RRule.FR.weekday];
+let items1 = [fn(8327).RRule.SU.weekday, fn(8327).RRule.MO.weekday, fn(8327).RRule.TU.weekday, fn(8327).RRule.WE.weekday, fn(8327).RRule.TH.weekday];
+let items2 = [fn(8327).RRule.TU.weekday, fn(8327).RRule.WE.weekday, fn(8327).RRule.TH.weekday, fn(8327).RRule.FR.weekday, fn(8327).RRule.SA.weekday];
+let items3 = [fn(8327).RRule.SA.weekday, fn(8327).RRule.SU.weekday];
+const items4 = [fn(8327).RRule.FR.weekday, fn(8327).RRule.SA.weekday];
+const items5 = [fn(8327).RRule.SU.weekday, fn(8327).RRule.MO.weekday];
+const items6 = [fn(8327).RRule.SU.weekday, fn(8327).RRule.MO.weekday, fn(8327).RRule.TU.weekday, fn(8327).RRule.WE.weekday, fn(8327).RRule.TH.weekday, fn(8327).RRule.FR.weekday, fn(8327).RRule.SA.weekday];
 const set = new Set([0, 6]);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ScheduleUtils.tsx");
@@ -249,7 +249,7 @@ export function getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guildEvent
   ({ scheduled_start_time, scheduled_end_time } = guildEvent);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2168(scheduled_start_time), endDate: "r" };
+    const obj = { startDate: _modDef2168(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef2168(scheduled_end_time);
@@ -296,7 +296,7 @@ export function getScheduleFromEventData(arg0) {
   ({ scheduledStartTime, scheduledEndTime } = arg0);
   let tmp;
   if (null != scheduledStartTime) {
-    const obj = { startDate: _modDef2168(scheduledStartTime), endDate: "r" };
+    const obj = { startDate: _modDef2168(scheduledStartTime), endDate: "Array" };
     tmp = obj;
     if (null != scheduledEndTime) {
       obj.endDate = _modDef2168(scheduledEndTime);
@@ -309,7 +309,7 @@ export function getScheduleFromEvent(arg0) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2168(scheduled_start_time), endDate: "r" };
+    const obj = { startDate: _modDef2168(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef2168(scheduled_end_time);

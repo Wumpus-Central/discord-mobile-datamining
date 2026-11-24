@@ -1,15 +1,15 @@
-// === Module 14523: WishlistUtils ===
+// === Module 14792: WishlistUtils ===
 
-// Module 14523 (WishlistUtils)
+// Module 14792 (WishlistUtils)
 import util from "util" /* 1112 */;
-import StorefrontUtils from "StorefrontUtils" /* 6852 */;
+import StorefrontUtils from "StorefrontUtils" /* 7467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SKURecord from "SKURecord" /* 2166 */;
 
 require = fn;
-let closure_4 = fn(8986).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(8987).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(8988).isSKUWishlistItemRecord;
+let closure_4 = fn(10974).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(10975).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(10976).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1071).SKUProductLines;
 const PremiumSubscriptionSKUs = fn(1388).PremiumSubscriptionSKUs;
 const size = fn(2);
@@ -20,7 +20,7 @@ export function createNitroSuggestedSku() {
   const intl = util.intl;
   obj.name = intl.string(util.t.lG6a5x);
   obj.features = new Set();
-  const set = new Set();
+  set = new Set();
   obj.genres = new Set();
   obj.manifests = [];
   obj.availableRegions = [];

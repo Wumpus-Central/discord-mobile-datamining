@@ -1,17 +1,17 @@
-// === Module 20154: usePendingParentRequests ===
+// === Module 20197: usePendingParentRequests ===
 
-// Module 20154 (usePendingParentRequests)
-import useUserLinks from "useUserLinks" /* 9136 */;
-import useFamilyCenterActions from "useFamilyCenterActions" /* 12467 */;
+// Module 20197 (usePendingParentRequests)
+import useUserLinks from "useUserLinks" /* 8070 */;
+import useFamilyCenterActions from "useFamilyCenterActions" /* 12378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8335 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8071 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const UserLinkStatus = fn(8336).UserLinkStatus;
+const UserLinkStatus = fn(8072).UserLinkStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
 
@@ -140,7 +140,7 @@ export function usePendingRequestListController(pendingRequests) {
         return has;
       } else {
         const _Set = Set;
-        const set = new Set(has);
+        set = new Set(has);
         set.add(closure_0);
         return set;
       }

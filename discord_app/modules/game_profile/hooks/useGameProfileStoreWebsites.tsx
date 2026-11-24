@@ -1,15 +1,15 @@
-// === Module 9778: useGameProfileStoreWebsites ===
+// === Module 8622: useGameProfileStoreWebsites ===
 
-// Module 9778 (useGameProfileStoreWebsites)
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9779 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9781 */;
+// Module 8622 (useGameProfileStoreWebsites)
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8623 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8625 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const set = new Set(["1402418703554842694", "356877880938070016"]);
-let items = [fn(9779).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, fn(9779).ThirdPartyGameApplicationWebsiteCategory.STEAM, fn(9779).ThirdPartyGameApplicationWebsiteCategory.ROBLOX, fn(9779).ThirdPartyGameApplicationWebsiteCategory.BATTLENET, fn(9779).ThirdPartyGameApplicationWebsiteCategory.RIOT, fn(9779).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
+let items = [fn(8623).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, fn(8623).ThirdPartyGameApplicationWebsiteCategory.STEAM, fn(8623).ThirdPartyGameApplicationWebsiteCategory.ROBLOX, fn(8623).ThirdPartyGameApplicationWebsiteCategory.BATTLENET, fn(8623).ThirdPartyGameApplicationWebsiteCategory.RIOT, fn(8623).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
 
@@ -66,7 +66,7 @@ export function useGameProfileStoreWebsites(data) {
           someResult = steamReleaseStatus === SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED;
         }
         if (!someResult) {
-          someResult = found.some((category) => category.category === steamWebsiteUrl(9779).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          someResult = found.some((category) => category.category === steamWebsiteUrl(8623).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         }
         if (!someResult) {
           const obj = { category: ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
@@ -74,9 +74,9 @@ export function useGameProfileStoreWebsites(data) {
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
-          if (category.category !== steamWebsiteUrl(9779).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+          if (category.category !== steamWebsiteUrl(8623).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
             let num2 = 0;
-            if (category2.category === steamWebsiteUrl(9779).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+            if (category2.category === steamWebsiteUrl(8623).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
               num2 = 1;
             }
             num = num2;

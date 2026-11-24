@@ -1,28 +1,28 @@
-// === Module 18837: AutocompleteScreenUtils ===
+// === Module 18879: AutocompleteScreenUtils ===
 
-// Module 18837 (AutocompleteScreenUtils)
+// Module 18879 (AutocompleteScreenUtils)
 import util from "util" /* 1112 */;
-import UserUtilsDefault from "UserUtils" /* 4969 */;
-import LinkIcon from "LinkIcon" /* 5609 */;
-import ImageIcon from "ImageIcon" /* 7688 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 10077 */;
-import AttachmentIcon from "AttachmentIcon" /* 10109 */;
-import VideoIcon from "VideoIcon" /* 11126 */;
-import StickerIcon from "StickerIcon" /* 11128 */;
-import PollsIcon from "PollsIcon" /* 11623 */;
-import RobotIcon from "RobotIcon" /* 12179 */;
-import UserIcon from "UserIcon" /* 12361 */;
-import SearchUtils from "SearchUtils" /* 13204 */;
-import SoundboardIcon from "SoundboardIcon" /* 13417 */;
-import EmbedIcon from "EmbedIcon" /* 14726 */;
-import WebhookIcon from "WebhookIcon" /* 18838 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import UserUtilsDefault from "UserUtils" /* 4973 */;
+import LinkIcon from "LinkIcon" /* 5613 */;
+import ImageIcon from "ImageIcon" /* 7027 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 8859 */;
+import AttachmentIcon from "AttachmentIcon" /* 9477 */;
+import VideoIcon from "VideoIcon" /* 10495 */;
+import StickerIcon from "StickerIcon" /* 10497 */;
+import PollsIcon from "PollsIcon" /* 10945 */;
+import RobotIcon from "RobotIcon" /* 12121 */;
+import UserIcon from "UserIcon" /* 12259 */;
+import SearchUtils from "SearchUtils" /* 13118 */;
+import SoundboardIcon from "SoundboardIcon" /* 13340 */;
+import EmbedIcon from "EmbedIcon" /* 14556 */;
+import WebhookIcon from "WebhookIcon" /* 18880 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
-import SearchQueryStore from "SearchQueryStore" /* 13211 */;
+import SearchQueryStore from "SearchQueryStore" /* 13125 */;
 
 require = fn;
-const SearchListItemTypes = fn(8576).SearchListItemTypes;
+const SearchListItemTypes = fn(8878).SearchListItemTypes;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
@@ -34,7 +34,7 @@ export function getSearchQueryUserIds(items) {
   const prefixTag = SearchQueryStore.getPrefixTag(items);
   if (null == prefixTag) {
     const _Set2 = Set;
-    const set = new Set();
+    set = new Set();
     return set;
   } else {
     const _Set = Set;

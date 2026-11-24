@@ -1,10 +1,10 @@
-// === Module 9140: openLinkedUsersChannel ===
+// === Module 9016: openLinkedUsersChannel ===
 
-// Module 9140 (openLinkedUsersChannel)
-import transitionToChannel from "transitionToChannel" /* 5646 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
+// Module 9016 (openLinkedUsersChannel)
+import transitionToChannel from "transitionToChannel" /* 6000 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 require = fn;
 let closure_5 = async function _openLinkedUsersChannel(arg0) {
@@ -12,7 +12,7 @@ let closure_5 = async function _openLinkedUsersChannel(arg0) {
   closure_131_0 = closure_2;
   if (length.length > 1) {
     const tmp11 = (function getGroupDMWithRecipients(items) {
-      const set = new Set(items);
+      set = new Set(items);
       sortedPrivateChannels = sortedPrivateChannels.getSortedPrivateChannels();
       const found = sortedPrivateChannels.find((isGroupDM) => {
         let isGroupDMResult = isGroupDM.isGroupDM();

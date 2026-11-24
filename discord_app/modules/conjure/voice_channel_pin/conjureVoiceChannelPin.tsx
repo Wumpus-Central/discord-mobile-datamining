@@ -1,12 +1,12 @@
-// === Module 12316: conjureVoiceChannelPin ===
+// === Module 11324: conjureVoiceChannelPin ===
 
-// Module 12316 (conjureVoiceChannelPin)
+// Module 11324 (conjureVoiceChannelPin)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6939 */;
-import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 11251 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7547 */;
+import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 7971 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 
 require = fn;
 function canPinVoiceChannel(arg0) {

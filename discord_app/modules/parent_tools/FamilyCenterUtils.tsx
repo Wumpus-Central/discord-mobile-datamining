@@ -1,14 +1,14 @@
-// === Module 9139: FamilyCenterUtils ===
+// === Module 8077: FamilyCenterUtils ===
 
-// Module 9139 (FamilyCenterUtils)
+// Module 8077 (FamilyCenterUtils)
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import _modDef2824 from "module_2824" /* 2824 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8337 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8335 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8073 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8071 */;
 
 require = fn;
-const FamilyCenterConstants = fn(8336);
+const FamilyCenterConstants = fn(8072);
 ({ ACTION_TO_TEXT: closure_4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: metroImportDefault, UserLinkStatus: closure_8, UserLinkType: closure_9 } = FamilyCenterConstants);
 let c10 = 86400;
 let c11 = 172800;
@@ -111,8 +111,8 @@ export function isPurchase(action) {
 export function isGift(action) {
   return action.display_type === constants2.GIFTS;
 }
-export function getFailureCodeForAPIError(arg0) {
-  let GENERIC_ERROR = hasOwnProperty[arg0.code];
+export function getFailureCodeForAPIError(code) {
+  let GENERIC_ERROR = hasOwnProperty[code.code];
   if (GENERIC_ERROR == null) {
     GENERIC_ERROR = constants.GENERIC_ERROR;
   }

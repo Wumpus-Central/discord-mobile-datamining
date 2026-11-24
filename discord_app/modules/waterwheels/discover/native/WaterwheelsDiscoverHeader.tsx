@@ -1,13 +1,13 @@
-// === Module 17830: WaterwheelsDiscoverHeader ===
+// === Module 17868: WaterwheelsDiscoverHeader ===
 
-// Module 17830 (WaterwheelsDiscoverHeader)
+// Module 17868 (WaterwheelsDiscoverHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef2643 from "module_2643" /* 2643 */;
-import useGameRecordsDefault from "useGameRecords" /* 10215 */;
-import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17831 */;
-import InterestGameCoverDefault from "InterestGameCover" /* 17845 */;
+import useGameRecordsDefault from "useGameRecords" /* 14393 */;
+import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17869 */;
+import InterestGameCoverDefault from "InterestGameCover" /* 17883 */;
 import noop from "module_19" /* 19 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 10044 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 8783 */;
 
 const require = globalThis.__r;
 
@@ -17,12 +17,12 @@ function openPicker() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17823);
+const InterestGamePickerConstants = fn(17861);
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { header: { height: nativeDefault.space.PX_64, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE }, title: null, titleText: null, picks: null, cover: null, overlappingCover: null, overflow: null };
 let obj3 = { height: nativeDefault.space.PX_64, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flexShrink: 1 };
@@ -60,9 +60,9 @@ export default function WaterwheelsDiscoverHeader() {
     const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
     const intl3 = tmp2(1112).intl;
     obj6.text = intl3.string(_modDef2643.SCFT8N);
-    obj6.icon = closure_7(tmp2(7040).GameControllerIcon, { size: "sm" });
+    obj6.icon = closure_7(tmp2(7623).GameControllerIcon, { size: "sm" });
     obj6.onPress = openPicker;
-    let tmp8Result = closure_7(tmp2(5511).Button, obj6);
+    let tmp8Result = closure_7(tmp2(5515).Button, obj6);
   } else {
     const obj7 = { style: tmp.picks, accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, children: null };
     const intl4 = tmp2(1112).intl;
@@ -95,7 +95,7 @@ export default function WaterwheelsDiscoverHeader() {
       const intl2 = tmp2(1112).intl;
       const obj12 = { count: diff };
       obj11.children = intl2.formatToPlainString(_modDef2643["OxfP+s"], obj12);
-      tmp8Result2 = closure_7(tmp2(5504).Text, obj11);
+      tmp8Result2 = closure_7(tmp2(5508).Text, obj11);
     }
     items4[1] = tmp8Result2;
     obj10.children = items4;

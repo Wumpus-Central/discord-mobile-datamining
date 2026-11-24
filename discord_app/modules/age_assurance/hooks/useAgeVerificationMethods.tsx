@@ -1,18 +1,18 @@
-// === Module 12438: useAgeVerificationMethods ===
+// === Module 12338: useAgeVerificationMethods ===
 
-// Module 12438 (useAgeVerificationMethods)
+// Module 12338 (useAgeVerificationMethods)
 import util from "util" /* 1112 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6365 */;
-import MetricEvents from "MetricEvents" /* 6370 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7807 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 12439 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5685 */;
+import MetricEvents from "MetricEvents" /* 5690 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7751 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 12339 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6412 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6700 */;
 
 require = fn;
-const AgeVerificationConstants = fn(6413);
+const AgeVerificationConstants = fn(6701);
 ({ VERIFICATION_METHOD_TITLE_MAP: metroImportDefault, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -99,8 +99,8 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(6414);
-                      const result = obj5.trackAgeVerificationModalClicked(id, id(6414).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6414).AgeVerificationModalCta.METHOD_SELECT, id);
+                      const obj5 = id(6702);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(6702).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6702).AgeVerificationModalCta.METHOD_SELECT, id);
                       v1 = 1;
                       c1 = 1;
                       const obj4 = { value: v1(id), done: false };

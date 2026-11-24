@@ -1,31 +1,31 @@
-// === Module 16980: ViewDebugLogsSetting ===
+// === Module 17014: ViewDebugLogsSetting ===
 
-// Module 16980 (ViewDebugLogsSetting)
+// Module 17014 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1112 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import ClockIcon from "ClockIcon" /* 5622 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7515 */;
-import ActionSheet from "ActionSheet" /* 7553 */;
-import ActionSheetRow from "ActionSheetRow" /* 7555 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10537 */;
-import ChannelNotificationIcon from "ChannelNotificationIcon" /* 11667 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15054 */;
-import WrenchIcon from "WrenchIcon" /* 16981 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 16983 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 16986 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 16987 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import ClockIcon from "ClockIcon" /* 5626 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7381 */;
+import ActionSheet from "ActionSheet" /* 7420 */;
+import ActionSheetRow from "ActionSheetRow" /* 7422 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11272 */;
+import ChannelNotificationIcon from "ChannelNotificationIcon" /* 11353 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14912 */;
+import WrenchIcon from "WrenchIcon" /* 17015 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 17017 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 17020 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 17021 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11937 */;
+import SettingBuilders from "SettingBuilders" /* 11815 */;
 import size from "module_2" /* 2 */;
 
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(7555).ActionSheetRow, {
+  return closure_5(title(7422).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {

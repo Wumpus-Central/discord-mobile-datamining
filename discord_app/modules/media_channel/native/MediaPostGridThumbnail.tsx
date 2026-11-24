@@ -1,8 +1,8 @@
-// === Module 12878: MediaPostGridThumbnail ===
+// === Module 12797: MediaPostGridThumbnail ===
 
-// Module 12878 (MediaPostGridThumbnail)
-import FastImageDefault from "FastImage" /* 5600 */;
-import ForumPostMedia from "ForumPostMedia" /* 12876 */;
+// Module 12797 (MediaPostGridThumbnail)
+import FastImageDefault from "FastImage" /* 5604 */;
+import ForumPostMedia from "ForumPostMedia" /* 12795 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

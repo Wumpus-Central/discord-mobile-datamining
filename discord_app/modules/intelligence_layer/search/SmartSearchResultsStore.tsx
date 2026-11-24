@@ -1,18 +1,18 @@
-// === Module 13201: SmartSearchResultsStore ===
+// === Module 13115: SmartSearchResultsStore ===
 
-// Module 13201 (SmartSearchResultsStore)
+// Module 13115 (SmartSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1454 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13202 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13116 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(13199);
+const SmartSearchConstants = fn(13113);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -51,11 +51,11 @@ prototype["getStatus"] = function getStatus(arg0, arg1) {
   }
   return status;
 };
-prototype["hasAnswer"] = function hasAnswer(guildId, requestKey) {
-  const peekResult = closure_6.peek(guildId);
+prototype["hasAnswer"] = function hasAnswer(arg0, arg1) {
+  const peekResult = closure_6.peek(arg0);
   let peekResult1;
   if (peekResult != null) {
-    peekResult1 = peekResult.peek(requestKey);
+    peekResult1 = peekResult.peek(arg1);
   }
   if (peekResult1 == null) {
     peekResult1 = null;

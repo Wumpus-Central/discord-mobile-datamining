@@ -1,6 +1,6 @@
-// === Module 5037: ? ===
+// === Module 5041: ? ===
 
-// Module 5037
+// Module 5041
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BadgeUnlockPulse.riv.js");

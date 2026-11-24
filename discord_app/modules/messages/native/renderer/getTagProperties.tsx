@@ -1,12 +1,12 @@
-// === Module 8782: getTagProperties ===
+// === Module 14237: getTagProperties ===
 
-// Module 8782 (getTagProperties)
+// Module 14237 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1112 */;
-import MessageConstants from "MessageConstants" /* 4918 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8783 */;
-import isCrosspostDefault from "isCrosspost" /* 8784 */;
-import _modDef8786 from "module_8786" /* 8786 */;
+import MessageConstants from "MessageConstants" /* 4922 */;
+import isCrosspostDefault from "isCrosspost" /* 12042 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 12043 */;
+import _modDef14238 from "module_14238" /* 14238 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8786).uri;
+            uri = Image.resolveAssetSource(_modDef14238).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "channel", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "__workletHash", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

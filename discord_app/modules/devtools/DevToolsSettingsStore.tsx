@@ -1,9 +1,9 @@
-// === Module 8422: DevToolsSettingsStore ===
+// === Module 8242: DevToolsSettingsStore ===
 
-// Module 8422 (DevToolsSettingsStore)
+// Module 8242 (DevToolsSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8423 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8243 */;
 
 let obj = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

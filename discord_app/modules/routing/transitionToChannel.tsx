@@ -1,12 +1,12 @@
-// === Module 5646: transitionToChannel ===
+// === Module 6000: transitionToChannel ===
 
-// Module 5646 (transitionToChannel)
+// Module 6000 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1098 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5647 */;
-import preloadChannelDefault from "preloadChannel" /* 5648 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5649 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 6001 */;
+import preloadChannelDefault from "preloadChannel" /* 6002 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 require = fn;
 const Routes = fn(1071).Routes;
@@ -97,9 +97,9 @@ export function transitionToMessage(id, id2, arg2) {
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id2);
   }
 }
-export function transitionToStaticChannelRoute(arg0, arg1, arg2) {
+export function transitionToStaticChannelRoute(guildId, channelId, arg2) {
   const obj = router_utils;
   const obj2 = { openChannel: true };
   const merged = Object.assign(arg2);
-  obj.transitionTo(Routes.CHANNEL(arg0, arg1), obj2);
+  obj.transitionTo(Routes.CHANNEL(guildId, channelId), obj2);
 }

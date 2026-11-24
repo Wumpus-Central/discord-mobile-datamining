@@ -1,8 +1,8 @@
-// === Module 8790: PollTextUtils ===
+// === Module 12081: PollTextUtils ===
 
-// Module 8790 (PollTextUtils)
-import MarkupUtilsDefault from "MarkupUtils" /* 5637 */;
-import markup_MarkupParser from "markup/MarkupParser" /* 8726 */;
+// Module 12081 (PollTextUtils)
+import MarkupUtilsDefault from "MarkupUtils" /* 6941 */;
+import markup_MarkupParser from "markup/MarkupParser" /* 7053 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/PollTextUtils.tsx");

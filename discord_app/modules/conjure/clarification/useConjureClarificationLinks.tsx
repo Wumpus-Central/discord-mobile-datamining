@@ -1,10 +1,10 @@
-// === Module 18588: useConjureClarificationLinks ===
+// === Module 18629: useConjureClarificationLinks ===
 
-// Module 18588 (useConjureClarificationLinks)
+// Module 18629 (useConjureClarificationLinks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -88,7 +88,7 @@ export default function useConjureClarificationLinks(arg0, arg1, arg2) {
       continue;
     }
   }, items1);
-  const set = new Set();
+  set = new Set();
   let items2 = [closure_5];
   const items3 = [memo];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {

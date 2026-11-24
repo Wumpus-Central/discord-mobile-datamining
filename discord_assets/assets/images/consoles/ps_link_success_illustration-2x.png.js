@@ -1,6 +1,6 @@
-// === Module 15094: ? ===
+// === Module 15115: ? ===
 
-// Module 15094
+// Module 15115
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js");

@@ -1,13 +1,13 @@
-// === Module 18889: IgnoredUserRequestsScreen ===
+// === Module 18931: IgnoredUserRequestsScreen ===
 
-// Module 18889 (IgnoredUserRequestsScreen)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
+// Module 18931 (IgnoredUserRequestsScreen)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6007 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
-const UserRowModes = fn(9646).UserRowModes;
+const UserRowModes = fn(8803).UserRowModes;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

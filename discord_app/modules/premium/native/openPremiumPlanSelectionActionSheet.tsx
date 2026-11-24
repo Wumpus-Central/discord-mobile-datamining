@@ -1,9 +1,9 @@
-// === Module 9110: openPremiumPlanSelectionActionSheet ===
+// === Module 8975: openPremiumPlanSelectionActionSheet ===
 
-// Module 9110 (openPremiumPlanSelectionActionSheet)
+// Module 8975 (openPremiumPlanSelectionActionSheet)
 import PremiumConstants from "PremiumConstants" /* 1388 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import premiumOrbsDeliveredModal from "premiumOrbsDeliveredModal" /* 9249 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import premiumOrbsDeliveredModal from "premiumOrbsDeliveredModal" /* 9130 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -35,6 +35,6 @@ export default function openPremiumPlanSelectionActionSheet(arg0, stack) {
       const result = premiumOrbsDeliveredModal.openOrbsModalIfDelivered();
     }
   };
-  obj2.openLazy(require("asyncRequireImpl")(9111, dependencyMap.paths), closure_3, obj3, stack);
-  const tmp4 = require("asyncRequireImpl")(9111, dependencyMap.paths);
+  obj2.openLazy(require("asyncRequireImpl")(8976, dependencyMap.paths), closure_3, obj3, stack);
+  const tmp4 = require("asyncRequireImpl")(8976, dependencyMap.paths);
 };

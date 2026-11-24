@@ -1,9 +1,9 @@
-// === Module 14985: GlobalDiscoveryServersSearchCountsStore ===
+// === Module 15024: GlobalDiscoveryServersSearchCountsStore ===
 
-// Module 14985 (GlobalDiscoveryServersSearchCountsStore)
+// Module 15024 (GlobalDiscoveryServersSearchCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6349 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5666 */;
 
 require = fn;
 const map = new Map();
@@ -100,7 +100,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     const result1 = merged.handleSearchCountFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    const set = new Set(ignoreQueries.ignoreQueries);
+    set = new Set(ignoreQueries.ignoreQueries);
     const item = map.forEach((item, index) => {
       if (!set.has(index)) {
         map.delete(index);

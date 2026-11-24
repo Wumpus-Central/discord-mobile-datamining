@@ -1,6 +1,6 @@
-// === Module 13561: GuildPromptsStore ===
+// === Module 13475: GuildPromptsStore ===
 
-// Module 13561 (GuildPromptsStore)
+// Module 13475 (GuildPromptsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -14,7 +14,7 @@ prototype["initialize"] = function initialize(obj) {
     let _Set = Set;
     let tmp3 = new.target;
     let tmp4 = new.target;
-    let set = new Set(arg0[key10004]);
+    set = new Set(arg0[key10004]);
     closure_0[key10004] = set;
     continue;
   }
@@ -36,7 +36,7 @@ const guildPromptsStore = new GuildPromptsStore(DispatcherDefault, {
     ({ prompt: _prompt, guildId } = arg0);
     if (null == dependencyMap[guildId]) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       dependencyMap[guildId] = set;
       dependencyMap[guildId].add(_prompt);
       let flag = true;

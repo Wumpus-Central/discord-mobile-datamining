@@ -1,9 +1,9 @@
-// === Module 13158: GuildDirectoryUtils ===
+// === Module 13076: GuildDirectoryUtils ===
 
-// Module 13158 (GuildDirectoryUtils)
+// Module 13076 (GuildDirectoryUtils)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 13159 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 13077 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryTypes = GuildDirectoryConstants.DirectoryEntryTypes;
@@ -35,7 +35,7 @@ export function guildDirectoryEntryFromServer(entry) {
     if (guild4 != null) {
       features = guild4.features;
     }
-    const set = new Set(features);
+    set = new Set(features);
     obj.features = set;
     const guild5 = entry.guild;
     let prop;

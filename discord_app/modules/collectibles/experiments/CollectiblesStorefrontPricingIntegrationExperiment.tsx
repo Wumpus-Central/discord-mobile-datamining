@@ -1,6 +1,6 @@
-// === Module 8964: CollectiblesStorefrontPricingIntegrationExperiment ===
+// === Module 11107: CollectiblesStorefrontPricingIntegrationExperiment ===
 
-// Module 8964 (CollectiblesStorefrontPricingIntegrationExperiment)
+// Module 11107 (CollectiblesStorefrontPricingIntegrationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

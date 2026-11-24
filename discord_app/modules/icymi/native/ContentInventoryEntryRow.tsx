@@ -1,10 +1,10 @@
-// === Module 18141: ContentInventoryEntryRow ===
+// === Module 18180: ContentInventoryEntryRow ===
 
-// Module 18141 (ContentInventoryEntryRow)
-import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 18142 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 18149 */;
+// Module 18180 (ContentInventoryEntryRow)
+import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 18181 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 18188 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -23,9 +23,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8012).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8012).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8012).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8449).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8449).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8449).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

@@ -1,21 +1,21 @@
-// === Module 19314: VoicePanelDismissableContent ===
+// === Module 19356: VoicePanelDismissableContent ===
 
-// Module 19314 (VoicePanelDismissableContent)
+// Module 19356 (VoicePanelDismissableContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11612 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10930 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(19315, dependencyMap.paths);
+  return asyncRequireImpl(19357, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11750).VoicePanelModes;
-const isActivityParticipant = fn(5563).isActivityParticipant;
+const VoicePanelModes = fn(11635).VoicePanelModes;
+const isActivityParticipant = fn(5567).isActivityParticipant;
 const jsx = fn(21).jsx;
 let closure_10 = { code: "(function VoicePanelDismissableContentTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;})" };
 let closure_11 = { code: "(function VoicePanelDismissableContentTsx2(manualId,previousManualId){let[scheduleOnRN,handleFocusChange]=this.__closure;if(manualId!==previousManualId){scheduleOnRN(handleFocusChange,manualId);}})" };
@@ -80,7 +80,7 @@ export default noop.memo(function VoicePanelDismissibleContent() {
   VoicePanelDismissableContentTsx2.__initData = tmp11;
   const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelDismissableContentTsx1, VoicePanelDismissableContentTsx2);
   if (tmp4[0]) {
-    const items5 = [tmp6(4746).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
+    const items5 = [tmp6(4750).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
     let items6 = items5;
   } else {
     items6 = [];

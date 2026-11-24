@@ -1,10 +1,10 @@
-// === Module 14502: Slider ===
+// === Module 14771: Slider ===
 
-// Module 14502 (Slider)
+// Module 14771 (Slider)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5129 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5130 */;
-import _modDef10970 from "module_10970" /* 10970 */;
+import HapticUtils from "HapticUtils" /* 5133 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5134 */;
+import _modDef8718 from "module_8718" /* 8718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, disabled: { opacity: 0.5 }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -71,7 +71,7 @@ export function Slider(maxValue) {
   if (tmp7 == null) {
     tmp7 = minValue;
   }
-  let obj = step(4974);
+  let obj = step(4978);
   [tmp9, tmp10] = noop.useState(tmp7);
   const tmp4Result3 = _slicedToArray(noop.useState(first), 2);
   if (first !== tmp4Result3[0]) {
@@ -131,11 +131,11 @@ export function Slider(maxValue) {
       tmp2(arg0);
     }
   };
-  const tmp21 = _modDef10970;
+  const tmp21 = _modDef8718;
   if (tmp2Result.isThemeDark(obj.useThemeContext().theme)) {
-    let tmp2Result3 = tmp2(14503);
+    let tmp2Result3 = tmp2(14772);
   } else {
-    tmp2Result3 = tmp2(14504);
+    tmp2Result3 = tmp2(14773);
   }
   obj5.thumbImage = tmp2Result3;
   obj5.thumbSize = 1.625 * num2;
@@ -150,7 +150,7 @@ export function Slider(maxValue) {
   }
   obj5.accessibilityValue = tmp23;
   obj5.testID = testID;
-  tmp2Result = step(5078);
+  tmp2Result = step(5082);
   let fn;
   if (tmp2Result4.isAndroid()) {
     fn = () => true;

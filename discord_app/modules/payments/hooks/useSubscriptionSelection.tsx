@@ -1,6 +1,6 @@
-// === Module 9609: useSubscriptionSelection ===
+// === Module 11168: useSubscriptionSelection ===
 
-// Module 9609 (useSubscriptionSelection)
+// Module 11168 (useSubscriptionSelection)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

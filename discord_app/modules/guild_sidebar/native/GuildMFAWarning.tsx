@@ -1,14 +1,14 @@
-// === Module 17715: GuildMFAWarning ===
+// === Module 17753: GuildMFAWarning ===
 
-// Module 17715 (GuildMFAWarning)
+// Module 17753 (GuildMFAWarning)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5643 */;
-import Pressables from "Pressables" /* 7030 */;
-import _modDef17716 from "module_17716" /* 17716 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5998 */;
+import Pressables from "Pressables" /* 6026 */;
+import _modDef17754 from "module_17754" /* 17754 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -79,7 +79,7 @@ const Constants = fn(1071);
 ({ HelpdeskArticles: closure_4, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" }, MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 }, MFAWarningLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 obj2.MFAWarningLink = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef17716 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef17754 };
   items = [hasOwnProperty(FastImageDefault, obj2), ];
   const obj3 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl = util.intl;

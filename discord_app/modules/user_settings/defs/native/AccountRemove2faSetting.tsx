@@ -1,10 +1,10 @@
-// === Module 16066: AccountRemove2faSetting ===
+// === Module 16099: AccountRemove2faSetting ===
 
-// Module 16066 (AccountRemove2faSetting)
+// Module 16099 (AccountRemove2faSetting)
 import util from "util" /* 1112 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import account_MFAUtils from "account/MFAUtils" /* 16067 */;
-import MfaFactorUtils from "MfaFactorUtils" /* 16068 */;
+import account_MFAUtils from "account/MFAUtils" /* 16100 */;
+import MfaFactorUtils from "MfaFactorUtils" /* 16101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -172,13 +172,13 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj3 = module_560.create(() => ({ isCheckingLastFactor: false }));
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["D+aE7g"]);
   },
-  parent: fn(8712).MobileUserSettings.ACCOUNT,
+  parent: fn(9414).MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
     const self = this;
     const apply = closure_7.apply;
@@ -200,8 +200,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16067).use2FARemoveDisableReason,
-  usePredicate: fn(15980).useIsTOTPEnabled
+  useDescription: fn(16100).use2FARemoveDisableReason,
+  usePredicate: fn(16013).useIsTOTPEnabled
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

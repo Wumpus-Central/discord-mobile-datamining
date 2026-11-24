@@ -1,13 +1,13 @@
-// === Module 18606: ConjureRestoreProposalCard ===
+// === Module 18647: ConjureRestoreProposalCard ===
 
-// Module 18606 (ConjureRestoreProposalCard)
+// Module 18647 (ConjureRestoreProposalCard)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import Stack_Stack from "Stack/Stack" /* 5929 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18305 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 18362 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import Stack_Stack from "Stack/Stack" /* 5989 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18344 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 18401 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
   const obj2 = { variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef4190["t+b0rz"]);
+  obj2.children = intl.string(_modDef4192["t+b0rz"]);
   items = [React3(Text_Text.Text, obj2), , ];
   const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: proposal.subject }), ];
   let tmp3Result = null;
@@ -35,7 +35,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   if (null != onRestore) {
     const obj5 = { text: null, variant: "secondary", onPress: null };
     const intl2 = util.intl;
-    obj5.text = intl2.string(_modDef4190.H8Jfhu);
+    obj5.text = intl2.string(_modDef4192.H8Jfhu);
     obj5.onPress = onRestore;
     tmp3Result2 = React3(components_Button_Button.Button, obj5);
   }

@@ -1,6 +1,6 @@
-// === Module 13959: ProductCatalog ===
+// === Module 9681: ProductCatalog ===
 
-// Module 13959 (ProductCatalog)
+// Module 9681 (ProductCatalog)
 import LoggerDefault from "Logger" /* 3 */;
 import PerksStateUtils from "PerksStateUtils" /* 1392 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1387 */;
@@ -23,9 +23,9 @@ const set3 = new Set(items3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/ProductCatalog.tsx");
 
-export function canUserUse(PREMIUM_COLLECTIBLES, stateFromStores) {
-  let warnResult = stateFromStores;
-  let tmp = null == stateFromStores || !warnResult.isPremiumWithFractionalPremiumOnly();
+export function canUserUse(PREMIUM_COLLECTIBLES, currentUser) {
+  let warnResult = currentUser;
+  let tmp = null == currentUser || !warnResult.isPremiumWithFractionalPremiumOnly();
   if (!tmp) {
     tmp = !set3.has(PREMIUM_COLLECTIBLES);
   }

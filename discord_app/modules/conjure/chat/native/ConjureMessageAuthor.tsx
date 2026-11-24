@@ -1,15 +1,15 @@
-// === Module 18473: ConjureMessageAuthor ===
+// === Module 18514: ConjureMessageAuthor ===
 
-// Module 18473 (ConjureMessageAuthor)
+// Module 18514 (ConjureMessageAuthor)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import Pressables from "Pressables" /* 7030 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 18474 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 18475 */;
-import _modDef18478 from "module_18478" /* 18478 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import Pressables from "Pressables" /* 6026 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 18515 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 18516 */;
+import _modDef18519 from "module_18519" /* 18519 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,9 +58,9 @@ class ConjureMessageHeader {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, agentAvatar: null };
-let size = { width: fn(18461).MESSAGE_AVATAR_SIZE, height: fn(18461).MESSAGE_AVATAR_SIZE, borderRadius: fn(18461).MESSAGE_AVATAR_SIZE / 2 };
+let size = { width: fn(18502).MESSAGE_AVATAR_SIZE, height: fn(18502).MESSAGE_AVATAR_SIZE, borderRadius: fn(18502).MESSAGE_AVATAR_SIZE / 2 };
 obj2.agentAvatar = size;
 const metroImportDefault = createStyles.createStyles(obj2);
 size = fn(2);
@@ -70,9 +70,9 @@ export { ConjureMessageHeader };
 export function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(11977).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(11977);
-  const name = messageAuthorUser(4969).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(11406).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(11406);
+  const name = messageAuthorUser(4973).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {
@@ -87,7 +87,7 @@ export function ConjureUserHeader(arg0) {
 export function ConjureHeader(arg0) {
   const obj = { name: null, color: "text-brand", at: null };
   const intl = util.intl;
-  obj.name = intl.string(_modDef4190.uk6jhJ);
+  obj.name = intl.string(_modDef4192.uk6jhJ);
   obj.at = arg0.at;
   return hasOwnProperty(ConjureMessageHeader, obj);
 }
@@ -97,7 +97,7 @@ export function ConjureUserAvatar(size) {
     NORMAL = messageAuthorUser(1186).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(11977).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(11406).useMessageAuthorUser(size.userId);
   items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
@@ -111,14 +111,14 @@ export function ConjureUserAvatar(size) {
     obj2.accessibilityLabel = intl.string(tmp3(1112).t.iXAna6);
     const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "Array" };
     obj2.children = closure_5(tmp3(1186).Avatar, obj3);
-    tmp7 = closure_5(tmp3(7030).PressableOpacity, obj2);
+    tmp7 = closure_5(tmp3(6026).PressableOpacity, obj2);
   }
   return tmp7;
 }
 export function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef18478;
+  obj.source = _modDef18519;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 }

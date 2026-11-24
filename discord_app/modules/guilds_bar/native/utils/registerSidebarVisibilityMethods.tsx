@@ -1,9 +1,9 @@
-// === Module 17696: registerSidebarVisibilityMethods ===
+// === Module 17734: registerSidebarVisibilityMethods ===
 
-// Module 17696 (registerSidebarVisibilityMethods)
-import SortedGuildStore2 from "SortedGuildStore" /* 6550 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9960 */;
-import GuildStore from "GuildStore" /* 4784 */;
+// Module 17734 (registerSidebarVisibilityMethods)
+import SortedGuildStore2 from "SortedGuildStore" /* 6038 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9718 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import size from "module_2" /* 2 */;
 
 const SortedGuildStore = SortedGuildStore2;
@@ -32,7 +32,7 @@ export function registerGuildVisibilityMethod(fastListRef) {
         const guilds = GuildStore.getGuilds();
         const node = SortedGuildStore.getGuildsTree();
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         let item = items.forEach((recyclerKey) => {
           let forEach = node.getNode(recyclerKey.recyclerKey);
           if (undefined !== forEach) {

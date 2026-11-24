@@ -1,15 +1,15 @@
-// === Module 18624: useConjureMentionCandidates ===
+// === Module 18665: useConjureMentionCandidates ===
 
-// Module 18624 (useConjureMentionCandidates)
-import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
-import GuildUtilsDefault from "GuildUtils" /* 6679 */;
-import conjureMentions from "conjureMentions" /* 18472 */;
+// Module 18665 (useConjureMentionCandidates)
+import PermissionUtilsAll from "PermissionUtils" /* 4854 */;
+import GuildUtilsDefault from "GuildUtils" /* 6864 */;
+import conjureMentions from "conjureMentions" /* 18513 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -20,42 +20,52 @@ let result = size.fileFinishedImporting("modules/conjure/chat/useConjureMentionC
 
 export default function useConjureMentionCandidates(arg0, str) {
   _require = arg0;
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = true;
+  }
+  let creator;
+  let stateFromStores1;
+  let formatted;
   items = [ConjureProjectStore];
   let items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureProjectStore.getProject(closure_0), items1);
   let obj = require("initialize");
   const conjureProjectPeople = require("useConjureProjectCreator").useConjureProjectPeople(stateFromStores);
-  const creator = conjureProjectPeople.creator;
-  collaborators = conjureProjectPeople.collaborators;
+  creator = conjureProjectPeople.creator;
+  const collaborators = conjureProjectPeople.collaborators;
   let obj2 = require("useConjureProjectCreator");
-  let items2 = [guild_id];
-  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => guild_id.getId());
-  guild_id = undefined;
+  let items2 = [stateFromStores1];
+  stateFromStores1 = require("initialize").useStateFromStores(items2, () => stateFromStores1.getId());
+  let guild_id;
   if (null != stateFromStores) {
     if (tmpResult.isProjectGuildCollaborationEnabled(stateFromStores)) {
       guild_id = stateFromStores.guild_id;
     }
     tmpResult = tmp(tmp2[9]);
   }
-  let formatted;
+  formatted = undefined;
   if (str != null) {
     formatted = str.toLowerCase();
   }
   if (formatted == null) {
     formatted = null;
   }
-  let items3 = [guild_id, formatted];
-  const effect = stateFromStores1.useEffect(() => {
-    let tmp2 = null != guild_id;
-    if (tmp2) {
-      tmp2 = null != formatted;
+  let items3 = [flag, guild_id, formatted];
+  const effect = collaborators.useEffect(() => {
+    let tmp = flag;
+    if (flag) {
+      tmp = null != guild_id;
     }
-    if (tmp2) {
+    if (tmp) {
+      tmp = null != formatted;
+    }
+    if (tmp) {
       const members = GuildUtilsDefault.requestMembers(guild_id, formatted, 100);
     }
   }, items3);
   let obj3 = require("initialize");
-  let items4 = [formatted, GuildStore, UserStore];
+  let items4 = [guild_id, formatted, UserStore];
   const items5 = [stateFromStores, guild_id, formatted, creator, collaborators, stateFromStores1];
   return require("initialize").useStateFromStoresArray(items4, () => {
     if (null == formatted) {
@@ -63,7 +73,7 @@ export default function useConjureMentionCandidates(arg0, str) {
     } else {
       guild = null;
       if (null != guild_id) {
-        guild = guild.getGuild(tmp26);
+        guild = formatted.getGuild(tmp26);
       }
       function matches(id) {
         let nick = null;
@@ -73,22 +83,22 @@ export default function useConjureMentionCandidates(arg0, str) {
         return conjureMentions.matchesConjureMentionQuery(id, formatted, nick);
       }
       let prop;
-      if (matches != null) {
-        prop = matches.collaborator_role_ids;
+      if (set != null) {
+        prop = set.collaborator_role_ids;
       }
       if (prop == null) {
         prop = [];
       }
-      const set = new Set(prop);
+      set = new Set(prop);
       let hasItem = null != guild;
       if (hasItem) {
-        hasItem = set.has(stateFromStores(collaborators[12]).castGuildIdAsEveryoneGuildRoleId(guild.id));
-        let obj2 = stateFromStores(collaborators[12]);
+        hasItem = set.has(flag(creator[12]).castGuildIdAsEveryoneGuildRoleId(guild.id));
+        let obj2 = flag(creator[12]);
       }
       if (null == guild) {
         items = [];
       } else {
-        const memberIds = formatted.getMemberIds(guild.id);
+        const memberIds = guild_id.getMemberIds(guild.id);
         const mapped = memberIds.map((item) => user.getUser(item));
         items = mapped.filter((id) => {
           let result = null != id;
@@ -126,18 +136,19 @@ export default function useConjureMentionCandidates(arg0, str) {
         });
       }
       const _Set = Set;
-      if (null != set) {
+      const set1 = new Set();
+      if (null != hasItem) {
         const items1 = [tmp16];
         let items2 = items1;
       } else {
         items2 = [];
       }
       const items3 = [];
-      HermesBuiltin.arraySpread(hasItem, HermesBuiltin.arraySpread(items2, 0));
+      HermesBuiltin.arraySpread(set1, HermesBuiltin.arraySpread(items2, 0));
       const items4 = [];
       HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(items3.filter(matches), 0));
       return items4.filter((id) => {
-        let flag = id.id !== stateFromStores1 && !id.bot;
+        flag = id.id !== stateFromStores1 && !id.bot;
         if (flag) {
           flag = !set1.has(id.id);
         }

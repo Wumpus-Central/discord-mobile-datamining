@@ -1,17 +1,17 @@
-// === Module 12364: NativeSearchableSelectActionComponentUtils ===
+// === Module 8694: NativeSearchableSelectActionComponentUtils ===
 
-// Module 12364 (NativeSearchableSelectActionComponentUtils)
+// Module 8694 (NativeSearchableSelectActionComponentUtils)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5976 */;
-import RoleIconUtils from "RoleIconUtils" /* 7544 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
-import _modDef7777 from "module_7777" /* 7777 */;
-import _modDef11611 from "module_11611" /* 11611 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6279 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 6970 */;
+import RoleIconUtils from "RoleIconUtils" /* 7411 */;
+import _modDef8416 from "module_8416" /* 8416 */;
+import _modDef8695 from "module_8695" /* 8695 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -55,7 +55,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef7777).uri;
+            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8416).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult10 = utils_ColorUtils;
@@ -95,7 +95,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef11611;
+          let channelIconWithGuild = _modDef8695;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -113,7 +113,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
 }
 export function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef11611;
+    let channelIconWithGuild = _modDef8695;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

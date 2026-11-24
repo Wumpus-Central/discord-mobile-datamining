@@ -1,7 +1,7 @@
-// === Module 6871: useIsCreatorMonetizationEnabledGuild ===
+// === Module 7482: useIsCreatorMonetizationEnabledGuild ===
 
-// Module 6871 (useIsCreatorMonetizationEnabledGuild)
-import GuildStore from "GuildStore" /* 4784 */;
+// Module 7482 (useIsCreatorMonetizationEnabledGuild)
+import GuildStore from "GuildStore" /* 4788 */;
 
 const require = globalThis.__r;
 

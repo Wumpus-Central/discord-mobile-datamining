@@ -1,6 +1,6 @@
-// === Module 14969: DiscordLabsDefinitions ===
+// === Module 15008: DiscordLabsDefinitions ===
 
-// Module 14969 (DiscordLabsDefinitions)
+// Module 15008 (DiscordLabsDefinitions)
 import size from "module_2" /* 2 */;
 
 const items = [];

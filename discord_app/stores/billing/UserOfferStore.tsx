@@ -1,17 +1,17 @@
-// === Module 8847: UserOfferStore ===
+// === Module 8998: UserOfferStore ===
 
-// Module 8847 (UserOfferStore)
+// Module 8998 (UserOfferStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PremiumUtils from "PremiumUtils" /* 2173 */;
-import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 8850 */;
-import DiscountRecord from "DiscountRecord" /* 8848 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 8842 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8849 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8844 */;
+import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 9005 */;
+import DiscountRecord from "DiscountRecord" /* 8999 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 9000 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 9004 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 9002 */;
 import UserStore from "UserStore" /* 1386 */;
-import EntitlementStore from "EntitlementStore" /* 8120 */;
+import EntitlementStore from "EntitlementStore" /* 6233 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;
 
 require = fn;

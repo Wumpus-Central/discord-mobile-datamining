@@ -1,12 +1,12 @@
-// === Module 16027: AgeGroupScreenRowProps ===
+// === Module 16060: AgeGroupScreenRowProps ===
 
-// Module 16027 (AgeGroupScreenRowProps)
+// Module 16060 (AgeGroupScreenRowProps)
 import util from "util" /* 1112 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6411 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6414 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7793 */;
-import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 15981 */;
+import _modDef3446 from "module_3446" /* 3446 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6699 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6702 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7737 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16014 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
@@ -14,11 +14,11 @@ let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGr
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3444.SH6Tcv);
+    return intl.string(_modDef3446.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3444.rJiO86);
+    return intl.string(_modDef3446.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;

@@ -1,9 +1,9 @@
-// === Module 19348: VoicePanelStyles ===
+// === Module 19390: VoicePanelStyles ===
 
-// Module 19348 (VoicePanelStyles)
+// Module 19390 (VoicePanelStyles)
 import nativeDefault from "native" /* 575 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 10598 */;
-import createStyles from "createStyles" /* 4913 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8478 */;
+import createStyles from "createStyles" /* 4917 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = createStyles.createStyles((arg0) => {

@@ -1,8 +1,8 @@
-// === Module 12231: openUserProfileFromCodedLink ===
+// === Module 12172: openUserProfileFromCodedLink ===
 
-// Module 12231 (openUserProfileFromCodedLink)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
-import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 12232 */;
+// Module 12172 (openUserProfileFromCodedLink)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6007 */;
+import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 11827 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 18764: FileOrLinkGridPlaceholder ===
+// === Module 18806: FileOrLinkGridPlaceholder ===
 
-// Module 18764 (FileOrLinkGridPlaceholder)
+// Module 18806 (FileOrLinkGridPlaceholder)
 import _modDef1653 from "module_1653" /* 1653 */;
-import useFontScale from "useFontScale" /* 5519 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18740 */;
-import SearchListCard from "SearchListCard" /* 18765 */;
+import useFontScale from "useFontScale" /* 5523 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18782 */;
+import SearchListCard from "SearchListCard" /* 18807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

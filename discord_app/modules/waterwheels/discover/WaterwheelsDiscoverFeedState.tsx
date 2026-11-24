@@ -1,6 +1,6 @@
-// === Module 17811: WaterwheelsDiscoverFeedState ===
+// === Module 17849: WaterwheelsDiscoverFeedState ===
 
-// Module 17811 (WaterwheelsDiscoverFeedState)
+// Module 17849 (WaterwheelsDiscoverFeedState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/waterwheels/discover/WaterwheelsDiscoverFeedState.tsx");
@@ -14,7 +14,7 @@ export function selectWaterwheelsDiscoverEntries(EMPTY_DISCOVER_SNAPSHOT, fn) {
     if (null != loadId) {
       const items1 = [];
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       const _Set2 = Set;
       const set1 = new Set();
       items = EMPTY_DISCOVER_SNAPSHOT.items;

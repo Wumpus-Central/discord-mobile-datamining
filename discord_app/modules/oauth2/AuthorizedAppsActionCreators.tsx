@@ -1,11 +1,11 @@
-// === Module 7012: AuthorizedAppsActionCreators ===
+// === Module 7391: AuthorizedAppsActionCreators ===
 
-// Module 7012 (AuthorizedAppsActionCreators)
+// Module 7391 (AuthorizedAppsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import Timers from "Timers" /* 4757 */;
+import Timers from "Timers" /* 4761 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6263 */;
 
 require = fn;
 function tokensToAppTokensMap(arg0, arr) {
@@ -120,9 +120,9 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(6825).FetchState;
+const FetchState = fn(6263).FetchState;
 const Endpoints = fn(1071).Endpoints;
-const batchInvocationManager = new fn(4757).BatchInvocationManager(fetchAuthorizedApps, {
+const batchInvocationManager = new fn(4761).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {
     return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },

@@ -1,9 +1,9 @@
-// === Module 12763: EmojiFrowningFaceIcon ===
+// === Module 12682: EmojiFrowningFaceIcon ===
 
-// Module 12763 (EmojiFrowningFaceIcon)
+// Module 12682 (EmojiFrowningFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod12764 from "module_12764" /* 12764 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod12683 from "module_12683" /* 12683 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiFrowningFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12764, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12683, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

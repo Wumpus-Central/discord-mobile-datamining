@@ -1,9 +1,9 @@
-// === Module 15037: GuildMFAWarningStore ===
+// === Module 15076: GuildMFAWarningStore ===
 
-// Module 15037 (GuildMFAWarningStore)
+// Module 15076 (GuildMFAWarningStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
 import UserStore from "UserStore" /* 1386 */;
 
 function handleUserStoreUpdates() {

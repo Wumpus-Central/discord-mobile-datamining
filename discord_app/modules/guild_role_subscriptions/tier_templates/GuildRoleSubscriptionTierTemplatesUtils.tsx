@@ -1,14 +1,14 @@
-// === Module 16636: GuildRoleSubscriptionTierTemplatesUtils ===
+// === Module 16670: GuildRoleSubscriptionTierTemplatesUtils ===
 
-// Module 16636 (GuildRoleSubscriptionTierTemplatesUtils)
+// Module 16670 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtilsAll from "FlagUtils" /* 1404 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 6880 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15108 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7491 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4838 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16637 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4842 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16671 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ require = fn;
 function getUsedTemplateChannelsForGuild(arg0) {
   const arr = useEditStateStore.getState().editStateIdsForGroup[arg0];
   const listings = useEditStateStore.getState().listings;
-  const set = new Set();
+  set = new Set();
   if (null != arr) {
     let item = arr.forEach((item) => {
       let channelBenefits;
@@ -137,9 +137,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(16631).useEditStateStore;
+const useEditStateStore = fn(16665).useEditStateStore;
 const GuildFeatures = fn(1071).GuildFeatures;
-const ChannelFlags = fn(4769).ChannelFlags;
+const ChannelFlags = fn(4773).ChannelFlags;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
@@ -211,7 +211,7 @@ export function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
         });
       }
       const _Set = Set;
-      const set = new Set(items1.concat(mapped));
+      set = new Set(items1.concat(mapped));
       if (set.has(price_tier)) {
         const index = priceTiers.indexOf(price_tier);
         if (-1 === index) {

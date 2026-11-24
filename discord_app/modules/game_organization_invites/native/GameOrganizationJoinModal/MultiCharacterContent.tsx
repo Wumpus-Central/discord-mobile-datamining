@@ -1,8 +1,8 @@
-// === Module 12247: MultiCharacterContent ===
+// === Module 12187: MultiCharacterContent ===
 
-// Module 12247 (MultiCharacterContent)
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7020 */;
-import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 12248 */;
+// Module 12187 (MultiCharacterContent)
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6921 */;
+import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 12188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

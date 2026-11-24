@@ -1,19 +1,19 @@
-// === Module 11971: conjureProjectLinkCard ===
+// === Module 11848: conjureProjectLinkCard ===
 
-// Module 11971 (conjureProjectLinkCard)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8698 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8699 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8701 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9953 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11972 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11973 */;
+// Module 11848 (conjureProjectLinkCard)
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8938 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 11342 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11849 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11850 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 11853 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 11854 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11970 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11847 */;
 
 require = fn;
 function readConjureProjectLinkCard(applicationId, ticket, memo2) {
@@ -109,7 +109,7 @@ function readConjureProjectLinkCard(applicationId, ticket, memo2) {
   return null;
 }
 let closure_3 = ["application"];
-const canRemixProject = fn(6621).canRemixProject;
+const canRemixProject = fn(6808).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/conjureProjectLinkCard.tsx");
 

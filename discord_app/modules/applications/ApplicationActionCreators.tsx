@@ -1,8 +1,8 @@
-// === Module 6659: ApplicationActionCreators ===
+// === Module 6845: ApplicationActionCreators ===
 
-// Module 6659 (ApplicationActionCreators)
+// Module 6845 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6660 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6846 */;
 import ApplicationRecord from "ApplicationRecord" /* 2142 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 
@@ -323,7 +323,7 @@ export default {
             c3 = 0;
             body = closure_128_1.body;
             const _Set = Set;
-            const set = new Set(body.map((id) => id.id));
+            set = new Set(body.map((id) => id.id));
             closure_128_3 = set;
             closure_128_4 = closure_128_0.filter((item) => !set.has(item));
             const obj10 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: closure_128_1.body, unknownApplicationIds: closure_128_4, isHydrated: true };

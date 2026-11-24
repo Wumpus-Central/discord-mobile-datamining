@@ -1,15 +1,15 @@
-// === Module 18032: SoundboardSoundPreviewActionSheet ===
+// === Module 18071: SoundboardSoundPreviewActionSheet ===
 
-// Module 18032 (SoundboardSoundPreviewActionSheet)
+// Module 18071 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 6830 */;
-import SoundboardUtils from "SoundboardUtils" /* 10984 */;
+import SoundboardUtils from "SoundboardUtils" /* 10260 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 10262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 import UserStore from "UserStore" /* 1386 */;
-import SoundboardStore from "SoundboardStore" /* 5961 */;
+import SoundboardStore from "SoundboardStore" /* 6797 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,10 +17,10 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
-obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
+obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
@@ -30,7 +30,7 @@ if (PlatformUtils.isIOS()) {
   num = 60;
 }
 obj2.emojiText = { fontSize: num, lineHeight: 74 };
-let obj4 = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
+let obj4 = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.text = { marginTop: nativeDefault.space.PX_16, alignSelf: "center" };
 let obj5 = { marginTop: nativeDefault.space.PX_16, alignSelf: "center" };
 obj2.buttonContainer = { gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_24 };

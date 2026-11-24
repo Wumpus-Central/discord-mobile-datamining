@@ -1,16 +1,16 @@
-// === Module 8339: ReferencedMessageStore ===
+// === Module 8160: ReferencedMessageStore ===
 
-// Module 8339 (ReferencedMessageStore)
+// Module 8160 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1454 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 8344 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 6661 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8340 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 8343 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import MessageStore from "MessageStore" /* 5964 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8161 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8164 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import MessageStore from "MessageStore" /* 6265 */;
 
 require = fn;
 function processMessage(message) {

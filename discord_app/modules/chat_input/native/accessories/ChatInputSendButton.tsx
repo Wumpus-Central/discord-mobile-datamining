@@ -1,19 +1,19 @@
-// === Module 13117: ChatInputSendButton ===
+// === Module 13035: ChatInputSendButton ===
 
-// Module 13117 (ChatInputSendButton)
+// Module 13035 (ChatInputSendButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import useToken from "useToken" /* 5477 */;
-import SendMessageIcon from "SendMessageIcon" /* 5611 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13099 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13106 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 13118 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 13123 */;
+import useToken from "useToken" /* 5481 */;
+import SendMessageIcon from "SendMessageIcon" /* 5615 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13017 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13024 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 13036 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 13041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import SlowmodeStore from "SlowmodeStore" /* 8388 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import SlowmodeStore from "SlowmodeStore" /* 8209 */;
 
 require = fn;
 function renderChatInputSendButton(type, arg1, state, cleanup) {
@@ -145,10 +145,10 @@ function FloatingSlot(arg0) {
   return jsx(_modDef1653.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12825).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12744).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = { button: null, buttonActive: { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND }, iconActive: null };
   const size = { width, height };

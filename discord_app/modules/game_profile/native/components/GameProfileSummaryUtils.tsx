@@ -1,6 +1,6 @@
-// === Module 9868: GameProfileSummaryUtils ===
+// === Module 14010: GameProfileSummaryUtils ===
 
-// Module 9868 (GameProfileSummaryUtils)
+// Module 14010 (GameProfileSummaryUtils)
 import size from "module_2" /* 2 */;
 
 const re0 = /[\n\r]+$/;

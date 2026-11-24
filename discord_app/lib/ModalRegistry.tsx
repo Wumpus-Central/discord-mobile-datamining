@@ -1,6 +1,6 @@
-// === Module 19047: ModalRegistry ===
+// === Module 19089: ModalRegistry ===
 
-// Module 19047 (ModalRegistry)
+// Module 19089 (ModalRegistry)
 import size from "module_2" /* 2 */;
 
 class ModalRegistry {
@@ -8,7 +8,7 @@ class ModalRegistry {
     obj = Object.create(new.target.prototype);
     obj.modals = global;
     obj.stores = (function calculateStores(modals) {
-      const set = new Set();
+      set = new Set();
       const iter = modals[Symbol.iterator]();
       while (iter !== undefined) {
         let stores = iter.next().stores;

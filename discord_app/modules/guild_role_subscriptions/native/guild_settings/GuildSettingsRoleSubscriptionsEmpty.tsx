@@ -1,11 +1,11 @@
-// === Module 19931: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 19974: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 19931 (GuildSettingsRoleSubscriptionsEmpty)
+// Module 19974 (GuildSettingsRoleSubscriptionsEmpty)
 import useNavigation from "useNavigation" /* 1500 */;
-import PlaceholderDefault from "Placeholder" /* 19933 */;
-import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 19934 */;
+import PlaceholderDefault from "Placeholder" /* 19976 */;
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 19977 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildStore from "GuildStore" /* 4788 */;
 
 require = fn;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {

@@ -1,14 +1,14 @@
-// === Module 6942: prefetchConjurePreviewFrame ===
+// === Module 7550: prefetchConjurePreviewFrame ===
 
-// Module 6942 (prefetchConjurePreviewFrame)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6626 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6659 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 6943 */;
-import createProxyTicket from "createProxyTicket" /* 6945 */;
-import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 6946 */;
+// Module 7550 (prefetchConjurePreviewFrame)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 7551 */;
+import createProxyTicket from "createProxyTicket" /* 7553 */;
+import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 7554 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 6934 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7542 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 let closure_7 = async function _loadPolicyAndApplication(arg0) {
@@ -62,7 +62,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
     }
   }
 };
-const isLaunched = fn(6624).isLaunched;
+const isLaunched = fn(6811).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/prefetchConjurePreviewFrame.tsx");
 

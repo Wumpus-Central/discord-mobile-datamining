@@ -1,19 +1,19 @@
-// === Module 18798: PeopleScreen ===
+// === Module 18840: PeopleScreen ===
 
-// Module 18798 (PeopleScreen)
-import TrackingDefault from "Tracking" /* 13218 */;
+// Module 18840 (PeopleScreen)
+import TrackingDefault from "Tracking" /* 13138 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13226 */;
-import SearchQueryStore from "SearchQueryStore" /* 13211 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13146 */;
+import SearchQueryStore from "SearchQueryStore" /* 13125 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(8576);
+const SearchConstants = fn(8878);
 ({ SearchListItemTypes: closure_8, USER_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(8575).SearchResultContentEntityTypes;
+let closure_10 = fn(8877).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
@@ -45,7 +45,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
   placeholderHeight = onPressGroupDMItem.useCallback((arg0) => {
     closure_0 = arg0;
     closure_8((items) => {
-      const set = new Set(items);
+      set = new Set(items);
       if (set.has(closure_0)) {
         set.delete(closure_0);
       } else {

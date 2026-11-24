@@ -1,7 +1,7 @@
-// === Module 10585: useMediaLoading ===
+// === Module 13975: useMediaLoading ===
 
-// Module 10585 (useMediaLoading)
-import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 7393 */;
+// Module 13975 (useMediaLoading)
+import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 7203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

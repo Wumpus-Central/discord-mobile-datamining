@@ -1,15 +1,15 @@
-// === Module 19092: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 19134: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 19092 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 19134 (IncentivizedAccountLinkConfirmationBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
-import _modDef3702 from "module_3702" /* 3702 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import LinkingDefault from "Linking" /* 5592 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 10139 */;
-import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAccountLinkConfirmationPromoSheet" /* 19093 */;
+import _modDef3704 from "module_3704" /* 3704 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import LinkingDefault from "Linking" /* 5596 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13928 */;
+import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAccountLinkConfirmationPromoSheet" /* 19135 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,9 +21,9 @@ const result = size.fileFinishedImporting("modules/application_account_linking/n
 export default function IncentivizedAccountLinkConfirmationBottomSheet(orbCount) {
   let obj = { title: null, description: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.formatToPlainString(_modDef3702.g56Cg0, { orbCount: orbCount.orbCount });
+  obj.title = intl.formatToPlainString(_modDef3704.g56Cg0, { orbCount: orbCount.orbCount });
   const intl2 = util.intl;
-  obj.description = intl2.string(_modDef3702["Mh/Ooc"]);
+  obj.description = intl2.string(_modDef3704["Mh/Ooc"]);
   let obj2 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = util.intl;
   obj2.text = intl3.string(util.t.aRIFWD);

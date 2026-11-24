@@ -1,104 +1,46 @@
-// === Module 14605: CheckpointProfileEntrypoint ===
+// === Module 14873: CheckpointProfileEntrypoint ===
 
-// Module 14605 (CheckpointProfileEntrypoint)
+// Module 14873 (CheckpointProfileEntrypoint)
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import openCheckpoint from "openCheckpoint" /* 12497 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CheckpointStore from "CheckpointStore" /* 12128 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import openCheckpoint from "openCheckpoint" /* 12412 */;
+import CheckpointStore from "CheckpointStore" /* 12407 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_7 = async function _handlePress(arg0) {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_1 = tmp4;
-          c2 = 1;
-          c3 = 1;
-          const obj5 = { value: openCheckpoint.openCheckpoint(closure_0), done: false };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        closure_129_1(closure_129_2[5]).hideAllActionSheets();
-        c3 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp12) {
-      c3 = tmp;
-      throw tmp12;
-    }
-  }
-};
 function CheckpointProfileEntrypointRow(source) {
   source = source.source;
-  const checkpointQAMode = source(6340).useCheckpointQAMode("CheckpointProfileEntrypoint");
-  const obj = source(6340);
+  const checkpointQAMode = source(6643).useCheckpointQAMode("CheckpointProfileEntrypoint");
+  const obj = source(6643);
   items = [CheckpointStore];
   const stateFromStores = source(504).useStateFromStores(items, () => isFetching.isFetching);
   const obj3 = { label: null, subLabel: null, icon: null, onPress: null, onLongPress: null, arrow: true, start: true, end: true };
   const intl = source(1112).intl;
-  obj3.label = intl.string(checkpointQAMode(3440)["8hclXY"]);
+  obj3.label = intl.string(checkpointQAMode(3442)["8hclXY"]);
   const intl2 = source(1112).intl;
-  obj3.subLabel = intl2.string(checkpointQAMode(3440).BFc4lY);
+  obj3.subLabel = intl2.string(checkpointQAMode(3442).BFc4lY);
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {
-    const obj4 = { IconComponent: tmp(10116).ExperimentalCheckpointIcon };
-    tmp5Result = jsx(tmp(7045).TableRow.Icon, { IconComponent: tmp(10116).ExperimentalCheckpointIcon });
+    const obj4 = { IconComponent: tmp(13943).ExperimentalCheckpointIcon };
+    tmp5Result = jsx(tmp(6018).TableRow.Icon, { IconComponent: tmp(13943).ExperimentalCheckpointIcon });
   }
   obj3.icon = tmp5Result;
   obj3.onPress = function onPress() {
-    return (function handlePress() {
-      const self = this;
-      const apply = closure_1_7.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(source);
+    return openCheckpoint.openCheckpoint(source);
   };
   let fn;
   if ("off" !== checkpointQAMode) {
     fn = () => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14606, dependencyMap.paths), "CheckpointTestingActionSheet", { mode: checkpointQAMode });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14874, dependencyMap.paths), "CheckpointTestingActionSheet", { mode: checkpointQAMode });
     };
   }
   obj3.onLongPress = fn;
-  return jsx(source(7045).TableRow, { label: null, subLabel: null, icon: null, onPress: null, onLongPress: null, arrow: true, start: true, end: true });
+  return jsx(source(6018).TableRow, { label: null, subLabel: null, icon: null, onPress: null, onLongPress: null, arrow: true, start: true, end: true });
 }
-const ActivityIndicator = fn(17).ActivityIndicator;
-const jsx = fn(21).jsx;
-const size = fn(2);
+const ActivityIndicator = _mod17.ActivityIndicator;
+const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointProfileEntrypoint.tsx");
 
 export default function CheckpointProfileEntrypoint(source) {

@@ -1,10 +1,10 @@
-// === Module 8472: uploader/UploadUtils ===
+// === Module 7993: uploader/UploadUtils ===
 
-// Module 8472 (uploader/UploadUtils)
+// Module 7993 (uploader/UploadUtils)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import js_shim_shim from "js_shim/shim" /* 1364 */;
-import UploadPlatform from "UploadPlatform" /* 8445 */;
-import AttachmentFile from "AttachmentFile" /* 8473 */;
+import UploadPlatform from "UploadPlatform" /* 7986 */;
+import AttachmentFile from "AttachmentFile" /* 7994 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");

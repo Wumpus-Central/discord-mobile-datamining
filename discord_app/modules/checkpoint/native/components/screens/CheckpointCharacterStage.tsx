@@ -1,11 +1,11 @@
-// === Module 12542: CheckpointCharacterStage ===
+// === Module 12462: CheckpointCharacterStage ===
 
-// Module 12542 (CheckpointCharacterStage)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12543 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 12709 */;
+// Module 12462 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12463 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 12629 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12128 */;
+import CheckpointStore from "CheckpointStore" /* 12407 */;
 
 require = fn;
 function CheckpointCharacterStage(stage) {
@@ -26,7 +26,7 @@ function CheckpointCharacterStage(stage) {
   const tmp4 = layout(isHidden[7])();
   items = [stateFromStores];
   stateFromStores = stage(isHidden[8]).useStateFromStores(items, () => stateFromStores.compactAssets);
-  const tmp7 = layout(isHidden[9])(() => CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c4, height, stateFromStores));
+  const tmp7 = layout(isHidden[9])(() => CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c4, height));
   const textureScale = tmp7;
   const obj2 = stage(isHidden[8]);
   const items1 = [stateFromStores];
@@ -38,7 +38,7 @@ function CheckpointCharacterStage(stage) {
   const obj3 = stage(isHidden[8]);
   const checkpointCharacterPreloadedTextureNames = stage(isHidden[12]).useCheckpointCharacterPreloadedTextureNames(stage, tmp12);
   const obj4 = stage(isHidden[12]);
-  const checkpointCharacterReferencedAssets = stage(isHidden[13]).useCheckpointCharacterReferencedAssets({ visibleDataBinding: first, requestedDataBinding: memo, textureScale: tmp7, preloadedTextureNames: checkpointCharacterPreloadedTextureNames });
+  const checkpointCharacterReferencedAssets = stage(isHidden[13]).useCheckpointCharacterReferencedAssets({ visibleDataBinding: first, requestedDataBinding: memo, textureScale: tmp7, preloadedTextureNames: checkpointCharacterPreloadedTextureNames, compactAssets: stateFromStores });
   const tmp15 = layout(isHidden[9])(checkpointCharacterReferencedAssets);
   const obj5 = stage(isHidden[13]);
   [tmp17, tmp18] = onExitPlaying(noop.useState(null), 2);
@@ -110,7 +110,7 @@ function CheckpointCharacterStage(stage) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};

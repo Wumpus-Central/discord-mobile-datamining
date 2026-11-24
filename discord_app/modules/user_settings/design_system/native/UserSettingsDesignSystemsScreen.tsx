@@ -1,12 +1,12 @@
-// === Module 17035: UserSettingsDesignSystemsScreen ===
+// === Module 17069: UserSettingsDesignSystemsScreen ===
 
-// Module 17035 (UserSettingsDesignSystemsScreen)
-import SettingBuilders from "SettingBuilders" /* 11937 */;
-import SettingLayoutDefault from "SettingLayout" /* 15985 */;
+// Module 17069 (UserSettingsDesignSystemsScreen)
+import SettingBuilders from "SettingBuilders" /* 11815 */;
+import SettingLayoutDefault from "SettingLayout" /* 16018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8712).MobileUserSettings;
+const MobileUserSettings = fn(9414).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");

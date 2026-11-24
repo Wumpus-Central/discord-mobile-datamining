@@ -1,12 +1,12 @@
-// === Module 19193: InviteActivityButton ===
+// === Module 19235: InviteActivityButton ===
 
-// Module 19193 (InviteActivityButton)
+// Module 19235 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12195 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12138 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 6921 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;
+import LocalActivityStore from "LocalActivityStore" /* 7529 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7528 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -23,9 +23,9 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     const obj2 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19194, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19236, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
-      icon: stateFromStores(11055),
+      icon: stateFromStores(10404),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -37,12 +37,12 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     obj2.text = intl.string(tmp(1112).t["OzOM/q"]);
     const intl2 = tmp(1112).intl;
     obj2.accessibilityLabel = intl2.string(tmp(1112).t["OzOM/q"]);
-    tmp4 = jsx(tmp(5511).Button, {
+    tmp4 = jsx(tmp(5515).Button, {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19194, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19236, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
-      icon: stateFromStores(11055),
+      icon: stateFromStores(10404),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",

@@ -1,19 +1,19 @@
-// === Module 11803: SafetyBookletSpotIllustration ===
+// === Module 11686: SafetyBookletSpotIllustration ===
 
-// Module 11803 (SafetyBookletSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef11804 from "module_11804" /* 11804 */;
-import _modDef11805 from "module_11805" /* 11805 */;
-import _modDef11806 from "module_11806" /* 11806 */;
+// Module 11686 (SafetyBookletSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef11687 from "module_11687" /* 11687 */;
+import _modDef11688 from "module_11688" /* 11688 */;
+import _modDef11689 from "module_11689" /* 11689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11804 }, 3: null };
-let obj2 = { uri: _modDef11804 };
-obj[2] = { uri: _modDef11805 };
-const obj3 = { uri: _modDef11805 };
-obj[3] = { uri: _modDef11806 };
+let obj = { 1: null, 2: { uri: _modDef11687 }, 3: null };
+let obj2 = { uri: _modDef11687 };
+obj[2] = { uri: _modDef11688 };
+const obj3 = { uri: _modDef11688 };
+obj[3] = { uri: _modDef11689 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyBookletSpotIllustration.native.tsx");
 

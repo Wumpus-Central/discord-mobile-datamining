@@ -1,10 +1,10 @@
-// === Module 13122: useVoiceMessageBottomInset ===
+// === Module 13040: useVoiceMessageBottomInset ===
 
-// Module 13122 (useVoiceMessageBottomInset)
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5488 */;
-import spring_spring from "spring/spring" /* 5514 */;
-import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7077 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11775 */;
+// Module 13040 (useVoiceMessageBottomInset)
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5492 */;
+import spring_spring from "spring/spring" /* 5518 */;
+import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 6923 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11665 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

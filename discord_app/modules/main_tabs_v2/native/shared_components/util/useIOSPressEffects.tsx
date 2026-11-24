@@ -1,6 +1,6 @@
-// === Module 7054: useIOSPressEffects ===
+// === Module 6028: useIOSPressEffects ===
 
-// Module 7054 (useIOSPressEffects)
+// Module 6028 (useIOSPressEffects)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import noop from "module_19" /* 19 */;

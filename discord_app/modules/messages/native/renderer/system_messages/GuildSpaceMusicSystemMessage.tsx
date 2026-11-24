@@ -1,22 +1,22 @@
-// === Module 8890: GuildSpaceMusicSystemMessage ===
+// === Module 14271: GuildSpaceMusicSystemMessage ===
 
-// Module 8890 (GuildSpaceMusicSystemMessage)
+// Module 14271 (GuildSpaceMusicSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5943 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8245 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8688 */;
-import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8689 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8698 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8700 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8702 */;
-import _modDef8891 from "module_8891" /* 8891 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6538 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6681 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8680 */;
+import _modDef10169 from "module_10169" /* 10169 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10470 */;
+import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 10471 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 11853 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14197 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14198 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6730 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_6 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_MUTED });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildSpaceMusicSystemMessage.tsx");
@@ -65,7 +65,7 @@ export function createGuildSpaceMusicSystemMessage(message) {
             const obj5 = { content: null, iconUrl: null, iconTintColor: null };
             obj2.usernameOnClick = obj6;
             obj5.content = intl.formatToParts(mobileMusicSystemMessage.message, obj2);
-            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8891);
+            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef10169);
             obj5.iconTintColor = tmp15.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(message));
             return obj5;

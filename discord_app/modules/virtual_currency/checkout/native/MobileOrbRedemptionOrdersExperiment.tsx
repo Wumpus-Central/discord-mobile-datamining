@@ -1,6 +1,6 @@
-// === Module 14241: MobileOrbRedemptionOrdersExperiment ===
+// === Module 11470: MobileOrbRedemptionOrdersExperiment ===
 
-// Module 14241 (MobileOrbRedemptionOrdersExperiment)
+// Module 11470 (MobileOrbRedemptionOrdersExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

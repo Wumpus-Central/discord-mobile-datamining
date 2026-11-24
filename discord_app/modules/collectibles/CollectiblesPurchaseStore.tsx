@@ -1,6 +1,6 @@
-// === Module 8090: CollectiblesPurchaseStore ===
+// === Module 6203: CollectiblesPurchaseStore ===
 
-// Module 8090 (CollectiblesPurchaseStore)
+// Module 6203 (CollectiblesPurchaseStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

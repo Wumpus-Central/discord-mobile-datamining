@@ -1,12 +1,12 @@
-// === Module 15765: getNativeDiscordCustomTheme ===
+// === Module 15793: getNativeDiscordCustomTheme ===
 
-// Module 15765 (getNativeDiscordCustomTheme)
+// Module 15793 (getNativeDiscordCustomTheme)
 import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
-import ColorUtils from "ColorUtils" /* 4910 */;
-import shared from "shared" /* 4920 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5083 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5119 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
+import ColorUtils from "ColorUtils" /* 4914 */;
+import shared from "shared" /* 4924 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5087 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5123 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4941 */;
 
 require = fn;
 const size = fn(2);

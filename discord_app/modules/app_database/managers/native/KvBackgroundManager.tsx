@@ -1,18 +1,18 @@
-// === Module 19494: KvBackgroundManager ===
+// === Module 19536: KvBackgroundManager ===
 
-// Module 19494 (KvBackgroundManager)
+// Module 19536 (KvBackgroundManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 19495 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 19537 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 13283 */;
-import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 8271 */;
-import FileSystemStore from "FileSystemStore" /* 8272 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import MultiAccountStore from "MultiAccountStore" /* 13210 */;
+import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 8111 */;
+import FileSystemStore from "FileSystemStore" /* 8112 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 let require = fn;
-let SaveableChannelsStore = fn(8271);
+let SaveableChannelsStore = fn(8111);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: metroImportDefault } = SaveableChannelsStore);
 let SaveableChannelsStore = SaveableChannelsStore_mod;
 let closure_10 = 5 * DurationsDefault.Millis.MINUTE;
@@ -64,12 +64,12 @@ class KvBackgroundManager extends tmp4 {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      prefix = v1(4791).channels(prefix);
-                      const obj5 = v1(4791);
+                      prefix = v1(4795).channels(prefix);
+                      const obj5 = v1(4795);
                       const obj6 = prefix;
-                      closure_1 = v1(4791).messages(prefix);
-                      const obj7 = v1(4791);
-                      closure_2 = v1(4791).channelsTemp(prefix);
+                      closure_1 = v1(4795).messages(prefix);
+                      const obj7 = v1(4795);
+                      closure_2 = v1(4795).channelsTemp(prefix);
                       if (closure_1_8.canEvictOrphans()) {
                         v1 = 1;
                         c0 = 1;
@@ -93,7 +93,7 @@ class KvBackgroundManager extends tmp4 {
                         };
                         return obj4;
                       }
-                      const obj8 = v1(4791);
+                      const obj8 = v1(4795);
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
@@ -150,12 +150,12 @@ class KvBackgroundManager extends tmp4 {
                                     let tmp10 = new.target;
                                     let tmp11 = new.target;
                                     let flag = true;
-                                    let table = new c0(4792).Table(items, tmp5, closure_1_0, true);
+                                    let table = new c0(4796).Table(items, tmp5, closure_1_0, true);
                                     let upgradeTransactionResult = table.upgradeTransaction(arg0);
                                     let deleteResult = upgradeTransactionResult.delete();
                                     continue;
                                   }
-                                  tmp = c0(4791).DEPRECATED_KEYSPACES[Symbol.iterator]();
+                                  tmp = c0(4795).DEPRECATED_KEYSPACES[Symbol.iterator]();
                                 }, "deleteDeprecatedKeyspaces"),
                         done: false
                       };
@@ -260,7 +260,7 @@ class KvBackgroundManager extends tmp4 {
                       let _Set = Set;
                       let tmp30 = new.target;
                       let tmp31 = new.target;
-                      let set = new Set(users.map((id) => closure_1_1(closure_1_2[13]).databaseName(id.id)));
+                      set = new Set(users.map((id) => closure_1_1(closure_1_2[13]).databaseName(id.id)));
                       closure_130_0 = set;
                       let Kv = closure_0(tmp2[12]).Kv;
                       c6 = 1;

@@ -1,15 +1,15 @@
-// === Module 7483: CategoryCollapseStore ===
+// === Module 7348: CategoryCollapseStore ===
 
-// Module 7483 (CategoryCollapseStore)
+// Module 7348 (CategoryCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import FavoritesUtils from "FavoritesUtils" /* 4787 */;
+import FavoritesUtils from "FavoritesUtils" /* 4791 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6040 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
 
 require = fn;
 function incrementVersion() {
@@ -162,7 +162,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
       }
       continue;
     }
-    const set = new Set(mapped.filter(GlobalUtils.isNotNullish));
+    set = new Set(mapped.filter(GlobalUtils.isNotNullish));
   },
   CATEGORY_COLLAPSE: function handleCategoryCollapse(id) {
     id = id.id;

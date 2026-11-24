@@ -1,6 +1,6 @@
-// === Module 7794: AgeVerificationIncodeWebViewConstants ===
+// === Module 7738: AgeVerificationIncodeWebViewConstants ===
 
-// Module 7794 (AgeVerificationIncodeWebViewConstants)
+// Module 7738 (AgeVerificationIncodeWebViewConstants)
 import size from "module_2" /* 2 */;
 
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";

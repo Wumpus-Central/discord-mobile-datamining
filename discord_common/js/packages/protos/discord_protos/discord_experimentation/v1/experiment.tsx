@@ -1,11 +1,11 @@
-// === Module 8242: experiment ===
+// === Module 5645: experiment ===
 
-// Module 8242 (experiment)
+// Module 5645 (experiment)
 import _mod1196 from "module_1196" /* 1196 */;
 import timestamp from "timestamp" /* 1225 */;
 import wrappers from "wrappers" /* 1226 */;
-import rules from "rules" /* 8243 */;
-import duration from "duration" /* 8244 */;
+import rules from "rules" /* 5646 */;
+import duration from "duration" /* 5647 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -887,7 +887,7 @@ class HoldoutScope$Type extends MessageType4 {
     items[0] = obj;
     items[1] = {
       no: 2,
-      name: "fiscal_half",
+      name: "fiscal_period",
       kind: "enum",
       T() {
             items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj13];
@@ -901,7 +901,7 @@ class HoldoutScope$Type extends MessageType4 {
 }
 const prototype4 = HoldoutScope$Type.prototype;
 prototype4["create"] = function create(partialSettings) {
-  const obj = { level: 0, fiscalHalf: 0, fiscalYear: 0 };
+  const obj = { level: 0, fiscalPeriod: 0, fiscalYear: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -924,7 +924,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         obj.level = pos.int32();
       } else if (2 === tmp5) {
-        obj.fiscalHalf = pos.int32();
+        obj.fiscalPeriod = pos.int32();
       } else if (3 === tmp5) {
         obj.fiscalYear = pos.int32();
       } else {
@@ -959,8 +959,8 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(level, tag, wri
     tag.tag(1, _mod1196.WireType.Varint).int32(level.level);
     const tagResult = tag.tag(1, _mod1196.WireType.Varint);
   }
-  if (0 !== level.fiscalHalf) {
-    tag.tag(2, _mod1196.WireType.Varint).int32(level.fiscalHalf);
+  if (0 !== level.fiscalPeriod) {
+    tag.tag(2, _mod1196.WireType.Varint).int32(level.fiscalPeriod);
     const tagResult1 = tag.tag(2, _mod1196.WireType.Varint);
   }
   if (0 !== level.fiscalYear) {
@@ -989,7 +989,7 @@ const items2 = [
   },
   {
     no: 2,
-    name: "fiscal_half",
+    name: "fiscal_period",
     kind: "enum",
     T() {
       items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj13];

@@ -1,17 +1,17 @@
-// === Module 16903: SettingsEmailNotificationsScreen ===
+// === Module 16937: SettingsEmailNotificationsScreen ===
 
-// Module 16903 (SettingsEmailNotificationsScreen)
+// Module 16937 (SettingsEmailNotificationsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import SettingBuilders from "SettingBuilders" /* 11937 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 16905 */;
+import SettingBuilders from "SettingBuilders" /* 11815 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 16939 */;
 import noop from "module_19" /* 19 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 15018 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 15057 */;
 
 require = fn;
-const MobileUserSettings = fn(8712).MobileUserSettings;
+const MobileUserSettings = fn(9414).MobileUserSettings;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { notice: { padding: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };

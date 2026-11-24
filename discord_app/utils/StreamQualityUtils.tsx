@@ -1,24 +1,24 @@
-// === Module 5836: StreamQualityUtils ===
+// === Module 5902: StreamQualityUtils ===
 
-// Module 5836 (StreamQualityUtils)
+// Module 5902 (StreamQualityUtils)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5838 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5904 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5837 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5903 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const StreamSettingsConstants = fn(5754);
+const StreamSettingsConstants = fn(5817);
 ({ ApplicationStreamFPS: closure_10, ApplicationStreamResolutions: closure_11, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = StreamSettingsConstants);
 let closure_15 = fn(1388).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5658).ResolutionTypes;
+const ResolutionTypes = fn(5729).ResolutionTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 
@@ -147,10 +147,13 @@ export function useMaxQuality(participant) {
     }
   }, items3);
 }
-export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) {
+export function trackStreamSettingsUpdate(preset, resolution, fps, sound) {
+  if (streamDrawingEnabled === undefined) {
+    streamDrawingEnabled = ApplicationStreamingSettingsStore.getState().streamDrawingEnabled;
+  }
   closure_0 = preset;
   closure_1 = resolution;
-  closure_2 = frameRate;
+  closure_2 = fps;
   const found = application_id.find((preset) => {
     let tmp = null == preset.preset;
     if (!tmp) {
@@ -174,7 +177,7 @@ export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) 
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
-  const obj2 = { user_premium_tier: premiumType, guild_premium_tier: null, stream_quality_user_premium_tier: null, stream_quality_guild_premium_tier: null, stream_quality_preset: null, stream_quality_resolution: null, stream_quality_frame_rate: null, soundshare_enabled: null };
+  const obj2 = { user_premium_tier: premiumType, guild_premium_tier: null, stream_quality_user_premium_tier: null, stream_quality_guild_premium_tier: null, stream_quality_preset: null, stream_quality_resolution: null, stream_quality_frame_rate: null, soundshare_enabled: null, stream_drawing_enabled: null };
   let premiumTier;
   if (guild != null) {
     premiumTier = guild.premiumTier;
@@ -184,11 +187,11 @@ export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) 
   if (found != null) {
     quality = found.quality;
   }
-  let tmp9 = null;
+  let tmp10 = null;
   if (null != quality) {
-    tmp9 = closure_15[found.quality];
+    tmp10 = closure_15[found.quality];
   }
-  obj2.stream_quality_user_premium_tier = tmp9;
+  obj2.stream_quality_user_premium_tier = tmp10;
   let guildPremiumTier;
   if (found != null) {
     guildPremiumTier = found.guildPremiumTier;
@@ -196,7 +199,8 @@ export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) 
   obj2.stream_quality_guild_premium_tier = guildPremiumTier;
   obj2.stream_quality_preset = preset;
   obj2.stream_quality_resolution = resolution;
-  obj2.stream_quality_frame_rate = frameRate;
+  obj2.stream_quality_frame_rate = fps;
   obj2.soundshare_enabled = sound;
+  obj2.stream_drawing_enabled = streamDrawingEnabled;
   AnalyticsUtilsDefault.track(AnalyticEvents.STREAM_SETTINGS_UPDATE, obj2);
 }

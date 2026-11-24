@@ -1,9 +1,9 @@
-// === Module 8968: CollectiblesCollectAndClaimPromotionUtils ===
+// === Module 11134: CollectiblesCollectAndClaimPromotionUtils ===
 
-// Module 8968 (CollectiblesCollectAndClaimPromotionUtils)
-import CollectiblesUtils from "CollectiblesUtils" /* 8087 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8969 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8075 */;
+// Module 11134 (CollectiblesCollectAndClaimPromotionUtils)
+import CollectiblesUtils from "CollectiblesUtils" /* 6197 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11135 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6185 */;
 
 require = fn;
 function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
@@ -18,7 +18,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
     if (flatMapResult == null) {
       flatMapResult = [];
     }
-    const set = new Set(flatMapResult);
+    set = new Set(flatMapResult);
     if (tmpResult.isBundleProduct(bundledProducts)) {
       bundledProducts = bundledProducts.bundledProducts;
       if (bundledProducts == null) {
@@ -53,7 +53,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
   }
   obj = require("CollectiblesUtils");
 }
-let closure_3 = fn(8927).getCollectiblesCollectAndClaim;
+let closure_3 = fn(10982).getCollectiblesCollectAndClaim;
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesCollectAndClaimPromotionUtils.tsx");
@@ -79,7 +79,7 @@ export function getBundleChildSkuIds(bundledProducts) {
       bundledProducts = bundledProducts.items;
     }
     const _Set = Set;
-    const set = new Set(bundledProducts.map((skuId) => skuId.skuId));
+    set = new Set(bundledProducts.map((skuId) => skuId.skuId));
     items = [];
     HermesBuiltin.arraySpread(set, 0);
     return items;

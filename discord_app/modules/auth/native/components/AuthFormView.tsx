@@ -1,12 +1,12 @@
-// === Module 7394: AuthFormView ===
+// === Module 7204: AuthFormView ===
 
-// Module 7394 (AuthFormView)
+// Module 7204 (AuthFormView)
 import nativeDefault from "native" /* 575 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7316 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7372 */;
-import WideAuthScrollContext from "WideAuthScrollContext" /* 7395 */;
-import AuthHeaderDefault from "AuthHeader" /* 7396 */;
-import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 7397 */;
+import BackgroundImageDefault from "BackgroundImage" /* 6916 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7182 */;
+import WideAuthScrollContext from "WideAuthScrollContext" /* 7205 */;
+import AuthHeaderDefault from "AuthHeader" /* 7206 */;
+import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 7207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, flex: { flex: 1 }, content: null, subHeader: null };
   let num = 0;

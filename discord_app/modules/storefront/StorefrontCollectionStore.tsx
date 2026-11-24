@@ -1,6 +1,6 @@
-// === Module 8969: StorefrontCollectionStore ===
+// === Module 11135: StorefrontCollectionStore ===
 
-// Module 8969 (StorefrontCollectionStore)
+// Module 11135 (StorefrontCollectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -265,7 +265,7 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
       pricingKey = "";
     }
     const fetchedAt = Date.now();
-    const set = new Set();
+    set = new Set();
     const item = collections.forEach((collection) => {
       set.add(collection.id);
       if (!dependencyMap) {

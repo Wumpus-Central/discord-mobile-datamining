@@ -1,16 +1,16 @@
-// === Module 13091: application_commands/ApplicationCommandUtils ===
+// === Module 13009: application_commands/ApplicationCommandUtils ===
 
-// Module 13091 (application_commands/ApplicationCommandUtils)
+// Module 13009 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import _modDef2107 from "module_2107" /* 2107 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5565 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5937 */;
-import DraftStore from "DraftStore" /* 8315 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10453 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11618 */;
-import _modDef13092 from "module_13092" /* 13092 */;
-import _modDef13093 from "module_13093" /* 13093 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8467 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5569 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6947 */;
+import DraftStore from "DraftStore" /* 7976 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9921 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10940 */;
+import _modDef13010 from "module_13010" /* 13010 */;
+import _modDef13011 from "module_13011" /* 13011 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7983 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;
@@ -23,9 +23,9 @@ export function getApplicationCommandsIconSource(section, stateFromStores) {
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13092);
+      return AvatarUtilsDefault.makeSource(_modDef13010);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13093);
+      return AvatarUtilsDefault.makeSource(_modDef13011);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };

@@ -1,13 +1,13 @@
-// === Module 4749: DismissibleContentFrameworkStore ===
+// === Module 4753: DismissibleContentFrameworkStore ===
 
-// Module 4749 (DismissibleContentFrameworkStore)
+// Module 4753 (DismissibleContentFrameworkStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4750 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 4753 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4754 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4757 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -48,7 +48,7 @@ prototype["initialize"] = function initialize(numberOfDCsShownToday) {
     obj.upsellBackoffOverridden = flag2;
   }
   obj.dismissibleContentSeenDuringSession = new Set();
-  const set = new Set();
+  set = new Set();
   obj.seenForGuildId = new Map();
   obj.lastDismissed = null;
   const map = new Map();
@@ -165,7 +165,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
     obj = {};
     const merged = Object.assign(obj);
     obj.dismissibleContentSeenDuringSession = new Set();
-    const set = new Set();
+    set = new Set();
     obj.shownContent = new Map();
     const map = new Map();
     obj.seenForGuildId = new Map();
@@ -194,7 +194,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
           if (!result1) {
             if (result1) {
               const seenForGuildId2 = tmp11.seenForGuildId;
-              let set = seenForGuildId2.get(guildId);
+              set = seenForGuildId2.get(guildId);
               if (set == null) {
                 const _Set = Set;
                 set = new Set();
@@ -264,7 +264,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
     obj.dailyCapPeriodStart = null;
     obj.numberOfDCsShownToday = 0;
     obj.dismissibleContentSeenDuringSession = new Set();
-    const set = new Set();
+    set = new Set();
     obj.seenForGuildId = new Map();
     obj.lastDismissed = null;
   }

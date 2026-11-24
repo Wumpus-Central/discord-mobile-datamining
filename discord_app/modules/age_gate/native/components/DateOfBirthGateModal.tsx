@@ -1,16 +1,16 @@
-// === Module 19435: DateOfBirthGateModal ===
+// === Module 19477: DateOfBirthGateModal ===
 
-// Module 19435 (DateOfBirthGateModal)
+// Module 19477 (DateOfBirthGateModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import NavigatorHeader from "NavigatorHeader" /* 7095 */;
-import ageGateNavigationCallbacks from "ageGateNavigationCallbacks" /* 19433 */;
-import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 19436 */;
-import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 19438 */;
+import NavigatorHeader from "NavigatorHeader" /* 7065 */;
+import ageGateNavigationCallbacks from "ageGateNavigationCallbacks" /* 19475 */;
+import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 19478 */;
+import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 19480 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const AgeGateSource = fn(1096).AgeGateSource;
-const AgeGate = fn(19432).ExistingUserAgeGateScreens;
+const AgeGate = fn(19474).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/DateOfBirthGateModal.tsx");
@@ -39,27 +39,27 @@ export default function DateOfBirthGateModal(source) {
             const obj2 = { text: null, variant: "success" };
             const intl = closure_0(1112).intl;
             obj2.text = intl.string(closure_0(1112).t.gUiIGZ);
-            closure_2_1(5595).open("AGE_GATE_AGE_VERIFIED", obj2);
+            closure_2_1(5599).open("AGE_GATE_AGE_VERIFIED", obj2);
           };
         }
         let obj2 = { onSuccess: fn, onClose: null, source: null };
         obj = source(1378);
-        obj2.onClose = source(19433).onGateClose;
+        obj2.onClose = source(19475).onGateClose;
         obj2.source = tmp;
         return jsx(ExistingUserAgeGateDefault, { onSuccess: fn, onClose: null, source: null });
       }
       fn = () => {
-        const result = closure_0(6424).closeAgeGateModalAfterSubmit();
-        const obj = closure_0(6424);
+        const result = closure_0(6712).closeAgeGateModalAfterSubmit();
+        const obj = closure_0(6712);
         const obj3 = { text: null, variant: "success" };
         const intl = closure_0(1112).intl;
         obj3.text = intl.string(closure_0(1112).t.gUiIGZ);
-        closure_2_1(5595).open("AGE_GATE_AGE_VERIFIED", obj3);
+        closure_2_1(5599).open("AGE_GATE_AGE_VERIFIED", obj3);
         if (closure_0 === constants.FAMILY_CENTER) {
-          closure_2_1(8337).initialPageLoad();
-          const tmp3Result = closure_2_1(8337);
+          closure_2_1(8073).initialPageLoad();
+          const tmp3Result = closure_2_1(8073);
         }
-        const obj2 = closure_2_1(5595);
+        const obj2 = closure_2_1(5599);
       };
     };
     obj2[NSFWGateGuild.AgeGate] = obj3;
@@ -90,7 +90,7 @@ export default function DateOfBirthGateModal(source) {
       impressionProperties: { existing_user: true },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(17493), {});
+        return closure_1_6(closure_1_1(17531), {});
       }
     };
     const obj6 = { headerTitle: ageGateNavigationCallbacks.renderHeaderTitle, headerLeft: null, render: null };
@@ -100,18 +100,18 @@ export default function DateOfBirthGateModal(source) {
       impressionProperties: { existing_user: true },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(17493), {});
+        return closure_1_6(closure_1_1(17531), {});
       }
     };
     obj6.headerLeft = NavigatorHeader.getHeaderBackButton(fn);
     obj6.render = function render() {
-      const obj = { onClose: source(19433).onGateClose };
-      return closure_1_6(closure_1_1(14697), obj);
+      const obj = { onClose: source(19475).onGateClose };
+      return closure_1_6(closure_1_1(7442), obj);
     };
     obj2[NSFWGateGuild.NSFWGateGuild] = obj6;
     return obj2;
   }, items);
   let intl = source(1112).intl;
   obj.headerBackTitle = intl.string(source(1112).t["13/7kX"]);
-  return jsx(source(7092).Navigator, { screens: null, initialRouteName: AgeGate.AgeGate, headerBackTitle: null });
+  return jsx(source(7229).Navigator, { screens: null, initialRouteName: AgeGate.AgeGate, headerBackTitle: null });
 };

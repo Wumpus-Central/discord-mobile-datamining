@@ -1,6 +1,6 @@
-// === Module 5828: ? ===
+// === Module 5894: ? ===
 
-// Module 5828
+// Module 5894
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/cybercity.png.js");

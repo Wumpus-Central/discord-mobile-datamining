@@ -1,12 +1,12 @@
-// === Module 8009: getChannelA11yLabel ===
+// === Module 8446: getChannelA11yLabel ===
 
-// Module 8009 (getChannelA11yLabel)
+// Module 8446 (getChannelA11yLabel)
 import util from "util" /* 1112 */;
-import UserUtils from "UserUtils" /* 4969 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6823 */;
-import utils from "utils" /* 8010 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import UserUtils from "UserUtils" /* 4973 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7002 */;
+import utils from "utils" /* 8447 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;

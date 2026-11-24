@@ -1,41 +1,10 @@
-// === Module 12543: CheckpointCharacterTextureUtils ===
+// === Module 12463: CheckpointCharacterTextureUtils ===
 
-// Module 12543 (CheckpointCharacterTextureUtils)
+// Module 12463 (CheckpointCharacterTextureUtils)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2022 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 12544 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 12464 */;
 import size from "module_2" /* 2 */;
 
-function getCheckpointCharacterTextureUrl(name, textureScale) {
-  ({ url, width, height, widthAt1x } = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);
-  if (null == widthAt1x) {
-    return url;
-  } else {
-    const _Math4 = Math;
-    const result = 4096 / Math.max(width, height);
-    const _Math5 = Math;
-    const bound = Math.min(textureScale * widthAt1x / width, result);
-    let tmp = result >= 1;
-    if (1 <= result) {
-      const _Math = Math;
-      tmp = textureScale >= Math.round(width / widthAt1x);
-    }
-    if (bound < 1) {
-      if (!tmp) {
-        let tmp3 = closure_10[name];
-        if (tmp3 == null) {
-          tmp3 = closure_9;
-        }
-        ({ columns, rows } = tmp3);
-        const _Math2 = Math;
-        const _Math3 = Math;
-        const result1 = columns * Math.round(width / columns * bound);
-        const _HermesInternal = HermesInternal;
-        return "" + url + "?width=" + result1 + "&height=" + rows * Math.round(height / rows * bound);
-      }
-    }
-    return url;
-  }
-}
 const CheckpointCharacterTextureType = { SLOT: "slot", TRAIT: "trait", LAYOUT: "layout", ALWAYS: "always" };
 const re4 = /^tex_(aura|base_\d+|outfit)_/;
 const re5 = /^tex_(headwear|shoes|wearable|face)_(\d+)_/;
@@ -87,29 +56,53 @@ export function getCheckpointCharacterTextureRole(name) {
   }
 }
 export function getCheckpointCharacterTextureScale(c4, height) {
-  let flag = stateFromStores;
-  if (stateFromStores === undefined) {
-    flag = false;
+  const result = Math.max(c4, height) / 1440;
+  closure_0 = result * getDevicePixelRatioDefault();
+  let found = items.find((item) => item >= closure_0);
+  if (found == null) {
+    found = closure_13;
   }
-  closure_0 = undefined;
-  if (flag) {
-    return closure_12;
-  } else {
-    const _Math = Math;
-    const result = Math.max(c4, height) / 1440;
-    closure_0 = result * getDevicePixelRatioDefault();
-    let found = items.find((item) => item >= closure_0);
-    if (found == null) {
-      found = closure_13;
-    }
-    return found;
-  }
+  return found;
 }
-export { getCheckpointCharacterTextureUrl };
-export function getCheckpointCharacterAuraUrl(name, textureScale, flag) {
-  let num = 1;
-  if (!flag) {
-    num = textureScale;
+export function getCheckpointCharacterTextureUrl(name, textureScale, flag) {
+  let tmp = textureScale;
+  if (flag) {
+    let num2 = 1;
+    if (!name.startsWith("tex_aura_")) {
+      num2 = 1;
+      if ("tex_wireframe_spritesheet" !== name) {
+        num2 = closure_12;
+      }
+    }
+    tmp = num2;
   }
-  return getCheckpointCharacterTextureUrl(name, num);
+  ({ url, width, height, widthAt1x } = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);
+  if (null == widthAt1x) {
+    return url;
+  } else {
+    const _Math4 = Math;
+    const result = 4096 / Math.max(width, height);
+    const _Math5 = Math;
+    const bound = Math.min(tmp * widthAt1x / width, result);
+    let tmp2 = result >= 1;
+    if (1 <= result) {
+      const _Math = Math;
+      tmp2 = tmp >= Math.round(width / widthAt1x);
+    }
+    if (bound < 1) {
+      if (!tmp2) {
+        let tmp4 = closure_10[name];
+        if (tmp4 == null) {
+          tmp4 = closure_9;
+        }
+        ({ columns, rows } = tmp4);
+        const _Math2 = Math;
+        const _Math3 = Math;
+        const result1 = columns * Math.round(width / columns * bound);
+        const _HermesInternal = HermesInternal;
+        return "" + url + "?width=" + result1 + "&height=" + rows * Math.round(height / rows * bound);
+      }
+    }
+    return url;
+  }
 }

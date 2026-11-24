@@ -1,12 +1,12 @@
-// === Module 12302: publishConjureCopy ===
+// === Module 11310: publishConjureCopy ===
 
-// Module 12302 (publishConjureCopy)
+// Module 11310 (publishConjureCopy)
 import router_utils from "router_utils" /* 1098 */;
-import transitionToGuild from "transitionToGuild" /* 6835 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 12303 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 12305 */;
+import transitionToGuild from "transitionToGuild" /* 8459 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11311 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11313 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 function needsInstallConsent(arg0) {

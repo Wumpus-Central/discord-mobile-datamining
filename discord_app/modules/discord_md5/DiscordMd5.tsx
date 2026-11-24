@@ -1,7 +1,7 @@
-// === Module 7404: DiscordMd5 ===
+// === Module 7214: DiscordMd5 ===
 
-// Module 7404 (DiscordMd5)
-import _modDef7405 from "module_7405" /* 7405 */;
+// Module 7214 (DiscordMd5)
+import _modDef7215 from "module_7215" /* 7215 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const prototype = function DiscordMd5() {
@@ -15,7 +15,7 @@ prototype["fromBlob"] = function fromBlob(arg0) {
   })();
 };
 prototype["fromArrayBuffer"] = function fromArrayBuffer(value) {
-  const _ArrayBuffer = _modDef7405.ArrayBuffer;
+  const _ArrayBuffer = _modDef7215.ArrayBuffer;
   return _ArrayBuffer.hash(value);
 };
 prototype["fromDataURI"] = function fromDataURI(arg0) {
@@ -42,7 +42,7 @@ prototype["fromDataURI"] = function fromDataURI(arg0) {
           length = atobResult.length;
         } while (num < length);
       }
-      const _ArrayBuffer = _modDef7405.ArrayBuffer;
+      const _ArrayBuffer = _modDef7215.ArrayBuffer;
       return _ArrayBuffer.hash(arrayBuffer);
     }
     const obj = /^data:[^;]*;base64,(.*)$/;

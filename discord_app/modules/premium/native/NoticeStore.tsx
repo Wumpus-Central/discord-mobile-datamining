@@ -1,11 +1,11 @@
-// === Module 15001: NoticeStore ===
+// === Module 15040: NoticeStore ===
 
-// Module 15001 (NoticeStore)
+// Module 15040 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import UserOfferStore from "UserOfferStore" /* 8847 */;
+import UserOfferStore from "UserOfferStore" /* 8998 */;
 
 require = fn;
 function clearDismissUntil(arg0) {

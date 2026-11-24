@@ -1,14 +1,14 @@
-// === Module 4819: GuildRoleStore ===
+// === Module 4823: GuildRoleStore ===
 
-// Module 4819 (GuildRoleStore)
+// Module 4823 (GuildRoleStore)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PlainRecord from "PlainRecord" /* 4777 */;
-import GuildRecord from "GuildRecord" /* 4780 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 4785 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 4788 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4820 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4821 */;
-import GuildRoleUtilsAll from "GuildRoleUtils" /* 4823 */;
+import PlainRecord from "PlainRecord" /* 4781 */;
+import GuildRecord from "GuildRecord" /* 4784 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 4789 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 4792 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4824 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4825 */;
+import GuildRoleUtilsAll from "GuildRoleUtils" /* 4827 */;
 import size from "module_2" /* 2 */;
 
 function createGuildRoleRecordFromRust(permissions) {
@@ -140,7 +140,7 @@ const guildRoleStore = new GuildRoleStore({
   },
   CONNECTION_OPEN(arg0, getPartitionKeys) {
     ({ guilds, unavailableGuilds } = arg0);
-    const set = new Set(guilds.map((id) => id.id));
+    set = new Set(guilds.map((id) => id.id));
     for (const item10017 of unavailableGuilds) {
       let addResult = set.add(item10017);
       continue;

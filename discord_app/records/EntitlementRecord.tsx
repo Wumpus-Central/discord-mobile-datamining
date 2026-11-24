@@ -2,7 +2,7 @@
 
 // Module 2165 (EntitlementRecord)
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 15288 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 15309 */;
 import Record from "Record" /* 1406 */;
 import SKURecord from "SKURecord" /* 2166 */;
 import UserRecord from "UserRecord" /* 1405 */;
@@ -112,7 +112,7 @@ Object.defineProperty(prototype, "isGiftable", {
   },
   set: undefined
 });
-prototype["isValid"] = function isValid(stateFromStores, get) {
+prototype["isValid"] = function isValid(currentUser, get) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -127,7 +127,7 @@ prototype["isValid"] = function isValid(stateFromStores, get) {
             return false;
           }
         }
-        if (!obj.canInstallPremiumApplications(stateFromStores)) {
+        if (!obj.canInstallPremiumApplications(currentUser)) {
           return false;
         }
         obj = PremiumUtilsDefault;

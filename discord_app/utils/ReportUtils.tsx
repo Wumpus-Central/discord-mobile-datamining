@@ -1,8 +1,8 @@
-// === Module 10175: ReportUtils ===
+// === Module 10628: ReportUtils ===
 
-// Module 10175 (ReportUtils)
-import ChannelStore from "ChannelStore" /* 4762 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+// Module 10628 (ReportUtils)
+import ChannelStore from "ChannelStore" /* 4766 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const Constants = fn(1071);
@@ -10,16 +10,16 @@ const Constants = fn(1071);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ReportUtils.tsx");
 
-export function canReportUser(author) {
-  if (null == author) {
+export function canReportUser(user) {
+  if (null == user) {
     return false;
   } else {
     const currentUser = UserStore.getCurrentUser();
     let tmp3 = null != currentUser;
     if (tmp3) {
-      let tmp4 = currentUser.id !== author.id;
+      let tmp4 = currentUser.id !== user.id;
       if (tmp4) {
-        tmp4 = true !== author.system;
+        tmp4 = true !== user.system;
       }
       tmp3 = tmp4;
     }

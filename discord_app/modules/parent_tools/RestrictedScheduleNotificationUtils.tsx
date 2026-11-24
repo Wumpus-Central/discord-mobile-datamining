@@ -1,10 +1,10 @@
-// === Module 11103: RestrictedScheduleNotificationUtils ===
+// === Module 10456: RestrictedScheduleNotificationUtils ===
 
-// Module 11103 (RestrictedScheduleNotificationUtils)
+// Module 10456 (RestrictedScheduleNotificationUtils)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import _modDef2824 from "module_2824" /* 2824 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 11104 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10457 */;
 import size from "module_2" /* 2 */;
 
 function isOnlyDayLoss(label, label2) {
@@ -196,7 +196,7 @@ export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult)
     }
     return obj10;
   }
-  let set = new Set(items1);
+  set = new Set(items1);
 }
 export function getRestrictedScheduleNotificationTitle(kind) {
   const intl = util.intl;

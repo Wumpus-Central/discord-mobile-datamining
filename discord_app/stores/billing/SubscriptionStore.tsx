@@ -152,7 +152,7 @@ prototype["getSubscriptionForPlanIds"] = function getSubscriptionForPlanIds(item
   if (arg1 === undefined) {
     flag = true;
   }
-  const set = new Set(items);
+  set = new Set(items);
   const tmp2 = flag ? obj2 : obj;
   let tmp3 = null;
   if (null != tmp2) {

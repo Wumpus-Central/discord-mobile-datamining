@@ -1,8 +1,8 @@
-// === Module 12896: useCommandContext ===
+// === Module 12815: useCommandContext ===
 
-// Module 12896 (useCommandContext)
+// Module 12815 (useCommandContext)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildStore from "GuildStore" /* 4788 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");

@@ -1,24 +1,24 @@
-// === Module 13988: BadgeDetailsSheet ===
+// === Module 9733: BadgeDetailsSheet ===
 
-// Module 13988 (BadgeDetailsSheet)
+// Module 9733 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5617 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 13987 */;
-import BadgeUtils from "BadgeUtils" /* 13990 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 14005 */;
-import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 14011 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5621 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 6262 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 9725 */;
+import BadgeUtils from "BadgeUtils" /* 9729 */;
+import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 9730 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 9732 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 import UserStore from "UserStore" /* 1386 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 13989 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 9731 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6257 */;
 
 const _modDef1653 = _mod1653;
 
@@ -81,9 +81,9 @@ function BadgeDetailsSheetContent(badge) {
   ({ unlock, contentOpacity, titleScale, unlockLabelOpacity, viewerBadge, displayedUserId } = badge);
   importDefault = displayedUserId;
   const isViewingOtherUser = badge.isViewingOtherUser;
-  ({ isViewerOwnershipKnown, showNewTag } = badge);
+  ({ targetUsername, isViewerOwnershipKnown, showNewTag } = badge);
   let badgeDetailsCta;
-  ({ sheetIndex, startsHidden, targetUsername } = badge);
+  ({ sheetIndex, startsHidden } = badge);
   const tmp = closure_16();
   items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -368,7 +368,7 @@ function BadgeDetailsSheetContent(badge) {
   obj21.children = items20;
   items13[2] = closure_14(closure_6, obj21);
   obj15.children = items13;
-  const items21 = [closure_14(closure_6, obj15), , ];
+  const items21 = [closure_14(closure_6, obj15), , , ];
   if (tmp33Result12) {
     const obj27 = { style: animatedStyle };
     const merged4 = Object.assign(obj4);
@@ -380,54 +380,73 @@ function BadgeDetailsSheetContent(badge) {
     tmp33Result12 = closure_13(tmp6(tmp3[15]).View, obj27);
   }
   items21[1] = tmp33Result12;
+  let owned = isViewingOtherUser;
+  if (isViewingOtherUser) {
+    owned = isViewerOwnershipKnown;
+  }
+  if (owned) {
+    let owned1;
+    if (viewerBadge != null) {
+      owned1 = viewerBadge.owned;
+    }
+    owned = true === owned1;
+  }
+  if (owned) {
+    owned = badge.owned;
+  }
+  if (owned) {
+    const obj30 = { badge, viewerBadge, displayedUserId, targetUsername, contentOpacity, isContentShown: tmp17 };
+    owned = closure_13(tmp6(tmp3[36]), obj30);
+  }
+  items21[2] = owned;
   if (!tmp8) {
     if (isNullOrEmptyResult) {
       if (!tmp49Result4) {
         let tmp33Result13 = null != tmp33Result;
         if (tmp33Result13) {
-          const obj30 = { style: animatedStyle };
+          const obj31 = { style: animatedStyle };
           const merged5 = Object.assign(obj4);
-          obj30.children = tmp33Result;
-          tmp33Result13 = closure_13(tmp6(tmp3[15]).View, obj30);
+          obj31.children = tmp33Result;
+          tmp33Result13 = closure_13(tmp6(tmp3[15]).View, obj31);
         }
       }
-      const obj31 = { children: null };
-      items21[2] = tmp33Result13;
-      obj31.children = items21;
-      return closure_14(closure_15, obj31);
+      const obj32 = { children: null };
+      items21[3] = tmp33Result13;
+      obj32.children = items21;
+      return closure_14(closure_15, obj32);
     }
   }
-  const obj32 = { style: tmp.card, children: null };
-  const obj33 = { style: null };
+  const obj33 = { style: tmp.card, children: null };
+  const obj34 = { style: null };
   const items22 = [tmp.cardContent, animatedStyle];
-  obj33.style = items22;
+  obj34.style = items22;
   const merged6 = Object.assign(obj4);
   let tmp49Result = tmp8;
   if (tmp8) {
-    const obj34 = { children: null };
-    const obj35 = { badge, viewerBadge };
-    const items23 = [closure_13(tmp6(tmp3[36]), obj35), ];
-    const obj36 = { style: tmp.divider };
-    items23[1] = closure_13(closure_6, obj36);
-    obj34.children = items23;
-    tmp49Result = closure_14(closure_15, obj34);
+    const obj35 = { children: null };
+    const obj36 = { badge, viewerBadge };
+    const items23 = [closure_13(tmp6(tmp3[37]), obj36), ];
+    const obj37 = { style: tmp.divider };
+    items23[1] = closure_13(closure_6, obj37);
+    obj35.children = items23;
+    tmp49Result = closure_14(closure_15, obj35);
   }
   const items24 = [tmp49Result, , , , ];
   let tmp49Result3 = tmp40;
   if (!isNullOrEmptyResult) {
-    const obj37 = { style: tmp.descriptionGroup, children: null };
+    const obj38 = { style: tmp.descriptionGroup, children: null };
     let tmp33Result14 = isLegacyDisplayBadgeResult;
     if (isLegacyDisplayBadgeResult) {
-      const obj38 = { variant: "body-sm/medium", color: "text-subtle", children: null };
+      const obj39 = { variant: "body-sm/medium", color: "text-subtle", children: null };
       const intl3 = tmp2(tmp3[32]).intl;
-      obj38.children = intl3.string(tmp2(tmp3[32]).t["/Gmn3f"]);
-      tmp33Result14 = closure_13(tmp2(tmp3[14]).Text, obj38);
+      obj39.children = intl3.string(tmp2(tmp3[32]).t["/Gmn3f"]);
+      tmp33Result14 = closure_13(tmp2(tmp3[14]).Text, obj39);
     }
     const items25 = [tmp33Result14, ];
-    const obj39 = { variant: "body-md/medium", color: "text-default", children: badgeDescriptionText };
-    items25[1] = closure_13(tmp2(tmp3[14]).Text, obj39);
-    obj37.children = items25;
-    tmp49Result3 = closure_14(closure_6, obj37);
+    const obj40 = { variant: "body-md/medium", color: "text-default", children: badgeDescriptionText };
+    items25[1] = closure_13(tmp2(tmp3[14]).Text, obj40);
+    obj38.children = items25;
+    tmp49Result3 = closure_14(closure_6, obj38);
   }
   items24[1] = tmp49Result3;
   let tmp33Result15 = tmp40;
@@ -438,13 +457,13 @@ function BadgeDetailsSheetContent(badge) {
     tmp33Result15 = isViewerOwnershipKnown;
   }
   if (tmp33Result15) {
-    const obj40 = { variant: null, size: "md", onPress: null, text: null };
-    const obj41 = { isNitro, isViewerOnUpgradeableNitro: result, viewerOwnsBadge: flag };
-    obj40.variant = tmp2(tmp3[22]).getBadgeCtaVariant(obj41);
-    obj40.onPress = callback;
-    const obj42 = { owned: flag, isViewerOnUpgradeableNitro: result };
-    obj40.text = badgeDetailsCta.ctaLabel(obj42);
-    tmp33Result15 = closure_13(tmp2(tmp3[37]).Button, obj40);
+    const obj41 = { variant: null, size: "md", onPress: null, text: null };
+    const obj42 = { isNitro, isViewerOnUpgradeableNitro: result, viewerOwnsBadge: flag };
+    obj41.variant = tmp2(tmp3[22]).getBadgeCtaVariant(obj42);
+    obj41.onPress = callback;
+    const obj43 = { owned: flag, isViewerOnUpgradeableNitro: result };
+    obj41.text = badgeDetailsCta.ctaLabel(obj43);
+    tmp33Result15 = closure_13(tmp2(tmp3[38]).Button, obj41);
     const tmp2Result26 = tmp2(tmp3[22]);
   }
   items24[2] = tmp33Result15;
@@ -454,21 +473,21 @@ function BadgeDetailsSheetContent(badge) {
       tmp33Result16 = tmp40;
     }
     if (tmp33Result16) {
-      const obj43 = { style: tmp.divider };
-      tmp33Result16 = closure_13(closure_6, obj43);
+      const obj44 = { style: tmp.divider };
+      tmp33Result16 = closure_13(closure_6, obj44);
     }
-    const obj44 = { children: null };
+    const obj45 = { children: null };
     const items26 = [tmp33Result16, ];
-    const obj45 = { badge: tmp45, isViewingOtherUser, targetUsername, isViewerOnUpgradeableNitro: result };
-    items26[1] = closure_13(tmp6(tmp3[38]), obj45);
-    obj44.children = items26;
-    tmp49Result4 = closure_14(closure_15, obj44);
+    const obj46 = { badge: tmp45, isViewingOtherUser, targetUsername, isViewerOnUpgradeableNitro: result };
+    items26[1] = closure_13(tmp6(tmp3[39]), obj46);
+    obj45.children = items26;
+    tmp49Result4 = closure_14(closure_15, obj45);
   }
   items24[3] = tmp49Result4;
   items24[4] = tmp33Result;
-  obj33.children = items24;
-  obj32.children = closure_14(require("module_1653").View, obj33);
-  tmp33Result13 = closure_13(closure_6, obj32);
+  obj34.children = items24;
+  obj33.children = closure_14(require("module_1653").View, obj34);
+  tmp33Result13 = closure_13(closure_6, obj33);
   const tmp2Result24 = require("badgeDetailsCtas");
 }
 function BadgeDetailsPage(badgeId) {
@@ -596,10 +615,10 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-let closure_12 = fn(5142).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(5146).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { content: { flexGrow: 1 }, page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, header: null, newTag: null, graphic: null, graphicAnimated: null, identity: null, centeredText: null, eyebrow: null, title: null, identityArea: null, unlockLabel: null, uppercase: null, accessoryLine: null, accessoryDot: null, card: null, cardContent: null, descriptionGroup: null, divider: null, notice: null, noticeIcon: null, noticeText: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_8 };
@@ -653,7 +672,7 @@ export default function BadgeDetailsSheet(badgeId) {
   let ref;
   c9 = undefined;
   let tmp = closure_16();
-  const sum = Math.max(displayedUserId(isViewingOtherUser[41])().bottom, closure_12) + 4;
+  const sum = Math.max(displayedUserId(isViewingOtherUser[42])().bottom, closure_12) + 4;
   items = [ref];
   const stateFromStores = badgeId(isViewingOtherUser[17]).useStateFromStores(items, () => {
     const currentUser = ref.getCurrentUser();
@@ -678,9 +697,9 @@ export default function BadgeDetailsSheet(badgeId) {
     }
     return tmp;
   }, items2);
-  const obj2 = badgeId(isViewingOtherUser[17]);
-  const isBadgeDirectoryUpdatesEnabled = badgeId(isViewingOtherUser[42]).useIsBadgeDirectoryUpdatesEnabled({ location: "BadgeDetailsSheet" });
-  let obj3 = badgeId(isViewingOtherUser[42]);
+  let obj2 = badgeId(isViewingOtherUser[17]);
+  const isBadgeDirectoryUpdatesEnabled = badgeId(isViewingOtherUser[43]).useIsBadgeDirectoryUpdatesEnabled({ location: "BadgeDetailsSheet" });
+  let obj3 = badgeId(isViewingOtherUser[43]);
   const items3 = [BadgeDirectoryStore];
   const items4 = [displayedUserId];
   const stateFromStores2 = badgeId(isViewingOtherUser[17]).useStateFromStores(items3, () => BadgeDirectoryStore.hasCatalogFor(displayedUserId), items4);
@@ -730,8 +749,8 @@ export default function BadgeDetailsSheet(badgeId) {
   if (!tmp12) {
     tmp24 = tmp23;
   }
-  let isBadgeUnreadStateEnabled = badgeId(isViewingOtherUser[44]).useIsBadgeUnreadStateEnabled({ location: "BadgeDetailsSheet", hasUnread: tmp24 });
-  const tmp5Result7 = badgeId(isViewingOtherUser[44]);
+  let isBadgeUnreadStateEnabled = badgeId(isViewingOtherUser[45]).useIsBadgeUnreadStateEnabled({ location: "BadgeDetailsSheet", hasUnread: tmp24 });
+  const tmp5Result7 = badgeId(isViewingOtherUser[45]);
   const items9 = [BadgeDirectoryStore];
   const items10 = [displayedUserId];
   const stateFromStores5 = badgeId(isViewingOtherUser[17]).useStateFromStores(items9, () => BadgeDirectoryStore.hasCatalogFetchErrorFor(displayedUserId), items10);
@@ -771,7 +790,7 @@ export default function BadgeDetailsSheet(badgeId) {
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj5 = { value: badgeId(isViewingOtherUser[39]).fetchBadgeDirectory(c1), done: false };
+              const obj5 = { value: badgeId(isViewingOtherUser[40]).fetchBadgeDirectory(c1), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -817,9 +836,10 @@ export default function BadgeDetailsSheet(badgeId) {
       tmp = null != stateFromStores;
     }
     if (tmp) {
-      if (!BadgeDirectoryStore.hasCatalogFor(stateFromStores)) {
-        const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(stateFromStores);
+      if (!tmp5) {
+        const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(stateFromStores, { isAutomatic: true });
       }
+      tmp5 = BadgeDirectoryStore.hasCatalogFor(stateFromStores) && !BadgeDirectoryStore.isCatalogStaleFor(stateFromStores);
     }
   }, items15);
   hasUnreadIndicator = tmp32;
@@ -837,7 +857,7 @@ export default function BadgeDetailsSheet(badgeId) {
     }
   }, items16);
   const tmp5Result9 = badgeId(isViewingOtherUser[17]);
-  const dismissBadgeDirectoryBadgeIndicator = badgeId(isViewingOtherUser[43]).useDismissBadgeDirectoryBadgeIndicator({ badgeId, enabled: !isViewingOtherUser });
+  const dismissBadgeDirectoryBadgeIndicator = badgeId(isViewingOtherUser[44]).useDismissBadgeDirectoryBadgeIndicator({ badgeId, enabled: !isViewingOtherUser });
   let tmp47Result2 = stateFromStores5;
   if (!stateFromStores5) {
     tmp47Result2 = stateFromStores2;
@@ -847,7 +867,7 @@ export default function BadgeDetailsSheet(badgeId) {
     tmp36 = tmp12;
   }
   const obj8 = { badgeId, enabled: !isViewingOtherUser };
-  const tmp5Result10 = badgeId(isViewingOtherUser[43]);
+  const tmp5Result10 = badgeId(isViewingOtherUser[44]);
   const sharedValue = badgeId(isViewingOtherUser[15]).useSharedValue(-1);
   const tmp5Result11 = badgeId(isViewingOtherUser[15]);
   [tmp39, tmp40] = stateFromStores(combined.useState(null), 2);
@@ -863,9 +883,9 @@ export default function BadgeDetailsSheet(badgeId) {
   }
   const tmp17Result2 = stateFromStores(combined.useState(null), 2);
   tmp41 = null != tmp39 && tmp39 !== combined;
-  const bottomSheetRef1 = badgeId(isViewingOtherUser[45]).useBottomSheetRef();
+  const bottomSheetRef1 = badgeId(isViewingOtherUser[46]).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-  const context = obj7.useContext(tmp2(tmp3[46]));
+  const context = obj7.useContext(tmp2(tmp3[47]));
   let str;
   if (context != null) {
     str = context.transitionState;
@@ -891,7 +911,7 @@ export default function BadgeDetailsSheet(badgeId) {
       name1 = stateFromStores3.name;
     }
     const obj11 = { accessibilityLabel: name1, onPress: bottomSheetClose };
-    tmp47Result = closure_13(tmp5(tmp3[49]).ActionSheetHeaderBar, obj11);
+    tmp47Result = closure_13(tmp5(tmp3[50]).ActionSheetHeaderBar, obj11);
   }
   const items19 = [tmp47Result, ];
   if (null == stateFromStores3) {
@@ -904,7 +924,7 @@ export default function BadgeDetailsSheet(badgeId) {
       const obj14 = { variant: "secondary", size: "sm", onPress: callback, text: null };
       const intl2 = tmp5(tmp3[32]).intl;
       obj14.text = intl2.string(tmp5(tmp3[32]).t["7NqTJn"]);
-      tmp47Result2 = closure_13(tmp5(tmp3[37]).Button, obj14);
+      tmp47Result2 = closure_13(tmp5(tmp3[38]).Button, obj14);
     }
     items20[1] = tmp47Result2;
     obj12.children = items20;
@@ -934,6 +954,6 @@ export default function BadgeDetailsSheet(badgeId) {
   }
   items19[1] = tmp47Result3;
   obj10.children = items19;
-  obj9.children = closure_14(badgeId(isViewingOtherUser[48]).BottomSheetScrollView, obj10);
-  return closure_13(badgeId(isViewingOtherUser[47]).BottomSheet, obj9);
+  obj9.children = closure_14(badgeId(isViewingOtherUser[49]).BottomSheetScrollView, obj10);
+  return closure_13(badgeId(isViewingOtherUser[48]).BottomSheet, obj9);
 };

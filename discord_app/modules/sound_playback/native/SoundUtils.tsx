@@ -1,11 +1,11 @@
-// === Module 10887: sound_playback/SoundUtils ===
+// === Module 10161: sound_playback/SoundUtils ===
 
-// Module 10887 (sound_playback/SoundUtils)
+// Module 10161 (sound_playback/SoundUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import _modDef10888 from "module_10888" /* 10888 */;
-import _modDef10889 from "module_10889" /* 10889 */;
+import _modDef10162 from "module_10162" /* 10162 */;
+import _modDef10163 from "module_10163" /* 10163 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -120,7 +120,7 @@ obj5.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 MetaQuestUtils = fn(1625);
 obj5.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({ VOICE: obj2.camera_on, VOICE: obj2.camera_off, VOICE: obj2.deafen, VOICE: obj2.disconnect, NOTIFICATION: obj2.mention1, NOTIFICATION: obj2.mention2, NOTIFICATION: obj2.mention3, NOTIFICATION: obj2.message1, NOTIFICATION: obj2.message2, NOTIFICATION: obj2.message3, VOICE: obj2.mute, VOICE: obj2.ptt_start, VOICE: obj2.ptt_stop, VOICE: obj2.reconnect, VOICE: obj2.stage_waiting, VOICE: obj2.stream_ended, VOICE: obj2.stream_started, VOICE: obj2.stream_user_joined, VOICE: obj2.stream_user_left, VOICE: obj2.soundboard_sound, VOICE: obj2.undeafen, VOICE: obj2.unmute, VOICE: obj2.user_join, VOICE: obj2.user_leave, VOICE: obj2.user_moved, MEDIA: obj2.vibing_wumpus, NOTIFICATION_NO_VIBRATION: obj2.activity_end, NOTIFICATION_NO_VIBRATION: obj2.activity_launch, NOTIFICATION_NO_VIBRATION: obj2.activity_user_join, NOTIFICATION_NO_VIBRATION: obj2.activity_user_left } = obj);
-const obj8 = { stage_waiting: _modDef10888, vibing_wumpus: _modDef10889 };
+const obj8 = { stage_waiting: _modDef10162, vibing_wumpus: _modDef10163 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 fn = (mobileAudioSound, soundboard_sound, c1, DEFAULT) => {

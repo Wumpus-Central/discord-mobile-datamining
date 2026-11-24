@@ -1,9 +1,9 @@
-// === Module 7722: FormRadioGroup ===
+// === Module 7962: FormRadioGroup ===
 
-// Module 7722 (FormRadioGroup)
-import RedesignCompat from "RedesignCompat" /* 7220 */;
-import TableRadioGroup from "TableRadioGroup" /* 7347 */;
-import FormSectionDefault from "FormSection" /* 7716 */;
+// Module 7962 (FormRadioGroup)
+import TableRadioGroup from "TableRadioGroup" /* 7125 */;
+import RedesignCompat from "RedesignCompat" /* 7126 */;
+import FormSectionDefault from "FormSection" /* 7956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

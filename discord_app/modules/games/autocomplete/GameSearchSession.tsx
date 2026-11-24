@@ -1,9 +1,9 @@
-// === Module 9930: GameSearchSession ===
+// === Module 8814: GameSearchSession ===
 
-// Module 9930 (GameSearchSession)
+// Module 8814 (GameSearchSession)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtils from "AnalyticsUtils" /* 1255 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8826 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7049 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsUtilsDefault = AnalyticsUtils;

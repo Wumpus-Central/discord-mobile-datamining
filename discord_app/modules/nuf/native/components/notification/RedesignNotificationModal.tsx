@@ -1,11 +1,11 @@
-// === Module 17506: RedesignNotificationModal ===
+// === Module 17544: RedesignNotificationModal ===
 
-// Module 17506 (RedesignNotificationModal)
+// Module 17544 (RedesignNotificationModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13281 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13282 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13593 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13208 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13209 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,12 +46,12 @@ class RedesignNotificationModal {
   }
 }
 const View = fn(17).View;
-const PermissionStateType = fn(13279).PermissionStateType;
-const NotificationPermissionConstants = fn(13280);
+const PermissionStateType = fn(13206).PermissionStateType;
+const NotificationPermissionConstants = fn(13207);
 ({ EventActionLocation: closure_6, EventActionType: metroImportDefault } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: nativeDefault.space.PX_48 } };
 const refs = createStyles.createStyles(obj2);
 const size = fn(2);

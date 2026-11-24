@@ -1,8 +1,8 @@
-// === Module 15787: getVolumeForSound ===
+// === Module 15815: getVolumeForSound ===
 
-// Module 15787 (getVolumeForSound)
-import UserSettings from "UserSettings" /* 4738 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5817 */;
+// Module 15815 (getVolumeForSound)
+import UserSettings from "UserSettings" /* 4742 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5878 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 require = fn;

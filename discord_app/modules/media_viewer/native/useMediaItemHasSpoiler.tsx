@@ -1,9 +1,9 @@
-// === Module 8222: useMediaItemHasSpoiler ===
+// === Module 8668: useMediaItemHasSpoiler ===
 
-// Module 8222 (useMediaItemHasSpoiler)
-import MediaSourceUtil from "MediaSourceUtil" /* 8223 */;
+// Module 8668 (useMediaItemHasSpoiler)
+import MediaSourceUtil from "MediaSourceUtil" /* 8669 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 const require = globalThis.__r;
 

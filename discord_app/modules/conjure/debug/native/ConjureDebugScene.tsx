@@ -1,27 +1,27 @@
-// === Module 18664: ConjureDebugScene ===
+// === Module 18705: ConjureDebugScene ===
 
-// Module 18664 (ConjureDebugScene)
+// Module 18705 (ConjureDebugScene)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
-import CopyIcon from "CopyIcon" /* 5613 */;
-import conjureDebugConnection from "conjureDebugConnection" /* 6988 */;
-import ClipboardUtils from "ClipboardUtils" /* 7545 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 18241 */;
-import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 18665 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 18674 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5599 */;
+import CopyIcon from "CopyIcon" /* 5617 */;
+import ClipboardUtils from "ClipboardUtils" /* 7412 */;
+import conjureDebugConnection from "conjureDebugConnection" /* 7584 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 18280 */;
+import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 18706 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 18715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 6968 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 7564 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(6967).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(7563).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabs: null, content: null, report: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabs = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_12 };
@@ -141,7 +141,7 @@ export default function ConjureDebugScene(projectId) {
     obj.copy(ConjureDebugSnapshot.conjureDebugSnapshot(projectId));
     const obj4 = { text: null, icon: null };
     const intl = util.intl;
-    obj4.text = intl.string(_modDef4190.wI6fhl);
+    obj4.text = intl.string(_modDef4192.wI6fhl);
     obj4.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_DEBUG_COPIED", obj4);
   }, items10);

@@ -1,8 +1,8 @@
-// === Module 6902: getSocketFrame ===
+// === Module 7511: getSocketFrame ===
 
-// Module 6902 (getSocketFrame)
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 6903 */;
-import FramesStore from "FramesStore" /* 6623 */;
+// Module 7511 (getSocketFrame)
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 7512 */;
+import FramesStore from "FramesStore" /* 6810 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getSocketFrame.tsx");

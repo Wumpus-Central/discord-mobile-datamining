@@ -1,15 +1,15 @@
-// === Module 14936: ReadyPayloadUtils ===
+// === Module 14975: ReadyPayloadUtils ===
 
-// Module 14936 (ReadyPayloadUtils)
+// Module 14975 (ReadyPayloadUtils)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import ChannelRecord from "ChannelRecord" /* 4766 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4791 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4808 */;
-import ChannelReaderDefault from "ChannelReader" /* 4812 */;
-import isCacheEnabled from "isCacheEnabled" /* 8351 */;
-import GuildVersionsDefault from "GuildVersions" /* 8355 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 8356 */;
+import ChannelRecord from "ChannelRecord" /* 4770 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4812 */;
+import ChannelReaderDefault from "ChannelReader" /* 4816 */;
+import isCacheEnabled from "isCacheEnabled" /* 8171 */;
+import GuildVersionsDefault from "GuildVersions" /* 8175 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 8176 */;
 import size from "module_2" /* 2 */;
 
 function hydrateGuild(guild) {
@@ -353,7 +353,7 @@ export function preloadReadyPayloadData() {
     const tmpResult3 = ChannelReaderDefault;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {

@@ -1,17 +1,17 @@
-// === Module 18257: ConjurePublishSheet ===
+// === Module 18296: ConjurePublishSheet ===
 
-// Module 18257 (ConjurePublishSheet)
+// Module 18296 (ConjurePublishSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import GuildIcon from "GuildIcon" /* 7322 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 12305 */;
-import showConjurePublishSheet from "showConjurePublishSheet" /* 18256 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import GuildIcon from "GuildIcon" /* 6926 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11313 */;
+import showConjurePublishSheet from "showConjurePublishSheet" /* 18295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -319,7 +319,7 @@ function PublishDestination(destination) {
     let name = destination.guild.name;
   } else {
     const intl = util.intl;
-    name = intl.string(_modDef4190["11Xr/r"]);
+    name = intl.string(_modDef4192["11Xr/r"]);
   }
   const obj = { style: tmp.destination, accessible: true, children: null };
   if ("server" === destination.type) {
@@ -337,8 +337,8 @@ function PublishDestination(destination) {
   const obj4 = { style: tmp.destinationText, children: null };
   const obj5 = { variant: "body-xs/normal", color: "text-subtle", children: null };
   const intl2 = tmp8(1112).intl;
-  obj5.children = intl2.string(_modDef4190.XHjO6t);
-  const items1 = [tmp10(tmp8(5504).Text, obj5), tmp10(tmp8(5504).Text, { variant: "body-md/medium", color: "text-strong", lineClamp: 1, children: name })];
+  obj5.children = intl2.string(_modDef4192.XHjO6t);
+  const items1 = [tmp10(tmp8(5508).Text, obj5), tmp10(tmp8(5508).Text, { variant: "body-md/medium", color: "text-strong", lineClamp: 1, children: name })];
   obj4.children = items1;
   items[1] = React5(View, obj4);
   obj.children = items;
@@ -347,7 +347,7 @@ function PublishDestination(destination) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { content: { gap: nativeDefault.space.PX_24, paddingBottom: arg0 + nativeDefault.space.PX_24 }, footer: null, footerBody: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom: arg0 + nativeDefault.space.PX_24 };
@@ -356,7 +356,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.footerBody = { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 };
   return obj;
 });
-createStyles = fn(4913);
+createStyles = fn(4917);
 let obj3 = { destination: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, destinationText: null };
 let obj4 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj3.destinationText = { flexShrink: 1, gap: nativeDefault.space.PX_4 / 2 };

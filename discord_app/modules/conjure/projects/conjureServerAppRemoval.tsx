@@ -1,18 +1,18 @@
-// === Module 12389: conjureServerAppRemoval ===
+// === Module 12288: conjureServerAppRemoval ===
 
-// Module 12389 (conjureServerAppRemoval)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6511 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6659 */;
-import ConjureUtils from "ConjureUtils" /* 6865 */;
-import conjureAppInServer from "conjureAppInServer" /* 6955 */;
+// Module 12288 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6865 */;
+import ConjureUtils from "ConjureUtils" /* 7476 */;
+import conjureAppInServer from "conjureAppInServer" /* 7562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -216,7 +216,7 @@ let closure_18 = async function _loadConjureServerApp(arg0) {
   return value;
 };
 function appChannelApplicationIds(id) {
-  const set = new Set();
+  set = new Set();
   const iter = GuildChannelStore.getChannels(id)[closure_7][Symbol.iterator]();
   while (iter !== undefined) {
     let obj2 = ConjureUtils;
@@ -300,7 +300,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4847).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

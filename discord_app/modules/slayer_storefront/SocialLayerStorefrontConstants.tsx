@@ -1,6 +1,6 @@
-// === Module 6850: SocialLayerStorefrontConstants ===
+// === Module 7465: SocialLayerStorefrontConstants ===
 
-// Module 6850 (SocialLayerStorefrontConstants)
+// Module 7465 (SocialLayerStorefrontConstants)
 import Constants from "Constants" /* 1071 */;
 import UserStoreConstants from "UserStoreConstants" /* 1403 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;

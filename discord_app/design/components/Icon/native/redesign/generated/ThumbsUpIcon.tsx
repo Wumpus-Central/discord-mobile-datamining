@@ -1,9 +1,9 @@
-// === Module 8652: ThumbsUpIcon ===
+// === Module 8920: ThumbsUpIcon ===
 
-// Module 8652 (ThumbsUpIcon)
+// Module 8920 (ThumbsUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod8653 from "module_8653" /* 8653 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod8921 from "module_8921" /* 8921 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThumbsUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8653, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8921, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

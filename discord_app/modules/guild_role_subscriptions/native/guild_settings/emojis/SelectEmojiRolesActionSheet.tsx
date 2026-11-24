@@ -1,10 +1,10 @@
-// === Module 20055: SelectEmojiRolesActionSheet ===
+// === Module 20098: SelectEmojiRolesActionSheet ===
 
-// Module 20055 (SelectEmojiRolesActionSheet)
+// Module 20098 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { list: { flex: 1 }, row: { paddingHorizontal: nativeDefault.space.PX_16 }, label: null, roleName: null, saveButtonDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.label = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -121,7 +121,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
       obj2.onPress = function onPress() {
         role_id = role_id.role_id;
         return closure_5((has) => {
-          const set = new Set(has);
+          set = new Set(has);
           if (has.has(role_id)) {
             set.delete(role_id);
           } else {

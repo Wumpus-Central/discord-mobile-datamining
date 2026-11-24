@@ -1,11 +1,11 @@
-// === Module 18652: ConjureCreateSheet ===
+// === Module 18693: ConjureCreateSheet ===
 
-// Module 18652 (ConjureCreateSheet)
+// Module 18693 (ConjureCreateSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 18342 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 18643 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 18655 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5131 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 18381 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 18684 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 18696 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,11 +16,11 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(6967).sendUserMessage;
+const sendUserMessage = fn(7563).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -409,19 +409,19 @@ export default function ConjureCreateSheet(guildId) {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (!first) {
-              tmp3(5127).hideActionSheet(callback1);
+              tmp3(5131).hideActionSheet(callback1);
               dependencyMap = 1;
-              const obj7 = tmp3(5127);
+              const obj7 = tmp3(5131);
               c3 = 2;
               c4 = 1;
-              const obj6 = { value: guildId(18391).pickConjureArchive(), done: false };
+              const obj6 = { value: guildId(18430).pickConjureArchive(), done: false };
               return obj6;
             }
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           const intl = guildId(1112).intl;
-          guildId(5594).presentError(intl.string(tmp3(4190)["Q+l4Hv"]));
+          guildId(5598).presentError(intl.string(tmp3(4192)["Q+l4Hv"]));
           c4 = 3;
           const obj9 = { value: undefined, done: true };
           return obj9;
@@ -438,12 +438,12 @@ export default function ConjureCreateSheet(guildId) {
             closure_128_0 = value;
             dependencyMap = 0;
             if (null != closure_128_0) {
-              closure_128_1 = guildId(18391).describeConjureArchiveRejection(closure_128_0);
+              closure_128_1 = guildId(18430).describeConjureArchiveRejection(closure_128_0);
               if (null != closure_128_1) {
-                guildId(5594).presentError(closure_128_1);
-                const obj2 = guildId(5594);
+                guildId(5598).presentError(closure_128_1);
+                const obj2 = guildId(5598);
               }
-              const obj12 = guildId(18391);
+              const obj12 = guildId(18430);
             }
             c3 = 3;
             c4 = 1;
@@ -504,21 +504,21 @@ export default function ConjureCreateSheet(guildId) {
     }
   }, items8);
   let intl = tmp4(tmp5[15]).intl;
-  const items9 = [intl.string(require("module_4190")["9w+Chc"]), , ];
+  const items9 = [intl.string(require("module_4192")["9w+Chc"]), , ];
   let intl2 = tmp4(tmp5[15]).intl;
-  items9[1] = intl2.string(require("module_4190").WAvmdq);
+  items9[1] = intl2.string(require("module_4192").WAvmdq);
   const intl3 = tmp4(tmp5[15]).intl;
-  items9[2] = intl3.string(require("module_4190").SKsrzl);
+  items9[2] = intl3.string(require("module_4192").SKsrzl);
   let obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   let obj4 = { title: null };
   const intl4 = tmp4(tmp5[15]).intl;
-  obj4.title = intl4.string(require("module_4190")["+5XyCR"]);
+  obj4.title = intl4.string(require("module_4192")["+5XyCR"]);
   obj3.header = callback(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj4);
   let obj5 = { style: tmp.content, children: null };
   let obj6 = { style: tmp.form, children: null };
   let obj7 = { placeholder: null, autoComplete: "off", value: null, onChange: null, disabled: null };
   const intl5 = tmp4(tmp5[15]).intl;
-  obj7.placeholder = intl5.string(require("module_4190").ab1sMf);
+  obj7.placeholder = intl5.string(require("module_4192").ab1sMf);
   obj7.value = str;
   obj7.onChange = tmp3[1];
   obj7.disabled = disabled;
@@ -526,7 +526,7 @@ export default function ConjureCreateSheet(guildId) {
   let obj8 = { hasIcons: false, children: null };
   let obj9 = { label: null, trailing: null, arrow: true, disabled: null, onPress: null };
   const intl6 = tmp4(tmp5[15]).intl;
-  obj9.label = intl6.string(require("module_4190").aBPQxX);
+  obj9.label = intl6.string(require("module_4192").aBPQxX);
   let obj10 = { variant: "body-md/normal", color: "text-muted", children: null };
   const conjureTemplatesResult = require("ConjureTemplates").conjureTemplates();
   obj10.children = require("ConjureEffortTiers").conjureTierDescription(CONJURE_DEFAULT_TIER_SETTINGS.tier);
@@ -554,7 +554,7 @@ export default function ConjureCreateSheet(guildId) {
   items10[3] = tmp21Result2;
   let obj13 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl7 = tmp4(tmp5[15]).intl;
-  obj13.children = intl7.string(require("module_4190").NvvCzX);
+  obj13.children = intl7.string(require("module_4192").NvvCzX);
   items10[4] = callback(require("Text/Text").Text, obj13);
   const obj14 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
   const intl8 = tmp4(tmp5[15]).intl;
@@ -571,18 +571,18 @@ export default function ConjureCreateSheet(guildId) {
   const obj16 = { style: tmp.sectionHeading, children: null };
   const obj17 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl9 = tmp4(tmp5[15]).intl;
-  obj17.children = intl9.string(require("module_4190").I7nPgX);
+  obj17.children = intl9.string(require("module_4192").I7nPgX);
   const items12 = [callback(require("Text/Text").Text, obj17), ];
   const obj18 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl10 = tmp4(tmp5[15]).intl;
-  obj18.children = intl10.string(require("module_4190").FXB8wQ);
+  obj18.children = intl10.string(require("module_4192").FXB8wQ);
   items12[1] = callback(require("Text/Text").Text, obj18);
   obj16.children = items12;
   const items13 = [closure_9(closure_6, obj16), ];
   const obj19 = { hasIcons: false, children: null };
   const obj20 = { label: null, arrow: true, disabled: null, onPress: null };
   const intl11 = tmp4(tmp5[15]).intl;
-  obj20.label = intl11.string(require("module_4190")["C8/T2E"]);
+  obj20.label = intl11.string(require("module_4192")["C8/T2E"]);
   obj20.disabled = disabled;
   obj20.onPress = function onPress() {
     closure_11().catch(() => {
@@ -597,11 +597,11 @@ export default function ConjureCreateSheet(guildId) {
   const obj22 = { style: tmp.sectionHeading, children: null };
   const obj23 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl12 = tmp4(tmp5[15]).intl;
-  obj23.children = intl12.string(require("module_4190").zzYLlW);
+  obj23.children = intl12.string(require("module_4192").zzYLlW);
   const items14 = [callback(require("Text/Text").Text, obj23), ];
   const obj24 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl13 = tmp4(tmp5[15]).intl;
-  obj24.children = intl13.string(require("module_4190")["N88+Ld"]);
+  obj24.children = intl13.string(require("module_4192")["N88+Ld"]);
   items14[1] = callback(require("Text/Text").Text, obj24);
   obj22.children = items14;
   const items15 = [closure_9(closure_6, obj22), ];
@@ -625,11 +625,11 @@ export default function ConjureCreateSheet(guildId) {
   const obj27 = { style: tmp.sectionHeading, children: null };
   const obj28 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl14 = tmp4(tmp5[15]).intl;
-  obj28.children = intl14.string(require("module_4190")["2XcV3x"]);
+  obj28.children = intl14.string(require("module_4192")["2XcV3x"]);
   const items16 = [callback(require("Text/Text").Text, obj28), ];
   const obj29 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl15 = tmp4(tmp5[15]).intl;
-  obj29.children = intl15.string(require("module_4190").JnJOAn);
+  obj29.children = intl15.string(require("module_4192").JnJOAn);
   items16[1] = callback(require("Text/Text").Text, obj29);
   obj27.children = items16;
   const items17 = [closure_9(closure_6, obj27), ];

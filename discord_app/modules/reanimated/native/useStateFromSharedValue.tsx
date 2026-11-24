@@ -1,6 +1,6 @@
-// === Module 10598: useStateFromSharedValue ===
+// === Module 8478: useStateFromSharedValue ===
 
-// Module 10598 (useStateFromSharedValue)
+// Module 8478 (useStateFromSharedValue)
 import _mod1706 from "module_1706" /* 1706 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ export default function useStateFromSharedValue(tmp12Result5) {
     value = map.get(c0);
     if (value == null) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       c0 = set;
       const obj2 = {
         sharedValue: tmp,
@@ -93,7 +93,7 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
     value = map.get(c0);
     if (value == null) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       c0 = set;
       const obj2 = {
         sharedValue: tmp,

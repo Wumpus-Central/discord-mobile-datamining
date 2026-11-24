@@ -1,17 +1,17 @@
-// === Module 19446: AudioSessionModeManager ===
+// === Module 19488: AudioSessionModeManager ===
 
-// Module 19446 (AudioSessionModeManager)
-import VoicePermissionManager from "VoicePermissionManager" /* 19447 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6536 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
+// Module 19488 (AudioSessionModeManager)
+import VoicePermissionManager from "VoicePermissionManager" /* 19489 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6727 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 function handleAVAudioSessionMode() {

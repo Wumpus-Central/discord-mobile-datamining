@@ -1,19 +1,19 @@
-// === Module 13121: useVoiceMessageTooltip ===
+// === Module 13039: useVoiceMessageTooltip ===
 
-// Module 13121 (useVoiceMessageTooltip)
+// Module 13039 (useVoiceMessageTooltip)
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VoiceMessagesUIStore = fn(12823);
+const VoiceMessagesUIStore = fn(12742);
 ({ hideVoiceMessagesTooltip: closure_4, showVoiceMessagesTooltip: hasOwnProperty, useVoiceMessagesUIStore: closure_6 } = VoiceMessagesUIStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
 
 export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
-  targetBottomInset = targetBottomInset(13122)().targetBottomInset;
-  let tmp3 = targetBottomInset(6417)(targetBottomInset);
+  targetBottomInset = targetBottomInset(13040)().targetBottomInset;
+  let tmp3 = targetBottomInset(6705)(targetBottomInset);
   if (tmp3 == null) {
     tmp3 = targetBottomInset;
   }
@@ -46,6 +46,6 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items2);
-  const tooltip = targetBottomInset(8942).useTooltip(ref, memo);
+  const tooltip = targetBottomInset(9428).useTooltip(ref, memo);
   return { tooltipTargetRef: ref, showVoiceMessagesTooltip };
 };

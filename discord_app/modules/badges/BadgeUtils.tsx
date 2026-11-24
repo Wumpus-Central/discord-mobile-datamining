@@ -1,11 +1,11 @@
-// === Module 13990: BadgeUtils ===
+// === Module 9729: BadgeUtils ===
 
-// Module 13990 (BadgeUtils)
+// Module 9729 (BadgeUtils)
 import util from "util" /* 1112 */;
 import StringUtils from "StringUtils" /* 2152 */;
-import Constants from "Constants" /* 8069 */;
-import BadgeId from "BadgeId" /* 8070 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8138 */;
+import Constants from "Constants" /* 6011 */;
+import BadgeId from "BadgeId" /* 6012 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 6258 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -172,10 +172,10 @@ export function getLegacyIconUrlByBadgeId(badges) {
   }
   return map;
 }
-export function findTier(badge, next_tier) {
-  closure_0 = next_tier;
+export function findTier(badge, current_tier) {
+  closure_0 = current_tier;
   let found;
-  if (null != next_tier) {
+  if (null != current_tier) {
     const tiers = badge.tiers;
     found = tiers.find((key) => key.key === closure_0);
   }

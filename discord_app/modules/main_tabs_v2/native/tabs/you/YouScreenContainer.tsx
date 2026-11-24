@@ -1,26 +1,24 @@
-// === Module 18891: YouScreenContainer ===
+// === Module 18933: YouScreenContainer ===
 
-// Module 18891 (YouScreenContainer)
+// Module 18933 (YouScreenContainer)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import useChatLayoutDefault from "useChatLayout" /* 5092 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17535 */;
-import AppFrameContainerDefault from "AppFrameContainer" /* 18890 */;
-import YouScreenDefault from "YouScreen" /* 18892 */;
+import useChatLayoutDefault from "useChatLayout" /* 5096 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17573 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 18932 */;
+import YouScreenDefault from "YouScreen" /* 18934 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(9420).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9288).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
-let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" }, androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none }, wrapper: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
-obj.wrapper = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
+const createStyles = fn(4917);
+let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" }, androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none }, wrapper: { flex: 1 } };
 let closure_6 = createStyles.createStyles(obj);
-let obj4 = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx");
 
@@ -59,8 +57,8 @@ export default noop.memo(function YouScreenContainer(route) {
       const obj7 = { maxWidth: 0.6 * useWindowDimensionsDefault().width };
       items1[1] = obj7;
       obj6.style = items1;
-      const obj8 = { initialTab };
-      tmp = jsx(YouScreenDefault, { initialTab });
+      const obj8 = { initialTab, isCard: true };
+      tmp = jsx(YouScreenDefault, { initialTab, isCard: true });
       obj6.children = tmp;
       let tmp6Result3 = <View style={null}>{null}</View>;
     } else {

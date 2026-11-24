@@ -1,7 +1,7 @@
-// === Module 19657: SettingTreeCacheLifecycleManager ===
+// === Module 19700: SettingTreeCacheLifecycleManager ===
 
-// Module 19657 (SettingTreeCacheLifecycleManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+// Module 19700 (SettingTreeCacheLifecycleManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 const prototype = function SettingTreeManagerLifecycleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

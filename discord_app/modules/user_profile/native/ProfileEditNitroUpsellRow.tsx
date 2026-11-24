@@ -1,9 +1,9 @@
-// === Module 15839: ProfileEditNitroUpsellRow ===
+// === Module 15886: ProfileEditNitroUpsellRow ===
 
-// Module 15839 (ProfileEditNitroUpsellRow)
+// Module 15886 (ProfileEditNitroUpsellRow)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8545 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8547 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9453 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9456 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

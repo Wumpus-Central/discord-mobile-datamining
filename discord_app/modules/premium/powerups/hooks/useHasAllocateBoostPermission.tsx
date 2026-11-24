@@ -1,8 +1,8 @@
-// === Module 13402: useHasAllocateBoostPermission ===
+// === Module 13325: useHasAllocateBoostPermission ===
 
-// Module 13402 (useHasAllocateBoostPermission)
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+// Module 13325 (useHasAllocateBoostPermission)
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 
 const require = globalThis.__r;
 

@@ -1,14 +1,14 @@
-// === Module 19658: SharedSpacesWarningManager ===
+// === Module 19701: SharedSpacesWarningManager ===
 
-// Module 19658 (SharedSpacesWarningManager)
+// Module 19701 (SharedSpacesWarningManager)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 15014 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 19659 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15011 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 15053 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 19702 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15050 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 function handleChannelSelect(channelId) {
@@ -47,7 +47,7 @@ function handleAppStateChanged(state) {
           const _Set = Set;
           items = [];
           HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
-          const set = new Set(items);
+          set = new Set(items);
           if (!React5(set)) {
             const items1 = [];
             HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
@@ -62,7 +62,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(15013);
+const SharedSpacesWarningStore = fn(15052);
 ({ isBlockedWarningQueued: hasOwnProperty, dequeueBlockWarning: closure_6, gdmBlockedWarningInCooldown: metroImportDefault, voiceBlockedWarningInCooldownForUsers: closure_8 } = SharedSpacesWarningStore);
 const prototype = function SharedSpacesWarningManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

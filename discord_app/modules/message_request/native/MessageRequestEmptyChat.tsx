@@ -1,14 +1,14 @@
-// === Module 13541: MessageRequestEmptyChat ===
+// === Module 13455: MessageRequestEmptyChat ===
 
-// Module 13541 (MessageRequestEmptyChat)
+// Module 13455 (MessageRequestEmptyChat)
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5504 */;
+import Text_Text from "Text/Text" /* 5508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const PlatformUtils = fn(1378);
 if (PlatformUtils.isAndroid()) {
   const obj3 = { fontFamily: fn(1082).Fonts.PRIMARY_NORMAL_ITALIC };

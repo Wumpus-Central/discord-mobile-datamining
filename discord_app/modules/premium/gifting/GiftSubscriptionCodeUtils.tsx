@@ -1,6 +1,6 @@
-// === Module 11911: GiftSubscriptionCodeUtils ===
+// === Module 11786: GiftSubscriptionCodeUtils ===
 
-// Module 11911 (GiftSubscriptionCodeUtils)
+// Module 11786 (GiftSubscriptionCodeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/GiftSubscriptionCodeUtils.tsx");

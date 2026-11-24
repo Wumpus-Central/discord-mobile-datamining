@@ -1,9 +1,9 @@
-// === Module 10368: DoorExitIcon ===
+// === Module 10172: DoorExitIcon ===
 
-// Module 10368 (DoorExitIcon)
+// Module 10172 (DoorExitIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod10369 from "module_10369" /* 10369 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod10173 from "module_10173" /* 10173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function DoorExitIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10369, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10173, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

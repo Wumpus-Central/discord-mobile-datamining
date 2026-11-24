@@ -1,15 +1,15 @@
-// === Module 18402: ConjureNativeControlOverlay ===
+// === Module 18441: ConjureNativeControlOverlay ===
 
-// Module 18402 (ConjureNativeControlOverlay)
+// Module 18441 (ConjureNativeControlOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import spring_spring from "spring/spring" /* 5514 */;
-import springPresets from "springPresets" /* 5515 */;
-import useConjureControlBar from "useConjureControlBar" /* 18403 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import spring_spring from "spring/spring" /* 5518 */;
+import springPresets from "springPresets" /* 5519 */;
+import useConjureControlBar from "useConjureControlBar" /* 18442 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { root: { flex: 1 }, content: { flex: 1 }, block: null, border: null, glow: null, barArea: null, bar: null, title: null, actions: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.block = {};
@@ -171,7 +171,7 @@ export default function ConjureNativeControlOverlay(arg0) {
   ConjureNativeControlOverlayTsx3.__initData = tmp22;
   const animatedStyle2 = require("module_1653").useAnimatedStyle(ConjureNativeControlOverlayTsx3);
   const intl = tmp2(1112).intl;
-  const tmp26 = _modDef4190;
+  const tmp26 = _modDef4192;
   if (tmp8) {
     if (conjureControlTuning) {
       let prop = tmp26["VJW/5P"];
@@ -195,10 +195,10 @@ export default function ConjureNativeControlOverlay(arg0) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp46Result = closure_6(tmp2(15221).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp46Result = closure_6(tmp2(15242).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp25(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp46Result = closure_6(tmp2(17250).SparklesIcon, obj8);
+          tmp46Result = closure_6(tmp2(17288).SparklesIcon, obj8);
         }
         const items11 = [tmp46Result, , ];
         const obj9 = { variant: "body-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: tmp.title, accessibilityLabel: null, children: null };
@@ -206,11 +206,11 @@ export default function ConjureNativeControlOverlay(arg0) {
         if (tmp8) {
           const intl2 = tmp2(1112).intl;
           const _HermesInternal = HermesInternal;
-          combined = "" + stringResult + ". " + intl2.string(tmp25(4190).fg1sor);
+          combined = "" + stringResult + ". " + intl2.string(tmp25(4192).fg1sor);
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items11[1] = closure_6(tmp2(5504).Text, obj9);
+        items11[1] = closure_6(tmp2(5508).Text, obj9);
         let tmp46Result3 = null;
         if (tmp8) {
           tmp46Result3 = null;
@@ -218,10 +218,10 @@ export default function ConjureNativeControlOverlay(arg0) {
             const obj10 = { style: tmp.actions, children: null };
             const obj11 = { variant: "primary-overlay", size: "sm", text: null, loading: null, onPress: null };
             const intl3 = tmp2(1112).intl;
-            obj11.text = intl3.string(tmp25(4190).oU59sU);
+            obj11.text = intl3.string(tmp25(4192).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5511).Button, obj11);
+            obj10.children = closure_6(tmp2(5515).Button, obj11);
             tmp46Result3 = closure_6(tmp34, obj10);
           }
         }

@@ -1,8 +1,8 @@
-// === Module 10640: VoiceChatHooks ===
+// === Module 9871: VoiceChatHooks ===
 
-// Module 10640 (VoiceChatHooks)
+// Module 9871 (VoiceChatHooks)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 const require = globalThis.__r;
 

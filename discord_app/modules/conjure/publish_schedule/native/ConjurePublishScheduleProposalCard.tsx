@@ -1,13 +1,13 @@
-// === Module 18607: ConjurePublishScheduleProposalCard ===
+// === Module 18648: ConjurePublishScheduleProposalCard ===
 
-// Module 18607 (ConjurePublishScheduleProposalCard)
+// Module 18648 (ConjurePublishScheduleProposalCard)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import Stack_Stack from "Stack/Stack" /* 5929 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18305 */;
-import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 18608 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import Stack_Stack from "Stack/Stack" /* 5989 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18344 */;
+import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 18649 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   const tmp3 = useConjurePublishScheduleProposalDefault(projectId, proposal, current);
   const obj = { variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.string(_modDef4190.ZtfX9V);
+  obj.children = intl.string(_modDef4192.ZtfX9V);
   items = [React3(Text_Text.Text, obj), , ];
   const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: tmp3.summary }), , , , ];
   let tmp4Result = null;
@@ -32,13 +32,13 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   items1[1] = tmp4Result;
   const obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef4190.cxNHma);
+  obj4.children = intl2.string(_modDef4192.cxNHma);
   items1[2] = React3(Text_Text.Text, obj4);
   let tmp4Result4 = null;
   if ("on" === tmp3.status) {
     const obj5 = { variant: "body-sm/normal", color: "text-default", accessibilityRole: "alert", children: null };
     const intl3 = util.intl;
-    obj5.children = intl3.string(_modDef4190.k4IRsm);
+    obj5.children = intl3.string(_modDef4192.k4IRsm);
     tmp4Result4 = React3(Text_Text.Text, obj5);
   }
   items1[3] = tmp4Result4;
@@ -53,7 +53,7 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   if (null != tmp3.onTurnOn) {
     const obj7 = { text: null, variant: "secondary", loading: null, disabled: null, onPress: null };
     const intl4 = util.intl;
-    obj7.text = intl4.string(_modDef4190.EuhBSG);
+    obj7.text = intl4.string(_modDef4192.EuhBSG);
     obj7.loading = "sending" === tmp3.status;
     obj7.disabled = "sending" === tmp3.status;
     obj7.onPress = tmp3.onTurnOn;

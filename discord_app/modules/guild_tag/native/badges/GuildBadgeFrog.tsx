@@ -1,8 +1,8 @@
-// === Module 15157: GuildBadgeFrog ===
+// === Module 15178: GuildBadgeFrog ===
 
-// Module 15157 (GuildBadgeFrog)
-import inlineStyles from "inlineStyles" /* 7865 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15133 */;
+// Module 15178 (GuildBadgeFrog)
+import inlineStyles from "inlineStyles" /* 7813 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15154 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

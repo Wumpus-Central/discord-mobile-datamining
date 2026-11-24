@@ -1,11 +1,11 @@
-// === Module 12308: requestConjureDevicePermissions ===
+// === Module 11316: requestConjureDevicePermissions ===
 
-// Module 12308 (requestConjureDevicePermissions)
+// Module 11316 (requestConjureDevicePermissions)
 import DurationsDefault from "Durations" /* 1088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import FramesStore from "FramesStore" /* 6623 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 12309 */;
+import FramesStore from "FramesStore" /* 6810 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 11317 */;
 
 const require = fn;
 let closure_10 = async function _requestConjureDevicePermissions(arg0) {
@@ -238,7 +238,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
     }
   }
 };
-const FrameLayoutModes = fn(6624).FrameLayoutModes;
+const FrameLayoutModes = fn(6811).FrameLayoutModes;
 const set = new Set();
 const SECOND = DurationsDefault.Millis.SECOND;
 const size = fn(2);

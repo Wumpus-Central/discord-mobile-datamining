@@ -1,6 +1,6 @@
-// === Module 7013: convertor ===
+// === Module 7606: convertor ===
 
-// Module 7013 (convertor)
+// Module 7606 (convertor)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
 

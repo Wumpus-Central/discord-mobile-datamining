@@ -1,12 +1,12 @@
-// === Module 19229: useIsDockCoveredByActivity ===
+// === Module 19271: useIsDockCoveredByActivity ===
 
-// Module 19229 (useIsDockCoveredByActivity)
-import ActivityPanelUtils from "ActivityPanelUtils" /* 19178 */;
-import FramesStore from "FramesStore" /* 6623 */;
+// Module 19271 (useIsDockCoveredByActivity)
+import ActivityPanelUtils from "ActivityPanelUtils" /* 19220 */;
+import FramesStore from "FramesStore" /* 6810 */;
 
 require = fn;
-const ActivityPanelModes = fn(5539).ActivityPanelModes;
-const isLaunched = fn(6624).isLaunched;
+const ActivityPanelModes = fn(5543).ActivityPanelModes;
+const isLaunched = fn(6811).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useIsDockCoveredByActivity.tsx");
 

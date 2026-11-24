@@ -1,14 +1,14 @@
-// === Module 17817: InterestGuildProfileBanner ===
+// === Module 17855: InterestGuildProfileBanner ===
 
-// Module 17817 (InterestGuildProfileBanner)
+// Module 17855 (InterestGuildProfileBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4776 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import VideoBackground from "VideoBackground" /* 8204 */;
-import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9749 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4780 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 8588 */;
+import VideoBackground from "VideoBackground" /* 9371 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildStore from "GuildStore" /* 4788 */;
 
 require = fn;
 function InterestGuildProfileSolidBanner(profile) {
@@ -26,7 +26,7 @@ function InterestGuildProfileSolidBanner(profile) {
 const View = fn(17).View;
 const GuildFeatures = fn(1071).GuildFeatures;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_7 = createStyles.createStyles({ banner: { height: 140, width: "100%" }, image: { resizeMode: "cover" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildProfileBanner.tsx");

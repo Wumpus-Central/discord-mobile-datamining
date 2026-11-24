@@ -1,11 +1,11 @@
-// === Module 11256: MentionGuardUtils ===
+// === Module 10640: MentionGuardUtils ===
 
-// Module 11256 (MentionGuardUtils)
+// Module 10640 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
-import MessageParserDefault from "MessageParser" /* 8382 */;
+import MessageParserDefault from "MessageParser" /* 8203 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6919 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7527 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {

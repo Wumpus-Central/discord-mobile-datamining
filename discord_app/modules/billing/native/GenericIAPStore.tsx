@@ -1,10 +1,10 @@
-// === Module 8169: GenericIAPStore ===
+// === Module 8971: GenericIAPStore ===
 
-// Module 8169 (GenericIAPStore)
+// Module 8971 (GenericIAPStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ProductIds from "ProductIds" /* 8170 */;
+import premium_ProductIds from "premium/ProductIds" /* 8972 */;
 
 require = fn;
 let c3 = null;
@@ -21,9 +21,9 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
     tmp = applyDefault.filter(c3, (identifier) => {
-      const GenericProductIds = ProductIds.GenericProductIds;
+      const GenericProductIds = premium_ProductIds.GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
-    }).length === ProductIds.GenericProductIds.length;
+    }).length === premium_ProductIds.GenericProductIds.length;
   }
   return tmp;
 };

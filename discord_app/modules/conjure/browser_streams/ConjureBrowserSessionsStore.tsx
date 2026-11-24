@@ -1,6 +1,6 @@
-// === Module 6971: ConjureBrowserSessionsStore ===
+// === Module 7567: ConjureBrowserSessionsStore ===
 
-// Module 6971 (ConjureBrowserSessionsStore)
+// Module 7567 (ConjureBrowserSessionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -38,7 +38,7 @@ prototype["getTab"] = function getTab(arg0, arg1) {
 const conjureBrowserSessionsStore = new ConjureBrowserSessionsStore(DispatcherDefault, {
   CONJURE_BROWSER_SESSIONS_SET: function handleBrowserSessionsSet(arg0) {
     ({ projectId, sessions } = arg0);
-    let set;
+    set = undefined;
     value = map.get(projectId);
     if (value == null) {
       value = closure_0;

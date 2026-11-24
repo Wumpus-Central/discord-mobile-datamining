@@ -1,9 +1,9 @@
-// === Module 7584: useInterestedEventUsers ===
+// === Module 8474: useInterestedEventUsers ===
 
-// Module 7584 (useInterestedEventUsers)
+// Module 8474 (useInterestedEventUsers)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4768 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6633 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4772 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5649 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -42,7 +42,7 @@ export default function useInterestedEventUsers(arg0, arg1) {
       return tmp2;
     });
     const found1 = stateFromStoresArray1.filter((response) => response.response === constants.INTERESTED);
-    const set = new Set();
+    set = new Set();
     items = [];
     const item = found.forEach(addUserToAllInterested);
     const item1 = found1.forEach(addUserToAllInterested);

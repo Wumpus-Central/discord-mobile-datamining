@@ -1,18 +1,18 @@
-// === Module 9112: NativeCheckoutStore ===
+// === Module 8977: NativeCheckoutStore ===
 
-// Module 9112 (NativeCheckoutStore)
+// Module 8977 (NativeCheckoutStore)
 import _mod1257 from "module_1257" /* 1257 */;
-import _mod4828 from "module_4828" /* 4828 */;
-import OrderActionCreators from "OrderActionCreators" /* 6862 */;
-import ContextUtilsDefault from "ContextUtils" /* 9116 */;
-import payments_OrderActionCreators from "payments/OrderActionCreators" /* 9117 */;
+import _mod4832 from "module_4832" /* 4832 */;
+import OrderActionCreators from "OrderActionCreators" /* 7474 */;
+import ContextUtilsDefault from "ContextUtils" /* 8981 */;
+import payments_OrderActionCreators from "payments/OrderActionCreators" /* 8982 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 9113 */;
+import OrderRecord from "OrderRecord" /* 8978 */;
 
 require = fn;
-const OrderStatus = fn(5630).OrderStatus;
+const OrderStatus = fn(5634).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
 const size = fn(2);
@@ -21,14 +21,14 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 export const NativeCheckoutStoreContextOrNull = context;
 export function useNativeCheckoutStore(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4828.shallow;
+    shallow = _mod4832.shallow;
   }
   const tmp3 = closure_7();
   return _mod1257.useStoreWithEqualityFn(tmp3, arg0, shallow);
 }
 export function useNativeCheckoutStoreOrNull(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4828.shallow;
+    shallow = _mod4832.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
@@ -668,5 +668,5 @@ export function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod4828.shallow);
+  }, _mod4832.shallow);
 }

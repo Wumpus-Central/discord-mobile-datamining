@@ -1,13 +1,13 @@
-// === Module 13719: ForumTagFilterActionSheet ===
+// === Module 13629: ForumTagFilterActionSheet ===
 
-// Module 13719 (ForumTagFilterActionSheet)
+// Module 13629 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import EmojiDefault from "Emoji" /* 7496 */;
-import Tracking from "Tracking" /* 8461 */;
+import EmojiDefault from "Emoji" /* 7362 */;
+import Tracking from "Tracking" /* 7975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6573 */;
+import EmojiStore from "EmojiStore" /* 6757 */;
 
 require = fn;
 function EmojiIcon(arg0) {
@@ -36,12 +36,12 @@ function EmojiIcon(arg0) {
   obj2.name = emojiName;
   return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
-const ForumChannelStore = fn(12868);
+const ForumChannelStore = fn(12787);
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: metroImportDefault } = ForumChannelStore);
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_12 = createStyles.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
@@ -52,7 +52,7 @@ export default function ForumPostTagsActionSheet(channel) {
   _slicedToArray = undefined;
   state = closure_7();
   [first, _slicedToArray] = noop.useState(new Set(closure_6(channel.id).tagFilter));
-  let set = new Set(closure_6(channel.id).tagFilter);
+  set = new Set(closure_6(channel.id).tagFilter);
   const unmountEffect = channel(first[8]).useUnmountEffect(() => {
     state = state.getState();
     state.setTagFilter(channel.id, first);
@@ -99,7 +99,7 @@ export default function ForumPostTagsActionSheet(channel) {
       if (null != closure_0) {
         let FORUM_CHANNEL_HEADER = globalThis;
         const _Set = Set;
-        const set = new Set(first);
+        set = new Set(first);
         if (set.has(obj.id)) {
           set.delete(obj.id);
         } else {

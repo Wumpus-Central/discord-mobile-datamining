@@ -1,16 +1,16 @@
-// === Module 14143: PremiumSubscriptionPricingUpsell ===
+// === Module 13823: PremiumSubscriptionPricingUpsell ===
 
-// Module 14143 (PremiumSubscriptionPricingUpsell)
+// Module 13823 (PremiumSubscriptionPricingUpsell)
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 9376 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 9235 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 import UserStore from "UserStore" /* 1386 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2177 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;
-import IAPStore from "IAPStore" /* 8851 */;
+import IAPStore from "IAPStore" /* 8963 */;
 
 require = fn;
 function PricingSubheadingCopy() {
@@ -196,7 +196,7 @@ const PremiumConstants = fn(1388);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/PremiumSubscriptionPricingUpsell.tsx");
@@ -215,5 +215,5 @@ export default function PremiumSubscriptionPricingUpsell() {
   }
   items[1] = tmp5Result;
   obj2.children = items;
-  return dependencyMap(View, obj2);
+  return set(View, obj2);
 };

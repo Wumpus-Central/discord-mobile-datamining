@@ -1,14 +1,14 @@
-// === Module 16646: GuildRoleSubscriptionBenefitRow ===
+// === Module 16680: GuildRoleSubscriptionBenefitRow ===
 
-// Module 16646 (GuildRoleSubscriptionBenefitRow)
+// Module 16680 (GuildRoleSubscriptionBenefitRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import useChannelNameDefault from "useChannelName" /* 5529 */;
-import EmojiIconDefault from "EmojiIcon" /* 16644 */;
-import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 16647 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import useChannelNameDefault from "useChannelName" /* 5533 */;
+import EmojiIconDefault from "EmojiIcon" /* 16678 */;
+import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 16681 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 require = fn;
 function BenefitRow(description) {
@@ -33,7 +33,7 @@ function BenefitRow(description) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { marginEnd: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -49,20 +49,20 @@ export function ChannelBenefitRow(benefit) {
   const obj2 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1112).intl;
   obj2.children = "[" + intl.string(benefit(1112).t.bz1PZX) + "]";
-  let tmp7 = closure_5(benefit(5504).Text, obj2);
+  let tmp7 = closure_5(benefit(5508).Text, obj2);
   if (null != stateFromStores) {
     const obj3 = { style: tmp.channelTitle, children: null };
     const obj4 = { style: tmp.channelIcon, size: "xs", color: "interactive-text-default" };
-    const items2 = [tmp2(16647).renderChannelIcon(stateFromStores, obj4), ];
+    const items2 = [tmp2(16681).renderChannelIcon(stateFromStores, obj4), ];
     const obj5 = { variant: "body-md/medium", color: "mobile-text-heading-primary", children: tmp5 };
-    items2[1] = closure_5(tmp2(5504).Text, obj5);
+    items2[1] = closure_5(tmp2(5508).Text, obj5);
     obj3.children = items2;
     tmp7 = closure_6(View, obj3);
-    const tmp2Result = tmp2(16647);
+    const tmp2Result = tmp2(16681);
   }
   const obj6 = { emojiId: null, guildId: null, title: null, description: null };
   tmp5 = useChannelNameDefault(stateFromStores);
-  obj6.emojiId = benefit(16647).getBenefitEmojiId(benefit);
+  obj6.emojiId = benefit(16681).getBenefitEmojiId(benefit);
   obj6.guildId = benefit.guildId;
   obj6.title = tmp7;
   obj6.description = benefit.description;

@@ -1,11 +1,11 @@
-// === Module 8927: StorefrontPromotionRecord ===
+// === Module 10982: StorefrontPromotionRecord ===
 
-// Module 8927 (StorefrontPromotionRecord)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8928 */;
-import CollectiblesPromotionIcon from "CollectiblesPromotionIcon" /* 8929 */;
-import CollectiblesPromotionBlockTarget from "CollectiblesPromotionBlockTarget" /* 8930 */;
-import CollectiblesPromotionBlockStyle2 from "CollectiblesPromotionBlockStyle" /* 8931 */;
-import CollectiblesPromotionCountdownUnit from "CollectiblesPromotionCountdownUnit" /* 8932 */;
+// Module 10982 (StorefrontPromotionRecord)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 10983 */;
+import CollectiblesPromotionIcon from "CollectiblesPromotionIcon" /* 10984 */;
+import CollectiblesPromotionBlockTarget from "CollectiblesPromotionBlockTarget" /* 10985 */;
+import CollectiblesPromotionBlockStyle2 from "CollectiblesPromotionBlockStyle" /* 10986 */;
+import CollectiblesPromotionCountdownUnit from "CollectiblesPromotionCountdownUnit" /* 10987 */;
 import Record from "Record" /* 1406 */;
 
 require = fn;
@@ -179,8 +179,8 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       let tmp27 = require;
       if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM === type) {
         type = collectibles.subtype;
-        if (tmp27(8928).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === type) {
-          const obj6 = { type: tmp27(8928).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp27(8928).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+        if (tmp27(10983).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === type) {
+          const obj6 = { type: tmp27(10983).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp27(10983).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
           const obj7 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
           const reward_states = collectibles.shop_home.reward_states;
           const obj9 = { inProgress: null, earned: null, consumed: null };
@@ -224,8 +224,8 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           tmp27 = parseCollectiblesShared;
           obj6.shared = parseCollectiblesShared(collectibles.shared);
           let merged = obj6;
-        } else if (tmp27(8928).StorefrontPromotionCollectAndClaimSubtype.BASIC === type) {
-          const obj18 = { type: tmp27(8928).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp27(8928).StorefrontPromotionCollectAndClaimSubtype.BASIC, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+        } else if (tmp27(10983).StorefrontPromotionCollectAndClaimSubtype.BASIC === type) {
+          const obj18 = { type: tmp27(10983).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp27(10983).StorefrontPromotionCollectAndClaimSubtype.BASIC, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
           const obj19 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, style: null };
           let tmp38;
           if (null != collectibles.shop_home.style) {
@@ -247,7 +247,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           obj18.shared = type;
           merged = obj18;
         }
-      } else if (tmp27(8928).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
+      } else if (tmp27(10983).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
         const reward = collectibles.reward;
         let nagbar;
         if (reward != null) {
@@ -285,14 +285,14 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           if (null == offer_notice) {
             if (null == progress_steps1) {
               if (null == hero_url) {
-                type = { type: tmp27(8928).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+                type = { type: tmp27(10983).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
                 let obj22 = type;
               }
               merged = obj22;
             }
           }
         }
-        obj22 = { type: tmp27(8928).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+        obj22 = { type: tmp27(10983).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
         let tmp35;
         if (null != nagbar) {
           const header_text = nagbar.header_text;
@@ -332,9 +332,9 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         type.collected = obj20;
         type.flavor = hero_url;
         obj22.reward = type;
-      } else if (tmp27(8928).StorefrontPromotionCollectiblesType.COLLECTION_SALE === type) {
+      } else if (tmp27(10983).StorefrontPromotionCollectiblesType.COLLECTION_SALE === type) {
         offer_notice = collectibles.navigation;
-        const obj27 = { type: tmp27(8928).StorefrontPromotionCollectiblesType.COLLECTION_SALE, collectionId: null, countdownStyle: null, showCountdownCta: null, countdownPosition: null, showUpsellBlocks: null, navigation: null };
+        const obj27 = { type: tmp27(10983).StorefrontPromotionCollectiblesType.COLLECTION_SALE, collectionId: null, countdownStyle: null, showCountdownCta: null, countdownPosition: null, showUpsellBlocks: null, navigation: null };
         ({ collection_id: obj8.collectionId, countdown_style: obj8.countdownStyle, show_countdown_cta } = collectibles);
         if (show_countdown_cta == null) {
           show_countdown_cta = true;
@@ -342,7 +342,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         obj27.showCountdownCta = show_countdown_cta;
         let RIGHT2 = collectibles.countdown_position;
         if (RIGHT2 == null) {
-          RIGHT2 = tmp27(8933).CollectiblesPromotionCountdownPosition.RIGHT;
+          RIGHT2 = tmp27(10988).CollectiblesPromotionCountdownPosition.RIGHT;
         }
         obj27.countdownPosition = RIGHT2;
         let flag2 = collectibles.show_upsell_blocks;
@@ -365,12 +365,12 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         }
         obj27.navigation = type;
         merged = obj27;
-      } else if (tmp27(8928).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER === type) {
+      } else if (tmp27(10983).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER === type) {
         offer_notice = collectibles.navigation;
-        const obj28 = { type: tmp27(8928).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER, collectionId: null, position: null, countdownStyle: null, showCountdownCta: null, countdownPosition: null, navigation: null };
+        const obj28 = { type: tmp27(10983).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER, collectionId: null, position: null, countdownStyle: null, showCountdownCta: null, countdownPosition: null, navigation: null };
         ({ collection_id: obj26.collectionId, position: obj26.position, countdown_style } = collectibles);
         if (countdown_style == null) {
-          countdown_style = tmp27(8934).CollectionPromotionCountdownStyle.DARK;
+          countdown_style = tmp27(10989).CollectionPromotionCountdownStyle.DARK;
         }
         obj28.countdownStyle = countdown_style;
         let flag = collectibles.show_countdown_cta;
@@ -380,7 +380,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         obj28.showCountdownCta = flag;
         let RIGHT = collectibles.countdown_position;
         if (RIGHT == null) {
-          RIGHT = tmp27(8933).CollectiblesPromotionCountdownPosition.RIGHT;
+          RIGHT = tmp27(10988).CollectiblesPromotionCountdownPosition.RIGHT;
         }
         obj28.countdownPosition = RIGHT;
         let tab1;

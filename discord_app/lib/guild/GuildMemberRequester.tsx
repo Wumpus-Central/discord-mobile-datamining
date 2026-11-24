@@ -1,8 +1,8 @@
-// === Module 6539: GuildMemberRequester ===
+// === Module 6731: GuildMemberRequester ===
 
-// Module 6539 (GuildMemberRequester)
+// Module 6731 (GuildMemberRequester)
 import applyDefault from "apply" /* 12 */;
-import Timers from "Timers" /* 4757 */;
+import Timers from "Timers" /* 4761 */;
 import size from "module_2" /* 2 */;
 
 class GuildMemberRequestState {
@@ -151,7 +151,7 @@ prototype2["_getGuildState"] = function _getGuildState(_guildId) {
       importDefault = tmp18;
       const merged = Object.assign({ _pendingRequests: null, _sentRequests: null, _unacknowledgedRequests: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const _Set2 = Set;
       const set1 = new Set();

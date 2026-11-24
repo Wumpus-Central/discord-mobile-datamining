@@ -1,16 +1,16 @@
-// === Module 18810: BaseMessagesScreen ===
+// === Module 18852: BaseMessagesScreen ===
 
-// Module 18810 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
-import SearchUtils from "SearchUtils" /* 13204 */;
-import TrackingDefault from "Tracking" /* 13218 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18812 */;
+// Module 18852 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13111 */;
+import SearchUtils from "SearchUtils" /* 13118 */;
+import TrackingDefault from "Tracking" /* 13138 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18854 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6641 */;
-import SearchQueryStore from "SearchQueryStore" /* 13211 */;
+import SearchMessageStore from "SearchMessageStore" /* 6827 */;
+import SearchQueryStore from "SearchQueryStore" /* 13125 */;
 
 require = fn;
-const constants = fn(8575).SearchResultContentEntityTypes;
+const constants = fn(8877).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");

@@ -1,10 +1,10 @@
-// === Module 16919: FriendAnniversaryNotificationUtils ===
+// === Module 16953: FriendAnniversaryNotificationUtils ===
 
-// Module 16919 (FriendAnniversaryNotificationUtils)
+// Module 16953 (FriendAnniversaryNotificationUtils)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import NotificationConstants from "NotificationConstants" /* 4858 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import NotificationConstants from "NotificationConstants" /* 4862 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

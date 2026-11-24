@@ -1,6 +1,6 @@
-// === Module 4844: createFavoritesGuildChannelRecord ===
+// === Module 4848: createFavoritesGuildChannelRecord ===
 
-// Module 4844 (createFavoritesGuildChannelRecord)
+// Module 4848 (createFavoritesGuildChannelRecord)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

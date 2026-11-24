@@ -1,17 +1,17 @@
-// === Module 18610: useConjureServerChangeButtons ===
+// === Module 18651: useConjureServerChangeButtons ===
 
-// Module 18610 (useConjureServerChangeButtons)
-import _modDef4190 from "module_4190" /* 4190 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import ConjureChatStore from "ConjureChatStore" /* 6925 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+// Module 18651 (useConjureServerChangeButtons)
+import _modDef4192 from "module_4192" /* 4192 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import ConjureChatStore from "ConjureChatStore" /* 7533 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isProjectOwner = fn(6621).isProjectOwner;
-let obj = { add_to_server: _modDef4190["7SD3ul"], remove_from_server: _modDef4190.ErhKil, change_server: _modDef4190["1E5/ay"] };
-let obj2 = { add_to_server: _modDef4190["Wy+mGW"], remove_from_server: _modDef4190.vUWHZe, change_server: _modDef4190.MfnSEe };
+const isProjectOwner = fn(6808).isProjectOwner;
+let obj = { add_to_server: _modDef4192["7SD3ul"], remove_from_server: _modDef4192.ErhKil, change_server: _modDef4192["1E5/ay"] };
+let obj2 = { add_to_server: _modDef4192["Wy+mGW"], remove_from_server: _modDef4192.vUWHZe, change_server: _modDef4192.MfnSEe };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_share/useConjureServerChangeButtons.tsx");
 
@@ -46,7 +46,7 @@ export default function useConjureServerChangeButtons(projectId, action) {
   }, items3);
   if (stateFromStores1 == null) {
     const intl = tmp(1112).intl;
-    stateFromStores1 = intl.string(_modDef4190["6bhivN"]);
+    stateFromStores1 = intl.string(_modDef4192["6bhivN"]);
   }
   const tmpResult = require("initialize");
   const tmpResult3 = require("useConjureProjectServerChange");
@@ -151,7 +151,7 @@ export default function useConjureServerChangeButtons(projectId, action) {
   if (tmp13) {
     if (!tmp15) {
       const intl3 = tmp(1112).intl;
-      let stringResult = intl3.string(_modDef4190.Kt9exT);
+      let stringResult = intl3.string(_modDef4192.Kt9exT);
     }
     const obj4 = { project: stateFromStores, action: tmp18, done: null, note: null };
     let formatToPlainStringResult = null;
@@ -171,7 +171,7 @@ export default function useConjureServerChangeButtons(projectId, action) {
   stringResult = null;
   if (true === disabled) {
     const intl4 = tmp(1112).intl;
-    stringResult = intl4.string(_modDef4190.NXvmoQ);
+    stringResult = intl4.string(_modDef4192.NXvmoQ);
   }
   tmp12 = "change_server" !== action.action || null == action.guild_id || result === action.guild_id;
   const tmpResult4 = require("initialize");

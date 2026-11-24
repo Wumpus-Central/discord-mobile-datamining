@@ -1,9 +1,9 @@
-// === Module 9817: GameProfileMediaSources ===
+// === Module 8662: GameProfileMediaSources ===
 
-// Module 9817 (GameProfileMediaSources)
+// Module 8662 (GameProfileMediaSources)
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1447 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2156 */;
-import StoreUtils from "StoreUtils" /* 6359 */;
+import StoreUtils from "StoreUtils" /* 5677 */;
 import size_mod from "module_2" /* 2 */;
 
 let c2 = 366;

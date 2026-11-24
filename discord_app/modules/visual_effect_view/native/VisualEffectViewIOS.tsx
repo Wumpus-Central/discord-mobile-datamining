@@ -1,9 +1,9 @@
-// === Module 5483: VisualEffectViewIOS ===
+// === Module 5487: VisualEffectViewIOS ===
 
-// Module 5483 (VisualEffectViewIOS)
-import VisualEffectViewNativeComponentDefault from "VisualEffectViewNativeComponent" /* 5485 */;
-import DeviceUtils from "DeviceUtils" /* 4870 */;
-import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5484 */;
+// Module 5487 (VisualEffectViewIOS)
+import VisualEffectViewNativeComponentDefault from "VisualEffectViewNativeComponent" /* 5489 */;
+import DeviceUtils from "DeviceUtils" /* 4874 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5488 */;
 import size from "module_2" /* 2 */;
 
 const obj = { componentName: "DCDVisualEffectView", componentFoundInstance: null };

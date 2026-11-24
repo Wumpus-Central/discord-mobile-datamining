@@ -1,8 +1,8 @@
-// === Module 11267: ForumGuidelinesManager ===
+// === Module 10651: ForumGuidelinesManager ===
 
-// Module 11267 (ForumGuidelinesManager)
+// Module 10651 (ForumGuidelinesManager)
 import Storage2 from "Storage" /* 510 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";
@@ -21,7 +21,7 @@ prototype["_initialize"] = function _initialize() {
   if (null != value) {
     const self = this;
     const _Set = Set;
-    const set = new Set(value);
+    set = new Set(value);
     this.seenForumGuidelines = set;
   }
 };

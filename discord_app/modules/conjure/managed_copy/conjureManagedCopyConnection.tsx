@@ -1,8 +1,8 @@
-// === Module 6993: conjureManagedCopyConnection ===
+// === Module 7589: conjureManagedCopyConnection ===
 
-// Module 6993 (conjureManagedCopyConnection)
+// Module 7589 (conjureManagedCopyConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6939 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7547 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/managed_copy/conjureManagedCopyConnection.tsx");

@@ -1,17 +1,17 @@
-// === Module 11299: EmojiPickerListRow ===
+// === Module 9591: EmojiPickerListRow ===
 
-// Module 11299 (EmojiPickerListRow)
+// Module 9591 (EmojiPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1186 */;
 import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import shared from "shared" /* 4920 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import Pressables from "Pressables" /* 7030 */;
-import _modDef7498 from "module_7498" /* 7498 */;
-import LockIcon from "LockIcon" /* 7695 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 11300 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 11301 */;
+import shared from "shared" /* 4924 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import Pressables from "Pressables" /* 6026 */;
+import LockIcon from "LockIcon" /* 7035 */;
+import _modDef7364 from "module_7364" /* 7364 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9592 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9593 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -92,12 +92,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9066);
+const EmojiPickerListConstants = fn(9399);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1227).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1378);
 let num = 28;

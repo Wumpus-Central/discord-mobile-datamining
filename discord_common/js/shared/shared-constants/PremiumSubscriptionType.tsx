@@ -1,6 +1,6 @@
-// === Module 9197: PremiumSubscriptionType ===
+// === Module 9078: PremiumSubscriptionType ===
 
-// Module 9197 (PremiumSubscriptionType)
+// Module 9078 (PremiumSubscriptionType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PremiumSubscriptionType.tsx");

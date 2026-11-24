@@ -1,8 +1,8 @@
-// === Module 7412: showInvalidUsernameToastNative ===
+// === Module 7222: showInvalidUsernameToastNative ===
 
-// Module 7412 (showInvalidUsernameToastNative)
+// Module 7222 (showInvalidUsernameToastNative)
 import util from "util" /* 1112 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5599 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");

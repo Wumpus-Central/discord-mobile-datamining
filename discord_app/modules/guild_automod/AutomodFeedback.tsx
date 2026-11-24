@@ -1,6 +1,6 @@
-// === Module 8311: AutomodFeedback ===
+// === Module 8100: AutomodFeedback ===
 
-// Module 8311 (AutomodFeedback)
+// Module 8100 (AutomodFeedback)
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 

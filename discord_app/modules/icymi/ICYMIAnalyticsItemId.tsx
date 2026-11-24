@@ -1,8 +1,8 @@
-// === Module 10052: ICYMIAnalyticsItemId ===
+// === Module 8792: ICYMIAnalyticsItemId ===
 
-// Module 10052 (ICYMIAnalyticsItemId)
-import ICYMITypes from "ICYMITypes" /* 10037 */;
-import parseWaterwheelsCard from "parseWaterwheelsCard" /* 10050 */;
+// Module 8792 (ICYMIAnalyticsItemId)
+import ICYMITypes from "ICYMITypes" /* 8776 */;
+import parseWaterwheelsCard from "parseWaterwheelsCard" /* 8790 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/ICYMIAnalyticsItemId.tsx");

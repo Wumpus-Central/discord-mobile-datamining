@@ -1,34 +1,34 @@
-// === Module 11325: CustomEmojiContent ===
+// === Module 9622: CustomEmojiContent ===
 
-// Module 11325 (CustomEmojiContent)
+// Module 9622 (CustomEmojiContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4867 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5595 */;
-import openUserSettings from "openUserSettings" /* 8194 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9099 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10009 */;
-import StarIcon from "StarIcon" /* 10011 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10394 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 11328 */;
+import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4871 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5599 */;
+import openUserSettings from "openUserSettings" /* 7968 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8960 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9620 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9624 */;
+import StarIcon from "StarIcon" /* 9626 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9629 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4868 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4872 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(7323).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(6927).EmojiSourceDataTypes;
 const Constants = fn(1071);
 ({ UserSettingsSections: closure_11, AnalyticEvents: closure_12, AnalyticsPages: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { nitroWheel: { height: 32, width: 32 }, nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW }, emojiDescriptionWrapperOuter: { flexDirection: "row", flex: 1, alignItems: "center", gap: 8 }, moreMenuIcon: null, bottomCtaButton: null, ctaDescriptionWrapper: null, betaTag: null, betaTagTextAddPack: null, betaTagTextRemovePack: null, favoriteButtonContainer: null };
 let size = { height: 32, width: 32, justifyContent: "center", alignItems: "center", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
 obj2.moreMenuIcon = size;
@@ -208,7 +208,7 @@ export default function CustomEmojiContent(emojiNode) {
     if (sourceType !== isFavoriteEmoji.PACK) {
       const obj17 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11327, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9628, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
       }
       const intl4 = tmp2(nonce[27]).intl;
       obj17.accessibilityLabel = intl4.string(tmp2(nonce[27]).t.PdRCRg);

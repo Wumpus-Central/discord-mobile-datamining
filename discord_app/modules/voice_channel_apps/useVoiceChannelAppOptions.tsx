@@ -1,12 +1,12 @@
-// === Module 18937: useVoiceChannelAppOptions ===
+// === Module 18979: useVoiceChannelAppOptions ===
 
-// Module 18937 (useVoiceChannelAppOptions)
+// Module 18979 (useVoiceChannelAppOptions)
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import ConjureUtils from "ConjureUtils" /* 6865 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 6933 */;
+import ConjureUtils from "ConjureUtils" /* 7476 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -60,12 +60,12 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
   closure_129_3 = memo;
   const items5 = [memo];
   const memo1 = getOrFetchApplication.useMemo(() => application_id.map((application_id) => application_id.application_id), items5);
-  const tmp9 = memo5(6864)(memo1, false);
+  const tmp9 = memo5(7389)(memo1, false);
   closure_129_4 = tmp9;
   let obj3 = require("initialize");
   const tmp8 = memo5;
   closure_129_5 = getOrFetchApplication.useRef(new Set());
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   [closure_129_6, closure_129_7] = getOrFetchApplication.useState(new Set());
   const tmp13 = _slicedToArray(getOrFetchApplication.useState(false), 2);
@@ -134,7 +134,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
     }
     return application_id;
   }), items11);
-  const tmp21 = tmp8(6864)(memo4);
+  const tmp21 = tmp8(7389)(memo4);
   closure_129_11 = tmp21;
   const items12 = [memo3, tmp21];
   memo5 = obj.useMemo(() => closure_1_10.map((application_id, index) => {

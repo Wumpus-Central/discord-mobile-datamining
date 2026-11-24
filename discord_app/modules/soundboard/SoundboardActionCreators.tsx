@@ -1,12 +1,12 @@
-// === Module 6830: SoundboardActionCreators ===
+// === Module 10262: SoundboardActionCreators ===
 
-// Module 6830 (SoundboardActionCreators)
+// Module 10262 (SoundboardActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4743 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5860 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4747 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5961 */;
+import SoundboardStore from "SoundboardStore" /* 6797 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ require = fn;
 let closure_11 = async function _fetchDefaultSoundsFromApi2() {
   closure_1 = tmp3;
   const HTTP = require("HTTPUtils").HTTP;
-  await HTTP.get({ url: constants.SOUNDBOARD_DEFAULT_SOUNDS, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+  await HTTP.get({ url: constants.SOUNDBOARD_SOUNDS_CATALOG, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
   if (1 === tmp7) {
     c3 = 0;
     closure_128_1 = closure_2;
@@ -28,8 +28,8 @@ let closure_11 = async function _fetchDefaultSoundsFromApi2() {
     c5 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    const body = value.body;
-    closure_128_0 = body.map((item) => closure_1_0(closure_1_2[6]).soundboardSoundFromAPI(item, closure_1_5));
+    const default_sounds = value.body.default_sounds;
+    closure_128_0 = default_sounds.map((item) => closure_1_0(closure_1_2[6]).soundboardSoundFromAPI(item, closure_1_5));
     closure_129_1(closure_129_2[7]).dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: closure_128_0 });
     c3 = 0;
     closure_129_1(closure_129_2[7]);
@@ -396,7 +396,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5963).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6799).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1071);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1081);

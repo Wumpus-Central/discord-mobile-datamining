@@ -1,13 +1,13 @@
-// === Module 7449: FastList ===
+// === Module 7302: FastList ===
 
-// Module 7449 (FastList)
+// Module 7302 (FastList)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import BottomSheetModal from "BottomSheetModal" /* 5145 */;
-import NativeViewDefault from "NativeView" /* 7324 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7451 */;
+import BottomSheetModal from "BottomSheetModal" /* 5149 */;
+import NativeViewDefault from "NativeView" /* 6929 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7304 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -384,7 +384,7 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   let num = -1;
   section3 = -1;
   closure_6 = 0;
-  const set = new Set();
+  set = new Set();
   if (rounded <= bound) {
     do {
       let chunk = self.getChunk(rounded);
@@ -653,7 +653,7 @@ prototype2["fullCompute"] = function fullCompute() {
   if (undefined === getRecyclerKey) {
     getRecyclerKey = defaultRecyclerKey;
   }
-  const set = new Set(self.props.persistantKeys);
+  set = new Set(self.props.persistantKeys);
   self.persistantItemData = [];
   items = [];
   self.dataCache = items;

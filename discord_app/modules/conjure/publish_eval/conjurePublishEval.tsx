@@ -1,19 +1,19 @@
-// === Module 12321: conjurePublishEval ===
+// === Module 11331: conjurePublishEval ===
 
-// Module 12321 (conjurePublishEval)
+// Module 11331 (conjurePublishEval)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import ConjurePublishEvalTypes from "ConjurePublishEvalTypes" /* 12324 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import ConjurePublishEvalTypes from "ConjurePublishEvalTypes" /* 11334 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureChatStore from "ConjureChatStore" /* 6925 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6980 */;
-import ConjurePublishEvalCooldownStore from "ConjurePublishEvalCooldownStore" /* 12322 */;
-import ConjurePublishEvalStore from "ConjurePublishEvalStore" /* 12323 */;
+import ConjureChatStore from "ConjureChatStore" /* 7533 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7576 */;
+import ConjurePublishEvalCooldownStore from "ConjurePublishEvalCooldownStore" /* 11332 */;
+import ConjurePublishEvalStore from "ConjurePublishEvalStore" /* 11333 */;
 
 const require = globalThis.__r;
 
@@ -103,7 +103,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
   })();
 };
 let closure_12 = { quality: null, metExpectations: null, speed: null };
-let obj = { quality: _modDef4190["N94/JU"], metExpectations: _modDef4190["7mnit0"], speed: _modDef4190["J/xftE"] };
+let obj = { quality: _modDef4192["N94/JU"], metExpectations: _modDef4192["7mnit0"], speed: _modDef4192["J/xftE"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_eval/conjurePublishEval.tsx");
 
@@ -222,7 +222,7 @@ export function conjurePublishEvalScoreLabel(dimension, score) {
   obj = { score, dimension: null };
   const intl2 = util.intl;
   obj.dimension = intl2.string(obj[dimension]);
-  return intl.formatToPlainString(_modDef4190.fML8aJ, obj);
+  return intl.formatToPlainString(_modDef4192.fML8aJ, obj);
 }
 export function useConjurePublishEvalForm(pending) {
   _require = pending;
@@ -346,7 +346,7 @@ export function useConjurePublishEvalForm(pending) {
   let stringResult = null;
   if (tmp7[0]) {
     const intl = require("util").intl;
-    stringResult = intl.string(require("module_4190").Nu6mEB);
+    stringResult = intl.string(require("module_4192").Nu6mEB);
   }
   obj3.error = stringResult;
   obj3.submit = callback1;

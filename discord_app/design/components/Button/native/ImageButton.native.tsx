@@ -1,16 +1,16 @@
-// === Module 14681: ImageButton ===
+// === Module 10348: ImageButton ===
 
-// Module 14681 (ImageButton)
+// Module 10348 (ImageButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import spring_spring from "spring/spring" /* 5514 */;
-import springPresets from "springPresets" /* 5515 */;
-import ButtonConstants from "ButtonConstants" /* 5517 */;
-import ButtonHooks from "ButtonHooks" /* 5518 */;
-import Button_BaseButton from "Button/BaseButton" /* 5520 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import BaseIconButton from "BaseIconButton" /* 7050 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import spring_spring from "spring/spring" /* 5518 */;
+import springPresets from "springPresets" /* 5519 */;
+import ButtonConstants from "ButtonConstants" /* 5521 */;
+import ButtonHooks from "ButtonHooks" /* 5522 */;
+import Button_BaseButton from "Button/BaseButton" /* 5524 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import BaseIconButton from "BaseIconButton" /* 6022 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {

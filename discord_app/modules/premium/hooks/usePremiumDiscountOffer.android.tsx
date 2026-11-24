@@ -1,10 +1,10 @@
-// === Module 8862: usePremiumDiscountOffer ===
+// === Module 9018: hooks/usePremiumDiscountOffer ===
 
-// Module 8862 (usePremiumDiscountOffer)
+// Module 9018 (hooks/usePremiumDiscountOffer)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ProductIds from "ProductIds" /* 8170 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8863 */;
-import IAPStore from "IAPStore" /* 8851 */;
+import premium_ProductIds from "premium/ProductIds" /* 8972 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 9019 */;
+import IAPStore from "IAPStore" /* 8963 */;
 
 require = fn;
 const PremiumConstants = fn(1388);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDisco
 export function usePremiumDiscountOffer() {
   items = [IAPStore];
   const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({ isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() })).offerIds;
-  const values = Object.values(ProductIds.DiscountIdToProductOfferId[React4]);
+  const values = Object.values(premium_ProductIds.DiscountIdToProductOfferId[React4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
@@ -25,7 +25,7 @@ export function usePremiumDiscountOffer() {
     tmp5 = tmp6;
   }
   tmp4 = useDiscountOfferDefault(React4);
-  const values2 = Object.values(ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
+  const values2 = Object.values(premium_ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
   let tmp8 = null;
   if (0 !== values2.length) {
     let tmp9 = null;

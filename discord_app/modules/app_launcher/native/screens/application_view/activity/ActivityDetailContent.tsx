@@ -1,21 +1,21 @@
-// === Module 13009: ActivityDetailContent ===
+// === Module 12928: ActivityDetailContent ===
 
-// Module 13009 (ActivityDetailContent)
+// Module 12928 (ActivityDetailContent)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10093 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10674 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10676 */;
-import AppLauncherContext from "AppLauncherContext" /* 12106 */;
-import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 12210 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12925 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6253 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9946 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9948 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11389 */;
+import AppLauncherContext from "AppLauncherContext" /* 11996 */;
+import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 12152 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5556 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5560 */;
 import ApplicationRecord from "ApplicationRecord" /* 2142 */;
 
 require = fn;
@@ -92,12 +92,12 @@ function TryItOutButton(applicationId) {
   items = [applicationId, analyticsLocations];
   let str = "primary";
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
-    v2(1255).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: tmp3(10676).EntryPointCommandButtonActions.OPEN_APP_DM });
+    v2(1255).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: tmp3(9948).EntryPointCommandButtonActions.OPEN_APP_DM });
     const _setTimeout = setTimeout;
     closure_3.current = setTimeout(() => {
       closure_1_2(true);
     }, 250);
-    await v2(12199).launch({ applicationId, analyticsLocations });
+    await v2(12142).launch({ applicationId, analyticsLocations });
     if (1 === tmp7) {
       dependencyMap = 0;
       const _clearTimeout = clearTimeout;
@@ -119,14 +119,14 @@ function TryItOutButton(applicationId) {
   const intl = applicationId(1112).intl;
   obj.text = intl.string(applicationId(1112).t.AUM8hY);
   obj.onPress = callback;
-  return closure_11(applicationId(5511).Button, obj);
+  return closure_11(applicationId(5515).Button, obj);
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1 }, cardContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderRadius: nativeDefault.radii.lg, overflow: "hidden", gap: nativeDefault.space.PX_16, paddingBottom: PX_12 }, activityHeroDetailsLandscape: { flexDirection: "row" }, heroMediaContainerLandscape: { width: "65%" }, detailsContainerLandscape: { width: "35%" }, details: { marginTop: 16, paddingHorizontal: PX_12, rowGap: 4 }, tagList: null, tag: null, tagText: null, tagIcon: null, buttonContainer: null, activityUrlOverrideInputContainer: null, primaryEntryPointButtonDisabledCTA: null, tryItOutButtonContainerStyle: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderRadius: nativeDefault.radii.lg, overflow: "hidden", gap: nativeDefault.space.PX_16, paddingBottom: PX_12 };
 obj2.tagList = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: nativeDefault.space.PX_8, columnGap: 4, rowGap: 6 };
@@ -149,19 +149,19 @@ export default function ActivityDetailContent(application) {
   importDefault = undefined;
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
   const tmp = closure_15();
-  const width = application(12106).useRequiredAppLauncherContext().width;
-  let obj = application(12106);
-  const getPrimaryAppCommand = application(10693).useGetPrimaryAppCommand(context, application.id);
-  const obj2 = application(10693);
+  const width = application(11996).useRequiredAppLauncherContext().width;
+  let obj = application(11996);
+  const getPrimaryAppCommand = application(9968).useGetPrimaryAppCommand(context, application.id);
+  const obj2 = application(9968);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
   [tmp8, c1] = noop.useState(undefined);
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(roundToNearestPixelDefault(nativeEvent.nativeEvent.layout.width));
   }, []);
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
-  const isScreenLandscape = application(8150).useIsScreenLandscape();
-  let detailsContainerLandscape = entrypoint !== application(10676).AppLauncherEntrypoint.VOICE && isScreenLandscape;
-  const obj3 = application(8150);
+  const isScreenLandscape = application(9901).useIsScreenLandscape();
+  let detailsContainerLandscape = entrypoint !== application(9948).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+  const obj3 = application(9901);
   items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = application(504).useStateFromStoresObject(items, () => ({ isDeveloperOfThisApp: DeveloperActivityShelfStore.inDevModeForApplication(application.id), activityUrlOverride: DeveloperActivityShelfStore.getActivityUrlOverride(), useActivityUrlOverride: DeveloperActivityShelfStore.getUseActivityUrlOverride() }));
   ({ isDeveloperOfThisApp, activityUrlOverride, useActivityUrlOverride } = stateFromStoresObject);
@@ -181,40 +181,40 @@ export default function ActivityDetailContent(application) {
       const obj5 = { style: null, children: null };
       obj4.marginBottom = num2;
       obj5.style = obj4;
-      const items1 = [closure_11(tmp2(7055).TableRowDivider, {}), , ];
+      const items1 = [closure_11(tmp2(6015).TableRowDivider, {}), , ];
       const obj6 = { label: null, value: null, onValueChange: null, end: true };
       let intl = tmp2(1112).intl;
       obj6.label = intl.string(tmp2(1112).t["3TSGuD"]);
       obj6.value = useActivityUrlOverride;
       obj6.onValueChange = DeveloperActivityShelfActionCreatorsAll.toggleUseActivityUrlOverride;
-      items1[1] = closure_11(tmp2(7556).TableSwitchRow, obj6);
+      items1[1] = closure_11(tmp2(7423).TableSwitchRow, obj6);
       let tmp22Result = null;
       if (useActivityUrlOverride) {
         const obj7 = { style: tmp.activityUrlOverrideInputContainer, children: null };
         const obj8 = { placeholder: "e.g. http://192.168.1.1:3000", value: activityUrlOverride, onChange: DeveloperActivityShelfActionCreatorsAll.setActivityUrlOverride };
-        obj7.children = closure_11(tmp2(7221).TextInput, obj8);
+        obj7.children = closure_11(tmp2(7148).TextInput, obj8);
         tmp22Result = closure_11(View, obj7);
       }
       items1[2] = tmp22Result;
       obj5.children = items1;
       tmp20Result = closure_12(View, obj5);
     }
-    const getOrFetchApplication = tmp2(6864).useGetOrFetchApplication(application.id);
+    const getOrFetchApplication = tmp2(7389).useGetOrFetchApplication(application.id);
     let bot;
     if (getOrFetchApplication != null) {
       bot = getOrFetchApplication.bot;
     }
-    const tmp2Result8 = tmp2(6864);
+    const tmp2Result8 = tmp2(7389);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(12925).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(12925);
-    const delayedSwapToActivityActionLeave = tmp2(13011).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(12844).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(12844);
+    const delayedSwapToActivityActionLeave = tmp2(12930).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(13011);
-    ({ reason, disabled } = tmp5(13012)(obj10));
+    const tmp2Result10 = tmp2(12930);
+    ({ reason, disabled } = tmp5(12931)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(13013);
+    tmp5(12932);
     if (bot != null) {
       id = bot.id;
     }
@@ -244,7 +244,7 @@ export default function ActivityDetailContent(application) {
       let tmp39Result2 = null != reason;
       if (tmp39Result2) {
         const obj17 = { variant: "body-sm/normal", style: tmp.primaryEntryPointButtonDisabledCTA, children: reason };
-        tmp39Result2 = closure_11(tmp2(5504).Text, obj17);
+        tmp39Result2 = closure_11(tmp2(5508).Text, obj17);
       }
       items3[1] = tmp39Result2;
       obj16.children = items3;
@@ -254,15 +254,15 @@ export default function ActivityDetailContent(application) {
         isDeveloperOfThisApp = !hasCommands;
       }
       if (isDeveloperOfThisApp) {
-        isDeveloperOfThisApp = tmp2(10674).isActivityApp(application);
-        const tmp2Result11 = tmp2(10674);
+        isDeveloperOfThisApp = tmp2(9946).isActivityApp(application);
+        const tmp2Result11 = tmp2(9946);
       }
       if (isDeveloperOfThisApp) {
         const obj18 = { style: tmp.buttonContainer, children: null };
         const obj19 = { type: "warning", message: null, role: "none" };
         const intl2 = tmp2(1112).intl;
         obj19.message = intl2.format(tmp2(1112).t["s/3hjE"], {});
-        obj18.children = closure_11(tmp2(7762).InlineNotice, obj19);
+        obj18.children = closure_11(tmp2(7808).InlineNotice, obj19);
         const tmp33 = closure_11(View, obj18);
       }
     }
@@ -281,13 +281,13 @@ export default function ActivityDetailContent(application) {
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(13012)(obj10);
+    const tmp29 = tmp5(12931)(obj10);
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(12951), obj25);
+    obj24.children = closure_11(tmp5(12870), obj25);
     const items4 = [closure_11(View, obj24), ];
     const items5 = [tmp.details, ];
     if (detailsContainerLandscape) {
@@ -297,22 +297,22 @@ export default function ActivityDetailContent(application) {
     items5[1] = detailsContainerLandscape;
     obj26.style = items5;
     const obj27 = { application };
-    const items6 = [closure_11(tmp5(13015), obj27), , , , ];
+    const items6 = [closure_11(tmp5(12934), obj27), , , , ];
     const obj28 = { style: tmp.tagList, children: null };
     const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj30 = { style: tmp.tagIcon, size: "xs" };
-    obj29.icon = closure_11(tmp2(7038).GroupIcon, obj30);
-    const tmp5Result3 = tmp5(12951);
+    obj29.icon = closure_11(tmp2(7029).GroupIcon, obj30);
+    const tmp5Result3 = tmp5(12870);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(13017).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(13017);
+    obj29.tagName = tmp2(12936).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(12936);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(13017)(num);
+    obj29.accessibilityLabel = tmp5(12936)(num);
     const items7 = [closure_11(Tag, obj29, "participants"), ];
     const tags = application.tags;
     let mapped;
@@ -336,11 +336,11 @@ export default function ActivityDetailContent(application) {
     obj22.children = closure_12(View, obj23);
     obj21.children = closure_11(View, obj22);
     obj20.children = closure_11(View, obj21);
-    return closure_11(tmp2(7520).AnalyticsLocationProvider, obj20);
+    return closure_11(tmp2(6253).AnalyticsLocationProvider, obj20);
   } else {
     const _Error = Error;
     const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  tmp2Result7 = application(10674);
+  tmp2Result7 = application(9946);
 };

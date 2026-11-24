@@ -1,6 +1,6 @@
-// === Module 11102: NotificationSettingsStore ===
+// === Module 10455: NotificationSettingsStore ===
 
-// Module 11102 (NotificationSettingsStore)
+// Module 10455 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;

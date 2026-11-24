@@ -1,24 +1,24 @@
-// === Module 9067: EmojiPickerUtils ===
+// === Module 9400: EmojiPickerUtils ===
 
-// Module 9067 (EmojiPickerUtils)
+// Module 9400 (EmojiPickerUtils)
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import v1 from "v1" /* 1268 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4863 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5650 */;
-import ExpressionPickerGridStores from "ExpressionPickerGridStores" /* 9068 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4863 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4867 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5887 */;
+import ExpressionPickerGridStores from "ExpressionPickerGridStores" /* 9401 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6573 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import SortedGuildStore from "SortedGuildStore" /* 6550 */;
+import EmojiStore from "EmojiStore" /* 6757 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import SortedGuildStore from "SortedGuildStore" /* 6038 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(6576);
+const EmojiPickerConstants = fn(6760);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: closure_10 } = EmojiPickerConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1, AutoCompleteResultTypes: closure_14, SearchTypes: closure_15 } = Constants);
@@ -263,7 +263,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
           }
         }
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         for (const item10015 of locked) {
           if (null != item10015.id) {
             let addResult = set.add(tmp7.id);

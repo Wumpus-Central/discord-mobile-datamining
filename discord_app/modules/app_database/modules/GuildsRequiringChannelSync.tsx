@@ -1,21 +1,21 @@
-// === Module 8354: GuildsRequiringChannelSync ===
+// === Module 8174: GuildsRequiringChannelSync ===
 
-// Module 8354 (GuildsRequiringChannelSync)
+// Module 8174 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1082 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import v1 from "v1" /* 1268 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import ChannelConstants from "ChannelConstants" /* 4769 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4791 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4835 */;
-import ChannelRecord from "ChannelRecord" /* 4766 */;
+import ChannelConstants from "ChannelConstants" /* 4773 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4839 */;
+import ChannelRecord from "ChannelRecord" /* 4770 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 import Constants from "Constants" /* 1071 */;
 import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;
@@ -141,7 +141,7 @@ prototype["processMemberRoleIds"] = function processMemberRoleIds(arg0, roles) {
     return { rolesAreDifferent: true, allRoleIds: null };
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const tmp18 = arg0[Symbol.iterator]();
     while (tmp18 !== undefined) {
       let addResult = set.add(tmp2);
@@ -224,7 +224,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           if (roles1 == null) {
             roles1 = [];
           }
-          const set = new Set(roles1);
+          set = new Set(roles1);
           const result = self.detectRoleVisibilityChanges(item10008.id, unsafeMutableRoles, obj2, set);
           flag = userBecameGuildOwnerResult;
           if (null != result) {
@@ -378,7 +378,7 @@ prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleCh
   } else {
     const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(id);
     const _Set = Set;
-    const set = new Set(items);
+    set = new Set(items);
     const _Map = Map;
     const map = new Map();
     const iter2 = channels[Symbol.iterator]();

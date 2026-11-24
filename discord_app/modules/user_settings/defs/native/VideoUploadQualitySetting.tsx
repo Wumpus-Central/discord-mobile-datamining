@@ -1,21 +1,21 @@
-// === Module 16871: VideoUploadQualitySetting ===
+// === Module 16905: VideoUploadQualitySetting ===
 
-// Module 16871 (VideoUploadQualitySetting)
+// Module 16905 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import UserSettingsText from "UserSettingsText" /* 16870 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import UserSettingsText from "UserSettingsText" /* 16904 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 
 require = fn;
 const VideoQualitySettings = fn(1193).VideoQualitySettings;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8712).MobileUserSettings.CHAT,
+  parent: fn(9414).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
     items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);

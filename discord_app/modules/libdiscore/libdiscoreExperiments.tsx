@@ -1,10 +1,10 @@
-// === Module 4788: libdiscoreExperiments ===
+// === Module 4792: libdiscoreExperiments ===
 
-// Module 4788 (libdiscoreExperiments)
+// Module 4792 (libdiscoreExperiments)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import js_shim_shim from "js_shim/shim" /* 1364 */;
-import BridgedStore from "BridgedStore" /* 4789 */;
+import BridgedStore from "BridgedStore" /* 4793 */;
 import size from "module_2" /* 2 */;
 
 const ensureValidMode = BridgedStore.ensureValidMode;
@@ -154,8 +154,8 @@ prototype3["getTreatments"] = function getTreatments() {
   items = [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
   return items;
 };
-const tmp14 = new "getEnabledFeatureName"("2026-01-libdiscore-batch-store-refactor", undefined, tmp11, tmp10, tmp9, tmp8, require, dependencyMap, items);
-tmp14.storeName = "batch-store-refactor";
+const tmp13 = new "getEnabledFeatureName"("2026-01-libdiscore-batch-store-refactor", undefined, tmp10, tmp9, tmp8, tmp7, require, dependencyMap, items);
+tmp13.storeName = "batch-store-refactor";
 class LibdiscoreTelemetryExperiment extends LibdiscoreCachedExperiment {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -210,12 +210,9 @@ prototype4["shouldCollectMetrics"] = function shouldCollectMetrics() {
   return tmp2;
 };
 const libdiscoreTelemetryExperiment = new LibdiscoreTelemetryExperiment("2025-09-libdiscore-telemetry");
-const tmp16 = new "shouldCollectMetrics"("2025-11-defer-load-late-lazy-cache", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-tmp16.label = "Allow react to render before lazy cache is loaded";
-tmp16.defaultValue = false;
-const tmp17 = new "shouldCollectMetrics"("2026-09-react-compiler-mobile", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-tmp17.label = "React Compiler for mobile";
-tmp17.defaultValue = false;
+const tmp15 = new "shouldCollectMetrics"("2026-09-react-compiler-mobile", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+tmp15.label = "React Compiler for mobile";
+tmp15.defaultValue = false;
 class LibdiscoreCustomTreatmentsExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1, arg2) {
     tmp1 = new tmp(global, new.target);
@@ -231,64 +228,63 @@ prototype5["getLabel"] = function getLabel() {
 prototype5["getTreatments"] = function getTreatments() {
   return Array.from({ length: this.treatmentCount }, (arg0, treatmentId) => ({ treatmentId }));
 };
-const tmp18 = new "getTreatments"("2026-01-android-rmle", undefined, tmp11, tmp10, tmp9, undefined, require);
-tmp18.label = "Android Pull Mode Rendering";
-tmp18.treatmentCount = 4;
-const tmp19 = new "getTreatments"("2026-02-android-fresco-cache", undefined, tmp11, tmp10, tmp9, undefined, require);
-tmp19.label = "Android Fresco Cache";
-tmp19.treatmentCount = 3;
-const tmp20 = new "getTreatments"("2026-02-android-chat-mosaic-shared-pool", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp3, tmp2, tmp);
-tmp20.label = "Android Chat Mosaic Shared Pool";
+const tmp16 = new "getTreatments"("2026-01-android-rmle", undefined, tmp10, tmp9, tmp8, undefined, require);
+tmp16.label = "Android Pull Mode Rendering";
+tmp16.treatmentCount = 4;
+const tmp17 = new "getTreatments"("2026-02-android-fresco-cache", undefined, tmp10, tmp9, tmp8, undefined, require);
+tmp17.label = "Android Fresco Cache";
+tmp17.treatmentCount = 3;
+const tmp18 = new "getTreatments"("2026-02-android-chat-mosaic-shared-pool", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp3, tmp2, tmp);
+tmp18.label = "Android Chat Mosaic Shared Pool";
+tmp18.defaultValue = false;
+const tmp19 = new "getTreatments"("2026-03-mobile-hermes-occupancy-target", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp2, tmp);
+tmp19.label = "Android Hermes Occupancy Target";
+tmp19.defaultValue = false;
+const tmp20 = new "getTreatments"("2026-08-android-jank-per-screen", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp19, tmp);
+tmp20.label = "Android Per-Screen Jank Aggregation";
 tmp20.defaultValue = false;
-const tmp21 = new "getTreatments"("2026-03-mobile-hermes-occupancy-target", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp2, tmp);
-tmp21.label = "Android Hermes Occupancy Target";
-tmp21.defaultValue = false;
-const tmp22 = new "getTreatments"("2026-08-android-jank-per-screen", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp);
-tmp22.label = "Android Per-Screen Jank Aggregation";
-tmp22.defaultValue = false;
-const tmp23 = new "getTreatments"("2026-10-android-chat-preinflation", undefined, tmp11, tmp10, tmp9, undefined, require);
-tmp23.label = "Android Chat Preinflation";
-tmp23.treatmentCount = 3;
-const tmp24 = new "getTreatments"("2026-10-uimanager-experiments", undefined, tmp11, tmp10, tmp9, undefined, require);
-tmp24.label = "UIManager Experiments";
-tmp24.treatmentCount = 3;
-const tmp25 = new "getTreatments"("2026-10-android-ui-manager-constants-cache", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22);
-tmp25.label = "Android UIManager Constants Cache";
+const tmp21 = new "getTreatments"("2026-10-android-chat-preinflation", undefined, tmp10, tmp9, tmp8, undefined, require);
+tmp21.label = "Android Chat Preinflation";
+tmp21.treatmentCount = 3;
+const tmp22 = new "getTreatments"("2026-10-uimanager-experiments", undefined, tmp10, tmp9, tmp8, undefined, require);
+tmp22.label = "UIManager Experiments";
+tmp22.treatmentCount = 3;
+const tmp23 = new "getTreatments"("2026-10-android-ui-manager-constants-cache", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20);
+tmp23.label = "Android UIManager Constants Cache";
+tmp23.defaultValue = false;
+const tmp24 = new "getTreatments"("2026-09-ios-callkit-connected-on-rtc", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20);
+tmp24.label = "iOS: show CallKit connected only once voice flows";
+tmp24.defaultValue = false;
+const tmp25 = new "getTreatments"("2026-11-android-telecom", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20);
+tmp25.label = "Android: Support TelecomManager on Android";
 tmp25.defaultValue = false;
-const tmp26 = new "getTreatments"("2026-09-ios-callkit-connected-on-rtc", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22);
-tmp26.label = "iOS: show CallKit connected only once voice flows";
-tmp26.defaultValue = false;
-const tmp27 = new "getTreatments"("2026-11-android-telecom", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22);
-tmp27.label = "Android: Support TelecomManager on Android";
-tmp27.defaultValue = false;
-const tmp92 = new tmp9("2026-10-ios-jank-per-screen", undefined, tmp11, tmp10, tmp9, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22);
-tmp92.label = "iOS Per-Screen Jank Aggregation";
+const tmp82 = new tmp8("2026-10-ios-jank-per-screen", undefined, tmp10, tmp9, tmp8, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20);
+tmp82.label = "iOS Per-Screen Jank Aggregation";
+tmp82.defaultValue = false;
+const tmp92 = new tmp9("2026-08-android-rn-reparenting-flag", undefined, tmp10, tmp9, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp13, libdiscoreTelemetryExperiment, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20);
+tmp92.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
 tmp92.defaultValue = false;
-const tmp102 = new tmp10("2026-08-android-rn-reparenting-flag", undefined, tmp11, tmp10, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp14, libdiscoreTelemetryExperiment, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22);
-tmp102.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
-tmp102.defaultValue = false;
 let c7 = false;
 const result = size.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
 export const ALL_LIBDISCORE_EXPERIMENTS = items;
 export { LibdiscoreCachedExperiment };
 export { LibdiscoreWrapperSimpleExperiment };
-export const LibdiscoreBatchStoreRefactorExperiment = tmp14;
+export const LibdiscoreBatchStoreRefactorExperiment = tmp13;
 export const TelemetryExperiment = libdiscoreTelemetryExperiment;
-export const DelayLoadLateLazyCacheHoldoutExperiment = tmp16;
-export const ReactCompilerExperiment = tmp17;
-export const AndroidPullModeRenderingExperiment = tmp18;
-export const AndroidFrescoCacheExperiment = tmp19;
-export const AndroidChatMosaicSharedPoolExperiment = tmp20;
-export const AndroidHermesOccupancyTargetExperiment = tmp21;
-export const AndroidJankPerScreenExperiment = tmp22;
-export const AndroidChatPreinflationExperiment = tmp23;
-export const UIManagerExperiments = tmp24;
-export const AndroidUIManagerConstantsCacheExperiment = tmp25;
-export const IOSCallKitConnectedOnRTCExperiment = tmp26;
-export const AndroidTelecomCallsManagerExperiment = tmp27;
-export const IOSJankPerScreenExperiment = tmp92;
-export const AndroidRNFlagReparenting = tmp102;
+export const ReactCompilerExperiment = tmp15;
+export const AndroidPullModeRenderingExperiment = tmp16;
+export const AndroidFrescoCacheExperiment = tmp17;
+export const AndroidChatMosaicSharedPoolExperiment = tmp18;
+export const AndroidHermesOccupancyTargetExperiment = tmp19;
+export const AndroidJankPerScreenExperiment = tmp20;
+export const AndroidChatPreinflationExperiment = tmp21;
+export const UIManagerExperiments = tmp22;
+export const AndroidUIManagerConstantsCacheExperiment = tmp23;
+export const IOSCallKitConnectedOnRTCExperiment = tmp24;
+export const AndroidTelecomCallsManagerExperiment = tmp25;
+export const IOSJankPerScreenExperiment = tmp82;
+export const AndroidRNFlagReparenting = tmp92;
 export function isExperimentSyncDisabled() {
   return c7;
 }

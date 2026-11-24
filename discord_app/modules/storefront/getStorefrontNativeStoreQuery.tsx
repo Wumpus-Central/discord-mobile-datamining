@@ -1,9 +1,9 @@
-// === Module 8172: getStorefrontNativeStoreQuery ===
+// === Module 11455: getStorefrontNativeStoreQuery ===
 
-// Module 8172 (getStorefrontNativeStoreQuery)
+// Module 11455 (getStorefrontNativeStoreQuery)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8168 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 11454 */;
 
 require = fn;
 const PaymentGateways = fn(1071).PaymentGateways;

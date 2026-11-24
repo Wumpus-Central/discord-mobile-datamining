@@ -1,26 +1,26 @@
-// === Module 11943: MessagesHooks ===
+// === Module 11821: MessagesHooks ===
 
-// Module 11943 (MessagesHooks)
+// Module 11821 (MessagesHooks)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6659 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8437 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10381 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11944 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11945 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 5648 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 8948 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11822 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10412 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11768 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6040 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(10382).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(8949).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
@@ -45,7 +45,7 @@ export function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
   items = [arg0];
   const memo = noop.useMemo(() => {
-    const set = new Set();
+    set = new Set();
     const item = closure_0.forEach((applicationId) => {
       if (tmp) {
         set.add(applicationId.applicationId);

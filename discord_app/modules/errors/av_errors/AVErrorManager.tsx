@@ -1,17 +1,17 @@
-// === Module 20105: AVErrorManager ===
+// === Module 20148: AVErrorManager ===
 
-// Module 20105 (AVErrorManager)
+// Module 20148 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AVError from "AVError" /* 5843 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 20106 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 20126 */;
+import AVError from "AVError" /* 5909 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 20149 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 20169 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
-import AVErrorStore from "AVErrorStore" /* 10721 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
+import AVErrorStore from "AVErrorStore" /* 9996 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 function setDifference(set, set2) {
@@ -77,7 +77,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
   if (activeErrors1 instanceof Map) {
     if (0 !== map.size) {
       const _Set = Set;
-      const set = new Set(map.keys());
+      set = new Set(map.keys());
       const _Set2 = Set;
       const set1 = new Set(activeErrors1.keys());
       if (set.size > set1.size) {

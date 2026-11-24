@@ -1,6 +1,6 @@
-// === Module 8155: FileManagerUtils ===
+// === Module 9353: FileManagerUtils ===
 
-// Module 8155 (FileManagerUtils)
+// Module 9353 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

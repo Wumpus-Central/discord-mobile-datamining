@@ -1,10 +1,10 @@
-// === Module 11285: age_gate/AgeGateUtils ===
+// === Module 9444: age_gate/AgeGateUtils ===
 
-// Module 11285 (age_gate/AgeGateUtils)
+// Module 9444 (age_gate/AgeGateUtils)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10442 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7444 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;

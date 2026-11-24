@@ -1,6 +1,6 @@
-// === Module 6888: BulkRoleActionsExperiment ===
+// === Module 7497: BulkRoleActionsExperiment ===
 
-// Module 6888 (BulkRoleActionsExperiment)
+// Module 7497 (BulkRoleActionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

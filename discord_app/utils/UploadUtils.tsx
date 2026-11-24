@@ -1,9 +1,9 @@
-// === Module 8442: UploadUtils ===
+// === Module 7987: UploadUtils ===
 
-// Module 8442 (UploadUtils)
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8443 */;
-import clipPayloadUtils from "clipPayloadUtils" /* 8444 */;
-import UploadPlatform from "UploadPlatform" /* 8445 */;
+// Module 7987 (UploadUtils)
+import UploadPlatform from "UploadPlatform" /* 7986 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7988 */;
+import clipPayloadUtils from "clipPayloadUtils" /* 7989 */;
 import size from "module_2" /* 2 */;
 
 const items = [

@@ -1,9 +1,9 @@
-// === Module 10331: ApplicationAssetsV2Store ===
+// === Module 14488: ApplicationAssetsV2Store ===
 
-// Module 10331 (ApplicationAssetsV2Store)
+// Module 14488 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10332 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11327 */;
 
 const require = fn;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {

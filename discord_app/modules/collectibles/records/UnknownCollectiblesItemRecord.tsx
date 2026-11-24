@@ -1,6 +1,6 @@
-// === Module 8083: UnknownCollectiblesItemRecord ===
+// === Module 6193: UnknownCollectiblesItemRecord ===
 
-// Module 8083 (UnknownCollectiblesItemRecord)
+// Module 6193 (UnknownCollectiblesItemRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
 import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2111 */;
 

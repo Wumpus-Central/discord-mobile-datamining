@@ -1,18 +1,18 @@
-// === Module 17700: useGuildHasLiveChannelNotice ===
+// === Module 17738: useGuildHasLiveChannelNotice ===
 
-// Module 17700 (useGuildHasLiveChannelNotice)
-import StageChannelParticipants from "StageChannelParticipants" /* 6537 */;
+// Module 17738 (useGuildHasLiveChannelNotice)
+import StageChannelParticipants from "StageChannelParticipants" /* 6729 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6534 */;
-import StageInstanceStore from "StageInstanceStore" /* 4767 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5657 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 17701 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6686 */;
+import StageInstanceStore from "StageInstanceStore" /* 4771 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5728 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 17739 */;
 
 require = fn;
-let closure_11 = fn(4768).GuildScheduledEventEntityTypes;
+let closure_11 = fn(4772).GuildScheduledEventEntityTypes;
 const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");

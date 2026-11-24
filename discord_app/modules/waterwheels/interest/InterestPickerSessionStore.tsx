@@ -1,6 +1,6 @@
-// === Module 10044: InterestPickerSessionStore ===
+// === Module 8783: InterestPickerSessionStore ===
 
-// Module 10044 (InterestPickerSessionStore)
+// Module 8783 (InterestPickerSessionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

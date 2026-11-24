@@ -1,8 +1,8 @@
-// === Module 19804: SoundboardSoundEditModalRootScreen ===
+// === Module 19847: SoundboardSoundEditModalRootScreen ===
 
-// Module 19804 (SoundboardSoundEditModalRootScreen)
+// Module 19847 (SoundboardSoundEditModalRootScreen)
 import nativeDefault from "native" /* 575 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9063 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9396 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,13 +12,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const SoundboardConstants = fn(5963);
+const SoundboardConstants = fn(6799);
 ({ MAX_LENGTH_SOUND_NAME: closure_8, MAX_SOUND_LENGTH_SECONDS: closure_9 } = SoundboardConstants);
 const EmojiConstants = fn(1389);
 ({ EMOJI_URL_BASE_SIZE: closure_10, EmojiIntention: closure_11 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, label: null, buttons: null, emojiPreview: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.label = { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };
@@ -83,7 +83,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
               obj5.localSource = tmp90;
               obj5.durationMs = durationMs;
               obj5.trim = trim;
-              ref.current = emojiId(19798).createSoundboardSound(obj5);
+              ref.current = emojiId(19841).createSoundboardSound(obj5);
               c6 = 3;
               c7 = 1;
               const obj8 = { value: ref.current, done: false };
@@ -102,7 +102,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
               obj9.emojiName = emojiName;
               c6 = 4;
               c7 = 1;
-              const obj10 = { value: emojiId(6830).updateSound(obj9), done: false };
+              const obj10 = { value: emojiId(10262).updateSound(obj9), done: false };
               return obj10;
             }
           }
@@ -115,7 +115,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
         } else if (2 === tmp8) {
           c5 = 1;
           closure_130_2 = closure_4;
-          const tmp38 = new emojiName(6350)(closure_130_2);
+          const tmp38 = new emojiName(5667)(closure_130_2);
           closure_130_0 = tmp38;
           firstFieldErrorMessage = closure_130_0.getFirstFieldErrorMessage("name");
           if (null != firstFieldErrorMessage) {
@@ -130,8 +130,8 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
             const obj12 = { value: undefined, done: true };
             return obj12;
           }
-          emojiId(5594).presentError(closure_130_0.getAnyErrorMessage());
-          const obj3 = emojiId(5594);
+          emojiId(5598).presentError(closure_130_0.getAnyErrorMessage());
+          const obj3 = emojiId(5598);
         } else {
           if (3 === tmp8) {
             if (arg0 === 1) {

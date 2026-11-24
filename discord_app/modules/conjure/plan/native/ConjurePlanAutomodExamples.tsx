@@ -1,11 +1,11 @@
-// === Module 18583: ConjurePlanAutomodExamples ===
+// === Module 18624: ConjurePlanAutomodExamples ===
 
-// Module 18583 (ConjurePlanAutomodExamples)
+// Module 18624 (ConjurePlanAutomodExamples)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 18584 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 18625 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -61,7 +61,7 @@ function ExampleRow(showReason) {
 }
 function ExampleSection(arg0) {
   ({ group, firstIndex: require } = arg0);
-  let set;
+  set = undefined;
   const tmp = closure_8();
   const obj = require("ConjurePlanAutomodOutcomes").CONJURE_PLAN_AUTOMOD_SECTIONS[group.section];
   const examples = group.examples;
@@ -99,7 +99,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
 let closure_6 = { blurple: "text-brand", red: "text-feedback-critical", green: "text-feedback-positive" };
 let closure_7 = ["glazedgamer", "sprinkles", "donutking"];
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { card: { gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" }, rule: null, section: null, caption: null, dot: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 obj2.rule = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };

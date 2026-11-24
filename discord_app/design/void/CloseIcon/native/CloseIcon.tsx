@@ -1,7 +1,7 @@
-// === Module 15384: CloseIcon ===
+// === Module 15405: CloseIcon ===
 
-// Module 15384 (CloseIcon)
-import inlineStyles from "inlineStyles" /* 7865 */;
+// Module 15405 (CloseIcon)
+import inlineStyles from "inlineStyles" /* 7813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

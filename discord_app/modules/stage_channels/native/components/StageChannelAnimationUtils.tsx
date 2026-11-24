@@ -1,11 +1,11 @@
-// === Module 11064: StageChannelAnimationUtils ===
+// === Module 10413: StageChannelAnimationUtils ===
 
-// Module 11064 (StageChannelAnimationUtils)
+// Module 10413 (StageChannelAnimationUtils)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import StageChannelHeightHooks from "StageChannelHeightHooks" /* 10847 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10850 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import StageChannelHeightHooks from "StageChannelHeightHooks" /* 10123 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10125 */;
 import size from "module_2" /* 2 */;
 
 let obj = { duration: 250, easing: null };

@@ -1,18 +1,18 @@
-// === Module 19797: GuildSettingsModalSoundboard ===
+// === Module 19840: GuildSettingsModalSoundboard ===
 
-// Module 19797 (GuildSettingsModalSoundboard)
+// Module 19840 (GuildSettingsModalSoundboard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5943 */;
-import EmojiDefault from "Emoji" /* 7496 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8743 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12492 */;
-import SoundboardCreationUtils from "SoundboardCreationUtils" /* 19798 */;
-import showGuildSettingsModalSoundboardSoundInfoActionSheet from "showGuildSettingsModalSoundboardSoundInfoActionSheet" /* 19810 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6681 */;
+import EmojiDefault from "Emoji" /* 7362 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 10222 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12400 */;
+import SoundboardCreationUtils from "SoundboardCreationUtils" /* 19841 */;
+import showGuildSettingsModalSoundboardSoundInfoActionSheet from "showGuildSettingsModalSoundboardSoundInfoActionSheet" /* 19853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5961 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import SoundboardStore from "SoundboardStore" /* 6797 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -26,20 +26,20 @@ function SoundboardSoundRow(arg0) {
   const obj2 = { style: tmp.soundEmoji, children: null };
   if (null == sound.emojiId) {
     if (null == sound.emojiName) {
-      let tmp5Result = closure_11(sound(7688).ImageIcon, { size: "lg", color: "icon-subtle" });
+      let tmp5Result = closure_11(sound(7027).ImageIcon, { size: "lg", color: "icon-subtle" });
     }
     const obj3 = { icon: null, label: null, trailing: null, onPress: null };
     obj2.children = tmp5Result;
     obj3.icon = closure_11(closure_6, obj2);
     const obj4 = { variant: "heading-xs/semibold", color: "text-strong", style: tmp.name, children: sound.name };
-    const items2 = [closure_11(sound(5504).Text, obj4), ];
+    const items2 = [closure_11(sound(5508).Text, obj4), ];
     let tmp12Result = null;
     if (null != stateFromStores) {
       const obj5 = { style: tmp.userRow, children: null };
       const obj6 = { user: stateFromStores, size: sound(1186).AvatarSizes.XSMALL_20, guildId };
       const items3 = [closure_11(sound(1186).Avatar, obj6), ];
       const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: NicknameUtilsDefault.getName(guildId, undefined, stateFromStores) };
-      items3[1] = closure_11(sound(5504).Text, obj7);
+      items3[1] = closure_11(sound(5508).Text, obj7);
       obj5.children = items3;
       tmp12Result = closure_12(closure_6, obj5);
     }
@@ -49,7 +49,7 @@ function SoundboardSoundRow(arg0) {
     obj3.label = closure_12(closure_6, obj8);
     let tmp5Result2;
     if (canManage) {
-      tmp5Result2 = closure_11(sound(7058).TableRowArrow, {});
+      tmp5Result2 = closure_11(sound(6030).TableRowArrow, {});
     }
     obj3.trailing = tmp5Result2;
     obj3.onPress = onPress;
@@ -76,7 +76,7 @@ function AddSoundButton(guildId) {
   obj2.onPress = function onPress() {
     return SoundboardCreationUtils.showAddSoundboardSoundOptions(guildId);
   };
-  obj.children = closure_11(guildId(5511).Button, obj2);
+  obj.children = closure_11(guildId(5515).Button, obj2);
   return closure_11(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -84,17 +84,17 @@ get_ActivityIndicator = fn(17);
 const BoostedGuildTiers = fn(1071).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 }, label: null };
   const obj2 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 };
   obj.label = { marginBottom: nativeDefault.space.PX_8 };
   return obj;
 });
-createStyles = fn(4913);
+createStyles = fn(4917);
 let obj = { addSoundButton: { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj);
-createStyles = fn(4913);
+createStyles = fn(4917);
 let obj5 = { soundEmoji: null, soundEmojiImage: null, soundEmojiText: null, name: null, userRow: null };
 let size = { width: nativeDefault.space.PX_48, height: nativeDefault.space.PX_48, alignItems: "center", justifyContent: "center" };
 obj5.soundEmoji = size;
@@ -195,7 +195,7 @@ export default noop.memo(function GuildSettingsModalSoundboard(guildId) {
       continue;
     }
   }, items4);
-  const set = new Set();
+  set = new Set();
   const manageResourcePermissions = guildId(stateFromStores[29]).useManageResourcePermissions(guild);
   ({ canCreateExpressions, canManageGuildExpression: c4, canManageAllExpressions } = manageResourcePermissions);
   guildId(stateFromStores[30]);

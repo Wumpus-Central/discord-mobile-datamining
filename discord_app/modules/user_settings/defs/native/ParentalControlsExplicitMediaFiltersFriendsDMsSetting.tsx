@@ -1,20 +1,20 @@
-// === Module 17395: ParentalControlsExplicitMediaFiltersFriendsDMsSetting ===
+// === Module 17433: ParentalControlsExplicitMediaFiltersFriendsDMsSetting ===
 
-// Module 17395 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
+// Module 17433 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
 import util from "util" /* 1112 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8448 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16118 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16122 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8335 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8796 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16151 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16155 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8071 */;
 
 require = fn;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["+uI23H"]);
   },
-  parent: fn(8712).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(9414).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const parentalControlledExplicitContentSettings = useParentalControlSettings.useParentalControlledExplicitContentSettings();
     let prop;
@@ -32,7 +32,7 @@ const pressable = SettingBuilders.createPressable({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       const intl = selectedTeenId(1112).intl;
-      const obj = selectedTeenId(16122);
+      const obj = selectedTeenId(16155);
       const stringResult = intl.string(selectedTeenId(1112).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl2 = selectedTeenId(1112).intl;
@@ -43,8 +43,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       items = [selectedTeenId(1195).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(16128).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(16128);
+      const result = selectedTeenId(16161).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(16161);
     }
   },
   unsearchable: true

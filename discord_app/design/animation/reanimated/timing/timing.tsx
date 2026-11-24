@@ -1,9 +1,9 @@
-// === Module 5123: timing/timing ===
+// === Module 5127: timing/timing ===
 
-// Module 5123 (timing/timing)
+// Module 5127 (timing/timing)
 import _mod1653 from "module_1653" /* 1653 */;
-import ReanimatedConstants from "ReanimatedConstants" /* 5124 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5125 */;
+import ReanimatedConstants from "ReanimatedConstants" /* 5128 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5129 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function withTiming_timingTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){let[accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE_TIMING,ReduceMotion,REAwithTiming]=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE_TIMING:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithTiming(toValue,configForRea,callback);})" }, reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING, _mod1653.ReduceMotion, _mod1653.withTiming];

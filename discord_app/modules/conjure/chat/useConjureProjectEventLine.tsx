@@ -1,9 +1,9 @@
-// === Module 18487: useConjureProjectEventLine ===
+// === Module 18528: useConjureProjectEventLine ===
 
-// Module 18487 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 11977 */;
+// Module 18528 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11406 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;

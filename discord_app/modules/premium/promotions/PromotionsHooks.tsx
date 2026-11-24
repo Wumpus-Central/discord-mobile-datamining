@@ -1,12 +1,12 @@
-// === Module 9946: PromotionsHooks ===
+// === Module 13847: PromotionsHooks ===
 
-// Module 9946 (PromotionsHooks)
+// Module 13847 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
-import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9400 */;
-import PromotionUtils from "PromotionUtils" /* 9401 */;
+import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9259 */;
+import PromotionUtils from "PromotionUtils" /* 9260 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
-import PromotionsStore from "PromotionsStore" /* 9143 */;
+import PromotionsStore from "PromotionsStore" /* 9021 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
   const stateFromStores1 = flag(stateFromStores[4]).useStateFromStores(items2, () => PromotionsStore.claimedOutboundPromotionCodes);
   const items3 = [stateFromStoresArray, stateFromStores, stateFromStores1, flag];
   return stateFromStores1.useMemo(() => {
-    let set = null;
+    set = null;
     if (set) {
       const _Set = Set;
       set = new Set(stateFromStores1.map((promotion) => promotion.promotion.id));
@@ -109,7 +109,7 @@ export function useOutboundPromotions() {
   activeOutboundPromotions = useEligibleActiveOutboundPromotions({ includeClaimedPromotions: true });
   const items7 = [activeOutboundPromotions, stateFromStores2];
   const claimedEndedOutboundPromotions = activeOutboundPromotions.useMemo(() => {
-    const set = new Set(activeOutboundPromotions.map((id) => id.id));
+    set = new Set(activeOutboundPromotions.map((id) => id.id));
     return stateFromStores2.filter((promotion) => {
       promotion = promotion.promotion;
       const hasItem = set.has(promotion.id);

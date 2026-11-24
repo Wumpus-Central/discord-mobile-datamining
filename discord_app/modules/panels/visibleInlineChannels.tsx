@@ -1,6 +1,6 @@
-// === Module 6669: visibleInlineChannels ===
+// === Module 6855: visibleInlineChannels ===
 
-// Module 6669 (visibleInlineChannels)
+// Module 6855 (visibleInlineChannels)
 import size from "module_2" /* 2 */;
 
 const map = new Map();
@@ -10,7 +10,7 @@ export function registerVisibleInlineChannel(channelId, windowId) {
   value = map.get(channelId);
   if (null == value) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const result = map.set(channelId, set);
     value = set;
   }

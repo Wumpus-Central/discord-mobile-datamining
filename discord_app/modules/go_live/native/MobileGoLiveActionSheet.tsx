@@ -1,43 +1,43 @@
-// === Module 10937: MobileGoLiveActionSheet ===
+// === Module 10217: MobileGoLiveActionSheet ===
 
-// Module 10937 (MobileGoLiveActionSheet)
+// Module 10217 (MobileGoLiveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import _modDef2575 from "module_2575" /* 2575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5809 */;
-import StreamActionCreators from "StreamActionCreators" /* 6456 */;
-import NativeViewDefault from "NativeView" /* 7324 */;
-import TableRadioRow from "TableRadioRow" /* 7349 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7388 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10459 */;
-import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 10938 */;
-import SpeedometerIcon from "SpeedometerIcon" /* 10943 */;
-import ImageSparkleIcon from "ImageSparkleIcon" /* 10945 */;
-import _modDef10947 from "module_10947" /* 10947 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5870 */;
+import NativeViewDefault from "NativeView" /* 6929 */;
+import TableRadioRow from "TableRadioRow" /* 7127 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7198 */;
+import StreamActionCreators from "StreamActionCreators" /* 8278 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9445 */;
+import _modDef9494 from "module_9494" /* 9494 */;
+import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 10218 */;
+import SpeedometerIcon from "SpeedometerIcon" /* 10234 */;
+import ImageSparkleIcon from "ImageSparkleIcon" /* 10236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5837 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5903 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(5754).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(5817).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5658).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5729).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { wrapper: { gap: nativeDefault.space.PX_24 }, header: { textAlign: "center" }, section: null, highQualityLabel: null };
 let obj3 = { gap: nativeDefault.space.PX_24 };
 obj.section = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -211,7 +211,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
           obj10.children = intl5.string(_modDef2575.nMcXo1);
           items = [gesture(Text_Text.Text, obj10), ];
           const tmp8Result = NativeViewDefault;
-          items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef10947, size: "xs" });
+          items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef9494, size: "xs" });
           obj9.children = items;
           obj8.label = colors(tmp8Result, obj9);
           if (null != maxSettingsForPreset2) {
@@ -312,5 +312,5 @@ export function showMobileGoLiveActionSheet(location_stack) {
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(10937, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10217, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 }

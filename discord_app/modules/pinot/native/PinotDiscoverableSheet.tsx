@@ -1,14 +1,14 @@
-// === Module 7768: PinotDiscoverableSheet ===
+// === Module 8407: PinotDiscoverableSheet ===
 
-// Module 7768 (PinotDiscoverableSheet)
+// Module 8407 (PinotDiscoverableSheet)
 import util from "util" /* 1112 */;
-import _modDef3508 from "module_3508" /* 3508 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import TableRadioGroup from "TableRadioGroup" /* 7347 */;
-import TableRadioRow from "TableRadioRow" /* 7349 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7515 */;
-import ActionSheet from "ActionSheet" /* 7553 */;
-import PinotDiscoverable from "PinotDiscoverable" /* 7747 */;
+import _modDef3510 from "module_3510" /* 3510 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import TableRadioGroup from "TableRadioGroup" /* 7125 */;
+import TableRadioRow from "TableRadioRow" /* 7127 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7381 */;
+import ActionSheet from "ActionSheet" /* 7420 */;
+import PinotDiscoverable from "PinotDiscoverable" /* 8389 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotDiscoverabl
 export default function PinotDiscoverableSheet(defaultValue) {
   ({ options, onChange: require } = defaultValue);
   let intl = util.intl;
-  const stringResult = intl.string(_modDef3508["r/o6RM"]);
+  const stringResult = intl.string(_modDef3510["r/o6RM"]);
   let obj = {
     startExpanded: true,
     header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult }),

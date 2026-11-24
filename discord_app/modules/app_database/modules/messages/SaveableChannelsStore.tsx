@@ -1,17 +1,17 @@
-// === Module 8271: SaveableChannelsStore ===
+// === Module 8111: SaveableChannelsStore ===
 
-// Module 8271 (SaveableChannelsStore)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 8273 */;
-import Lru from "Lru" /* 8274 */;
-import isPrivateChannel from "isPrivateChannel" /* 8276 */;
-import isReadableChannel from "isReadableChannel" /* 8277 */;
-import isLimitedChannel from "isLimitedChannel" /* 8278 */;
-import withFallbacks from "withFallbacks" /* 8279 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5534 */;
+// Module 8111 (SaveableChannelsStore)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 8113 */;
+import Lru from "Lru" /* 8114 */;
+import isPrivateChannel from "isPrivateChannel" /* 8116 */;
+import isReadableChannel from "isReadableChannel" /* 8117 */;
+import isLimitedChannel from "isLimitedChannel" /* 8118 */;
+import withFallbacks from "withFallbacks" /* 8119 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5538 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1070 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import FileSystemStore from "FileSystemStore" /* 8272 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import FileSystemStore from "FileSystemStore" /* 8112 */;
 
 require = fn;
 function handleSelectedChannelStoreChanged() {
@@ -85,9 +85,9 @@ function handleCacheLoadedLazyNoCache() {
 }
 let lastChannel = null;
 const bound = Math.max(25, 25, 1);
-let extendedMemoryLru = new fn(8273).ExtendedMemoryLru(750, 500);
+let extendedMemoryLru = new fn(8113).ExtendedMemoryLru(750, 500);
 let global = extendedMemoryLru;
-let lru = new fn(8274).Lru(15);
+let lru = new fn(8114).Lru(15);
 let c9 = false;
 let SaveableChannelsStore;
 class SaveableChannelsStore extends tmp3 {
@@ -195,7 +195,7 @@ SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
     }
     continue;
   }
-  const set = new Set();
+  set = new Set();
   const items1 = [snapshot.penalized, lru.keys()];
   for (const item10067 of items1) {
     for (const item10072 of item10067) {

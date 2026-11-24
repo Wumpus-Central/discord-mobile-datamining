@@ -1,6 +1,6 @@
-// === Module 12940: ApplicationDirectoryCollectionsStore ===
+// === Module 12859: ApplicationDirectoryCollectionsStore ===
 
-// Module 12940 (ApplicationDirectoryCollectionsStore)
+// Module 12859 (ApplicationDirectoryCollectionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

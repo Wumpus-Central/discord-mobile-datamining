@@ -1,10 +1,10 @@
-// === Module 7067: TwoWayLinkPreConnect ===
+// === Module 7631: TwoWayLinkPreConnect ===
 
-// Module 7067 (TwoWayLinkPreConnect)
+// Module 7631 (TwoWayLinkPreConnect)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7068 */;
-import TwoWayLinkType from "TwoWayLinkType" /* 7071 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7406 */;
+import TwoWayLinkType from "TwoWayLinkType" /* 7632 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const WebBrowserType = fn(1071).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");

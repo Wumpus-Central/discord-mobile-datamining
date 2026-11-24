@@ -1,19 +1,19 @@
-// === Module 10064: Autocompleter ===
+// === Module 8807: Autocompleter ===
 
-// Module 10064 (Autocompleter)
+// Module 8807 (Autocompleter)
 import applyDefault from "apply" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1379 */;
 import _modDef2068 from "module_2068" /* 2068 */;
 import StringUtils from "StringUtils" /* 2152 */;
-import findCodedLinks from "findCodedLinks" /* 5631 */;
-import CodedLink from "CodedLink" /* 5635 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6556 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6678 */;
-import GuildUtilsDefault from "GuildUtils" /* 6679 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9649 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 6894 */;
-import LinkRecord from "LinkRecord" /* 10065 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import findCodedLinks from "findCodedLinks" /* 5635 */;
+import CodedLink from "CodedLink" /* 5639 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6743 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6863 */;
+import GuildUtilsDefault from "GuildUtils" /* 6864 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8809 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7503 */;
+import LinkRecord from "LinkRecord" /* 8808 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4843).GUILD_VOCAL_CHANNELS_KEY;
-fn(6675).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4847).GUILD_VOCAL_CHANNELS_KEY;
+fn(6860).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -161,7 +161,7 @@ prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCate
   this._refetchForSingleCategoryLimit = _refetchForSingleCategoryLimit;
 };
 prototype["setResultTypes"] = function setResultTypes(items) {
-  let set = null;
+  set = null;
   if (null != items) {
     const _Set = Set;
     set = new Set(items);

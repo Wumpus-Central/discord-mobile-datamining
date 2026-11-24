@@ -1,23 +1,23 @@
-// === Module 8350: GuildBasicChannels ===
+// === Module 8170: GuildBasicChannels ===
 
-// Module 8350 (GuildBasicChannels)
+// Module 8170 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4791 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4832 */;
-import PermissionUtils from "PermissionUtils" /* 4850 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4854 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4836 */;
+import PermissionUtils from "PermissionUtils" /* 4854 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4763 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4767 */;
 
 require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -72,7 +72,7 @@ function haveSelfMemberPermissionInputsChanged(roles, member) {
     if (!tmp2) {
       roles = member.roles;
       const roles1 = roles.roles;
-      let set;
+      set = undefined;
       let flag = false;
       if (roles.length === roles1.length) {
         const _Set = Set;
@@ -118,7 +118,7 @@ function haveRolesChangedSinceSync(id, value, op) {
   if (roles1 === undefined) {
     items = [];
   }
-  let set;
+  set = undefined;
   let map;
   if ("update" === op.op) {
     if (0 === op.writes.length) {
@@ -253,8 +253,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(4766).createChannelRecordFromServer;
-const ChannelLoader = fn(4762).ChannelLoader;
+let closure_7 = fn(4770).createChannelRecordFromServer;
+const ChannelLoader = fn(4766).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -314,9 +314,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(4791).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4791).basicChannels(closure_0);
-    items[1] = tmp3(4791).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(4795).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4795).basicChannels(closure_0);
+    items[1] = tmp3(4795).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -566,7 +566,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_16.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "r" }, done: true };
+                            const obj5 = { value: { v: "Array" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

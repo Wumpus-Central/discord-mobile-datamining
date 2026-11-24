@@ -1,24 +1,24 @@
-// === Module 16279: FriendRequestsMutualGuildsSetting ===
+// === Module 16312: FriendRequestsMutualGuildsSetting ===
 
-// Module 16279 (FriendRequestsMutualGuildsSetting)
+// Module 16312 (FriendRequestsMutualGuildsSetting)
 import util from "util" /* 1112 */;
 import FlagUtilsAll from "FlagUtils" /* 1404 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16118 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7225 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1071).FriendSourceFlags;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(8712).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9414).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const FriendSourceFlagsSetting = setting(4738).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(4742).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualGuilds;

@@ -1,8 +1,8 @@
-// === Module 6928: conjureChatHistory ===
+// === Module 7536: conjureChatHistory ===
 
-// Module 6928 (conjureChatHistory)
+// Module 7536 (conjureChatHistory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 6927 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 7535 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -355,7 +355,7 @@ export function foldDividers(items) {
     return items;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     return items.flatMap((contextSwitch) => {
       contextSwitch = contextSwitch.contextSwitch;
       let id;

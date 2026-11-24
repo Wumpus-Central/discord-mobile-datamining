@@ -1,11 +1,11 @@
-// === Module 10678: ApplicationCommandOptionUtils ===
+// === Module 9950: ApplicationCommandOptionUtils ===
 
-// Module 10678 (ApplicationCommandOptionUtils)
+// Module 9950 (ApplicationCommandOptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2117 */;
-import RegexUtilsDefault from "RegexUtils" /* 5538 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5937 */;
-import numberParts from "numberParts" /* 10679 */;
+import RegexUtilsDefault from "RegexUtils" /* 5542 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6947 */;
+import numberParts from "numberParts" /* 9951 */;
 import size from "module_2" /* 2 */;
 
 function getString(arg0, arg1) {

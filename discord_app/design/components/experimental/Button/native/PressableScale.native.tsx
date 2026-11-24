@@ -1,8 +1,8 @@
-// === Module 7605: PressableScale ===
+// === Module 8353: PressableScale ===
 
-// Module 7605 (PressableScale)
+// Module 8353 (PressableScale)
 import _mod1653 from "module_1653" /* 1653 */;
-import ButtonHooks from "ButtonHooks" /* 5518 */;
+import ButtonHooks from "ButtonHooks" /* 5522 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

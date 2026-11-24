@@ -1,7 +1,7 @@
-// === Module 5740: VideoCodecUtils ===
+// === Module 5803: VideoCodecUtils ===
 
-// Module 5740 (VideoCodecUtils)
-import Constants from "Constants" /* 5658 */;
+// Module 5803 (VideoCodecUtils)
+import Constants from "Constants" /* 5729 */;
 import size from "module_2" /* 2 */;
 
 const ExperimentFlags = Constants.ExperimentFlags;
@@ -15,7 +15,7 @@ export function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodec
     flag = false;
   }
   items = undefined;
-  let set;
+  set = undefined;
   const combined = experimentCodecs.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
@@ -78,7 +78,7 @@ export function filterVideoCodecs(arg0, arr) {
     flag = false;
   }
   items = undefined;
-  let set;
+  set = undefined;
   const combined = arr.concat(items);
   items = [];
   const item = combined.forEach((encode) => {

@@ -1,8 +1,8 @@
-// === Module 15981: AgeNoticeSettingsPredicate ===
+// === Module 16014: AgeNoticeSettingsPredicate ===
 
-// Module 15981 (AgeNoticeSettingsPredicate)
-import AgeNoticeConstants from "AgeNoticeConstants" /* 6422 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6423 */;
+// Module 16014 (AgeNoticeSettingsPredicate)
+import AgeNoticeConstants from "AgeNoticeConstants" /* 6710 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6711 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = AgeNoticeConstants.AGE_NOTICE_SETTINGS_LOCATION;

@@ -1,13 +1,13 @@
-// === Module 10688: openFrame ===
+// === Module 9962: openFrame ===
 
-// Module 10688 (openFrame)
+// Module 9962 (openFrame)
 import router_utils from "router_utils" /* 1098 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5557 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10622 */;
-import FramesStore from "FramesStore" /* 6623 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5561 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9855 */;
+import FramesStore from "FramesStore" /* 6810 */;
 
 require = fn;
-const FramesConstants = fn(6624);
+const FramesConstants = fn(6811);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const Routes = fn(1071).Routes;
 const size = fn(2);

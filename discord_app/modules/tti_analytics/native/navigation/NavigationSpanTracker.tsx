@@ -1,11 +1,11 @@
-// === Module 10427: NavigationSpanTracker ===
+// === Module 12353: NavigationSpanTracker ===
 
-// Module 10427 (NavigationSpanTracker)
+// Module 12353 (NavigationSpanTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import v1 from "v1" /* 1268 */;
-import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 10428 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 10429 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 10430 */;
+import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 12354 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 12355 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 12356 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -66,7 +66,7 @@ prototype["subscribe"] = function subscribe(definition, destinationKey, arg2) {
   const surfaceKey = this.getSurfaceKey(definition, destinationKey);
   let listenersBySurface = this.listenersBySurface;
   value = listenersBySurface.get(surfaceKey);
-  let set = value;
+  set = value;
   obj = value;
   if (null == value) {
     const _Set = Set;

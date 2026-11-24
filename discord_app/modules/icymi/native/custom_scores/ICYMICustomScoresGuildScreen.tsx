@@ -1,22 +1,22 @@
-// === Module 18098: ICYMICustomScoresGuildScreen ===
+// === Module 18137: ICYMICustomScoresGuildScreen ===
 
-// Module 18098 (ICYMICustomScoresGuildScreen)
+// Module 18137 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import ChannelListState from "ChannelListState" /* 8321 */;
-import ICYMIUtils from "ICYMIUtils" /* 10042 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12797 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18100 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import ChannelListState from "ChannelListState" /* 8145 */;
+import ICYMIUtils from "ICYMIUtils" /* 8781 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9675 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18139 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelListStore from "ChannelListStore" /* 8319 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
-import ICYMIStore from "ICYMIStore" /* 10033 */;
+import ChannelListStore from "ChannelListStore" /* 8143 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
+import ICYMIStore from "ICYMIStore" /* 8772 */;
 
 require = fn;
 function ICYMICustomScoreChannelRow(channelId) {
@@ -108,7 +108,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 }, guildHeader: null, categoryHeader: null, channelNameContainer: null, channelMutedIcon: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.guildHeader = { marginBottom: nativeDefault.space.PX_32 };
@@ -151,9 +151,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(10042).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(8781).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(10042);
+  const tmp2Result3 = navigation(8781);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () => ChannelListStore.getGuild(guildId)).guildChannels;
   const items4 = [numberToCustomScoreResult, guildChannels];
@@ -265,6 +265,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(7490).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(7356).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 };

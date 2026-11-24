@@ -1,6 +1,6 @@
-// === Module 10037: ICYMITypes ===
+// === Module 8776: ICYMITypes ===
 
-// Module 10037 (ICYMITypes)
+// Module 8776 (ICYMITypes)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

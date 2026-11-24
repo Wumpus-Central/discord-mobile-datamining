@@ -1,14 +1,14 @@
-// === Module 12890: GameInvitesChannelUtils ===
+// === Module 12809: GameInvitesChannelUtils ===
 
-// Module 12890 (GameInvitesChannelUtils)
+// Module 12809 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
-import ActivityTypes from "ActivityTypes" /* 5652 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6672 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7750 */;
-import hasFlagDefault from "hasFlag" /* 8061 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 11673 */;
+import ActivityTypes from "ActivityTypes" /* 5889 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6858 */;
+import hasFlagDefault from "hasFlag" /* 8260 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8392 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 11558 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1071);
 ({ ActivityFlags: metroImportDefault, MAX_CHANNEL_NAME_LENGTH: closure_8 } = Constants);
-const ChannelFlags = fn(4769).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(8506).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(4773).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(8027).MAX_FORUM_POST_TAGS;
 let c11 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
@@ -132,7 +132,7 @@ export function useSubscribeToGameInvitePostAuthors(isGameInvitesChannel, arg1) 
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     if (isGameInvitesChannelResult) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       items = [];
       const tmp7 = dependencyMap[Symbol.iterator]();
       while (tmp7 !== undefined) {

@@ -1,6 +1,6 @@
-// === Module 18361: databaseRestoreResultFromStatus ===
+// === Module 18400: databaseRestoreResultFromStatus ===
 
-// Module 18361 (databaseRestoreResultFromStatus)
+// Module 18400 (databaseRestoreResultFromStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/history/ConjureDatabaseRestoreResult.tsx");

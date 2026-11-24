@@ -1,6 +1,6 @@
-// === Module 18314: conjureFileMentions ===
+// === Module 18353: conjureFileMentions ===
 
-// Module 18314 (conjureFileMentions)
+// Module 18353 (conjureFileMentions)
 import _modDef2068 from "module_2068" /* 2068 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export function withoutInlineFileMentions(attachments, content) {
       const _Set = Set;
       const _Set2 = Set;
       const _Array = Array;
-      const set = new Set(Array.from(content.matchAll(regExp), (arg0) => arg0[1]));
+      set = new Set(Array.from(content.matchAll(regExp), (arg0) => arg0[1]));
       items = [];
       HermesBuiltin.arraySpread(set, 0);
       return attachments.filter((id) => {

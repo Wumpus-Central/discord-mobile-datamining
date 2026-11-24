@@ -1,9 +1,9 @@
-// === Module 13989: BadgeDirectorySeenStore ===
+// === Module 9731: BadgeDirectorySeenStore ===
 
-// Module 13989 (BadgeDirectorySeenStore)
+// Module 9731 (BadgeDirectorySeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BadgeUtils from "BadgeUtils" /* 13990 */;
+import BadgeUtils from "BadgeUtils" /* 9729 */;
 
 require = fn;
 let obj = { seenBadgeIndicatorIds: new Set() };
@@ -40,7 +40,7 @@ obj2 = {
       const _Set = Set;
       items = [];
       items[HermesBuiltin.arraySpread(obj2.seenBadgeIndicatorIds, 0)] = badgeId;
-      const set = new Set(items);
+      set = new Set(items);
       obj.seenBadgeIndicatorIds = set;
     }
     return false;
@@ -56,7 +56,7 @@ obj2 = {
         const _Set = Set;
         items = [];
         items[HermesBuiltin.arraySpread(obj2.seenBadgeIndicatorIds, 0)] = badgeId;
-        const set = new Set(items);
+        set = new Set(items);
         obj2.seenBadgeIndicatorIds = set;
       }
       isBetaBadgeIdResult = flag;

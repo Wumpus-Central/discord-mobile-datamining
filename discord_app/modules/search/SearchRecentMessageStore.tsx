@@ -1,6 +1,6 @@
-// === Module 13206: SearchRecentMessageStore ===
+// === Module 13120: SearchRecentMessageStore ===
 
-// Module 13206 (SearchRecentMessageStore)
+// Module 13120 (SearchRecentMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -26,7 +26,7 @@ const searchRecentMessageStore = new SearchRecentMessageStore(DispatcherDefault,
     ({ guildId, data } = arg0);
     c0 = undefined;
     items = undefined;
-    let set;
+    set = undefined;
     if (null == guildId) {
       return false;
     } else {

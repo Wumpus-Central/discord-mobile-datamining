@@ -1,6 +1,6 @@
-// === Module 4979: TransitionGroup/TransitionGroup ===
+// === Module 4983: TransitionGroup/TransitionGroup ===
 
-// Module 4979 (TransitionGroup/TransitionGroup)
+// Module 4983 (TransitionGroup/TransitionGroup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ class TransitionGroup {
       if (current != null) {
         keys = current.keys();
       }
-      const set = new Set(keys);
+      set = new Set(keys);
       const map = new Map(ref2.current);
       function _loop() {
         const tmp2 = getItemKey(item);

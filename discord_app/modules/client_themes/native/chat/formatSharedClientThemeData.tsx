@@ -1,10 +1,10 @@
-// === Module 14272: formatSharedClientThemeData ===
+// === Module 14303: formatSharedClientThemeData ===
 
-// Module 14272 (formatSharedClientThemeData)
+// Module 14303 (formatSharedClientThemeData)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1112 */;
-import _modDef3056 from "module_3056" /* 3056 */;
-import _modDef8840 from "module_8840" /* 8840 */;
+import _modDef3058 from "module_3058" /* 3058 */;
+import _modDef9497 from "module_9497" /* 9497 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -21,14 +21,14 @@ export function formatSharedClientThemeData(message, ensureAvatarSourceResult, n
       str2 = ensureAvatarSourceResult.uri;
     }
     obj.createdByAvatarUrl = str2;
-    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8840).uri;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef9497).uri;
     const intl = util.intl;
     obj.previewLabel = intl.string(util.t.SKNnqq);
     const intl2 = util.intl;
-    obj.previewHeading = intl2.string(_modDef3056.yl1iMm);
+    obj.previewHeading = intl2.string(_modDef3058.yl1iMm);
     const intl3 = util.intl;
     const _HermesInternal = HermesInternal;
-    obj.createdByLabel = "" + intl3.format(_modDef3056.fQPSEf, { username: "__USERNAME__" });
+    obj.createdByLabel = "" + intl3.format(_modDef3058.fQPSEf, { username: "__USERNAME__" });
     return obj;
   }
 }

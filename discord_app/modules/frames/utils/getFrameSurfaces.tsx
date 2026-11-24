@@ -1,15 +1,15 @@
-// === Module 10673: getFrameSurfaces ===
+// === Module 9945: getFrameSurfaces ===
 
-// Module 10673 (getFrameSurfaces)
+// Module 9945 (getFrameSurfaces)
 import Constants from "Constants" /* 1071 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2150 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5557 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6661 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10674 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5561 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9946 */;
 import size from "module_2" /* 2 */;
 
 function getFrameSurfaces(application) {
-  const set = new Set();
+  set = new Set();
   if (null != application) {
     if (obj5.isRealApplication(application)) {
       let result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(application, EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);

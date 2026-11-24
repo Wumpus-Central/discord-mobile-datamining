@@ -1,8 +1,8 @@
-// === Module 14195: maybeShowUnsavedChangesAlert ===
+// === Module 9660: maybeShowUnsavedChangesAlert ===
 
-// Module 14195 (maybeShowUnsavedChangesAlert)
+// Module 9660 (maybeShowUnsavedChangesAlert)
 import util from "util" /* 1112 */;
-import AlertModal from "AlertModal" /* 5866 */;
+import AlertModal from "AlertModal" /* 5926 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -133,16 +133,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5098).dismissKeyboard();
-    const obj = onReset(5098);
+    onReset(5102).dismissKeyboard();
+    const obj = onReset(5102);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5127).hideActionSheet();
-      const tmp7Result = tmp7(5127);
-      tmp7(5861).close();
-      const tmp4Result = tmp4(5862);
+      tmp7(5131).hideActionSheet();
+      const tmp7Result = tmp7(5131);
+      tmp7(5921).close();
+      const tmp4Result = tmp4(5922);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(5861);
+      const tmp7Result3 = tmp7(5921);
     } else {
       const obj4 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
       const intl = tmp4(1112).intl;
@@ -160,10 +160,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(5861).show(obj4);
-      const tmp7Result4 = tmp7(5861);
+      tmp7(5921).show(obj4);
+      const tmp7Result4 = tmp7(5921);
     }
-    obj2 = onReset(14196);
+    obj2 = onReset(9661);
   } else {
     onContinue();
   }

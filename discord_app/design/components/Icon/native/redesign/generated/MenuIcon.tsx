@@ -1,9 +1,9 @@
-// === Module 17328: MenuIcon ===
+// === Module 17366: MenuIcon ===
 
-// Module 17328 (MenuIcon)
+// Module 17366 (MenuIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod17329 from "module_17329" /* 17329 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod17367 from "module_17367" /* 17367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MenuIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17329, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17367, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

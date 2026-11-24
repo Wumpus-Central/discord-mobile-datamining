@@ -1,66 +1,66 @@
-// === Module 11893: Messages ===
+// === Module 11766: Messages ===
 
-// Module 11893 (Messages)
+// Module 11766 (Messages)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6659 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10088 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10381 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 8948 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4761 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 6918 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7526 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11894 */;
-import CacheStore from "CacheStore" /* 8269 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6620 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10412 */;
-import EmojiStore from "EmojiStore" /* 6573 */;
-import ExperimentStore from "ExperimentStore" /* 5530 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 8225 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11895 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6660 */;
-import BasicGuildStore from "BasicGuildStore" /* 8693 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8675 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6633 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8052 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 11899 */;
-import InteractionStore from "InteractionStore" /* 8249 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11901 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8678 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11902 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 8842 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11904 */;
-import PendingReplyStore from "PendingReplyStore" /* 8380 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 8339 */;
-import SummaryStore from "SummaryStore" /* 10419 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8466 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11767 */;
+import CacheStore from "CacheStore" /* 8109 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11768 */;
+import EmojiStore from "EmojiStore" /* 6757 */;
+import ExperimentStore from "ExperimentStore" /* 5534 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 8671 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11769 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6846 */;
+import BasicGuildStore from "BasicGuildStore" /* 11773 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8088 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5649 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8105 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8684 */;
+import InteractionStore from "InteractionStore" /* 8102 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11774 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 11775 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6263 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11777 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 9000 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11779 */;
+import PendingReplyStore from "PendingReplyStore" /* 8201 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 8160 */;
+import SummaryStore from "SummaryStore" /* 11649 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4851 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7982 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import EditMessageStore from "EditMessageStore" /* 8381 */;
-import GiftCodeStore from "GiftCodeStore" /* 11905 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6531 */;
-import InviteStore from "InviteStore" /* 5632 */;
-import MessageStore from "MessageStore" /* 5964 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
-import ReadStateStore from "ReadStateStore" /* 6619 */;
-import SessionsStore from "SessionsStore" /* 5656 */;
-import UploadStore from "UploadStore" /* 8531 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import EditMessageStore from "EditMessageStore" /* 8202 */;
+import GiftCodeStore from "GiftCodeStore" /* 11780 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6673 */;
+import InviteStore from "InviteStore" /* 5636 */;
+import MessageStore from "MessageStore" /* 6265 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
+import SessionsStore from "SessionsStore" /* 5727 */;
+import UploadStore from "UploadStore" /* 11808 */;
 import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
-import SKUStore from "SKUStore" /* 6674 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11931 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5657 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
+import SKUStore from "SKUStore" /* 6234 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 11809 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5728 */;
 
 require = fn;
 class MessagesConnected {
@@ -163,7 +163,7 @@ class MessagesConnected {
     items8[0] = stateFromStores;
     items8[1] = application_id;
     memo1 = obj6.useMemo(() => {
-      const set = new Set();
+      set = new Set();
       const item = channel.forEach((applicationId) => {
         if (tmp) {
           set.add(applicationId.applicationId);
@@ -263,7 +263,7 @@ class MessagesConnected {
     items18 = [];
     items18[0] = closure_6;
     stateFromStoresArray5 = tmp2Result12.useStateFromStoresArray(items18, () => {
-      const set = new Set();
+      set = new Set();
       const embeddedActivitiesByChannel = stateFromStores7.getEmbeddedActivitiesByChannel();
       let item = embeddedActivitiesByChannel.forEach((arr, index) => {
         closure_0 = index;
@@ -339,13 +339,14 @@ class MessagesConnected {
       }
       return items;
     }, items25);
+    tmp46 = closure_1(tmp3[68])(stateFromStores, guildId, id);
     tmp2Result19 = tmp2(tmp3[59]);
     items26 = [];
     items26[0] = closure_9;
     stateFromStores9 = tmp2Result19.useStateFromStores(items26, () => items72.getBuildOverrides(), []);
-    tmp2Result20 = tmp2(tmp3[68]);
+    tmp2Result20 = tmp2(tmp3[69]);
     codedLinksExperimentEmbeds = tmp2Result20.useCodedLinksExperimentEmbeds();
-    tmp2Result21 = tmp2(tmp3[69]);
+    tmp2Result21 = tmp2(tmp3[70]);
     quests1 = tmp2Result21.useQuests({ fetchPolicy: "cache-or-network", callerSource: "messages_native" });
     ({ quests, isFetchingCurrentQuests } = quests1);
     found = stateFromStores.filter((type) => type.type === constants.PREMIUM_REFERRAL);
@@ -365,13 +366,13 @@ class MessagesConnected {
       });
       return mapped.filter(GlobalUtils.isNotNullish);
     });
-    tmp2Result23 = tmp2(tmp3[70]);
+    tmp2Result23 = tmp2(tmp3[71]);
     trialOffer = tmp2Result23.useTrialOffer(closure_65);
     tmp2Result24 = tmp2(tmp3[59]);
-    tmp51 = closure_54;
+    tmp52 = closure_54;
     items28 = [];
     items28[0] = closure_54;
-    stateFromStores10 = tmp2Result24.useStateFromStores(items28, () => stateFromStores(id[71]).isPremiumExactly(authStore2.getCurrentUser(), TIER_2.TIER_2));
+    stateFromStores10 = tmp2Result24.useStateFromStores(items28, () => stateFromStores(id[72]).isPremiumExactly(authStore2.getCurrentUser(), TIER_2.TIER_2));
     tmp2Result25 = tmp2(tmp3[59]);
     items29 = [];
     items29[0] = closure_41;
@@ -414,15 +415,15 @@ class MessagesConnected {
     items37[0] = closure_48;
     items38 = [];
     items38[0] = channel;
-    tmp57 = closure_48;
+    tmp58 = closure_48;
     stateFromStores15 = tmp2Result29.useStateFromStores(items37, () => PermissionStore.can(constants2.SEND_MESSAGES, channel), items38);
-    tmp59 = closure_1(tmp3[72])(id);
+    tmp60 = closure_1(tmp3[73])(id);
     tmp2Result30 = tmp2(tmp3[59]);
     items39 = [];
     items39[0] = closure_55;
     items40 = [];
     items40[0] = stateFromStores2;
-    tmp60 = closure_55;
+    tmp61 = closure_55;
     stateFromStores16 = tmp2Result30.useStateFromStores(items39, () => VoiceStateStore.getUserVoiceChannelId(closure_2_61, stateFromStores2), items40);
     tmp2Result31 = tmp2(tmp3[59]);
     items41 = [];
@@ -487,26 +488,26 @@ class MessagesConnected {
     tmp2Result40 = tmp2(tmp3[59]);
     items55 = [];
     items55[0] = closure_22;
-    tmp71 = closure_3(tmp2Result40.useStateFromStores(items55, () => {
+    tmp72 = closure_3(tmp2Result40.useStateFromStores(items55, () => {
       items = [LocalInteractionComponentStateStore.getInteractionComponentStates(), LocalInteractionComponentStateStore.getInteractionComponentStateVersion()];
       return items;
-    }, [], tmp2(tmp3[73]).isVersionEqual), 2);
-    [tmp72, tmp73] = tmp71;
+    }, [], tmp2(tmp3[74]).isVersionEqual), 2);
+    [tmp73, tmp74] = tmp72;
     tmp2Result41 = tmp2(tmp3[59]);
     items56 = [];
     items56[0] = closure_14;
     stateFromStores23 = tmp2Result41.useStateFromStores(items56, () => hasLoadedExperiments.hasLoadedExperiments);
-    tmp2Result42 = tmp2(tmp3[74]);
+    tmp2Result42 = tmp2(tmp3[75]);
     isSpamMessageRequest = tmp2Result42.useIsSpamMessageRequest(channel.id);
-    tmp2Result43 = tmp2(tmp3[75]);
-    tmp77 = null != stateFromStores;
+    tmp2Result43 = tmp2(tmp3[76]);
+    tmp78 = null != stateFromStores;
     isMessageRequest = tmp2Result43.useIsMessageRequest(channel.id);
-    if (tmp77) {
-      tmp78 = stateFromStores.ready || stateFromStores.cached;
-      tmp77 = tmp78;
+    if (tmp78) {
+      tmp79 = stateFromStores.ready || stateFromStores.cached;
+      tmp78 = tmp79;
     }
-    tmp79 = null != stateFromStores && stateFromStores.cached;
-    tmp80 = null != stateFromStores && stateFromStores.ready && !stateFromStores.loadingMore;
+    tmp80 = null != stateFromStores && stateFromStores.cached;
+    tmp81 = null != stateFromStores && stateFromStores.ready && !stateFromStores.loadingMore;
     tmp2Result44 = tmp2(tmp3[59]);
     items57 = [];
     items57[0] = closure_20;
@@ -549,9 +550,9 @@ class MessagesConnected {
     }, items61);
     tmp2Result48 = tmp2(tmp3[59]);
     items62 = [];
-    items62[0] = tmp57;
+    items62[0] = tmp58;
     stateFromStores27 = tmp2Result48.useStateFromStores(items62, () => PermissionStore.can(constants2.MODERATE_MEMBERS, stateFromStores1));
-    tmp2Result49 = tmp2(tmp3[77]);
+    tmp2Result49 = tmp2(tmp3[78]);
     id1 = undefined;
     if (stateFromStores1 != null) {
       id1 = stateFromStores1.id;
@@ -560,7 +561,7 @@ class MessagesConnected {
     items63 = [];
     items63[0] = closure_37;
     stateFromStores28 = tmp2Result50.useStateFromStores(items63, () => locale.locale);
-    tmp2Result51 = tmp2(tmp3[78]);
+    tmp2Result51 = tmp2(tmp3[79]);
     isPaymentsBlocked = tmp2Result51.useIsPaymentsBlocked();
     tmp2Result52 = tmp2(tmp3[59]);
     items64 = [];
@@ -584,10 +585,10 @@ class MessagesConnected {
     items67 = [];
     items67[0] = closure_10;
     stateFromStores32 = tmp2Result55.useStateFromStores(items67, () => stateFromStoresArray9.getLazyCacheStatus());
-    tmp2Result56 = tmp2(tmp3[79]);
+    tmp2Result56 = tmp2(tmp3[80]);
     messageJumpAndroidKeyboardHeight = tmp2Result56.useMessageJumpAndroidKeyboardHeight();
-    tmp94 = tmp26(tmp3[80])();
-    tmp2Result57 = tmp2(tmp3[81]);
+    tmp95 = tmp26(tmp3[81])();
+    tmp2Result57 = tmp2(tmp3[82]);
     channelSummariesExperiment = tmp2Result57.useChannelSummariesExperiment(channel);
     closure_8 = channelSummariesExperiment;
     tmp2Result58 = tmp2(tmp3[59]);
@@ -606,7 +607,7 @@ class MessagesConnected {
     items70 = [, , , , ];
     items70[0] = channel.id;
     ({ hasMoreAfter: arr74[1], hasMoreBefore: arr74[2], length: arr74[3], ready: arr74[4] } = stateFromStores);
-    tmp97 = tmp26(tmp3[82])(channel.id);
+    tmp98 = tmp26(tmp3[83])(channel.id);
     effect1 = obj6.useEffect(() => {
       const ready = stateFromStores.ready;
       let hasMoreAfter = !ready;
@@ -625,32 +626,32 @@ class MessagesConnected {
         const result = obj.updateChannelDimensions(channel.id, Date.now(), 1, 1, 0);
       }
     }, items70);
-    tmp2Result59 = tmp2(tmp3[84]);
-    shouldTrackAnnouncementMessageViews = tmp2Result59.useShouldTrackAnnouncementMessageViews({ guild: stateFromStores1, channel, messages: stateFromStores, isMessagesReady: tmp77 });
-    tmp2Result60 = tmp2(tmp3[84]);
-    shouldTrackRichPresenceInviteEmbedViews = tmp2Result60.useShouldTrackRichPresenceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp77 });
-    tmp2Result61 = tmp2(tmp3[84]);
-    shouldTrackOfficialMessageViews = tmp2Result61.useShouldTrackOfficialMessageViews({ guild: stateFromStores1, messages: stateFromStores, isMessagesReady: tmp77 });
-    tmp2Result62 = tmp2(tmp3[84]);
-    shouldTrackVoiceInviteEmbedViews = tmp2Result62.useShouldTrackVoiceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp77 });
-    tmp2Result63 = tmp2(tmp3[85]);
+    tmp2Result59 = tmp2(tmp3[85]);
+    shouldTrackAnnouncementMessageViews = tmp2Result59.useShouldTrackAnnouncementMessageViews({ guild: stateFromStores1, channel, messages: stateFromStores, isMessagesReady: tmp78 });
+    tmp2Result60 = tmp2(tmp3[85]);
+    shouldTrackRichPresenceInviteEmbedViews = tmp2Result60.useShouldTrackRichPresenceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp78 });
+    tmp2Result61 = tmp2(tmp3[85]);
+    shouldTrackOfficialMessageViews = tmp2Result61.useShouldTrackOfficialMessageViews({ guild: stateFromStores1, messages: stateFromStores, isMessagesReady: tmp78 });
+    tmp2Result62 = tmp2(tmp3[85]);
+    shouldTrackVoiceInviteEmbedViews = tmp2Result62.useShouldTrackVoiceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp78 });
+    tmp2Result63 = tmp2(tmp3[86]);
     shouldDisplaySpoilerObscurity = tmp2Result63.useShouldDisplaySpoilerObscurity(channel);
-    tmp2Result64 = tmp2(tmp3[86]);
+    tmp2Result64 = tmp2(tmp3[87]);
     items71 = [, ];
     items71[0] = id;
     items71[1] = guildId;
     isAgeVerified = tmp2Result64.useIsAgeVerified();
     effect2 = obj6.useEffect(() => {
-      stateFromStores(id[87]).handleChannelSelect();
+      stateFromStores(id[88]).handleChannelSelect();
       return () => {
-        stateFromStores(id[87]).handleChannelSelect();
+        stateFromStores(id[88]).handleChannelSelect();
       };
     }, items71);
-    tmp2Result65 = tmp2(tmp3[88]);
+    tmp2Result65 = tmp2(tmp3[89]);
     shouldDisableInteractiveComponents = tmp2Result65.useShouldDisableInteractiveComponents(channel.id);
     items72 = [];
     closure_9 = items72;
-    tmp107 = closure_28(channel.id);
+    tmp108 = closure_28(channel.id);
     item = stateFromStores.forEach((messageReference) => {
       messageReference = messageReference.messageReference;
       let message_id;
@@ -661,7 +662,7 @@ class MessagesConnected {
         items72.push(message_id);
       }
     });
-    tmp109 = closure_29(items72);
+    tmp110 = closure_29(items72);
     tmp2Result66 = tmp2(tmp3[59]);
     items73 = [];
     items73[0] = closure_15;
@@ -672,12 +673,12 @@ class MessagesConnected {
     items75 = [];
     items75[0] = closure_27;
     stateFromStores35 = tmp2Result67.useStateFromStores(items75, () => pendingConnection.getPendingConnection());
-    tmp112 = tmp26(tmp3[89])();
-    tmp113 = tmp26(tmp3[90])(stateFromStores);
-    ({ unloadedContentEntryMessageIds, unloadableContentEntryMessageIds } = tmp113);
+    tmp113 = tmp26(tmp3[90])();
+    tmp114 = tmp26(tmp3[91])(stateFromStores);
+    ({ unloadedContentEntryMessageIds, unloadableContentEntryMessageIds } = tmp114);
     tmp2Result68 = tmp2(tmp3[59]);
     items76 = [];
-    items76[0] = tmp51;
+    items76[0] = tmp52;
     stateFromStores36 = tmp2Result68.useStateFromStores(items76, () => {
       const currentUser = authStore2.getCurrentUser();
       let flag;
@@ -693,7 +694,7 @@ class MessagesConnected {
     items77 = [];
     items77[0] = closure_18;
     stateFromStores37 = tmp2Result69.useStateFromStores(items77, () => version.getVersion());
-    tmp2Result70 = tmp2(tmp3[91]);
+    tmp2Result70 = tmp2(tmp3[92]);
     colorStore = tmp2Result70.useColorStore((palette) => Object.keys(palette.palette).length);
     tmp2Result71 = tmp2(tmp3[59]);
     items78 = [];
@@ -701,7 +702,7 @@ class MessagesConnected {
     stateFromStores38 = tmp2Result71.useStateFromStores(items78, () => EmojiStore.getGuildEmoji(guildId));
     tmp2Result72 = tmp2(tmp3[59]);
     items79 = [];
-    items79[0] = tmp60;
+    items79[0] = tmp61;
     items80 = [];
     items80[0] = guildId;
     stateFromStores39 = tmp2Result72.useStateFromStores(items79, () => {
@@ -732,7 +733,7 @@ class MessagesConnected {
           id1 = channel.id;
         }
         if (null != id1) {
-          let obj4 = channel(id[92]);
+          let obj4 = channel(id[93]);
           if (obj4.isVoiceChannelInvite(tmp3)) {
             id = tmp3.channel.id;
             guild = tmp3.guild;
@@ -792,7 +793,7 @@ class MessagesConnected {
     }, []);
     tmp2Result77 = tmp2(tmp3[59]);
     items85 = [];
-    items85[0] = tmp51;
+    items85[0] = tmp52;
     stateFromStores40 = tmp2Result77.useStateFromStores(items85, () => {
       const currentUser = authStore2.getCurrentUser();
       let displayNameStyles;
@@ -801,25 +802,25 @@ class MessagesConnected {
       }
       return displayNameStyles;
     });
-    tmp2Result78 = tmp2(tmp3[93]);
+    tmp2Result78 = tmp2(tmp3[94]);
     socialLayerStorefrontEmbedData = tmp2Result78.useSocialLayerStorefrontEmbedData(stateFromStores);
-    tmp125 = tmp26(tmp3[94])(stateFromStores);
-    tmp126 = jsxs;
+    tmp126 = tmp26(tmp3[95])(stateFromStores);
+    tmp127 = jsxs;
     obj1 = { profile: null, children: null };
-    tmp26Result = tmp26(tmp3[95]);
-    obj1.profile = tmp2(tmp3[95]).Profiles.Messages;
+    tmp26Result = tmp26(tmp3[96]);
+    obj1.profile = tmp2(tmp3[96]).Profiles.Messages;
     isThreadResult = channel.isThread();
     if (isThreadResult) {
-      tmp129 = jsx;
-      isThreadResult = jsx(tmp26(tmp3[96]), { absolute: true });
+      tmp130 = jsx;
+      isThreadResult = jsx(tmp26(tmp3[97]), { absolute: true });
     }
     items86 = [, ];
     items86[0] = isThreadResult;
-    tmp130 = jsx;
-    obj85 = { ref: global.ref, theme: stateFromStores3, saturation, isStaff: stateFromStores36, animateEmoji: setting5, animateStickers: setting6, containerWidth: tmp112, gifAutoPlay: setting7, timestampHourCycle: setting8, inlineAttachmentMedia: setting, inlineEmbedMedia: setting1, renderEmbeds: setting2, renderReactions: setting3, developerMode: setting4, roleStyle, officialMessageStyle, guildId, currentUserId: stateFromStores2, channelId: id, isMessagesReady: tmp77, isMessagesCached: tmp79, isMessagesAckable: tmp80, isMessageRequest, isSpamMessageRequest, messageAuthorActivities: stateFromStoresObject, invites: stateFromStores4, appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, invalidApplicationIds: stateFromStoresArray, applicationAssetFetchingIds: stateFromStoresArray1, messages: stateFromStores, messagesWithActivitiesLaunching: stateFromStoresArray6, activityInstanceIds: stateFromStoresArray3, activityParticipants: stateFromStoresArray5, activityInstancePresenceDetails: stateFromStoresArray4, appDirectoryEmbedApplicationFetchStates, mediaPostPreviewEmbeds: stateFromStores5, guildTemplates: stateFromStores6, gameOrganizationInvites: stateFromStores7, joinedGameOrganizationGuildIds: stateFromStoresArray7, pendingGameOrganizationJoinFlowCodes: stateFromStores8, buildOverrides: stateFromStores9, fetchingSkuIds: stateFromStoresArray2, socialLayerStorefrontEmbedData, conjureProjectLinkEmbeds: tmp125, experimentEmbeds: codedLinksExperimentEmbeds, quests, isFetchingCurrentQuests, editingMessageId: stateFromStores11, replyingMessageId: stateFromStores12, oldestUnreadMessageId: stateFromStores13, canChat: stateFromStores14, canSendMessages: stateFromStores15, isCallActive: tmp59, voiceStatePrivateChannelId: stateFromStores16, currentClientVoiceChannelId: stateFromStores17, voiceStateChannelIdSummaryForGuild: stateFromStores39, resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes, participantsLength: stateFromStores19, uploads: stateFromStores20, repliedIds: stateFromStores21, useReducedMotion, displayNameStylesEnabled, channelThreadsVersion: stateFromStores22, rsvpVersion: stateFromStores24, failedMessagesVersion: stateFromStores25, communicationDisabledVersion: stateFromStores26, messageAuthorMembers: stateFromStoresObject5, forwardGuildsVersion: stateFromStores37, interactionStates: stateFromStoresObject4, interactionComponentStates: tmp72, interactionComponentStatesVersion: tmp73, hasLoadedExperiments: null, guildSystemChannelFlags: null, currentUserCommunicationDisabled: null, renderCommunicationDisabled: null, userSettingsLocale: null, paymentsBlocked: null, isFollowingForumPost: null, showMediaPostSharePrompt: null, showPushFeedback: null, cacheStoreLoaded: null, androidKeyboardHeight: null, selectedSummary: null, selectedConversation: null, keyboardType: null, shouldTrackAnnouncementMessageViews: null, shouldTrackRichPresenceInviteEmbedViews: null, shouldTrackOfficialMessageViews: null, shouldTrackVoiceInviteEmbedViews: null, shouldObscureSpoiler: null, shouldDisableInteractiveComponents: null, channelPolls: null, messageReferencePolls: null, explicitMediaFalsePositiveInfo: null, familyCenterPendingConnection: null, threadStartingReferenceMessage: null, unloadedContentEntryMessageIds: null, unloadableContentEntryMessageIds: null, resolvedReferralTrialOfferIds: null, referralTrialOfferId: null, isPremiumTier2User: null, activityInviteMessageIds: null, guildInviteColorsFetched: null, isAgeVerified: null, guildEmojis: null, enableSwipeActions: null, selfActivities: null, activityLaunchJoinStates: null, authorizedAppsTokens: null, currentUserDisplayNameStyles: null, voiceInviteDataByChannelId: null, officialMessageColor: null };
-    tmp26Result1 = tmp26(tmp3[97]);
+    tmp131 = jsx;
+    obj85 = { ref: global.ref, theme: stateFromStores3, saturation, isStaff: stateFromStores36, animateEmoji: setting5, animateStickers: setting6, containerWidth: tmp113, gifAutoPlay: setting7, timestampHourCycle: setting8, inlineAttachmentMedia: setting, inlineEmbedMedia: setting1, renderEmbeds: setting2, renderReactions: setting3, developerMode: setting4, roleStyle, officialMessageStyle, guildId, currentUserId: stateFromStores2, channelId: id, isMessagesReady: tmp78, isMessagesCached: tmp80, isMessagesAckable: tmp81, isMessageRequest, isSpamMessageRequest, messageAuthorActivities: stateFromStoresObject, invites: stateFromStores4, appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, invalidApplicationIds: stateFromStoresArray, applicationAssetFetchingIds: stateFromStoresArray1, messages: stateFromStores, messagesWithActivitiesLaunching: stateFromStoresArray6, activityInstanceIds: stateFromStoresArray3, activityParticipants: stateFromStoresArray5, activityInstancePresenceDetails: stateFromStoresArray4, appDirectoryEmbedApplicationFetchStates, mediaPostPreviewEmbeds: stateFromStores5, guildTemplates: stateFromStores6, gameOrganizationInvites: stateFromStores7, joinedGameOrganizationGuildIds: stateFromStoresArray7, pendingGameOrganizationJoinFlowCodes: stateFromStores8, userProfileEmbedUsers: tmp46, buildOverrides: stateFromStores9, fetchingSkuIds: stateFromStoresArray2, socialLayerStorefrontEmbedData, conjureProjectLinkEmbeds: tmp126, experimentEmbeds: codedLinksExperimentEmbeds, quests, isFetchingCurrentQuests, editingMessageId: stateFromStores11, replyingMessageId: stateFromStores12, oldestUnreadMessageId: stateFromStores13, canChat: stateFromStores14, canSendMessages: stateFromStores15, isCallActive: tmp60, voiceStatePrivateChannelId: stateFromStores16, currentClientVoiceChannelId: stateFromStores17, voiceStateChannelIdSummaryForGuild: stateFromStores39, resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes, participantsLength: stateFromStores19, uploads: stateFromStores20, repliedIds: stateFromStores21, useReducedMotion, displayNameStylesEnabled, channelThreadsVersion: stateFromStores22, rsvpVersion: stateFromStores24, failedMessagesVersion: stateFromStores25, communicationDisabledVersion: stateFromStores26, messageAuthorMembers: stateFromStoresObject5, forwardGuildsVersion: stateFromStores37, interactionStates: stateFromStoresObject4, interactionComponentStates: tmp73, interactionComponentStatesVersion: tmp74, hasLoadedExperiments: null, guildSystemChannelFlags: null, currentUserCommunicationDisabled: null, renderCommunicationDisabled: null, userSettingsLocale: null, paymentsBlocked: null, isFollowingForumPost: null, showMediaPostSharePrompt: null, showPushFeedback: null, cacheStoreLoaded: null, androidKeyboardHeight: null, selectedSummary: null, selectedConversation: null, keyboardType: null, shouldTrackAnnouncementMessageViews: null, shouldTrackRichPresenceInviteEmbedViews: null, shouldTrackOfficialMessageViews: null, shouldTrackVoiceInviteEmbedViews: null, shouldObscureSpoiler: null, shouldDisableInteractiveComponents: null, channelPolls: null, messageReferencePolls: null, explicitMediaFalsePositiveInfo: null, familyCenterPendingConnection: null, threadStartingReferenceMessage: null, unloadedContentEntryMessageIds: null, unloadableContentEntryMessageIds: null, resolvedReferralTrialOfferIds: null, referralTrialOfferId: null, isPremiumTier2User: null, activityInviteMessageIds: null, guildInviteColorsFetched: null, isAgeVerified: null, guildEmojis: null, enableSwipeActions: null, selfActivities: null, activityLaunchJoinStates: null, authorizedAppsTokens: null, currentUserDisplayNameStyles: null, voiceInviteDataByChannelId: null, officialMessageColor: null };
+    tmp26Result1 = tmp26(tmp3[98]);
     if (stateFromStores23) {
-      stateFromStores23 = tmp77;
+      stateFromStores23 = tmp78;
     }
     obj85.hasLoadedExperiments = stateFromStores23;
     obj85.guildSystemChannelFlags = systemChannelFlags;
@@ -833,16 +834,16 @@ class MessagesConnected {
     obj85.cacheStoreLoaded = "initializing" !== stateFromStores32;
     obj85.androidKeyboardHeight = messageJumpAndroidKeyboardHeight;
     obj85.selectedSummary = stateFromStores33;
-    obj85.selectedConversation = tmp97;
-    obj85.keyboardType = tmp94;
+    obj85.selectedConversation = tmp98;
+    obj85.keyboardType = tmp95;
     obj85.shouldTrackAnnouncementMessageViews = shouldTrackAnnouncementMessageViews;
     obj85.shouldTrackRichPresenceInviteEmbedViews = shouldTrackRichPresenceInviteEmbedViews;
     obj85.shouldTrackOfficialMessageViews = shouldTrackOfficialMessageViews;
     obj85.shouldTrackVoiceInviteEmbedViews = shouldTrackVoiceInviteEmbedViews;
     obj85.shouldObscureSpoiler = shouldDisplaySpoilerObscurity;
     obj85.shouldDisableInteractiveComponents = shouldDisableInteractiveComponents;
-    obj85.channelPolls = tmp107;
-    obj85.messageReferencePolls = tmp109;
+    obj85.channelPolls = tmp108;
+    obj85.messageReferencePolls = tmp110;
     obj85.explicitMediaFalsePositiveInfo = stateFromStores34;
     obj85.familyCenterPendingConnection = stateFromStores35;
     obj85.threadStartingReferenceMessage = stateFromStores18;
@@ -871,16 +872,16 @@ class MessagesConnected {
     }
     obj85.officialMessageColor = officialMessageColor;
     merged1 = Object.assign(merged);
-    items86[1] = tmp130(tmp26Result1, obj85);
+    items86[1] = tmp131(tmp26Result1, obj85);
     obj1.children = items86;
-    return tmp126(tmp26Result, obj1);
+    return tmp127(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11903);
+const PollsInteractionStore = fn(11778);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1071);
 ({ ActivityActionTypes: closure_59, ChannelTypesSets: closure_60, ME: closure_61, MessageTypes: closure_62, Permissions: closure_63 } = Constants);
-let closure_64 = fn(11896).GameOrganizationInviteStates;
+let closure_64 = fn(11770).GameOrganizationInviteStates;
 const PremiumConstants = fn(1388);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);

@@ -1,7 +1,7 @@
-// === Module 14561: conjureWorkerOrigin ===
+// === Module 14829: conjureWorkerOrigin ===
 
-// Module 14561 (conjureWorkerOrigin)
-import conjureLocalDev from "conjureLocalDev" /* 6941 */;
+// Module 14829 (conjureWorkerOrigin)
+import conjureLocalDev from "conjureLocalDev" /* 7549 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/conjureWorkerOrigin.tsx");

@@ -1,6 +1,6 @@
-// === Module 8893: redactRestrictedContent ===
+// === Module 14273: redactRestrictedContent ===
 
-// Module 8893 (redactRestrictedContent)
+// Module 14273 (redactRestrictedContent)
 import size from "module_2" /* 2 */;
 
 function nodeToText(content) {

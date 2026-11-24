@@ -1,13 +1,13 @@
-// === Module 13053: AppLauncherRoleListActionSheet ===
+// === Module 12972: AppLauncherRoleListActionSheet ===
 
-// Module 13053 (AppLauncherRoleListActionSheet)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7495 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 7776 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 13049 */;
+// Module 12972 (AppLauncherRoleListActionSheet)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7361 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8415 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12970 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7494 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7360 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
 
 const require = globalThis.__r;
 
@@ -87,7 +87,7 @@ class RoleRow {
     return tmp7(guildRole(closure_3[11]).TableRow, obj1, guildRole.id);
   }
 }
-const isEveryoneRole = fn(4820).isEveryoneRole;
+const isEveryoneRole = fn(4824).isEveryoneRole;
 const DEFAULT_ROLE_COLOR_HEX = fn(1071).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

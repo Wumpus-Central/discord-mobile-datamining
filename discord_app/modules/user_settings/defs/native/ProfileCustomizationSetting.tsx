@@ -1,9 +1,9 @@
-// === Module 15827: ProfileCustomizationSetting ===
+// === Module 15855: ProfileCustomizationSetting ===
 
-// Module 15827 (ProfileCustomizationSetting)
+// Module 15855 (ProfileCustomizationSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import SettingBuilders from "SettingBuilders" /* 11937 */;
+import SettingBuilders from "SettingBuilders" /* 11815 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const route = SettingBuilders.createRoute({
   screen: {
     route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION,
     getComponent() {
-      return require("ProfileCustomizationSettingScreen").default;
+      return require("ProfileCustomizationSettingScreenExperimentWrapper").default;
     }
   }
 });

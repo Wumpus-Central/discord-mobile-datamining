@@ -1,6 +1,6 @@
-// === Module 6849: SocialLayerStorefrontStore ===
+// === Module 7464: SocialLayerStorefrontStore ===
 
-// Module 6849 (SocialLayerStorefrontStore)
+// Module 7464 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
@@ -96,9 +96,10 @@ prototype["getAnnouncement"] = function getAnnouncement(arg0) {
   return obj[arg0];
 };
 prototype["getConfig"] = function getConfig() {
-  let config = null;
   if ("success" === obj.state) {
-    config = obj.config;
+    let config = obj.config;
+  } else {
+    config = null;
   }
   return config;
 };
@@ -434,7 +435,11 @@ obj = {
     obj[guildId.guildId] = { state: "error" };
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function handleStorefrontConfigFetchStart() {
-
+    let config = null;
+    if ("success" === obj.state) {
+      config = obj.config;
+    }
+    obj = { state: "loading", config };
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: function handleStorefrontConfigFetchSuccess(config) {
     config = config.config;

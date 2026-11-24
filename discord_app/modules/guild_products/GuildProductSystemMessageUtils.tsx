@@ -1,6 +1,6 @@
-// === Module 8731: GuildProductSystemMessageUtils ===
+// === Module 10466: GuildProductSystemMessageUtils ===
 
-// Module 8731 (GuildProductSystemMessageUtils)
+// Module 10466 (GuildProductSystemMessageUtils)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;

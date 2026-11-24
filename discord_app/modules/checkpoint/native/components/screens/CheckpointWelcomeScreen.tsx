@@ -1,23 +1,23 @@
-// === Module 12726: CheckpointWelcomeScreen ===
+// === Module 12646: CheckpointWelcomeScreen ===
 
-// Module 12726 (CheckpointWelcomeScreen)
+// Module 12646 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _modDef3408 from "module_3408" /* 3408 */;
-import _modDef3440 from "module_3440" /* 3440 */;
-import UserUtils from "UserUtils" /* 4969 */;
-import CheckpointScreen from "CheckpointScreen" /* 12509 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12727 */;
-import CheckpointNavigationControls from "CheckpointNavigationControls" /* 12728 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 12740 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 12741 */;
+import _modDef3410 from "module_3410" /* 3410 */;
+import _modDef3442 from "module_3442" /* 3442 */;
+import UserUtils from "UserUtils" /* 4973 */;
+import CheckpointScreen from "CheckpointScreen" /* 12425 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12647 */;
+import CheckpointNavigationControls from "CheckpointNavigationControls" /* 12648 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 12659 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 12660 */;
 import UserStore from "UserStore" /* 1386 */;
-import CheckpointConstants from "CheckpointConstants" /* 5969 */;
+import CheckpointConstants from "CheckpointConstants" /* 6270 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4913 */;
+import createStyles from "createStyles" /* 4917 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointScreenDefault = CheckpointScreen;
@@ -49,7 +49,7 @@ export default function CheckpointWelcomeScreen() {
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const name = UserUtils.useName(stateFromStores);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3408["CdU/PF"]);
+  const stringResult = intl.string(_modDef3410["CdU/PF"]);
   let str = "Check\u200Bpoint";
   if ("Checkpoint" !== stringResult) {
     str = stringResult;
@@ -78,7 +78,7 @@ export default function CheckpointWelcomeScreen() {
     ({ wideSubtitle: obj19.style, wideSubtitleText: obj19.textStyle } = tmp);
     const intl3 = util.intl;
     const obj8 = { username: name };
-    obj7.text = intl3.formatToPlainString(_modDef3440.xhZ23b, obj8);
+    obj7.text = intl3.formatToPlainString(_modDef3442.xhZ23b, obj8);
     obj7.delay = delay + TextWritingAnimation.DURATION;
     items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj7);
     obj4.children = items3;
@@ -115,7 +115,7 @@ export default function CheckpointWelcomeScreen() {
     const tmp2Result5 = TextWritingAnimationDefault;
     const intl2 = util.intl;
     const obj17 = { username: name };
-    obj16.text = intl2.formatToPlainString(_modDef3440.xhZ23b, obj17);
+    obj16.text = intl2.formatToPlainString(_modDef3442.xhZ23b, obj17);
     obj16.delay = delay + TextWritingAnimation.DURATION;
     items6[1] = hasOwnProperty(TextWritingAnimationDefault, obj16);
     const obj18 = { style: tmp.knickKnacks };

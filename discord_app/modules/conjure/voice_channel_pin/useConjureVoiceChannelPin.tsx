@@ -1,23 +1,23 @@
-// === Module 18490: useConjureVoiceChannelPin ===
+// === Module 18531: useConjureVoiceChannelPin ===
 
-// Module 18490 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5529 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 12316 */;
+// Module 18531 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5533 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11324 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 6984 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 7580 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4843).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4847).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1071);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);

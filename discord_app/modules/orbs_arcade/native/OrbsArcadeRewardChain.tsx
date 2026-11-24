@@ -1,16 +1,16 @@
-// === Module 16436: OrbsArcadeRewardChain ===
+// === Module 16469: OrbsArcadeRewardChain ===
 
-// Module 16436 (OrbsArcadeRewardChain)
+// Module 16469 (OrbsArcadeRewardChain)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16424 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16425 */;
-import OrbsArcadeRewardChainCell from "OrbsArcadeRewardChainCell" /* 16437 */;
-import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16442 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16457 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16458 */;
+import OrbsArcadeRewardChainCell from "OrbsArcadeRewardChainCell" /* 16470 */;
+import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16475 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16423 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16456 */;
 
 const OrbsArcadeRewardChainCellDefault = OrbsArcadeRewardChainCell;
 
@@ -32,7 +32,7 @@ const PX_16 = nativeDefault.space.PX_16;
 let closure_9 = 2 * PX_16 + 1;
 let start = { x: 0, y: 0 };
 let end = { x: 0, y: 1 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { chainGlowContainer: { borderRadius: nativeDefault.radii.lg }, chain: null, divider: null, row: null, rewardCopy: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg };
 obj2.chain = { overflow: "hidden", padding: nativeDefault.space.PX_16, gap: PX_16, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -55,7 +55,7 @@ export default function OrbsArcadeRewardChain(game) {
   start = undefined;
   end = undefined;
   const tmp = closure_12();
-  let obj = game(4920);
+  let obj = game(4924);
   items = [c6];
   const stateFromStores = game(504).useStateFromStores(items, () => _undefined.ownedRewardSkuIds);
   let items1 = [game.rewards];
@@ -71,15 +71,15 @@ export default function OrbsArcadeRewardChain(game) {
   if (findLastResult == null) {
     first = memo[0];
   }
-  const tmp8 = gameState(16441)(first);
+  const tmp8 = gameState(16474)(first);
   closure_7 = tmp8;
   let type;
   if (first != null) {
     type = first.type;
   }
   NITRO_GLOW_COLOR = tmp8;
-  if (type === game(16425).OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
-    NITRO_GLOW_COLOR = tmp2(16441).NITRO_GLOW_COLOR;
+  if (type === game(16458).OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
+    NITRO_GLOW_COLOR = tmp2(16474).NITRO_GLOW_COLOR;
   }
   let obj2 = game(504);
   let tmp7 = gameState;
@@ -96,7 +96,7 @@ export default function OrbsArcadeRewardChain(game) {
   }
   obj4.focusedRewardId = id;
   obj4.grantAnimatedOnOpenRewardIds = game.grantAnimatedOnOpenRewardIds;
-  const orbsArcadeRewardChainTimeline = game(16437).useOrbsArcadeRewardChainTimeline(obj4);
+  const orbsArcadeRewardChainTimeline = game(16470).useOrbsArcadeRewardChainTimeline(obj4);
   ({ timeline: c9, getGrantAtMs: c10, getFocusRingAtMs: c11 } = orbsArcadeRewardChainTimeline);
   const items3 = [tmp8];
   const items4 = [NITRO_GLOW_COLOR];
@@ -112,8 +112,8 @@ export default function OrbsArcadeRewardChain(game) {
     obj.boxShadow = items;
     return obj;
   }, items4);
-  const tmp2Result = game(16437);
-  const isThemeLightResult = game(4920).isThemeLight(obj.useThemeContext().theme);
+  const tmp2Result = game(16470);
+  const isThemeLightResult = game(4924).isThemeLight(obj.useThemeContext().theme);
   const items5 = [tmp.chainGlowContainer, ];
   let tmp17;
   if (!isThemeLightResult) {
@@ -125,7 +125,7 @@ export default function OrbsArcadeRewardChain(game) {
   let tmp15Result = null;
   if (!isThemeLightResult) {
     let obj7 = { style: memo.absoluteFill, start, end, colors: memo1 };
-    tmp15Result = tmp15(tmp7(5468), obj7);
+    tmp15Result = tmp15(tmp7(5472), obj7);
   }
   const items6 = [
     tmp15Result,

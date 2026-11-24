@@ -1,6 +1,6 @@
-// === Module 8483: IosImageTypesManager ===
+// === Module 8004: IosImageTypesManager ===
 
-// Module 8483 (IosImageTypesManager)
+// Module 8004 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1442 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -23,7 +23,7 @@ prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTy
       const supportedImageTypes = NativeMediaManagerModuleDefault.getSupportedImageTypes();
       closure_4 = supportedImageTypes;
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       const _Set2 = Set;
       const set1 = new Set();
       const _Set3 = Set;

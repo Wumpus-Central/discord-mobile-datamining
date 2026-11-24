@@ -1,16 +1,16 @@
-// === Module 19801: SoundboardRecordingWaveform ===
+// === Module 19844: SoundboardRecordingWaveform ===
 
-// Module 19801 (SoundboardRecordingWaveform)
+// Module 19844 (SoundboardRecordingWaveform)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5514 */;
-import springPresets from "springPresets" /* 5515 */;
+import spring_spring from "spring/spring" /* 5518 */;
+import springPresets from "springPresets" /* 5519 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12824).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12743).WAVEFORM_WAVE_MAX_VALUE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { container: { flexDirection: "row", alignItems: "center" }, slot: { flex: 1, marginHorizontal: 1, alignItems: "center", justifyContent: "center" }, bar: { alignSelf: "stretch", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = { code: "(function SoundboardRecordingWaveformTsx1(){let[height]=this.__closure;return{height:height.get()};})" };

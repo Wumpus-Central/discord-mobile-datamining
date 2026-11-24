@@ -1,15 +1,15 @@
-// === Module 20073: SelectInviteRolesActionSheet ===
+// === Module 20116: SelectInviteRolesActionSheet ===
 
-// Module 20073 (SelectInviteRolesActionSheet)
+// Module 20116 (SelectInviteRolesActionSheet)
 import apply from "apply" /* 12 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_8 = createStyles.createStyles({ list: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx");
@@ -21,7 +21,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
   let first;
   items = [assignableRoles, selectedRoleIds];
   const memo = first.useMemo(() => {
-    const set = new Set(assignableRoles.map((id) => id.id));
+    set = new Set(assignableRoles.map((id) => id.id));
     return selectedRoleIds.filter((item) => set.has(item));
   }, items);
   const tmp3 = memo(first.useState(() => new Set(memo)), 2);
@@ -32,7 +32,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
   const callback = first.useCallback((arg0) => {
     closure_0 = arg0;
     closure_5((items) => {
-      const set = new Set(items);
+      set = new Set(items);
       if (!set.delete(closure_0)) {
         set.add(closure_0);
       }

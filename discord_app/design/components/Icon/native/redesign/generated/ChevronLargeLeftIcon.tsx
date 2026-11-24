@@ -1,9 +1,9 @@
-// === Module 11357: ChevronLargeLeftIcon ===
+// === Module 10672: ChevronLargeLeftIcon ===
 
-// Module 11357 (ChevronLargeLeftIcon)
+// Module 10672 (ChevronLargeLeftIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod11358 from "module_11358" /* 11358 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod10673 from "module_10673" /* 10673 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChevronLargeLeftIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11358, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10673, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

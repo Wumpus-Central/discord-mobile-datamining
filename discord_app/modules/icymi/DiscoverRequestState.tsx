@@ -1,6 +1,6 @@
-// === Module 10040: DiscoverRequestState ===
+// === Module 8779: DiscoverRequestState ===
 
-// Module 10040 (DiscoverRequestState)
+// Module 8779 (DiscoverRequestState)
 import size from "module_2" /* 2 */;
 
 class DiscoverRequestGuard {

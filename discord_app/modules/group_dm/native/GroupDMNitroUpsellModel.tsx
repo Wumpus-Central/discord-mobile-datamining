@@ -1,6 +1,6 @@
-// === Module 12060: GroupDMNitroUpsellModel ===
+// === Module 11952: GroupDMNitroUpsellModel ===
 
-// Module 12060 (GroupDMNitroUpsellModel)
+// Module 11952 (GroupDMNitroUpsellModel)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;

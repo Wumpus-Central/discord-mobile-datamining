@@ -1,13 +1,13 @@
-// === Module 7198: PlayStationLinkPreConnect ===
+// === Module 7655: PlayStationLinkPreConnect ===
 
-// Module 7198 (PlayStationLinkPreConnect)
-import _modDef7199 from "module_7199" /* 7199 */;
+// Module 7655 (PlayStationLinkPreConnect)
+import _modDef7656 from "module_7656" /* 7656 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(7195).PlayStationLinkModalScenes;
+let closure_4 = fn(7652).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
@@ -25,12 +25,12 @@ export function PlayStationLinkPreConnect(arg0) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef7199 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef7656 }), []);
   const obj2 = { platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null };
   const intl = navigation(1112).intl;
   obj2.title = intl.string(navigation(1112).t["6n+UPR"]);
   const intl2 = navigation(1112).intl;
   obj2.body = intl2.string(navigation(1112).t.JaaqIf);
   obj2.autoStart = autoStart;
-  return jsx(navigation(7067).TwoWayLinkPreConnect, { platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null });
+  return jsx(navigation(7631).TwoWayLinkPreConnect, { platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null });
 }

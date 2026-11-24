@@ -1,15 +1,15 @@
-// === Module 6912: botScopedAccess ===
+// === Module 7521: botScopedAccess ===
 
-// Module 6912 (botScopedAccess)
+// Module 7521 (botScopedAccess)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 6903 */;
-import RPCErrorDefault from "RPCError" /* 6909 */;
-import validateScopeDefault from "validateScope" /* 6911 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 6913 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 6914 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4854 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 5655 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 7512 */;
+import RPCErrorDefault from "RPCError" /* 7518 */;
+import validateScopeDefault from "validateScope" /* 7520 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 7522 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 
 require = fn;
 const Constants = fn(1071);
@@ -21,7 +21,7 @@ export function isBotScopeOnly(authorization, scope) {
   const scopes = authorization.authorization.scopes;
   if (scopes.has(OAuth2Scopes.OAuth2Scopes.BOT)) {
     const _Set = Set;
-    const set = new Set(authorization.authorization.scopes);
+    set = new Set(authorization.authorization.scopes);
     set.delete(OAuth2Scopes.OAuth2Scopes.BOT);
     return !validateScopeDefault(set, scope);
   } else {

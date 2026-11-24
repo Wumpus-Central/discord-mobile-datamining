@@ -1,10 +1,10 @@
-// === Module 18316: conjureStoredAttachments ===
+// === Module 18355: conjureStoredAttachments ===
 
-// Module 18316 (conjureStoredAttachments)
+// Module 18355 (conjureStoredAttachments)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18318 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18357 */;
 import noop from "module_19" /* 19 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 18317 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 18356 */;
 
 const require = globalThis.__r;
 

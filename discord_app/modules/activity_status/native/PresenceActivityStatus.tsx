@@ -1,15 +1,15 @@
-// === Module 13517: PresenceActivityStatus ===
+// === Module 11228: PresenceActivityStatus ===
 
-// Module 13517 (PresenceActivityStatus)
-import ActivityTypes from "ActivityTypes" /* 5652 */;
-import GameControllerIcon2 from "GameControllerIcon" /* 7040 */;
-import AppsIcon from "AppsIcon" /* 7704 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8060 */;
-import MusicIcon from "MusicIcon" /* 10894 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 13512 */;
-import TvIcon from "TvIcon" /* 13513 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 13515 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 13518 */;
+// Module 11228 (PresenceActivityStatus)
+import ActivityTypes from "ActivityTypes" /* 5889 */;
+import AppsIcon from "AppsIcon" /* 7046 */;
+import GameControllerIcon2 from "GameControllerIcon" /* 7623 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8259 */;
+import MusicIcon from "MusicIcon" /* 10168 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 11223 */;
+import TvIcon from "TvIcon" /* 11224 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 11226 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

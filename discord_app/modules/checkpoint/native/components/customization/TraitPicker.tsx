@@ -1,16 +1,16 @@
-// === Module 12786: TraitPicker ===
+// === Module 12705: TraitPicker ===
 
-// Module 12786 (TraitPicker)
+// Module 12705 (TraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef3440 from "module_3440" /* 3440 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5093 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6336 */;
-import CheckpointTextDefault from "CheckpointText" /* 12510 */;
-import TraitOptionListDefault from "TraitOptionList" /* 12784 */;
-import TraitOptionDetailsDefault from "TraitOptionDetails" /* 12787 */;
-import useTraitPicker from "useTraitPicker" /* 12789 */;
+import _modDef3442 from "module_3442" /* 3442 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5097 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6639 */;
+import CheckpointTextDefault from "CheckpointText" /* 12426 */;
+import TraitOptionListDefault from "TraitOptionList" /* 12703 */;
+import TraitOptionDetailsDefault from "TraitOptionDetails" /* 12706 */;
+import useTraitPicker from "useTraitPicker" /* 12708 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function EarnedCountHeader(customizationOption) {
   const tmp = closure_9();
   const customizationOptionName = CheckpointCustomizationUtils.getCustomizationOptionName(customizationOption.customizationOption);
   const intl = util.intl;
-  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3440.Vfq58K, {
+  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3442.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(arg0) {
@@ -28,7 +28,7 @@ function EarnedCountHeader(customizationOption) {
   });
   const obj3 = { variant: "body-md/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3440.Vfq58K, {
+  obj3.children = intl2.format(_modDef3442.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -130,14 +130,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(4913);
-let obj2 = { container: { gap: fn(12784).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
-let obj3 = { gap: fn(12784).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12784).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12784).CONTENT_INSET };
+const createStyles = fn(4917);
+let obj2 = { container: { gap: fn(12703).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
+let obj3 = { gap: fn(12703).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12703).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12703).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(12784).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12703).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

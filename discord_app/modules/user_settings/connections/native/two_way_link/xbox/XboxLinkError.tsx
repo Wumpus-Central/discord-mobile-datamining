@@ -1,14 +1,14 @@
-// === Module 7087: XboxLinkError ===
+// === Module 7645: XboxLinkError ===
 
-// Module 7087 (XboxLinkError)
+// Module 7645 (XboxLinkError)
 import util from "util" /* 1112 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import useConnectRetry from "useConnectRetry" /* 7088 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 7089 */;
+import useConnectRetry from "useConnectRetry" /* 7646 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 7647 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const XboxLinkModalScenes = fn(7028).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(7617).XboxLinkModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");

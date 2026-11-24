@@ -1,19 +1,19 @@
-// === Module 15123: useMessageRequestPrivacyOption ===
+// === Module 15144: useMessageRequestPrivacyOption ===
 
-// Module 15123 (useMessageRequestPrivacyOption)
-import UserSettings from "UserSettings" /* 4738 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7415 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13330 */;
+// Module 15144 (useMessageRequestPrivacyOption)
+import UserSettings from "UserSettings" /* 4742 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7225 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4738).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(4742).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(4738).RestrictedGuildIds;
+  const RestrictedGuildIds = id(4742).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   items = [id];
@@ -39,7 +39,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7555).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7422).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

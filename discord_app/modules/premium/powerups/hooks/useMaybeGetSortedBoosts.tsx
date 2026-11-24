@@ -1,15 +1,15 @@
-// === Module 13470: useMaybeGetSortedBoosts ===
+// === Module 13395: useMaybeGetSortedBoosts ===
 
-// Module 13470 (useMaybeGetSortedBoosts)
+// Module 13395 (useMaybeGetSortedBoosts)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1112 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8746 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 10225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13452 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6538 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13377 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6730 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const items3 = [memo1];
   const items4 = [arg0, memo];
   stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => {
-    const set = new Set();
+    set = new Set();
     const item = memo.forEach((boost) => {
       boost = boost.boost;
       if (null == GuildMemberStore.getMember(closure_0, boost.userId)) {

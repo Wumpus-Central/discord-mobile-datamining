@@ -1,9 +1,9 @@
-// === Module 14636: UserClockIcon ===
+// === Module 14904: UserClockIcon ===
 
-// Module 14636 (UserClockIcon)
+// Module 14904 (UserClockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod14637 from "module_14637" /* 14637 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod14905 from "module_14905" /* 14905 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UserClockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14637, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14905, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

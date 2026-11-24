@@ -1,19 +1,19 @@
-// === Module 19979: StarCoinsSpotIllustration ===
+// === Module 20022: StarCoinsSpotIllustration ===
 
-// Module 19979 (StarCoinsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef19980 from "module_19980" /* 19980 */;
-import _modDef19981 from "module_19981" /* 19981 */;
-import _modDef19982 from "module_19982" /* 19982 */;
+// Module 20022 (StarCoinsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef20023 from "module_20023" /* 20023 */;
+import _modDef20024 from "module_20024" /* 20024 */;
+import _modDef20025 from "module_20025" /* 20025 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19980 }, 3: null };
-let obj2 = { uri: _modDef19980 };
-obj[2] = { uri: _modDef19981 };
-const obj3 = { uri: _modDef19981 };
-obj[3] = { uri: _modDef19982 };
+let obj = { 1: null, 2: { uri: _modDef20023 }, 3: null };
+let obj2 = { uri: _modDef20023 };
+obj[2] = { uri: _modDef20024 };
+const obj3 = { uri: _modDef20024 };
+obj[3] = { uri: _modDef20025 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StarCoinsSpotIllustration.native.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 18735: SearchHistoryStore ===
+// === Module 18777: SearchHistoryStore ===
 
-// Module 18735 (SearchHistoryStore)
+// Module 18777 (SearchHistoryStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SearchConstants from "SearchConstants" /* 8576 */;
+import SearchConstants from "SearchConstants" /* 8878 */;
 import size from "module_2" /* 2 */;
 
 const SearchHistoryItemTypes = SearchConstants.SearchHistoryItemTypes;

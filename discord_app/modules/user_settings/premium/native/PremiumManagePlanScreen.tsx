@@ -1,7 +1,7 @@
-// === Module 16287: PremiumManagePlanScreen ===
+// === Module 16320: PremiumManagePlanScreen ===
 
-// Module 16287 (PremiumManagePlanScreen)
-import PremiumManagePlanDefault from "PremiumManagePlan" /* 14103 */;
+// Module 16320 (PremiumManagePlanScreen)
+import PremiumManagePlanDefault from "PremiumManagePlan" /* 13783 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

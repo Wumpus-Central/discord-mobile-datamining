@@ -1,18 +1,18 @@
-// === Module 18598: ConjureAppBuildRequestCard ===
+// === Module 18639: ConjureAppBuildRequestCard ===
 
-// Module 18598 (ConjureAppBuildRequestCard)
+// Module 18639 (ConjureAppBuildRequestCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import TableRow from "TableRow" /* 7045 */;
-import XSmallIcon from "XSmallIcon" /* 7151 */;
-import TableRowGroup from "TableRowGroup" /* 7348 */;
-import TextArea from "TextArea" /* 7461 */;
-import IconButton from "IconButton" /* 7591 */;
-import ConjureAppBuildRequest from "ConjureAppBuildRequest" /* 18436 */;
-import ConjureAppBuildRequestProjectsSheetDefault from "ConjureAppBuildRequestProjectsSheet" /* 18599 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5131 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import TableRowGroup from "TableRowGroup" /* 6014 */;
+import TableRow from "TableRow" /* 6018 */;
+import XSmallIcon from "XSmallIcon" /* 7121 */;
+import TextArea from "TextArea" /* 7314 */;
+import IconButton from "IconButton" /* 7811 */;
+import ConjureAppBuildRequest from "ConjureAppBuildRequest" /* 18477 */;
+import ConjureAppBuildRequestProjectsSheetDefault from "ConjureAppBuildRequestProjectsSheet" /* 18640 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, header: null, heading: null, footer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -41,7 +41,7 @@ export default function ConjureAppBuildRequestCard(arg0) {
     return targetIds.includes(projectId.projectId);
   });
   const intl = util.intl;
-  const stringResult = intl.string(conjureAppBuildRequestForm(4190)["29gr8j"]);
+  const stringResult = intl.string(conjureAppBuildRequestForm(4192)["29gr8j"]);
   dependencyMap = stringResult;
   let obj2 = { style: tmp.card, holdsKeyboard: true, children: null };
   let obj3 = { style: tmp.header, children: null };
@@ -50,20 +50,20 @@ export default function ConjureAppBuildRequestCard(arg0) {
   items = [closure_5(closure_4, obj4), ];
   const obj6 = { variant: "tertiary", size: "sm", icon: closure_5(XSmallIcon.XSmallIcon, { size: "sm" }), onPress: conjureAppBuildRequestForm.dismiss, accessibilityLabel: null };
   const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.string(conjureAppBuildRequestForm(4190).KQUuAZ);
+  obj6.accessibilityLabel = intl2.string(conjureAppBuildRequestForm(4192).KQUuAZ);
   items[1] = closure_5(IconButton.IconButton, obj6);
   obj3.children = items;
   const items1 = [closure_6(closure_4, obj3), , , ];
   if (0 === conjureAppBuildRequestForm.projects.length) {
     const obj7 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = util.intl;
-    obj7.children = intl4.string(tmp5(4190).TbbzW5);
+    obj7.children = intl4.string(tmp5(4192).TbbzW5);
     let tmp10Result = closure_5(Text_Text.Text, obj7);
   } else {
     const obj8 = { title: stringResult, hasIcons: false, children: null };
     if (0 === found.length) {
       const intl3 = util.intl;
-      let stringResult1 = intl3.string(tmp5(4190).twlOb6);
+      let stringResult1 = intl3.string(tmp5(4192).twlOb6);
     } else {
       const mapped = found.map((name) => name.name);
       stringResult1 = mapped.join(", ");
@@ -92,7 +92,7 @@ export default function ConjureAppBuildRequestCard(arg0) {
   items1[1] = tmp10Result;
   const obj11 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, onFocus: null, onBlur: null, errorMessage: null };
   const intl5 = util.intl;
-  obj11.label = intl5.string(conjureAppBuildRequestForm(4190).XZNsDA);
+  obj11.label = intl5.string(conjureAppBuildRequestForm(4192).XZNsDA);
   ({ prompt: obj10.value, setPrompt: obj10.onChange } = conjureAppBuildRequestForm);
   obj11.maxLength = ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
   obj11.disabled = conjureAppBuildRequestForm.sending;
@@ -113,18 +113,18 @@ export default function ConjureAppBuildRequestCard(arg0) {
   let stringResult2;
   if (conjureAppBuildRequestForm.failed) {
     const intl6 = util.intl;
-    stringResult2 = intl6.string(tmp5(4190).kMZz8G);
+    stringResult2 = intl6.string(tmp5(4192).kMZz8G);
   }
   obj11.errorMessage = stringResult2;
   items1[2] = closure_5(TextArea.TextArea, obj11);
   const obj13 = { style: tmp.footer, children: null };
   const obj24 = { variant: "primary", size: "sm", text: null, disabled: null, loading: null, onPress: null };
   const intl7 = util.intl;
-  obj24.text = intl7.string(conjureAppBuildRequestForm(4190).gG4j6o);
+  obj24.text = intl7.string(conjureAppBuildRequestForm(4192).gG4j6o);
   obj24.disabled = !conjureAppBuildRequestForm.canSubmit;
   ({ sending: obj12.loading, submit: obj12.onPress } = conjureAppBuildRequestForm);
   obj13.children = closure_5(components_Button_Button.Button, obj24);
   items1[3] = closure_5(closure_4, obj13);
   obj2.children = items1;
-  return closure_6(conjureAppBuildRequestForm(18305), obj2);
+  return closure_6(conjureAppBuildRequestForm(18344), obj2);
 };

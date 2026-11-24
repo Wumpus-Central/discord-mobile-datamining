@@ -1,8 +1,8 @@
-// === Module 10349: useBoardWidgets ===
+// === Module 14501: useBoardWidgets ===
 
-// Module 10349 (useBoardWidgets)
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 10213 */;
-import BoardWidgetUtils from "BoardWidgetUtils" /* 10350 */;
+// Module 14501 (useBoardWidgets)
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14391 */;
+import BoardWidgetUtils from "BoardWidgetUtils" /* 14502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

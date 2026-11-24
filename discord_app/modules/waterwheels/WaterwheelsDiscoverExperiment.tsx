@@ -1,6 +1,6 @@
-// === Module 10041: WaterwheelsDiscoverExperiment ===
+// === Module 8780: WaterwheelsDiscoverExperiment ===
 
-// Module 10041 (WaterwheelsDiscoverExperiment)
+// Module 8780 (WaterwheelsDiscoverExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -15,39 +15,11 @@ const result = size.fileFinishedImporting("modules/waterwheels/WaterwheelsDiscov
 
 export const WaterwheelsDiscoverExperiment = apexExperiment;
 export function getWaterwheelsDiscoverEnabled(fetchDehydrated) {
-  const currentUser = UserStore.getCurrentUser();
-  let flag;
-  if (currentUser != null) {
-    flag = currentUser.isStaff();
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let enabled = flag;
-  if (enabled) {
-    const obj = { location: fetchDehydrated };
-    enabled = apexExperiment.getConfig(obj).enabled;
-  }
-  return enabled;
+  return apexExperiment.getConfig({ location: fetchDehydrated }).enabled;
 }
 export function useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel) {
   _require = WaterwheelsDiscoverPanel;
   items = [ApexExperimentStore, AuthenticationStore, UserStore];
   const items1 = [WaterwheelsDiscoverPanel];
-  return require("initialize").useStateFromStores(items, () => {
-    const currentUser = UserStore.getCurrentUser();
-    let flag;
-    if (currentUser != null) {
-      flag = currentUser.isStaff();
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    let enabled = flag;
-    if (enabled) {
-      const obj = { location: _location };
-      enabled = apexExperiment.getConfig(obj).enabled;
-    }
-    return enabled;
-  }, items1);
+  return require("initialize").useStateFromStores(items, () => apexExperiment.getConfig({ location: _location }).enabled, items1);
 }

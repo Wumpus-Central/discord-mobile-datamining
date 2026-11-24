@@ -1,6 +1,6 @@
-// === Module 6427: ConsentStore ===
+// === Module 6715: ConsentStore ===
 
-// Module 6427 (ConsentStore)
+// Module 6715 (ConsentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

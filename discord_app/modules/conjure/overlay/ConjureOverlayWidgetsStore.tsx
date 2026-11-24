@@ -1,11 +1,11 @@
-// === Module 14956: ConjureOverlayWidgetsStore ===
+// === Module 14995: ConjureOverlayWidgetsStore ===
 
-// Module 14956 (ConjureOverlayWidgetsStore)
+// Module 14995 (ConjureOverlayWidgetsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureOverlayApps from "conjureOverlayApps" /* 14963 */;
-import LayoutStore from "LayoutStore" /* 14957 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import conjureOverlayApps from "conjureOverlayApps" /* 15002 */;
+import LayoutStore from "LayoutStore" /* 14996 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 function syncProjects() {
@@ -33,7 +33,7 @@ function syncProjects() {
   })();
   items = [...found];
   const items1 = [];
-  let set = new Set(found.map((application_id) => application_id.application_id));
+  set = new Set(found.map((application_id) => application_id.application_id));
   const arraySpreadResult = HermesBuiltin.arraySpread(closure_9, 0);
   closure_129_0 = new Set(closure_9.map((application_id) => application_id.application_id));
   const ownedProjects1 = ConjureProjectStore.getOwnedProjects();
@@ -62,7 +62,7 @@ function handleLayoutChange() {
 }
 function markServerListStale(guildId) {
   items = [];
-  const set = new Set(closure_9.map((application_id) => application_id.application_id));
+  set = new Set(closure_9.map((application_id) => application_id.application_id));
   const ownedProjects = ConjureProjectStore.getOwnedProjects();
   HermesBuiltin.arraySpread(ownedProjects.filter((application_id) => {
     let result = conjureOverlayApps.isConjureServerOverlayApp(application_id);
@@ -79,7 +79,7 @@ function markServerListStale(guildId) {
   const arraySpreadResult = HermesBuiltin.arraySpread(closure_9, 0);
 }
 const OverlayWidgets = fn(1071).OverlayWidgets;
-const OVERLAY_V3_LAYOUT_ID = fn(14960).OVERLAY_V3_LAYOUT_ID;
+const OVERLAY_V3_LAYOUT_ID = fn(14999).OVERLAY_V3_LAYOUT_ID;
 let items = [];
 let closure_7 = items;
 let closure_8 = items;

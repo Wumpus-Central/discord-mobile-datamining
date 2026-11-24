@@ -1,9 +1,9 @@
-// === Module 17020: TeacupIcon ===
+// === Module 17054: TeacupIcon ===
 
-// Module 17020 (TeacupIcon)
+// Module 17054 (TeacupIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod17021 from "module_17021" /* 17021 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod17055 from "module_17055" /* 17055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TeacupIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17021, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17055, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,6 +1,6 @@
-// === Module 6306: CheckpointCharacterAura ===
+// === Module 6609: CheckpointCharacterAura ===
 
-// Module 6306 (CheckpointCharacterAura)
+// Module 6609 (CheckpointCharacterAura)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointCharacterAura.tsx");

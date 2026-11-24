@@ -1,8 +1,8 @@
-// === Module 18157: ICYMIWaterwheelsRow ===
+// === Module 18196: ICYMIWaterwheelsRow ===
 
-// Module 18157 (ICYMIWaterwheelsRow)
-import useWaterwheelsActions from "useWaterwheelsActions" /* 17802 */;
-import WaterwheelsCard from "WaterwheelsCard" /* 17807 */;
+// Module 18196 (ICYMIWaterwheelsRow)
+import useWaterwheelsActions from "useWaterwheelsActions" /* 17840 */;
+import WaterwheelsCard from "WaterwheelsCard" /* 17845 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

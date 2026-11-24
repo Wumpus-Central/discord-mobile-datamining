@@ -1,11 +1,11 @@
-// === Module 8233: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 8068: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 8233 (SensitiveMediaGoreRedactionSettingsUtils)
+// Module 8068 (SensitiveMediaGoreRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5575 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5583 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6411 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5579 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5587 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6699 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 

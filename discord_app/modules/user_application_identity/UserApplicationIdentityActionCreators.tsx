@@ -1,8 +1,8 @@
-// === Module 10334: UserApplicationIdentityActionCreators ===
+// === Module 14490: UserApplicationIdentityActionCreators ===
 
-// Module 10334 (UserApplicationIdentityActionCreators)
+// Module 14490 (UserApplicationIdentityActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10333 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 14489 */;
 
 const require = fn;
 const Constants = fn(1071);

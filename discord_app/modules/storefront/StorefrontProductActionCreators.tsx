@@ -1,12 +1,12 @@
-// === Module 8167: StorefrontProductActionCreators ===
+// === Module 11457: StorefrontProductActionCreators ===
 
-// Module 8167 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8171 */;
-import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8172 */;
+// Module 11457 (StorefrontProductActionCreators)
+import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 11455 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 11458 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8168 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 8094 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 11454 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 6207 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -179,8 +179,8 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
             closure_129_4 = closure_129_0.filter((item) => {
               let storefrontPricingKey = closure_1_3;
               if (closure_1_3 === undefined) {
-                storefrontPricingKey = closure_0(8172).getStorefrontPricingKey();
-                const obj = closure_0(8172);
+                storefrontPricingKey = closure_0(11455).getStorefrontPricingKey();
+                const obj = closure_0(11455);
               }
               let diff = globalThis;
               let flag = false;
@@ -193,9 +193,9 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
                     flag = true;
                     if (null != fetchedAtForSku) {
                       if ("error" === fetchStateForSku) {
-                        let TWELVE_HOURS_MS = closure_0(8171).ERROR_STALE_THRESHOLD_MS;
+                        let TWELVE_HOURS_MS = closure_0(11458).ERROR_STALE_THRESHOLD_MS;
                       } else {
-                        TWELVE_HOURS_MS = closure_0(8171).TWELVE_HOURS_MS;
+                        TWELVE_HOURS_MS = closure_0(11458).TWELVE_HOURS_MS;
                       }
                       const _Date = diff.Date;
                       diff = _Date.now() - fetchedAtForSku;

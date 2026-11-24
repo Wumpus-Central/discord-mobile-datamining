@@ -1,6 +1,6 @@
-// === Module 6080: ? ===
+// === Module 6383: ? ===
 
-// Module 6080
+// Module 6383
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/traveler.png.js");

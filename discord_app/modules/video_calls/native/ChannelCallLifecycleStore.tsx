@@ -1,20 +1,20 @@
-// === Module 10647: ChannelCallLifecycleStore ===
+// === Module 9881: ChannelCallLifecycleStore ===
 
-// Module 10647 (ChannelCallLifecycleStore)
+// Module 9881 (ChannelCallLifecycleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1343 from "module_1343" /* 1343 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 
-const VoiceCallOverlayType = fn(10637).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(9868).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
 let visible = false;
 let obj = {};
-let size = { x: "Array", y: "s", width: "channel", height: "useSharedValue", screenOrientation: fn(9431).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 2674, isInitialized: 38144, isVisible: 2047955200 };
+let size = { x: "Array", y: "s", width: "channel_id", height: "channel_id", screenOrientation: fn(8769).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "<string:822083853>", isInitialized: "isArray", isVisible: "<string:1071644672>" };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "s", width: "channel", height: "useSharedValue", screenOrientation: fn(9431).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 2674, isInitialized: 38144, isVisible: 2047955200 };
+const size1 = { x: "Array", y: "s", width: "channel_id", height: "channel_id", screenOrientation: fn(8769).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "<string:822083853>", isInitialized: "isArray", isVisible: "<string:1071644672>" };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;
 const Store = initializeDefault.Store;

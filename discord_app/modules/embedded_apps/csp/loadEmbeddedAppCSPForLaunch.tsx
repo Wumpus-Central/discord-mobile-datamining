@@ -1,11 +1,11 @@
-// === Module 6946: loadEmbeddedAppCSPForLaunch ===
+// === Module 7554: loadEmbeddedAppCSPForLaunch ===
 
-// Module 6946 (loadEmbeddedAppCSPForLaunch)
-import getURLForApplication from "getURLForApplication" /* 5554 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 6948 */;
-import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 6949 */;
+// Module 7554 (loadEmbeddedAppCSPForLaunch)
+import getURLForApplication from "getURLForApplication" /* 5558 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7556 */;
+import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7557 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 6947 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 7555 */;
 
 const getURLForApplicationDefault = getURLForApplication;
 

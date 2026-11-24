@@ -1,13 +1,13 @@
-// === Module 14333: useJoinFromSupportedPlatformsIconKeys ===
+// === Module 14364: useJoinFromSupportedPlatformsIconKeys ===
 
-// Module 14333 (useJoinFromSupportedPlatformsIconKeys)
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7074 */;
+// Module 14364 (useJoinFromSupportedPlatformsIconKeys)
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   ({ platforms, currentPlatform } = isGameLaunchable);
-  const set = new Set(platforms);
+  set = new Set(platforms);
   if (null != platforms) {
     if (0 !== platforms.length) {
       if (null != currentPlatform) {
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
 
 export { IconKey };
-export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = { [fn(7074).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [fn(7074).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [fn(7074).ActivityGamePlatforms.IOS]: IconKey.IOS, [fn(7074).ActivityGamePlatforms.XBOX]: IconKey.XBOX, [fn(7074).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION, [fn(7074).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION, [fn(7074).ActivityGamePlatforms.SAMSUNG]: null, [fn(7074).ActivityGamePlatforms.EMBEDDED]: null, [fn(7074).ActivityGamePlatforms.META_QUEST]: IconKey.VR };
+export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = { [fn(7635).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [fn(7635).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [fn(7635).ActivityGamePlatforms.IOS]: IconKey.IOS, [fn(7635).ActivityGamePlatforms.XBOX]: IconKey.XBOX, [fn(7635).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION, [fn(7635).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION, [fn(7635).ActivityGamePlatforms.SAMSUNG]: null, [fn(7635).ActivityGamePlatforms.EMBEDDED]: null, [fn(7635).ActivityGamePlatforms.META_QUEST]: IconKey.VR };
 export { getJoinFromSupportedPlatformsIconKeys };
 export function useJoinFromSupportedPlatformsIconKeys(platforms) {
   platforms = platforms.platforms;

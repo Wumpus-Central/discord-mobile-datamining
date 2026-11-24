@@ -1,17 +1,17 @@
-// === Module 13507: ActivityStatus ===
+// === Module 11218: ActivityStatus ===
 
-// Module 13507 (ActivityStatus)
+// Module 11218 (ActivityStatus)
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
 const View = fn(17).View;
-const DOT_UNICODE = fn(13508).DOT_UNICODE;
+const DOT_UNICODE = fn(11219).DOT_UNICODE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_12 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
@@ -38,7 +38,7 @@ export default function ActivityStatus(guildId) {
   const items1 = [PresenceStore];
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
   const obj2 = userId(504);
-  const voiceChannel = stateFromStores1(13510)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(11221)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = noop.useMemo(() => {
     let found;
@@ -67,13 +67,13 @@ export default function ActivityStatus(guildId) {
       return tmp4;
     }
   }, items2);
-  const tmp6 = stateFromStores1(13509)(userId);
+  const tmp6 = stateFromStores1(11220)(userId);
   state = undefined;
   if (memo != null) {
     state = memo.state;
   }
-  const gameMentionsAsPlainText = userId(9052).useGameMentionsAsPlainText(state);
-  const obj3 = userId(9052);
+  const gameMentionsAsPlainText = userId(9387).useGameMentionsAsPlainText(state);
+  const obj3 = userId(9387);
   const items3 = [RelationshipStore];
   if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
@@ -89,7 +89,7 @@ export default function ActivityStatus(guildId) {
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(13516));
+        found = stateFromStores1.find(tmp5(11227));
       }
       const obj4 = { game: found, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
       const items4 = [tmp.icon, iconStyle];
@@ -98,8 +98,8 @@ export default function ActivityStatus(guildId) {
       obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
       obj4.hideIcon = tmp12;
       obj4.hideText = tmp13;
-      let tmp18Result = closure_9(tmp5(13511), obj4);
-      const tmp5Result = tmp5(13511);
+      let tmp18Result = closure_9(tmp5(11222), obj4);
+      const tmp5Result = tmp5(11222);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -116,7 +116,7 @@ export default function ActivityStatus(guildId) {
         obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
         obj5.hideIcon = tmp12;
         obj5.hideText = tmp13;
-        tmp18Result = closure_9(tmp5(13517), obj5);
+        tmp18Result = closure_9(tmp5(11228), obj5);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
@@ -127,7 +127,7 @@ export default function ActivityStatus(guildId) {
           obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
           obj6.hideIcon = tmp12;
           obj6.hideText = tmp13;
-          tmp18Result = closure_9(tmp5(13523), obj6);
+          tmp18Result = closure_9(tmp5(11234), obj6);
         }
       }
     }
@@ -141,13 +141,13 @@ export default function ActivityStatus(guildId) {
         }
         if (tmp25) {
           const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-          tmp25 = closure_9(tmp5(13525), obj7);
+          tmp25 = closure_9(tmp5(11236), obj7);
         }
         const items7 = [tmp25, ];
         let tmp27 = null != memo.state;
         if (tmp27) {
           const obj8 = { variant: "body-xs/normal", style: textStyle, maxFontSizeMultiplier, children: gameMentionsAsPlainText };
-          tmp27 = closure_9(tmp5(13515), obj8);
+          tmp27 = closure_9(tmp5(11226), obj8);
         }
         const obj9 = { children: null };
         items7[1] = tmp27;
@@ -164,7 +164,7 @@ export default function ActivityStatus(guildId) {
     }
     if (tmp31) {
       const obj11 = { variant: "body-xs/normal", style: textStyle, maxFontSizeMultiplier, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DOT_UNICODE };
-      tmp31 = closure_9(tmp5(13515), obj11);
+      tmp31 = closure_9(tmp5(11226), obj11);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;

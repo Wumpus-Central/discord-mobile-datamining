@@ -1,12 +1,12 @@
-// === Module 18233: usePaginatedMemberApplications ===
+// === Module 18272: usePaginatedMemberApplications ===
 
-// Module 18233 (usePaginatedMemberApplications)
+// Module 18272 (usePaginatedMemberApplications)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const result = fn(4949).MAX_RESULTS_PER_PAGE * fn(4949).MAX_VISIBLE_PAGES;
+const result = fn(4953).MAX_RESULTS_PER_PAGE * fn(4953).MAX_VISIBLE_PAGES;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx");
 
@@ -17,7 +17,7 @@ export function usePaginatedMemberApplications(guildId) {
   error = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  closure_2 = noop.useRef(false);
+  closure_2 = noop.useRef(new Set());
   [error, _slicedToArray] = noop.useState(null);
   noop = noop.useRef(null);
   closure_6 = noop.useRef(false);
@@ -51,26 +51,32 @@ export function usePaginatedMemberApplications(guildId) {
               return obj4;
             } else {
               closure_3 = tmp4;
-              closure_130_0 = undefined;
+              dependencyMap = tmp8;
+              closure_130_0 = status;
               closure_130_1 = undefined;
-              if (!tmp8.current) {
+              closure_130_2 = undefined;
+              closure_130_3 = undefined;
+              const current5 = dependencyMap.current;
+              if (!current5.has(status)) {
                 const _HermesInternal = HermesInternal;
                 const combined = "" + guildId + "-" + status;
+                closure_130_1 = combined;
                 let flag = false;
-                if (combined !== ref2.current) {
-                  ref2.current = combined;
+                if (combined !== ref.current) {
+                  ref.current = combined;
                   limit.current = false;
                   flag = true;
                 }
                 if (!limit.current) {
                   if (null != closure_3) {
-                    tmp58(null);
+                    tmp74(null);
                   }
-                  ref2 = 2;
-                  ref.current = true;
-                  const tmp51 = (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
-                    const tmp2 = status2 === guildId(4949).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (guildId2 === guildId(4949).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                  ref = 2;
+                  const current4 = dependencyMap.current;
+                  current4.add(status);
+                  const tmp66 = (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
+                    const tmp2 = status2 === guildId(4953).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                    if (guildId2 === guildId(4953).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                       if (!flag) {
                         if (0 !== status.length) {
                           const obj2 = { before: tmp2 ? status[status.length - 1].joinRequestId : status[status.length - 1].actionedAt };
@@ -94,10 +100,10 @@ export function usePaginatedMemberApplications(guildId) {
                     }
                   })(guildId, status, guildId, status, flag);
                   const obj5 = { guildId, status, limit, force: true };
-                  const merged = Object.assign(tmp51);
+                  const merged = Object.assign(tmp66);
                   limit = 3;
                   c7 = 1;
-                  const obj6 = { value: guildJoinRequests(ref[5]).fetchGuildJoinRequests(obj5), done: false };
+                  const obj6 = { value: guildJoinRequests(6879).fetchGuildJoinRequests(obj5), done: false };
                   return obj6;
                 }
               }
@@ -105,40 +111,45 @@ export function usePaginatedMemberApplications(guildId) {
             }
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
-              ref2 = 1;
-              closure_130_2 = tmp58;
-              const aPIError = new guildId(ref[6]).APIError(closure_130_2);
-              closure_130_1 = aPIError;
-              tmp58(closure_130_1.getAnyErrorMessage());
+              ref = 1;
+              closure_130_4 = tmp74;
+              const aPIError = new guildId(5666).APIError(closure_130_4);
+              closure_130_3 = aPIError;
+              tmp74(closure_130_3.getAnyErrorMessage());
             } else if (arg0 === 1) {
               c7 = 3;
               throw value;
             } else if (arg0 === 2) {
-              ref2 = 0;
-              ref.current = false;
+              ref = 0;
+              const current = dependencyMap.current;
+              current.delete(closure_130_0);
               c7 = 3;
               let obj = { value, done: true };
               return obj;
             } else {
-              closure_130_0 = value;
-              if (null != closure_130_0) {
-                if (closure_130_0.body.guild_join_requests.length < limit) {
-                  limit.current = true;
+              closure_130_2 = value;
+              if (null != closure_130_2) {
+                if (closure_130_1 === ref.current) {
+                  if (closure_130_2.body.guild_join_requests.length < limit) {
+                    limit.current = true;
+                  }
                 }
               }
-              ref2 = 1;
+              ref = 1;
             }
-            ref2 = 0;
-            ref.current = false;
+            ref = 0;
+            const current2 = dependencyMap.current;
+            current2.delete(closure_130_0);
           }
-          ref2 = 0;
-          ref.current = false;
-          throw tmp58;
-        } catch (tmp58) {
-          if (tmp5 === ref2) {
+          ref = 0;
+          const current3 = dependencyMap.current;
+          current3.delete(closure_130_0);
+          throw tmp74;
+        } catch (tmp74) {
+          if (tmp5 === ref) {
             c7 = tmp3;
-            throw tmp58;
-          } else if (tmp2 === tmp60) {
+            throw tmp74;
+          } else if (tmp2 === tmp76) {
             limit = tmp2;
           } else {
             limit = tmp;
@@ -148,6 +159,7 @@ export function usePaginatedMemberApplications(guildId) {
     })();
   });
   items = [error, guildId, guildJoinRequests];
+  set = new Set();
   return {
     fetchNextPage: noop.useCallback(function() {
       const self = this;

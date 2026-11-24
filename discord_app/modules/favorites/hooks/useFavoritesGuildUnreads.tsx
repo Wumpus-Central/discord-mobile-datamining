@@ -1,14 +1,14 @@
-// === Module 17891: useFavoritesGuildUnreads ===
+// === Module 17929: useFavoritesGuildUnreads ===
 
-// Module 17891 (useFavoritesGuildUnreads)
+// Module 17929 (useFavoritesGuildUnreads)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6618 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6664 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import ReadStateStore from "ReadStateStore" /* 6619 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6805 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4851 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function useFavoritesGuildUnreads(arg0) {
   items = [ActiveJoinedThreadsStore, ChannelStore, GuildReadStateStore, JoinedThreadsStore, PermissionStore, ReadStateStore, UserGuildSettingsStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const keys = SnowflakeUtilsDefault.keys(closure_0);
-    const set = new Set();
+    set = new Set();
     return keys.reduce((badge, item) => {
       channel = channel.getChannel(item);
       let guildId;

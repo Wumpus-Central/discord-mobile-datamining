@@ -1,9 +1,9 @@
-// === Module 7698: VoiceWarningIcon ===
+// === Module 7039: VoiceWarningIcon ===
 
-// Module 7698 (VoiceWarningIcon)
+// Module 7039 (VoiceWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod7646 from "module_7646" /* 7646 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod6983 from "module_6983" /* 6983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VoiceWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7646, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod6983, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

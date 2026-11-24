@@ -1,10 +1,10 @@
-// === Module 11986: useRelativeTimestampUpdates ===
+// === Module 11870: useRelativeTimestampUpdates ===
 
-// Module 11986 (useRelativeTimestampUpdates)
+// Module 11870 (useRelativeTimestampUpdates)
 import DurationsDefault from "Durations" /* 1088 */;
-import MarkupTypes from "MarkupTypes" /* 5934 */;
-import TimestampUtils from "TimestampUtils" /* 8821 */;
-import useFormattedTimestamp from "useFormattedTimestamp" /* 11143 */;
+import MarkupTypes from "MarkupTypes" /* 5994 */;
+import TimestampUtils from "TimestampUtils" /* 6965 */;
+import useFormattedTimestamp from "useFormattedTimestamp" /* 10512 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ function getRowId(type) {
   }
   return context;
 }
-const RowGeneratorConstants = fn(8670);
+const RowGeneratorConstants = fn(8083);
 ({ Changeset: closure_4, RowType: hasOwnProperty } = RowGeneratorConstants);
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
@@ -75,7 +75,7 @@ export default function useRelativeTimestampUpdates(isActive) {
   dependencyMap = noop.useRef({ first: -1, last: -1 });
   noop = noop.useRef(null);
   noop.useRef(undefined);
-  const tmp = chatManager(7392)(isActive.onRefresh);
+  const tmp = chatManager(7202)(isActive.onRefresh);
   closure_5 = tmp;
   function update() {
     clearTimeout(ref3.current);
@@ -108,7 +108,7 @@ export default function useRelativeTimestampUpdates(isActive) {
                       let _Set = Set;
                       let tmp21 = new.target;
                       let tmp22 = new.target;
-                      let set = new Set();
+                      set = new Set();
                       tmp17.shownIn = set;
                     }
                     let tmp58Result = useFormattedTimestamp;

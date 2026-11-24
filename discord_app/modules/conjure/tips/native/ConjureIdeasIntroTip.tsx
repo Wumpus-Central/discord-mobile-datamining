@@ -1,11 +1,11 @@
-// === Module 18465: ConjureIdeasIntroTip ===
+// === Module 18506: ConjureIdeasIntroTip ===
 
-// Module 18465 (ConjureIdeasIntroTip)
+// Module 18506 (ConjureIdeasIntroTip)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import LightbulbIcon from "LightbulbIcon" /* 11336 */;
-import ConjureTipCallout from "ConjureTipCallout" /* 18467 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import LightbulbIcon from "LightbulbIcon" /* 9637 */;
+import ConjureTipCallout from "ConjureTipCallout" /* 18508 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureTipCalloutDefault = ConjureTipCallout;
@@ -14,23 +14,23 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = {};
-const merged = Object.assign(fn(18466).CONJURE_IDEAS_INTRO_TIP_BASE);
+const merged = Object.assign(fn(18507).CONJURE_IDEAS_INTRO_TIP_BASE);
 obj.render = function render(arg0, context) {
   const onAskForIdeas = context.context.onAskForIdeas;
   const dismiss = context.dismiss;
   const obj = { icon: LightbulbIcon.LightbulbIcon, onDismiss: dismiss, children: null };
   const obj2 = { children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef4190.OJlbhX);
+  obj2.children = intl.string(_modDef4192.OJlbhX);
   items = [React3(ConjureTipCallout.ConjureTipTitle, obj2), , ];
   const obj3 = { children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef4190["3vJBni"]);
+  obj3.children = intl2.string(_modDef4192["3vJBni"]);
   items[1] = React3(ConjureTipCallout.ConjureTipBody, obj3);
   const obj4 = { children: null };
   const obj5 = { variant: "primary", size: "sm", text: null, disabled: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef4190["U/bLzU"]);
+  obj5.text = intl3.string(_modDef4192["U/bLzU"]);
   obj5.disabled = null == onAskForIdeas;
   obj5.onPress = function onPress() {
     if (dismiss != null) {

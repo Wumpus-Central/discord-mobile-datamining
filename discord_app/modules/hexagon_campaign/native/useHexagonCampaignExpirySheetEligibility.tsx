@@ -1,18 +1,18 @@
-// === Module 19111: useHexagonCampaignExpirySheetEligibility ===
+// === Module 19153: useHexagonCampaignExpirySheetEligibility ===
 
-// Module 19111 (useHexagonCampaignExpirySheetEligibility)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4941 */;
-import restoreHexagonCampaignPerks from "restoreHexagonCampaignPerks" /* 16411 */;
+// Module 19153 (useHexagonCampaignExpirySheetEligibility)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4945 */;
+import restoreHexagonCampaignPerks from "restoreHexagonCampaignPerks" /* 16444 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4941 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UserStore from "UserStore" /* 1386 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15636 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15657 */;
 
 require = fn;
-const HexagonCampaignConstants = fn(4938);
+const HexagonCampaignConstants = fn(4942);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_9, HexagonCampaignPerk: closure_10 } = HexagonCampaignConstants);
 const SystemTheme = fn(1194).SystemTheme;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 13212: SearchQueryTagManager ===
+// === Module 13126: SearchQueryTagManager ===
 
-// Module 13212 (SearchQueryTagManager)
-import TrackingConstants from "TrackingConstants" /* 8575 */;
-import SearchConstants from "SearchConstants" /* 8576 */;
+// Module 13126 (SearchQueryTagManager)
+import TrackingConstants from "TrackingConstants" /* 8877 */;
+import SearchConstants from "SearchConstants" /* 8878 */;
 import size from "module_2" /* 2 */;
 
 function isComplete(type) {
@@ -24,7 +24,7 @@ class SearchQueryTagManager {
 }
 const prototype = SearchQueryTagManager.prototype;
 prototype["markChanged"] = function markChanged() {
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   const tags = this.tags;
   const item = tags.forEach((text) => {
@@ -76,7 +76,7 @@ prototype["getChannelIds"] = function getChannelIds() {
 };
 prototype["getUserIds"] = function getUserIds(arg0) {
   closure_0 = arg0;
-  const set = new Set();
+  set = new Set();
   const tags = this.tags;
   const item = tags.forEach((type) => {
     if (type.type === SearchQueryTagTypes.COMPLETE) {

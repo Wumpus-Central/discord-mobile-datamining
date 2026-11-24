@@ -1178,7 +1178,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(partialSettings) {
-  obj = { emoji: { oneofKind: "r" }, animated: false };
+  obj = { emoji: { oneofKind: "Array" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2152,7 +2152,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(partialSettings) {
-  obj = { badge: { oneofKind: "r" } };
+  obj = { badge: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2346,22 +2346,30 @@ class AnonymizationInfo$Type extends MessageType18 {
             return items;
           }
     };
-    items = [, , ];
+    items = [, , , ];
     items[0] = obj;
-    obj1 = { no: 2, name: "anon_user_id", kind: "message", T: null };
+    items[1] = {
+      no: 2,
+      name: "anon_user_id",
+      kind: "message",
+      T() {
+            return require("wrappers").UInt64Value;
+          }
+    };
+    obj1 = { no: 3, name: "original_user_created_at", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[2]).UInt64Value;
+        return closure_1_0(closure_1_1[4]).Timestamp;
       }
     }
     obj1.T = T;
-    items[1] = obj1;
-    items[2] = {
-      no: 3,
-      name: "original_user_created_at",
+    items[2] = obj1;
+    items[3] = {
+      no: 4,
+      name: "original_user_id",
       kind: "message",
       T() {
-            return require("timestamp").Timestamp;
+            return require("wrappers").UInt64Value;
           }
     };
     tmp1 = new tmp("discord_protos.users.v1.AnonymizationInfo", items, T);
@@ -2393,11 +2401,14 @@ prototype18["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         obj.status = pos.int32();
       } else if (2 === tmp5) {
-        let UInt64Value = wrappers.UInt64Value;
-        obj.anonUserId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.anonUserId);
+        let UInt64Value2 = wrappers.UInt64Value;
+        obj.anonUserId = UInt64Value2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.anonUserId);
       } else if (3 === tmp5) {
         let Timestamp = timestamp.Timestamp;
         obj.originalUserCreatedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.originalUserCreatedAt);
+      } else if (4 === tmp5) {
+        let UInt64Value = wrappers.UInt64Value;
+        obj.originalUserId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.originalUserId);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -2442,6 +2453,12 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(status, tag, w
     const joined1 = Timestamp.internalBinaryWrite(status.originalUserCreatedAt, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Timestamp.internalBinaryWrite(status.originalUserCreatedAt, tag.tag(3, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (status.originalUserId) {
+    const UInt64Value2 = wrappers.UInt64Value;
+    const tagResult3 = tag.tag(4, _mod1196.WireType.LengthDelimited);
+    const joined2 = UInt64Value2.internalBinaryWrite(status.originalUserId, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = UInt64Value2.internalBinaryWrite(status.originalUserId, tag.tag(4, _mod1196.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -2476,6 +2493,14 @@ const items17 = [
     kind: "message",
     T() {
       return require("timestamp").Timestamp;
+    }
+  },
+  {
+    no: 4,
+    name: "original_user_id",
+    kind: "message",
+    T() {
+      return require("wrappers").UInt64Value;
     }
   }
 ];
@@ -4387,7 +4412,7 @@ class PerkConfig$Type extends MessageType30 {
 }
 const prototype30 = PerkConfig$Type.prototype;
 prototype30["create"] = function create(partialSettings) {
-  obj = { source: [], kind: { oneofKind: "r" } };
+  obj = { source: [], kind: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

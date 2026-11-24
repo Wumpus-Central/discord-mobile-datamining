@@ -1,21 +1,21 @@
-// === Module 5631: findCodedLinks ===
+// === Module 5635: findCodedLinks ===
 
-// Module 5631 (findCodedLinks)
+// Module 5635 (findCodedLinks)
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1375 */;
 import Url from "Url" /* 1381 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5633 */;
-import CodedLink from "CodedLink" /* 5635 */;
-import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 5636 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5940 */;
-import keysSorter from "keysSorter" /* 6570 */;
-import Authorize from "Authorize" /* 7004 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8239 */;
-import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 8392 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8437 */;
-import conjureProjectLink from "conjureProjectLink" /* 8899 */;
-import storefrontCodedLink2 from "storefrontCodedLink" /* 11965 */;
-import InviteStore from "InviteStore" /* 5632 */;
-import RegexUtils_mod from "RegexUtils" /* 5538 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5637 */;
+import CodedLink from "CodedLink" /* 5639 */;
+import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 5640 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 5641 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 5648 */;
+import Authorize from "Authorize" /* 5653 */;
+import keysSorter from "keysSorter" /* 5656 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 5659 */;
+import storefrontCodedLink2 from "storefrontCodedLink" /* 5660 */;
+import conjureProjectLink from "conjureProjectLink" /* 5661 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5662 */;
+import InviteStore from "InviteStore" /* 5636 */;
+import RegexUtils_mod from "RegexUtils" /* 5542 */;
 
 require = fn;
 function getPathsFromURL(target) {
@@ -404,7 +404,7 @@ function findCodedLinks(str) {
       if (null != arg0) {
         if (0 !== arg0.length) {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           items = [];
           function _loop(iter) {
             ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = getPathsFromURL(iter));
@@ -1167,7 +1167,7 @@ export function findCodedLink(sanitizeUrlResult) {
       if (null != arg0) {
         if (0 !== arg0.length) {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           items = [];
           function _loop(iter) {
             ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = getPathsFromURL(iter));
@@ -1699,7 +1699,7 @@ export function containsCodedLink(displayTarget) {
         if (null != arg0) {
           if (0 !== arg0.length) {
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             items = [];
             function _loop(iter) {
               ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = getPathsFromURL(iter));

@@ -1,18 +1,18 @@
-// === Module 17827: WaterwheelsDiscoverStatus ===
+// === Module 17865: WaterwheelsDiscoverStatus ===
 
-// Module 17827 (WaterwheelsDiscoverStatus)
+// Module 17865 (WaterwheelsDiscoverStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2643 from "module_2643" /* 2643 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 }, copy: null, centered: null, banner: null, bannerText: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 };
 obj2.copy = { alignItems: "center", gap: nativeDefault.space.PX_4 };

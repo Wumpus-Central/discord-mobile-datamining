@@ -1,19 +1,19 @@
-// === Module 12246: GameOrganizationInviteSummary ===
+// === Module 12186: GameOrganizationInviteSummary ===
 
-// Module 12246 (GameOrganizationInviteSummary)
+// Module 12186 (GameOrganizationInviteSummary)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2639 from "module_2639" /* 2639 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import Stack_Stack from "Stack/Stack" /* 5929 */;
-import GroupIcon from "GroupIcon" /* 7038 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12086 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import Stack_Stack from "Stack/Stack" /* 5989 */;
+import GroupIcon from "GroupIcon" /* 7029 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 11977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_5 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationInviteSummary.tsx");

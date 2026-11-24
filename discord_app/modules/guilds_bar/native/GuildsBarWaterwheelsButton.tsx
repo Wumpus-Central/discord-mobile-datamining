@@ -1,21 +1,21 @@
-// === Module 17931: GuildsBarWaterwheelsButton ===
+// === Module 17967: GuildsBarWaterwheelsButton ===
 
-// Module 17931 (GuildsBarWaterwheelsButton)
+// Module 17967 (GuildsBarWaterwheelsButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2643 from "module_2643" /* 2643 */;
-import useToken from "useToken" /* 5477 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import CompassIcon from "CompassIcon" /* 17014 */;
-import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 17828 */;
-import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17831 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17874 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 17886 */;
-import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 17924 */;
+import useToken from "useToken" /* 5481 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import CompassIcon from "CompassIcon" /* 17048 */;
+import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 17866 */;
+import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 17869 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17912 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 17924 */;
+import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 17960 */;
 import noop from "module_19" /* 19 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 10044 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 8783 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -40,7 +40,7 @@ const View = fn(17).View;
 const WATERWHEELS = fn(1071).WATERWHEELS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_10 = createStyles.createStyles((marginBottom) => {
   const obj = { stretch: { alignSelf: "stretch", marginBottom: -marginBottom } };
   return obj;
@@ -56,7 +56,7 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
   const obj4 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(() => ({ onPress }), []);
   const items1 = [React5(GuildsBarSeparatorDefault, {}), ];
-  const obj5 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 4, expandedChildren: 0, children: 0 };
+  const obj5 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: null, expandedChildren: null, children: null };
   const intl = util.intl;
   obj5.label = intl.string(_modDef2643.zFl2A4);
   obj5.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});

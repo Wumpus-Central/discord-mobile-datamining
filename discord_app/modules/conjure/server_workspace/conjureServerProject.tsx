@@ -1,9 +1,9 @@
-// === Module 6838: conjureServerProject ===
+// === Module 7449: conjureServerProject ===
 
-// Module 6838 (conjureServerProject)
-import ConjureActivity from "ConjureActivity" /* 6839 */;
-import conjurePageRoutes from "conjurePageRoutes" /* 6840 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+// Module 7449 (conjureServerProject)
+import ConjureActivity from "ConjureActivity" /* 7450 */;
+import conjurePageRoutes from "conjurePageRoutes" /* 7451 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 const size = fn(2);

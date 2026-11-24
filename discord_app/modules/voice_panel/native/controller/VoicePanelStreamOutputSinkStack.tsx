@@ -1,6 +1,6 @@
-// === Module 19231: VoicePanelStreamOutputSinkStack ===
+// === Module 19273: VoicePanelStreamOutputSinkStack ===
 
-// Module 19231 (VoicePanelStreamOutputSinkStack)
+// Module 19273 (VoicePanelStreamOutputSinkStack)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ prototype["logSinks"] = function logSinks() {
 prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(dependencyMap, arg1, arg2) {
   const self = this;
   const activeSinks = this.activeSinks;
-  let set = activeSinks.get(arg1);
+  set = activeSinks.get(arg1);
   if (set == null) {
     const _Set = Set;
     set = new Set();

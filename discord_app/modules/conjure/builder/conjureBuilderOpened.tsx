@@ -1,9 +1,9 @@
-// === Module 18238: conjureBuilderOpened ===
+// === Module 18277: conjureBuilderOpened ===
 
-// Module 18238 (conjureBuilderOpened)
-import ConjureAnalytics from "ConjureAnalytics" /* 6986 */;
+// Module 18277 (conjureBuilderOpened)
+import ConjureAnalytics from "ConjureAnalytics" /* 7582 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 

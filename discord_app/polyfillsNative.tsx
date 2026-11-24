@@ -1,14 +1,14 @@
-// === Module 15534: polyfillsNative ===
+// === Module 15555: polyfillsNative ===
 
-// Module 15534 (polyfillsNative)
+// Module 15555 (polyfillsNative)
 import q from "q" /* 1247 */;
 import Buffer from "Buffer" /* 1266 */;
-import _mod15629 from "module_15629" /* 15629 */;
+import _mod15650 from "module_15650" /* 15650 */;
 import Logger from "Logger" /* 3 */;
-import module_15535 from "module_15535" /* 15535 */;
-import get_ActivityIndicator from "module_15605" /* 15605 */;
-import _typeof from "module_15623" /* 15623 */;
-import GetOption from "module_15626" /* 15626 */;
+import module_15556 from "module_15556" /* 15556 */;
+import get_ActivityIndicator from "module_15626" /* 15626 */;
+import _typeof from "module_15644" /* 15644 */;
+import GetOption from "module_15647" /* 15647 */;
 import size from "module_2" /* 2 */;
 
 if (typeof process === "undefined") {
@@ -23,7 +23,7 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = _mod15629;
+  const _module5 = _mod15650;
   const _window = window;
   window.crypto = global.crypto;
 }

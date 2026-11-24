@@ -1,6 +1,6 @@
-// === Module 10047: generateHydrationId ===
+// === Module 8786: generateHydrationId ===
 
-// Module 10047 (generateHydrationId)
+// Module 8786 (generateHydrationId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/generateHydrationId.tsx");

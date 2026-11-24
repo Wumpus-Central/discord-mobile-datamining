@@ -1,10 +1,10 @@
-// === Module 5837: ApplicationStreamingSettingsStore ===
+// === Module 5903: ApplicationStreamingSettingsStore ===
 
-// Module 5837 (ApplicationStreamingSettingsStore)
+// Module 5903 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 5658 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5754 */;
+import Constants from "Constants" /* 5729 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5817 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
@@ -14,6 +14,7 @@ let preset = ApplicationStreamPresets.PRESET_VIDEO;
 let resolution = ApplicationStreamResolutions.RESOLUTION_720;
 let frameRate = ApplicationStreamFPS.FPS_30;
 const soundshareEnabled = true;
+let streamDrawingEnabled = true;
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStreamingSettingsStore extends PersistedStore {
 }
@@ -29,10 +30,15 @@ prototype["initialize"] = function initialize(preset) {
     if (soundshareEnabled == null) {
       soundshareEnabled = true;
     }
+    let flag = preset.streamDrawingEnabled;
+    if (flag == null) {
+      flag = true;
+    }
+    streamDrawingEnabled = flag;
   }
 };
 prototype["getState"] = function getState() {
-  return { preset, resolution, fps: frameRate, soundshareEnabled };
+  return { preset, resolution, fps: frameRate, soundshareEnabled, streamDrawingEnabled };
 };
 ApplicationStreamingSettingsStore.displayName = "ApplicationStreamingSettingsStore";
 ApplicationStreamingSettingsStore.persistKey = "ApplicationStreamingSettingStore";
@@ -68,7 +74,7 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return false;
   },
   STREAM_UPDATE_SETTINGS: function handleUpdateSettings(arg0) {
-    ({ preset, resolution, frameRate, soundshareEnabled } = arg0);
+    ({ preset, resolution, frameRate, soundshareEnabled, streamDrawingEnabled } = arg0);
     let tmp = null != preset;
     if (tmp) {
       tmp = preset !== preset;
@@ -96,6 +102,13 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
       tmp7 = soundshareEnabled !== soundshareEnabled;
     }
     if (tmp7) {
+      flag = true;
+    }
+    let tmp9 = null != streamDrawingEnabled;
+    if (tmp9) {
+      tmp9 = streamDrawingEnabled !== streamDrawingEnabled;
+    }
+    if (tmp9) {
       flag = true;
     }
     return flag;

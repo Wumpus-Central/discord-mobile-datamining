@@ -10,13 +10,13 @@ import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import FingerprintUtils from "FingerprintUtils" /* 1253 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import Server from "Server" /* 2117 */;
-import APIErrorDefault from "APIError" /* 6350 */;
-import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 7376 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 8368 */;
-import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 13285 */;
-import fetchExperiments from "fetchExperiments" /* 15430 */;
-import awaitExperiments from "awaitExperiments" /* 15431 */;
-import TrackingConsentUtilsDefault from "TrackingConsentUtils" /* 15432 */;
+import APIErrorDefault from "APIError" /* 5667 */;
+import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 7186 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 8190 */;
+import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 13212 */;
+import fetchExperiments from "fetchExperiments" /* 15451 */;
+import awaitExperiments from "awaitExperiments" /* 15452 */;
+import TrackingConsentUtilsDefault from "TrackingConsentUtils" /* 15453 */;
 import BrowserHandoffStore from "BrowserHandoffStore" /* 503 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1070 */;
 import Dispatcher from "Dispatcher" /* 572 */;
@@ -162,8 +162,8 @@ function handleLogout(isSwitchingAccount) {
   c28 = "";
   c30 = null;
   c29 = false;
-  c35 = false;
-  closure_36 = false;
+  c36 = false;
+  closure_37 = false;
   items = [];
   if (c31) {
     items.push({ type: "totp" });
@@ -204,7 +204,8 @@ let c32 = false;
 let closure_33 = null;
 let c34 = null;
 let c35 = false;
-let closure_36 = false;
+let c36 = false;
+let closure_37 = false;
 let items = [];
 let Store = initializeDefault.Store;
 class AuthenticationStore extends Store {
@@ -310,11 +311,14 @@ prototype["allowLogoutRedirect"] = function allowLogoutRedirect() {
 prototype["getSuspendedUserToken"] = function getSuspendedUserToken() {
   return c34;
 };
+prototype["isSuspendedUserTokenExpired"] = function isSuspendedUserTokenExpired() {
+  return null != c34 && c35;
+};
 prototype["getIsPasswordlessActive"] = function getIsPasswordlessActive() {
-  return c35;
+  return c36;
 };
 prototype["attemptedPasswordLogin"] = function attemptedPasswordLogin() {
-  return closure_36;
+  return closure_37;
 };
 AuthenticationStore.displayName = "AuthenticationStore";
 const authenticationStore = new AuthenticationStore(Dispatcher, {
@@ -420,11 +424,11 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
   },
   LOGIN: function handleLogin(arg0) {
     LOGGING_IN = LoginStates.LOGGING_IN;
-    let tmp2 = closure_36;
-    if (!closure_36) {
+    let tmp2 = closure_37;
+    if (!closure_37) {
       tmp2 = true === tmp;
     }
-    closure_36 = tmp2;
+    closure_37 = tmp2;
   },
   LOGIN_SUCCESS: function handleLoginSuccess(token) {
     LOGGING_IN = LoginStates.NONE;
@@ -452,7 +456,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     if (c29) {
       items.push({ type: "sms" });
     }
-    c35 = false;
+    c36 = false;
     c34 = null;
   },
   LOGIN_FAILURE: function handleLoginFailure(error) {
@@ -557,8 +561,9 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     LOGGING_IN = LoginStates.NONE;
   },
   LOGIN_SUSPENDED_USER: function handleSuspendedUserLogin(suspendedUserToken) {
-    c35 = false;
+    c36 = false;
     suspendedUserToken = suspendedUserToken.suspendedUserToken;
+    c35 = false;
     setImmediate(() => router_utils.transitionTo(constants.ACCOUNT_STANDING));
   },
   LOGOUT: handleLogout,
@@ -715,12 +720,20 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     handleLogout();
     setImmediate(() => router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT));
   },
+  SUSPENDED_USER_TOKEN_EXPIRED: function handleSuspendedUserTokenExpired() {
+    if (null != c34) {
+      if (!c35) {
+        c35 = true;
+      }
+    }
+    return false;
+  },
   PASSWORDLESS_FAILURE: function handlePasswordlessFailure(error) {
     error = error.error;
     c28 = "";
     c29 = false;
     c30 = null;
-    c35 = false;
+    c36 = false;
     c5 = null;
     if (error instanceof APIErrorDefault) {
       if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
@@ -735,7 +748,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     }
   },
   PASSWORDLESS_START: function handlePasswordlessStart() {
-    c35 = true;
+    c36 = true;
     LOGGING_IN = LoginStates.LOGGING_IN;
   }
 }, fn(572).DispatchBand.Early);

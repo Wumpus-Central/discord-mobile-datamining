@@ -1,6 +1,6 @@
-// === Module 8041: HotspotActionCreators ===
+// === Module 7440: HotspotActionCreators ===
 
-// Module 8041 (HotspotActionCreators)
+// Module 7440 (HotspotActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;

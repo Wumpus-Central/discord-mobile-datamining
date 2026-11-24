@@ -1,12 +1,14 @@
-// === Module 12262: GameOrganizationBenefitsCarousel ===
+// === Module 12201: GameOrganizationBenefitsCarousel ===
 
-// Module 12262 (GameOrganizationBenefitsCarousel)
+// Module 12201 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import Stack_Stack from "Stack/Stack" /* 5929 */;
-import Card from "Card" /* 7047 */;
-import GameOrganizationBenefits from "GameOrganizationBenefits" /* 12275 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import Stack_Stack from "Stack/Stack" /* 5989 */;
+import Card from "Card" /* 6019 */;
+import GameOrganizationBenefits from "GameOrganizationBenefits" /* 12202 */;
+import GameOrganizationBenefitIllustrations from "GameOrganizationBenefitIllustrations" /* 12203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,13 +16,13 @@ require = fn;
 function BenefitCard(isLast) {
   isLast = isLast.isLast;
   ({ text, Illustration } = isLast);
-  const tmp = closure_11(isLast.cardWidth);
+  const tmp = closure_10(isLast.cardWidth);
   items = [tmp.card, ];
   let cardSpacing = !isLast;
   if (!isLast) {
     cardSpacing = tmp.cardSpacing;
   }
-  obj = { border: "none", radius: 12, style: items, children: null };
+  const obj = { border: "none", radius: 12, style: items, children: null };
   items[1] = cardSpacing;
   const obj2 = { spacing: nativeDefault.space.PX_24, children: null };
   const items1 = [timestampProducer(Illustration, { width: "100%", accessible: false }), timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: text })];
@@ -35,13 +37,13 @@ function BenefitsCarousel(cardWidth) {
   noop = undefined;
   const sum = cardWidth + PX_12;
   dependencyMap = sum;
-  const tmp2 = closure_11(cardWidth);
+  const tmp2 = closure_10(cardWidth);
   [tmp4, c3] = noop.useState(0);
   const tmp3 = _slicedToArray(noop.useState(0), 2);
   [tmp6, c4] = noop.useState(0);
   const tmp7 = _slicedToArray(noop.useState(0), 2);
   closure_5 = tmp7[1];
-  obj = { style: tmp2.carouselContainer, children: null };
+  let obj = { style: tmp2.carouselContainer, children: null };
   const obj2 = {
     style: tmp2.carousel,
     width: sum,
@@ -78,20 +80,28 @@ function BenefitsCarousel(cardWidth) {
   };
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   const tmp9 = closure_5;
-  const prop = cardWidth(12275).GAME_ORGANIZATION_BENEFITS;
+  const prop = cardWidth(12202).GAME_ORGANIZATION_BENEFITS;
   obj2.children = prop.map((key, index) => {
-    obj = { cardWidth, text: key.key.getText(displayNoun), Illustration: obj[key.key], isLast: index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1 };
+    const obj = { cardWidth, text: null, Illustration: null, isLast: null };
+    const intl = util.intl;
+    let str = displayNoun;
+    if (displayNoun == null) {
+      str = "other";
+    }
+    obj.text = intl.formatToPlainString(key.key.message, { displayNoun: str });
+    obj.Illustration = GameOrganizationBenefitIllustrations.GAME_ORGANIZATION_BENEFIT_ILLUSTRATIONS[key.key];
+    obj.isLast = index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1;
     return timestampProducer(BenefitCard, obj, key.key);
   });
-  obj.children = closure_6(displayNoun(10504), obj2);
+  obj.children = closure_6(displayNoun(9553), obj2);
   const children = [closure_6(closure_5, obj), ];
   let tmp10Result = null;
-  if (cardWidth(12275).GAME_ORGANIZATION_BENEFITS.length > 1) {
+  if (cardWidth(12202).GAME_ORGANIZATION_BENEFITS.length > 1) {
     tmp10Result = null;
     if (tmp6 > 0) {
       tmp10Result = null;
       if (tmp7[0] > tmp6) {
-        const obj3 = { containerStyle: tmp2.pagination, numberOfItems: tmp13(12275).GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp4 };
+        const obj3 = { containerStyle: tmp2.pagination, numberOfItems: tmp13(12202).GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp4 };
         tmp10Result = closure_6(tmp13(1186).CarouselPagination, obj3);
       }
     }
@@ -104,10 +114,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-let obj = { "auto-sync": fn(12263).GuildRolesAbstractUI, "linked-channel": fn(12267).GuildChatAbstractUI, "guild-invite": fn(12271).GuildInviteAbstractUI };
-const createStyles = fn(4913);
-let closure_11 = createStyles.createStyles((width) => {
-  obj = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: { padding: nativeDefault.space.PX_16, width, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, cardSpacing: { marginRight: PX_12 }, pagination: { paddingBottom: 0 } };
+const createStyles = fn(4917);
+let closure_10 = createStyles.createStyles((width) => {
+  const obj = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: { padding: nativeDefault.space.PX_16, width, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, cardSpacing: { marginRight: PX_12 }, pagination: { paddingBottom: 0 } };
   return obj;
 });
 const size = fn(2);

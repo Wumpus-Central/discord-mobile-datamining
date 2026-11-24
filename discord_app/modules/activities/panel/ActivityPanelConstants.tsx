@@ -1,6 +1,6 @@
-// === Module 5539: ActivityPanelConstants ===
+// === Module 5543: ActivityPanelConstants ===
 
-// Module 5539 (ActivityPanelConstants)
+// Module 5543 (ActivityPanelConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");

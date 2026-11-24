@@ -1,11 +1,11 @@
-// === Module 4786: DualReadUtils ===
+// === Module 4790: DualReadUtils ===
 
-// Module 4786 (DualReadUtils)
+// Module 4790 (DualReadUtils)
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import SetUtils from "SetUtils" /* 4779 */;
+import SetUtils from "SetUtils" /* 4783 */;
 import size from "module_2" /* 2 */;
 
 function deepEqualImpl(getTime, getTime2, map, arg3) {
@@ -233,7 +233,7 @@ function logErrorsToAnalytics(store_name, items) {
         const weakSet = new WeakSet();
         obj.visitedEntries = weakSet;
         let _Set = Set;
-        let set = new Set();
+        set = new Set();
         obj.seenMismatches = set;
         value = obj;
       }
@@ -502,7 +502,7 @@ export function runDualReadValidation(store_name, Kkv, fn) {
                         if (closure_2_9(shadowValue)) {
                           const _Set3 = Set;
                           const _Object = Object;
-                          const set = new Set(Object.keys(primaryValue));
+                          set = new Set(Object.keys(primaryValue));
                           const _Set4 = Set;
                           const _Object2 = Object;
                           const set1 = new Set(Object.keys(shadowValue));

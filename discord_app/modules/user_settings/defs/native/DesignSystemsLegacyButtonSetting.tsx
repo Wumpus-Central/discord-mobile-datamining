@@ -1,9 +1,9 @@
-// === Module 17211: DesignSystemsLegacyButtonSetting ===
+// === Module 17249: DesignSystemsLegacyButtonSetting ===
 
-// Module 17211 (DesignSystemsLegacyButtonSetting)
+// Module 17249 (DesignSystemsLegacyButtonSetting)
 import Constants from "Constants" /* 1071 */;
-import SettingsConstants from "SettingsConstants" /* 8712 */;
-import SettingBuilders from "SettingBuilders" /* 11937 */;
+import SettingsConstants from "SettingsConstants" /* 9414 */;
+import SettingBuilders from "SettingBuilders" /* 11815 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

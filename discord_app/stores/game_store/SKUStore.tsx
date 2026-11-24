@@ -1,6 +1,6 @@
-// === Module 6674: SKUStore ===
+// === Module 6234: SKUStore ===
 
-// Module 6674 (SKUStore)
+// Module 6234 (SKUStore)
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SKURecord from "SKURecord" /* 2166 */;

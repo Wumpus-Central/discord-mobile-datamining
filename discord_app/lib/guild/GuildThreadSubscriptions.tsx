@@ -1,6 +1,6 @@
-// === Module 14764: GuildThreadSubscriptions ===
+// === Module 14594: GuildThreadSubscriptions ===
 
-// Module 14764 (GuildThreadSubscriptions)
+// Module 14594 (GuildThreadSubscriptions)
 import privDefault from "priv" /* 1454 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ prototype["get"] = function get(arg0) {
   return this._get(arg0).keys();
 };
 prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
-  const set = new Set();
+  set = new Set();
   for (const key10010 in this._subscriptions) {
     let obj2 = this._subscriptions[key10010];
     let keys = obj2.keys();

@@ -1,11 +1,11 @@
-// === Module 19307: useVoiceChannelGames ===
+// === Module 19349: useVoiceChannelGames ===
 
-// Module 19307 (useVoiceChannelGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 8827 */;
+// Module 19349 (useVoiceChannelGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 7050 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6920 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7528 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -53,7 +53,7 @@ export default function useVoiceChannelGames(arg0, arg1) {
   const items3 = [getGamesForAppIds, stateFromStores];
   return stateFromStores.useMemo(() => {
     items = [];
-    const set = new Set();
+    set = new Set();
     for (const item10013 of getGamesForAppIds) {
       let obj2 = useGameProfileObscured;
       let result = obj2.isGameProfileObscured(item10013, stateFromStores);

@@ -1,9 +1,9 @@
-// === Module 5647: useGuildIdForChannelRoute ===
+// === Module 6001: useGuildIdForChannelRoute ===
 
-// Module 5647 (useGuildIdForChannelRoute)
+// Module 6001 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
-import FavoriteStore from "FavoriteStore" /* 4765 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+import FavoriteStore from "FavoriteStore" /* 4769 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
 
 require = fn;
 const FAVORITES = fn(1071).FAVORITES;

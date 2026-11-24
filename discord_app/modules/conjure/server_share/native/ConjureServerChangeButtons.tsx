@@ -1,8 +1,8 @@
-// === Module 18609: ConjureServerChangeButtons ===
+// === Module 18650: ConjureServerChangeButtons ===
 
-// Module 18609 (ConjureServerChangeButtons)
-import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet" /* 18299 */;
-import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert" /* 18301 */;
+// Module 18650 (ConjureServerChangeButtons)
+import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet" /* 18338 */;
+import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert" /* 18340 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ export default function ConjureServerChangeButtons(projectId) {
   ({ change, current, onReply } = projectId);
   dependencyMap = undefined;
   action = undefined;
-  const iter = onReply(18610)(projectId, change);
+  const iter = onReply(18651)(projectId, change);
   ({ project: c2, action } = iter);
   let done = iter.done;
   const keep_label = change.keep_label;
@@ -56,7 +56,7 @@ export default function ConjureServerChangeButtons(projectId) {
           }
         }
       };
-      tmp9Result = action(tmp7(5511).Button, obj);
+      tmp9Result = action(tmp7(5515).Button, obj);
     }
     items = [tmp9Result, , ];
     let tmp10 = null;
@@ -72,7 +72,7 @@ export default function ConjureServerChangeButtons(projectId) {
                       return onReply(keep_label);
                     }
           };
-          tmp10 = action(tmp7(5511).Button, obj2);
+          tmp10 = action(tmp7(5515).Button, obj2);
         }
       }
     }
@@ -80,12 +80,12 @@ export default function ConjureServerChangeButtons(projectId) {
     let tmp12 = null;
     if (null != done) {
       const obj3 = { variant: "body-sm/normal", color: "text-muted", children: done };
-      tmp12 = action(tmp7(5504).Text, obj3);
+      tmp12 = action(tmp7(5508).Text, obj3);
     }
     const obj4 = { direction: "vertical", spacing: 8, children: null };
     items[2] = tmp12;
     obj4.children = items;
-    let tmp6Result = keep_label(projectId(5929).Stack, obj4);
+    let tmp6Result = keep_label(projectId(5989).Stack, obj4);
   } else {
     tmp6Result = null;
   }

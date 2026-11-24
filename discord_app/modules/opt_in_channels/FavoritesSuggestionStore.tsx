@@ -1,11 +1,11 @@
-// === Module 8323: FavoritesSuggestionStore ===
+// === Module 8147: FavoritesSuggestionStore ===
 
-// Module 8323 (FavoritesSuggestionStore)
+// Module 8147 (FavoritesSuggestionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
 
 function handleChange() {
   const channelId = SelectedChannelStore.getChannelId();
@@ -21,7 +21,7 @@ function handleChange() {
           channelOpensByChannelId[channelId] = channelOpensByChannelId[channelId] + 1;
           if (null == dependencyMap[guild_id]) {
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             dependencyMap[guild_id] = set;
           }
           if (UserGuildSettingsStore.isFavorite(guild_id, channelId)) {
@@ -61,7 +61,7 @@ prototype["initialize"] = function initialize(arg0) {
         let _Set = Set;
         let tmp9 = new.target;
         let tmp10 = new.target;
-        let set = new Set(suggestedChannels[key10015]);
+        set = new Set(suggestedChannels[key10015]);
         closure_3[key10015] = set;
         continue;
       }
@@ -94,7 +94,7 @@ const favoritesSuggestionStore = new FavoritesSuggestionStore(DispatcherDefault,
     ({ guildId, channelId } = arg0);
     if (null == dependencyMap2[guildId]) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       dependencyMap2[guildId] = set;
     }
     dependencyMap2[guildId].add(channelId);

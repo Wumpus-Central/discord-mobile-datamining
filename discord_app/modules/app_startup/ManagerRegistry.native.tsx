@@ -1,8 +1,8 @@
-// === Module 19426: ManagerRegistry ===
+// === Module 19468: ManagerRegistry ===
 
-// Module 19426 (ManagerRegistry)
+// Module 19468 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20171 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20214 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -102,6 +102,7 @@ const obj = {
   IOSUserIdentifiersManager: null,
   DiskUsageManager: null,
   InstantInviteManager: null,
+  ImageLoadMetricsManager: null,
   JankSessionManager: null,
   JankStatsManager: null,
   JSWatchdogManager: null,
@@ -509,6 +510,12 @@ obj.InstantInviteManager = {
   inlineRequire() {
     return require("InstantInviteManager").default;
   }
+};
+obj.ImageLoadMetricsManager = {
+  inlineRequire() {
+    return require("ImageLoadMetricsManager").default;
+  },
+  hasStoreChangeListeners: true
 };
 obj.JankSessionManager = {
   actions: ["APP_STATE_UPDATE", "CONNECTION_OPEN_SUPPLEMENTAL"],

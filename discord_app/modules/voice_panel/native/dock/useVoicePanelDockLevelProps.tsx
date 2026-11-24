@@ -1,17 +1,17 @@
-// === Module 13309: useVoicePanelDockLevelProps ===
+// === Module 13235: useVoicePanelDockLevelProps ===
 
-// Module 13309 (useVoicePanelDockLevelProps)
+// Module 13235 (useVoicePanelDockLevelProps)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
-import SpeakingStore from "SpeakingStore" /* 6535 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import SpeakingStore from "SpeakingStore" /* 6726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const DEFAULT_VAD_THRESHOLD = fn(2131).DEFAULT_VAD_THRESHOLD;
-let closure_9 = fn(13310).VoicePanelDockHiddenContext;
+let closure_9 = fn(13236).VoicePanelDockHiddenContext;
 const InputModes = fn(1071).InputModes;
 let closure_11 = { tween: true, riseDurationMs: 90, fallDurationMs: 180, tweenFrameRate: 20 };
 const size = fn(2);
@@ -19,12 +19,12 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVo
 
 export function useVoicePanelDockGlowLevelProps() {
   const context = noop.useContext(closure_9);
-  const shouldAnimateSpeakerLevels = num2(12827).useShouldAnimateSpeakerLevels("VoicePanelDock");
-  const obj2 = num2(12827);
+  const shouldAnimateSpeakerLevels = num2(12746).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  const obj2 = num2(12746);
   items = [SelectedChannelStore, ChannelStore];
   const stateFromStores = num2(504).useStateFromStores(items, () => channel.getChannel(voiceChannelId.getVoiceChannelId()));
   const obj3 = num2(504);
-  const obj4 = num2(11009);
+  const obj4 = num2(10358);
   const items1 = [MediaEngineStore, SpeakingStore];
   const stateFromStoresObject = num2(504).useStateFromStoresObject(items1, () => {
     const mode = MediaEngineStore.getMode();
@@ -42,7 +42,7 @@ export function useVoicePanelDockGlowLevelProps() {
     let num = 0;
   } else if (!shouldAnimateSpeakerLevels) {
     num2 = 0;
-    if (!obj4.createMuteHandler(floorDb(10985)(stateFromStores)).mute) {
+    if (!obj4.createMuteHandler(floorDb(10261)(stateFromStores)).mute) {
       num2 = 0;
       if (tmp8) {
         num2 = 1;

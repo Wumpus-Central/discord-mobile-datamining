@@ -1,10 +1,10 @@
-// === Module 19806: useSoundboardSoundLocalPreview ===
+// === Module 19849: useSoundboardSoundLocalPreview ===
 
-// Module 19806 (useSoundboardSoundLocalPreview)
-import SoundboardActionCreators from "SoundboardActionCreators" /* 6830 */;
+// Module 19849 (useSoundboardSoundLocalPreview)
+import SoundboardActionCreators from "SoundboardActionCreators" /* 10262 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SoundboardStore from "SoundboardStore" /* 5961 */;
+import SoundboardStore from "SoundboardStore" /* 6797 */;
 
 const require = globalThis.__r;
 

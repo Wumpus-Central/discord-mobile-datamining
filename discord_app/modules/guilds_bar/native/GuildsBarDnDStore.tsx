@@ -1,10 +1,10 @@
-// === Module 17865: GuildsBarDnDStore ===
+// === Module 17903: GuildsBarDnDStore ===
 
-// Module 17865 (GuildsBarDnDStore)
+// Module 17903 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import _mod4828 from "module_4828" /* 4828 */;
-import SortedGuildStore from "SortedGuildStore" /* 6550 */;
+import _mod4832 from "module_4832" /* 4832 */;
+import SortedGuildStore from "SortedGuildStore" /* 6038 */;
 import identity from "module_1257" /* 1257 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("module_1653").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 500, scrollPosition: 1000, windowSize: 60000, setStateShallow: 3600000, dropStart: 86400000, dropComplete: 604800000 };
+  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: require("module_1653").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 500, scrollPosition: 1000, windowSize: 60000, setStateShallow: 3600000, dropStart: 86400000, dropComplete: 604800000 };
   let obj2 = require("module_1653");
   obj.gestureState = require("module_1653").makeMutable(obj);
   let obj3 = require("module_1653");
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "add" }));
+      dropSpecs(1262).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "analyticsLocations" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -109,7 +109,7 @@ export function useItemDragState(guildId, flag) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "disabled", overState: "isArray", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }
@@ -198,7 +198,7 @@ export function useItemDragState(guildId, flag) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4828.shallow);
+  }, _mod4832.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

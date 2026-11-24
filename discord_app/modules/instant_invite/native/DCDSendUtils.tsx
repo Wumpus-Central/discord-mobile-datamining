@@ -1,7 +1,7 @@
-// === Module 6450: DCDSendUtils ===
+// === Module 8272: DCDSendUtils ===
 
-// Module 6450 (DCDSendUtils)
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 6451 */;
+// Module 8272 (DCDSendUtils)
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 8273 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

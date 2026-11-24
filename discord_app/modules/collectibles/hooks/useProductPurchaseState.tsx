@@ -1,9 +1,9 @@
-// === Module 9038: useProductPurchaseState ===
+// === Module 11086: useProductPurchaseState ===
 
-// Module 9038 (useProductPurchaseState)
+// Module 11086 (useProductPurchaseState)
 import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
-import compactDefault from "compact" /* 9039 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8090 */;
+import compactDefault from "compact" /* 11087 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6203 */;
 
 const require = globalThis.__r;
 

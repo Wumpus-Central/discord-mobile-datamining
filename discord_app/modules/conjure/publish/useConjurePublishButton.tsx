@@ -1,9 +1,9 @@
-// === Module 18252: useConjurePublishButton ===
+// === Module 18291: useConjurePublishButton ===
 
-// Module 18252 (useConjurePublishButton)
+// Module 18291 (useConjurePublishButton)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 12305 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11313 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
   obj.variant = str3;
   if (tmp5) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef4190.kAfbEN);
+    let stringResult = intl2.string(_modDef4192.kAfbEN);
   } else {
     stringResult = undefined;
     if (tmp4 != null) {
@@ -41,7 +41,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
     }
     if (stringResult == null) {
       const intl = util.intl;
-      stringResult = intl.string(_modDef4190["120EFN"]);
+      stringResult = intl.string(_modDef4192["120EFN"]);
     }
   }
   obj.text = stringResult;
@@ -57,7 +57,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
   let stringResult1 = null;
   if ("auto_synced" === str) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef4190.W4LzCY);
+    stringResult1 = intl3.string(_modDef4192.W4LzCY);
   }
   obj.hint = stringResult1;
   let tmp11 = null != tmp4;

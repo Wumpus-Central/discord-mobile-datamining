@@ -1,15 +1,15 @@
-// === Module 18009: VoicePanelDockStatusDisplay ===
+// === Module 18048: VoicePanelDockStatusDisplay ===
 
-// Module 18009 (VoicePanelDockStatusDisplay)
+// Module 18048 (VoicePanelDockStatusDisplay)
 import _mod1653 from "module_1653" /* 1653 */;
-import _modDef3376 from "module_3376" /* 3376 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import spring_spring from "spring/spring" /* 5514 */;
+import _modDef3378 from "module_3378" /* 3378 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import spring_spring from "spring/spring" /* 5518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CallStore from "CallStore" /* 6627 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import CallStore from "CallStore" /* 6814 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 const _modDef1653 = _mod1653;
 
@@ -27,13 +27,13 @@ function StatusText(status) {
     if ("speaker" !== kind) {
       if ("joined" === kind) {
         const intl3 = require("util").intl;
-        stringResult = intl3.string(_modDef3376.f9Cdb5);
+        stringResult = intl3.string(_modDef3378.f9Cdb5);
       } else if ("left" === kind) {
         const intl2 = require("util").intl;
-        stringResult = intl2.string(_modDef3376.aZoM2c);
+        stringResult = intl2.string(_modDef3378.aZoM2c);
       } else if ("streaming" === kind) {
         const intl = require("util").intl;
-        stringResult = intl.string(_modDef3376.syN59i);
+        stringResult = intl.string(_modDef3378.syN59i);
       }
     }
   }
@@ -56,13 +56,13 @@ function StatusText(status) {
     if ("speaker" !== kind2) {
       if ("joined" === kind2) {
         const intl6 = require("util").intl;
-        stringResult1 = intl6.string(_modDef3376.f9Cdb5);
+        stringResult1 = intl6.string(_modDef3378.f9Cdb5);
       } else if ("left" === kind2) {
         const intl5 = require("util").intl;
-        stringResult1 = intl5.string(_modDef3376.aZoM2c);
+        stringResult1 = intl5.string(_modDef3378.aZoM2c);
       } else if ("streaming" === kind2) {
         const intl4 = require("util").intl;
-        stringResult1 = intl4.string(_modDef3376.syN59i);
+        stringResult1 = intl4.string(_modDef3378.syN59i);
       }
     }
   }
@@ -162,9 +162,9 @@ function StatusText(status) {
       ringing = dm2.ringing;
     }
     obj5.ringing = ringing;
-    let tmp53Result = closure_11(tmp26(18011).DockUserTitle, obj5);
+    let tmp53Result = closure_11(tmp26(18050).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_11(tmp26(18011).DockChannelTitle, {});
+    tmp53Result = closure_11(tmp26(18050).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_11(c5, obj4), ];
@@ -179,7 +179,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj7 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj6.children = closure_11(tmp26(5504).Text, obj7);
+    obj6.children = closure_11(tmp26(5508).Text, obj7);
     tmp53Result2 = closure_11(_modDef1653.View, obj6);
   }
   items7[1] = tmp53Result2;
@@ -475,10 +475,10 @@ function StatusLayer(exit) {
     }
     obj4.dimmed = tmp35;
     obj4.entered = tmp12[0];
-    let tmp32Result = tmp32(tmp2(18011).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(18050).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(18011).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(18050).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue5(_modDef1653.View, obj3), ];
@@ -498,16 +498,16 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(18010);
+const VoicePanelDockStatusStore = fn(18049);
 ({ useDockHasStreamers: closure_9, useDockSubject: closure_10 } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11768);
+const VoicePanelDockConstants = fn(11658);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-fn(5504).TextStyleSheet["body-md/medium"].lineHeight;
-const lineHeight = fn(5504).TextStyleSheet["body-xs/medium"].lineHeight;
-const createStyles = fn(4913);
+fn(5508).TextStyleSheet["body-md/medium"].lineHeight;
+const lineHeight = fn(5508).TextStyleSheet["body-xs/medium"].lineHeight;
+const createStyles = fn(4917);
 let obj = { display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE }, layer: null, tile: null, textSlot: null, subtext: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

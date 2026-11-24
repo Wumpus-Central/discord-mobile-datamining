@@ -1,11 +1,11 @@
-// === Module 13550: useChatPlaceholderAnimatedStyles ===
+// === Module 13464: useChatPlaceholderAnimatedStyles ===
 
-// Module 13550 (useChatPlaceholderAnimatedStyles)
+// Module 13464 (useChatPlaceholderAnimatedStyles)
 import initialize from "initialize" /* 504 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import timingPresets from "timingPresets" /* 5126 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import timingPresets from "timingPresets" /* 5130 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 
 require = fn;
 let obj = { duration: 1300, easing: fn(1186).STANDARD_EASING };

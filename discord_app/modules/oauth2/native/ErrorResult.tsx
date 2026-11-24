@@ -1,21 +1,21 @@
-// === Module 7016: ? ===
+// === Module 7609: ? ===
 
-// Module 7016
+// Module 7609
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import components_Button_Button from "components/Button/Button" /* 5511 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7017 */;
-import _modDef7019 from "module_7019" /* 7019 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import components_Button_Button from "components/Button/Button" /* 5515 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7354 */;
+import _modDef7610 from "module_7610" /* 7610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, gap: 16, paddingHorizontal: 16, justifyContent: "center", flexDirection: "column" }, inner: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center" }, text: { marginTop: 24, textAlign: "center" }, image: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, gap: 16, paddingHorizontal: 16, justifyContent: "center", flexDirection: "column" };
 obj2.image = { tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
@@ -28,7 +28,7 @@ export default function ErrorResult(error) {
   const tmp = closure_6();
   const obj = { bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.inner, children: null };
-  const obj3 = { source: _modDef7019, style: tmp.image };
+  const obj3 = { source: _modDef7610, style: tmp.image };
   items = [React4(FastImageDefault, obj3), ];
   const obj4 = { style: tmp.text, variant: "body-md/medium", children: null };
   if (error == null) {

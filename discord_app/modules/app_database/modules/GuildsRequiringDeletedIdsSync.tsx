@@ -1,7 +1,7 @@
-// === Module 8353: GuildsRequiringDeletedIdsSync ===
+// === Module 8173: GuildsRequiringDeletedIdsSync ===
 
-// Module 8353 (GuildsRequiringDeletedIdsSync)
-import DatabaseDaosDefault from "DatabaseDaos" /* 4791 */;
+// Module 8173 (GuildsRequiringDeletedIdsSync)
+import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class GuildsRequiringDeletedIdsSync {
@@ -57,7 +57,7 @@ prototype["getAll"] = function getAll() {
             const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSync();
             if (null == result) {
               const _Set2 = Set;
-              const set = new Set();
+              set = new Set();
               c2 = 3;
               const obj4 = { value: set, done: true };
               return obj4;

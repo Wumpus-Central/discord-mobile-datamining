@@ -1,14 +1,14 @@
-// === Module 14999: GuildOfficialMessagesStore ===
+// === Module 15038: GuildOfficialMessagesStore ===
 
-// Module 14999 (GuildOfficialMessagesStore)
+// Module 15038 (GuildOfficialMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -629,7 +629,7 @@ obj = {
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
     ({ ids, guildId } = arg0);
-    let set;
+    set = undefined;
     let found;
     let messages;
     if (null == guildId) {

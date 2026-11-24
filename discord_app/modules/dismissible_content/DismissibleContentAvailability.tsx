@@ -1,11 +1,11 @@
-// === Module 9084: DismissibleContentAvailability ===
+// === Module 9424: DismissibleContentAvailability ===
 
-// Module 9084 (DismissibleContentAvailability)
+// Module 9424 (DismissibleContentAvailability)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4745 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4747 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4967 */;
-import DismissibleContentScope from "DismissibleContentScope" /* 9083 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4749 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4751 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4971 */;
+import DismissibleContentScope from "DismissibleContentScope" /* 9423 */;
 import size from "module_2" /* 2 */;
 
 function canShowTimeRecurringDismissibleContent(lastDismissedAtMs, numTimesDismissed, cooldownDurationMs, arg3) {

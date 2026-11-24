@@ -1,11 +1,11 @@
-// === Module 11682: ForLaterModal ===
+// === Module 11569: ForLaterModal ===
 
-// Module 11682 (ForLaterModal)
+// Module 11569 (ForLaterModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6429 */;
-import HeaderShared from "HeaderShared" /* 8561 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 11683 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
+import HeaderShared from "HeaderShared" /* 8863 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 11570 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -56,7 +56,7 @@ export default function ForLaterModal(type) {
   tmp4Result = require("PlatformUtils");
   obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  items = [closure_4(require("module_7102").Header, obj3), ];
+  items = [closure_4(require("module_7072").Header, obj3), ];
   const obj4 = { type, onClose: null };
   const tmp4Result2 = require("NavigatorHeader");
   obj4.onClose = ModalActionCreatorsDefault.pop;

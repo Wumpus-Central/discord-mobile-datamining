@@ -1,9 +1,9 @@
-// === Module 15361: KeyboardLayoutMapUtils ===
+// === Module 15382: KeyboardLayoutMapUtils ===
 
-// Module 15361 (KeyboardLayoutMapUtils)
+// Module 15382 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 15360 */;
+import keyCodeDefault from "keyCode" /* 15381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1360 */;
@@ -101,7 +101,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
   }
 };
 function normalizeKeyMap(arg0) {
-  const set = new Set();
+  set = new Set();
   const obj = {};
   const entries = Object.entries(arg0);
   while (tmp2 !== undefined) {
@@ -346,7 +346,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(8297);
+const KeyboardConstants = fn(8136);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1378);

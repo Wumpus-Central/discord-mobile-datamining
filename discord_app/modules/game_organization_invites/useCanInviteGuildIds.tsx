@@ -1,11 +1,11 @@
-// === Module 12050: useCanInviteGuildIds ===
+// === Module 11942: useCanInviteGuildIds ===
 
-// Module 12050 (useCanInviteGuildIds)
+// Module 11942 (useCanInviteGuildIds)
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 
 const require = fn;
 const size = fn(2);

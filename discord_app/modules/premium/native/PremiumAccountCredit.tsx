@@ -1,16 +1,16 @@
-// === Module 9369: PremiumAccountCredit ===
+// === Module 9223: PremiumAccountCredit ===
 
-// Module 9369 (PremiumAccountCredit)
+// Module 9223 (PremiumAccountCredit)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PremiumUtils from "PremiumUtils" /* 2173 */;
-import _modDef3636 from "module_3636" /* 3636 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import GameIcon from "GameIcon" /* 7526 */;
-import BoostGemIcon from "BoostGemIcon" /* 9370 */;
+import _modDef3638 from "module_3638" /* 3638 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import GameIcon from "GameIcon" /* 7393 */;
+import BoostGemIcon from "BoostGemIcon" /* 9224 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 8120 */;
+import EntitlementStore from "EntitlementStore" /* 6233 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -31,7 +31,7 @@ function AccountCreditTier(arg0) {
   }
   if (hasPremiumGroup) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3636["5asczk"]);
+    let stringResult = intl3.string(_modDef3638["5asczk"]);
   } else {
     if (null != currentSubscription) {
       if (currentSubscription.planId === planId) {
@@ -106,9 +106,9 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1071).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, boostIcon: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-let size = { width: fn(7526).GameIconImageSize[fn(undefined, 7526).GameIconSizes.SMALL], height: fn(7526).GameIconImageSize[fn(undefined, 7526).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
+let size = { width: fn(7393).GameIconImageSize[fn(undefined, 7393).GameIconSizes.SMALL], height: fn(7393).GameIconImageSize[fn(undefined, 7393).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
 obj2.boostIcon = size;
 obj2.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
 obj2.headerText = { lineHeight: 20 };
@@ -150,7 +150,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
       const intl = tmp2(1112).intl;
       obj3.children = intl.string(tmp2(1112).t.YugZY0);
-      const items1 = [closure_6(tmp2(5504).Text, obj3), , , ];
+      const items1 = [closure_6(tmp2(5508).Text, obj3), , , ];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -164,7 +164,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
       const intl2 = tmp2(1112).intl;
       obj5.children = intl2.string(tmp2(1112).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(5504).Text, obj5);
+      items1[2] = closure_6(tmp2(5508).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -172,7 +172,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
           const intl3 = tmp2(1112).intl;
           obj6.children = intl3.string(tmp2(1112).t.azRP0E);
-          tmp9Result = closure_6(tmp2(5504).Text, obj6);
+          tmp9Result = closure_6(tmp2(5508).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

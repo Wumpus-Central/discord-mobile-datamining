@@ -1,10 +1,10 @@
-// === Module 12194: ActivityFlagUtils ===
+// === Module 12137: ActivityFlagUtils ===
 
-// Module 12194 (ActivityFlagUtils)
+// Module 12137 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8060 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8259 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

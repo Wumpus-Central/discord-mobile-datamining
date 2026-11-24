@@ -1,9 +1,9 @@
-// === Module 12106: AppLauncherContext ===
+// === Module 11996: AppLauncherContext ===
 
-// Module 12106 (AppLauncherContext)
+// Module 11996 (AppLauncherContext)
 import _mod1653 from "module_1653" /* 1653 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10676 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12107 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9948 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 12787: TraitOptionDetails ===
+// === Module 12706: TraitOptionDetails ===
 
-// Module 12787 (TraitOptionDetails)
+// Module 12706 (TraitOptionDetails)
 import nativeDefault from "native" /* 575 */;
-import _modDef3440 from "module_3440" /* 3440 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import RarityBadgeDefault from "RarityBadge" /* 12788 */;
+import _modDef3442 from "module_3442" /* 3442 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import RarityBadgeDefault from "RarityBadge" /* 12707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,26 +22,26 @@ function OptionDescription(option) {
             style: subscribeLink.subscribeLink,
             onPress() {
               const obj = { analyticsLocations: null };
-              items = [closure_1_1(7539).CHECKPOINT, closure_1_1(7539).CHECKPOINT_TRAIT];
+              items = [closure_1_1(6254).CHECKPOINT, closure_1_1(6254).CHECKPOINT_TRAIT];
               obj.analyticsLocations = items;
-              return closure_1_1(9099)(obj);
+              return closure_1_1(8960)(obj);
             },
             accessibilityRole: "link",
             children
           }, arg1);
         }
     };
-    let formatResult = intl.format(_modDef3440.E6AfCb, obj);
+    let formatResult = intl.format(_modDef3442.E6AfCb, obj);
   } else {
-    formatResult = tmp2(6336).getPlaintextAssetDescription(option);
-    const tmp2Result = tmp2(6336);
+    formatResult = tmp2(6639).getPlaintextAssetDescription(option);
+    const tmp2Result = tmp2(6639);
   }
   return closure_4(require("Text/Text").Text, { variant: "body-md/medium", color: "text-subtle", style: tmp.description, accessibilityElementsHidden: null == formatResult, children: formatResult });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, title: { textTransform: "capitalize" }, description: null, subscribeLink: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };

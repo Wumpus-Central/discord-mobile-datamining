@@ -1,7 +1,7 @@
-// === Module 18503: chat/ConjureAwaitingUser ===
+// === Module 18544: chat/ConjureAwaitingUser ===
 
-// Module 18503 (chat/ConjureAwaitingUser)
-import conjureChatTurns from "conjureChatTurns" /* 6926 */;
+// Module 18544 (chat/ConjureAwaitingUser)
+import conjureChatTurns from "conjureChatTurns" /* 7534 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureAwaitingUser.tsx");

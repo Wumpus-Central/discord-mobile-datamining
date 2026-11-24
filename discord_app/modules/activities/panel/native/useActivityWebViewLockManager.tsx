@@ -1,7 +1,7 @@
-// === Module 19181: useActivityWebViewLockManager ===
+// === Module 19223: useActivityWebViewLockManager ===
 
-// Module 19181 (useActivityWebViewLockManager)
-import native from "native" /* 4974 */;
+// Module 19223 (useActivityWebViewLockManager)
+import native from "native" /* 4978 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ export default function useActivityWebViewLockManager() {
       }
       return tmp;
     }
-    const set = new Set();
+    set = new Set();
     const map = new Map();
     return function useActivityWebviewLock() {
       const id = getCanRender.useId();
@@ -91,7 +91,7 @@ export default function useActivityWebViewLockManager() {
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(/* F139206 */ function() { ... });
+            closure_0 = resolved.then(/* F139421 */ function() { ... });
           }
         };
       }, items1);

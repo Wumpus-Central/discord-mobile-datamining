@@ -1,14 +1,14 @@
-// === Module 5841: SpatialAudioSessionStats ===
+// === Module 5907: SpatialAudioSessionStats ===
 
-// Module 5841 (SpatialAudioSessionStats)
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5812 */;
-import classifyOutputDeviceDefault from "classifyOutputDevice" /* 5842 */;
+// Module 5907 (SpatialAudioSessionStats)
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5873 */;
+import classifyOutputDeviceDefault from "classifyOutputDevice" /* 5908 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SpatialAudioStore from "SpatialAudioStore" /* 5810 */;
+import SpatialAudioStore from "SpatialAudioStore" /* 5871 */;
 
 const require = fn;
 function requestNativeStats() {
@@ -150,12 +150,12 @@ function takeSnapshot(isSpatial, arg1) {
     OFF_UNSUPPORTED = obj.OFF_UNSUPPORTED;
   }
 }
-const React6 = fn(5811).SpatialAudioOverrideSource;
-const Constants = fn(5658);
+const React6 = fn(5872).SpatialAudioOverrideSource;
+const Constants = fn(5729);
 ({ DEFAULT_DEVICE_ID: closure_10, Features: closure_11, SpatialAudioStatus: closure_12 } = Constants);
 let obj = { OFF_UNSUPPORTED: "off_unsupported", OFF_EXPERIMENT: "off_experiment", OFF_USER: "off_user", OFF_OVERRIDE: "off_override", IDLE: "idle", ACTIVE: "active", ACTIVE_MONO: "active_mono", FAILED_INIT: "failed_init", FAILED_HRTF: "failed_hrtf" };
 let closure_14 = { [obj.OFF_UNSUPPORTED]: "duration_off_unsupported_ms", [obj.OFF_EXPERIMENT]: "duration_off_experiment_ms", [obj.OFF_USER]: "duration_off_user_ms", [obj.OFF_OVERRIDE]: "duration_off_override_ms", [obj.IDLE]: "duration_idle_ms", [obj.ACTIVE]: "duration_active_ms", [obj.ACTIVE_MONO]: "duration_active_mono_ms", [obj.FAILED_INIT]: "duration_failed_init_ms", [obj.FAILED_HRTF]: "duration_failed_hrtf_ms" };
-const dependencyMap = Object.values(fn(5842).OutputDeviceClass);
+const dependencyMap = Object.values(fn(5908).OutputDeviceClass);
 let closure_16 = { mixUs: "mix_us", positioningUs: "positioning_us", renderUs: "render_us", reflectionsSimUs: "reflections_sim_us" };
 let closure_17 = ["mean", "p75", "p95", "p99", "max"];
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 6657: ConjureGuildExperiment ===
+// === Module 6843: ConjureGuildExperiment ===
 
-// Module 6657 (ConjureGuildExperiment)
-import ConjureUserExperiment from "ConjureUserExperiment" /* 6658 */;
-import GuildStore from "GuildStore" /* 4784 */;
+// Module 6843 (ConjureGuildExperiment)
+import ConjureUserExperiment from "ConjureUserExperiment" /* 6844 */;
+import GuildStore from "GuildStore" /* 4788 */;
 
 const require = globalThis.__r;
 
@@ -98,6 +98,18 @@ export function useIsConjureGuildEnabled(arg0) {
 }
 export { isConjureGuildEnabled };
 export { hasConjureGuild };
+export function hasConjureExperimentGuild(guildsArray, useConjureServerWidgetOffers) {
+  const obj = guildsArray[Symbol.iterator]();
+  while (obj !== undefined) {
+    let obj2 = { guildId: tmp.id, location: useConjureServerWidgetOffers };
+    if (closure_4.getConfig(obj2).enabled) {
+      obj.return();
+      let flag = true;
+      return true;
+    }
+  }
+  return false;
+}
 export { isConjureGuildEnabledWithoutExposure };
 export { hasConjureGuildWithoutExposure };
 export function useHasConjureGuild(DMAppChannel, arg1) {

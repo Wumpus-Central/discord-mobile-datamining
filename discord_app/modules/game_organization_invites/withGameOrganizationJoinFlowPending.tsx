@@ -1,6 +1,6 @@
-// === Module 12238: withGameOrganizationJoinFlowPending ===
+// === Module 12178: withGameOrganizationJoinFlowPending ===
 
-// Module 12238 (withGameOrganizationJoinFlowPending)
+// Module 12178 (withGameOrganizationJoinFlowPending)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

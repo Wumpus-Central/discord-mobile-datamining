@@ -1,13 +1,13 @@
-// === Module 13336: ChatInputGuardQuarantineDM ===
+// === Module 13259: ChatInputGuardQuarantineDM ===
 
-// Module 13336 (ChatInputGuardQuarantineDM)
+// Module 13259 (ChatInputGuardQuarantineDM)
 import util from "util" /* 1112 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13333 */;
-import ChatWarningIcon from "ChatWarningIcon" /* 13338 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13256 */;
+import ChatWarningIcon from "ChatWarningIcon" /* 13261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QUARANTINE_APPEAL_LINK = fn(13337).QUARANTINE_APPEAL_LINK;
+const QUARANTINE_APPEAL_LINK = fn(13260).QUARANTINE_APPEAL_LINK;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");

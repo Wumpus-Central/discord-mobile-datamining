@@ -1,13 +1,13 @@
-// === Module 17755: RTCConnectionDesyncHooks ===
+// === Module 17793: RTCConnectionDesyncHooks ===
 
-// Module 17755 (RTCConnectionDesyncHooks)
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17756 */;
+// Module 17793 (RTCConnectionDesyncHooks)
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17794 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15035 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15074 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ export function useEnsureSyncedChannelVoiceStates(id, voiceStates) {
       if (0 !== stateFromStores.length) {
         items = [];
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         const iter = arg1[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {

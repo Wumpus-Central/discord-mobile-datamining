@@ -1,10 +1,10 @@
-// === Module 17828: WaterwheelsDiscoverNavigation ===
+// === Module 17866: WaterwheelsDiscoverNavigation ===
 
-// Module 17828 (WaterwheelsDiscoverNavigation)
-import transitionToGuild from "transitionToGuild" /* 6835 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 10041 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17829 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4946 */;
+// Module 17866 (WaterwheelsDiscoverNavigation)
+import transitionToGuild from "transitionToGuild" /* 8459 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 8780 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17867 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
 
 require = fn;
 const Constants = fn(1071);
@@ -22,11 +22,13 @@ export function selectWaterwheelsDiscoverFromGuildsBar() {
   return flag;
 }
 export function selectWaterwheelsDiscover() {
-  if (obj.getWaterwheelsDiscoverEnabled(WaterwheelsDiscoverNavigation)) {
+  let flag = WaterwheelsDiscoverExperiment.getWaterwheelsDiscoverEnabled(WaterwheelsDiscoverNavigation);
+  if (flag) {
     transitionToGuild.transitionToGuild(hasOwnProperty);
+    flag = true;
     const tmpResult = transitionToGuild;
   }
-  obj = WaterwheelsDiscoverExperiment;
+  return flag;
 }
 export function leaveWaterwheelsDiscover() {
   if (SelectedGuildStore.getGuildId() === hasOwnProperty) {

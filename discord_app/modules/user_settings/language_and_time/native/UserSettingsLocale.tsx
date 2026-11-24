@@ -1,11 +1,11 @@
-// === Module 16830: UserSettingsLocale ===
+// === Module 16864: UserSettingsLocale ===
 
-// Module 16830 (UserSettingsLocale)
+// Module 16864 (UserSettingsLocale)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import TableRadioRow from "TableRadioRow" /* 7349 */;
-import flags from "flags" /* 16831 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import TableRadioRow from "TableRadioRow" /* 7127 */;
+import flags from "flags" /* 16865 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
@@ -77,7 +77,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
 const ScrollView = fn(17).ScrollView;
 const setAppLocale = fn(2189).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };

@@ -1,7 +1,7 @@
-// === Module 12283: launchConjureSharedProject ===
+// === Module 12223: launchConjureSharedProject ===
 
-// Module 12283 (launchConjureSharedProject)
-import openFrameDefault from "openFrame" /* 10688 */;
+// Module 12223 (launchConjureSharedProject)
+import openFrameDefault from "openFrame" /* 9962 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/share/launchConjureSharedProject.tsx");

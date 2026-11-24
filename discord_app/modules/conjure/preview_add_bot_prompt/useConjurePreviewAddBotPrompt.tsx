@@ -1,11 +1,11 @@
-// === Module 18243: useConjurePreviewAddBotPrompt ===
+// === Module 18282: useConjurePreviewAddBotPrompt ===
 
-// Module 18243 (useConjurePreviewAddBotPrompt)
-import conjurePreviewAddBotPromptConnection from "conjurePreviewAddBotPromptConnection" /* 14743 */;
+// Module 18282 (useConjurePreviewAddBotPrompt)
+import conjurePreviewAddBotPromptConnection from "conjurePreviewAddBotPromptConnection" /* 14573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePreviewAddBotPromptStore from "ConjurePreviewAddBotPromptStore" /* 6979 */;
+import ConjurePreviewAddBotPromptStore from "ConjurePreviewAddBotPromptStore" /* 7575 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
                 c3 = 1;
                 dependencyMap = 2;
                 c4 = 1;
-                const obj6 = { value: tmp3(12305).requestConjureInstallConsent(tmp3, closure_1), done: false };
+                const obj6 = { value: tmp3(11313).requestConjureInstallConsent(tmp3, closure_1), done: false };
                 return obj6;
               }
             }
@@ -84,10 +84,10 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
           c3 = 0;
           closure_128_4(false);
           if (obj.conjurePreviewBotAdded(closure_128_0)) {
-            const result = tmp3(14743).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
-            const obj2 = tmp3(14743);
+            const result = tmp3(14573).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
+            const obj2 = tmp3(14573);
           }
-          obj = tmp3(14743);
+          obj = tmp3(14573);
         }
         c3 = 0;
         closure_128_4(false);

@@ -1,8 +1,8 @@
-// === Module 19202: VoicePanelIconButton ===
+// === Module 19244: VoicePanelIconButton ===
 
-// Module 19202 (VoicePanelIconButton)
+// Module 19244 (VoicePanelIconButton)
 import _modDef1653 from "module_1653" /* 1653 */;
-import IconButton from "IconButton" /* 7591 */;
+import IconButton from "IconButton" /* 7811 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

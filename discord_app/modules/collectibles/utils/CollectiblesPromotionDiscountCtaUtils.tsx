@@ -1,11 +1,11 @@
-// === Module 14245: CollectiblesPromotionDiscountCtaUtils ===
+// === Module 11476: CollectiblesPromotionDiscountCtaUtils ===
 
-// Module 14245 (CollectiblesPromotionDiscountCtaUtils)
+// Module 11476 (CollectiblesPromotionDiscountCtaUtils)
 import util from "util" /* 1112 */;
-import useCollectiblesPromotionForProduct from "useCollectiblesPromotionForProduct" /* 8960 */;
-import CollectiblesStorefrontPricingIntegrationExperiment from "CollectiblesStorefrontPricingIntegrationExperiment" /* 8964 */;
-import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8966 */;
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 8970 */;
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 11104 */;
+import CollectiblesStorefrontPricingIntegrationExperiment from "CollectiblesStorefrontPricingIntegrationExperiment" /* 11107 */;
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 11109 */;
+import useCollectiblesPromotionForProduct from "useCollectiblesPromotionForProduct" /* 11132 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionDiscountCtaUtils.tsx");

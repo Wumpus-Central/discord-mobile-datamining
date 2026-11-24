@@ -1,12 +1,12 @@
-// === Module 4851: AutomodPermissionUtils ===
+// === Module 4855: AutomodPermissionUtils ===
 
-// Module 4851 (AutomodPermissionUtils)
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+// Module 4855 (AutomodPermissionUtils)
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
 const size = fn(2);
@@ -17,7 +17,7 @@ export function getAutomodQuarantinedProfileFlags(flags) {
   closure_0 = flags;
   if (null == flags) {
     const _Set2 = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     const _Set = Set;
     set = new Set(items.reduce((arr, item) => {
@@ -36,7 +36,7 @@ export function getAutomodQuarantinedProfileFlags(flags) {
 export function getAutomodQuarantinedGuildMemberFlags(member) {
   if (null == member) {
     const _Set3 = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     const flags = member.flags;
     if (null == flags) {

@@ -1,6 +1,6 @@
-// === Module 10840: SafeAreaDisabledStore ===
+// === Module 10116: SafeAreaDisabledStore ===
 
-// Module 10840 (SafeAreaDisabledStore)
+// Module 10116 (SafeAreaDisabledStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ export default module_560.create((arg0, arg1) => {
               items = [closure_1_0];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
-              const set = new Set(items);
+              set = new Set(items);
               obj.lockKeys = set;
               tmp12 = obj;
             }

@@ -1,9 +1,9 @@
-// === Module 14884: DatagramConnection ===
+// === Module 14921: DatagramConnection ===
 
-// Module 14884 (DatagramConnection)
-import RTCConnectionEvent from "RTCConnectionEvent" /* 5773 */;
-import DatagramEvent from "DatagramEvent" /* 14885 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5682 */;
+// Module 14921 (DatagramConnection)
+import RTCConnectionEvent from "RTCConnectionEvent" /* 5834 */;
+import DatagramEvent from "DatagramEvent" /* 14922 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5745 */;
 
 require = fn;
 const React2 = { Closed: 0, [0]: "Closed", Connecting: 1, [1]: "Connecting", Connected: 2, [2]: "Connected" };
@@ -51,7 +51,7 @@ prototype["connect"] = function connect() {
     self.started = true;
     self.state = Connecting.Connecting;
     let rtc = self.rtc;
-    rtc.on(self(5773).RTCConnectionEvent.WebTransportAck, self.webTransportAck);
+    rtc.on(self(5834).RTCConnectionEvent.WebTransportAck, self.webTransportAck);
     const _setTimeout = setTimeout;
     self.connectTimeout = setTimeout(() => {
       if (self.state === Connecting.Connecting) {

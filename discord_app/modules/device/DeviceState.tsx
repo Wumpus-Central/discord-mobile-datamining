@@ -1,8 +1,8 @@
-// === Module 5796: DeviceState ===
+// === Module 5857: DeviceState ===
 
-// Module 5796 (DeviceState)
-import device_DeviceState from "device/DeviceState" /* 5797 */;
-import constants_DeviceState from "constants/DeviceState" /* 5798 */;
+// Module 5857 (DeviceState)
+import device_DeviceState from "device/DeviceState" /* 5858 */;
+import constants_DeviceState from "constants/DeviceState" /* 5859 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/device/DeviceState.tsx");

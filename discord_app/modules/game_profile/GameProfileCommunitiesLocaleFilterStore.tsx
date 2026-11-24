@@ -1,6 +1,6 @@
-// === Module 9938: GameProfileCommunitiesLocaleFilterStore ===
+// === Module 14078: GameProfileCommunitiesLocaleFilterStore ===
 
-// Module 9938 (GameProfileCommunitiesLocaleFilterStore)
+// Module 14078 (GameProfileCommunitiesLocaleFilterStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

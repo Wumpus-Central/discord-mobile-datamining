@@ -1,29 +1,29 @@
-// === Module 15965: GuildProfileEditForm ===
+// === Module 16004: GuildProfileEditForm ===
 
-// Module 15965 (GuildProfileEditForm)
+// Module 16004 (GuildProfileEditForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7520 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7539 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8131 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8909 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9099 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10459 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10505 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15849 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15857 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15884 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15944 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6249 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6253 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 6262 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8960 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 9011 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9445 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9554 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11799 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15896 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15925 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15985 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import UserProfileStore from "UserProfileStore" /* 6956 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6257 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import UserProfileStore from "UserProfileStore" /* 6037 */;
 
 require = fn;
 function EditGuildProfileBanner(user) {
@@ -43,7 +43,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null, onGifBannerSelect: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(15834, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(15881, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -79,7 +79,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1112).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7520).AnalyticsLocationProvider, obj2);
+  return closure_17(user(6253).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;

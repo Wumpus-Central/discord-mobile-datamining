@@ -1,7 +1,7 @@
-// === Module 19719: guild_automod/ExperimentUtils ===
+// === Module 19762: guild_automod/ExperimentUtils ===
 
-// Module 19719 (guild_automod/ExperimentUtils)
-import AutomodExperiment from "AutomodExperiment" /* 19720 */;
+// Module 19762 (guild_automod/ExperimentUtils)
+import AutomodExperiment from "AutomodExperiment" /* 19763 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");

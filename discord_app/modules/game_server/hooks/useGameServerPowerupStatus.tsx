@@ -1,10 +1,10 @@
-// === Module 13465: useGameServerPowerupStatus ===
+// === Module 13390: useGameServerPowerupStatus ===
 
-// Module 13465 (useGameServerPowerupStatus)
+// Module 13390 (useGameServerPowerupStatus)
 import util from "util" /* 1112 */;
 import _modDef2856 from "module_2856" /* 2856 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8750 */;
+import GameServerStore from "GameServerStore" /* 10229 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(13449)(arg0);
+  const tmp2 = stateFromStores(13374)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {

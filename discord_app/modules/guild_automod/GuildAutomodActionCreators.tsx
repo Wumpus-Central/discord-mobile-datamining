@@ -1,17 +1,17 @@
-// === Module 12413: GuildAutomodActionCreators ===
+// === Module 12312: GuildAutomodActionCreators ===
 
-// Module 12413 (GuildAutomodActionCreators)
+// Module 12312 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5650 */;
-import AutomodFeedback from "AutomodFeedback" /* 8311 */;
-import DataUtils from "DataUtils" /* 12414 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
+import AutomodFeedback from "AutomodFeedback" /* 8100 */;
+import DataUtils from "DataUtils" /* 12313 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ function _transformApiRuletoClientRule(id) {
   if (exempt_roles == null) {
     exempt_roles = [];
   }
-  const set = new Set(exempt_channels);
+  set = new Set(exempt_channels);
   obj4.exemptRoles = new Set(exempt_roles);
   if (null != obj4.triggerMetadata) {
     const triggerMetadata = obj4.triggerMetadata;

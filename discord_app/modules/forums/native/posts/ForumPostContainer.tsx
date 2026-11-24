@@ -1,19 +1,19 @@
-// === Module 12887: ForumPostContainer ===
+// === Module 12806: ForumPostContainer ===
 
-// Module 12887 (ForumPostContainer)
+// Module 12806 (ForumPostContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import Card from "Card" /* 7047 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11214 */;
+import Card from "Card" /* 6019 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(7450);
+const ReanimatedHelperTypes = fn(7303);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");

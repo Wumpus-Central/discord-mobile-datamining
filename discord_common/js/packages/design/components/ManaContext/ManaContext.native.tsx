@@ -1,6 +1,6 @@
-// === Module 5030: ManaContext ===
+// === Module 5034: ManaContext ===
 
-// Module 5030 (ManaContext)
+// Module 5034 (ManaContext)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

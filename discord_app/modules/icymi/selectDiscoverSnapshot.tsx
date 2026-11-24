@@ -1,8 +1,8 @@
-// === Module 10049: selectDiscoverSnapshot ===
+// === Module 8789: selectDiscoverSnapshot ===
 
-// Module 10049 (selectDiscoverSnapshot)
-import ICYMITypes from "ICYMITypes" /* 10037 */;
-import parseWaterwheelsCard from "parseWaterwheelsCard" /* 10050 */;
+// Module 8789 (selectDiscoverSnapshot)
+import ICYMITypes from "ICYMITypes" /* 8776 */;
+import parseWaterwheelsCard from "parseWaterwheelsCard" /* 8790 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/icymi/selectDiscoverSnapshot.
 
 export function selectDiscoverSnapshot(items, fn) {
   items = [];
-  const set = new Set();
+  set = new Set();
   const entries = items.entries();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

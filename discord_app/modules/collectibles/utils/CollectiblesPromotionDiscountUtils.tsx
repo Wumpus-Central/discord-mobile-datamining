@@ -1,7 +1,7 @@
-// === Module 8966: CollectiblesPromotionDiscountUtils ===
+// === Module 11109: CollectiblesPromotionDiscountUtils ===
 
-// Module 8966 (CollectiblesPromotionDiscountUtils)
-import StorefrontTypes from "StorefrontTypes" /* 6854 */;
+// Module 11109 (CollectiblesPromotionDiscountUtils)
+import StorefrontTypes from "StorefrontTypes" /* 7469 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionDiscountUtils.tsx");

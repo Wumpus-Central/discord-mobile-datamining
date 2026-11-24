@@ -1,9 +1,9 @@
-// === Module 17182: PhoenixLaunchState ===
+// === Module 17215: PhoenixLaunchState ===
 
-// Module 17182 (PhoenixLaunchState)
+// Module 17215 (PhoenixLaunchState)
 import LoggerDefault from "Logger" /* 3 */;
-import LaunchClient2 from "LaunchClient" /* 17181 */;
-import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17183 */;
+import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17216 */;
+import LaunchClient2 from "LaunchClient" /* 17217 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

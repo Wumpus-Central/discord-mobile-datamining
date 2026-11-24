@@ -1,10 +1,10 @@
-// === Module 12326: conjurePublishAction ===
+// === Module 11336: conjurePublishAction ===
 
-// Module 12326 (conjurePublishAction)
+// Module 11336 (conjurePublishAction)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 12303 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 12319 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11311 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11329 */;
 import size from "module_2" /* 2 */;
 
 function resolveConjurePublishAction(input) {
@@ -57,7 +57,7 @@ function resolveConjurePublishAction(input) {
         str3 = "";
       }
       const obj5 = { server: str3 };
-      formatResult = intl.format(_modDef4190.N4NkyR, obj5);
+      formatResult = intl.format(_modDef4192.N4NkyR, obj5);
     }
   }
   const obj7 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -108,7 +108,7 @@ function resolveConjurePublishAction(input) {
             str6 = "";
           }
           const obj9 = { server: str6 };
-          formatResult1 = intl2.format(_modDef4190.eHYXFg, obj9);
+          formatResult1 = intl2.format(_modDef4192.eHYXFg, obj9);
         }
       }
     }
@@ -136,7 +136,7 @@ function resolveConjurePublishAction(input) {
       const obj10 = {};
       const merged2 = Object.assign(obj8);
       const intl4 = util.intl;
-      obj10.label = intl4.string(_modDef4190["tUeY/h"]);
+      obj10.label = intl4.string(_modDef4192["tUeY/h"]);
       obj10.action = "review_permissions";
       let obj11 = obj10;
     }
@@ -145,7 +145,7 @@ function resolveConjurePublishAction(input) {
   obj11 = {};
   const merged3 = Object.assign(obj8);
   const intl3 = util.intl;
-  obj11.label = intl3.string(_modDef4190["120EFN"]);
+  obj11.label = intl3.string(_modDef4192["120EFN"]);
   obj11.action = "publish";
 }
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");

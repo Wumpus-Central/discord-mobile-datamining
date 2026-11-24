@@ -1,13 +1,13 @@
-// === Module 19624: NotifSettingsProtoManager ===
+// === Module 19668: NotifSettingsProtoManager ===
 
-// Module 19624 (NotifSettingsProtoManager)
+// Module 19668 (NotifSettingsProtoManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ApexExperiment from "ApexExperiment" /* 1450 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 14952 */;
-import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 17427 */;
-import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17435 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14938 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 14991 */;
+import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 17465 */;
+import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17473 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14977 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 require = fn;
 function cancelRefresh() {
@@ -72,9 +72,9 @@ function handleAssignmentChange() {
     json(572).wait(() => DispatcherDefault.dispatch({ type: "EFFECTIVE_NOTIFICATION_SETTINGS_ARM_CHANGE", enabled: result, assignment: json }));
     const obj2 = json(572);
   }
-  const set = new Set(mapped.filter((item) => null != item));
+  set = new Set(mapped.filter((item) => null != item));
 }
-const NOTIF_SETTINGS = fn(15656).NOTIF_SETTINGS;
+const NOTIF_SETTINGS = fn(15677).NOTIF_SETTINGS;
 class NotifSettingsProtoManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

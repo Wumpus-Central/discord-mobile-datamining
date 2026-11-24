@@ -1,10 +1,10 @@
-// === Module 10190: IarSettingsUpsellsConfigScFiltersSexualMedia ===
+// === Module 8064: IarSettingsUpsellsConfigScFiltersSexualMedia ===
 
-// Module 10190 (IarSettingsUpsellsConfigScFiltersSexualMedia)
+// Module 8064 (IarSettingsUpsellsConfigScFiltersSexualMedia)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8231 */;
-import MenuTypes from "MenuTypes" /* 10177 */;
+import MenuTypes from "MenuTypes" /* 8051 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8065 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

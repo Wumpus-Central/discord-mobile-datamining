@@ -1,9 +1,9 @@
-// === Module 7007: disclosures ===
+// === Module 7601: disclosures ===
 
-// Module 7007 (disclosures)
+// Module 7601 (disclosures)
 import util from "util" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import applications from "applications" /* 7008 */;
+import applications from "applications" /* 7602 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -77,7 +77,7 @@ const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(7008).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(7602).ApplicationDisclosureType;
 export function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

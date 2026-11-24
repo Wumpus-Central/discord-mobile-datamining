@@ -1,18 +1,18 @@
-// === Module 17358: ManageSponsoredContentScreen ===
+// === Module 17396: ManageSponsoredContentScreen ===
 
-// Module 17358 (ManageSponsoredContentScreen)
+// Module 17396 (ManageSponsoredContentScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
 import _modDef2276 from "module_2276" /* 2276 */;
-import UserSettings from "UserSettings" /* 4738 */;
-import TableRowGroup from "TableRowGroup" /* 7348 */;
+import UserSettings from "UserSettings" /* 4742 */;
+import TableRowGroup from "TableRowGroup" /* 6014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(4738).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(4742).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
@@ -24,7 +24,7 @@ function AdTopicRow(adTopic) {
   obj.value = !hasItem;
   obj.onValueChange = function onValueChange(arg0) {
     const AdTopicOptOuts = UserSettings.AdTopicOptOuts;
-    const set = new Set(AdTopicOptOuts.getSetting());
+    set = new Set(AdTopicOptOuts.getSetting());
     if (arg0) {
       set.delete(adTopic);
     } else {
@@ -34,7 +34,7 @@ function AdTopicRow(adTopic) {
     items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7556).TableSwitchRow, obj);
+  return closure_5(adTopic(7423).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
@@ -44,7 +44,7 @@ let obj = {};
 obj[fn(1195).AdTopic.REAL_MONEY_GAMING] = _modDef2276.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj3 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj3);
 const size = fn(2);

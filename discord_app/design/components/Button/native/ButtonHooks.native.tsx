@@ -1,17 +1,17 @@
-// === Module 5518: ButtonHooks ===
+// === Module 5522: ButtonHooks ===
 
-// Module 5518 (ButtonHooks)
+// Module 5522 (ButtonHooks)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import shared from "shared" /* 4920 */;
-import native from "native" /* 4974 */;
-import useToken from "useToken" /* 5477 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import Icon from "Icon" /* 5513 */;
-import spring_spring from "spring/spring" /* 5514 */;
-import springPresets from "springPresets" /* 5515 */;
-import ButtonConstants from "ButtonConstants" /* 5517 */;
+import shared from "shared" /* 4924 */;
+import native from "native" /* 4978 */;
+import useToken from "useToken" /* 5481 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import Icon from "Icon" /* 5517 */;
+import spring_spring from "spring/spring" /* 5518 */;
+import springPresets from "springPresets" /* 5519 */;
+import ButtonConstants from "ButtonConstants" /* 5521 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -169,11 +169,11 @@ function useButtonScaleStyles(sharedValue, sharedValue1, scaleAmountInPx) {
   return _mod1653.useAnimatedStyle(ButtonHooksNativeTsx3);
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(4913);
+createStyles = fn(4917);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
-createStyles = fn(4913);
+createStyles = fn(4917);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 let closure_9 = { code: "(function ButtonHooksNativeTsx1(){let[interpolateColor,pressed,inactiveColor,pressedColor]=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};})" };
 let closure_10 = { code: "(function ButtonHooksNativeTsx2(){let[themedStyles,colors,interpolateColor,pressed]=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};})" };

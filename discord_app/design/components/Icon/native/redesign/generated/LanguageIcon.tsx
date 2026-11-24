@@ -1,9 +1,9 @@
-// === Module 9941: LanguageIcon ===
+// === Module 14081: LanguageIcon ===
 
-// Module 9941 (LanguageIcon)
+// Module 14081 (LanguageIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod9942 from "module_9942" /* 9942 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod14082 from "module_14082" /* 14082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function LanguageIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9942, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14082, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

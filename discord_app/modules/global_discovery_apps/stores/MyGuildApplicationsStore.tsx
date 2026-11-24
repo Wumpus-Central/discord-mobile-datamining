@@ -1,6 +1,6 @@
-// === Module 12942: MyGuildApplicationsStore ===
+// === Module 12861: MyGuildApplicationsStore ===
 
-// Module 12942 (MyGuildApplicationsStore)
+// Module 12861 (MyGuildApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
@@ -9,7 +9,7 @@ function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;
   if (null == closure_3.applicationIdToGuildIds[applicationId]) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     closure_3.applicationIdToGuildIds[applicationId] = set;
   }
   closure_3.applicationIdToGuildIds[applicationId].add(applicationId.guildId);
@@ -29,7 +29,7 @@ prototype["initialize"] = function initialize(applicationIdToGuildIds) {
       let _Set = Set;
       let tmp5 = new.target;
       let tmp6 = new.target;
-      let set = new Set(arg0.applicationIdToGuildIds[key10009]);
+      set = new Set(arg0.applicationIdToGuildIds[key10009]);
       closure_3.applicationIdToGuildIds[key10009] = set;
       continue;
     }
@@ -95,7 +95,7 @@ const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault,
       const id = application.id;
       if (null == closure_3.applicationIdToGuildIds[id]) {
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         closure_3.applicationIdToGuildIds[id] = set;
       }
       closure_3.applicationIdToGuildIds[id].add(tmp);
@@ -110,7 +110,7 @@ const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault,
       if (null != closure_3.applicationIdToGuildIds[applicationId]) {
         closure_3.applicationIdToGuildIds[applicationId].delete(tmp);
         const _Set = Set;
-        const set = new Set(closure_3.applicationIdToGuildIds[applicationId]);
+        set = new Set(closure_3.applicationIdToGuildIds[applicationId]);
         closure_3.applicationIdToGuildIds[applicationId] = set;
       }
     }

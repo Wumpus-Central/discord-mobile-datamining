@@ -1,19 +1,19 @@
-// === Module 18327: ConjureGuildPickerSheet ===
+// === Module 18366: ConjureGuildPickerSheet ===
 
-// Module 18327 (ConjureGuildPickerSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5976 */;
-import TableRowIcon from "TableRowIcon" /* 7057 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7636 */;
-import MentionableSelectOptionParts from "MentionableSelectOptionParts" /* 12360 */;
+// Module 18366 (ConjureGuildPickerSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import TableRowIcon from "TableRowIcon" /* 6029 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6279 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 6970 */;
+import MentionableSelectOptionParts from "MentionableSelectOptionParts" /* 12258 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildStore from "GuildStore" /* 4788 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { channel: fn(5976).SelectOptionType.CHANNEL, role: fn(5976).SelectOptionType.ROLE, user: fn(5976).SelectOptionType.USER };
+let obj = { channel: fn(6279).SelectOptionType.CHANNEL, role: fn(6279).SelectOptionType.ROLE, user: fn(6279).SelectOptionType.USER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/guild_pickers/native/ConjureGuildPickerSheet.tsx");
 
@@ -28,7 +28,7 @@ export default function ConjureGuildPickerSheet(guildId) {
   guild = undefined;
   closure_11 = undefined;
   closure_12 = undefined;
-  let set;
+  set = undefined;
   function toOption(id) {
     obj = { type: obj[type], value: id.id, label: id.label };
     return obj;

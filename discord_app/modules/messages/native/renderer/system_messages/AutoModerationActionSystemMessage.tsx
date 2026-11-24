@@ -1,31 +1,31 @@
-// === Module 8761: AutoModerationActionSystemMessage ===
+// === Module 14220: AutoModerationActionSystemMessage ===
 
-// Module 8761 (AutoModerationActionSystemMessage)
+// Module 14220 (AutoModerationActionSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import DateUtils from "DateUtils" /* 4735 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4832 */;
-import shared from "shared" /* 4920 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import useMessageAuthor from "useMessageAuthor" /* 6341 */;
-import _modDef7227 from "module_7227" /* 7227 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 8301 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8673 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8702 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8728 */;
-import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 8762 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8763 */;
-import _modDef8767 from "module_8767" /* 8767 */;
-import getRoleIcon from "getRoleIcon" /* 8768 */;
+import DateUtils from "DateUtils" /* 4739 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4836 */;
+import shared from "shared" /* 4924 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import useMessageAuthor from "useMessageAuthor" /* 6644 */;
+import _modDef7154 from "module_7154" /* 7154 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8086 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 8090 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 10452 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 10463 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14198 */;
+import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 14221 */;
+import _modDef14222 from "module_14222" /* 14222 */;
+import getRoleIcon from "getRoleIcon" /* 14223 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -84,7 +84,7 @@ export function createAutoModerationActionSystemMessage(message) {
             const internal3 = nativeDefault.internal;
             obj2.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
             const tmpResult35 = RowGeneratorStyleSheet;
-            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef7227)).uri;
+            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef7154)).uri;
             const tmpResult36 = AvatarUtils;
             const internal4 = nativeDefault.internal;
             obj2.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal4.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -122,7 +122,7 @@ export function createAutoModerationActionSystemMessage(message) {
               const internal = nativeDefault.internal;
               obj3.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE));
               const tmpResult39 = RowGeneratorStyleSheet;
-              obj3.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef8767)).uri;
+              obj3.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef14222)).uri;
               const tmpResult40 = AvatarUtils;
               const internal2 = nativeDefault.internal;
               obj3.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal2.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE));
@@ -173,7 +173,7 @@ export function createAutoModerationActionSystemMessage(message) {
             const internal7 = nativeDefault.internal;
             obj5.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal7.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE));
             const tmpResult44 = RowGeneratorStyleSheet;
-            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef7227)).uri;
+            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef7154)).uri;
             const tmpResult45 = AvatarUtils;
             const internal8 = nativeDefault.internal;
             obj5.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal8.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE));
@@ -224,7 +224,7 @@ export function createAutoModerationActionSystemMessage(message) {
       let getRaidAlertResolveCTAText = React4.resolveAssetSource;
       let internal6 = AvatarUtils;
       let intl9 = internal6.makeSource;
-      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp41 ? 8766 : 7227))).uri;
+      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp41 ? 13262 : 7154))).uri;
       const tmpResult47 = RowGeneratorStyleSheet;
       internal6 = nativeDefault.internal;
       obj8.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal6.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -336,7 +336,7 @@ export function createAutoModerationActionSystemMessage(message) {
       }
       obj12.reasonDisplayText = formatToPlainStringResult1;
       const tmpResult56 = DateUtils;
-      obj12.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(importDefault(result1 ? 8769 : 8770))).uri;
+      obj12.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(importDefault(result1 ? 14224 : 14225))).uri;
       const intl16 = util.intl;
       const string2 = intl16.string;
       const t3 = util.t;

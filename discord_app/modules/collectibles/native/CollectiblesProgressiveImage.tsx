@@ -1,9 +1,9 @@
-// === Module 17340: CollectiblesProgressiveImage ===
+// === Module 17378: CollectiblesProgressiveImage ===
 
-// Module 17340 (CollectiblesProgressiveImage)
+// Module 17378 (CollectiblesProgressiveImage)
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5123 */;
-import FastImageDefault from "FastImage" /* 5600 */;
+import timing_timing from "timing/timing" /* 5127 */;
+import FastImageDefault from "FastImage" /* 5604 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

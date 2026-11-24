@@ -1,6 +1,6 @@
-// === Module 12418: VoiceMessageAnalytics ===
+// === Module 12317: VoiceMessageAnalytics ===
 
-// Module 12418 (VoiceMessageAnalytics)
+// Module 12317 (VoiceMessageAnalytics)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import size from "module_2" /* 2 */;

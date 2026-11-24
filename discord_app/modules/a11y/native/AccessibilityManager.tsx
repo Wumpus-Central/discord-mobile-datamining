@@ -1,15 +1,15 @@
-// === Module 15644: AccessibilityManager ===
+// === Module 15665: AccessibilityManager ===
 
-// Module 15644 (AccessibilityManager)
+// Module 15665 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4973 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11754 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 15645 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15646 */;
-import updateSaturation from "updateSaturation" /* 15648 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4977 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11639 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 15666 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15667 */;
+import updateSaturation from "updateSaturation" /* 15669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -112,7 +112,7 @@ export default {
     ThemeActionCreators.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
-    const set = new Set();
+    set = new Set();
     const listener = closure_4.addEventListener("announcementFinished", (event) => {
       if (!event.success) {
         if (!set.has(event.announcement)) {

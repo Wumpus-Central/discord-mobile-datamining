@@ -1,15 +1,15 @@
-// === Module 17885: HomeDrawerFolderRow ===
+// === Module 17923: HomeDrawerFolderRow ===
 
-// Module 17885 (HomeDrawerFolderRow)
+// Module 17923 (HomeDrawerFolderRow)
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10364 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 11351 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6664 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import SortedGuildStore from "SortedGuildStore" /* 6550 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import SortedGuildStore from "SortedGuildStore" /* 6038 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -90,7 +90,7 @@ function Wrapper(folder) {
           const afkChannelId = guild.afkChannelId;
         }
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         const _Object = Object;
         const values = Object.values(voiceStates.getVoiceStates(item));
         for (const item10027 of values) {
@@ -206,7 +206,7 @@ const View = fn(17).View;
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5095).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5099).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

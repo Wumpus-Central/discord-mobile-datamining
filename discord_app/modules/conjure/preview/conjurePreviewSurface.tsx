@@ -1,23 +1,23 @@
-// === Module 6943: conjurePreviewSurface ===
+// === Module 7551: conjurePreviewSurface ===
 
-// Module 6943 (conjurePreviewSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5557 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 6944 */;
-import FramesStore from "FramesStore" /* 6623 */;
+// Module 7551 (conjurePreviewSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5561 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 7552 */;
+import FramesStore from "FramesStore" /* 6810 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(6624);
+const FramesConstants = fn(6811);
 ({ getFrameHostWindowKey: c3, isLaunched: closure_4, makeFrameId: hasOwnProperty, OVERLAY_SURFACE: closure_6 } = FramesConstants);
 let c7 = "0";
-const CONJURE_PREVIEW_SURFACE = { type: fn(5557).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
+const CONJURE_PREVIEW_SURFACE = { type: fn(5561).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewSurface.tsx");
 
 export const CONJURE_UNKNOWN_CHANNEL = "0";
 export { CONJURE_PREVIEW_SURFACE };
-export const CONJURE_PREVIEW_OVERLAY_SURFACE = { type: fn(5557).EmbeddedSurfaceType.OVERLAY, ticketChannelId: "0" };
+export const CONJURE_PREVIEW_OVERLAY_SURFACE = { type: fn(5561).EmbeddedSurfaceType.OVERLAY, ticketChannelId: "0" };
 export function isConjurePreviewSurface(surface) {
   let tmp3 = surface.type === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;
   if (!tmp3) {

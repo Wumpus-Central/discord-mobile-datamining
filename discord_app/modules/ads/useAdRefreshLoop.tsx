@@ -1,12 +1,12 @@
-// === Module 16502: useAdRefreshLoop ===
+// === Module 16536: useAdRefreshLoop ===
 
-// Module 16502 (useAdRefreshLoop)
+// Module 16536 (useAdRefreshLoop)
 import _mod19 from "module_19" /* 19 */;
-import QuestConstants from "QuestConstants" /* 6558 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6651 */;
-import QuestsEligibility from "QuestsEligibility" /* 9950 */;
-import AdDeliveryActionCreators from "AdDeliveryActionCreators" /* 9992 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8401 */;
+import QuestConstants from "QuestConstants" /* 6745 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6836 */;
+import QuestsEligibility from "QuestsEligibility" /* 9752 */;
+import AdDeliveryActionCreators from "AdDeliveryActionCreators" /* 9783 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8221 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -55,13 +55,15 @@ export function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA, fetch) {
   } else {
     QUESTS_BAR_MOBILE = QuestsExperimentLocations.QUESTS_BAR_MOBILE;
   }
-  state = null;
-  enabled = AdRefreshImmediateOnFocusExperiment.useConfig({ location: QUESTS_BAR_MOBILE }, { autoTrackExposure: null != MOBILE_HOME_DOCK_AREA }).enabled;
-  if (enabled) {
-    state = obj2.useState();
+  if (enabled == null) {
+    enabled = AdRefreshImmediateOnFocusExperiment.useConfig({ location: QUESTS_BAR_MOBILE }, { autoTrackExposure: tmp5 }).enabled;
   }
-  const obj = { autoTrackExposure: null != MOBILE_HOME_DOCK_AREA };
-  obj2 = _fetch(callerSource[5]);
+  state = null;
+  if (enabled) {
+    state = obj.useState();
+  }
+  obj = _fetch(callerSource[5]);
+  tmp5 = null != MOBILE_HOME_DOCK_AREA && null == enabled;
   items = [stateFromStores];
   const items1 = [MOBILE_HOME_DOCK_AREA];
   stateFromStores = require("initialize").useStateFromStores(items, () => {

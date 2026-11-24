@@ -1,16 +1,16 @@
-// === Module 14248: UnlockWithNitroButton ===
+// === Module 11479: UnlockWithNitroButton ===
 
-// Module 14248 (UnlockWithNitroButton)
+// Module 11479 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import BaseTextButton from "BaseTextButton" /* 5512 */;
-import ProductIds from "ProductIds" /* 8170 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8952 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14230 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import BaseTextButton from "BaseTextButton" /* 5516 */;
+import premium_ProductIds from "premium/ProductIds" /* 8972 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9496 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 11480 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 8851 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8090 */;
+import IAPStore from "IAPStore" /* 8963 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6203 */;
 
 require = fn;
 const ShopCtaEnum = fn(1073).ShopCtaEnum;
@@ -28,7 +28,7 @@ export function UnlockWithNitroButton(shouldShrink) {
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
-      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(ProductIds.ProductIds.GENERIC_CONSUMABLE);
+      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(premium_ProductIds.ProductIds.GENERIC_CONSUMABLE);
     }
     return isPurchasingProductResult;
   });

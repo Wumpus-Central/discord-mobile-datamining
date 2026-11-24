@@ -1,16 +1,16 @@
-// === Module 8340: ChannelConversationsStore ===
+// === Module 8161: ChannelConversationsStore ===
 
-// Module 8340 (ChannelConversationsStore)
+// Module 8161 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1454 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8341 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8162 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -162,7 +162,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(5537);
+const ConversationConstants = fn(5541);
 ({ CONVERSATION_COLORS: closure_8, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: closure_9, MAX_CONVERSATIONS_PER_CHANNEL: closure_10, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -364,7 +364,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       } else {
         const _Set = Set;
         items = [str];
-        const set = new Set(items);
+        set = new Set(items);
         const result = map1.set(conversationId, set);
       }
     }
@@ -451,7 +451,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     value = map.get(channelId);
     if (null == value) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       const result = map.set(channelId, set);
       value = set;
     }
@@ -459,9 +459,9 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
   },
   CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function handleFetchSuccess(requestKey) {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
-    let set;
+    set = undefined;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(8342).mapConversation);
+      const mapped = rawConversations.map(set(8163).mapConversation);
       const found = mapped.filter(set(1254).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

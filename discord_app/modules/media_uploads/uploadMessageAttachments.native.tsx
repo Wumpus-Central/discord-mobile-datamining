@@ -1,8 +1,8 @@
-// === Module 8530: uploadMessageAttachments ===
+// === Module 14189: uploadMessageAttachments ===
 
-// Module 8530 (uploadMessageAttachments)
+// Module 14189 (uploadMessageAttachments)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploadStore from "UploadStore" /* 8531 */;
+import UploadStore from "UploadStore" /* 11808 */;
 
 const require = fn;
 let closure_6 = async function _uploadMessageAttachments(arg0) {

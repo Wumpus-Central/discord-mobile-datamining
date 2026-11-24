@@ -1,17 +1,17 @@
-// === Module 13187: CreateGuildContainer ===
+// === Module 13105: CreateGuildContainer ===
 
-// Module 13187 (CreateGuildContainer)
+// Module 13105 (CreateGuildContainer)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;
 const UPLOAD_MEDIUM_SIZE = fn(1071).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5467).NAV_BAR_HEIGHT } };
+const createStyles = fn(4917);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5471).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");
@@ -186,7 +186,7 @@ export default function CreateGuildContainer(onCreate) {
             const obj14 = onCreate(tmp38[13]);
             const obj9 = { omitUserIds: null, guild: null, channel: null };
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             obj9.omitUserIds = set;
             obj9.guild = closure_128_3;
             obj9.channel = defaultChannel2;

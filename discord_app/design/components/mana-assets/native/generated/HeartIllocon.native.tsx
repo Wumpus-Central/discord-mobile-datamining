@@ -1,20 +1,20 @@
-// === Module 13625: HeartIllocon ===
+// === Module 13539: HeartIllocon ===
 
-// Module 13625 (HeartIllocon)
-import FastImageDefault from "FastImage" /* 5600 */;
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef13626 from "module_13626" /* 13626 */;
-import _modDef13627 from "module_13627" /* 13627 */;
-import _modDef13628 from "module_13628" /* 13628 */;
+// Module 13539 (HeartIllocon)
+import FastImageDefault from "FastImage" /* 5604 */;
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef13540 from "module_13540" /* 13540 */;
+import _modDef13541 from "module_13541" /* 13541 */;
+import _modDef13542 from "module_13542" /* 13542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13626 }, 3: null };
-const obj2 = { uri: _modDef13626 };
-obj[2] = { uri: _modDef13627 };
-const obj3 = { uri: _modDef13627 };
-obj[3] = { uri: _modDef13628 };
+let obj = { 1: null, 2: { uri: _modDef13540 }, 3: null };
+const obj2 = { uri: _modDef13540 };
+obj[2] = { uri: _modDef13541 };
+const obj3 = { uri: _modDef13541 };
+obj[3] = { uri: _modDef13542 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function HeartIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7357).getAssetSource(obj);
+  obj.source = num(7135).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

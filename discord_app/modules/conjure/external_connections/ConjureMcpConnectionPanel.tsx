@@ -1,6 +1,6 @@
-// === Module 18357: ConjureMcpConnectionPanel ===
+// === Module 18396: ConjureMcpConnectionPanel ===
 
-// Module 18357 (ConjureMcpConnectionPanel)
+// Module 18396 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

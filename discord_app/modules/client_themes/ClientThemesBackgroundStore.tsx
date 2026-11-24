@@ -1,19 +1,19 @@
-// === Module 4937: ClientThemesBackgroundStore ===
+// === Module 4941: ClientThemesBackgroundStore ===
 
-// Module 4937 (ClientThemesBackgroundStore)
+// Module 4941 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import dismissible_content from "dismissible_content" /* 4746 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4945 */;
-import UserUtils from "UserUtils" /* 4969 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4973 */;
+import dismissible_content from "dismissible_content" /* 4750 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4949 */;
+import UserUtils from "UserUtils" /* 4973 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4977 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -175,9 +175,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4766).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4770).isGuildTextChannelType;
 const dependencyMap = fn(1239).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(4938).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(4942).HexagonCampaignPerk;
 const SystemThemeState = fn(1194).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

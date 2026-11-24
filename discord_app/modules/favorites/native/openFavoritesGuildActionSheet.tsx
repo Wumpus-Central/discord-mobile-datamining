@@ -1,15 +1,15 @@
-// === Module 17656: openFavoritesGuildActionSheet ===
+// === Module 17694: openFavoritesGuildActionSheet ===
 
-// Module 17656 (openFavoritesGuildActionSheet)
+// Module 17694 (openFavoritesGuildActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
 import size from "module_2" /* 2 */;
 
 const FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
 const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildActionSheet.tsx");
 
 export default function openFavoritesGuildActionSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17657, dependencyMap.paths), FavoritesGuildActionSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17695, dependencyMap.paths), FavoritesGuildActionSheet, {
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildActionSheet);
     }

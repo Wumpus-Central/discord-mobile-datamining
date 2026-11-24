@@ -1,20 +1,20 @@
-// === Module 5966: MessageRecordUtils ===
+// === Module 6267: MessageRecordUtils ===
 
-// Module 5966 (MessageRecordUtils)
+// Module 6267 (MessageRecordUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import findCodedLinksDefault from "findCodedLinks" /* 5631 */;
-import useMessageAuthor from "useMessageAuthor" /* 6341 */;
-import isMessageMentioned from "isMessageMentioned" /* 6346 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6347 */;
-import transformMessagPollDefault from "transformMessagPoll" /* 6383 */;
-import EmbedUtils from "EmbedUtils" /* 6384 */;
-import StickersUtils from "StickersUtils" /* 6386 */;
-import InteractionRecord from "InteractionRecord" /* 5967 */;
-import MessageRecord_mod from "MessageRecord" /* 4856 */;
+import findCodedLinksDefault from "findCodedLinks" /* 5635 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5664 */;
+import useMessageAuthor from "useMessageAuthor" /* 6644 */;
+import isMessageMentioned from "isMessageMentioned" /* 6649 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 6650 */;
+import EmbedUtils from "EmbedUtils" /* 6651 */;
+import StickersUtils from "StickersUtils" /* 6653 */;
+import InteractionRecord from "InteractionRecord" /* 6268 */;
+import MessageRecord_mod from "MessageRecord" /* 4860 */;
 import UserRecord from "UserRecord" /* 1405 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -324,7 +324,7 @@ function isCurrentReactionType(count_details) {
   }
   return tmp;
 }
-let MessageRecord = fn(4856);
+let MessageRecord = fn(4860);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1071);

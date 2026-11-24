@@ -1,13 +1,13 @@
-// === Module 5651: PresenceStore ===
+// === Module 5888: PresenceStore ===
 
-// Module 5651 (PresenceStore)
+// Module 5888 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1343 from "module_1343" /* 1343 */;
-import ActivityTypes from "ActivityTypes" /* 5652 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5653 */;
+import ActivityTypes from "ActivityTypes" /* 5889 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5890 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -621,7 +621,7 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     obj3 = { [id]: obj3[id] };
     obj4 = { [id]: obj4[id] };
     closure_15 = { [id]: {} };
-    const set = new Set();
+    set = new Set();
     let item = guilds.forEach((presences) => {
       presences = presences.presences;
       const item = presences.forEach((status) => {

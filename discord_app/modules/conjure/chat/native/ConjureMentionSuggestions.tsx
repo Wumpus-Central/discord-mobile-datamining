@@ -1,10 +1,10 @@
-// === Module 18625: ConjureMentionSuggestions ===
+// === Module 18666: ConjureMentionSuggestions ===
 
-// Module 18625 (ConjureMentionSuggestions)
+// Module 18666 (ConjureMentionSuggestions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import TableRowGroup from "TableRowGroup" /* 7348 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import TableRowGroup from "TableRowGroup" /* 6014 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { fileThumbnail: null };
 let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xs };
 obj2.fileThumbnail = size;
@@ -31,7 +31,7 @@ export default function ConjureMentionSuggestions(arg0) {
     if (found.length > 0) {
       let obj = { title: null, hasIcons: true, children: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef4190.Vb3sUg);
+      obj.title = intl.string(_modDef4192.Vb3sUg);
       obj.children = found.map((user) => {
         closure_0 = user;
         const obj = { icon: closure_1_3(projectId(fileThumbnail[8]).Avatar, { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null };
@@ -50,7 +50,7 @@ export default function ConjureMentionSuggestions(arg0) {
     if (found1.length > 0) {
       let obj2 = { title: null, hasIcons: true, children: null };
       const intl2 = util.intl;
-      obj2.title = intl2.string(_modDef4190.zA5KLM);
+      obj2.title = intl2.string(_modDef4192.zA5KLM);
       obj2.children = found1.map((file) => {
         projectId = file;
         const obj = {

@@ -1,14 +1,14 @@
-// === Module 17346: updatePersistentCodesEnabled ===
+// === Module 17384: updatePersistentCodesEnabled ===
 
-// Module 17346 (updatePersistentCodesEnabled)
+// Module 17384 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9707 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9711 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 8539 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -216,9 +216,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(6529).disconnect();
-                                  const obj = c1(6529);
-                                  const voiceChannel = c1(6529).selectVoiceChannel(dependencyMap);
+                                  c1(6671).disconnect();
+                                  const obj = c1(6671);
+                                  const voiceChannel = c1(6671).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };
@@ -276,7 +276,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9708).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(8540).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");

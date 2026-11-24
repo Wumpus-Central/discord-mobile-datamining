@@ -1,16 +1,16 @@
-// === Module 18308: useConjureSettingPickerOptions ===
+// === Module 18347: useConjureSettingPickerOptions ===
 
-// Module 18308 (useConjureSettingPickerOptions)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6622 */;
-import ConjureUtils from "ConjureUtils" /* 6865 */;
+// Module 18347 (useConjureSettingPickerOptions)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+import ConjureUtils from "ConjureUtils" /* 7476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import StreamerModeStore from "StreamerModeStore" /* 4970 */;
+import GuildChannelStore from "GuildChannelStore" /* 4847 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
+import StreamerModeStore from "StreamerModeStore" /* 4974 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -181,7 +181,7 @@ export function useConjureSettingsServers(projectId, flag) {
         }
         if (name == null) {
           const intl = projectId(1112).intl;
-          name = intl.string(stateFromStores(4190)["6bhivN"]);
+          name = intl.string(stateFromStores(4192)["6bhivN"]);
         }
         obj.name = name;
         return obj;

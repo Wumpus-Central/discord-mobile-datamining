@@ -1,15 +1,15 @@
-// === Module 7720: FormSwitchRow ===
+// === Module 7960: FormSwitchRow ===
 
-// Module 7720 (FormSwitchRow)
+// Module 7960 (FormSwitchRow)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import RedesignCompat from "RedesignCompat" /* 7220 */;
-import FormRowDefault from "FormRow" /* 7503 */;
-import FormLabelDefault from "FormLabel" /* 7505 */;
-import TableSwitchRow from "TableSwitchRow" /* 7556 */;
+import RedesignCompat from "RedesignCompat" /* 7126 */;
+import FormRowDefault from "FormRow" /* 7369 */;
+import FormLabelDefault from "FormLabel" /* 7371 */;
+import TableSwitchRow from "TableSwitchRow" /* 7423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const Form_FormSwitchDefault = tmp13(7718);
+const Form_FormSwitchDefault = tmp13(7958);
 require = fn;
 function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;
@@ -86,7 +86,7 @@ function FormSwitchRow(onValueChange) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_8 = createStyles.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");

@@ -1,6 +1,6 @@
-// === Module 12715: useCheckpointCharacterTextureSwaps ===
+// === Module 12635: useCheckpointCharacterTextureSwaps ===
 
-// Module 12715 (useCheckpointCharacterTextureSwaps)
+// Module 12635 (useCheckpointCharacterTextureSwaps)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -70,7 +70,7 @@ let closure_3 = async function _swapTextures(arg0) {
               closure_129_5 = map1;
               const _Array2 = Array;
               const _Set = Set;
-              const set = new Set(closure_129_4.values());
+              set = new Set(closure_129_4.values());
               c2 = 2;
               c3 = 1;
               const obj5 = {

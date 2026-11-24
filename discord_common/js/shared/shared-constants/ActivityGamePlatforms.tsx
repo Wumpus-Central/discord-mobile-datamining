@@ -1,6 +1,6 @@
-// === Module 7074: ActivityGamePlatforms ===
+// === Module 7635: ActivityGamePlatforms ===
 
-// Module 7074 (ActivityGamePlatforms)
+// Module 7635 (ActivityGamePlatforms)
 import size from "module_2" /* 2 */;
 
 const obj = { CONNECT: new Set(["android", "desktop", "embedded", "ios", "meta_quest", "ps4", "ps5", "xbox"]), PLAYSTATION: null };

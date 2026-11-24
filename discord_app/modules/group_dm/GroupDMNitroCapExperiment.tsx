@@ -1,6 +1,6 @@
-// === Module 12063: GroupDMNitroCapExperiment ===
+// === Module 11955: GroupDMNitroCapExperiment ===
 
-// Module 12063 (GroupDMNitroCapExperiment)
+// Module 11955 (GroupDMNitroCapExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1451 */;
 
 const tmp2 = apex_ApexExperimentDefault({ kind: "user", name: "2026-06-nitro-gdm-cap-increase", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

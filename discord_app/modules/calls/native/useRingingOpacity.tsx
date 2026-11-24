@@ -1,8 +1,8 @@
-// === Module 18014: useRingingOpacity ===
+// === Module 18053: useRingingOpacity ===
 
-// Module 18014 (useRingingOpacity)
+// Module 18053 (useRingingOpacity)
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5123 */;
+import timing_timing from "timing/timing" /* 5127 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

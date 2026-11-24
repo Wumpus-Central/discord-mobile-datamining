@@ -1,6 +1,6 @@
-// === Module 12772: useFriendsAnimationState ===
+// === Module 12691: useFriendsAnimationState ===
 
-// Module 12772 (useFriendsAnimationState)
+// Module 12691 (useFriendsAnimationState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

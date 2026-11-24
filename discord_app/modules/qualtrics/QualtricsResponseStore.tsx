@@ -1,6 +1,6 @@
-// === Module 6486: QualtricsResponseStore ===
+// === Module 7725: QualtricsResponseStore ===
 
-// Module 6486 (QualtricsResponseStore)
+// Module 7725 (QualtricsResponseStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -50,7 +50,7 @@ export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_0((displayedQuestions) => {
-        let set = displayedQuestions.displayedQuestions[closure_0];
+        set = displayedQuestions.displayedQuestions[closure_0];
         if (set == null) {
           const _Set = Set;
           set = new Set();

@@ -1,9 +1,9 @@
-// === Module 11944: ChannelInfoActionCreators ===
+// === Module 11822: ChannelInfoActionCreators ===
 
-// Module 11944 (ChannelInfoActionCreators)
+// Module 11822 (ChannelInfoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
-import ChannelStatusStore from "ChannelStatusStore" /* 8322 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
+import ChannelStatusStore from "ChannelStatusStore" /* 8146 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");

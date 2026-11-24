@@ -1,26 +1,26 @@
-// === Module 19143: LaunchPadSearchResultUser ===
+// === Module 19185: LaunchPadSearchResultUser ===
 
-// Module 19143 (LaunchPadSearchResultUser)
+// Module 19185 (LaunchPadSearchResultUser)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 4969 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7737 */;
-import isStreamingDefault from "isStreaming" /* 8215 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17919 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18756 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 18757 */;
-import renderChannelContentDefault from "renderChannelContent" /* 18759 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 19132 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 19133 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 19134 */;
+import UserUtilsDefault from "UserUtils" /* 4973 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
+import isStreamingDefault from "isStreaming" /* 9382 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17957 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18798 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 18799 */;
+import renderChannelContentDefault from "renderChannelContent" /* 18801 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 19174 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 19175 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 19176 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
-import TypingStore from "TypingStore" /* 12829 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6552 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
+import TypingStore from "TypingStore" /* 12748 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
 
 require = fn;
 function UserResult(user) {
@@ -50,8 +50,8 @@ function UserResult(user) {
     obj2.recipientIds = items;
     ChannelActionCreatorsDefault.openPrivateChannel(obj2);
   }, items);
-  const fontScale = user(5519).useFontScale();
-  const obj = user(5519);
+  const fontScale = user(5523).useFontScale();
+  const obj = user(5523);
   const items1 = [LocaleStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
@@ -69,8 +69,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(6638).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(6638);
+    relativeTimestamp = tmp6(6824).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(6824);
   }
   let str = "text-muted";
   if (unread) {
@@ -85,7 +85,7 @@ function UserResult(user) {
   obj5.style = items4;
   const tmp2Result5 = renderChannelPressableWrapperDefault;
   const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), , ];
-  const obj7 = { user, guildId: "Button", isMobileOnline, isVROnline, status: null, streaming: "2729fa208c62e46e0b72396f606417db", style: "hr.messages.2729fa208c62e46e0b72396f606417db.compiled.messages", size: "jsona", animate: "ConjureAppPictureInPicture", typing: null, autoStatusCutout: null };
+  const obj7 = { user, guildId: "Button", isMobileOnline, isVROnline, status: null, streaming: "9fa15bfa930ac7d15224a1ec649e8bef", style: "ro.messages.9fa15bfa930ac7d15224a1ec649e8bef.compiled.messages", size: "jsona", animate: "ConjureAppPictureInPicture", typing: null, autoStatusCutout: null };
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;
@@ -118,8 +118,8 @@ function UserResult(user) {
   let tmp14Result;
   if (null != lastMessage) {
     if (null != channel) {
-      const obj9 = { channel, message: lastMessage, color: str, muted: flag, layout: tmp6(5574).ChannelListLayoutTypes.COMPACT };
-      tmp14Result = closure_12(tmp6(11125).ChannelRowPreview, obj9);
+      const obj9 = { channel, message: lastMessage, color: str, muted: flag, layout: tmp6(5578).ChannelListLayoutTypes.COMPACT };
+      tmp14Result = closure_12(tmp6(10494).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -133,7 +133,7 @@ function UserResult(user) {
   items5[2] = renderChannelContentDefault(obj8);
   obj10.children = items5;
   obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-  return tmp2Result5(closure_12(user(7030).PressableHighlight, obj5));
+  return tmp2Result5(closure_12(user(6026).PressableHighlight, obj5));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -146,7 +146,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(16723)(channel, { unread });
+  obj4.lastMessage = channel(16757)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;
@@ -154,10 +154,10 @@ function UserResultWithChannel(arg0) {
   return closure_12(UserResult, obj4);
 }
 const StatusTypes = fn(1071).StatusTypes;
-const UnreadSetting = fn(6553).UnreadSetting;
+const UnreadSetting = fn(6042).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };

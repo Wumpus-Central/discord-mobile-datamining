@@ -1,6 +1,6 @@
-// === Module 8901: NativeChatModule ===
+// === Module 11864: NativeChatModule ===
 
-// Module 8901 (NativeChatModule)
+// Module 11864 (NativeChatModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

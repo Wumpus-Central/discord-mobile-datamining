@@ -1,11 +1,11 @@
-// === Module 7736: DefaultChannelThresholdUtils ===
+// === Module 8387: DefaultChannelThresholdUtils ===
 
-// Module 7736 (DefaultChannelThresholdUtils)
+// Module 8387 (DefaultChannelThresholdUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7470 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7328 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7471 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7329 */;
 
 require = fn;
 let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
@@ -161,7 +161,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
           const _Set = Set;
           const items2 = [];
           HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(defaultChannelIds, 0));
-          const set = new Set(items2);
+          set = new Set(items2);
           const items3 = [];
           HermesBuiltin.arraySpread(set, 0);
           return items3;
@@ -329,7 +329,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(6822).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(7330).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 6002: ? ===
+// === Module 6305: ? ===
 
-// Module 6002
+// Module 6305
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/clyde_small_pink_static.png.js");

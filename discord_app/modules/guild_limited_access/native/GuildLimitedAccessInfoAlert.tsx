@@ -1,20 +1,20 @@
-// === Module 6405: GuildLimitedAccessInfoAlert ===
+// === Module 6694: GuildLimitedAccessInfoAlert ===
 
-// Module 6405 (GuildLimitedAccessInfoAlert)
+// Module 6694 (GuildLimitedAccessInfoAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import common_AlertDefault from "common/Alert" /* 5932 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import common_AlertDefault from "common/Alert" /* 5992 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import TextStyles from "TextStyles" /* 6407 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import TextStyles from "TextStyles" /* 6696 */;
 
 require = fn;
-const helpdeskArticle = fn(6406).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(6695).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1071).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

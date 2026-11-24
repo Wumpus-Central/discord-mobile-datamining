@@ -1,6 +1,6 @@
-// === Module 14013: useBadgeColor ===
+// === Module 13678: useBadgeColor ===
 
-// Module 14013 (useBadgeColor)
+// Module 13678 (useBadgeColor)
 import nativeDefault from "native" /* 575 */;
 import privDefault from "priv" /* 1454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const NEUTRAL_35 = nativeDefault.unsafe_rawColors.NEUTRAL_35;
 let closure_7 = new privDefault({ max: 50 });
-const promiseDeduper = new fn(5033).PromiseDeduper();
+const promiseDeduper = new fn(5037).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/useBadgeColor.tsx");
 
@@ -56,7 +56,7 @@ export function useBadgeColor(rasterUrl) {
               const obj4 = {
                 value: promiseDeduper.one(uri, asyncGeneratorStep(async () => {
                           closure_3 = tmp2;
-                          const tmp14 = value(14014);
+                          const tmp14 = value(13679);
                           const pickBadgeColor = tmp14.pickBadgeColor;
                           await pickBadgeColor(2023).getDominantColors({ uri });
                           const tmp8 = pickBadgeColor(value);

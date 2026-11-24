@@ -1,8 +1,8 @@
-// === Module 15996: UserSettingSearchManager ===
+// === Module 16029: UserSettingSearchManager ===
 
-// Module 15996 (UserSettingSearchManager)
-import fuzzysearchDefault from "fuzzysearch" /* 6677 */;
-import StringMatchUtils from "StringMatchUtils" /* 15997 */;
+// Module 16029 (UserSettingSearchManager)
+import fuzzysearchDefault from "fuzzysearch" /* 6862 */;
+import StringMatchUtils from "StringMatchUtils" /* 16030 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
@@ -20,7 +20,7 @@ class SettingSearchManager {
       [tmp, arr] = item;
       items = [];
       const items1 = [];
-      const set = new Set();
+      set = new Set();
       item = arr.forEach((toLocaleLowerCase) => {
         items.push(toLocaleLowerCase.toLocaleLowerCase());
         if (toLocaleLowerCase.includes(" ")) {

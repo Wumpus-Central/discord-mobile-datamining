@@ -1,31 +1,31 @@
-// === Module 10804: RPCHelpers ===
+// === Module 10080: RPCHelpers ===
 
-// Module 10804 (RPCHelpers)
+// Module 10080 (RPCHelpers)
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import UrlDefault from "Url" /* 1381 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5554 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5943 */;
-import transformUserDefault from "transformUser" /* 6907 */;
-import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 6908 */;
-import RPCErrorDefault from "RPCError" /* 6909 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 6913 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8250 */;
-import transformMessage from "transformMessage" /* 10805 */;
-import LeakyBucketDefault from "LeakyBucket" /* 10807 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5558 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 5655 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6681 */;
+import transformUserDefault from "transformUser" /* 7516 */;
+import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 7517 */;
+import RPCErrorDefault from "RPCError" /* 7518 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8103 */;
+import transformMessage from "transformMessage" /* 10081 */;
+import LeakyBucketDefault from "LeakyBucket" /* 10083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import ApplicationRecord from "ApplicationRecord" /* 2142 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import MessageStore from "MessageStore" /* 5964 */;
-import PresenceStore from "PresenceStore" /* 5651 */;
+import MessageStore from "MessageStore" /* 6265 */;
+import PresenceStore from "PresenceStore" /* 5888 */;
 import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 import URLUtils from "URLUtils" /* 1379 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 5538 */;
+import RegexUtils from "RegexUtils" /* 5542 */;
 
 require = fn;
 function validateOrigin(arg0) {
@@ -244,8 +244,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4766).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6354);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4770).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(5671);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1071);
 ({ ActivityActionTypes: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, MAX_MESSAGES_PER_CHANNEL: closure_18, RPCCloseCodes: closure_19, RPCErrors: closure_20, RTCConnectionStates: closure_21 } = Constants);
@@ -417,10 +417,10 @@ export function transformChannel(channel, result, arg2) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(5943).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(6681).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(6907)(user);
+          obj.user = closure_1(7516)(user);
           return obj;
         }
       });
@@ -548,7 +548,7 @@ export function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
     const _Set = Set;
     items = [state];
-    const set = new Set(items);
+    set = new Set(items);
     authorization.authorization.scopes = set;
   }
 }

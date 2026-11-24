@@ -1,14 +1,14 @@
-// === Module 9507: PremiumGiftPromotionDetails ===
+// === Module 11019: PremiumGiftPromotionDetails ===
 
-// Module 9507 (PremiumGiftPromotionDetails)
+// Module 11019 (PremiumGiftPromotionDetails)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import SKUPreview from "SKUPreview" /* 8980 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import SKUPreview from "SKUPreview" /* 11020 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
@@ -65,7 +65,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
@@ -73,7 +73,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1, alignSelf: "center" };
   return obj;
 });
-createStyles = fn(4913);
+createStyles = fn(4917);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;

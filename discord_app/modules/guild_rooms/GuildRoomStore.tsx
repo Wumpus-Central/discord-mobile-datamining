@@ -1,13 +1,13 @@
-// === Module 6461: GuildRoomStore ===
+// === Module 8283: GuildRoomStore ===
 
-// Module 6461 (GuildRoomStore)
+// Module 8283 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 6462 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 8284 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5654 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 
 require = fn;
 function resolveCreatingNotes(roomId, objects) {
@@ -30,7 +30,7 @@ function resolveCreatingNotes(roomId, objects) {
               tmp3[roomId] = found1;
             }
           }
-          const set = new Set(found.map((position) => {
+          set = new Set(found.map((position) => {
             position = position.position;
             return "" + position.x + "," + position.y;
           }));

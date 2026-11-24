@@ -1,6 +1,6 @@
-// === Module 6350: APIError ===
+// === Module 5667: APIError ===
 
-// Module 6350 (APIError)
+// Module 5667 (APIError)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;

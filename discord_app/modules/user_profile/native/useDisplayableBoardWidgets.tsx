@@ -1,6 +1,6 @@
-// === Module 10348: useDisplayableBoardWidgets ===
+// === Module 14500: useDisplayableBoardWidgets ===
 
-// Module 10348 (useDisplayableBoardWidgets)
+// Module 14500 (useDisplayableBoardWidgets)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

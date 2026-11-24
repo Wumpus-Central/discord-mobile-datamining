@@ -1,10 +1,10 @@
-// === Module 18328: useConjureLinkedApps ===
+// === Module 18367: useConjureLinkedApps ===
 
-// Module 18328 (useConjureLinkedApps)
+// Module 18367 (useConjureLinkedApps)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -249,7 +249,7 @@ export default function useConjureLinkedApps(projectId, arg1) {
   if (name == null) {
     let intl = tmp27(tmp28[6]).intl;
     const obj5 = { projectId };
-    name = intl.formatToPlainString(require("module_4190").HHCa93, obj5);
+    name = intl.formatToPlainString(require("module_4192").HHCa93, obj5);
   }
   const obj8 = { name, project: null, live: null, hasPreview: null, callers: null, targets: null, projects: null, names: null, failed: null, saved: null, setBuild: null, remove: null };
   if (stateFromStores == null) {

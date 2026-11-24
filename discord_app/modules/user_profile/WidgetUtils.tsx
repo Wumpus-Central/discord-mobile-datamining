@@ -1,19 +1,19 @@
-// === Module 10217: WidgetUtils ===
+// === Module 14395: WidgetUtils ===
 
-// Module 10217 (WidgetUtils)
+// Module 14395 (WidgetUtils)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
-import utils from "utils" /* 5542 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6958 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 6960 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 6962 */;
-import useGame2 from "useGame" /* 9053 */;
-import WidgetGameTag from "WidgetGameTag" /* 10202 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10219 */;
+import utils from "utils" /* 5546 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6045 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 6047 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 6049 */;
+import useGame2 from "useGame" /* 8578 */;
+import WidgetGameTag from "WidgetGameTag" /* 14385 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1386 */;
-import UserProfileStore from "UserProfileStore" /* 6956 */;
-import WidgetStore from "WidgetStore" /* 10207 */;
+import UserProfileStore from "UserProfileStore" /* 6037 */;
+import WidgetStore from "WidgetStore" /* 14390 */;
 
 require = fn;
 function getCurrentWidgets() {
@@ -139,8 +139,8 @@ function reorderMovableWidgets(isBoardWidget, arg1, arg2) {
     }
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(6959).WIDGET_TITLES_BY_TYPE;
-let closure_8 = fn(10218).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(6046).WIDGET_TITLES_BY_TYPE;
+let closure_8 = fn(14396).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

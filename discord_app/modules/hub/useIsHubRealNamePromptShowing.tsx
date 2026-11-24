@@ -1,18 +1,18 @@
-// === Module 13560: useIsHubRealNamePromptShowing ===
+// === Module 13474: useIsHubRealNamePromptShowing ===
 
-// Module 13560 (useIsHubRealNamePromptShowing)
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13563 */;
+// Module 13474 (useIsHubRealNamePromptShowing)
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13477 */;
 import noop from "module_19" /* 19 */;
-import GuildPromptsStore from "GuildPromptsStore" /* 13561 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
+import GuildPromptsStore from "GuildPromptsStore" /* 13475 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1071).GuildFeatures;
-const GuildPrompts = fn(13562).GuildPrompts;
+const GuildPrompts = fn(13476).GuildPrompts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 

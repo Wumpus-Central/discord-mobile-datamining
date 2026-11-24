@@ -1,16 +1,16 @@
-// === Module 9482: GiftingBadgesUtils ===
+// === Module 11011: GiftingBadgesUtils ===
 
-// Module 9482 (GiftingBadgesUtils)
+// Module 11011 (GiftingBadgesUtils)
 import util from "util" /* 1112 */;
 import _modDef2920 from "module_2920" /* 2920 */;
-import BadgeId from "BadgeId" /* 8070 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8142 */;
+import BadgeId from "BadgeId" /* 6012 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 6262 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8137 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6257 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-let closure_5 = fn(8137).getSingleRequirementThreshold;
+let closure_5 = fn(6257).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -65,7 +65,7 @@ export function useGiftingBadgeCoachmarkVariant(location) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(9483).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11012).GiftingBadgeCoachmarkAudienceExperiment;
   const enabled = GiftingBadgeCoachmarkAudienceExperiment.useConfig({ location: location.location }).enabled;
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
@@ -80,8 +80,8 @@ export function useGiftingBadgeCoachmarkVariant(location) {
     return flag;
   });
   let obj = stateFromStores(504);
-  const result = stateFromStores(4945).useIsDismissibleContentDismissed_UNSAFE(stateFromStores(4746).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  let obj2 = stateFromStores(4945);
+  const result = stateFromStores(4949).useIsDismissibleContentDismissed_UNSAFE(stateFromStores(4750).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  let obj2 = stateFromStores(4949);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[9]).BadgeId.GIFTING));
   let tmp4 = !result;

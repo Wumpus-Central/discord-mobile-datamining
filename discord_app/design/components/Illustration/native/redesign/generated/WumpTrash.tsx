@@ -1,9 +1,9 @@
-// === Module 17483: WumpTrash ===
+// === Module 17521: WumpTrash ===
 
-// Module 17483 (WumpTrash)
-import shared from "shared" /* 4920 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import _mod7786 from "module_7786" /* 7786 */;
+// Module 17521 (WumpTrash)
+import shared from "shared" /* 4924 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import _mod8425 from "module_8425" /* 8425 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,43 +14,43 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/WumpTrash.tsx");
 
 export function getWumpTrashSource(theme) {
-  return _mod7786.getIllustrationSource(theme, {
+  return _mod8425.getIllustrationSource(theme, {
     dark() {
-      return require("module_17484");
+      return require("module_17522");
     },
     darker() {
-      return require("module_17485");
+      return require("module_17523");
     }
   });
 }
 export function useWumpTrashSource() {
   const obj = shared;
-  return _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8425.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17484");
+      return require("module_17522");
     },
     darker() {
-      return require("module_17485");
+      return require("module_17523");
     }
   });
 }
 export function WumpTrash(arg0) {
   const obj = shared;
-  const illustrationSource = _mod7786.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8425.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17484");
+      return require("module_17522");
     },
     darker() {
-      return require("module_17485");
+      return require("module_17523");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_17484");
+      return require("module_17522");
     },
     darker() {
-      return require("module_17485");
+      return require("module_17523");
     }
   };
   const merged = Object.assign(arg0);

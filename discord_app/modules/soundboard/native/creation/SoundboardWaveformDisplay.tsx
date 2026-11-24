@@ -1,14 +1,14 @@
-// === Module 19808: SoundboardWaveformDisplay ===
+// === Module 19851: SoundboardWaveformDisplay ===
 
-// Module 19808 (SoundboardWaveformDisplay)
+// Module 19851 (SoundboardWaveformDisplay)
 import nativeDefault from "native" /* 575 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 13120 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 13038 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12824).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12743).WAVEFORM_WAVE_MAX_VALUE;
 let jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flexDirection: "row", alignItems: "center" }, bar: { flex: 1, marginHorizontal: 1, borderRadius: nativeDefault.radii.round }, barActive: null, barTrimmedOut: null };
 const obj3 = { flex: 1, marginHorizontal: 1, borderRadius: nativeDefault.radii.round };
 obj2.barActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };

@@ -1,11 +1,11 @@
-// === Module 9564: useTargetedOfferPromotion ===
+// === Module 11102: useTargetedOfferPromotion ===
 
-// Module 9564 (useTargetedOfferPromotion)
+// Module 11102 (useTargetedOfferPromotion)
 import Constants from "Constants" /* 1071 */;
-import StorefrontTypes from "StorefrontTypes" /* 6854 */;
-import usePromotionForApplicationDefault from "usePromotionForApplication" /* 8961 */;
-import CollectiblesPricingPromotionUtils from "CollectiblesPricingPromotionUtils" /* 8962 */;
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 8970 */;
+import StorefrontTypes from "StorefrontTypes" /* 7469 */;
+import usePromotionForApplicationDefault from "usePromotionForApplication" /* 11103 */;
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 11104 */;
+import CollectiblesPricingPromotionUtils from "CollectiblesPricingPromotionUtils" /* 11105 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = Constants.COLLECTIBLES_APPLICATION_ID;
@@ -27,7 +27,7 @@ export function useEligibleCollectiblesTargetedOfferPromotion() {
   }
   return tmp5;
 }
-export function useTargetedOfferPromotionForCollectiblesProduct(isFirstParty) {
+export function useTargetedOfferPromotionForCollectiblesProduct(skuId) {
   const tmp2 = usePromotionForApplicationDefault(closure_3);
   let rewardStatus;
   if (tmp2 != null) {
@@ -41,9 +41,9 @@ export function useTargetedOfferPromotionForCollectiblesProduct(isFirstParty) {
     }
     tmp4Result = CollectiblesTargetedOfferPromotionUtils;
   }
-  const collectiblesPricingPromotionForProduct = CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(isFirstParty);
+  const collectiblesPricingPromotionForProduct = CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(skuId);
   const tmp4Result3 = CollectiblesPricingPromotionUtils;
-  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(isFirstParty, tmp5, collectiblesPricingPromotionForProduct);
+  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(skuId, tmp5, collectiblesPricingPromotionForProduct);
 }
 export function useIsFiatExclusiveTargetedOfferPromotion(product) {
   const tmp2 = usePromotionForApplicationDefault(closure_3);

@@ -1,14 +1,14 @@
-// === Module 9966: QuestDecisionRoundtripTracker ===
+// === Module 9755: QuestDecisionRoundtripTracker ===
 
-// Module 9966 (QuestDecisionRoundtripTracker)
+// Module 9755 (QuestDecisionRoundtripTracker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AdCreativeType from "AdCreativeType" /* 6565 */;
-import NetStats from "NetStats" /* 8253 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 8256 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8377 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8402 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8401 */;
-import NetworkStore from "NetworkStore" /* 5794 */;
+import NetStats from "NetStats" /* 6667 */;
+import AdCreativeType from "AdCreativeType" /* 6752 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8107 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8222 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 9756 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8221 */;
+import NetworkStore from "NetworkStore" /* 5855 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
@@ -71,8 +71,8 @@ class QuestDecisionRoundtripTracker {
 const prototype = QuestDecisionRoundtripTracker.prototype;
 prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
   const self = this;
-  let tmp = MOBILE_HOME_DOCK_AREA;
-  if (MOBILE_HOME_DOCK_AREA === undefined) {
+  let tmp = QUEST_HOME_BANNER_DESKTOP;
+  if (QUEST_HOME_BANNER_DESKTOP === undefined) {
     tmp = null;
   }
   const SymbolResult = Symbol();

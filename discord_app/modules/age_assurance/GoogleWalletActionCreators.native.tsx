@@ -1,9 +1,9 @@
-// === Module 7843: GoogleWalletActionCreators ===
+// === Module 7787: GoogleWalletActionCreators ===
 
-// Module 7843 (GoogleWalletActionCreators)
+// Module 7787 (GoogleWalletActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7808 */;
-import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7844 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7752 */;
+import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

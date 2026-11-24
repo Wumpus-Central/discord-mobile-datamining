@@ -1,6 +1,6 @@
-// === Module 5033: utils/FunctionUtils ===
+// === Module 5037: utils/FunctionUtils ===
 
-// Module 5033 (utils/FunctionUtils)
+// Module 5037 (utils/FunctionUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -168,7 +168,7 @@ prototype["many"] = function many(items, fn) {
       Promise.reject(tmp13);
     }
   }
-  const set = new Set(items);
+  set = new Set(items);
 };
 
 export function areArraysShallowlyEqual(arg0, arg1) {

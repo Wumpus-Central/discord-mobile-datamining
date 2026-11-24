@@ -1,10 +1,10 @@
-// === Module 14567: useApplicationWidgetAffinityData ===
+// === Module 14835: useApplicationWidgetAffinityData ===
 
-// Module 14567 (useApplicationWidgetAffinityData)
-import LibraryApplicationStatisticsActionCreators from "LibraryApplicationStatisticsActionCreators" /* 14569 */;
+// Module 14835 (useApplicationWidgetAffinityData)
+import LibraryApplicationStatisticsActionCreators from "LibraryApplicationStatisticsActionCreators" /* 14837 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10332 */;
-import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14568 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11327 */;
+import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14836 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export default function useApplicationWidgetAffinityData(arg0) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => memo1.getFeaturedApplicationIds());
   const items1 = [stateFromStores, arg0];
   memo = noop.useMemo(() => {
-    const set = new Set(stateFromStores);
+    set = new Set(stateFromStores);
     const found = closure_0.filter((item) => item instanceof set(memo[4]).ApplicationWidget);
     const mapped = found.map((applicationId) => applicationId.applicationId);
     return mapped.filter((item) => set.has(item));

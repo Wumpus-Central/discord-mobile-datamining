@@ -1,9 +1,9 @@
-// === Module 13219: SearchSessionAnalyticsManager ===
+// === Module 13139: SearchSessionAnalyticsManager ===
 
-// Module 13219 (SearchSessionAnalyticsManager)
-import TrackingConstants from "TrackingConstants" /* 8575 */;
-import SearchUtils from "SearchUtils" /* 13204 */;
-import AbstractSearchSessionAnalyticsManager from "AbstractSearchSessionAnalyticsManager" /* 13220 */;
+// Module 13139 (SearchSessionAnalyticsManager)
+import TrackingConstants from "TrackingConstants" /* 8877 */;
+import SearchUtils from "SearchUtils" /* 13118 */;
+import AbstractSearchSessionAnalyticsManager from "AbstractSearchSessionAnalyticsManager" /* 13140 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = TrackingConstants.SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB;

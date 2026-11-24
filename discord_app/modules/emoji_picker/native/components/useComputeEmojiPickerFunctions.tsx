@@ -1,11 +1,11 @@
-// === Module 11284: useComputeEmojiPickerFunctions ===
+// === Module 9443: useComputeEmojiPickerFunctions ===
 
-// Module 11284 (useComputeEmojiPickerFunctions)
+// Module 9443 (useComputeEmojiPickerFunctions)
 import applyDefault from "apply" /* 12 */;
 import FunctionUtils from "FunctionUtils" /* 2160 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9067 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 11285 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4863 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9400 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9444 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,7 +99,7 @@ function _computeCategories(arg0) {
         let _Set2 = Set;
         let tmp16 = new.target;
         let tmp17 = new.target;
-        let set = new Set();
+        set = new Set();
         obj38.emojisDisabled = set;
         let _Set3 = Set;
         let tmp20 = new.target;
@@ -168,7 +168,7 @@ function _computeSearchResults(emojis) {
   }
   const obj3 = { emojiSections: items, renderingData: null, rowSize: null };
   const obj4 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
-  const set = new Set();
+  set = new Set();
   obj4.label = EmojiPickerUtils.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
   obj4.footer = constants2.PREMIUM_UPSELL;
   obj3.renderingData = obj4;
@@ -191,9 +191,9 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6576);
+const EmojiPickerConstants = fn(6760);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: closure_6 } = EmojiPickerConstants);
-const constants3 = fn(9066).EmojiPickerRenderingDataType;
+const constants3 = fn(9399).EmojiPickerRenderingDataType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 

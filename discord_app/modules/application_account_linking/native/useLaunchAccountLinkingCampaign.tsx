@@ -1,20 +1,20 @@
-// === Module 19110: useLaunchAccountLinkingCampaign ===
+// === Module 19152: useLaunchAccountLinkingCampaign ===
 
-// Module 19110 (useLaunchAccountLinkingCampaign)
-import useAuthorizationApp from "useAuthorizationApp" /* 7523 */;
+// Module 19152 (useLaunchAccountLinkingCampaign)
+import useAuthorizationApp from "useAuthorizationApp" /* 7388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14993 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6825 */;
-import ConsentStore from "ConsentStore" /* 6427 */;
-import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 19089 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15032 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6263 */;
+import ConsentStore from "ConsentStore" /* 6715 */;
+import AccountLinkingCampaignStore from "AccountLinkingCampaignStore" /* 19131 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useEffect: closure_4, useState: hasOwnProperty } = noop);
-const FetchState = fn(6825).FetchState;
+const FetchState = fn(6263).FetchState;
 const Consents = fn(1071).Consents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useLaunchAccountLinkingCampaign.tsx");
@@ -68,9 +68,9 @@ export default function useLaunchAccountLinkingCampaign(disableFetch) {
     }
   }, items2);
   let obj = require("initialize");
-  const tmp4Result = first(6864)(stateFromStoresArray.map((applicationId) => applicationId.applicationId), disableFetch);
-  const tmp4 = first(6864);
-  first(6864)(tmp4Result.map((linkedGames) => {
+  const tmp4Result = first(7389)(stateFromStoresArray.map((applicationId) => applicationId.applicationId), disableFetch);
+  const tmp4 = first(7389);
+  first(7389)(tmp4Result.map((linkedGames) => {
     let id;
     if (linkedGames != null) {
       linkedGames = linkedGames.linkedGames;
@@ -83,7 +83,7 @@ export default function useLaunchAccountLinkingCampaign(disableFetch) {
     }
     return id;
   }), disableFetch);
-  const tmp5 = first(6864);
+  const tmp5 = first(7389);
   const flatMapResult = tmp4Result.flatMap((item) => {
     const authorizationApp = disableFetch(closure_2[12]).getAuthorizationApp(item);
     let prop;

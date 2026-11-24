@@ -1,25 +1,25 @@
-// === Module 19386: StreamVolumeMovedNotice ===
+// === Module 19428: StreamVolumeMovedNotice ===
 
-// Module 19386 (StreamVolumeMovedNotice)
+// Module 19428 (StreamVolumeMovedNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import dismissible_content from "dismissible_content" /* 4746 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6401 */;
-import TableRow from "TableRow" /* 7045 */;
-import TableRowGroup from "TableRowGroup" /* 7348 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9080 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11749 */;
+import dismissible_content from "dismissible_content" /* 4750 */;
+import TableRowGroup from "TableRowGroup" /* 6014 */;
+import TableRow from "TableRow" /* 6018 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6690 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9420 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6400 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const showStreamVolumeMovedHint = fn(14506).showStreamVolumeMovedHint;
-const VoicePanelControlsModes = fn(11748).VoicePanelControlsModes;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const showStreamVolumeMovedHint = fn(14775).showStreamVolumeMovedHint;
+const VoicePanelControlsModes = fn(11633).VoicePanelControlsModes;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/stream_volume_moved/StreamVolumeMovedNotice.tsx");

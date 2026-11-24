@@ -1,6 +1,6 @@
-// === Module 8310: AutomodAlert ===
+// === Module 8099: AutomodAlert ===
 
-// Module 8310 (AutomodAlert)
+// Module 8099 (AutomodAlert)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodAlert.tsx");

@@ -1,19 +1,19 @@
-// === Module 16076: PasskeysSpotIllustration ===
+// === Module 16109: PasskeysSpotIllustration ===
 
-// Module 16076 (PasskeysSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef16077 from "module_16077" /* 16077 */;
-import _modDef16078 from "module_16078" /* 16078 */;
-import _modDef16079 from "module_16079" /* 16079 */;
+// Module 16109 (PasskeysSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef16110 from "module_16110" /* 16110 */;
+import _modDef16111 from "module_16111" /* 16111 */;
+import _modDef16112 from "module_16112" /* 16112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16077 }, 3: null };
-let obj2 = { uri: _modDef16077 };
-obj[2] = { uri: _modDef16078 };
-const obj3 = { uri: _modDef16078 };
-obj[3] = { uri: _modDef16079 };
+let obj = { 1: null, 2: { uri: _modDef16110 }, 3: null };
+let obj2 = { uri: _modDef16110 };
+obj[2] = { uri: _modDef16111 };
+const obj3 = { uri: _modDef16111 };
+obj[3] = { uri: _modDef16112 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PasskeysSpotIllustration.native.tsx");
 

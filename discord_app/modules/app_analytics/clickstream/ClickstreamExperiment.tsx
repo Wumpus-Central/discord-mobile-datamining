@@ -1,6 +1,6 @@
-// === Module 8260: ClickstreamExperiment ===
+// === Module 8035: ClickstreamExperiment ===
 
-// Module 8260 (ClickstreamExperiment)
+// Module 8035 (ClickstreamExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

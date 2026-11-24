@@ -1,18 +1,18 @@
-// === Module 18415: MediaKeyboardBottomSheet ===
+// === Module 18456: MediaKeyboardBottomSheet ===
 
-// Module 18415 (MediaKeyboardBottomSheet)
+// Module 18456 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5085 */;
-import ChatInputUtils from "ChatInputUtils" /* 5098 */;
-import HapticUtils from "HapticUtils" /* 5129 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5130 */;
-import BottomSheetModalDefault from "BottomSheetModal" /* 5145 */;
-import useMountEffectDefault from "useMountEffect" /* 5474 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12947 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5089 */;
+import ChatInputUtils from "ChatInputUtils" /* 5102 */;
+import HapticUtils from "HapticUtils" /* 5133 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5134 */;
+import BottomSheetModalDefault from "BottomSheetModal" /* 5149 */;
+import useMountEffectDefault from "useMountEffect" /* 5478 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12866 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ const MetaQuestUtils = fn(1625);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1378);
 let closure_12 = PlatformUtils.isIOS();
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 let closure_15 = { code: "(function MediaKeyboardBottomSheetTsx1(){let[animatedIndex]=this.__closure;return animatedIndex.get()>=0;})" };

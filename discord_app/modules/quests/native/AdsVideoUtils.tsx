@@ -1,6 +1,6 @@
-// === Module 16340: AdsVideoUtils ===
+// === Module 16373: AdsVideoUtils ===
 
-// Module 16340 (AdsVideoUtils)
+// Module 16373 (AdsVideoUtils)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 

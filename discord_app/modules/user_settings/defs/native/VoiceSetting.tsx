@@ -1,20 +1,20 @@
-// === Module 16651: VoiceSetting ===
+// === Module 16685: VoiceSetting ===
 
-// Module 16651 (VoiceSetting)
+// Module 16685 (VoiceSetting)
 import util from "util" /* 1112 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ InputModes: c3, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11011).MicrophoneIcon,
+  IconComponent: fn(10360).MicrophoneIcon,
   useTrailing: function useVoiceSettingTrailing() {
     items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {

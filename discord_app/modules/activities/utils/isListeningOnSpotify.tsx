@@ -1,10 +1,10 @@
-// === Module 13521: isListeningOnSpotify ===
+// === Module 11232: isListeningOnSpotify ===
 
-// Module 13521 (isListeningOnSpotify)
+// Module 11232 (isListeningOnSpotify)
 import Constants from "Constants" /* 1071 */;
-import ActivityTypes from "ActivityTypes" /* 5652 */;
-import PlatformsDefault from "Platforms" /* 6691 */;
-import SpotifyConstants from "SpotifyConstants" /* 6897 */;
+import ActivityTypes from "ActivityTypes" /* 5889 */;
+import PlatformsDefault from "Platforms" /* 6052 */;
+import SpotifyConstants from "SpotifyConstants" /* 7506 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

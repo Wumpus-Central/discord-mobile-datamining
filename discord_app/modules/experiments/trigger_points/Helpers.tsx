@@ -1,9 +1,9 @@
-// === Module 9239: Helpers ===
+// === Module 9119: Helpers ===
 
-// Module 9239 (Helpers)
+// Module 9119 (Helpers)
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 
-const CommonTriggerPoints = fn(5531).CommonTriggerPoints;
+const CommonTriggerPoints = fn(5535).CommonTriggerPoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {

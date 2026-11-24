@@ -1,19 +1,19 @@
-// === Module 12267: GuildChatAbstractUI ===
+// === Module 12208: GuildChatAbstractUI ===
 
-// Module 12267 (GuildChatAbstractUI)
-import assetHelpers from "assetHelpers" /* 7357 */;
-import _modDef12268 from "module_12268" /* 12268 */;
-import _modDef12269 from "module_12269" /* 12269 */;
-import _modDef12270 from "module_12270" /* 12270 */;
+// Module 12208 (GuildChatAbstractUI)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef12209 from "module_12209" /* 12209 */;
+import _modDef12210 from "module_12210" /* 12210 */;
+import _modDef12211 from "module_12211" /* 12211 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12268 }, 3: null };
-let obj2 = { uri: _modDef12268 };
-obj[2] = { uri: _modDef12269 };
-const obj3 = { uri: _modDef12269 };
-obj[3] = { uri: _modDef12270 };
+let obj = { 1: null, 2: { uri: _modDef12209 }, 3: null };
+let obj2 = { uri: _modDef12209 };
+obj[2] = { uri: _modDef12210 };
+const obj3 = { uri: _modDef12210 };
+obj[3] = { uri: _modDef12211 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GuildChatAbstractUI.native.tsx");
 

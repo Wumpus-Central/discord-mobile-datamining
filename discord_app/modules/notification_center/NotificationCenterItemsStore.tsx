@@ -1,15 +1,15 @@
-// === Module 6636: NotificationCenterItemsStore ===
+// === Module 6822: NotificationCenterItemsStore ===
 
-// Module 6636 (NotificationCenterItemsStore)
+// Module 6822 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5966 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6637 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6638 */;
-import ExperimentStore from "ExperimentStore" /* 5530 */;
-import MessageRecord from "MessageRecord" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6823 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6824 */;
+import ExperimentStore from "ExperimentStore" /* 5534 */;
+import MessageRecord from "MessageRecord" /* 4860 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -195,9 +195,9 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6633).isGuildEventEnded;
+const isGuildEventEnded = fn(5649).isGuildEventEnded;
 const RelationshipTypes = fn(1071).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "installation", notifCenterTabFocused: "2026-11-apex-launch-latch" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "board", notifCenterTabFocused: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -305,7 +305,7 @@ NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
 const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
     items = [];
-    const set = new Set();
+    set = new Set();
     relationships = relationships.relationships;
     let item = relationships.forEach((item) => {
       ({ id, since, user_ignored, type, is_spam_request, origin_application_id } = item);
@@ -369,7 +369,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "installation", notifCenterTabFocused: "2026-11-apex-launch-latch" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "board", notifCenterTabFocused: null };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -495,7 +495,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "installation", notifCenterTabFocused: "2026-11-apex-launch-latch" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "board", notifCenterTabFocused: null };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6638);
+        obj = id(6824);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -645,7 +645,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "installation", notifCenterTabFocused: "2026-11-apex-launch-latch" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Promise", notifCenterActive: "board", notifCenterTabFocused: null };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -671,7 +671,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
   },
   APPLICATIONS_FETCH_SUCCESS: function handleFetchApplicationsSuccess(unknownApplicationIds) {
     unknownApplicationIds = unknownApplicationIds.unknownApplicationIds;
-    let set;
+    set = undefined;
     if (null != unknownApplicationIds) {
       const _Set = Set;
       set = new Set(unknownApplicationIds);

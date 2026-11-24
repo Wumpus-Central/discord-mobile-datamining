@@ -1,6 +1,6 @@
-// === Module 4798: TableId ===
+// === Module 4802: TableId ===
 
-// Module 4798 (TableId)
+// Module 4802 (TableId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");

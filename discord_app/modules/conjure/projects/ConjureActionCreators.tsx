@@ -1,20 +1,20 @@
-// === Module 6933: ConjureActionCreators ===
+// === Module 7541: ConjureActionCreators ===
 
-// Module 6933 (ConjureActionCreators)
+// Module 7541 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5557 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6939 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6940 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 6942 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 6943 */;
-import createProxyTicket from "createProxyTicket" /* 6945 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5561 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7547 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7548 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7550 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7551 */;
+import createProxyTicket from "createProxyTicket" /* 7553 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6619 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 6934 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7542 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 function listProjects() {
@@ -1525,7 +1525,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1071).Endpoints;
-const ReadStateTypes = fn(6553).ReadStateTypes;
+const ReadStateTypes = fn(6042).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;
@@ -1596,6 +1596,13 @@ export function isConjureProjectUnavailable(c1) {
   let hasItem = set1.has(c1);
   if (hasItem) {
     hasItem = null == ConjureProjectStore.getProject(c1);
+  }
+  return hasItem;
+}
+export function isConjureProjectReadDone(arg0) {
+  let hasItem = set.has(arg0);
+  if (hasItem) {
+    hasItem = c30 !== arg0;
   }
   return hasItem;
 }

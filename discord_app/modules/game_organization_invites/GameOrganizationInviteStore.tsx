@@ -1,11 +1,11 @@
-// === Module 11895: GameOrganizationInviteStore ===
+// === Module 11769: GameOrganizationInviteStore ===
 
-// Module 11895 (GameOrganizationInviteStore)
+// Module 11769 (GameOrganizationInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameOrganizationModels from "GameOrganizationModels" /* 11897 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11898 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11896 */;
+import GameOrganizationModels from "GameOrganizationModels" /* 11771 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11772 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11770 */;
 import size from "module_2" /* 2 */;
 
 ({ GameOrganizationCharacterMode: c2, GameOrganizationInviteStates: c3 } = GameOrganizationInviteConstants);

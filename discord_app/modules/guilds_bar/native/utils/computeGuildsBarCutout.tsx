@@ -1,10 +1,10 @@
-// === Module 17878: computeGuildsBarCutout ===
+// === Module 17916: computeGuildsBarCutout ===
 
-// Module 17878 (computeGuildsBarCutout)
+// Module 17916 (computeGuildsBarCutout)
 import _mod17 from "module_17" /* 17 */;
 import native from "native" /* 1186 */;
-import ClipView from "ClipView" /* 9023 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 17862 */;
+import ClipView from "ClipView" /* 9279 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 17900 */;
 import size from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;

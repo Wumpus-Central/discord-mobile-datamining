@@ -1,9 +1,9 @@
-// === Module 12346: GuildLeaderboardStatCopy ===
+// === Module 11245: GuildLeaderboardStatCopy ===
 
-// Module 12346 (GuildLeaderboardStatCopy)
+// Module 11245 (GuildLeaderboardStatCopy)
 import util from "util" /* 1112 */;
 import _modDef2707 from "module_2707" /* 2707 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4833 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4837 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/GuildLeaderboardStatCopy.tsx");

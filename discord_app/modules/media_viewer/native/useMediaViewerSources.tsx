@@ -1,7 +1,7 @@
-// === Module 8218: useMediaViewerSources ===
+// === Module 8664: useMediaViewerSources ===
 
-// Module 8218 (useMediaViewerSources)
-import ZustandStore from "ZustandStore" /* 5102 */;
+// Module 8664 (useMediaViewerSources)
+import ZustandStore from "ZustandStore" /* 5106 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => {
@@ -19,7 +19,7 @@ export function setMediaViewerSources(sources) {
   if (null != initialIndex) {
     const _Set2 = Set;
     items = [initialIndex];
-    let set = new Set(items);
+    set = new Set(items);
   } else {
     const _Set = Set;
     set = new Set();
@@ -33,14 +33,14 @@ export function removeSpoiler(index) {
   const field = zustandStore.getField("userRevealedIndexes");
   if (!field.has(index)) {
     const _Set = Set;
-    const set = new Set(field);
+    set = new Set(field);
     set.add(index);
     const obj2 = { userRevealedIndexes: set };
     zustandStore.setState(obj2);
   }
 }
 export function toggleSpoiler(index) {
-  const set = new Set(zustandStore.getField("userRevealedIndexes"));
+  set = new Set(zustandStore.getField("userRevealedIndexes"));
   if (set.has(index)) {
     set.delete(index);
   } else {

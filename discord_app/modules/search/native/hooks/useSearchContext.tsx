@@ -1,9 +1,9 @@
-// === Module 13153: useSearchContext ===
+// === Module 13071: useSearchContext ===
 
-// Module 13153 (useSearchContext)
+// Module 13071 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 const require = globalThis.__r;
 

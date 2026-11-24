@@ -1,11 +1,11 @@
-// === Module 6498: useIsOnStartStageScreenStore ===
+// === Module 7703: useIsOnStartStageScreenStore ===
 
-// Module 6498 (useIsOnStartStageScreenStore)
+// Module 7703 (useIsOnStartStageScreenStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4770 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4774 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4816 */;
+import PermissionStore from "PermissionStore" /* 4849 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ export function useUpdateIsOnStartStageScreenEffect(id) {
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(6499)(id.id);
+    tmp3 = !stateFromStores(7704)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

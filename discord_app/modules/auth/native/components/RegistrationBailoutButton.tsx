@@ -1,13 +1,13 @@
-// === Module 17480: RegistrationBailoutButton ===
+// === Module 17518: RegistrationBailoutButton ===
 
-// Module 17480 (RegistrationBailoutButton)
+// Module 17518 (RegistrationBailoutButton)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_3 = createStyles.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");

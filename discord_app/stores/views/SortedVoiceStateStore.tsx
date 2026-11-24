@@ -1,21 +1,21 @@
-// === Module 5657: SortedVoiceStateStore ===
+// === Module 5728: SortedVoiceStateStore ===
 
-// Module 5657 (SortedVoiceStateStore)
+// Module 5728 (SortedVoiceStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4840 */;
-import UserUtilsDefault from "UserUtils" /* 4969 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4844 */;
+import UserUtilsDefault from "UserUtils" /* 4973 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 4765 */;
+import FavoriteStore from "FavoriteStore" /* 4769 */;
 import UserRecord from "UserRecord" /* 1405 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
 import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5561 */;
+import VoiceStateStore from "VoiceStateStore" /* 5565 */;
 
 require = fn;
 function getVoiceStatesForGuild(guildId) {
@@ -24,7 +24,7 @@ function getVoiceStatesForGuild(guildId) {
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
@@ -325,7 +325,7 @@ prototype2["initialize"] = function initialize() {
         if (typeof SortedVoiceStates === "function") {
           const merged = Object.assign({ _pending: null, _voiceStates: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[0] = set;
           const secondaryIndexMap = new allVoiceStates(dependencyMap[10]).SecondaryIndexMap((voiceState) => {
             const channelId = voiceState.voiceState.channelId;
@@ -437,7 +437,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       if (typeof SortedVoiceStates === "function") {
         const merged = Object.assign({ _pending: null, _voiceStates: null });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[0] = set;
         const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
@@ -474,7 +474,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
@@ -496,7 +496,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
   }
   return obj.getVoiceStatesForChannel(getGuildId.id);
 };
-prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt(id, guildId) {
+prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt(channelId, guildId) {
   let tmp = guildId;
   if (guildId == null) {
     tmp = ME;
@@ -506,7 +506,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
@@ -526,7 +526,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
       throw new TypeError("Trying to call a non-function");
     }
   }
-  return obj.getVoiceStatesForChannel(id);
+  return obj.getVoiceStatesForChannel(channelId);
 };
 prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(arg0) {
   const channel = ChannelStore.getChannel(arg0);
@@ -541,7 +541,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
       if (typeof SortedVoiceStates === "function") {
         const merged = Object.assign({ _pending: null, _voiceStates: null });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[0] = set;
         const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
@@ -575,7 +575,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
@@ -621,7 +621,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
           if (typeof SortedVoiceStates === "function") {
             const merged = Object.assign({ _pending: null, _voiceStates: null });
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             merged[0] = set;
             const secondaryIndexMap = new allVoiceStates(dependencyMap[10]).SecondaryIndexMap((voiceState) => {
               const channelId = voiceState.voiceState.channelId;
@@ -658,7 +658,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
         if (typeof SortedVoiceStates === "function") {
           const merged = Object.assign({ _pending: null, _voiceStates: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[0] = set;
           const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
             const channelId = voiceState.voiceState.channelId;
@@ -694,7 +694,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
         if (typeof SortedVoiceStates === "function") {
           const merged = Object.assign({ _pending: null, _voiceStates: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[0] = set;
           const secondaryIndexMap = new require("SecondaryIndexMap").SecondaryIndexMap((voiceState) => {
             const channelId = voiceState.voiceState.channelId;
@@ -724,7 +724,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
       if (typeof SortedVoiceStates === "function") {
         const merged = Object.assign({ _pending: null, _voiceStates: null });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[0] = set;
         const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
@@ -763,7 +763,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
     if (voiceStates != null) {
       mapped = voiceStates.map((userId) => userId.userId);
     }
-    const set = new Set(userIds);
+    set = new Set(userIds);
     const tmp4 = new Set(userIds);
     const set1 = new Set(mapped);
     items = [...set1];

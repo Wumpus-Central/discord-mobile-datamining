@@ -1,30 +1,30 @@
-// === Module 10547: ExecutedApplicationCommandPopout ===
+// === Module 12014: ExecutedApplicationCommandPopout ===
 
-// Module 10547 (ExecutedApplicationCommandPopout)
+// Module 12014 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;
 import Server from "Server" /* 2117 */;
-import UserUtilsDefault from "UserUtils" /* 4969 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5127 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5565 */;
-import ToastUtils from "ToastUtils" /* 5594 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8067 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 10548 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 10549 */;
+import UserUtilsDefault from "UserUtils" /* 4973 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5569 */;
+import ToastUtils from "ToastUtils" /* 5598 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6007 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8689 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 12015 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4914 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildRoleStore from "GuildRoleStore" /* 4819 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import MessageStore from "MessageStore" /* 5964 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import MessageStore from "MessageStore" /* 6265 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10436 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9906 */;
 
 require = fn;
 function getCommandOptionComponents(option) {
@@ -65,7 +65,7 @@ function getCommandOptionComponents(option) {
             },
             children: null
           };
-          items = [closure_1_21, channel(4969).getUserTag(user, { decoration: "never" })];
+          items = [closure_1_21, channel(4973).getUserTag(user, { decoration: "never" })];
           obj.children = items;
           return closure_1_23(user(1186).LegacyText, obj, "optionValue-" + user.name);
         }
@@ -84,18 +84,18 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_19, tmp6(5529).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_19, tmp6(5533).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_23(tmp6(1186).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5529);
+            const tmp6Result = tmp6(5533);
           }
         } else {
           function getRoleComponent(role) {
             const obj = { style: styles.commandOptionMentionText, children: null };
             items = [guild, role.name];
             obj.children = items;
-            return dependencyMap2(native.LegacyText, obj, "optionValue-" + iter.name);
+            return closure_2_23(native.LegacyText, obj, "optionValue-" + iter.name);
           }
           if (tmp6(2117).ApplicationCommandOptionType.ROLE === type) {
             value = iter.value;
@@ -375,7 +375,7 @@ function CommandContentContainer(channelId) {
     commandHook() {
       if (closure_1_5 === constants.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
-        let children = "" + dependencyMap + name_localized;
+        let children = "" + set + name_localized;
       } else {
         children = name_localized;
       }
@@ -388,7 +388,7 @@ function CommandContentContainer(channelId) {
       obj2.source = utils_AvatarUtils.ensureAvatarSource(avatarSource.getAvatarSource(guildId));
       items = [closure_2_22(tmp, obj2, "icon-" + avatarSource.id), closure_2_22(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
       obj.children = items;
-      return dependencyMap2(timestampProducer, obj, "application");
+      return closure_2_23(timestampProducer, obj, "application");
     }
   };
   const tmp4Result6 = channelId(data[29]);
@@ -447,7 +447,7 @@ function CommandContentContainer(channelId) {
     commandHook() {
       if (closure_1_5 === constants.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
-        let children = "" + dependencyMap + name_localized;
+        let children = "" + set + name_localized;
       } else {
         children = name_localized;
       }
@@ -460,7 +460,7 @@ function CommandContentContainer(channelId) {
       obj2.source = utils_AvatarUtils.ensureAvatarSource(avatarSource.getAvatarSource(guildId));
       items = [closure_2_22(tmp, obj2, "icon-" + avatarSource.id), closure_2_22(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
       obj.children = items;
-      return dependencyMap2(timestampProducer, obj, "application");
+      return closure_2_23(timestampProducer, obj, "application");
     }
   }), (children, arg1) => {
     let tmp = children;
@@ -510,7 +510,7 @@ function CommandActionsContainer(channelId) {
     if (name_localized == null) {
       name_localized = data.name;
     }
-    items = [dependencyMap + name_localized];
+    items = [set + name_localized];
     let combined = items;
     if (null != data.options) {
       const application_command2 = data.application_command;
@@ -620,15 +620,15 @@ function CommandActionsContainer(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5937).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(6947).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1071);
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = Constants);
 const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5938);
+const ChannelAutocompleteConstants = fn(6948);
 ({ CHANNEL_SENTINEL: closure_19, COMMAND_SENTINEL: closure_20, MENTION_SENTINEL: closure_21 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 }, activityIndicator: { padding: 16 }, application: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, applicationIcon: null, commandName: null, commandOptionText: null, commandOptionMentionText: null, commandText: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round };
 obj2.applicationIcon = size;
@@ -681,7 +681,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7520)(messageId(7539).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(6253)(messageId(6254).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -711,6 +711,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = closure_22(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_22(channelId(5141).BottomSheet, obj3);
-  return closure_22(channelId(7520).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_22(channelId(5145).BottomSheet, obj3);
+  return closure_22(channelId(6253).AnalyticsLocationProvider, obj2);
 };

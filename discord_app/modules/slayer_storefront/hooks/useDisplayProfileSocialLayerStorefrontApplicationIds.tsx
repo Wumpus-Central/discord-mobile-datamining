@@ -1,11 +1,11 @@
-// === Module 8992: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 10990: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 8992 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 10990 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import apply from "apply" /* 12 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6958 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6961 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6045 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6048 */;
 import noop from "module_19" /* 19 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6849 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7464 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
       return [];
     } else {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       let widgets1;
       if (application != null) {
         widgets1 = application.widgets;

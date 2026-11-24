@@ -1,11 +1,11 @@
-// === Module 18682: ConjureDebugAnalytics ===
+// === Module 18723: ConjureDebugAnalytics ===
 
-// Module 18682 (ConjureDebugAnalytics)
+// Module 18723 (ConjureDebugAnalytics)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 18677 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 18678 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 18680 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 18718 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 18719 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 18721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,9 +19,9 @@ export function ConjureDebugAgentAnalyticsRows(analytics) {
   if ("ok" !== analytics.status) {
     const obj2 = { label: null, value: null, hint: null };
     const intl4 = util.intl;
-    obj2.label = intl4.string(_modDef4190.SXP7pD);
+    obj2.label = intl4.string(_modDef4192.SXP7pD);
     const intl5 = util.intl;
-    obj2.value = intl5.string(_modDef4190.E5hKVi);
+    obj2.value = intl5.string(_modDef4192.E5hKVi);
     obj2.hint = ConjureDebugLabels.analyticsUnavailableReason(analytics);
     return React3(ConjureDebugPrimitives.DebugStatRow, obj2);
   } else {
@@ -33,22 +33,22 @@ export function ConjureDebugAgentAnalyticsRows(analytics) {
     if (null == found) {
       const obj3 = { label: null, value: "\u2014", hint: null };
       const intl2 = util.intl;
-      obj3.label = intl2.string(_modDef4190.SXP7pD);
+      obj3.label = intl2.string(_modDef4192.SXP7pD);
       const intl3 = util.intl;
-      obj3.hint = intl3.string(_modDef4190.AGvoMJ);
+      obj3.hint = intl3.string(_modDef4192.AGvoMJ);
       return React3(ConjureDebugPrimitives.DebugStatRow, obj3);
     } else {
       const analyticsMemoryValueResult = ConjureDebugLabels.analyticsMemoryValue(found);
       const obj4 = { label: null, value: null };
       const intl6 = util.intl;
-      obj4.label = intl6.string(_modDef4190["H/X+FI"]);
+      obj4.label = intl6.string(_modDef4192["H/X+FI"]);
       obj4.value = ConjureDebugFormat.formatMs(found.cpu_ms);
       items = [React3(ConjureDebugPrimitives.DebugStatRow, obj4), ];
       let tmp17Result = null;
       if (null != analyticsMemoryValueResult) {
         const obj = { label: null, value: null };
         const intl = util.intl;
-        obj.label = intl.string(_modDef4190.lmFmMO);
+        obj.label = intl.string(_modDef4192.lmFmMO);
         obj.value = analyticsMemoryValueResult;
         tmp17Result = React3(ConjureDebugPrimitives.DebugStatRow, obj);
       }
@@ -62,7 +62,7 @@ export function ConjureDebugAgentAnalyticsRows(analytics) {
 export function ConjureDebugWorkerAnalyticsSection(analytics) {
   analytics = analytics.analytics;
   let intl = util.intl;
-  const stringResult = intl.string(_modDef4190.LoZwWn);
+  const stringResult = intl.string(_modDef4192.LoZwWn);
   if ("ok" !== analytics.status) {
     let obj2 = { title: stringResult, children: null };
     let obj3 = { children: ConjureDebugLabels.analyticsUnavailableReason(analytics) };
@@ -82,7 +82,7 @@ export function ConjureDebugWorkerAnalyticsSection(analytics) {
     if (0 === found.length) {
       let obj4 = { children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef4190.AGvoMJ);
+      obj4.children = intl2.string(_modDef4192.AGvoMJ);
       let mapped1 = React3(ConjureDebugPrimitives.DebugNote, obj4);
     } else {
       mapped1 = found.map((label) => {
@@ -90,7 +90,7 @@ export function ConjureDebugWorkerAnalyticsSection(analytics) {
         const obj = { label: label.label, value: null, hint: null };
         const intl = util.intl;
         const obj2 = { cpu: ConjureDebugFormat.formatMs(object.cpu_ms) };
-        obj.value = intl.formatToPlainString(_modDef4190["w/2voO"], obj2);
+        obj.value = intl.formatToPlainString(_modDef4192["w/2voO"], obj2);
         obj.hint = ConjureDebugLabels.analyticsMemoryValue(object);
         return closure_1_3(ConjureDebugPrimitives.DebugStatRow, obj, object.role);
       });

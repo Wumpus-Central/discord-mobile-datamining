@@ -1,6 +1,6 @@
-// === Module 7840: AgeVerificationMethodsV2 ===
+// === Module 7784: AgeVerificationMethodsV2 ===
 
-// Module 7840 (AgeVerificationMethodsV2)
+// Module 7784 (AgeVerificationMethodsV2)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

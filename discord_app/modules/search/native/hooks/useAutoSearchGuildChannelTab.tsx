@@ -1,14 +1,14 @@
-// === Module 18831: useAutoSearchGuildChannelTab ===
+// === Module 18873: useAutoSearchGuildChannelTab ===
 
-// Module 18831 (useAutoSearchGuildChannelTab)
+// Module 18873 (useAutoSearchGuildChannelTab)
 import apply from "apply" /* 12 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
-import SearchUtils from "SearchUtils" /* 13204 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13111 */;
+import SearchUtils from "SearchUtils" /* 13118 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(13213).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_4 = fn(13127).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 

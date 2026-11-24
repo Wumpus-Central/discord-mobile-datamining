@@ -1,16 +1,16 @@
-// === Module 9401: PromotionUtils ===
+// === Module 9260: PromotionUtils ===
 
-// Module 9401 (PromotionUtils)
+// Module 9260 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import dismissible_content from "dismissible_content" /* 4746 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4747 */;
-import constants from "constants" /* 9192 */;
+import dismissible_content from "dismissible_content" /* 4750 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4751 */;
+import constants from "constants" /* 9070 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import PromotionRecord from "PromotionRecord" /* 9144 */;
-import PromotionsStore from "PromotionsStore" /* 9143 */;
+import PromotionRecord from "PromotionRecord" /* 9022 */;
+import PromotionsStore from "PromotionsStore" /* 9021 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -271,7 +271,7 @@ export function getClaimedOutboundPromotionCodeMap(stateFromStores2) {
   return obj;
 }
 export function getClaimedEndedOutboundPromotions(arr, arr2) {
-  const set = new Set(arr2.map((id) => id.id));
+  set = new Set(arr2.map((id) => id.id));
   return arr.filter((promotion) => {
     promotion = promotion.promotion;
     const hasItem = set.has(promotion.id);

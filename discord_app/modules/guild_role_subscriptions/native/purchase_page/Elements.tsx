@@ -1,15 +1,15 @@
-// === Module 18190: Elements ===
+// === Module 18229: Elements ===
 
-// Module 18190 (Elements)
+// Module 18229 (Elements)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import Pressables from "Pressables" /* 7030 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9247 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9495 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16630 */;
-import _modDef18191 from "module_18191" /* 18191 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import Pressables from "Pressables" /* 6026 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9128 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9557 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16664 */;
+import _modDef18230 from "module_18230" /* 18230 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2177 */;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const constants = fn(1071).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { toggleTruncateButton: { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 }, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
 let obj3 = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
 obj2.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -103,7 +103,7 @@ export function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_12();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  items = [refs(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), refs(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18191, style: tmp.arrowButtonIcon })];
+  items = [refs(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), refs(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18230, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_11(Pressables.PressableOpacity, obj);
 }
@@ -117,8 +117,8 @@ export function useFormattedSubscriptionPlan(listingId) {
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(6856).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(6856);
+    str = "" + tmp3(6199).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(6199);
   }
   return str;
 }

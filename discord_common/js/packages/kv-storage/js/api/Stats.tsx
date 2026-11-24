@@ -1,7 +1,7 @@
-// === Module 4807: api/Stats ===
+// === Module 4811: api/Stats ===
 
-// Module 4807 (api/Stats)
-import Host2 from "Host" /* 4800 */;
+// Module 4811 (api/Stats)
+import Host2 from "Host" /* 4804 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Stats.tsx");

@@ -1,14 +1,14 @@
-// === Module 4784: GuildStore ===
+// === Module 4788: GuildStore ===
 
-// Module 4784 (GuildStore)
+// Module 4788 (GuildStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FavoritesConstants from "FavoritesConstants" /* 4775 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 4776 */;
-import SetUtils from "SetUtils" /* 4779 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 4785 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 4788 */;
-import PlainRecord from "PlainRecord" /* 4777 */;
-import GuildRecord from "GuildRecord" /* 4780 */;
+import FavoritesConstants from "FavoritesConstants" /* 4779 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 4780 */;
+import SetUtils from "SetUtils" /* 4783 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 4789 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 4792 */;
+import PlainRecord from "PlainRecord" /* 4781 */;
+import GuildRecord from "GuildRecord" /* 4784 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -100,7 +100,7 @@ const guildStore = new GuildStore({
   CONNECTION_OPEN(arg0, getAllRecords) {
     ({ guilds, unavailableGuilds } = arg0);
     const allRecords = getAllRecords.getAllRecords();
-    const set = new Set(Object.keys(allRecords));
+    set = new Set(Object.keys(allRecords));
     const iter = guilds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {

@@ -1,17 +1,17 @@
-// === Module 13897: ConjureAppChannelSheetHeader ===
+// === Module 11408: ConjureAppChannelSheetHeader ===
 
-// Module 13897 (ConjureAppChannelSheetHeader)
+// Module 11408 (ConjureAppChannelSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import Stack_Stack from "Stack/Stack" /* 5929 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 12291 */;
-import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 12294 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import Stack_Stack from "Stack/Stack" /* 5989 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11409 */;
+import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 11415 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_5 = createStyles.createStyles({ details: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_hover_card/native/ConjureAppChannelSheetHeader.tsx");

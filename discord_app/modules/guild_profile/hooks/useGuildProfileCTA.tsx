@@ -1,15 +1,15 @@
-// === Module 12280: useGuildProfileCTA ===
+// === Module 12220: useGuildProfileCTA ===
 
-// Module 12280 (useGuildProfileCTA)
+// Module 12220 (useGuildProfileCTA)
 import FlagUtils from "FlagUtils" /* 1404 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 7279 */;
-import GuildTagUtils from "GuildTagUtils" /* 7999 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 12281 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 7700 */;
+import GuildTagUtils from "GuildTagUtils" /* 8437 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 12221 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4825 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import InviteStore from "InviteStore" /* 5632 */;
+import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import InviteStore from "InviteStore" /* 5636 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -112,7 +112,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
                 if (inviteRoles.some((id) => !set.has(id.id))) {
                   return features.ACCEPT_ROLES;
                 }
-                const set = new Set(roles);
+                set = new Set(roles);
               }
             }
           }
@@ -250,7 +250,7 @@ export function getGuildProfileCTAType(guildProfileFromInvite, code) {
           if (roles.some((id) => !set.has(id.id))) {
             return obj.ACCEPT_ROLES;
           }
-          const set = new Set(roles2);
+          set = new Set(roles2);
         }
       }
     }

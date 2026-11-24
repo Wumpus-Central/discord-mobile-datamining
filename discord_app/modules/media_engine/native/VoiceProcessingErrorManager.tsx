@@ -1,7 +1,7 @@
-// === Module 19681: VoiceProcessingErrorManager ===
+// === Module 19724: VoiceProcessingErrorManager ===
 
-// Module 19681 (VoiceProcessingErrorManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+// Module 19724 (VoiceProcessingErrorManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 let require = fn;
 const prototype = function VoiceProcessingErrorManager() {
@@ -16,10 +16,10 @@ const prototype = function VoiceProcessingErrorManager() {
     }
   };
   applyArgumentsResult.handleNoiseCancellationError = function handleNoiseCancellationError() {
-    const result = applyArgumentsResult(5594).presentNoiseCancellationError();
+    const result = applyArgumentsResult(5598).presentNoiseCancellationError();
   };
   applyArgumentsResult.handleVoiceActivityDetectionError = function handleVoiceActivityDetectionError() {
-    const result = applyArgumentsResult(5594).presentVoiceActivityDetectionError();
+    const result = applyArgumentsResult(5598).presentVoiceActivityDetectionError();
   };
   return applyArgumentsResult;
 }.prototype;

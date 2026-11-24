@@ -1,6 +1,6 @@
-// === Module 4779: SetUtils ===
+// === Module 4783: SetUtils ===
 
-// Module 4779 (SetUtils)
+// Module 4783 (SetUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
@@ -27,7 +27,7 @@ export function areSetsEqual(set, set2) {
 export function toSetInplace(features) {
   if (null == features) {
     const _Set3 = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     const _Set = Set;
     set = features;

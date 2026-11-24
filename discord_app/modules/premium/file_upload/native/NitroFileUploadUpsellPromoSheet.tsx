@@ -1,8 +1,8 @@
-// === Module 19087: NitroFileUploadUpsellPromoSheet ===
+// === Module 19129: NitroFileUploadUpsellPromoSheet ===
 
-// Module 19087 (NitroFileUploadUpsellPromoSheet)
+// Module 19129 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 575 */;
-import openUserSettings from "openUserSettings" /* 8194 */;
+import openUserSettings from "openUserSettings" /* 7968 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,9 +11,9 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticsPages: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

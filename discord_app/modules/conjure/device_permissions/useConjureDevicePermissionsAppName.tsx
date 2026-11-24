@@ -1,9 +1,9 @@
-// === Module 14358: useConjureDevicePermissionsAppName ===
+// === Module 13894: useConjureDevicePermissionsAppName ===
 
-// Module 14358 (useConjureDevicePermissionsAppName)
-import isConjureApplicationDefault from "isConjureApplication" /* 6632 */;
+// Module 13894 (useConjureDevicePermissionsAppName)
+import isConjureApplicationDefault from "isConjureApplication" /* 6819 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6621 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 

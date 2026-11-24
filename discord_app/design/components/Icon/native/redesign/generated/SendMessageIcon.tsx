@@ -1,9 +1,9 @@
-// === Module 5611: SendMessageIcon ===
+// === Module 5615: SendMessageIcon ===
 
-// Module 5611 (SendMessageIcon)
+// Module 5615 (SendMessageIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5599 */;
-import _mod5612 from "module_5612" /* 5612 */;
+import BaseIconImage from "BaseIconImage" /* 5603 */;
+import _mod5616 from "module_5616" /* 5616 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SendMessageIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5612, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5616, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,11 +1,11 @@
-// === Module 14983: FriendGroupsStore ===
+// === Module 15022: FriendGroupsStore ===
 
-// Module 14983 (FriendGroupsStore)
+// Module 15022 (FriendGroupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8143 */;
-import ConsentStore from "ConsentStore" /* 6427 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8181 */;
+import ConsentStore from "ConsentStore" /* 6715 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 let items = [];
@@ -127,7 +127,7 @@ const friendGroupsStore = new FriendGroupsStore(DispatcherDefault, {
   },
   ADD_USERS_TO_GROUP: function handleAddUsersToGroup(arg0) {
     ({ groupId: UserAffinitiesV2Store, userIds } = arg0);
-    let set;
+    set = undefined;
     const findIndexResult = items.findIndex((id) => id.id === UserAffinitiesV2Store);
     if (-1 === findIndexResult) {
       return false;
@@ -150,7 +150,7 @@ const friendGroupsStore = new FriendGroupsStore(DispatcherDefault, {
   },
   REMOVE_USERS_FROM_GROUP: function handleRemoveUsersFromGroup(arg0) {
     ({ groupId: UserAffinitiesV2Store, userIds } = arg0);
-    let set;
+    set = undefined;
     const findIndexResult = items.findIndex((id) => id.id === UserAffinitiesV2Store);
     if (-1 === findIndexResult) {
       return false;

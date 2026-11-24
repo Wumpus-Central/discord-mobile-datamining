@@ -1,10 +1,10 @@
-// === Module 14987: GlobalDiscoveryServersSearchResultsStore ===
+// === Module 15026: GlobalDiscoveryServersSearchResultsStore ===
 
-// Module 14987 (GlobalDiscoveryServersSearchResultsStore)
+// Module 15026 (GlobalDiscoveryServersSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6349 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 7996 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5666 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8434 */;
 import size from "module_2" /* 2 */;
 
 ({ SEARCH_RESULTS_QUERY_PREFIX: c2, SEARCH_RESULTS_CATEGORY_PREFIX: c3, SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: closure_4 } = GlobalDiscoveryServersConstants);
@@ -199,7 +199,7 @@ export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
     value.handleSearchFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    const set = new Set(ignoreQueries.ignoreQueries);
+    set = new Set(ignoreQueries.ignoreQueries);
     const item = map.forEach((query, index) => {
       if (null != query.query) {
         if (!set.has(query.query)) {

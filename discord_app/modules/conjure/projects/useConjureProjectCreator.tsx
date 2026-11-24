@@ -1,14 +1,14 @@
-// === Module 12292: useConjureProjectCreator ===
+// === Module 12231: useConjureProjectCreator ===
 
-// Module 12292 (useConjureProjectCreator)
+// Module 12231 (useConjureProjectCreator)
 import util from "util" /* 1112 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import UserUtils from "UserUtils" /* 4969 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 11977 */;
-import ListUtils from "ListUtils" /* 12293 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import UserUtils from "UserUtils" /* 4973 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11406 */;
+import ListUtils from "ListUtils" /* 12232 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureChatStore from "ConjureChatStore" /* 6925 */;
+import ConjureChatStore from "ConjureChatStore" /* 7533 */;
 
 require = fn;
 function useConjureProjectPeople(project) {
@@ -28,7 +28,7 @@ function useConjureProjectPeople(project) {
     } else {
       const messages = ConjureChatStore.getMessages(tmp);
       const _Set = Set;
-      const set = new Set(messages.flatMap((user_id) => {
+      set = new Set(messages.flatMap((user_id) => {
         if (null != user_id.user_id) {
           if (user_id.user_id !== owner_user_id) {
             items = [user_id.user_id];
@@ -94,12 +94,12 @@ export default function useConjureProjectCreator(project) {
       if (0 === mapped.length) {
         intl = intl(1112).intl;
         obj2 = { creator: name };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef4190.t5RWBS, obj2);
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef4192.t5RWBS, obj2);
       } else {
         const intl2 = intl(1112).intl;
-        const obj4 = { creator: name, collaborators: intl(12293).getListSummaryLabel(mapped) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef4190["b5uCe/"], obj4);
-        const intlResult = intl(12293);
+        const obj4 = { creator: name, collaborators: intl(12232).getListSummaryLabel(mapped) };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef4192["b5uCe/"], obj4);
+        const intlResult = intl(12232);
       }
       obj.label = formatToPlainStringResult;
     }
@@ -109,11 +109,11 @@ export function getConjureProjectCreatorLabel(creator, names) {
   if (0 === names.length) {
     const intl2 = util.intl;
     const obj3 = { creator };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4190.t5RWBS, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4192.t5RWBS, obj3);
   } else {
     const intl = util.intl;
     const obj = { creator, collaborators: ListUtils.getListSummaryLabel(names) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4190["b5uCe/"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4192["b5uCe/"], obj);
   }
   return formatToPlainStringResult;
 }

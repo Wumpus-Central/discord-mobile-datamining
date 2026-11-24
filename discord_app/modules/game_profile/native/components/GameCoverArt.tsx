@@ -1,11 +1,11 @@
-// === Module 9811: GameCoverArt ===
+// === Module 8655: GameCoverArt ===
 
-// Module 9811 (GameCoverArt)
+// Module 8655 (GameCoverArt)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5504 */;
-import FastImageDefault from "FastImage" /* 5600 */;
-import useGameArtworkDefault from "useGameArtwork" /* 9812 */;
+import Text_Text from "Text/Text" /* 5508 */;
+import FastImageDefault from "FastImage" /* 5604 */;
+import useGameArtworkDefault from "useGameArtwork" /* 8656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -153,7 +153,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const GameCoverArtSize = { SMALL: 0, [0]: "SMALL", LARGE: 1, [1]: "LARGE", COMPACT: 2, [2]: "COMPACT" };
 let closure_7 = { [GameCoverArtSize.SMALL]: { nameVariant: "body-xs/medium", nameLineClamp: 3, releaseYearVariant: "footnote/normal" }, [GameCoverArtSize.LARGE]: { nameVariant: "body-md/medium", nameLineClamp: 4, releaseYearVariant: "body-sm/normal" } };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj3 = { container: { borderRadius: nativeDefault.radii.sm }, image: null, iconContainer: null, backdropContainer: null, backdrop: null, icon: null, fallback: null, compactFallback: null, fallbackText: null, spacer: null, placeholder: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj3.image = size;

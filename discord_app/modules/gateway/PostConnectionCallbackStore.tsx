@@ -1,8 +1,8 @@
-// === Module 7263: PostConnectionCallbackStore ===
+// === Module 5721: PostConnectionCallbackStore ===
 
-// Module 7263 (PostConnectionCallbackStore)
-import NewUserStore from "NewUserStore" /* 7264 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
+// Module 5721 (PostConnectionCallbackStore)
+import NewUserStore from "NewUserStore" /* 5722 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
 function processCallbacks() {

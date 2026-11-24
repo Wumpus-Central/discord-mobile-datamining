@@ -1,20 +1,20 @@
-// === Module 12001: OptInChannelsUtils ===
+// === Module 11892: OptInChannelsUtils ===
 
-// Module 12001 (OptInChannelsUtils)
+// Module 11892 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1098 */;
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6677 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7476 */;
-import ChannelListState from "ChannelListState" /* 8321 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 12002 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6862 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7341 */;
+import ChannelListState from "ChannelListState" /* 8145 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11893 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7477 */;
-import ReadStateStore from "ReadStateStore" /* 6619 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7342 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -25,10 +25,10 @@ function setIndex(arg0, index) {
 }
 const Constants = fn(1071);
 ({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
-const ChannelConstants = fn(4769);
+const ChannelConstants = fn(4773);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(8327).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6553).ReadStateTypes;
+const ChannelListGuildActionRow = fn(8151).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6042).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 

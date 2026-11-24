@@ -1,9 +1,9 @@
-// === Module 11389: openStickersPremiumUpsellAlert ===
+// === Module 10707: openStickersPremiumUpsellAlert ===
 
-// Module 11389 (openStickersPremiumUpsellAlert)
+// Module 10707 (openStickersPremiumUpsellAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6360 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6877 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5680 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

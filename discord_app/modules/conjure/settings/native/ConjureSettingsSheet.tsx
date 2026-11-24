@@ -1,15 +1,15 @@
-// === Module 18284: ConjureSettingsSheet ===
+// === Module 18323: ConjureSettingsSheet ===
 
-// Module 18284 (ConjureSettingsSheet)
+// Module 18323 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5127 */;
+import _modDef4192 from "module_4192" /* 4192 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5131 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 6967 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 6977 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6621 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 7563 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 7573 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6808 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -495,14 +495,14 @@ function SettingsTabStrip(tabs) {
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6621);
+let ConjureProjectStore = fn(6808);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
-let obj = { project: _modDef4190.W0eQfN, app: _modDef4190.lFaJYF, secrets: _modDef4190.vDpCPU, model: _modDef4190.Rs3qc9, linked: _modDef4190.fBEHdq, experimental: _modDef4190["0Pe9uw"] };
-const createStyles = fn(4913);
+let obj = { project: _modDef4192.W0eQfN, app: _modDef4192.lFaJYF, secrets: _modDef4192.vDpCPU, model: _modDef4192.Rs3qc9, linked: _modDef4192.fBEHdq, experimental: _modDef4192["0Pe9uw"] };
+const createStyles = fn(4917);
 let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
 const value = createStyles.createStyles(obj3);
 const size = fn(2);

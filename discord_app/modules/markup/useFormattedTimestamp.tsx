@@ -1,6 +1,6 @@
-// === Module 11143: useFormattedTimestamp ===
+// === Module 10512: useFormattedTimestamp ===
 
-// Module 11143 (useFormattedTimestamp)
+// Module 10512 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1088 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import _slicedToArray from "module_32" /* 32 */;

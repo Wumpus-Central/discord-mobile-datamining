@@ -1,7 +1,7 @@
-// === Module 6687: guildHasOnboardingHome ===
+// === Module 7458: guildHasOnboardingHome ===
 
-// Module 6687 (guildHasOnboardingHome)
-import FavoritesUtils from "FavoritesUtils" /* 4787 */;
+// Module 7458 (guildHasOnboardingHome)
+import FavoritesUtils from "FavoritesUtils" /* 4791 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

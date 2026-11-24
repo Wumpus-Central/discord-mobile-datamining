@@ -1,8 +1,8 @@
-// === Module 9235: useDiscountedPremiumProductInfo ===
+// === Module 9116: useDiscountedPremiumProductInfo ===
 
-// Module 9235 (useDiscountedPremiumProductInfo)
-import PriceUtils from "PriceUtils" /* 6856 */;
-import ProductIds from "ProductIds" /* 8170 */;
+// Module 9116 (useDiscountedPremiumProductInfo)
+import PriceUtils from "PriceUtils" /* 6199 */;
+import premium_ProductIds from "premium/ProductIds" /* 8972 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ export function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
     discountedPriceString: noop.useMemo(() => {
       if (null != closure_0) {
         if (null != discountedProduct) {
-          const tmp8 = ProductIds.DiscountIdToProductOfferId[tmp.discountId];
+          const tmp8 = premium_ProductIds.DiscountIdToProductOfferId[tmp.discountId];
           let tmp2;
           if (tmp8 != null) {
             tmp2 = tmp8[discountedProduct.identifier];

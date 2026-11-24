@@ -1,20 +1,20 @@
-// === Module 5083: client_themes/ClientThemesUtils ===
+// === Module 5087: client_themes/ClientThemesUtils ===
 
-// Module 5083 (client_themes/ClientThemesUtils)
+// Module 5087 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
-import ColorUtils from "ColorUtils" /* 4910 */;
-import utils_ColorDefault from "utils/Color" /* 4911 */;
-import shared from "shared" /* 4920 */;
-import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5084 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5085 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5119 */;
-import useThemeDefault from "useTheme" /* 5122 */;
+import ColorUtils from "ColorUtils" /* 4914 */;
+import utils_ColorDefault from "utils/Color" /* 4915 */;
+import shared from "shared" /* 4924 */;
+import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5088 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5089 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5123 */;
+import useThemeDefault from "useTheme" /* 5126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4941 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1237 */;
 
 require = fn;

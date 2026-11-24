@@ -1,8 +1,8 @@
-// === Module 14021: useCanUseTenureBadge ===
+// === Module 9679: useCanUseTenureBadge ===
 
-// Module 14021 (useCanUseTenureBadge)
+// Module 9679 (useCanUseTenureBadge)
 import initialize from "initialize" /* 504 */;
-import PremiumPerkGates from "PremiumPerkGates" /* 13958 */;
+import PremiumPerkGates from "PremiumPerkGates" /* 9680 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;

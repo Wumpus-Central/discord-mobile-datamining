@@ -1,8 +1,8 @@
-// === Module 15792: GameRelationshipManager ===
+// === Module 15820: GameRelationshipManager ===
 
-// Module 15792 (GameRelationshipManager)
+// Module 15820 (GameRelationshipManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8360 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8180 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 
 const RelationshipTypes = fn(1071).RelationshipTypes;
@@ -11,7 +11,7 @@ class GameRelationshipManager extends tmp2 {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       gameRelationships = gameRelationships.getGameRelationships();
-      const set = new Set();
+      set = new Set();
       const values = gameRelationships.values();
       const item = values.forEach((type) => {
         if (type.type === constants.PENDING_INCOMING) {

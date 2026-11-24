@@ -1,22 +1,22 @@
-// === Module 18835: AutocompleteScreen ===
+// === Module 18877: AutocompleteScreen ===
 
-// Module 18835 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 4969 */;
-import useChannelName from "useChannelName" /* 5529 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13197 */;
-import TrackingDefault from "Tracking" /* 13218 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13222 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18837 */;
+// Module 18877 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 4973 */;
+import useChannelName from "useChannelName" /* 5533 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13111 */;
+import TrackingDefault from "Tracking" /* 13138 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13142 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import RelationshipStore from "RelationshipStore" /* 4859 */;
 import UserStore from "UserStore" /* 1386 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18836 */;
-import SearchQueryStore from "SearchQueryStore" /* 13211 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18878 */;
+import SearchQueryStore from "SearchQueryStore" /* 13125 */;
 
 require = fn;
-const SearchConstants = fn(8576);
+const SearchConstants = fn(8878);
 ({ SearchListItemTypes: closure_10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1071);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
@@ -151,7 +151,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       return items;
     } else {
       const _Set = Set;
-      const set = new Set(searchContext(first[18]).getSearchQueryUserIds(items));
+      set = new Set(searchContext(first[18]).getSearchQueryUserIds(items));
       const _Set2 = Set;
       let obj = searchContext(first[18]);
       set1 = new Set(searchContext(first[18]).getSearchQueryChannelIds(items));

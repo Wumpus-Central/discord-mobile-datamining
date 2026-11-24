@@ -1,13 +1,13 @@
-// === Module 16666: AppearanceSetting ===
+// === Module 16700: AppearanceSetting ===
 
-// Module 16666 (AppearanceSetting)
+// Module 16700 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
-import _modDef3056 from "module_3056" /* 3056 */;
-import useThemeDefault from "useTheme" /* 5122 */;
-import useActiveTheme from "useActiveTheme" /* 8572 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
+import _modDef3058 from "module_3058" /* 3058 */;
+import useThemeDefault from "useTheme" /* 5126 */;
+import useActiveTheme from "useActiveTheme" /* 8874 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4941 */;
 
 require = fn;
 function useAppearanceSettingTrailing() {
@@ -18,7 +18,7 @@ function useAppearanceSettingTrailing() {
   const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3056.KSBBpC);
+    return intl2.string(_modDef3058.KSBBpC);
   } else if (ActiveThemeType.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -39,14 +39,14 @@ function useAppearanceSettingTrailing() {
   }
 }
 const ActiveThemeType = fn(1194).ActiveThemeType;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16667).PaintPaletteIcon,
+  IconComponent: fn(16701).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1071).UserSettingsSections.APPEARANCE,

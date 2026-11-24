@@ -1,17 +1,17 @@
-// === Module 19461: ChannelResyncManager ===
+// === Module 19503: ChannelResyncManager ===
 
-// Module 19461 (ChannelResyncManager)
+// Module 19503 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8354 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8174 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6551 */;
-import GuildStore from "GuildStore" /* 4784 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6394 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7484 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6040 */;
+import GuildStore from "GuildStore" /* 4788 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
 
 const require = fn;
 function handleGuildCreate(guild) {
@@ -62,7 +62,7 @@ function handleChannelSync(integrity_check) {
 function handleLogout(isSwitchingAccount) {
   closure_18 = closure_18 + 1;
   items = [...Object.keys(closure_15), ...Object.keys(closure_16)];
-  const set = new Set(items);
+  set = new Set(items);
   const item = set.forEach((guild_id) => {
     if (null != closure_14[guild_id]) {
       let tmp2 = tmp9;
@@ -298,7 +298,7 @@ let closure_25 = async function _getResyncGuilds() {
   }, { eligible: [], ineligible: [] });
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4769).ChannelFlags;
+const ChannelFlags = fn(4773).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

@@ -1,8 +1,8 @@
-// === Module 8661: UID ===
+// === Module 8929: UID ===
 
-// Module 8661 (UID)
-import useInitialValueDefault from "useInitialValue" /* 5492 */;
-import uniqueIdDefault from "uniqueId" /* 5931 */;
+// Module 8929 (UID)
+import useInitialValueDefault from "useInitialValue" /* 5496 */;
+import uniqueIdDefault from "uniqueId" /* 5991 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/core/web/UID.tsx");

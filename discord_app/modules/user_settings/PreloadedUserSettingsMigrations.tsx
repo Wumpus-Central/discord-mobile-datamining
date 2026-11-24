@@ -1,16 +1,16 @@
-// === Module 15667: PreloadedUserSettingsMigrations ===
+// === Module 15688: PreloadedUserSettingsMigrations ===
 
-// Module 15667 (PreloadedUserSettingsMigrations)
+// Module 15688 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import wrappers from "wrappers" /* 1226 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1232 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4745 */;
-import dismissible_content from "dismissible_content" /* 4746 */;
-import HotspotStore2 from "HotspotStore" /* 8038 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8314 */;
-import ChannelStore from "ChannelStore" /* 4762 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4749 */;
+import dismissible_content from "dismissible_content" /* 4750 */;
+import HotspotStore2 from "HotspotStore" /* 7436 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8042 */;
+import ChannelStore from "ChannelStore" /* 4766 */;
 
 require = fn;
 function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NOTICE_HUBLINK) {

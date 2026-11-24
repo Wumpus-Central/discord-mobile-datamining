@@ -1,9 +1,9 @@
-// === Module 16261: UserSettingsAuthedAppPermissions ===
+// === Module 16294: UserSettingsAuthedAppPermissions ===
 
-// Module 16261 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 5504 */;
-import disclosures from "disclosures" /* 7007 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16255 */;
+// Module 16294 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 5508 */;
+import disclosures from "disclosures" /* 7601 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16288 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
@@ -49,8 +49,8 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(7532).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(5504).Text, { style: items.permissionText, variant: "body-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(7399).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(5508).Text, { style: items.permissionText, variant: "body-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });
