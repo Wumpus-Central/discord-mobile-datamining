@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 267,
-  height: 267,
+  httpServerLocation: "/assets/modules/emoji_terms",
   scales: [1],
-  hash: "898dc79e0285b8e9855531eeca36bf84",
-  name: "img_roblox_white",
-  type: "svg",
+  hash: "93a908dd3f00fe94997ed65b638218f9",
+  name: "emoji-terms-ja",
+  type: "jsona",
 });

@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/empties",
-  width: 414.5,
-  height: 200,
+  width: 292,
+  height: 182,
   scales: [2, 3],
-  hash: "ad997b689c0c3a8b01184b1daa84d93c",
-  name: "pending_light",
+  hash: "4eb5c147e02fe50003e9c4d31a0b00b8",
+  name: "webhook_empty_light",
   type: "png",
 });

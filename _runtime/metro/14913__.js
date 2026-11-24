@@ -1,10 +1,13 @@
 // _runtime/metro/14913__.js
-import _mod14927 from "14927__.js";
-import assign from "../14914_assign.js";
-import Deflate from "../14915_Deflate.js";
-import Inflate from "../14923_Inflate.js";
+import registerAsset from "01118__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14927);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "b3429e38ab32663de7a271eafbda6e13",
+  name: "ChannelListMagnifyingGlassIcon",
+  type: "png",
+});

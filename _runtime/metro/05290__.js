@@ -1,14 +1,11 @@
 // _runtime/metro/05290__.js
-import ComposedGestureName from "../05235_ComposedGestureName.js";
-import _mod5289 from "05289__.js";
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function useExclusiveGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod5289.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
+for (const key10013 in require("05291__.js")) {
+  arg5[key10013] = require("05291__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("transformTapProps")) {
+  arg5[key10017] = require("transformTapProps")[key10017];
+  continue;
 }

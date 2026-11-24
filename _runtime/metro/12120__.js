@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
-  height: 24.5,
+  height: 24,
   scales: [2, 3],
-  hash: "8baf8e74a5de42544f8c13cd8c4c504d",
-  name: "ic_share_android",
+  hash: "59c1068002b82917b518f48d03d4151e",
+  name: "BookmarkOutlineIcon",
   type: "png",
 });

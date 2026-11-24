@@ -1,50 +1,47 @@
 // _runtime/metro/05338__.js
-import _mod1653 from "01653__.js";
-import value2 from "../05146_value2.js";
-import _mod5150 from "05150__.js";
-import BottomSheetContext from "../05156_BottomSheetContext.js";
 import noop from "00019__.js";
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
+const require = globalThis.__r;
 
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod5150.useGestureEventsHandlersDefault;
+({ useEffect: c2, useRef: c3 } = noop);
+
+export (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
   }
-  const sharedValue = _mod1653.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod5150.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod5150.useGestureHandler(
-    value2.GESTURE_SOURCE.CONTENT,
-    animatedContentGestureState,
-    sharedValue,
-    handleOnStart,
-    handleOnChange,
-    handleOnEnd,
-    handleOnFinalize,
-  );
-  const gestureHandler1 = _mod5150.useGestureHandler(
-    value2.GESTURE_SOURCE.HANDLE,
-    animatedHandleGestureState,
-    sharedValue,
-    handleOnStart,
-    handleOnChange,
-    handleOnEnd,
-    handleOnFinalize,
-  );
-  items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(
-    () => ({
-      contentPanGestureHandler: gestureHandler,
-      handlePanGestureHandler: gestureHandler1,
-      animatedGestureSource: sharedValue,
-    }),
-    items,
-  );
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("01653__.js").makeMutable(obj2);
+        let obj = require("01653__.js");
+      } else {
+        mutable = require("01653__.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("01653__.js");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
 }

@@ -1,7 +1,14 @@
 // _runtime/metro/05159__.js
 import _mod19 from "00019__.js";
+import BottomSheetContext from "../05160_BottomSheetContext.js";
 
-const context = _mod19.createContext(null);
+const useContext = _mod19.useContext;
 
-export const BottomSheetModalInternalContext = context;
-export const BottomSheetModalInternalProvider = context.Provider;
+export () => {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  if (null === tmp) {
+    throw "'BottomSheetModalContext' cannot be null!";
+  } else {
+    return tmp;
+  }
+}

@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_panel/native/dock",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92b2ljZV9wYW5lbC9uYXRpdmUvZG9jaw==",
   scales: [1],
-  hash: "d24bba461b937c817a1f5469143e0980",
-  name: "VoicePanelDock.compiled.messages",
+  hash: "4d136db5d1fa7c54463647cce84fc449",
+  name: "zh-CN.messages.4d136db5d1fa7c54463647cce84fc449.compiled.messages",
   type: "jsona",
 });

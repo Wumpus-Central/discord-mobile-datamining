@@ -13,7 +13,7 @@ function prepareAnimation(arg0, onFrame, arg2, arg3) {
   let current = arg2;
   dependencyMap = arg2;
   let iter = arg3;
-  dependencyMap2 = arg3;
+  const dependencyMap2 = arg3;
   if (Array.isArray(onFrame)) {
     const item = onFrame.forEach((item, index) => {
       let tmp3 = dependencyMap;

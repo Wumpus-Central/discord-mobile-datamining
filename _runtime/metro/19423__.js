@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 1080,
-  height: 2400,
-  scales: [1],
-  hash: "98ba52ca11c0740336b7f6cfc50c1516",
-  name: "sunbeam_gradient_mobile",
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "28a4fc424c84aa1427fe3a27faf0383e",
+  name: "settings",
   type: "png",
 });

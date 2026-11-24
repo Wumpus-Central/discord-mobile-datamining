@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/mfa/native/images",
-  width: 762,
-  height: 525,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
   scales: [1],
-  hash: "b69fc6a5d63e56edc7ec5a1e4af96c20",
-  name: "img_register_header",
-  type: "webp",
+  hash: "ec62a0adb2a6736a93fafc0b9d7dfef7",
+  name: "vi.messages.ec62a0adb2a6736a93fafc0b9d7dfef7.compiled.messages",
+  type: "jsona",
 });

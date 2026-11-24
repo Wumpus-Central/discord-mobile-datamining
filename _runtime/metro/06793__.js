@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  httpServerLocation: "/assets/modules/emoji_terms",
   scales: [1],
-  hash: "e219f41761a656e709d88fce70516612",
-  name: "img_account_sync_instagram_white",
-  type: "png",
+  hash: "b5b24f52f5ec462e85a92d6a68c01577",
+  name: "emoji-terms-zh-CN",
+  type: "jsona",
 });

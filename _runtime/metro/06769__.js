@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  httpServerLocation: "/assets/modules/emoji_terms",
   scales: [1],
-  hash: "eb232cce91e81121373a2c7b4cc58581",
-  name: "img_account_sync_riot_light_and_dark",
-  type: "png",
+  hash: "2513edd46ae85e36c2e7d080597de69d",
+  name: "emoji-terms-de",
+  type: "jsona",
 });

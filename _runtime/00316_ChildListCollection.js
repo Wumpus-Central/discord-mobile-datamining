@@ -20,7 +20,7 @@ const entry = {
     const _childrenToCellKey = this._childrenToCellKey;
     ChildListCollection(38)(!_childrenToCellKey.has(arg0), "Trying to add already present child list");
     const _cellKeyToChildren = this._cellKeyToChildren;
-    let set = _cellKeyToChildren.get(arg1);
+    set = _cellKeyToChildren.get(arg1);
     if (set == null) {
       const _Set = Set;
       set = new Set();

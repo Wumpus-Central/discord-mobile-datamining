@@ -44,7 +44,7 @@ export function normalizeCSSTransitionProperties(prevTransitionProperties) {
   if (someResult) {
     ({ transitionProperty, transitionDuration, transitionTimingFunction, transitionDelay, transitionBehavior } = tmp);
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const _Set2 = Set;
     const set1 = new Set();
     if (!transitionProperty.length) {

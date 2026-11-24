@@ -3069,8 +3069,8 @@ let fn = () => {
         if (!hasOwnProperty2Result) {
           continue;
         } else {
-          tmp18 = f82993;
-          call = f82993.call;
+          tmp18 = f83112;
+          call = f83112.call;
           tmp19 = closure_82;
           if (typeof call === "unknown") {
             tmp18Result = tmp18(key10033);
@@ -3830,7 +3830,7 @@ let fn = () => {
   const re13 =
     /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
   const re14 = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-  dependencyMap2 = {};
+  let dependencyMap2 = {};
   let _pf = {};
   dependencyMap2 = {
     D: "date",
@@ -3906,7 +3906,7 @@ let fn = () => {
   const re23 = /Z|[+-]\d\d:?\d\d/gi;
   const re24 = /Z|[+-]\d\d(?::?\d\d)?/gi;
   let obj2 = {};
-  dependencyMap3 = {};
+  const dependencyMap3 = {};
   c26 = 0;
   c27 = 1;
   c28 = 2;

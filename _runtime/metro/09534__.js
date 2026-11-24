@@ -1,15 +1,13 @@
 // _runtime/metro/09534__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01118__.js";
 
-const useEffect = _mod19.useEffect;
-
-export (arg0, options) => {
-  closure_0 = arg0;
-  const enabled = options.enabled;
-  items = [enabled, arg0];
-  useEffect(() => {
-    if (undefined !== enabled) {
-      closure_0.enabled(tmp);
-    }
-  }, items);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
+  name: "BeanieIcon",
+  type: "png",
+});

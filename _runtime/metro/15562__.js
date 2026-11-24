@@ -1,4 +1,12 @@
 // _runtime/metro/15562__.js
-import _mod15548 from "15548__.js";
+import _mod15563 from "15563__.js";
 
-export default (arg0) => Object(_mod15548(arg0));
+export default !_mod15563(
+  () =>
+    7 !==
+    Object.defineProperty({}, 1, {
+      get() {
+        return 7;
+      },
+    })[1],
+);

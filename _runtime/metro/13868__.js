@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "abe3edaf4092c8b2f7e822b6a96655d7",
-  name: "InboxIcon",
+  httpServerLocation: "/assets/images/native/gifting/seasonal",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "fb690a4c8c2a3f037f38e87a73eb44db",
+  name: "chest_idle",
   type: "png",
 });

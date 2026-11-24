@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "2a494bf31a8fce454d9a34e7b4733430",
-  name: "OrbsIcon",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "6220c6fc32c3a2a05a977c59f0c7790d",
+  name: "wumpus-ash",
   type: "png",
 });

@@ -1,12 +1,17 @@
 // _runtime/metro/07911__.js
-import _modDef7904 from "07904__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import appendTransformPropsDefault from "../07821_appendTransformProps.js";
+import extractPropsDefault from "../07828_extractProps.js";
+import extractFontDefault from "../07835_extractFont.js";
+import _modDef7837 from "07837__.js";
+import _modDef7914 from "07914__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeDiffuseLighting = arg1;
+const Text = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,38 +30,74 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDiffuseLighting {
+_possibleConstructorReturnDefault;
+_isNativeReflectConstruct = fn(7912);
+const jsx = fn(21).jsx;
+class Text {
   constructor() {
     self = this;
-    tmp = c2(this, FeDiffuseLighting);
-    tmp2 = closure_4;
-    obj = closure_4(FeDiffuseLighting);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, Text);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Text);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      let tmp = matrix;
+      if (matrix) {
+        tmp = !matrix.matrix;
+      }
+      if (tmp) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = Text(7828).propsAndStyles(matrix);
+      const obj = Text(7828);
+      const merged = Object.assign(
+        propsAndStylesResult,
+        Text(7829).pickNotNil(extractFontDefault(propsAndStylesResult, true)),
+      );
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = Text(7829);
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeDiffuseLighting, _modDef7904);
+_inherits(Text, _modDef7837);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDiffuseLighting(7881).warnUnimplementedFilter();
-    return null;
+    const propsAndStylesResult = Text(7828).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = Text(7828);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef7914, {});
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
-importDefaultResultResult.displayName = "FeDiffuseLighting";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+let items = [entry];
+const importDefaultResultResult = _createClass(Text, items);
+importDefaultResultResult.displayName = "Text";
 
 export default importDefaultResultResult;

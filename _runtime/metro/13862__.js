@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 256,
-  height: 128,
-  scales: [2, 3],
-  hash: "fe7e2c7efcbe72663147a76476794c5c",
-  name: "img_invite_empty_dark",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "e32285515cb51d557a374cd91c39dd3d",
+  name: "box_idle",
   type: "png",
 });

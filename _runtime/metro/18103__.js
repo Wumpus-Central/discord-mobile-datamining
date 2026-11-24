@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 24.5,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "17237a5c49ea745b655cbec7c093406d",
-  name: "emoji-positive",
+  hash: "9418ce18a45ac2ccf91c54293677973d",
+  name: "ic_friend_wave_24px",
   type: "png",
 });

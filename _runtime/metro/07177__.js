@@ -1,17 +1,13 @@
 // _runtime/metro/07177__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01118__.js";
 
-const constants = _mod17.Platform.constants;
-if (constants != null) {
-  const reactNativeVersion = constants.reactNativeVersion;
-}
-try {
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
-  }
-  if (0 !== major) {
-    const InteractionManager = _mod17.InteractionManager;
-  }
-  exports.InteractionManager = InteractionManager;
-} catch (err) {}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2f67acde4c60441cfd2d6684d11b6d76",
+  name: "ic_close_circle_24px",
+  type: "png",
+});

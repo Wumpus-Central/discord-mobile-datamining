@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  httpServerLocation: "/assets/modules/emoji_terms",
   scales: [1],
-  hash: "659ba58a5945e0a8efee29d8d7d906ca",
-  name: "img_account_sync_tiktok_dark",
-  type: "svg",
+  hash: "8c7921960737e4533cf877ea21bd1bf5",
+  name: "emoji-terms-uk",
+  type: "jsona",
 });

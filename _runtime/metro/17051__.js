@@ -3,9 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "15e2770ff873ff5fbea525f59a114fa0",
-  name: "es-419.messages.15e2770ff873ff5fbea525f59a114fa0.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "30f38e9cc06345b39ea1b73343d04289",
+  name: "CarIcon",
+  type: "png",
 });

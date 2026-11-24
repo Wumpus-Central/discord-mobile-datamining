@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "000feaebcabc55e90b1dcd63e76aa1dd",
-  name: "ShieldLockIcon",
+  hash: "b8e06ae6b6de6ac4efb5803ebe56348e",
+  name: "star",
   type: "png",
 });

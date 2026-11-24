@@ -1,3 +1,109 @@
 // _runtime/metro/10826__.js
+import AbstractParserWithWordBoundaryChecking from "../10741_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-export default '"use strict";(()=>{var a="discordEmbeddedAppShim";function g(e){return e!=null&&typeof e=="object"&&Object.getOwnPropertyDescriptor(e,a)!=null}function S(e){let t=Object.getOwnPropertyDescriptor(e,"nonce")?.value;return typeof t=="string"?t:null}function E(e,t,o,l){let i=new globalThis.MessageChannel,{port1:n,port2:d}=i;l({post(r){n.postMessage(r)},listen(r){n.onmessage=C=>r(C.data)},close(){n.close()}});let s={[a]:"connection_open",nonce:o};e.postMessage(s,t,[d])}var c="discordEmbeddedAppShimBridge",h="DiscordEmbeddedAppShimBridge";var p=new Map,u=0;function m(e){let{ReactNativeWebView:t}=window;t.postMessage(JSON.stringify(e))}window[h]={start(e,t){window.addEventListener("message",o=>{if(!g(o.data))return;o.stopImmediatePropagation();let l=document.getElementById(t),i=l instanceof HTMLIFrameElement?l.contentWindow:null,n=S(o.data);i==null||o.source!==i||o.origin==="null"||o.data[a]!=="hello"||n==null||E(i,o.origin,n,d=>{let s=++u;p.set(s,d),m({[c]:e,event:"open",pipeId:s}),d.listen(r=>m({[c]:e,event:"message",pipeId:s,message:r}))})},!0)},post(e,t){p.get(e)?.post(t)},close(e){p.get(e)?.close(),p.delete(e)}};})();';
+const NLCasualTimeParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class NLCasualTimeParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, NLCasualTimeParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLCasualTimeParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(NLCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return /(deze)?\s*(namiddag|avond|middernacht|ochtend|middag|'s middags|'s avonds|'s ochtends)(?=\W|$)/i;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      if ("deze" === arg1[1]) {
+        const refDate2 = refDate.refDate;
+        parsingComponents.assign("day", refDate2.getDate());
+        const refDate3 = refDate.refDate;
+        parsingComponents.assign("month", refDate3.getMonth() + 1);
+        const refDate4 = refDate.refDate;
+        parsingComponents.assign("year", refDate4.getFullYear());
+      }
+      const formatted = arg1[2].toLowerCase();
+      if ("namiddag" !== formatted) {
+        if ("'s namiddags" !== formatted) {
+          if ("avond" !== formatted) {
+            if ("'s avonds'" !== formatted) {
+              if ("middernacht" === formatted) {
+                const _Date = Date;
+                const date = new Date(refDate.getTime());
+                date.setDate(date.getDate() + 1);
+                NLCasualTimeParser(10740).assignSimilarDate(parsingComponents, date);
+                NLCasualTimeParser(10740).implySimilarTime(parsingComponents, date);
+                parsingComponents.imply("hour", 0);
+                parsingComponents.imply("minute", 0);
+                parsingComponents.imply("second", 0);
+              } else {
+                if ("ochtend" !== formatted) {
+                  if ("'s ochtends" !== formatted) {
+                    if ("middag" === formatted) {
+                      parsingComponents.imply("meridiem", NLCasualTimeParser(10739).Meridiem.AM);
+                      parsingComponents.imply("hour", 12);
+                    }
+                  }
+                }
+                parsingComponents.imply("meridiem", NLCasualTimeParser(10739).Meridiem.AM);
+                parsingComponents.imply("hour", 6);
+              }
+            }
+          }
+          parsingComponents.imply("meridiem", NLCasualTimeParser(10739).Meridiem.PM);
+          parsingComponents.imply("hour", 20);
+        }
+        return parsingComponents;
+      }
+      parsingComponents.imply("meridiem", NLCasualTimeParser(10739).Meridiem.PM);
+      parsingComponents.imply("hour", 15);
+    },
+  },
+];
+
+export default _createClass(NLCasualTimeParser, items);

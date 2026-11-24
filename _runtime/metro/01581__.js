@@ -11,7 +11,7 @@ function shouldPreventRemove(emitter, beforeRemoveListeners, routes, routes2, ta
   let tmp3 = closure_3;
   if (!(closure_3 in target)) {
     const _Set2 = Set;
-    let set = new Set();
+    set = new Set();
     const obj = {};
     const merged = Object.assign(tmp);
     obj[tmp3] = set;

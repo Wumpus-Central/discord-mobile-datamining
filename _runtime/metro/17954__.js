@@ -1,0 +1,13 @@
+// _runtime/metro/17954__.js
+import registerAsset from "01118__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 46,
+  height: 46,
+  scales: [2, 3],
+  hash: "812d0ec6cbf43741fa947b18063ae5e5",
+  name: "server-error",
+  type: "png",
+});

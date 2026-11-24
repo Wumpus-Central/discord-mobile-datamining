@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3707ecbdc52255079d75d7398451480d",
-  name: "RibbonIcon",
+  hash: "456f425cbb5592c677bebe2b3b5f83ae",
+  name: "ic_text_in_voice_24px",
   type: "png",
 });

@@ -28,29 +28,29 @@ let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 let items = [
   {
-    code: "(function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};})",
+    code: "(function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};})",
   },
 ];
 [tmp4] = items;
-function changeEventCalculator(force, force2) {
-  if (undefined === force2) {
-    const obj2 = { forceChange: force.force };
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
     let obj = obj2;
   } else {
-    obj = { forceChange: force.force - force2.force };
+    obj = { scaleChange: scale.scale / scale2.scale };
   }
-  const merged = Object.assign(force);
+  const merged = Object.assign(scale);
   const merged1 = Object.assign(obj);
   return {};
 }
-changeEventCalculator.__workletHash = 14930773822007;
+changeEventCalculator.__workletHash = 3108914846004;
 changeEventCalculator.__initData = tmp4;
-class ForceTouchGesture {
+class PinchGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, ForceTouchGesture);
+    tmp = closure_0(this, PinchGesture);
     tmp2 = c2;
-    obj = c2(ForceTouchGesture);
+    obj = c2(PinchGesture);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -60,49 +60,25 @@ class ForceTouchGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    tmp3Result.handlerName = "PinchGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = ForceTouchGesture;
-_inherits(ForceTouchGesture, fn(5193).ContinousBaseGesture);
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(5197).ContinousBaseGesture);
 const entry = {
-  key: "minForce",
-  value: function minForce(minForce) {
-    this.config.minForce = minForce;
-    return this;
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    items = [arg0];
+    return fn(items);
   },
 };
-const items1 = [
-  entry,
-  {
-    key: "maxForce",
-    value: function maxForce(maxForce) {
-      this.config.maxForce = maxForce;
-      return this;
-    },
-  },
-  {
-    key: "feedbackOnActivation",
-    value: function feedbackOnActivation(feedbackOnActivation) {
-      this.config.feedbackOnActivation = feedbackOnActivation;
-      return this;
-    },
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [arg0];
-      return fn(items);
-    },
-  },
-];
+const items1 = [entry];
 
-export const ForceTouchGesture = _createClass(ForceTouchGesture, items1);
+export const PinchGesture = _createClass(PinchGesture, items1);

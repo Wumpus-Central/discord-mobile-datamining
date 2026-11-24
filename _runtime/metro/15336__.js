@@ -1,57 +1,71 @@
 // _runtime/metro/15336__.js
-import _mod15330 from "15330__.js";
-import _mod15331 from "15331__.js";
-import _mod15332 from "15332__.js";
-import _mod15333 from "15333__.js";
-import _mod15334 from "15334__.js";
-import _mod15335 from "15335__.js";
+const re0 = /^[0-9]+$/;
 
-export default (version, arg1, version2, arg3) => {
-  switch (arg1) {
-    case "===":
-      let version3 = version;
-      if (typeof version === "object") {
-        version3 = version.version;
+export default {
+  compareIdentifiers(major, major2) {
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = major2;
+    let tmp5 = major;
+    if (tmp3) {
+      tmp5 = +major;
+      tmp4 = +major2;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
       }
-      let version4 = version2;
-      if (typeof version2 === "object") {
-        version4 = version2.version;
+      num = num2;
+    }
+    return num;
+  },
+  rcompareIdentifiers(arg0, arg1) {
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = arg0;
+    let tmp5 = arg1;
+    if (tmp3) {
+      tmp5 = +arg1;
+      tmp4 = +arg0;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
       }
-      return version3 === version4;
-    case "!==":
-      if (typeof version === "object") {
-        version = version.version;
-      }
-      if (typeof version2 === "object") {
-        version2 = version2.version;
-      }
-      return version !== version2;
-    case "":
-      let tmp13 = _mod15332;
-      let tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    case "=":
-      tmp13 = _mod15332;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    case "==":
-      tmp13 = _mod15332;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    case "!=":
-      return _mod15333(version, version2, arg3);
-    case ">":
-      return _mod15330(version, version2, arg3);
-    case ">=":
-      return _mod15334(version, version2, arg3);
-    case "<":
-      return _mod15331(version, version2, arg3);
-    case "<=":
-      return _mod15335(version, version2, arg3);
-    default:
-      const _TypeError = TypeError;
-      const _HermesInternal = HermesInternal;
-      const typeError = new TypeError("Invalid operator: " + arg1);
-      throw typeError;
-  }
+      num = num2;
+    }
+    return num;
+  },
 };

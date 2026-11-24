@@ -28,7 +28,7 @@ const entry = {
       let obj = tmp16[arg0];
       if (null == obj) {
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         tmp16[arg0] = set;
         obj = set;
       }

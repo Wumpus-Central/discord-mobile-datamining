@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/user_settings/connected_apps",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Nvbm5lY3RlZF9hcHBz",
   scales: [1],
-  hash: "b50ef845a3f41f3a92290f7873930c0e",
-  name: "ConnectedApps.compiled.messages",
+  hash: "9aa9e46c4435eb938cd3f4f28f536c49",
+  name: "zh-CN.messages.9aa9e46c4435eb938cd3f4f28f536c49.compiled.messages",
   type: "jsona",
 });

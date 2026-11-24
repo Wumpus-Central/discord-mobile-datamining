@@ -39,7 +39,7 @@ export function useOnAction(router) {
     setState,
   ];
   const callback = setState.useCallback((target) => {
-    let set = arg1;
+    set = arg1;
     if (arg1 === undefined) {
       const _Set = Set;
       set = new Set();

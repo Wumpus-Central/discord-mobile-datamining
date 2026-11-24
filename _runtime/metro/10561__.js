@@ -1,13 +1,10 @@
 // _runtime/metro/10561__.js
-import registerAsset from "01118__.js";
+import _mod10560 from "10560__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 48,
-  height: 48,
-  scales: [2, 3],
-  hash: "8011f85c511bc539d06f3c7f5cbb3598",
-  name: "feedback-modal-sad-desaturated_darker",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod10560.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+}

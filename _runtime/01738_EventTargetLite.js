@@ -19,7 +19,7 @@ const entry = {
     value = eventListeners.get(arg0);
     if (undefined === value) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       const eventListeners2 = this.eventListeners;
       const result = eventListeners2.set(arg0, set);
       value = set;

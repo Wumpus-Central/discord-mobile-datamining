@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images",
+  width: 59,
+  height: 85.5,
   scales: [2, 3],
-  hash: "8aacc7898585bec38aca6cf682c01533",
-  name: "FolderIcon",
+  hash: "07edfc27bc58db41fd8c1993a9ed69f0",
+  name: "xbox_app_phone",
   type: "png",
 });

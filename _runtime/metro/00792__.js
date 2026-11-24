@@ -58,7 +58,7 @@ export const consoleIntegration = setupIntegration.defineIntegration(() => {
   if (arg0 === undefined) {
     obj = {};
   }
-  let set;
+  set = undefined;
   let CONSOLE_LEVELS = obj.levels;
   if (!CONSOLE_LEVELS) {
     CONSOLE_LEVELS = set(688).CONSOLE_LEVELS;

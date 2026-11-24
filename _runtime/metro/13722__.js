@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/forums/native/images",
-  width: 120,
-  height: 80,
-  scales: [2, 3],
-  hash: "80a29bcae35fa62f1f957cb01201db17",
-  name: "img_forum_empty_state_light",
+  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
+  width: 180,
+  height: 180,
+  scales: [1],
+  hash: "7d7d766e7ebb30cec66584e69b89634d",
+  name: "Glow",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "bfaa24ee9d14df63fd4c31531ca2dc70",
-  name: "ic_badge_staff",
+  hash: "4efa5140d546996fe7cb2ba013410d48",
+  name: "ArrowAngleLeftUpIcon",
   type: "png",
 });

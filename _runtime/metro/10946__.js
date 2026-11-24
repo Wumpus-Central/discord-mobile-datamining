@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
-  name: "ImageSparkleIcon",
+  hash: "651f23c3c753462d68eac15857d95d39",
+  name: "PollsIcon",
   type: "png",
 });

@@ -1085,7 +1085,7 @@ let items = [
       if (!this.props.inverted) {
         items = [];
         const _Set = Set;
-        const set = new Set(self.props.stickyHeaderIndices);
+        set = new Set(self.props.stickyHeaderIndices);
         const items1 = [];
         if (ListHeaderComponent) {
           if (set.has(0)) {
@@ -1763,7 +1763,7 @@ let items1 = [
           cellRenderMask.addCells(VirtualizedList._initialRenderRegion(getItemCount));
         }
         const _Set = Set;
-        const set = new Set(getItemCount.stickyHeaderIndices);
+        set = new Set(getItemCount.stickyHeaderIndices);
         const result = VirtualizedList._ensureClosestStickyHeader(
           getItemCount,
           set,

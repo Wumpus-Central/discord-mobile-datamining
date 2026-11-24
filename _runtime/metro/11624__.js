@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
   scales: [2, 3],
-  hash: "651f23c3c753462d68eac15857d95d39",
-  name: "PollsIcon",
+  hash: "9c2cfd53ed0ab3abd70ee33b26a982e5",
+  name: "channel_following_success_2",
   type: "png",
 });

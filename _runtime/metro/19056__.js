@@ -1,7 +1,13 @@
 // _runtime/metro/19056__.js
-import _mod518 from "00518__.js";
-import _mod535 from "00535__.js";
+import registerAsset from "01118__.js";
 
-export default function isArrayLikeObject(arg0) {
-  return _mod535(arg0) && _mod518(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 414,
+  height: 200,
+  scales: [2, 3],
+  hash: "f00fcaea4a34903a201c81fe65a7bcce",
+  name: "pending_darker",
+  type: "png",
+});

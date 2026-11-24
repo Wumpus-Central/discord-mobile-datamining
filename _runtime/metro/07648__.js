@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/consoles",
+  width: 254,
+  height: 127,
   scales: [2, 3],
-  hash: "cb3e9c62b8b2529f17e6e1b9b76c6ce0",
-  name: "StageLockIcon",
+  hash: "4d6a15fbe9eb4d6c66e3d9151f9a0183",
+  name: "link_failure",
   type: "png",
 });

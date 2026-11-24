@@ -13,7 +13,7 @@ export const BaseRouter = {
             return null;
           } else {
             const _Set = Set;
-            const set = new Set(routeNames.routeNames);
+            set = new Set(routeNames.routeNames);
             let tmp8 = null;
             if (0 !== payload.routes.length) {
               const routes2 = payload.routes;

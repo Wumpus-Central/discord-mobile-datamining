@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 278.5,
-  height: 48,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "fd5849efd39a217c9ef72fb828af8485",
-  name: "img_nitro_tier_0_activated_light",
+  hash: "a55e771de04b13c26603a57cb2527fa8",
+  name: "BoostGemIcon",
   type: "png",
 });

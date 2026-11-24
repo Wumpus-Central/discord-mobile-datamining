@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "c08dbe4e409a6c5d300d5c847a8685e2",
-  name: "ic_stage_channel_24px",
+  scales: [2, 3],
+  hash: "133f082cc6a7642a4a6e08e490a58839",
+  name: "ic_close_24px",
   type: "png",
 });

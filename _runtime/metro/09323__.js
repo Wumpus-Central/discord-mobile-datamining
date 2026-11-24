@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "1e7b4b86ff7b632a5724a01e406c1753",
-  name: "img_subheader_error_mobile",
+  hash: "367021fc812df044b1b4d5405a1e12c2",
+  name: "CircleQuestionIcon-primary",
   type: "png",
 });

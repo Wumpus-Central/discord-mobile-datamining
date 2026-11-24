@@ -32,7 +32,7 @@ export function createConsolaReporter() {
   if (arg0 === undefined) {
     obj = {};
   }
-  let set;
+  set = undefined;
   let client;
   let levels = obj.levels;
   if (levels == null) {

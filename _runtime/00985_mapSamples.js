@@ -9,7 +9,7 @@ function mapSamples(samples) {
     tmp = closure_2;
   }
   items = [];
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   const first = samples[0];
   if (first) {

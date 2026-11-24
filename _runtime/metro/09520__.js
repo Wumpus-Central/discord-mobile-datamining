@@ -1,54 +1,13 @@
 // _runtime/metro/09520__.js
-import _mod1653 from "01653__.js";
-import noop from "00019__.js";
+import registerAsset from "01118__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext({});
-let closure_5 = { code: "(function pnpm_indexTsx1(index,dimensions){let[itemDimensions]=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};})" };
-let closure_6 = { code: "(function pnpm_indexTsx2(dimensions){let[containerSize]=this.__closure;containerSize.value=dimensions;})" };
-
-export const GlobalStateContext = context;
-export (value) => {
-  const sharedValue = _mod1653.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = _mod1653.useSharedValue({});
-  items = [closure_5, sharedValue1];
-  [tmp3, tmp4] = items;
-  function pnpm_indexTsx1(arg0, arg1) {
-    const obj = {};
-    const merged = Object.assign(_undefined.value);
-    obj[arg0] = arg1;
-    _undefined.value = obj;
-  }
-  const items1 = [tmp4];
-  pnpm_indexTsx1.__closure = items1;
-  pnpm_indexTsx1.__workletHash = 6407231763087;
-  pnpm_indexTsx1.__initData = tmp3;
-  const items2 = [closure_6, sharedValue];
-  c0 = undefined;
-  [tmp5, tmp6] = items2;
-  function pnpm_indexTsx2(value) {
-    c0.value = value;
-  }
-  const items3 = [tmp6];
-  pnpm_indexTsx2.__closure = items3;
-  pnpm_indexTsx2.__workletHash = 15528502204235;
-  pnpm_indexTsx2.__initData = tmp5;
-  const obj3 = { value: null, children: null };
-  const obj4 = {};
-  let merged = Object.assign(value.value);
-  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: pnpm_indexTsx1, updateContainerSize: pnpm_indexTsx2 };
-  obj3.value = obj4;
-  obj3.children = value.children;
-  return <context.Provider value={null}>{null}</context.Provider>;
-}
-export () => {
-  context = noop.useContext(context);
-  if (context) {
-    return context;
-  } else {
-    const _Error = Error;
-    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
-    throw error;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "44efb56cf36c8202533bcbc557ebf8e5",
+  name: "MidnightPrismIcon",
+  type: "png",
+});

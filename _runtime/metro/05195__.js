@@ -1,7 +1,4 @@
 // _runtime/metro/05195__.js
-let closure_0 = 1;
+import noop from "00019__.js";
 
-export function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
-}
+export default noop.createContext(false);

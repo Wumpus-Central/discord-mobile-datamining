@@ -1,239 +1,117 @@
 // _runtime/metro/10761__.js
-const obj = {
-  v: "4.8.0",
-  meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
-  fr: 60,
-  ip: 7,
-  op: 83,
-  w: 1280,
-  h: 720,
-  nm: "FrameEffect_09-1_Out",
-  ddd: 0,
-  assets: null,
-  layers: null,
-  markers: [],
-};
-const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
-const obj2 = { id: "comp_0", layers: null };
-const obj3 = {
-  ddd: 0,
-  ind: 3,
-  ty: 2,
-  nm: "smile",
-  refId: "image_0",
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
-    a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
-    s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
-  },
-  ao: 0,
-  ip: 0,
-  op: 914,
-  st: 0,
-  bm: 0,
-};
-const items1 = [obj3];
-obj2.layers = items1;
-items[1] = obj2;
-obj.assets = items;
-const obj5 = {
-  ddd: 0,
-  ind: 1,
-  ty: 0,
-  nm: "particle",
-  refId: "comp_0",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: 32,
-  op: 88,
-  st: 30,
-  bm: 0,
-};
-const obj6 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: null,
-  a: { a: 0, k: [20, 20, 0], ix: 1 },
-  s: { a: 0, k: [512, 512, 100], ix: 6 },
-};
-const obj7 = { a: 1, k: null, ix: 2 };
-const items2 = [
-  {
-    i: { x: 0.833, y: 0.833 },
-    o: { x: 0.167, y: 0.167 },
-    t: 32,
-    s: [809.6, -236.8, 0],
-    to: [0, 199.467, 0],
-    ti: [0, -199.467, 0],
-  },
-  { t: 87, s: [809.6, 960, 0] },
-];
-obj7.k = items2;
-obj6.p = obj7;
-obj5.ks = obj6;
-const items3 = [obj5, , , ,];
-const obj8 = {
-  ddd: 0,
-  ind: 2,
-  ty: 0,
-  nm: "particle",
-  refId: "comp_0",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: 43,
-  op: 78,
-  st: 41,
-  bm: 0,
-};
-const obj9 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: null,
-  a: { a: 0, k: [20, 20, 0], ix: 1 },
-  s: { a: 0, k: [583.2, 583.2, 100], ix: 6 },
-};
-const obj10 = { a: 1, k: null, ix: 2 };
-const items4 = [
-  {
-    i: { x: 0.833, y: 0.833 },
-    o: { x: 0.167, y: 0.167 },
-    t: 43,
-    s: [313.6, -236.8, 0],
-    to: [0, 92.687, 0],
-    ti: [0, -106.78, 0],
-  },
-  { t: 77, s: [313.6, 960, 0] },
-];
-obj10.k = items4;
-obj9.p = obj10;
-obj8.ks = obj9;
-items3[1] = obj8;
-const obj11 = {
-  ddd: 0,
-  ind: 3,
-  ty: 0,
-  nm: "particle",
-  refId: "comp_0",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: 21,
-  op: 56,
-  st: 19,
-  bm: 0,
-};
-const obj12 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: null,
-  a: { a: 0, k: [20, 20, 0], ix: 1 },
-  s: { a: 0, k: [583.2, 583.2, 100], ix: 6 },
-};
-const obj13 = { a: 1, k: null, ix: 2 };
-const items5 = [
-  {
-    i: { x: 0.833, y: 0.833 },
-    o: { x: 0.167, y: 0.167 },
-    t: 21,
-    s: [1065.6, -236.8, 0],
-    to: [0, 92.687, 0],
-    ti: [0, -106.78, 0],
-  },
-  { t: 55, s: [1065.6, 960, 0] },
-];
-obj13.k = items5;
-obj12.p = obj13;
-obj11.ks = obj12;
-items3[2] = obj11;
-const obj14 = {
-  ddd: 0,
-  ind: 4,
-  ty: 0,
-  nm: "particle",
-  refId: "comp_0",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: 9,
-  op: 77,
-  st: 7,
-  bm: 0,
-};
-const obj15 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: null,
-  a: { a: 0, k: [20, 20, 0], ix: 1 },
-  s: { a: 0, k: [412.8, 412.8, 100], ix: 6 },
-};
-const obj16 = { a: 1, k: null, ix: 2 };
-const items6 = [
-  {
-    i: { x: 0.833, y: 0.833 },
-    o: { x: 0.167, y: 0.167 },
-    t: 9,
-    s: [704, -236.8, 0],
-    to: [0, 199.467, 0],
-    ti: [0, -199.467, 0],
-  },
-  { t: 77, s: [704, 960, 0] },
-];
-obj16.k = items6;
-obj15.p = obj16;
-obj14.ks = obj15;
-items3[3] = obj14;
-const obj17 = {
-  ddd: 0,
-  ind: 5,
-  ty: 0,
-  nm: "particle",
-  refId: "comp_0",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: 2,
-  op: 58,
-  st: 0,
-  bm: 0,
-};
-const obj18 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: null,
-  a: { a: 0, k: [20, 20, 0], ix: 1 },
-  s: { a: 0, k: [512, 512, 100], ix: 6 },
-};
-const obj19 = { a: 1, k: null, ix: 2 };
-const items7 = [
-  {
-    i: { x: 0.833, y: 0.833 },
-    o: { x: 0.167, y: 0.167 },
-    t: 2,
-    s: [156.8, -236.8, 0],
-    to: [0, 199.467, 0],
-    ti: [0, -199.467, 0],
-  },
-  { t: 57, s: [156.8, 960, 0] },
-];
-obj19.k = items7;
-obj18.p = obj19;
-obj17.ks = obj18;
-items3[4] = obj17;
-obj.layers = items3;
+import ReferenceWithTimezone from "../10737_ReferenceWithTimezone.js";
+import Meridiem from "../10739_Meridiem.js";
 
-export default obj;
+require = arg1;
+const dependencyMap = arg6;
+function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
+  const day = dateWithAdjustedTimezone.getDay();
+  if ("this" === next) {
+    const diff = sum - dateWithAdjustedTimezone.getDay();
+    sum = diff;
+    if (diff < 0) {
+      sum = diff + 7;
+    }
+    return sum;
+  } else if ("last" === next) {
+    const diff1 = sum - dateWithAdjustedTimezone.getDay();
+    let diff2 = diff1;
+    if (diff1 >= 0) {
+      diff2 = diff1 - 7;
+    }
+    return diff2;
+  } else if ("next" === next) {
+    if (day == Meridiem.Weekday.SUNDAY) {
+      let num12 = 7;
+      if (sum != Meridiem.Weekday.SUNDAY) {
+        num12 = sum;
+      }
+      let sum3 = num12;
+    } else if (day == Meridiem.Weekday.SATURDAY) {
+      let num9 = 7;
+      if (sum != Meridiem.Weekday.SATURDAY) {
+        let num10 = 8;
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          num10 = 1 + sum;
+        }
+        num9 = num10;
+      }
+      sum3 = num9;
+    } else {
+      if (sum < day) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          const diff3 = sum - dateWithAdjustedTimezone.getDay();
+          let sum1 = diff3;
+          if (diff3 < 0) {
+            sum1 = diff3 + 7;
+          }
+          sum3 = sum1;
+        }
+      }
+      const diff4 = sum - dateWithAdjustedTimezone.getDay();
+      let sum2 = diff4;
+      if (diff4 < 0) {
+        sum2 = diff4 + 7;
+      }
+      sum3 = sum2 + 7;
+    }
+    return sum3;
+  } else {
+    const diff5 = sum - dateWithAdjustedTimezone.getDay();
+    let diff6 = diff5;
+    if (diff5 >= 0) {
+      diff6 = diff5 - 7;
+    }
+    const diff7 = sum - dateWithAdjustedTimezone.getDay();
+    let sum4 = diff7;
+    if (diff7 < 0) {
+      sum4 = diff7 + 7;
+    }
+    if (sum4 < -diff6) {
+      diff6 = sum4;
+    }
+    return diff6;
+  }
+}
+
+export function createParsingComponentsAtWeekday(reference, sum, next) {
+  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({
+    day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next),
+  });
+  addDurationAsImpliedResult.assign("weekday", sum);
+  return addDurationAsImpliedResult;
+}
+export { getDaysToWeekday };
+export function getDaysToWeekdayClosest(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  const diff2 = arg1 - getDay.getDay();
+  let sum = diff2;
+  if (diff2 < 0) {
+    sum = diff2 + 7;
+  }
+  if (sum < -diff1) {
+    diff1 = sum;
+  }
+  return diff1;
+}
+export function getDaysForwardToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let sum = diff;
+  if (diff < 0) {
+    sum = diff + 7;
+  }
+  return sum;
+}
+export function getBackwardDaysToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  return diff1;
+}

@@ -7,7 +7,7 @@ function subscribersFor(tag, subscribersByTag, retiringByTag) {
   const value2 = retiringByTag.get(tag);
   let tmp3 = value;
   if (value2) {
-    let set = value2;
+    set = value2;
     if (value) {
       const _Set = Set;
       items = [];
@@ -45,7 +45,7 @@ const entry = {
     } else {
       const _Set = Set;
       items = [arg1];
-      const set = new Set(items);
+      set = new Set(items);
       const result = subscribersByTag.set(arg0, set);
     }
   },
@@ -77,7 +77,7 @@ let items = [
       } else {
         const _Set = Set;
         items = [arg1];
-        const set = new Set(items);
+        set = new Set(items);
         const result = retiringByTag.set(arg0, set);
       }
     },

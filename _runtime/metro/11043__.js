@@ -1,13 +1,31 @@
 // _runtime/metro/11043__.js
-import registerAsset from "01118__.js";
+import Layouts5 from "../11044_Layouts.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b58afbfc4faaabe5f94fadb0443cc8ee",
-  name: "voice_bar_deafen_off",
-  type: "png",
-});
+require = arg1;
+
+export function useLayoutConfig(size) {
+  size = size.size;
+  const vertical = size.vertical;
+  items = [, , ,];
+  ({ mode: arr[0], modeConfig: arr[1] } = size);
+  items[2] = size;
+  items[3] = vertical;
+  return vertical.useMemo(() => {
+    const obj = { size, vertical };
+    const mode = size.mode;
+    if ("parallax" === mode) {
+      const Layouts4 = Layouts5.Layouts;
+      return Layouts4.parallax(obj, size.modeConfig);
+    } else if ("horizontal-stack" === mode) {
+      const Layouts3 = Layouts5.Layouts;
+      return Layouts3.horizontalStack(size.modeConfig);
+    } else if ("vertical-stack" === mode) {
+      const Layouts2 = Layouts5.Layouts;
+      return Layouts2.verticalStack(size.modeConfig);
+    } else {
+      const Layouts = Layouts5.Layouts;
+      return Layouts.normal(obj);
+    }
+  }, items);
+}

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dfdac2dbaa2d7bb47146e9074e36688f",
-  name: "GiftIcon",
+  hash: "f046981b02f540ff191ca29308781e07",
+  name: "PhoneCallIcon",
   type: "png",
 });

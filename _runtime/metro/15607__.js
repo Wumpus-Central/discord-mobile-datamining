@@ -1,4 +1,11 @@
 // _runtime/metro/15607__.js
-import _mod17 from "00017__.js";
+import _mod15608 from "15608__.js";
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+export default (arg0) => {
+  const tmp = _mod15608(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
+  }
+  return num;
+};

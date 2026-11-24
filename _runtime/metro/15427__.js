@@ -3,9 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/intl/messages",
-  scales: [1],
-  hash: "543686ca35ed234b2b3a77d23e96ee73",
-  name: "untranslated.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "82f333ceda03bd515ab62e8f0d1ea043",
+  name: "StatusOnline",
+  type: "png",
 });

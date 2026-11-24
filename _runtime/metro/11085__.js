@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 18,
-  height: 18,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ade8732f10573e5215aa029a138cb853",
-  name: "watch",
+  hash: "9037a70d8faa972c462f54c8bc0bf00a",
+  name: "HeartOutlineIcon",
   type: "png",
 });

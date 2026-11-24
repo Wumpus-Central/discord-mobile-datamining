@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/user_settings",
+  width: 234,
+  height: 147.5,
   scales: [2, 3],
-  hash: "4f2842b39c98933e8b7bea806132028f",
-  name: "ForumLockIcon",
+  hash: "251353afd104effe8e007def09df8df2",
+  name: "crunchyroll_link_intro",
   type: "png",
 });

@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  httpServerLocation: "/assets/modules/emoji_terms",
   scales: [1],
-  hash: "e0fcff705b60ad228f8934b127b63657",
-  name: "img_account_sync_paypal_light_and_dark",
-  type: "png",
+  hash: "e24babdf82c399aced4a5a9eff703edf",
+  name: "emoji-terms-ko",
+  type: "jsona",
 });

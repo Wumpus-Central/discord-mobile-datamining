@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 160.5,
-  height: 140,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 215,
+  height: 128,
   scales: [2, 3],
-  hash: "ad61eda1bea496e5c4dfb770ef28c56b",
-  name: "server-invite-envelope",
+  hash: "91b8f5f85a023591658822c0d3091e54",
+  name: "guild_subscription_removal_darker",
   type: "png",
 });

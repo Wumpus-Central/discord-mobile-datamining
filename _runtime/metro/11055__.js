@@ -1,13 +1,15 @@
 // _runtime/metro/11055__.js
-import registerAsset from "01118__.js";
+import _mod19 from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "97b88511d0fe85beb9ea20d66572b94a",
-  name: "GroupPlusIcon",
-  type: "png",
-});
+const useEffect = _mod19.useEffect;
+
+export (arg0, options) => {
+  closure_0 = arg0;
+  const enabled = options.enabled;
+  items = [enabled, arg0];
+  useEffect(() => {
+    if (undefined !== enabled) {
+      closure_0.enabled(tmp);
+    }
+  }, items);
+}

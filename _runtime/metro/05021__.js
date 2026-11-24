@@ -1,16 +1,16 @@
 // _runtime/metro/05021__.js
-import c from "../05005_c.js";
-import _mod5018 from "05018__.js";
+import c from "../05009_c.js";
+import _mod5022 from "05022__.js";
 import _slicedToArray from "00032__.js";
 
 require = arg1;
-function getBooleanProperty(booleanProperty, arg1) {
-  return booleanProperty.booleanProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export function useRiveBoolean(reducedMotion, instance) {
+export function useRiveNumber(chapterID, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5018.useRiveProperty(instance, reducedMotion, getBooleanProperty);
+  [tmp3, tmp4, tmp5] = _mod5022.useRiveProperty(instance, chapterID, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

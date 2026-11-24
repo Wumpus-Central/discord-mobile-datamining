@@ -10,7 +10,7 @@ let items = [
 let c0;
 [tmp2, tmp3] = items;
 function setupSetTimeout() {
-  const set = new Set();
+  set = new Set();
   c1 = 0;
   globalThis.setTimeout = (arg0) => {
     let num = arg1;

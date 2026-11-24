@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "3cca2566d6ada925d540d64d7940bca5",
-  name: "AtIcon",
+  hash: "d082de3975b39d41cd3c34c609bd917a",
+  name: "ic_launch",
   type: "png",
 });

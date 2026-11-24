@@ -3,9 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "1a2ed221615ffab4e022949f6b12481c",
-  name: "bg.messages.1a2ed221615ffab4e022949f6b12481c.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3e998a340948f95ab4885c3644b255dc",
+  name: "AchievementsIcon",
+  type: "png",
 });

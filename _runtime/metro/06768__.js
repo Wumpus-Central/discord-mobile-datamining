@@ -3,11 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  httpServerLocation: "/assets/modules/emoji_terms",
   scales: [1],
-  hash: "604528a3bb006839cd94a191736eec62",
-  name: "img_account_sync_epic_dark_and_white",
-  type: "svg",
+  hash: "c840db5e58e426829abc2bd104d04deb",
+  name: "emoji-terms-da",
+  type: "jsona",
 });

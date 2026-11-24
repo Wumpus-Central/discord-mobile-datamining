@@ -10,7 +10,7 @@ let closure_2 = {
 export function useComposedEventHandlerBase(arr, items26) {
   const obj = {};
   _require = obj;
-  const set = new Set();
+  set = new Set();
   const obj2 = {};
   const found = arr.filter((item) => null !== item);
   let item = found.forEach((workletEventHandler) => {

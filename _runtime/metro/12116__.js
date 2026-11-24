@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d884288c334e9055542f154b2caf3b3e",
-  name: "TopicsIcon",
+  hash: "4ca3f49624db00fa92c0d848adcbd326",
+  name: "StampIcon",
   type: "png",
 });

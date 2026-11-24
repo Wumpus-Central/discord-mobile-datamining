@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4aac4b9e524273cde97c71cf7da9357a",
-  name: "DoubleCheckmarkIcon",
+  hash: "3ef7b97baaf789cd87cf8f96f96361db",
+  name: "BeakerIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "2bf7738cbb1d2827663b492fedbd65fb",
-  name: "MedalIcon",
+  httpServerLocation: "/assets/modules/safety_hub/images",
+  width: 350,
+  height: 350,
+  scales: [1],
+  hash: "ebaa362a049339e084011170417c750e",
+  name: "video_light",
   type: "png",
 });
