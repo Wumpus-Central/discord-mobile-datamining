@@ -9,15 +9,15 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(19714).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(19716);
+const useAutomodRulesList = fn(19757).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(19759);
 ({ useAutomodEditingRuleActions: metroImportDefault, useAutomodEditingRuleState: closure_8 } =
   GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12408).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12307).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING },
 };
@@ -338,20 +338,20 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(12413).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(12312).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {
                       v0 = 0;
                       closure_129_0 = closure_3;
-                      const aPIError = new closure_0(6349).APIError(closure_129_0);
+                      const aPIError = new closure_0(5666).APIError(closure_129_0);
                       const anyErrorMessage = aPIError.getAnyErrorMessage();
                       closure_0 = anyErrorMessage;
                       if (anyErrorMessage == null) {
                         const intl = closure_0(1112).intl;
                         closure_0 = intl.string(closure_0(1112).t.fEptJP);
                       }
-                      closure_0(5594).presentError(closure_0);
+                      closure_0(5598).presentError(closure_0);
                       throw closure_129_0;
                     } else if (arg0 === 1) {
                       c6 = 3;

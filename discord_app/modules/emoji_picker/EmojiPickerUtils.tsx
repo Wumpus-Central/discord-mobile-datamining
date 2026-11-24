@@ -16,7 +16,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(6576);
+const EmojiPickerConstants = fn(6760);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: closure_10 } = EmojiPickerConstants);
 const Constants = fn(1071);
 ({
@@ -337,7 +337,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
           }
         }
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         for (const item10015 of locked) {
           if (null != item10015.id) {
             let addResult = set.add(tmp7.id);

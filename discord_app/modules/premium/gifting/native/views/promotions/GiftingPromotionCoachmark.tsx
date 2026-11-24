@@ -1,9 +1,9 @@
 // discord_app/modules/premium/gifting/native/views/promotions/GiftingPromotionCoachmark.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import usePreviousDefault from "../../../../../../hooks/usePrevious.tsx";
 import useAnalyticsLocationsDefault from "../../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../../app_analytics/AnalyticsLocation.tsx";
+import usePreviousDefault from "../../../../../../hooks/usePrevious.tsx";
 import utils_openGiftModal from "../../../../native/utils/openGiftModal.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
@@ -13,10 +13,10 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticsSections: metroImportDefault, AnalyticsObjects: closure_8, AnalyticsPages: closure_9 } = Constants);
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { alignItems: "center", padding: nativeDefault.space.PX_16 },
   textContainer: null,
@@ -60,10 +60,10 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(9505).useThemeAndReducedMotionAwareAssetUrl(asset);
-  const GiftPromotionReminderExperiment = markAsDismissed(9477).GiftPromotionReminderExperiment;
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(11017).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const GiftPromotionReminderExperiment = markAsDismissed(11006).GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: "GiftingPromotionCoachmarkActionSheet" }).enabled;
-  let obj2 = markAsDismissed(9505);
+  let obj2 = markAsDismissed(11017);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -71,7 +71,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(9506).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(11018).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp10;
   const tmp12 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp12;
@@ -100,7 +100,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result2 = markAsDismissed(9506);
+  const tmp2Result2 = markAsDismissed(11018);
   analyticsLocations = useAnalyticsLocationsDefault(
     AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK,
   ).analyticsLocations;
@@ -122,7 +122,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj5.source = obj6;
       obj5.style = tmp.imageShared;
       obj5.enableAnimation = !stateFromStores;
-      tmp19Result = closure_11(tmp11(5600), obj5);
+      tmp19Result = closure_11(tmp11(5604), obj5);
     }
     const items4 = [tmp19Result, , ,];
     if (enabled) {
@@ -130,7 +130,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     }
     if (enabled) {
       const obj7 = { text: tickingFormattedLimitedOfferTimeLeft, style: tmp.countdownBadge };
-      enabled = closure_11(tmp11(9508), obj7);
+      enabled = closure_11(tmp11(11029), obj7);
     }
     items4[1] = enabled;
     const obj8 = { style: tmp.textContainer, children: null };
@@ -140,26 +140,26 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       color: "mobile-text-heading-primary",
       children: coachmarkComponent.header,
     };
-    const items5 = [closure_11(markAsDismissed(5504).Heading, obj9)];
+    const items5 = [closure_11(markAsDismissed(5508).Heading, obj9)];
     const obj10 = {
       style: tmp.text,
       variant: "body-md/normal",
       color: "text-default",
       children: coachmarkComponent.body,
     };
-    items5[1] = closure_11(markAsDismissed(5504).Text, obj10);
+    items5[1] = closure_11(markAsDismissed(5508).Text, obj10);
     obj8.children = items5;
     items4[2] = closure_12(closure_4, obj8);
     const obj11 = { grow: true, icon: null, text: null, onPress: null };
     const obj12 = { size: "sm", color: tmp11(575).colors.WHITE };
-    obj11.icon = closure_11(markAsDismissed(12475).GiftIcon, obj12);
+    obj11.icon = closure_11(markAsDismissed(11162).GiftIcon, obj12);
     const intl = markAsDismissed(1112).intl;
     obj11.text = intl.string(markAsDismissed(1112).t.Ve9Ge6);
     obj11.onPress = tmp17;
-    items4[3] = closure_11(markAsDismissed(5511).Button, obj11);
+    items4[3] = closure_11(markAsDismissed(5515).Button, obj11);
     obj4.children = items4;
     obj3.children = closure_12(closure_4, obj4);
-    tmp19Result2 = closure_11(markAsDismissed(5141).BottomSheet, obj3);
+    tmp19Result2 = closure_11(markAsDismissed(5145).BottomSheet, obj3);
   }
   return tmp19Result2;
 }

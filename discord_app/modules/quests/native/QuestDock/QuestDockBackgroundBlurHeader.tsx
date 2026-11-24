@@ -10,8 +10,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestDockMode = fn(6558).QuestDockMode;
-const QuestDockConstants = fn(16475);
+const QuestDockMode = fn(6745).QuestDockMode;
+const QuestDockConstants = fn(16508);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -23,7 +23,7 @@ const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MOD
 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   header: {
     alignItems: "center",
@@ -39,6 +39,7 @@ let obj = {
   },
   secondaryContent: { flexGrow: 0, flexShrink: 0 },
   secondaryContentStretched: { alignSelf: "stretch" },
+  secondaryContentTrailing: { alignItems: "flex-end", justifyContent: "center" },
   secondaryContentOverlay: { justifyContent: "center", position: "absolute", bottom: 0, top: 0, right: 0 },
   expandedContent: null,
   leadingContent: null,
@@ -68,7 +69,7 @@ let items = [
   {
     code: "(function questDockHeaderLayoutAnimation_QuestDockBackgroundBlurHeaderTsx1(values){let[withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED]=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};})",
   },
-  fn(5514).withSpring,
+  fn(5518).withSpring,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
 ];
 let closure_129_0;
@@ -125,21 +126,25 @@ let obj4 = { alignItems: "center", flexDirection: "row", gap: nativeDefault.spac
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBackgroundBlurHeader.tsx");
 
-export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLeading) {
-  ({ blurHash, children, secondaryContentWidth, withPressableDisclosure } = promotedLabelLeading);
-  if (withPressableDisclosure === undefined) {
-    withPressableDisclosure = false;
+export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDisclosure) {
+  ({ blurHash, children, secondaryContentWidth, secondaryContentLayout } = withPressableDisclosure);
+  if (secondaryContentLayout === undefined) {
+    secondaryContentLayout = "overlay";
   }
-  let flag = promotedLabelLeading.promotedLabelLeading;
+  let flag = withPressableDisclosure.withPressableDisclosure;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = promotedLabelLeading.hideBlurWhenCollapsed;
+  let flag2 = withPressableDisclosure.promotedLabelLeading;
   if (flag2 === undefined) {
     flag2 = false;
   }
+  let flag3 = withPressableDisclosure.hideBlurWhenCollapsed;
+  if (flag3 === undefined) {
+    flag3 = false;
+  }
   _require = undefined;
-  ({ onDisclosurePress, onSubmenuPress } = promotedLabelLeading);
+  ({ onDisclosurePress, onSubmenuPress } = withPressableDisclosure);
   const context = noop.useContext(require("QuestDockGestureContext").QuestDockGestureContext);
   ({ activeQuestDockMode, questDockWrapperSpecs } = context);
   [tmp5, c0] = noop.useState(false);
@@ -444,11 +449,11 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   QuestDockBackgroundBlurHeaderTsx9.__workletHash = 6712330626688;
   QuestDockBackgroundBlurHeaderTsx9.__initData = tmp61;
   let animatedStyle6;
-  if (flag2) {
+  if (flag3) {
     animatedStyle6 = tmpResult13.useAnimatedStyle(QuestDockBackgroundBlurHeaderTsx9);
   }
   const tmp67 = closure_15();
-  if (withPressableDisclosure) {
+  if (flag) {
     let obj3 = { onPress: onDisclosurePress, accessibilityRole: "button", style: null, children: null };
     const items16 = [,];
     ({ actionDisclosures: arr18[0], tertiaryContent: arr18[1] } = tmp67);
@@ -457,12 +462,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     const obj5 = { color: "interactive-text-active", variant: "body-sm/medium", children: null };
     const intl2 = tmp(1112).intl;
     obj5.children = intl2.string(tmp(1112).t.o6FLcF);
-    const items17 = [closure_12(tmp(5504).Text, obj5)];
+    const items17 = [closure_12(tmp(5508).Text, obj5)];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
-    items17[1] = closure_12(tmp(9449).CircleQuestionIcon, obj6);
+    items17[1] = closure_12(tmp(9321).CircleQuestionIcon, obj6);
     obj4.children = items17;
     obj3.children = closure_14(closure_13, obj4);
-    let tmp68Result = closure_12(tmp(7030).PressableOpacity, obj3);
+    let tmp68Result = closure_12(tmp(6026).PressableOpacity, obj3);
     let tmp71 = closure_12;
   } else {
     const obj7 = { style: null, children: null };
@@ -472,7 +477,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     const obj8 = { color: "text-default", variant: "body-sm/medium", children: null };
     const intl = tmp(1112).intl;
     obj8.children = intl.string(tmp(1112).t.o6FLcF);
-    obj7.children = closure_12(tmp(5504).Text, obj8);
+    obj7.children = closure_12(tmp(5508).Text, obj8);
     tmp68Result = closure_12(c6, obj7);
     tmp71 = closure_12;
   }
@@ -488,128 +493,83 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp71Result = tmp71(tmp7(16581), obj10);
+      let tmp71Result = tmp71(tmp7(16615), obj10);
     }
     const items20 = [tmp71Result, ,];
     let tmp71Result2 = children;
-    if (flag) {
+    if (flag2) {
       const obj11 = { style: tmp67.leadingContent, children };
       tmp71Result2 = tmp71(c6, obj11);
     }
     items20[1] = tmp71Result2;
     const items21 = [tmp67.secondaryContent];
-    let tmp82 = null != secondaryContentWidth;
-    if (tmp82) {
-      const items22 = [tmp67.secondaryContentStretched];
-      const obj12 = { width: secondaryContentWidth };
-      items22[1] = obj12;
-      tmp82 = items22;
-    }
-    const obj13 = { style: null, children: null };
-    items21[1] = tmp82;
-    obj13.style = items21;
-    const obj14 = { style: null, layout: null, children: null };
-    const items23 = [tmp67.secondaryContentOverlay, animatedStyle2];
-    obj14.style = items23;
-    obj14.layout = questDockHeaderLayoutAnimation;
-    const obj15 = { style: animatedStyle1, children: promotedLabelLeading.collapsedContent };
-    obj14.children = tmp71(tmp7(1653).View, obj15);
-    const items24 = [tmp71(tmp7(1653).View, obj14)];
-    const obj16 = { animatedProps, style: null, layout: null, children: null };
-    let secondaryContentOverlay = null != secondaryContentWidth;
-    const View = tmp7(1653).View;
-    if (secondaryContentOverlay) {
-      secondaryContentOverlay = tmp67.secondaryContentOverlay;
-    }
-    const items25 = [secondaryContentOverlay, animatedStyle4];
-    obj16.style = items25;
-    obj16.layout = questDockHeaderLayoutAnimation;
-    const obj17 = { style: null, children: null };
-    const items26 = [tmp67.expandedContent, animatedStyle3];
-    obj17.style = items26;
-    let tmp74Result = !flag;
-    if (!flag) {
-      const obj18 = { children: null };
-      const items27 = [tmp68Result, tmp71(tmp7(16583), {})];
-      obj18.children = items27;
-      tmp74Result = closure_14(closure_13, obj18);
-    }
-    const items28 = [tmp74Result];
-    const obj19 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    const intl3 = tmp(1112).intl;
-    obj19.accessibilityLabel = intl3.string(tmp(1112).t.PdRCRg);
-    obj19.onPress = onSubmenuPress;
-    obj19.style = tmp67.tertiaryContent;
-    const obj20 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE };
-    obj19.children = tmp71(tmp(7022).MoreHorizontalIcon, obj20);
-    items28[1] = tmp71(tmp(7030).PressableOpacity, obj19);
-    obj17.children = items28;
-    obj16.children = closure_14(tmp7(1653).View, obj17);
-    class QuestDockBackgroundBlurHeaderTsx2 {
-      constructor() {
-        obj = closure_0;
-        tmp = closure_1;
-        obj1 = {
-          borderTopLeftRadius: closure_0.get() === closure_1.EXPANDED ? closure_2 : closure_3,
-          borderTopRightRadius: obj.get() === tmp.EXPANDED ? closure_2 : closure_3,
-          borderBottomLeftRadius: null,
-          borderBottomRightRadius: null,
-          width: null,
-          transform: null,
-        };
-        if (obj.get() === tmp.EXPANDED) {
-          tmp5 = closure_2;
-        } else {
-          tmp2 = closure_4;
-          tmp3 = closure_5;
-          tmp4 = closure_6;
-          tmp5 = closure_4(closure_5.get(), closure_6);
-        }
-        obj1.borderBottomLeftRadius = tmp5;
-        if (obj.get() === tmp.EXPANDED) {
-          tmp9 = closure_2;
-        } else {
-          tmp6 = closure_4;
-          tmp7 = closure_5;
-          tmp8 = closure_6;
-          tmp9 = closure_4(closure_5.get(), closure_6);
-        }
-        obj1.borderBottomRightRadius = tmp9;
-        if (obj.get() === tmp.EXPANDED) {
-          tmp11 = closure_7;
-          tmp12 = closure_8;
-          num = 2;
-          width = closure_7.get().width - 2 * closure_8;
-        } else {
-          tmp10 = closure_7;
-          width = closure_7.get().width;
-        }
-        obj1.width = width;
-        tmp13 = closure_4;
-        num2 = 0;
-        if (obj.get() === tmp.EXPANDED) {
-          num2 = closure_8;
-        }
-        obj5 = { translateX: tmp13(num2, closure_6) };
-        tmp14 = closure_6;
-        items = [,];
-        items[0] = obj5;
-        num3 = 0;
-        if (obj.get() === tmp.EXPANDED) {
-          num3 = closure_8;
-        }
-        obj6 = { translateY: tmp13(num3, tmp14) };
-        items[1] = obj6;
-        obj1.transform = items;
-        return obj1;
+    if (null == secondaryContentWidth) {
+      const obj12 = { style: null, children: null };
+      items21[1] = tmp82;
+      obj12.style = items21;
+      const obj13 = { style: null, layout: null, children: null };
+      const items22 = [tmp67.secondaryContentOverlay, animatedStyle2];
+      obj13.style = items22;
+      obj13.layout = questDockHeaderLayoutAnimation;
+      const obj14 = { style: animatedStyle1, children: withPressableDisclosure.collapsedContent };
+      obj13.children = tmp71(tmp7(1653).View, obj14);
+      const items23 = [tmp71(tmp7(1653).View, obj13)];
+      const obj15 = { animatedProps, style: null, layout: null, children: null };
+      let secondaryContentOverlay = null != secondaryContentWidth;
+      if (secondaryContentOverlay) {
+        secondaryContentOverlay = "overlay" === secondaryContentLayout;
       }
+      if (secondaryContentOverlay) {
+        secondaryContentOverlay = tmp67.secondaryContentOverlay;
+      }
+      const items24 = [secondaryContentOverlay, animatedStyle4];
+      obj15.style = items24;
+      obj15.layout = questDockHeaderLayoutAnimation;
+      const obj16 = { style: null, children: null };
+      const items25 = [tmp67.expandedContent, animatedStyle3];
+      obj16.style = items25;
+      let tmp74Result = !flag2;
+      if (!flag2) {
+        const obj17 = { children: null };
+        const items26 = [tmp68Result, tmp71(tmp7(16617), {})];
+        obj17.children = items26;
+        tmp74Result = closure_14(closure_13, obj17);
+      }
+      const items27 = [tmp74Result];
+      const obj18 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        onPress: null,
+        style: null,
+        children: null,
+      };
+      const intl3 = tmp(1112).intl;
+      obj18.accessibilityLabel = intl3.string(tmp(1112).t.PdRCRg);
+      obj18.onPress = onSubmenuPress;
+      obj18.style = tmp67.tertiaryContent;
+      const obj19 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE };
+      obj18.children = tmp71(tmp(7612).MoreHorizontalIcon, obj19);
+      items27[1] = tmp71(tmp(6026).PressableOpacity, obj18);
+      obj16.children = items27;
+      obj15.children = closure_14(tmp7(1653).View, obj16);
+      items23[1] = tmp71(tmp7(1653).View, obj15);
+      obj12.children = items23;
+      items20[2] = closure_14(tmp80, obj12);
+      obj9.children = items20;
+      return closure_14(tmp7(1653).View, obj9);
+    } else if ("inline" === secondaryContentLayout) {
+      const items28 = [, ,];
+      ({ secondaryContentStretched: arr24[0], secondaryContentTrailing: arr24[1] } = tmp67);
+      const obj20 = { minWidth: secondaryContentWidth };
+      items28[2] = obj20;
+      let items29 = items28;
+    } else {
+      items29 = [tmp67.secondaryContentStretched];
+      const obj21 = { width: secondaryContentWidth };
+      items29[1] = obj21;
     }
-    obj13.children = items24;
-    items20[2] = closure_14(c6, obj13);
-    obj9.children = items20;
-    return closure_14(tmp7(1653).View, obj9);
   }
-  tmp71Result = tmp71(tmp7(16546), {
+  tmp71Result = tmp71(tmp7(16580), {
     layoutAnimatedStyle: animatedStyle5,
     opacityAnimatedStyle: animatedStyle6,
     layoutAnimation: questDockHeaderLayoutAnimation,

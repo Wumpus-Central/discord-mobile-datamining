@@ -5,11 +5,11 @@ import MetricEvents from "../../../../discord_common/js/shared/shared-constants/
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VerificationMethod = fn(6413).VerificationMethod;
-const SafetyHubLinks = fn(7809).SafetyHubLinks;
+const VerificationMethod = fn(6701).VerificationMethod;
+const SafetyHubLinks = fn(7753).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   content: { marginTop: nativeDefault.space.PX_8 },
   errorContainer: null,
@@ -29,7 +29,7 @@ export function AgeVerificationMethodsContainer(ageVerificationMethods) {
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = closure_8();
-  const isSuspendedUser = prop(7808).useIsSuspendedUser();
+  const isSuspendedUser = prop(7752).useIsSuspendedUser();
   items = [prop];
   const effect = noop.useEffect(() => {
     let someResult;
@@ -45,12 +45,12 @@ export function AgeVerificationMethodsContainer(ageVerificationMethods) {
   let obj3 = { type: "info", message: null, role: "none" };
   const intl = prop(1112).intl;
   obj3.message = intl.string(prop(1112).t.El4aXl);
-  const items1 = [closure_6(prop(7762).InlineNotice, obj3)];
+  const items1 = [closure_6(prop(7808).InlineNotice, obj3)];
   if (null != prop) {
     if (0 !== prop.length) {
       let mapped = prop.map((label) =>
         closure_1_6(
-          prop(7045).TableRow,
+          prop(6018).TableRow,
           {
             label: label.title,
             subLabel: label.description,
@@ -66,37 +66,37 @@ export function AgeVerificationMethodsContainer(ageVerificationMethods) {
     const obj4 = { hasIcons: false, children: mapped };
     items1[1] = closure_6(tmp8, obj4);
     obj2.children = items1;
-    const items2 = [closure_7(prop(5929).Stack, obj2)];
+    const items2 = [closure_7(prop(5989).Stack, obj2)];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       const obj5 = { variant: "body-xs/medium", children: null };
       const intl4 = tmp2(1112).intl;
       const obj6 = {
         handleOnHelpUrlHook() {
-          modalSessionId(7793).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+          modalSessionId(7737).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
         },
       };
-      obj5.children = intl4.format(modalSessionId(3444).htWh1G, obj6);
-      tmp7Result = closure_6(tmp2(5504).Text, obj5);
+      obj5.children = intl4.format(modalSessionId(3446).htWh1G, obj6);
+      tmp7Result = closure_6(tmp2(5508).Text, obj5);
     }
     const obj7 = { spacing: 8, align: "center", children: null };
     items2[1] = tmp7Result;
     obj7.children = items2;
-    return closure_7(prop(5929).Stack, obj7);
+    return closure_7(prop(5989).Stack, obj7);
   }
   const obj8 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj9 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
   const intl2 = tmp2(1112).intl;
-  obj9.children = intl2.string(modalSessionId(3444).cR6336);
-  const items3 = [closure_6(prop(5504).Text, obj9)];
+  obj9.children = intl2.string(modalSessionId(3446).cR6336);
+  const items3 = [closure_6(prop(5508).Text, obj9)];
   const obj10 = { style: tmp.buttonGroup, children: null };
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1112).intl;
-  obj11.text = intl3.string(modalSessionId(3444).hDvmYP);
-  obj11.onPress = prop(7807).getAgeVerificationMethods;
-  obj10.children = closure_6(prop(5511).Button, obj11);
-  items3[1] = closure_6(prop(6545).ButtonGroup, obj10);
+  obj11.text = intl3.string(modalSessionId(3446).hDvmYP);
+  obj11.onPress = prop(7751).getAgeVerificationMethods;
+  obj10.children = closure_6(prop(5515).Button, obj11);
+  items3[1] = closure_6(prop(6737).ButtonGroup, obj10);
   obj8.children = items3;
-  mapped = closure_7(tmp2(5929).Stack, obj8);
-  const obj = prop(7808);
+  mapped = closure_7(tmp2(5989).Stack, obj8);
+  const obj = prop(7752);
 }

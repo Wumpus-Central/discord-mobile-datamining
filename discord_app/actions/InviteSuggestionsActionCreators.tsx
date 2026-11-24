@@ -16,7 +16,7 @@ export function loadInviteSuggestions(arg0) {
   } = arg0);
   const userAffinitiesV2 = UserAffinitiesActionCreators.fetchUserAffinitiesV2();
   return userAffinitiesV2.then(() => {
-    let set = require;
+    set = require;
     if (require == null) {
       const _Set = Set;
       set = new Set();

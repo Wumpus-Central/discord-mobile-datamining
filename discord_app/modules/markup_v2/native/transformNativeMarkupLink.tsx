@@ -1,6 +1,6 @@
 // discord_app/modules/markup_v2/native/transformNativeMarkupLink.tsx
-import MarkupTypes from "../../markup/MarkupTypes.tsx";
 import UnicodeSanitizationUtils from "../../markup/UnicodeSanitizationUtils.tsx";
+import MarkupTypes from "../../markup/MarkupTypes.tsx";
 import MarkupChannelMentionRule from "../../markup/MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRule from "../../markup/MarkupAttachmentLinkRule.tsx";
 import transformNativeMarkupMention from "transformNativeMarkupMention.tsx";

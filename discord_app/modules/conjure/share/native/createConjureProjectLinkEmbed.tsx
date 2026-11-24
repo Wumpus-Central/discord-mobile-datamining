@@ -2,14 +2,14 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
-import getEmbedThemeColorsDefault from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
-import resolveMessageContentColorsDefault from "../../../messages/native/renderer/resolveMessageContentColors.tsx";
-import CodedLinksConstants from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx";
+import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
 import conjureDefaultAppIcon2 from "../../projects/conjureDefaultAppIcon.tsx";
 import conjureProjectLinkCard2 from "conjureProjectLinkCard.tsx";
 import conjureSharedProjectSurfaces from "../conjureSharedProjectSurfaces.tsx";
+import getEmbedThemeColorsDefault from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import CodedLinksConstants from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx";
 import CodedLinksTypes from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx";
+import resolveMessageContentColorsDefault from "../../../messages/native/renderer/resolveMessageContentColors.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -46,9 +46,9 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
     if (tmp4) {
       const intl7 = util.intl;
       if ("expired" === conjureProjectLinkCard.type) {
-        let mQma36 = _modDef4190.wahvH2;
+        let mQma36 = _modDef4192.wahvH2;
       } else {
-        mQma36 = _modDef4190.mQma36;
+        mQma36 = _modDef4192.mQma36;
       }
       const stringResult = intl7.string(mQma36);
       const obj3 = {};
@@ -119,7 +119,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
         }
         obj6.linkColor = defaultUsernameColor;
         obj5.nameOnClick = obj6;
-        formatToPartsResult = intl.formatToParts(_modDef4190.dMdop9, obj5);
+        formatToPartsResult = intl.formatToParts(_modDef4192.dMdop9, obj5);
       }
       obj4.creatorContent = formatToPartsResult;
       let creatorAvatarUrl = null;
@@ -140,7 +140,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult1 = null;
       if ("ready" !== conjureProjectLinkCard.type) {
         const intl2 = util.intl;
-        stringResult1 = intl2.string(_modDef4190["2DSRxV"]);
+        stringResult1 = intl2.string(_modDef4192["2DSRxV"]);
       }
       obj4.noticeText = stringResult1;
       obj4.iconUrl = iconURL;
@@ -177,14 +177,14 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult2 = null;
       if (canRemix) {
         const intl3 = util.intl;
-        stringResult2 = intl3.string(_modDef4190.XWgAfc);
+        stringResult2 = intl3.string(_modDef4192.XWgAfc);
       }
       obj4.installLabel = stringResult2;
       obj4.remixLabel = null;
       obj4.coverAction = coverAction;
       if ("launch" === coverAction) {
         const intl5 = util.intl;
-        let stringResult3 = intl5.string(_modDef4190["1cF7L4"]);
+        let stringResult3 = intl5.string(_modDef4192["1cF7L4"]);
       } else {
         stringResult3 = null;
         if ("open" === coverAction) {
@@ -195,7 +195,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       obj4.coverActionLabel = stringResult3;
       const intl6 = util.intl;
       const obj8 = { name: application.name };
-      obj4.accessibilityLabel = intl6.formatToPlainString(_modDef4190.c8DqSD, obj8);
+      obj4.accessibilityLabel = intl6.formatToPlainString(_modDef4192.c8DqSD, obj8);
       return obj4;
     }
   }

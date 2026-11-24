@@ -90,7 +90,7 @@ prototype["getResolution"] = function getResolution(arg0) {
   }
 };
 MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) {
-  const set = new Set([0, 4, 8, 10]);
+  set = new Set([0, 4, 8, 10]);
   items = [];
   let num = 1;
   do {

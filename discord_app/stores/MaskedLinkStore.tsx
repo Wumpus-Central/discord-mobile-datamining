@@ -29,7 +29,7 @@ prototype["initialize"] = function initialize() {
       const _Array3 = Array;
       arr = Array.from(obj);
     }
-    const set = new Set(arr);
+    set = new Set(arr);
     set2 = set;
     const _Set = Set;
     const set1 = new Set();

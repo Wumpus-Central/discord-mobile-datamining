@@ -6,9 +6,9 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/07865_inlineStyles.js";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import inlineStyles from "../../../../_runtime/07813_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -164,7 +164,7 @@ let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { position: "relative" },
@@ -214,7 +214,7 @@ let closure_15 = {
   statusBubblePaddingVertical: 7,
 };
 let closure_16 = {
-  [fn(7564).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7431).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "body-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -222,7 +222,7 @@ let closure_16 = {
     statusBubblePaddingVertical: 6,
   },
 };
-createStyles = fn(4913);
+createStyles = fn(4917);
 let closure_19 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");

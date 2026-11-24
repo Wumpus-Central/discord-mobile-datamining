@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelParticipants.tsx
 import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import getParticipantUserKeyDefault from "../calls/getParticipantUserKey.tsx";
 import useGuildMemberDisplayRole from "useGuildMemberDisplayRole.tsx";
@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(5657).getComparator;
+const getComparator = fn(5728).getComparator;
 const StageChannelParticipantNamedIndex = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",
@@ -271,7 +271,7 @@ prototype["rebuild"] = function rebuild() {
     if (channel.isGuildStageVoice()) {
       const _Set = Set;
       const _Object = Object;
-      const set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
+      set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
       ({ participants: require, _participantsIndex } = self);
       _participantsIndex.clear();
       const _requestToSpeakIndex = self._requestToSpeakIndex;

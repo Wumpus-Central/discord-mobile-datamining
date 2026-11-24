@@ -121,15 +121,15 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "Path",
-    shouldShowThread: "Suomi",
+    shouldShowThread: "ox",
   });
   return metroImportDefault(_modDef1653.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12825).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12744).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const React6 = createStyles.createStyles(() => {
   const obj = {
     container: {

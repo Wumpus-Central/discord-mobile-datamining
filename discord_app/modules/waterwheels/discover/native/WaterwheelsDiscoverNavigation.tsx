@@ -20,11 +20,13 @@ export function selectWaterwheelsDiscoverFromGuildsBar() {
   return flag;
 }
 export function selectWaterwheelsDiscover() {
-  if (obj.getWaterwheelsDiscoverEnabled(WaterwheelsDiscoverNavigation)) {
+  let flag = WaterwheelsDiscoverExperiment.getWaterwheelsDiscoverEnabled(WaterwheelsDiscoverNavigation);
+  if (flag) {
     transitionToGuild.transitionToGuild(hasOwnProperty);
+    flag = true;
     const tmpResult = transitionToGuild;
   }
-  obj = WaterwheelsDiscoverExperiment;
+  return flag;
 }
 export function leaveWaterwheelsDiscover() {
   if (SelectedGuildStore.getGuildId() === hasOwnProperty) {

@@ -13,16 +13,16 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05145_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05149_BottomSheetModal.js";
 import BurstReactionAnimationPreviewDefault from "../../messages/native/burst_reactions/BurstReactionAnimationPreview.tsx";
 import MessageReactionsTypes from "../../messages/MessageReactionsTypes.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
+import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import FastListDefault from "../../../lib/native/FastList.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
-import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
+import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
 import useEmojiColorPalette from "../../emojis/hooks/useEmojiColorPalette.tsx";
 import SwipeableFastListDefault from "../../../components_native/common/SwipeableFastList.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -221,14 +221,14 @@ function EmojiOptionsButton(channelId) {
   items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(10391)(stateFromStores);
+  const tmp3 = messageId(12095)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
   const obj2 = {
     onPress: noop.useCallback(() => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10392, dependencyMap.paths),
+        asyncRequireImpl(12096, dependencyMap.paths),
         "ReactionEmojiOptionsActionSheet",
         { channelId, messageId, reaction, canRemoveReactions },
         "replaceTopSheet",
@@ -240,9 +240,9 @@ function EmojiOptionsButton(channelId) {
   const obj3 = { variant: "body-xs/semibold", color: "text-subtle", children: null };
   const intl = channelId(1112).intl;
   obj3.children = intl.string(channelId(1112).t.pCaYID);
-  const items3 = [closure_17(channelId(5504).Text, obj3)];
+  const items3 = [closure_17(channelId(5508).Text, obj3)];
   const obj = channelId(504);
-  items3[1] = closure_17(channelId(7565).ChevronSmallRightIcon, {
+  items3[1] = closure_17(channelId(7432).ChevronSmallRightIcon, {
     color: messageId(575).colors.ICON_SUBTLE,
     size: "xs",
   });
@@ -281,14 +281,14 @@ function ReactionTabs(setReactionSelectedIndex) {
   };
   ({ tab: obj2.tabStyle, tabActive: obj2.tabStyleActive, tabSelected: obj2.tabStyleSelected } = tmp);
   items = [
-    closure_17(setReactionSelectedIndex(10395), obj3),
-    closure_17(setReactionSelectedIndex(7713), { outer: true }),
+    closure_17(setReactionSelectedIndex(12097), obj3),
+    closure_17(setReactionSelectedIndex(7953), { outer: true }),
   ];
   const obj4 = { style: tmp.removeButtonContainer, children: null };
   const obj6 = { style: tmp.emojiTextIdentifier, variant: "body-sm/medium", color: "text-default", children: null };
-  const tmp2 = setReactionSelectedIndex(10395);
-  obj6.children = reactionSelectedIndex(4857).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
-  const items1 = [closure_17(reactionSelectedIndex(5504).Text, obj6)];
+  const tmp2 = setReactionSelectedIndex(12097);
+  obj6.children = reactionSelectedIndex(4861).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
+  const items1 = [closure_17(reactionSelectedIndex(5508).Text, obj6)];
   const merged = Object.assign(setReactionSelectedIndex);
   items1[1] = closure_17(EmojiOptionsButton, {});
   obj4.children = items1;
@@ -308,7 +308,7 @@ const Constants = fn(1071);
 ({ DEFAULT_NUM_REACTION_USERS: closure_15, Permissions: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1 },
   containerEmpty: {
@@ -464,15 +464,15 @@ export function MessageReactionsContent(channelId) {
   );
   const bound = Math.min(tmp3[0], reactions.length - 1);
   if (null != reactions[bound].me_vote) {
-    let NORMAL = channelId(5495).ReactionTypes.VOTE;
+    let NORMAL = channelId(5499).ReactionTypes.VOTE;
     let tmp8 = channelId;
     let tmp10 = channelId;
   } else if (tmp5.burst_count > 0) {
-    NORMAL = channelId(5495).ReactionTypes.BURST;
+    NORMAL = channelId(5499).ReactionTypes.BURST;
     tmp8 = channelId;
     tmp10 = channelId;
   } else {
-    NORMAL = channelId(5495).ReactionTypes.NORMAL;
+    NORMAL = channelId(5499).ReactionTypes.NORMAL;
     tmp8 = channelId;
     tmp10 = channelId;
   }
@@ -488,9 +488,9 @@ export function MessageReactionsContent(channelId) {
   const items1 = [channelId];
   const stateFromStores = tmp10(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp10Result = tmp10(504);
-  const isActiveChannelOrUnarchivableThread = tmp10(6893).useIsActiveChannelOrUnarchivableThread(stateFromStores);
+  const isActiveChannelOrUnarchivableThread = tmp10(7502).useIsActiveChannelOrUnarchivableThread(stateFromStores);
   closure_130_0 = channelId;
-  const tmp10Result3 = tmp10(6893);
+  const tmp10Result3 = tmp10(7502);
   const tmp20 = useSafeAreaInsetsDefault();
   const items2 = [PermissionStore];
   const items3 = [channelId];
@@ -689,13 +689,13 @@ export function MessageReactionsContent(channelId) {
   const tmp10Result4 = tmp10(1378);
   let obj3 = {
     scrollable: true,
-    backdropOpacity: tmp10(4871).BACKDROP_OPACITY,
+    backdropOpacity: tmp10(4875).BACKDROP_OPACITY,
     backdropChildren: null,
     header: null,
     children: null,
   };
   let tmp27Result = null;
-  if (NORMAL === tmp8(5495).ReactionTypes.BURST) {
+  if (NORMAL === tmp8(5499).ReactionTypes.BURST) {
     let obj4 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
     let obj5 = { emoji: tmp5.emoji, reactionType: NORMAL, messageId, channelId };
     obj4.children = closure_17(BurstReactionAnimationPreviewDefault, obj5);
@@ -720,5 +720,5 @@ export function MessageReactionsContent(channelId) {
     const tmp19Result2 = FastListDefault;
   }
   obj3.children = tmp27Result4;
-  return closure_17(tmp10(5141).BottomSheet, obj3);
+  return closure_17(tmp10(5145).BottomSheet, obj3);
 }

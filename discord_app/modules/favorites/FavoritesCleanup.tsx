@@ -85,8 +85,8 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4766).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(4775);
+const THREAD_CHANNEL_TYPES = fn(4770).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(4779);
 ({
   FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10,
   FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11,
@@ -102,7 +102,7 @@ export function getAutoAddedThreadsCategoryIds() {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
   items = [closure_1_11.toLowerCase()];
-  const set = new Set(items);
+  set = new Set(items);
   if (FavoriteStore.autoAddThreadsMode === refs) {
     const guildsArray = GuildStore.getGuildsArray();
     for (const item10026 of guildsArray) {

@@ -25,7 +25,7 @@ export function areSetsEqual(set, set2) {
 export function toSetInplace(features) {
   if (null == features) {
     const _Set3 = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     const _Set = Set;
     set = features;

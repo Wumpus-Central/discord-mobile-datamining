@@ -2,16 +2,16 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
-import BottomSheetModal from "../../../../_runtime/05145_BottomSheetModal.js";
-import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import BottomSheetModal from "../../../../_runtime/05149_BottomSheetModal.js";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
+import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import maybeFetchUserProfileDefault from "../maybeFetchUserProfile.tsx";
-import ProfileFrameLayerOrder from "../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
-import ProfileFrameDefault from "../../collectibles/profile_frames/native/ProfileFrame.tsx";
-import scaleProfileFrameDefault from "../../collectibles/profile_frames/scaleProfileFrame.tsx";
-import ApplicationPresenceUtils from "../../applications/ApplicationPresenceUtils.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
+import ProfileFrameLayerOrder from "../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
+import scaleProfileFrameDefault from "../../collectibles/profile_frames/scaleProfileFrame.tsx";
+import ProfileFrameDefault from "../../collectibles/profile_frames/native/ProfileFrame.tsx";
+import ApplicationPresenceUtils from "../../applications/ApplicationPresenceUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -84,13 +84,13 @@ function ActionSheetAlignedView(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7564).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7431).UserProfileThemeTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5142).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5146).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },

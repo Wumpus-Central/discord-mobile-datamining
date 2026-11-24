@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx
-import GuildSettingsServerTagUtils from "../../../guild_settings/GuildSettingsServerTagUtils.tsx";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import GuildSettingsServerTagUtils from "../../../guild_settings/GuildSettingsServerTagUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
@@ -8,7 +8,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(8332);
+const GuildPowerupsConstants = fn(8156);
 ({ GuildPowerupNewPerkMarketingVersion: hasOwnProperty, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } =
   GuildPowerupsConstants);
 const Constants = fn(1071);

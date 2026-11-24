@@ -4,35 +4,25 @@ import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
 import CollectiblesRecommendationStore from "../CollectiblesRecommendationStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-let useMemo = _mod19.useMemo;
+const useMemo = _mod19.useMemo;
 let closure_5 = [];
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useRecommendedCollectiblesSections.tsx");
 
 export default function useRecommendedCollectiblesSections(arg0, arg1) {
-  _require = arg0;
+  closure_0 = arg0;
   importDefault = arg1;
-  dependencyMap = require("EditProfileCollectiblesOrderingExperiment").useIsEditProfileCollectiblesOrderingEnabled(
-    "collectibles_picker",
-  );
-  let tmp = useInitialValueDefault(() => {
-    if (closure_2) {
-      const recommendations = CollectiblesRecommendationStore.getRecommendations();
-      let skuIds;
-      if (recommendations != null) {
-        skuIds = recommendations.skuIds;
-      }
-      if (skuIds == null) {
-        skuIds = closure_5;
-      }
-      let tmp = skuIds;
-    } else {
-      tmp = closure_5;
+  const tmp = useInitialValueDefault(() => {
+    recommendations = recommendations.getRecommendations();
+    let skuIds;
+    if (recommendations != null) {
+      skuIds = recommendations.skuIds;
     }
-    return tmp;
+    if (skuIds == null) {
+      skuIds = closure_1_5;
+    }
+    return skuIds;
   });
-  useMemo = tmp;
+  dependencyMap = tmp;
   items = [arg1, tmp, arg0];
   return useMemo(() => {
     if (0 === length.length) {
@@ -42,7 +32,7 @@ export default function useRecommendedCollectiblesSections(arg0, arg1) {
         if (section.section !== closure_1_1) {
           return section;
         } else {
-          const result = closure_0(closure_2[4]).reorderCollectiblesByRecommendation(section.items, length);
+          const result = closure_0(closure_2[3]).reorderCollectiblesByRecommendation(section.items, length);
           let tmp5 = section;
           if (result !== section.items) {
             const obj2 = {};

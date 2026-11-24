@@ -3,8 +3,8 @@ import util from "../../intl/index.native.tsx";
 import ObscuredMediaUtils from "../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ObscureMediaModels from "../explicit_media_redaction/ObscureMediaModels.tsx";
 import ExplicitMediaRedactionModels from "../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
-import ForumPostMediaUtils from "../forums/ForumPostMediaUtils.tsx";
 import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay.tsx";
+import ForumPostMediaUtils from "../forums/ForumPostMediaUtils.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
@@ -147,10 +147,10 @@ export function useShouldObscure(channel) {
     }
     return canResult;
   });
-  const RenderSpoilers = channel(4738).RenderSpoilers;
+  const RenderSpoilers = channel(4742).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(8224).getEnabledHarmTypesBitmaskForChannelType(channel(8230).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(8670).getEnabledHarmTypesBitmaskForChannelType(channel(8675).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 }
 export function getObscuredAlt(arg0) {

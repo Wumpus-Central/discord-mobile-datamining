@@ -18,9 +18,9 @@ import ForumPostMessagesStore from "../../ForumPostMessagesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(8315).DraftType;
+const DraftType = fn(7976).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

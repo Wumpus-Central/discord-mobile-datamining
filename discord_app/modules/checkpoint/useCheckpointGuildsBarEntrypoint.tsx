@@ -1,36 +1,37 @@
 // discord_app/modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx
+import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import CheckpointExperiments from "CheckpointExperiments.tsx";
+import useSelectedDismissibleContent from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
 
-const require = fn;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+require = fn;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const guilds_bar = "guilds_bar";
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx");
 
 export const CHECKPOINT_GUILDS_BAR_SOURCE = "guilds_bar";
+export function dismissCheckpointIntro(arg0) {
+  if (arg0 === guilds_bar) {
+    let INDIRECT_ACTION = ContentDismissActionType.TAKE_ACTION;
+  } else {
+    INDIRECT_ACTION = ContentDismissActionType.INDIRECT_ACTION;
+  }
+  const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+    dismissible_content.DismissibleContent.BUILD_A_BEAR_INTRO,
+    { dismissAction: INDIRECT_ACTION },
+  );
+}
 export function useCheckpointGuildsBarEntrypoint(GuildsBar) {
-  const isCheckpointIntroEnabled = markAsDismissed(visible[3]).useIsCheckpointIntroEnabled(GuildsBar);
-  const obj = markAsDismissed(visible[3]);
+  const isCheckpointIntroEnabled = CheckpointExperiments.useIsCheckpointIntroEnabled(GuildsBar);
   if (isCheckpointIntroEnabled) {
-    items = [tmp(tmp2[5]).DismissibleContent.BUILD_A_BEAR_INTRO];
+    items = [dismissible_content.DismissibleContent.BUILD_A_BEAR_INTRO];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const tmp4 = isCheckpointOpen(markAsDismissed(visible[4]).useSelectedDismissibleContent(items1), 2);
-  markAsDismissed = tmp4[1];
-  visible = tmp4[0] === tmp(tmp2[5]).DismissibleContent.BUILD_A_BEAR_INTRO;
-  const obj2 = markAsDismissed(visible[4]);
-  isCheckpointOpen = markAsDismissed(visible[6]).useIsCheckpointOpen();
-  const items2 = [visible, isCheckpointOpen, markAsDismissed];
-  const effect = noop.useEffect(() => {
-    let tmp = visible;
-    if (visible) {
-      tmp = isCheckpointOpen;
-    }
-    if (tmp) {
-      markAsDismissed(ContentDismissActionType.INDIRECT_ACTION);
-    }
-  }, items2);
-  return { visible, markAsDismissed };
+  const tmp4 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(items1), 2);
+  [tmp5, tmp6] = tmp4;
+  return { visible: tmp5 === dismissible_content.DismissibleContent.BUILD_A_BEAR_INTRO, markAsDismissed: tmp6 };
 }

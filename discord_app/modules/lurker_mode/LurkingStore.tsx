@@ -100,7 +100,7 @@ const lurkingStore = new LurkingStore(DispatcherDefault, {
   },
   GUILD_STOP_LURKING: function handleGuildStopLurking(ignoredGuildIds) {
     ignoredGuildIds = ignoredGuildIds.ignoredGuildIds;
-    let set;
+    set = undefined;
     if (ignoredGuildIds == null) {
       ignoredGuildIds = [];
     }

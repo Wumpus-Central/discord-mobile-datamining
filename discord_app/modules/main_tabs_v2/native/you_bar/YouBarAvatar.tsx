@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -30,9 +30,9 @@ function YouBarAvatarLarge(transitionState) {
   let obj = require("initialize");
   let items1 = [c10];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => _undefined11.getCurrentUser());
-  let result = require("native").AVATAR_SIZE_MAP[closure_13] / height;
+  let result = require("native").AVATAR_SIZE_MAP[closure_13] / YOU_BAR_AVATAR_LARGE_PX;
   dependencyMap = result;
-  let result1 = (height - require("native").AVATAR_SIZE_MAP[closure_13]) / 2;
+  let result1 = (YOU_BAR_AVATAR_LARGE_PX - require("native").AVATAR_SIZE_MAP[closure_13]) / 2;
   c3 = result1;
   let tmp8 = transitionState === require("native").TransitionStates.MOUNTED;
   const obj2 = require("initialize");
@@ -51,7 +51,7 @@ function YouBarAvatarLarge(transitionState) {
   noop = sharedValue1;
   const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
   if (tmp8) {
-    let tmp11 = -closure_17;
+    let tmp11 = -YOU_BAR_PADDING;
   } else {
     tmp11 = -result1;
   }
@@ -59,7 +59,7 @@ function YouBarAvatarLarge(transitionState) {
   c6 = sharedValue2;
   const tmp2Result13 = require("../../../../../_runtime/metro/01653__.js");
   if (tmp8) {
-    let diff = -closure_17 - (height - closure_15) / 2;
+    let diff = -YOU_BAR_PADDING - (YOU_BAR_AVATAR_LARGE_PX - YOU_BAR_HEIGHT) / 2;
   } else {
     diff = -result1;
   }
@@ -80,13 +80,13 @@ function YouBarAvatarLarge(transitionState) {
     if (tmp) {
       let tmp8 = -c3;
     } else {
-      tmp8 = -closure_2_17;
+      tmp8 = -YOU_BAR_PADDING;
     }
     const result2 = _undefined7.set(tmp8);
     if (tmp) {
       let diff = -c3;
     } else {
-      diff = -closure_2_17 - (dependencyMap - colors) / 2;
+      diff = -YOU_BAR_PADDING - (YOU_BAR_AVATAR_LARGE_PX - YOU_BAR_HEIGHT) / 2;
     }
     const result3 = _undefined8.set(diff);
   }, items2);
@@ -104,7 +104,7 @@ function YouBarAvatarLarge(transitionState) {
     if (null != OFFLINE) {
       const result = statusSizeOverride / 2;
       const sum = result + native.STATUS_PADDING;
-      const diff = dependencyMap - sum - (statusSizeOverride / 4) * 2;
+      const diff = YOU_BAR_AVATAR_LARGE_PX - sum - (statusSizeOverride / 4) * 2;
       const obj = { nativeCutouts: null };
       const point = {
         shape: ClipView.CutoutShape.Circle,
@@ -207,7 +207,7 @@ function YouBarAvatarLarge(transitionState) {
   if (null != stateFromStores) {
     const obj4 = { style: null, children: null };
     const items7 = [tmp.avatarShadow, ,];
-    size = { position: "absolute", width: height, height };
+    size = { position: "absolute", width: YOU_BAR_AVATAR_LARGE_PX, height: YOU_BAR_AVATAR_LARGE_PX };
     items7[1] = size;
     items7[2] = animatedStyle;
     obj4.style = items7;
@@ -216,13 +216,18 @@ function YouBarAvatarLarge(transitionState) {
       nativeCutouts = memo.nativeCutouts;
     }
     const obj5 = { cutouts: nativeCutouts, style: null, children: null };
-    const size1 = { position: "absolute", width: height, height };
+    const size1 = { position: "absolute", width: YOU_BAR_AVATAR_LARGE_PX, height: YOU_BAR_AVATAR_LARGE_PX };
     obj5.style = size1;
     const obj6 = { style: null };
-    size2 = { width: height, height, borderRadius: height / 2, backgroundColor: token };
+    size2 = {
+      width: YOU_BAR_AVATAR_LARGE_PX,
+      height: YOU_BAR_AVATAR_LARGE_PX,
+      borderRadius: YOU_BAR_AVATAR_LARGE_PX / 2,
+      backgroundColor: token,
+    };
     obj6.style = size2;
     obj5.children = closure_22(c6, obj6);
-    const items8 = [closure_22(tmp35(9023), obj5), , ,];
+    const items8 = [closure_22(tmp35(9279), obj5), , ,];
     const obj7 = {
       user: stateFromStores,
       guildId: "Array",
@@ -232,7 +237,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: "Espa\u00F1ol",
+      statusStyle: 0,
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
@@ -244,7 +249,7 @@ function YouBarAvatarLarge(transitionState) {
     obj7.statusStyle = rect;
     items8[1] = closure_22(tmp2(1186).Avatar, obj7);
     let mapped;
-    const tmp35Result = tmp35(9023);
+    const tmp35Result = tmp35(9279);
     const tmp44 = c6;
     if (memo != null) {
       const nativeCutouts1 = memo.nativeCutouts;
@@ -259,45 +264,51 @@ function YouBarAvatarLarge(transitionState) {
       }
     }
     const obj8 = { cutouts: mapped, style: null, pointerEvents: "none", children: null };
-    const size3 = { position: "absolute", top: -1, left: -1, width: height + 2, height: height + 2 };
+    const size3 = {
+      position: "absolute",
+      top: -1,
+      left: -1,
+      width: YOU_BAR_AVATAR_LARGE_PX + 2,
+      height: YOU_BAR_AVATAR_LARGE_PX + 2,
+    };
     obj8.style = size3;
     const obj9 = { style: null };
     const size4 = {
-      width: height + 2,
-      height: height + 2,
-      borderRadius: (height + 2) / 2,
+      width: YOU_BAR_AVATAR_LARGE_PX + 2,
+      height: YOU_BAR_AVATAR_LARGE_PX + 2,
+      borderRadius: (YOU_BAR_AVATAR_LARGE_PX + 2) / 2,
       borderWidth: 1,
       borderColor: tmp38,
     };
     obj9.style = size4;
     obj8.children = closure_22(tmp44, obj9);
-    items8[2] = closure_22(tmp35(9023), obj8);
+    items8[2] = closure_22(tmp35(9279), obj8);
     let tmp41Result = null != avatarDecoration;
     if (tmp41Result) {
       const obj10 = { size: null, avatarDecoration: null, decorationStyle: null, animate: null, cutout: null };
-      const tmp35Result4 = tmp35(9022);
-      obj10.size = tmp2(8905).getDecorationSizeForAvatarSize(tmp45);
+      const tmp35Result4 = tmp35(9278);
+      obj10.size = tmp2(14280).getDecorationSizeForAvatarSize(tmp45);
       obj10.avatarDecoration = avatarDecoration;
       const rect1 = { position: "absolute", top: null, left: null };
-      const tmp2Result20 = tmp2(8905);
-      rect1.top = -tmp2(8905).getDecorationSizeForAvatarSize(tmp45) - height / 2;
-      const tmp2Result21 = tmp2(8905);
-      rect1.left = -tmp2(8905).getDecorationSizeForAvatarSize(tmp45) - height / 2;
+      const tmp2Result20 = tmp2(14280);
+      rect1.top = -tmp2(14280).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX / 2;
+      const tmp2Result21 = tmp2(14280);
+      rect1.left = -tmp2(14280).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX / 2;
       obj10.decorationStyle = rect1;
       obj10.animate = stateFromStores1 && "always";
-      const tmp2Result22 = tmp2(8905);
-      const tmp2Result23 = tmp2(8905);
+      const tmp2Result22 = tmp2(14280);
+      const tmp2Result23 = tmp2(14280);
       obj10.cutout = tmp2Result23.getDecorationCutoutForAvatarCutout(
         memo,
-        (tmp2(8905).getDecorationSizeForAvatarSize(tmp45) - height) / 2,
+        (tmp2(14280).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX) / 2,
       );
       tmp41Result = closure_22(tmp35Result4, obj10, avatarDecoration.asset);
-      const tmp2Result24 = tmp2(8905);
+      const tmp2Result24 = tmp2(14280);
     }
     items8[3] = tmp41Result;
     obj4.children = items8;
     tmp40Result = closure_23(tmp35(1653).View, obj4);
-    const tmp35Result3 = tmp35(9023);
+    const tmp35Result3 = tmp35(9279);
   }
   return tmp40Result;
 }
@@ -426,26 +437,31 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16511);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
   YOU_BAR_AVATAR_SIZE: map1,
   YOU_BAR_STATUS_INSET: closure_14,
-  YOU_BAR_HEIGHT: closure_15,
-  YOU_BAR_LARGE_STATUS_SIZE: closure_16,
-  YOU_BAR_PADDING: closure_17,
-  YOU_BAR_SPRING_CONFIG: closure_18,
-  YOU_BAR_STATUS_OFFSET: closure_19,
-  YOU_BAR_AVATAR_LARGE_PX: closure_20,
+  YOU_BAR_HEIGHT,
 } = YouBarConstants);
+({ YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING } = YouBarConstants);
+({ YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX } = YouBarConstants);
 const StatusTypes = fn(1071).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4913);
-let obj = { avatarShadow: null };
+const createStyles = fn(4917);
+let obj = { avatarShadow: null, coachmarkAnchor: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
+let size = {
+  position: "absolute",
+  left: -YOU_BAR_PADDING,
+  top: -YOU_BAR_PADDING - (YOU_BAR_AVATAR_LARGE_PX - YOU_BAR_HEIGHT) / 2,
+  width: YOU_BAR_AVATAR_LARGE_PX,
+  height: YOU_BAR_AVATAR_LARGE_PX,
+};
+obj.coachmarkAnchor = size;
 let closure_24 = createStyles.createStyles(obj);
 let closure_25 = {
   code: "(function YouBarAvatarTsx1(finished){let[transitionState,TransitionStates,scheduleOnRN,cleanup]=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanup);}})",
@@ -471,24 +487,26 @@ let closure_33 = {
 let closure_34 = {
   code: "(function YouBarAvatarTsx8(){let[scheduleOnRN,setIsAvatarPressed]=this.__closure;scheduleOnRN(setIsAvatarPressed,false);})",
 };
-let size = fn(2);
+size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarAvatar.tsx");
 
 export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
   isLargeAvatar = isLargeAvatar.isLargeAvatar;
   _require = isLargeAvatar;
   const onPress = isLargeAvatar.onPress;
+  const coachmarkAnchorRef = isLargeAvatar.coachmarkAnchorRef;
   let callback1;
+  const tmp = closure_24();
   items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
-  [tmp5, c2] = noop.useState(false);
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
-  let items1 = [closure_31, require("spring/spring").withSpring, tmp5, closure_18];
+  [tmp6, c2] = noop.useState(false);
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  let items1 = [closure_31, require("spring/spring").withSpring, tmp6, closure_18];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
-  [tmp6, tmp7, tmp8, tmp9] = items1;
+  [tmp7, tmp8, tmp9, tmp10] = items1;
   class YouBarAvatarTsx5 {
     constructor() {
       num = 1;
@@ -504,10 +522,10 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
       return obj;
     }
   }
-  let items2 = [tmp7, tmp8, tmp9];
+  let items2 = [tmp8, tmp9, tmp10];
   YouBarAvatarTsx5.__closure = items2;
   YouBarAvatarTsx5.__workletHash = 4651565273867;
-  YouBarAvatarTsx5.__initData = tmp6;
+  YouBarAvatarTsx5.__initData = tmp7;
   let items3 = [onPress];
   const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(YouBarAvatarTsx5);
   const callback = noop.useCallback(() => {
@@ -625,7 +643,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
       closure_1_22(arg1 ? YouBarAvatarLarge : YouBarAvatar, { transitionState, cleanup }, arg0),
     [],
   );
-  let tmp16 = null;
+  let tmp18Result2 = null;
   if (null != stateFromStores) {
     let obj4 = { gesture: memo, children: null };
     let obj5 = {
@@ -641,23 +659,30 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     };
     const obj6 = { style: null, children: null };
     size = {
-      height: tmp(1186).AVATAR_SIZE_MAP[closure_12],
-      width: tmp(1186).AVATAR_SIZE_MAP[closure_12],
+      height: tmp2(1186).AVATAR_SIZE_MAP[closure_12],
+      width: tmp2(1186).AVATAR_SIZE_MAP[closure_12],
       position: "relative",
     };
     let items5 = [size, animatedStyle];
     obj6.style = items5;
     const obj7 = {
-      items: tmp15,
+      items: tmp16,
       getItemKey(arg0) {
         return arg0.toString();
       },
       renderItem: callback2,
     };
-    obj6.children = closure_22(tmp(4974).TransitionGroup, obj7);
-    obj5.children = closure_22(_modDef1653.View, obj6);
+    const items6 = [closure_22(tmp2(4978).TransitionGroup, obj7)];
+    let tmp18Result = null;
+    if (null != coachmarkAnchorRef) {
+      const obj8 = { ref: coachmarkAnchorRef, style: tmp.coachmarkAnchor, pointerEvents: "none", collapsable: false };
+      tmp18Result = closure_22(closure_6, obj8);
+    }
+    items6[1] = tmp18Result;
+    obj6.children = items6;
+    obj5.children = closure_23(_modDef1653.View, obj6);
     obj4.children = closure_22(closure_7, obj5);
-    tmp16 = closure_22(tmp(5173).GestureDetector, obj4);
+    tmp18Result2 = closure_22(tmp2(5177).GestureDetector, obj4);
   }
-  return tmp16;
+  return tmp18Result2;
 });

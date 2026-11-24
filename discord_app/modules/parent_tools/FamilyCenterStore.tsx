@@ -410,8 +410,8 @@ function reset() {
   c33 = null;
   c20 = false;
 }
-const getCountryCodeByAlpha2 = fn(5577).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(8336);
+const getCountryCodeByAlpha2 = fn(5581).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(8072);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: closure_6, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;

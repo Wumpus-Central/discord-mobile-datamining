@@ -1565,7 +1565,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1071).Endpoints;
-const ReadStateTypes = fn(6553).ReadStateTypes;
+const ReadStateTypes = fn(6042).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;
@@ -1636,6 +1636,13 @@ export function isConjureProjectUnavailable(c1) {
   let hasItem = set1.has(c1);
   if (hasItem) {
     hasItem = null == ConjureProjectStore.getProject(c1);
+  }
+  return hasItem;
+}
+export function isConjureProjectReadDone(arg0) {
+  let hasItem = set.has(arg0);
+  if (hasItem) {
+    hasItem = c30 !== arg0;
   }
   return hasItem;
 }

@@ -2,9 +2,9 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import keysSorter from "../../../_runtime/06570_keysSorter.js";
-import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
+import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import keysSorter from "../../../_runtime/05656_keysSorter.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 

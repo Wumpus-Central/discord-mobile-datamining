@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SafetyHubActionCreators from "../SafetyHubActionCreators.tsx";
 import AutomatedUnderageAppealModalActionCreatorsDefault from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
@@ -12,11 +12,11 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7809);
+const SafetyHubConstants = fn(7753);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_6, SafetyHubLinks: metroImportDefault } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 },
   header: { alignItems: "center" },
@@ -120,16 +120,16 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const obj8 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onClose(1112).intl;
   obj8.children = intl.string(onClose(1112).t["9SDLnj"]);
-  const items5 = [closure_8(onClose(5504).Text, obj8)];
+  const items5 = [closure_8(onClose(5508).Text, obj8)];
   const obj9 = { variant: "heading-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1112).intl;
   obj9.children = intl2.string(onClose(1112).t["yvx//1"]);
-  items5[1] = closure_8(onClose(5504).Text, obj9);
+  items5[1] = closure_8(onClose(5508).Text, obj9);
   obj7.children = items5;
   const items6 = [closure_9(callback, obj7), , ,];
   const obj10 = { children: null };
   let obj2 = onClose(504);
-  obj10.children = closure_8(onClose(7348).TableRowGroup, {
+  obj10.children = closure_8(onClose(6014).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
       ({ title, description } = item);
@@ -155,8 +155,8 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   obj14.onPress = function openForm() {
     return classificationId(number[19]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj13.children = closure_8(onClose(7045).TableRow, obj14);
-  obj12.children = closure_8(onClose(7348).TableRowGroup, obj13);
+  obj13.children = closure_8(onClose(6018).TableRow, obj14);
+  obj12.children = closure_8(onClose(6014).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
   const obj15 = { style: tmp.footer, children: null };
   const obj16 = {
@@ -169,15 +169,15 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   };
   const intl6 = onClose(1112).intl;
   obj16.text = intl6.string(onClose(1112).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5511).Button, obj16)];
+  const items7 = [closure_8(onClose(5515).Button, obj16)];
   const obj17 = { variant: "heading-xs/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1112).intl;
   obj17.children = intl7.format(onClose(1112).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
-  items7[1] = closure_8(onClose(5504).Text, obj17);
+  items7[1] = closure_8(onClose(5508).Text, obj17);
   obj15.children = items7;
   items6[3] = closure_9(callback, obj15);
   obj5.children = items6;
   obj4.children = closure_9(callback, obj5);
-  obj3.children = closure_8(onClose(5145).BottomSheetScrollView, obj4);
-  return closure_8(onClose(5141).BottomSheet, obj3);
+  obj3.children = closure_8(onClose(5149).BottomSheetScrollView, obj4);
+  return closure_8(onClose(5145).BottomSheet, obj3);
 }

@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ComponentProfiler from "../../../../profiling/ComponentProfiler.tsx";
 import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -6,10 +6,10 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import useAuthorizedAppsToken from "../../application_account_linking/hooks/useAuthorizedAppsToken.tsx";
-import useIsEligibleSenderForReferralProgram from "../../premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx";
 import usePremiumTrialOffer from "../../premium/hooks/usePremiumTrialOffer.android.tsx";
-import usePremiumDiscountOffer from "../../premium/hooks/usePremiumDiscountOffer.android.tsx";
+import hooks_usePremiumDiscountOffer from "../../premium/hooks/usePremiumDiscountOffer.android.tsx";
 import MarketingSurfaceType from "../../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
+import useIsEligibleSenderForReferralProgram from "../../premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx";
 import usePromotionMarketingSurface from "../../premium/hooks/usePromotionMarketingSurface.tsx";
 import GiftPromotionReminderExperiment2 from "../../premium/gifting/experiments/GiftPromotionReminderExperiment.tsx";
 import GiftingBadgesUtils from "../../premium/gifting/GiftingBadgesUtils.tsx";
@@ -34,7 +34,7 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx";
 
 require = fn;
-let closure_10 = fn(7522).ApplicationAccountLinkingConstants;
+let closure_10 = fn(7387).ApplicationAccountLinkingConstants;
 const PremiumConstants = fn(1388);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
@@ -92,8 +92,8 @@ export function useMainViewTooltipActionSheetMap() {
     }),
     2,
   );
-  const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
-  const tmpResult24 = usePremiumDiscountOffer;
+  const premiumDiscountOffer = hooks_usePremiumDiscountOffer.usePremiumDiscountOffer();
+  const tmpResult24 = hooks_usePremiumDiscountOffer;
   const items3 = [ApexExperimentStore];
   let stateFromStores2 = initialize.useStateFromStores(items3, () => {
     const RecurringReferralReminderExperiment =

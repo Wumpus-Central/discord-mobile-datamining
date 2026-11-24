@@ -10,7 +10,7 @@ const _modDef1653 = _mod1653;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_5 = createStyles.createStyles({
   title: { flex: 1, alignItems: "center", justifyContent: "center", minWidth: 0 },
   normal: { maxWidth: "100%" },

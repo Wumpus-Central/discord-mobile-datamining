@@ -54,8 +54,8 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
-const TypeTag = fn(4778).TypeTag;
-const LibdiscoreStore = fn(4785).LibdiscoreStore;
+const TypeTag = fn(4782).TypeTag;
+const LibdiscoreStore = fn(4789).LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -72,7 +72,7 @@ prototype["getGuildEmojis"] = function getGuildEmojis(guildId) {
   return database.getNullablePartition(guildId);
 };
 RawGuildEmojiStore.displayName = "RawGuildEmojiStore";
-const LibdiscoreBatchStoreRefactorExperiment = fn(4788).LibdiscoreBatchStoreRefactorExperiment;
+const LibdiscoreBatchStoreRefactorExperiment = fn(4792).LibdiscoreBatchStoreRefactorExperiment;
 const rawGuildEmojiStore = new RawGuildEmojiStore(
   {
     LOGOUT(arg0, clear) {
@@ -86,7 +86,7 @@ const rawGuildEmojiStore = new RawGuildEmojiStore(
     },
     CONNECTION_OPEN(arg0, getPartitionKeys) {
       ({ guilds, unavailableGuilds } = arg0);
-      const set = new Set(guilds.map((id) => id.id));
+      set = new Set(guilds.map((id) => id.id));
       for (const item10017 of unavailableGuilds) {
         let addResult = set.add(item10017);
         continue;

@@ -2,8 +2,8 @@
 import Constants from "../../../Constants.tsx";
 import StorefrontTypes from "../../storefront/StorefrontTypes.tsx";
 import usePromotionForApplicationDefault from "../../storefront/hooks/usePromotionForApplication.tsx";
-import CollectiblesPricingPromotionUtils from "../utils/CollectiblesPricingPromotionUtils.tsx";
 import CollectiblesTargetedOfferPromotionUtils from "../utils/CollectiblesTargetedOfferPromotionUtils.tsx";
+import CollectiblesPricingPromotionUtils from "../utils/CollectiblesPricingPromotionUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_3 = Constants.COLLECTIBLES_APPLICATION_ID;
@@ -25,7 +25,7 @@ export function useEligibleCollectiblesTargetedOfferPromotion() {
   }
   return tmp5;
 }
-export function useTargetedOfferPromotionForCollectiblesProduct(isFirstParty) {
+export function useTargetedOfferPromotionForCollectiblesProduct(skuId) {
   const tmp2 = usePromotionForApplicationDefault(closure_3);
   let rewardStatus;
   if (tmp2 != null) {
@@ -40,10 +40,10 @@ export function useTargetedOfferPromotionForCollectiblesProduct(isFirstParty) {
     tmp4Result = CollectiblesTargetedOfferPromotionUtils;
   }
   const collectiblesPricingPromotionForProduct =
-    CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(isFirstParty);
+    CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(skuId);
   const tmp4Result3 = CollectiblesPricingPromotionUtils;
   return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
-    isFirstParty,
+    skuId,
     tmp5,
     collectiblesPricingPromotionForProduct,
   );

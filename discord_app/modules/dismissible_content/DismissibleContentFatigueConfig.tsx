@@ -124,6 +124,7 @@ const items = [
   dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_LAUNCH_ANNOUNCEMENT,
   dismissible_content.DismissibleContent.ORB_WALLET_SHOP_CTA_CARD_MOBILE,
   dismissible_content.DismissibleContent.ORB_WALLET_NITRO_UPSELL_CTA_CARD_MOBILE,
+  dismissible_content.DismissibleContent.BUILD_A_BEAR_RELAUNCH_COACHMARK,
 ];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

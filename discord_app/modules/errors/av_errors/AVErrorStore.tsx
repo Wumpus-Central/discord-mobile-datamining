@@ -62,7 +62,7 @@ const aVErrorStore = new AVErrorStore(DispatcherDefault, {
         activeErrors = map;
       }
       const _Set = Set;
-      const set = new Set(activeErrors.keys());
+      set = new Set(activeErrors.keys());
       const _Set2 = Set;
       const set1 = new Set(activeErrors.keys());
       if (obj.areSetsEqual(set, set1)) {

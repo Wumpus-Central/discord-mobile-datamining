@@ -125,7 +125,7 @@ let closure_8 = async function _fetchDiscoverableGuilds(arg0) {
             let _Set = Set;
             let tmp31 = new.target;
             let tmp32 = new.target;
-            let set = new Set();
+            set = new Set();
             closure_2 = dependencyMap;
             closure_1 = dependencyMap[Symbol.iterator]();
             while (closure_1 !== undefined) {

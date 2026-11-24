@@ -8,11 +8,11 @@ const GIFPickerItemViewDefault = GIFPickerItemView;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
-let obj2 = { list: { marginHorizontal: -fn(11353).GIF_PICKER_GUTTER_SPACING / 2 } };
+const createStyles = fn(4917);
+let obj2 = { list: { marginHorizontal: -fn(10666).GIF_PICKER_GUTTER_SPACING / 2 } };
 let closure_6 = createStyles.createStyles(obj2);
 const obj4 = { length: 20 };
-let obj3 = { marginHorizontal: -fn(11353).GIF_PICKER_GUTTER_SPACING / 2 };
+let obj3 = { marginHorizontal: -fn(10666).GIF_PICKER_GUTTER_SPACING / 2 };
 let closure_7 = Array.from(obj4).map(() => {});
 const arr = Array.from(obj4);
 let closure_8 = Array.from(obj4).map(() => {
@@ -56,7 +56,7 @@ export default function GIFPickerResultsList(columnWidth) {
   const callback2 = noop.useCallback((changed) => {
     changed = changed.changed;
     _undefined((items) => {
-      const set = new Set(items);
+      set = new Set(items);
       const item = changed.forEach((item) => {
         const index = item.index;
         if (tmp) {

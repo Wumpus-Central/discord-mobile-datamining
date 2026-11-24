@@ -88,7 +88,7 @@ export default function useConjureClarificationLinks(arg0, arg1, arg2) {
       continue;
     }
   }, items1);
-  const set = new Set();
+  set = new Set();
   let items2 = [closure_5];
   const items3 = [memo];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(

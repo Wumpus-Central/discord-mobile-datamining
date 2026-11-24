@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/native/ConjurePlanExperiences.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon2 from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import conjurePlanExperienceSurfaces from "../conjurePlanExperienceSurfaces.tsx";
@@ -113,7 +113,7 @@ function ExperienceBlocks(arg0) {
         const obj2 = { channels: true, caption: null, children: null };
         const intl2 = util.intl;
         const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef4190.w8F5sy, obj4);
+        obj2.caption = intl2.formatToPlainString(_modDef4192.w8F5sy, obj4);
         const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
         obj5.children = channels.map((description) => {
@@ -128,7 +128,7 @@ function ExperienceBlocks(arg0) {
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
         const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef4190.MY6UGJ);
+        obj6.caption = intl3.string(_modDef4192.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -268,14 +268,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
-  frame: fn(7040).GameControllerIcon,
-  overlay_widget: fn(18273).WindowTopIcon,
-  user_widget: fn(13050).UserCircleIcon,
-  bot: fn(12179).RobotIcon,
-  commands: fn(12179).RobotIcon,
-  automod: fn(10133).ShieldIcon,
+  frame: fn(7623).GameControllerIcon,
+  overlay_widget: fn(18312).WindowTopIcon,
+  user_widget: fn(11265).UserCircleIcon,
+  bot: fn(12121).RobotIcon,
+  commands: fn(12121).RobotIcon,
+  automod: fn(9937).ShieldIcon,
 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj3 = {
   intro: { gap: nativeDefault.space.PX_8 },
   divider: null,

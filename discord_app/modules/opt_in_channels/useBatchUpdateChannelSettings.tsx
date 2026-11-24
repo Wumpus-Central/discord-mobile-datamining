@@ -43,33 +43,33 @@ export default function useBatchUpdateChannelSettings(guildId) {
         isCollapsedResult = null != channel;
       }
       if (isCollapsedResult) {
-        guildId(12000).categoryExpand(channel);
-        const obj = guildId(12000);
+        guildId(11891).categoryExpand(channel);
+        const obj = guildId(11891);
       }
       if (obj2.hasNotSetUpChannelOptIn(guildId)) {
         if (channelId === channel) {
           const obj3 = { include: null };
           const _Set2 = Set;
           items = [channelId];
-          const set = new Set(items);
+          set = new Set(items);
           obj3.include = set;
-          const result = guildId(11997).optIntoAllChannelsForExistingMember(guildId, obj3);
-          const tmp8Result = guildId(11997);
+          const result = guildId(11888).optIntoAllChannelsForExistingMember(guildId, obj3);
+          const tmp8Result = guildId(11888);
         } else {
           const obj4 = { exclude: null };
           const _Set = Set;
           const items1 = [channelId];
           const set1 = new Set(items1);
           obj4.exclude = set1;
-          const result1 = guildId(11997).optIntoAllChannelsForExistingMember(guildId, obj4);
-          const tmp8Result3 = guildId(11997);
+          const result1 = guildId(11888).optIntoAllChannelsForExistingMember(guildId, obj4);
+          const tmp8Result3 = guildId(11888);
         }
       } else {
-        const tmp8Result4 = guildId(7479);
+        const tmp8Result4 = guildId(7344);
         const obj5 = { section: constants.CHANNEL_BROWSER };
         const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
       }
-      obj2 = guildId(11997);
+      obj2 = guildId(11888);
     }, []),
   };
 }

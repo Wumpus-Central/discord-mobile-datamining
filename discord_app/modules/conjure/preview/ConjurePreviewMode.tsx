@@ -1,12 +1,12 @@
 // discord_app/modules/conjure/preview/ConjurePreviewMode.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 
 require = fn;
 const obj = {};
-obj[fn(5557).EmbeddedSurfaceType.APP_CHANNEL] = _modDef4190.xI4N6Q;
-obj[fn(5557).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef4190.oWMDh6;
-obj[fn(5557).EmbeddedSurfaceType.MAIN] = _modDef4190["0ICBnS"];
+obj[fn(5561).EmbeddedSurfaceType.APP_CHANNEL] = _modDef4192.xI4N6Q;
+obj[fn(5561).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef4192.oWMDh6;
+obj[fn(5561).EmbeddedSurfaceType.MAIN] = _modDef4192["0ICBnS"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewMode.tsx");
 

@@ -87,9 +87,9 @@ function handleAssignmentChange() {
     );
     const obj2 = json(572);
   }
-  const set = new Set(mapped.filter((item) => null != item));
+  set = new Set(mapped.filter((item) => null != item));
 }
-const NOTIF_SETTINGS = fn(15656).NOTIF_SETTINGS;
+const NOTIF_SETTINGS = fn(15677).NOTIF_SETTINGS;
 class NotifSettingsProtoManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

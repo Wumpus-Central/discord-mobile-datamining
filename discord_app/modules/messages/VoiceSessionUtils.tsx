@@ -1,7 +1,7 @@
 // discord_app/modules/messages/VoiceSessionUtils.tsx
 import useMessageAuthor from "useMessageAuthor.tsx";
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration.tsx";
 import maybeSortByProbability from "../user_affinities/maybeSortByProbability.tsx";
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import UserAffinitiesV2Store from "../user_affinities/UserAffinitiesV2Store.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";

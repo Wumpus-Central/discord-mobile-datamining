@@ -37,7 +37,7 @@ export function isUnlinkedGamePlayerPlaceholder(linkedLobby, items1) {
   return isProvisional;
 }
 export function getFirstMessagePerAuthor(unlinkedGamePlayerPlaceholders) {
-  const set = new Set();
+  set = new Set();
   items = [];
   const iter = unlinkedGamePlayerPlaceholders[Symbol.iterator]();
   const nextResult = iter.next();

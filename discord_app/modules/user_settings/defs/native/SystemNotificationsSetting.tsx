@@ -88,16 +88,16 @@ let closure_8 = async function _handleEnableSystemNotification() {
   }
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-let closure_5 = fn(6496).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13280);
+let closure_5 = fn(7739).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13207);
 ({ EventActionType: closure_6, EventActionLocation: metroImportDefault } = NotificationPermissionConstants);
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8712).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9414).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;

@@ -74,10 +74,10 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12868).useForumChannelStore;
+const useForumChannelStore = fn(12787).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_8 = createStyles.createStyles({
   authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },
   roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 },

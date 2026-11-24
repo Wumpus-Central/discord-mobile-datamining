@@ -120,13 +120,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F124898 */ function() { ... });
+                      mapped = choices.map(/* F124887 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F92794 */ function() { ... });
+                      mapped1 = options.map(/* F92236 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -434,7 +434,8 @@ export { buildCommand };
 export function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
   return applyDefault.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
-    return buildSubCommands({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions });
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
+    return buildSubCommands(obj);
   });
 }
 export function applicationPermissionsList(arr) {

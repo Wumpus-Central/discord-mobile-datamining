@@ -2,24 +2,24 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils from "../nameplates/utils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9033 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef11025 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(8080).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(6190).isAvatarDecorationRecord;
 const isNameplateRecord = fn(2110).isNameplateRecord;
-const isProfileEffectRecord = fn(8081).isProfileEffectRecord;
-const isProfileFrameRecord = fn(8082).isProfileFrameRecord;
-let closure_8 = fn(8174).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileEffectRecord = fn(6191).isProfileEffectRecord;
+const isProfileFrameRecord = fn(6192).isProfileFrameRecord;
+let closure_8 = fn(9365).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const obj = {
   tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" },
   framePreview: {
@@ -38,7 +38,7 @@ const obj = {
 };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9010).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9326).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = {
   overflow: "hidden",
   borderTopRightRadius: nativeDefault.radii.xs,
@@ -80,7 +80,7 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj7 = { style: items, children: null };
     const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj9 = { source: null, style: null, resizeMode: "cover" };
-    const obj10 = { uri: _modDef9033 };
+    const obj10 = { uri: _modDef11025 };
     obj9.source = obj10;
     obj9.style = tmp.sampleProfile;
     const items1 = [React6(FastImageDefault, obj9)];

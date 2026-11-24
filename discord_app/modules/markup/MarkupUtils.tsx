@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupUtils.tsx
-import reactParserFor2 from "native/reactParserFor.tsx";
 import MarkupReactRules from "MarkupReactRules.native.tsx";
+import reactParserFor2 from "native/reactParserFor.tsx";
 import combineMarkupRulesDefault from "combineMarkupRules.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import markup_MarkupParserAll from "../../../discord_common/js/packages/markup/MarkupParser.tsx";

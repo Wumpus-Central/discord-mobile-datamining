@@ -5,8 +5,8 @@ import native from "../../../design/void/native.tsx";
 import utils from "../nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2.tsx";
 import NameplateDummyUserPreview from "../nameplates/native/NameplateDummyUserPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -155,7 +155,7 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9010).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9326).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
@@ -183,7 +183,7 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

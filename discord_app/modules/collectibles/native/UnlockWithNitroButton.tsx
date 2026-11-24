@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import BaseTextButton from "../../../design/components/Button/native/BaseTextButton.native.tsx";
-import ProductIds from "../../premium/native/ProductIds.android.tsx";
+import premium_ProductIds from "../../premium/native/ProductIds.android.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -26,7 +26,9 @@ export function UnlockWithNitroButton(shouldShrink) {
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
-      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(ProductIds.ProductIds.GENERIC_CONSUMABLE);
+      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(
+        premium_ProductIds.ProductIds.GENERIC_CONSUMABLE,
+      );
     }
     return isPurchasingProductResult;
   });

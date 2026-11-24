@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/native/components/RevealProvider.tsx
-import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
-import HomeIndicatorDefault from "../../../voice_panel/native/HomeIndicator.tsx";
 import useIsPrivateAudioOnlyCallDefault from "../useIsPrivateAudioOnlyCall.tsx";
 import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
+import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import HomeIndicatorDefault from "../../../voice_panel/native/HomeIndicator.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
@@ -46,7 +46,7 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(10636);
+const ChannelCallStore = fn(9867);
 ({
   useChannelCallStore: closure_6,
   focusTimeout: metroImportDefault,

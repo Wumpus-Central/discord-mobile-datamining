@@ -218,7 +218,7 @@ function navigateAwayFromChannel(id, guild_id, id2) {
     tmp19 = tmp20;
   }
   if (tmp19) {
-    router_utils.replaceWith(dependencyMap3.CHANNEL(tmp4, tmp11));
+    router_utils.replaceWith(dependencyMap.CHANNEL(tmp4, tmp11));
   }
   if (flag3) {
     const Storage = Storage3.Storage;
@@ -334,11 +334,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(4766);
+const ChannelRecord = fn(4770);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1071);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(4769).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4773).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};

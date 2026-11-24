@@ -28,7 +28,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     setChannelPanelPIP: null,
     setChannelPanelWithDock: null,
   };
-  let set = new Set();
+  set = new Set();
   obj.voicePanelsWithDock = new Set();
   let set1 = new Set();
   obj.voicePanelsFullscreen = new Set();
@@ -47,7 +47,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           items = [closure_1_0, ...Array.from(channels.channels)];
           obj.channels = new Set(items);
           const items1 = [closure_1_0, ...Array.from(channels.voicePanelsOpened)];
-          const set = new Set(items);
+          set = new Set(items);
           obj.voicePanelsOpened = new Set(items1);
           return obj;
         });
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let tmp3 = channels;
         if (channels.has(channelId)) {
           const _Set = Set;
-          const set = new Set(channels);
+          set = new Set(channels);
           set.delete(channelId);
           tmp3 = set;
         }
@@ -117,7 +117,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dependencyMap = lockEnabled;
     c0(1262).batchUpdates(() => {
       c0((voicePanelsFullscreen) => {
-        const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
+        set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
         const hasItem = set.has(closure_1_0);
         if (lockEnabled) {
           if (hasItem) {
@@ -144,7 +144,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         channels = channels.channels;
         if (channels.has(closure_1_0)) {
           const _Set = Set;
-          const set = new Set(channels.voicePanelsOpened);
+          set = new Set(channels.voicePanelsOpened);
           const hasItem = set.has(closure_1_0);
           if (closure_1_1) {
             if (hasItem) {
@@ -175,7 +175,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dependencyMap = arg1;
     c0(1262).batchUpdates(() => {
       c0((voicePanelsPIP) => {
-        const set = new Set(voicePanelsPIP.voicePanelsPIP);
+        set = new Set(voicePanelsPIP.voicePanelsPIP);
         const hasItem = set.has(closure_1_0);
         if (closure_1_1) {
           if (hasItem) {
@@ -204,7 +204,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           return voicePanelsWithDock;
         } else {
           const _Set = Set;
-          const set = new Set(voicePanelsWithDock.voicePanelsWithDock);
+          set = new Set(voicePanelsWithDock.voicePanelsWithDock);
           if (tmp2) {
             set.add(closure_1_0);
           } else {

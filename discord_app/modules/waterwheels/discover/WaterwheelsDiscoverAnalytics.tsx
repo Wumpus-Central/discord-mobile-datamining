@@ -71,7 +71,19 @@ export function getDiscoverActionParameters(type, arg1) {
       intentType: "open",
       destinationType: "unknown",
       guildId: null,
+      gameId: null,
+      connectionProvider: null,
     };
+    let game_id;
+    if (type.type === WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME) {
+      game_id = type.value.game_id;
+    }
+    obj.gameId = game_id;
+    let provider;
+    if (type.type === WaterwheelsCardTypes.WaterwheelsActionType.OPEN_CONNECTION) {
+      provider = type.value.provider;
+    }
+    obj.connectionProvider = provider;
     return obj;
   }
 }
@@ -194,6 +206,8 @@ export const discoverAnalyticsTracker = {
       ux_variation: waterwheels_discover,
       session_interaction_index: sessionInteractionIndex,
       guild_id: parameters.guildId,
+      game_id: parameters.gameId,
+      connection_provider: parameters.connectionProvider,
     });
   },
   actioned(arg0) {

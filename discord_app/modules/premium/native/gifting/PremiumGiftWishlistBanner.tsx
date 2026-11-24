@@ -11,17 +11,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_7 = fn(6848).WishlistRecommendationReason;
+let closure_7 = fn(7463).WishlistRecommendationReason;
 const PremiumConstants = fn(1388);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1073).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8069).UserProfileSections;
+const UserProfileSections = fn(6011).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = {
     title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 },
@@ -130,7 +130,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
       };
       const _Array = Array;
       const _Set = Set;
-      const set = new Set(memo.map((sku) => sku.sku.productLine));
+      set = new Set(memo.map((sku) => sku.sku.productLine));
       obj2.product_lines = Array.from(set);
       AnalyticsUtilsDefault.track(constants.IMPRESSION_GIFT_OPTION_WISHLIST_BANNER_VIEWED, obj2);
       ref.current = true;

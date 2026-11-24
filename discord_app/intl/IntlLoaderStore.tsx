@@ -317,17 +317,17 @@ const identity = fn(1257);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  let obj = {
+  return {
     isLoading: false,
     inProgressLocale: "y",
-    error: "channel",
-    localeData: "right",
+    error: "channel_id",
+    localeData: "application",
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "disabled", error: "isArray" });
+        closure_0({ isLoading: false, inProgressLocale: "sa", error: "isArray" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -340,7 +340,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
-  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");

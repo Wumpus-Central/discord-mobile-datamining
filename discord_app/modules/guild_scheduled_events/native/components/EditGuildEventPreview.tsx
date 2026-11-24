@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
-import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import ScheduleUtils from "../../utils/ScheduleUtils.tsx";
+import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import guildEventDetailsParser from "../../guildEventDetailsParser.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -23,7 +23,7 @@ function PreviewBody(event) {
     () => ChannelStore.getChannel(channel_id),
     items1,
   );
-  const tmp6 = channel_id(5529)(stateFromStores);
+  const tmp6 = channel_id(5533)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -57,7 +57,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1112).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(8009)(obj7);
+    obj6.channelName = tmp5(8446)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1112).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -112,7 +112,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
     flex: 1,

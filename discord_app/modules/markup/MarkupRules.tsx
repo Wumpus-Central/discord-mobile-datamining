@@ -3,20 +3,20 @@ import util from "../../intl/index.native.tsx";
 import EnhancedRoleColorUtils from "../premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MarkupLinkRule from "MarkupLinkRule.tsx";
 import useHasEnhancedRoleColors from "../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import StaticRouteRendering from "StaticRouteRendering.tsx";
 import MarkupTextRuleDefault from "MarkupTextRule.tsx";
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
 import getSoundmojiASTFromString from "../premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx";
-import MarkupRulesUtils from "MarkupRulesUtils.tsx";
+import TimestampUtils from "TimestampUtils.tsx";
+import MarkupHeadingRuleDefault from "MarkupHeadingRule.tsx";
 import MarkupListRuleDefault from "MarkupListRule.tsx";
 import MarkupSubtextRuleDefault from "MarkupSubtextRule.tsx";
-import TimestampUtils from "TimestampUtils.tsx";
 import PlatformMarkupRulesDefault from "PlatformMarkupRules.native.tsx";
-import MarkupHeadingRuleDefault from "MarkupHeadingRule.tsx";
+import MarkupRulesUtils from "MarkupRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import _toArray from "../../../_runtime/00717__toArray.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -38,7 +38,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "channel" };
+    obj3 = { type: "link", content: null, target: null, title: "channel_id" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     items = [obj4];
     obj3.content = items;
@@ -249,8 +249,8 @@ const Constants = fn(1071);
   MARKDOWN_SPOILER_REGEXP: closure_10,
   MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11,
 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5937).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5938).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(6947).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(6948).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

@@ -8,10 +8,10 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(4780);
+const GuildRecord = fn(4784);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: closure_6 } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -160,7 +160,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: "Bouvet Island",
+    children: "rice_scene",
   };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[19]);
@@ -206,6 +206,6 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: "Bouvet Island",
+    children: "rice_scene",
   });
 });

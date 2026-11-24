@@ -5,18 +5,18 @@ import _modDef2639 from "../GameOrganizationInvitesUntranslated.messages.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import InviteButtonDefault from "../../instant_invite/native/components/InviteButton.tsx";
 import getGameOrganizationInviteSendStateKey from "../getGameOrganizationInviteSendStateKey.tsx";
 import GameOrganizationIconDefault from "GameOrganizationIcon.tsx";
-import InviteButtonDefault from "../../instant_invite/native/components/InviteButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(12084).useInstantInviteSendStates;
-const InviteSendStates = fn(8438).InviteSendStates;
+let closure_4 = fn(10352).useInstantInviteSendStates;
+const InviteSendStates = fn(5650).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);

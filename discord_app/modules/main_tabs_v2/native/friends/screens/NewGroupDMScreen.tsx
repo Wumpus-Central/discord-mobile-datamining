@@ -154,7 +154,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                                 const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                                 return obj5;
                               } else {
-                                const obj6 = v3(7737);
+                                const obj6 = v3(7714);
                                 v3 = 1;
                                 dependencyMap = 1;
                                 const obj7 = {
@@ -191,21 +191,21 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj = { value, done: true };
                               return obj;
                             } else {
-                              const tmp8 = v3(7739);
+                              const tmp8 = v3(7716);
                               const call = tmp8.call;
                               if (typeof call === "unknown") {
                                 tmp8(false, true);
                               } else {
                                 call(tmp9, false, true);
                               }
-                              v3(12206)(closure_128_3);
+                              v3(12149)(closure_128_3);
                               dependencyMap = 3;
                               tmp9 = closure_128_3;
                             }
                             closure_128_3 = value;
                             v3 = 3;
                             dependencyMap = 1;
-                            const obj10 = { value: id(6494).monkeyPatchCall(), done: false };
+                            const obj10 = { value: id(8308).monkeyPatchCall(), done: false };
                             return obj10;
                           }
                         } catch (tmp26) {
@@ -291,7 +291,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const UserRowModes = fn(9646).UserRowModes;
+const UserRowModes = fn(8803).UserRowModes;
 const Constants = fn(1071);
 ({
   InstantInviteSources: map1,
@@ -301,7 +301,7 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE },
   container: { height: "100%", display: "flex" },
@@ -380,7 +380,7 @@ export default function NewGroupDMScreen(navigation) {
   const tmp22 = require("getGroupDMRecipientLimit")({ useNitroCapExperiment: true });
   const maxMemberLimit = tmp22;
   closure_19 = tmp23;
-  const set = new Set(items3);
+  set = new Set(items3);
   const config = require("GroupDMNitroCapExperiment").useConfig({ location: "NewGroupDMScreen" });
   let obj5 = require("GroupDMNitroCapExperiment");
   let result = require("GroupDMNitroUpsellModel").shouldUseGroupDMParticipantLimitUI(config.enabled, tmp22);

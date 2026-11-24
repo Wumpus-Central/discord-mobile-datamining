@@ -83,8 +83,8 @@ export function useAgeVerificationMethodsV2() {
             tmp75(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(7808).isCurrentUserSuspended();
-            const obj7 = closure_0(7840);
+            const result = closure_0(7752).isCurrentUserSuspended();
+            const obj7 = closure_0(7784);
             if (result) {
               c5 = 4;
               c6 = 1;
@@ -96,7 +96,7 @@ export function useAgeVerificationMethodsV2() {
               const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
               return obj9;
             }
-            const obj6 = closure_0(7808);
+            const obj6 = closure_0(7752);
           }
         } else if (1 === tmp9) {
           v0 = 0;

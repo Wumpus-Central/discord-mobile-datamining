@@ -12,15 +12,15 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../../actions/UserSettingsActionCreators.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import Card from "../../../../../design/components/Card/native/Card.native.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import useDesignToggleDefault from "../../../../devtools/design_toggles/useDesignToggle.tsx";
 import TableRadioGroup from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import _modDef7465 from "../../../../../../_runtime/metro/07465__.js";
+import _modDef7318 from "../../../../../../_runtime/metro/07318__.js";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import getChannelA11yLabel from "../../../../channel/getChannelA11yLabel.tsx";
 import userSettingToActivity from "../../../../custom_status/utils/userSettingToActivity.tsx";
@@ -48,9 +48,9 @@ import DeveloperExperimentStore from "../../../../../stores/DeveloperExperimentS
 import StreamerModeStore from "../../../../../stores/StreamerModeStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const TableRowGroup = currentLocale(7348);
-const TableSwitchRow = currentLocale(7556);
-const BellSlashIcon = currentLocale(10364);
+const TableRowGroup = currentLocale(6014);
+const TableSwitchRow = currentLocale(7423);
+const BellSlashIcon = currentLocale(11351);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
@@ -65,30 +65,30 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(7057).TableRowIcon, { source: closure_1(15406), variant: "text-status-online" }),
+      icon: closure_1_19(setting(6029).TableRowIcon, { source: closure_1(15427), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
     items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(15406), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(7057).TableRowIcon, { source: closure_1(15403), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(15427), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(6029).TableRowIcon, { source: closure_1(15424), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(15403), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(7057).TableRowIcon, { source: closure_1(15404), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(15424), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(6029).TableRowIcon, { source: closure_1(15425), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(15404), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(7057).TableRowIcon, { source: closure_1(15405), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(15425), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(6029).TableRowIcon, { source: closure_1(15426), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
   }, []);
-  const StatusSetting = setting(4738).StatusSetting;
+  const StatusSetting = setting(4742).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(4738).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(4742).StatusExpiresAtSetting;
   closure_1 = StatusExpiresAtSetting.useSetting();
   items = [setting];
   const callback = noop.useCallback((nextStatus) => {
@@ -132,7 +132,7 @@ function YouStatusRadioGroup() {
   };
   const items1 = [
     closure_19(AccountSectionHeading, { children: stringResult }),
-    closure_19(setting(7347).TableRadioGroup, {
+    closure_19(setting(7125).TableRadioGroup, {
       accessibilityLabel: stringResult,
       onChange: callback,
       defaultValue: setting,
@@ -204,18 +204,18 @@ function ThemeRadioGroup() {
   obj10.value = constants3.ONYX;
   items2[3] = closure_1_19(TableRadioRow.TableRadioRow, obj10);
   obj3.children = items2;
-  items1[1] = dependencyMap(TableRadioGroup.TableRadioGroup, obj3);
+  items1[1] = set(TableRadioGroup.TableRadioGroup, obj3);
   obj2.children = items1;
-  return dependencyMap(View, obj2);
+  return set(View, obj2);
 }
 function YouAccountRadioGroup() {
   const tmp = closure_21();
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(17456).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(17494).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(17456);
+  let obj2 = stateFromStores(17494);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -240,7 +240,7 @@ function YouAccountRadioGroup() {
           str2 = "never";
         }
         const obj3 = {
-          label: multiAccountUsers(4969).getUserTag(obj, { mode: "username", identifiable: str2 }),
+          label: multiAccountUsers(4973).getUserTag(obj, { mode: "username", identifiable: str2 }),
           value: id.id,
           subLabel: combined,
           icon: null,
@@ -266,15 +266,15 @@ function YouAccountRadioGroup() {
     let obj5 = { style: tmp.manage, children: null };
     const obj6 = {
       onPress() {
-        return multiAccountUsers(17956)();
+        return multiAccountUsers(17995)();
       },
       children: null,
     };
     const obj7 = { variant: "body-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp2(1112).intl;
     obj7.children = intl2.string(tmp2(1112).t.HxrBOZ);
-    obj6.children = closure_19(tmp2(5504).Text, obj7);
-    obj5.children = closure_19(tmp2(7030).PressableOpacity, obj6);
+    obj6.children = closure_19(tmp2(5508).Text, obj7);
+    obj5.children = closure_19(tmp2(6026).PressableOpacity, obj6);
     const items4 = [closure_19(View, obj5), ,];
     const obj8 = { children: stringResult };
     items4[1] = closure_19(AccountSectionHeading, obj8);
@@ -285,10 +285,10 @@ function YouAccountRadioGroup() {
       hasIcons: true,
       children: memo.map((value) => {
         const merged = Object.assign(value);
-        return closure_1_19(stateFromStores(7349).TableRadioRow, {}, value.value);
+        return closure_1_19(stateFromStores(7127).TableRadioRow, {}, value.value);
       }),
     };
-    items4[2] = closure_19(tmp2(7347).TableRadioGroup, obj9);
+    items4[2] = closure_19(tmp2(7125).TableRadioGroup, obj9);
     obj4.children = items4;
     return closure_20(View, obj4);
   }
@@ -323,11 +323,11 @@ function FocusModeSetting() {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
-            closure_1_0(11109).setFocusMode(quiet_mode_enabled, arg1);
-            const obj = closure_1_0(11109);
-            closure_1_1(5127).hideActionSheet();
-            const obj2 = closure_1_1(5127);
-            const result = closure_1_0(17951).showYouAccountActionSheet();
+            closure_1_0(10473).setFocusMode(quiet_mode_enabled, arg1);
+            const obj = closure_1_0(10473);
+            closure_1_1(5131).hideActionSheet();
+            const obj2 = closure_1_1(5131);
+            const result = closure_1_0(17990).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
@@ -482,7 +482,7 @@ function CustomStatus() {
   obj10.children = gameMentionsAsPlainText;
   items[1] = closure_1_19(Text_Text.Text, obj10);
   obj5.children = items;
-  const items1 = [dependencyMap(Pressables.PressableOpacity, obj5)];
+  const items1 = [set(Pressables.PressableOpacity, obj5)];
   let tmp21Result2 = null;
   if (null != customStatusActivity) {
     const obj11 = {
@@ -498,7 +498,7 @@ function CustomStatus() {
     const intl4 = util.intl;
     obj11.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj11.style = tmp.customStatusRemoveButton;
-    const obj12 = { style: tmp.trailingIcon, source: _modDef7465 };
+    const obj12 = { style: tmp.trailingIcon, source: _modDef7318 };
     obj11.children = closure_1_19(FastImageDefault, obj12);
     tmp21Result2 = closure_1_19(Pressables.PressableOpacity, obj11);
     const tmp18Result = FastImageDefault;
@@ -506,17 +506,17 @@ function CustomStatus() {
   const tmp2Result4 = useToken;
   items1[1] = tmp21Result2;
   obj4.children = items1;
-  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
+  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: set(Card.Card, obj4) });
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13283).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(13210).MultiAccountTokenStatus;
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
-let closure_18 = fn(13284).MultiAccountSwitchLocation;
+let closure_18 = fn(13211).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   account: { position: "relative" },
   manage: { position: "absolute", right: 0, zIndex: 100 },
@@ -643,9 +643,9 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
       closure_1_19(DevToolsContentDefault, { embedded: true }),
     ];
     obj4.children = items3;
-    tmp9Result = dependencyMap(View, obj4);
+    tmp9Result = set(View, obj4);
   }
   items2[6] = tmp9Result;
-  obj3.children = dependencyMap(Stack_Stack.Stack, { spacing: 24, children: items2 });
+  obj3.children = set(Stack_Stack.Stack, { spacing: 24, children: items2 });
   return closure_1_19(ActionSheet.ActionSheet, obj3);
 });

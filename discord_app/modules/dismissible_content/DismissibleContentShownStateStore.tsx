@@ -348,7 +348,7 @@ let closure_12 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
   obj.currentlyShown = new Set();
-  const set = new Set();
+  set = new Set();
   obj.currentlyShownGroup = new Set();
   return obj;
 });
@@ -471,7 +471,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
                 obj.candidates = new Map(candidates.candidates);
                 const map = new Map(candidates.candidates);
                 obj.currentlyShown = new Set(candidates.currentlyShown);
-                const set = new Set(candidates.currentlyShown);
+                set = new Set(candidates.currentlyShown);
                 obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
                 const tmp5 = (function nextFatigableContent(prevFatigableCandidate, candidates) {
                   const found = candidates.filter((content) => {
@@ -571,7 +571,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4757).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4761).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -602,7 +602,7 @@ const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
         obj.currentlyShown = new Set();
-        const set = new Set();
+        set = new Set();
         obj.currentlyShownGroup = new Set();
         obj.postConnectionOpen = true;
         return obj;
@@ -619,7 +619,7 @@ const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
         obj.currentlyShown = new Set();
-        const set = new Set();
+        set = new Set();
         obj.currentlyShownGroup = new Set();
         obj.postConnectionOpen = true;
         return obj;
@@ -652,9 +652,9 @@ export function isStateInCooldown(shownFatigableCandidate) {
 }
 export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4750).bypassesFatigue(content.content);
+  closure_1 = closure_0(4754).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4750);
+  let obj = closure_0(4754);
   closure_0(1262).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
@@ -662,7 +662,7 @@ export function addCandidateContent(content) {
       obj.candidates = new Map(candidates.candidates);
       const map = new Map(candidates.candidates);
       obj.currentlyShown = new Set(candidates.currentlyShown);
-      const set = new Set(candidates.currentlyShown);
+      set = new Set(candidates.currentlyShown);
       obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
       if (closure_2_13) {
         return obj;
@@ -697,7 +697,7 @@ export function removeCandidateContent(arg0, arg1) {
       obj.candidates = new Map(candidates.candidates);
       const map = new Map(candidates.candidates);
       obj.currentlyShown = new Set(candidates.currentlyShown);
-      const set = new Set(candidates.currentlyShown);
+      set = new Set(candidates.currentlyShown);
       obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
       const shownFatigableCandidate = obj.shownFatigableCandidate;
       content = undefined;
@@ -824,7 +824,7 @@ export function reset() {
       const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       const map = new Map();
       obj.currentlyShown = new Set();
-      const set = new Set();
+      set = new Set();
       obj.currentlyShownGroup = new Set();
       obj.postConnectionOpen = true;
       return obj;
@@ -843,7 +843,7 @@ export function resetFatigueCooldown() {
       obj.candidates = new Map(candidates.candidates);
       const map = new Map(candidates.candidates);
       obj.currentlyShown = new Set(candidates.currentlyShown);
-      const set = new Set(candidates.currentlyShown);
+      set = new Set(candidates.currentlyShown);
       obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
       obj.prevFatigableCandidate = null;
       obj.lastWinnerTime = 0;

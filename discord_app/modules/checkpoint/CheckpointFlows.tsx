@@ -18,9 +18,9 @@ function getAdjacentCheckpointRoute(arg0) {
     isCharacterCreatorEnabled = true;
   }
   if (flow === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp2(12131).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp2(12410).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp2(12132).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp2(12411).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {

@@ -96,12 +96,17 @@ let closure_15 = async function _collectAgeSignal() {
 };
 let closure_16 = async function _performAgeCheck(arg0) {
   closure_2 = tmp3;
-  closure_129_0 = closure_0;
+  closure_1 = tmp5;
+  let tmp49 = closure_0;
+  if (obj21.getIsAppStoreConsentReinstateEndpointEnabled("appStoreAgeSignalReport", false)) {
+    tmp49 = null;
+  }
+  closure_129_0 = tmp49;
   const result = require("AppStoreAgeSignalAttestation").warmAgeSignalAttestation();
   items = [collectAgeSignal()];
   items[1] = require("AppStoreAgeSignalAttestation").getAgeSignalChallenge();
   await Promise.all(items);
-  if (1 === tmp7) {
+  if (1 === tmp8) {
     c4 = 0;
     closure_129_7 = closure_3;
     closure_130_1(closure_130_2[7]).captureException(closure_129_7, {
@@ -109,7 +114,7 @@ let closure_16 = async function _performAgeCheck(arg0) {
     });
     c6 = 3;
     closure_130_1(closure_130_2[7]);
-  } else if (2 === tmp7) {
+  } else if (2 === tmp8) {
     if (arg0 === 1) {
       c6 = 3;
       throw value;
@@ -125,11 +130,11 @@ let closure_16 = async function _performAgeCheck(arg0) {
       c5 = 3;
       c6 = 1;
       return {
-        value: closure_130_0(closure_130_2[9]).getAgeSignalIntegrityToken(closure_129_4, closure_129_3),
+        value: closure_130_0(closure_130_2[10]).getAgeSignalIntegrityToken(closure_129_4, closure_129_3),
         done: false,
       };
     }
-  } else if (3 === tmp7) {
+  } else if (3 === tmp8) {
     if (arg0 === 1) {
       c6 = 3;
       throw value;
@@ -142,11 +147,11 @@ let closure_16 = async function _performAgeCheck(arg0) {
       c5 = 4;
       c6 = 1;
       return {
-        value: closure_130_0(closure_130_2[9]).getAppStoreAgeSignalAssertion(closure_129_3, closure_129_0),
+        value: closure_130_0(closure_130_2[10]).getAppStoreAgeSignalAssertion(closure_129_3, closure_129_0),
         done: false,
       };
     }
-  } else if (4 === tmp7) {
+  } else if (4 === tmp8) {
     if (arg0 === 1) {
       c6 = 3;
       throw value;
@@ -158,9 +163,9 @@ let closure_16 = async function _performAgeCheck(arg0) {
       closure_129_6 = value;
       c5 = 5;
       c6 = 1;
-      closure_130_0(closure_130_2[10]);
+      closure_130_0(closure_130_2[11]);
       return {
-        value: closure_130_0(closure_130_2[10]).submitAgeSignal(
+        value: closure_130_0(closure_130_2[11]).submitAgeSignal(
           closure_129_3,
           closure_129_5,
           closure_129_0,
@@ -174,12 +179,12 @@ let closure_16 = async function _performAgeCheck(arg0) {
     c6 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    const obj17 = { platform: null };
-    obj17.platform = closure_130_0(closure_130_2[8]).getNativePlatform();
-    closure_130_1(closure_130_2[11]).track(closure_130_7.PARENTAL_CONSENT_CHECKED, obj17);
+    const obj19 = { platform: null };
+    obj19.platform = closure_130_0(closure_130_2[8]).getNativePlatform();
+    closure_130_1(closure_130_2[12]).track(closure_130_7.PARENTAL_CONSENT_CHECKED, obj19);
     c4 = 0;
     closure_130_0(closure_130_2[8]);
-    closure_130_1(closure_130_2[11]);
+    closure_130_1(closure_130_2[12]);
   }
   return value;
 };
@@ -188,8 +193,8 @@ function startAgeSignalReport(isColdLaunch, connection) {
   if (tmp) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp2(5575).shouldCollectAppStoreSignal();
-      const tmp2Result = tmp2(5575);
+      result = tmp2(5579).shouldCollectAppStoreSignal();
+      const tmp2Result = tmp2(5579);
     }
     tmp = result;
     const obj = require("AppStoreAgeSignalSupport");

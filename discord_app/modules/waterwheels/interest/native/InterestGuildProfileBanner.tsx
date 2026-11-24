@@ -3,8 +3,8 @@ import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import VideoBackground from "../../../calls/native/VideoBackground.tsx";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
+import VideoBackground from "../../../calls/native/VideoBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
@@ -26,7 +26,7 @@ function InterestGuildProfileSolidBanner(profile) {
 const View = fn(17).View;
 const GuildFeatures = fn(1071).GuildFeatures;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_7 = createStyles.createStyles({ banner: { height: 140, width: "100%" }, image: { resizeMode: "cover" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildProfileBanner.tsx");

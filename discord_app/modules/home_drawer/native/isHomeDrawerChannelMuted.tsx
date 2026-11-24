@@ -4,7 +4,7 @@ import JoinedThreadsStore from "../../threads/JoinedThreadsStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const isThread = fn(4766).isThread;
+const isThread = fn(4770).isThread;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/html_parser/HTMLParserLinkUtils.tsx
-import MarkupLinkRule2 from "../markup/MarkupLinkRule.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
+import MarkupLinkRule2 from "../markup/MarkupLinkRule.tsx";
 import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import t from "../../../_runtime/metro/02068__.js";
@@ -398,7 +398,7 @@ function validateSplitURLs(items) {
   }
 }
 let closure_3 = ["rawURL"];
-const HTMLParserConstants = fn(9841);
+const HTMLParserConstants = fn(9810);
 ({
   ALLOWED_MAILTO_HEADERS: hasOwnProperty,
   BIDI_CONTROL_CHARACTERS: closure_6,
@@ -657,7 +657,7 @@ export function addTextLinks(items1) {
           });
         });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         const item = mapped.forEach((item, index) => {
           const iter = item[Symbol.iterator]();
           while (iter !== undefined) {
@@ -809,7 +809,7 @@ export function addTextLinks(items1) {
           });
         });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         const item = mapped.forEach((item, index) => {
           const iter = item[Symbol.iterator]();
           while (iter !== undefined) {

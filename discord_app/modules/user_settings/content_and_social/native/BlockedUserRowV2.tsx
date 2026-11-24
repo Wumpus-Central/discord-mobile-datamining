@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx
-import RelationshipActionCreatorsDefault from "../../../../actions/RelationshipActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
+import RelationshipActionCreatorsDefault from "../../../../actions/RelationshipActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -8,7 +8,7 @@ const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7520)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6253)().analyticsLocations;
   const intl = userRecord(1112).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -40,7 +40,7 @@ function BlockedUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16105).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16138).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -61,14 +61,14 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5511).Button, {
+  obj.trailing = jsx(userRecord(5515).Button, {
     size: "sm",
     variant: "secondary",
     text: null,
     accessibilityLabel: null,
     onPress: null,
   });
-  return jsx(userRecord(7045).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  return jsx(userRecord(6018).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

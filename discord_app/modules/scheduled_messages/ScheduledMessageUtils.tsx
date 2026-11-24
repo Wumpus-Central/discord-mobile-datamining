@@ -20,7 +20,7 @@ require = fn;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, MessageFlags: metroImportDefault, Permissions: closure_8 } = Constants);
 const PremiumTypes = fn(1388).PremiumTypes;
-const ScheduledMessagesConstants = fn(8541);
+const ScheduledMessagesConstants = fn(9455);
 ({
   MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_10,
   MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11,

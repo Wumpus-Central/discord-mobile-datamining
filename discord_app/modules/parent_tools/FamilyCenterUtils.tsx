@@ -6,7 +6,7 @@ import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators.tsx";
 import FamilyCenterStore from "FamilyCenterStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(8336);
+const FamilyCenterConstants = fn(8072);
 ({
   ACTION_TO_TEXT: closure_4,
   FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty,
@@ -120,8 +120,8 @@ export function isPurchase(action) {
 export function isGift(action) {
   return action.display_type === constants2.GIFTS;
 }
-export function getFailureCodeForAPIError(arg0) {
-  let GENERIC_ERROR = hasOwnProperty[arg0.code];
+export function getFailureCodeForAPIError(code) {
+  let GENERIC_ERROR = hasOwnProperty[code.code];
   if (GENERIC_ERROR == null) {
     GENERIC_ERROR = constants.GENERIC_ERROR;
   }

@@ -165,7 +165,7 @@ function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   const tmp = closure_14();
-  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10640).useIsConnectedToVoiceChannel(channel);
+  isConnectedToVoiceChannel = isConnectedToVoiceChannel(9871).useIsConnectedToVoiceChannel(channel);
   const id = noop.useId();
   items = [isConnectedToVoiceChannel, id];
   const effect = noop.useEffect(() => {
@@ -176,14 +176,14 @@ function MainCallScreen(channel) {
       const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
     };
   }, items);
-  let obj = isConnectedToVoiceChannel(10640);
-  const isChannelContentGated = isConnectedToVoiceChannel(6419).useIsChannelContentGated(channel);
+  let obj = isConnectedToVoiceChannel(9871);
+  const isChannelContentGated = isConnectedToVoiceChannel(6707).useIsChannelContentGated(channel);
   const effect1 = noop.useEffect(() => {
     function dismissOAuthModal() {
       if (c0) {
-        id(6429).popWithKey(closure_2_11);
+        id(6004).popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(6429);
+        const obj = id(6004);
       }
     }
     function showOAuth2Modal() {
@@ -260,19 +260,19 @@ function MainCallScreen(channel) {
       const ComponentDispatch = isConnectedToVoiceChannel(1107).ComponentDispatch;
       ComponentDispatch.unsubscribe(ComponentActions.SHOW_OAUTH2_MODAL, showOAuth2Modal);
       if (c0) {
-        id(6429).popWithKey(closure_2_11);
+        id(6004).popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(6429);
+        const obj = id(6004);
       }
     };
   }, []);
-  isConnectedToVoiceChannel(10926);
+  isConnectedToVoiceChannel(10203);
   if (isChannelContentGated) {
-    let obj3 = { onReturnToSafety: id(6429).pop, guildId: null, channelId: null };
+    let obj3 = { onReturnToSafety: id(6004).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(11745), obj3);
+    let tmp14Result2 = closure_12(id(11630), obj3);
     let tmp11 = closure_12;
-    const tmp20 = id(11745);
+    const tmp20 = id(11630);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -285,31 +285,31 @@ function MainCallScreen(channel) {
     let tmp14Result = null;
     if (channel.isGuildStageVoice()) {
       let obj7 = { channel };
-      tmp14Result = closure_12(id(10841), obj7);
+      tmp14Result = closure_12(id(10117), obj7);
     }
     obj5.children = tmp14Result;
     tmp14Result2 = closure_12(closure_6, obj5);
     tmp11 = closure_12;
   }
-  let obj2 = isConnectedToVoiceChannel(6419);
-  const tmp21 = id(5085)();
-  const tmp22 = id(10857);
+  let obj2 = isConnectedToVoiceChannel(6707);
+  const tmp21 = id(5089)();
+  const tmp22 = id(10132);
   const tmp2Result = isConnectedToVoiceChannel(1378);
   const tmp23 = isConnectedToVoiceChannel(1378).isAndroid() || !isConnectedToVoiceChannel;
   return tmp11(tmp22, {
     forceHide: isConnectedToVoiceChannel(1378).isAndroid() || !isConnectedToVoiceChannel,
     showWhenParticipantOnScreen: !isConnectedToVoiceChannel,
-    children: tmp11(isConnectedToVoiceChannel(4974).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }),
+    children: tmp11(isConnectedToVoiceChannel(4978).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }),
   });
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
-const ChannelCallScreens = fn(10637).ChannelCallScreens;
+const ChannelCallScreens = fn(9868).ChannelCallScreens;
 const ComponentActions = fn(1071).ComponentActions;
-let closure_11 = fn(10696).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_11 = fn(9971).OAUTH2_AUTHORIZE_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   flex: { flex: 1, alignSelf: "stretch" },
   textInVoiceContainer: null,
@@ -365,6 +365,6 @@ export default function ChannelCallNavigator(channel) {
     },
     initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN,
   };
-  obj.children = closure_12(channel(7092).Navigator, obj2);
+  obj.children = closure_12(channel(7229).Navigator, obj2);
   return closure_12(GuildThemeGuildIdOverrideContextDefault.Provider, obj);
 }

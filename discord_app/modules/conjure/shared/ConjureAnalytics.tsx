@@ -90,7 +90,7 @@ function conjureLocation(project_id, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const isProjectOwner = fn(6621).isProjectOwner;
+const isProjectOwner = fn(6808).isProjectOwner;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");

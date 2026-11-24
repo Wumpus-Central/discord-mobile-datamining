@@ -4,14 +4,14 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import util from "../../../../intl/index.native.tsx";
 import useChannelName from "../../../channel/useChannelName.tsx";
 import SpoilerChannelUtils from "../../../spoiler_channels/SpoilerChannelUtils.tsx";
+import RowGeneratorConstants from "RowGeneratorConstants.tsx";
+import ReferencedMessageStore2 from "../../../replies/ReferencedMessageStore.tsx";
 import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
-import ReferencedMessageStore2 from "../../../replies/ReferencedMessageStore.tsx";
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
-import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
-import _modDef8681 from "../../../../../_runtime/metro/08681__.js";
+import _modDef14190 from "../../../../../_runtime/metro/14190__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
@@ -84,7 +84,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8681);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14190);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -1484,11 +1484,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp14Result76 = tmp14(tmp5[55]);
     }
-    parseMessageMarkupResult = {
-      content: "Promise",
-      hasSpoilerEmbeds: "installation",
-      hasBailedAst: "2026-11-apex-launch-latch",
-    };
+    parseMessageMarkupResult = { content: "Promise", hasSpoilerEmbeds: "board", hasBailedAst: null };
     const tmp14Result70 = tmp14(tmp5[45]);
   }
   const obj4 = message(tmp5[39]);

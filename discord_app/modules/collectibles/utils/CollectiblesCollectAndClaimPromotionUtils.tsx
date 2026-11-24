@@ -16,7 +16,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
     if (flatMapResult == null) {
       flatMapResult = [];
     }
-    const set = new Set(flatMapResult);
+    set = new Set(flatMapResult);
     if (tmpResult.isBundleProduct(bundledProducts)) {
       bundledProducts = bundledProducts.bundledProducts;
       if (bundledProducts == null) {
@@ -51,7 +51,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
   }
   obj = require("CollectiblesUtils");
 }
-let closure_3 = fn(8927).getCollectiblesCollectAndClaim;
+let closure_3 = fn(10982).getCollectiblesCollectAndClaim;
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesCollectAndClaimPromotionUtils.tsx");
@@ -77,7 +77,7 @@ export function getBundleChildSkuIds(bundledProducts) {
       bundledProducts = bundledProducts.items;
     }
     const _Set = Set;
-    const set = new Set(bundledProducts.map((skuId) => skuId.skuId));
+    set = new Set(bundledProducts.map((skuId) => skuId.skuId));
     items = [];
     HermesBuiltin.arraySpread(set, 0);
     return items;

@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/hooks/useAddableWidgets.tsx
-import ApplicationWidgetConfigSurface from "../../../../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx";
 import ApplicationWidgetConfigActions from "../../application_widget/ApplicationWidgetConfigActions.tsx";
+import ApplicationWidgetConfigSurface from "../../../../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationWidgetConfigStore from "../../application_widget/ApplicationWidgetConfigStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -18,7 +18,7 @@ function hasAddableApplicationWidgetSurfaces(arg0) {
   }
   return tmp3;
 }
-const WIDGET_SORT_ORDER = fn(6959).WIDGET_SORT_ORDER;
+const WIDGET_SORT_ORDER = fn(6046).WIDGET_SORT_ORDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useAddableWidgets.tsx");
 
@@ -68,11 +68,11 @@ export default function useAddableWidgets() {
   }, items4);
   const items5 = [setting, stateFromStores1, stateFromStores2, stateFromStores3, tmp6Result, tmp13];
   return stateFromStores2.useMemo(() => {
-    let found = set1.filter((item) => item instanceof set(6961).ApplicationWidget);
-    let set = new Set(found.map((applicationId) => applicationId.applicationId));
+    let found = set1.filter((item) => item instanceof set(6048).ApplicationWidget);
+    set = new Set(found.map((applicationId) => applicationId.applicationId));
     set1 = new Set(set1.map((type) => type.type));
     let found1 = WIDGET_SORT_ORDER.filter((item) => {
-      const ADDABLE_WIDGET_TYPES = set(14558).ADDABLE_WIDGET_TYPES;
+      const ADDABLE_WIDGET_TYPES = set(14826).ADDABLE_WIDGET_TYPES;
       return ADDABLE_WIDGET_TYPES.has(item);
     });
     return found1.flatMap((type) => {

@@ -1,8 +1,8 @@
 // discord_app/modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import SoundboardActionCreators from "../SoundboardActionCreators.tsx";
 import SoundboardUtils from "../SoundboardUtils.tsx";
+import SoundboardActionCreators from "../SoundboardActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -15,7 +15,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   soundPresentation: {
     borderWidth: 2,
@@ -38,7 +38,7 @@ let obj3 = {
   borderRadius: nativeDefault.radii.lg,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
+obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
@@ -48,7 +48,7 @@ if (PlatformUtils.isIOS()) {
   num = 60;
 }
 obj2.emojiText = { fontSize: num, lineHeight: 74 };
-let obj4 = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
+let obj4 = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.text = { marginTop: nativeDefault.space.PX_16, alignSelf: "center" };
 let obj5 = { marginTop: nativeDefault.space.PX_16, alignSelf: "center" };
 obj2.buttonContainer = { gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_24 };

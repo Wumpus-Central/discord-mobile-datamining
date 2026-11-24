@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef7135 from "../../../../../../_runtime/metro/07135__.js";
+import _modDef7105 from "../../../../../../_runtime/metro/07105__.js";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
-import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
-import _modDef9033 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import ProfileFrameDefault from "../ProfileFrame.tsx";
+import _modDef11025 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,10 +15,10 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7564).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7431).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   profileFrameContainer: { flex: 1 },
   profileContainer: {
@@ -28,7 +28,7 @@ let obj2 = {
     borderColor: nativeDefault.colors.BORDER_NORMAL,
     borderRadius: nativeDefault.radii.xs,
   },
-  sampleProfile: { width: "100%", aspectRatio: fn(9010).SAMPLE_PROFILE_ASPECT_RATIO },
+  sampleProfile: { width: "100%", aspectRatio: fn(9326).SAMPLE_PROFILE_ASPECT_RATIO },
 };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -239,8 +239,8 @@ export default function ProfileFrameSamplePreview(previewWidth) {
       backgroundColor: "black",
     },
   };
-  tmp13 = _modDef7135;
-  obj18.uri = _modDef9033;
+  tmp13 = _modDef7105;
+  obj18.uri = _modDef11025;
   obj17.source = obj18;
   obj17.style = tmp.sampleProfile;
   obj16.children = timestampProducer(FastImageDefault, obj17);

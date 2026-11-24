@@ -84,7 +84,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
                       c3 = 1;
                       ref = 2;
                       v3 = 1;
-                      const obj6 = { value: memo2(9210).loadInAppSkus(differenceResult), done: false };
+                      const obj6 = { value: memo2(9090).loadInAppSkus(differenceResult), done: false };
                       return obj6;
                     }
                   }
@@ -156,8 +156,8 @@ function useLoadedGoogleSkuIds(memo1) {
   ];
   const effect = noop.useEffect(() => {
     c0 = true;
-    const obj = memo1(9210);
-    ({ settled, release: first } = memo1(9210).retainInAppSkus(c0));
+    const obj = memo1(9090);
+    ({ settled, release: first } = memo1(9090).retainInAppSkus(c0));
     settled.then(() => {
       if (c0) {
         closure_2((arg0) => {

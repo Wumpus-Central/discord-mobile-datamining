@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/SearchableUserListActions.tsx
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting(
 export function useUserListActionsProps(actions) {
   actions = actions.actions;
   const style = actions.style;
-  const tmp = style(9655)();
+  const tmp = style(11208)();
   dependencyMap = tmp;
   items = [actions, tmp, style];
   return noop.useMemo(() => {

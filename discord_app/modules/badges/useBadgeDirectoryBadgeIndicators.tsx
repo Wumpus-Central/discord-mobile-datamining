@@ -8,7 +8,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/useBadgeDirectoryBadgeIndicators.tsx");
 
-export const NEW_INDICATOR_BADGE_IDS = fn(13990).BETA_BADGE_IDS;
+export const NEW_INDICATOR_BADGE_IDS = fn(9729).BETA_BADGE_IDS;
 export function isNewIndicatorBadgeId(badgeId) {
   const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;
   return BETA_BADGE_IDS.has(badgeId);

@@ -21,7 +21,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(11750);
+const VoicePanelConstants = fn(11635);
 ({ VoicePanelCardItemType: closure_12, VoicePanelCTACard: map1 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1071).RTCConnectionStates;
 let closure_15 = [];
@@ -181,7 +181,7 @@ export function useChunkedParticipants(channelId, arg1) {
         items = [];
         if (VoiceStateStore.isInChannel(closure_0, id)) {
           const _Set = Set;
-          const set = new Set(
+          set = new Set(
             (() => {
               let end;
               items = [];

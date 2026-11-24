@@ -5,7 +5,7 @@ import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
@@ -39,7 +39,7 @@ const _modDef1653 = _mod1653;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11750);
+const VoicePanelConstants = fn(11635);
 ({
   UI_SHOW_HIDE_PHYSICS: metroImportDefault,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -47,16 +47,16 @@ const VoicePanelConstants = fn(11750);
   PANEL_CONTROLS_HEIGHT_PHYSICS: closure_10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11753);
+const VoicePanelCardConstants = fn(11638);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11748);
+const VoicePanelControlsConstants = fn(11633);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1071);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -177,7 +177,7 @@ let closure_37 = noop.memo(function FloatingBars(controlsSpecs) {
     renderItem: VoicePanelConsoleStatus.renderVoicePanelConsoleStatus,
   });
   obj3.children = items2;
-  return dependencyMap(closure_1_19, obj3);
+  return set(closure_1_19, obj3);
 });
 let closure_38 = {
   code: "(function VoicePanelControlsTsx12(){let[controlsSpecs,connected,sharedTab,wrapperSpecs,TRANSITIONAL_HEIGHT,CONTROLS_DRAWER_HEADER_EXPANDED_SIZE,withSpring,MODE_CHANGE_PHYSICS]=this.__closure;const showPushToTalkText=controlsSpecs.get().pushToTalk&&connected.get();const height=sharedTab.get()==='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?CONTROLS_DRAWER_HEADER_EXPANDED_SIZE:controlsSpecs.get().height;const translateY=function(){return sharedTab.get()!=='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?-controlsSpecs.get().height:0;}();return{top:showPushToTalkText?-4:0,height:withSpring(height,MODE_CHANGE_PHYSICS),opacity:withSpring(sharedTab.get()!=='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?0:1,MODE_CHANGE_PHYSICS),transform:[{translateY:withSpring(translateY,MODE_CHANGE_PHYSICS)},{scale:withSpring(sharedTab.get()!=='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?0.95:1,MODE_CHANGE_PHYSICS)}]};})",
@@ -423,7 +423,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(17993).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(18032).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -433,7 +433,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(17993).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(18032).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }
@@ -759,7 +759,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   closure_129_2 = sharedValue1;
   closure_129_3 = callback;
   ({ hiddenProps, hiddenStyles } = useControlsHiddenPresentationDefault(mode, sharedValue1));
-  const context1 = obj2.useContext(tmp4(11749));
+  const context1 = obj2.useContext(tmp4(11634));
   const controlsSpecs2 = context1.controlsSpecs;
   closure_129_4 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -1362,7 +1362,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const tmpResult25 = require("../../../../../_runtime/metro/01653__.js");
   const isScreenReaderEnabled1 = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmpResult26 = require("useIsScreenReaderEnabled");
-  const context2 = obj2.useContext(tmp4(11749));
+  const context2 = obj2.useContext(tmp4(11634));
   ({
     controlsSpecs: controlsSpecs3,
     windowDimensions: windowDimensions2,

@@ -7,7 +7,7 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const DraftType = fn(8315).DraftType;
+const DraftType = fn(7976).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 

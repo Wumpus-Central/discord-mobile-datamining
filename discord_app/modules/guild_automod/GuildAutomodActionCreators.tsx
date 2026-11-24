@@ -92,7 +92,7 @@ function _transformApiRuletoClientRule(id) {
   if (exempt_roles == null) {
     exempt_roles = [];
   }
-  const set = new Set(exempt_channels);
+  set = new Set(exempt_channels);
   obj4.exemptRoles = new Set(exempt_roles);
   if (null != obj4.triggerMetadata) {
     const triggerMetadata = obj4.triggerMetadata;

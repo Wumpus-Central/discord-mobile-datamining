@@ -103,7 +103,7 @@ const guildStore = new GuildStore(
     CONNECTION_OPEN(arg0, getAllRecords) {
       ({ guilds, unavailableGuilds } = arg0);
       const allRecords = getAllRecords.getAllRecords();
-      const set = new Set(Object.keys(allRecords));
+      set = new Set(Object.keys(allRecords));
       const iter = guilds[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {

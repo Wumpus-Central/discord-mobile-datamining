@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutout.tsx
-import inlineStyles from "../../../../../_runtime/07865_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07813_inlineStyles.js";
 import CircleWithCutoutUtils from "CircleWithCutoutUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -68,5 +68,5 @@ export default noop.memo(function CircleWithCutout(arg0) {
   size.children = items2;
   return React4(inlineStylesDefault, size);
 });
-export const getBadgeLeft = fn(10660).getBadgeLeft;
-export const getBadgeTop = fn(10660).getBadgeTop;
+export const getBadgeLeft = fn(9893).getBadgeLeft;
+export const getBadgeTop = fn(9893).getBadgeTop;

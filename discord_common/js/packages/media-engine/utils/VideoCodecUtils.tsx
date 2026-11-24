@@ -16,7 +16,7 @@ export function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodec
     flag = false;
   }
   items = undefined;
-  let set;
+  set = undefined;
   const combined = experimentCodecs.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
@@ -83,7 +83,7 @@ export function filterVideoCodecs(arg0, arr) {
     flag = false;
   }
   items = undefined;
-  let set;
+  set = undefined;
   const combined = arr.concat(items);
   items = [];
   const item = combined.forEach((encode) => {

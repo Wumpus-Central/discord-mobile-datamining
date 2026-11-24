@@ -5,14 +5,14 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import PremiumFeatureListDefault from "../../premium/native/components/PremiumFeatureList.tsx";
-import _modDef14146 from "../../../../_runtime/metro/14146__.js";
-import _modDef14147 from "../../../../_runtime/metro/14147__.js";
+import _modDef13826 from "../../../../_runtime/metro/13826__.js";
+import _modDef13827 from "../../../../_runtime/metro/13827__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -20,7 +20,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(8951).Gradients;
+const Gradients = fn(8985).Gradients;
 const PremiumConstants = fn(1388);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault,
@@ -28,7 +28,7 @@ const PremiumConstants = fn(1388);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -143,11 +143,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef14146;
+    obj11.source = _modDef13826;
     const items4 = [React6(FastImageDefault, obj11), ,];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef14147;
+    obj12.source = _modDef13827;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

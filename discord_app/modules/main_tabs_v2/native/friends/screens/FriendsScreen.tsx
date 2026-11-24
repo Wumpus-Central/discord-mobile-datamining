@@ -4,11 +4,11 @@ import util from "../../../../../intl/index.native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import SendMessageIcon from "../../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import WumpusCouchSpotIllustration from "../../../../../design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
-import _modDef18081 from "../../../../../../_runtime/metro/18081__.js";
+import _modDef18120 from "../../../../../../_runtime/metro/18120__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
   requestsButtonContainer: null,
@@ -91,7 +91,7 @@ export default function FriendsScreen() {
     items = [];
     if (tmp2) {
       const obj = {
-        icon: _modDef18081,
+        icon: _modDef18120,
         IconComponent: SendMessageIcon.SendMessageIcon,
         iconVariant: "default",
         label: null,
@@ -140,7 +140,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18081 };
+      const obj8 = { source: _modDef18120 };
       obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
       obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

@@ -2,8 +2,8 @@
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import Constants from "../Constants.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import shared_PlatformUtils from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import dispatchAutoDisableVideoDefault from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
 import size from "../../_runtime/metro/00002__.js";
 

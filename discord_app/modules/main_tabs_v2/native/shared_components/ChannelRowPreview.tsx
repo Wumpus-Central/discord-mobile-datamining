@@ -4,11 +4,11 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
-import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorStyleSheet from "../../../messages/native/renderer/RowGeneratorStyleSheet.tsx";
 import RowGeneratorTypes from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
+import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
+import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";

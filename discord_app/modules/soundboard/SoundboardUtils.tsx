@@ -7,9 +7,9 @@ import UserSettings from "../user_settings/UserSettings.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UserUtils from "../../utils/UserUtils.tsx";
 import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
-import SoundboardActionCreators from "SoundboardActionCreators.tsx";
 import SoundboardTypes from "SoundboardTypes.tsx";
 import useMuteStates from "../video_calls/useMuteStates.tsx";
+import SoundboardActionCreators from "SoundboardActionCreators.tsx";
 import VoiceChannelEffectsActionCreators from "../voice_channel_effects/VoiceChannelEffectsActionCreators.tsx";
 import getCurrentVoiceChannelDefault from "../rpc/helpers/getCurrentVoiceChannel.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -179,9 +179,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(6830).playSoundLocally(id, sound);
-                  const obj = closure_1_0(6830);
-                  const result = closure_1_0(10986).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(10262).playSoundLocally(id, sound);
+                  const obj = closure_1_0(10262);
+                  const result = closure_1_0(10264).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -199,8 +199,8 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
     }
   }
 };
-let closure_5 = fn(4766).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
-const SoundboardConstants = fn(5963);
+let closure_5 = fn(4770).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
+const SoundboardConstants = fn(6799);
 ({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: closure_10 } = SoundboardConstants);
 const Constants = fn(1071);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
@@ -335,9 +335,9 @@ export function updateCustomJoinSound(guildId, guildId, location_stack) {
         tmp6 = require;
       }
       if (null != joinSound.joinSound) {
-        let ADDED = tmp6(6831).AnalyticsChangeType.UPDATED;
+        let ADDED = tmp6(6963).AnalyticsChangeType.UPDATED;
       } else {
-        ADDED = tmp6(6831).AnalyticsChangeType.ADDED;
+        ADDED = tmp6(6963).AnalyticsChangeType.ADDED;
       }
       joinSound.joinSound = { soundId: guildId.soundId, guildId: guildId.guildId === refs ? React6 : guildId.guildId };
       const obj2 = { location_stack, guild_id: null, change_type: null, sound_type: null, sound_source: null };
@@ -348,7 +348,7 @@ export function updateCustomJoinSound(guildId, guildId, location_stack) {
       }
       obj2.guild_id = num;
       obj2.change_type = ADDED;
-      obj2.sound_type = tmp6(6831).AnalyticsSoundType.ENTRY;
+      obj2.sound_type = tmp6(6963).AnalyticsSoundType.ENTRY;
       obj2.sound_source = CUSTOM;
       AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj2);
     },

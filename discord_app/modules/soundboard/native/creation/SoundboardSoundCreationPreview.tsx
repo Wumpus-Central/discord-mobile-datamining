@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import _modDef9260 from "../../../../../_runtime/metro/09260__.js";
+import _modDef8745 from "../../../../../_runtime/metro/08745__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -45,11 +45,11 @@ function PlayheadLine(arg0) {
   return refs(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const MAX_SOUND_LENGTH_SECONDS = fn(5963).MAX_SOUND_LENGTH_SECONDS;
-const SoundOutputChannel = fn(5814).SoundOutputChannel;
+const MAX_SOUND_LENGTH_SECONDS = fn(6799).MAX_SOUND_LENGTH_SECONDS;
+const SoundOutputChannel = fn(5875).SoundOutputChannel;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   waveformCard: {
     backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
@@ -85,7 +85,7 @@ let closure_16 = PlatformUtils.isIOS()
       onLoad = onLoad.onLoad;
       ({ uri, volume, onEnd, onError } = onLoad);
       const tmp = closure_13();
-      return refs(_modDef9260, {
+      return refs(_modDef8745, {
         source: { uri },
         audioOnly: true,
         paused: false,
@@ -103,11 +103,11 @@ let closure_16 = PlatformUtils.isIOS()
       uri = uri.uri;
       let volume = uri.volume;
       ({ onLoad, onEnd, onError } = uri);
-      const tmp = volume(7392)(onLoad);
+      const tmp = volume(7202)(onLoad);
       dependencyMap = tmp;
-      const tmp2 = volume(7392)(onEnd);
+      const tmp2 = volume(7202)(onEnd);
       closure_3 = tmp2;
-      const tmp3 = volume(7392)(onError);
+      const tmp3 = volume(7202)(onError);
       closure_4 = tmp3;
       items = [uri, volume, tmp, tmp2, tmp3];
       const effect = noop.useEffect(() => {
@@ -198,7 +198,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(19799).loadSoundboardAudioPreview(c4, closure_2_0(19799).WAVEFORM_BAR_COUNT);
+      await closure_2_0(19842).loadSoundboardAudioPreview(c4, closure_2_0(19842).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {

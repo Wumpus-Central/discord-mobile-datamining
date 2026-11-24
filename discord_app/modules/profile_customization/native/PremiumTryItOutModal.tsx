@@ -1,8 +1,8 @@
 // discord_app/modules/profile_customization/native/PremiumTryItOutModal.tsx
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import maybeFetchUserProfileDefault from "../../user_profile/maybeFetchUserProfile.tsx";
+import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 

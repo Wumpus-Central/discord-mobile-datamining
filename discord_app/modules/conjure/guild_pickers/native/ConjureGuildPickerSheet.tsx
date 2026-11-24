@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/guild_pickers/native/ConjureGuildPickerSheet.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import InteractionComponentTypes from "../../../interaction_components/InteractionComponentTypes.tsx";
 import TableRowIcon from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
+import InteractionComponentTypes from "../../../interaction_components/InteractionComponentTypes.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
 import MentionableSelectOptionParts from "../../../interaction_components/native/components/MentionableSelectOptionParts.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -12,9 +12,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {
-  channel: fn(5976).SelectOptionType.CHANNEL,
-  role: fn(5976).SelectOptionType.ROLE,
-  user: fn(5976).SelectOptionType.USER,
+  channel: fn(6279).SelectOptionType.CHANNEL,
+  role: fn(6279).SelectOptionType.ROLE,
+  user: fn(6279).SelectOptionType.USER,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/guild_pickers/native/ConjureGuildPickerSheet.tsx");
@@ -30,7 +30,7 @@ export default function ConjureGuildPickerSheet(guildId) {
   guild = undefined;
   closure_11 = undefined;
   closure_12 = undefined;
-  let set;
+  set = undefined;
   function toOption(id) {
     obj = { type: obj[type], value: id.id, label: id.label };
     return obj;

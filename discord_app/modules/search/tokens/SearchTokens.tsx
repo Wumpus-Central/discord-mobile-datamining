@@ -113,7 +113,7 @@ function dateValidator(getFullMatch, after) {
     const tmp23 = _slicedToArray(tmp2(), 2);
   } else {
     const _Set3 = Set;
-    const set = new Set(_modDef2168.months().map((item) => item.toLowerCase()));
+    set = new Set(_modDef2168.months().map((item) => item.toLowerCase()));
     if (set.has(formatted)) {
       const localResult = _modDef2168(formatted, "MMMM").local();
       items = [localResult];
@@ -292,7 +292,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(13208);
+    obj2 = replaced(13122);
   }
   return flag;
 }
@@ -348,7 +348,7 @@ function isValidPinnedAutocomplete(getMatch) {
 function generateDateAutocompletions() {
   const monthsResult = _modDef2168.months();
   items = [...Array.from(new Set(_modDef2168.months().map((item) => item.toLowerCase())))];
-  const set = new Set(_modDef2168.months().map((item) => item.toLowerCase()));
+  set = new Set(_modDef2168.months().map((item) => item.toLowerCase()));
   const weekdaysResult = _modDef2168.weekdays();
   const set1 = new Set(_modDef2168.weekdays().map((item) => item.toLowerCase()));
   const arraySpreadResult = HermesBuiltin.arraySpread(
@@ -399,7 +399,7 @@ function getUserAutocompletions(tokens) {
             items = [];
           } else {
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             closure_129_0 = set;
             const items1 = [];
             closure_129_1 = items1;
@@ -581,8 +581,8 @@ function getChannelAutocompletions(arg0) {
       };
       const obj12 = AutocompleteUtilsDefault;
       const tmp7 = importDefault;
-      obj.boosters = tmp(6556).getBoosterMap(tmp(10063).AutocompleterResultTypes.TEXT_CHANNEL);
-      const tmpResult = tmp(6556);
+      obj.boosters = tmp(6743).getBoosterMap(tmp(8806).AutocompleterResultTypes.TEXT_CHANNEL);
+      const tmpResult = tmp(6743);
       const queryChannelsResult = obj12.queryChannels(obj);
       obj2 = {
         query: substr1,
@@ -594,7 +594,7 @@ function getChannelAutocompletions(arg0) {
         boosters: null,
       };
       const obj16 = AutocompleteUtilsDefault;
-      obj2.boosters = tmp(6556).getBoosterMap(tmp(10063).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj2.boosters = tmp(6743).getBoosterMap(tmp(8806).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(obj16.queryChannels(obj2));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -606,7 +606,7 @@ function getChannelAutocompletions(arg0) {
         }
       }
       importDefault = GuildChannelStore.getTextChannelNameDisambiguations(guildId);
-      const tmpResult4 = tmp(6556);
+      const tmpResult4 = tmp(6743);
       const obj19 = tmp7(12)(mapped);
       const takeResult = tmp7(12)(mapped).take(maxResults);
       let substr3 = tmp7(12)(mapped)
@@ -639,16 +639,16 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj5 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj5.boosters = tmp(6556).getBoosterMap(tmp(10063).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult5 = tmp(6556);
+          obj5.boosters = tmp(6743).getBoosterMap(tmp(8806).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult5 = tmp(6743);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj5);
           const obj6 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj6.boosters = tmp(6556).getBoosterMap(tmp(10063).AutocompleterResultTypes.USER);
-          const tmpResult6 = tmp(6556);
+          obj6.boosters = tmp(6743).getBoosterMap(tmp(8806).AutocompleterResultTypes.USER);
+          const tmpResult6 = tmp(6743);
           const queryDMChannelsResult = obj8.queryDMChannels(obj6);
           const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(
-            tmp(10063).sortByMatchScore,
+            tmp(8806).sortByMatchScore,
           );
           const mapped1 = sorted.map((record) => {
             record = record.record;
@@ -1103,7 +1103,7 @@ function makeSearchTokenConfigs(arg0) {
   obj[SearchTokenTypes.ANSWER_AUTHOR_TYPE] = obj26;
   return obj;
 }
-let GuildChannelStore = fn(4843);
+let GuildChannelStore = fn(4847);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: closure_6 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1071);

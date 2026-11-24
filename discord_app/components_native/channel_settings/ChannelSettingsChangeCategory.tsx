@@ -6,9 +6,9 @@ import Text_Text from "../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../modules/channel/useChannelName.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import Stack_Stack from "../../design/components/Stack/native/Stack.native.tsx";
-import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import TableRow from "../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../design/components/TableRow/native/TableRow.native.tsx";
+import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import _toArray from "../../../_runtime/00717__toArray.js";
@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1071).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -313,7 +313,7 @@ prototype["render"] = function render() {
   obj.children = gesture(Stack_Stack.Stack, obj2);
   return state(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(4974).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(4978).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
@@ -324,7 +324,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1500).useNavigation();
   const obj2 = channelId(1500);
-  const appChannelBotUserId = channelId(12079).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11971).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

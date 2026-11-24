@@ -186,7 +186,7 @@ import ViewDebugLogsSettingDefault from "../../defs/native/ViewDebugLogsSetting.
 import CacheActionsSettingDefault from "../../defs/native/CacheActionsSetting.tsx";
 import ShowDevWidgetSettingDefault from "../../defs/native/ShowDevWidgetSetting.tsx";
 import ShowDevToolsSettingDefault from "../../defs/native/ShowDevToolsSetting.tsx";
-import PhoenixLaunchSettingDefault from "../../defs/native/PhoenixLaunchSetting.tsx";
+import PhoenixSettingDefault from "../../defs/native/PhoenixSetting.tsx";
 import BuildOverridesSettingDefault from "../../defs/native/BuildOverridesSetting.tsx";
 import BugReporterSettingDefault from "../../defs/native/BugReporterSetting.tsx";
 import InternalBuildActiveSettingDefault from "../../defs/native/InternalBuildActiveSetting.tsx";
@@ -506,7 +506,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   CACHE_ACTIONS,
   SHOW_DEV_WIDGET,
   SHOW_DEV_TOOLS,
-  PHOENIX_LAUNCH,
+  PHOENIX,
   BUILD_OVERRIDES,
   BUG_REPORTER,
   INTERNAL_BUILD_ACTIVE,
@@ -798,7 +798,7 @@ const frozen = Object.freeze({
   [CACHE_ACTIONS]: CacheActionsSettingDefault,
   [SHOW_DEV_WIDGET]: ShowDevWidgetSettingDefault,
   [SHOW_DEV_TOOLS]: ShowDevToolsSettingDefault,
-  [PHOENIX_LAUNCH]: PhoenixLaunchSettingDefault,
+  [PHOENIX]: PhoenixSettingDefault,
   [BUILD_OVERRIDES]: BuildOverridesSettingDefault,
   [BUG_REPORTER]: BugReporterSettingDefault,
   [INTERNAL_BUILD_ACTIVE]: InternalBuildActiveSettingDefault,

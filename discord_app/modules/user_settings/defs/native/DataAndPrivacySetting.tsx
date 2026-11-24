@@ -5,14 +5,14 @@ import RequestYourDataSetting from "RequestYourDataSetting.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: fn(13817).ShieldLockIcon,
+  IconComponent: fn(14142).ShieldLockIcon,
   screen: {
     route: fn(1071).UserSettingsSections.DATA_AND_PRIVACY,
     getComponent() {

@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(17829)(closure_1_5);
+        closure_1_1(17867)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(17656)();
+        closure_1_1(17694)();
       },
     }),
     [],
@@ -64,10 +64,10 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: null,
-    externalChildren: null,
-    expandedChildren: false,
-    children: true,
+    label: "getSpotifyResourceType",
+    externalChildren: "<string:553844736>",
+    expandedChildren: "itemContent",
+    children: -1,
   };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
@@ -88,9 +88,9 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: null,
-    externalChildren: null,
-    expandedChildren: false,
-    children: true,
+    label: "getSpotifyResourceType",
+    externalChildren: "<string:553844736>",
+    expandedChildren: "itemContent",
+    children: -1,
   });
 });

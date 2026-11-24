@@ -705,9 +705,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2144).ImageSizes;
-const promiseDeduper = new fn(5033).PromiseDeduper();
-const promiseDeduper3 = new fn(5033).PromiseDeduper();
-const promiseDeduper4 = new fn(5033).PromiseDeduper();
+const promiseDeduper = new fn(5037).PromiseDeduper();
+const promiseDeduper3 = new fn(5037).PromiseDeduper();
+const promiseDeduper4 = new fn(5037).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx",
@@ -721,7 +721,7 @@ export default function useLoadMessageContentEntries(arg0) {
   const tmp4 = unloadedContentEntryMessageIds(first1.useState(new Set()), 2);
   unloadedContentEntryMessageIds = tmp4[0];
   asyncGeneratorStep = tmp4[1];
-  let set = new Set();
+  set = new Set();
   const tmp7 = unloadedContentEntryMessageIds(first1.useState(new Set()), 2);
   first1 = tmp7[0];
   closure_6 = tmp7[1];
@@ -864,7 +864,7 @@ export default function useLoadMessageContentEntries(arg0) {
           current2.delete(item);
         });
         closure_4((items) => {
-          const set = new Set(items);
+          set = new Set(items);
           const item = items.forEach((item) => set.delete(item));
           return set;
         });
@@ -887,7 +887,7 @@ export default function useLoadMessageContentEntries(arg0) {
   return {
     unloadedContentEntryMessageIds,
     unloadableContentEntryMessageIds: first1.useMemo(() => {
-      const set = new Set();
+      set = new Set();
       const item = first.forEach((item) => set.add(item));
       const item1 = first1.forEach((item) => set.add(item));
       return set;

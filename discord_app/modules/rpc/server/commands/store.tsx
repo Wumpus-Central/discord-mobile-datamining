@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/commands/store.tsx
-import RPCErrorDefault from "../../RPCError.tsx";
 import EntitlementActionCreatorsAll from "../../../../actions/EntitlementActionCreators.tsx";
+import RPCErrorDefault from "../../RPCError.tsx";
 import validateTransportType from "../../helpers/validateTransportType.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -295,7 +295,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6354);
+let Constants = fn(5671);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1071);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: closure_6, SKUTypes: metroImportDefault } = Constants);
@@ -306,7 +306,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(15680);
+let CONTEXT_MENU_ICON_NAMES = fn(15701);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -322,7 +322,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(15680);
+CONTEXT_MENU_ICON_NAMES = fn(15701);
 let obj7 = {
   scope: null,
   handler(arg0) {

@@ -81,7 +81,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
   const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
   const setting2 = ExplicitContentFilter2.getSetting();
 }
-const ExplicitContentFilterTypes = fn(4740).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(4744).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1195).ExplicitContentRedaction.SHOW;

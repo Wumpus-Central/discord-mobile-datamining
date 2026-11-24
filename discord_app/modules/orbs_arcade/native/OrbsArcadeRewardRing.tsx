@@ -41,7 +41,7 @@ function RingArc(arcLength) {
 }
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let closure_4 = module_1653.createAnimatedComponent(fn(7865).Path);
+let closure_4 = module_1653.createAnimatedComponent(fn(7813).Path);
 let closure_5 = {
   code: "(function OrbsArcadeRewardRingTsx1(){let[arcLength,progress]=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};})",
 };

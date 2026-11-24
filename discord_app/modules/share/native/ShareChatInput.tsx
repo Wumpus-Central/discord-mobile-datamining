@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FormInputDefault from "../../../design/void/Form/native/FormInput.tsx";
-import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import useMessageMaxLengthDefault from "../../messages/useMessageMaxLength.tsx";
+import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
     flex: 1,

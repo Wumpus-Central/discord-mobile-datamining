@@ -111,8 +111,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(5537).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(5537).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5541).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5541).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -226,7 +226,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       } else {
         const _Set = Set;
         items = [str];
-        const set = new Set(items);
+        set = new Set(items);
         const result = map1.set(conversationId, set);
       }
     }

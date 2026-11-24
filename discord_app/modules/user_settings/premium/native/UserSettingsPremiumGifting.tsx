@@ -3,33 +3,35 @@ import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import EntitlementActionCreators from "../../../../actions/EntitlementActionCreators.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
-import EntitlementActionCreators from "../../../../actions/EntitlementActionCreators.tsx";
 import BillingActionCreatorsDefault from "../../../../actions/native/BillingActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
+import GiftedSubscriptionUtils from "../../../premium/gifting/GiftedSubscriptionUtils.tsx";
 import OutboundPromotionCardDefault from "../../../premium/promotions/native/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../gifting/native/EntitlementGiftGroupCard.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
+import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
 import EntitlementStore from "../../../../stores/game_store/EntitlementStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
 function GiftingSectionTitle(title) {
-  return state(TableRowGroup.TableRowGroupTitle, { title: title.title });
+  return gesture(TableRowGroup.TableRowGroupTitle, { title: title.title });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1071);
-({ UserSettingsSections: closure_9, AnalyticsPages: closure_10 } = Constants);
+({ UserSettingsSections: closure_10, AnalyticsPages: closure_11 } = Constants);
 const PremiumConstants = fn(1388);
-({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
+({ PremiumTypes: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4913);
+({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
+const createStyles = fn(4917);
 let obj2 = {
   scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL },
   giftingSettingsContainer: { flex: 1 },
@@ -69,7 +71,7 @@ obj2.giftPurchaseButton = { marginTop: 8, height: 40 };
 obj2.buttonWrapper = { marginTop: 16 };
 obj2.loading = { marginTop: 32 };
 obj2.warningMargins = { marginHorizontal: 16 };
-let closure_16 = createStyles.createStyles(obj2);
+let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx");
 
@@ -81,181 +83,255 @@ export default function UserSettingsPremiumGifting(ref) {
   }
   _require = undefined;
   let stateFromStoresArray;
-  let memo;
-  _slicedToArray = undefined;
-  noop = undefined;
-  const tmp2 = closure_16();
-  stateFromStoresArray(memo[11])();
+  let stateFromStoresArray1;
+  let memo2;
+  c5 = undefined;
+  c7 = undefined;
+  const tmp2 = closure_17();
+  stateFromStoresArray(stateFromStoresArray1[12])();
   _require = require("useNavigation").useNavigation();
   let obj2 = require("useNavigation");
   items = [EntitlementStore];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => giftable.getGiftable());
-  const items1 = [stateFromStoresArray];
-  memo = noop.useMemo(
-    () =>
-      applyDefault.groupBy(stateFromStoresArray, (skuId) =>
-        closure_1_0(memo[16]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle),
-      ),
-    items1,
-  );
   let obj3 = require("initialize");
+  const items1 = [SubscriptionStore];
+  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items1, () => {
+    subscriptions = subscriptions.getSubscriptions();
+    if (subscriptions == null) {
+      subscriptions = {};
+    }
+    return closure_0(stateFromStoresArray1[16]).getGiftedSubscriptions(Object.values(subscriptions));
+  });
+  const items2 = [stateFromStoresArray1];
+  const memo = memo2.useMemo(
+    () => GiftedSubscriptionUtils.getPendingGiftSubscriptionGrants(stateFromStoresArray1),
+    items2,
+  );
+  const items3 = [stateFromStoresArray1];
+  const memo1 = memo2.useMemo(
+    () =>
+      applyDefault.sortBy(stateFromStoresArray1, (subscription) => {
+        let num = 1;
+        if ("pending" === obj.getGiftedSubscriptionRowState(subscription).kind) {
+          num = 0;
+        }
+        return num;
+      }),
+    items3,
+  );
+  const items4 = [stateFromStoresArray, memo];
+  memo2 = memo2.useMemo(
+    () =>
+      applyDefault.groupBy(
+        stateFromStoresArray.filter((id) => {
+          entitlementIds = entitlementIds.entitlementIds;
+          return !entitlementIds.has(id.id);
+        }),
+        (skuId) =>
+          closure_1_0(stateFromStoresArray1[18]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle),
+      ),
+    items4,
+  );
+  const obj4 = require("initialize");
   const isPaymentsBlocked = require("BlockedPaymentsCountryExperiment").useIsPaymentsBlocked();
-  const obj4 = require("BlockedPaymentsCountryExperiment");
+  const obj5 = require("BlockedPaymentsCountryExperiment");
   const outboundPromotions = require("PromotionsHooks").useOutboundPromotions();
   ({
     activeOutboundPromotions,
     claimedEndedOutboundPromotions,
-    claimedOutboundPromotionCodeMap: c3,
+    claimedOutboundPromotionCodeMap: c5,
     promotionsLoaded,
   } = outboundPromotions);
-  const obj5 = require("PromotionsHooks");
-  const items2 = [BadgeDirectoryStore];
-  const stateFromStores = require("initialize").useStateFromStores(items2, () =>
-    badgeById.getBadgeById(closure_0(memo[19]).BadgeId.GIFTING),
+  const obj6 = require("PromotionsHooks");
+  const items5 = [c7];
+  const stateFromStores = require("initialize").useStateFromStores(items5, () =>
+    _undefined2.getBadgeById(closure_0(stateFromStoresArray1[21]).BadgeId.GIFTING),
   );
-  const obj6 = require("initialize");
-  [tmp13, c4] = noop.useState(false);
-  const tmp12 = _slicedToArray(noop.useState(false), 2);
+  stateFromStoresArray(stateFromStoresArray1[22])(stateFromStoresArray1);
+  const tmp14 = stateFromStoresArray(stateFromStoresArray1[23])();
+  const succeeded = tmp14.succeeded;
+  const obj7 = require("initialize");
+  [tmp16, c7] = memo(memo2.useState(false), 2);
+  const tmp15 = memo(memo2.useState(false), 2);
   const subscriptionPlansLoaded = require("useSubscriptionPlansLoaded").useSubscriptionPlansLoaded();
-  const effect = noop.useEffect(() => {
+  const effect = memo2.useEffect(() => {
     const giftableEntitlements = EntitlementActionCreators.fetchGiftableEntitlements();
-    giftableEntitlements.then(() => closure_1_4(true));
-    BillingActionCreatorsDefault.init();
+    giftableEntitlements.then(() => _undefined2(true));
+    BillingActionCreatorsDefault.init({ shouldFetchSubscriptions: false });
   }, []);
-  const effect1 = noop.useEffect(() => {
-    const badge = closure_0(memo[23]).fetchBadge(closure_0(memo[19]).BadgeId.GIFTING);
+  const effect1 = memo2.useEffect(() => {
+    const badge = closure_0(stateFromStoresArray1[27]).fetchBadge(closure_0(stateFromStoresArray1[21]).BadgeId.GIFTING);
   }, []);
-  const obj8 = { paddingBottom: stateFromStoresArray(memo[13])().bottom + stateFromStoresArray(memo[9]).space.PX_16 };
+  const obj9 = {
+    paddingBottom:
+      stateFromStoresArray(stateFromStoresArray1[14])().bottom +
+      stateFromStoresArray(stateFromStoresArray1[10]).space.PX_16,
+  };
   if (isPaymentsBlocked) {
-    const obj9 = { style: tmp2.giftingSettingsContainer, children: null };
-    const obj10 = {
+    const obj10 = { style: tmp2.giftingSettingsContainer, children: null };
+    const obj11 = {
       ref,
       contentInset: { top: 40 },
-      contentContainerStyle: obj8,
+      contentContainerStyle: obj9,
       style: tmp2.scrollView,
-      children: closure_13(tmp3(tmp4[36]), {}),
+      children: closure_14(tmp3(tmp4[42]), {}),
     };
-    obj9.children = closure_13(closure_6, obj10);
-    let tmp17Result10 = closure_13(closure_5, obj9);
+    obj10.children = closure_14(succeeded, obj11);
+    let tmp20Result12 = closure_14(c5, obj10);
   } else {
-    const obj11 = { style: tmp2.giftingSettingsContainer, children: null };
-    const items3 = [closure_13(tmp3(tmp4[37]), {})];
-    const obj12 = { ref, style: tmp2.scrollView, contentContainerStyle: obj8, children: null };
-    let tmp17Result = null != stateFromStores;
-    if (tmp17Result) {
-      const obj13 = { children: null };
-      const obj14 = { style: tmp2.titleWrapper, children: null };
-      const obj15 = { title: null };
-      const intl = tmp6(tmp4[30]).intl;
-      obj15.title = intl.string(tmp3(tmp4[38]).sFokBp);
-      obj14.children = closure_13(GiftingSectionTitle, obj15);
-      const items4 = [closure_13(closure_5, obj14)];
-      const obj16 = { analyticsLocation };
-      items4[1] = closure_13(tmp3(tmp4[39]), obj16);
-      obj13.children = items4;
-      tmp17Result = closure_14(closure_15, obj13);
+    const obj12 = { style: tmp2.giftingSettingsContainer, children: null };
+    const items6 = [closure_14(tmp3(tmp4[43]), {})];
+    const obj13 = { ref, style: tmp2.scrollView, contentContainerStyle: obj9, children: null };
+    let tmp20Result = null != stateFromStores;
+    if (tmp20Result) {
+      const obj14 = { children: null };
+      const obj15 = { style: tmp2.titleWrapper, children: null };
+      const obj16 = { title: null };
+      const intl = tmp6(tmp4[34]).intl;
+      obj16.title = intl.string(tmp3(tmp4[44]).sFokBp);
+      obj15.children = closure_14(GiftingSectionTitle, obj16);
+      const items7 = [closure_14(tmp21, obj15)];
+      const obj17 = { analyticsLocation };
+      items7[1] = closure_14(tmp3(tmp4[45]), obj17);
+      obj14.children = items7;
+      tmp20Result = closure_15(closure_16, obj14);
     }
-    const items5 = [tmp17Result, ,];
-    if (tmp13) {
-      if (promotionsLoaded) {
-        if (subscriptionPlansLoaded) {
-          const _Object = Object;
-          const keys = Object.keys(memo);
-          if (0 === keys.length) {
-            const obj17 = { style: tmp2.emptyGiftLinks, children: null };
-            const obj18 = { style: tmp2.emptyImage, source: tmp3(tmp4[28]) };
-            const items6 = [closure_13(tmp3(tmp4[27]), obj18)];
-            const obj19 = { style: tmp2.emptyGiftDescription, accessible: true, children: null };
-            const obj20 = {
-              style: tmp2.emptyGiftHeader,
-              variant: "body-md/semibold",
-              color: "mobile-text-heading-primary",
-              children: null,
-            };
-            const intl3 = tmp6(tmp4[30]).intl;
-            obj20.children = intl3.string(tmp6(tmp4[30]).t.B1qgZn);
-            const items7 = [closure_13(tmp6(tmp4[29]).Text, obj20)];
-            const obj21 = {
-              style: tmp2.emptyGiftInformation,
-              variant: "body-sm/medium",
-              color: "text-default",
-              children: null,
-            };
-            const intl4 = tmp6(tmp4[30]).intl;
-            obj21.children = intl4.string(tmp6(tmp4[30]).t["OV/u0n"]);
-            items7[1] = closure_13(tmp6(tmp4[29]).Text, obj21);
-            obj19.children = items7;
-            items6[1] = closure_14(closure_5, obj19);
-            obj17.children = items6;
-            let tmp17Result6 = closure_14(closure_5, obj17);
-            const tmp3Result = tmp3(tmp4[27]);
-          }
-          const obj22 = { style: tmp2.inventorySectionWrapper, children: null };
-          let tmp17Result7 = null;
-          if (activeOutboundPromotions.length + claimedEndedOutboundPromotions.length > 0) {
-            const obj23 = { children: null };
-            const obj24 = { style: tmp2.titleWrapper, children: null };
-            const obj25 = { title: null };
-            const intl8 = tmp6(tmp4[30]).intl;
-            obj25.title = intl8.string(tmp6(tmp4[30]).t.wFsj3B);
-            obj24.children = closure_13(GiftingSectionTitle, obj25);
-            const items8 = [
-              closure_13(closure_5, obj24),
-              claimedEndedOutboundPromotions.map((code) => {
-                const outboundPromotion = code.promotion;
-                return closure_1_13(
-                  stateFromStoresArray(memo[31]),
-                  { outboundPromotion, code: code.code },
-                  outboundPromotion.id,
-                );
-              }),
-              activeOutboundPromotions.map((outboundPromotion) =>
-                state(
-                  OutboundPromotionCardDefault,
-                  { outboundPromotion, code: _undefined[outboundPromotion.id] },
-                  outboundPromotion.id,
+    const items8 = [tmp20Result, ,];
+    if (tmp16) {
+      if (tmp14.loaded) {
+        if (promotionsLoaded) {
+          if (subscriptionPlansLoaded) {
+            const _Object = Object;
+            const keys = Object.keys(memo2);
+            if (0 === keys.length) {
+              if (0 === stateFromStoresArray1.length) {
+                const obj18 = { style: tmp2.emptyGiftLinks, children: null };
+                const obj19 = { style: tmp2.emptyImage, source: tmp3(tmp4[32]) };
+                const items9 = [closure_14(tmp3(tmp4[31]), obj19)];
+                const obj20 = { style: tmp2.emptyGiftDescription, accessible: true, children: null };
+                const obj21 = {
+                  style: tmp2.emptyGiftHeader,
+                  variant: "body-md/semibold",
+                  color: "mobile-text-heading-primary",
+                  children: null,
+                };
+                const intl4 = tmp6(tmp4[34]).intl;
+                obj21.children = intl4.string(tmp6(tmp4[34]).t.B1qgZn);
+                const items10 = [closure_14(tmp6(tmp4[33]).Text, obj21)];
+                const obj22 = {
+                  style: tmp2.emptyGiftInformation,
+                  variant: "body-sm/medium",
+                  color: "text-default",
+                  children: null,
+                };
+                const intl5 = tmp6(tmp4[34]).intl;
+                obj22.children = intl5.string(tmp6(tmp4[34]).t["OV/u0n"]);
+                items10[1] = closure_14(tmp6(tmp4[33]).Text, obj22);
+                obj20.children = items10;
+                items9[1] = closure_15(tmp21, obj20);
+                obj18.children = items9;
+                let tmp20Result7 = closure_15(tmp21, obj18);
+                const tmp3Result = tmp3(tmp4[31]);
+              }
+            }
+            const obj23 = { style: tmp2.inventorySectionWrapper, children: null };
+            let tmp20Result8 = null;
+            if (activeOutboundPromotions.length + claimedEndedOutboundPromotions.length > 0) {
+              const obj24 = { children: null };
+              const obj25 = { style: tmp2.titleWrapper, children: null };
+              const obj26 = { title: null };
+              const intl9 = tmp6(tmp4[34]).intl;
+              obj26.title = intl9.string(tmp6(tmp4[34]).t.wFsj3B);
+              obj25.children = closure_14(GiftingSectionTitle, obj26);
+              const items11 = [
+                closure_14(tmp21, obj25),
+                claimedEndedOutboundPromotions.map((code) => {
+                  const outboundPromotion = code.promotion;
+                  return closure_1_14(
+                    stateFromStoresArray(stateFromStoresArray1[35]),
+                    { outboundPromotion, code: code.code },
+                    outboundPromotion.id,
+                  );
+                }),
+                activeOutboundPromotions.map((outboundPromotion) =>
+                  gesture(
+                    OutboundPromotionCardDefault,
+                    { outboundPromotion, code: _undefined[outboundPromotion.id] },
+                    outboundPromotion.id,
+                  ),
                 ),
-              ),
-            ];
-            obj23.children = items8;
-            tmp17Result7 = closure_14(closure_15, obj23);
-          }
-          const items9 = [tmp17Result7];
-          let tmp17Result8 = null;
-          if (keys.length > 0) {
-            const obj26 = { children: null };
-            const obj27 = { style: tmp2.titleWrapper, children: null };
-            const obj28 = { title: null };
-            const intl2 = tmp6(tmp4[30]).intl;
-            obj28.title = intl2.string(tmp6(tmp4[30]).t["9KeUbY"]);
-            obj27.children = closure_13(GiftingSectionTitle, obj28);
-            const items10 = [
-              closure_13(closure_5, obj27),
-              keys.map((item) => {
-                ({ skuId, subscriptionPlanId, giftStyle } = GiftCodeUtils.parseComboId(item));
-                return state(
+              ];
+              obj24.children = items11;
+              tmp20Result8 = closure_15(closure_16, obj24);
+            }
+            const items12 = [tmp20Result8, ,];
+            let tmp20Result9 = null;
+            if (memo1.length > 0) {
+              const obj27 = { children: null };
+              const obj28 = { style: tmp2.titleWrapper, children: null };
+              const obj29 = { title: null };
+              const intl2 = tmp6(tmp4[34]).intl;
+              obj29.title = intl2.string(tmp6(tmp4[34]).t.trSpHX);
+              obj28.children = closure_14(GiftingSectionTitle, obj29);
+              const items13 = [
+                closure_14(tmp21, obj28),
+                memo1.map((subscription) =>
+                  closure_1_14(stateFromStoresArray(stateFromStoresArray1[36]), { subscription }, subscription.id),
+                ),
+              ];
+              obj27.children = items13;
+              tmp20Result9 = closure_15(closure_16, obj27);
+            }
+            items12[1] = tmp20Result9;
+            if (keys.length <= 0) {
+              items12[2] = null;
+              obj23.children = items12;
+              tmp20Result7 = closure_15(tmp21, obj23);
+            } else {
+              let obj30 = { style: tmp2.titleWrapper, children: null };
+              let map = GiftingSectionTitle;
+              const intl3 = tmp6(tmp4[34]).intl;
+              if (stateFromStoresArray1.length > 0) {
+                let LO0a0F = tmp3(tmp4[37]).LO0a0F;
+              } else {
+                LO0a0F = tmp6(tmp4[34]).t["9KeUbY"];
+              }
+              const obj31 = { children: null };
+              const obj32 = { title: intl3.string(LO0a0F) };
+              obj30.children = closure_14(map, obj32);
+              obj30 = [,];
+              obj30[0] = closure_14(tmp21, obj30);
+              map = keys.map;
+              obj30[1] = map((arg0) => {
+                ({ skuId, subscriptionPlanId, giftStyle } = GiftCodeUtils.parseComboId(arg0));
+                return gesture(
                   EntitlementGiftGroupCardDefault,
-                  { skuId, subscriptionPlanId, entitlements: memo[item], giftStyle },
-                  item,
+                  {
+                    skuId,
+                    subscriptionPlanId,
+                    entitlements: memo2[arg0],
+                    giftStyle,
+                    pendingGiftSubscriptionCodes: memo.giftCodes,
+                    canRevokeGiftCodes: succeeded,
+                  },
+                  arg0,
                 );
-              }),
-            ];
-            obj26.children = items10;
-            tmp17Result8 = closure_14(closure_15, obj26);
+              });
+              obj31.children = obj30;
+              closure_15(closure_16, obj31);
+              const tmp22Result = closure_14(tmp21, obj30);
+            }
           }
-          items9[1] = tmp17Result8;
-          obj22.children = items9;
-          tmp17Result6 = closure_14(closure_5, obj22);
         }
       }
     }
-    const obj29 = { style: tmp2.loading };
-    const obj30 = { children: closure_13(tmp6(tmp4[40]).ActivityIndicator, obj29) };
-    items5[1] = closure_13(closure_5, obj30);
-    let tmp17Result9 = null;
+    const obj33 = { style: tmp2.loading };
+    const obj34 = { children: closure_14(tmp6(tmp4[46]).ActivityIndicator, obj33) };
+    items8[1] = closure_14(c5, obj34);
+    let tmp20Result11 = null;
     if (subscriptionPlansLoaded) {
-      const obj31 = { style: tmp2.giftPurchaseSectionWrapper, children: null };
-      const obj32 = { title: null };
+      const obj35 = { style: tmp2.giftPurchaseSectionWrapper, children: null };
+      const obj36 = { title: null };
       function handleLearnMorePremiumClick() {
         UserSettingsModalActionCreatorsDefault.setSection(constants.PREMIUM_GIFTING);
         const result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: constants.PREMIUM_GIFTING });
@@ -269,80 +345,80 @@ export default function UserSettingsPremiumGifting(ref) {
           premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_0_LEADING,
         });
       }
-      const intl5 = tmp6(tmp4[30]).intl;
-      obj32.title = intl5.string(tmp6(tmp4[30]).t["55Ccy0"]);
-      const items11 = [closure_13(GiftingSectionTitle, obj32), , ,];
-      const obj33 = { premiumType: closure_11.TIER_2, style: tmp2.tierCard, children: null };
-      const obj34 = { style: tmp2.cardText, variant: "body-sm/medium", color: "text-default", children: null };
-      const intl6 = tmp6(tmp4[30]).intl;
-      const obj35 = { onClick: handleLearnMorePremiumClick };
-      obj34.children = intl6.format(tmp6(tmp4[30]).t.thORji, obj35);
-      const items12 = [closure_13(tmp6(tmp4[29]).Text, obj34)];
-      const obj36 = { style: tmp2.buttonWrapper, children: null };
-      const obj37 = {
+      const intl6 = tmp6(tmp4[34]).intl;
+      obj36.title = intl6.string(tmp6(tmp4[34]).t["55Ccy0"]);
+      const items14 = [closure_14(GiftingSectionTitle, obj36), , ,];
+      const obj37 = { premiumType: closure_12.TIER_2, style: tmp2.tierCard, children: null };
+      const obj38 = { style: tmp2.cardText, variant: "body-sm/medium", color: "text-default", children: null };
+      const intl7 = tmp6(tmp4[34]).intl;
+      const obj39 = { onClick: handleLearnMorePremiumClick };
+      obj38.children = intl7.format(tmp6(tmp4[34]).t.thORji, obj39);
+      const items15 = [closure_14(tmp6(tmp4[33]).Text, obj38)];
+      const obj40 = { style: tmp2.buttonWrapper, children: null };
+      const obj41 = {
         recipientUserId,
         style: tmp2.giftPurchaseButton,
         variant: "active",
-        planId: closure_12.PREMIUM_YEAR_TIER_2,
+        planId: closure_13.PREMIUM_YEAR_TIER_2,
         analyticsLocation,
       };
-      const items13 = [closure_13(tmp3(tmp4[34]), obj37)];
-      const obj38 = {
+      const items16 = [closure_14(tmp3(tmp4[40]), obj41)];
+      const obj42 = {
         recipientUserId,
         style: tmp2.giftPurchaseButton,
         variant: "secondary",
-        planId: closure_12.PREMIUM_MONTH_TIER_2,
+        planId: closure_13.PREMIUM_MONTH_TIER_2,
         analyticsLocation,
       };
-      items13[1] = closure_13(tmp3(tmp4[34]), obj38);
-      obj36.children = items13;
-      items12[1] = closure_14(closure_5, obj36);
-      obj33.children = items12;
-      items11[1] = closure_14(tmp3(tmp4[33]), obj33);
-      const obj39 = { style: tmp2.warningMargins };
-      items11[2] = closure_13(tmp3(tmp4[35]), obj39);
-      const obj40 = { children: null };
-      const obj41 = { premiumType: closure_11.TIER_0, style: tmp2.tierCard, children: null };
-      const tmp3Result3 = tmp3(tmp4[33]);
-      const obj42 = { style: tmp2.cardText, variant: "body-sm/medium", color: "text-default", children: null };
-      const intl7 = tmp6(tmp4[30]).intl;
-      const obj43 = { onClick: handleLearnMoreNitroBasicClick };
-      obj42.children = intl7.format(tmp6(tmp4[30]).t.NmpnsP, obj43);
-      const items14 = [closure_13(tmp6(tmp4[29]).Text, obj42)];
-      const obj44 = { style: tmp2.buttonWrapper, children: null };
-      const obj45 = {
-        recipientUserId,
-        style: tmp2.giftPurchaseButton,
-        variant: "active",
-        planId: closure_12.PREMIUM_YEAR_TIER_0,
-        analyticsLocation,
-      };
-      const items15 = [closure_13(tmp3(tmp4[34]), obj45)];
-      const obj46 = {
-        recipientUserId,
-        style: tmp2.giftPurchaseButton,
-        variant: "secondary",
-        planId: closure_12.PREMIUM_MONTH_TIER_0,
-        analyticsLocation,
-      };
-      items15[1] = closure_13(tmp3(tmp4[34]), obj46);
-      obj44.children = items15;
-      items14[1] = closure_14(closure_5, obj44);
-      obj41.children = items14;
-      const items16 = [closure_14(tmp3(tmp4[33]), obj41)];
-      const obj47 = { style: tmp2.warningMargins };
-      items16[1] = closure_13(tmp3(tmp4[35]), obj47);
+      items16[1] = closure_14(tmp3(tmp4[40]), obj42);
       obj40.children = items16;
-      items11[3] = closure_14(closure_15, obj40);
-      obj31.children = items11;
-      tmp17Result9 = closure_14(closure_5, obj31);
-      const tmp3Result4 = tmp3(tmp4[33]);
+      items15[1] = closure_15(tmp21, obj40);
+      obj37.children = items15;
+      items14[1] = closure_15(tmp3(tmp4[39]), obj37);
+      const obj43 = { style: tmp2.warningMargins };
+      items14[2] = closure_14(tmp3(tmp4[41]), obj43);
+      const obj44 = { children: null };
+      const obj45 = { premiumType: closure_12.TIER_0, style: tmp2.tierCard, children: null };
+      const tmp3Result3 = tmp3(tmp4[39]);
+      const obj46 = { style: tmp2.cardText, variant: "body-sm/medium", color: "text-default", children: null };
+      const intl8 = tmp6(tmp4[34]).intl;
+      const obj47 = { onClick: handleLearnMoreNitroBasicClick };
+      obj46.children = intl8.format(tmp6(tmp4[34]).t.NmpnsP, obj47);
+      const items17 = [closure_14(tmp6(tmp4[33]).Text, obj46)];
+      const obj48 = { style: tmp2.buttonWrapper, children: null };
+      const obj49 = {
+        recipientUserId,
+        style: tmp2.giftPurchaseButton,
+        variant: "active",
+        planId: closure_13.PREMIUM_YEAR_TIER_0,
+        analyticsLocation,
+      };
+      const items18 = [closure_14(tmp3(tmp4[40]), obj49)];
+      const obj50 = {
+        recipientUserId,
+        style: tmp2.giftPurchaseButton,
+        variant: "secondary",
+        planId: closure_13.PREMIUM_MONTH_TIER_0,
+        analyticsLocation,
+      };
+      items18[1] = closure_14(tmp3(tmp4[40]), obj50);
+      obj48.children = items18;
+      items17[1] = closure_15(tmp21, obj48);
+      obj45.children = items17;
+      const items19 = [closure_15(tmp3(tmp4[39]), obj45)];
+      const obj93 = { style: tmp2.warningMargins };
+      items19[1] = closure_14(tmp3(tmp4[41]), obj93);
+      obj44.children = items19;
+      items14[3] = closure_15(closure_16, obj44);
+      obj35.children = items14;
+      tmp20Result11 = closure_15(tmp21, obj35);
+      const tmp3Result4 = tmp3(tmp4[39]);
     }
-    items5[2] = tmp17Result9;
-    obj12.children = items5;
-    items3[1] = closure_14(closure_6, obj12);
-    obj11.children = items3;
-    tmp17Result10 = closure_14(closure_5, obj11);
+    items8[2] = tmp20Result11;
+    obj13.children = items8;
+    items6[1] = closure_15(succeeded, obj13);
+    obj12.children = items6;
+    tmp20Result12 = closure_15(tmp21, obj12);
   }
-  return tmp17Result10;
+  return tmp20Result12;
 }

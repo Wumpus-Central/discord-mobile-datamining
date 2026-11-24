@@ -21,7 +21,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
-const useStateFromSharedValueDefault = tmp(10598);
+const useStateFromSharedValueDefault = tmp(8478);
 require = fn;
 function getButtons(c1, stateFromStores, c2, memo) {
   if (c1) {
@@ -111,7 +111,7 @@ function getButtons(c1, stateFromStores, c2, memo) {
     arr2 = items1;
   }
 }
-const VoicePanelControlsConstants = fn(11748);
+const VoicePanelControlsConstants = fn(11633);
 ({ CONTROLS_BUTTON_SIZE_LARGE: closure_6, CONTROLS_BUTTON_SIZE_NORMAL: metroImportDefault } =
   VoicePanelControlsConstants);
 const InputModes = fn(1071).InputModes;

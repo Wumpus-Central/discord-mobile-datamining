@@ -1,7 +1,7 @@
 // discord_app/modules/interaction_components/SearchableSelectActionComponentUtils.tsx
 import useChannelName from "../channel/useChannelName.tsx";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import InteractionComponentTypes from "InteractionComponentTypes.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import AutocompleteUtilsDefault from "../../utils/AutocompleteUtils.tsx";
 import SnowflakeSelectDefaultValueTypes from "../../../discord_common/js/shared/shared-constants/SnowflakeSelectDefaultValueTypes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -52,10 +52,10 @@ export function queryMentionables(type, query, channelId, arg3) {
       request: flag,
       limit: 15,
     };
-    let obj2 = channel(6556);
-    ({ users, roles } = channel(6556).queryMentionResults(obj3));
+    let obj2 = channel(6743);
+    ({ users, roles } = channel(6743).queryMentionResults(obj3));
     items = [];
-    const queryMentionResultsResult = channel(6556).queryMentionResults(obj3);
+    const queryMentionResultsResult = channel(6743).queryMentionResults(obj3);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(

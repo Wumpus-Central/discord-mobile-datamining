@@ -38,7 +38,7 @@ function isSequencedOfferRewardAvailable(rewardStatus) {
   return tmp;
 }
 ({ doesStorefrontPromotionCoverSku: c2, getCollectiblesCollectionSequencedOffer: c3 } = StorefrontPromotionRecord);
-const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesSequencedOfferPromotionUtils.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesSequencedOfferPromotionUtils.tsx");
 
 export function isOrbsBackPromotion(rewardConfig) {
   let actionType;
@@ -76,4 +76,26 @@ export function getSequencedOfferPromotionForCollectiblesProduct(skuId, includeB
     tmp5 = null;
   }
   return tmp5;
+}
+export function getActiveSequencedOfferPromotion(arr, arg1, arg2) {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  let found;
+  if (arr != null) {
+    found = arr.find((item) => {
+      const tmp = React3(item);
+      let result = null != tmp;
+      if (result) {
+        result = tmp.collectionId === closure_0;
+      }
+      if (result) {
+        result = CollectiblesPromoPriceUtils.isStorefrontPromotionActive(item, closure_1);
+      }
+      return result;
+    });
+  }
+  if (found == null) {
+    found = null;
+  }
+  return found;
 }

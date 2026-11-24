@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
 import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault.tsx";
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting(

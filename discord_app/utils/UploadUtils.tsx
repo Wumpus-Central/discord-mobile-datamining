@@ -1,7 +1,7 @@
 // discord_app/utils/UploadUtils.tsx
+import UploadPlatform from "../modules/media_uploads/UploadPlatform.tsx";
 import NitroFileUploadExperiments from "../modules/premium/experiments/NitroFileUploadExperiments.tsx";
 import clipPayloadUtils from "../modules/clips/clipPayloadUtils.tsx";
-import UploadPlatform from "../modules/media_uploads/UploadPlatform.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const items = [

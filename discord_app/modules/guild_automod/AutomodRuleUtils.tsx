@@ -8,8 +8,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(19714).getRuleCountByTriggerType;
-const Constants = fn(12408);
+const getRuleCountByTriggerType = fn(19757).getRuleCountByTriggerType;
+const Constants = fn(12307);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -123,7 +123,7 @@ export function createDefaultRule(guildId, triggerType) {
   obj3.creatorId = AuthenticationStore.getId();
   obj3.actions = AutomodActionUtils.getRuleDefaultActionsFromConfig(obj);
   obj3.exemptChannels = new Set();
-  const set = new Set();
+  set = new Set();
   obj3.exemptRoles = new Set();
   const set1 = new Set();
   let str = obj3.id;

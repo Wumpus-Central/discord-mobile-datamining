@@ -61,7 +61,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   stateFromStoresArray1 = require("initialize").useStateFromStoresArray(
     items3,
     () => {
-      const set = new Set();
+      set = new Set();
       const item = memo.forEach((boost) => {
         boost = boost.boost;
         if (null == GuildMemberStore.getMember(closure_0, boost.userId)) {

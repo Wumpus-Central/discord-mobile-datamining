@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1071);
 ({ Permissions: closure_9, UserSettingsSections: closure_10 } = Constants);
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 let closure_12 = fn(1081).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
@@ -115,14 +115,7 @@ export function useOpenFixQuarantinedProfileModal(guildId) {
     },
     items3,
   );
-  let obj2 = guildId(scrollPosition[10]);
-  const items4 = [
-    stateFromStores1,
-    scrollPosition,
-    guildId.analyticsLocations,
-    stateFromStores,
-    guildId(scrollPosition[13]).useIsEligibleForUserProfileWYSIWYGEditing("AutomodQuarantineUtils"),
-  ];
+  const items4 = [stateFromStores1, scrollPosition, guildId.analyticsLocations, stateFromStores];
   const items5 = [
     stateFromStores.useCallback(() => {
       let setState = stateFromStores;

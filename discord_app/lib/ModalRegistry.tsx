@@ -6,7 +6,7 @@ class ModalRegistry {
     obj = Object.create(new.target.prototype);
     obj.modals = global;
     obj.stores = (function calculateStores(modals) {
-      const set = new Set();
+      set = new Set();
       const iter = modals[Symbol.iterator]();
       while (iter !== undefined) {
         let stores = iter.next().stores;

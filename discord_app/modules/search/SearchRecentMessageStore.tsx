@@ -23,7 +23,7 @@ const searchRecentMessageStore = new SearchRecentMessageStore(DispatcherDefault,
     ({ guildId, data } = arg0);
     c0 = undefined;
     items = undefined;
-    let set;
+    set = undefined;
     if (null == guildId) {
       return false;
     } else {

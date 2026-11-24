@@ -35,7 +35,7 @@ prototype["getTab"] = function getTab(arg0, arg1) {
 const conjureBrowserSessionsStore = new ConjureBrowserSessionsStore(DispatcherDefault, {
   CONJURE_BROWSER_SESSIONS_SET: function handleBrowserSessionsSet(arg0) {
     ({ projectId, sessions } = arg0);
-    let set;
+    set = undefined;
     value = map.get(projectId);
     if (value == null) {
       value = closure_0;

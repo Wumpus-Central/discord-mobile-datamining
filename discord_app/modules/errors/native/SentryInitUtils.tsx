@@ -575,8 +575,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6365).increment(obj6, true);
-  const tmp26Result = tmp26(6365);
+  tmp26(5685).increment(obj6, true);
+  const tmp26Result = tmp26(5685);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1071);
@@ -669,13 +669,13 @@ export function initSentry() {
               tunnel: `/error-reporting-proxy/${str2}`,
               autoInitializeNativeSdk: false,
               beforeSend,
-              dist: "35720000000000",
+              dist: "35720100000000",
               dsn: SentryStaffDsn,
               environment: ReleaseChannel,
               tracesSampleRate: 0,
               sampleRate: 1,
               ignoreErrors,
-              release: "discord_android@357.0.0-2+357200",
+              release: "discord_android@357.1.0-2+357201",
               tracePropagationTargets: null,
               integrations: null,
               beforeBreadcrumb: null,
@@ -710,7 +710,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35720000000000");
+            _mod674.setTag("buildNumber", "35720100000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

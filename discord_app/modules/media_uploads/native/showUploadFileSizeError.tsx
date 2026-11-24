@@ -2,24 +2,24 @@
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
+import FileSizeUtils from "../../../utils/FileSizeUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import FileSizeUtils from "../../../utils/FileSizeUtils.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UploadUtils from "../../../utils/UploadUtils.tsx";
 import NitroFileUploadExperiments from "../../premium/experiments/NitroFileUploadExperiments.tsx";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
+import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import logMessageSendFailure from "../../messages/logMessageSendFailure.tsx";
 import buildFileSizeLimitEventProperties from "../buildFileSizeLimitEventProperties.tsx";
 import getUploaderFileSizeMetrics from "../getUploaderFileSizeMetrics.tsx";
-import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
-const FileUploadErrorTypes = fn(4918).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4922).FileUploadErrorTypes;
 const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };

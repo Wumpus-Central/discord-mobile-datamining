@@ -1,9 +1,9 @@
 // discord_app/modules/conversations/native/createConversationHeader.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4092 from "../Conversations.messages.js";
+import _modDef4094 from "../Conversations.messages.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
-import _modDef12817 from "../../../../_runtime/metro/12817__.js";
+import _modDef12736 from "../../../../_runtime/metro/12736__.js";
 import RowGeneratorConstants from "../../messages/native/renderer/RowGeneratorConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -16,11 +16,11 @@ export default function createConversationHeader(conversationId) {
     channelId: conversationId.channelId,
     startMessageId: conversationId.startMessageId,
     title: conversationId.title,
-    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12817),
+    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12736),
     expandAccessibilityLabel: null,
   };
   const intl = util.intl;
-  obj.expandAccessibilityLabel = intl.string(_modDef4092.pU5Dut);
+  obj.expandAccessibilityLabel = intl.string(_modDef4094.pU5Dut);
   return obj;
 }
 export function findConversationHeaderRowIndex(previousRows, startMessageId) {

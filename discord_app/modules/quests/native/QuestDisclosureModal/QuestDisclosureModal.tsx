@@ -1,16 +1,16 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import util from "../../../../intl/index.native.tsx";
-import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef7032 from "../../../../../_runtime/metro/07032__.js";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import _modDef7619 from "../../../../../_runtime/metro/07619__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators.tsx";
 import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 function CloseButton() {
   const obj = {
-    source: _modDef7032,
+    source: _modDef7619,
     onPress: function onClose() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },
@@ -19,7 +19,7 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7032,
+    source: _modDef7619,
     onPress: function onClose() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },

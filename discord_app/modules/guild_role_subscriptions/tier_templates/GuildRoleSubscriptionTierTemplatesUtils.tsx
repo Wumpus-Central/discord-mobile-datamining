@@ -14,7 +14,7 @@ require = fn;
 function getUsedTemplateChannelsForGuild(arg0) {
   const arr = useEditStateStore.getState().editStateIdsForGroup[arg0];
   const listings = useEditStateStore.getState().listings;
-  const set = new Set();
+  set = new Set();
   if (null != arr) {
     let item = arr.forEach((item) => {
       let channelBenefits;
@@ -137,9 +137,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(16631).useEditStateStore;
+const useEditStateStore = fn(16665).useEditStateStore;
 const GuildFeatures = fn(1071).GuildFeatures;
-const ChannelFlags = fn(4769).ChannelFlags;
+const ChannelFlags = fn(4773).ChannelFlags;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -224,7 +224,7 @@ export function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
         });
       }
       const _Set = Set;
-      const set = new Set(items1.concat(mapped));
+      set = new Set(items1.concat(mapped));
       if (set.has(price_tier)) {
         const index = priceTiers.indexOf(price_tier);
         if (-1 === index) {

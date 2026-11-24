@@ -3,16 +3,16 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import util from "../../../intl/index.native.tsx";
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import _modDef4090 from "../intl/SlayerStorefront.messages.js";
+import _modDef4092 from "../intl/SlayerStorefront.messages.js";
+import Constants from "../../instant_invite/Constants.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import OrbCheckoutUtils from "../../virtual_currency/checkout/OrbCheckoutUtils.tsx";
-import Constants from "../../instant_invite/Constants.tsx";
-import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
-import _modDef8959 from "../../../../_runtime/metro/08959__.js";
-import CodedLinksConstants from "../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx";
+import _modDef9314 from "../../../../_runtime/metro/09314__.js";
 import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice.android.tsx";
 import SocialLayerStorefrontMobileEmbedExperiment from "../experiments/SocialLayerStorefrontMobileEmbedExperiment.tsx";
+import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import CodedLinksConstants from "../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx";
 import isSocialLayerApplicationDefault from "../../applications/isSocialLayerApplication.tsx";
 import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails.tsx";
 import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors.tsx";
@@ -128,7 +128,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 obj5.orbPriceText = StringResult;
                 let uri;
                 if (null != orbPriceFromPrices) {
-                  uri = Image.resolveAssetSource(_modDef8959).uri;
+                  uri = Image.resolveAssetSource(_modDef9314).uri;
                 }
                 obj5.orbIconUrl = uri;
                 ({ badgeText: obj14.overlayBadgeText, badgeIconUrl: obj14.overlayBadgeIconUrl } =
@@ -141,7 +141,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 obj5.backgroundColor =
                   socialLayerStorefrontEmbedColors.getSocialLayerStorefrontEmbedColors(theme).backgroundColor;
                 obj5.showWishlistButton = true;
-                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 8977 : 8975)).uri;
+                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 9648 : 11085)).uri;
                 const intl5 = util.intl;
                 const t = util.t;
                 obj5.wishlistButtonAccessibilityLabel = intl5.string(hasSkuIdResult ? t["19b82d"] : t.Hcgz2S);
@@ -223,7 +223,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 if (result2) {
                   let stringResult = string(util.t.boqtTA);
                 } else {
-                  stringResult = string(_modDef4090.BKf0MM);
+                  stringResult = string(_modDef4092.BKf0MM);
                 }
                 obj6.acceptLabelText = stringResult;
                 let prop;

@@ -84,7 +84,7 @@ function VoicePanelDockSlotDock(micLive) {
     VoicePanelDockSlotTsx3.__workletHash = 4300785804393;
     VoicePanelDockSlotTsx3.__initData = tmp23;
     const animatedReaction = _mod1653.useAnimatedReaction(VoicePanelDockSlotTsx2, VoicePanelDockSlotTsx3);
-    const tmp26 = tmp(10598)(sharedValue);
+    const tmp26 = tmp(8478)(sharedValue);
     importDefault = tmp26;
     const items4 = [isDockSlotEmpty, tmp26];
     const effect = noop.useEffect(() => {
@@ -140,7 +140,7 @@ function VoicePanelDockSlotDock(micLive) {
       const items12 = [StyleSheet.absoluteFill, animatedStyle];
       obj5.style = items12;
       obj5.onLayout = callback;
-      obj5.children = metroImportDefault(tmp(17986), { isInSlot: true });
+      obj5.children = metroImportDefault(tmp(18025), { isInSlot: true });
       items11[1] = metroImportDefault(tmp(1653).View, obj5);
       const obj6 = { style: null, pointerEvents: "none", children: null };
       const items13 = [StyleSheet.absoluteFill];
@@ -333,7 +333,7 @@ function VoicePanelDockSlotContent(width) {
   return metroImportDefault(VoicePanelStateContextDefault.Provider, obj4);
 }
 const StyleSheet = fn(17).StyleSheet;
-const useVoicePanelDockState = fn(13310).useVoicePanelDockState;
+const useVoicePanelDockState = fn(13236).useVoicePanelDockState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const slot = StyleSheet.create({ slot: { position: "absolute", left: 0, bottom: 0 } });
@@ -342,7 +342,7 @@ let items = [
     code: "(function getSlotDockShouldMount_VoicePanelDockSlotTsx1(progress,isTouched,{gestureActive:gestureActive}){let[SLOT_DOCK_MOUNT_PROGRESS,SHEET_MORPH_PHYSICS]=this.__closure;if(isTouched||progress>=SLOT_DOCK_MOUNT_PROGRESS)return true;if(!gestureActive&&progress<=SHEET_MORPH_PHYSICS.restDisplacementThreshold)return false;return null;})",
   },
   0.5,
-  fn(11775).SHEET_MORPH_PHYSICS,
+  fn(11665).SHEET_MORPH_PHYSICS,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -400,10 +400,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePa
 
 export default noop.memo(function VoicePanelDockSlot(placement) {
   placement = placement.placement;
-  const isMobileRTCV2Enabled = placement(12827).useIsMobileRTCV2Enabled("VoicePanelDockSlot");
+  const isMobileRTCV2Enabled = placement(12746).useIsMobileRTCV2Enabled("VoicePanelDockSlot");
   const tmp2 = useVoicePanelDockState();
-  const obj = placement(12827);
-  const drawerWidth = placement(11954).useDrawerWidth({ whileSliding: "wider" });
+  const obj = placement(12746);
+  const drawerWidth = placement(11837).useDrawerWidth({ whileSliding: "wider" });
   let width = useBaseAppContainerDimensionsDefault().width;
   placement(504);
   [][0] = placement;

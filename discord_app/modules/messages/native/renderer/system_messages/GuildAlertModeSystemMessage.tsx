@@ -3,15 +3,15 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import AvatarUtils from "../../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
-import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import getTagPropertiesDefault from "../getTagProperties.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   automodUsernameColor: nativeDefault.colors.TEXT_BRAND,
 });

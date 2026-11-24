@@ -49,7 +49,7 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(8764).IncidentAlertModeratorPermissions;
+let closure_10 = fn(10453).IncidentAlertModeratorPermissions;
 const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 const size = fn(2);
@@ -76,7 +76,7 @@ export function useFirstGuildIncidentId() {
       let tmp16 = tmp15;
       if (null != tmp15) {
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(8763);
+        let obj8 = stateFromStores1(10452);
         if (obj8.hasDetectedActivity(tmp16)) {
           let obj5 = BigFlagUtilsAll;
           let obj6 = PermissionUtilsAll;
@@ -87,7 +87,7 @@ export function useFirstGuildIncidentId() {
             return nextResult.id;
           }
         } else {
-          let tmp18Result = tmp18(8763);
+          let tmp18Result = tmp18(10452);
         }
       }
     }
@@ -124,8 +124,8 @@ export function useGuildIncidentsState(id) {
   const obj3 = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = tmp(8763).isUnderLockdown(stateFromStores1);
-    const tmpResult = tmp(8763);
+    isUnderLockdownResult = tmp(10452).isUnderLockdown(stateFromStores1);
+    const tmpResult = tmp(10452);
   }
   obj3.isUnderLockdown = isUnderLockdownResult;
   return obj3;

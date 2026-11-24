@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDisconnectCancelButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../../actions/ChannelRTCActionCreators.tsx";
-import StreamActionCreators from "../../../../../actions/StreamActionCreators.tsx";
-import StageChannelActionCreatorExtras from "../../../../stage_channels/StageChannelActionCreatorExtras.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
 import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
+import StageChannelActionCreatorExtras from "../../../../stage_channels/StageChannelActionCreatorExtras.native.tsx";
+import StreamActionCreators from "../../../../../actions/StreamActionCreators.tsx";
 import leaveEmbeddedActivity from "../../../../activities/leaveEmbeddedActivity.tsx";
 import shouldShowEndStageModalDefault from "../../../../stage_channels/shouldShowEndStageModal.tsx";
 import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
@@ -19,10 +19,10 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11750).VoicePanelModes;
+const VoicePanelModes = fn(11635).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,
@@ -161,11 +161,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(10368).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(10172).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19359).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19401).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(8614).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(8883).PhoneHangUpIcon;
   }
   const element = {
     onPress: callback1,

@@ -6,12 +6,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1071).Routes;
-const StaticChannelRoute = fn(4769).StaticChannelRoute;
+const StaticChannelRoute = fn(4773).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
-    marginVertical: fn(5642).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(5997).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -27,7 +27,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
-  const ChannelModes = id(13248).ChannelModes;
+  const ChannelModes = id(13168).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -54,8 +54,8 @@ export default function GuildHomeChannelRow(selected) {
   const intl2 = tmp5(1112).intl;
   obj2.name = intl2.string(tmp5(1112).t.VbpLyU);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(13248).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(13248).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15052).SignPostIcon });
+  obj.name = jsx(tmp5(13168).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(13168).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(14910).SignPostIcon });
   return (
     <tmp7
       onPress={callback}

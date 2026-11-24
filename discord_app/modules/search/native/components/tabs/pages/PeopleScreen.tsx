@@ -9,9 +9,9 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(8576);
+const SearchConstants = fn(8878);
 ({ SearchListItemTypes: closure_8, USER_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(8575).SearchResultContentEntityTypes;
+let closure_10 = fn(8877).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
@@ -51,7 +51,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
   placeholderHeight = onPressGroupDMItem.useCallback((arg0) => {
     closure_0 = arg0;
     closure_8((items) => {
-      const set = new Set(items);
+      set = new Set(items);
       if (set.has(closure_0)) {
         set.delete(closure_0);
       } else {

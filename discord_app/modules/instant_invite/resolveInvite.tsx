@@ -1,16 +1,16 @@
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import TypeUtils from "../../../discord_common/js/packages/type-utils/TypeUtils.tsx";
-import InviteTargetTypes from "../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
 import InviteTypeUtils from "InviteTypeUtils.tsx";
+import InviteTargetTypes from "../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6432);
+const TrackedHTTPUtilsDefault = tmp4(6009);
 require = fn;
-const InviteTypes = fn(8438).InviteTypes;
+const InviteTypes = fn(5650).InviteTypes;
 const Constants = fn(1071);
 ({
   Endpoints: closure_6,

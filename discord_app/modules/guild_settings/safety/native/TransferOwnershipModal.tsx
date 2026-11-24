@@ -10,7 +10,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(12384);
+const TransferOwnershipConstants = fn(12283);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: closure_6 } =
   TransferOwnershipConstants);
 const jsx = fn(21).jsx;
@@ -47,7 +47,7 @@ export default function TransferOwnershipModal(guild) {
         c2 = 0;
         c1 = 0;
         return (function* (arg0) {
-          yield toUser(7994).transferOwnership(id.id, id2.id, constants.EMAIL, id);
+          yield toUser(8432).transferOwnership(id.id, id2.id, constants.EMAIL, id);
           return value;
         })();
       });
@@ -62,11 +62,11 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(12382).close();
-        const obj = toUser(12382);
-        toUser(7994).close();
-        const obj2 = toUser(7994);
-        const result = closure_0(5594).showTransferOwnershipSuccess();
+        toUser(12281).close();
+        const obj = toUser(12281);
+        toUser(8432).close();
+        const obj2 = toUser(8432);
+        const result = closure_0(5598).showTransferOwnershipSuccess();
       };
       obj.onResend = closure_1_3(function* () {
         if (c0 === 2) {
@@ -119,7 +119,7 @@ export default function TransferOwnershipModal(guild) {
       obj.headerText = intl.string(guild(1112).t.Z5s7PM);
       const intl2 = guild(1112).intl;
       obj.confirmButtonText = intl2.string(guild(1112).t.Z5s7PM);
-      return closure_1_7(toUser(7368), obj);
+      return closure_1_7(toUser(7146), obj);
     };
     obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
     return obj2;
@@ -127,7 +127,7 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1112).intl;
   obj.headerBackTitle = intl.string(guild(1112).t["13/7kX"]);
-  return jsx(guild(7092).Navigator, {
+  return jsx(guild(7229).Navigator, {
     screens: memo,
     initialRouteName: constants.TRANFSER_OWNERSHIP,
     headerBackTitle: null,

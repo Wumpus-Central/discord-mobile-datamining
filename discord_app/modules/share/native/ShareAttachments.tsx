@@ -1,7 +1,7 @@
 // discord_app/modules/share/native/ShareAttachments.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
 import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const LinearGradient = module_1653.createAnimatedComponent(LinearGradientDefault);
 let obj = { duration: 300, easing: fn(1186).STANDARD_EASING };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 }, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };

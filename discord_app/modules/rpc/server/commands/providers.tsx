@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/server/commands/providers.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import RPCErrorDefault from "../../RPCError.tsx";
 import ConnectedAccountsActionCreatorsDefault from "../../../../actions/ConnectedAccountsActionCreators.tsx";
+import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
@@ -21,7 +21,7 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6354);
+let Constants = fn(5671);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1071);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: closure_6, PlatformTypes: metroImportDefault } = Constants);

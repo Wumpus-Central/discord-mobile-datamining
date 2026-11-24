@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 let items = [, ,];
 ({
   AUTOMOD_QUARANTINED_BIO: arr[0],
@@ -19,7 +19,7 @@ export function getAutomodQuarantinedProfileFlags(flags) {
   closure_0 = flags;
   if (null == flags) {
     const _Set2 = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     const _Set = Set;
     set = new Set(
@@ -40,7 +40,7 @@ export function getAutomodQuarantinedProfileFlags(flags) {
 export function getAutomodQuarantinedGuildMemberFlags(member) {
   if (null == member) {
     const _Set3 = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     const flags = member.flags;
     if (null == flags) {

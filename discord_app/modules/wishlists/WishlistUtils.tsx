@@ -5,9 +5,9 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import SKURecord from "../skus/SKURecord.tsx";
 
 require = fn;
-let closure_4 = fn(8986).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(8987).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(8988).isSKUWishlistItemRecord;
+let closure_4 = fn(10974).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(10975).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(10976).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1071).SKUProductLines;
 const PremiumSubscriptionSKUs = fn(1388).PremiumSubscriptionSKUs;
 const size = fn(2);
@@ -31,7 +31,7 @@ export function createNitroSuggestedSku() {
   const intl = util.intl;
   obj.name = intl.string(util.t.lG6a5x);
   obj.features = new Set();
-  const set = new Set();
+  set = new Set();
   obj.genres = new Set();
   obj.manifests = [];
   obj.availableRegions = [];

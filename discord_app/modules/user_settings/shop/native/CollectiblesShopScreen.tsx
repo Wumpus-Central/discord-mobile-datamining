@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/shop/native/CollectiblesShopScreen.tsx
-import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
 import useGiftCardMobileConsumptionHalfsheet from "../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx";
 import useShopOrientationLock from "../../../collectibles/native/useShopOrientationLock.tsx";
 import CollectiblesShopV2 from "../../../collectibles/native/CollectiblesShopV2.tsx";

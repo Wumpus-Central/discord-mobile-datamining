@@ -3,21 +3,21 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import useBadges from "../hooks/useBadges.tsx";
-import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
-import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
+import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
+import BotTagDefault from "../../applications/native/BotTag.tsx";
 import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
+import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
+import useBadges from "../hooks/useBadges.tsx";
+import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
-import BotTagDefault from "../../applications/native/BotTag.tsx";
-import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import trackBadgeDirectoryActionDefault from "../../badges/trackBadgeDirectoryAction.tsx";
 import openBadgeDirectoryScreen from "../../badges/native/openBadgeDirectoryScreen.tsx";
+import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
@@ -459,7 +459,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9023), obj);
+  return closure_15(first(9279), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -928,17 +928,17 @@ function GuildTag(primaryGuildOverride) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const getBadgeName = fn(8069).getBadgeName;
-const Constants = fn(7564);
+const getBadgeName = fn(6011).getBadgeName;
+const Constants = fn(7431);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const GuildTagBadgeSize = fn(8000).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8139).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8438).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(6259).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 let closure_19 = PX_6 + 4;
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -1013,7 +1013,7 @@ obj2.addBadgesChip = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
 };
-const dependencyMap = createStyles.createStyles(obj2);
+createStyles.createStyles(obj2);
 let closure_21 = {
   headingVariant: "heading-xl/semibold",
   textVariant: "body-md/normal",
@@ -1023,7 +1023,7 @@ let closure_21 = {
   guildTagTextVariant: "body-sm/medium",
   guildTagHorizontalPadding: 8,
 };
-let dependencyMap2 = {
+const dependencyMap2 = {
   [UserProfileThemeTypes.PREVIEW]: {
     headingVariant: "heading-lg/semibold",
     textVariant: "body-sm/normal",
@@ -1034,8 +1034,8 @@ let dependencyMap2 = {
     guildTagHorizontalPadding: 6,
   },
 };
-createStyles = fn(4913);
-dependencyMap2 = createStyles.createStyles((arg0) => {
+createStyles = fn(4917);
+let closure_23 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {
     sum = arg0 + 2;

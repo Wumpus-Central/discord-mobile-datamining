@@ -9,13 +9,13 @@ const obj = {
   isInMainTabs: false,
   isNavigatorPanelsBesideChannelList: false,
 };
-const Gesture = fn(5173).Gesture;
+const Gesture = fn(5177).Gesture;
 obj.gesture = Gesture.Pan();
-let ReanimatedHelperTypes = fn(7450);
+let ReanimatedHelperTypes = fn(7303);
 obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7450);
+ReanimatedHelperTypes = fn(7303);
 obj.edgeSwipeOnly = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7450);
+ReanimatedHelperTypes = fn(7303);
 obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 const context1 = noop.createContext(undefined);

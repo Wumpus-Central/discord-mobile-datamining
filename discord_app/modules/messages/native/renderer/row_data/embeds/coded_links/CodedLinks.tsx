@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx
 import GlobalUtils from "../../../../../../../utils/GlobalUtils.tsx";
 import CodedLink from "../../../../../../coded_links/CodedLink.tsx";
-import ApplicationCodedLink from "../../../../../../coded_links/ApplicationCodedLink.tsx";
-import conjureProjectLink from "../../../../../../conjure/share/conjureProjectLink.tsx";
 import storefrontCodedLink from "../../../../../../slayer_storefront/storefrontCodedLink.tsx";
+import conjureProjectLink from "../../../../../../conjure/share/conjureProjectLink.tsx";
+import ApplicationCodedLink from "../../../../../../coded_links/ApplicationCodedLink.tsx";
 import ExperimentEmbed from "ExperimentEmbed.tsx";
 import createAppMessageEmbed from "../../../../../../applications/message_embed/native/createAppMessageEmbed.tsx";
 import createActivityMessageEmbed from "../../../../../../applications/message_embed/native/createActivityMessageEmbed.tsx";

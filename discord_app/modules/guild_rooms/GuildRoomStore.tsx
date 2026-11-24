@@ -28,7 +28,7 @@ function resolveCreatingNotes(roomId, objects) {
               tmp3[roomId] = found1;
             }
           }
-          const set = new Set(
+          set = new Set(
             found.map((position) => {
               position = position.position;
               return "" + position.x + "," + position.y;

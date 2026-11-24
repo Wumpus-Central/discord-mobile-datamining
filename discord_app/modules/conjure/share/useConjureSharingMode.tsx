@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/share/useConjureSharingMode.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6621).isProjectOwner;
+let isProjectOwner = fn(6808).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/useConjureSharingMode.tsx");
 
@@ -219,15 +219,15 @@ export default function useConjureSharingMode(arg0) {
 export function conjureSharingOptions() {
   const obj = { value: "collaborators", label: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef4190["a/Tlqf"]);
+  obj.label = intl.string(_modDef4192["a/Tlqf"]);
   items = [obj, ,];
   const obj2 = { value: "link", label: null };
   const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef4190.e0VakN);
+  obj2.label = intl2.string(_modDef4192.e0VakN);
   items[1] = obj2;
   const obj3 = { value: "public", label: null };
   const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef4190["98MAcX"]);
+  obj3.label = intl3.string(_modDef4192["98MAcX"]);
   items[2] = obj3;
   return items;
 }

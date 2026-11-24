@@ -147,7 +147,7 @@ prototype["processMemberRoleIds"] = function processMemberRoleIds(arg0, roles) {
     return { rolesAreDifferent: true, allRoleIds: null };
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const tmp18 = arg0[Symbol.iterator]();
     while (tmp18 !== undefined) {
       let addResult = set.add(tmp2);
@@ -230,7 +230,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           if (roles1 == null) {
             roles1 = [];
           }
-          const set = new Set(roles1);
+          set = new Set(roles1);
           const result = self.detectRoleVisibilityChanges(item10008.id, unsafeMutableRoles, obj2, set);
           flag = userBecameGuildOwnerResult;
           if (null != result) {
@@ -406,7 +406,7 @@ prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleCh
   } else {
     const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(id);
     const _Set = Set;
-    const set = new Set(items);
+    set = new Set(items);
     const _Map = Map;
     const map = new Map();
     const iter2 = channels[Symbol.iterator]();

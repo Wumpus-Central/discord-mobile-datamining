@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import _mod4828 from "../../../_runtime/metro/04828__.js";
+import _mod4832 from "../../../_runtime/metro/04832__.js";
 import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
 import identity from "../../../_runtime/metro/01257__.js";
 import size from "../../../_runtime/metro/00002__.js";
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4828.shallow);
+}, _mod4832.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export function useSelectedVariantIndex(product) {

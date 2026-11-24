@@ -1,7 +1,7 @@
 // discord_app/utils/InstantInviteUtils.tsx
 import util from "../intl/index.native.tsx";
-import AutocompleteUtilsDefault from "AutocompleteUtils.tsx";
 import InviteTargetTypes from "../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
+import AutocompleteUtilsDefault from "AutocompleteUtils.tsx";
 import EmbeddedActivitiesStore from "../modules/activities/EmbeddedActivitiesStore.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildMemberStore from "../stores/GuildMemberStore.tsx";
@@ -97,18 +97,18 @@ const hours = "hours";
 const days = "days";
 const never = "never";
 const dependencyMap = {
-  [fn(8055).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
-  [fn(8055).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
-  [fn(8055).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
-  [fn(8055).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
-  [fn(8055).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
-  [fn(8055).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
-  [fn(8055).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
-  [fn(8055).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
-  [fn(8055).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
-  [fn(8055).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
+  [fn(10287).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
+  [fn(10287).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
+  [fn(10287).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
+  [fn(10287).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
+  [fn(10287).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
+  [fn(10287).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
+  [fn(10287).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
+  [fn(10287).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
+  [fn(10287).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
+  [fn(10287).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
 };
-let items = [fn(8055).INVITE_OPTIONS_14_DAYS, fn(8055).INVITE_OPTIONS_30_DAYS, fn(8055).INVITE_OPTIONS_60_DAYS];
+let items = [fn(10287).INVITE_OPTIONS_14_DAYS, fn(10287).INVITE_OPTIONS_30_DAYS, fn(10287).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -144,31 +144,31 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(8055).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(8055).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(8055).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(8055).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(8055).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(8055).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(8055).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(8055).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(8055).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(8055).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(8055).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(8055).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(8055).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(8055).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(8055).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(8055).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(8055).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(8055).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(8055).INVITE_OPTIONS_100_TIMES,
+  getMaxUsesOptions: fn(10287).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(10287).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(10287).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(10287).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(10287).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(10287).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(10287).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(10287).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(10287).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(10287).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(10287).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(10287).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(10287).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(10287).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(10287).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(10287).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(10287).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(10287).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(10287).INVITE_OPTIONS_100_TIMES,
 };
 export { RowTypes };
 export function generateRowsForQuery(arg0) {
   ({ query, inviteTargetType, omitUserIds, suggestedUserIds, omitGuildId } = arg0);
   ({ suggestedChannelIds, maxRowsWithoutQuery } = arg0);
-  const set = new Set();
+  set = new Set();
   const rows = [];
   const counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numGuildMembers: 0, numChannels: 0 };
   if ("" === query) {
@@ -296,8 +296,8 @@ export function generateRowsForQuery(arg0) {
       _require = undefined;
       importDefault = undefined;
       ({ rows: c0, counts: c1, query: query4, inviteTargetType: inviteTargetType2 } = obj10);
-      if (inviteTargetType2 === tmp39(7267).InviteTargetTypes.EMBEDDED_APPLICATION) {
-        const obj12 = { query: query4, limit: 3, guildId: "channel" };
+      if (inviteTargetType2 === tmp39(5651).InviteTargetTypes.EMBEDDED_APPLICATION) {
+        const obj12 = { query: query4, limit: 3, guildId: "channel_id" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);
@@ -515,7 +515,7 @@ export function getUsersAlreadyJoined(channel) {
           let _Set = Set;
           let tmp8 = new.target;
           let tmp9 = new.target;
-          let set = new Set(item10020.userIds);
+          set = new Set(item10020.userIds);
           obj.return();
           return set;
         }

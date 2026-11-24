@@ -79,7 +79,7 @@ const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(7008).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(7602).ApplicationDisclosureType;
 export function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

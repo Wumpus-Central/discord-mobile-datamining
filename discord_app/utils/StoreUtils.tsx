@@ -240,14 +240,14 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
 };
 const Constants = fn(1071);
 ({ Endpoints: metroImportDefault, OperatingSystems: closure_8 } = Constants);
-const isMobile = fn(5848).isMobile;
+const isMobile = fn(5676).isMobile;
 let tmp3 = !isMobile;
 if (!isMobile) {
-  tmp3 = !fn(5848).isTablet;
+  tmp3 = !fn(5676).isTablet;
 }
 if (tmp3) {
-  tmp3 = -1 !== fn(5762).getChromeVersion();
-  let obj = fn(5762);
+  tmp3 = -1 !== fn(5678).getChromeVersion();
+  let obj = fn(5678);
 }
 let closure_9 = tmp3;
 const size = fn(2);

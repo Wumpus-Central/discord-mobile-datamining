@@ -1,6 +1,6 @@
 // discord_app/modules/premium/hooks/useAndroidAndLegacyIOSPremiumTrialOfferCandidates.native.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import ProductIds from "../native/ProductIds.android.tsx";
+import premium_ProductIds from "../native/ProductIds.android.tsx";
 import useTrialOffer from "../useTrialOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
@@ -26,34 +26,34 @@ export function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
     offerIds: IAPStore.getOfferIds(),
   })).offerIds;
   const trialOffer = useTrialOffer.useTrialOffer(timestampProducer);
-  const values = Object.values(ProductIds.TrialIdToProductOfferId[timestampProducer]);
+  const values = Object.values(premium_ProductIds.TrialIdToProductOfferId[timestampProducer]);
   let tmp4 = null;
   if (values.every((item) => offerIds.has(item))) {
     tmp4 = trialOffer;
   }
   const trialOffer1 = useTrialOffer.useTrialOffer(React3);
-  const values6 = Object.values(ProductIds.TrialIdToProductOfferId[React3]);
+  const values6 = Object.values(premium_ProductIds.TrialIdToProductOfferId[React3]);
   let tmp6 = null;
   if (values6.every((item) => offerIds.has(item))) {
     tmp6 = trialOffer1;
   }
   const tmpResult = useTrialOffer;
   const trialOffer2 = useTrialOffer.useTrialOffer(React4);
-  const values7 = Object.values(ProductIds.TrialIdToProductOfferId[React4]);
+  const values7 = Object.values(premium_ProductIds.TrialIdToProductOfferId[React4]);
   let tmp8 = null;
   if (values7.every((item) => offerIds.has(item))) {
     tmp8 = trialOffer2;
   }
   const tmpResult5 = useTrialOffer;
   const trialOffer3 = useTrialOffer.useTrialOffer(hasOwnProperty);
-  const values8 = Object.values(ProductIds.TrialIdToProductOfferId[hasOwnProperty]);
+  const values8 = Object.values(premium_ProductIds.TrialIdToProductOfferId[hasOwnProperty]);
   let tmp10 = null;
   if (values8.every((item) => offerIds.has(item))) {
     tmp10 = trialOffer3;
   }
   const tmpResult6 = useTrialOffer;
   const trialOffer4 = useTrialOffer.useTrialOffer(metroImportDefault);
-  const values9 = Object.values(ProductIds.TrialIdToProductOfferId[metroImportDefault]);
+  const values9 = Object.values(premium_ProductIds.TrialIdToProductOfferId[metroImportDefault]);
   let tmp12 = null;
   if (values9.every((item) => offerIds.has(item))) {
     tmp12 = trialOffer4;
@@ -61,7 +61,7 @@ export function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
   const items1 = [tmp12, tmp4, tmp6, tmp8, ,];
   const tmpResult7 = useTrialOffer;
   const trialOffer5 = useTrialOffer.useTrialOffer(React5);
-  const values10 = Object.values(ProductIds.TrialIdToProductOfferId[React5]);
+  const values10 = Object.values(premium_ProductIds.TrialIdToProductOfferId[React5]);
   let tmp14 = null;
   if (values10.every((item) => offerIds.has(item))) {
     tmp14 = trialOffer5;

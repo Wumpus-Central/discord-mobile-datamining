@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/server_share/native/ConjureChangeList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,19 +12,19 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = {
-  bots: fn(12179).RobotIcon,
-  channels: fn(7704).AppsIcon,
-  test_app: fn(17004).BeakerIcon,
-  profile_widget: fn(7848).IdCardIcon,
-  overlay: fn(7040).GameControllerIcon,
-  automod: fn(10133).ShieldIcon,
-  collaboration: fn(7038).GroupIcon,
-  only_you: fn(12361).UserIcon,
-  location: fn(12329).MagicWandIcon,
-  server: fn(12471).ServerIcon,
-  settings: fn(10371).SettingsIcon,
+  bots: fn(12121).RobotIcon,
+  channels: fn(7046).AppsIcon,
+  test_app: fn(17038).BeakerIcon,
+  profile_widget: fn(7792).IdCardIcon,
+  overlay: fn(7623).GameControllerIcon,
+  automod: fn(9937).ShieldIcon,
+  collaboration: fn(7029).GroupIcon,
+  only_you: fn(12259).UserIcon,
+  location: fn(11339).MagicWandIcon,
+  server: fn(11300).ServerIcon,
+  settings: fn(10310).SettingsIcon,
 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj3 = {
   box: {
     padding: nativeDefault.space.PX_12,
@@ -44,7 +44,7 @@ export default function ConjureChangeList(rows) {
   obj = { spacing: 8, children: null };
   const obj2 = { variant: "body-md/semibold", color: "text-strong", children: null };
   const intl = require("util").intl;
-  obj2.children = intl.string(_modDef4190["kG/2e8"]);
+  obj2.children = intl.string(_modDef4192["kG/2e8"]);
   items = [closure_4(require("Text/Text").Text, obj2)];
   const obj3 = {
     style: tmp.box,

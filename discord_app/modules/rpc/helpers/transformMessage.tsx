@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/helpers/transformMessage.tsx
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import Server from "../../../flow/Server.tsx";
-import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import useMessageAuthor from "../../messages/useMessageAuthor.tsx";
+import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import transformUserDefault from "transformUser.tsx";
 import getRemoteIconURLDefault from "getRemoteIconURL.tsx";
 import UserRecord from "../../../records/UserRecord.tsx";

@@ -27,7 +27,7 @@ export default function useFavoritesGuildUnreads(arg0) {
   ];
   return require("initialize").useStateFromStoresObject(items, () => {
     const keys = SnowflakeUtilsDefault.keys(closure_0);
-    const set = new Set();
+    set = new Set();
     return keys.reduce(
       (badge, item) => {
         channel = channel.getChannel(item);

@@ -11,9 +11,9 @@ import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.ts
 import ObscuredMediaUtils from "../../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import MarkupParsers from "MarkupParsers.tsx";
-import sanitizeMediaDimension from "sanitizeMediaDimension.tsx";
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
+import sanitizeMediaDimension from "sanitizeMediaDimension.tsx";
+import MarkupParsers from "MarkupParsers.tsx";
 import utils from "../../../interaction_components/content_inventory_entry/utils.tsx";
 import isConjureProjectLinkEmbedDefault from "../../../conjure/share/isConjureProjectLinkEmbed.tsx";
 import NativeChatCapabilities from "../../../chat/native/NativeChatCapabilities.tsx";
@@ -102,11 +102,11 @@ export default function transformEmbeds(arg0) {
                           obj2.height = sanitizeMediaDimension.sanitizeMediaDimension(height);
                           let imageSrc = proxyURL;
                           if (null != proxyURL) {
-                            const obj4Result = obj4(8896);
+                            const obj4Result = obj4(8707);
                             imageSrc = obj4Result.getImageSrc(proxyURL, width, height, !closure_1_1);
                           }
                           obj2.proxyURL = imageSrc;
-                          const obj4Result3 = obj4(8896);
+                          const obj4Result3 = obj4(8707);
                           if (proxyURL == null) {
                             proxyURL = thumbnail.url;
                           }
@@ -250,8 +250,8 @@ export default function transformEmbeds(arg0) {
                             const mapped1 = fields.map((rawName) => {
                               let result = null;
                               if (null != rawName.rawName) {
-                                result = channelId(8791).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                                const obj = channelId(8791);
+                                result = channelId(14242).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                                const obj = channelId(14242);
                               }
                               let result1 = null;
                               if (null != rawName.rawValue) {
@@ -264,8 +264,8 @@ export default function transformEmbeds(arg0) {
                                   showListsAndHeaders,
                                   showMaskedLinks,
                                 };
-                                result1 = channelId(8791).parseEmbedDescriptionMarkup(obj3);
-                                const obj2 = channelId(8791);
+                                result1 = channelId(14242).parseEmbedDescriptionMarkup(obj3);
+                                const obj2 = channelId(14242);
                               }
                               const obj4 = {};
                               const merged = Object.assign(rawName);
@@ -294,7 +294,7 @@ export default function transformEmbeds(arg0) {
                                 }
                                 let tmp64 = obj10;
                                 if (null != iconURL) {
-                                  const obj4Result4 = obj4(8896);
+                                  const obj4Result4 = obj4(8707);
                                   obj10.iconURL = obj4Result4.getImageSrc(iconURL, 16, 16, !closure_1_1);
                                   tmp64 = obj10;
                                 }
@@ -450,7 +450,7 @@ export default function transformEmbeds(arg0) {
                                 if (null != iconURL2) {
                                   const obj15 = {};
                                   const merged7 = Object.assign(type.author);
-                                  obj4 = obj4(8896);
+                                  obj4 = obj4(8707);
                                   obj15.iconURL = obj4.getImageSrc(iconURL2, 16, 16, !closure_1_1);
                                   let author = obj15;
                                 } else {

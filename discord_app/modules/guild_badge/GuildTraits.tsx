@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx")
 
 export { GuildVisibility };
 export function getGuildTraits(fromGuildProfileResult) {
-  const set = new Set(fromGuildProfileResult.features);
+  set = new Set(fromGuildProfileResult.features);
   let APPLY_TO_JOIN = obj.INVITE_ONLY;
   if (set.has(constants.COMMUNITY)) {
     if (set.has(constants.DISCOVERABLE)) {
@@ -88,7 +88,7 @@ export function isDiscoverableGuild(guild) {
   let hasItem = null != guild;
   if (hasItem) {
     const _Set = Set;
-    const set = new Set(guild.features);
+    set = new Set(guild.features);
     hasItem = set.has(constants.DISCOVERABLE);
   }
   return hasItem;

@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
-import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import TextIcon3 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
@@ -70,7 +70,7 @@ function ChannelListItem(arg0) {
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

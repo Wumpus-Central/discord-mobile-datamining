@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/share/CheckpointShareCardFooter.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import inlineStyles from "../../../../../../_runtime/07865_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07813_inlineStyles.js";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let size = { width: 121, height: 28 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { footer: null, portraitFooter: null, characterAndStatsFooter: null, footerTitle: null };
 const obj3 = {};
 const merged = Object.assign(size);

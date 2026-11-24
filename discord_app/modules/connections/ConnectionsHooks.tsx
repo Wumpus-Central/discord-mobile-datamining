@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1071);
 ({ ACTIVITY_PLATFORM_TYPES: metroImportDefault, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(8297).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(8136).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -99,7 +99,7 @@ export function usePlatforms() {
   };
   const items2 = [stateFromStores];
   memo = noop.useMemo(() => {
-    const set = new Set();
+    set = new Set();
     const item = stateFromStores.forEach((type) => set.add(type.type));
     return set;
   }, items2);
@@ -132,7 +132,7 @@ export function useEmptyStatePlatforms() {
   closure_129_0 = false;
   items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(8299).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(8138).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {

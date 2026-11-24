@@ -21,9 +21,9 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ ChannelSettingsSections: closure_4, SearchTypes: hasOwnProperty, WebhookTypes: closure_6 } = Constants);
-const SearchTabs = fn(8576).SearchTabs;
+const SearchTabs = fn(8878).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   pinsScreen: null,

@@ -60,16 +60,9 @@ function getAnalyticsConfig(type) {
       inviteChannelId: obj3.invite_channel_id,
       inviteInstanceId: obj3.invite_instance_id,
       hasActiveStream: obj3.has_active_stream,
-      treatmentRendered,
     } = type);
-    const INVITE_EMBED = AnalyticsLocationDefault.INVITE_EMBED;
-    if (treatmentRendered) {
-      items = [INVITE_EMBED, AnalyticsLocationDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
-      let items1 = items;
-    } else {
-      items1 = [INVITE_EMBED];
-    }
-    obj20.location_stack = items1;
+    items = [AnalyticsLocationDefault.INVITE_EMBED];
+    obj20.location_stack = items;
     obj19.properties = obj20;
     return obj19;
   } else {
@@ -169,7 +162,7 @@ prototype["handleMessageListVisibilityChange"] = function handleMessageListVisib
   const keys = Object.keys(self.currentlyVisibleMessageTimers);
   if (keys.length > 0) {
     const _Set = Set;
-    const set = new Set(items.map(getMessageViewKey));
+    set = new Set(items.map(getMessageViewKey));
     const iter = keys[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {

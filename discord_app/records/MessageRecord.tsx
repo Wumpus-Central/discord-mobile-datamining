@@ -554,9 +554,9 @@ prototype["isInteractionPlaceholder"] = function isInteractionPlaceholder() {
   }
   return isNonUserBotResult;
 };
-prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
+prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id2) {
   const self = this;
-  if (this.author.id === id1) {
+  if (this.author.id === id2) {
     return true;
   } else {
     const interactionMetadata2 = self.interactionMetadata;
@@ -572,7 +572,7 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
     if (interactionMetadata != null) {
       id = interactionMetadata.user.id;
     }
-    let tmp2 = id === id1;
+    let tmp2 = id === id2;
     if (tmp2) {
       const _Object = Object;
       tmp2 = 1 === Object.keys(prop).length;

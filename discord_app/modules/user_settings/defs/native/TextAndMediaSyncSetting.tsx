@@ -5,13 +5,13 @@ import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsA
 import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSettingsStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8712).MobileUserSettings.CHAT,
+  parent: fn(9414).MobileUserSettings.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
     items = [SelectivelySyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));

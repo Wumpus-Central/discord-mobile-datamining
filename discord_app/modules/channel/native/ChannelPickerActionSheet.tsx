@@ -2,8 +2,8 @@
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelName from "../useChannelName.tsx";
 import TableRowIcon from "../../../design/components/TableRow/native/TableRowIcon.native.tsx";
-import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
+import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -39,7 +39,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   items = undefined;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("../../../../_runtime/metro/11732__.js") };
+    let obj4 = { source: require("../../../../_runtime/metro/11617__.js") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

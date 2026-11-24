@@ -5,14 +5,14 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 require = fn;
 const Constants = fn(1071);
 ({ InputModes: c3, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11011).MicrophoneIcon,
+  IconComponent: fn(10360).MicrophoneIcon,
   useTrailing: function useVoiceSettingTrailing() {
     items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {

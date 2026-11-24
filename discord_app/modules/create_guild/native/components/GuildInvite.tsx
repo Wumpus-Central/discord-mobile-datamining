@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
-import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7490 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7356 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
-import CreateGuildModalActionCreatorsDefault from "../CreateGuildModalActionCreators.tsx";
 import InstantInviteRowDefault from "../../../instant_invite/native/components/InstantInviteRow.tsx";
+import CreateGuildModalActionCreatorsDefault from "../CreateGuildModalActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -66,15 +66,15 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     obj3.getItemType = function getItemType(type) {
       return type.type;
     };
-    obj2.children = closure_17(_mod7490.FlashList, obj3);
+    obj2.children = closure_17(_mod7356.FlashList, obj3);
     tmp6Result2 = closure_17(closure_5, obj2);
   }
   return tmp6Result2;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(12084).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7399).CreateGuildModalStates;
+let closure_6 = fn(10352).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7209).CreateGuildModalStates;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_12,
@@ -85,10 +85,10 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
-    marginTop: fn(5467).NAV_BAR_HEIGHT,
+    marginTop: fn(5471).NAV_BAR_HEIGHT,
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     alignItems: "center",
@@ -107,7 +107,7 @@ let obj2 = {
   separator: null,
 };
 let obj3 = {
-  marginTop: fn(5467).NAV_BAR_HEIGHT,
+  marginTop: fn(5471).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",

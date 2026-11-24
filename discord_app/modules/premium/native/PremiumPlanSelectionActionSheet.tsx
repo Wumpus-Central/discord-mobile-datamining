@@ -9,13 +9,9 @@ import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
-import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
-import ACOMExperiments from "../../billing/native/ACOMExperiments.tsx";
-import PremiumPlanActionSheetHeaderDefault from "PremiumPlanActionSheetHeader.tsx";
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
-import useIsEligibleForBogoOffer from "hooks/useIsEligibleForBogoOffer.android.tsx";
 import MobileWebRedirectCheckoutUtils from "../../payments/utils/MobileWebRedirectCheckoutUtils.tsx";
+import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
+import PremiumPlanActionSheetHeaderDefault from "PremiumPlanActionSheetHeader.tsx";
 import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
 import NativeCheckoutStoreProviderDefault from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -128,16 +124,16 @@ function PlanOption(premiumItem) {
   items = [IAPStore];
   const stateFromStores = premiumItem(504).useStateFromStores(items, () => IAPStore.getProduct(premiumItem.productId));
   const obj = premiumItem(504);
-  let checkoutPlanPriceString = premiumItem(9130).useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
-  const obj2 = premiumItem(9130);
+  let checkoutPlanPriceString = premiumItem(9009).useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
+  const obj2 = premiumItem(9009);
   const obj4 = { discountedPriceString, regularPriceString: null };
   let priceString;
   if (stateFromStores != null) {
     priceString = stateFromStores.priceString;
   }
   obj4.regularPriceString = priceString;
-  const checkoutPlanDiscountPrices = premiumItem(9130).useCheckoutPlanDiscountPrices(premiumItem.productId, obj4);
-  const obj3 = premiumItem(9130);
+  const checkoutPlanDiscountPrices = premiumItem(9009).useCheckoutPlanDiscountPrices(premiumItem.productId, obj4);
+  const obj3 = premiumItem(9009);
   ({ orderRequired, orderRecord } = useNativeCheckoutStore((orderRequired) => ({
     orderRequired: orderRequired.orderRequired,
     orderRecord: orderRequired.orderRecord,
@@ -197,9 +193,9 @@ function PlanOption(premiumItem) {
     userIsEligibleForBogoPromotion = premiumItem.basePlanId === closure_21.PREMIUM_MONTH_TIER_2;
   }
   if (null == stateFromStores) {
-    let USD = constants6.USD;
+    let USD = constants5.USD;
   } else {
-    if (str.toLowerCase() in constants6) {
+    if (str.toLowerCase() in constants5) {
       USD = stateFromStores.currencyCode.toLowerCase();
     } else {
       USD = tmp24.USD;
@@ -208,18 +204,18 @@ function PlanOption(premiumItem) {
   }
   let formatRateResult = null;
   if (null != checkoutPlanDiscountPrices) {
-    formatRateResult = tmp4(6856).formatRate(
+    formatRateResult = tmp4(6199).formatRate(
       checkoutPlanDiscountPrices.discountedPrice,
       tmp26.interval,
       tmp26.intervalCount,
     );
-    const tmp4Result5 = tmp4(6856);
+    const tmp4Result5 = tmp4(6199);
   }
   if (tmp14) {
     const intl = tmp4(1112).intl;
-    const obj6 = { price: tmp4(6856).formatPrice(0, USD, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) };
+    const obj6 = { price: tmp4(6199).formatPrice(0, USD, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) };
     let formatToPlainStringResult = intl.formatToPlainString(tmp4(1112).t.hXcaLT, obj6);
-    const tmp4Result6 = tmp4(6856);
+    const tmp4Result6 = tmp4(6199);
   } else {
     formatToPlainStringResult = undefined;
     if (checkoutPlanDiscountPrices != null) {
@@ -243,7 +239,7 @@ function PlanOption(premiumItem) {
   if (regularPrice == null) {
     regularPrice = closure_18;
   }
-  const tmp4Result7 = premiumItem(6856);
+  const tmp4Result7 = premiumItem(6199);
   if (first > 0) {
     const items1 = [tmp.planOptionPriceContainer];
     const obj8 = { transform: null };
@@ -274,7 +270,7 @@ function PlanOption(premiumItem) {
     combined = "" + tierDisplayNameByPlanId + " " + intervalString;
   }
   obj11.children = combined;
-  const items3 = [closure_35(premiumItem(5504).Text, obj11)];
+  const items3 = [closure_35(premiumItem(5508).Text, obj11)];
   const obj12 = { style: planOptionPriceContainer, children: null };
   const obj13 = { style: tmp.planOptionDiscountContainer, children: null };
   if (null == customBadgeComponent) {
@@ -305,7 +301,7 @@ function PlanOption(premiumItem) {
   }
   obj17.color = str8;
   obj17.children = formatToPlainStringResult;
-  items4[1] = closure_35(premiumItem(5504).Text, obj17);
+  items4[1] = closure_35(premiumItem(5508).Text, obj17);
   obj13.children = items4;
   const items5 = [closure_36(closure_8, obj13), ,];
   if (!tmp14) {
@@ -343,7 +339,7 @@ function PlanOption(premiumItem) {
           }
           obj20.numMonths = num2;
           obj19.children = intl6.formatToPlainString(tmp4(1112).t["02Gmgm"], obj20);
-          tmp33Result4 = closure_35(tmp4(5504).Text, obj19);
+          tmp33Result4 = closure_35(tmp4(5508).Text, obj19);
         }
       }
     }
@@ -366,7 +362,7 @@ function PlanOption(premiumItem) {
       }
       obj22.numMonths = num3;
       obj21.children = intl7.formatToPlainString(tmp4(1112).t["vZk+c/"], obj22);
-      tmp33Result5 = closure_35(tmp4(5504).Text, obj21);
+      tmp33Result5 = closure_35(tmp4(5508).Text, obj21);
     }
     items6[1] = tmp33Result5;
     obj18.children = items6;
@@ -398,9 +394,9 @@ function PlanOption(premiumItem) {
       formatToPlainStringResult1 = intl4.formatToPlainString(tmp4(1112).t.v9QeON, obj25);
     }
     obj23.children = formatToPlainStringResult1;
-    closure_35(tmp4(5504).Text, obj23);
+    closure_35(tmp4(5508).Text, obj23);
   }
-  formatRateResult1 = premiumItem(6856).formatRate(
+  formatRateResult1 = premiumItem(6199).formatRate(
     regularPrice,
     dependencyMap[premiumItem.basePlanId].interval,
     dependencyMap[premiumItem.basePlanId].intervalCount,
@@ -430,35 +426,36 @@ function PremiumPlanSelectionActionSheetCTA(isPaymentSuccess) {
   }
 }
 function PremiumPlanSelectionActionSheet(premiumItems) {
-  ({ applicationId: require, analyticsLocation, premiumType } = premiumItems);
+  ({ applicationId: require, analyticsLocation, analyticsLocations, premiumType } = premiumItems);
   premiumItems = premiumItems.premiumItems;
-  const onPaymentStart = premiumItems.onPaymentStart;
+  ({ onSwitchPremiumType: closure_3, onPaymentStart } = premiumItems);
   const onPaymentSuccess = premiumItems.onPaymentSuccess;
   const onPaymentDismiss = premiumItems.onPaymentDismiss;
   let flag = premiumItems.showFormTitle;
-  ({ analyticsLocations, userIsEligibleForBogoPromotion, initialSelectedItem } = premiumItems);
+  ({ userIsEligibleForBogoPromotion, initialSelectedItem } = premiumItems);
   if (flag === undefined) {
     flag = true;
   }
-  let handlePremiumPurchase;
-  c14 = undefined;
+  let ref;
+  closure_15 = undefined;
+  c16 = undefined;
   orderRequired = undefined;
   isPatchOrderLoading = undefined;
-  closure_17 = undefined;
+  closure_19 = undefined;
   discountedPriceString = undefined;
-  first = undefined;
-  closure_20 = undefined;
-  closure_21 = undefined;
-  let analyticsLocations2;
+  let first;
+  closure_22 = undefined;
   closure_23 = undefined;
+  let analyticsLocations2;
+  closure_25 = undefined;
   let memo;
   let basePurchaseFlowAnalyticsFields;
   let basePlanId;
-  constants3 = undefined;
+  c29 = undefined;
   let onDismiss;
   let callback1;
   let memo1;
-  TitleStyleType = async function _onPlanSelectionChange(arg0) {
+  closure_32 = async function _onPlanSelectionChange(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -493,15 +490,15 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
                 closure_129_1 = found;
                 if (null != found) {
                   if (found !== first) {
-                    find = closure_0(tmp3[50]).getSubscriptionItemsForProduct(tmp35);
+                    find = closure_0(tmp3[51]).getSubscriptionItemsForProduct(tmp35);
                     ref.current = true;
                     c4 = 1;
-                    const obj5 = closure_0(tmp3[50]);
+                    const obj5 = closure_0(tmp3[51]);
                   }
                   c5 = 2;
                   c6 = 1;
                   const obj4 = {
-                    value: gesture(
+                    value: closure_2_16(
                       find.map((planId) => {
                         const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
                         const obj2 = closure_1_0(2173);
@@ -523,26 +520,26 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           }
         } else if (1 === tmp7) {
           c4 = 0;
-          closure_130_21.current = false;
+          closure_130_23.current = false;
           throw closure_3;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
-          closure_130_21.current = false;
+          closure_130_23.current = false;
           c6 = 3;
           let obj = { value, done: true };
           return obj;
         } else if (null == value) {
           c4 = 0;
-          closure_130_21.current = false;
+          closure_130_23.current = false;
           c6 = 3;
           return { value: "HermesInternal", done: null };
         }
-        closure_130_20(closure_129_1);
+        closure_130_22(closure_129_1);
         c4 = 0;
-        closure_130_21.current = false;
+        closure_130_23.current = false;
       } catch (tmp25) {
         closure_3 = tmp25;
         if (tmp4 === c4) {
@@ -555,33 +552,42 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     }
   };
   let tmp = closure_38();
-  _slicedToArray = tmp;
-  const tmp2 = orderRequired((isPaymentSuccess) => isPaymentSuccess.isPaymentSuccess);
-  noop = tmp2;
-  let tmp3 = orderRequired((productId) => productId.productId);
-  const product_id = tmp3;
-  const tmp6 = premiumItems;
-  const tmp4 = orderRequired(
+  noop = tmp;
+  let tmp3 = premiumItems;
+  const hasItem = analyticsLocations.includes(premiumType(premiumItems[27]).USER_SETTINGS_TRY_OUT_PREMIUM);
+  const showNitroBasicPurchaseWarning =
+    require("UserProfilePremiumTryItOutMobileRefreshExperiment").useTryItOutMobileRefreshConfig(
+      "PremiumPlanSelectionActionSheet",
+      hasItem,
+    ).showNitroBasicPurchaseWarning;
+  let tmp48Result6 = undefined !== showNitroBasicPurchaseWarning && showNitroBasicPurchaseWarning && hasItem;
+  closure_8 = tmp48Result6;
+  const tmp7 = closure_15((isPaymentSuccess) => isPaymentSuccess.isPaymentSuccess);
+  closure_9 = tmp7;
+  const tmp8 = closure_15((productId) => productId.productId);
+  useNativeCheckoutStore = tmp8;
+  let obj = require("UserProfilePremiumTryItOutMobileRefreshExperiment");
+  const tmp9 = closure_15(
     (mobileWebRedirectCheckoutStatus) => mobileWebRedirectCheckoutStatus.mobileWebRedirectCheckoutStatus,
   );
-  items = [handlePremiumPurchase];
-  let stateFromStores = require("initialize").useStateFromStores(items, () => handlePremiumPurchase.isBusy());
-  let obj = require("initialize");
-  const tmp7 = handlePremiumPurchase;
+  items = [ref];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => ref.isBusy());
+  const tmp10 = ref;
+  const tmp5Result = require("initialize");
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   noop.useRef(null);
-  const ref = noop.useRef(null);
-  const items1 = [tmp2];
+  ref = noop.useRef(null);
+  const items1 = [tmp7];
   const effect = noop.useEffect(() => {
-    if (closure_7) {
+    if (closure_9) {
       const _Date = Date;
-      closure_11.current = Date.now();
+      closure_13.current = Date.now();
     }
   }, items1);
-  const items2 = [tmp2, isScreenReaderEnabled];
+  const items2 = [tmp7, isScreenReaderEnabled];
   const effect1 = noop.useEffect(() => {
-    let tmp = closure_7;
-    if (closure_7) {
+    let tmp = closure_9;
+    if (closure_9) {
       tmp = isScreenReaderEnabled;
     }
     if (tmp) {
@@ -589,51 +595,51 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
     }
   }, items2);
-  let obj2 = require("useIsScreenReaderEnabled");
-  handlePremiumPurchase = require("handlePremiumPurchase").useHandlePremiumPurchase();
-  let obj4 = require("handlePremiumPurchase");
+  const tmp5Result17 = require("useIsScreenReaderEnabled");
+  const handlePremiumPurchase = require("handlePremiumPurchase").useHandlePremiumPurchase();
+  const tmp5Result18 = require("handlePremiumPurchase");
   const isPaymentsBlocked = require("BlockedPaymentsCountryExperiment").useIsPaymentsBlocked();
-  const tmp16 = premiumType(premiumItems[31])();
-  const tmp17 = ref((orderRecord) => orderRecord.orderRecord);
-  closure_13 = tmp17;
-  let obj5 = require("BlockedPaymentsCountryExperiment");
+  const tmp18 = premiumType(tmp3[33])();
+  const tmp19 = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
+  closure_15 = tmp19;
+  const tmp5Result19 = require("BlockedPaymentsCountryExperiment");
   ({
-    patchOrderLineItems: c14,
+    patchOrderLineItems: c16,
     isPatchOrderLoading,
     orderRequired,
-  } = ref((patchOrderLineItems) => ({
+  } = useNativeCheckoutStore((patchOrderLineItems) => ({
     patchOrderLineItems: patchOrderLineItems.patchOrderLineItems,
     isPatchOrderLoading: patchOrderLineItems.isPatchOrderLoading,
     orderRequired: patchOrderLineItems.orderRequired,
   })));
   if (!isPatchOrderLoading) {
-    isPatchOrderLoading = ref((isCreateOrderLoading) => isCreateOrderLoading.isCreateOrderLoading);
+    isPatchOrderLoading = useNativeCheckoutStore((isCreateOrderLoading) => isCreateOrderLoading.isCreateOrderLoading);
   }
-  const tmp18 = ref((patchOrderLineItems) => ({
+  const tmp20 = useNativeCheckoutStore((patchOrderLineItems) => ({
     patchOrderLineItems: patchOrderLineItems.patchOrderLineItems,
     isPatchOrderLoading: patchOrderLineItems.isPatchOrderLoading,
     orderRequired: patchOrderLineItems.orderRequired,
   }));
   const premiumTrialOffer = require("usePremiumTrialOffer").usePremiumTrialOffer();
-  const tmp5Result = require("usePremiumTrialOffer");
-  const premiumDiscountOffer = require("usePremiumDiscountOffer").usePremiumDiscountOffer();
-  let tmp21 = null != premiumTrialOffer && null != premiumType;
-  if (tmp21) {
+  const tmp5Result20 = require("usePremiumTrialOffer");
+  const premiumDiscountOffer = require("hooks/usePremiumDiscountOffer").usePremiumDiscountOffer();
+  let tmp23 = null != premiumTrialOffer && null != premiumType;
+  if (tmp23) {
     const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
     let skuId;
     if (subscriptionTrial != null) {
       skuId = subscriptionTrial.skuId;
     }
-    tmp21 = skuId === premiumType(tmp6[17]).getSkuIdForPremiumType(premiumType);
-    const tmp15Result = premiumType(tmp6[17]);
+    tmp23 = skuId === premiumType(tmp3[17]).getSkuIdForPremiumType(premiumType);
+    const tmp2Result = premiumType(tmp3[17]);
   }
-  let tmp23 = tmp21;
-  if (tmp23) {
-    let tmp24 = !orderRequired;
+  let tmp25 = tmp23;
+  if (tmp25) {
+    let tmp26 = !orderRequired;
     if (orderRequired) {
       let subscriptionTrialId;
-      if (tmp17 != null) {
-        const subscriptionFacet = tmp17.subscriptionFacet;
+      if (tmp19 != null) {
+        const subscriptionFacet = tmp19.subscriptionFacet;
         if (subscriptionFacet != null) {
           const subscriptionPreview = subscriptionFacet.subscriptionPreview;
           if (subscriptionPreview != null) {
@@ -641,36 +647,38 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           }
         }
       }
-      tmp24 = premiumTrialOffer.trialId === subscriptionTrialId;
+      tmp26 = premiumTrialOffer.trialId === subscriptionTrialId;
     }
-    tmp23 = tmp24;
+    tmp25 = tmp26;
   }
-  closure_17 = tmp23;
-  const tmp5Result13 = require("usePremiumDiscountOffer");
+  closure_19 = tmp25;
+  const tmp5Result21 = require("hooks/usePremiumDiscountOffer");
   const discountedPremiumProductInfo = require("useDiscountedPremiumProductInfo").useDiscountedPremiumProductInfo(
     premiumDiscountOffer,
     premiumItems,
   );
   ({ discountedPlan, discountedProduct, discountedPriceString } = discountedPremiumProductInfo);
-  const tmp5Result14 = require("useDiscountedPremiumProductInfo");
+  const tmp5Result22 = require("useDiscountedPremiumProductInfo");
   let productId;
   if (discountedPlan != null) {
     productId = discountedPlan.productId;
   }
-  let obj6 = { discountedPriceString, regularPriceString: null };
+  let obj2 = { discountedPriceString, regularPriceString: null };
   let priceString;
   if (discountedProduct != null) {
     priceString = discountedProduct.priceString;
   }
-  obj6.regularPriceString = priceString;
+  obj2.regularPriceString = priceString;
   const checkoutPlanDiscountPrices = require("useCheckoutPlanPriceString").useCheckoutPlanDiscountPrices(
     productId,
-    obj6,
+    obj2,
   );
-  [first, closure_20] = noop.useState(initialSelectedItem);
-  closure_21 = obj3.useRef(false);
-  const tmp5Result15 = require("useCheckoutPlanPriceString");
-  const items3 = [tmp7];
+  const tmp32 = onPaymentDismiss(noop.useState(initialSelectedItem), 2);
+  first = tmp32[0];
+  closure_22 = tmp32[1];
+  closure_23 = obj4.useRef(false);
+  const tmp5Result23 = require("useCheckoutPlanPriceString");
+  const items3 = [tmp10];
   const stateFromStores1 = require("initialize").useStateFromStores(items3, () => {
     let product = null;
     if (null != first) {
@@ -678,51 +686,51 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     }
     return product;
   });
-  const tmp5Result16 = require("initialize");
-  const tmp5Result17 = require("useBottomSheetRef");
-  analyticsLocations2 = premiumType(tmp6[36])(
+  const tmp5Result24 = require("initialize");
+  const tmp5Result25 = require("useBottomSheetRef");
+  analyticsLocations2 = premiumType(tmp3[38])(
     analyticsLocations,
-    premiumType(tmp6[37]).PREMIUM_PAYMENT_ACTION_SHEET,
+    premiumType(tmp3[27]).PREMIUM_PAYMENT_ACTION_SHEET,
   ).analyticsLocations;
-  const tmp34 = premiumType(tmp6[38])(() => require("PremiumAnalyticsUtils").getNewAnalyticsLoadId());
-  closure_23 = tmp34;
+  const tmp36 = premiumType(tmp3[39])(() => require("PremiumAnalyticsUtils").getNewAnalyticsLoadId());
+  closure_25 = tmp36;
   const items4 = [premiumType];
-  memo = obj3.useMemo(() => {
+  memo = obj4.useMemo(() => {
     const obj = PremiumUtils;
     return obj.castPremiumSubscriptionAsSkuId(PremiumUtilsDefault.getSkuIdForPremiumType(premiumType));
   }, items4);
-  const tmp15Result8 = premiumType(tmp6[36]);
-  let obj7 = { analyticsLoadId: tmp34, analyticsLocation: null, analyticsLocations: null };
+  const tmp2Result8 = premiumType(tmp3[38]);
+  let obj3 = { analyticsLoadId: tmp36, analyticsLocation: null, analyticsLocations: null };
   let merged = Object.assign(analyticsLocation);
-  obj7.analyticsLocation = { object: basePlanId.BUTTON_CTA, object_type: constants3.BUY };
-  obj7.analyticsLocations = analyticsLocations2;
-  basePurchaseFlowAnalyticsFields = require("PremiumAnalyticsUtils").getBasePurchaseFlowAnalyticsFields(obj7);
+  obj3.analyticsLocation = { object: memo.BUTTON_CTA, object_type: basePurchaseFlowAnalyticsFields.BUY };
+  obj3.analyticsLocations = analyticsLocations2;
+  basePurchaseFlowAnalyticsFields = require("PremiumAnalyticsUtils").getBasePurchaseFlowAnalyticsFields(obj3);
   basePlanId = null;
   if (null != first) {
     basePlanId = first.basePlanId;
   }
-  let obj8 = { object: basePlanId.BUTTON_CTA, object_type: constants3.BUY };
-  const tmp5Result18 = require("PremiumAnalyticsUtils");
+  let obj5 = { object: memo.BUTTON_CTA, object_type: basePurchaseFlowAnalyticsFields.BUY };
+  const tmp5Result26 = require("PremiumAnalyticsUtils");
   let result = require("MobileWebRedirectCheckoutUtils").isMobileWebRedirectCheckoutEnabled();
-  constants3 = result;
-  premiumType(tmp6[41])(() => {
+  c29 = result;
+  premiumType(tmp3[42])(() => {
     const obj2 = {};
     const merged = Object.assign(basePurchaseFlowAnalyticsFields);
     obj2.application_id = application_id;
     obj2.subscription_plan_id = basePlanId;
     obj2.sku_id = memo;
     let customCheckoutFlowForAnalytics;
-    if (c27) {
+    if (c29) {
       customCheckoutFlowForAnalytics = MobileWebRedirectCheckoutUtils.getCustomCheckoutFlowForAnalytics();
       const tmpResult = MobileWebRedirectCheckoutUtils;
     }
     obj2.custom_checkout_flow = customCheckoutFlowForAnalytics;
     const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(obj2);
   });
-  const items5 = [tmp2, tmp3];
-  onDismiss = obj3.useCallback(() => {
-    let tmp = closure_7;
-    if (closure_7) {
+  const items5 = [tmp7, tmp8];
+  onDismiss = obj4.useCallback(() => {
+    let tmp = closure_9;
+    if (closure_9) {
       tmp = null != ref.current;
     }
     if (tmp) {
@@ -734,14 +742,14 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     closure_2_16();
   }, items5);
   const items6 = [onDismiss];
-  callback1 = obj3.useCallback(() => {
+  callback1 = obj4.useCallback(() => {
     callback();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items6);
   const items7 = [
     memo,
     basePurchaseFlowAnalyticsFields,
-    tmp34,
+    tmp36,
     analyticsLocations2,
     handlePremiumPurchase,
     result,
@@ -749,12 +757,12 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     onPaymentDismiss,
     onPaymentStart,
     onPaymentSuccess,
-    tmp17,
+    tmp19,
     first,
   ];
-  const items8 = [tmp23, result];
-  const callback2 = obj3.useCallback(
-    onPaymentDismiss(function* () {
+  const items8 = [tmp25, tmp48Result6, result, premiumType];
+  const callback2 = obj4.useCallback(
+    onPaymentSuccess(function* () {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -804,14 +812,14 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
                 const obj9 = { value, done: true };
                 return obj9;
               } else {
-                premiumType(tmp3[20])(null != closure_130_19, "cannot start payment without a selectedItem");
-                basePlanId = closure_130_19.basePlanId;
-                let tmp33 = closure_130_27;
-                if (closure_130_27) {
+                premiumType(tmp3[20])(null != closure_130_21, "cannot start payment without a selectedItem");
+                basePlanId = closure_130_21.basePlanId;
+                let tmp33 = closure_130_29;
+                if (closure_130_29) {
                   tmp33 = closure_129_0;
                 }
                 closure_129_2 = tmp33;
-                const PaymentFlowStep = closure_0(tmp3[39]).PaymentFlowStep;
+                const PaymentFlowStep = closure_0(tmp3[40]).PaymentFlowStep;
                 if (closure_129_2) {
                   let EXTERNAL_PAYMENT = PaymentFlowStep.MOBILE_WEB_REDIRECT_CHECKOUT;
                 } else {
@@ -819,29 +827,29 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
                 }
                 closure_129_3 = EXTERNAL_PAYMENT;
                 const obj10 = {
-                  from_step: closure_0(tmp3[39]).PaymentFlowStep.PLAN_SELECT,
+                  from_step: closure_0(tmp3[40]).PaymentFlowStep.PLAN_SELECT,
                   to_step: closure_129_3,
-                  subscription_plan_gateway_plan_id: closure_130_19.productId,
-                  sku_id: closure_130_24,
+                  subscription_plan_gateway_plan_id: closure_130_21.productId,
+                  sku_id: closure_130_26,
                 };
-                paymentFlowStepAnalyticsFields = closure_0(tmp3[39]).getPaymentFlowStepAnalyticsFields(
-                  closure_130_25,
+                paymentFlowStepAnalyticsFields = closure_0(tmp3[40]).getPaymentFlowStepAnalyticsFields(
+                  closure_130_27,
                   obj10,
                 );
                 if (!closure_129_2) {
-                  premiumType(tmp3[43]).track(constants.PAYMENT_FLOW_STEP, paymentFlowStepAnalyticsFields);
-                  const obj7 = premiumType(tmp3[43]);
+                  premiumType(tmp3[44]).track(constants.PAYMENT_FLOW_STEP, paymentFlowStepAnalyticsFields);
+                  const obj7 = premiumType(tmp3[44]);
                 }
                 const obj12 = {
-                  productId: closure_130_19.productId,
-                  onPaymentStart: closure_130_3,
-                  onPaymentSuccess: closure_130_4,
-                  onPaymentDismiss: closure_130_5,
+                  productId: closure_130_21.productId,
+                  onPaymentStart: closure_130_4,
+                  onPaymentSuccess: closure_130_5,
+                  onPaymentDismiss: closure_130_6,
                 };
-                closure_1_13(obj12);
+                ref(obj12);
                 if (closure_129_2) {
-                  const obj11 = closure_0(tmp3[45]);
-                  const obj13 = { planId: basePlanId, isGift: false, loadId: closure_130_23 };
+                  const obj11 = closure_0(tmp3[46]);
+                  const obj13 = { planId: basePlanId, isGift: false, loadId: closure_130_25 };
                   const result = obj11.goToStandalonePremiumCheckoutFromMobileApp(
                     "premium_plan_selection_action_sheet",
                     obj13,
@@ -849,12 +857,9 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
                       if (obj.isMetaQuest()) {
                         callback1();
                       } else {
-                        c14("in_mobile_web");
-                        premiumType(premiumItems[43]).track(
-                          basePurchaseFlowAnalyticsFields.PAYMENT_FLOW_STEP,
-                          closure_1_4,
-                        );
-                        const obj2 = premiumType(premiumItems[43]);
+                        handlePremiumPurchase("in_mobile_web");
+                        premiumType(premiumItems[44]).track(constants.PAYMENT_FLOW_STEP, closure_1_4);
+                        const obj2 = premiumType(premiumItems[44]);
                       }
                       obj = require("MetaQuestUtils");
                     },
@@ -864,44 +869,44 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
                       obj2.title = intl.string(closure_1_0(1112).t.NrBVjw);
                       const intl2 = closure_1_0(1112).intl;
                       obj2.body = intl2.string(closure_1_0(1112).t["gD+grx"]);
-                      closure_1_1(5861).show(obj2);
+                      closure_1_1(5921).show(obj2);
                     },
                   );
                 } else {
                   c4 = 1;
                   const obj14 = {
-                    productId: closure_130_19.productId,
-                    analyticsLocation: closure_130_25.location,
-                    analyticsLoadId: closure_130_23,
-                    analyticsLocations: closure_130_22,
+                    productId: closure_130_21.productId,
+                    analyticsLocation: closure_130_27.location,
+                    analyticsLoadId: closure_130_25,
+                    analyticsLocations: closure_130_24,
                     orderId: null,
                   };
                   let id;
-                  if (closure_130_13 != null) {
-                    id = closure_130_13.id;
+                  if (closure_130_15 != null) {
+                    id = closure_130_15.id;
                   }
                   obj14.orderId = id;
                   c5 = 3;
                   c6 = 1;
-                  const obj15 = { value: closure_130_12(obj14), done: false };
+                  const obj15 = { value: closure_130_14(obj14), done: false };
                   return obj15;
                 }
-                const obj5 = closure_0(tmp3[39]);
+                const obj5 = closure_0(tmp3[40]);
               }
             } else {
               if (2 === tmp7) {
                 c4 = 0;
                 closure_129_5 = closure_3;
-                if (closure_129_5 instanceof premiumType(tmp3[48])) {
-                  const subscriptions = closure_0(tmp3[49]).fetchSubscriptions();
-                  let obj2 = closure_0(tmp3[49]);
+                if (closure_129_5 instanceof premiumType(tmp3[49])) {
+                  const subscriptions = closure_0(tmp3[50]).fetchSubscriptions();
+                  let obj2 = closure_0(tmp3[50]);
                   const obj16 = { title: null, body: null, hideActionSheet: true };
                   let intl = closure_0(tmp3[19]).intl;
                   obj16.title = intl.string(closure_0(tmp3[19]).t["U+H+kd"]);
                   let intl2 = closure_0(tmp3[19]).intl;
                   obj16.body = intl2.string(closure_0(tmp3[19]).t.F9ktNa);
-                  premiumType(tmp3[47]).show(obj16);
-                  const obj3 = premiumType(tmp3[47]);
+                  premiumType(tmp3[48]).show(obj16);
+                  const obj3 = premiumType(tmp3[48]);
                 } else {
                   throw closure_129_5;
                 }
@@ -931,14 +936,13 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     }),
     items7,
   );
-  memo1 = obj3.useMemo(() => {
-    if (c27) {
+  memo1 = obj4.useMemo(() => {
+    if (c29) {
+      const intl4 = util.intl;
+      let stringResult = intl4.string(util.t.rylrdY);
+    } else if (closure_19) {
       const intl3 = util.intl;
-      let stringResult = intl3.string(util.t.rylrdY);
-    } else if (closure_17) {
-      const tmp2Result = PlatformUtils;
-      const intl2 = util.intl;
-      const string = intl2.string;
+      const string = intl3.string;
       let rKD72m = util.t;
       if (isAndroidResult) {
         rKD72m = rKD72m.rKD72m;
@@ -948,14 +952,21 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       }
       isAndroidResult = PlatformUtils.isAndroid();
     } else {
+      if (closure_8) {
+        if (null != premiumType) {
+          const intl2 = util.intl;
+          const obj = { planName: PremiumUtils.getPremiumTypeDisplayName(tmp3) };
+          stringResult = intl2.formatToPlainString(util.t["4UNoeD"], obj);
+        }
+      }
       const intl = util.intl;
       stringResult = intl.string(util.t.nIlrxd);
     }
     return stringResult;
   }, items8);
-  const items9 = [tmp2, first, tmp23, discountedPriceString, memo1, tmp.legalDisclaimerText];
-  const memo2 = obj3.useMemo(() => {
-    if (closure_7) {
+  const items9 = [tmp7, first, tmp25, discountedPriceString, memo1, tmp.legalDisclaimerText];
+  const memo2 = obj4.useMemo(() => {
+    if (closure_9) {
       return null;
     } else {
       let interval;
@@ -964,19 +975,27 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       }
       if (null == interval) {
         return null;
-      } else if (closure_17) {
-        const obj2 = { style: selectedPremiumType.legalDisclaimerText, variant: "footnote/medium", children: null };
+      } else if (closure_19) {
+        const obj2 = {
+          style: optionNeedsProductNameLabel.legalDisclaimerText,
+          variant: "footnote/medium",
+          children: null,
+        };
         const intl3 = util.intl;
         const t = util.t;
-        const obj4 = { paidURL: constants4.PAID_TERMS, interval: null, cancelURL: null };
+        const obj4 = { paidURL: constants3.PAID_TERMS, interval: null, cancelURL: null };
         const isAndroidResult = PlatformUtils.isAndroid();
         const tmp42 = PlatformUtils.isAndroid() ? t.tINI9V : t.ZWXtAj;
         obj4.interval = PremiumUtilsDefault.getIntervalStringAsNoun(interval);
-        obj4.cancelURL = HelpdeskUtilsDefault.getArticleURL(constants5.PREMIUM_DETAILS_CANCEL_SUB);
+        obj4.cancelURL = HelpdeskUtilsDefault.getArticleURL(constants4.PREMIUM_DETAILS_CANCEL_SUB);
         obj2.children = intl3.format(tmp42, obj4);
         return keyExtractor(Text_Text.Text, obj2);
       } else if (null != discountedPriceString) {
-        const obj5 = { style: selectedPremiumType.legalDisclaimerText, variant: "footnote/medium", children: null };
+        const obj5 = {
+          style: optionNeedsProductNameLabel.legalDisclaimerText,
+          variant: "footnote/medium",
+          children: null,
+        };
         const intl2 = util.intl;
         const obj9 = {
           buttonText: memo1,
@@ -984,16 +1003,20 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           cancelSubscriptionArticle: null,
           paidServiceTermsArticle: null,
         };
-        obj9.cancelSubscriptionArticle = HelpdeskUtilsDefault.getArticleURL(constants5.PREMIUM_DETAILS_CANCEL_SUB);
-        obj9.paidServiceTermsArticle = HelpdeskUtilsDefault.getArticleURL(constants5.PAID_TERMS);
+        obj9.cancelSubscriptionArticle = HelpdeskUtilsDefault.getArticleURL(constants4.PREMIUM_DETAILS_CANCEL_SUB);
+        obj9.paidServiceTermsArticle = HelpdeskUtilsDefault.getArticleURL(constants4.PAID_TERMS);
         obj5.children = intl2.format(util.t["3uC7vj"], obj9);
         return keyExtractor(Text_Text.Text, obj5);
       } else {
         const t2 = util.t;
         const isAndroidResult1 = PlatformUtils.isAndroid();
-        const obj = { style: selectedPremiumType.legalDisclaimerText, variant: "footnote/medium", children: null };
+        const obj = {
+          style: optionNeedsProductNameLabel.legalDisclaimerText,
+          variant: "footnote/medium",
+          children: null,
+        };
         const intl = util.intl;
-        const obj11 = { paidURL: constants4.PAID_TERMS, interval: null, ctaText: null };
+        const obj11 = { paidURL: constants3.PAID_TERMS, interval: null, ctaText: null };
         const tmp3 = PlatformUtils.isAndroid() ? t2.COObWR : t2["7wpqfj"];
         obj11.interval = PremiumUtilsDefault.getIntervalStringAsNoun(interval);
         obj11.ctaText = memo1;
@@ -1002,24 +1025,24 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       }
     }
   }, items9);
-  let obj9 = {
-    ref: tmp5Result17.useBottomSheetRef().bottomSheetRef,
+  let obj6 = {
+    ref: tmp5Result25.useBottomSheetRef().bottomSheetRef,
     handleDisabled: true,
     onDismiss,
     startExpanded: true,
     children: null,
   };
   if (isPaymentsBlocked) {
-    let obj10 = { style: tmp.blockedPaymentContainer, children: null };
-    const items10 = [closure_35(premiumType(tmp6[61]), {})];
-    let obj11 = { variant: "floating", onPress: callback1 };
-    items10[1] = closure_35(require("ActionSheetHeaderBar").ActionSheetHeaderBar, obj11);
-    obj10.children = items10;
-    let tmp47Result = closure_36(product_id, obj10);
+    let obj7 = { style: tmp.blockedPaymentContainer, children: null };
+    const items10 = [closure_35(premiumType(tmp3[62]), {})];
+    let obj8 = { variant: "floating", onPress: callback1 };
+    items10[1] = closure_35(require("ActionSheetHeaderBar").ActionSheetHeaderBar, obj8);
+    obj7.children = items10;
+    let tmp49Result = closure_36(closure_8, obj7);
   } else {
-    let obj12 = {
+    let obj9 = {
       premiumType,
-      isPaymentSuccess: tmp2,
+      isPaymentSuccess: tmp7,
       selectedPremiumType: null,
       trialOffer: null,
       discountOffer: null,
@@ -1028,124 +1051,124 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     if (first != null) {
       premiumTier = first.premiumTier;
     }
-    obj12.selectedPremiumType = premiumTier;
-    obj12.trialOffer = premiumTrialOffer;
-    let tmp51 = null;
+    obj9.selectedPremiumType = premiumTier;
+    obj9.trialOffer = premiumTrialOffer;
+    let tmp53 = null;
     if (null != discountedPriceString) {
-      tmp51 = premiumDiscountOffer;
+      tmp53 = premiumDiscountOffer;
     }
-    obj12.discountOffer = tmp51;
-    const items11 = [closure_35(Header, obj12), ,];
-    let obj13 = { style: tmp.body, children: null };
-    if ("in_mobile_web" === tmp4) {
-      let obj14 = { size: "large", style: tmp.loadingIndicator };
-      let tmp47Result3 = closure_35(isScreenReaderEnabled, obj14);
-    } else if (tmp2) {
-      let obj15 = { style: tmp.contentActivated, children: null };
-      let obj16 = { ref, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
-      const intl5 = require("util").intl;
-      obj16.accessibilityLabel = intl5.string(require("util").t["Q+BB2w"]);
+    obj9.discountOffer = tmp53;
+    const items11 = [closure_35(Header, obj9), ,];
+    let obj10 = { style: tmp.body, children: null };
+    if ("in_mobile_web" === tmp9) {
+      let obj11 = { size: "large", style: tmp.loadingIndicator };
+      let tmp49Result3 = closure_35(closure_9, obj11);
+    } else if (tmp7) {
+      let obj12 = { style: tmp.contentActivated, children: null };
+      let obj13 = { ref, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
+      const intl8 = require("util").intl;
+      obj13.accessibilityLabel = intl8.string(require("util").t["Q+BB2w"]);
       let premiumTier1;
       if (first != null) {
         premiumTier1 = first.premiumTier;
       }
-      if (first.TIER_0 === premiumTier1) {
-        if (tmp5Result20.isThemeDark(tmp16)) {
-          let tmp15Result10 = premiumType(tmp6[52]);
+      if (closure_19.TIER_0 === premiumTier1) {
+        if (tmp5Result28.isThemeDark(tmp18)) {
+          let tmp2Result10 = premiumType(tmp3[53]);
         } else {
-          tmp15Result10 = premiumType(tmp6[53]);
+          tmp2Result10 = premiumType(tmp3[54]);
         }
-        tmp5Result20 = require("shared");
+        tmp5Result28 = require("shared");
       } else {
-        if (tmp73.TIER_1 === premiumTier1) {
-          if (tmp5Result21.isThemeDark(tmp16)) {
-            let tmp15Result11 = premiumType(tmp6[54]);
+        if (tmp77.TIER_1 === premiumTier1) {
+          if (tmp5Result29.isThemeDark(tmp18)) {
+            let tmp2Result11 = premiumType(tmp3[55]);
           } else {
-            tmp15Result11 = premiumType(tmp6[55]);
+            tmp2Result11 = premiumType(tmp3[56]);
           }
-          let tmp74 = tmp15Result11;
-          tmp5Result21 = require("shared");
-        } else if (tmp73.TIER_2 === premiumTier1) {
-          if (tmp5Result22.isThemeDark(tmp16)) {
-            let tmp15Result12 = premiumType(tmp6[56]);
+          let tmp78 = tmp2Result11;
+          tmp5Result29 = require("shared");
+        } else if (tmp77.TIER_2 === premiumTier1) {
+          if (tmp5Result30.isThemeDark(tmp18)) {
+            let tmp2Result12 = premiumType(tmp3[57]);
           } else {
-            tmp15Result12 = premiumType(tmp6[57]);
+            tmp2Result12 = premiumType(tmp3[58]);
           }
-          tmp74 = tmp15Result12;
-          tmp5Result22 = require("shared");
+          tmp78 = tmp2Result12;
+          tmp5Result30 = require("shared");
         }
-        const obj17 = { source: tmp74 };
-        obj16.children = closure_35(tmp15Result9, obj17);
-        const items12 = [closure_35(tmp52, obj16)];
-        let obj18 = { style: tmp.contentActivatedText, variant: "body-md/semibold", children: null };
+        let obj14 = { source: tmp78 };
+        obj13.children = closure_35(tmp2Result9, obj14);
+        const items12 = [closure_35(tmp54, obj13)];
+        let obj15 = { style: tmp.contentActivatedText, variant: "body-md/semibold", children: null };
         let premiumTier2;
         if (first != null) {
           premiumTier2 = first.premiumTier;
         }
-        if (tmp73.TIER_0 === premiumTier2) {
-          const intl7 = require("util").intl;
-          let stringResult = intl7.string(require("util").t["6WWrVM"]);
-          obj18.children = stringResult;
-          obj18 = closure_35(require("Text/Text").Text, obj18);
-          items12[1] = obj18;
-          obj15.children = items12;
-          closure_36(tmp52, obj15);
-        } else if (tmp73.TIER_1 !== premiumTier2) {
-          if (tmp73.TIER_2 === premiumTier2) {
-            const intl8 = require("util").intl;
-            stringResult = intl8.string(require("util").t.I7xNzI);
+        if (tmp77.TIER_0 === premiumTier2) {
+          const intl10 = require("util").intl;
+          let stringResult = intl10.string(require("util").t["6WWrVM"]);
+          obj15.children = stringResult;
+          obj15 = closure_35(require("Text/Text").Text, obj15);
+          items12[1] = obj15;
+          obj12.children = items12;
+          closure_36(tmp54, obj12);
+        } else if (tmp77.TIER_1 !== premiumTier2) {
+          if (tmp77.TIER_2 === premiumTier2) {
+            const intl11 = require("util").intl;
+            stringResult = intl11.string(require("util").t.I7xNzI);
           }
         }
-        const intl6 = require("util").intl;
-        stringResult = intl6.string(require("util").t.LAAgsy);
+        const intl9 = require("util").intl;
+        stringResult = intl9.string(require("util").t.LAAgsy);
       }
-      tmp15Result9 = premiumType(tmp6[63]);
+      tmp2Result9 = premiumType(tmp3[64]);
     } else {
-      const obj19 = { convertToMajorUnits: require("PlatformUtils").isAndroid() };
+      let obj16 = { convertToMajorUnits: require("PlatformUtils").isAndroid() };
       if (flag) {
-        flag = !tmp23;
+        flag = !tmp25;
       }
-      const obj20 = { style: tmp.contentSelectPlan, children: null };
-      if (tmp23) {
-        const obj21 = { variant: "body-md/normal", color: "text-strong", style: tmp.trialDisclaimer, children: null };
+      const obj17 = { style: tmp.contentSelectPlan, children: null };
+      if (tmp25) {
+        const obj18 = { variant: "body-md/normal", color: "text-strong", style: tmp.trialDisclaimer, children: null };
         let intl2 = require("util").intl;
-        obj21.children = intl2.string(require("util").t.u95Dt4);
-        let tmp46Result3 = closure_35(require("Text/Text").Text, obj21);
+        obj18.children = intl2.string(require("util").t.u95Dt4);
+        let tmp48Result4 = closure_35(require("Text/Text").Text, obj18);
       } else {
-        tmp46Result3 = null;
+        tmp48Result4 = null;
         if (null != checkoutPlanDiscountPrices) {
-          tmp46Result3 = null;
+          tmp48Result4 = null;
           if (null != premiumType) {
-            const obj22 = { children: null };
-            const obj23 = {
+            const obj19 = { children: null };
+            const obj20 = {
               variant: "body-md/normal",
               color: "text-strong",
               style: tmp.discountDisclaimer,
               children: null,
             };
             let intl = require("util").intl;
-            obj23.children = intl.format(require("util").t.yBn7uz, checkoutPlanDiscountPrices);
-            const items13 = [closure_35(require("Text/Text").Text, obj23)];
-            const obj24 = { style: null };
+            obj20.children = intl.format(require("util").t.yBn7uz, checkoutPlanDiscountPrices);
+            const items13 = [closure_35(require("Text/Text").Text, obj20)];
+            const obj21 = { style: null };
             const items14 = [,];
             ({ divider: arr14[0], offerDividerMargin: arr14[1] } = tmp);
-            obj24.style = items14;
-            items13[1] = closure_35(tmp52, obj24);
-            obj22.children = items13;
-            tmp46Result3 = closure_36(tmp52, obj22);
+            obj21.style = items14;
+            items13[1] = closure_35(tmp54, obj21);
+            obj19.children = items13;
+            tmp48Result4 = closure_36(tmp54, obj19);
           }
         }
       }
-      const items15 = [tmp46Result3];
+      const items15 = [tmp48Result4, ,];
       let stringResult1;
-      const tmp5Result23 = require("PlatformUtils");
+      const tmp5Result31 = require("PlatformUtils");
       if (flag) {
         let intl3 = require("util").intl;
         stringResult1 = intl3.string(require("util").t.u95Dt4);
       }
-      const obj25 = {
+      const obj22 = {
         title: stringResult1,
-        titleStyleType: TitleStyleType.NO_BORDER_OR_MARGIN,
+        titleStyleType: onDismiss.NO_BORDER_OR_MARGIN,
         titleViewStyle: tmp.formTitle,
         sectionBodyStyle: null,
         inset: true,
@@ -1157,35 +1180,35 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
         formSectionBodyWithNoTitle = tmp.formSectionBodyWithNoTitle;
       }
       items16[1] = formSectionBodyWithNoTitle;
-      obj25.sectionBodyStyle = items16;
-      let tmp46Result4 = null != stateFromStores1;
-      if (tmp46Result4) {
-        tmp46Result4 = "HR" === stateFromStores1.countryCode;
+      obj22.sectionBodyStyle = items16;
+      let tmp48Result5 = null != stateFromStores1;
+      if (tmp48Result5) {
+        tmp48Result5 = "HR" === stateFromStores1.countryCode;
       }
-      if (tmp46Result4) {
-        tmp46Result4 = stateFromStores1.currencyCode.toLowerCase() === constants6.EUR;
+      if (tmp48Result5) {
+        tmp48Result5 = stateFromStores1.currencyCode.toLowerCase() === memo1.EUR;
       }
-      if (tmp46Result4) {
-        const obj26 = { message: null };
-        const intl4 = require("util").intl;
-        const obj27 = { kunaPriceWithCurrency: null };
-        const tmp15Result14 = premiumType(tmp6[65]);
-        obj27.kunaPriceWithCurrency = require("PriceUtils").formatPrice(
-          stateFromStores1.price * memo1,
-          constants6.HRK,
-          obj19,
+      if (tmp48Result5) {
+        const obj23 = { message: null };
+        let intl4 = require("util").intl;
+        const obj24 = { kunaPriceWithCurrency: null };
+        const tmp2Result14 = premiumType(tmp3[66]);
+        obj24.kunaPriceWithCurrency = require("PriceUtils").formatPrice(
+          stateFromStores1.price * callback1,
+          memo1.HRK,
+          obj16,
         );
-        obj26.message = intl4.formatToPlainString(require("util").t["9hnZoK"], obj27);
-        tmp46Result4 = closure_35(tmp15Result14, obj26);
-        const tmp5Result24 = require("PriceUtils");
+        obj23.message = intl4.formatToPlainString(require("util").t["9hnZoK"], obj24);
+        tmp48Result5 = closure_35(tmp2Result14, obj23);
+        const tmp5Result32 = require("PriceUtils");
       }
-      const items17 = [tmp46Result4];
+      const items17 = [tmp48Result5];
       let str4 = "auto";
       let str5 = "auto";
       if (isPatchOrderLoading) {
         str5 = "none";
       }
-      const obj28 = {
+      const obj25 = {
         pointerEvents: str5,
         accessibilityElementsHidden: isPatchOrderLoading,
         importantForAccessibility: null,
@@ -1195,17 +1218,17 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       if (isPatchOrderLoading) {
         str4 = "no-hide-descendants";
       }
-      obj28.importantForAccessibility = str4;
+      obj25.importantForAccessibility = str4;
       let planOptionsBusy = null;
       if (isPatchOrderLoading) {
         planOptionsBusy = tmp.planOptionsBusy;
       }
-      obj28.style = planOptionsBusy;
+      obj25.style = planOptionsBusy;
       let productId1;
       if (first != null) {
         productId1 = first.productId;
       }
-      const obj29 = {
+      const obj26 = {
         value: productId1,
         options: null,
         onChange: null,
@@ -1230,9 +1253,9 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       closure_129_5 = userIsEligibleForBogoPromotion;
       closure_129_6 = premiumType;
       const _Set = Set;
-      const set = new Set(premiumItems.map((premiumTier) => premiumTier.premiumTier));
+      set = new Set(premiumItems.map((premiumTier) => premiumTier.premiumTier));
       closure_129_7 = set.size > 1;
-      obj29.options = premiumItems.map((premiumItem) => {
+      obj26.options = premiumItems.map((premiumItem) => {
         const obj = {
           premiumItem,
           selectedProductId,
@@ -1244,18 +1267,18 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           selectedPremiumType: null,
         };
         let tmp3 = null;
-        if (premiumItem.productId === onPaymentStart) {
-          tmp3 = onPaymentSuccess;
+        if (premiumItem.productId === closure_1_3) {
+          tmp3 = onPaymentStart;
         }
         obj.discountedPriceString = tmp3;
-        obj.userIsEligibleForBogoPromotion = onPaymentDismiss;
-        obj.selectedPremiumType = selectedPremiumType;
+        obj.userIsEligibleForBogoPromotion = onPaymentSuccess;
+        obj.selectedPremiumType = onPaymentDismiss;
         return { name: keyExtractor(PlanOption, obj), value: premiumItem.productId };
       });
-      obj29.onChange = function onChange(value) {
+      obj26.onChange = function onChange(value) {
         return (function onPlanSelectionChange(value) {
           const self = this;
-          const apply = closure_1_30.apply;
+          const apply = closure_1_32.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -1264,16 +1287,46 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           return applyArgumentsResult;
         })(value.value);
       };
-      obj29.style = tmp.planOptionRowContainer;
-      obj29.disabled = stateFromStores;
-      obj28.children = closure_35(require("native").RadioGroup, obj29);
-      items17[1] = closure_35(tmp52, obj28);
-      obj25.children = items17;
-      items15[1] = closure_36(premiumType(tmp6[64]), obj25);
-      obj20.children = items15;
-      const items18 = [closure_36(tmp52, obj20)];
+      obj26.style = tmp.planOptionRowContainer;
+      obj26.disabled = stateFromStores;
+      obj25.children = closure_35(require("native").RadioGroup, obj26);
+      items17[1] = closure_35(tmp54, obj25);
+      obj22.children = items17;
+      items15[1] = closure_36(premiumType(tmp3[65]), obj22);
+      if (tmp48Result6) {
+        tmp48Result6 = premiumType === closure_19.TIER_0;
+      }
+      if (tmp48Result6) {
+        const obj27 = { style: tmp.profileWarning, children: null };
+        const obj28 = { type: "warning", role: "none", title: null, message: null, action: null };
+        const intl5 = require("util").intl;
+        obj28.title = intl5.string(require("util").t.INiT2j);
+        const intl6 = require("util").intl;
+        obj28.message = intl6.string(require("util").t.HdDf7r);
+        const obj29 = { text: null, onPress: null, loading: null };
+        const intl7 = require("util").intl;
+        obj29.text = intl7.string(require("util").t.NQWezR);
+        obj29.onPress = function onPress() {
+          let interval;
+          if (first != null) {
+            interval = first.interval;
+          }
+          return closure_1_3(closure_2_19.TIER_2, interval);
+        };
+        let tmp74 = stateFromStores;
+        if (!stateFromStores) {
+          tmp74 = isPatchOrderLoading;
+        }
+        obj29.loading = tmp74;
+        obj28.action = obj29;
+        obj27.children = closure_35(require("InlineNotice").InlineNotice, obj28);
+        tmp48Result6 = closure_35(tmp54, obj27);
+      }
+      items15[2] = tmp48Result6;
+      obj17.children = items15;
+      const items18 = [closure_36(tmp54, obj17)];
       const obj30 = {
-        isPaymentSuccess: tmp2,
+        isPaymentSuccess: tmp7,
         onClose: callback1,
         ctaText: memo1,
         onStartPayment: callback2,
@@ -1281,11 +1334,11 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
         disabled: null,
         loading: null,
       };
-      let tmp83 = stateFromStores;
+      let tmp87 = stateFromStores;
       if (!stateFromStores) {
-        tmp83 = isPatchOrderLoading;
+        tmp87 = isPatchOrderLoading;
       }
-      obj30.disabled = tmp83;
+      obj30.disabled = tmp87;
       if (!stateFromStores) {
         stateFromStores = isPatchOrderLoading;
       }
@@ -1293,31 +1346,31 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       obj30.loading = stateFromStores;
       items18[1] = closure_35(PremiumPlanSelectionActionSheetCTA, obj30);
       obj31.children = items18;
-      tmp47Result3 = closure_36(closure_37, obj31);
-      const tmp15Result13 = premiumType(tmp6[64]);
+      tmp49Result3 = closure_36(closure_37, obj31);
+      const tmp2Result13 = premiumType(tmp3[65]);
     }
-    const items19 = [tmp47Result3];
-    let tmp86 = !result;
+    const items19 = [tmp49Result3];
+    let tmp90 = !result;
     if (!result) {
-      tmp86 = memo2;
+      tmp90 = memo2;
     }
     const obj32 = { children: null };
-    items19[1] = tmp86;
-    obj13.children = items19;
-    items11[1] = closure_36(product_id, obj13);
+    items19[1] = tmp90;
+    obj10.children = items19;
+    items11[1] = closure_36(closure_8, obj10);
     const obj33 = { variant: "floating", onPress: callback1 };
     items11[2] = closure_35(require("ActionSheetHeaderBar").ActionSheetHeaderBar, obj33);
     obj32.children = items11;
-    tmp47Result = closure_36(closure_37, obj32);
+    tmp49Result = closure_36(closure_37, obj32);
   }
-  obj9.children = tmp47Result;
-  return closure_35(require("Sheet/BottomSheet").BottomSheet, obj9);
+  obj6.children = tmp49Result;
+  return closure_35(require("Sheet/BottomSheet").BottomSheet, obj6);
 }
-let closure_3 = ["predicate", "initialSelectedCriteria", "sortFn"];
+let closure_3 = ["predicate", "initialSelectedCriteria", "initialSelectedInterval", "sortFn"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
-const useNativeCheckoutStore = fn(9112).useNativeCheckoutStore;
-const PremiumPlanPurchasedStore = fn(9109);
+let useNativeCheckoutStore = fn(8977).useNativeCheckoutStore;
+const PremiumPlanPurchasedStore = fn(8974);
 ({
   setInitiatedPurchaseFromNewFlow: map1,
   setMobileWebRedirectCheckoutStatus: closure_14,
@@ -1343,18 +1396,19 @@ let Constants = fn(1071);
   MarketingURLs: closure_28,
   HelpdeskArticles: closure_29,
 } = Constants);
-let TitleStyleType = fn(1190).TitleStyleType;
-const PaymentConstants = fn(5630);
+const TitleStyleType = fn(1190).TitleStyleType;
+const PaymentConstants = fn(5634);
 ({ EUR_TO_HRK_CONVERSION_RATE: closure_31, ItemPurchaseType: closure_32 } = PaymentConstants);
 Constants = fn(1082);
 ({ CurrencyCodes: items, PaymentGateways: closure_34 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_35, jsxs: closure_36, Fragment: closure_37 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   body: { padding: 16 },
   headerText: { paddingTop: 30, paddingHorizontal: 20 },
   contentSelectPlan: { marginBottom: 16 },
+  profileWarning: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 },
   contentActivated: { alignItems: "center", paddingTop: 40, paddingBottom: 56 },
   contentActivatedText: { width: 328, marginTop: 16, textAlign: "center" },
   formTitle: { paddingTop: 0, paddingLeft: 0 },
@@ -1371,17 +1425,7 @@ let obj2 = {
     alignItems: "flex-end",
   },
   planOptionDiscountContainer: { display: "flex", flexDirection: "row", flexShrink: 1 },
-  planOptionDiscount: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: nativeDefault.radii.lg,
-    backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,
-    paddingVertical: 2,
-    paddingHorizontal: 8,
-    marginRight: 8,
-  },
+  planOptionDiscount: null,
   planOptionDiscountWhite: null,
   planOptionDiscountText: null,
   blockedPaymentContainer: null,
@@ -1394,7 +1438,19 @@ let obj2 = {
   discountSubTextContainer: null,
   priceText: null,
 };
-let obj3 = {
+let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
+obj2.planOptionDiscount = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: nativeDefault.radii.lg,
+  backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,
+  paddingVertical: 2,
+  paddingHorizontal: 8,
+  marginRight: 8,
+};
+let obj4 = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -1418,126 +1474,183 @@ obj2.loadingIndicator = { marginVertical: 30 };
 obj2.discountSubTextContainer = { alignItems: "flex-end" };
 obj2.priceText = { flexShrink: 1 };
 let closure_38 = createStyles.createStyles(obj2);
+class PremiumPlanSelectionActionSheetWithOrderCTX {
+  constructor(arg0) {
+    TIER_2 = global;
+    tmp = TIER_2;
+    tmp2 = initialSelectedInterval;
+    NitroACOMSubscriptionExperiment = TIER_2(initialSelectedInterval[69]).NitroACOMSubscriptionExperiment;
+    obj = TIER_2(initialSelectedInterval[59]);
+    tmp3 = PaymentGateways;
+    if (obj.isIOS()) {
+      if (
+        NitroACOMSubscriptionExperiment.useConfig({ location: "PremiumPlanSelectionActionSheetWithOrderCTX" }).enabled
+      ) {
+        APPLE = tmp3.APPLE_ADVANCED_COMMERCE;
+        tmp5 = tmp3;
+      } else {
+        APPLE = tmp3.APPLE;
+        tmp5 = tmp3;
+      }
+      tmp6 = tmp5;
+      tmp7 = APPLE;
+    } else {
+      GOOGLE = tmp3.GOOGLE;
+      tmp4 = tmp3;
+      tmp8 = closure_7;
+      tmp9 = null;
+      closure_1 = closure_7.useRef(null);
+      effect = closure_7.useEffect(
+        () => () => {
+          const current = ref.current;
+          if (null != current) {
+            ref(5131).openLazy(() => Promise.resolve(closure_1_44), closure_2_24, current);
+            const obj = ref(5131);
+          }
+        },
+        [],
+      );
+      fn = global.predicate;
+      if (undefined === fn) {
+        TIER_2 = global.premiumType;
+        if (TIER_2 == null) {
+          tmp11 = PremiumTypes;
+          TIER_2 = PremiumTypes.TIER_2;
+        }
+        fn = (additionalPlans) => {
+          let tmp = 0 === additionalPlans.additionalPlans.length;
+          ({ numPremiumGuild, premiumTier } = additionalPlans);
+          if (tmp) {
+            tmp = !additionalPlans.isDeprecated;
+          }
+          if (tmp) {
+            tmp = 0 === numPremiumGuild;
+          }
+          if (tmp) {
+            tmp = premiumTier === TIER_2;
+          }
+          return tmp;
+        };
+      }
+      fn2 = global.initialSelectedCriteria;
+      if (undefined === fn2) {
+        fn2 = (interval) => interval.interval === constants.YEAR;
+      }
+      ({ initialSelectedInterval, sortFn } = global);
+      if (undefined === sortFn) {
+        sortFn = (interval, interval2) => interval2.interval - interval.interval;
+      }
+      tmp12 = closure_4;
+      tmp13 = closure_3;
+      tmp14 = closure_4(global, closure_3);
+      tmpResult = tmp(tmp2[34]);
+      premiumTrialOffer = tmpResult.usePremiumTrialOffer();
+      premiumType = global.premiumType;
+      tmp16 = null != premiumTrialOffer && null != premiumType;
+      if (tmp16) {
+        subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+        skuId = undefined;
+        if (subscriptionTrial != null) {
+          skuId = subscriptionTrial.skuId;
+        }
+        tmp18 = closure_1;
+        obj3 = closure_1(tmp2[17]);
+        tmp16 = skuId === obj3.getSkuIdForPremiumType(premiumType);
+      }
+      tmp19 = undefined;
+      if (tmp16) {
+        obj1 = { subscription_preview: null };
+        obj15 = { subscription_trial_id: null };
+        obj15.subscription_trial_id = premiumTrialOffer.trialId;
+        obj1.subscription_preview = obj15;
+        tmp19 = obj1;
+      }
+      tmpResult1 = tmp(tmp2[70]);
+      isEligibleForBogoOffer = tmpResult1.useIsEligibleForBogoOffer();
+      if (null == sortFn) {
+        tmpResult2 = tmp(tmp2[51]);
+        premiumBundlesWithPredicate = tmpResult2.getPremiumBundlesWithPredicate(fn);
+      } else {
+        tmpResult3 = tmp(tmp2[51]);
+        premiumBundlesWithPredicate1 = tmpResult3.getPremiumBundlesWithPredicate(fn);
+        premiumBundlesWithPredicate = premiumBundlesWithPredicate1.sort(sortFn);
+      }
+      if (isEligibleForBogoOffer) {
+        fn2 = (interval) => interval.interval === constants.MONTH;
+      }
+      found = premiumBundlesWithPredicate.find((interval) => interval.interval === dependencyMap);
+      if (found == null) {
+        found = premiumBundlesWithPredicate.find(fn2);
+      }
+      if (null != found) {
+        tmpResult4 = tmp(tmp2[51]);
+        subscriptionItemsForProduct = tmpResult4.getSubscriptionItemsForProduct(found.productId);
+        mapped = subscriptionItemsForProduct.map((planId) => {
+          const obj = { subscriptionPlanId: planId.planId, skuId: null, quantity: null };
+          const obj2 = TIER_2(2173);
+          obj.skuId = obj2.castPremiumSubscriptionAsSkuId(closure_1(2173).getSkuIdForPlan(planId.planId));
+          obj.quantity = planId.quantity;
+          return obj;
+        });
+      } else {
+        obj16 = { subscriptionPlanId: null, skuId: null, quantity: 1 };
+        tmp22 = SubscriptionPlans;
+        obj16.subscriptionPlanId = SubscriptionPlans.PREMIUM_YEAR_TIER_2;
+        tmpResult5 = tmp(tmp2[17]);
+        tmp23 = PremiumSubscriptionSKUs;
+        obj16.skuId = tmpResult5.castPremiumSubscriptionAsSkuId(PremiumSubscriptionSKUs.TIER_2);
+        mapped = [];
+        mapped[0] = obj16;
+      }
+      tmp24 = jsx;
+      tmp25 = closure_1;
+      obj17 = {
+        paymentGateway: null,
+        orderRequired: null,
+        skuIds: null,
+        defaultPlans: null,
+        isGift: false,
+        activeSubscription: null,
+        initialSubscriptionFacet: null,
+        onOrderRetryCancellation: null,
+        children: null,
+      };
+      obj17.paymentGateway = GOOGLE;
+      obj17.orderRequired = GOOGLE === tmp3.APPLE_ADVANCED_COMMERCE;
+      obj17.skuIds = [];
+      obj17.defaultPlans = mapped;
+      obj17.initialSubscriptionFacet = tmp19;
+      obj17.onOrderRetryCancellation = function onOrderRetryCancellation() {
+        return closure_1(5131).hideActionSheet(closure_1_24);
+      };
+      tmp27 = PremiumPlanSelectionActionSheet;
+      obj18 = {};
+      tmp28 = obj18;
+      tmp29 = tmp14;
+      tmp26 = closure_1(tmp2[71]);
+      merged = Object.assign(tmp14);
+      obj18.onSwitchPremiumType = function onSwitchPremiumType(premiumType, initialSelectedInterval) {
+        const obj = {};
+        const merged = Object.assign(TIER_2);
+        obj.premiumType = premiumType;
+        obj.predicate = undefined;
+        obj.initialSelectedInterval = initialSelectedInterval;
+        closure_1.current = obj;
+        ActionSheetActionCreatorsDefault.hideActionSheet(dependencyMap);
+      };
+      obj18.premiumItems = premiumBundlesWithPredicate;
+      obj18.userIsEligibleForBogoPromotion = isEligibleForBogoOffer;
+      obj18.initialSelectedItem = found;
+      obj17.children = jsx(PremiumPlanSelectionActionSheet, obj18);
+      return jsx(tmp26, obj17);
+    }
+    return;
+  }
+}
 size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectionActionSheet.tsx");
 
-export default function PremiumPlanSelectionActionSheetWithOrderCTX(predicate) {
-  const NitroACOMSubscriptionExperiment = ACOMExperiments.NitroACOMSubscriptionExperiment;
-  if (obj.isIOS()) {
-    if (
-      NitroACOMSubscriptionExperiment.useConfig({ location: "PremiumPlanSelectionActionSheetWithOrderCTX" }).enabled
-    ) {
-      let APPLE = constants.APPLE_ADVANCED_COMMERCE;
-    } else {
-      APPLE = constants.APPLE;
-    }
-  } else {
-    const GOOGLE = constants.GOOGLE;
-    let fn = predicate.predicate;
-    if (undefined === fn) {
-      TIER_2 = predicate.premiumType;
-      if (TIER_2 == null) {
-        TIER_2 = TIER_2.TIER_2;
-      }
-      fn = (additionalPlans) => {
-        let tmp = 0 === additionalPlans.additionalPlans.length;
-        ({ numPremiumGuild, premiumTier } = additionalPlans);
-        if (tmp) {
-          tmp = !additionalPlans.isDeprecated;
-        }
-        if (tmp) {
-          tmp = 0 === numPremiumGuild;
-        }
-        if (tmp) {
-          tmp = premiumTier === TIER_2;
-        }
-        return tmp;
-      };
-    }
-    let fn2 = predicate.initialSelectedCriteria;
-    if (undefined === fn2) {
-      fn2 = (interval) => interval.interval === constants.YEAR;
-    }
-    let fn3 = predicate.sortFn;
-    if (undefined === fn3) {
-      fn3 = (interval, interval2) => interval2.interval - interval.interval;
-    }
-    const tmp13 = _objectWithoutProperties(predicate, closure_3);
-    const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-    const premiumType = predicate.premiumType;
-    let tmp16 = null != premiumTrialOffer && null != premiumType;
-    if (tmp16) {
-      const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
-      let skuId;
-      if (subscriptionTrial != null) {
-        skuId = subscriptionTrial.skuId;
-      }
-      tmp16 = skuId === PremiumUtilsDefault.getSkuIdForPremiumType(premiumType);
-    }
-    let tmp19;
-    if (tmp16) {
-      let obj2 = { subscription_preview: null };
-      const obj4 = { subscription_trial_id: premiumTrialOffer.trialId };
-      obj2.subscription_preview = obj4;
-      tmp19 = obj2;
-    }
-    const tmpResult = usePremiumTrialOffer;
-    const isEligibleForBogoOffer = useIsEligibleForBogoOffer.useIsEligibleForBogoOffer();
-    if (null == fn3) {
-      let premiumBundlesWithPredicate = PremiumBundledPlansUtils.getPremiumBundlesWithPredicate(fn);
-      const tmpResult7 = PremiumBundledPlansUtils;
-    } else {
-      const premiumBundlesWithPredicate1 = PremiumBundledPlansUtils.getPremiumBundlesWithPredicate(fn);
-      premiumBundlesWithPredicate = premiumBundlesWithPredicate1.sort(fn3);
-      const tmpResult8 = PremiumBundledPlansUtils;
-    }
-    if (isEligibleForBogoOffer) {
-      fn2 = (interval) => interval.interval === constants.MONTH;
-    }
-    const found = premiumBundlesWithPredicate.find(fn2);
-    if (null != found) {
-      const subscriptionItemsForProduct = PremiumBundledPlansUtils.getSubscriptionItemsForProduct(found.productId);
-      let mapped = subscriptionItemsForProduct.map((planId) => {
-        const obj = { subscriptionPlanId: planId.planId, skuId: null, quantity: null };
-        const obj2 = TIER_2(2173);
-        obj.skuId = obj2.castPremiumSubscriptionAsSkuId(PremiumUtilsDefault.getSkuIdForPlan(planId.planId));
-        obj.quantity = planId.quantity;
-        return obj;
-      });
-      const tmpResult9 = PremiumBundledPlansUtils;
-    } else {
-      const obj5 = {
-        subscriptionPlanId: guild.PREMIUM_YEAR_TIER_2,
-        skuId: PremiumUtils.castPremiumSubscriptionAsSkuId(TIER_22.TIER_2),
-        quantity: 1,
-      };
-      mapped = [obj5];
-      const tmpResult10 = PremiumUtils;
-    }
-    const obj6 = {
-      paymentGateway: GOOGLE,
-      orderRequired: GOOGLE === constants.APPLE_ADVANCED_COMMERCE,
-      skuIds: [],
-      defaultPlans: mapped,
-      isGift: false,
-      activeSubscription: null,
-      initialSubscriptionFacet: tmp19,
-      onOrderRetryCancellation() {
-        return ActionSheetActionCreatorsDefault.hideActionSheet(closure_1_24);
-      },
-      children: null,
-    };
-    const obj7 = {};
-    const tmpResult6 = useIsEligibleForBogoOffer;
-    const merged = Object.assign(tmp13);
-    obj7.premiumItems = premiumBundlesWithPredicate;
-    obj7.userIsEligibleForBogoPromotion = isEligibleForBogoOffer;
-    obj7.initialSelectedItem = found;
-    obj6.children = keyExtractor(PremiumPlanSelectionActionSheet, obj7);
-    return keyExtractor(NativeCheckoutStoreProviderDefault, obj6);
-  }
-  obj = PlatformUtils;
-}
+export default PremiumPlanSelectionActionSheetWithOrderCTX;
 export function getItemsByPremiumTypePredicate(arg0) {
   closure_0 = arg0;
   return (additionalPlans) => {

@@ -32,7 +32,7 @@ function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secu
         return uint8Array;
       });
     } else {
-      const obj4 = joined(9692);
+      const obj4 = joined(8524);
       const _Uint8Array = Uint8Array;
       const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
       const _Uint8Array2 = Uint8Array;
@@ -134,8 +134,8 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
     }
   }
 };
-let closure_7 = fn(9708).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(5658).Features;
+let closure_7 = fn(8540).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(5729).Features;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

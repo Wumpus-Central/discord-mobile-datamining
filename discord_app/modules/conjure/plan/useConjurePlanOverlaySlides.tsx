@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/plan/useConjurePlanOverlaySlides.tsx
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -7,7 +7,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let items = [_modDef4190["3eTjcV"], _modDef4190.l3j5nS];
+let items = [_modDef4192["3eTjcV"], _modDef4192.l3j5nS];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/useConjurePlanOverlaySlides.tsx");
 

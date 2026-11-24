@@ -3,8 +3,8 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import DiscordTagDefault from "../../user_profile/native/DiscordTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   mainIdentity: { flexDirection: "row", alignItems: "center" },
   primaryAvatar: { marginRight: nativeDefault.space.PX_4 },

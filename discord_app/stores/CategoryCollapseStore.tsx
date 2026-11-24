@@ -159,7 +159,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
       }
       continue;
     }
-    const set = new Set(mapped.filter(GlobalUtils.isNotNullish));
+    set = new Set(mapped.filter(GlobalUtils.isNotNullish));
   },
   CATEGORY_COLLAPSE: function handleCategoryCollapse(id) {
     id = id.id;

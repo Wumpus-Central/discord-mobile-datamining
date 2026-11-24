@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/ConjureImageOptions.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 import MaskedLinkStoreMethodsAdditional from "../../../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
@@ -79,7 +79,7 @@ export function imageOptionViewerSize(value) {
 export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef4190.SUdqCQ);
+  obj.label = intl.string(_modDef4192.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 }
@@ -163,7 +163,7 @@ export function imageOptionCaption(option) {
 export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef4190;
+  const tmp2 = _modDef4192;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
 }
 export function uploadHint(upload) {
@@ -171,13 +171,13 @@ export function uploadHint(upload) {
     return null;
   } else if (0 === upload.options.length) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef4190.ZZ641e);
+    let stringResult = intl2.string(_modDef4192.ZZ641e);
   } else {
     const intl = util.intl;
     if (1 === upload.options.length) {
-      let dkzChE = _modDef4190["2g3gk9"];
+      let dkzChE = _modDef4192["2g3gk9"];
     } else {
-      dkzChE = _modDef4190.dkzChE;
+      dkzChE = _modDef4192.dkzChE;
     }
     stringResult = intl.string(dkzChE);
   }
@@ -185,6 +185,6 @@ export function uploadHint(upload) {
 export function noImageAnswer() {
   const obj = { kind: "custom", text: null };
   const intl = util.intl;
-  obj.text = intl.string(_modDef4190.zxSq2q);
+  obj.text = intl.string(_modDef4192.zxSq2q);
   return obj;
 }

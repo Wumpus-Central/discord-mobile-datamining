@@ -1,8 +1,8 @@
 // discord_app/modules/search/native/components/tabs/pages/RecentScreen.tsx
 import util from "../../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import AgeVerificationAnalyticsUtils from "../../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
+import AgeVerificationAnalyticsUtils from "../../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SearchPlatformUtils from "../../../SearchPlatformUtils.tsx";
 import SmartSearchUtils from "../../../../../intelligence_layer/search/SmartSearchUtils.tsx";
@@ -35,8 +35,8 @@ function ClearAllHistory(searchContext) {
   const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1112).intl;
   obj2.children = intl2.string(searchContext(1112).t.LFTAUp);
-  obj.children = jsx(searchContext(5504).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(7030).PressableHighlight, {
+  obj.children = jsx(searchContext(5508).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(6026).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -68,14 +68,14 @@ function ViewAll(onJumpToMedia) {
     children: null,
   });
 }
-const SearchConstants = fn(8576);
+const SearchConstants = fn(8878);
 ({
   EMPTY_SEARCH_QUERY_STRING: closure_10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13213).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13127).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {

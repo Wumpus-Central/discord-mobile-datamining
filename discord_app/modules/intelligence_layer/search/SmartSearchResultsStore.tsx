@@ -10,7 +10,7 @@ require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(13199);
+const SmartSearchConstants = fn(13113);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -48,11 +48,11 @@ prototype["getStatus"] = function getStatus(arg0, arg1) {
   }
   return status;
 };
-prototype["hasAnswer"] = function hasAnswer(guildId, requestKey) {
-  const peekResult = closure_6.peek(guildId);
+prototype["hasAnswer"] = function hasAnswer(arg0, arg1) {
+  const peekResult = closure_6.peek(arg0);
   let peekResult1;
   if (peekResult != null) {
-    peekResult1 = peekResult.peek(requestKey);
+    peekResult1 = peekResult.peek(arg1);
   }
   if (peekResult1 == null) {
     peekResult1 = null;

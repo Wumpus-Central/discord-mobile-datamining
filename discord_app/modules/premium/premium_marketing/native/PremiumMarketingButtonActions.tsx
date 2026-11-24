@@ -1,8 +1,8 @@
 // discord_app/modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx
-import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
-import ProductIds from "../../native/ProductIds.android.tsx";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
+import premium_ProductIds from "../../native/ProductIds.android.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremiumPlanSelectionActionSheet.tsx";
 import cta_button from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 import navigateToSocialLayerStorefrontDefault from "../../../slayer_storefront/navigateToSocialLayerStorefront.tsx";
@@ -140,8 +140,8 @@ export function getButtonActionHandler(giftModalDestination) {
             const tmp3Result = showMarketingMomentRewardScreen;
           }
           tmp5 =
-            productId === ProductIds.ProductIds.PREMIUM_TIER_2_MONTHLY ||
-            productId === ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
+            productId === premium_ProductIds.ProductIds.PREMIUM_TIER_2_MONTHLY ||
+            productId === premium_ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
         },
       };
       require("openPremiumPlanSelectionActionSheet")(obj);

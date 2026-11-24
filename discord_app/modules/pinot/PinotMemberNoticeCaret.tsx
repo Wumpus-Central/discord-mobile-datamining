@@ -3,6 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/pinot/PinotMemberNoticeCaret.tsx");
 
+export const PINOT_MEMBER_NOTICE_BORDER_WIDTH = 1;
 export const PINOT_MEMBER_NOTICE_CARET_FILL =
   "M10.3426 2.92826C9.14163 1.42704 6.85837 1.42704 5.65739 2.92826L0 10L16 10L10.3426 2.92826Z";
 export const PINOT_MEMBER_NOTICE_CARET_BORDER =

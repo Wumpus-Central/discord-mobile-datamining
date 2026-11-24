@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const FamilyCenterAction = fn(8336).FamilyCenterAction;
+const FamilyCenterAction = fn(8072).FamilyCenterAction;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   centered: null,
@@ -63,7 +63,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(19620).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(19664).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -85,7 +85,7 @@ export default function ConnectGuardianModal(route) {
     const items1 = [,];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
     obj2.style = items1;
-    obj2.children = closure_7(tmp4(7020).ActivityIndicator, {});
+    obj2.children = closure_7(tmp4(6921).ActivityIndicator, {});
     let tmp9 = closure_7(View, obj2);
   } else {
     const obj3 = { style: tmp.container, children: null };
@@ -93,20 +93,20 @@ export default function ConnectGuardianModal(route) {
     const obj5 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-default", children: null };
     const intl = tmp4(1112).intl;
     obj5.children = intl.string(tmp2(2824).ITlV6p);
-    const items2 = [closure_7(tmp4(5504).Text, obj5)];
+    const items2 = [closure_7(tmp4(5508).Text, obj5)];
     const obj6 = { style: tmp.description, variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp4(1112).intl;
     obj6.children = intl2.format(tmp2(2824).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = closure_7(tmp4(5504).Text, obj6);
+    items2[1] = closure_7(tmp4(5508).Text, obj6);
     obj4.children = items2;
     const items3 = [closure_8(View, obj4), , ,];
     const obj7 = { style: tmp.cardSection, children: null };
     const obj8 = { style: tmp.scanPrompt, variant: "body-md/semibold", color: "text-default", children: null };
     const intl3 = tmp4(1112).intl;
     obj8.children = intl3.string(tmp2(2824).Mi60fm);
-    const items4 = [closure_7(tmp4(5504).Text, obj8)];
+    const items4 = [closure_7(tmp4(5508).Text, obj8)];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(16183).ConnectGuardianCard, {
+    items4[1] = closure_7(tmp4(16216).ConnectGuardianCard, {
       shareActions: "compact",
       linkCode: null,
       expiresAt: null,
@@ -131,7 +131,7 @@ export default function ConnectGuardianModal(route) {
       }
       return tmpResult;
     };
-    obj12.children = closure_7(tmp4(5511).Button, obj25);
+    obj12.children = closure_7(tmp4(5515).Button, obj25);
     items3[3] = closure_7(View, obj12);
     obj3.children = items3;
     tmp9 = closure_8(View, obj3);

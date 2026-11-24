@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef5621 from "../../../../_runtime/metro/05621__.js";
+import _modDef5625 from "../../../../_runtime/metro/05625__.js";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -39,15 +39,24 @@ class ForLaterDeletedMessageCard {
     obj6.children = stringResult;
     items1[1] = tmp5(savedMessage(closure_2[10]).Text, obj6);
     obj7 = { style: tmp.deletedActionButton, children: null };
-    obj8 = { variant: "secondary", accessibilityLabel: null, size: "sm", icon: null, onPress: null };
+    tmp8 = View;
     intl3 = tmp3(tmp4[11]).intl;
-    obj8.accessibilityLabel = intl3.string(tmp3(tmp4[11]).t.SvXS1Z);
-    obj8.icon = tmp6(tmp4[13]);
-    obj8.onPress = function onPress() {
-      return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
+    if (null != savedMessage.saveData.dueAt) {
+      SvXS1Z = tmp3(tmp4[11]).t["a6gcZ/"];
+    } else {
+      SvXS1Z = tmp3(tmp4[11]).t.SvXS1Z;
+    }
+    obj8 = {
+      variant: "secondary",
+      accessibilityLabel: intl3.string(SvXS1Z),
+      size: "sm",
+      icon: tmp6(tmp4[13]),
+      onPress() {
+        return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
+      },
     };
     obj7.children = tmp5(tmp3(tmp4[12]).IconButton, obj8);
-    items1[2] = tmp5(View, obj7);
+    items1[2] = tmp5(tmp8, obj7);
     obj.children = items1;
     return tmp2(savedMessage(closure_2[8]).Card, obj);
   }
@@ -57,7 +66,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   card: { gap: 16, marginBottom: 16 },
   cardDivider: {
@@ -150,7 +159,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: v3(11694).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: v3(11581).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -161,8 +170,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       const obj6 = { value, done: true };
                       return obj6;
                     } else {
-                      v1(6429).pop();
-                      const arr = v1(6429);
+                      v1(6004).pop();
+                      const arr = v1(6004);
                       const obj8 = {
                         channel_id: tmp4.saveData.channelId,
                         message_id: tmp4.saveData.messageId,
@@ -177,9 +186,9 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       }
                       obj8.message_author_id = id;
                       if (null != tmp4.saveData.dueAt) {
-                        let BOOKMARK = v3(11680).SavedMessageSortTypes.REMINDER;
+                        let BOOKMARK = v3(11567).SavedMessageSortTypes.REMINDER;
                       } else {
-                        BOOKMARK = v3(11680).SavedMessageSortTypes.BOOKMARK;
+                        BOOKMARK = v3(11567).SavedMessageSortTypes.BOOKMARK;
                       }
                       obj8.type = BOOKMARK;
                       let diffResult;

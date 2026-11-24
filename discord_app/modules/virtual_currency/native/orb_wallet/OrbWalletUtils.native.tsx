@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/orb_wallet/OrbWalletUtils.native.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../../../premium/native/openPremiumPlanSelectionActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

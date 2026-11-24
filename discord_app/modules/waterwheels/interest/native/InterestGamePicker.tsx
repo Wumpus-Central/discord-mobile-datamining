@@ -9,9 +9,9 @@ import timing_timing from "../../../../design/animation/reanimated/timing/timing
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import GameAutocompleteUtils from "../../../games/autocomplete/GameAutocompleteUtils.tsx";
 import useKeyboardIsOpenDefault from "../../../keyboard/native/useKeyboardIsOpen.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
-import GameAutocompleteUtils from "../../../games/autocomplete/GameAutocompleteUtils.tsx";
 import useGame2 from "../../../games/hooks/useGame.tsx";
 import useGameRecordsDefault from "../../../games/hooks/useGameRecords.tsx";
 import GameCoverDefault from "../../native/GameCover.tsx";
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
   Pressable: metroImportDefault,
   View: closure_8,
 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17823);
+const InterestGamePickerConstants = fn(17861);
 ({
   FOOTER_BORDER_WIDTH: closure_11,
   GRID_COLUMNS: closure_12,
@@ -53,7 +53,7 @@ const InterestGamePickerConstants = fn(17823);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_26 = createStyles.createStyles((borderRadius, minWidth) => {
   const obj = {
     screen: { flex: 1 },
@@ -454,7 +454,7 @@ export default function InterestGamePicker(catalog) {
           const obj2 = {};
           const merged = Object.assign(_undefined2);
           const merged1 = Object.assign(arg0);
-          obj2.sample_rate = c0(17826).COVER_LOAD_SAMPLE_RATE;
+          obj2.sample_rate = c0(17864).COVER_LOAD_SAMPLE_RATE;
           return c1(1255).track(callback.WATERWHEELS_INTEREST_COVER_LOADED, obj2);
         },
         (arg0) => {
@@ -490,7 +490,7 @@ export default function InterestGamePicker(catalog) {
   const bottom = useSafeAreaInsetsDefault().bottom;
   [first1, closure_12] = initialSelection.useState(0);
   [first2, max] = initialSelection.useState(() => {
-    const set = new Set(initialSelection);
+    set = new Set(initialSelection);
     return Array.from(new Set(initialSelection)).slice(0, gesture);
   });
   let tmp13 = _slicedToArray(initialSelection.useState(""), 2);
@@ -906,7 +906,7 @@ export default function InterestGamePicker(catalog) {
       }
     }
   }, items23);
-  closure_57 = tmp6(7392)((arg0) => {
+  closure_57 = tmp6(7202)((arg0) => {
     callback();
     hasOwnProperty.dismiss();
     const current = ref7.current;
@@ -1140,14 +1140,14 @@ export default function InterestGamePicker(catalog) {
             items = [,];
             ({ screen: arr[0], tileWrapper: arr[1] } = gridRow);
             obj2.style = items;
-            const items1 = [callback1(c1(17843), obj2), callback1(c1(17838), { radius })];
+            const items1 = [callback1(c1(17881), obj2), callback1(c1(17876), { radius })];
             obj.children = items1;
             return closure_24(c8, obj, arg1);
           }),
         };
         items = [gridRow.gridRow, { columnGap }];
         obj.style = items;
-        return dependencyMap2(React5, obj, arg1);
+        return closure_2_23(React5, obj, arg1);
       });
     }
     obj21.children = arr;
@@ -1159,11 +1159,11 @@ export default function InterestGamePicker(catalog) {
     const obj23 = { variant: "body-sm/semibold", color: "text-muted", style: tmp9.subtitle, children: null };
     const intl5 = tmp4(1112).intl;
     obj23.children = intl5.string(tmp6(2643).w5cRz0);
-    const items35 = [tmp75(tmp4(5504).Heading, obj23)];
+    const items35 = [tmp75(tmp4(5508).Heading, obj23)];
     const obj24 = { variant: "body-sm/semibold", color: "text-muted", style: tmp9.subtitle, children: null };
     const intl6 = tmp4(1112).intl;
     obj24.children = intl6.string(tmp6(2643).Khsqzs);
-    items35[1] = tmp75(tmp4(5504).Text, obj24);
+    items35[1] = tmp75(tmp4(5508).Text, obj24);
     obj22.children = items35;
     tmp73Result = tmp73(tmp74, obj22);
   }
@@ -1174,13 +1174,13 @@ export default function InterestGamePicker(catalog) {
     const intl7 = tmp4(1112).intl;
     const tmp6Result2 = tmp6(2643);
     obj26.children = intl7.string(stateFromStores2 ? tmp6Result2["+np3yH"] : tmp6Result2.V7UsE0);
-    const items36 = [tmp75(tmp4(5504).Text, obj26)];
+    const items36 = [tmp75(tmp4(5508).Text, obj26)];
     let tmp75Result4 = catalog.length > 0;
     if (tmp75Result4) {
       const obj27 = { onPress: callback6, size: "sm", text: null, variant: "secondary" };
       const intl8 = tmp4(1112).intl;
       obj27.text = intl8.string(tmp4(1112).t["5911Lb"]);
-      tmp75Result4 = tmp75(tmp4(5511).Button, obj27);
+      tmp75Result4 = tmp75(tmp4(5515).Button, obj27);
     }
     items36[1] = tmp75Result4;
     obj25.children = items36;
@@ -1212,7 +1212,7 @@ export default function InterestGamePicker(catalog) {
               if (!hasItem) {
                 tmp2 = memo7.length >= gesture;
               }
-              return dependencyMap2(
+              return closure_3_23(
                 closure_29,
                 {
                   game,
@@ -1258,7 +1258,7 @@ export default function InterestGamePicker(catalog) {
             if (!hasItem) {
               tmp2 = memo7.length >= gesture;
             }
-            return dependencyMap2(
+            return closure_3_23(
               closure_29,
               {
                 game,
@@ -1341,7 +1341,7 @@ export default function InterestGamePicker(catalog) {
     const intl9 = tmp4(1112).intl;
     const obj35 = { count: arr28.length, max };
     obj34.children = intl9.format(tmp6(2643).v9v0uY, obj35);
-    tmp75Result6 = tmp75(tmp4(5504).Text, obj34);
+    tmp75Result6 = tmp75(tmp4(5508).Text, obj34);
   }
   const items41 = [tmp75Result6];
   const obj36 = { style: tmp9.nextButton, children: null };

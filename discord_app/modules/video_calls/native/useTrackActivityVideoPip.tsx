@@ -16,9 +16,9 @@ export default function useTrackActivityPip(arg0) {
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
   );
-  let tmp2 = stateFromStores(6417)(stateFromStores);
+  let tmp2 = stateFromStores(6705)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(10776)();
+  const tmp3 = stateFromStores(10052)();
   noop = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = noop.useEffect(() => {

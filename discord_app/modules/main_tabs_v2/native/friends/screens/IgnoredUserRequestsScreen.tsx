@@ -5,7 +5,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const UserRowModes = fn(9646).UserRowModes;
+const UserRowModes = fn(8803).UserRowModes;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

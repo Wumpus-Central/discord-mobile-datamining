@@ -85,7 +85,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               if (guild2 != null) {
                 features = guild2.features;
               }
-              const set = new Set(features);
+              set = new Set(features);
               closure_129_5 = set;
             }
             if (null != closure_129_0) {

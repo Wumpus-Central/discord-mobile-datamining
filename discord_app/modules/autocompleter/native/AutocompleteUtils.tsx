@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
+import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -14,12 +14,12 @@ function AutocompleteFormDivider() {
   const tmp = closure_17();
   return jsx(FormDividerDefault, { style: closure_17().itemDivider });
 }
-let closure_3 = fn(4766).isGuildSelectableChannelType;
+let closure_3 = fn(4770).isGuildSelectableChannelType;
 const Constants = fn(1071);
 ({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(11261);
+const ApplicationCommandsConstants = fn(10645);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5938);
+const ChannelAutocompleteConstants = fn(6948);
 ({
   CHANNEL_SENTINEL: closure_11,
   EMOJI_SENTINEL: closure_12,
@@ -28,7 +28,7 @@ const ChannelAutocompleteConstants = fn(5938);
 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const re19 = /[\r\n]/;

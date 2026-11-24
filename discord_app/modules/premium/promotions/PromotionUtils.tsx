@@ -299,7 +299,7 @@ export function getClaimedOutboundPromotionCodeMap(stateFromStores2) {
   return obj;
 }
 export function getClaimedEndedOutboundPromotions(arr, arr2) {
-  const set = new Set(arr2.map((id) => id.id));
+  set = new Set(arr2.map((id) => id.id));
   return arr.filter((promotion) => {
     promotion = promotion.promotion;
     const hasItem = set.has(promotion.id);

@@ -2,7 +2,7 @@
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -30,7 +30,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useTap
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11749)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11634)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   closure_4 = tmp2;

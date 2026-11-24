@@ -22,7 +22,7 @@ export default function useActivityWebViewLockManager() {
       }
       return tmp;
     }
-    const set = new Set();
+    set = new Set();
     const map = new Map();
     return function useActivityWebviewLock() {
       const id = getCanRender.useId();
@@ -89,7 +89,7 @@ export default function useActivityWebViewLockManager() {
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(/* F139206 */ function() { ... });
+            closure_0 = resolved.then(/* F139421 */ function() { ... });
           }
         };
       }, items1);

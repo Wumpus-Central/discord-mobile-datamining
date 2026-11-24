@@ -14,7 +14,7 @@ import SearchAutocompleteStore from "../../../../SearchAutocompleteStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(8576);
+const SearchConstants = fn(8878);
 ({
   SearchListItemTypes: closure_10,
   SearchQueryTagTypes: closure_11,
@@ -182,7 +182,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       return items;
     } else {
       const _Set = Set;
-      const set = new Set(searchContext(first[18]).getSearchQueryUserIds(items));
+      set = new Set(searchContext(first[18]).getSearchQueryUserIds(items));
       const _Set2 = Set;
       let obj = searchContext(first[18]);
       set1 = new Set(searchContext(first[18]).getSearchQueryChannelIds(items));

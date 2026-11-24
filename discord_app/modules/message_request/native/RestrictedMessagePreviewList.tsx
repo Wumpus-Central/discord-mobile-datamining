@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import ImageWarningIcon from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
+import ImageWarningIcon from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import MessageStore from "../../../stores/MessageStore.tsx";
@@ -72,10 +72,10 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(19024).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(19066).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -87,11 +87,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19024).RESTRICTED_CONTENT_INSET,
-  height: fn(19024).RESTRICTED_AVATAR_SIZE,
+  width: fn(19066).RESTRICTED_CONTENT_INSET,
+  height: fn(19066).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(19024).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(19066).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",

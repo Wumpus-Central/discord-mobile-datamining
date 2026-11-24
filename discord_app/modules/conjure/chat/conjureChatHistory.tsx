@@ -371,7 +371,7 @@ export function foldDividers(items) {
     return items;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     return items.flatMap((contextSwitch) => {
       contextSwitch = contextSwitch.contextSwitch;
       let id;

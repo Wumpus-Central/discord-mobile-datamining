@@ -148,13 +148,13 @@ function EmbedCard(embed) {
   return React6(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11114);
+const InAppNotificationConstants = fn(10483);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } =
   InAppNotificationConstants);
 const Fonts = fn(1082).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 const PlatformUtils = fn(1358);
 let obj3 = {
   italic: {
@@ -163,7 +163,7 @@ let obj3 = {
   },
 };
 const refs = createStyles.createStyles(obj3);
-createStyles = fn(4913);
+createStyles = fn(4917);
 let obj6 = {
   embedContainer: null,
   embedAccentBar: null,
@@ -211,7 +211,7 @@ obj6.embedTextContainer = {
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "sa" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "channel_id" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

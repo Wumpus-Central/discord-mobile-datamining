@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/conjurePublishCard.tsx
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const weakMap = new WeakMap();
@@ -69,7 +69,7 @@ export function publishNoticeMessage(notice, name, automod) {
   if (true === notice.commands_failed) {
   } else if (true === notice.channel_skipped) {
   } else {
-    const tmp4 = _modDef4190;
+    const tmp4 = _modDef4192;
     if (!notice.update) {
       if (automod) {
         let KORRGl = tmp4.KORRGl;

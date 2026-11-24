@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionIn
 
 export function coalesceInvoiceItems(arr) {
   items = [];
-  const set = new Set();
+  set = new Set();
   const mapped = arr.map((subscriptionPlanId) => {
     for (const item10009 of items) {
       if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {

@@ -3,10 +3,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import useEventExceptionDefault from "../../useEventException.tsx";
 import LazyAPIPromiseDefault from "../../../../utils/LazyAPIPromise.tsx";
 import saveGuildEventRecurrenceDefault from "../../saveGuildEventRecurrence.tsx";
+import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar.tsx";
 import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer.tsx";
 import GuildEventScheduleDefault from "GuildEventSchedule.tsx";
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -106,13 +106,13 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(7575).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(7575);
-  const scheduleForRecurrenceWithException = guildEvent(7575).getScheduleForRecurrenceWithException(
+  const baseScheduleForRecurrence = guildEvent(8325).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8325);
+  const scheduleForRecurrenceWithException = guildEvent(8325).getScheduleForRecurrenceWithException(
     baseScheduleForRecurrence,
     tmp3,
   );
-  let obj2 = guildEvent(7575);
+  let obj2 = guildEvent(8325);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(
@@ -149,10 +149,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5511).Button, obj3);
+  const action = closure_8(guildEvent(5515).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7092).Navigator, {
+    children: closure_8(guildEvent(7229).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

@@ -19,7 +19,7 @@ export function selectWaterwheelsDiscoverEntries(EMPTY_DISCOVER_SNAPSHOT, fn) {
     if (null != loadId) {
       const items1 = [];
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       const _Set2 = Set;
       const set1 = new Set();
       items = EMPTY_DISCOVER_SNAPSHOT.items;

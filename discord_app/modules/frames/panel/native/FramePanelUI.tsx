@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function renderActivityOrPIP(key, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 19208;
+    let tmp4 = 19250;
   } else {
-    tmp4 = 19209;
+    tmp4 = 19251;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, key);
 }

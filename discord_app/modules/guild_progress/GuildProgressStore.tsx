@@ -13,7 +13,7 @@ function completeStep(guild_id, CHANNEL) {
     let flag = !hasItem;
     if (!hasItem) {
       const _Set = Set;
-      const set = new Set(obj.add(CHANNEL));
+      set = new Set(obj.add(CHANNEL));
       dependencyMap[guild_id] = set;
       flag = true;
     }
@@ -21,7 +21,7 @@ function completeStep(guild_id, CHANNEL) {
   }
   return tmp;
 }
-const Steps = fn(13355).Steps;
+const Steps = fn(13278).Steps;
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildProgressStore extends PersistedStore {}
@@ -40,7 +40,7 @@ prototype["initialize"] = function initialize(arg0) {
       }
       if (tmp2) {
         const _Set = Set;
-        const set = new Set(tmp);
+        set = new Set(tmp);
         closure_6[item] = set;
       }
     });
@@ -79,7 +79,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
         let flag = !hasItem;
         if (!hasItem) {
           const _Set = Set;
-          const set = new Set(obj.add(DISMISSED));
+          set = new Set(obj.add(DISMISSED));
           dependencyMap[item] = set;
           flag = true;
         }
@@ -92,7 +92,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       dependencyMap[guildId] = set;
     }
     if (!obj.has(Steps.COMPLETED)) {
@@ -106,7 +106,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
       return false;
     } else {
       const _Set = Set;
-      const set = new Set(dependencyMap[guildId].add(Steps.COMPLETED));
+      set = new Set(dependencyMap[guildId].add(Steps.COMPLETED));
       dependencyMap[guildId] = set;
     }
   },
@@ -119,7 +119,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
       let flag = !hasItem;
       if (!hasItem) {
         const _Set = Set;
-        const set = new Set(obj.add(DISMISSED));
+        set = new Set(obj.add(DISMISSED));
         dependencyMap[guildId] = set;
         flag = true;
       }
@@ -162,7 +162,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
         let flag = !hasItem;
         if (!hasItem) {
           const _Set = Set;
-          const set = new Set(obj.add(CHANNEL));
+          set = new Set(obj.add(CHANNEL));
           dependencyMap[guild_id] = set;
           flag = true;
         }
@@ -215,7 +215,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
           let flag = !hasItem;
           if (!hasItem) {
             const _Set = Set;
-            const set = new Set(obj.add(AVATAR));
+            set = new Set(obj.add(AVATAR));
             dependencyMap[id] = set;
             flag = true;
           }
@@ -247,7 +247,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
         let flag = !hasItem;
         if (!hasItem) {
           const _Set = Set;
-          const set = new Set(obj.add(MESSAGE));
+          set = new Set(obj.add(MESSAGE));
           dependencyMap[guild_id] = set;
           flag = true;
         }
@@ -271,7 +271,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
         let flag = !hasItem;
         if (!hasItem) {
           const _Set = Set;
-          const set = new Set(obj.add(INVITE));
+          set = new Set(obj.add(INVITE));
           dependencyMap[guildId] = set;
           flag = true;
         }

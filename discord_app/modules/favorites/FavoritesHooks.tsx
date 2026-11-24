@@ -12,7 +12,7 @@ import FavoriteStore from "FavoriteStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4775).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(4779).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1388).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");

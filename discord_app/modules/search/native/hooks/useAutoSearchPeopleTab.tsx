@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(13213).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(13127).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
@@ -26,8 +26,8 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
     if (!closure_1) {
       const debounceResult = apply.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          closure_1(13222).searchPeopleTab(searchContext, searchQueryString);
-          const obj = closure_1(13222);
+          closure_1(13142).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(13142);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -36,7 +36,7 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
   const items2 = [searchContext];
   const effect2 = noop.useEffect(
     () => () => {
-      closure_1(13222).cleanupPeopleTab(searchContext);
+      closure_1(13142).cleanupPeopleTab(searchContext);
     },
     items2,
   );

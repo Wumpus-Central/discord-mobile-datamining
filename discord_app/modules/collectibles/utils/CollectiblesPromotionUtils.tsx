@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/utils/CollectiblesPromotionUtils.tsx
 import StorefrontCollectiblesTypes from "../../storefront/collectibles/StorefrontCollectiblesTypes.tsx";
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils.tsx";
 import CollectiblesSequencedOfferPromotionUtils from "CollectiblesSequencedOfferPromotionUtils.tsx";
 import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils.tsx";
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils.tsx";
 import CollectiblesCollectionSalePromotionUtils from "CollectiblesCollectionSalePromotionUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

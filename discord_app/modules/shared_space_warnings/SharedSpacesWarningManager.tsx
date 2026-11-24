@@ -48,7 +48,7 @@ function handleAppStateChanged(state) {
             ignoredUsersForVoiceChannel,
             HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
           );
-          const set = new Set(items);
+          set = new Set(items);
           if (!React5(set)) {
             const items1 = [];
             HermesBuiltin.arraySpread(
@@ -66,7 +66,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(15013);
+const SharedSpacesWarningStore = fn(15052);
 ({
   isBlockedWarningQueued: hasOwnProperty,
   dequeueBlockWarning: closure_6,

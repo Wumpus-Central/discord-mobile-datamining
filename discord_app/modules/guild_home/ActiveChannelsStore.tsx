@@ -31,7 +31,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(4769).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4773).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};
@@ -86,7 +86,7 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
           const found = applyDefault.chain(Array.from(arr)).filter((item) => item in dependencyMap);
           const chainResult = applyDefault.chain(Array.from(arr));
           const _Set = Set;
-          const set = new Set(
+          set = new Set(
             found
               .sortBy((arg0) => {
                 let num;

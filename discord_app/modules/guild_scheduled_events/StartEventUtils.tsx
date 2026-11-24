@@ -252,8 +252,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "Path";
 };
-let closure_4 = fn(4766).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(4768);
+let closure_4 = fn(4770).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4772);
 ({ GuildScheduledEventEntityTypes: metroImportDefault, GuildScheduledEventPrivacyLevel: closure_8 } =
   GuildScheduledEventsConstants);
 const ChannelTypes = fn(1071).ChannelTypes;

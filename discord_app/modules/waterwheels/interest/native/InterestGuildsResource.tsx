@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 function availableInterestGuilds(guilds) {
-  const set = new Set();
+  set = new Set();
   guilds = guilds.guilds;
   const found = guilds.filter((joined) => {
     joined = joined.joined;
@@ -18,7 +18,7 @@ function availableInterestGuilds(guilds) {
   });
   return found.slice(0, 15);
 }
-const MAX_SELECTIONS = fn(17823).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(17861).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {
@@ -67,7 +67,7 @@ prototype["updatePicks"] = function updatePicks(gameIds, flag, arg2) {
     if (!arg2) {
       const _Array = Array;
       const _Set = Set;
-      const set = new Set(gameIds);
+      set = new Set(gameIds);
       const substr = Array.from(set).slice(0, MAX_SELECTIONS);
       const sorted = substr.sort();
       str = sorted.join(",");
@@ -195,7 +195,7 @@ prototype["load"] = function load(arg0, arg1, arg2) {
 };
 
 export function interestGuildsKey(items) {
-  const set = new Set(items);
+  set = new Set(items);
   const substr = Array.from(new Set(items)).slice(0, MAX_SELECTIONS);
   const sorted = substr.sort();
   return sorted.join(",");

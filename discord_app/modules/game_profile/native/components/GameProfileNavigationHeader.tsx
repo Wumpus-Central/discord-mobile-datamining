@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   headerContainer: {
     height: 56,
@@ -157,7 +157,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     const obj4 = { style: tmp.headerContainer, children: null };
     const obj5 = { android_fallbackColor: token };
-    const items6 = [closure_6(tmp2(7600).BackgroundBlurFill, obj5)];
+    const items6 = [closure_6(tmp2(8348).BackgroundBlurFill, obj5)];
     const obj6 = { style: tmp.headerRow, children: null };
     let tmp21Result = null != memo;
     if (tmp21Result) {
@@ -165,7 +165,7 @@ export default function GameProfileNavigationHeader(game) {
       const obj8 = { uri: memo };
       obj7.source = obj8;
       obj7.style = tmp.icon;
-      tmp21Result = closure_6(tmp4(5600), obj7);
+      tmp21Result = closure_6(tmp4(5604), obj7);
     }
     const items7 = [tmp21Result, ,];
     const obj9 = { style: tmp.titleContainer, children: null };
@@ -175,7 +175,7 @@ export default function GameProfileNavigationHeader(game) {
       lineClamp: 1,
       children: name,
     };
-    const items8 = [closure_6(tmp2(5504).Heading, obj10)];
+    const items8 = [closure_6(tmp2(5508).Heading, obj10)];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
@@ -195,7 +195,7 @@ export default function GameProfileNavigationHeader(game) {
       }
       obj12.importantForAccessibility = str2;
       const obj13 = { rank: game.l30Rank, compact: true };
-      obj12.children = closure_6(tmp4(9813), obj13);
+      obj12.children = closure_6(tmp4(8657), obj13);
       const items9 = [closure_6(closure_4, obj12)];
       const obj14 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
       const items10 = [StyleSheet.absoluteFill, animatedStyle1];
@@ -207,7 +207,7 @@ export default function GameProfileNavigationHeader(game) {
       }
       obj14.importantForAccessibility = str3;
       const obj15 = { rank: game.l30Rank };
-      obj14.children = closure_6(tmp4(9813), obj15);
+      obj14.children = closure_6(tmp4(8657), obj15);
       items9[1] = closure_6(tmp4(1653).View, obj14);
       obj11.children = items9;
       tmp19Result = closure_7(closure_4, obj11);

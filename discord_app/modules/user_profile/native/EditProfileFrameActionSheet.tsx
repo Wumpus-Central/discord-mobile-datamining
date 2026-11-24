@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/EditProfileFrameActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import maybeFetchUserProfileDefault from "../maybeFetchUserProfile.tsx";
-import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import useShopProductItems from "../../collectibles/hooks/useShopProductItems.tsx";
+import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import EditProfileFrameSection from "../../collectibles/profile_frames/native/EditProfileFrameSection.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -112,7 +112,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(8915)(previewSkuId);
+  const tmp2 = purchase(14283)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -136,21 +136,21 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(9452), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+  const items1 = [closure_9(purchase(11142), { user, guildId, profileFrame: memo, maxWidth: 280 })];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5468), obj2);
+  items1[1] = closure_9(purchase(5472), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(8082).isProfileFrameRecord;
+const isProfileFrameRecord = fn(6192).isProfileFrameRecord;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1 },
   previewContainer: { overflow: "hidden", height: 300, alignItems: "center" },

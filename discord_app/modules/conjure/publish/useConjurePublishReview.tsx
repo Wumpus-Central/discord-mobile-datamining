@@ -15,7 +15,7 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6621).isProjectOwner;
+let isProjectOwner = fn(6808).isProjectOwner;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_11, Permissions: closure_12 } = Constants);
 const size = fn(2);
@@ -149,8 +149,8 @@ export default function useConjurePublishReview(id, arg1) {
   const trimmed = str.trim();
   let result = null;
   if (tmp14) {
-    result = tmp3(18268).conjureProjectNameError(trimmed);
-    const tmp3Result = tmp3(18268);
+    result = tmp3(18307).conjureProjectNameError(trimmed);
+    const tmp3Result = tmp3(18307);
   }
   isProjectOwner = result;
   const tmp11 = stateFromStores(saving.useState(false), 2);

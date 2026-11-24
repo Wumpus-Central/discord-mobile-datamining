@@ -11,18 +11,16 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(9420).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9288).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" },
   androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none },
-  wrapper: null,
+  wrapper: { flex: 1 },
 };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
-obj.wrapper = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
 let closure_6 = createStyles.createStyles(obj);
-let obj4 = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx");
 
@@ -61,8 +59,8 @@ export default noop.memo(function YouScreenContainer(route) {
       const obj7 = { maxWidth: 0.6 * useWindowDimensionsDefault().width };
       items1[1] = obj7;
       obj6.style = items1;
-      const obj8 = { initialTab };
-      tmp = jsx(YouScreenDefault, { initialTab });
+      const obj8 = { initialTab, isCard: true };
+      tmp = jsx(YouScreenDefault, { initialTab, isCard: true });
       obj6.children = tmp;
       let tmp6Result3 = <View style={null}>{null}</View>;
     } else {

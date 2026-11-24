@@ -9,7 +9,7 @@ export function getWidgetEmptyStateSuggestions(addableWidgets) {
   addableWidgets = addableWidgets.addableWidgets;
   const prop = addableWidgets.applicationAffinityData;
   items = [];
-  const set = new Set();
+  set = new Set();
   let WANT_TO_PLAY_GAMES = Date.now();
   let found = prop.filter((item) => {
     ({ isConnected, lastPlayedAt } = item);

@@ -5,10 +5,10 @@ import native from "../../../../../../discord_common/js/packages/design/native.t
 import useColorThemeBackgroundDefault from "../../../../client_themes/native/useColorThemeBackground.tsx";
 import RootNavigationRef from "../../../RootNavigationRef.native.tsx";
 import LayerScope from "../../../../../design/components/Layers/native/LayerScope.native.tsx";
-import useNavigatorBackPressHandler from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
-import useIsWindowLargeDefault from "../../../../screen/native/useIsWindowLarge.tsx";
 import useAnalyticsLocations from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
+import useNavigatorBackPressHandler from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
+import useIsWindowLargeDefault from "../../../../screen/native/useIsWindowLarge.tsx";
 import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import VoicePanelDockScrimDefault from "../../../../voice_panel/native/dock/VoicePanelDockScrim.tsx";
@@ -143,11 +143,11 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(9420).YouBarNavigatorScreens;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const YouBarNavigatorScreens = fn(9288).YouBarNavigatorScreens;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   containerOuter: { flex: 1 },
   containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flex: 1 },
@@ -208,8 +208,8 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1112).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1112).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(15971).LeftBackIconWithBadge, {});
-    const items1 = [closure_7(tmp11(7030).PressableOpacity, obj3), ,];
+    obj3.children = closure_7(tmp11(15870).LeftBackIconWithBadge, {});
+    const items1 = [closure_7(tmp11(6026).PressableOpacity, obj3), ,];
     const obj4 = {
       color: "mobile-text-heading-primary",
       variant: "heading-lg/semibold",
@@ -220,13 +220,13 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     };
     const intl2 = tmp11(1112).intl;
     obj4.children = intl2.string(tmp11(1112).t.HcoRu0);
-    items1[1] = closure_7(tmp11(5504).Text, obj4);
+    items1[1] = closure_7(tmp11(5508).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
-    const obj6 = { ref, type: tmp11(11680).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+    const obj6 = { ref, type: tmp11(11567).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), ,];
     const obj7 = { type: null, onOpen: null };
     const tmp2Result = ForLaterOpenActionButtonDefault;
-    obj7.type = tmp11(11680).SavedMessageSortTypes.REMINDER;
+    obj7.type = tmp11(11567).SavedMessageSortTypes.REMINDER;
     obj7.onOpen = callback;
     items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj7);
     items2[2] = closure_7(NotificationCenterActionButtonDefault, {});

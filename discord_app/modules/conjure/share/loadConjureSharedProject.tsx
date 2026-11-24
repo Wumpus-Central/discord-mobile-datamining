@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/loadConjureSharedProject.tsx
+import conjureProjectLink from "conjureProjectLink.tsx";
 import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
-import conjureProjectLink from "conjureProjectLink.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
@@ -367,7 +367,7 @@ export default function loadConjureSharedProject(arg0) {
       ticketOnlyProjectIds: null,
     };
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     obj2.loading = set;
     const _Map = Map;
     const map = new Map();

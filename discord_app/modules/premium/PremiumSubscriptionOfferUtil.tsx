@@ -3,10 +3,10 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import Server from "../../flow/Server.tsx";
 import _modDef2168 from "../../../_runtime/metro/02168__.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
-import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
+import hooks_usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
 import useDiscountOfferDefault from "hooks/useDiscountOffer.tsx";
 import UserOfferActionCreators from "UserOfferActionCreators.tsx";
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
 import ReverseTrialUtils from "ReverseTrialUtils.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -29,7 +29,7 @@ function getDiscountInfo(active_discount_id) {
           if (gesture !== active_discount_id) {
             if (colors !== active_discount_id) {
               if (state !== active_discount_id) {
-                if (dependencyMap !== active_discount_id) {
+                if (set !== active_discount_id) {
                   if (timestampProducer === active_discount_id) {
                     const obj4 = { duration: 1, percentage: 20, discountId: active_discount_id };
                     return obj4;
@@ -106,7 +106,7 @@ const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionOf
 export function useIsInPremiumOfferExperience() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   const hasActiveTrial = PremiumSubscriptionTrialUtil.useHasActiveTrial();
-  usePremiumDiscountOffer;
+  hooks_usePremiumDiscountOffer;
   if (typeof useHasDiscountApplied === "function") {
     items = [SubscriptionStore];
     const stateFromStores = initialize.useStateFromStores(items, () => SubscriptionStore.getPremiumTypeSubscription());
@@ -149,7 +149,7 @@ export function useFetchChurnUserDiscountOffer(arg0) {
   const tmp3 = useDiscountOfferDefault(collapsedCategories);
   const tmp4 = useDiscountOfferDefault(closure_1_19);
   const tmp5 = useDiscountOfferDefault(closure_1_11);
-  const tmp6 = useDiscountOfferDefault(dependencyMap);
+  const tmp6 = useDiscountOfferDefault(set);
   [tmp8, require] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [tmp10, tmp11] = noop.useState(false);

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -130,7 +130,7 @@ function buildTimelineTree(steps, arg1) {
   const map3 = new Map();
   const segmentOf = ensure(steps).segmentOf;
   closure_9 = (function cancelledLaneIds(steps) {
-    const set = new Set();
+    set = new Set();
     const iter = steps[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -161,7 +161,7 @@ function buildTimelineTree(steps, arg1) {
     return set;
   })(steps);
   closure_10 = (function legacyControlLineIds(steps) {
-    const set = new Set();
+    set = new Set();
     const iter = steps[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -306,7 +306,7 @@ function buildTimelineTree(steps, arg1) {
             const result2 = map2.set(tmp13Result, value2);
             const lines = node.lines;
             for (const item10121 of lines) {
-              let set = item10121.set;
+              set = item10121.set;
               if (set == null) {
                 set = value2.get(item10121.key);
               }
@@ -636,15 +636,15 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef4190.iwOTgo,
-  preview_ready: _modDef4190.okkgSB,
-  working: _modDef4190.t8skVB,
-  error: _modDef4190.avt0ax,
-  error_service_unavailable: _modDef4190.yreXyD,
-  error_rate_limited: _modDef4190.d8lNBq,
-  error_timeout: _modDef4190.t1R7Rt,
-  error_usage_limit: _modDef4190["9zBM8L"],
-  error_internal_error: _modDef4190.ZnbiGS,
+  healthcheck_failed: _modDef4192.iwOTgo,
+  preview_ready: _modDef4192.okkgSB,
+  working: _modDef4192.t8skVB,
+  error: _modDef4192.avt0ax,
+  error_service_unavailable: _modDef4192.yreXyD,
+  error_rate_limited: _modDef4192.d8lNBq,
+  error_timeout: _modDef4192.t1R7Rt,
+  error_usage_limit: _modDef4192["9zBM8L"],
+  error_internal_error: _modDef4192.ZnbiGS,
 };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
@@ -670,7 +670,7 @@ export function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef4190.t8skVB;
+    t8skVB = _modDef4192.t8skVB;
   }
   return intl.string(t8skVB);
 }
@@ -728,7 +728,7 @@ export function turnSegments(steps, arg1) {
     }
     continue;
   }
-  const set = new Set();
+  set = new Set();
   for (const item10041 of tmp7) {
     let addResult = set.add(item10041.segment);
     continue;

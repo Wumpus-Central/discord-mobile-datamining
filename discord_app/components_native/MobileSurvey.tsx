@@ -21,21 +21,21 @@ export default function MobileSurvey() {
     if (null != combined) {
       const obj2 = { type: "survey", promotion_id: tmp.id };
       AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
-      stateFromStores(17144).surveySeen(tmp.key);
+      stateFromStores(17179).surveySeen(tmp.key);
       const _HermesInternal = HermesInternal;
       combined = "mobile-survey-" + tmp.key;
-      const obj4 = stateFromStores(5862);
+      const obj4 = stateFromStores(5922);
       const obj6 = { title: null, content: null, actions: null };
       ({ prompt: obj5.title, body } = tmp);
       obj6.content = body;
       const obj7 = { variant: "primary", text: tmp.cta, icon: null, iconPosition: "end", onPress: null };
       const obj8 = { size: "sm", color: nativeDefault.colors.ICON_OVERLAY_LIGHT };
-      obj7.icon = closure_1_6(stateFromStores(10139).WindowLaunchIcon, obj8);
+      obj7.icon = closure_1_6(stateFromStores(13928).WindowLaunchIcon, obj8);
       obj7.onPress = function onPress() {
         LinkingDefault.openURL(combined.url);
-        stateFromStores(17144).surveyHide(combined.key, false);
+        stateFromStores(17179).surveyHide(combined.key, false);
       };
-      items = [closure_1_6(stateFromStores(5866).AlertActionButton, obj7)];
+      items = [closure_1_6(stateFromStores(5926).AlertActionButton, obj7)];
       if (null != tmp.secondary_cta) {
         if ("" !== tmp.secondary_cta) {
           let secondary_cta = tmp.secondary_cta;
@@ -45,20 +45,20 @@ export default function MobileSurvey() {
           variant: "secondary",
           text: secondary_cta,
           onPress() {
-            return stateFromStores(17144).surveyHide(combined.key, true);
+            return stateFromStores(17179).surveyHide(combined.key, true);
           },
         };
         items[1] = closure_1_6(tmp13, obj15);
         obj9.children = items;
         obj6.actions = closure_1_8(closure_1_7, obj9);
-        obj4.openAlert(combined, closure_1_6(stateFromStores(5866).AlertModal, obj6), undefined, {
+        obj4.openAlert(combined, closure_1_6(stateFromStores(5926).AlertModal, obj6), undefined, {
           dismissable: false,
         });
         return () => useAlertStore.dismissAlert(combined);
       }
       const intl = stateFromStores(1112).intl;
       secondary_cta = intl.string(stateFromStores(1112).t.f3Pet9);
-      const obj3 = stateFromStores(17144);
+      const obj3 = stateFromStores(17179);
     }
   }, items1);
   return null;

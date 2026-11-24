@@ -1,11 +1,11 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
 import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(11784).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11263).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx",

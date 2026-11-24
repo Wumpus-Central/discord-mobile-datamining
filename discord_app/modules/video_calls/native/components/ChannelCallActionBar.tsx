@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/components/ChannelCallActionBar.tsx
 import util from "../../../../intl/index.native.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
-import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
-import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import useAnalyticsLocations from "../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
 import leaveEmbeddedActivity from "../../../activities/leaveEmbeddedActivity.tsx";
 import VoiceChatHooks from "../../../voice_chat/VoiceChatHooks.tsx";
@@ -14,9 +14,9 @@ import useIsRemoteDefault from "../../../game_console/hooks/useIsRemote.tsx";
 import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreThermalStateAlert.tsx";
 import CameraLottie from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import _modDef10957 from "../../../../../_runtime/metro/10957__.js";
-import _modDef10958 from "../../../../../_runtime/metro/10958__.js";
-import _modDef10959 from "../../../../../_runtime/metro/10959__.js";
+import _modDef10242 from "../../../../../_runtime/metro/10242__.js";
+import _modDef10243 from "../../../../../_runtime/metro/10243__.js";
+import _modDef10244 from "../../../../../_runtime/metro/10244__.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
@@ -269,7 +269,7 @@ function LeaveActivityButton(isSmallSize) {
     obj2.applicationId = applicationId;
     const result = leaveEmbeddedActivity.leaveEmbeddedActivity(obj2);
   };
-  obj.source = _modDef10959;
+  obj.source = _modDef10244;
   obj.isSmallSize = isSmallSize.isSmallSize;
   return colors(CallBarActionAll.PrimaryActionButton, obj);
 }
@@ -308,8 +308,8 @@ function useActionBarSecondButton(channel) {
 }
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
-  const isConnectedToVoiceChannel = channel(10640).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(10640);
+  const isConnectedToVoiceChannel = channel(9871).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(9871);
   items = [ChannelRTCStore, AuthenticationStore];
   closure_1 = channel(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
@@ -356,14 +356,14 @@ function useActionBarPrimaryButtons(channel) {
   return obj6;
 }
 const View = fn(17).View;
-const ParticipantTypes = fn(5563).ParticipantTypes;
-const Features = fn(5658).Features;
+const ParticipantTypes = fn(5567).ParticipantTypes;
+const Features = fn(5729).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
-    height: fn(10657).CALL_ACTION_BAR_HEIGHT,
+    height: fn(9890).CALL_ACTION_BAR_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -371,16 +371,16 @@ let obj2 = {
   containerForFiveButtonLayout: null,
 };
 let obj3 = {
-  height: fn(10657).CALL_ACTION_BAR_HEIGHT,
+  height: fn(9890).CALL_ACTION_BAR_HEIGHT,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
 };
 obj2.containerForFiveButtonLayout = {
-  height: fn(10657).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  height: fn(9890).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: fn(10657).FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: fn(10657).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(9890).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(9890).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };

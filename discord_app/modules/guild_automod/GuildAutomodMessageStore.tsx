@@ -3,9 +3,9 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
-import AutomodMessageUtils from "AutomodMessageUtils.tsx";
 import MessageQueue from "../../lib/MessageQueue.tsx";
 import AutomodErrorUtils from "AutomodErrorUtils.tsx";
+import AutomodMessageUtils from "AutomodMessageUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 

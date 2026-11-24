@@ -168,7 +168,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
           const _Set = Set;
           const items2 = [];
           HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(defaultChannelIds, 0));
-          const set = new Set(items2);
+          set = new Set(items2);
           const items3 = [];
           HermesBuiltin.arraySpread(set, 0);
           return items3;
@@ -339,7 +339,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(6822).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(7330).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);

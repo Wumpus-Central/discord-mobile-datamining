@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardsGrid.tsx
 import applyDefault from "../../../../_runtime/00012_apply.js";
-import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2.tsx";
+import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
@@ -28,8 +28,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9545).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4917);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(11066).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -43,7 +43,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom, header } = accessibilityLabel);
   const rowContainer = closure_9();
-  const cardLayout = products(17316).useCardLayout();
+  const cardLayout = products(17354).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   items = [products, columns];
@@ -60,9 +60,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(17316);
+  let obj = products(17354);
   obj2.contentContainerStyle = {
-    gap: products(9545).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(11066).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: rowWidth,

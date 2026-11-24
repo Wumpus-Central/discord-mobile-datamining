@@ -162,7 +162,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5588)(href);
+                  closure_1(5592)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -238,7 +238,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6354);
+let Constants = fn(5671);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1071);
 ({
@@ -253,7 +253,7 @@ const items = [,];
 const set = new Set(items);
 let closure_10 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15680);
+let CONTEXT_MENU_ICON_NAMES = fn(15701);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -305,16 +305,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15680);
+CONTEXT_MENU_ICON_NAMES = fn(15701);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(10804).validatePostMessageTransport(socket.transport);
-    let obj = socket(10804);
+    let result = socket(10080).validatePostMessageTransport(socket.transport);
+    let obj = socket(10080);
     let tmp = socket;
-    const validateApplicationResult = socket(10804).validateApplication(socket.application);
+    const validateApplicationResult = socket(10080).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -347,7 +347,7 @@ let obj6 = {
       }
       tmpResult = tmp(2150);
     }
-    let obj2 = socket(10804);
+    let obj2 = socket(10080);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

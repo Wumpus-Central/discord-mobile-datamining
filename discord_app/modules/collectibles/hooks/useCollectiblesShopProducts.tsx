@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useCollectiblesShopProducts.tsx
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import StorefrontProductActionCreators from "../../storefront/StorefrontProductActionCreators.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
+import StorefrontProductActionCreators from "../../storefront/StorefrontProductActionCreators.tsx";
 import StorefrontCollectionActionCreators from "../../storefront/StorefrontCollectionActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -68,7 +68,7 @@ function useAbsentIds(arg0) {
     return tmp;
   });
   const someResult = mapped.some((item) => !first.has(item));
-  let set = first;
+  set = first;
   if (someResult) {
     const _Set = Set;
     items = [];

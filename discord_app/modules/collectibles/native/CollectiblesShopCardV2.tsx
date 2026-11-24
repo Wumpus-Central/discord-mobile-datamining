@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import v1 from "../../../../_runtime/01268_v1.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import openProductDetailsActionSheet from "openProductDetailsActionSheet.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
+import openProductDetailsActionSheet from "openProductDetailsActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
@@ -375,7 +375,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   card: null,
   topRowOverlay: null,

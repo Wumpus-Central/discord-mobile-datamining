@@ -51,7 +51,7 @@ export function useHandleUseNow(product) {
           return true;
         } else {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           items = product.items;
           for (const item10023 of items) {
             if (set.has(item10023.type)) {

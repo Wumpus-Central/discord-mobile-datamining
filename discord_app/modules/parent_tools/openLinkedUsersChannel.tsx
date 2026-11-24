@@ -10,7 +10,7 @@ let closure_5 = async function _openLinkedUsersChannel(arg0) {
   closure_131_0 = closure_2;
   if (length.length > 1) {
     const tmp11 = (function getGroupDMWithRecipients(items) {
-      const set = new Set(items);
+      set = new Set(items);
       sortedPrivateChannels = sortedPrivateChannels.getSortedPrivateChannels();
       const found = sortedPrivateChannels.find((isGroupDM) => {
         let isGroupDMResult = isGroupDM.isGroupDM();

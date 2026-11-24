@@ -34,7 +34,7 @@ prototype["initialize"] = function initialize(seenFontIds) {
   if (seenEffectIds == null) {
     seenEffectIds = [];
   }
-  const set = new Set(seenFontIds);
+  set = new Set(seenFontIds);
   obj.seenEffectIds = new Set(seenEffectIds);
   let flag;
   if (seenFontIds != null) {
@@ -98,7 +98,7 @@ const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefa
       const _Set = Set;
       items = [];
       items[HermesBuiltin.arraySpread(obj.seenFontIds, 0)] = fontId;
-      const set = new Set(items);
+      set = new Set(items);
       obj.seenFontIds = set;
     }
   },
@@ -113,7 +113,7 @@ const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefa
       const _Set = Set;
       items = [];
       items[HermesBuiltin.arraySpread(obj.seenEffectIds, 0)] = effectId;
-      const set = new Set(items);
+      set = new Set(items);
       obj.seenEffectIds = set;
     }
   },

@@ -73,7 +73,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  obj2 = obj(4787);
+  obj2 = obj(4791);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
@@ -187,13 +187,13 @@ function handleGuildRoleUpdate(guildId) {
 }
 function hasElevatedPermissions(user, context) {
   obj = BigFlagUtilsAll;
-  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), dependencyMap);
+  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), set);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4844).createFavoritesGuildChannelRecord;
-const ChannelRecord = fn(4766);
+let closure_6 = fn(4848).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(4770);
 ({
   isGuildSelectableChannelType: metroImportDefault,
   GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,

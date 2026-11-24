@@ -5,9 +5,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import _modDef5998 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
-import _modDef5999 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import _modDef6301 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
+import _modDef6302 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
 import VoiceNormalIcon2 from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
@@ -49,11 +49,11 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/Ch
 export default function CheckpointHeader(logoAnimatedUri) {
   logoAnimatedUri = logoAnimatedUri.logoAnimatedUri;
   if (logoAnimatedUri === undefined) {
-    logoAnimatedUri = _modDef5998;
+    logoAnimatedUri = _modDef6301;
   }
   let logoStaticUri = logoAnimatedUri.logoStaticUri;
   if (logoStaticUri === undefined) {
-    logoStaticUri = _modDef5999;
+    logoStaticUri = _modDef6302;
   }
   let color = logoAnimatedUri.color;
   if (color === undefined) {

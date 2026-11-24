@@ -1,7 +1,7 @@
 // discord_app/modules/applications/isSocialLayerApplication.tsx
 import Constants from "../../Constants.tsx";
-import ApplicationFlagUtils from "utils/ApplicationFlagUtils.tsx";
 import scopes2 from "../oauth2/scopes.tsx";
+import ApplicationFlagUtils from "utils/ApplicationFlagUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ApplicationFlags = Constants.ApplicationFlags;

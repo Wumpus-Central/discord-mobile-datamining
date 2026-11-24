@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx
 import util from "../../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;

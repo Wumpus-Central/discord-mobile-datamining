@@ -13,11 +13,11 @@ const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(12084);
+const InstantInviteSendStateStore = fn(10352);
 ({ setSendState: closure_9, useInstantInviteSendStates: closure_10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(8438).InviteSendStates;
+const InviteSendStates = fn(5650).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { acronym: null };
 let size = {
   width: 32,

@@ -2,20 +2,21 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../Dispatcher.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators.tsx";
 import StreamQualityUtils from "../utils/StreamQualityUtils.tsx";
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators.tsx";
+import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
 import ChannelUtils from "../utils/ChannelUtils.tsx";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
-import GuildRoomActionCreators from "../modules/guild_rooms/GuildRoomActionCreators.native.tsx";
-import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
 import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
 import CallActionCreatorsDefault from "CallActionCreators.tsx";
+import GuildRoomActionCreators from "../modules/guild_rooms/GuildRoomActionCreators.native.tsx";
+import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import GameConsoleStore from "../modules/game_console/GameConsoleStore.tsx";
 import PopoutWindowStore from "../modules/popout-window/PopoutWindowStore.native.tsx";
 import ApplicationStreamPreviewStore from "../stores/ApplicationStreamPreviewStore.tsx";
+import ApplicationStreamingSettingsStore from "../stores/ApplicationStreamingSettingsStore.tsx";
 import ApplicationStreamingStore from "../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
@@ -85,7 +86,7 @@ function watchStream(stream, forceMultiple) {
     }
   }
 }
-let closure_19 = async function _fetchStreamPreview() {
+let closure_20 = async function _fetchStreamPreview() {
   closure_1 = arg1;
   closure_2 = arg2;
   c7 = 0;
@@ -139,7 +140,7 @@ let closure_19 = async function _fetchStreamPreview() {
               c6 = 1;
               HTTP = obj6(1284).HTTP;
               const request = {
-                url: closure_2_13.STREAM_PREVIEW(HTTPResult),
+                url: closure_2_14.STREAM_PREVIEW(HTTPResult),
                 query: null,
                 oldFormErrors: true,
                 rejectWithError: null,
@@ -161,11 +162,11 @@ let closure_19 = async function _fetchStreamPreview() {
             c6 = 0;
             closure_131_3 = closure_5;
             if (429 === closure_131_3.status) {
-              closure_131_2 = closure_131_3.body.retry_after * closure_132_1(closure_132_2[20]).Millis.SECOND;
+              closure_131_2 = closure_131_3.body.retry_after * closure_132_1(closure_132_2[21]).Millis.SECOND;
             }
             const obj10 = { type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: closure_131_0, retryAfter: closure_131_2 };
-            closure_132_1(closure_132_2[12]).dispatch(obj10);
-            const obj4 = closure_132_1(closure_132_2[12]);
+            closure_132_1(closure_132_2[13]).dispatch(obj10);
+            const obj4 = closure_132_1(closure_132_2[13]);
           } else if (arg0 === 1) {
             c8 = 3;
             throw value;
@@ -176,9 +177,9 @@ let closure_19 = async function _fetchStreamPreview() {
               streamKey: closure_131_0,
               previewURL: closure_131_1.body.url,
             };
-            closure_132_1(closure_132_2[12]).dispatch(obj11);
+            closure_132_1(closure_132_2[13]).dispatch(obj11);
             c6 = 0;
-            const obj = closure_132_1(closure_132_2[12]);
+            const obj = closure_132_1(closure_132_2[13]);
           }
           c6 = 0;
           c8 = 3;
@@ -198,9 +199,9 @@ let closure_19 = async function _fetchStreamPreview() {
     }
   })();
 };
-let closure_20 = async function _notifyStreamStart(arg0) {
+let closure_21 = async function _notifyStreamStart(arg0) {
   await TrackedHTTPUtilsDefault.post({
-    url: closure_2_13.STREAM_NOTIFY(closure_0),
+    url: closure_2_14.STREAM_NOTIFY(closure_0),
     oldFormErrors: true,
     trackedActionData: { event: require("discord_common/AnalyticsUtils").NetworkActionNames.STREAM_NOTIFY },
     rejectWithError: true,
@@ -217,8 +218,8 @@ let closure_20 = async function _notifyStreamStart(arg0) {
   return value;
 };
 const Constants = fn(1071);
-({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6397).StreamTypes;
+({ Endpoints: closure_14, AppContext: closure_15, PopoutWindowKeys: closure_16 } = Constants);
+const StreamTypes = fn(6688).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -288,7 +289,7 @@ export function closeStream(encodeStreamKeyResult1, arg1) {
 }
 export function fetchStreamPreview() {
   const self = this;
-  const apply = closure_19.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -301,7 +302,7 @@ export function setLayout(layout) {
 }
 export function notifyStreamStart() {
   const self = this;
-  const apply = closure_20.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -311,22 +312,38 @@ export function notifyStreamStart() {
 }
 export function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
-    const obj = StreamQualityUtils;
-    const result = obj.trackStreamSettingsUpdate(
-      noTrack.preset,
-      noTrack.resolution,
-      noTrack.frameRate,
-      noTrack.soundshareEnabled,
-    );
+    state = ApplicationStreamingSettingsStore.getState();
+    const obj3 = StreamQualityUtils;
+    let preset = noTrack.preset;
+    if (preset == null) {
+      preset = state.preset;
+    }
+    let resolution = noTrack.resolution;
+    if (resolution == null) {
+      resolution = state.resolution;
+    }
+    let fps = noTrack.frameRate;
+    if (fps == null) {
+      fps = state.fps;
+    }
+    let soundshareEnabled = noTrack.soundshareEnabled;
+    if (soundshareEnabled == null) {
+      soundshareEnabled = state.soundshareEnabled;
+    }
+    let streamDrawingEnabled = noTrack.streamDrawingEnabled;
+    if (streamDrawingEnabled == null) {
+      streamDrawingEnabled = state.streamDrawingEnabled;
+    }
+    const result = obj3.trackStreamSettingsUpdate(preset, resolution, fps, soundshareEnabled, streamDrawingEnabled);
   }
   const merged = Object.assign(noTrack);
   DispatcherDefault.dispatch({ type: "STREAM_UPDATE_SETTINGS" });
-  const obj3 = { type: "STREAM_UPDATE_SETTINGS" };
+  const obj2 = { type: "STREAM_UPDATE_SETTINGS" };
 }
 export function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: state.STREAM(encodeStreamKeyResult),
+    url: gesture.STREAM(encodeStreamKeyResult),
     body: { region: preferredRegion },
     oldFormErrors: true,
     rejectWithError: true,
@@ -375,15 +392,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(6493)(closure_1_1);
+          closure_1(8307)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5948).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5948);
+          closure_0(6675).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6675);
         }
       }
     };

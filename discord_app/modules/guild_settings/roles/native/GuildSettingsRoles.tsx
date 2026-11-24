@@ -7,9 +7,9 @@ import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import GuildRoleMemberActionCreatorsAll from "../../GuildRoleMemberActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import ArrowsUpDownIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
@@ -37,8 +37,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
-const isEveryoneRole = fn(4820).isEveryoneRole;
-let closure_15 = fn(19831).GuildSettingsRoleEditSections;
+const isEveryoneRole = fn(4824).isEveryoneRole;
+let closure_15 = fn(19874).GuildSettingsRoleEditSections;
 const Constants = fn(1071);
 ({
   GuildSettingsSections: closure_16,
@@ -49,7 +49,7 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },
@@ -400,7 +400,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     const obj2 = { title: null };
     const intl = util.intl;
     obj2.title = intl.formatToPlainString(util.t["38N3Vz"], { numRoles: "" + roleData.length });
-    const items1 = [dependencyMap(TableRowGroup.TableRowGroupTitle, obj2)];
+    const items1 = [set(TableRowGroup.TableRowGroupTitle, obj2)];
     let tmpResult = null;
     if (!first) {
       tmpResult = null;
@@ -417,7 +417,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         obj4.onPress = callback5;
         obj4.style = closure_1.reorderButton;
         const obj5 = { color: nativeDefault.colors.TEXT_LINK, size: "sm" };
-        const items2 = [dependencyMap(ArrowsUpDownIcon.ArrowsUpDownIcon, obj5)];
+        const items2 = [set(ArrowsUpDownIcon.ArrowsUpDownIcon, obj5)];
         const obj6 = {
           style: closure_1.reorderButtonText,
           variant: "body-sm/medium",
@@ -426,7 +426,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         };
         const intl3 = util.intl;
         obj6.children = intl3.string(util.t["0dOFq+"]);
-        items2[1] = dependencyMap(Text_Text.Text, obj6);
+        items2[1] = set(Text_Text.Text, obj6);
         obj4.children = items2;
         tmpResult = guild(Pressables.PressableOpacity, obj4);
       }
@@ -444,7 +444,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       };
       const intl4 = util.intl;
       obj7.children = intl4.string(util.t.nHcwVl);
-      tmp6Result = dependencyMap(Text_Text.Text, obj7);
+      tmp6Result = set(Text_Text.Text, obj7);
     }
     children[1] = tmp6Result;
     return guild(timestampProducer, { children });
@@ -471,19 +471,19 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       };
       const intl4 = util.intl;
       obj5.children = intl4.string(util.t["1ydhVp"]);
-      obj3.children = dependencyMap(Text_Text.Text, obj5);
-      const items1 = [dependencyMap(timestampProducer, obj3)];
+      obj3.children = set(Text_Text.Text, obj5);
+      const items1 = [set(timestampProducer, obj3)];
       const obj6 = { style: closure_1.divider };
-      items1[1] = dependencyMap(timestampProducer, obj6);
+      items1[1] = set(timestampProducer, obj6);
       obj2.children = items1;
       let tmpResult = guild(closure_2_22, obj2);
     } else {
       const obj = { style: closure_1.emptySubheaderContainer, children: null };
       const obj7 = {
         style: closure_1.emptyIlloContainer,
-        children: dependencyMap(MemberRolesAbstractUI.MemberRolesAbstractUI, {}),
+        children: set(MemberRolesAbstractUI.MemberRolesAbstractUI, {}),
       };
-      const items2 = [dependencyMap(timestampProducer, obj7), ,];
+      const items2 = [set(timestampProducer, obj7), ,];
       const obj8 = { style: closure_1.emptySubheaderBody, children: null };
       const obj9 = {
         style: closure_1.subheader,
@@ -493,7 +493,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       };
       const intl = util.intl;
       obj9.children = intl.string(util.t.ALlnbi);
-      const items3 = [dependencyMap(Text_Text.Heading, obj9), ,];
+      const items3 = [set(Text_Text.Heading, obj9), ,];
       const obj10 = {
         style: closure_1.subheaderBody,
         variant: "body-sm/medium",
@@ -502,18 +502,18 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       };
       const intl2 = util.intl;
       obj10.children = intl2.string(util.t["1ydhVp"]);
-      items3[1] = dependencyMap(Text_Text.Text, obj10);
+      items3[1] = set(Text_Text.Text, obj10);
       const obj11 = { style: closure_1.subheaderButton, children: null };
       const obj12 = { text: null, onPress: null };
       const intl3 = util.intl;
       obj12.text = intl3.string(util.t.JZZjQK);
       obj12.onPress = callback2;
-      obj11.children = dependencyMap(components_Button_Button.Button, obj12);
-      items3[2] = dependencyMap(timestampProducer, obj11);
+      obj11.children = set(components_Button_Button.Button, obj12);
+      items3[2] = set(timestampProducer, obj11);
       obj8.children = items3;
       items2[1] = guild(timestampProducer, obj8);
       const obj13 = { style: closure_1.divider };
-      items2[2] = dependencyMap(timestampProducer, obj13);
+      items2[2] = set(timestampProducer, obj13);
       obj.children = items2;
       tmpResult = guild(timestampProducer, obj);
     }
@@ -538,8 +538,8 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
           isLastRole: true,
           isFirstRole: true,
         };
-        obj2.children = dependencyMap(GuildSettingsRoleItemDefault, obj3);
-        return dependencyMap(timestampProducer, obj2);
+        obj2.children = set(GuildSettingsRoleItemDefault, obj3);
+        return set(timestampProducer, obj2);
       }
     }
     return null;
@@ -684,7 +684,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       let obj10 = {
         style: tmp.emptyRolesIcon,
         size: tmp3(tmp4[44]).Icon.Sizes.LARGE,
-        source: require("../../../../../_runtime/metro/07779__.js"),
+        source: require("../../../../../_runtime/metro/08418__.js"),
       };
       obj9.leading = tmp44(tmp3(tmp4[44]).Icon, obj10);
       let obj11 = { variant: "body-md/semibold", color: "interactive-text-default", children: null };

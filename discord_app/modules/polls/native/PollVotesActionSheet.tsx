@@ -7,14 +7,14 @@ import timing_timing from "../../../design/animation/reanimated/timing/timing.ts
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
-import PollsUtils from "../PollsUtils.tsx";
 import PollTextUtils from "../PollTextUtils.tsx";
+import PollsUtils from "../PollsUtils.tsx";
 import chat_formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12160 from "../../../../_runtime/metro/12160__.js";
-import _modDef12161 from "../../../../_runtime/metro/12161__.js";
+import _modDef12102 from "../../../../_runtime/metro/12102__.js";
+import _modDef12103 from "../../../../_runtime/metro/12103__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -484,9 +484,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12160;
+    let tmp2Result = _modDef12102;
   } else {
-    tmp2Result = _modDef12161;
+    tmp2Result = _modDef12103;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];
@@ -510,7 +510,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },

@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/native/server/commands/voiceSettings.tsx
 import Constants from "../../../../../Constants.tsx";
-import Constants2 from "../../../Constants.tsx";
 import OAuth2Scopes from "../../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import Constants2 from "../../../Constants.tsx";
 import NativeRPCHelpers from "../NativeRPCHelpers.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 

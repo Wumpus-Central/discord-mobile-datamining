@@ -1,7 +1,7 @@
 // discord_app/modules/report_to_mod/hooks/useReportToModHooks.tsx
 import _mod19 from "../../../../_runtime/metro/00019__.js";
-import getGuildModeratorReportingEnabledDefault from "../getGuildModeratorReportingEnabled.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
+import getGuildModeratorReportingEnabledDefault from "../getGuildModeratorReportingEnabled.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import getGuildModeratorReportChannelIdDefault from "../getGuildModeratorReportChannelId.tsx";
 import ReportToModUtils from "../ReportToModUtils.tsx";
@@ -14,8 +14,8 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
 
-export function useIsReportToModEnabled(id2) {
-  _require = id2;
+export function useIsReportToModEnabled(arg0) {
+  _require = arg0;
   items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {

@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/builder/native/conjureChatMoreSections.tsx
-import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 import conjureProjectMute from "../../projects/conjureProjectMute.tsx";
 import openConjureUnpublishUserAppAlertDefault from "../../projects/native/openConjureUnpublishUserAppAlert.tsx";
@@ -15,25 +15,29 @@ export function conjureChatMoreSections(project) {
     guildId: importDefault,
     removeTarget: dependencyMap,
     annotate,
+    onOpenSettings,
     onShare,
     onRefresh,
     onDebug,
     onConnectTool,
     preview,
   } = project);
-  ({ muted, onOpenSettings, onHistory } = project);
+  ({ muted, onHistory } = project);
   const tmp = preview(project);
-  let obj = { kind: "action", key: "settings", label: null, IconComponent: null, onPress: null };
-  const intl = project(1112).intl;
-  obj.label = intl.string(_modDef4190.I2XSKe);
-  obj.IconComponent = project(10371).SettingsIcon;
-  obj.onPress = onOpenSettings;
-  items = [obj];
+  items = [];
+  if (null != onOpenSettings) {
+    let obj = { kind: "action", key: "settings", label: null, IconComponent: null, onPress: null };
+    const intl = project(1112).intl;
+    obj.label = intl.string(_modDef4192.I2XSKe);
+    obj.IconComponent = project(10310).SettingsIcon;
+    obj.onPress = onOpenSettings;
+    items.push(obj);
+  }
   if (null != onShare) {
     const obj2 = { kind: "action", key: "share", label: null, IconComponent: null, onPress: null };
-    const intl2 = tmp2(1112).intl;
-    obj2.label = intl2.string(tmp2(1112).t.RDE0Sc);
-    obj2.IconComponent = tmp2(10137).ShareIcon;
+    const intl2 = project(1112).intl;
+    obj2.label = intl2.string(project(1112).t.RDE0Sc);
+    obj2.IconComponent = project(12658).ShareIcon;
     obj2.onPress = onShare;
     items.push(obj2);
   }
@@ -49,24 +53,25 @@ export function conjureChatMoreSections(project) {
       closesOnEnable: true,
       onValueChange: null,
     };
-    const intl15 = tmp2(1112).intl;
-    entry.label = intl15.string(_modDef4190["6GOFLB"]);
-    entry.IconComponent = tmp2(18388).ExperimentalDirectSelectIcon;
+    const intl15 = project(1112).intl;
+    entry.label = intl15.string(_modDef4192["6GOFLB"]);
+    entry.IconComponent = project(18427).ExperimentalDirectSelectIcon;
     ({ active: obj15.value, busy: obj15.disabled } = annotate);
     let stringResult;
     if (annotate.busy) {
-      const intl3 = tmp2(1112).intl;
-      stringResult = intl3.string(_modDef4190.bcdhe6);
+      const intl3 = tmp26(1112).intl;
+      stringResult = intl3.string(_modDef4192.bcdhe6);
     }
     entry.subLabel = stringResult;
     entry.onValueChange = annotate.onToggle;
     items.push(entry);
+    tmp26 = project;
   }
   if (null != onRefresh) {
     const obj3 = { kind: "action", key: "refresh", label: null, IconComponent: null, onPress: null };
-    const intl4 = tmp2(1112).intl;
-    obj3.label = intl4.string(_modDef4190["p4B/7M"]);
-    obj3.IconComponent = tmp2(14366).RefreshIcon;
+    const intl4 = project(1112).intl;
+    obj3.label = intl4.string(_modDef4192["p4B/7M"]);
+    obj3.IconComponent = project(13902).RefreshIcon;
     obj3.onPress = onRefresh;
     items.push(obj3);
   }
@@ -78,17 +83,17 @@ export function conjureChatMoreSections(project) {
     value: null,
     onValueChange: null,
   };
-  const intl5 = tmp2(1112).intl;
+  const intl5 = project(1112).intl;
   entry1.label = intl5.string(project(1112).t.HcoRu0);
-  entry1.IconComponent = project(11239).BellIcon;
+  entry1.IconComponent = project(8456).BellIcon;
   entry1.value = !muted;
   entry1.onValueChange = function onValueChange(arg0) {
     return conjureProjectMute.setConjureProjectMuted(project.id, !arg0);
   };
   const obj4 = { kind: "action", key: "history", label: null, IconComponent: null, onPress: null };
-  const intl6 = tmp2(1112).intl;
-  obj4.label = intl6.string(_modDef4190["3hIVou"]);
-  obj4.IconComponent = project(5622).ClockIcon;
+  const intl6 = project(1112).intl;
+  obj4.label = intl6.string(_modDef4192["3hIVou"]);
+  obj4.IconComponent = project(5626).ClockIcon;
   obj4.onPress = onHistory;
   items.push(entry1, obj4);
   let items1;
@@ -109,9 +114,9 @@ export function conjureChatMoreSections(project) {
       onPress: null,
     };
     if ("refresh" === kind.kind) {
-      let KeyIcon = project(10343).RetryIcon;
+      let KeyIcon = project(10541).RetryIcon;
     } else {
-      KeyIcon = project(7386).KeyIcon;
+      KeyIcon = project(7196).KeyIcon;
     }
     obj.IconComponent = KeyIcon;
     obj.onPress = function onPress() {
@@ -123,26 +128,26 @@ export function conjureChatMoreSections(project) {
     };
     return obj;
   });
-  const intl7 = tmp2(1112).intl;
+  const intl7 = tmp15(1112).intl;
   obj5.label = intl7.string(project(1112).t.WqhZss);
-  obj5.IconComponent = project(5609).LinkIcon;
+  obj5.IconComponent = project(5613).LinkIcon;
   obj5.onPress = function onPress() {
     return conjureProjectActions.copyConjureProjectLink(project, importDefault);
   };
   const items2 = [obj5];
   const obj6 = { kind: "action", key: "export", label: null, IconComponent: null, onPress: null };
-  const intl8 = tmp2(1112).intl;
-  obj6.label = intl8.string(_modDef4190.WsEEP7);
-  obj6.IconComponent = project(5615).DownloadIcon;
+  const intl8 = tmp15(1112).intl;
+  obj6.label = intl8.string(_modDef4192.WsEEP7);
+  obj6.IconComponent = project(5619).DownloadIcon;
   obj6.onPress = function onPress() {
     return conjureProjectActions.exportConjureProject(project);
   };
   items2[1] = obj6;
   if (tmp) {
     const obj7 = { kind: "action", key: "import", label: null, IconComponent: null, onPress: null };
-    const intl9 = tmp2(1112).intl;
-    obj7.label = intl9.string(_modDef4190.rWGY3e);
-    obj7.IconComponent = tmp2(16957).FileUpIcon;
+    const intl9 = tmp15(1112).intl;
+    obj7.label = intl9.string(_modDef4192.rWGY3e);
+    obj7.IconComponent = tmp15(16991).FileUpIcon;
     obj7.onPress = function onPress() {
       return conjureProjectActions.importConjureProject(project);
     };
@@ -151,29 +156,29 @@ export function conjureChatMoreSections(project) {
   const items3 = [];
   if (null != onDebug) {
     const obj8 = { kind: "action", key: "debug", label: null, IconComponent: null, onPress: null };
-    const intl10 = tmp2(1112).intl;
-    obj8.label = intl10.string(_modDef4190["Q4FN+H"]);
-    obj8.IconComponent = tmp2(17189).BugIcon;
+    const intl10 = tmp15(1112).intl;
+    obj8.label = intl10.string(_modDef4192["Q4FN+H"]);
+    obj8.IconComponent = tmp15(17227).BugIcon;
     obj8.onPress = onDebug;
     items3.push(obj8);
   }
   if (null != onConnectTool) {
     const obj9 = { kind: "action", key: "connect-tool", label: null, IconComponent: null, onPress: null };
-    const intl11 = tmp2(1112).intl;
-    obj9.label = intl11.string(_modDef4190.yOIql5);
-    obj9.IconComponent = tmp2(18354).LinkPlusIcon;
+    const intl11 = tmp15(1112).intl;
+    obj9.label = intl11.string(_modDef4192.yOIql5);
+    obj9.IconComponent = tmp15(18393).LinkPlusIcon;
     obj9.onPress = onConnectTool;
     items3.push(obj9);
   }
   const obj10 = { kind: "action", key: "copy-project-id", label: null, IconComponent: null, onPress: null };
-  const intl12 = tmp2(1112).intl;
-  obj10.label = intl12.string(_modDef4190["nm/zuU"]);
-  obj10.IconComponent = project(10378).IdIcon;
+  const intl12 = tmp15(1112).intl;
+  obj10.label = intl12.string(_modDef4192["nm/zuU"]);
+  obj10.IconComponent = project(10936).IdIcon;
   obj10.onPress = function onPress() {
     return conjureProjectActions.copyConjureProjectId(project);
   };
   items3.push(obj10);
-  if (tmp2Result.canUnpublishConjureUserApp(project)) {
+  if (tmp15Result.canUnpublishConjureUserApp(project)) {
     const obj11 = {
       kind: "action",
       key: "unpublish",
@@ -182,9 +187,9 @@ export function conjureChatMoreSections(project) {
       destructive: true,
       onPress: null,
     };
-    const intl13 = tmp2(1112).intl;
-    obj11.label = intl13.string(_modDef4190.jYAR58);
-    obj11.IconComponent = tmp2(7235).EyeSlashIcon;
+    const intl13 = tmp15(1112).intl;
+    obj11.label = intl13.string(_modDef4192.jYAR58);
+    obj11.IconComponent = tmp15(7162).EyeSlashIcon;
     obj11.onPress = function onPress() {
       return openConjureUnpublishUserAppAlertDefault(project);
     };
@@ -192,9 +197,9 @@ export function conjureChatMoreSections(project) {
   }
   if (tmp) {
     const obj12 = { kind: "action", key: "delete", label: null, IconComponent: null, destructive: true, onPress: null };
-    const intl14 = tmp2(1112).intl;
-    obj12.label = intl14.string(tmp2(1112).t.oyYWHE);
-    obj12.IconComponent = tmp2(5620).TrashIcon;
+    const intl14 = tmp15(1112).intl;
+    obj12.label = intl14.string(tmp15(1112).t.oyYWHE);
+    obj12.IconComponent = tmp15(5624).TrashIcon;
     obj12.onPress = function onPress() {
       return conjureProjectActions.deleteConjureProject(project, dependencyMap);
     };

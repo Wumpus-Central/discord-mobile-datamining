@@ -174,7 +174,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function handleProductsWithSkusFetchSuccess(arg0) {
     ({ productIds, products } = arg0);
     const fetchedAt = Date.now();
-    const set = new Set();
+    set = new Set();
     const item = products.forEach((id) => {
       set.add(id.id);
       closure_2[id.id] = { state: "success", product: id, fetchedAt, includePricing: true };

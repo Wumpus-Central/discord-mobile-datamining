@@ -1,8 +1,11 @@
 // discord_app/modules/checkpoint/native/components/CheckpointRecapCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import CheckpointCharacterAccessibilityUtils from "../../CheckpointCharacterAccessibilityUtils.tsx";
 import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext.tsx";
 import CheckpointCardFrameDefault from "card/CheckpointCardFrame.tsx";
+import useCheckpointCharacterImagesDefault from "../../hooks/useCheckpointCharacterImages.tsx";
+import useCheckpointCompositeRevealStyleDefault from "../useCheckpointCompositeRevealStyle.tsx";
 import CheckpointShareCardYearDefault from "share/CheckpointShareCardYear.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,6 +26,7 @@ export default function CheckpointRecapCard(character) {
   if (flag === undefined) {
     flag = false;
   }
+  const tmp3 = useCheckpointCharacterImagesDefault(character, 240);
   let bound = maxScale;
   const context = noop.useContext(CheckpointStepHeaderRefContextDefault);
   if (null != maxHeight) {
@@ -30,8 +34,9 @@ export default function CheckpointRecapCard(character) {
     const _Math2 = Math;
     bound = Math.min(Math.max(maxHeight / 268, 0.75), maxScale);
   }
-  const characterCardColorPalette = character(5993).getCharacterCardColorPalette(character);
-  const obj2 = character(5993);
+  const tmp4 = useCheckpointCompositeRevealStyleDefault(tmp3);
+  const characterCardColorPalette = character(6296).getCharacterCardColorPalette(character);
+  const obj2 = character(6296);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -41,8 +46,9 @@ export default function CheckpointRecapCard(character) {
     }
     return checkpointCharacterAccessibilityLabel;
   }, items);
-  const obj4 = {
-    character,
+  const obj4 = { style: tmp4, children: null };
+  const obj5 = {
+    images: tmp3,
     cardColorPalette: characterCardColorPalette,
     canvasWidth: 200,
     canvasHeight: 268,
@@ -51,16 +57,16 @@ export default function CheckpointRecapCard(character) {
     characterLayout: rect,
     children: null,
   };
-  const obj3 = character(5993);
-  const obj5 = { path: null, x: null, color: null };
+  const obj3 = character(6296);
+  const obj6 = { path: null, x: null, color: null };
   const tmpResult = CheckpointCardFrameDefault;
-  obj5.path = character(12522).YEAR_PATH;
-  obj5.x = 200 - character(12522).YEAR_WIDTH;
-  obj5.color = obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor;
-  obj4.children = jsx(CheckpointShareCardYearDefault, { path: null, x: null, color: null });
-  const tmp11 = (
+  obj6.path = character(12442).YEAR_PATH;
+  obj6.x = 200 - character(12442).YEAR_WIDTH;
+  obj6.color = obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor;
+  obj5.children = jsx(CheckpointShareCardYearDefault, { path: null, x: null, color: null });
+  obj4.children = (
     <tmpResult
-      character={character}
+      images={tmp3}
       cardColorPalette={characterCardColorPalette}
       canvasWidth={200}
       canvasHeight={268}
@@ -71,21 +77,22 @@ export default function CheckpointRecapCard(character) {
       {null}
     </tmpResult>
   );
+  const tmp13 = jsx(_modDef1653.View, { style: tmp4, children: null });
   if (null == memo) {
-    const obj6 = {
+    const obj7 = {
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
-      children: tmp11,
+      children: tmp13,
     };
-    let obj7 = obj6;
+    let obj8 = obj7;
   } else {
-    let tmp13;
+    let tmp15;
     if (flag) {
-      tmp13 = context;
+      tmp15 = context;
     }
-    obj7 = { ref: tmp13, accessible: true, accessibilityRole: "image", accessibilityLabel: memo, children: tmp11 };
+    obj8 = { ref: tmp15, accessible: true, accessibilityRole: "image", accessibilityLabel: memo, children: tmp13 };
   }
-  return <View {...obj7} />;
+  return <View {...obj8} />;
 }
 export const CARD_WIDTH = 200;
 export const CARD_HEIGHT = 268;

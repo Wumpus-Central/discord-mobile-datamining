@@ -12,13 +12,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5969);
+const CheckpointConstants = fn(6270);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   messageInputContainer: null,
   messageInputContainerLarge: null,

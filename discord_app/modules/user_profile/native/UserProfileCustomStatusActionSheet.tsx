@@ -3,18 +3,18 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import HeaderAvatarDefault from "../../profile_customization/native/HeaderAvatar.tsx";
 import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble.tsx";
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
 import useCustomStatusActivityForUserDefault from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7564);
+const Constants = fn(7431);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   statusPreviewContainer: {
     flexDirection: "row",

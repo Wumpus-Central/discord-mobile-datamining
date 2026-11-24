@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_5 = fn(8069).TrackUserProfileEditActions;
+let closure_5 = fn(6011).TrackUserProfileEditActions;
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useAddProfileWidget.tsx");

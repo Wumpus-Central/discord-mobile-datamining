@@ -10,11 +10,11 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(6548).PremiumGuildSubscribeModalScenes;
+let closure_9 = fn(6740).PremiumGuildSubscribeModalScenes;
 const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   safeArea: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 },
   guildList: { padding: 16 },
@@ -22,7 +22,7 @@ let obj2 = {
   guildName: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 };
-obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6555).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6742).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -41,7 +41,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   const memo = first.useMemo(() => {
     if (null == guildBoostSlots) {
       const _Set2 = Set;
-      let set = new Set();
+      set = new Set();
     } else {
       const _Set = Set;
       const found = guildBoostSlots.filter((premiumGuildSubscription) => {
@@ -120,7 +120,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   obj4.onClose = BoostingActionCreatorsAll.closeApplyBoostModal;
   const items3 = [closure_11(SearchBarNavDefault, obj4)];
   const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-  obj5.children = closure_11(guildBoostSlots(7017).SafeAreaPaddingView, {
+  obj5.children = closure_11(guildBoostSlots(7354).SafeAreaPaddingView, {
     bottom: true,
     children: stateFromStoresArray.map((guild) => {
       const obj = {
@@ -147,5 +147,5 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   });
   items3[1] = closure_11(memo, obj5);
   obj3.children = items3;
-  return closure_12(guildBoostSlots(7017).SafeAreaPaddingView, obj3);
+  return closure_12(guildBoostSlots(7354).SafeAreaPaddingView, obj3);
 }

@@ -70,7 +70,7 @@ prototype["subscribe"] = function subscribe(definition, destinationKey, arg2) {
   const surfaceKey = this.getSurfaceKey(definition, destinationKey);
   let listenersBySurface = this.listenersBySurface;
   value = listenersBySurface.get(surfaceKey);
-  let set = value;
+  set = value;
   obj = value;
   if (null == value) {
     const _Set = Set;

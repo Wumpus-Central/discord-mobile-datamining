@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Pressable = fn(17).Pressable;
-const CHECKPOINT_PRIMARY = fn(5969).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6270).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_6 = createStyles.createStyles({
   button: { width: 32, height: 32, alignItems: "center", justifyContent: "center", borderWidth: 1 },
 });

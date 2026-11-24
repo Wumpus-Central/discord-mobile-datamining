@@ -14,11 +14,11 @@ require = fn;
 let closure_8 = {
   user: "a",
   profile: "Path",
-  wishlistId: "container",
-  wishlist: "sv-FI",
-  updatedAt: "sv",
-  storedUpdatedAt: false,
-  fetching: null,
+  wishlistId: "context",
+  wishlist: true,
+  updatedAt: "/assets/modules/main_tabs_v2/native/images",
+  storedUpdatedAt: 24,
+  fetching: 24,
   error: null,
 };
 const size = fn(2);

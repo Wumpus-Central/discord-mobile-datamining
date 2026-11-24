@@ -6,8 +6,8 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Server from "../../flow/Server.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
+import fuzzysearchDefault from "../../../_runtime/06862_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import fuzzysearchDefault from "../../../_runtime/06677_fuzzysearch.js";
 import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators.tsx";
 import CommandPermissionContext from "CommandPermissionContext.tsx";
@@ -234,7 +234,7 @@ function handleFetchSuccess(arg0) {
     const obj3 = {};
     const obj4 = {};
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const applications = index.applications;
     const iter2 = applications[Symbol.iterator]();
     const nextResult = iter2.next();
@@ -251,11 +251,11 @@ function handleFetchSuccess(arg0) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(8314);
+          let obj2 = id(8042);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(8317);
+            let tmp19Result = tmp19(8043);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -277,7 +277,7 @@ function handleFetchSuccess(arg0) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(8314).buildApplicationCommands(
+    const applicationCommands = id(8042).buildApplicationCommands(
       application_commands.map((description_default) => {
         const obj = {};
         const merged = Object.assign(description_default);
@@ -339,7 +339,7 @@ function handleFetchSuccess(arg0) {
     obj8.result = obj9;
     obj8.fetchState = { fetching: false };
     updateIndex(target, obj8, flag);
-    const obj6 = id(8314);
+    const obj6 = id(8042);
     tmp32 = "guild" === target.type && set.size > 0;
     tmp64 = set;
   }
@@ -669,7 +669,7 @@ function useQueryState(type, commandTypes, allowFetch) {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(10444).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(9912).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -685,7 +685,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(10444).ScoreMethod.NONE;
+    NONE = NONE(9912).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -704,10 +704,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(10444).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(10444).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(10446).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(10446);
+  if (builtIns !== NONE(9912).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(9912).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(9914).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(9914);
   } else {
     builtInCommands = [];
   }
@@ -736,7 +736,7 @@ function queryIndex(allowApplicationCommands) {
   if (sections1 == null) {
     sections1 = {};
   }
-  const set = new Set();
+  set = new Set();
   if (flag) {
     if (permissionContext.hasBaseAccessPermissions) {
       for (const key10083 in sections) {
@@ -847,7 +847,7 @@ function queryIndex(allowApplicationCommands) {
     useFrecency = sortOptions.applications.useFrecency;
   }
   if (useFrecency) {
-    const FrecencyUserSettingsActionCreators = NONE(4743).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = NONE(4747).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }
   const sorted = items.sort((section, section2) => {
@@ -887,13 +887,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(
-      NONE(10446).BUILT_IN_SECTIONS[constants.BUILT_IN],
-      builtInCommands,
-      true,
-      true,
-      obj,
-    );
+    const tmp87 = queryIndexSection(NONE(9914).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -907,7 +901,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(10444).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(9912).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -924,7 +918,7 @@ function queryIndex(allowApplicationCommands) {
       flag2 = someResult;
     }
     if (flag2) {
-      const FrecencyUserSettingsActionCreators2 = NONE(4743).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators2 = NONE(4747).FrecencyUserSettingsActionCreators;
       const ifNecessary1 = FrecencyUserSettingsActionCreators2.loadIfNecessary();
     }
     let tmp98;
@@ -1351,7 +1345,7 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
   }
   return constants4.COMMAND_NAME_STARTS_WITH;
 }
-const ApplicationCommandConstants = fn(5937);
+const ApplicationCommandConstants = fn(6947);
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = ApplicationCommandConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = Constants);

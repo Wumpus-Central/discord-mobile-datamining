@@ -77,7 +77,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                       closure_129_0 = undefined;
                       if (dependencyMap()) {
                         c6 = 3;
-                        const obj5 = { value: { v: "r" }, done: true };
+                        const obj5 = { value: { v: "Array" }, done: true };
                         return obj5;
                       } else {
                         c4 = 1;
@@ -130,7 +130,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                         return obj10;
                       } else if (closure_130_0()) {
                         c6 = 3;
-                        const obj11 = { value: { v: "r" }, done: true };
+                        const obj11 = { value: { v: "Array" }, done: true };
                         return obj11;
                       } else {
                         c4 = 2;
@@ -289,7 +289,7 @@ let result = size.fileFinishedImporting("modules/conjure/server_widgets/useConju
 export default function useConjureServerWidgetOffers() {
   items = [GuildStore, stateFromStores2(stateFromStores4[10]).ApexExperimentStore];
   const stateFromStores = stateFromStores2(stateFromStores4[9]).useStateFromStores(items, () =>
-    stateFromStores2(stateFromStores4[11]).hasEligibleConjureGuild(
+    stateFromStores2(stateFromStores4[11]).hasConjureExperimentGuild(
       GuildStore.getGuildsArray(),
       "useConjureServerWidgetOffers",
     ),
@@ -369,7 +369,7 @@ export default function useConjureServerWidgetOffers() {
   );
   const items8 = [stateFromStores2, stateFromStores4, stateFromStores5, tmp10Result];
   return noop.useMemo(() => {
-    const found = closure_1.filter((item) => item instanceof stateFromStores2(6961).ApplicationWidget);
+    const found = closure_1.filter((item) => item instanceof stateFromStores2(6048).ApplicationWidget);
     const map = new Map();
     const iter = stateFromStores2[Symbol.iterator]();
     const nextResult = iter.next();
@@ -381,7 +381,7 @@ export default function useConjureServerWidgetOffers() {
       let found1;
       if (arr2 != null) {
         found1 = arr2.find(
-          (status) => status.status === stateFromStores2(14554).ApplicationWidgetConfigStatus.PUBLISHED,
+          (status) => status.status === stateFromStores2(14823).ApplicationWidgetConfigStatus.PUBLISHED,
         );
       }
       let tmp6 = found1;

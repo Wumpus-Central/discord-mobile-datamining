@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager.tsx";
 import ScheduleUtils from "utils/ScheduleUtils.tsx";
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager.tsx";
 import usePrevValueDefault from "../../../discord_common/js/shared/hooks/usePrevValue.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(7575);
+      const tmpResult = tmp(8325);
       let _Date = Date;
-      let rRule = tmp(7575).getRRule(byWeekday);
+      let rRule = tmp(8325).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(7575);
+      const tmpResult2 = tmp(8325);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];

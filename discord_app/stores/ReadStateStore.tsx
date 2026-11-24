@@ -818,18 +818,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6633).isEventUpcoming;
-const ChannelRecord = fn(4766);
+const isEventUpcoming = fn(5649).isEventUpcoming;
+const ChannelRecord = fn(4770);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5539);
+const ActivityPanelConstants = fn(5543);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4769);
+const ChannelConstants = fn(4773);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4768).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6553).ReadStateTypes;
+const GuildScheduledEventStatus = fn(4772).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6042).ReadStateTypes;
 const ThreadMemberFlags = fn(1111).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -1923,14 +1923,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6668, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6854, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6668, dependencyMap.paths);
+          const promise = asyncRequireImpl(6854, dependencyMap.paths);
         }
       }
     });
@@ -2112,7 +2112,7 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
         const tmp6 = collapsedCategories(basicChannel.type);
         let tmp7 = !tmp6;
         if (tmp6) {
-          const tmp9 = dependencyMap(basicChannel.type);
+          const tmp9 = closure_1_20(basicChannel.type);
           let tmp10 = !tmp9;
           if (!tmp9) {
             const hasItem = set2.has(basicChannel.type);
@@ -3231,7 +3231,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: "rtc_participants", isExplicitUserAction: 46, trackAnalytics: "dynamic_config_size_limit_override" });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: 0.799, isExplicitUserAction: 0.701, trackAnalytics: 0.448 });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3618,7 +3618,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "heading-sm/medium", trackAnalytics: "text-subtle" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "cocktail", trackAnalytics: 93278465 });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

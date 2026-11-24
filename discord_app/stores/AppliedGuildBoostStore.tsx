@@ -81,7 +81,7 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(DispatcherDefault, {
   GUILD_APPLY_BOOST_START: handleModifyingAppliedBoostStart,
   GUILD_APPLY_BOOST_SUCCESS: function handleApplyBoostSuccess(appliedGuildBoost) {
     appliedGuildBoost = appliedGuildBoost.appliedGuildBoost;
-    const set = new Set(appliedGuildBoost.map((id) => id.id));
+    set = new Set(appliedGuildBoost.map((id) => id.id));
     items = [...appliedGuildBoost, ...closure_2.filter((id) => !set.has(id.id))];
     closure_2 = items;
     error = null;

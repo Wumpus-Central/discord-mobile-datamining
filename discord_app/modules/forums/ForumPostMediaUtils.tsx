@@ -5,8 +5,8 @@ import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import InteractionComponentUtils from "../interaction_components/InteractionComponentUtils.tsx";
+import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ThreadMessageStore from "../threads/ThreadMessageStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -149,8 +149,8 @@ function getForumPostMedia(attachments) {
     return [];
   }
 }
-function useForumPostEmbeds(embeds, flag) {
-  _require = flag;
+function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
+  _require = hasSpoilerEmbeds;
   const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
   const setting = InlineEmbedMedia.useSetting();
   const RenderEmbeds = require("UserSettings").RenderEmbeds;

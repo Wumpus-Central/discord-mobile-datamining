@@ -12,8 +12,10 @@ import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActio
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowIcon from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
+import _modDef8048 from "../../../../../_runtime/metro/08048__.js";
 import FormComponents from "../shared/FormComponents.tsx";
 import useIsSecureFramesVerified from "../../../rtc/hooks/useIsSecureFramesVerified.tsx";
 import SecureFramesPlatformUtilsDefault from "../../../rtc/SecureFramesPlatformUtils.native.tsx";
@@ -21,9 +23,7 @@ import showShareActionSheet from "../../../action_sheet/native/showShareActionSh
 import useIsSecureFramesUIEnabled from "../../../rtc/hooks/useIsSecureFramesUIEnabled.tsx";
 import StageChannelUnifiedCallExperiment from "../../../stage_channels/StageChannelUnifiedCallExperiment.tsx";
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
-import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
 import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
-import _modDef14844 from "../../../../../_runtime/metro/14844__.js";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators.tsx";
 import getChannelInfoSubtitleDefault from "../utils/getChannelInfoSubtitle.tsx";
@@ -138,10 +138,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = {
     onPress: callback,
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, {
-      IconComponent: WrenchIcon.WrenchIcon,
-      source: _modDef14844,
-    }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8048 }),
     label: null,
     trailing: null,
   };
@@ -161,7 +158,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef14844,
+    source: _modDef8048,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -173,11 +170,11 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1071);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5563).isStreamParticipant;
-let closure_17 = fn(9708).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const isStreamParticipant = fn(5567).isStreamParticipant;
+let closure_17 = fn(8540).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   headerContainer: { alignItems: "center" },
   channelTitleWrapper: {
@@ -249,7 +246,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
       if (null != stateFromStores) {
         if (stateFromStores.isPrivate()) {
           const _Set = Set;
-          const set = new Set(stateFromStores1.map((user) => user.user.id));
+          set = new Set(stateFromStores1.map((user) => user.user.id));
           items = [];
           const recipients = stateFromStores.recipients;
           for (const item10020 of recipients) {
@@ -312,7 +309,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18004, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18043, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

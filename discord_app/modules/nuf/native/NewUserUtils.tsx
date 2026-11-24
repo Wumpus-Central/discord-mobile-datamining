@@ -5,15 +5,19 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Link from "../../../../_runtime/01501_Link.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NativePermissionManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
+import WaterwheelsDiscoverExperiment from "../../waterwheels/WaterwheelsDiscoverExperiment.tsx";
+import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import NewUserAnalyticsUtils from "NewUserAnalyticsUtils.tsx";
 import nuf_NUFActionCreators from "../NUFActionCreators.tsx";
 import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment.android.tsx";
+import WaterwheelsDiscoverNavigation from "../../waterwheels/discover/native/WaterwheelsDiscoverNavigation.tsx";
 import InterestPickerExperiment from "../../waterwheels/interest/InterestPickerExperiment.tsx";
 import NewUserModalTypes from "components/NewUserModalTypes.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ParentalConsentStore from "../../parent_tools/ParentalConsentStore.tsx";
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+import NewUserStore from "../NewUserStore.tsx";
 
 const require = globalThis.__r;
 
@@ -21,7 +25,7 @@ require = fn;
 function shouldSkipContactSync() {
   return MobileOnboardingFrictionExperimentDefault.getMobileOnboardingFrictionConfig(NewUserUtils).skipContactSync;
 }
-let closure_15 = async function _shouldSkipContactSyncStep() {
+let closure_17 = async function _shouldSkipContactSyncStep() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -62,9 +66,9 @@ let closure_15 = async function _shouldSkipContactSyncStep() {
         c2 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        if (value === closure_128_11.UNAUTHORIZED) {
-          closure_128_0(closure_128_2[10]).isIOS();
-          const obj = closure_128_0(closure_128_2[10]);
+        if (value === closure_128_13.UNAUTHORIZED) {
+          closure_128_0(closure_128_2[12]).isIOS();
+          const obj = closure_128_0(closure_128_2[12]);
         }
       }
       c2 = 3;
@@ -77,14 +81,32 @@ let closure_15 = async function _shouldSkipContactSyncStep() {
   }
 };
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
+  let waterwheelsDiscoverEnabled = NewUserStore.getType() === NewUserTypes.ORGANIC_REGISTERED;
+  if (waterwheelsDiscoverEnabled) {
+    waterwheelsDiscoverEnabled = !instant_invite_InstantInviteUtils.hasDeferredInvite();
+  }
+  if (waterwheelsDiscoverEnabled) {
+    waterwheelsDiscoverEnabled = !ParentalConsentStore.getShouldShowGuardianConnect();
+  }
+  if (waterwheelsDiscoverEnabled) {
+    waterwheelsDiscoverEnabled = WaterwheelsDiscoverExperiment.getWaterwheelsDiscoverEnabled("nuf_complete");
+  }
   NewUserAnalyticsUtils.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   ModalActionCreatorsDefault.popWithKey(NewUserModalTypes.NEW_USER_MODAL_KEY);
-  router_utils.transitionTo(constants2.ME, { navigationReplace: true });
+  if (waterwheelsDiscoverEnabled) {
+    waterwheelsDiscoverEnabled = WaterwheelsDiscoverNavigation.selectWaterwheelsDiscover();
+    const tmp7Result = WaterwheelsDiscoverNavigation;
+  }
+  if (!waterwheelsDiscoverEnabled) {
+    router_utils.transitionTo(constants2.ME, { navigationReplace: true });
+    const tmp7Result3 = router_utils;
+  }
   const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
+  const tmp7Result4 = nuf_NUFActionCreators;
 }
 function getNextOnboardingStep() {
   const self = this;
-  const apply = closure_21.apply;
+  const apply = closure_23.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -92,7 +114,7 @@ function getNextOnboardingStep() {
   }
   return applyArgumentsResult;
 }
-let closure_21 = async function _getNextOnboardingStep() {
+let closure_23 = async function _getNextOnboardingStep() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -148,7 +170,7 @@ let closure_21 = async function _getNextOnboardingStep() {
           return obj5;
         } else {
           let key;
-          if (closure_133_18[closure_132_1] != null) {
+          if (closure_133_20[closure_132_1] != null) {
             key = tmp73.key;
           }
           let registration = key;
@@ -158,8 +180,8 @@ let closure_21 = async function _getNextOnboardingStep() {
           closure_132_3 = registration;
           const sum = closure_132_2 + 1;
           closure_132_2 = sum;
-          if (sum >= closure_133_18.length) {
-            closure_133_19(closure_132_3);
+          if (sum >= closure_133_20.length) {
+            closure_133_21(closure_132_3);
             const obj6 = {
               lastShownStepIndex: closure_132_1,
               onboardingStepIndex: closure_132_2,
@@ -169,7 +191,7 @@ let closure_21 = async function _getNextOnboardingStep() {
             const obj7 = { value: obj6, done: true };
             return obj7;
           } else {
-            closure_132_4 = closure_133_18[closure_132_2];
+            closure_132_4 = closure_133_20[closure_132_2];
             key2 = closure_132_4.key;
             shouldShowStep = closure_132_4.shouldShowStep;
             transitionStep2 = closure_132_4.transitionStep;
@@ -190,9 +212,9 @@ let closure_21 = async function _getNextOnboardingStep() {
         } else if (value) {
           closure_132_1 = closure_132_2;
           const obj10 = { skip: closure_132_0 };
-          closure_133_0(closure_133_2[19]).trackNUFStep(closure_132_3, key2, obj10);
+          closure_133_0(closure_133_2[22]).trackNUFStep(closure_132_3, key2, obj10);
           if (null != transitionStep2) {
-            closure_133_19(key2);
+            closure_133_21(key2);
             transitionStep2();
             const obj11 = {
               lastShownStepIndex: closure_132_1,
@@ -203,16 +225,16 @@ let closure_21 = async function _getNextOnboardingStep() {
           } else {
             obj12 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: null };
             let transitionStep;
-            if (closure_133_18[closure_132_2] != null) {
+            if (closure_133_20[closure_132_2] != null) {
               transitionStep = tmp27.transitionStep;
             }
             obj12.continueNavigation = null == transitionStep;
           }
-          const obj3 = closure_133_0(closure_133_2[19]);
+          const obj3 = closure_133_0(closure_133_2[22]);
         } else {
           c6 = 3;
           c7 = 1;
-          const obj13 = { value: closure_133_20(closure_132_0, closure_132_1, closure_132_2), done: false };
+          const obj13 = { value: closure_133_22(closure_132_0, closure_132_1, closure_132_2), done: false };
           return obj13;
         }
       } else if (arg0 === 1) {
@@ -233,15 +255,16 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(13280);
-({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
+const NewUserTypes = fn(13525).NewUserTypes;
+const NotificationPermissionConstants = fn(13207);
+({ EventActionLocation: closure_9, EventActionType: closure_10 } = NotificationPermissionConstants);
 const Constants = fn(1071);
-({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(13583).ContactPermissions;
-let closure_12 = fn(6496).NotificationAuthorizationStatus;
+({ PlatformTypes: closure_11, Routes: closure_12 } = Constants);
+const ContactPermissions = fn(13497).ContactPermissions;
+let closure_14 = fn(7739).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
-let closure_16 = asyncGeneratorStep(async () => {
+let closure_18 = asyncGeneratorStep(async () => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -292,10 +315,10 @@ let closure_16 = asyncGeneratorStep(async () => {
       } else if (1 === tmp8) {
         c3 = 0;
         closure_128_2 = closure_2;
-        if (notificationPrompt !== closure_129_0(closure_129_2[12]).OnboardingNotificationPrompt.OS_ONLY) {
+        if (notificationPrompt !== closure_129_0(closure_129_2[14]).OnboardingNotificationPrompt.OS_ONLY) {
           throw closure_128_2;
         } else {
-          closure_129_1(closure_129_2[14]).captureException(closure_128_2);
+          closure_129_1(closure_129_2[16]).captureException(closure_128_2);
           c5 = 3;
           return { value: false, done: true };
         }
@@ -311,29 +334,29 @@ let closure_16 = asyncGeneratorStep(async () => {
             return obj9;
           } else {
             closure_128_1 = value;
-            if (closure_128_1 === closure_129_12.AUTHORIZED) {
+            if (closure_128_1 === closure_129_14.AUTHORIZED) {
               c3 = 0;
               c5 = 3;
               return { value: false, done: true };
-            } else if (closure_129_0(closure_129_2[12]).OnboardingNotificationPrompt.EXPLAINER === notificationPrompt) {
+            } else if (closure_129_0(closure_129_2[14]).OnboardingNotificationPrompt.EXPLAINER === notificationPrompt) {
               c3 = 0;
               c5 = 3;
               return { value: true, done: true };
-            } else if (closure_129_0(closure_129_2[12]).OnboardingNotificationPrompt.OS_ONLY === tmp54) {
-              if (closure_128_1 !== closure_129_12.DENIED) {
+            } else if (closure_129_0(closure_129_2[14]).OnboardingNotificationPrompt.OS_ONLY === tmp54) {
+              if (closure_128_1 !== closure_129_14.DENIED) {
                 c4 = 3;
                 c5 = 1;
                 const obj10 = {
-                  value: closure_129_0(closure_129_2[13]).requestPushNotificationPermission(
-                    closure_129_8.REQUEST,
-                    closure_129_7.AUTO_PROMPT,
+                  value: closure_129_0(closure_129_2[15]).requestPushNotificationPermission(
+                    closure_129_10.REQUEST,
+                    closure_129_9.AUTO_PROMPT,
                     () => {},
                   ),
                   done: false,
                 };
                 return obj10;
               }
-            } else if (closure_129_0(closure_129_2[12]).OnboardingNotificationPrompt.NONE === tmp54) {
+            } else if (closure_129_0(closure_129_2[14]).OnboardingNotificationPrompt.NONE === tmp54) {
               c3 = 0;
               c5 = 3;
               return { value: false, done: true };
@@ -369,7 +392,7 @@ let closure_16 = asyncGeneratorStep(async () => {
 });
 obj2.shouldShowStep = function shouldShowStep() {
   const self = this;
-  const apply = closure_16.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -378,7 +401,7 @@ obj2.shouldShowStep = function shouldShowStep() {
   return applyArgumentsResult;
 };
 let obj3 = { key: "contact-sync", shouldShowStep: null };
-let closure_17 = asyncGeneratorStep(async () => {
+let closure_19 = asyncGeneratorStep(async () => {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -419,7 +442,7 @@ let closure_17 = asyncGeneratorStep(async () => {
             const obj4 = {
               value: (function shouldSkipContactSyncStep() {
                 const self = this;
-                const apply = closure_1_15.apply;
+                const apply = closure_1_17.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                 } else {
@@ -447,7 +470,7 @@ let closure_17 = asyncGeneratorStep(async () => {
 });
 obj3.shouldShowStep = function shouldShowStep() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -500,7 +523,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(8051).hasDeferredInvite,
+    shouldShowStep: fn(10284).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

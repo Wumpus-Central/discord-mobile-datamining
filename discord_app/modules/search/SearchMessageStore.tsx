@@ -2,8 +2,8 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ReactionUtils from "../reactions/ReactionUtils.tsx";
-import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
+import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
@@ -154,7 +154,7 @@ prototype2["getTotalCount"] = function getTotalCount(searchTabFetchId) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -181,7 +181,7 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -208,7 +208,7 @@ prototype2["getIsIndexing"] = function getIsIndexing(searchTabFetchId) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -235,7 +235,7 @@ prototype2["getIsHistoricalIndexing"] = function getIsHistoricalIndexing(searchT
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -262,7 +262,7 @@ prototype2["getDocumentsIndexed"] = function getDocumentsIndexed(searchTabFetchI
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -289,7 +289,7 @@ prototype2["getIsFetching"] = function getIsFetching(arg0) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -316,7 +316,7 @@ prototype2["getError"] = function getError(arg0) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -343,7 +343,7 @@ prototype2["getMessages"] = function getMessages(arg0) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -370,7 +370,7 @@ prototype2["getCursor"] = function getCursor(searchTabFetchId) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -397,7 +397,7 @@ prototype2["getAnalyticsId"] = function getAnalyticsId(arg0) {
         cursor: null,
       });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[8] = set;
       value = merged;
     } else {
@@ -431,7 +431,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
             cursor: null,
           });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {
@@ -463,7 +463,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
             cursor: null,
           });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {
@@ -510,7 +510,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
             cursor: null,
           });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {
@@ -541,7 +541,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
             cursor: null,
           });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[8] = set;
           value = merged;
         } else {

@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/utils/CollectiblesPromotionDiscountCtaUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import useCollectiblesPromotionForProduct from "../hooks/useCollectiblesPromotionForProduct.tsx";
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils.tsx";
 import CollectiblesStorefrontPricingIntegrationExperiment from "../experiments/CollectiblesStorefrontPricingIntegrationExperiment.tsx";
 import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils.tsx";
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils.tsx";
+import useCollectiblesPromotionForProduct from "../hooks/useCollectiblesPromotionForProduct.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionDiscountCtaUtils.tsx");

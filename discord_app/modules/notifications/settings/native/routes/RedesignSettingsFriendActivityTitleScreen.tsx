@@ -1,23 +1,9 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsFriendActivityTitleScreen.tsx
-import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
-import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilders.tsx";
-import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import RedesignSettingsCategoryFriendsActivityScreenDefault from "RedesignSettingsCategoryFriendsActivityScreen.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/notifications/settings/native/routes/RedesignSettingsFriendActivityTitleScreen.tsx",
 );
 
-export default noop.memo(function RedesignSettingsFriendActivityTitleScreen() {
-  const node = noop.useMemo(() => {
-    const obj2 = { sections: null };
-    const obj = SettingBuilders;
-    items = [MobileNotifSettingsRouteBuilders.buildFriendActivityTitleSettingsSection()];
-    obj2.sections = items;
-    return obj.createList(obj2);
-  }, []);
-  return jsx(SystemNotifPermissionLayoutDefault, { node, category: "222_social" });
-});
+export default RedesignSettingsCategoryFriendsActivityScreenDefault;

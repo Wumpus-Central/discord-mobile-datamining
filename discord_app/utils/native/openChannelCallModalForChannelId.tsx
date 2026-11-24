@@ -1,6 +1,6 @@
 // discord_app/utils/native/openChannelCallModalForChannelId.tsx
-import PrivateChannelCallUtils from "PrivateChannelCallUtils.tsx";
 import StageChannelModalActionCreators from "../../modules/stage_channels/StageChannelModalActionCreators.tsx";
+import PrivateChannelCallUtils from "PrivateChannelCallUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;

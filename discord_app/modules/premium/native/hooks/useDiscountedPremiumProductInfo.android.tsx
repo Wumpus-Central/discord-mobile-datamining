@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx
 import PriceUtils from "../../../../utils/PriceUtils.tsx";
-import ProductIds from "../ProductIds.android.tsx";
+import premium_ProductIds from "../ProductIds.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ export function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
     discountedPriceString: noop.useMemo(() => {
       if (null != closure_0) {
         if (null != discountedProduct) {
-          const tmp8 = ProductIds.DiscountIdToProductOfferId[tmp.discountId];
+          const tmp8 = premium_ProductIds.DiscountIdToProductOfferId[tmp.discountId];
           let tmp2;
           if (tmp8 != null) {
             tmp2 = tmp8[discountedProduct.identifier];

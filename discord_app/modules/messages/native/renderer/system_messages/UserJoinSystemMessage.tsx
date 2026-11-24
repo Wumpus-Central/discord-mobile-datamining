@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
+import SystemMessageUtilsDefault from "../../../../../utils/SystemMessageUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import WelcomeCTAUtils from "../../../../welcome_cta/WelcomeCTAUtils.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import SystemMessageUtilsDefault from "../../../../../utils/SystemMessageUtils.tsx";
 import useIsStickerReplyEnabled from "useIsStickerReplyEnabled.tsx";
 import transformSticker from "transformSticker.tsx";
-import WelcomeCTAUtils from "../../../../welcome_cta/WelcomeCTAUtils.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 

@@ -3,8 +3,8 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01268_v1.js";
 import utils_StringUtils from "../../../discord_common/js/shared/utils/StringUtils.tsx";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import FakePlaceholderPrivateChannel from "../channel/FakePlaceholderPrivateChannel.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageReactionsStore from "../../stores/MessageReactionsStore.tsx";
@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(5495).ReactionTypes.VOTE,
+    channel(5499).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -104,7 +104,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8521);
+const PollsConstants = fn(12084);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1071);
 ({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);
@@ -121,8 +121,8 @@ export function generateLocalCreationAnswerId() {
 export function filterOutUUID(str) {
   return str.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "");
 }
-export function hasNonVoteReactions(arg0) {
-  const iter = arg0.reactions[Symbol.iterator]();
+export function hasNonVoteReactions(message) {
+  const iter = message.reactions[Symbol.iterator]();
   while (iter !== undefined) {
     if (null == iter.next().me_vote) {
       iter.return();

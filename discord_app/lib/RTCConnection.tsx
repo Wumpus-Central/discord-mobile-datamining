@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/05726_flatRest.js";
+import flatRestDefault from "../../_runtime/05789_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import DaveRecipientTrackerDefault from "../modules/rtc/DaveRecipientTracker.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
@@ -114,7 +114,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5673).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5736).getSystemAnalyticsInfo;
 let Constants = fn(1071);
 ({
   AnalyticEvents: closure_18,
@@ -123,10 +123,10 @@ let Constants = fn(1071);
   RTCConnectionQuality: closure_21,
   BoostedGuildTiers: closure_22,
 } = Constants);
-const StreamSettingsConstants = fn(5754);
+const StreamSettingsConstants = fn(5817);
 ({ ApplicationStreamFPS: closure_23, ApplicationStreamResolutions: closure_24 } = StreamSettingsConstants);
-let closure_25 = fn(5755).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5658);
+let closure_25 = fn(5818).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5729);
 ({
   ExperimentFlags: closure_26,
   Features: closure_27,
@@ -1592,7 +1592,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesState = null;
     const _Set = Set;
     items = [self.userId];
-    const set = new Set(items);
+    set = new Set(items);
     self._userIds = set;
     const _secureFramesRosterMap = self._secureFramesRosterMap;
     _secureFramesRosterMap.clear();
@@ -1603,7 +1603,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesLastExecutedTransitionId = undefined;
     const _daveJoinTimer = self._daveJoinTimer;
     _daveJoinTimer.socketLost();
-    const tmp49 = new self(5758)();
+    const tmp49 = new self(5821)();
     self._daveRecipientTracker = tmp49;
     self._daveRecipientsActive = false;
     if (null != self._connection) {
@@ -2660,7 +2660,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     if (tmp) {
       tmp = height <= 720;
     }
-    if (height === dependencyMap3.RESOLUTION_1080) {
+    if (height === dependencyMap.RESOLUTION_1080) {
       if (framerate === FPS_30.FPS_30) {
         const tmp6Result = getFrontierTuningConfigIfEligibleDefault(
           "RTCConnection",
@@ -4428,7 +4428,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5662).now();
+  const commitReceivedTime = _connection(5701).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
@@ -4481,7 +4481,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5662).now();
+  const welcomeReceivedTime = _connection(5701).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;

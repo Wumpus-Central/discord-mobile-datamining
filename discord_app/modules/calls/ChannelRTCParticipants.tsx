@@ -62,12 +62,12 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5563);
+const CallConstants = fn(5567);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
 const ChannelTypes = fn(1071).ChannelTypes;
-const FramesConstants = fn(6624);
+const FramesConstants = fn(6811);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-const Constants = fn(5658);
+const Constants = fn(5729);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -178,7 +178,7 @@ prototype["rebuild"] = function rebuild() {
       } else {
         recipients = channel.recipients;
       }
-      const set = new Set(recipients);
+      set = new Set(recipients);
       set.add(AuthenticationStore.getId());
       const allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(self.channelId);
       const item = allActiveStreamsForChannel.forEach((ownerId) => set.add(ownerId.ownerId));
@@ -256,11 +256,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f89394) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f89837) {
   const self = this;
-  const userId = f89394;
+  const userId = f89837;
   let flag;
-  if (this.participants[f89394] != null) {
+  if (this.participants[f89837] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -302,10 +302,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f893
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f89400, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f89843, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f89400] != null) {
+  if (this.participants[f89843] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

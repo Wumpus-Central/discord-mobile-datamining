@@ -36,7 +36,7 @@ function allowChannelAccess(id, channelType, ROLE) {
     tmp7 = channelType === closure_1_22;
   }
   if (!tmp7) {
-    let tmp10 = channelType === dependencyMap2;
+    let tmp10 = channelType === closure_1_23;
     if (!tmp10) {
       tmp10 = channelType === closure_1_22;
     }
@@ -159,7 +159,7 @@ export function isChannelFull(channel, VoiceStateStore, GuildStore) {
   const result = SortedVoiceStateStore.countVoiceStatesForChannel(channel.id);
   const voiceStatesForChannel = SortedVoiceStateStore.getVoiceStatesForChannel(channel);
   const tmp6 = PermissionStore.can(constants.MOVE_MEMBERS, channel) && PermissionStore.can(constants.CONNECT, channel);
-  if (channel.type === dependencyMap2) {
+  if (channel.type === closure_1_23) {
     let tmp8 = null != guildId;
     if (tmp8) {
       let hasVideoResult = VoiceStateStore.hasVideo(channel.id);

@@ -7,18 +7,18 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
-import useMaybeFetchProfileFrameDefault from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
-import useProfileEffectDefault from "../profile_effects/useProfileEffect.tsx";
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import BundleSampleV2Default from "BundleSampleV2.tsx";
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import useProfileEffectDefault from "../profile_effects/useProfileEffect.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
+import useMaybeFetchProfileFrameDefault from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9551 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import _modDef11089 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
-import _modDef13910 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
+import _modDef11426 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +29,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef13910 };
+    const obj3 = { uri: _modDef11426 };
     obj2.source = obj3;
     obj2.accessibilityLabel = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;
@@ -152,7 +152,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return metroImportDefault(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj = { source: null, style: null };
-    const obj2 = { uri: _modDef9551 };
+    const obj2 = { uri: _modDef11089 };
     obj.source = obj2;
     obj.style = tmp.externalProductImage;
     return metroImportDefault(FastImageDefault, obj);
@@ -283,11 +283,11 @@ function ProductPriceAmountTag(product) {
 }
 const View = fn(17).View;
 const EXTERNAL_PRODUCT_SKU_IDS = fn(1073).EXTERNAL_PRODUCT_SKU_IDS;
-const CollectiblesPreviewConstants = fn(9010);
+const CollectiblesPreviewConstants = fn(9326);
 ({ BUNDLE_PREVIEW_CONFIG: closure_6, SAMPLE_PROFILE_ASPECT_RATIO } = CollectiblesPreviewConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let obj2 = {
   externalProductImage: { width: 45, height: 45 },
   bundlePreviewContainer: {
@@ -355,7 +355,7 @@ obj2.errorContainer = {
   borderBottomRightRadius: nativeDefault.radii.lg,
 };
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4913);
+createStyles = fn(4917);
 let closure_10 = createStyles.createStyles((arg0) => {
   colors = nativeDefault.colors;
   if (arg0) {
@@ -370,12 +370,12 @@ let closure_10 = createStyles.createStyles((arg0) => {
       borderWidth: 2,
       borderColor: BORDER_FEEDBACK_CRITICAL,
       marginHorizontal: tmp4(575).space.PX_16,
-      backgroundColor: "__closure",
+      backgroundColor: "displayName",
     },
   };
   return obj;
 });
-createStyles = fn(4913);
+createStyles = fn(4917);
 const obj11 = { profileEffectContainer: null, profileEffect: null };
 let size = {
   position: "relative",
@@ -387,7 +387,7 @@ let size = {
 obj11.profileEffectContainer = size;
 obj11.profileEffect = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
 let closure_11 = createStyles.createStyles(obj11);
-createStyles = fn(4913);
+createStyles = fn(4917);
 const obj12 = { nameplate: null };
 const obj8 = {
   height: 36,

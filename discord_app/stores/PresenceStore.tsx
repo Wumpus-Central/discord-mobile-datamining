@@ -641,7 +641,7 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     obj3 = { [id]: obj3[id] };
     obj4 = { [id]: obj4[id] };
     closure_15 = { [id]: {} };
-    const set = new Set();
+    set = new Set();
     let item = guilds.forEach((presences) => {
       presences = presences.presences;
       const item = presences.forEach((status) => {

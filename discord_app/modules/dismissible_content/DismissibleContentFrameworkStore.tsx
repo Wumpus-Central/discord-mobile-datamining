@@ -55,7 +55,7 @@ prototype["initialize"] = function initialize(numberOfDCsShownToday) {
     obj.upsellBackoffOverridden = flag2;
   }
   obj.dismissibleContentSeenDuringSession = new Set();
-  const set = new Set();
+  set = new Set();
   obj.seenForGuildId = new Map();
   obj.lastDismissed = null;
   const map = new Map();
@@ -172,7 +172,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
     obj = {};
     const merged = Object.assign(obj);
     obj.dismissibleContentSeenDuringSession = new Set();
-    const set = new Set();
+    set = new Set();
     obj.shownContent = new Map();
     const map = new Map();
     obj.seenForGuildId = new Map();
@@ -201,7 +201,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
           if (!result1) {
             if (result1) {
               const seenForGuildId2 = tmp11.seenForGuildId;
-              let set = seenForGuildId2.get(guildId);
+              set = seenForGuildId2.get(guildId);
               if (set == null) {
                 const _Set = Set;
                 set = new Set();
@@ -275,7 +275,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
     obj.dailyCapPeriodStart = null;
     obj.numberOfDCsShownToday = 0;
     obj.dismissibleContentSeenDuringSession = new Set();
-    const set = new Set();
+    set = new Set();
     obj.seenForGuildId = new Map();
     obj.lastDismissed = null;
   },

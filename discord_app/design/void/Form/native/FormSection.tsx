@@ -1,8 +1,8 @@
 // discord_app/design/void/Form/native/FormSection.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import TableRowGroup from "../../../components/TableRow/native/TableRowGroup.native.tsx";
+import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import FormRowDefault from "FormRow.tsx";
 import FormDividerDefault from "FormDivider.tsx";
 import FormTitleDefault from "FormTitle.tsx";
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const TitleStyleType = fn(1190).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 },
   titledSectionNoBorder: { marginTop: 24 },

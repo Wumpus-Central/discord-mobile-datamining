@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/07865_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07813_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DOCK_FADE_TIMING = fn(11768).DOCK_FADE_TIMING;
+const DOCK_FADE_TIMING = fn(11658).DOCK_FADE_TIMING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = noop.memo(function ButtonRimGradient(arg0) {

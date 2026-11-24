@@ -42,7 +42,7 @@ export function useSearchFetchPendingManager(searchContext) {
     if (typeof closure_3 === "function") {
       const obj = Object.create(closure_3.prototype);
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       obj.pending = set;
       obj.add = function add(arg0) {
         const pending = obj.pending;

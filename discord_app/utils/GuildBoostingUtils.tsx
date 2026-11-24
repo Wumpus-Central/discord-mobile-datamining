@@ -5,7 +5,7 @@ import GlobalUtils from "GlobalUtils.tsx";
 import _modDef2168 from "../../_runtime/metro/02168__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
-import _modDef3636 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef3638 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import actions_BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
@@ -25,7 +25,7 @@ function getTotalSoundboardSoundCountForTier(items, features) {
   } else {
     premiumTier = features.premiumTier;
   }
-  let tmp3 = dependencyMap;
+  let tmp3 = set;
   const premiumFeatures = features.premiumFeatures;
   let num;
   if (premiumFeatures != null) {
@@ -499,7 +499,7 @@ export function generateBlockGuildSubscriptionPurchasesNode(fractionalState) {
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_27() };
-    return intl7.formatToPlainString(_modDef3636["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3638["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -711,7 +711,7 @@ export function getAvailableSoundboardSoundCount(premiumFeatures, arg1, arg2) {
   if (-1 === items.indexOf(arg2)) {
     return 0;
   } else {
-    let tmp4 = dependencyMap;
+    let tmp4 = set;
     premiumFeatures = premiumFeatures.premiumFeatures;
     let num;
     if (premiumFeatures != null) {
@@ -730,7 +730,7 @@ export function getAvailableSoundboardSoundCount(premiumFeatures, arg1, arg2) {
   }
 }
 export function getMaxSoundboardSlots(guild) {
-  let tmp = dependencyMap;
+  let tmp = set;
   const premiumFeatures = guild.premiumFeatures;
   let num;
   if (premiumFeatures != null) {
@@ -792,7 +792,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8753).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(10232).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

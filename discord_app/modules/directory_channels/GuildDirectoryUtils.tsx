@@ -57,7 +57,7 @@ export function guildDirectoryEntryFromServer(entry) {
     if (guild4 != null) {
       features = guild4.features;
     }
-    const set = new Set(features);
+    set = new Set(features);
     obj.features = set;
     const guild5 = entry.guild;
     let prop;

@@ -5,12 +5,12 @@ import util from "../../../../../../../intl/index.native.tsx";
 import ClientInfoUtilsAll from "../../../../../../../utils/native/ClientInfoUtils.tsx";
 import Constants from "../../../../../../instant_invite/Constants.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
-import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import BuildOverrideStore2 from "../../../../../../build_overrides/BuildOverrideStore.tsx";
 import build_overrides_BuildOverrideUtils from "../../../../../../build_overrides/native/BuildOverrideUtils.tsx";
-import _modDef12333 from "../../../../../../../../_runtime/metro/12333__.js";
-import _modDef12334 from "../../../../../../../../_runtime/metro/12334__.js";
-import _modDef14307 from "../../../../../../../../_runtime/metro/14307__.js";
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import _modDef12237 from "../../../../../../../../_runtime/metro/12237__.js";
+import _modDef12238 from "../../../../../../../../_runtime/metro/12238__.js";
+import _modDef14338 from "../../../../../../../../_runtime/metro/14338__.js";
 import validateBuildOverrideDefault from "../../../../../../build_overrides/validateBuildOverride.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -94,7 +94,7 @@ export function createBuildOverrideEmbed(code, theme) {
               obj3.titleColor = colors.titleColor;
               obj3.subtitle = id;
               obj3.subtitleColor = colors.subtitleColor;
-              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef14307).uri;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef14338).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -139,9 +139,9 @@ export function createBuildOverrideEmbed(code, theme) {
     }
     obj5.subtitleColor = subtitleColor;
     if (tmp20Result.isThemeDark(theme)) {
-      let tmpResult2 = _modDef12333;
+      let tmpResult2 = _modDef12237;
     } else {
-      tmpResult2 = _modDef12334;
+      tmpResult2 = _modDef12238;
     }
     obj5.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
     obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

@@ -72,18 +72,18 @@ export function useDisplayProfileWithFetchEffect(arg0, guildId) {
     return tmp2;
   });
 }
-export function getDisplayProfile(id, guildId) {
+export function getDisplayProfile(id1, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
     items = [UserStore, UserProfileStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
-  if (null === id) {
+  if (null === id1) {
     return null;
   } else {
-    const user = obj.getUser(id);
-    const userProfile = obj2.getUserProfile(id);
+    const user = obj.getUser(id1);
+    const userProfile = obj2.getUserProfile(id1);
     let tmp8 = null;
     if (null != user) {
       tmp8 = null;

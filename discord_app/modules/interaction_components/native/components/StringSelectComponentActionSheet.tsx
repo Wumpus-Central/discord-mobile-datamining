@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   selectionOptionItemWithDescription: { minHeight: 64 },
   selectionOptionItemDescription: { marginTop: 2 },
@@ -32,10 +32,10 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(12353);
+  let obj = selectionActionComponent(8691);
   let tmp3 = first(
     noop.useState(
-      new Set(selectionActionComponent(12353).getInitialStringSelectOptions(selectionActionComponent, containerId)),
+      new Set(selectionActionComponent(8691).getInitialStringSelectOptions(selectionActionComponent, containerId)),
     ),
     2,
   );
@@ -61,7 +61,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
       }
       if (!tmp3) {
         closure_4((items) => {
-          const set = new Set(items);
+          set = new Set(items);
           if (closure_1) {
             set.add(value.value);
           } else {
@@ -144,9 +144,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null,
   };
-  let set = new Set(
-    selectionActionComponent(12353).getInitialStringSelectOptions(selectionActionComponent, containerId),
-  );
+  set = new Set(selectionActionComponent(8691).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -175,5 +173,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12354), obj2);
+  return tmp9(onSubmit(12254), obj2);
 }

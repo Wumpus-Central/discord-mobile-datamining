@@ -1,9 +1,9 @@
 // discord_app/modules/game_profile/native/components/AnnouncementMarkup.tsx
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import _modDef2068 from "../../../../../_runtime/metro/02068__.js";
-import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
-import Spoiler from "../../../markup/native/Spoiler.tsx";
 import CustomMarkup from "../../../markup/CustomMarkup.native.tsx";
+import Spoiler from "../../../markup/native/Spoiler.tsx";
+import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
 import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import apply_mod from "../../../../../_runtime/00012_apply.js";

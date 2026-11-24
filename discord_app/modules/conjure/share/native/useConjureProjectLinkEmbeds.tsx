@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/share/native/useConjureProjectLinkEmbeds.tsx
+import conjureMessageAuthors from "../../chat/conjureMessageAuthors.tsx";
 import conjureProjectLinkCard2 from "conjureProjectLinkCard.tsx";
 import conjureSharedProjectHome from "../conjureSharedProjectHome.tsx";
 import loadConjureSharedProjectDefault from "../loadConjureSharedProject.tsx";
-import conjureMessageAuthors from "../../chat/conjureMessageAuthors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -17,7 +17,7 @@ import ConjureSharedProjectStore from "../ConjureSharedProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelLoader = fn(4762).ChannelLoader;
+const ChannelLoader = fn(4766).ChannelLoader;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/useConjureProjectLinkEmbeds.tsx");
 

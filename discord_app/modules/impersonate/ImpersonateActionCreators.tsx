@@ -45,7 +45,7 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1071);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(4769).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4773).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
@@ -73,7 +73,7 @@ export function stopImpersonating(guildId) {
   DispatcherDefault.dispatch({ type: "IMPERSONATE_STOP", guildId });
 }
 export function updateImpersonatedChannels(guildId, items1, items2) {
-  const set = new Set(UserGuildSettingsStore.getOptedInChannels(guildId));
+  set = new Set(UserGuildSettingsStore.getOptedInChannels(guildId));
   const item = items1.forEach((item) => set.add(item));
   const item1 = items2.forEach((item) => set.delete(item));
   updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, optInChannels: set });

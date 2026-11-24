@@ -4,8 +4,8 @@ import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import in_app_reports_ReportUtils from "../../ReportUtils.tsx";
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -38,7 +38,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   settingsContainer: null,

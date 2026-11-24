@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting(

@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
-const ReadStateTypes = fn(6553).ReadStateTypes;
+const ReadStateTypes = fn(6042).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -77,7 +77,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const _Object = Object;
       const keys = Object.keys(ChannelStore.getMutablePrivateChannels());
       const _Set = Set;
-      const set = new Set(keys);
+      set = new Set(keys);
       const sorted = applyDefault(keys).sort(SnowflakeUtilsDefault.compare);
       const obj11 = applyDefault(keys);
       let str = sorted.reverse().value()[0];

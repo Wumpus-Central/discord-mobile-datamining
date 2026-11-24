@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4190 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
 import ConjurePublishTypes from "ConjurePublishTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -55,7 +55,7 @@ function resolveConjurePublishAction(input) {
         str3 = "";
       }
       const obj5 = { server: str3 };
-      formatResult = intl.format(_modDef4190.N4NkyR, obj5);
+      formatResult = intl.format(_modDef4192.N4NkyR, obj5);
     }
   }
   const obj7 = {
@@ -118,7 +118,7 @@ function resolveConjurePublishAction(input) {
             str6 = "";
           }
           const obj9 = { server: str6 };
-          formatResult1 = intl2.format(_modDef4190.eHYXFg, obj9);
+          formatResult1 = intl2.format(_modDef4192.eHYXFg, obj9);
         }
       }
     }
@@ -146,7 +146,7 @@ function resolveConjurePublishAction(input) {
       const obj10 = {};
       const merged2 = Object.assign(obj8);
       const intl4 = util.intl;
-      obj10.label = intl4.string(_modDef4190["tUeY/h"]);
+      obj10.label = intl4.string(_modDef4192["tUeY/h"]);
       obj10.action = "review_permissions";
       let obj11 = obj10;
     }
@@ -155,7 +155,7 @@ function resolveConjurePublishAction(input) {
   obj11 = {};
   const merged3 = Object.assign(obj8);
   const intl3 = util.intl;
-  obj11.label = intl3.string(_modDef4190["120EFN"]);
+  obj11.label = intl3.string(_modDef4192["120EFN"]);
   obj11.action = "publish";
 }
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");

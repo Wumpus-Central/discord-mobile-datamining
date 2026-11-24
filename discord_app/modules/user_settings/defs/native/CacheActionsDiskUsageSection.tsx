@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import FileSizeUtils from "../../../../utils/FileSizeUtils.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -184,7 +184,7 @@ function DiskUsageResults(metricKitSize) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   label: { flex: 1 },
   nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 },

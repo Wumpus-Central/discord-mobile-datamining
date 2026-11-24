@@ -3,10 +3,10 @@ import util from "../../../../../intl/index.native.tsx";
 import AvatarUtils from "../../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
 import useMessageAuthor from "../../../useMessageAuthor.tsx";
+import GuildProductSystemMessageUtils from "../../../../guild_products/GuildProductSystemMessageUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import GuildProductSystemMessageUtils from "../../../../guild_products/GuildProductSystemMessageUtils.tsx";
 import MessageRecord from "../../../../../records/MessageRecord.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 

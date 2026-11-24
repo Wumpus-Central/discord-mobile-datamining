@@ -78,7 +78,7 @@ export function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
     items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
     let items3 = items;
   } else if ("text" === arg2) {
-    let set = _modDef671(arg0).set;
+    set = _modDef671(arg0).set;
     if ("light" === arg3) {
       let TEXT_LIGHTNESS_DARK_THEME = constants2.TEXT_LIGHTNESS_LIGHT_THEME;
       let tmp7 = constants2;

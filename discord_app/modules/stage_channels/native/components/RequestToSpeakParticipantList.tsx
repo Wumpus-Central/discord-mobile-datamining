@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
+import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -99,7 +99,7 @@ function RequestToSpeakParticipant(participant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 },
   listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 },

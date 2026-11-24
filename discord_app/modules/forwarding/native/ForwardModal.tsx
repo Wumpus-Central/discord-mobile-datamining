@@ -6,8 +6,8 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
-import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import ForwardModalUtils from "ForwardModalUtils.tsx";
 import ForwardingAnalyticsUtils from "../ForwardingAnalyticsUtils.tsx";
 import formatResults from "../../share/formatResults.tsx";
@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(10060).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(9646).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(8802).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(8803).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -261,9 +261,9 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5862).openAlert(
+                    closure_1_0(5922).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(10075), {
+                      closure_1_15(forwardOptions(8824), {
                         onConfirm() {
                           return closure_0(true);
                         },

@@ -235,7 +235,7 @@ function logErrorsToAnalytics(store_name, items) {
         const weakSet = new WeakSet();
         obj.visitedEntries = weakSet;
         let _Set = Set;
-        let set = new Set();
+        set = new Set();
         obj.seenMismatches = set;
         value = obj;
       }
@@ -524,7 +524,7 @@ export function runDualReadValidation(store_name, Kkv, fn) {
                         if (closure_2_9(shadowValue)) {
                           const _Set3 = Set;
                           const _Object = Object;
-                          const set = new Set(Object.keys(primaryValue));
+                          set = new Set(Object.keys(primaryValue));
                           const _Set4 = Set;
                           const _Object2 = Object;
                           const set1 = new Set(Object.keys(shadowValue));

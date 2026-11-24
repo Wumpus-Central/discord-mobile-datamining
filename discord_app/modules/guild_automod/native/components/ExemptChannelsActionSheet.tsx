@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/native/components/ExemptChannelsActionSheet.tsx
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import getFlattedChannelListDefault from "../../../channel/getFlattedChannelList.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
+import getFlattedChannelListDefault from "../../../channel/getFlattedChannelList.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildCategoryStore from "../../../../stores/GuildCategoryStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -85,7 +85,7 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(19749), {
+  return jsx(stateFromStores(19792), {
     title: null,
     searchPlaceholder: null,
     listId: "automod-exempt-channels",

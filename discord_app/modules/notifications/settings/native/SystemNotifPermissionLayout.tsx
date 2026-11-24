@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/SystemNotifPermissionLayout.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef3152 from "../../NotificationSettings.messages.js";
+import _modDef3154 from "../../NotificationSettings.messages.js";
 import openNotificationSettingsDefault from "../../../native_permissions/mobile/openNotificationSettings.native.tsx";
 import NotificationPermissionUtil from "../../../nuf/native/NotificationPermissionUtil.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -126,8 +126,8 @@ function SystemNotifPermissionHeader() {
 }
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
-let closure_10 = fn(6496).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13280);
+let closure_10 = fn(7739).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13207);
 ({
   EventActionLocation: closure_11,
   EventActionType: closure_12,
@@ -137,19 +137,19 @@ const NotificationPermissionConstants = fn(13280);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let obj = {
-  "111_realtime": _modDef3152.dF4FmA,
-  "222_social": _modDef3152.tgF0IR,
-  "333_server": _modDef3152.rwJXCw,
-  "444_other": _modDef3152["8gfmjs"],
+  "111_realtime": _modDef3154.dF4FmA,
+  "222_social": _modDef3154.tgF0IR,
+  "333_server": _modDef3154.rwJXCw,
+  "444_other": _modDef3154["8gfmjs"],
 };
 let obj2 = {
-  "111_realtime": _modDef3152.HszTZQ,
-  "222_social": _modDef3152.UbGSlJ,
-  "333_server": _modDef3152.Jweb0a,
-  "444_other": _modDef3152.NQH8GA,
+  "111_realtime": _modDef3154.HszTZQ,
+  "222_social": _modDef3154.UbGSlJ,
+  "333_server": _modDef3154.Jweb0a,
+  "444_other": _modDef3154.NQH8GA,
 };
 const redux = noop.createContext(undefined);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj3 = {
   container: { paddingTop: nativeDefault.space.PX_16 },
   card: null,
@@ -185,7 +185,7 @@ export default function SystemNotifPermissionLayout(node) {
   const effect = noop.useEffect(() => {
     closure_1 = async function _loadPermissionStatus() {
       closure_1 = tmp3;
-      await closure_2_1(7802).getNotificationAuthorizationStatus();
+      await closure_2_1(7746).getNotificationAuthorizationStatus();
       if (1 === tmp7) {
         c2 = 0;
         if (closure_129_0) {
@@ -199,8 +199,8 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13282).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13282);
+            const result = node(13209).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13209);
           }
           v2(true);
           c2 = 0;

@@ -17,7 +17,7 @@ export function defineProtoSetting(
   arg4,
 ) {
   let getSetting = textAndImages;
-  let f86296 = activityRestrictedGuildIds;
+  let f86417 = activityRestrictedGuildIds;
   closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
@@ -36,11 +36,11 @@ export function defineProtoSetting(
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f86296];
+      tmp3 = tmp2[f86417];
     }
     return explicitContentFromProto(tmp3);
   };
-  f86296 = (favorites) => {
+  f86417 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(
       explicitContentFromProto[3],
@@ -48,7 +48,7 @@ export function defineProtoSetting(
     return PreloadedUserSettingsActionCreators.updateAsync(
       closure_0,
       async (arg0) => {
-        arg0[f86296] = closure_3(closure_0, arg0[f86296]);
+        arg0[f86417] = closure_3(closure_0, arg0[f86417]);
       },
       INFREQUENT_USER_ACTION,
     );
@@ -60,7 +60,7 @@ export function defineProtoSetting(
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86303(tmp2);
+      return f86424(tmp2);
     },
     useSetting() {
       items = [UserSettingsProtoStore];
@@ -121,7 +121,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86303(tmp2);
+      return f86424(tmp2);
     },
   };
 }
@@ -135,9 +135,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f86303 = (arg0) => {
+  const f86424 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    items = [f86303];
+    items = [f86424];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -157,7 +157,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86303(tmp2);
+      return f86424(tmp2);
     },
   };
 }

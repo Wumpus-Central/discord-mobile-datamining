@@ -77,14 +77,15 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            let tmp31 = closure_130_5;
+            let tmp33 = closure_130_5;
             if (!closure_130_5) {
-              tmp31 = !closure_131_5.hasFetched(closure_130_0);
+              tmp33 = !closure_131_5.hasFetched(closure_130_0);
             }
-            closure_130_6 = tmp31;
-            if (!closure_131_5.isFetching()) {
+            closure_130_6 = tmp33;
+            if (!closure_131_5.isFetching(closure_130_0, closure_130_1)) {
               if (closure_130_6) {
-                closure_131_1(closure_131_2[6]).dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
+                const obj6 = { type: "GUILD_JOIN_REQUESTS_FETCH_START", guildId: closure_130_0, status: closure_130_1 };
+                closure_131_1(closure_131_2[6]).dispatch(obj6);
                 c5 = 1;
                 const HTTP = closure_131_0(closure_131_2[7]).HTTP;
                 const request = {
@@ -92,19 +93,19 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
                   query: null,
                   rejectWithError: null,
                 };
-                const obj7 = {
+                const obj8 = {
                   status: closure_130_1,
                   limit: closure_130_4,
                   before: closure_130_2,
                   after: closure_130_3,
                 };
-                request.query = obj7;
-                const obj6 = closure_131_1(closure_131_2[6]);
+                request.query = obj8;
+                const obj7 = closure_131_1(closure_131_2[6]);
                 request.rejectWithError = closure_131_0(closure_131_2[7]).rejectWithMigratedError();
                 c6 = 3;
                 c7 = 1;
-                const obj8 = { value: HTTP.get(request), done: false };
-                return obj8;
+                const obj9 = { value: HTTP.get(request), done: false };
+                return obj9;
               }
             }
             c7 = 3;
@@ -113,7 +114,8 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
         } else if (2 === tmp7) {
           c5 = 0;
           closure_130_10 = closure_4;
-          closure_131_1(closure_131_2[6]).dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
+          const obj10 = { type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE", guildId: closure_130_0, status: closure_130_1 };
+          closure_131_1(closure_131_2[6]).dispatch(obj10);
           throw closure_130_10;
         } else if (arg0 === 1) {
           c7 = 3;
@@ -121,8 +123,8 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
+          const obj12 = { value, done: true };
+          return obj12;
         } else {
           closure_130_7 = value;
           total = closure_130_7.body.total;
@@ -132,7 +134,7 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
             closure_1 = [];
           }
           closure_130_9 = closure_1.map(closure_131_6);
-          const obj11 = {
+          const obj13 = {
             type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
             status: closure_130_1,
             requests: closure_130_9,
@@ -140,17 +142,17 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
             limit: closure_130_4,
             guildId: closure_130_0,
           };
-          closure_131_1(closure_131_2[6]).dispatch(obj11);
+          closure_131_1(closure_131_2[6]).dispatch(obj13);
           c5 = 0;
           c7 = 3;
-          const obj12 = { value: closure_130_7, done: true };
-          return obj12;
+          const obj14 = { value: closure_130_7, done: true };
+          return obj14;
         }
-      } catch (tmp57) {
-        closure_4 = tmp57;
+      } catch (tmp63) {
+        closure_4 = tmp63;
         if (tmp4 === c5) {
           c7 = tmp2;
-          throw tmp57;
+          throw tmp63;
         } else {
           c6 = tmp;
         }
@@ -367,8 +369,8 @@ let closure_13 = async function _updateGuildJoinRequest() {
       obj2.title = intl.string(closure_1_0(1112).t.DxJj4e);
       const intl2 = closure_1_0(1112).intl;
       obj2.body = intl2.string(closure_1_0(1112).t.rSAOk9);
-      closure_1_1(5860).show(obj2);
-      const obj = closure_1_1(5860);
+      closure_1_1(5920).show(obj2);
+      const obj = closure_1_1(5920);
     }
     return Promise.reject(error);
   });
@@ -620,8 +622,8 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
     }
   }
 };
-let closure_4 = fn(4766).createChannelRecordFromServer;
-const joinRequestFromServer = fn(4947).joinRequestFromServer;
+let closure_4 = fn(4770).createChannelRecordFromServer;
+const joinRequestFromServer = fn(4951).joinRequestFromServer;
 const Constants = fn(1071);
 ({ AbortCodes: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);

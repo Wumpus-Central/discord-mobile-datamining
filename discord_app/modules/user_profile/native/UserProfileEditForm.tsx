@@ -4,26 +4,26 @@ import util from "../../../intl/index.native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import useKeyboardIsOpenDefault from "../../keyboard/native/useKeyboardIsOpen.tsx";
-import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import useDisplayProfileDefault from "../hooks/useDisplayProfile.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
+import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
-import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import useKeyboardIsOpenDefault from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
-import useFetchCollectiblesCategoriesAndPurchasesDefault from "../../collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx";
-import UserProfileEditFormKeyboardAvoidingContextDefault from "UserProfileEditFormKeyboardAvoidingContext.tsx";
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
+import useFetchCollectiblesCategoriesAndPurchasesDefault from "../../collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx";
+import UserProfileEditFormKeyboardAvoidingContextDefault from "UserProfileEditFormKeyboardAvoidingContext.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef15832 from "../../../../_runtime/metro/15832__.js";
+import useUserProfileEditFormDefault from "../../user_settings/profiles/native/useUserProfileEditForm.tsx";
+import _modDef15879 from "../../../../_runtime/metro/15879__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
-import useUserProfileEditFormDefault from "../../user_settings/profiles/native/useUserProfileEditForm.tsx";
 import UserProfileEditFormTextFieldDefault from "UserProfileEditFormTextField.tsx";
 import UserProfileDisplayNameStylesEditButtonDefault from "UserProfileDisplayNameStylesEditButton.tsx";
 import UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault from "UserProfileHexagonCampaignDisplayNameStyleEditButton.tsx";
@@ -46,17 +46,17 @@ import 01653__ from "../../../../_runtime/metro/01653__.js";
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useMeasuredLayoutDefault = tmp(7597);
-const useProfileThemeDefault = tmp(8180);
-const useUserProfileBannerHeightDefault = tmp(8183);
-const UserProfileFixedBackgroundDefault = tmp(8190);
-const useBadgesDefault = tmp(8198);
-const UserProfileCustomStatusBubbleDefault = tmp(9051);
-const useTryItOutUpsellScrollTrackingDefault = tmp(15858);
-const useStickyEditFormHeadersDefault = tmp(15859);
-const useScrollToUserProfileEditFormSectionDefault = tmp(15860);
-const EditUserProfileAvatarDefault = tmp(15945);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(15957);
+const useMeasuredLayoutDefault = tmp(8345);
+const useProfileThemeDefault = tmp(9344);
+const useBadgesDefault = tmp(9362);
+const UserProfileCustomStatusBubbleDefault = tmp(9386);
+const useUserProfileBannerHeightDefault = tmp(14675);
+const UserProfileFixedBackgroundDefault = tmp(14678);
+const useTryItOutUpsellScrollTrackingDefault = tmp(15899);
+const useStickyEditFormHeadersDefault = tmp(15900);
+const useScrollToUserProfileEditFormSectionDefault = tmp(15901);
+const EditUserProfileAvatarDefault = tmp(15986);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(15998);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({ user, displayProfile, pendingBanner, tryItOutBanner, isTryItOut, pendingAvatarSrc, pendingAccentColor, pendingThemeColors, disabled } = arg0);
@@ -521,7 +521,7 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(8909).setPendingChanges({ globalName });
+          return _undefined(11799).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
@@ -551,7 +551,7 @@ function UserProfileEditFormContent(currentUser) {
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(8909).setPendingChanges({ pronouns });
+            return _undefined(11799).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
@@ -574,7 +574,7 @@ function UserProfileEditFormContent(currentUser) {
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(8909).setPendingChanges({ bio });
+            return _undefined(11799).setPendingChanges({ bio });
           };
           obj10.autoFocus = c1 === constants.BIO;
           obj10.maxLength = maxLength;
@@ -585,7 +585,7 @@ function UserProfileEditFormContent(currentUser) {
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(8909).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(11799).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
@@ -641,7 +641,7 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_53.onTryItOutSectionLayout,
               onPreviewPremium() {
-                    return _undefined(15941).openPremiumTryItOutModal();
+                    return _undefined(15982).openPremiumTryItOutModal();
                   }
             };
             tmp12Result9 = gesture(UserProfilePremiumTryItOutSectionDefault, obj21);
@@ -694,7 +694,7 @@ function UserProfileEditFormContent(currentUser) {
     items10[2] = tmp27;
     obj19.children = items10;
     obj18.children = tmp58(tmp59, obj19);
-    return tmp57(tmp4(4974).ThemeContextProvider, obj18);
+    return tmp57(tmp4(4978).ThemeContextProvider, obj18);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -706,26 +706,26 @@ function UserProfileEditFormContent(currentUser) {
     let tmp57Result2 = tmp57(tmp, obj);
   } else {
     let obj29 = { isTryItOut };
-    tmp57Result2 = tmp57(tmp4(15958).UserProfilePremiumUpsellCard, obj29);
+    tmp57Result2 = tmp57(tmp4(15999).UserProfilePremiumUpsellCard, obj29);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7564).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7431).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1071);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_8, PRONOUNS_MAX_LENGTH: closure_9 } = Constants);
-const HexagonCampaignConstants = fn(4938);
+const HexagonCampaignConstants = fn(4942);
 ({ HexagonCampaignPerk: closure_10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 let closure_12 = fn(1081).ProfileCustomizationScrollPositions;
-let closure_13 = fn(15831).UserProfileEditAutoFocusElement;
+let closure_13 = fn(15878).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = [1];
 let closure_18 = module_1653.createAnimatedComponent(ScrollView);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { stickyHeader: { zIndex: 2 }, tabsAnchor: { marginTop: nativeDefault.space.PX_12 } };
 let closure_19 = createStyles.createStyles(obj);
-let obj4 = { assetOrigin: fn(7410).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15832, staticImageUri: _modDef15832, description: "", originalAsset: "add" };
+let obj4 = { assetOrigin: fn(7220).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15879, staticImageUri: _modDef15879, description: "", originalAsset: "analyticsLocations" };
 let closure_24 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

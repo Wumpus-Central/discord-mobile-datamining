@@ -1,7 +1,7 @@
 // discord_app/design/components/Sheet/native/ActionSheetRow.native.tsx
+import TableRowGroup from "../../TableRow/native/TableRowGroup.native.tsx";
 import TableRow from "../../TableRow/native/TableRow.native.tsx";
 import TableRowIcon from "../../TableRow/native/TableRowIcon.native.tsx";
-import TableRowGroup from "../../TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../TableRow/native/TableSwitchRow.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

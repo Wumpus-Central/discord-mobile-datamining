@@ -38,7 +38,7 @@ const View = fn(17).View;
 const WATERWHEELS = fn(1071).WATERWHEELS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_10 = createStyles.createStyles((marginBottom) => {
   const obj = { stretch: { alignSelf: "stretch", marginBottom: -marginBottom } };
   return obj;
@@ -61,9 +61,9 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: 4,
-    expandedChildren: 0,
-    children: 0,
+    label: null,
+    expandedChildren: null,
+    children: null,
   };
   const intl = util.intl;
   obj5.label = intl.string(_modDef2643.zFl2A4);

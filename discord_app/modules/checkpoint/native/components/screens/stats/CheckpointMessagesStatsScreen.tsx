@@ -3,8 +3,8 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3408 from "../../../../Checkpoint.messages.js";
-import _modDef3440 from "../../../../Checkpoint2026.messages.js";
+import _modDef3410 from "../../../../Checkpoint.messages.js";
+import _modDef3442 from "../../../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../../../CheckpointConstants.tsx";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -16,8 +16,8 @@ import CheckpointGlobalStatNumberDefault from "../../CheckpointGlobalStatNumber.
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointNumberUtils from "../../../CheckpointNumberUtils.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12752 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
-import _modDef12753 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_static.png.js";
+import _modDef12671 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
+import _modDef12672 from "../../../../../../../discord_assets/assets/checkpoint/2026/messages_loop_static.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -128,9 +128,9 @@ export default function CheckpointMessagesStatsScreen() {
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
   if (rounded <= 0 && null != stateFromStores1) {
-    let wWKySP = _modDef3440["2BuyVC"];
+    let wWKySP = _modDef3442["2BuyVC"];
   } else {
-    wWKySP = _modDef3408.wWKySP;
+    wWKySP = _modDef3410.wWKySP;
   }
   const tmp5Result = CheckpointStatsUtils;
   let formatToPlainStringResult;
@@ -138,7 +138,7 @@ export default function CheckpointMessagesStatsScreen() {
     if (null != checkpointTopPercent) {
       const intl2 = util.intl;
       const obj3 = { percent: checkpointTopPercent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3440.wHn2YM, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3442.wHn2YM, obj3);
     }
   }
   const obj4 = { centered: tmp4, children: null };
@@ -147,8 +147,8 @@ export default function CheckpointMessagesStatsScreen() {
   const stringResult = intl.string(wWKySP);
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef12752;
-  obj7.staticUri = _modDef12753;
+  obj7.animatedUri = _modDef12671;
+  obj7.staticUri = _modDef12672;
   const items2 = [tmp.image];
   let wideImage = tmp4;
   if (tmp4) {
@@ -194,7 +194,7 @@ export default function CheckpointMessagesStatsScreen() {
     obj16.numCopies = tmp5Result7.formatCheckpointCompactNumber(
       CheckpointStatsUtils.getCheckpointOdysseyCopies(stateFromStores1),
     );
-    let formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3440.bAxEs2, obj16);
+    let formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3442.bAxEs2, obj16);
     const tmp5Result8 = CheckpointStatsUtils;
   } else if (null != checkpointTopPercent) {
     const intl4 = util.intl;
@@ -204,11 +204,11 @@ export default function CheckpointMessagesStatsScreen() {
         return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
       },
     };
-    formatToPlainStringResult1 = intl4.format(_modDef3440.TOMBAW, obj17);
+    formatToPlainStringResult1 = intl4.format(_modDef3442.TOMBAW, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numMessages: rounded };
-    formatToPlainStringResult1 = intl3.format(_modDef3440.cYCqz8, obj18);
+    formatToPlainStringResult1 = intl3.format(_modDef3442.cYCqz8, obj18);
   }
   obj15.children = formatToPlainStringResult1;
   items5[2] = timestampProducer(CheckpointTextDefault, obj15);

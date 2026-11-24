@@ -17,7 +17,7 @@ export function setMediaViewerSources(sources) {
   if (null != initialIndex) {
     const _Set2 = Set;
     items = [initialIndex];
-    let set = new Set(items);
+    set = new Set(items);
   } else {
     const _Set = Set;
     set = new Set();
@@ -31,14 +31,14 @@ export function removeSpoiler(index) {
   const field = zustandStore.getField("userRevealedIndexes");
   if (!field.has(index)) {
     const _Set = Set;
-    const set = new Set(field);
+    set = new Set(field);
     set.add(index);
     const obj2 = { userRevealedIndexes: set };
     zustandStore.setState(obj2);
   }
 }
 export function toggleSpoiler(index) {
-  const set = new Set(zustandStore.getField("userRevealedIndexes"));
+  set = new Set(zustandStore.getField("userRevealedIndexes"));
   if (set.has(index)) {
     set.delete(index);
   } else {

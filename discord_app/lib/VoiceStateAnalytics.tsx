@@ -4,7 +4,7 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const SpeakingFlags = fn(5658).SpeakingFlags;
+const SpeakingFlags = fn(5729).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
@@ -62,7 +62,7 @@ prototype["getStats"] = function getStats() {
   };
 };
 prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(localMutes) {
-  const set = new Set(Object.keys(localMutes.localMutes));
+  set = new Set(Object.keys(localMutes.localMutes));
   const set1 = new Set(Object.keys(localMutes.localVolumes));
   set1.delete(this.userId);
   set.delete(this.userId);
@@ -125,7 +125,7 @@ prototype["setChannelId"] = function setChannelId(channelId) {
     self.channelId = channelId;
     const _Set = Set;
     items = [self.userId];
-    const set = new Set(items);
+    set = new Set(items);
     self.totalParticipants = set;
     const _Object = Object;
     const keys = Object.keys(VoiceStateStore.getVoiceStatesForChannel(self.channelId));

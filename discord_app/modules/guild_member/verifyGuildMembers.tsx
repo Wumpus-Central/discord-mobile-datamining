@@ -47,7 +47,7 @@ function addPending(guildId, item10018) {
   value = map1.get(guildId);
   if (null == value) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const result = map1.set(guildId, set);
     value = set;
   }
@@ -280,8 +280,8 @@ function clearRetryBackoffs() {
   }
   map5.clear();
 }
-let closure_5 = fn(6394).MAX_GUILD_MEMBER_REQUEST_SIZE;
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+let closure_5 = fn(5723).MAX_GUILD_MEMBER_REQUEST_SIZE;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 let c10 = 300000;
 let map = new Map();
 let map1 = new Map();
@@ -293,7 +293,7 @@ const map6 = new Map();
 let c18 = null;
 let Infinity = Infinity;
 let c20 = 0;
-const delayedCall = new fn(4757).DelayedCall(500, () => {
+const delayedCall = new fn(4761).DelayedCall(500, () => {
   (function pruneExpired(arg0) {
     closure_0 = arg0;
     let item = set.forEach((size, index) => {

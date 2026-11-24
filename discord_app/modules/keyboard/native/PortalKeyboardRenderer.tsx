@@ -46,18 +46,18 @@ export function PortalKeyboardRenderer(portal) {
   const layoutEffect = noop.useLayoutEffect(() => PortalKeyboardUIStore3.registerPortalKeyboardRenderer(id), items);
   const layoutEffect1 = noop.useLayoutEffect(() => {
     closure_0 = closure_4(function onKeyboardStoreChange() {
-      const PortalKeyboardUIStore = closure_0(5101).PortalKeyboardUIStore;
+      const PortalKeyboardUIStore = closure_0(5105).PortalKeyboardUIStore;
       field = PortalKeyboardUIStore.getField("keyboard");
-      closure_0(5100);
+      closure_0(5104);
       if (tmp6) {
-        const result = closure_0(5101).closePortalKeyboardIfUnhandled();
-        const tmpResult = closure_0(5101);
+        const result = closure_0(5105).closePortalKeyboardIfUnhandled();
+        const tmpResult = closure_0(5105);
       }
       tmp6 = null != field && tmp5 !== field.type;
     });
     return () => {
       closure_0();
-      const result = id(5101).closePortalKeyboardIfUnhandled();
+      const result = id(5105).closePortalKeyboardIfUnhandled();
     };
   }, []);
   const layoutEffect2 = noop.useLayoutEffect(() => {
@@ -97,9 +97,9 @@ export function PortalKeyboardRenderer(portal) {
     obj = rootNavigationRef(dependencyMap[6]);
     tmp = rootNavigationRef;
   }, []);
-  let PortalKeyboardUIStore = id(5101).PortalKeyboardUIStore;
+  let PortalKeyboardUIStore = id(5105).PortalKeyboardUIStore;
   let field = PortalKeyboardUIStore.useField("keyboard");
-  const PortalKeyboardUIStore2 = id(5101).PortalKeyboardUIStore;
+  const PortalKeyboardUIStore2 = id(5105).PortalKeyboardUIStore;
   const field1 = PortalKeyboardUIStore2.useField("renderers");
   let tmp8 = 0 === field1.length;
   if (!tmp8) {
@@ -117,17 +117,17 @@ export function PortalKeyboardRenderer(portal) {
     }
     tmp3 = closure_6;
   }, items1);
-  const tmp11 = jsx(id(4974).TransitionGroup, {
+  const tmp11 = jsx(id(4978).TransitionGroup, {
     items: memo,
     getItemKey: transitionGroupGetItemKey,
     renderItem: transitionGroupRenderItem,
   });
   if (flag) {
     const obj3 = { children: tmp11 };
-    let tmp10Result = jsx(tmp5(5104).PortalKeyboard, { children: tmp11 });
+    let tmp10Result = jsx(tmp5(5108).PortalKeyboard, { children: tmp11 });
   } else {
     const obj4 = { value: true, children: tmp11 };
-    tmp10Result = jsx(tmp5(11312).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
+    tmp10Result = jsx(tmp5(9604).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
   }
   return tmp10Result;
 }

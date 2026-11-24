@@ -3,11 +3,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import utils from "../../collectibles/nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import NameplateUtils from "../../collectibles/nameplates/native/NameplateUtils.tsx";
 import useMaybeFetchProfileFrameDefault from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import NitroWheelIcon2 from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import NameplateUtils from "../../collectibles/nameplates/native/NameplateUtils.tsx";
 import ProfileFrameSamplePreviewDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import ShopIcon from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
 import FamilyCenterActivityPurchaseRowUtils from "../FamilyCenterActivityPurchaseRowUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -131,9 +131,9 @@ function CollectiblePreview(arg0) {
   }
 }
 const View = fn(17).View;
-let closure_4 = fn(8174).PROFILE_FRAME_ASPECT_RATIO;
+let closure_4 = fn(9365).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   purchasePlaceholder: null,
   avatarDecorationPreview: null,
@@ -142,8 +142,8 @@ let obj2 = {
   profileFrameContainer: null,
 };
 let size = {
-  width: fn(16204).PREVIEW_SIZE,
-  height: fn(16204).PREVIEW_SIZE,
+  width: fn(16237).PREVIEW_SIZE,
+  height: fn(16237).PREVIEW_SIZE,
   borderRadius: nativeDefault.radii.xs,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   display: "flex",
@@ -152,11 +152,11 @@ let size = {
   marginRight: 12,
 };
 obj2.purchasePlaceholder = size;
-const size1 = { width: fn(16204).PREVIEW_SIZE, height: fn(16204).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(16237).PREVIEW_SIZE, height: fn(16237).PREVIEW_SIZE, marginRight: 12 };
 obj2.avatarDecorationPreview = size1;
 const size2 = {
-  width: fn(16204).PREVIEW_SIZE,
-  height: fn(16204).PREVIEW_SIZE,
+  width: fn(16237).PREVIEW_SIZE,
+  height: fn(16237).PREVIEW_SIZE,
   marginRight: 12,
   borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
@@ -166,13 +166,13 @@ obj2.nameplateContainer = size2;
 const size3 = {
   position: "absolute",
   right: 0,
-  width: fn(16204).PREVIEW_SIZE * fn(16204).NAMEPLATE_ASPECT_RATIO,
-  height: fn(16204).PREVIEW_SIZE,
+  width: fn(16237).PREVIEW_SIZE * fn(16237).NAMEPLATE_ASPECT_RATIO,
+  height: fn(16237).PREVIEW_SIZE,
 };
 obj2.nameplatePreview = size3;
 const size4 = {
-  width: fn(16204).PREVIEW_SIZE,
-  height: fn(16204).PREVIEW_SIZE,
+  width: fn(16237).PREVIEW_SIZE,
+  height: fn(16237).PREVIEW_SIZE,
   marginRight: 12,
   alignItems: "center",
   justifyContent: "center",

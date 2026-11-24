@@ -21,7 +21,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-fn(8852).GPlayBillingResult;
+fn(8964).GPlayBillingResult;
 const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1082).PaymentGateways;
@@ -126,7 +126,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
   let obj3 = require("useOrderContext");
   planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, first1);
   let obj4 = require("PremiumUtils");
-  productIdForGift = require("ProductIds").getProductIdForGift(planIdForPremiumType);
+  productIdForGift = require("premium/ProductIds").getProductIdForGift(planIdForPremiumType);
   if (null == first5[planIdForPremiumType]) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -277,7 +277,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "Path", planSelection: "container", giftInfo: "sv-FI" };
+    let obj6 = { orderId: "a", planId: null, planSelection: null, giftInfo: null };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
@@ -1076,10 +1076,10 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           obj7.title = intl.string(closure_0(1112).t.R0RpRX);
           const intl2 = closure_0(1112).intl;
           obj7.body = intl2.string(closure_0(1112).t.CKsXk3);
-          tmp3(5861).show(obj7);
+          tmp3(5921).show(obj7);
           closure_129_2();
           c4 = 3;
-          tmp3(5861);
+          tmp3(5921);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -1231,7 +1231,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                             closure_1 = closure_1_27;
                             c6 = 2;
                             c7 = 1;
-                            return { value: closure_2_0(9117).cancelOrderSigning(closure_2_1), done: false };
+                            return { value: closure_2_0(8982).cancelOrderSigning(closure_2_1), done: false };
                           }
                         }
                       }
@@ -1243,13 +1243,13 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                       closure_130_0 = closure_5;
                       const obj8 = { tags: { source: "NativeGiftContext_cancelOrderSigning" }, extra: null };
                       obj8.extra = { skuId, orderId: closure_131_1 };
-                      const result = closure_2_0(4726).captureBillingException(closure_130_0, obj8);
+                      const result = closure_2_0(4730).captureBillingException(closure_130_0, obj8);
                       logger.error("Failed to cancel order signing", {
                         error: closure_130_0,
                         skuId,
                         orderId: closure_131_1,
                       });
-                      closure_2_0(4726);
+                      closure_2_0(4730);
                     } else if (arg0 === 1) {
                       c7 = 3;
                       throw value;
@@ -1432,7 +1432,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     };
     return first6(first7.Provider, obj8);
   }
-  let obj5 = require("ProductIds");
+  let obj5 = require("premium/ProductIds");
 }
 export const useNativeGiftContext = tmp6;
 export const useForwardedNativeGiftContext = tmp7;

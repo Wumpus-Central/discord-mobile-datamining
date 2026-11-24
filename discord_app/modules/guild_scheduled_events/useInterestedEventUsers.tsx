@@ -48,7 +48,7 @@ export default function useInterestedEventUsers(arg0, arg1) {
       return tmp2;
     });
     const found1 = stateFromStoresArray1.filter((response) => response.response === constants.INTERESTED);
-    const set = new Set();
+    set = new Set();
     items = [];
     const item = found.forEach(addUserToAllInterested);
     const item1 = found1.forEach(addUserToAllInterested);

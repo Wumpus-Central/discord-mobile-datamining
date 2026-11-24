@@ -239,7 +239,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(19753).AuditLogChange;
+const AuditLogChange = fn(19796).AuditLogChange;
 const Constants = fn(1071);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
@@ -258,17 +258,17 @@ const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
   SystemChannelFlags: closure_28,
   AuditLogActionTypes: closure_29,
 } = Constants);
-const ChannelFlags = fn(4769).ChannelFlags;
-const AutomodTriggerType = fn(12408).AutomodTriggerType;
-const GuildOnboardingMode = fn(6822).GuildOnboardingMode;
-const GuildScheduledEventsConstants = fn(4768);
+const ChannelFlags = fn(4773).ChannelFlags;
+const AutomodTriggerType = fn(12307).AutomodTriggerType;
+const GuildOnboardingMode = fn(7330).GuildOnboardingMode;
+const GuildScheduledEventsConstants = fn(4772);
 ({
   GuildScheduledEventEntityTypes: items,
   GuildScheduledEventStatus: closure_34,
   GuildScheduledEventPrivacyLevel: closure_35,
 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-items = [fn(5662).TimeUnits.DAYS, fn(5662).TimeUnits.HOURS, fn(5662).TimeUnits.MINUTES, fn(5662).TimeUnits.SECONDS];
+items = [fn(5701).TimeUnits.DAYS, fn(5701).TimeUnits.HOURS, fn(5701).TimeUnits.MINUTES, fn(5701).TimeUnits.SECONDS];
 let closure_38 = {
   [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true },
   [AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
@@ -646,19 +646,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(5662).TimeUnits.SECONDS]: (seconds) => {
+  [fn(5701).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(5662).TimeUnits.MINUTES]: (minutes) => {
+  [fn(5701).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(5662).TimeUnits.HOURS]: (hours) => {
+  [fn(5701).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(5662).TimeUnits.DAYS]: (days) => {
+  [fn(5701).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   },
@@ -919,7 +919,7 @@ export function getChangeStrings(targetType) {
           __3TkD = __3TkD(1112).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj23 = {};
-          obj23[__3TkD(7279).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1112).t.XYZMbL;
+          obj23[__3TkD(7700).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1112).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1112).t.gb1Owj;
@@ -2671,7 +2671,7 @@ export function transformLogs(arr, arg1) {
                             let tmp10 = null;
                             if (tmp9) {
                               tmp10 = ((channel) =>
-                                result3(5529).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                                result3(5533).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2757,7 +2757,7 @@ export function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(5529).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(5533).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2805,8 +2805,8 @@ export function transformLogs(arr, arg1) {
             user = authStore.getUser(id);
           }
           if (tmp225) {
-            id = items(4969).getUserTag(user);
-            let obj4 = items(4969);
+            id = items(4973).getUserTag(user);
+            let obj4 = items(4973);
           }
           obj.subtarget = id;
           tmp225 = null != user && true;
@@ -2880,7 +2880,7 @@ export function transformLogs(arr, arg1) {
               (event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id,
             );
           }
-          let obj5 = closure_0(4735);
+          let obj5 = closure_0(4739);
           const tmp245 = items(2168);
           let str5;
           if (found20 != null) {
@@ -3404,7 +3404,7 @@ export function transformLogs(arr, arg1) {
                                                   const mapped6 = newValue22.map(ChannelStore.getChannel);
                                                   const found2 = mapped6.filter((item) => null != item);
                                                   const mapped7 = found2.map((item) =>
-                                                    newValue(5529).computeChannelName(item, user, closure_1_12, true),
+                                                    newValue(5533).computeChannelName(item, user, closure_1_12, true),
                                                   );
                                                   if (null == mapped7) {
                                                     newValue5 = mapped7;
@@ -3421,7 +3421,7 @@ export function transformLogs(arr, arg1) {
                                                   const mapped8 = oldValue22.map(ChannelStore.getChannel);
                                                   const found3 = mapped8.filter((item) => null != item);
                                                   const mapped9 = found3.map((item) =>
-                                                    newValue(5529).computeChannelName(item, user, closure_1_12, true),
+                                                    newValue(5533).computeChannelName(item, user, closure_1_12, true),
                                                   );
                                                   if (null == mapped9) {
                                                     oldValue5 = mapped9;

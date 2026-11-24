@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx
+import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
 import UserProfileEditFormDefault from "../../../user_profile/native/UserProfileEditForm.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -31,7 +31,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(tmp4(7520).AnalyticsLocationProvider, {
+    tmp7 = jsx(tmp4(6253).AnalyticsLocationProvider, {
       value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations,
       children: null,
     });

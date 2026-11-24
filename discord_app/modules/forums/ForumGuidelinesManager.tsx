@@ -19,7 +19,7 @@ prototype["_initialize"] = function _initialize() {
   if (null != value) {
     const self = this;
     const _Set = Set;
-    const set = new Set(value);
+    set = new Set(value);
     this.seenForumGuidelines = set;
   }
 };

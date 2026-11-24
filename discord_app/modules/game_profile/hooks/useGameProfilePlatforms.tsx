@@ -5,12 +5,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [
-  fn(8997).PlatformType.DESKTOP,
+  fn(8617).PlatformType.DESKTOP,
   "mobile",
-  fn(8997).PlatformType.XBOX,
-  fn(8997).PlatformType.PLAYSTATION,
-  fn(8997).PlatformType.NINTENDO,
-  fn(8997).PlatformType.ROBLOX,
+  fn(8617).PlatformType.XBOX,
+  fn(8617).PlatformType.PLAYSTATION,
+  fn(8617).PlatformType.NINTENDO,
+  fn(8617).PlatformType.ROBLOX,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfilePlatforms.tsx");
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 export default function useGameProfilePlatforms(platforms) {
   items = [platforms.platforms];
   return noop.useMemo(() => {
-    const set = new Set(platforms.platforms);
+    set = new Set(platforms.platforms);
     let hasItem = set.has(PlatformType.PlatformType.MACOS);
     if (!hasItem) {
       hasItem = set.has(PlatformType.PlatformType.LINUX);

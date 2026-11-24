@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/utils/getApplicationIdsForGame.tsx");
 
 export default function getApplicationIdsForGame(arg0) {
-  const set = new Set();
+  set = new Set();
   if (null != arg0) {
     set.add(arg0);
     const game = GameStore.getGame(arg0);
@@ -45,7 +45,7 @@ export function useApplicationIdsForGame(gameId) {
   return require("initialize").useStateFromStoresArray(
     items,
     () => {
-      const set = new Set();
+      set = new Set();
       if (null != closure_0) {
         set.add(closure_0);
         game = GameStore.getGame(closure_0);

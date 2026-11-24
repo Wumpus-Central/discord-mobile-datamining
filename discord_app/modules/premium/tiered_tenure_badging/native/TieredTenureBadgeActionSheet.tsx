@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import TieredTenureBadgeUtils from "../../../user_profile/TieredTenureBadgeUtils.tsx";
 import showUserProfileActionSheet from "../../../user_profile/native/showUserProfileActionSheet.tsx";
+import TieredTenureBadgeUtils from "../../../user_profile/TieredTenureBadgeUtils.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import useMobileTenureBadgeImages from "hooks/useMobileTenureBadgeImages.tsx";
 import useTenureBadgeRequirementString from "../hooks/useTenureBadgeRequirementString.tsx";
@@ -82,7 +82,7 @@ const Constants = fn(1071);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   headerContainer: { paddingHorizontal: 24, alignItems: "center" },
   title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" },

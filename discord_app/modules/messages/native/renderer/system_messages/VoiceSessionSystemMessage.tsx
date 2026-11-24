@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx
+import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 const require = globalThis.__r;

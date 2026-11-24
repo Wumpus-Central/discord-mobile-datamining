@@ -2,7 +2,7 @@
 import applyDefault from "../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ProductIds from "../../premium/native/ProductIds.android.tsx";
+import premium_ProductIds from "../../premium/native/ProductIds.android.tsx";
 
 require = fn;
 let c3 = null;
@@ -19,9 +19,9 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   if (tmp) {
     tmp =
       applyDefault.filter(c3, (identifier) => {
-        const GenericProductIds = ProductIds.GenericProductIds;
+        const GenericProductIds = premium_ProductIds.GenericProductIds;
         return GenericProductIds.includes(identifier.identifier);
-      }).length === ProductIds.GenericProductIds.length;
+      }).length === premium_ProductIds.GenericProductIds.length;
   }
   return tmp;
 };

@@ -7,7 +7,7 @@ import _mod1653 from "../../../_runtime/metro/01653__.js";
 import timing_timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../design/animation/reanimated/spring/spring.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7250 from "../../../_runtime/metro/07250__.js";
+import _modDef7177 from "../../../_runtime/metro/07177__.js";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
 import AttachmentPreviewDefault from "../../modules/media/native/AttachmentPreview.tsx";
@@ -384,14 +384,14 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(8315).DraftType;
-const ImageCarouselConstants = fn(11617);
+const DraftType = fn(7976).DraftType;
+const ImageCarouselConstants = fn(10939);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   container: { width: "100%" },
   pressableContainer: { marginHorizontal: 4 },

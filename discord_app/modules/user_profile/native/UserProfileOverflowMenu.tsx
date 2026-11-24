@@ -4,10 +4,10 @@ import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import CallActionCreatorsDefault from "../../../actions/CallActionCreators.tsx";
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import isGameOrganizationInviteRecipientDefault from "../../game_organization_invites/isGameOrganizationInviteRecipient.tsx";
 import openGameOrganizationInvitePickerDefault from "../../game_organization_invites/native/openGameOrganizationInvitePicker.tsx";
 import getApplicationInstallURL from "../../applications/getApplicationInstallURL.tsx";
@@ -24,10 +24,10 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7564).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7431).UserProfileThemeTypes;
 const Constants = fn(1071);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5563).ParticipantTypes;
+const ParticipantTypes = fn(5567).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = [];
@@ -329,7 +329,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14432, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14701, dependencyMap.paths), {
             userId: id,
             showUserProfile: callback1,
           });

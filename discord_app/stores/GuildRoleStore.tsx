@@ -151,7 +151,7 @@ const guildRoleStore = new GuildRoleStore(
     },
     CONNECTION_OPEN(arg0, getPartitionKeys) {
       ({ guilds, unavailableGuilds } = arg0);
-      const set = new Set(guilds.map((id) => id.id));
+      set = new Set(guilds.map((id) => id.id));
       for (const item10017 of unavailableGuilds) {
         let addResult = set.add(item10017);
         continue;

@@ -40,7 +40,7 @@ export function collectSocialLayerStorefrontEmbedLinks(arr) {
     }
     return items;
   }
-  const set = new Set();
+  set = new Set();
   items = [];
   const set1 = new Set();
   const rows = {};
@@ -105,7 +105,7 @@ export function useSocialLayerStorefrontEmbedData(stateFromStores) {
       }
       return items;
     }
-    const set = new Set();
+    set = new Set();
     items = [];
     const set1 = new Set();
     const rows = {};

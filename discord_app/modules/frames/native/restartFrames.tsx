@@ -9,7 +9,7 @@ function restartFrame(frame) {
   }
   tmp = isLaunched(frame) && !frame.data.proxyTicketRefreshing;
 }
-const isLaunched = fn(6624).isLaunched;
+const isLaunched = fn(6811).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 

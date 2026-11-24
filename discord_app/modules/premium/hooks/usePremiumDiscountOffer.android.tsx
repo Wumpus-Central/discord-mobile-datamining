@@ -1,6 +1,6 @@
 // discord_app/modules/premium/hooks/usePremiumDiscountOffer.android.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import ProductIds from "../native/ProductIds.android.tsx";
+import premium_ProductIds from "../native/ProductIds.android.tsx";
 import useDiscountOfferDefault from "useDiscountOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
@@ -19,7 +19,7 @@ export function usePremiumDiscountOffer() {
     isFetchingProducts: IAPStore.isFetchingProducts(),
     offerIds: IAPStore.getOfferIds(),
   })).offerIds;
-  const values = Object.values(ProductIds.DiscountIdToProductOfferId[React4]);
+  const values = Object.values(premium_ProductIds.DiscountIdToProductOfferId[React4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
@@ -29,7 +29,7 @@ export function usePremiumDiscountOffer() {
     tmp5 = tmp6;
   }
   tmp4 = useDiscountOfferDefault(React4);
-  const values2 = Object.values(ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
+  const values2 = Object.values(premium_ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
   let tmp8 = null;
   if (0 !== values2.length) {
     let tmp9 = null;

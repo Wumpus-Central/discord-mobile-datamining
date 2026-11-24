@@ -4,8 +4,8 @@ import useColorThemeBackgroundDefault from "../../../client_themes/native/useCol
 import GuildThemeGuildIdOverrideContextDefault from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
-import ModalStackNavigatorDefault from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import ChannelVoiceChatDefault from "ChannelVoiceChat.tsx";
+import ModalStackNavigatorDefault from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,7 +38,7 @@ export default function ChannelVoiceChatModal(channel) {
     <tmp5
       screenKey="StageVoiceChat"
       title={str}
-      titleIcon={jsx(channel(7620).StageIcon, { size: "sm" })}
+      titleIcon={jsx(channel(7037).StageIcon, { size: "sm" })}
       render={function render() {
         let guild_id = channel.guild_id;
         if (guild_id == null) {

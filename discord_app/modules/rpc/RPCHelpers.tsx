@@ -4,11 +4,11 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import UrlDefault from "../../../_runtime/01381_Url.js";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
+import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
 import transformAvatarDecorationDefault from "helpers/transformAvatarDecoration.tsx";
 import RPCErrorDefault from "RPCError.tsx";
-import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import transformMessage from "helpers/transformMessage.tsx";
 import LeakyBucketDefault from "../../../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx";
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4766).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6354);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4770).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(5671);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1071);
 ({
@@ -489,7 +489,7 @@ export function transformChannel(channel, result, arg2) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(5943).getName(dependencyMap, id.id, user),
+            nick: closure_1(6681).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -498,7 +498,7 @@ export function transformChannel(channel, result, arg2) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(6907)(user);
+          obj.user = closure_1(7516)(user);
           return obj;
         }
       });
@@ -630,7 +630,7 @@ export function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
     const _Set = Set;
     items = [state];
-    const set = new Set(items);
+    set = new Set(items);
     authorization.authorization.scopes = set;
   }
 }

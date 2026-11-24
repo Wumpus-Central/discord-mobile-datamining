@@ -4,9 +4,9 @@ import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtil
 import Server from "../../flow/Server.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
-import SafetyToastsActionCreatorsDefault from "../safety_common/SafetyToastsActionCreators.native.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import StageChannelModalActionCreators from "StageChannelModalActionCreators.tsx";
+import SafetyToastsActionCreatorsDefault from "../safety_common/SafetyToastsActionCreators.native.tsx";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import StageInstanceActionCreators from "StageInstanceActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -14,9 +14,9 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 const HTTPUtils = obj(1284);
-const AppAnalyticsUtils = obj(5650);
-const useStageSpeakingForCurrentUser = obj(6502);
-const StageChannelUtils = obj(6505);
+const AppAnalyticsUtils = obj(5887);
+const useStageSpeakingForCurrentUser = obj(6728);
+const StageChannelUtils = obj(7708);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -241,7 +241,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1071);
 ({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(6504).SafetyToastType;
+const SafetyToastType = fn(7707).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 

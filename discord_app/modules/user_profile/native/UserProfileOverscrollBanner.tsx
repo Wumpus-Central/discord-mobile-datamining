@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileOverscrollBanner.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import VisualEffectViewThemedDefault from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
+import VisualEffectViewThemedDefault from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import 01653__ from "../../../../_runtime/metro/01653__.js";
 

@@ -81,7 +81,7 @@ const reportToModStore = new ReportToModStore(DispatcherDefault, {
     channelId = channelId.channelId;
     if (null == closure_3.reportedMessages[channelId]) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       closure_3.reportedMessages[channelId] = set;
     }
     closure_3.reportedMessages[channelId].add(channelId.messageId);
@@ -106,7 +106,7 @@ const reportToModStore = new ReportToModStore(DispatcherDefault, {
   },
   GUILD_SETTINGS_LOADED_BANS_BATCH: function handleGuildBansLoaded(guildId) {
     ({ bans, userIds } = guildId);
-    let set;
+    set = undefined;
     if (guildId.guildId === c1) {
       const _Set = Set;
       set = new Set(

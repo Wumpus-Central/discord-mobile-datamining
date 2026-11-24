@@ -6,17 +6,17 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05145_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05149_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import ChannelPermissionsUtils from "../../ChannelPermissionsUtils.tsx";
 import InlineNotice from "../../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
+import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
+import ChannelPermissionsUtils from "../../ChannelPermissionsUtils.tsx";
 import ChannelOverwritesItemDefault from "../components/ChannelOverwritesItem.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
-import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
 import channel_permissions_ChannelPermissionsUtils from "../ChannelPermissionsUtils.tsx";
 import AppChannelPermissionUtils from "../../../app_channels/AppChannelPermissionUtils.tsx";
 import ChannelDetailsUtils from "../../../main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx";
@@ -33,7 +33,7 @@ const Constants = fn(1071);
 ({ ChannelSettingsSections: closure_9, Permissions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },

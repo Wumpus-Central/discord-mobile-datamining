@@ -1,5 +1,6 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsCategoryFriendsActivityScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
+import _modDef3154 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import FamilyCenterAgeGroupPrefetch from "../../../../parent_tools/FamilyCenterAgeGroupPrefetch.tsx";
@@ -8,7 +9,7 @@ import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8712).MobileUserSettings;
+const MobileUserSettings = fn(9414).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -17,32 +18,46 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(function RedesignSettingsCategoryFriendsActivityScreen() {
   const memo = noop.useMemo(() => {
+    const friendActivityTitleSettingsSection =
+      MobileNotifSettingsRouteBuilders.buildFriendActivityTitleSettingsSection();
     const categoryFriendsActivitySettingsSection =
       MobileNotifSettingsRouteBuilders.buildCategoryFriendsActivitySettingsSection();
     items = [constants.REDESIGN_FRIEND_ANNIVERSARY_NOTIFICATIONS];
-    const obj2 = { label: null, settings: null };
+    const obj3 = { label: null, settings: null };
     const intl = util.intl;
-    obj2.label = intl.string(util.t["0YtG+k"]);
+    obj3.label = intl.string(util.t["0YtG+k"]);
     const items1 = [,];
     ({
       REDESIGN_SCREEN_DOWNTIME_SCHEDULE_NOTIFICATIONS: arr2[0],
       REDESIGN_SCREEN_DOWNTIME_REMINDER_NOTIFICATIONS: arr2[1],
     } = constants);
-    obj2.settings = items1;
-    const obj3 = { node: null, unavailableNode: null };
-    const obj5 = { sections: null };
-    const obj6 = {};
-    const merged = Object.assign(categoryFriendsActivitySettingsSection);
+    obj3.settings = items1;
+    const obj4 = { node: null, unavailableNode: null };
+    const obj6 = { sections: null };
+    const obj7 = {};
+    const merged = Object.assign(friendActivityTitleSettingsSection);
+    const intl2 = util.intl;
+    obj7.label = intl2.string(_modDef3154.B0OBFd);
     const items2 = [...items];
-    obj6.settings = items2;
-    const items3 = [obj6, obj2];
-    obj5.sections = items3;
-    obj3.node = SettingBuilders.createList(obj5);
-    const obj8 = { sections: null };
-    const items4 = [{ settings: items }, obj2];
-    obj8.sections = items4;
-    obj3.unavailableNode = SettingBuilders.createList(obj8);
-    return obj3;
+    obj7.settings = items2;
+    const items3 = [obj7, ,];
+    const obj8 = {};
+    const merged1 = Object.assign(categoryFriendsActivitySettingsSection);
+    const intl3 = util.intl;
+    obj8.label = intl3.string(_modDef3154.wB1ASV);
+    items3[1] = obj8;
+    items3[2] = obj3;
+    obj6.sections = items3;
+    obj4.node = SettingBuilders.createList(obj6);
+    const obj10 = { sections: null };
+    const obj11 = { label: null, settings: null };
+    const intl4 = util.intl;
+    obj11.label = intl4.string(_modDef3154.B0OBFd);
+    obj11.settings = items;
+    const items4 = [obj11, obj3];
+    obj10.sections = items4;
+    obj4.unavailableNode = SettingBuilders.createList(obj10);
+    return obj4;
   }, []);
   ({ node, unavailableNode } = memo);
   useMountEffectDefault(FamilyCenterAgeGroupPrefetch.prefetchFamilyCenterAgeGroup);

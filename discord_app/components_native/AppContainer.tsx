@@ -12,7 +12,7 @@ import ManaContext from "../../discord_common/js/packages/design/components/Mana
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../modules/main_tabs_v2/native/getInitialNavigationState.tsx";
-import Portal from "../../_runtime/05105_Portal.js";
+import Portal from "../../_runtime/05109_Portal.js";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import BackPressTracking from "../modules/routing/native/BackPressTracking.android.tsx";
 import ModalDispatchQueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
@@ -21,11 +21,11 @@ import useNavigationTheme from "../design/components/Navigator/native/useNavigat
 import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.tsx";
 import WebViewContext from "../modules/embedded_apps/native/WebViewContext.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
-import MemoryRouter from "../../_runtime/13737_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/13647_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/15806_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/15834_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -198,13 +198,13 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6653).handleHistoryStoreNavigationChange;
+let closure_7 = fn(6838).handleHistoryStoreNavigationChange;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12, Routes: map1 } = Constants);
-const isStaticChannelRoute = fn(4769).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4773).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   flex: { flex: 1 },
   rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND },
@@ -214,19 +214,19 @@ const module_1653 = fn(1653);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 let result = module_1653.configureReanimatedLogger({ level: fn(1653).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(5868).enableFreeze();
-  let obj6 = fn(5868);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(15803).useTrackNavigatorScreenImpression };
-  fn(7187).setDesignConfig(obj8);
+  fn(5928).enableFreeze();
+  let obj6 = fn(5928);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(15831).useTrackNavigatorScreenImpression };
+  fn(7266).setDesignConfig(obj8);
   let c23 = false;
   let closure_24 = {
     code: "(function AppContainerTsx1(){let[RNScreensTurboModule]=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;})",
   };
-  let obj7 = fn(7187);
+  let obj7 = fn(7266);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(15805).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(15833).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c23) {
         items = [closure_24, RNScreensTurboModule.RNScreensTurboModule];
@@ -258,8 +258,8 @@ try {
       }
       const obj = appEntryKey(1378);
     }, []);
-    let obj = appEntryKey(15805);
-    const riveAppStatePlaybackExperiment = appEntryKey(17443).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(15833);
+    const riveAppStatePlaybackExperiment = appEntryKey(17481).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

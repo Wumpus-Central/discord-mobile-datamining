@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthBackgroundArt.tsx");
 
 export default noop.memo(function AuthBackgroundArt() {
-  const tmp3 = sharedValue(7315)();
+  const tmp3 = sharedValue(6915)();
   _require = tmp3;
   let num = 0;
   if ("square" === tmp3) {
@@ -64,15 +64,15 @@ export default noop.memo(function AuthBackgroundArt() {
   const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(AuthBackgroundArtTsx1);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
   const tmp4Result = require("../../../../../../_runtime/metro/01653__.js");
-  obj3.backgroundImageSource = sharedValue(7319);
-  const items3 = [closure_6(sharedValue(7316), obj3)];
+  obj3.backgroundImageSource = sharedValue(6919);
+  const items3 = [closure_6(sharedValue(6916), obj3)];
   const obj4 = { style: null, children: null };
   const items4 = [StyleSheet.absoluteFill, animatedStyle];
   obj4.style = items4;
   const obj5 = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmpResult = sharedValue(7316);
-  obj5.backgroundImageSource = sharedValue(7320);
-  obj4.children = closure_6(sharedValue(7316), obj5);
+  const tmpResult = sharedValue(6916);
+  obj5.backgroundImageSource = sharedValue(6920);
+  obj4.children = closure_6(sharedValue(6916), obj5);
   items3[1] = closure_6(sharedValue(1653).View, obj4);
   obj2.children = items3;
   return closure_7(View, obj2);

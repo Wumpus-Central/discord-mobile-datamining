@@ -1,7 +1,7 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
 import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
-import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";

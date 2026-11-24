@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import MediaEngineActionCreators from "../../../media_engine/MediaEngineActionCreators.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
@@ -12,9 +12,9 @@ import module_1653_mod from "../../../../../_runtime/metro/01653__.js";
 
 const require = globalThis.__r;
 
-const _modDef19333 = tmp4(19333);
+const _modDef19375 = tmp4(19375);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11750).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11635).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let module_1653 = module_1653_mod;
@@ -22,7 +22,7 @@ const NativeView = module_1653.createAnimatedComponent(NativeViewDefault);
 let module_1653 = module_1653_mod;
 let closure_11 = module_1653.createAnimatedComponent(fn(1186).Icon);
 const hitSlop = { top: 6, bottom: 6, left: 6, right: 6 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { iconContainer: null, overlay: null };
 let size = {
   position: "absolute",
@@ -273,7 +273,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj8.children = closure_7(closure_11, {
     style: animatedStyle1,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: _modDef19333,
+    source: _modDef19375,
     disableColor: true,
   });
   obj7.children = closure_7(NativeView, obj8);

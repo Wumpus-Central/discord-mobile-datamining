@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
-import AgeGateUtils from "../AgeGateUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import AgeGateUtils from "../AgeGateUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
@@ -52,8 +52,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6419).getAgeGateType(source);
-  let obj = source(6419);
+  importDefault = source(6707).getAgeGateType(source);
+  let obj = source(6707);
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {

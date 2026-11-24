@@ -9,8 +9,8 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
-import usePreviousDefault from "../../../hooks/usePrevious.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import usePreviousDefault from "../../../hooks/usePrevious.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import canAddNewReactionsDefault from "../../reactions/canAddNewReactions.tsx";
@@ -174,7 +174,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13251, dependencyMap.paths),
+      asyncRequireImpl(13171, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -230,12 +230,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   animatedContainer: {
     borderTopWidth: 1,

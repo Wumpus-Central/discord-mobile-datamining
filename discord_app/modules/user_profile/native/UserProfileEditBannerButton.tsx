@@ -1,15 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
-import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
+import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
+import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(15850);
+const EditButtonDefault = tmp(15897);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -57,10 +57,10 @@ function EditButton(disabled) {
   return timestampProducer(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(8069).TrackUserProfileEditActions;
+let closure_5 = fn(6011).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

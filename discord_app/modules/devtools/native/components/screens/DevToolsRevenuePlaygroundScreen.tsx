@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import Sheet_showSimpleActionSheet from "../../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
@@ -723,7 +723,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(8859).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(8995).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -736,16 +736,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17115, dependencyMap.paths),
+          asyncRequireImpl(17149, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(7045).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(6018).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(7045).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6018).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -757,7 +757,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17115, dependencyMap.paths),
+          asyncRequireImpl(17149, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -765,7 +765,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(7348).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6014).TableRowGroup, obj3);
 }
 function PremiumToggles() {
   items = [DevSettingsStore];
@@ -785,7 +785,7 @@ function PremiumToggles() {
     children: stateFromStores.map((item) => {
       [tmp, tmp2] = item;
       return closure_17(
-        closure_0(7556).TableSwitchRow,
+        closure_0(7423).TableSwitchRow,
         {
           label: tmp3,
           subLabel: tmp,
@@ -915,7 +915,7 @@ function GuildTagBadges() {
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(5507).DevSettingsCategory;
+const DevSettingsCategory = fn(5511).DevSettingsCategory;
 const PremiumConstants = fn(1388);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -932,7 +932,7 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };

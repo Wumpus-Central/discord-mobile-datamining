@@ -5,11 +5,11 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "../scopes.tsx";
+import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import disclosures from "../../applications/disclosures.tsx";
 import Utils from "../Utils.tsx";
-import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import GlobeEarthIcon from "../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
@@ -42,7 +42,7 @@ function ApplicationDetailsEntry(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   applicationDetails: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 8 },

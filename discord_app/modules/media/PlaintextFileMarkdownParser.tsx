@@ -1,8 +1,8 @@
 // discord_app/modules/media/PlaintextFileMarkdownParser.tsx
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
-import MarkupLinkRule from "../markup/MarkupLinkRule.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
-import _modDef12037 from "../../../_runtime/metro/12037__.js";
+import MarkupLinkRule from "../markup/MarkupLinkRule.tsx";
+import _modDef11929 from "../../../_runtime/metro/11929__.js";
 
 require = fn;
 function createLinkNode(arr) {
@@ -356,7 +356,7 @@ function parseMarkdownTokens(children1, remaining) {
   }
   return items[0].children;
 }
-let closure_2 = new _modDef12037({ html: false, linkify: false, typographer: false }).use(fn(12042).dollarmathPlugin, {
+let closure_2 = new _modDef11929({ html: false, linkify: false, typographer: false }).use(fn(11934).dollarmathPlugin, {
   allow_space: false,
   allow_digits: false,
   allow_labels: false,

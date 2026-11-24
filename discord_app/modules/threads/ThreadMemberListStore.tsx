@@ -80,7 +80,7 @@ prototype["rebuild"] = function rebuild(items) {
   this.sections = {};
   if (null != items) {
     const _Set = Set;
-    const set = new Set(items);
+    set = new Set(items);
     self.allUserIds = set;
   }
   const channel = ChannelStore.getChannel(self.parentId);
@@ -467,7 +467,7 @@ const threadMemberListStore = new ThreadMemberListStore(DispatcherDefault, {
         const merged = Object.assign({ version: 0, sections: null, allUserIds: null });
         merged[1] = {};
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[2] = set;
         merged.guildId = guildId.guildId;
         merged.parentId = parent_id;

@@ -5,8 +5,8 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
-export function canViewInteractionInfo(interactionMetadata) {
-  return null != interactionMetadata.interactionMetadata;
+export function canViewInteractionInfo(message) {
+  return null != message.interactionMetadata;
 }
 export function isPrimaryEntryPointCommandMessage(message) {
   const interactionMetadata = message.interactionMetadata;

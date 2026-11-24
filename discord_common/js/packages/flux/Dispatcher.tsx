@@ -267,7 +267,7 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: 48,
+      functionCache: "PayPal",
     });
     merged[0] = [];
     merged[1] = {};

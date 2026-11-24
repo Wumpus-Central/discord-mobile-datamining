@@ -101,7 +101,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
   if (activeErrors1 instanceof Map) {
     if (0 !== map.size) {
       const _Set = Set;
-      const set = new Set(map.keys());
+      set = new Set(map.keys());
       const _Set2 = Set;
       const set1 = new Set(activeErrors1.keys());
       if (set.size > set1.size) {

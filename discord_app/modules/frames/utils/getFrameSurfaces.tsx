@@ -7,7 +7,7 @@ import AppLauncherUtils from "../../app_launcher/utils/AppLauncherUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function getFrameSurfaces(application) {
-  const set = new Set();
+  set = new Set();
   if (null != application) {
     if (obj5.isRealApplication(application)) {
       let result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(

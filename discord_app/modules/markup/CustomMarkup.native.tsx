@@ -1,8 +1,8 @@
 // discord_app/modules/markup/CustomMarkup.native.tsx
 import _modDef2068 from "../../../_runtime/metro/02068__.js";
-import MarkupUtilsDefault from "MarkupUtils.tsx";
-import MarkupReactRules from "MarkupReactRules.native.tsx";
 import MarkupTypes from "MarkupTypes.tsx";
+import MarkupReactRules from "MarkupReactRules.native.tsx";
+import MarkupUtilsDefault from "MarkupUtils.tsx";
 import combineMarkupRulesDefault from "combineMarkupRules.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import size from "../../../_runtime/metro/00002__.js";

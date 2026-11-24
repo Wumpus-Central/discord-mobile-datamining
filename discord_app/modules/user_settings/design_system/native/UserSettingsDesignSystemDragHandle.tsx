@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemDragHandle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05472_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import DragHandle from "../../../../design/components/DragHandle/native/DragHandle.native.tsx";
-import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -197,7 +197,7 @@ const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const colors = ["purple", "orange"];
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, handles: null, handleWithLabel: null, heading: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.handles = {

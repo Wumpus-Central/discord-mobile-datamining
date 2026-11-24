@@ -16,30 +16,30 @@ export default function FormEmojiPicker(emoji) {
     if (emojiName == null) {
       emojiName = "";
     }
-    emojiId = onChange(4859).convertSurrogateToName(emojiName, false);
-    let obj = onChange(4859);
+    emojiId = onChange(4863).convertSurrogateToName(emojiName, false);
+    let obj = onChange(4863);
   }
-  const emojiByIdOrName = guildId(16645).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(16679).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
-    allEmojiNamesString = tmp3(4863).getAllEmojiNamesString(emojiByIdOrName);
-    const tmp3Result = tmp3(4863);
+    allEmojiNamesString = tmp3(4867).getAllEmojiNamesString(emojiByIdOrName);
+    const tmp3Result = tmp3(4867);
   }
   const intl = tmp3(1112).intl;
-  let obj2 = guildId(16645);
+  let obj2 = guildId(16679);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(16644), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(16678), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;
-    const obj4 = { IconComponent: tmp3(9489).ReactionIcon };
-    tmp9 = jsx(tmp3(7045).TableRow.Icon, { IconComponent: tmp3(9489).ReactionIcon });
+    const obj4 = { IconComponent: tmp3(9563).ReactionIcon };
+    tmp9 = jsx(tmp3(6018).TableRow.Icon, { IconComponent: tmp3(9563).ReactionIcon });
   }
   const obj5 = { icon: tmp9, label: null, arrow: true, onPress: null };
   if (allEmojiNamesString == null) {
     const obj6 = { variant: "body-md/medium", color: "text-muted", children: stringResult };
-    allEmojiNamesString = tmp8(tmp3(5504).Text, obj6);
+    allEmojiNamesString = tmp8(tmp3(5508).Text, obj6);
   }
   obj5.label = allEmojiNamesString;
   obj5.onPress = function handleSelectEmoji() {
@@ -61,5 +61,5 @@ export default function FormEmojiPicker(emoji) {
       pickerIntention: EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI,
     });
   };
-  return tmp8(guildId(7045).TableRow, obj5);
+  return tmp8(guildId(6018).TableRow, obj5);
 }

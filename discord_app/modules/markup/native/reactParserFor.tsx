@@ -1,6 +1,6 @@
 // discord_app/modules/markup/native/reactParserFor.tsx
-import MarkupParserDefault from "../../../../discord_common/js/packages/markup/native/MarkupParser.tsx";
 import Spoiler from "Spoiler.tsx";
+import MarkupParserDefault from "../../../../discord_common/js/packages/markup/native/MarkupParser.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

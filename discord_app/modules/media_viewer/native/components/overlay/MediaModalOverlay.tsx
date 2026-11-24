@@ -5,12 +5,12 @@ import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
 import VisualEffectViewDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
-import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useMediaViewerSources from "../../useMediaViewerSources.tsx";
 import useVideoControls from "../../useVideoControls.tsx";
 import MediaPlayerMuteManager from "../../MediaPlayerMuteManager.tsx";
 import MediaSourceUtil from "../../MediaSourceUtil.tsx";
 import useMediaModalFooterAction from "../../useMediaModalFooterAction.tsx";
+import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useOverlayLayoutDriver from "../../useOverlayLayoutDriver.tsx";
 import MediaViewerThumbnailsDefault from "../MediaViewerThumbnails.tsx";
 import MediaModalOverlayHeader from "MediaModalOverlayHeader.tsx";
@@ -39,7 +39,7 @@ function OverlayMuteButton(isMuted) {
     children: metroImportDefault(tmp5, {
       accessibilityRole: "button",
       accessibilityLabel: stringResult,
-      source: importDefault(isMuted ? 10144 : 10145),
+      source: importDefault(isMuted ? 13949 : 10384),
       color: nativeDefault.unsafe_rawColors.WHITE,
       onPress: isMuted.onToggleMute,
       style: tmp.overlayButton,
@@ -63,7 +63,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 10146 : 10147);
+  obj.source = importDefault(spoilerActive ? 13950 : 13951);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -73,7 +73,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  const tmp2 = videoControls(8220)(index, source, videoControls);
+  const tmp2 = videoControls(8666)(index, source, videoControls);
   items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -89,7 +89,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(10150).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(13954).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }
@@ -98,7 +98,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   portraitFooterButtons: null,
   invisibleFooter: null,

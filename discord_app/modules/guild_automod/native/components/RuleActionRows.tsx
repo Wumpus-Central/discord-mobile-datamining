@@ -61,11 +61,11 @@ function RuleActionRow(onPress) {
     return timestampProducer(TableRow.TableRow, obj2);
   }
 }
-let closure_4 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(12408).AutomodActionType;
+let closure_4 = fn(4847).GUILD_SELECTABLE_CHANNELS_KEY;
+const AutomodActionType = fn(12307).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -74,7 +74,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(19718).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(19761).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
@@ -131,7 +131,7 @@ export default function RuleActionRows(rule) {
               obj5.onSelect = function onSelect(id) {
                 if (null != id) {
                   const _Set = Set;
-                  const set = new Set(closure_0.exemptChannels);
+                  set = new Set(closure_0.exemptChannels);
                   set.add(id.id);
                   const obj2 = {};
                   const obj3 = { type: constants.FLAG_TO_CHANNEL, metadata: null };
@@ -207,7 +207,7 @@ export default function RuleActionRows(rule) {
         actionType,
       );
     });
-    tmp3 = closure_6(tmp(7348).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(6014).TableRowGroup, obj2);
   }
   return tmp3;
 }

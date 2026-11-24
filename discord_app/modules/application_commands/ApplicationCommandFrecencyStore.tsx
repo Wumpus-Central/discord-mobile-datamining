@@ -26,7 +26,7 @@ function handleUserSettingsProtoStoreChange() {
     global.pendingUsages,
   );
 }
-const ApplicationCommandConstants = fn(5937);
+const ApplicationCommandConstants = fn(6947);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1081).UserSettingsTypes;
 let global = { pendingUsages: [] };
@@ -133,7 +133,7 @@ const result = size.fileFinishedImporting("modules/application_commands/Applicat
 
 export default applicationCommandFrecencyStore;
 export function getTopRealCommands(arg0) {
-  const set = new Set();
+  set = new Set();
   const iter = arg0[Symbol.iterator]();
   while (iter !== undefined) {
     let first = str.split(React4)[0];

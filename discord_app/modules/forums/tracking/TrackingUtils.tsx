@@ -84,9 +84,9 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(8315).DraftType;
+const DraftType = fn(7976).DraftType;
 const Permissions = fn(1071).Permissions;
-const ChannelFlags = fn(4769).ChannelFlags;
+const ChannelFlags = fn(4773).ChannelFlags;
 const constants = fn(1111).ThreadSortOrderReadableForAnalytics;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
@@ -131,7 +131,7 @@ export function getForumPostDraftAppliedTagIds(channelId) {
         }
         const _Set2 = Set;
         const _Array = Array;
-        const set = new Set(availableTags.map((id) => id.id));
+        set = new Set(availableTags.map((id) => id.id));
         return Array.from(appliedTags).filter((item) => set.has(item));
       }
     }
@@ -225,7 +225,7 @@ export function collectForumPostAnalyticsMetadata(channelId) {
             num4 = firstMessage1.reactions.length;
           }
           obj2.forum_post_num_unique_reactions = num4;
-          let set;
+          set = undefined;
           const channel2 = ChannelStore.getChannel(channel.id);
           if (null == channel2) {
             items = [];

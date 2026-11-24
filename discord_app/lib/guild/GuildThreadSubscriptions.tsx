@@ -19,7 +19,7 @@ prototype["get"] = function get(arg0) {
   return this._get(arg0).keys();
 };
 prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
-  const set = new Set();
+  set = new Set();
   for (const key10010 in this._subscriptions) {
     let obj2 = this._subscriptions[key10010];
     let keys = obj2.keys();

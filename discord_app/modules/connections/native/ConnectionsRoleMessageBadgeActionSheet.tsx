@@ -10,11 +10,11 @@ import useThemeDefault from "../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
+import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import PlatformsDefault from "../../../lib/Platforms.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
+import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
 import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators.tsx";
@@ -191,12 +191,12 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const OperatorTypes = fn(7025).OperatorTypes;
+const OperatorTypes = fn(6245).OperatorTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", padding: 16 },
   header: {

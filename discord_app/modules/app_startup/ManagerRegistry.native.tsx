@@ -100,6 +100,7 @@ const obj = {
   IOSUserIdentifiersManager: null,
   DiskUsageManager: null,
   InstantInviteManager: null,
+  ImageLoadMetricsManager: null,
   JankSessionManager: null,
   JankStatsManager: null,
   JSWatchdogManager: null,
@@ -561,6 +562,12 @@ obj.InstantInviteManager = {
   inlineRequire() {
     return require("InstantInviteManager").default;
   },
+};
+obj.ImageLoadMetricsManager = {
+  inlineRequire() {
+    return require("ImageLoadMetricsManager").default;
+  },
+  hasStoreChangeListeners: true,
 };
 obj.JankSessionManager = {
   actions: ["APP_STATE_UPDATE", "CONNECTION_OPEN_SUPPLEMENTAL"],

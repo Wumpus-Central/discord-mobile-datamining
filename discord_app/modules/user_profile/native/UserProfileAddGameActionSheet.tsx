@@ -6,13 +6,13 @@ import StringUtils from "../../../utils/StringUtils.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _mod6680 from "../../../../_runtime/metro/06680__.js";
-import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
+import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet.tsx";
+import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
+import _mod9072 from "../../../../_runtime/metro/09072__.js";
 import GamePlatformBadgeRowDefault from "../../games/native/GamePlatformBadgeRow.tsx";
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -21,10 +21,10 @@ import WidgetStore from "../WidgetStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(8069).TrackUserProfileEditActions;
+let closure_8 = fn(6011).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 },
   list: null,
@@ -181,7 +181,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
       const mapped1 = found.map((id) => ({ id: id.id, label: id.name, disabled: false }));
       const _Set = Set;
       items = [];
-      const set = new Set(mapped1.map((id) => id.id));
+      set = new Set(mapped1.map((id) => id.id));
       HermesBuiltin.arraySpread(
         mapped.filter((id) => !set.has(id.id)),
         HermesBuiltin.arraySpread(mapped1, 0),
@@ -300,7 +300,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_5) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        length = _mod6680.matchSorter(memo1, query, obj2).length;
+        length = _mod9072.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }

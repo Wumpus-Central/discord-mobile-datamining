@@ -15,8 +15,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(17718).NO_SUGGESTIONS;
-const isAllowedType = fn(10071).isAllowedType;
+const NO_SUGGESTIONS = fn(17756).NO_SUGGESTIONS;
+const isAllowedType = fn(8820).isAllowedType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 
@@ -62,7 +62,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   const items4 = [memo, tmp, arg0, results, memo1];
   return memo.useMemo(() => {
     items = [];
-    const set = new Set();
+    set = new Set();
     const obj = { affinities: memo, getChannelId: getAffineChannelId, index: 0 };
     const obj2 = { affinities: memo1, getChannelId: getAffineUserDMId, index: 0 };
     let num = 0;

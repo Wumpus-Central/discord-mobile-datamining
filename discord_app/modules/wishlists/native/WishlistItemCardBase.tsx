@@ -6,12 +6,12 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import IndicatorDot from "../../../design/components/IndicatorDot/native/IndicatorDot.native.tsx";
 import useUserProfileColors from "../../user_profile/hooks/native/useUserProfileColors.tsx";
 import useWishlistHooks from "../hooks/useWishlistHooks.tsx";
 import WishlistShopUnpublishUtils from "../WishlistShopUnpublishUtils.tsx";
 import WishlistShopUnpublishLabelDefault from "WishlistShopUnpublishLabel.tsx";
-import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
-import IndicatorDot from "../../../design/components/IndicatorDot/native/IndicatorDot.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(8976).HeartIcon, {
+    children: closure_5(toastText(9647).HeartIcon, {
       color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
       size: "md",
     }),
@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   card: {
     borderWidth: 1,

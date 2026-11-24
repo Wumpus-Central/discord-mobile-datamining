@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx
 import util from "../../../../intl/index.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import useGame from "../../../games/hooks/useGame.tsx";
 import FormComponents from "../shared/FormComponents.tsx";
+import useGame from "../../../games/hooks/useGame.tsx";
 import GameActivityIconDefault from "../../../games/native/GameActivityIcon.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";

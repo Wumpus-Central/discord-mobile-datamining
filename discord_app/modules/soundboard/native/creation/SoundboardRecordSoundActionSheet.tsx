@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import useAccessibilityPressDefault from "../../../a11y/native/useAccessibilityPress.tsx";
 import utils_TimeUtils from "../../../../utils/native/TimeUtils.tsx";
+import useAccessibilityPressDefault from "../../../a11y/native/useAccessibilityPress.tsx";
 import SoundboardRecordingWaveformDefault from "SoundboardRecordingWaveform.tsx";
 import showSoundboardSoundEditModalDefault from "../edit_modal/showSoundboardSoundEditModal.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -122,8 +122,8 @@ function stopSoundboardRecording(arg0, items, arg2) {
   });
 }
 const View = fn(17).View;
-const NativePermissionTypes = fn(6496).NativePermissionTypes;
-const VoiceMessageConstants = fn(12824);
+const NativePermissionTypes = fn(7739).NativePermissionTypes;
+const VoiceMessageConstants = fn(12743);
 ({
   VOICE_RECORDING_MAX_DB: closure_9,
   VOICE_RECORDING_MIN_DURATION_MILLIS: closure_10,
@@ -131,7 +131,7 @@ const VoiceMessageConstants = fn(12824);
 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16, alignItems: "center" },
   title: null,
@@ -367,7 +367,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
                     ref3.current = true;
                     c3 = 1;
                     c4 = 1;
-                    const obj5 = { value: tmp3(7795).requestPermission(ref.AUDIO), done: false };
+                    const obj5 = { value: tmp3(7740).requestPermission(ref.AUDIO), done: false };
                     return obj5;
                   }
                 }
@@ -431,7 +431,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
               closure_129_8.current = null;
               closure_129_2(false);
               closure_129_5(closure_129_13.current);
-              const result = guildId(5594).showVoiceRecordingFailed();
+              const result = guildId(5598).showVoiceRecordingFailed();
               c4 = 3;
               const obj9 = { value: undefined, done: true };
               return obj9;
@@ -496,8 +496,8 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
         items = [];
         c1 = false;
         mediaEngine = mediaEngine.getMediaEngine();
-        mediaEngine.removeListener(guildId(5679).MediaEngineEvent.VoiceActivity, callback);
-        closure_2 = guildId(13119).generateBase64EncodedWaveform(items);
+        mediaEngine.removeListener(guildId(5742).MediaEngineEvent.VoiceActivity, callback);
+        closure_2 = guildId(13037).generateBase64EncodedWaveform(items);
         new Promise((arg0) => {
           closure_0 = arg0;
           const reachedLimit = setTimeout(
@@ -510,7 +510,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
             closure_0({ uri, durationSecs: arg1 / 1000, waveform, waveformLevels: items, reachedLimit });
           });
         });
-        const obj2 = guildId(13119);
+        const obj2 = guildId(13037);
       }
     },
     items4,

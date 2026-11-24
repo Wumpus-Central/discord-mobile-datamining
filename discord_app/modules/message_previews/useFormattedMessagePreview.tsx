@@ -4,8 +4,8 @@ import MessageTypes from "../../../discord_common/js/shared/shared-constants/Mes
 import util from "../../intl/index.native.tsx";
 import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
 import useMessageAuthorDefault from "../messages/useMessageAuthor.tsx";
-import useIsCallActiveDefault from "../calls/mobile/useIsCallActive.tsx";
 import SystemMessageUtilsDefault from "../../utils/SystemMessageUtils.tsx";
+import useIsCallActiveDefault from "../calls/mobile/useIsCallActive.tsx";
 import VoiceSessionUtils from "../messages/VoiceSessionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";

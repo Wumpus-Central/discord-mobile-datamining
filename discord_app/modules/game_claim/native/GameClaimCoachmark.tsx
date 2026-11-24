@@ -5,11 +5,11 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
+import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import GameClaimCardStack from "GameClaimCardStack.tsx";
 import UnclaimedGamesActionCreators from "../UnclaimedGamesActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -22,13 +22,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: closure_6 } = Constants);
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -136,9 +136,9 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(9595).redirectDeveloperPortalWithHandoffToken(
+                value: v1(11484).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(9599).LoginHandoffSource.GAME_CLAIM,
+                  v3(11488).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };

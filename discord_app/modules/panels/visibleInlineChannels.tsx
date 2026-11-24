@@ -8,7 +8,7 @@ export function registerVisibleInlineChannel(channelId, windowId) {
   value = map.get(channelId);
   if (null == value) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const result = map.set(channelId, set);
     value = set;
   }

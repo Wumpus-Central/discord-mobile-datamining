@@ -37,7 +37,7 @@ obj2 = {
       const _Set = Set;
       items = [];
       items[HermesBuiltin.arraySpread(obj2.seenBadgeIndicatorIds, 0)] = badgeId;
-      const set = new Set(items);
+      set = new Set(items);
       obj.seenBadgeIndicatorIds = set;
     }
     return false;
@@ -53,7 +53,7 @@ obj2 = {
         const _Set = Set;
         items = [];
         items[HermesBuiltin.arraySpread(obj2.seenBadgeIndicatorIds, 0)] = badgeId;
-        const set = new Set(items);
+        set = new Set(items);
         obj2.seenBadgeIndicatorIds = set;
       }
       isBetaBadgeIdResult = flag;

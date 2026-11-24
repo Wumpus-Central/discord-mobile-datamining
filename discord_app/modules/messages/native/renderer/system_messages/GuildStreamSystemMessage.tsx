@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
 import Constants from "../../../../go_live/Constants.tsx";
+import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const StreamTypes = Constants.StreamTypes;

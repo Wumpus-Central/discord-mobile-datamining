@@ -7,7 +7,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(13193).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(10297).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1071).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
@@ -58,7 +58,7 @@ export function useHubProgressBarCompletedSteps(guild) {
   memo = noop.useMemo(
     () =>
       (function convertHubProgressFlagSetToSet(stateFromStores1) {
-        const set = new Set();
+        set = new Set();
         for (const item10013 of closure_1_5) {
           let obj2 = memo(stateFromStores1[9]);
           if (obj2.hasFlag(arg0, item10013)) {
@@ -80,7 +80,7 @@ export function useHubProgressBarCompletedSteps(guild) {
   return noop.useMemo(() => {
     if (stateFromStores1) {
       const _Set = Set;
-      const set = new Set(memo);
+      set = new Set(memo);
       set.add(preloaded_user_settings.HubProgressStep.CONTACT_SYNC);
       return set;
     } else {

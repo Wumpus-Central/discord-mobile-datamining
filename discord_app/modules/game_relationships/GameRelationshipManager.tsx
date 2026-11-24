@@ -9,7 +9,7 @@ class GameRelationshipManager extends tmp2 {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       gameRelationships = gameRelationships.getGameRelationships();
-      const set = new Set();
+      set = new Set();
       const values = gameRelationships.values();
       const item = values.forEach((type) => {
         if (type.type === constants.PENDING_INCOMING) {

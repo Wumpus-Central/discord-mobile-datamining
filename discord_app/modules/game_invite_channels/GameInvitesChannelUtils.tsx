@@ -2,8 +2,8 @@
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import getThreadAutoArchiveTimeOnceDefault from "../threads/getThreadAutoArchiveTimeOnce.tsx";
-import sanitizeThreadNameDefault from "../threads/sanitizeThreadName.tsx";
 import hasFlagDefault from "../activities/utils/hasFlag.tsx";
+import sanitizeThreadNameDefault from "../threads/sanitizeThreadName.tsx";
 import ForumPostDataLoader from "../forums/ForumPostDataLoader.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -15,8 +15,8 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1071);
 ({ ActivityFlags: metroImportDefault, MAX_CHANNEL_NAME_LENGTH: closure_8 } = Constants);
-const ChannelFlags = fn(4769).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(8506).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(4773).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(8027).MAX_FORUM_POST_TAGS;
 let c11 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
@@ -134,7 +134,7 @@ export function useSubscribeToGameInvitePostAuthors(isGameInvitesChannel, arg1) 
     () => {
       if (isGameInvitesChannelResult) {
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         items = [];
         const tmp7 = dependencyMap[Symbol.iterator]();
         while (tmp7 !== undefined) {

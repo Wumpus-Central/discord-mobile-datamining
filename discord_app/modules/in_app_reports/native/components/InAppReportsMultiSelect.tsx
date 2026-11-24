@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

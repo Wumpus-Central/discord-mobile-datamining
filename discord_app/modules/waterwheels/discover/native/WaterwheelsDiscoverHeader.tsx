@@ -15,12 +15,12 @@ function openPicker() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17823);
+const InterestGamePickerConstants = fn(17861);
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   header: {
     height: nativeDefault.space.PX_64,
@@ -111,9 +111,9 @@ export default function WaterwheelsDiscoverHeader() {
     const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
     const intl3 = tmp2(1112).intl;
     obj6.text = intl3.string(_modDef2643.SCFT8N);
-    obj6.icon = closure_7(tmp2(7040).GameControllerIcon, { size: "sm" });
+    obj6.icon = closure_7(tmp2(7623).GameControllerIcon, { size: "sm" });
     obj6.onPress = openPicker;
-    let tmp8Result = closure_7(tmp2(5511).Button, obj6);
+    let tmp8Result = closure_7(tmp2(5515).Button, obj6);
   } else {
     const obj7 = {
       style: tmp.picks,
@@ -165,7 +165,7 @@ export default function WaterwheelsDiscoverHeader() {
       const intl2 = tmp2(1112).intl;
       const obj12 = { count: diff };
       obj11.children = intl2.formatToPlainString(_modDef2643["OxfP+s"], obj12);
-      tmp8Result2 = closure_7(tmp2(5504).Text, obj11);
+      tmp8Result2 = closure_7(tmp2(5508).Text, obj11);
     }
     items4[1] = tmp8Result2;
     obj10.children = items4;

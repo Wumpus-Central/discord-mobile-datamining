@@ -126,7 +126,7 @@ const friendGroupsStore = new FriendGroupsStore(DispatcherDefault, {
   },
   ADD_USERS_TO_GROUP: function handleAddUsersToGroup(arg0) {
     ({ groupId: UserAffinitiesV2Store, userIds } = arg0);
-    let set;
+    set = undefined;
     const findIndexResult = items.findIndex((id) => id.id === UserAffinitiesV2Store);
     if (-1 === findIndexResult) {
       return false;
@@ -149,7 +149,7 @@ const friendGroupsStore = new FriendGroupsStore(DispatcherDefault, {
   },
   REMOVE_USERS_FROM_GROUP: function handleRemoveUsersFromGroup(arg0) {
     ({ groupId: UserAffinitiesV2Store, userIds } = arg0);
-    let set;
+    set = undefined;
     const findIndexResult = items.findIndex((id) => id.id === UserAffinitiesV2Store);
     if (-1 === findIndexResult) {
       return false;

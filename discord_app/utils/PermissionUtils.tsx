@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4766);
+const ChannelRecord = fn(4770);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4780);
+const GuildRecord = fn(4784);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(4820).hasPermission;
+const hasPermission = fn(4824).hasPermission;
 const Constants = fn(1071);
 const Permissions = Constants.Permissions;
 ({
@@ -444,7 +444,7 @@ let closure_29 = BigFlagUtils.combine(
   Permissions.READ_MESSAGE_HISTORY,
   Permissions.CHANGE_NICKNAME,
 );
-const items1 = [fn(4831).GuildMemberFlags.IS_GUEST, ...fn(4851).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
+const items1 = [fn(4835).GuildMemberFlags.IS_GUEST, ...fn(4855).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
 const reduced = items1.reduce((acc, item) => acc | item, 0);
 let BigFlagUtils = BigFlagUtils_mod;
 const size = fn(2);

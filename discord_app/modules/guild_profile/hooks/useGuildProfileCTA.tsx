@@ -137,7 +137,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
                 if (inviteRoles.some((id) => !set.has(id.id))) {
                   return features.ACCEPT_ROLES;
                 }
-                const set = new Set(roles);
+                set = new Set(roles);
               }
             }
           }
@@ -275,7 +275,7 @@ export function getGuildProfileCTAType(guildProfileFromInvite, code) {
           if (roles.some((id) => !set.has(id.id))) {
             return obj.ACCEPT_ROLES;
           }
-          const set = new Set(roles2);
+          set = new Set(roles2);
         }
       }
     }

@@ -8,7 +8,7 @@ require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
 let closure_4 = module_1653.createAnimatedComponent(Text);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;

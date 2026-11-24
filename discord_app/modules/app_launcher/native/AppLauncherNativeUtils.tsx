@@ -5,8 +5,8 @@ import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import ApplicationCommandTypes from "../../application_commands/ApplicationCommandTypes.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
 import ApplicationCommandActionCreatorsAll from "../../application_commands/ApplicationCommandActionCreators.tsx";
+import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
 import AppLauncherUtils from "../utils/AppLauncherUtils.tsx";
 import FrecencySection from "screens/home/FrecencySection.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ const AppLauncherNativeConstants = fn(1499);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: metroImportDefault, AppLauncherRouteName: closure_8 } =
   AppLauncherNativeConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const BuiltInSectionId = fn(5937).BuiltInSectionId;
+const BuiltInSectionId = fn(6947).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 

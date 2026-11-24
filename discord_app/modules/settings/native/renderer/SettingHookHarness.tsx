@@ -5,7 +5,7 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
 const require = fn;
-const NodeType = fn(11938).NodeType;
+const NodeType = fn(11816).NodeType;
 let closure_7 = [];
 const map = new Map();
 const map1 = new Map();
@@ -63,7 +63,7 @@ export default noop.memo(function SettingHookHarness() {
   const effect = noop.useEffect(() => {
     if (items1.length > 0) {
       const _Set = Set;
-      const set = new Set(SettingBlocklistStore.getField("blocklist"));
+      set = new Set(SettingBlocklistStore.getField("blocklist"));
       const item = items1.forEach((item) => set.add(item));
       const item1 = items2.forEach((item) => set.delete(item));
       const obj = { blocklist: set };

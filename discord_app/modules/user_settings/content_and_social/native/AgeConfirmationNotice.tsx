@@ -8,16 +8,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6504);
+const Constants = fn(7707);
 ({ SafetySettingsNoticeAction: hasOwnProperty, SafetySettingsNoticeType: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(8233).useSensitiveContentFilterHelpArticle();
+  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(8068).useSensitiveContentFilterHelpArticle();
   const effect = noop.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(15984).trackSafetySettingsNoticeAnalytics(
+    const result = sensitiveContentFilterHelpArticle(16017).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.VIEWED,
     );
@@ -34,14 +34,14 @@ export default function AgeConfirmationNotice() {
   let obj2 = { style: null, children: null };
   const obj3 = { marginBottom: null };
   const callback = noop.useCallback(() => {
-    const obj = onPress(7793);
+    const obj = onPress(7737);
     const result = obj.showAgeVerificationGetStartedModal({
-      entryPoint: sensitiveContentFilterHelpArticle(6414).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+      entryPoint: sensitiveContentFilterHelpArticle(6702).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     });
     const obj2 = {
-      entryPoint: sensitiveContentFilterHelpArticle(6414).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+      entryPoint: sensitiveContentFilterHelpArticle(6702).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     };
-    const result1 = sensitiveContentFilterHelpArticle(15984).trackSafetySettingsNoticeAnalytics(
+    const result1 = sensitiveContentFilterHelpArticle(16017).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.CONFIRM_AGE,
     );
@@ -60,7 +60,7 @@ export default function AgeConfirmationNotice() {
   obj6.text = intl2.string(sensitiveContentFilterHelpArticle(1112).t.FDSSia);
   obj6.onPress = callback;
   obj4.action = obj6;
-  obj2.children = jsx(sensitiveContentFilterHelpArticle(7762).InlineNotice, {
+  obj2.children = jsx(sensitiveContentFilterHelpArticle(7808).InlineNotice, {
     type: "info",
     message: null,
     role: "status",

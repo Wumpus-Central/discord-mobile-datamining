@@ -1,9 +1,9 @@
 // discord_app/modules/conjure/publish/useConjurePublishAction.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
-import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import conjureAppInServer from "../projects/conjureAppInServer.tsx";
 import ConjurePublishTypes from "ConjurePublishTypes.tsx";
 import conjurePublishAction2 from "conjurePublishAction.tsx";
@@ -465,13 +465,13 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(12320).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                      project = closure_0(6933).getProject(projectId);
+                    if (ok.code === closure_0(11330).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(7541).getProject(projectId);
                       project.catch(() => {});
-                      const tmp9Result = closure_0(6933);
+                      const tmp9Result = closure_0(7541);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(12320)(ok));
+                    const error = new Error(closure_1(11330)(ok));
                     throw error;
                   }
                 })
@@ -479,19 +479,19 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   (result) => {
                     const channel_skipped = result;
                     const intl = project(1112).intl;
-                    closure_5.showConfirmation(intl.string(closure_1_1(4190).S6Px3n));
-                    const conjurePublishEval = project(12321).requestConjurePublishEval(projectId);
+                    closure_5.showConfirmation(intl.string(closure_1_1(4192).S6Px3n));
+                    const conjurePublishEval = project(11331).requestConjurePublishEval(projectId);
                     if (null != channel_skipped.guildId) {
-                      const tmpResult = project(6954);
-                      const profile = tmpResult.fetchProfile(project(6955).conjureProductionBotUserId(closure_4), {
+                      const tmpResult = project(6008);
+                      const profile = tmpResult.fetchProfile(project(7562).conjureProductionBotUserId(closure_4), {
                         withMutualGuilds: true,
                       });
                       profile.catch(() => {});
-                      const tmpResult3 = project(6955);
+                      const tmpResult3 = project(7562);
                     }
-                    const obj = project(12321);
-                    result = project(12317).refreshPublishedProject(projectId, { isPreview: false });
-                    const tmpResult4 = project(12317);
+                    const obj = project(11331);
+                    result = project(11325).refreshPublishedProject(projectId, { isPreview: false });
+                    const tmpResult4 = project(11325);
                     const catchPromise1 = result.catch(() => {});
                     const nextPromise = result
                       .catch(() => {})
@@ -548,7 +548,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                       message = message.message;
                     } else {
                       const intl = closure_0(1112).intl;
-                      message = intl.string(closure_1(4190).gMWZeG);
+                      message = intl.string(closure_1(4192).gMWZeG);
                     }
                     const obj = closure_1(572);
                     const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: false };
@@ -563,13 +563,13 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(12320).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                      project = closure_0(6933).getProject(projectId);
+                    if (ok.code === closure_0(11330).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(7541).getProject(projectId);
                       project.catch(() => {});
-                      const tmp9Result = closure_0(6933);
+                      const tmp9Result = closure_0(7541);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(12320)(ok));
+                    const error = new Error(closure_1(11330)(ok));
                     throw error;
                   }
                 });
@@ -1002,13 +1002,13 @@ let closure_30 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f137735 = requestConsent;
+                  f137684 = requestConsent;
                   if (requestConsent == null) {
-                    f137735 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f137684 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f137735(closure_0), done: false };
+                  const obj5 = { value: f137684(closure_0), done: false };
                   return obj5;
                 }
               }
@@ -1117,7 +1117,7 @@ let closure_30 = async function _continuePublish(arg0, arg1, arg2, arg3) {
     }
   })();
 };
-let ConjureProjectStore = fn(6621);
+let ConjureProjectStore = fn(6808);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1071).Permissions;

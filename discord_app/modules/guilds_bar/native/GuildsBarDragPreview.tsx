@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1653 from "../../../../_runtime/metro/01653__.js";
-import _mod4828 from "../../../../_runtime/metro/04828__.js";
+import _mod4832 from "../../../../_runtime/metro/04832__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "GuildsBarDnDStore.tsx";
@@ -184,9 +184,9 @@ function PreviewItem(overState) {
           id: -1,
           parentId: "Path",
           name: "Array",
-          color: "channel",
-          expanded: null,
-          children: null,
+          color: "analyticsLocations",
+          expanded: "call",
+          children: "a",
         };
         items = [tmp2];
         element.children = items;
@@ -398,30 +398,30 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(17873), obj5);
+    let tmp22Result = tmp22(tmp4(17911), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(4974).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(4978).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(17893), obj6);
-    const tmp4Result = tmp4(17893);
+    tmp22Result = tmp22(tmp4(17931), obj6);
+    const tmp4Result = tmp4(17931);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1653.View, obj4);
 }
-let GuildsNodeType = fn(6550).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17862).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6038).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17900).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4913);
+createStyles = fn(4917);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -505,13 +505,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "body-sm/normal",
-            scrollPosition: "text-feedback-warning",
-            dragRegion: null,
-            windowSize:
-              "M6.351,6.351C7.824,4.871,9.828,4,12,4c4.411,0,8,3.589,8,8h2c0-5.515-4.486-10-10-10 C9.285,2,6.779,3.089,4.938,4.938L3,3v6h6L6.351,6.351z",
-            dropComplete: "body-xs/medium",
-            listInsets: "text-muted",
+            gestureState: "#ffffff",
+            scrollPosition: null,
+            dragRegion: "body-xs/semibold",
+            windowSize: "interactive-text-active",
+            dropComplete: null,
+            listInsets: "PAYPAL_POPUP_OPEN_FAILED",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -531,7 +530,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4828.shallow);
+  }, _mod4832.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx
 import util from "../../../../intl/index.native.tsx";
-import MessageRecordUtils from "../../../messages/MessageRecordUtils.tsx";
 import UserActionCreatorsAll from "../../../../actions/UserActionCreators.tsx";
+import MessageRecordUtils from "../../../messages/MessageRecordUtils.tsx";
 import createMessageDefault from "../../../messages/createMessage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserRecord from "../../../../records/UserRecord.tsx";

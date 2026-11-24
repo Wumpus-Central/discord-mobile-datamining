@@ -215,7 +215,7 @@ function setChannelActivity(channelId) {
         }
       }
       HermesBuiltin.arraySpread(items1, 1);
-      const set = new Set(items);
+      set = new Set(items);
       const items3 = [];
       HermesBuiltin.arraySpread(set, 0);
       const CHANNELResult = gesture.CHANNEL(channel.guild_id, channel.id);

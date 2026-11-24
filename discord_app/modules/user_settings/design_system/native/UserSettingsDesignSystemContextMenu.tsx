@@ -3,15 +3,15 @@ import apply from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5623 from "../../../../../_runtime/metro/05623__.js";
+import _modDef5627 from "../../../../../_runtime/metro/05627__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef8704 from "../../../../../_runtime/metro/08704__.js";
-import _modDef12006 from "../../../../../_runtime/metro/12006__.js";
-import _modDef12011 from "../../../../../_runtime/metro/12011__.js";
-import _modDef13727 from "../../../../../_runtime/metro/13727__.js";
-import _modDef14838 from "../../../../../_runtime/metro/14838__.js";
-import _modDef17231 from "../../../../../_runtime/metro/17231__.js";
-import _modDef17232 from "../../../../../_runtime/metro/17232__.js";
+import _modDef7323 from "../../../../../_runtime/metro/07323__.js";
+import _modDef9484 from "../../../../../_runtime/metro/09484__.js";
+import _modDef11897 from "../../../../../_runtime/metro/11897__.js";
+import _modDef11902 from "../../../../../_runtime/metro/11902__.js";
+import _modDef13637 from "../../../../../_runtime/metro/13637__.js";
+import _modDef17269 from "../../../../../_runtime/metro/17269__.js";
+import _modDef17270 from "../../../../../_runtime/metro/17270__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -51,7 +51,7 @@ function DemoContextMenu(align) {
             IconComponent: "a",
             iconSource: length2[index % length2.length],
             variant: true,
-            action: "attachEvents",
+            action: "setFingerprint",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -75,7 +75,7 @@ function DemoContextMenu(align) {
           IconComponent: "a",
           iconSource: length2[index % length2.length],
           variant: true,
-          action: "attachEvents",
+          action: "setFingerprint",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
-  _modDef13727,
-  _modDef14838,
-  _modDef8704,
-  _modDef12011,
-  _modDef5623,
-  _modDef17231,
-  _modDef17232,
-  _modDef12006,
+  _modDef13637,
+  _modDef7323,
+  _modDef9484,
+  _modDef11902,
+  _modDef5627,
+  _modDef17269,
+  _modDef17270,
+  _modDef11897,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -132,7 +132,7 @@ let closure_8 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },

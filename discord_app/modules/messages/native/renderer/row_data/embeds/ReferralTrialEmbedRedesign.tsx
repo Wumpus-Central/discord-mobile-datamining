@@ -6,12 +6,12 @@ import PremiumUtils from "../../../../../../utils/PremiumUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8840 from "../../../../../../../_runtime/metro/08840__.js";
-import _modDef8853 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import premium_ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
+import _modDef9497 from "../../../../../../../_runtime/metro/09497__.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
+import _modDef14258 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../../../stores/billing/SubscriptionStore.tsx";
@@ -82,7 +82,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
               learnMoreLink: null,
             };
             const tmp41Result9 = HelpdeskUtilsDefault;
-            obj6.headerImageUrl = _modDef8853;
+            obj6.headerImageUrl = _modDef14258;
             const intl12 = util.intl;
             obj6.headerText = intl12.string(util.t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -101,7 +101,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
               const userTrialOffer = UserOfferStore.getUserTrialOffer(closure_9);
               IAPStore.getOfferIds();
               const _Object = Object;
-              const values = Object.values(ProductIds.TrialIdToProductOfferId[closure_9]);
+              const values = Object.values(premium_ProductIds.TrialIdToProductOfferId[closure_9]);
               id = undefined;
               if (userTrialOffer != null) {
                 id = userTrialOffer.id;
@@ -197,7 +197,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
                     const intl7 = util.intl;
                     obj13.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8840);
+                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9497);
                     tmp31 = obj13;
                     const tmp39Result7 = renderer_EmbedUtils;
                   }
@@ -252,7 +252,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
         const obj19 = {
           titleText: "",
           titleColor,
-          headerImageUrl: _modDef8853,
+          headerImageUrl: _modDef14258,
           headerText: "",
           headerColor: headerTextColor,
           backgroundColor,

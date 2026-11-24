@@ -129,7 +129,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
     });
   }
   const onBeforeBatch = obj.onBeforeBatch;
-  const set = new Set();
+  set = new Set();
   let map = new Map();
   const map1 = new Map();
   const obj2 = {};

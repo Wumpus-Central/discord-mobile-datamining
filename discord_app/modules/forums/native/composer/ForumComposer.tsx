@@ -10,16 +10,16 @@ import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import sanitizeThreadNameDefault from "../../../threads/sanitizeThreadName.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import MessageParser from "../../../messages/MessageParser.tsx";
 import Tracking from "../../tracking/Tracking.tsx";
 import DraftActionCreatorsDefault from "../../../../actions/DraftActionCreators.tsx";
-import TagIcon from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
+import MessageParser from "../../../messages/MessageParser.tsx";
+import sanitizeThreadNameDefault from "../../../threads/sanitizeThreadName.tsx";
 import useFocusHandlers from "hooks/useFocusHandlers.tsx";
 import ForumGuidelinesActionSheet from "../ForumGuidelinesActionSheet.tsx";
 import openExpressionPickerActionSheet from "../../../expression_picker/native/openExpressionPickerActionSheet.tsx";
 import DismissibleActionSheet from "../../../dismissible_content/native/DismissibleActionSheet.tsx";
+import TagIcon from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
 import ImageCarouselDefault from "../../../../components_native/chat/ImageCarousel.tsx";
 import MediaKeyboardUtils from "../../../media_keyboard/native/MediaKeyboardUtils.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -131,7 +131,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9041).TagIcon;
+      obj6.IconComponent = tmp2(10932).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -161,12 +161,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1626).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1626).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11663, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11552, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7029).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7618).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(11257).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10641).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -178,9 +178,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1112).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1112).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9489).ReactionIcon;
+      obj7.IconComponent = tmp2(9563).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7029).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7618).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -198,13 +198,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(7672).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(7011).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5511).Button, obj9);
+    obj8.children = closure_29(tmp2(5515).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -218,9 +218,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11661).KeyboardIcon;
+      let ImageIcon = tmp2(11550).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(7688).ImageIcon;
+      ImageIcon = tmp2(7027).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -232,7 +232,7 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7029).HeaderActionButton, obj11);
+    closure_29(tmp2(7618).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -244,12 +244,12 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(8315).DraftType;
-const SlowmodeType = fn(8388).SlowmodeType;
+const DraftType = fn(7976).DraftType;
+const SlowmodeType = fn(8209).SlowmodeType;
 let Constants = fn(1071);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(4769).ChannelFlags;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ChannelFlags = fn(4773).ChannelFlags;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 let closure_27 = fn(1111).OpenThreadAnalyticsLocations;
 Constants = fn(1082);
@@ -257,7 +257,7 @@ Constants = fn(1082);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -590,7 +590,7 @@ export default function ForumComposer(parentChannel) {
     if (!isEdit) {
       const obj2 = { appliedTags: null };
       const _Set = Set;
-      const set = new Set(arr.map((id) => id.id));
+      set = new Set(arr.map((id) => id.id));
       obj2.appliedTags = set;
       DraftActionCreatorsDefault.changeThreadSettings(channel.id, obj2);
     }

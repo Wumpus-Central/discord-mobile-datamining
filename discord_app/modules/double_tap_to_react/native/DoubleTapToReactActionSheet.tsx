@@ -128,7 +128,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -314,7 +314,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const callback = obj.useCallback((arg0, current) => {
     closure_0 = arg0;
     if (!first1) {
-      let set = sharedValue1.set;
+      set = sharedValue1.set;
       if (current) {
         const result = set(1);
         set = sharedValue2;
@@ -432,7 +432,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             } else {
               let tmp22 = tmp2;
               if (memo) {
-                const DoubleTapReactionEmoji = tmp2(4738).DoubleTapReactionEmoji;
+                const DoubleTapReactionEmoji = tmp2(4742).DoubleTapReactionEmoji;
                 const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
                 tmp22 = first;
                 obj5.emojiName = first.name;
@@ -456,7 +456,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(7539).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(6254).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
           tmp22(1255).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;

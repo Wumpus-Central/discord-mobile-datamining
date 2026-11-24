@@ -9,8 +9,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import AutocompleterDefault from "../../autocompleter/Autocompleter.tsx";
 import createAutocompleterResultForChannelIdDefault from "../../autocompleter/createAutocompleterResultForChannelId.tsx";
-import RouteManagerDefault from "../../routing/RouteManager.tsx";
 import hideLaunchPadDefault from "hideLaunchPad.tsx";
+import RouteManagerDefault from "../../routing/RouteManager.tsx";
 import DevToolsNavigator from "../../devtools/native/components/DevToolsNavigator.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -77,17 +77,17 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6653);
+let NavigationHistoryStore = fn(6838);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: closure_10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
-const ChannelRecord = fn(4766);
+const ChannelRecord = fn(4770);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = ChannelRecord);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -307,7 +307,7 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
       spellCheck: false,
       autoFocus: false,
     };
-    let tmp24 = closure_27(tmp2(7427).SearchBar, obj6);
+    let tmp24 = closure_27(tmp2(7280).SearchBar, obj6);
     let tmp23 = closure_27;
   } else if (tab === constants3.MEMBERS) {
     const obj7 = { text: null };
@@ -398,11 +398,11 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
 });
 const results = [];
 let items = [
-  fn(10063).AutocompleterResultTypes.GUILD,
-  fn(10063).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(10063).AutocompleterResultTypes.GROUP_DM,
-  fn(10063).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(10063).AutocompleterResultTypes.USER,
+  fn(8806).AutocompleterResultTypes.GUILD,
+  fn(8806).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(8806).AutocompleterResultTypes.GROUP_DM,
+  fn(8806).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(8806).AutocompleterResultTypes.USER,
 ];
 let closure_39 = { code: "(function LaunchPadTsx3(){let[sharedState]=this.__closure;return sharedState.get()===0;})" };
 let closure_40 = {
@@ -454,7 +454,7 @@ export default noop.memo(function LaunchPad(arg0) {
     () =>
       RouteManagerDefault.addRouteChangeListener(() => {
         items = ["user:" + ref5.getId()];
-        const set = new Set(items);
+        set = new Set(items);
         const selectedGuildFromRoute = c0(c2[37]).getSelectedGuildFromRoute();
         if (null != selectedGuildFromRoute) {
           const _HermesInternal = HermesInternal;
@@ -661,7 +661,7 @@ export default noop.memo(function LaunchPad(arg0) {
     if (!c0) {
       if (c1) {
         const _Set = Set;
-        const set = new Set(current2);
+        set = new Set(current2);
         if (null != c2) {
           set.add(tmp7);
         }
@@ -750,7 +750,7 @@ export default noop.memo(function LaunchPad(arg0) {
         items = [];
         if (null == noop) {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           for (const item10022 of tmp5) {
             let tmp16 = createAndAppendChannel(item10022, set, items);
             continue;
@@ -892,14 +892,14 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp59Result = closure_27(tmp43(19124), obj9);
+    tmp59Result = closure_27(tmp43(19166), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19131).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19173).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -932,13 +932,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19131).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19173).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(17194), {});
+    tmp59Result2 = closure_27(tmp43(17232), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19144), {});
+    tmp59Result2 = closure_27(tmp43(19186), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19145), {});
+    tmp59Result2 = closure_27(tmp43(19187), {});
   }
   tmp56 = str.trim().length > 0;
 });

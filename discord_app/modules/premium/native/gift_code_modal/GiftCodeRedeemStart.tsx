@@ -5,14 +5,14 @@ import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
-import SoundboardActionCreators from "../../../soundboard/SoundboardActionCreators.tsx";
 import SlayerStorefrontUtils from "../../../slayer_storefront/SlayerStorefrontUtils.tsx";
-import ProfileEffectUserPreviewDefault from "../../../collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx";
 import SocialLayerStorefrontActionCreators from "../../../slayer_storefront/SocialLayerStorefrontActionCreators.tsx";
+import ProfileEffectUserPreviewDefault from "../../../collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx";
+import SoundboardActionCreators from "../../../soundboard/SoundboardActionCreators.tsx";
 import ProfileFrameUserPreviewDefault from "../../../collectibles/profile_frames/native/previews/ProfileFrameUserPreview.tsx";
-import NameplatePreview from "../../../collectibles/nameplates/native/NameplatePreview.tsx";
 import actions_GiftCodeActionCreatorsDefault from "../../../../actions/native/GiftCodeActionCreators.tsx";
 import GiftCodeRedeemModal from "GiftCodeRedeemModal.tsx";
+import NameplatePreview from "../../../collectibles/nameplates/native/NameplatePreview.tsx";
 import GiftBoxAnimationDefault from "GiftBoxAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -28,7 +28,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, GiftCodeModalStates: closure_12, NOOP: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 },

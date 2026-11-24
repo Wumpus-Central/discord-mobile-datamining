@@ -26,7 +26,7 @@ ICYMIPopularGuildsStore.displayName = "ICYMIPopularGuildsStore";
 const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(DispatcherDefault, {
   LOAD_ICYMI_POPULAR_GUILDS: function loadOnboardingPopularGuilds(categoryIds) {
     ({ guilds, offset } = categoryIds);
-    let set;
+    set = undefined;
     let set1;
     if (0 === offset) {
       categoryIds = categoryIds.categoryIds;

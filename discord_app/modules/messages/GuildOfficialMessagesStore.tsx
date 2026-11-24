@@ -624,7 +624,7 @@ obj = {
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
     ({ ids, guildId } = arg0);
-    let set;
+    set = undefined;
     let found;
     let messages;
     if (null == guildId) {

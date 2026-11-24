@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelStageAudienceButton.tsx
-import _modDef4320 from "../../../../stage_channels/StageChannel.messages.js";
+import _modDef4322 from "../../../../stage_channels/StageChannel.messages.js";
 import NativeViewDefault from "../../../../core/native/NativeView.tsx";
 import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const result = BADGE_SIZE / 2;
 const cutoutRadius = result + BADGE_PADDING;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_8 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",
@@ -34,15 +34,15 @@ export default function StageAudienceButton(props) {
   props = props.props;
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(19348).useVoicePanelButtonStyles(props.wrapperSpecs);
-  const obj = channelId(19348);
-  const canModerateRequestToSpeak = channelId(6532).useCanModerateRequestToSpeak(channelId);
-  const obj2 = channelId(6532);
+  const voicePanelButtonStyles = channelId(19390).useVoicePanelButtonStyles(props.wrapperSpecs);
+  const obj = channelId(19390);
+  const canModerateRequestToSpeak = channelId(6683).useCanModerateRequestToSpeak(channelId);
+  const obj2 = channelId(6683);
   let num = 0;
   if (canModerateRequestToSpeak) {
     num = obj3.useStageParticipantsCount(
       channelId,
-      channelId(6537).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
+      channelId(6729).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
     );
   }
   const element = {
@@ -53,13 +53,13 @@ export default function StageAudienceButton(props) {
     accessibilityLabel: null,
     children: null,
   };
-  obj3 = channelId(6543);
+  obj3 = channelId(6735);
   const intl = tmp4(1112).intl;
   if (num > 0) {
     const obj4 = { count: num };
-    let formatToPlainStringResult = intl.formatToPlainString(_modDef4320.IQmRBE, obj4);
+    let formatToPlainStringResult = intl.formatToPlainString(_modDef4322.IQmRBE, obj4);
   } else {
-    formatToPlainStringResult = intl.string(_modDef4320.Ds8IST);
+    formatToPlainStringResult = intl.string(_modDef4322.Ds8IST);
   }
   element.accessibilityLabel = formatToPlainStringResult;
   items = [
@@ -87,7 +87,7 @@ export default function StageAudienceButton(props) {
     scaleToPixelDensity: true,
   };
   const tmpResult = VoicePanelAnimatedButtonWrapperDefault;
-  obj6.children = closure_4(channelId(7038).GroupIcon, { color: voicePanelButtonStyles.iconFill.color });
+  obj6.children = closure_4(channelId(7029).GroupIcon, { color: voicePanelButtonStyles.iconFill.color });
   items[1] = closure_4(NativeViewDefault, obj6);
   const obj8 = { style: tmp3.badge, pointerEvents: "none", children: null };
   const obj7 = { color: voicePanelButtonStyles.iconFill.color };

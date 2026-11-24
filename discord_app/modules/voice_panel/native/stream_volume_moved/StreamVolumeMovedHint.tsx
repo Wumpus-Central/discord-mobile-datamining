@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(14506).clearStreamVolumeMovedHint;
+let closure_6 = fn(14775).clearStreamVolumeMovedHint;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: null, pill: null };
 const rect = {
   position: "absolute",
@@ -88,7 +88,7 @@ export default function StreamVolumeMovedHint(streamKey) {
     const items4 = [tmp.pill, animatedStyle];
     obj3.style = items4;
     const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult };
-    obj3.children = jsx(tmp2(5504).Text, {
+    obj3.children = jsx(tmp2(5508).Text, {
       variant: "body-md/semibold",
       color: "text-overlay-light",
       children: stringResult,

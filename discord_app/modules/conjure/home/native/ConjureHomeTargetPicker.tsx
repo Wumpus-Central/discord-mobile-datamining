@@ -1,9 +1,9 @@
 // discord_app/modules/conjure/home/native/ConjureHomeTargetPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4190 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import ChevronSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
+import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,7 +46,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(12471).ServerIcon,
+        IconComponent: target(11300).ServerIcon,
         action() {
           return dependencyMap(label.id);
         },
@@ -73,7 +73,7 @@ export default function ConjureHomeTargetPicker(target) {
       onAccessibilityAction: null,
     };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef4190.Lyx6pW, { name });
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef4192.Lyx6pW, { name });
     obj.accessibilityActions = accessibilityActions;
     obj.onAccessibilityAction = onAccessibilityAction;
     return jsx(components_Button_Button.Button, {

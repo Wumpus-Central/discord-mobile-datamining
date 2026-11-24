@@ -1,14 +1,14 @@
 // discord_app/modules/collectibles/native/AvatarDecorationProductPreview.tsx
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_4 = createStyles.createStyles({
   fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" },
 });

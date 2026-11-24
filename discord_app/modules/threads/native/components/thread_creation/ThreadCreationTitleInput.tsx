@@ -1,6 +1,6 @@
 // discord_app/modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx
-import sanitizeThreadNameDefault from "../../../sanitizeThreadName.tsx";
 import DraftActionCreatorsDefault from "../../../../../actions/DraftActionCreators.tsx";
+import sanitizeThreadNameDefault from "../../../sanitizeThreadName.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 

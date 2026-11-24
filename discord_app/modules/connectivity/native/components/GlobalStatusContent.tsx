@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import ChannelCallModalDefault from "../../../video_calls/native/components/ChannelCallModal.tsx";
+import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import useCanSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
@@ -18,11 +18,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(10852).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(10127).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1071).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -107,8 +107,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5089).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5089);
+    isScreenLandscape = tmp5(5093).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5093);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1378).isAndroid();

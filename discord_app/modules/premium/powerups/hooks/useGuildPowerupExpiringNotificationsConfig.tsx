@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
 import util from "../../../../intl/index.native.tsx";
 import _modDef2856 from "../GuildPowerups.messages.js";
-import _modDef3312 from "../../../game_server/GameServer.messages.js";
+import _modDef3314 from "../../../game_server/GameServer.messages.js";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups.tsx";
 import useGameServerGetExpiringEntitlementsDefault from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
@@ -18,7 +18,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = util.intl;
-      stringResult = intl.string(_modDef3312["B3OfL/"]);
+      stringResult = intl.string(_modDef3314["B3OfL/"]);
     }
     items = [];
     const arraySpreadResult = HermesBuiltin.arraySpread(
@@ -39,7 +39,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      items3.push(intl3.string(_modDef3312.wiungr));
+      items3.push(intl3.string(_modDef3314.wiungr));
     }
     const obj2 = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
     return obj2;

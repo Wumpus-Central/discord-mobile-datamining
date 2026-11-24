@@ -332,7 +332,7 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
     let flag = handleChannelSelect();
-    const set = new Set();
+    set = new Set();
     const iter = arg0.voiceStates[Symbol.iterator]();
     while (iter !== undefined) {
       ({ channelId, oldChannelId } = nextResult);

@@ -4,27 +4,27 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4320 from "../../StageChannel.messages.js";
+import _modDef4322 from "../../StageChannel.messages.js";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05472_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
-import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
-import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
 import StageChannelParticipants from "../../StageChannelParticipants.tsx";
 import StageChannelParticipantStoreHooks from "../../StageChannelParticipantStoreHooks.tsx";
-import _modDef7619 from "../../../../../_runtime/metro/07619__.js";
-import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
+import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
+import _modDef7944 from "../../../../../_runtime/metro/07944__.js";
+import _modDef7966 from "../../../../../_runtime/metro/07966__.js";
+import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef11051 from "../../../../../_runtime/metro/11051__.js";
-import _modDef11052 from "../../../../../_runtime/metro/11052__.js";
-import _modDef11053 from "../../../../../_runtime/metro/11053__.js";
-import _modDef11054 from "../../../../../_runtime/metro/11054__.js";
+import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
+import _modDef10401 from "../../../../../_runtime/metro/10401__.js";
+import _modDef10402 from "../../../../../_runtime/metro/10402__.js";
+import _modDef10403 from "../../../../../_runtime/metro/10403__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -50,7 +50,7 @@ function HideStageChannelCallIcon(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef11051;
+  obj2.source = _modDef10401;
   const intl = channel(1112).intl;
   obj2.accessibilityLabel = intl.string(channel(1112).t.cpT0Cq);
   obj2.onPress = function handleClose() {
@@ -80,19 +80,19 @@ function StageParticipantCounts(channelId) {
     style: tmp.counts,
     pointerEvents: "none",
     accessible: true,
-    accessibilityLabel: intl.formatToPlainString(_modDef4320.TdMGe4, {
+    accessibilityLabel: intl.formatToPlainString(_modDef4322.TdMGe4, {
       speakerCount: actualStageSpeakerCount,
       audienceCount: stageParticipantsCount,
     }),
     children: null,
   };
   items = [
-    state(native.Icon, { source: _modDef11052, size: native.Icon.Sizes.SMALL, style: tmp.icon }),
+    state(native.Icon, { source: _modDef7944, size: native.Icon.Sizes.SMALL, style: tmp.icon }),
     state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }),
     ,
   ];
-  const obj4 = { source: _modDef11052, size: native.Icon.Sizes.SMALL, style: tmp.icon };
-  items[2] = state(native.Icon, { source: _modDef11053, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  const obj4 = { source: _modDef7944, size: native.Icon.Sizes.SMALL, style: tmp.icon };
+  items[2] = state(native.Icon, { source: _modDef10402, size: native.Icon.Sizes.SMALL, style: tmp.icon });
   items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
   obj3.children = items;
   return gesture(React4, obj3);
@@ -356,7 +356,7 @@ const Constants = fn(1071);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, nativeDefault.unsafe_rawColors.BLACK];
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let obj = {
   content: {
     marginStart: nativeDefault.space.PX_12,
@@ -374,7 +374,7 @@ let obj = {
   icon: null,
 };
 let obj4 = { backgroundColor: null };
-const ColorUtils = fn(4910);
+const ColorUtils = fn(4914);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
 let obj3 = {
@@ -397,7 +397,7 @@ obj.icon = {
   tintColor: nativeDefault.colors.TEXT_SUBTLE,
 };
 const value = createStyles.createStyles(obj);
-createStyles = fn(4913);
+createStyles = fn(4917);
 let closure_17 = createStyles.createStyles((arg0, arg1) => {
   const space = nativeDefault.space;
   if (arg0) {

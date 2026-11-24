@@ -241,7 +241,7 @@ export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
     value.handleSearchFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    const set = new Set(ignoreQueries.ignoreQueries);
+    set = new Set(ignoreQueries.ignoreQueries);
     const item = map.forEach((query, index) => {
       if (null != query.query) {
         if (!set.has(query.query)) {

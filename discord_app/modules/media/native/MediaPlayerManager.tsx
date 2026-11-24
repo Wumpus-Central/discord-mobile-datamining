@@ -34,17 +34,17 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "Promise",
-    canAccessMedia: "disabled",
+    canAccessMedia: "sa",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: "Suomi",
+    showPip: "ox",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: true
+    currentlyDisplayedChannelId: "default"
   };
   return obj;
 });
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "GUILD_SUBSCRIPTIONS_FLUSH" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "response" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);
@@ -362,7 +362,7 @@ prototype["handleMediaPlayerViewWillAppear"] = function handleMediaPlayerViewWil
     displayedMediaItemIdsPerChannel[_require] = new Set(items1);
     obj.setState({ displayedMediaItemIdsPerChannel });
     self.updateDisplayState();
-    const set = new Set(items1);
+    set = new Set(items1);
   });
 };
 prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewDidDisappear(arg0) {
@@ -370,7 +370,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
   ({ mediaItemIds: importDefault, channelId: require } = arg0);
   require("ReactBatchUpdates").batchUpdates(() => {
     const displayedMediaItemIdsPerChannel = obj.getState().displayedMediaItemIdsPerChannel;
-    let set = displayedMediaItemIdsPerChannel[_require];
+    set = displayedMediaItemIdsPerChannel[_require];
     if (set == null) {
       const _Set = Set;
       set = new Set();

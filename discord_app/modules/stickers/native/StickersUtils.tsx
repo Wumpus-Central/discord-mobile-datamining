@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(11371).useStickerPickerStore;
+const useStickerPickerStore = fn(10689).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1071).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const size = fn(2);

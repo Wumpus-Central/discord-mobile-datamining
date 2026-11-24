@@ -68,7 +68,7 @@ prototype["getGuildIds"] = function getGuildIds() {
             const channelsResult = DatabaseDaosDefault.channels();
             if (null == channelsResult) {
               const _Set3 = Set;
-              const set = new Set();
+              set = new Set();
               c4 = 0;
               c6 = 3;
               const obj4 = { value: set, done: true };

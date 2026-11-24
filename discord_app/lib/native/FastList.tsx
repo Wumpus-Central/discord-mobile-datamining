@@ -3,7 +3,7 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import _mod1653 from "../../../_runtime/metro/01653__.js";
-import BottomSheetModal from "../../../_runtime/05145_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/05149_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -456,7 +456,7 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   let num = -1;
   section3 = -1;
   closure_6 = 0;
-  const set = new Set();
+  set = new Set();
   if (rounded <= bound) {
     do {
       let chunk = self.getChunk(rounded);
@@ -772,7 +772,7 @@ prototype2["fullCompute"] = function fullCompute() {
   if (undefined === getRecyclerKey) {
     getRecyclerKey = defaultRecyclerKey;
   }
-  const set = new Set(self.props.persistantKeys);
+  set = new Set(self.props.persistantKeys);
   self.persistantItemData = [];
   items = [];
   self.dataCache = items;

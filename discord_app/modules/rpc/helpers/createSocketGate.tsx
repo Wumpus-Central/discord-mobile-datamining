@@ -6,8 +6,8 @@ let result = size.fileFinishedImporting("modules/rpc/helpers/createSocketGate.ts
 
 export default function createSocketGate(cooldownMs) {
   cooldownMs = cooldownMs.cooldownMs;
-  function tryAcquire(arg0) {
-    let obj1 = weakMap.get(arg0);
+  function tryAcquire(socket) {
+    let obj1 = weakMap.get(socket);
     if (obj1 == null) {
       obj1 = { inFlight: false, readyAt: 0 };
     }
@@ -17,7 +17,7 @@ export default function createSocketGate(cooldownMs) {
       fn = null;
       if (Date.now() >= obj1.readyAt) {
         obj1.inFlight = true;
-        const result = weakMap.set(arg0, obj1);
+        const result = weakMap.set(socket, obj1);
         fn = () => {
           let obj = arg0;
           if (arg0 === undefined) {

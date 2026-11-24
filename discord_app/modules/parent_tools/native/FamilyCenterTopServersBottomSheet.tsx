@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import _modDef2824 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
@@ -19,20 +19,20 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(9139).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(8077).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(7045).TableRow, obj2);
+    return closure_4(tmp2(6018).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   header: { textAlign: "center" },
   guildIcon: {

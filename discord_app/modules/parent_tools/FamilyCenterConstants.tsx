@@ -338,6 +338,7 @@ export const ACTION_TO_TEXT = new Map(items1);
 export const FamilyCenterIconType = obj3;
 export const FamilyCenterFailureCode = obj4;
 export const FAMILY_CENTER_ERROR_CODE_TO_FAILURE = { 290000: null, 290002: null, 290005: null };
+export const FAMILY_CENTER_INVALID_LINK_CODE_ERROR_CODE = 290007;
 export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
   [obj4.GENERIC_ERROR]: {
     header() {

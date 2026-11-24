@@ -47,7 +47,7 @@ prototype["logSinks"] = function logSinks() {
 prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(dependencyMap, arg1, arg2) {
   const self = this;
   const activeSinks = this.activeSinks;
-  let set = activeSinks.get(arg1);
+  set = activeSinks.get(arg1);
   if (set == null) {
     const _Set = Set;
     set = new Set();

@@ -3,8 +3,8 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import util from "../../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import GuildSettingsRolesActionCreators from "../../GuildSettingsRolesActionCreators.tsx";
@@ -180,18 +180,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(19850).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(19850);
+                  closure_0(19893).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(19893);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(19850);
+                const tmp22 = closure_0(19893);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(19854).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(19897).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -199,8 +199,8 @@ export default function RoleIconActionSheet(arg0) {
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1112).intl;
-              closure_0(5594).presentError(intl.string(closure_0(1112).t.R0RpRX));
-              const obj2 = closure_0(5594);
+              closure_0(5598).presentError(intl.string(closure_0(1112).t.R0RpRX));
+              const obj2 = closure_0(5598);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -234,7 +234,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(9063).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(9396).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

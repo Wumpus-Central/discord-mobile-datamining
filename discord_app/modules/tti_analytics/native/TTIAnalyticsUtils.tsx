@@ -807,8 +807,8 @@ let closure_38 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(8370).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(4769).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(8192).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(4773).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1268);
 const load_id = v1.v4();

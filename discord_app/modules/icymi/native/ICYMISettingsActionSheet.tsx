@@ -1,8 +1,8 @@
 // discord_app/modules/icymi/native/ICYMISettingsActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { padding: { bottomPadding: nativeDefault.space.PX_16, width: "100%" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

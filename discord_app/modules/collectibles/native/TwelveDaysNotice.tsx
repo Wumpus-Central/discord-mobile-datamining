@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
 import useTrackImpression from "../../app_analytics/useTrackImpression.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,17 +15,17 @@ function NoticeGradient() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const colors = ["rgba(14, 56, 100, 0.7)", "rgba(6, 138, 185, 0.7)"];
-const TextVariantsFlat = fn(5505).TextVariantsFlat;
+const TextVariantsFlat = fn(5509).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
   lineHeight = found.lineHeight;
 }
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { nagbar: null, nagbarContent: null, nagbarText: null, indexNotice: null, indexNoticeIcon: null, indexNoticeCopy: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, overflow: "hidden" };
 obj2.nagbar = rect;
@@ -37,7 +37,7 @@ obj2.indexNoticeIcon = { height: lineHeight, justifyContent: "center" };
 let obj4 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.indexNoticeCopy = { flex: 1, gap: nativeDefault.space.PX_4 };
 let closure_12 = createStyles.createStyles(obj2);
-let items = [fn(4746).DismissibleContent.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR];
+let items = [fn(4750).DismissibleContent.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR];
 let closure_14 = [];
 const constants = { SHOP_HOME: "shop_home", COLLECTION_INDEX: "collection_index" };
 const size = fn(2);

@@ -175,10 +175,10 @@ export function getLegacyIconUrlByBadgeId(badges) {
   }
   return map;
 }
-export function findTier(badge, next_tier) {
-  closure_0 = next_tier;
+export function findTier(badge, current_tier) {
+  closure_0 = current_tier;
   let found;
-  if (null != next_tier) {
+  if (null != current_tier) {
     const tiers = badge.tiers;
     found = tiers.find((key) => key.key === closure_0);
   }

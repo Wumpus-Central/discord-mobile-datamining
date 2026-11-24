@@ -7,10 +7,10 @@ import shared from "../design/shared.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import transitionToChannel from "../modules/routing/transitionToChannel.tsx";
 import preloadChannelDefault from "../modules/channel/preloadChannel.tsx";
-import QualtricsActionCreatorsDefault from "../modules/qualtrics/QualtricsActionCreators.tsx";
-import SurveyActionTypes from "../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
 import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
+import QualtricsActionCreatorsDefault from "../modules/qualtrics/QualtricsActionCreators.tsx";
+import SurveyActionTypes from "../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChangelogStore from "../modules/changelog/ChangelogStore.tsx";
@@ -20,7 +20,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4766).createChannelRecordFromServer;
+let closure_6 = fn(4770).createChannelRecordFromServer;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_9,
@@ -333,8 +333,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6483).fireSurveyAction(tmp2(6490).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6483);
+        tmp5(7722).fireSurveyAction(tmp2(7729).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(7722);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -468,7 +468,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "add" },
+      channel: { id, guild_id: "Array", parent_id: "analyticsLocations" },
       silent: flag2,
     });
     if (flag) {
@@ -482,7 +482,11 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "add" }, silent: flag2 };
+    const obj2 = {
+      type: "CHANNEL_DELETE",
+      channel: { id, guild_id: "Array", parent_id: "analyticsLocations" },
+      silent: flag2,
+    };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1284).rejectWithMigratedError();
     const obj8 = flag3(1284);
@@ -630,8 +634,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7730).checkGuildTemplateDirty(closure_128_2);
-        name(7730);
+        const result = name(7731).checkGuildTemplateDirty(closure_128_2);
+        name(7731);
       }
       return closure_128_1;
     })();

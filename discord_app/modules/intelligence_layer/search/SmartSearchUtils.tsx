@@ -13,11 +13,11 @@ function isUnsupportedFilterToken(type) {
   return tmp;
 }
 SmartSearchResultsStoreDefault;
-const SmartSearchConstants = fn(13199);
+const SmartSearchConstants = fn(13113);
 ({ MAX_PRESENTED_CITATIONS: c3, SUGGESTED_SEARCH_CHANNEL_KEY_DELIMITER: closure_4 } = SmartSearchConstants);
 const Constants = fn(1071);
 ({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
-const SearchTabs = fn(8576).SearchTabs;
+const SearchTabs = fn(8878).SearchTabs;
 let items = [,];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);
@@ -103,11 +103,15 @@ export function isSmartSearchEmptyOrErrored(smartSearchStatus) {
   );
 }
 export function getSmartSearchCitationsCount(searchContext, searchResultsQuery, arg2) {
+  let obj = arg3;
+  if (arg3 === undefined) {
+    obj = SmartSearchResultsStore;
+  }
   const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
   if (null == guildIdFromSearchContext) {
     return 0;
   } else {
-    const answer = SmartSearchResultsStore.getAnswer(
+    const answer = obj.getAnswer(
       guildIdFromSearchContext,
       SearchUtils.getSearchTabFetchId(searchContext, SearchTabs.MESSAGES, searchResultsQuery),
     );

@@ -44,7 +44,7 @@ export function withoutInlineFileMentions(attachments, content) {
       const _Set = Set;
       const _Set2 = Set;
       const _Array = Array;
-      const set = new Set(Array.from(content.matchAll(regExp), (arg0) => arg0[1]));
+      set = new Set(Array.from(content.matchAll(regExp), (arg0) => arg0[1]));
       items = [];
       HermesBuiltin.arraySpread(set, 0);
       return attachments.filter((id) => {

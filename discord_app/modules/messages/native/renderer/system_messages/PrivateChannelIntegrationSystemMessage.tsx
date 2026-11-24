@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx
 import Constants from "../../../../../Constants.tsx";
+import PrivateChannelIntegrationSystemMessageUtils from "../../../../private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import PrivateChannelIntegrationSystemMessageUtils from "../../../../private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const MessageTypes = Constants.MessageTypes;

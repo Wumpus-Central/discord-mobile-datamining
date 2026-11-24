@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/conjureServerAppRemoval.tsx
-import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
+import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -231,7 +231,7 @@ let closure_18 = async function _loadConjureServerApp(arg0) {
   return value;
 };
 function appChannelApplicationIds(id) {
-  const set = new Set();
+  set = new Set();
   const iter = GuildChannelStore.getChannels(id)[closure_7][Symbol.iterator]();
   while (iter !== undefined) {
     let obj2 = ConjureUtils;
@@ -311,7 +311,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4847).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

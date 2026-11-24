@@ -40,7 +40,7 @@ export default function useConjurePerfTraceTree(arg0) {
   const first1 = tmp4[0];
   if (null == memo) {
     const _Set = Set;
-    let set = new Set();
+    set = new Set();
   } else {
     set = require("ConjurePerfTraceLayout").perfTraceKeys(memo);
     const obj2 = require("ConjurePerfTraceLayout");

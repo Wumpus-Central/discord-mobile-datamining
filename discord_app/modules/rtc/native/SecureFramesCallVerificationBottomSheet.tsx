@@ -36,7 +36,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1112).t["MPp7+C"]);
   const intl3 = channelId(1112).intl;
   const obj3 = { helpArticle: null };
-  obj3.helpArticle = channelId(9707).getSecureFramesHelpdeskArticle();
+  obj3.helpArticle = channelId(8539).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1112).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

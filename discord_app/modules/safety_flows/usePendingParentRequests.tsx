@@ -9,7 +9,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const UserLinkStatus = fn(8336).UserLinkStatus;
+const UserLinkStatus = fn(8072).UserLinkStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
 
@@ -140,7 +140,7 @@ export function usePendingRequestListController(pendingRequests) {
         return has;
       } else {
         const _Set = Set;
-        const set = new Set(has);
+        set = new Set(has);
         set.add(closure_0);
         return set;
       }

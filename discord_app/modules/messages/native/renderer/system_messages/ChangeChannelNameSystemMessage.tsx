@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
-import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;

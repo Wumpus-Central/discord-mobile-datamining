@@ -76,12 +76,12 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
     () => application_id.map((application_id) => application_id.application_id),
     items5,
   );
-  const tmp9 = memo5(6864)(memo1, false);
+  const tmp9 = memo5(7389)(memo1, false);
   closure_129_4 = tmp9;
   let obj3 = require("initialize");
   const tmp8 = memo5;
   closure_129_5 = getOrFetchApplication.useRef(new Set());
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   [closure_129_6, closure_129_7] = getOrFetchApplication.useState(new Set());
   const tmp13 = _slicedToArray(getOrFetchApplication.useState(false), 2);
@@ -173,7 +173,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
       }),
     items11,
   );
-  const tmp21 = tmp8(6864)(memo4);
+  const tmp21 = tmp8(7389)(memo4);
   closure_129_11 = tmp21;
   const items12 = [memo3, tmp21];
   memo5 = obj.useMemo(

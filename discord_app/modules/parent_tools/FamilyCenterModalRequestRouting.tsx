@@ -1,7 +1,9 @@
 // discord_app/modules/parent_tools/FamilyCenterModalRequestRouting.tsx
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators.tsx";
+import FamilyCenterUtils from "FamilyCenterUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
+require = fn;
 function getConnectionPrereqTarget(teen_identity) {
   if ("ready" in teen_identity) {
     const obj2 = { section: frozen.REQUEST, params: null };
@@ -24,7 +26,7 @@ function getConnectionPrereqTarget(teen_identity) {
   }
   return tmp;
 }
-let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
+let closure_8 = async function _resolveConnectionPrereqTarget(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -51,7 +53,7 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
         } else {
           closure_3 = tmp3;
           c4 = 1;
-          asyncGeneratorStep = getConnectionPrereqTarget;
+          dependencyMap = getConnectionPrereqTarget;
           c5 = 2;
           c6 = 1;
           const obj5 = {
@@ -63,7 +65,7 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        const obj6 = { value: closure_131_4, done: true };
+        const obj6 = { value: closure_131_6, done: true };
         return obj6;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -76,7 +78,7 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: asyncGeneratorStep(value), done: true };
+        obj = { value: dependencyMap(value), done: true };
         return obj;
       }
     } catch (tmp15) {
@@ -89,6 +91,8 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
     }
   }
 };
+const FamilyCenterConstants = fn(8072);
+let closure_4 = FamilyCenterConstants.FAMILY_CENTER_INVALID_LINK_CODE_ERROR_CODE;
 const frozen = Object.freeze({
   PREREQ_LOADING: "PREREQ_LOADING",
   CONFIRM_AGE: "CONFIRM_AGE",
@@ -99,15 +103,29 @@ const frozen = Object.freeze({
   INVALID_CODE: "INVALID_CODE",
   MUST_BE_ADULT: "MUST_BE_ADULT",
 });
-let obj = { section: frozen.ERROR, params: { failureCode: fn(8336).FamilyCenterFailureCode.GENERIC_ERROR } };
+let obj = {
+  section: frozen.ERROR,
+  params: { failureCode: FamilyCenterConstants.FamilyCenterFailureCode.GENERIC_ERROR },
+};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterModalRequestRouting.tsx");
 
 export const FamilyCenterModalRequestSections = frozen;
 export { getConnectionPrereqTarget };
+export function getRequestErrorTarget(code) {
+  if (code.code === closure_4) {
+    const obj2 = { section: frozen.INVALID_CODE };
+    obj = obj2;
+  } else {
+    obj = { section: frozen.ERROR, params: null };
+    const obj4 = { failureCode: FamilyCenterUtils.getFailureCodeForAPIError(code) };
+    obj.params = obj4;
+  }
+  return obj;
+}
 export function resolveConnectionPrereqTarget() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

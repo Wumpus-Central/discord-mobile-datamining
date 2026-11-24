@@ -1,17 +1,17 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import GuildScheduledEventModalActionCreators from "../../GuildScheduledEventModalActionCreators.native.tsx";
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
+import GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../GuildScheduledEventModalActionCreators.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6633).isGuildScheduledEventActive;
+let closure_6 = fn(5649).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   header: {
     margin: 12,
@@ -69,7 +69,7 @@ export default noop.memo(function GuildEventVoiceBanner(channel) {
     }
     if (tmp) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      let result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(
+      let result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(
         first,
         nextRecurrenceIdInEvent,
         () => {

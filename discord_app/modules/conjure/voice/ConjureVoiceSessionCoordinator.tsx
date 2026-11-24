@@ -15,8 +15,8 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
 const RPCErrors = fn(1071).RPCErrors;
-const constants = fn(5811).SpatialAudioOverrideSource;
-const Constants = fn(5658);
+const constants = fn(5872).SpatialAudioOverrideSource;
+const Constants = fn(5729);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 let closure_14 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -168,15 +168,15 @@ prototype["start"] = function start(id) {
               );
               throw tmp15;
             }
-            tmp41Result2 = tmp41(15672);
+            tmp41Result2 = tmp41(15693);
           }
-          tmp41Result = tmp41(15672);
+          tmp41Result = tmp41(15693);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(15672);
+        obj13 = handleFrameLifecycleChange(15693);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -214,7 +214,7 @@ prototype["start"] = function start(id) {
         updateTimer: null,
       };
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       obj3.appliedUserIds = set;
       if (self.hasMediaEngineConnection(obj3)) {
         const sessions2 = self.sessions;
@@ -266,16 +266,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15674);
+    obj2 = obj2(15695);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15674).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15695).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15674);
+      const tmp11Result = tmp11(15695);
     }
     tmp11 = obj2;
   } else {
@@ -402,7 +402,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15675).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15696).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }
@@ -416,7 +416,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
       if (self.spatialHolder === validateSessionResult) {
         self.scheduleApply(validateSessionResult);
       }
-      const set = new Set();
+      set = new Set();
     }
   } else {
     const obj = { errorCode: RPCErrors.INVALID_COMMAND };
@@ -604,7 +604,7 @@ prototype["scheduleApply"] = function scheduleApply(validateSessionResult) {
 prototype["applySources"] = function applySources(sources) {
   closure_0 = sources;
   sources = sources.sources;
-  const set = new Set(sources.map((userId) => userId.userId));
+  set = new Set(sources.map((userId) => userId.userId));
   items = [...sources.appliedUserIds];
   closure_2 = items.filter((item) => !set.has(item));
   const result = this.withMediaEngineConnection(sources, (setUserPosition) => {

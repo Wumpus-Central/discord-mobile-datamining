@@ -12,9 +12,9 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StageChannelListStore = fn(11067);
+const StageChannelListStore = fn(10416);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: closure_6 } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(6500).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6674).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let cutout = { direction: fn(1186).CutoutDirection.RIGHT, radius: 13, inset: -6 };
@@ -299,10 +299,10 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(10906).useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(10183).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1494)().width;
-  let obj = width(10906);
-  isScreenLandscape = width(8150).useIsScreenLandscape();
+  let obj = width(10183);
+  isScreenLandscape = width(9901).useIsScreenLandscape();
   items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -316,9 +316,9 @@ export default function StageChannelCallList(channel) {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(8150);
+  const obj2 = width(9901);
   const tmp4 = _slicedToArray(
-    width(10906).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+    width(10183).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
     2,
   );
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });

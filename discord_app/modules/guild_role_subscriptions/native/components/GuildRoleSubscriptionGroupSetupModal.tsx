@@ -166,8 +166,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                       const intl = merged(1112).intl;
                       closure_1 = intl.string(merged(1112).t.ZUEGFn);
                     }
-                    merged(5594).presentError(closure_1);
-                    const obj8 = merged(5594);
+                    merged(5598).presentError(closure_1);
+                    const obj8 = merged(5598);
                   }
                   const obj5 = {
                     guildId: closure_131_1,
@@ -308,8 +308,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(20007).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(16610);
+const useRoleTierEditStore = fn(20050).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(16644);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } =
   GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;

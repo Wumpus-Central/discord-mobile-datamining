@@ -1,7 +1,7 @@
 // discord_app/modules/age_gate/native/components/ageGateNavigationCallbacks.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import AgeGateModalActionCreators from "../../AgeGateModalActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import AgeGateModalActionCreators from "../../AgeGateModalActionCreators.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 

@@ -55,7 +55,7 @@ prototype["getAll"] = function getAll() {
             const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSync();
             if (null == result) {
               const _Set2 = Set;
-              const set = new Set();
+              set = new Set();
               c2 = 3;
               const obj4 = { value: set, done: true };
               return obj4;

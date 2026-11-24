@@ -109,6 +109,18 @@ export function useIsConjureGuildEnabled(arg0) {
 }
 export { isConjureGuildEnabled };
 export { hasConjureGuild };
+export function hasConjureExperimentGuild(guildsArray, useConjureServerWidgetOffers) {
+  const obj = guildsArray[Symbol.iterator]();
+  while (obj !== undefined) {
+    let obj2 = { guildId: tmp.id, location: useConjureServerWidgetOffers };
+    if (closure_4.getConfig(obj2).enabled) {
+      obj.return();
+      let flag = true;
+      return true;
+    }
+  }
+  return false;
+}
 export { isConjureGuildEnabledWithoutExposure };
 export { hasConjureGuildWithoutExposure };
 export function useHasConjureGuild(DMAppChannel, arg1) {

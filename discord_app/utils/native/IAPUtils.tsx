@@ -6,7 +6,7 @@ import v1 from "../../../_runtime/01268_v1.js";
 import ClientInfoUtilsAll from "ClientInfoUtils.tsx";
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import DeviceUtils from "DeviceUtils.tsx";
-import ProductIds from "../../modules/premium/native/ProductIds.android.tsx";
+import premium_ProductIds from "../../modules/premium/native/ProductIds.android.tsx";
 import StorekitIAPQueueDefault from "../../modules/billing/native/StorekitIAPQueue.tsx";
 import GeneratedPaymentCurrencies from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -94,7 +94,7 @@ let closure_16 = async function _makeIAPRequest() {
               };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("../../../_runtime/metro/09289__.js").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("../../../_runtime/metro/09140__.js").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -184,7 +184,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("../../../_runtime/metro/09289__.js").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("../../../_runtime/metro/09140__.js").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -492,7 +492,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("../../../_runtime/metro/09289__.js").getStorefront(), done: false };
+            const obj6 = { value: require("../../../_runtime/metro/09140__.js").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -532,7 +532,7 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5577).convertToAlpha2;
+const convertToAlpha2 = fn(5581).convertToAlpha2;
 const Constants = fn(1071);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1388).NAMESPACE_SNOWFLAKE_UUID;
@@ -540,12 +540,12 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1378);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(9288).default;
+  _default = fn(9139).default;
 }
 let items = [
-  fn(9289).ErrorCode.E_USER_CANCELLED,
+  fn(9140).ErrorCode.E_USER_CANCELLED,
   Constants.StoreKitErrors.PAYMENT_CANCELED,
-  fn(9289).ErrorCode.E_UNKNOWN,
+  fn(9140).ErrorCode.E_UNKNOWN,
 ];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
@@ -553,9 +553,9 @@ let obj = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      items = [StorekitIAPQueueDefault.fetchSubscriptions(Object.values(ProductIds.ProductIds))];
+      items = [StorekitIAPQueueDefault.fetchSubscriptions(Object.values(premium_ProductIds.ProductIds))];
       const _Object2 = Object;
-      items[1] = StorekitIAPQueueDefault.fetchProducts(Object.values(ProductIds.ProductIds));
+      items[1] = StorekitIAPQueueDefault.fetchProducts(Object.values(premium_ProductIds.ProductIds));
       let nextPromise = _Promise.all(items).then((result) => {
         [r10007, tmp] = result;
         set = new Set();
@@ -631,8 +631,8 @@ if (PlatformUtils) {
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4870).getIsRunningOnSimulator();
-      let obj7 = fn(4870);
+      isRunningOnSimulator = fn(4874).getIsRunningOnSimulator();
+      let obj7 = fn(4874);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -645,7 +645,7 @@ if (PlatformUtils) {
   let obj5 = fn(1378);
 }
 if (PlatformUtils) {
-  obj = fn(9310).default;
+  obj = fn(9161).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

@@ -34,7 +34,7 @@ class DaveRecipientTracker {
       lingerCount: 0,
       lingerTotalDuration: 0,
       lingerMaxDuration: 0,
-      lingerMaxCause: "done",
+      lingerMaxCause: "channel_id",
     };
     set = new Set();
     merged[4] = set;
@@ -77,7 +77,7 @@ prototype["mlsMessageProcessed"] = function mlsMessageProcessed(arg0, arg1, prot
   if (arg1) {
     self.hasGroup = true;
     const _Set = Set;
-    const set = new Set(items);
+    set = new Set(items);
     self.newestRoster = set;
     self.prepare(arg0, protocolVersion);
     if (0 === arg0) {
@@ -217,7 +217,7 @@ prototype["execute"] = function execute(arg0, arg1) {
       if (0 === value.protocolVersion) {
         self.hasGroup = false;
         const _Set2 = Set;
-        const set = new Set();
+        set = new Set();
         self.recipients = set;
         self.setMode("passthrough");
       } else {

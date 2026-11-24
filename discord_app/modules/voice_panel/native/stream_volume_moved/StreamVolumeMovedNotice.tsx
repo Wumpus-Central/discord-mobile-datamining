@@ -2,9 +2,9 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
-import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import useSelectedDismissibleContent from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,9 +15,9 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const showStreamVolumeMovedHint = fn(14506).showStreamVolumeMovedHint;
-const VoicePanelControlsModes = fn(11748).VoicePanelControlsModes;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const showStreamVolumeMovedHint = fn(14775).showStreamVolumeMovedHint;
+const VoicePanelControlsModes = fn(11633).VoicePanelControlsModes;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/stream_volume_moved/StreamVolumeMovedNotice.tsx");

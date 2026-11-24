@@ -9,12 +9,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7809);
+const SafetyHubConstants = fn(7753);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -115,7 +115,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj9 = { variant: "body-xs/normal", children: null };
     const intl6 = tmp2(1112).intl;
     obj9.children = intl6.format(tmp2(1112).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5504).Text, obj9);
+    isDsaEligible = closure_8(tmp2(5508).Text, obj9);
   }
   const obj10 = { children: null };
   items2[5] = isDsaEligible;

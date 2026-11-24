@@ -1,6 +1,6 @@
 // discord_app/modules/pinot/native/PinotDiscoverableSheet.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3508 from "../Pinot.messages.js";
+import _modDef3510 from "../Pinot.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRadioGroup from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotDiscoverabl
 export default function PinotDiscoverableSheet(defaultValue) {
   ({ options, onChange: require } = defaultValue);
   let intl = util.intl;
-  const stringResult = intl.string(_modDef3508["r/o6RM"]);
+  const stringResult = intl.string(_modDef3510["r/o6RM"]);
   let obj = {
     startExpanded: true,
     header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult }),

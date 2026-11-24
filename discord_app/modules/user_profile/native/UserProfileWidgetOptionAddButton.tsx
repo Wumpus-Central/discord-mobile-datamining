@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import CirclePlusIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
+import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import AddWidgetButtonConfig from "../AddWidgetButtonConfig.tsx";
 import UserProfileApplicationWidgetPreviewDefault from "UserProfileApplicationWidgetPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -75,7 +75,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const NUMBER_OF_COLUMNS_BY_VARIANT = { default: 4, compact: 3 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj3 = {
   button: {
     backgroundColor: nativeDefault.colors.CARD_MUTED_BG,

@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
-import _modDef3056 from "../../../client_themes/intl/ClientThemes.messages.js";
+import _modDef3058 from "../../../client_themes/intl/ClientThemes.messages.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useActiveTheme from "../../../client_themes/native/useActiveTheme.tsx";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
@@ -16,7 +16,7 @@ function useAppearanceSettingTrailing() {
   const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3056.KSBBpC);
+    return intl2.string(_modDef3058.KSBBpC);
   } else if (ActiveThemeType.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -37,14 +37,14 @@ function useAppearanceSettingTrailing() {
   }
 }
 const ActiveThemeType = fn(1194).ActiveThemeType;
-const SettingBuilders = fn(11937);
+const SettingBuilders = fn(11815);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16667).PaintPaletteIcon,
+  IconComponent: fn(16701).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1071).UserSettingsSections.APPEARANCE,

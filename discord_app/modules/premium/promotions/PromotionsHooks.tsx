@@ -38,7 +38,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
   );
   const items3 = [stateFromStoresArray, stateFromStores, stateFromStores1, flag];
   return stateFromStores1.useMemo(() => {
-    let set = null;
+    set = null;
     if (set) {
       const _Set = Set;
       set = new Set(stateFromStores1.map((promotion) => promotion.promotion.id));
@@ -132,7 +132,7 @@ export function useOutboundPromotions() {
   activeOutboundPromotions = useEligibleActiveOutboundPromotions({ includeClaimedPromotions: true });
   const items7 = [activeOutboundPromotions, stateFromStores2];
   const claimedEndedOutboundPromotions = activeOutboundPromotions.useMemo(() => {
-    const set = new Set(activeOutboundPromotions.map((id) => id.id));
+    set = new Set(activeOutboundPromotions.map((id) => id.id));
     return stateFromStores2.filter((promotion) => {
       promotion = promotion.promotion;
       const hasItem = set.has(promotion.id);

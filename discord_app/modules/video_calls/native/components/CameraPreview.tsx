@@ -2,7 +2,7 @@
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
@@ -145,7 +145,7 @@ function CameraPreview(arg0) {
     const obj8 = { text: null, onClick: null };
     const intl = tmp(1112).intl;
     obj8.text = intl.string(tmp(1112).t["1fRDnT"]);
-    obj8.onClick = tmp(10669).openIgnoreThermalStateAlert;
+    obj8.onClick = tmp(9903).openIgnoreThermalStateAlert;
     const items7 = [obj8];
     items8 = items7;
   } else {
@@ -158,7 +158,7 @@ function CameraPreview(arg0) {
     const obj9 = { gesture: tmp34, children: null };
     const obj10 = { style: closure_5.absoluteFill };
     obj9.children = closure_21(closure_6, obj10);
-    tmp37 = closure_21(tmp(5173).GestureDetector, obj9);
+    tmp37 = closure_21(tmp(5177).GestureDetector, obj9);
   }
   const items9 = [tmp37];
   const obj11 = { style: closure_5.absoluteFill, pointerEvents: "box-none", children: null };
@@ -209,9 +209,9 @@ function CameraPreview(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_9 = fn(10382).useBestActiveChatInputContainerHeight;
-const useChannelCallStore = fn(10636).useChannelCallStore;
-const ChannelCallConstants = fn(10637);
+let closure_9 = fn(8949).useBestActiveChatInputContainerHeight;
+const useChannelCallStore = fn(9867).useChannelCallStore;
+const ChannelCallConstants = fn(9868);
 ({
   VoiceChatDrawerState: closure_14,
   VOICE_CALL_OVERLAY_HORIZONTAL_MARGIN: closure_15,
@@ -219,7 +219,7 @@ const ChannelCallConstants = fn(10637);
   VoiceCallOverlayType: closure_17,
 } = ChannelCallConstants);
 const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
-const CallConstants = fn(5563);
+const CallConstants = fn(5567);
 ({ ParticipantTypes: closure_19, isStreamParticipant: closure_20 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
@@ -246,7 +246,7 @@ export default function CameraPreviewContainer(channel) {
   }
   closure_3 = undefined;
   let id;
-  const tmp3 = flag(10639)(channel);
+  const tmp3 = flag(9870)(channel);
   dependencyMap = tmp3;
   items = [ChannelRTCStore, AuthenticationStore, ApplicationStreamingStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -312,11 +312,11 @@ export default function CameraPreviewContainer(channel) {
     tmp12 = stateFromStores1;
   }
   const obj3 = channel(504);
-  const isStreamFocused = channel(10836).useIsStreamFocused(channel.id);
-  const tmp4Result = channel(10836);
-  const isViewingActivity = channel(10654).useIsViewingActivity({ channelId: channel.id });
+  const isStreamFocused = channel(10112).useIsStreamFocused(channel.id);
+  const tmp4Result = channel(10112);
+  const isViewingActivity = channel(9888).useIsViewingActivity({ channelId: channel.id });
   const obj4 = { channelId: channel.id };
-  const tmp4Result7 = channel(10654);
+  const tmp4Result7 = channel(9888);
   const items2 = [ChannelRTCStore, AuthenticationStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
     id = AuthenticationStore.getId();
@@ -369,7 +369,7 @@ export default function CameraPreviewContainer(channel) {
   const items3 = [AuthenticationStore, ChannelRTCStore];
   id = channel.id;
   const stateFromStores3 = channel(504).useStateFromStores(items3, () => {
-    const tmp2 = dependencyMap(user);
+    const tmp2 = set(user);
     let type;
     if (user != null) {
       type = user.type;
@@ -430,7 +430,7 @@ export default function CameraPreviewContainer(channel) {
   const stateFromStores5 = channel(504).useStateFromStores(items5, () =>
     ChannelRTCStore.getSelectedParticipant(channel.id),
   );
-  const tmp19 = flag(10651)(channel.id);
+  const tmp19 = flag(9885)(channel.id);
   let tmp20 = null;
   if (null != tmp19) {
     tmp20 = null;
@@ -473,7 +473,7 @@ export default function CameraPreviewContainer(channel) {
   if (flag2) {
     flag2 = flag;
   }
-  flag(10837)(channel);
+  flag(10113)(channel);
   if (tmp9) {
     if (!stateFromStores6) {
       let tmp25 = null;

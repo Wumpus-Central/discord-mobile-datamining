@@ -6,13 +6,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const GameOrganizationInviteConstants = fn(11896);
+const GameOrganizationInviteConstants = fn(11770);
 ({ GameOrganizationCharacterMode: metroImportDefault, GameOrganizationInviteAcceptStatus: closure_8 } =
   GameOrganizationInviteConstants);
-const onPress = fn(12244).closeGameOrganizationJoinModal;
+const onPress = fn(12184).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   text: { textAlign: "center" },
   buttonGroup: { paddingVertical: 0 },
@@ -227,14 +227,14 @@ export function AcceptStep(code) {
     if (!tmp8) {
       const obj12 = { variant: "heading-lg/semibold", children: null };
       const intl2 = tmp5(tmp3[16]).intl;
-      obj12.children = intl2.string(tmp2(tmp3[22]).yFqGy8);
+      obj12.children = intl2.string(tmp2(tmp3[24]).Tt5YbA);
       tmp18Result = closure_10(tmp5(tmp3[21]).Text, obj12);
     }
     const obj13 = { children: null };
     const obj14 = { children: null };
     const items5 = [tmp18Result];
     const obj15 = { displayNoun };
-    items5[1] = closure_10(tmp2(tmp3[24]), obj15);
+    items5[1] = closure_10(tmp2(tmp3[25]), obj15);
     obj11.children = items5;
     items4[1] = closure_12(tmp5(tmp3[19]).Stack, obj11);
     obj6.children = items4;
@@ -259,16 +259,16 @@ export function AcceptStep(code) {
       }
       return applyArgumentsResult;
     };
-    const items7 = [closure_10(tmp5(tmp3[27]).Button, obj18)];
+    const items7 = [closure_10(tmp5(tmp3[28]).Button, obj18)];
     const obj19 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
     const intl4 = tmp5(tmp3[16]).intl;
     obj19.text = intl4.string(tmp5(tmp3[16]).t["ETE/oC"]);
     obj19.onPress = onPress;
     obj19.disabled = disabled;
-    items7[1] = closure_10(tmp5(tmp3[27]).Button, obj19);
+    items7[1] = closure_10(tmp5(tmp3[28]).Button, obj19);
     obj17.children = items7;
-    obj16.children = closure_12(tmp5(tmp3[26]).ButtonGroup, obj17);
-    items6[1] = closure_10(tmp5(tmp3[25]).ModalFooter, obj16);
+    obj16.children = closure_12(tmp5(tmp3[27]).ButtonGroup, obj17);
+    items6[1] = closure_10(tmp5(tmp3[26]).ModalFooter, obj16);
     obj13.children = items6;
     return closure_12(tmp5(tmp3[17]).ModalScreen, obj13);
   }

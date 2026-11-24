@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import TrashIcon from "../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_4 = fn(8069).TrackUserProfileEditActions;
+let closure_4 = fn(6011).TrackUserProfileEditActions;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetRemoveGameButton.tsx");

@@ -2,12 +2,12 @@
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import BillingPlatformUtils from "../../../device/BillingPlatformUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import openProductDetailsActionSheet from "../openProductDetailsActionSheet.tsx";
 import ACOMExperiments from "../../../billing/native/ACOMExperiments.tsx";
-import useProductPurchaseState from "../../hooks/useProductPurchaseState.tsx";
 import NativeCheckoutStoreProviderDefault from "../../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
-import NativePaymentContext from "../../../payments/native/NativePaymentContext.tsx";
+import useProductPurchaseState from "../../hooks/useProductPurchaseState.tsx";
+import openProductDetailsActionSheet from "../openProductDetailsActionSheet.tsx";
 import useCollectiblesExternalGatewayFacetDefault from "../hooks/useCollectiblesExternalGatewayFacet.android.tsx";
+import NativePaymentContext from "../../../payments/native/NativePaymentContext.tsx";
 import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

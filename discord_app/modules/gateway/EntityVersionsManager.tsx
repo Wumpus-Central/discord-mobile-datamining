@@ -25,7 +25,7 @@ function handleDeletedEntityIds(guild_id) {
     if (null != guild_id.channels) {
       const guild_id2 = tmp.guild_id;
       const _Set2 = Set;
-      const set = new Set(tmp.channels);
+      set = new Set(tmp.channels);
       let set3 = guild_id2;
       let set1 = set;
       const keys = SnowflakeUtilsDefault.keys(ChannelStore.getMutableBasicGuildChannelsForGuild(guild_id2));

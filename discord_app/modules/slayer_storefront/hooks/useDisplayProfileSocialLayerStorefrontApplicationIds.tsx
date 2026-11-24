@@ -62,7 +62,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
         return [];
       } else {
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         let widgets1;
         if (application != null) {
           widgets1 = application.widgets;

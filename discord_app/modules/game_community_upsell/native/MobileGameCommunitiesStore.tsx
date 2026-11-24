@@ -35,7 +35,7 @@ prototype["initialize"] = function initialize(guilds) {
     });
     obj.lastFetchedAt = guilds.lastFetchedAt;
     const _Set = Set;
-    const set = new Set(guilds.lastFetchedGameIds);
+    set = new Set(guilds.lastFetchedGameIds);
     obj.lastFetchedGameIds = set;
     const _Set2 = Set;
     const set1 = new Set(guilds.dismissedGuildIds);
@@ -112,7 +112,7 @@ prototype["DEV_clearState"] = function DEV_clearState() {
     dismissedGuildIds: null,
     guildGameIds: null,
   };
-  const set = new Set();
+  set = new Set();
   obj.dismissedGuildIds = new Set();
   obj.guildGameIds = {};
   this.emitChange();
@@ -156,7 +156,7 @@ const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefa
       dismissedGuildIds: null,
       guildGameIds: null,
     };
-    const set = new Set();
+    set = new Set();
     obj.dismissedGuildIds = new Set();
     obj.guildGameIds = {};
   },

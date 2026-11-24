@@ -117,7 +117,7 @@ export default {
     ThemeActionCreators.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
-    const set = new Set();
+    set = new Set();
     const listener = closure_4.addEventListener("announcementFinished", (event) => {
       if (!event.success) {
         if (!set.has(event.announcement)) {

@@ -351,7 +351,7 @@ export default {
             c3 = 0;
             body = closure_128_1.body;
             const _Set = Set;
-            const set = new Set(body.map((id) => id.id));
+            set = new Set(body.map((id) => id.id));
             closure_128_3 = set;
             closure_128_4 = closure_128_0.filter((item) => !set.has(item));
             const obj10 = {

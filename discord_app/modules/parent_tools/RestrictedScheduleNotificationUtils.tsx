@@ -210,7 +210,7 @@ export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult)
     }
     return obj10;
   }
-  let set = new Set(items1);
+  set = new Set(items1);
 }
 export function getRestrictedScheduleNotificationTitle(kind) {
   const intl = util.intl;

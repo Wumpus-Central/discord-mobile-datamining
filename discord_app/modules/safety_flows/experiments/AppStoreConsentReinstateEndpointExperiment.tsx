@@ -12,6 +12,10 @@ const result = size.fileFinishedImporting(
   "modules/safety_flows/experiments/AppStoreConsentReinstateEndpointExperiment.tsx",
 );
 
-export function getIsAppStoreConsentReinstateEndpointEnabled(parentalConsentManager) {
-  return config.getConfig({ location: parentalConsentManager }).enabled;
+export function getIsAppStoreConsentReinstateEndpointEnabled(appStoreAgeSignalReport, arg1) {
+  let autoTrackExposure = arg1;
+  if (arg1 === undefined) {
+    autoTrackExposure = true;
+  }
+  return config.getConfig({ location: appStoreAgeSignalReport }, { autoTrackExposure }).enabled;
 }

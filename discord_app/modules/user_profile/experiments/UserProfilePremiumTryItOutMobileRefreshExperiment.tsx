@@ -9,7 +9,7 @@ const obj = {
   variations: null,
 };
 const obj2 = { 1: null, 2: { enabled: true, shuffleButtonLocation: "header" } };
-obj2[2] = { enabled: true, shuffleButtonLocation: "inline" };
+obj2[2] = { enabled: true, shuffleButtonLocation: "inline", showNitroBasicPurchaseWarning: true };
 obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting(
@@ -17,5 +17,9 @@ const result = size.fileFinishedImporting(
 );
 
 export function useTryItOutMobileRefreshConfig(DisplayNameStylesFlywheelMobileActionSheet) {
-  return closure_0.useConfig({ location: DisplayNameStylesFlywheelMobileActionSheet });
+  let autoTrackExposure = hasItem;
+  if (hasItem === undefined) {
+    autoTrackExposure = true;
+  }
+  return closure_0.useConfig({ location: DisplayNameStylesFlywheelMobileActionSheet }, { autoTrackExposure });
 }

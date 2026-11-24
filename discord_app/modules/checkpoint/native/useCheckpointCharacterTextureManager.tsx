@@ -1,5 +1,5 @@
 // discord_app/modules/checkpoint/native/useCheckpointCharacterTextureManager.tsx
-import DataBindByName from "../../../../_runtime/04983_DataBindByName.js";
+import DataBindByName from "../../../../_runtime/04987_DataBindByName.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

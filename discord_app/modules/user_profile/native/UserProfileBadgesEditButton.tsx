@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileBadgesEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import BadgeCatalogIconDefault from "../../badges/native/BadgeCatalogIcon.tsx";
+import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import openCustomizeBadgesSheet from "../../badges/native/openCustomizeBadgesSheet.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,10 +12,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   badge: { width: 32, height: 32 },

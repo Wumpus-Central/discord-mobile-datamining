@@ -22,7 +22,7 @@ class SearchQueryTagManager {
 }
 const prototype = SearchQueryTagManager.prototype;
 prototype["markChanged"] = function markChanged() {
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   const tags = this.tags;
   const item = tags.forEach((text) => {
@@ -86,7 +86,7 @@ prototype["getChannelIds"] = function getChannelIds() {
 };
 prototype["getUserIds"] = function getUserIds(arg0) {
   closure_0 = arg0;
-  const set = new Set();
+  set = new Set();
   const tags = this.tags;
   const item = tags.forEach((type) => {
     if (type.type === SearchQueryTagTypes.COMPLETE) {

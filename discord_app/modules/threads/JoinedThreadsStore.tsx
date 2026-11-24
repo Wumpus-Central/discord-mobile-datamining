@@ -26,7 +26,7 @@ function storeThread(channel) {
     navigation.clearTimer(id);
     if (true === obj[id].muted) {
       const _Set2 = Set;
-      const set = new Set(set2);
+      set = new Set(set2);
       set2 = set;
       set.add(id);
       if (
@@ -68,7 +68,7 @@ function handleThreadListSyncOrSearchFinish(guildId) {
       closure_5.clearTimer(id);
       if (true === obj[id].muted) {
         const _Set2 = Set;
-        const set = new Set(set2);
+        set = new Set(set2);
         set2 = set;
         set.add(id);
         if (
@@ -269,7 +269,7 @@ obj = {
       navigation.clearTimer(id);
       if (true === obj[id].muted) {
         const _Set2 = Set;
-        const set = new Set(set2);
+        set = new Set(set2);
         set2 = set;
         set.add(id);
         if (
@@ -301,7 +301,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "Array" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;
@@ -356,7 +356,7 @@ obj = {
           let muteConfig = obj[id];
           closure_5.clearTimer(id);
           if (true === muteConfig.muted) {
-            const set = new tmp15.Set(set2);
+            set = new tmp15.Set(set2);
             set2 = set;
             set.add(id);
             muteConfig = muteConfig.muteConfig;

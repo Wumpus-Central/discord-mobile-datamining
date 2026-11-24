@@ -2,24 +2,24 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05472_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef8868 from "../../../../../_runtime/metro/08868__.js";
-import _modDef9127 from "../../../../../_runtime/metro/09127__.js";
-import _modDef9128 from "../../../../../_runtime/metro/09128__.js";
-import _modDef9218 from "../../../../../_runtime/metro/09218__.js";
-import _modDef14186 from "../../../../../_runtime/metro/14186__.js";
-import _modDef14187 from "../../../../../_runtime/metro/14187__.js";
+import _modDef9006 from "../../../../../_runtime/metro/09006__.js";
+import _modDef9007 from "../../../../../_runtime/metro/09007__.js";
+import _modDef9098 from "../../../../../_runtime/metro/09098__.js";
+import _modDef9103 from "../../../../../_runtime/metro/09103__.js";
+import _modDef13874 from "../../../../../_runtime/metro/13874__.js";
+import _modDef13875 from "../../../../../_runtime/metro/13875__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const PremiumTypes = fn(1388).PremiumTypes;
-const getPremiumGradientColor = fn(8951).getPremiumGradientColor;
+const getPremiumGradientColor = fn(8985).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   header: { marginTop: 24, padding: 16 },
   textLogoTier0: { width: 158, height: 32 },
@@ -63,11 +63,11 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef14186;
+    let tmp5Result = _modDef13874;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef14187;
+    tmp5Result = _modDef13875;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef8868;
+    tmp5Result = _modDef9103;
   }
   obj2.source = tmp5Result;
   obj.children = timestampProducer(tmp9, obj2);
@@ -83,11 +83,11 @@ export default function _default(premiumType) {
   const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result4 = _modDef9127;
+    let tmp5Result4 = _modDef9006;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result4 = _modDef9128;
+    tmp5Result4 = _modDef9007;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result4 = _modDef9218;
+    tmp5Result4 = _modDef9098;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result4;

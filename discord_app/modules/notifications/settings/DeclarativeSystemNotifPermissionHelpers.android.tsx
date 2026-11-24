@@ -8,7 +8,7 @@ import NotifSettings from "../../../../discord_common/js/shared/shared-constants
 import size from "../../../../_runtime/metro/00002__.js";
 
 function refreshSystemNotifPermissions() {
-  const tmp = settings(15663);
+  const tmp = settings(15684);
   let androidNotifChannelStates;
   if (tmp != null) {
     const getAndroidNotifChannelStates = tmp.getAndroidNotifChannelStates;
@@ -19,7 +19,7 @@ function refreshSystemNotifPermissions() {
   if (null != androidNotifChannelStates) {
     items = [];
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     let iter = androidNotifChannelStates[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -34,9 +34,9 @@ function refreshSystemNotifPermissions() {
       }
       continue;
     }
-    settings = androidNotifChannelStates(15660).getAssignedNotifSettingsAndMappings().settings;
+    settings = androidNotifChannelStates(15681).getAssignedNotifSettingsAndMappings().settings;
     const _Map = Map;
-    const obj2 = androidNotifChannelStates(15660);
+    const obj2 = androidNotifChannelStates(15681);
     const _Object = Object;
     const entries = Object.entries(obj);
     let found = entries.filter((item) => {

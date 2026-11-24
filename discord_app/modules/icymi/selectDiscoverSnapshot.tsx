@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/icymi/selectDiscoverSnapshot.
 
 export function selectDiscoverSnapshot(items, fn) {
   items = [];
-  const set = new Set();
+  set = new Set();
   const entries = items.entries();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

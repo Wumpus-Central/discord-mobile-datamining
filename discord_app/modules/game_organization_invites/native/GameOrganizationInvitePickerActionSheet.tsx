@@ -4,7 +4,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef7530 from "../../../../_runtime/metro/07530__.js";
+import _modDef7397 from "../../../../_runtime/metro/07397__.js";
 import GameOrganizationInvitePickerRowDefault from "GameOrganizationInvitePickerRow.tsx";
 import useGameOrganizationInvitePickerDefault from "../useGameOrganizationInvitePicker.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ function GameSection(arg0) {
     const obj3 = { uri: application.iconUrl };
     let tmp5Result = obj3;
   } else {
-    tmp5Result = _modDef7530;
+    tmp5Result = _modDef7397;
   }
   items = [
     closure_5(FastImageDefault, { source: tmp5Result, style: tmp.gameIcon }),
@@ -44,10 +44,10 @@ function GameSection(arg0) {
   return closure_6(Stack_Stack.Stack, obj);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const days = fn(11896).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
+const days = fn(11770).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   header: { paddingTop: nativeDefault.space.PX_8 },
   centeredText: { textAlign: "center" },
@@ -85,7 +85,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
       obj2.style = items;
       const intl2 = userId(1112).intl;
       obj2.children = intl2.string(userId(1112).t.fEptJP);
-      let tmp13 = closure_5(userId(5504).Text, obj2);
+      let tmp13 = closure_5(userId(5508).Text, obj2);
     } else {
       const obj3 = { style: tmp.status };
       tmp13 = closure_5(ActivityIndicator, obj3);
@@ -98,7 +98,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
       obj4.style = items1;
       const intl = userId(1112).intl;
       obj4.children = intl.string(tmp2(2639).v7A3HG);
-      let tmp8 = closure_5(userId(5504).Text, obj4);
+      let tmp8 = closure_5(userId(5508).Text, obj4);
       let tmp6 = closure_5;
     } else {
       tmp6 = closure_5;
@@ -107,7 +107,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
         style: tmp.sections,
         children: groups.map((group) => hasOwnProperty(GameSection, { group, userId, onInvite }, group.application.id)),
       };
-      tmp8 = closure_5(userId(5929).Stack, obj);
+      tmp8 = closure_5(userId(5989).Stack, obj);
     }
     const obj5 = { scrollable: true, dismissAccessibilityLabel: null, header: null, children: null };
     const intl3 = userId(1112).intl;
@@ -121,19 +121,19 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
     };
     const intl4 = userId(1112).intl;
     obj7.children = intl4.string(tmp2(2639)["v5/qxX"]);
-    const items2 = [tmp6(userId(5504).Heading, obj7)];
+    const items2 = [tmp6(userId(5508).Heading, obj7)];
     const obj8 = { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
     const intl5 = userId(1112).intl;
-    let str = tmp2(4969).getName(tmp5);
+    let str = tmp2(4973).getName(tmp5);
     if (str == null) {
       str = "";
     }
     const obj9 = { username: str, days };
     obj8.children = intl5.formatToPlainString(tmp2(2639).txHfjn, obj9);
-    items2[1] = tmp6(userId(5504).Text, obj8);
+    items2[1] = tmp6(userId(5508).Text, obj8);
     obj6.children = items2;
-    obj5.header = closure_6(userId(5929).Stack, obj6);
+    obj5.header = closure_6(userId(5989).Stack, obj6);
     obj5.children = tmp8;
-    return tmp6(userId(7553).ActionSheet, obj5);
+    return tmp6(userId(7420).ActionSheet, obj5);
   }
 }

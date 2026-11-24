@@ -6,11 +6,11 @@ import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
-import AgeGateUtils from "../modules/age_gate/AgeGateUtils.tsx";
 import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
+import AgeGateUtils from "../modules/age_gate/AgeGateUtils.tsx";
 import SpoilerChannelUtils from "../modules/spoiler_channels/SpoilerChannelUtils.tsx";
-import LurkerActionCreators from "../modules/lurker_mode/LurkerActionCreators.tsx";
 import GuildTemplateTooltipActionCreatorsDefault from "../modules/guild_templates/GuildTemplateTooltipActionCreators.tsx";
+import LurkerActionCreators from "../modules/lurker_mode/LurkerActionCreators.tsx";
 import getPreviousSafeRouteForNsfwReturnDefault from "../modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -220,7 +220,7 @@ let closure_26 = async function _joinGuild(arg0) {
                 obj2.title = intl.string(closure_1_0(1112).t.ZZlox4);
                 const intl2 = closure_1_0(1112).intl;
                 obj2.body = intl2.string(closure_1_0(1112).t.ZUEGFn);
-                closure_1_1(5860).show(obj2);
+                closure_1_1(5920).show(obj2);
               })();
               const obj17 = { cause: closure_131_12 };
               const joinGuildRefusedError3 = new closure_132_0(closure_132_3[16]).JoinGuildRefusedError(obj17);
@@ -794,7 +794,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4850).NONE;
+              obj5.permissions = primary_color(4854).NONE;
               c6 = 1;
               const HTTP = color(1284).HTTP;
               const request = {
@@ -811,7 +811,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4734)(closure_131_2);
+            const tmp30 = new obj6(4738)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -831,7 +831,7 @@ export default {
               obj6(572).dispatch(obj10);
               const obj = obj6(572);
             }
-            const result = obj6(7730).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7731).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -875,7 +875,7 @@ export default {
       request.rejectWithError = tmp5(1284).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7730).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7731).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -911,7 +911,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7730).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7731).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -929,7 +929,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7730).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7731).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },

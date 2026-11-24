@@ -1,9 +1,9 @@
 // discord_app/modules/group_dm/native/GroupDMNitroCapBanner.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import usePremiumPrimaryGradientColorsDefault from "../../premium/native/usePremiumPrimaryGradientColors.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const locations = [0.0065, 0.5046, 0.9196];
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   wrapper: {
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,

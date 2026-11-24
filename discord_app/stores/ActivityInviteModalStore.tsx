@@ -149,9 +149,9 @@ function handleLocalActivityUpdate() {
 const Constants = fn(1071);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
 let items = [
-  fn(10063).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(10063).AutocompleterResultTypes.GROUP_DM,
-  fn(10063).AutocompleterResultTypes.USER,
+  fn(8806).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(8806).AutocompleterResultTypes.GROUP_DM,
+  fn(8806).AutocompleterResultTypes.USER,
 ];
 let c14 = null;
 let c15 = null;
@@ -314,8 +314,8 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           activity,
           location: "Channel Text Area - Invite to Join Modal",
         };
-        let obj = userId(11941);
-        userId(11941)
+        let obj = userId(11819);
+        userId(11819)
           .sendActivityInvite(obj2)
           .then(() => {
             items = [];
@@ -333,10 +333,10 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
             closure_18 = withSameGameSection(mapped);
             activityInviteModalStoreClass.emitChange();
           });
-        const sendActivityInviteResult = userId(11941).sendActivityInvite(obj2);
+        const sendActivityInviteResult = userId(11819).sendActivityInvite(obj2);
       } else if (null != userId) {
         const obj4 = { userId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        const result = userId(11941).sendActivityInviteUser(obj4);
+        const result = userId(11819).sendActivityInviteUser(obj4);
         result.then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = userId;
@@ -353,7 +353,7 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const obj3 = userId(11941);
+        const obj3 = userId(11819);
       }
       return false;
     }

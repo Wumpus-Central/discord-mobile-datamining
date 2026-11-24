@@ -9,9 +9,9 @@ import InviteStore from "../../../../stores/InviteStore.tsx";
 
 require = fn;
 const ThemeTypes = fn(1071).ThemeTypes;
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { flex: { flex: 1 }, paddingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,7 +67,7 @@ export default function AcceptInviteContainer(code) {
           }
           const roles = invite.roles;
           flag = roles.some((id) => !set.has(id.id));
-          const set = new Set(roles2);
+          set = new Set(roles2);
         }
       }
     }

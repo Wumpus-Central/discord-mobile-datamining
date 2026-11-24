@@ -193,7 +193,7 @@ const result = size.fileFinishedImporting("modules/waterwheels/interest/native/I
 
 export const INTEREST_PICKER_CATALOG_VERSION = "2026-11-06";
 export function getInterestPickerCatalog(arg0) {
-  const set = new Set(dependencyMap[arg0]);
+  set = new Set(dependencyMap[arg0]);
   const substr = Array.from(new Set(dependencyMap[arg0])).slice(0, 60);
   let tmp2 = null;
   if (0 !== substr.length) {

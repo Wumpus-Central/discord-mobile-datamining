@@ -78,11 +78,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6822).OnboardingConnectionType;
+let closure_7 = fn(4847).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7330).OnboardingConnectionType;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4831).GuildMemberFlags;
+const GuildMemberFlags = fn(4835).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");
@@ -174,7 +174,7 @@ export function showRulesInOnboarding(stateFromStores2, stateFromStores) {
 export function getChannelCoverageForOnboarding(c0, arr, defaultChannelIds) {
   arr = GuildChannelStore.getChannels(c0)[closure_7];
   const mapped = arr.map((channel) => channel.channel);
-  const set = new Set();
+  set = new Set();
   const item = arr.forEach((options) => {
     options = options.options;
     let item = options.forEach((channelIds) => {

@@ -1,8 +1,8 @@
 // discord_app/utils/native/MessagesUtils.tsx
 import CodedLink from "../../modules/coded_links/CodedLink.tsx";
+import ExperimentEmbedUtils from "../../modules/experiments/ExperimentEmbedUtils.tsx";
 import MediaPostEmbedUtils from "../../modules/media_channel/MediaPostEmbedUtils.tsx";
 import GuildTemplatesConstants from "../../modules/guild_templates/GuildTemplatesConstants.tsx";
-import ExperimentEmbedUtils from "../../modules/experiments/ExperimentEmbedUtils.tsx";
 import GameOrganizationInviteConstants from "../../modules/game_organization_invites/GameOrganizationInviteConstants.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -37,6 +37,7 @@ export default {
           props.gameOrganizationInvites !== merged.gameOrganizationInvites ||
           props.joinedGameOrganizationGuildIds !== merged.joinedGameOrganizationGuildIds ||
           props.pendingGameOrganizationJoinFlowCodes !== merged.pendingGameOrganizationJoinFlowCodes ||
+          props.userProfileEmbedUsers !== merged.userProfileEmbedUsers ||
           props.buildOverrides !== merged.buildOverrides ||
           props.activityParticipants !== merged.activityParticipants ||
           props.quests !== merged.quests ||
@@ -50,108 +51,108 @@ export default {
             if (CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (CodedLink.CodedLinkType.EXPERIMENT === type) {
                 const experimentFromEmbedURL = ExperimentEmbedUtils.getExperimentFromEmbedURL(code);
-                let tmp61 = null != experimentFromEmbedURL;
-                if (tmp61) {
+                let tmp64 = null != experimentFromEmbedURL;
+                if (tmp64) {
                   const legacyExperiments = props.experimentEmbeds.legacyExperiments;
-                  let tmp63;
+                  let tmp66;
                   if (legacyExperiments != null) {
-                    tmp63 = legacyExperiments[experimentFromEmbedURL];
+                    tmp66 = legacyExperiments[experimentFromEmbedURL];
                   }
                   const legacyExperiments2 = merged.experimentEmbeds.legacyExperiments;
-                  let tmp65;
+                  let tmp68;
                   if (legacyExperiments2 != null) {
-                    tmp65 = legacyExperiments2[experimentFromEmbedURL];
+                    tmp68 = legacyExperiments2[experimentFromEmbedURL];
                   }
-                  let tmp66 = tmp63 !== tmp65;
-                  if (!tmp66) {
+                  let tmp69 = tmp66 !== tmp68;
+                  if (!tmp69) {
                     const legacyOverridesInfo = props.experimentEmbeds.legacyOverridesInfo;
-                    let tmp67;
+                    let tmp70;
                     if (legacyOverridesInfo != null) {
-                      tmp67 = legacyOverridesInfo[experimentFromEmbedURL];
+                      tmp70 = legacyOverridesInfo[experimentFromEmbedURL];
                     }
                     const legacyOverridesInfo2 = merged.experimentEmbeds.legacyOverridesInfo;
-                    let tmp68;
+                    let tmp71;
                     if (legacyOverridesInfo2 != null) {
-                      tmp68 = legacyOverridesInfo2[experimentFromEmbedURL];
+                      tmp71 = legacyOverridesInfo2[experimentFromEmbedURL];
                     }
-                    tmp66 = tmp67 !== tmp68;
+                    tmp69 = tmp70 !== tmp71;
                   }
-                  if (!tmp66) {
+                  if (!tmp69) {
                     const apexExperiments = props.experimentEmbeds.apexExperiments;
-                    let tmp69;
+                    let tmp72;
                     if (apexExperiments != null) {
-                      tmp69 = apexExperiments[experimentFromEmbedURL];
+                      tmp72 = apexExperiments[experimentFromEmbedURL];
                     }
                     const apexExperiments2 = merged.experimentEmbeds.apexExperiments;
-                    let tmp70;
+                    let tmp73;
                     if (apexExperiments2 != null) {
-                      tmp70 = apexExperiments2[experimentFromEmbedURL];
+                      tmp73 = apexExperiments2[experimentFromEmbedURL];
                     }
-                    tmp66 = tmp69 !== tmp70;
+                    tmp69 = tmp72 !== tmp73;
                   }
-                  if (!tmp66) {
+                  if (!tmp69) {
                     const apexOverridesInfo = props.experimentEmbeds.apexOverridesInfo;
-                    let tmp71;
+                    let tmp74;
                     if (apexOverridesInfo != null) {
-                      tmp71 = apexOverridesInfo[experimentFromEmbedURL];
+                      tmp74 = apexOverridesInfo[experimentFromEmbedURL];
                     }
                     const apexOverridesInfo2 = merged.experimentEmbeds.apexOverridesInfo;
-                    let tmp72;
+                    let tmp75;
                     if (apexOverridesInfo2 != null) {
-                      tmp72 = apexOverridesInfo2[experimentFromEmbedURL];
+                      tmp75 = apexOverridesInfo2[experimentFromEmbedURL];
                     }
-                    tmp66 = tmp71 !== tmp72;
+                    tmp69 = tmp74 !== tmp75;
                   }
-                  tmp61 = tmp66;
+                  tmp64 = tmp69;
                 }
-                return tmp61;
+                return tmp64;
               } else if (CodedLink.CodedLinkType.INVITE === type) {
                 const invites3 = props.invites;
                 value = invites3.get(code);
                 const invites4 = merged.invites;
-                const value7 = invites4.get(code);
+                const value8 = invites4.get(code);
                 state = undefined;
                 if (value != null) {
                   state = value.state;
                 }
                 let state1;
-                if (value7 != null) {
-                  state1 = value7.state;
+                if (value8 != null) {
+                  state1 = value8.state;
                 }
-                let tmp56 = state !== state1;
-                if (tmp56) {
+                let tmp59 = state !== state1;
+                if (tmp59) {
                   state2 = undefined;
-                  if (value7 != null) {
-                    state2 = value7.state;
+                  if (value8 != null) {
+                    state2 = value8.state;
                   }
-                  tmp56 = state2 !== constants.RESOLVING;
+                  tmp59 = state2 !== constants.RESOLVING;
                 }
-                if (!tmp56) {
-                  tmp56 = props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds;
+                if (!tmp59) {
+                  tmp59 = props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds;
                 }
-                return tmp56;
+                return tmp59;
               } else if (CodedLink.CodedLinkType.TEMPLATE === type) {
                 const guildTemplates = props.guildTemplates;
-                const value8 = guildTemplates.get(code);
+                const value9 = guildTemplates.get(code);
                 const guildTemplates2 = merged.guildTemplates;
-                const value9 = guildTemplates2.get(code);
+                const value10 = guildTemplates2.get(code);
                 let state3;
-                if (value8 != null) {
-                  state3 = value8.state;
+                if (value9 != null) {
+                  state3 = value9.state;
                 }
                 let state4;
-                if (value9 != null) {
-                  state4 = value9.state;
+                if (value10 != null) {
+                  state4 = value10.state;
                 }
-                let tmp46 = state3 !== state4;
-                if (tmp46) {
+                let tmp49 = state3 !== state4;
+                if (tmp49) {
                   let state5;
-                  if (value9 != null) {
-                    state5 = value9.state;
+                  if (value10 != null) {
+                    state5 = value10.state;
                   }
-                  tmp46 = state5 !== GuildTemplateStates.RESOLVING;
+                  tmp49 = state5 !== GuildTemplateStates.RESOLVING;
                 }
-                return tmp46;
+                return tmp49;
               } else {
                 if (CodedLink.CodedLinkType.EVENT !== type) {
                   if (CodedLink.CodedLinkType.CHANNEL_LINK !== type) {
@@ -159,17 +160,17 @@ export default {
                       const invalidAppDirectoryEmbedApplicationIds = props.invalidAppDirectoryEmbedApplicationIds;
                       const invalidAppDirectoryEmbedApplicationIds2 = merged.invalidAppDirectoryEmbedApplicationIds;
                       const hasItem = invalidAppDirectoryEmbedApplicationIds.has(code);
-                      let tmp38 =
+                      let tmp41 =
                         props.appDirectoryEmbedApplications[code] !== merged.appDirectoryEmbedApplications[code];
-                      if (!tmp38) {
-                        tmp38 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
+                      if (!tmp41) {
+                        tmp41 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
                       }
-                      if (!tmp38) {
-                        tmp38 =
+                      if (!tmp41) {
+                        tmp41 =
                           props.appDirectoryEmbedApplicationFetchStates[code] !==
                           merged.appDirectoryEmbedApplicationFetchStates[code];
                       }
-                      return tmp38;
+                      return tmp41;
                     } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
                       return (
                         props.activityParticipants !== merged.activityParticipants ||
@@ -178,33 +179,33 @@ export default {
                       );
                     } else if (CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
                       const invites = props.invites;
-                      const value10 = invites.get(code);
+                      const value11 = invites.get(code);
                       const invites2 = merged.invites;
-                      const value11 = invites2.get(code);
-                      let tmp25 =
+                      const value12 = invites2.get(code);
+                      let tmp28 =
                         props.activityParticipants !== merged.activityParticipants ||
                         props.invalidApplicationIds !== merged.invalidApplicationIds ||
                         props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds;
-                      if (!tmp25) {
+                      if (!tmp28) {
                         let state6;
-                        if (value10 != null) {
-                          state6 = value10.state;
+                        if (value11 != null) {
+                          state6 = value11.state;
                         }
                         let state7;
-                        if (value11 != null) {
-                          state7 = value11.state;
+                        if (value12 != null) {
+                          state7 = value12.state;
                         }
-                        let tmp29 = state6 !== state7;
-                        if (tmp29) {
+                        let tmp32 = state6 !== state7;
+                        if (tmp32) {
                           let state8;
-                          if (value11 != null) {
-                            state8 = value11.state;
+                          if (value12 != null) {
+                            state8 = value12.state;
                           }
-                          tmp29 = state8 !== constants.RESOLVING;
+                          tmp32 = state8 !== constants.RESOLVING;
                         }
-                        tmp25 = tmp29;
+                        tmp28 = tmp32;
                       }
-                      return tmp25;
+                      return tmp28;
                     } else {
                       if (CodedLink.CodedLinkType.GUILD_PRODUCT !== type) {
                         if (CodedLink.CodedLinkType.SERVER_SHOP !== type) {
@@ -213,7 +214,7 @@ export default {
                               if (CodedLink.CodedLinkType.QUESTS_EMBED === type) {
                                 return (
                                   props.quests !== merged.quests ||
-                                  props.isFetchingCurrentQuests !== tmp19.isFetchingCurrentQuests
+                                  props.isFetchingCurrentQuests !== tmp22.isFetchingCurrentQuests
                                 );
                               } else {
                                 if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
@@ -221,60 +222,63 @@ export default {
                                     if (CodedLink.CodedLinkType.APP_OAUTH2_LINK === type) {
                                       return (
                                         props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds ||
-                                        props.invalidApplicationIds !== tmp17.invalidApplicationIds
+                                        props.invalidApplicationIds !== tmp20.invalidApplicationIds
                                       );
                                     } else {
                                       if (CodedLink.CodedLinkType.COLLECTIBLES_SHOP !== type) {
                                         if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                                           if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                            if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                              if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
-                                                if (CodedLink.CodedLinkType.CONJURE_PROJECT === type) {
-                                                  return (
-                                                    props.conjureProjectLinkEmbeds[code] !==
-                                                    merged.conjureProjectLinkEmbeds[code]
-                                                  );
-                                                } else if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
-                                                  const gameOrganizationInvites = merged.gameOrganizationInvites;
-                                                  const value12 = gameOrganizationInvites.get(code);
-                                                  const gameOrganizationInvites2 = props.gameOrganizationInvites;
-                                                  let tmp7 = gameOrganizationInvites2.get(code) !== value12;
-                                                  if (!tmp7) {
-                                                    const pendingGameOrganizationJoinFlowCodes =
-                                                      props.pendingGameOrganizationJoinFlowCodes;
-                                                    const pendingGameOrganizationJoinFlowCodes2 =
-                                                      merged.pendingGameOrganizationJoinFlowCodes;
-                                                    const hasItem1 = pendingGameOrganizationJoinFlowCodes.has(code);
-                                                    let tmp9 =
-                                                      hasItem1 !== pendingGameOrganizationJoinFlowCodes2.has(code);
-                                                    if (!tmp9) {
-                                                      let state9;
-                                                      if (value12 != null) {
-                                                        state9 = value12.state;
-                                                      }
-                                                      let tmp13 = state9 === constants.RESOLVED;
-                                                      if (tmp13) {
-                                                        const joinedGameOrganizationGuildIds =
-                                                          props.joinedGameOrganizationGuildIds;
-                                                        const joinedGameOrganizationGuildIds2 =
-                                                          merged.joinedGameOrganizationGuildIds;
-                                                        const hasItem2 = joinedGameOrganizationGuildIds.includes(
-                                                          value12.guildId,
-                                                        );
-                                                        tmp13 =
-                                                          hasItem2 !==
-                                                          joinedGameOrganizationGuildIds2.includes(value12.guildId);
-                                                      }
-                                                      tmp9 = tmp13;
+                                            if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
+                                              if (CodedLink.CodedLinkType.USER_PROFILE === type) {
+                                                const userProfileEmbedUsers = props.userProfileEmbedUsers;
+                                                const userProfileEmbedUsers2 = merged.userProfileEmbedUsers;
+                                                const value13 = userProfileEmbedUsers.get(code);
+                                                return value13 !== userProfileEmbedUsers2.get(code);
+                                              } else if (CodedLink.CodedLinkType.CONJURE_PROJECT === type) {
+                                                return (
+                                                  props.conjureProjectLinkEmbeds[code] !==
+                                                  merged.conjureProjectLinkEmbeds[code]
+                                                );
+                                              } else if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                                                const gameOrganizationInvites = merged.gameOrganizationInvites;
+                                                const value14 = gameOrganizationInvites.get(code);
+                                                const gameOrganizationInvites2 = props.gameOrganizationInvites;
+                                                let tmp7 = gameOrganizationInvites2.get(code) !== value14;
+                                                if (!tmp7) {
+                                                  const pendingGameOrganizationJoinFlowCodes =
+                                                    props.pendingGameOrganizationJoinFlowCodes;
+                                                  const pendingGameOrganizationJoinFlowCodes2 =
+                                                    merged.pendingGameOrganizationJoinFlowCodes;
+                                                  const hasItem1 = pendingGameOrganizationJoinFlowCodes.has(code);
+                                                  let tmp9 =
+                                                    hasItem1 !== pendingGameOrganizationJoinFlowCodes2.has(code);
+                                                  if (!tmp9) {
+                                                    let state9;
+                                                    if (value14 != null) {
+                                                      state9 = value14.state;
                                                     }
-                                                    tmp7 = tmp9;
+                                                    let tmp13 = state9 === constants.RESOLVED;
+                                                    if (tmp13) {
+                                                      const joinedGameOrganizationGuildIds =
+                                                        props.joinedGameOrganizationGuildIds;
+                                                      const joinedGameOrganizationGuildIds2 =
+                                                        merged.joinedGameOrganizationGuildIds;
+                                                      const hasItem2 = joinedGameOrganizationGuildIds.includes(
+                                                        value14.guildId,
+                                                      );
+                                                      tmp13 =
+                                                        hasItem2 !==
+                                                        joinedGameOrganizationGuildIds2.includes(value14.guildId);
+                                                    }
+                                                    tmp9 = tmp13;
                                                   }
-                                                  return tmp7;
-                                                } else {
-                                                  const _Error = Error;
-                                                  const _HermesInternal = HermesInternal;
-                                                  throw Error("Unknown coded link type: " + type);
+                                                  tmp7 = tmp9;
                                                 }
+                                                return tmp7;
+                                              } else {
+                                                const _Error = Error;
+                                                const _HermesInternal = HermesInternal;
+                                                throw Error("Unknown coded link type: " + type);
                                               }
                                             }
                                           }
@@ -300,11 +304,11 @@ export default {
           }
           let state10;
           if (props.buildOverrides[code] != null) {
-            state10 = tmp73.state;
+            state10 = tmp76.state;
           }
           let state11;
           if (merged.buildOverrides[code] != null) {
-            state11 = tmp74.state;
+            state11 = tmp77.state;
           }
           return state10 !== state11;
         });
@@ -318,6 +322,7 @@ export default {
           props.gameOrganizationInvites !== merged.gameOrganizationInvites ||
           props.joinedGameOrganizationGuildIds !== merged.joinedGameOrganizationGuildIds ||
           props.pendingGameOrganizationJoinFlowCodes !== merged.pendingGameOrganizationJoinFlowCodes ||
+          props.userProfileEmbedUsers !== merged.userProfileEmbedUsers ||
           props.buildOverrides !== merged.buildOverrides ||
           props.activityParticipants !== merged.activityParticipants ||
           props.quests !== merged.quests ||
@@ -331,108 +336,108 @@ export default {
             if (CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (CodedLink.CodedLinkType.EXPERIMENT === type) {
                 const experimentFromEmbedURL = ExperimentEmbedUtils.getExperimentFromEmbedURL(code);
-                let tmp61 = null != experimentFromEmbedURL;
-                if (tmp61) {
+                let tmp64 = null != experimentFromEmbedURL;
+                if (tmp64) {
                   const legacyExperiments = props.experimentEmbeds.legacyExperiments;
-                  let tmp63;
+                  let tmp66;
                   if (legacyExperiments != null) {
-                    tmp63 = legacyExperiments[experimentFromEmbedURL];
+                    tmp66 = legacyExperiments[experimentFromEmbedURL];
                   }
                   const legacyExperiments2 = merged.experimentEmbeds.legacyExperiments;
-                  let tmp65;
+                  let tmp68;
                   if (legacyExperiments2 != null) {
-                    tmp65 = legacyExperiments2[experimentFromEmbedURL];
+                    tmp68 = legacyExperiments2[experimentFromEmbedURL];
                   }
-                  let tmp66 = tmp63 !== tmp65;
-                  if (!tmp66) {
+                  let tmp69 = tmp66 !== tmp68;
+                  if (!tmp69) {
                     const legacyOverridesInfo = props.experimentEmbeds.legacyOverridesInfo;
-                    let tmp67;
+                    let tmp70;
                     if (legacyOverridesInfo != null) {
-                      tmp67 = legacyOverridesInfo[experimentFromEmbedURL];
+                      tmp70 = legacyOverridesInfo[experimentFromEmbedURL];
                     }
                     const legacyOverridesInfo2 = merged.experimentEmbeds.legacyOverridesInfo;
-                    let tmp68;
+                    let tmp71;
                     if (legacyOverridesInfo2 != null) {
-                      tmp68 = legacyOverridesInfo2[experimentFromEmbedURL];
+                      tmp71 = legacyOverridesInfo2[experimentFromEmbedURL];
                     }
-                    tmp66 = tmp67 !== tmp68;
+                    tmp69 = tmp70 !== tmp71;
                   }
-                  if (!tmp66) {
+                  if (!tmp69) {
                     const apexExperiments = props.experimentEmbeds.apexExperiments;
-                    let tmp69;
+                    let tmp72;
                     if (apexExperiments != null) {
-                      tmp69 = apexExperiments[experimentFromEmbedURL];
+                      tmp72 = apexExperiments[experimentFromEmbedURL];
                     }
                     const apexExperiments2 = merged.experimentEmbeds.apexExperiments;
-                    let tmp70;
+                    let tmp73;
                     if (apexExperiments2 != null) {
-                      tmp70 = apexExperiments2[experimentFromEmbedURL];
+                      tmp73 = apexExperiments2[experimentFromEmbedURL];
                     }
-                    tmp66 = tmp69 !== tmp70;
+                    tmp69 = tmp72 !== tmp73;
                   }
-                  if (!tmp66) {
+                  if (!tmp69) {
                     const apexOverridesInfo = props.experimentEmbeds.apexOverridesInfo;
-                    let tmp71;
+                    let tmp74;
                     if (apexOverridesInfo != null) {
-                      tmp71 = apexOverridesInfo[experimentFromEmbedURL];
+                      tmp74 = apexOverridesInfo[experimentFromEmbedURL];
                     }
                     const apexOverridesInfo2 = merged.experimentEmbeds.apexOverridesInfo;
-                    let tmp72;
+                    let tmp75;
                     if (apexOverridesInfo2 != null) {
-                      tmp72 = apexOverridesInfo2[experimentFromEmbedURL];
+                      tmp75 = apexOverridesInfo2[experimentFromEmbedURL];
                     }
-                    tmp66 = tmp71 !== tmp72;
+                    tmp69 = tmp74 !== tmp75;
                   }
-                  tmp61 = tmp66;
+                  tmp64 = tmp69;
                 }
-                return tmp61;
+                return tmp64;
               } else if (CodedLink.CodedLinkType.INVITE === type) {
                 const invites3 = props.invites;
                 value = invites3.get(code);
                 const invites4 = merged.invites;
-                const value7 = invites4.get(code);
+                const value8 = invites4.get(code);
                 state = undefined;
                 if (value != null) {
                   state = value.state;
                 }
                 let state1;
-                if (value7 != null) {
-                  state1 = value7.state;
+                if (value8 != null) {
+                  state1 = value8.state;
                 }
-                let tmp56 = state !== state1;
-                if (tmp56) {
+                let tmp59 = state !== state1;
+                if (tmp59) {
                   state2 = undefined;
-                  if (value7 != null) {
-                    state2 = value7.state;
+                  if (value8 != null) {
+                    state2 = value8.state;
                   }
-                  tmp56 = state2 !== constants.RESOLVING;
+                  tmp59 = state2 !== constants.RESOLVING;
                 }
-                if (!tmp56) {
-                  tmp56 = props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds;
+                if (!tmp59) {
+                  tmp59 = props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds;
                 }
-                return tmp56;
+                return tmp59;
               } else if (CodedLink.CodedLinkType.TEMPLATE === type) {
                 const guildTemplates = props.guildTemplates;
-                const value8 = guildTemplates.get(code);
+                const value9 = guildTemplates.get(code);
                 const guildTemplates2 = merged.guildTemplates;
-                const value9 = guildTemplates2.get(code);
+                const value10 = guildTemplates2.get(code);
                 let state3;
-                if (value8 != null) {
-                  state3 = value8.state;
+                if (value9 != null) {
+                  state3 = value9.state;
                 }
                 let state4;
-                if (value9 != null) {
-                  state4 = value9.state;
+                if (value10 != null) {
+                  state4 = value10.state;
                 }
-                let tmp46 = state3 !== state4;
-                if (tmp46) {
+                let tmp49 = state3 !== state4;
+                if (tmp49) {
                   let state5;
-                  if (value9 != null) {
-                    state5 = value9.state;
+                  if (value10 != null) {
+                    state5 = value10.state;
                   }
-                  tmp46 = state5 !== GuildTemplateStates.RESOLVING;
+                  tmp49 = state5 !== GuildTemplateStates.RESOLVING;
                 }
-                return tmp46;
+                return tmp49;
               } else {
                 if (CodedLink.CodedLinkType.EVENT !== type) {
                   if (CodedLink.CodedLinkType.CHANNEL_LINK !== type) {
@@ -440,17 +445,17 @@ export default {
                       const invalidAppDirectoryEmbedApplicationIds = props.invalidAppDirectoryEmbedApplicationIds;
                       const invalidAppDirectoryEmbedApplicationIds2 = merged.invalidAppDirectoryEmbedApplicationIds;
                       const hasItem = invalidAppDirectoryEmbedApplicationIds.has(code);
-                      let tmp38 =
+                      let tmp41 =
                         props.appDirectoryEmbedApplications[code] !== merged.appDirectoryEmbedApplications[code];
-                      if (!tmp38) {
-                        tmp38 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
+                      if (!tmp41) {
+                        tmp41 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
                       }
-                      if (!tmp38) {
-                        tmp38 =
+                      if (!tmp41) {
+                        tmp41 =
                           props.appDirectoryEmbedApplicationFetchStates[code] !==
                           merged.appDirectoryEmbedApplicationFetchStates[code];
                       }
-                      return tmp38;
+                      return tmp41;
                     } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
                       return (
                         props.activityParticipants !== merged.activityParticipants ||
@@ -459,33 +464,33 @@ export default {
                       );
                     } else if (CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
                       const invites = props.invites;
-                      const value10 = invites.get(code);
+                      const value11 = invites.get(code);
                       const invites2 = merged.invites;
-                      const value11 = invites2.get(code);
-                      let tmp25 =
+                      const value12 = invites2.get(code);
+                      let tmp28 =
                         props.activityParticipants !== merged.activityParticipants ||
                         props.invalidApplicationIds !== merged.invalidApplicationIds ||
                         props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds;
-                      if (!tmp25) {
+                      if (!tmp28) {
                         let state6;
-                        if (value10 != null) {
-                          state6 = value10.state;
+                        if (value11 != null) {
+                          state6 = value11.state;
                         }
                         let state7;
-                        if (value11 != null) {
-                          state7 = value11.state;
+                        if (value12 != null) {
+                          state7 = value12.state;
                         }
-                        let tmp29 = state6 !== state7;
-                        if (tmp29) {
+                        let tmp32 = state6 !== state7;
+                        if (tmp32) {
                           let state8;
-                          if (value11 != null) {
-                            state8 = value11.state;
+                          if (value12 != null) {
+                            state8 = value12.state;
                           }
-                          tmp29 = state8 !== constants.RESOLVING;
+                          tmp32 = state8 !== constants.RESOLVING;
                         }
-                        tmp25 = tmp29;
+                        tmp28 = tmp32;
                       }
-                      return tmp25;
+                      return tmp28;
                     } else {
                       if (CodedLink.CodedLinkType.GUILD_PRODUCT !== type) {
                         if (CodedLink.CodedLinkType.SERVER_SHOP !== type) {
@@ -494,7 +499,7 @@ export default {
                               if (CodedLink.CodedLinkType.QUESTS_EMBED === type) {
                                 return (
                                   props.quests !== merged.quests ||
-                                  props.isFetchingCurrentQuests !== tmp19.isFetchingCurrentQuests
+                                  props.isFetchingCurrentQuests !== tmp22.isFetchingCurrentQuests
                                 );
                               } else {
                                 if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
@@ -502,60 +507,63 @@ export default {
                                     if (CodedLink.CodedLinkType.APP_OAUTH2_LINK === type) {
                                       return (
                                         props.applicationAssetFetchingIds !== merged.applicationAssetFetchingIds ||
-                                        props.invalidApplicationIds !== tmp17.invalidApplicationIds
+                                        props.invalidApplicationIds !== tmp20.invalidApplicationIds
                                       );
                                     } else {
                                       if (CodedLink.CodedLinkType.COLLECTIBLES_SHOP !== type) {
                                         if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                                           if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                            if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                              if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
-                                                if (CodedLink.CodedLinkType.CONJURE_PROJECT === type) {
-                                                  return (
-                                                    props.conjureProjectLinkEmbeds[code] !==
-                                                    merged.conjureProjectLinkEmbeds[code]
-                                                  );
-                                                } else if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
-                                                  const gameOrganizationInvites = merged.gameOrganizationInvites;
-                                                  const value12 = gameOrganizationInvites.get(code);
-                                                  const gameOrganizationInvites2 = props.gameOrganizationInvites;
-                                                  let tmp7 = gameOrganizationInvites2.get(code) !== value12;
-                                                  if (!tmp7) {
-                                                    const pendingGameOrganizationJoinFlowCodes =
-                                                      props.pendingGameOrganizationJoinFlowCodes;
-                                                    const pendingGameOrganizationJoinFlowCodes2 =
-                                                      merged.pendingGameOrganizationJoinFlowCodes;
-                                                    const hasItem1 = pendingGameOrganizationJoinFlowCodes.has(code);
-                                                    let tmp9 =
-                                                      hasItem1 !== pendingGameOrganizationJoinFlowCodes2.has(code);
-                                                    if (!tmp9) {
-                                                      let state9;
-                                                      if (value12 != null) {
-                                                        state9 = value12.state;
-                                                      }
-                                                      let tmp13 = state9 === constants.RESOLVED;
-                                                      if (tmp13) {
-                                                        const joinedGameOrganizationGuildIds =
-                                                          props.joinedGameOrganizationGuildIds;
-                                                        const joinedGameOrganizationGuildIds2 =
-                                                          merged.joinedGameOrganizationGuildIds;
-                                                        const hasItem2 = joinedGameOrganizationGuildIds.includes(
-                                                          value12.guildId,
-                                                        );
-                                                        tmp13 =
-                                                          hasItem2 !==
-                                                          joinedGameOrganizationGuildIds2.includes(value12.guildId);
-                                                      }
-                                                      tmp9 = tmp13;
+                                            if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
+                                              if (CodedLink.CodedLinkType.USER_PROFILE === type) {
+                                                const userProfileEmbedUsers = props.userProfileEmbedUsers;
+                                                const userProfileEmbedUsers2 = merged.userProfileEmbedUsers;
+                                                const value13 = userProfileEmbedUsers.get(code);
+                                                return value13 !== userProfileEmbedUsers2.get(code);
+                                              } else if (CodedLink.CodedLinkType.CONJURE_PROJECT === type) {
+                                                return (
+                                                  props.conjureProjectLinkEmbeds[code] !==
+                                                  merged.conjureProjectLinkEmbeds[code]
+                                                );
+                                              } else if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                                                const gameOrganizationInvites = merged.gameOrganizationInvites;
+                                                const value14 = gameOrganizationInvites.get(code);
+                                                const gameOrganizationInvites2 = props.gameOrganizationInvites;
+                                                let tmp7 = gameOrganizationInvites2.get(code) !== value14;
+                                                if (!tmp7) {
+                                                  const pendingGameOrganizationJoinFlowCodes =
+                                                    props.pendingGameOrganizationJoinFlowCodes;
+                                                  const pendingGameOrganizationJoinFlowCodes2 =
+                                                    merged.pendingGameOrganizationJoinFlowCodes;
+                                                  const hasItem1 = pendingGameOrganizationJoinFlowCodes.has(code);
+                                                  let tmp9 =
+                                                    hasItem1 !== pendingGameOrganizationJoinFlowCodes2.has(code);
+                                                  if (!tmp9) {
+                                                    let state9;
+                                                    if (value14 != null) {
+                                                      state9 = value14.state;
                                                     }
-                                                    tmp7 = tmp9;
+                                                    let tmp13 = state9 === constants.RESOLVED;
+                                                    if (tmp13) {
+                                                      const joinedGameOrganizationGuildIds =
+                                                        props.joinedGameOrganizationGuildIds;
+                                                      const joinedGameOrganizationGuildIds2 =
+                                                        merged.joinedGameOrganizationGuildIds;
+                                                      const hasItem2 = joinedGameOrganizationGuildIds.includes(
+                                                        value14.guildId,
+                                                      );
+                                                      tmp13 =
+                                                        hasItem2 !==
+                                                        joinedGameOrganizationGuildIds2.includes(value14.guildId);
+                                                    }
+                                                    tmp9 = tmp13;
                                                   }
-                                                  return tmp7;
-                                                } else {
-                                                  const _Error = Error;
-                                                  const _HermesInternal = HermesInternal;
-                                                  throw Error("Unknown coded link type: " + type);
+                                                  tmp7 = tmp9;
                                                 }
+                                                return tmp7;
+                                              } else {
+                                                const _Error = Error;
+                                                const _HermesInternal = HermesInternal;
+                                                throw Error("Unknown coded link type: " + type);
                                               }
                                             }
                                           }
@@ -581,11 +589,11 @@ export default {
           }
           let state10;
           if (props.buildOverrides[code] != null) {
-            state10 = tmp73.state;
+            state10 = tmp76.state;
           }
           let state11;
           if (merged.buildOverrides[code] != null) {
-            state11 = tmp74.state;
+            state11 = tmp77.state;
           }
           return state10 !== state11;
         });

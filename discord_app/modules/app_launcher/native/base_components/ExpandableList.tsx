@@ -4,8 +4,8 @@ import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_9 = createStyles.createStyles({
   animatedListContainer: { overflow: "hidden" },
   expandCTALabelContainer: { alignItems: "center" },

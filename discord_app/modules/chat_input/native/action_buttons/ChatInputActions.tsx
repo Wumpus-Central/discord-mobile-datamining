@@ -7,9 +7,9 @@ import ImageIcon from "../../../../design/components/Icon/native/redesign/genera
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import ImagePickerUtils from "../../../image/native/ImagePickerUtils.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import CalendarPlusIcon from "../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import CalendarPlusIcon from "../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import ThreadPlusIcon from "../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ChatInputActionButtonDefault from "ChatInputActionButton.tsx";
 import MediaKeyboardButtonIcon from "../../../media_keyboard/native/MediaKeyboardButtonIcon.tsx";
@@ -371,12 +371,12 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12825);
+const ChatInputConstants = fn(12744);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: closure_6 } = ChatInputConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG },
@@ -384,8 +384,8 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5517).SMALL_BUTTON_HEIGHT + fn(5517).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5517).SMALL_BUTTON_HEIGHT + fn(5517).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5521).SMALL_BUTTON_HEIGHT + fn(5521).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5521).SMALL_BUTTON_HEIGHT + fn(5521).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function ChatInputActionsTsx1(){return{opacity:1};})" };

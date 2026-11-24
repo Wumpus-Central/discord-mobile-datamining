@@ -9,9 +9,9 @@ import Sheet_BottomSheet from "../../../../design/components/Sheet/native/Bottom
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import GuildSettingsServerTagUtils from "../../../guild_settings/GuildSettingsServerTagUtils.tsx";
-import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
+import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import GuildSettingsServerTagUtils from "../../../guild_settings/GuildSettingsServerTagUtils.tsx";
 import useGuildPowerupRollbackEnabledDefault from "../hooks/useGuildPowerupRollbackEnabled.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";

@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, SectionList: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -87,7 +87,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   );
   [first, closure_8] = noop.useState(initialTierEmojiIds);
   const items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
-  let set = noop.useMemo(() => {
+  set = noop.useMemo(() => {
     if (null == subscriptionRoleId) {
       const _Set2 = Set;
       set = new Set();

@@ -4,10 +4,10 @@ import ChannelTypes from "../../shared/shared-constants/ChannelTypes.tsx";
 import EmbeddedActivityOrientationLockState2 from "../../shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import EntitlementTypes from "../../shared/shared-constants/EntitlementTypes.tsx";
 import EmbeddedSurfaceType from "../../shared/shared-constants/EmbeddedSurfaceType.tsx";
-import ActivityTypes from "../../shared/shared-constants/ActivityTypes.tsx";
-import OAuth2Scopes from "../../shared/shared-constants/OAuth2Scopes.tsx";
-import ActivityGamePlatforms from "../../shared/shared-constants/ActivityGamePlatforms.tsx";
 import InviteTargetTypes from "../../shared/shared-constants/InviteTargetTypes.tsx";
+import OAuth2Scopes from "../../shared/shared-constants/OAuth2Scopes.tsx";
+import ActivityTypes from "../../shared/shared-constants/ActivityTypes.tsx";
+import ActivityGamePlatforms from "../../shared/shared-constants/ActivityGamePlatforms.tsx";
 import ActivityPlatform from "../../shared/constants/ActivityPlatform.tsx";
 import StatusDisplayTypes from "../../shared/shared-constants/StatusDisplayTypes.tsx";
 import ThermalStates from "../../shared/constants/ThermalStates.tsx";
@@ -2677,7 +2677,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channelId", response: "" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "id", response: "" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

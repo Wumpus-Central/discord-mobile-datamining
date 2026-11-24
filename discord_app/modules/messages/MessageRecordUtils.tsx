@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef2168 from "../../../_runtime/metro/02168__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
+import GiftCodeUtils from "../../utils/GiftCodeUtils.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
 import isMessageMentioned from "isMessageMentioned.tsx";
-import GiftCodeUtils from "../../utils/GiftCodeUtils.tsx";
 import transformMessagPollDefault from "../polls/transformMessagPoll.tsx";
 import EmbedUtils from "../../utils/EmbedUtils.tsx";
 import StickersUtils from "../stickers/StickersUtils.tsx";
@@ -343,7 +343,7 @@ function isCurrentReactionType(count_details) {
   }
   return tmp;
 }
-let MessageRecord = fn(4856);
+let MessageRecord = fn(4860);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1071);

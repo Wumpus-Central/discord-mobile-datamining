@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/conjureGamePickerOptions.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import _mod6680 from "../../../../_runtime/metro/06680__.js";
+import _mod9072 from "../../../../_runtime/metro/09072__.js";
 import GamesActionCreatorsDefault from "../../../actions/GamesActionCreators.native.tsx";
 import useConjureSettingPickerOptions from "useConjureSettingPickerOptions.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -36,7 +36,7 @@ export function useConjureGameOptions() {
   });
   const items2 = [stateFromStores];
   memo = noop.useMemo(() => {
-    const set = new Set();
+    set = new Set();
     items = [];
     const iter = stateFromStores[Symbol.iterator]();
     const nextResult = iter.next();
@@ -76,8 +76,8 @@ export function conjureGamePickerOptions(allOptions, query, runningIds, first1) 
     items = [];
     HermesBuiltin.arraySpread(allOptions, 0);
     const obj2 = { keys };
-    found = _mod6680.matchSorter(items, query, obj2).slice(0, 50);
-    const matchSorterResult = _mod6680.matchSorter(items, query, obj2);
+    found = _mod9072.matchSorter(items, query, obj2).slice(0, 50);
+    const matchSorterResult = _mod9072.matchSorter(items, query, obj2);
   }
   new Set(found.map((value) => value.value));
   const found1 = first1.filter((item) => !set1.has(item));

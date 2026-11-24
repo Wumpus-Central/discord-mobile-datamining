@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingSearchManager.tsx
-import fuzzysearchDefault from "../../../_runtime/06677_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06862_fuzzysearch.js";
 import StringMatchUtils from "../search/StringMatchUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -18,7 +18,7 @@ class SettingSearchManager {
       [tmp, arr] = item;
       items = [];
       const items1 = [];
-      const set = new Set();
+      set = new Set();
       item = arr.forEach((toLocaleLowerCase) => {
         items.push(toLocaleLowerCase.toLocaleLowerCase());
         if (toLocaleLowerCase.includes(" ")) {

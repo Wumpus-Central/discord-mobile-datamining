@@ -7,10 +7,10 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Server from "../flow/Server.tsx";
 import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
+import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
 import InteractionTypes from "../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import ChannelMessagesDefault from "../lib/ChannelMessages.tsx";
-import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.tsx";
 import handleExplicitMediaScanTimeoutForMessage from "../modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx";
 import MessageQueue from "../lib/MessageQueue.tsx";
 import canEditMessageDefault from "../modules/messages/canEditMessage.tsx";
@@ -953,7 +953,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6389).getOrCreate(ids.channelId);
+    const orCreate = mutation(6656).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1002,14 +1002,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6389).commit(tmp3);
+        tmp(6656).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6389);
+        const tmpResult2 = tmp(6656);
       }
     }
-    let obj = mutation(6389);
+    let obj = mutation(6656);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

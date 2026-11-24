@@ -159,7 +159,7 @@ prototype["startItemsDwell"] = function startItemsDwell(arr) {
   self._dwelledItemsChangedCount = self._dwelledItemsChangedCount + 1;
   items = [];
   const _activeItems = self._activeItems;
-  const set = new Set(_activeItems.map((itemId) => itemId.itemId));
+  set = new Set(_activeItems.map((itemId) => itemId.itemId));
   const iter = arr[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

@@ -556,7 +556,7 @@ const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const collapsedCategories = createStyles.createStyles(() => {
   const obj = {
     media: { borderRadius: nativeDefault.radii.xs },

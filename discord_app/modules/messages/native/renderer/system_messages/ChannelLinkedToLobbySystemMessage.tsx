@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
-import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import ApplicationStore from "../../../../applications/ApplicationStore.tsx";

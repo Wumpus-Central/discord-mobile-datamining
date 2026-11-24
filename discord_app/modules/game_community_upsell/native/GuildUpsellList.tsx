@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const viewabilityConfig = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   hidden: { opacity: 0 },
   gridItem: { flex: 1 },
@@ -200,7 +200,7 @@ export function GuildUpsellList(numColumns) {
   }, items4);
   const tmp11 = suggestedGuilds(onDismiss[12]);
   closure_129_2 = first.useRef(new Set());
-  const set = new Set();
+  set = new Set();
   const focusEffect = numColumns(onDismiss[10]).useFocusEffect(
     first.useCallback(() => {
       const current = onDismiss.current;

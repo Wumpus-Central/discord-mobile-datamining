@@ -1,7 +1,7 @@
 // discord_app/design/void/Avatar/native/Avatar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import avatar_decorations_AvatarDecorationUtils from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
 import ClipView from "../../../components/Icon/native/ClipView.tsx";
+import avatar_decorations_AvatarDecorationUtils from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
 import CutoutableAvatarImage from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import Status_StatusUtils from "../../Status/native/StatusUtils.tsx";
 import getStatusContainerStyleDefault from "../../Status/native/getStatusContainerStyle.tsx";
@@ -50,7 +50,7 @@ const StatusConstants = fn(1187);
 ({ STATUS_PADDING: closure_6, StatusSizes: metroImportDefault } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = {
     status: { position: "absolute", right: -3, bottom: -3 },
@@ -381,5 +381,5 @@ export default noop.memo(function Avatar(isMobileOnline) {
     tmp10(cutout, obj14);
   }
 });
-export const AvatarSizes = fn(14487).AvatarSizes;
+export const AvatarSizes = fn(14756).AvatarSizes;
 export { getStatusSize };

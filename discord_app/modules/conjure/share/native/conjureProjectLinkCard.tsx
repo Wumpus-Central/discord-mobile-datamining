@@ -1,10 +1,10 @@
 // discord_app/modules/conjure/share/native/conjureProjectLinkCard.tsx
-import useAuthorWithProcessedColor from "../../../messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import createDisplayNameStylesMobile from "../../../display_name_styles/native/createDisplayNameStylesMobile.tsx";
 import ConjureMobileExperiment from "../../experiments/ConjureMobileExperiment.tsx";
 import conjureSharedProjectSurfaces from "../conjureSharedProjectSurfaces.tsx";
 import conjureSharedProjectCoverTargetDefault from "../conjureSharedProjectCoverTarget.tsx";
+import useAuthorWithProcessedColor from "../../../messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx";
+import createDisplayNameStylesMobile from "../../../display_name_styles/native/createDisplayNameStylesMobile.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -128,7 +128,7 @@ function readConjureProjectLinkCard(applicationId, ticket, memo2) {
   return null;
 }
 let closure_3 = ["application"];
-const canRemixProject = fn(6621).canRemixProject;
+const canRemixProject = fn(6808).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/conjureProjectLinkCard.tsx");
 

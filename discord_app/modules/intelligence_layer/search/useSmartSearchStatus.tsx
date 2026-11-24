@@ -1,14 +1,14 @@
-// discord_app/modules/intelligence_layer/search/native/useSmartSearchStatus.tsx
-import SmartSearchUtils from "../SmartSearchUtils.tsx";
-import SmartSearchResultsStoreDefault from "../SmartSearchResultsStore.tsx";
-import SmartSearchTypes from "../SmartSearchTypes.tsx";
+// discord_app/modules/intelligence_layer/search/useSmartSearchStatus.tsx
+import SmartSearchUtils from "SmartSearchUtils.tsx";
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore.tsx";
+import SmartSearchTypes from "SmartSearchTypes.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
 SmartSearchResultsStoreDefault;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchStatus.tsx");
+const result = size.fileFinishedImporting("modules/intelligence_layer/search/useSmartSearchStatus.tsx");
 
 export function useSmartSearchStatus(memo) {
   _require = memo;

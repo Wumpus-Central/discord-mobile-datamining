@@ -3,10 +3,12 @@ import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces.tsx";
 import conjureOverlayPreview from "../preview/conjureOverlayPreview.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let c2 = 1920;
 const combined = "" + Number((2.357563850687623).toFixed(3)) + "%";
 const combined1 = "" + Number((1.25).toFixed(3)) + "%";
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanOverlayDesign.tsx");
 
+export const CONJURE_PLAN_OVERLAY_SCENE_WIDTH = 1920;
 export const CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO = 1.8860510805500983;
 export const CONJURE_PLAN_OVERLAY_WIDGET_TOP = combined;
 export const CONJURE_PLAN_OVERLAY_WIDGET_END = combined1;
@@ -101,7 +103,7 @@ export function conjurePlanDesignPreviews(proposal) {
 export function conjurePlanOverlayWidgetBox(size) {
   const bound = Math.min(1, 1872 / size.width, 970 / size.height);
   size = { width: null, height: null };
-  const result = ((size.width * bound) / 1920) * 100;
+  const result = ((size.width * bound) / c2) * 100;
   size.width = "" + Number(result.toFixed(3)) + "%";
   const result1 = ((size.height * bound) / 1018) * 100;
   size.height = "" + Number(result1.toFixed(3)) + "%";

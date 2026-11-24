@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8615 from "../../../../../_runtime/metro/08615__.js";
+import _modDef8884 from "../../../../../_runtime/metro/08884__.js";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
-import _modDef13418 from "../../../../../_runtime/metro/13418__.js";
+import _modDef13341 from "../../../../../_runtime/metro/13341__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton.tsx";
@@ -68,13 +68,13 @@ function DockMuteButton(channelId) {
     onPress: null,
   };
   if (dominantMuteState === channelId(onPress[11]).DominantMuteState.SERVER_MUTE) {
-    const obj5 = { size: "sm", color: token };
-    let tmp7Result = closure_9(tmp(tmp2[17]).MicrophoneDenyIcon, obj5);
+    let MicrophoneIcon = tmp(tmp2[17]).MicrophoneDenyIcon;
+  } else if (mute) {
+    MicrophoneIcon = tmp(tmp2[18]).MicrophoneSlashIcon;
   } else {
-    const obj6 = { size: "sm", color: token, muted: mute };
-    tmp7Result = closure_9(tmp(tmp2[18]).VoicePanelRiveMicButton, obj6);
+    MicrophoneIcon = tmp(tmp2[19]).MicrophoneIcon;
   }
-  obj4.icon = tmp7Result;
+  obj4.icon = closure_9(MicrophoneIcon, { size: "sm", color: token });
   obj4.onPress = callback;
   return closure_9(channelId(onPress[15]).IconButton, obj4);
 }
@@ -89,9 +89,9 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1112).intl;
   obj.accessibilityLabel = intl.string(channelId(1112).t["6vrfgt"]);
-  obj.icon = _modDef8615;
+  obj.icon = _modDef8884;
   obj.onPress = callback;
-  return closure_9(channelId(7591).IconButton, obj);
+  return closure_9(channelId(7811).IconButton, obj);
 }
 function DockSoundboardButton(arg0) {
   ({ onPress, disabled, disabledAccessibilityHint } = arg0);
@@ -106,7 +106,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13418;
+  obj.icon = _modDef13341;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -116,9 +116,9 @@ const View = fn(17).View;
 const InputModes = fn(1071).InputModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11768).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11658).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_11 = createStyles.createStyles(obj);

@@ -4,8 +4,8 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
-import SessionForegroundUtils from "SessionForegroundUtils.native.tsx";
 import SessionAdGenerator from "SessionAdGenerator.tsx";
+import SessionForegroundUtils from "SessionForegroundUtils.native.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 

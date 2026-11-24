@@ -3,11 +3,11 @@ import Constants from "../../../../Constants.tsx";
 import DurationsDefault from "../../../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
-import renderMessageMarkup from "../../renderMessageMarkup.tsx";
 import markup_MarkupParser from "../../../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import renderMessageMarkup from "../../renderMessageMarkup.tsx";
 import NativeMarkdownExperiment from "../../../markup_v2/NativeMarkdownExperiment.tsx";
-import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
+import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import priv from "../../../../../_runtime/01454_priv.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 

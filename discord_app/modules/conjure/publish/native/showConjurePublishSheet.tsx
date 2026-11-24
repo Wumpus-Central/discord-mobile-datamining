@@ -7,6 +7,6 @@ const ConjurePublishSheet = "ConjurePublishSheet";
 const result = size.fileFinishedImporting("modules/conjure/publish/native/showConjurePublishSheet.tsx");
 
 export default function showConjurePublishSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18257, dependencyMap.paths), ConjurePublishSheet, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18296, dependencyMap.paths), ConjurePublishSheet, arg0);
 }
 export const CONJURE_PUBLISH_SHEET_KEY = "ConjurePublishSheet";

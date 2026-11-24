@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -90,7 +90,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15189);
+const GuildReportRaidModalConstants = fn(15210);
 ({
   getReportRaidHelpArticleURL: metroImportDefault,
   getReportRaidTypeLabel: closure_8,
@@ -99,7 +99,7 @@ const GuildReportRaidModalConstants = fn(15189);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: {
     flex: 1,
@@ -167,9 +167,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
               dependencyMap = 3;
             } else {
               tmp21.current = true;
-              const result = tmp2(12368).trackReportRaidViewed(guildId, first);
-              const obj2 = tmp2(12368);
-              tmp2(12368).handleReportRaid(guildId);
+              const result = tmp2(12267).trackReportRaidViewed(guildId, first);
+              const obj2 = tmp2(12267);
+              tmp2(12267).handleReportRaid(guildId);
               const intl = tmp2(1112).intl;
               c1 = 1;
               dependencyMap = 1;

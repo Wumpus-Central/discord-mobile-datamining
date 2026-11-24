@@ -269,7 +269,7 @@ export default function CheckpointFadeLayer(visible) {
       currentWhen = children;
     }
     obj5.children = currentWhen;
-    obj3.children = stateFromStores(tmp11(12506).Provider, obj5);
+    obj3.children = stateFromStores(tmp11(12422).Provider, obj5);
     let tmp27Result = tmp27(tmp11(1653).View, obj3);
   } else {
     tmp27Result = null;

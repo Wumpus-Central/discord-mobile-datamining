@@ -4,7 +4,7 @@ import isConjureApplicationDefault from "../../conjure/shared/isConjureApplicati
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
 
 require = fn;
-const BuiltInSectionId = fn(5937).BuiltInSectionId;
+const BuiltInSectionId = fn(6947).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 

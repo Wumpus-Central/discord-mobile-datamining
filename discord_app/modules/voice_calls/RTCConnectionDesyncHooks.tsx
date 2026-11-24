@@ -33,7 +33,7 @@ export function useEnsureSyncedChannelVoiceStates(id, voiceStates) {
           if (0 !== stateFromStores.length) {
             items = [];
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             const iter = arg1[Symbol.iterator]();
             const nextResult = iter.next();
             while (iter !== undefined) {

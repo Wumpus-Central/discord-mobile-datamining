@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras.native.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -202,15 +202,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(6497).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(7702).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(6497);
+    const obj2 = flag2(7702);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(6497).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(6497);
+      flag2(7702).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(7702);
     }
   }
 }

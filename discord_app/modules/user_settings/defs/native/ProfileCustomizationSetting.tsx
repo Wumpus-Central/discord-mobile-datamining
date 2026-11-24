@@ -16,7 +16,7 @@ const route = SettingBuilders.createRoute({
   screen: {
     route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION,
     getComponent() {
-      return require("ProfileCustomizationSettingScreen").default;
+      return require("ProfileCustomizationSettingScreenExperimentWrapper").default;
     },
   },
 });

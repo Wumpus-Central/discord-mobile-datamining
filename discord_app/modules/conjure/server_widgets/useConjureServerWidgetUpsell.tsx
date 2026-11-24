@@ -74,7 +74,7 @@ export function useConjureServerWidgetUpsellDetails(userId, widget, guildId) {
   );
   const obj3 = require("initialize");
   const messageAuthorUser = require("conjureMessageAuthors").useMessageAuthorUser(stateFromStores1);
-  const tmp5 = applicationId(10330)(userId, applicationId);
+  const tmp5 = applicationId(14487)(userId, applicationId);
   dependencyMap = tmp5;
   [][0] = tmp5;
   let tmp7 = null;

@@ -7,7 +7,7 @@ import GameAutocompleteStore from "../../../games/autocomplete/GameAutocompleteS
 
 require = fn;
 let closure_6 = [];
-const DEFAULT = fn(9932).GameSearchFilterGroup.DEFAULT;
+const DEFAULT = fn(8815).GameSearchFilterGroup.DEFAULT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestGameSearch.tsx");
 

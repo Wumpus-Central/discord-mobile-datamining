@@ -4,8 +4,8 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
-import ClipsExperiment from "ClipsExperiment.tsx";
 import isClipsEnabled from "isClipsEnabled.tsx";
+import ClipsExperiment from "ClipsExperiment.tsx";
 import AutoclipsExperimentDefault from "AutoclipsExperiment.tsx";
 import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -146,8 +146,8 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(5673).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8441);
+const getSystemAnalyticsInfo = fn(5736).getSystemAnalyticsInfo;
+const ClipsConstants = fn(7990);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
   CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
@@ -157,8 +157,8 @@ const ClipsConstants = fn(8441);
 } = ClipsConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6397).StreamTypes;
-const Features = fn(5658).Features;
+const StreamTypes = fn(6688).StreamTypes;
+const Features = fn(5729).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -398,7 +398,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4738).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4742).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -478,7 +478,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4738).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4742).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };

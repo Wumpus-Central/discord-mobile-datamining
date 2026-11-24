@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import BookCheckIcon from "../../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
+import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = {
     headerBar: { height, flexDirection: "row", alignItems: "center" },

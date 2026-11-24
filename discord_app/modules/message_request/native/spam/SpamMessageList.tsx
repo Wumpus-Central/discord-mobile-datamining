@@ -1,9 +1,9 @@
 // discord_app/modules/message_request/native/spam/SpamMessageList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import MonitoringAgentDefault from "../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -200,7 +200,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/helpers/setupEmbeddedAppBotScope.tsx
-import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 const require = globalThis.__r;

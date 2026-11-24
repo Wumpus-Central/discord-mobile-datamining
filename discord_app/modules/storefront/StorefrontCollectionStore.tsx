@@ -262,7 +262,7 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
       pricingKey = "";
     }
     const fetchedAt = Date.now();
-    const set = new Set();
+    set = new Set();
     const item = collections.forEach((collection) => {
       set.add(collection.id);
       if (!dependencyMap) {

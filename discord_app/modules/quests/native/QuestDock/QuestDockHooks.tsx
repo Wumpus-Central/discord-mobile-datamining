@@ -10,10 +10,10 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
+import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
 import AssetUtils from "../../lib/AssetUtils.tsx";
-import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockGestureContext from "QuestDockGestureContext.tsx";
@@ -28,9 +28,9 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6558);
+const QuestConstants = fn(6745);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_6, QuestDockMode: metroImportDefault } = QuestConstants);
-const QuestDockConstants = fn(16475);
+const QuestDockConstants = fn(16508);
 ({
   QUEST_DOCK_CLOSED_HEIGHT: closure_8,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_9,
@@ -279,34 +279,50 @@ export function useQuestDockExternalOffset() {
     }
   }, items1);
 }
-export function useQuestDockDismissalReset() {
-  setRestingQuestDockMode = noop.useContext(
-    setRestingQuestDockMode(16479).QuestDockExternalCoordinationContext,
-  ).setRestingQuestDockMode;
+export function useQuestDockDismissalReset(autoCloseEnabled) {
+  autoCloseEnabled = autoCloseEnabled.autoCloseEnabled;
+  let setRestingQuestDockMode;
+  const context = noop.useContext(autoCloseEnabled(setRestingQuestDockMode[7]).QuestDockExternalCoordinationContext);
+  const restingQuestDockMode = context.restingQuestDockMode;
+  setRestingQuestDockMode = context.setRestingQuestDockMode;
   const activeQuestDockMode = noop.useContext(
-    setRestingQuestDockMode(16476).QuestDockGestureContext,
+    autoCloseEnabled(setRestingQuestDockMode[6]).QuestDockGestureContext,
   ).activeQuestDockMode;
-  items = [setRestingQuestDockMode, activeQuestDockMode];
+  items = [setRestingQuestDockMode, restingQuestDockMode, activeQuestDockMode, autoCloseEnabled];
   const effect = noop.useEffect(() => {
-    let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
-    if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16474).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16474);
+    let tmp = !interval;
+    if (!interval) {
+      tmp = restingQuestDockMode.get() === constants.CLOSED;
     }
-    if (!isSoftDismissedResult) {
+    let tmp4 = activeQuestDockMode.get() === constants.SOFT_DISMISSED;
+    if (tmp4) {
+      tmp4 = !autoCloseEnabled(setRestingQuestDockMode[14]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = autoCloseEnabled(setRestingQuestDockMode[14]);
+    }
+    if (!tmp) {
+      tmp = tmp4;
+    }
+    if (tmp) {
       setRestingQuestDockMode(constants.COLLAPSED);
     }
-    function maybeResetSoftDismissal() {
-      let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
-      if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16474).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16474);
+    function maybeReset() {
+      let tmp = !closure_0;
+      if (!closure_0) {
+        tmp = restingQuestDockMode.get() === constants.CLOSED;
       }
-      if (!isSoftDismissedResult) {
-        closure_0(constants.COLLAPSED);
+      let tmp4 = activeQuestDockMode.get() === constants.SOFT_DISMISSED;
+      if (tmp4) {
+        tmp4 = !autoCloseEnabled(setRestingQuestDockMode[14]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = autoCloseEnabled(setRestingQuestDockMode[14]);
+      }
+      if (!tmp) {
+        tmp = tmp4;
+      }
+      if (tmp) {
+        closure_1_2(constants.COLLAPSED);
       }
     }
-    setRestingQuestDockMode = setInterval(maybeResetSoftDismissal, 5 * activeQuestDockMode(1088).Millis.MINUTE);
+    interval = setInterval(maybeReset, 5 * restingQuestDockMode(setRestingQuestDockMode[15]).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
@@ -326,7 +342,7 @@ export function useActionSheetPressHandler(questCreative) {
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16483, dependencyMap.paths),
+      asyncRequireImpl(16517, dependencyMap.paths),
       "QuestDockContextMenuActionSheet",
       { creative, impressionId: questImpressionId },
     );

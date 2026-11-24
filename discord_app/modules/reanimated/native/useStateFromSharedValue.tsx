@@ -24,7 +24,7 @@ export default function useStateFromSharedValue(tmp12Result5) {
     value = map.get(c0);
     if (value == null) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       c0 = set;
       const obj2 = {
         sharedValue: tmp,
@@ -96,7 +96,7 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
     value = map.get(c0);
     if (value == null) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       c0 = set;
       const obj2 = {
         sharedValue: tmp,

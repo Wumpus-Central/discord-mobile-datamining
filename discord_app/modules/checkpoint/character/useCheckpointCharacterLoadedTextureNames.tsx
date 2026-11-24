@@ -9,7 +9,7 @@ export function useCheckpointCharacterLoadedTextureNames(visibleTextureNames) {
   visibleTextureNames = visibleTextureNames.visibleTextureNames;
   const requestedTextureNames = visibleTextureNames.requestedTextureNames;
   first = undefined;
-  let set;
+  set = undefined;
   [first] = noop.useState(visibleTextureNames);
   closure_3 = tmp3;
   const tmp4 = _slicedToArray(noop.useState(visibleTextureNames), 2);

@@ -2,8 +2,8 @@
 import router_utils from "../../routing/router_utils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import DisplayedInviteActionCreators from "../../../actions/native/DisplayedInviteActionCreators.tsx";
 import FriendInviteUtils from "../../friend_invites/native/FriendInviteUtils.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -15,7 +15,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(8370).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(8192).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1071);
 ({ InviteStates: closure_10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -118,7 +118,7 @@ const prototype = function AcceptInviteManager() {
                       }
                       const roles = invite.roles;
                       flag2 = false;
-                      const set = new Set(roles1);
+                      set = new Set(roles1);
                     }
                   }
                   let flag3 = PermissionStore.can(constants2.VIEW_CHANNEL, ChannelStore.getChannel(target_channel_id));
@@ -150,7 +150,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(19428, dependencyMap.paths),
+            asyncRequireImpl(19470, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

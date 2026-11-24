@@ -20,7 +20,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(8576).SearchTabs;
+const SearchTabs = fn(8878).SearchTabs;
 const Constants = fn(1071);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({
@@ -312,7 +312,7 @@ export function getSearchQueryFromTokens(tokenizeQueryResult) {
             })(type);
             if (null == obj[tmp27]) {
               const _Set = Set;
-              const set = new Set();
+              set = new Set();
               tmp28[tmp27] = set;
             }
             if (SearchTokenTypes.ANSWER_USERNAME_FROM !== type) {

@@ -1,21 +1,18 @@
 // discord_app/modules/frames/panel/native/PlayableActivityFrameHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import leaveFrame from "../../leaveFrame.tsx";
-import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import ActivityPanelHeader from "../../../activities/panel/native/ActivityPanelHeader.tsx";
+import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5539).ActivityPanelModes;
-const orbAmount = fn(6558).PLAYABLE_REWARD_ORB_QUANTITY;
+const ActivityPanelModes = fn(5543).ActivityPanelModes;
+const orbAmount = fn(6745).PLAYABLE_REWARD_ORB_QUANTITY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   header: null,
   handleWrapper: null,
@@ -66,14 +63,18 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/PlayableA
 export default function PlayableActivityFrameHeader(arg0) {
   ({ frameId: require, playable } = arg0);
   let setMode;
+  function onLeave() {
+    setMode(ActivityPanelModes.DISCONNECTED);
+    const timerId = setTimeout(() => require("leaveFrame").leaveFrame(closure_1_0), 400);
+  }
   const tmp = closure_9();
-  const tmp4 = setMode(19212)(playable.id);
+  const tmp4 = setMode(onLeave[7])(playable.id);
   let isClaimed = tmp4.isClaimed;
-  const context = noop.useContext(setMode(19206));
+  const context = noop.useContext(setMode(onLeave[8]));
   setMode = context.setMode;
   ({ wrapperOffset, pipState } = context);
-  const obj2 = {
-    gesture: ActivityPanelHeader.useBaseActivityPanelHeaderContent({
+  let obj2 = {
+    gesture: require("ActivityPanelHeader").useBaseActivityPanelHeaderContent({
       landscape: false,
       setMode,
       wrapperOffset,
@@ -86,7 +87,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   items = [closure_7(View, obj4), ,];
   const obj6 = { style: tmp.info, children: null };
   const items1 = [
-    closure_7(setMode(16362), {
+    closure_7(setMode(onLeave[12]), {
       isCompleted: isClaimed,
       totalSeconds: playable.rewardTimerSeconds,
       remainingSeconds: tmp4.remainingSeconds,
@@ -102,13 +103,13 @@ export default function PlayableActivityFrameHeader(arg0) {
     children: null,
   };
   if (isClaimed) {
-    const intl = util.intl;
-    let productName = intl.string(tmp2(4661)["08Kgg0"]);
+    let intl = require("util").intl;
+    let productName = intl.string(tmp2(tmp3[15])["08Kgg0"]);
   } else {
     productName = playable.productName;
   }
   obj9.children = productName;
-  const items2 = [closure_7(Text_Text.Text, obj9)];
+  const items2 = [closure_7(require("Text/Text").Text, obj9)];
   if (isClaimed) {
     const obj10 = {
       variant: "body-sm/medium",
@@ -121,10 +122,10 @@ export default function PlayableActivityFrameHeader(arg0) {
     const items3 = [,];
     ({ textShadow: arr4[0], subtitle: arr4[1] } = tmp);
     obj10.style = items3;
-    const intl2 = util.intl;
+    let intl2 = require("util").intl;
     const obj11 = { orbAmount };
-    obj10.children = intl2.formatToPlainString(tmp2(4661).Hshnic, obj11);
-    isClaimed = closure_7(Text_Text.Text, obj10);
+    obj10.children = intl2.formatToPlainString(tmp2(tmp3[15]).Hshnic, obj11);
+    isClaimed = closure_7(require("Text/Text").Text, obj10);
   }
   items2[1] = isClaimed;
   obj8.children = items2;
@@ -132,24 +133,41 @@ export default function PlayableActivityFrameHeader(arg0) {
   obj6.children = items1;
   items[1] = closure_8(View, obj6);
   const obj12 = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, onPress: null };
+  const obj = require("ActivityPanelHeader");
   const obj5 = { style: tmp.handle };
   const obj7 = {
     isCompleted: isClaimed,
     totalSeconds: playable.rewardTimerSeconds,
     remainingSeconds: tmp4.remainingSeconds,
   };
-  obj12.icon = closure_7(XSmallIcon.XSmallIcon, {
+  obj12.icon = closure_7(require("XSmallIcon").XSmallIcon, {
     size: "sm",
-    color: setMode(575).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+    color: setMode(onLeave[6]).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
   });
-  const intl3 = util.intl;
-  obj12.accessibilityLabel = intl3.string(util.t.cpT0Cq);
+  let intl3 = require("util").intl;
+  obj12.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
   obj12.onPress = function onClose() {
-    setMode(ActivityPanelModes.DISCONNECTED);
-    const timerId = setTimeout(() => leaveFrame.leaveFrame(closure_1_0), 400);
+    const obj2 = {
+      key: "playable-leave-game-confirm",
+      title: null,
+      content: null,
+      confirmText: null,
+      cancelText: null,
+      onConfirm: null,
+    };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.sfp1IW);
+    const intl2 = util.intl;
+    obj2.content = intl2.string(util.t.N9rsFG);
+    const intl3 = util.intl;
+    obj2.confirmText = intl3.string(util.t["Hi1/aQ"]);
+    const intl4 = util.intl;
+    obj2.cancelText = intl4.string(util.t.DvApnG);
+    obj2.onConfirm = onLeave;
+    AlertModal.showConfirmModal(obj2);
   };
-  items[2] = closure_7(IconButton.IconButton, obj12);
+  items[2] = closure_7(require("IconButton").IconButton, obj12);
   obj3.children = items;
   obj2.children = closure_8(View, obj3);
-  return closure_7(LegacyBaseButton.GestureDetector, obj2);
+  return closure_7(require("LegacyBaseButton").GestureDetector, obj2);
 }

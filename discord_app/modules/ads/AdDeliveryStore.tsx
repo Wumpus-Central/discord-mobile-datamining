@@ -56,8 +56,8 @@ Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
   },
   set: undefined,
 });
-prototype["getAdDecisionsForPlacement"] = function getAdDecisionsForPlacement(MOBILE_HOME_DOCK_AREA) {
-  value = map1.get(MOBILE_HOME_DOCK_AREA);
+prototype["getAdDecisionsForPlacement"] = function getAdDecisionsForPlacement(QUEST_HOME_BANNER_DESKTOP) {
+  value = map1.get(QUEST_HOME_BANNER_DESKTOP);
   if (value == null) {
     value = closure_9;
   }

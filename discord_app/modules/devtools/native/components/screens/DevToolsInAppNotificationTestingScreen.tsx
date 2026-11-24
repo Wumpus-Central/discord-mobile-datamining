@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
-import StickersTypes from "../../../../stickers/StickersTypes.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import StickersTypes from "../../../../stickers/StickersTypes.tsx";
 import InAppNotificationUtils from "../../../../in_app_notifications/native/InAppNotificationUtils.tsx";
 import InAppNotificationActionCreatorsDefault from "../../../../../actions/native/InAppNotificationActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -223,12 +223,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(4766).createChannelRecord;
+const createChannelRecord = fn(4770).createChannelRecord;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -602,15 +602,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
       obj2.children = options.map((label) => {
         closure_0 = label;
         return closure_1_14(
-          closure_1_0(7045).TableRow,
+          closure_1_0(6018).TableRow,
           {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(closure_1_0(17004).BeakerIcon, {}),
+            icon: closure_1_14(closure_1_0(17038).BeakerIcon, {}),
             onPress() {
               return closure_2_0(closure_0);
             },
-            trailing: closure_1_14(closure_1_0(7058).TableRowArrow, {}),
+            trailing: closure_1_14(closure_1_0(6030).TableRowArrow, {}),
           },
           label.label,
         );
@@ -626,15 +626,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
     hasIcons: true,
     children: items3.map((label) =>
       closure_1_14(
-        label(7045).TableRow,
+        label(6018).TableRow,
         {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(label(17004).BeakerIcon, {}),
+          icon: closure_1_14(label(17038).BeakerIcon, {}),
           onPress() {
             return label(label);
           },
-          trailing: closure_1_14(label(7058).TableRowArrow, {}),
+          trailing: closure_1_14(label(6030).TableRowArrow, {}),
         },
         label.label,
       ),

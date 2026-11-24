@@ -2,16 +2,16 @@
 import util from "../../../../../intl/index.native.tsx";
 import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
-import createCommonMessageDefault from "createCommonMessage.tsx";
-import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import useIsCallActive from "../../../../calls/mobile/useIsCallActive.tsx";
+import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
 import ChannelRTCStore from "../../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
 const ME = fn(1071).ME;
-const ParticipantTypes = fn(5563).ParticipantTypes;
+const ParticipantTypes = fn(5567).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 

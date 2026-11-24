@@ -20,7 +20,7 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(8576).SearchListItemTypes;
+const SearchListItemTypes = fn(8878).SearchListItemTypes;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -34,7 +34,7 @@ export function getSearchQueryUserIds(items) {
   const prefixTag = SearchQueryStore.getPrefixTag(items);
   if (null == prefixTag) {
     const _Set2 = Set;
-    const set = new Set();
+    set = new Set();
     return set;
   } else {
     const _Set = Set;

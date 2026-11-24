@@ -1,13 +1,12 @@
 // discord_app/modules/checkpoint/native/components/CheckpointGuildsBarEntrypoint.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3440 from "../../Checkpoint2026.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
+import _modDef3442 from "../../Checkpoint2026.messages.js";
+import LinearGradientDefault from "../../../../../_runtime/05472_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "../../../guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx";
 import HomeDrawerShared from "../../../home_drawer/native/HomeDrawerShared.tsx";
-import _modDef17923 from "../../../../../_runtime/metro/17923__.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _modDef17959 from "../../../../../_runtime/metro/17959__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx";
 
@@ -18,28 +17,28 @@ function ExpandedChildren() {
   const obj = { title: null, subtitle: null };
   const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3440["8hclXY"]);
-  obj.title = closure_1_11(Text_Text.Text, obj2);
-  return closure_1_11(HomeDrawerShared.HomeDrawerSharedItem, obj);
+  obj2.children = intl.string(_modDef3442["8hclXY"]);
+  obj.title = refs(Text_Text.Text, obj2);
+  return refs(HomeDrawerShared.HomeDrawerSharedItem, obj);
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(5969).CHECKPOINT_PRIMARY;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(17862).GUILD_ITEM_INSET_LEFT;
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const CHECKPOINT_PRIMARY = fn(6270).CHECKPOINT_PRIMARY;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const GUILD_ITEM_INSET_LEFT = fn(17900).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
 const start = { x: 1, y: 1 };
 const end = { x: 0, y: 0 };
-let closure_16 = {
+let closure_15 = {
   code: "(function CheckpointGuildsBarEntrypointTsx1(){let[scrollPosition]=this.__closure;return scrollPosition.get();})",
 };
-let closure_17 = {
+let closure_16 = {
   code: "(function CheckpointGuildsBarEntrypointTsx2(current){let[dismissed,initialScrollPosition,DISMISS_SCROLL_DISTANCE,scheduleOnRN,onScroll]=this.__closure;if(dismissed.get())return;const initial=initialScrollPosition.get();if(initial==null){initialScrollPosition.set(current);return;}if(Math.abs(current-initial)>=DISMISS_SCROLL_DISTANCE){dismissed.set(true);scheduleOnRN(onScroll);}})",
 };
-const createStyles = fn(4913);
-let closure_18 = createStyles.createStyles((width) => {
+const createStyles = fn(4917);
+let closure_17 = createStyles.createStyles((width) => {
   const obj = {
     container: { position: "relative" },
     itemShape: { backgroundColor: CHECKPOINT_PRIMARY },
@@ -61,16 +60,16 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/Ch
 export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   _require = markAsDismissed;
-  asyncGeneratorStep = undefined;
+  noop = undefined;
   let isModalOpen;
   let coachmark;
-  const tmp4 = closure_18(require("useToken").useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE));
+  const tmp4 = closure_17(require("useToken").useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE));
   importDefault = tmp4;
   let obj = require("useToken");
   const guildsBarAnimatedWrapperStyles = require("GuildsBarAnimatedItemWrapper").useGuildsBarAnimatedWrapperStyles();
   dependencyMap = guildsBarAnimatedWrapperStyles;
   items = [guildsBarAnimatedWrapperStyles, tmp4.itemShape];
-  const memo = isModalOpen.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = {};
     const merged = Object.assign(_undefined3);
     const merged1 = Object.assign(_undefined3.itemShape);
@@ -78,85 +77,34 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     obj.itemShape = {};
     return obj;
   }, items);
-  const items1 = [markAsDismissed];
-  const callback = isModalOpen.useCallback(
-    asyncGeneratorStep(async () => {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              c1 = 1;
-              dependencyMap = 1;
-              const obj5 = { value: tmp4(12497).openCheckpoint(tmp4(17921).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            if (value) {
-              closure_128_0(constants.TAKE_ACTION);
-            }
-            dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp11) {
-          dependencyMap = tmp;
-          throw tmp11;
-        }
-      }
-    }),
-    items1,
-  );
-  asyncGeneratorStep = callback;
-  const items2 = [callback];
-  const items3 = [markAsDismissed];
-  const memo1 = isModalOpen.useMemo(() => ({ onPress: _undefined4 }), items2);
-  const callback1 = isModalOpen.useCallback(() => _undefined(ContentDismissActionType.USER_DISMISS), items3);
+  const callback = noop.useCallback(() => {
+    _undefined(_undefined3[17]).openCheckpoint(_undefined(_undefined3[18]).CHECKPOINT_GUILDS_BAR_SOURCE);
+  }, []);
+  noop = callback;
+  const items1 = [callback];
+  const items2 = [markAsDismissed];
+  const memo1 = noop.useMemo(() => ({ onPress: _undefined4 }), items1);
+  const callback1 = noop.useCallback(() => _undefined(ContentDismissActionType.USER_DISMISS), items2);
   const obj2 = require("GuildsBarAnimatedItemWrapper");
   const tmp10 = GuildsBarDnDStore((scrollPosition) => scrollPosition.scrollPosition);
   const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(null);
-  let obj4 = require("../../../../../_runtime/metro/01653__.js");
+  const obj4 = require("../../../../../_runtime/metro/01653__.js");
   const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  let obj5 = require("../../../../../_runtime/metro/01653__.js");
-  const items4 = [closure_16, tmp10];
+  const obj5 = require("../../../../../_runtime/metro/01653__.js");
+  const items3 = [closure_15, tmp10];
   _require = undefined;
-  [tmp13, tmp14] = items4;
+  [tmp13, tmp14] = items3;
   class CheckpointGuildsBarEntrypointTsx1 {
     constructor() {
       return closure_0.get();
     }
   }
-  const items5 = [tmp14];
-  CheckpointGuildsBarEntrypointTsx1.__closure = items5;
+  const items4 = [tmp14];
+  CheckpointGuildsBarEntrypointTsx1.__closure = items4;
   CheckpointGuildsBarEntrypointTsx1.__workletHash = 1024720770114;
   CheckpointGuildsBarEntrypointTsx1.__initData = tmp13;
-  const items6 = [
-    closure_17,
+  const items5 = [
+    closure_16,
     sharedValue1,
     sharedValue,
     8,
@@ -166,9 +114,9 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
-  asyncGeneratorStep = undefined;
+  noop = undefined;
   isModalOpen = undefined;
-  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items6;
+  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items5;
   class CheckpointGuildsBarEntrypointTsx2 {
     constructor(arg0) {
       obj = closure_0;
@@ -195,8 +143,8 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
       return;
     }
   }
-  const items7 = [tmp16, tmp17, tmp18, tmp19, tmp20];
-  CheckpointGuildsBarEntrypointTsx2.__closure = items7;
+  const items6 = [tmp16, tmp17, tmp18, tmp19, tmp20];
+  CheckpointGuildsBarEntrypointTsx2.__closure = items6;
   CheckpointGuildsBarEntrypointTsx2.__workletHash = 1045220900980;
   CheckpointGuildsBarEntrypointTsx2.__initData = tmp15;
   const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
@@ -205,7 +153,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   );
   const obj6 = require("../../../../../_runtime/metro/01653__.js");
   isModalOpen = require("NavigationRouteUtils").useIsModalOpen();
-  const items8 = [markAsDismissed, callback, isModalOpen];
+  const items7 = [markAsDismissed, callback, isModalOpen];
   const memo2 = obj3.useMemo(() => {
     const obj = {
       title: null,
@@ -220,27 +168,27 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
       onButtonPress: null,
     };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3440.tgYaeZ);
+    obj.title = intl.string(_modDef3442.tgYaeZ);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef3440.BFc4lY);
+    obj.description = intl2.string(_modDef3442.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef17923, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef17959, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(_modDef3440.UjtEWE);
+    obj.buttonLabel = intl3.string(_modDef3442.UjtEWE);
     obj.onButtonPress = _undefined4;
     return obj;
-  }, items8);
-  const ref = isModalOpen.useRef(null);
+  }, items7);
+  const ref = noop.useRef(null);
   const tmpResult = require("NavigationRouteUtils");
   coachmark = require("useCoachmark").useCoachmark(ref, memo2);
-  const items9 = [coachmark];
+  const items8 = [coachmark];
   const obj7 = { style: tmp4.container, children: null };
   const callback2 = obj3.useCallback(() => {
     coachmark(false);
-  }, items9);
+  }, items8);
   const obj8 = {
     selected: false,
     circle: false,
@@ -249,26 +197,26 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     overState: "y",
     config: memo1,
     label: null,
-    expandedChildren: "\u{1F9CF}",
+    expandedChildren: "\u{1F645}",
     children: true,
   };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1112).intl;
-  obj8.label = intl.string(_modDef3440["8hclXY"]);
-  obj8.expandedChildren = closure_11(ExpandedChildren, {});
-  const items10 = [
-    closure_11(LinearGradientDefault, { colors, start, end, style: coachmark.absoluteFill, pointerEvents: "none" }),
+  obj8.label = intl.string(_modDef3442["8hclXY"]);
+  obj8.expandedChildren = closure_10(ExpandedChildren, {});
+  const items9 = [
+    closure_10(LinearGradientDefault, { colors, start, end, style: isModalOpen.absoluteFill, pointerEvents: "none" }),
   ];
-  const obj9 = { colors, start, end, style: coachmark.absoluteFill, pointerEvents: "none" };
+  const obj9 = { colors, start, end, style: isModalOpen.absoluteFill, pointerEvents: "none" };
   const tmp3Result = GuildsBarAnimatedItemWrapperDefault;
-  items10[1] = closure_11(require("ExperimentalCheckpointIcon").ExperimentalCheckpointIcon, {
+  items9[1] = closure_10(require("ExperimentalCheckpointIcon").ExperimentalCheckpointIcon, {
     size: "md",
     color: nativeDefault.colors.WHITE,
   });
-  obj8.children = items10;
-  const items11 = [
-    closure_12(tmp3Result, obj8),
-    closure_11(closure_6, {
+  obj8.children = items9;
+  const items10 = [
+    closure_11(tmp3Result, obj8),
+    closure_10(coachmark, {
       ref,
       style: tmp4.coachmarkAnchor,
       onLayout: callback2,
@@ -276,6 +224,6 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
       collapsable: false,
     }),
   ];
-  obj7.children = items11;
-  return closure_12(closure_6, obj7);
+  obj7.children = items10;
+  return closure_11(coachmark, obj7);
 });

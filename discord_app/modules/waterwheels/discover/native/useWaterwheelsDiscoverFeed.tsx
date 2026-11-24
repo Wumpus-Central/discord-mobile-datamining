@@ -30,7 +30,7 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
     discoverSnapshot.getDiscoverSnapshot(),
   );
   if (!arg0) {
-    EMPTY_DISCOVER_SNAPSHOT = tmp(10040).EMPTY_DISCOVER_SNAPSHOT;
+    EMPTY_DISCOVER_SNAPSHOT = tmp(8779).EMPTY_DISCOVER_SNAPSHOT;
   }
   const tmp3 = useWaterwheelsCardEligibilityDefault();
   importDefault = tmp3;
@@ -40,11 +40,11 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
     items1,
   );
   const obj = EMPTY_DISCOVER_SNAPSHOT(504);
-  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17811);
+  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17849);
   return {
     snapshot: EMPTY_DISCOVER_SNAPSHOT,
     entries: memo,
-    status: EMPTY_DISCOVER_SNAPSHOT(17811).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
+    status: EMPTY_DISCOVER_SNAPSHOT(17849).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
     retry: requestWaterwheelsDiscover,
   };
 }
@@ -110,14 +110,14 @@ export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot)
                 hasRequestInFlight: null,
                 isPickerOpen: null,
               };
-              const obj = enabled(17811);
-              obj2.hasRequestInFlight = visible(10043).hasDiscoverRequestInFlight();
+              const obj = enabled(17849);
+              obj2.hasRequestInFlight = visible(8782).hasDiscoverRequestInFlight();
               obj2.isPickerOpen = InterestPickerSessionStore.isPickerOpen();
               if (obj.shouldRequestWaterwheelsDiscover(obj2)) {
-                const dehydrated = visible(10043).fetchDehydrated();
-                const tmp2Result = visible(10043);
+                const dehydrated = visible(8782).fetchDehydrated();
+                const tmp2Result = visible(8782);
               }
-              const obj3 = visible(10043);
+              const obj3 = visible(8782);
             }
             const result = ICYMIActionCreatorsDefault.subscribeDiscoverRequests(requestWhenReady);
             let obj3 = {

@@ -25,8 +25,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4843).GUILD_VOCAL_CHANNELS_KEY;
-fn(6675).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4847).GUILD_VOCAL_CHANNELS_KEY;
+fn(6860).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -182,7 +182,7 @@ prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCate
   this._refetchForSingleCategoryLimit = _refetchForSingleCategoryLimit;
 };
 prototype["setResultTypes"] = function setResultTypes(items) {
-  let set = null;
+  set = null;
   if (null != items) {
     const _Set = Set;
     set = new Set(items);

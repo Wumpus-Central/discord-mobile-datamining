@@ -8,13 +8,13 @@ function useHighlightNotifications() {
   items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-let SettingBuilders = fn(11937);
+let SettingBuilders = fn(11815);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8712).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9414).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);
@@ -27,10 +27,10 @@ const route = SettingBuilders.createRoute({
     },
   },
 });
-SettingBuilders = fn(11937);
+SettingBuilders = fn(11815);
 const obj4 = {};
 const merged = Object.assign(route);
-obj4.parent = fn(16896).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
+obj4.parent = fn(16930).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");

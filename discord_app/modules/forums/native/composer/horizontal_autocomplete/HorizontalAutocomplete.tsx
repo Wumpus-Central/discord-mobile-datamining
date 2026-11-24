@@ -10,7 +10,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef11611 from "../../../../../../_runtime/metro/11611__.js";
+import _modDef8695 from "../../../../../../_runtime/metro/08695__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -59,7 +59,7 @@ const Constants = fn(1071);
 ({ ChannelTypes: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   emoji: { width: 32, height: 32 },
   emojiImage: { resizeMode: "contain" },
@@ -176,17 +176,17 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef11611;
+      let channelIconWithGuild = _modDef8695;
     } else {
-      channelIconWithGuild = tmp2(7636).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(7636);
+      channelIconWithGuild = tmp2(6970).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(6970);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1186).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     items = [tmp8];
-    const channelName = channel(5529).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(5504).Text, {
+    const channelName = channel(5533).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(5508).Text, {
       style: tmp.channelName,
       variant: "body-sm/semibold",
       children: channelName,

@@ -52,19 +52,19 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             function checkpointResponseFromServer(body) {
               let statsFromServerResult = null;
               if (null != body.stats) {
-                statsFromServerResult = closure_1_0(6339).statsFromServer(body.stats);
-                const obj = closure_1_0(6339);
+                statsFromServerResult = closure_1_0(6642).statsFromServer(body.stats);
+                const obj = closure_1_0(6642);
               }
               const obj4 = {
                 stats: statsFromServerResult,
-                globalStats: closure_1_0(6339).globalStatsFromServer(body.global_stats),
+                globalStats: closure_1_0(6642).globalStatsFromServer(body.global_stats),
                 character: null,
                 compactAssets: null,
                 availability: null,
               };
               ({ character: obj2.character, compact_assets: obj2.compactAssets, availability } = body);
               if (availability == null) {
-                availability = closure_1_0(12129).CheckpointAvailability.FULL;
+                availability = closure_1_0(12408).CheckpointAvailability.FULL;
               }
               obj4.availability = availability;
               return obj4;
@@ -227,7 +227,20 @@ let closure_9 = async function _completeCheckpoint() {
     }
   })();
 };
-let closure_10 = async function _resetCheckpointCharacter() {
+function resetCheckpointProgress() {
+  return DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_PROGRESS" });
+}
+function resetCheckpointCharacter() {
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_12 = async function _resetCheckpointCharacter() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -287,7 +300,17 @@ let closure_10 = async function _resetCheckpointCharacter() {
     }
   }
 };
-let closure_11 = async function _sendSidekickMessage() {
+let closure_13 = async function _resetCheckpoint() {
+  closure_1 = tmp5;
+  closure_0 = tmp2;
+  await resetCheckpointCharacter();
+  closure_128_0 = value;
+  if (closure_128_0) {
+    closure_129_10();
+  }
+  return closure_128_0;
+};
+let closure_14 = async function _sendSidekickMessage() {
   closure_2 = tmp2;
   closure_130_0 = closure_0;
   closure_130_1 = closure_1;
@@ -307,7 +330,7 @@ let closure_11 = async function _sendSidekickMessage() {
   const result = closure_131_0(closure_131_2[5]).trackCheckpoint2026SidekickMessageSent(closure_130_1);
   return closure_130_5;
 };
-let closure_12 = async function _sendCheckpointCard(arg0) {
+let closure_15 = async function _sendCheckpointCard(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -367,10 +390,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(8250);
+                  const obj = checkpointCardType(8103);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(8382).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(8203).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -411,7 +434,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(12128).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12407).CheckpointFetchStates;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");
@@ -449,12 +472,11 @@ export function completeCheckpoint() {
   }
   return applyArgumentsResult;
 }
-export function resetCheckpointProgress() {
-  return DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_PROGRESS" });
-}
-export function resetCheckpointCharacter() {
+export { resetCheckpointProgress };
+export { resetCheckpointCharacter };
+export function resetCheckpoint() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -464,7 +486,7 @@ export function resetCheckpointCharacter() {
 }
 export function sendSidekickMessage() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -474,7 +496,7 @@ export function sendSidekickMessage() {
 }
 export function sendCheckpointCard() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

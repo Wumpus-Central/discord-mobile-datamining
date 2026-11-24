@@ -18,28 +18,28 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import ChannelUtils from "../../../utils/ChannelUtils.tsx";
-import MediaFormatTesters from "../MediaFormatTesters.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
 import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
+import MediaFormatTesters from "../MediaFormatTesters.tsx";
 import Client from "../../../flow/Client.tsx";
+import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
-import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
-import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
-import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
-import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
-import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import Tracking from "../../forums/tracking/Tracking.tsx";
-import PopularMusicSystemMessageTypes from "../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
+import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
+import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
+import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
+import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
-import computeScrollData from "../../chat/native/computeScrollData.tsx";
-import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
-import MediaPlaybackFacts from "../MediaPlaybackFacts.tsx";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
+import PopularMusicSystemMessageTypes from "../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
+import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
+import computeScrollData from "../../chat/native/computeScrollData.tsx";
+import MediaPlaybackFacts from "../MediaPlaybackFacts.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ReferencedMessageStore from "../../replies/ReferencedMessageStore.tsx";
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(10382).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8670);
+let closure_5 = fn(8949).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8083);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1071);
 ({
@@ -786,7 +786,7 @@ export function handleMessageVisibilityChanged(
 }
 export function handleLongPressSticker(arg0, arg1, fn) {
   items = [arg0];
-  const set = new Set(items);
+  set = new Set(items);
   if (null != arg1) {
     set.add(arg1);
   }
@@ -1088,7 +1088,7 @@ export function getVoiceStateChannelSummaryFromVoiceStates(voiceStates) {
 export function getVoiceChannelIdChangedAuthorIds(prop, prop1) {
   const obj = parseVoiceStateChannelIdSummary(prop);
   const obj2 = parseVoiceStateChannelIdSummary(prop1);
-  const set = new Set();
+  set = new Set();
   items = [...obj.keys(), ...obj2.keys()];
   for (const item10032 of set1) {
     value = obj.get(item10032);

@@ -2,13 +2,13 @@
 import _mod17 from "../../../../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import GuildTemplatesConstants from "../../../../../../guild_templates/GuildTemplatesConstants.tsx";
 import Constants from "../../../../../../instant_invite/Constants.tsx";
+import GuildTemplatesConstants from "../../../../../../guild_templates/GuildTemplatesConstants.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
-import _modDef12333 from "../../../../../../../../_runtime/metro/12333__.js";
-import _modDef12334 from "../../../../../../../../_runtime/metro/12334__.js";
-import _modDef14307 from "../../../../../../../../_runtime/metro/14307__.js";
+import _modDef12237 from "../../../../../../../../_runtime/metro/12237__.js";
+import _modDef12238 from "../../../../../../../../_runtime/metro/12238__.js";
+import _modDef14338 from "../../../../../../../../_runtime/metro/14338__.js";
 import GuildTemplateStore from "../../../../../../guild_templates/GuildTemplateStore.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -42,9 +42,9 @@ export function createGuildTemplateEmbed(code, theme) {
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef12333;
+      let tmpResult = _modDef12237;
     } else {
-      tmpResult = _modDef12334;
+      tmpResult = _modDef12238;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -63,7 +63,7 @@ export function createGuildTemplateEmbed(code, theme) {
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef14307).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef14338).uri;
     ({
       acceptLabelGreenColor: obj6.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,

@@ -11,10 +11,10 @@ import UpcomingEventNoticesStore from "UpcomingEventNoticesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(6633);
+let GuildScheduledEventStore = fn(5649);
 ({ isGuildScheduledEventActive: metroImportDefault, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(4768);
+const GuildScheduledEventsConstants = fn(4772);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
 const Constants = fn(1071);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
@@ -387,11 +387,11 @@ export function useImminentUpcomingGuildEvents(id) {
   return noop.useMemo(
     () =>
       stateFromStores.filter((status) => {
-        const eventSchedule = id(7583).getEventSchedule(status);
+        const eventSchedule = id(8328).getEventSchedule(status);
         ({ startTime, endTime } = eventSchedule);
-        const obj = id(7583);
+        const obj = id(8328);
         let toISOStringResult1;
-        const obj2 = id(7575);
+        const obj2 = id(8325);
         if (endTime != null) {
           toISOStringResult1 = endTime.toISOString();
         }

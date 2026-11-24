@@ -6,10 +6,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(8576).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(8878).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = {
     pressable: { paddingHorizontal: 16, paddingVertical },

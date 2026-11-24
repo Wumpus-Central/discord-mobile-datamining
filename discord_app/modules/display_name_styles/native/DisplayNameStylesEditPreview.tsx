@@ -3,15 +3,15 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef3248 from "../intl/DisplayNameStyles.messages.js";
+import _modDef3250 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAvatarDecoration from "../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
-import profile_customization_ProfileCustomizationUtils from "../../profile_customization/native/ProfileCustomizationUtils.tsx";
-import usePendingAvatarSettingsDefault from "../../user_profile/hooks/usePendingAvatarSettings.tsx";
 import RecentAvatarUtils from "../../recent_avatars/RecentAvatarUtils.tsx";
+import profile_customization_ProfileCustomizationUtils from "../../profile_customization/native/ProfileCustomizationUtils.tsx";
 import UsernameWithEffectsDefault from "UsernameWithEffects.tsx";
 import types from "../types.tsx";
+import usePendingAvatarSettingsDefault from "../../user_profile/hooks/usePendingAvatarSettings.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import UserProfileSettingsStore from "../../user_profile/UserProfileSettingsStore.tsx";
@@ -78,7 +78,7 @@ function ChatPreview(chatMessage) {
   const obj10 = { variant: "body-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   if (chatMessage == null) {
     const intl = util.intl;
-    chatMessage = intl.string(_modDef3248.h5Cuej);
+    chatMessage = intl.string(_modDef3250.h5Cuej);
   }
   obj10.children = chatMessage;
   items3[1] = metroImportDefault(Text_Text.Text, obj10);
@@ -90,7 +90,7 @@ function ChatPreview(chatMessage) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4913);
+let createStyles = fn(4917);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -156,7 +156,7 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4913);
+createStyles = fn(4917);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = {

@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import LinearGradientDefault from "../../../../../_runtime/05468_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05472_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef7135 from "../../../../../_runtime/metro/07135__.js";
+import _modDef7105 from "../../../../../_runtime/metro/07105__.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -57,7 +57,7 @@ function YouBarMaskedBackground(barWidth) {
       backgroundColor: "black",
     },
   };
-  const tmp3 = _modDef7135;
+  const tmp3 = _modDef7105;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef671("#000000");
   const items1 = [_modDef671("#000000").alpha(0).hex(), "#000000"];
@@ -133,12 +133,12 @@ function YouBarAnimatedBackground(arg0) {
   return timestampProducer(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16511);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   youRowFloating: {
     borderWidth: 1,

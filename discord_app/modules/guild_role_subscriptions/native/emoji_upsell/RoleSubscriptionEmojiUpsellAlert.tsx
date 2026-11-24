@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx
 import util from "../../../../intl/index.native.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import _modDef10460 from "../../../../../_runtime/metro/10460__.js";
+import _modDef9446 from "../../../../../_runtime/metro/09446__.js";
 import CreatorRevenueButton from "../components/CreatorRevenueButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -9,7 +9,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const StaticChannelRoute = fn(4769).StaticChannelRoute;
+const StaticChannelRoute = fn(4773).StaticChannelRoute;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting(
@@ -49,7 +49,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef10460, title: null, description: null };
+    const obj = { image: _modDef9446, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

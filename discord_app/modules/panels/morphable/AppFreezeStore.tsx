@@ -23,7 +23,7 @@ export default module_560.create((arg0) => {
               items = [closure_1_0];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
-              const set = new Set(items);
+              set = new Set(items);
               obj.lockKeys = set;
               tmp12 = obj;
             }

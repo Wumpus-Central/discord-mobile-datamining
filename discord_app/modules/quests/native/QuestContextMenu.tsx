@@ -6,18 +6,18 @@ import CopyIcon from "../../../design/components/Icon/native/redesign/generated/
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import _modDef7023 from "../../../../_runtime/metro/07023__.js";
 import CheckmarkLargeIcon2 from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import _modDef7613 from "../../../../_runtime/metro/07613__.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
-import QuestUtils from "QuestUtils.native.tsx";
-import QuestActionCreators from "../QuestActionCreators.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
+import QuestUtils from "QuestUtils.native.tsx";
+import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import _modDef16464 from "../../../../_runtime/metro/16464__.js";
+import _modDef16497 from "../../../../_runtime/metro/16497__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef7023;
+  obj.icon = _modDef7613;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -167,7 +167,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef16464;
+    obj2.iconSource = _modDef16497;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

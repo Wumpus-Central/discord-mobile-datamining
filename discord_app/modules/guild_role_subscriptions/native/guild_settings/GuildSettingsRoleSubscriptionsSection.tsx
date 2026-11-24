@@ -2,8 +2,8 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TagsIcon from "../../../../design/components/Icon/native/redesign/generated/TagsIcon.tsx";
 import EmojiMoneyMouthFaceIcon from "../../../../design/components/Icon/native/redesign/generated/EmojiMoneyMouthFaceIcon.tsx";
 import WalletIcon from "../../../../design/components/Icon/native/redesign/generated/WalletIcon.tsx";
@@ -59,7 +59,7 @@ function HasCreatedListingsSection(arg0) {
   obj2.children = items1;
   return closure_7(TableRowGroup.TableRowGroup, obj2);
 }
-const isGuildOwner = fn(4780).isGuildOwner;
+const isGuildOwner = fn(4784).isGuildOwner;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

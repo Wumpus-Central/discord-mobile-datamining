@@ -43,7 +43,7 @@ let closure_10 = async function _maybeFetchCollectiblesForInvoices(arg0) {
           return obj3;
         } else {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           const item = _require.forEach((invoice_items) => {
             if (null != invoice_items.invoice_items) {
               if (invoice_items.invoice_items.length > 0) {
@@ -116,7 +116,7 @@ let closure_12 = async function _maybeFetchCollectiblesForGifts(arg0) {
           return obj3;
         } else {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           const item = _require.forEach((sku_id) => {
             if (null != sku_id.sku_id) {
               set.add(sku_id.sku_id);
@@ -436,10 +436,10 @@ let closure_20 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(8336).FamilyCenterAction;
+const FamilyCenterAction = fn(8072).FamilyCenterAction;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault } = Constants);
-const SafetyToastType = fn(6504).SafetyToastType;
+const SafetyToastType = fn(7707).SafetyToastType;
 const map = new Map();
 const map1 = new Map();
 const size = fn(2);
@@ -1180,7 +1180,7 @@ export default {
   onTeenSettingsLoadFailure(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    let set = map1.get(arg0);
+    set = map1.get(arg0);
     if (set == null) {
       const _Set = Set;
       set = new Set();
@@ -1225,13 +1225,13 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(4744).getProtoFieldClass(tmp5(1195).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(4748).getProtoFieldClass(tmp5(1195).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(4744);
+              const tmp33Result = tmp5(4748);
               const modifiedProto = tmp33Result.createModifiedProto(
                 tmp13,
                 closure_2,
@@ -1257,7 +1257,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(4744);
+              const obj12 = tmp5(4748);
             }
           } else if (arg0 === 1) {
             c3 = 3;

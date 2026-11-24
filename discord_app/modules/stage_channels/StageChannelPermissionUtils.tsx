@@ -12,7 +12,7 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4780).isGuildOwner;
+const isGuildOwner = fn(4784).isGuildOwner;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);

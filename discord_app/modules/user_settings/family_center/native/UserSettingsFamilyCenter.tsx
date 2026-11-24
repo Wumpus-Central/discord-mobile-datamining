@@ -7,9 +7,9 @@ import _modDef2824 from "../../../parent_tools/FamilyCenter.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import MonitoringAgentDefault from "../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import AgeGateModalActionCreators from "../../../age_gate/AgeGateModalActionCreators.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import FamilyCenterActionCreatorsDefault from "../../../parent_tools/FamilyCenterActionCreators.tsx";
@@ -230,7 +230,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const AgeGateSource = fn(1096).AgeGateSource;
-const FamilyCenterConstants = fn(8336);
+const FamilyCenterConstants = fn(8072);
 ({
   FamilyCenterPageLocationAnalyticsIds: closure_10,
   FamilyCenterSubPageAnalyticsIds: closure_11,
@@ -240,7 +240,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [,];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { display: "flex", flex: 1 },
   segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },

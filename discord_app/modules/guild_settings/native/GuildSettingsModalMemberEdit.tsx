@@ -9,11 +9,11 @@ import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import TableRowGroup2 from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import TextInput from "../../../design/components/TextInput/native/TextInput.native.tsx";
-import TableRowGroup2 from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
@@ -168,14 +168,14 @@ class GuildSettingsModalMemberEditScene {
   }
 }
 const View = fn(17).View;
-const GuildRecord = fn(4780);
+const GuildRecord = fn(4784);
 ({ isGuildOwner: closure_6, isGuildOwnerWithRequiredMfaLevel: metroImportDefault } = GuildRecord);
-const isEveryoneRole = fn(4820).isEveryoneRole;
+const isEveryoneRole = fn(4824).isEveryoneRole;
 const Constants = fn(1071);
 ({ Permissions: closure_15, GuildFeatures: closure_16, GuildSettingsSections: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
@@ -406,8 +406,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(7095).getHeaderCloseButton(onClose);
-      let obj = self(7095);
+      fn = self(7065).getHeaderCloseButton(onClose);
+      let obj = self(7065);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -608,7 +608,7 @@ prototype["render"] = function render() {
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(4974).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(4978).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
@@ -616,7 +616,7 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5492)(guildId);
+  const tmp = onRemove(5496)(guildId);
   closure_2 = tmp;
   items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
@@ -641,7 +641,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(12388), obj);
+          return closure_2_18(onRemove(12287), obj);
         },
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -653,7 +653,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(12395), obj);
+          return closure_2_18(onRemove(12294), obj);
         },
       },
     };
@@ -661,6 +661,6 @@ export default function MemberModalEdit(onClose) {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_18(onClose(7092).Navigator, obj);
+  return closure_18(onClose(7229).Navigator, obj);
 }
 export { GuildSettingsModalMemberEditScene };

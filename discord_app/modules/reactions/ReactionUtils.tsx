@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4858).NotificationSettingsUpdateType;
+const constants3 = fn(4862).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 

@@ -97,7 +97,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     const result1 = merged.handleSearchCountFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    const set = new Set(ignoreQueries.ignoreQueries);
+    set = new Set(ignoreQueries.ignoreQueries);
     const item = map.forEach((item, index) => {
       if (!set.has(index)) {
         map.delete(index);

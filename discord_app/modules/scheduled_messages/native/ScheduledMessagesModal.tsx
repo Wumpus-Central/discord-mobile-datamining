@@ -7,11 +7,11 @@ import spring_spring from "../../../design/animation/reanimated/spring/spring.ts
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import ScheduledMessageActionCreators from "../ScheduledMessageActionCreators.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import PremiumUpsellUtils from "../../../utils/native/PremiumUpsellUtils.tsx";
-import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
+import ScheduledMessageActionCreators from "../ScheduledMessageActionCreators.tsx";
 import ScheduledMessageCardDefault from "ScheduledMessageCard.tsx";
+import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import NitroLimitUpsellBarDefault from "../../saved_messages/native/NitroLimitUpsellBar.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -145,11 +145,11 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1071).AnalyticsPages;
 const PremiumTypes = fn(1388).PremiumTypes;
-const premiumMax = fn(8541).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9455).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   modal: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -233,9 +233,9 @@ export default function ScheduledMessagesModal() {
   }
   obj5.headerStatusBarHeight = num + sharedValue(575).space.PX_8;
   tmp4Result = require("PlatformUtils");
-  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6429).pop);
+  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6004).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items3 = [closure_10(require("../../../../_runtime/metro/07102__.js").Header, obj5), ,];
+  const items3 = [closure_10(require("../../../../_runtime/metro/07072__.js").Header, obj5), ,];
   const obj6 = { style: null };
   const items4 = [tmp.headerBorder, animatedStyle];
   obj6.style = items4;

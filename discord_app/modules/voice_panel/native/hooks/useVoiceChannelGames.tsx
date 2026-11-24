@@ -55,7 +55,7 @@ export default function useVoiceChannelGames(arg0, arg1) {
   const items3 = [getGamesForAppIds, stateFromStores];
   return stateFromStores.useMemo(() => {
     items = [];
-    const set = new Set();
+    set = new Set();
     for (const item10013 of getGamesForAppIds) {
       let obj2 = useGameProfileObscured;
       let result = obj2.isGameProfileObscured(item10013, stateFromStores);

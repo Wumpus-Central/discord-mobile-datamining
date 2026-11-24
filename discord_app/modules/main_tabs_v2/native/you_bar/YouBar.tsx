@@ -9,12 +9,12 @@ import dismissible_content from "../../../../../discord_common/js/packages/proto
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05173_LegacyBaseButton.js";
-import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
+import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
-import useConjureEntryPointPlacementDefault from "../../../conjure/title_bar/native/useConjureEntryPointPlacement.tsx";
+import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import MainTabsNavigatorPanelContextDefault from "../panels/MainTabsNavigatorPanelContext.tsx";
 import getNavigatorCurrentRouteDefault from "../../navigator/getNavigatorCurrentRoute.tsx";
+import useConjureEntryPointPlacementDefault from "../../../conjure/title_bar/native/useConjureEntryPointPlacement.tsx";
 import YouBarBackgroundDefault from "YouBarBackground.tsx";
 import YouBarUserDefault from "YouBarUser.tsx";
 import YouBarNotificationsButtonDefault from "YouBarNotificationsButton.tsx";
@@ -29,7 +29,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(16478);
+const YouBarConstants = fn(16511);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -39,10 +39,10 @@ const YouBarConstants = fn(16478);
   YOU_BAR_BUTTON_HIT_SLOP: closure_15,
 } = YouBarConstants);
 const ME = fn(1071).ME;
-const ContentDismissActionType = fn(4759).ContentDismissActionType;
+const ContentDismissActionType = fn(4763).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { dockRimRow: null, dockRim: null, youRow: null, youRowRight: null, youPressable: null };
 const rect = {
   position: "absolute",
@@ -102,7 +102,7 @@ let closure_26 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11775).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11665).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -175,6 +175,7 @@ let closure_26 = noop.memo(function YouBar() {
   const youBarCoachmark = require("useYouBarCoachmark").useYouBarCoachmark({ isCondensed: tmp8 });
   visibleContent = youBarCoachmark.visibleContent;
   markAsDismissed = youBarCoachmark.markAsDismissed;
+  ({ animatedRef, avatarAnchorRef } = youBarCoachmark);
   const tmp2Result21 = require("useYouBarCoachmark");
   const showAgeNoticePromoSheet = require("AgeNoticeLazy").useShowAgeNoticePromoSheet({
     visibleContent,
@@ -450,7 +451,7 @@ let closure_26 = noop.memo(function YouBar() {
   } else {
     tmp48 = AVATAR_SIZE_MAP[closure_13];
   }
-  const obj5 = { ref: youBarCoachmark.animatedRef, style: null, shouldRasterizeIOS: true, children: null };
+  const obj5 = { ref: animatedRef, style: null, shouldRasterizeIOS: true, children: null };
   const items11 = [tmp.youRow, memo, animatedStyle];
   obj5.style = items11;
   const items12 = [
@@ -466,7 +467,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp52Result = tmp34;
   if (null != nameplate) {
     const obj6 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
-    tmp52Result = closure_18(tmp27(17966), obj6);
+    tmp52Result = closure_18(tmp27(18005), obj6);
   }
   items12[1] = tmp52Result;
   const obj7 = { gesture: memo3, children: null };
@@ -495,7 +496,11 @@ let closure_26 = noop.memo(function YouBar() {
   obj8.onPress = memo1;
   obj8.onLongPress = callback;
   obj8.hitSlop = hitSlop;
-  obj8.children = closure_18(YouBarUserDefault, { isCondensed: null != str, onAvatarPress: memo1 });
+  obj8.children = closure_18(YouBarUserDefault, {
+    isCondensed: null != str,
+    onAvatarPress: memo1,
+    avatarCoachmarkAnchorRef: avatarAnchorRef,
+  });
   obj7.children = closure_18(ref2, obj8);
   items12[2] = closure_18(require("LegacyBaseButton").GestureDetector, obj7);
   const obj10 = { style: tmp.youRowRight, children: null };
@@ -505,12 +510,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj11 = { hasNameplate: tmp34, canUnpin: tmp28.canPin };
-    let tmp52Result3 = closure_18(tmp27(17972), obj11);
+    let tmp52Result3 = closure_18(tmp27(18011), obj11);
   } else {
     tmp52Result3 = null;
     if (tmp26) {
       const obj12 = { hasNameplate: tmp34 };
-      tmp52Result3 = closure_18(tmp27(17974), obj12);
+      tmp52Result3 = closure_18(tmp27(18013), obj12);
     }
   }
   const items13 = [tmp52Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
@@ -523,7 +528,7 @@ let closure_26 = noop.memo(function YouBar() {
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj13.style = items15;
     const obj14 = { style: tmp.dockRim };
-    obj13.children = closure_18(tmp27(13307), obj14);
+    obj13.children = closure_18(tmp27(13233), obj14);
     tmp52Result4 = closure_18(tmp27(1653).View, obj13);
   }
   children[1] = tmp52Result4;

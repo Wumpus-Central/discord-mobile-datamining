@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/native/components/GameProfileMedia.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import openMediaModal from "../../../media_viewer/native/components/openMediaModal.tsx";
-import useMediaViewerSources from "../../../media_viewer/native/useMediaViewerSources.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import GameProfileMediaSources from "GameProfileMediaSources.tsx";
+import openMediaModal from "../../../media_viewer/native/components/openMediaModal.tsx";
+import useMediaViewerSources from "../../../media_viewer/native/useMediaViewerSources.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -35,8 +35,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(9817).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(4913);
+let closure_14 = 2 * (fn(8662).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(4917);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
   list: { overflow: "visible" },
@@ -53,8 +53,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(9817).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(9817).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(8662).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(8662).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };

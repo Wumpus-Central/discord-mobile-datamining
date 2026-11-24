@@ -261,7 +261,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F121222 */ function() { ... });
+                            image.onerror = closure_2_4(/* F121410 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });
@@ -323,7 +323,7 @@ export function loadImage(url, bind) {
     image = bindResult;
     if (null == value.callbacks) {
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       value.callbacks = set;
     }
     let callbacks = value.callbacks;

@@ -22,10 +22,10 @@ import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ChannelDetailsStore = fn(8574);
+const ChannelDetailsStore = fn(8876);
 ({ useChannelDetailsStore: metroImportDefault, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(4766).isTextChannel;
-let closure_16 = fn(9963).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const isTextChannel = fn(4770).isTextChannel;
+let closure_16 = fn(9719).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1071).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -77,10 +77,10 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     applyArgumentsResult.findQuestEmbedsInMessage = function findQuestEmbedsInMessage(codedLinks) {
       closure_0 = codedLinks;
       items = [];
-      const set = new Set();
+      set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(5635).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(5639).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -205,7 +205,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         }
         continue;
       }
-      const set = new Set(visibleEmbeds.map((item) => cacheKey.getCacheKey(item)));
+      set = new Set(visibleEmbeds.map((item) => cacheKey.getCacheKey(item)));
     };
     applyArgumentsResult.getCacheKey = function getCacheKey(channelId) {
       return channelId.channelId + ":" + channelId.messageId + ":" + channelId.questId;
@@ -215,8 +215,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6652).isChannelFocused();
-      applyArgumentsResult(5089);
+      let isChannelFocusedResult = applyArgumentsResult(6837).isChannelFocused();
+      applyArgumentsResult(5093);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }
@@ -543,7 +543,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         }
         continue;
       }
-      const set = new Set(items);
+      set = new Set(items);
     };
     applyArgumentsResult.handleNavigationStateChanged = function handleNavigationStateChanged() {
       log();

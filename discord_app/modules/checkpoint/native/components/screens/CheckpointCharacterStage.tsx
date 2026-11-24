@@ -25,7 +25,7 @@ function CheckpointCharacterStage(stage) {
   items = [stateFromStores];
   stateFromStores = stage(isHidden[8]).useStateFromStores(items, () => stateFromStores.compactAssets);
   const tmp7 = layout(isHidden[9])(() =>
-    CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c4, height, stateFromStores),
+    CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c4, height),
   );
   const textureScale = tmp7;
   const obj2 = stage(isHidden[8]);
@@ -57,6 +57,7 @@ function CheckpointCharacterStage(stage) {
     requestedDataBinding: memo,
     textureScale: tmp7,
     preloadedTextureNames: checkpointCharacterPreloadedTextureNames,
+    compactAssets: stateFromStores,
   });
   const tmp15 = layout(isHidden[9])(checkpointCharacterReferencedAssets);
   const obj5 = stage(isHidden[13]);
@@ -157,7 +158,7 @@ function CheckpointCharacterStage(stage) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};

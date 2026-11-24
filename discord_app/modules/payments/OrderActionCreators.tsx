@@ -606,12 +606,12 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     }
   }
 };
-const ConstraintReasonCode = fn(6861).ConstraintReasonCode;
+const ConstraintReasonCode = fn(7473).ConstraintReasonCode;
 const Endpoints = fn(1071).Endpoints;
 let closure_6 = new LoggerDefault("OrderActionCreators");
 let obj = {
-  [SPENDING_LIMIT_REACHED]: fn(6351).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED,
-  [SPENDING_LIMIT_WILL_EXCEED]: fn(6351).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED,
+  [SPENDING_LIMIT_REACHED]: fn(5668).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED,
+  [SPENDING_LIMIT_WILL_EXCEED]: fn(5668).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED,
 };
 ({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = ConstraintReasonCode);
 let BillingError = BillingError_mod;

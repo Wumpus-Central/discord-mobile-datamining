@@ -181,9 +181,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4766).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4770).isGuildTextChannelType;
 const dependencyMap = fn(1239).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(4938).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(4942).HexagonCampaignPerk;
 const SystemThemeState = fn(1194).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

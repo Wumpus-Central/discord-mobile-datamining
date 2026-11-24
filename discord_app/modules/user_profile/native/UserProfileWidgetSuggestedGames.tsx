@@ -7,17 +7,17 @@ import GameCoverImageDefault from "GameCoverImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const AccessibilityAnnouncer2 = trackUserProfileEditAction(4922);
-const UserProfileAnalyticsUtils = trackUserProfileEditAction(8136);
-const WidgetUtils = trackUserProfileEditAction(10217);
+const AccessibilityAnnouncer2 = trackUserProfileEditAction(4926);
+const UserProfileAnalyticsUtils = trackUserProfileEditAction(6256);
+const WidgetUtils = trackUserProfileEditAction(14395);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(8069).TrackUserProfileEditActions;
+let closure_7 = fn(6011).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   container: {
     marginTop: nativeDefault.space.PX_16,
@@ -88,7 +88,7 @@ export default function UserProfileWidgetSuggestedGames(widgetType) {
   let bound = Math.min(6, Math.max(4, Math.ceil((containerWidth + ref2) / (100 + ref2))));
   items = [gameIds, addedGames, bound];
   const memo = onFillWidget.useMemo(() => {
-    const set = new Set(addedGames.map((gameId) => gameId.gameId));
+    set = new Set(addedGames.map((gameId) => gameId.gameId));
     const found = gameIds.filter((item) => !set.has(item));
     return found.slice(0, bound);
   }, items);

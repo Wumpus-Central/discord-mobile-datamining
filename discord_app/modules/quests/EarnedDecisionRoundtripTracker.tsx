@@ -1,8 +1,8 @@
 // discord_app/modules/quests/EarnedDecisionRoundtripTracker.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import NetStats from "../network/NetStats.android.tsx";
-import SessionForegroundUtils from "../analytics_sessions/SessionForegroundUtils.native.tsx";
 import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
+import SessionForegroundUtils from "../analytics_sessions/SessionForegroundUtils.native.tsx";
 import NetworkStore from "../../stores/NetworkStore.tsx";
 
 require = fn;

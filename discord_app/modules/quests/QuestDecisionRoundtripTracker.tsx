@@ -1,10 +1,10 @@
 // discord_app/modules/quests/QuestDecisionRoundtripTracker.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import NetStats from "../network/NetStats.android.tsx";
-import SessionForegroundUtils from "../analytics_sessions/SessionForegroundUtils.native.tsx";
+import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
 import AdDecisionUtils from "../ads/utils/AdDecisionUtils.tsx";
+import SessionForegroundUtils from "../analytics_sessions/SessionForegroundUtils.native.tsx";
 import AdDeliveryStore from "../ads/AdDeliveryStore.tsx";
 import NetworkStore from "../../stores/NetworkStore.tsx";
 
@@ -69,8 +69,8 @@ class QuestDecisionRoundtripTracker {
 const prototype = QuestDecisionRoundtripTracker.prototype;
 prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
   const self = this;
-  let tmp = MOBILE_HOME_DOCK_AREA;
-  if (MOBILE_HOME_DOCK_AREA === undefined) {
+  let tmp = QUEST_HOME_BANNER_DESKTOP;
+  if (QUEST_HOME_BANNER_DESKTOP === undefined) {
     tmp = null;
   }
   const SymbolResult = Symbol();

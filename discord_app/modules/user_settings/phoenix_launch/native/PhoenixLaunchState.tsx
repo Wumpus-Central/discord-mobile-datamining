@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/phoenix_launch/native/PhoenixLaunchState.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import LaunchClient2 from "LaunchClient.tsx";
 import NativePhoenixLaunchModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativePhoenixLaunchModule.tsx";
+import LaunchClient2 from "LaunchClient.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

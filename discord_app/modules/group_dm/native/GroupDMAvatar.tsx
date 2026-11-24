@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "center",
+      animate: 212,
     };
     obj12.animate = animate;
     if (null == users) {
@@ -116,7 +116,7 @@ obj[fn(1186).AvatarSizes.REFRESH_MEDIUM_32] = fn(1186).AvatarSizes.XSMALL_20;
 obj[fn(1186).AvatarSizes.XSMALL] = fn(1186).AvatarSizes.SIZE_16;
 obj[fn(1186).AvatarSizes.SIZE_16] = fn(1186).AvatarSizes.XXSMALL_10;
 obj[fn(1186).AvatarSizes.NORMAL] = fn(1186).AvatarSizes.XSMALL;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const React5 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },

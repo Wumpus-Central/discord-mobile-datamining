@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx
-import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import startFrameMonitor from "startFrameMonitor.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 

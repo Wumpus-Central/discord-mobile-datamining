@@ -54,7 +54,7 @@ export function messageChecklist(role) {
   }
 }
 export function supersededChecklists(memo) {
-  const set = new Set();
+  set = new Set();
   let diff = memo.length - 1;
   let flag = false;
   if (0 <= diff) {

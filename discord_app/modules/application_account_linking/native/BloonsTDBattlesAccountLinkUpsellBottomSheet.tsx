@@ -1,5 +1,5 @@
 // discord_app/modules/application_account_linking/native/BloonsTDBattlesAccountLinkUpsellBottomSheet.tsx
-import _modDef3702 from "../IncentivizedAccountLinking.messages.js";
+import _modDef3704 from "../IncentivizedAccountLinking.messages.js";
 import GameIconDefault from "../../game_detection/native/GameIcon.tsx";
 import CutoutableAvatarImageDefault from "../../../design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import AccountLinkManager from "../AccountLinkManager.tsx";
@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_5 = fn(7522).ApplicationAccountLinkingConstants;
+let closure_5 = fn(7387).ApplicationAccountLinkingConstants;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
@@ -22,13 +22,13 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
     currentUser.getCurrentUser(),
   );
   const obj = BLOONS_TD_BATTLES_2_APPLICATION_ID(563);
-  const accountLinkBottomSheetStyles = BLOONS_TD_BATTLES_2_APPLICATION_ID(19097).useAccountLinkBottomSheetStyles();
+  const accountLinkBottomSheetStyles = BLOONS_TD_BATTLES_2_APPLICATION_ID(19139).useAccountLinkBottomSheetStyles();
   BLOONS_TD_BATTLES_2_APPLICATION_ID = closure_5.BLOONS_TD_BATTLES_2_APPLICATION_ID;
-  const obj2 = BLOONS_TD_BATTLES_2_APPLICATION_ID(19097);
-  const getOrFetchApplication = BLOONS_TD_BATTLES_2_APPLICATION_ID(6864).useGetOrFetchApplication(
+  const obj2 = BLOONS_TD_BATTLES_2_APPLICATION_ID(19139);
+  const getOrFetchApplication = BLOONS_TD_BATTLES_2_APPLICATION_ID(7389).useGetOrFetchApplication(
     BLOONS_TD_BATTLES_2_APPLICATION_ID,
   );
-  const bloonsTDBattlesUpsellExperiment = BLOONS_TD_BATTLES_2_APPLICATION_ID(19098).bloonsTDBattlesUpsellExperiment;
+  const bloonsTDBattlesUpsellExperiment = BLOONS_TD_BATTLES_2_APPLICATION_ID(19140).bloonsTDBattlesUpsellExperiment;
   [][0] = BLOONS_TD_BATTLES_2_APPLICATION_ID;
   if (null != stateFromStores) {
     if (null != getOrFetchApplication) {
@@ -39,10 +39,10 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
         style: accountLinkBottomSheetStyles.content,
         children: null,
       };
-      const obj5 = { game: getOrFetchApplication, size: tmp(7526).GameIconSizes.LARGE };
-      const items1 = [closure_6(GameIconDefault, obj5), closure_6(tmp(19101).UnionOrbsIcon, {})];
-      const obj6 = { guildId: "a", user: stateFromStores, size: "container", "aria-label": "sv-FI" };
-      obj6.size = tmp(14487).AvatarSizes.XXLARGE;
+      const obj5 = { game: getOrFetchApplication, size: tmp(7393).GameIconSizes.LARGE };
+      const items1 = [closure_6(GameIconDefault, obj5), closure_6(tmp(19143).UnionOrbsIcon, {})];
+      const obj6 = { guildId: "a", user: stateFromStores, size: null, "aria-label": null };
+      obj6.size = tmp(14756).AvatarSizes.XXLARGE;
       let username;
       if (stateFromStores != null) {
         username = stateFromStores.username;
@@ -51,7 +51,7 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
       obj6["aria-label"] = username;
       items1[2] = closure_6(CutoutableAvatarImageDefault, obj6);
       obj7.children = items1;
-      const items2 = [closure_7(tmp(5929).Stack, obj7)];
+      const items2 = [closure_7(tmp(5989).Stack, obj7)];
       const obj8 = { justify: "center", children: null };
       const obj9 = {
         variant: "heading-xl/semibold",
@@ -64,8 +64,8 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
         orbCount: bloonsTDBattlesUpsellExperiment.useConfig({ location: "AccountLinkUpsellBottomSheet" }).orbQuantity,
         applicationName: getOrFetchApplication.name,
       };
-      obj9.children = intl.format(_modDef3702.T0vNuI, obj10);
-      const items3 = [closure_6(tmp(5504).Text, obj9)];
+      obj9.children = intl.format(_modDef3704.T0vNuI, obj10);
+      const items3 = [closure_6(tmp(5508).Text, obj9)];
       const obj11 = {
         variant: "body-md/medium",
         color: "text-subtle",
@@ -73,18 +73,18 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
         children: null,
       };
       const intl2 = tmp(1112).intl;
-      obj11.children = intl2.string(_modDef3702["ru+EPb"]);
-      items3[1] = closure_6(tmp(5504).Text, obj11);
+      obj11.children = intl2.string(_modDef3704["ru+EPb"]);
+      items3[1] = closure_6(tmp(5508).Text, obj11);
       obj8.children = items3;
-      items2[1] = closure_7(tmp(5929).Stack, obj8);
+      items2[1] = closure_7(tmp(5989).Stack, obj8);
       obj4.children = items2;
       const obj12 = {
         markAsDismissed: markAsDismissed.markAsDismissed,
         application: getOrFetchApplication,
-        body: closure_7(tmp(5929).Stack, obj4),
+        body: closure_7(tmp(5989).Stack, obj4),
         onSuccess: tmp6,
       };
-      return closure_6(tmp(19097).AccountLinkUpsellBottomSheet, obj12);
+      return closure_6(tmp(19139).AccountLinkUpsellBottomSheet, obj12);
     }
   }
   return null;

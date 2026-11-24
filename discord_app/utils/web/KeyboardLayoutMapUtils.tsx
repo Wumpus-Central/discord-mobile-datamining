@@ -1,7 +1,7 @@
 // discord_app/utils/web/KeyboardLayoutMapUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import keyCodeDefault from "../../../_runtime/15360_keyCode.js";
+import keyCodeDefault from "../../../_runtime/15381_keyCode.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import DeveloperOptionsStore from "../../stores/DeveloperOptionsStore.tsx";
@@ -99,7 +99,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
   }
 };
 function normalizeKeyMap(arg0) {
-  const set = new Set();
+  set = new Set();
   const obj = {};
   const entries = Object.entries(arg0);
   while (tmp2 !== undefined) {
@@ -344,7 +344,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(8297);
+const KeyboardConstants = fn(8136);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1378);

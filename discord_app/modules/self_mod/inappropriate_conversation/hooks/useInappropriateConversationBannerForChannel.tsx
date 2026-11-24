@@ -1,9 +1,9 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
 import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
-import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
 import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault.tsx";
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
+import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;

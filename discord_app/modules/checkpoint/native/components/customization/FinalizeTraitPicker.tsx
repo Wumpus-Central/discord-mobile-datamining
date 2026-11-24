@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/customization/FinalizeTraitPicker.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3440 from "../../../Checkpoint2026.messages.js";
+import _modDef3442 from "../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointCharacterTraits from "../../../CheckpointCharacterTraits.tsx";
 import CheckpointTrait from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTrait.tsx";
@@ -63,11 +63,11 @@ function NoOutfitColorways(minHeight) {
   items[1] = tmp4;
   const obj3 = { variant: "body-lg/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3440.zsYYN1);
+  obj3.children = intl.string(_modDef3442.zsYYN1);
   const items1 = [React4(Text_Text.Text, obj3)];
   const obj4 = { variant: "body-md/medium", color: "text-subtle", style: tmp.description, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3440.BkuqWx);
+  obj4.children = intl2.string(_modDef3442.BkuqWx);
   items1[1] = React4(Text_Text.Text, obj4);
   obj2.children = items1;
   return timestampProducer(View, obj2);
@@ -98,9 +98,9 @@ function OptionListSpacer(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
-let obj2 = { message: { paddingHorizontal: fn(12784).CONTENT_INSET }, description: null };
-let obj3 = { paddingHorizontal: fn(12784).CONTENT_INSET };
+const createStyles = fn(4917);
+let obj2 = { message: { paddingHorizontal: fn(12703).CONTENT_INSET }, description: null };
+let obj3 = { paddingHorizontal: fn(12703).CONTENT_INSET };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

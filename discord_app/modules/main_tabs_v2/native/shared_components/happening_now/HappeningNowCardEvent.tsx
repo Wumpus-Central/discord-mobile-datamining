@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import GuildScheduledEventModalActionCreators from "../../../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16701);
+const HappeningNowConstants = fn(16735);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
   HappeningNowCardTrackingType: closure_8,
@@ -18,7 +18,7 @@ const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 },
   infoNoImage: {
@@ -104,7 +104,7 @@ let obj5 = {
 };
 obj.avatarContainer = { width: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.XSMALL_20] };
 let closure_13 = createStyles.createStyles(obj);
-const point = { shape: fn(9023).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(9279).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let closure_15 = noop.memo(function DottedLineSeparator() {
   const tmp = closure_13();
@@ -170,7 +170,10 @@ export default noop.memo(function HappeningNowCardEvent(event) {
     obj2.highlighted_user_ids = tmp4;
     obj2.destination_channel_id = event.channel_id;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    const result = GuildScheduledEventModalActionCreators.openGuildEventDetails({ eventId: event.id, event });
+    const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openGuildEventDetails({
+      eventId: event.id,
+      event,
+    });
     const obj4 = { eventId: event.id, event };
   }, items4);
   if (null != event.image) {

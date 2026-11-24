@@ -28,7 +28,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_7 = 6 * DurationsDefault.Millis.SECOND;
 let closure_8 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   voiceChannelEffectEmojiContainer: null,
   voiceChannelEffectEmojiContainerTileNotch: null,
@@ -160,12 +160,12 @@ export default function AnimatedEffectEmoji(onComplete) {
     const obj3 = { style: tmp.voiceChannelEffectEmoji, children: null };
     const obj4 = { url: null, surrogates: null };
     let tmp2Result = tmp2(1186);
-    obj4.url = tmp2(10742).getEffectUrl(emoji);
+    obj4.url = tmp2(10018).getEffectUrl(emoji);
     obj4.surrogates = emoji.name;
     obj3.children = <Emoji url={null} surrogates={null} />;
     obj2.children = <c4 style={tmp.voiceChannelEffectEmoji}>{null}</c4>;
     tmp16Result = jsx(_modDef1653.View, { style: null, children: null });
-    const tmp2Result2 = tmp2(10742);
+    const tmp2Result2 = tmp2(10018);
   }
   return tmp16Result;
 }

@@ -9,15 +9,15 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import BaseIconImage from "../../../design/components/Icon/native/BaseIconImage.tsx";
 import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
-import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
+import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
+import _modDef9494 from "../../../../_runtime/metro/09494__.js";
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
-import _modDef10947 from "../../../../_runtime/metro/10947__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -30,12 +30,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(5754).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(5817).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5658).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5729).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   wrapper: { gap: nativeDefault.space.PX_24 },
   header: { textAlign: "center" },
@@ -233,7 +233,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj10.children = intl5.string(_modDef2575.nMcXo1);
         items = [gesture(Text_Text.Text, obj10)];
         const tmp8Result = NativeViewDefault;
-        items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef10947, size: "xs" });
+        items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef9494, size: "xs" });
         obj9.children = items;
         obj8.label = colors(tmp8Result, obj9);
         if (null != maxSettingsForPreset2) {
@@ -337,5 +337,5 @@ export function showMobileGoLiveActionSheet(location_stack) {
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(10937, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10217, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 }

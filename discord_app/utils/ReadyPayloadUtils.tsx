@@ -500,7 +500,7 @@ export function preloadReadyPayloadData() {
     const tmpResult3 = ChannelReaderDefault;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {

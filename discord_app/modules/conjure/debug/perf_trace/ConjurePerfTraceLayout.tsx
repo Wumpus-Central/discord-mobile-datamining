@@ -454,7 +454,7 @@ export function visiblePerfTraceRows(key, arg1) {
 }
 export function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f90124 = (depth) => {
+  const f91248 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -462,11 +462,11 @@ export function overviewView(children) {
     }
     return tmp;
   };
-  const set = new Set();
+  set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f90140(children);
+      tmp = f91264(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -490,12 +490,12 @@ export function extendView(collapsed, memo, current) {
     }
     return tmp;
   };
-  const set = new Set();
+  set = new Set();
   closure_129_1 = set;
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f90140(children);
+      tmp = f91264(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -524,18 +524,18 @@ export function extendView(collapsed, memo, current) {
   return tmp4;
 }
 export function perfTraceKeys(memo) {
-  const set = new Set();
+  set = new Set();
   walkNodes(memo, (key) => set.add(key.key));
   return set;
 }
 export function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f90139 = () => true;
+  const f91263 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f90140(children);
+      tmp = f91264(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -551,12 +551,12 @@ export function expandedView(children) {
 }
 export function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f90140 = (depth) => depth.depth > 0;
-  const set = new Set();
+  const f91264 = (depth) => depth.depth > 0;
+  set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f90140(children);
+      tmp = f91264(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -575,7 +575,7 @@ export function toggleNode(collapsed, findPerfTraceNodeResult) {
   collapsed = collapsed.collapsed;
   if (collapsed.has(findPerfTraceNodeResult.key)) {
     const _Set2 = Set;
-    const set = new Set(collapsed.collapsed);
+    set = new Set(collapsed.collapsed);
     set.delete(findPerfTraceNodeResult.key);
     const obj2 = { collapsed: set, revealed: null };
     const children = findPerfTraceNodeResult.children;

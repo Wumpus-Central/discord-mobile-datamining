@@ -64,7 +64,7 @@ function handleChannelSync(integrity_check) {
 function handleLogout(isSwitchingAccount) {
   closure_18 = closure_18 + 1;
   items = [...Object.keys(closure_15), ...Object.keys(closure_16)];
-  const set = new Set(items);
+  set = new Set(items);
   const item = set.forEach((guild_id) => {
     if (null != closure_14[guild_id]) {
       let tmp2 = tmp9;
@@ -325,7 +325,7 @@ let closure_25 = async function _getResyncGuilds() {
   );
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4769).ChannelFlags;
+const ChannelFlags = fn(4773).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

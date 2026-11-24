@@ -1,6 +1,6 @@
 // discord_app/modules/polls/native/formatPollMessageChatData.tsx
-import MarkupParsers from "../../messages/native/renderer/MarkupParsers.tsx";
 import chat_formatPollMessageChatDataDefault from "../chat/formatPollMessageChatData.tsx";
+import MarkupParsers from "../../messages/native/renderer/MarkupParsers.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/polls/native/formatPollMessageChatData.tsx");

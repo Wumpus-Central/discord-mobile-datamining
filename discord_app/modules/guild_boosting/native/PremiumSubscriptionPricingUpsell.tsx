@@ -228,7 +228,7 @@ const PremiumConstants = fn(1388);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_21 = createStyles.createStyles({
   title: { marginTop: 16 },
   pricingSection: { alignItems: "center" },
@@ -258,5 +258,5 @@ export default function PremiumSubscriptionPricingUpsell() {
   }
   items[1] = tmp5Result;
   obj2.children = items;
-  return dependencyMap(View, obj2);
+  return set(View, obj2);
 }

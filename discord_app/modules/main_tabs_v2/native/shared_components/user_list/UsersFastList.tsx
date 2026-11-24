@@ -4,11 +4,11 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ClientThemesOverrides from "../../../../client_themes/native/ClientThemesOverrides.tsx";
-import useFastestListTableRowPlaceholderConfig from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
 import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
+import useFastestListTableRowPlaceholderConfig from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
 import UserRowDefault from "UserRow.tsx";
 import GroupDMRowDefault from "GroupDMRow.tsx";
 import ChannelRowDefault from "ChannelRow.tsx";
@@ -40,11 +40,11 @@ function PlaceholderSection() {
   return metroImportDefault(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(9657);
+const UsersFastListConstants = fn(10586);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   sectionHeader: { flex: 1, overflow: "hidden" },
   stickySectionContent: { top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },

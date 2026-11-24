@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx
 import isChangelogUserDefault from "../../../changelog/utils/isChangelogUser.tsx";
-import GuildJoinRequestAnalyticUtils from "../../GuildJoinRequestAnalyticUtils.tsx";
 import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
+import GuildJoinRequestAnalyticUtils from "../../GuildJoinRequestAnalyticUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import UserRecord from "../../../../records/UserRecord.tsx";
@@ -191,7 +191,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let closure_11 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },

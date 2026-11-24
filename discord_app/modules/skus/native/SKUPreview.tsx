@@ -4,11 +4,11 @@ import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import ThemeAwareNitroWishlistingWumpusRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/ThemeAwareNitroWishlistingWumpusRive.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
+import AvatarDecorationSampleV2Default from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
 import useShopProductItems from "../../collectibles/hooks/useShopProductItems.tsx";
-import WishlistItemCardBase from "../../wishlists/native/WishlistItemCardBase.tsx";
 import BundleSampleV2Default from "../../collectibles/native/BundleSampleV2.tsx";
 import ProfileEffectSampleV2Default from "../../collectibles/native/ProfileEffectSampleV2.tsx";
-import AvatarDecorationSampleV2Default from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
+import WishlistItemCardBase from "../../wishlists/native/WishlistItemCardBase.tsx";
 import ProfileFrameSamplePreviewDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
 import NameplateCardPreviewDefault from "../../collectibles/nameplates/native/NameplateCardPreview.tsx";
 import SlayerStorefrontItemCardDefault from "../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
@@ -139,7 +139,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8981).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(11021).DEFAULT_ITEM_SIZE;
   }
   items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -195,10 +195,10 @@ class PremiumSKUPreview {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(8079).transformSKUToCollectiblesItem;
+let closure_5 = fn(6189).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1071).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const React5 = createStyles.createStyles((width, height) => {
   const obj = {
     container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" },
@@ -227,7 +227,7 @@ const React5 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(8981).DEFAULT_ITEM_SIZE, height: fn(8981).DEFAULT_ITEM_SIZE };
+let size = { width: fn(11021).DEFAULT_ITEM_SIZE, height: fn(11021).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

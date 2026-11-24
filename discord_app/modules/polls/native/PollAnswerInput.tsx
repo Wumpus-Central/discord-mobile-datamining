@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import PollsUtils from "../PollsUtils.tsx";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
+import PollsUtils from "../PollsUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(8315).DraftType;
-const PollsConstants = fn(8521);
+const DraftType = fn(7976).DraftType;
+const PollsConstants = fn(12084);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13087, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13004, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -207,15 +207,15 @@ export default function PollAnswerInput(answer) {
     onBlur: null,
     blurOnSubmit: false,
     style: null,
-    selectionColor: "channel",
-    textContentType: "HFU_MAU",
-    accessibilityLabel: "next",
-    accessibilityHint: "makeEmptyTitleError",
-    maxLength: "J90oLW",
-    returnKeyType: "allow_labels",
-    required: "numSelections",
-    autoCorrect: "col",
-    "aria-invalid": "sa",
+    selectionColor: "channel_id",
+    textContentType: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    maxLength: null,
+    returnKeyType: null,
+    required: null,
+    autoCorrect: null,
+    "aria-invalid": null,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

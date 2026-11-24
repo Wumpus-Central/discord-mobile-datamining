@@ -8,7 +8,7 @@ const STAGE_AUDIENCE_SHEET_KEY = StageChannelsConstants.STAGE_AUDIENCE_SHEET_KEY
 const result = size.fileFinishedImporting("modules/stage_channels/native/openStageAudienceSheet.tsx");
 
 export default function openStageAudienceSheet(channelId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10904, dependencyMap.paths), STAGE_AUDIENCE_SHEET_KEY, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10181, dependencyMap.paths), STAGE_AUDIENCE_SHEET_KEY, {
     channelId,
   });
 }

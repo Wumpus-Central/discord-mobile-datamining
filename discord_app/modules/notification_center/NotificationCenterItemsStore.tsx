@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6633).isGuildEventEnded;
+const isGuildEventEnded = fn(5649).isGuildEventEnded;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 let obj = {
   loading: false,
@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Promise",
-  notifCenterActive: "installation",
-  notifCenterTabFocused: "2026-11-apex-launch-latch",
+  notifCenterActive: "board",
+  notifCenterTabFocused: null,
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -323,7 +323,7 @@ NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
 const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
     items = [];
-    const set = new Set();
+    set = new Set();
     relationships = relationships.relationships;
     let item = relationships.forEach((item) => {
       ({ id, since, user_ignored, type, is_spam_request, origin_application_id } = item);
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "installation",
-      notifCenterTabFocused: "2026-11-apex-launch-latch",
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "installation",
-      notifCenterTabFocused: "2026-11-apex-launch-latch",
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6638);
+        obj = id(6824);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "installation",
-      notifCenterTabFocused: "2026-11-apex-launch-latch",
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -744,7 +744,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
   },
   APPLICATIONS_FETCH_SUCCESS: function handleFetchApplicationsSuccess(unknownApplicationIds) {
     unknownApplicationIds = unknownApplicationIds.unknownApplicationIds;
-    let set;
+    set = undefined;
     if (null != unknownApplicationIds) {
       const _Set = Set;
       set = new Set(unknownApplicationIds);

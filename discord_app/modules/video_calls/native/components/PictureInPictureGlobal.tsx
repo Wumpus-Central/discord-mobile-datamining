@@ -5,9 +5,9 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
 import isChannelFocused from "../../../panels/isChannelFocused.native.tsx";
+import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
 import PictureInPictureDefault from "PictureInPicture.tsx";
 import getPIPBottomOffsetForPIPMode from "../../../panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx";
@@ -23,12 +23,12 @@ const _modDef1653 = _mod1653;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(10382).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(8949).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1071).PictureInPicturePositions;
-const ParticipantTypes = fn(5563).ParticipantTypes;
+const ParticipantTypes = fn(5567).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,

@@ -22,7 +22,7 @@ function getVoiceStatesForGuild(guildId) {
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
         (voiceState) => {
@@ -335,7 +335,7 @@ prototype2["initialize"] = function initialize() {
         if (typeof SortedVoiceStates === "function") {
           const merged = Object.assign({ _pending: null, _voiceStates: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[0] = set;
           const secondaryIndexMap = new allVoiceStates(dependencyMap[10]).SecondaryIndexMap(
             (voiceState) => {
@@ -452,7 +452,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       if (typeof SortedVoiceStates === "function") {
         const merged = Object.assign({ _pending: null, _voiceStates: null });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[0] = set;
         const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
           (voiceState) => {
@@ -492,7 +492,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
         (voiceState) => {
@@ -517,7 +517,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
   }
   return obj.getVoiceStatesForChannel(getGuildId.id);
 };
-prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt(id, guildId) {
+prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt(channelId, guildId) {
   let tmp = guildId;
   if (guildId == null) {
     tmp = ME;
@@ -527,7 +527,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
         (voiceState) => {
@@ -550,7 +550,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
       throw new TypeError("Trying to call a non-function");
     }
   }
-  return obj.getVoiceStatesForChannel(id);
+  return obj.getVoiceStatesForChannel(channelId);
 };
 prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(arg0) {
   const channel = ChannelStore.getChannel(arg0);
@@ -565,7 +565,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
       if (typeof SortedVoiceStates === "function") {
         const merged = Object.assign({ _pending: null, _voiceStates: null });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[0] = set;
         const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
           (voiceState) => {
@@ -602,7 +602,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
     if (typeof SortedVoiceStates === "function") {
       const merged = Object.assign({ _pending: null, _voiceStates: null });
       const _Set = Set;
-      const set = new Set();
+      set = new Set();
       merged[0] = set;
       const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
         (voiceState) => {
@@ -651,7 +651,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
           if (typeof SortedVoiceStates === "function") {
             const merged = Object.assign({ _pending: null, _voiceStates: null });
             const _Set = Set;
-            const set = new Set();
+            set = new Set();
             merged[0] = set;
             const secondaryIndexMap = new allVoiceStates(dependencyMap[10]).SecondaryIndexMap(
               (voiceState) => {
@@ -691,7 +691,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
         if (typeof SortedVoiceStates === "function") {
           const merged = Object.assign({ _pending: null, _voiceStates: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[0] = set;
           const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
             (voiceState) => {
@@ -730,7 +730,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
         if (typeof SortedVoiceStates === "function") {
           const merged = Object.assign({ _pending: null, _voiceStates: null });
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           merged[0] = set;
           const secondaryIndexMap = new require("SecondaryIndexMap").SecondaryIndexMap(
             (voiceState) => {
@@ -763,7 +763,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
       if (typeof SortedVoiceStates === "function") {
         const merged = Object.assign({ _pending: null, _voiceStates: null });
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         merged[0] = set;
         const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
           (voiceState) => {
@@ -805,7 +805,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
     if (voiceStates != null) {
       mapped = voiceStates.map((userId) => userId.userId);
     }
-    const set = new Set(userIds);
+    set = new Set(userIds);
     const tmp4 = new Set(userIds);
     const set1 = new Set(mapped);
     items = [...set1];

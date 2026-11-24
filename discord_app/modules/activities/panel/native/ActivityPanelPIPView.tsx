@@ -373,7 +373,7 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityPanelConstants = fn(5539);
+const ActivityPanelConstants = fn(5543);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_10,
@@ -381,15 +381,15 @@ const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1,
 } = ActivityPanelConstants);
-let closure_14 = fn(19036).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19078).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 let ThemeTypes = fn(1071).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11751).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(10774).ActivityLayoutMode;
+const PIP_WINDOW_OFFSET = fn(11636).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(10050).ActivityLayoutMode;
 let jsx = fn(21).jsx;
 let closure_19 = { duration: 300 };
 const native = fn(1186);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1186).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -404,7 +404,7 @@ obj.mask = {
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-let dependencyMap = createStyles.createStyles(obj);
+createStyles.createStyles(obj);
 let closure_21 = {
   code: "(function transitionComplete_ActivityPanelPIPViewTsx1(finished=false){let[transitionState,TransitionStates,scheduleOnRN,transitionCleanUp]=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(transitionCleanUp);}})",
 };

@@ -39,7 +39,7 @@ class TransitionGroup {
       if (current != null) {
         keys = current.keys();
       }
-      const set = new Set(keys);
+      set = new Set(keys);
       const map = new Map(ref2.current);
       function _loop() {
         const tmp2 = getItemKey(item);

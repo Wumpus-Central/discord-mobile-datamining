@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const HexagonCampaignConstants = fn(4938);
+const HexagonCampaignConstants = fn(4942);
 const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HexagonCampaignConstants.HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT;
 ({
   HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_8,
@@ -21,7 +21,7 @@ const Fonts = fn(1082).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let result = 3 * nativeDefault.space.PX_8;
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" },
@@ -114,7 +114,7 @@ obj2.campaignLogoFrame = { width: 48, height: 48, alignItems: "center", justifyC
 obj2.campaignLogo = { width: 32, height: 24 };
 obj2.campaignName = {
   flex: 1,
-  fontFamily: fn(9456).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
+  fontFamily: fn(8572).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
 };
 obj2.campaignNameFallback = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.campaignLegal = { paddingHorizontal: 2 };

@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
+import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
 import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -50,15 +50,15 @@ function GameTag(removeButtonRef) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(8069).TrackUserProfileEditActions;
+let closure_7 = fn(6011).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let xs = "xs";
-xs = fn(7240).ICON_SIZE.xs;
+xs = fn(7167).ICON_SIZE.xs;
 const PX_4 = nativeDefault.space.PX_4;
 let c13 = "body-sm/normal";
 const hitSlop = Math.max((44 - xs) / 2, 0);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   tags: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 },
   tag: null,

@@ -10,7 +10,7 @@ require = fn;
 function hideSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(hasOwnProperty);
 }
-const GameOrganizationInviteConstants = fn(11896);
+const GameOrganizationInviteConstants = fn(11770);
 ({ GAME_ORGANIZATION_CANT_JOIN_ACTION_SHEET_KEY: hasOwnProperty, GameOrganizationCantJoinReasons: closure_6 } =
   GameOrganizationInviteConstants);
 const jsx = fn(21).jsx;
@@ -48,7 +48,7 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
       lXyJMS = _modDef2639["IIR/NZ"];
     }
     let obj2 = {
-      header: jsx(tmp5(7515).BottomSheetTitleHeader, { title: null }),
+      header: jsx(tmp5(7381).BottomSheetTitleHeader, { title: null }),
       title: null,
       description: null,
       actions: null,
@@ -71,9 +71,9 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
       obj6.text = intl3.string(tmp5(1112).t.cpT0Cq);
       obj6.onPress = hideSheet;
     }
-    obj2.actions = jsx(tmp5(5511).Button, obj6);
-    return jsx(tmp5(11225).PromoSheet, {
-      header: jsx(tmp5(7515).BottomSheetTitleHeader, { title: null }),
+    obj2.actions = jsx(tmp5(5515).Button, obj6);
+    return jsx(tmp5(10603).PromoSheet, {
+      header: jsx(tmp5(7381).BottomSheetTitleHeader, { title: null }),
       title: null,
       description: null,
       actions: null,

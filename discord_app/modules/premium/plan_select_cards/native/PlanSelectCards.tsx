@@ -5,9 +5,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremiumPlanSelectionActionSheet.tsx";
-import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
-import usePremiumPlanPriceDefault from "../../native/hooks/usePremiumPlanPrice.tsx";
 import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
+import usePremiumPlanPriceDefault from "../../native/hooks/usePremiumPlanPrice.tsx";
+import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -75,8 +75,8 @@ function PlanSelectCard(onLayout) {
   ({ applicationId: importDefault, onPaymentSuccess: dependencyMap, onPaymentDismiss: View } = onLayout);
   const tmp = closure_11();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  const theme = premiumType(4974).useThemeContext().theme;
-  premiumType(4935);
+  const theme = premiumType(4978).useThemeContext().theme;
+  premiumType(4939);
   if (premiumType === PremiumTypes.TIER_2) {
     const obj2 = { variant: "expressive", iconColor: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
     let obj4 = obj2;
@@ -95,11 +95,11 @@ function PlanSelectCard(onLayout) {
       backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
       style: tmp.gradient,
     };
-    items = [closure_6(tmp4(7812).ExpressiveGradient, obj7)];
+    items = [closure_6(tmp4(7756).ExpressiveGradient, obj7)];
     const obj8 = {
       style: tmp.wumpus,
       pointerEvents: "none",
-      children: closure_6(tmp4(14073).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
+      children: closure_6(tmp4(13753).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
     };
     items[1] = closure_6(View, obj8);
     obj6.children = items;
@@ -109,9 +109,9 @@ function PlanSelectCard(onLayout) {
   const obj9 = { spacing: nativeDefault.space.PX_4, children: null };
   const intl = tmp4(1112).intl;
   const t = tmp4(1112).t;
-  const obj = premiumType(4974);
+  const obj = premiumType(4978);
   const items2 = [
-    closure_6(premiumType(5504).Heading, {
+    closure_6(premiumType(5508).Heading, {
       variant: "nitro-md",
       color: "text-strong",
       children: intl.string(premiumType === PremiumTypes.TIER_2 ? t.lG6a5x : t["t9uG/o"]),
@@ -119,7 +119,7 @@ function PlanSelectCard(onLayout) {
     closure_6(PlanSelectCardPrices, { premiumType }),
   ];
   obj9.children = items2;
-  items1[1] = closure_7(premiumType(5929).Stack, obj9);
+  items1[1] = closure_7(premiumType(5989).Stack, obj9);
   items1[2] = closure_6(View, { style: tmp.divider });
   items1[3] = closure_6(PlanSelectCardPerks, { premiumType });
   const obj12 = { style: tmp.cta, children: null };
@@ -127,7 +127,7 @@ function PlanSelectCard(onLayout) {
   const t2 = tmp4(1112).t;
   const obj13 = {
     text: intl2.string(premiumType === PremiumTypes.TIER_2 ? t2["8x0jKT"] : t2.cM8bbx),
-    icon: closure_6(premiumType(8952).NitroWheelIcon, { size: "md", color: obj4.iconColor }),
+    icon: closure_6(premiumType(9496).NitroWheelIcon, { size: "md", color: obj4.iconColor }),
     variant: obj4.variant,
     size: "lg",
     grow: true,
@@ -142,7 +142,7 @@ function PlanSelectCard(onLayout) {
       });
     },
   };
-  obj12.children = closure_6(premiumType(5511).Button, obj13);
+  obj12.children = closure_6(premiumType(5515).Button, obj13);
   items1[4] = closure_6(View, obj12);
   obj5.children = items1;
   return closure_7(View, obj5);
@@ -170,7 +170,7 @@ const dependencyMap = {
     yearly: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
   },
 };
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj4 = {
   container: { width: "100%", gap: nativeDefault.space.PX_12 },
   card: null,

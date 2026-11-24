@@ -176,7 +176,7 @@ prototype["many"] = function many(items, fn) {
       Promise.reject(tmp13);
     }
   }
-  const set = new Set(items);
+  set = new Set(items);
 };
 
 export function areArraysShallowlyEqual(arg0, arg1) {

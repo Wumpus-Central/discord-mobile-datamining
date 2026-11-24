@@ -4,10 +4,10 @@ import _modDef38 from "../../_runtime/metro/00038__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
-import StreamRTCConnection from "../modules/go_live/StreamRTCConnection.tsx";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
 import StreamerApplicationSelectors from "../modules/go_live/utils/StreamerApplicationSelectors.tsx";
+import StreamRTCConnection from "../modules/go_live/StreamRTCConnection.tsx";
 import RunningGameStore from "../modules/game_detection/RunningGameStore.native.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 import MediaEngineStore from "MediaEngineStore.tsx";
@@ -20,7 +20,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1071);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6397).StreamTypes;
+const StreamTypes = fn(6688).StreamTypes;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -317,7 +317,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
       appContext = appContext.appContext;
       const streamKey = appContext.streamKey;
-      closure_11[streamKey] = { appContext, analyticsLocations: "r" };
+      closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
       const item = applyDefault.forEach(closure_18, (analyticsContext) => {
         analyticsContext = analyticsContext.analyticsContext;
         analyticsContext.setActionContext(appContext);

@@ -31,7 +31,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   container: { flex: 1 },
   scrollContent: {
@@ -330,7 +330,7 @@ export default function ScheduleDowntimeScreen() {
   );
   const items3 = [teenId, ,];
   let ruleId1;
-  let set = new Set(days);
+  set = new Set(days);
   if (rule != null) {
     ruleId1 = rule.ruleId;
   }
@@ -373,7 +373,7 @@ export default function ScheduleDowntimeScreen() {
                   dependencyMap = 3;
                   c5 = 1;
                   const obj6 = {
-                    value: closure_0(16242).deleteRestrictedScheduleRule(teenId, rule.ruleId),
+                    value: closure_0(16275).deleteRestrictedScheduleRule(teenId, rule.ruleId),
                     done: false,
                   };
                   return obj6;
@@ -385,8 +385,8 @@ export default function ScheduleDowntimeScreen() {
             if (2 === tmp8) {
               c4 = 1;
               const intl = closure_0(1112).intl;
-              closure_0(5594).presentFailedToast(intl.string(tmp4(2824).Wu8BK2));
-              const obj2 = closure_0(5594);
+              closure_0(5598).presentFailedToast(intl.string(tmp4(2824).Wu8BK2));
+              const obj2 = closure_0(5598);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -498,7 +498,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(16242).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(16275).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -508,8 +508,8 @@ export default function ScheduleDowntimeScreen() {
           if (2 === tmp8) {
             c4 = 1;
             const intl = closure_0(1112).intl;
-            closure_0(5594).presentFailedToast(intl.string(tmp4(2824).Wu8BK2));
-            const obj2 = closure_0(5594);
+            closure_0(5598).presentFailedToast(intl.string(tmp4(2824).Wu8BK2));
+            const obj2 = closure_0(5598);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -613,7 +613,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = first1(tmp2(stringResult[23]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f130520 = (first1) => {
+      const f130718 = (first1) => {
         closure_1_12(first1);
         const result = (closure_0(rule[17]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };
@@ -622,7 +622,7 @@ export default function ScheduleDowntimeScreen() {
       const stringResult = intl.string(_modDef2824["8bLRt0"]);
       const obj2 = { title: stringResult, mode: "time", startDate: null, onSubmit: null };
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(7622, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(8365, dependencyMap.paths);
       obj2.startDate = new Date(2025, 0, 1, first1.hours, first1.minutes, 0, 0);
       obj2.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };
@@ -645,7 +645,7 @@ export default function ScheduleDowntimeScreen() {
       const stringResult = intl.string(_modDef2824["+JkWJV"]);
       const obj2 = { title: stringResult, mode: "time", startDate: null, onSubmit: null };
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(7622, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(8365, dependencyMap.paths);
       obj2.startDate = new Date(2025, 0, 1, first2.hours, first2.minutes, 0, 0);
       obj2.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };
@@ -682,7 +682,7 @@ export default function ScheduleDowntimeScreen() {
         style: items,
         onPress() {
           closure_16((items) => {
-            const set = new Set(items);
+            set = new Set(items);
             if (set.has(closure_0)) {
               set.delete(closure_0);
             } else {

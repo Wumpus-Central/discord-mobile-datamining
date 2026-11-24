@@ -8,7 +8,7 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import FramesStore from "../../frames/FramesStore.tsx";
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6354).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(5671).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_8,
@@ -17,7 +17,7 @@ const Constants = fn(1071);
   RPCErrors: closure_11,
   RPCCommands: closure_12,
 } = Constants);
-const asLaunched = fn(6624).asLaunched;
+const asLaunched = fn(6811).asLaunched;
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const map1 = new Map();
@@ -62,9 +62,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
           const obj = closure_1_1(1255);
-          obj2.channel_id = closure_1_0(4834).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4834);
-          obj2.guild_id = closure_1_0(4834).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.channel_id = closure_1_0(4838).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4838);
+          obj2.guild_id = closure_1_0(4838).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });

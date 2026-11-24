@@ -4,9 +4,9 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
+import TableRowDivider from "TableRowDivider.native.tsx";
 import TableRowGroupContext from "TableRowGroupContext.native.tsx";
 import Card from "../../Card/native/Card.native.tsx";
-import TableRowDivider from "TableRowDivider.native.tsx";
 import TableRowArrow from "TableRowArrow.native.tsx";
 import TableRowTrailingText from "TableRowTrailingText.native.tsx";
 import Badge from "../../Badge/native/Badge.native.tsx";
@@ -296,7 +296,7 @@ class TableRowInner {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 const React5 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   const obj = {
     padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
@@ -386,9 +386,9 @@ const React5 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   obj2.trailingText = { flexShrink: 1, marginStart: num5 };
   return obj2;
 });
-TableRow.Icon = fn(7057).TableRowIcon;
-TableRow.Arrow = fn(7058).TableRowArrow;
-TableRow.TrailingText = fn(7060).TableRowTrailingText;
+TableRow.Icon = fn(6029).TableRowIcon;
+TableRow.Arrow = fn(6030).TableRowArrow;
+TableRow.TrailingText = fn(6032).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

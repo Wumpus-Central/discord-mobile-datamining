@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/helpers/botScopedAccess.tsx
 import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../../utils/PermissionUtils.tsx";
+import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import isPostMessageSocketDefault from "isPostMessageSocket.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
 import validateScopeDefault from "validateScope.tsx";
-import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import getGuildIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
@@ -19,7 +19,7 @@ export function isBotScopeOnly(authorization, scope) {
   const scopes = authorization.authorization.scopes;
   if (scopes.has(OAuth2Scopes.OAuth2Scopes.BOT)) {
     const _Set = Set;
-    const set = new Set(authorization.authorization.scopes);
+    set = new Set(authorization.authorization.scopes);
     set.delete(OAuth2Scopes.OAuth2Scopes.BOT);
     return !validateScopeDefault(set, scope);
   } else {

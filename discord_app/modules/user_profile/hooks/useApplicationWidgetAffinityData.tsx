@@ -16,7 +16,7 @@ export default function useApplicationWidgetAffinityData(arg0) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => memo1.getFeaturedApplicationIds());
   const items1 = [stateFromStores, arg0];
   memo = noop.useMemo(() => {
-    const set = new Set(stateFromStores);
+    set = new Set(stateFromStores);
     const found = closure_0.filter((item) => item instanceof set(memo[4]).ApplicationWidget);
     const mapped = found.map((applicationId) => applicationId.applicationId);
     return mapped.filter((item) => set.has(item));

@@ -30,7 +30,7 @@ export function registerGuildVisibilityMethod(fastListRef) {
         const guilds = GuildStore.getGuilds();
         const node = SortedGuildStore.getGuildsTree();
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         let item = items.forEach((recyclerKey) => {
           let forEach = node.getNode(recyclerKey.recyclerKey);
           if (undefined !== forEach) {

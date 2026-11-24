@@ -4,8 +4,8 @@ import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
 import getDevicePixelRatioDefault from "../../../../../utils/getDevicePixelRatio.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import ChatIcon from "../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import UnknownGameIcon from "../../../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import MicrophoneIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
@@ -66,7 +66,7 @@ function StatRow(stat) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj2 = {
   statRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 },
   statText: null,

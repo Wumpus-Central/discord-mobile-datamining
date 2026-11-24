@@ -24,7 +24,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4843);
+let GuildChannelStore = fn(4847);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1071);
@@ -100,8 +100,8 @@ export function findConjureChannelId(guild_id, application_id) {
   }
   return null;
 }
-export function isConjureGuildEligible(guildId, ConjureRemixSheet) {
-  return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: ConjureRemixSheet });
+export function isConjureGuildEligible(guildId, location) {
+  return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location });
 }
 export function eligibleConjureGuilds(arr, arg1) {
   closure_0 = arg1;
@@ -120,8 +120,8 @@ export function eligibleConjureGuilds(arr, arg1) {
     return num;
   });
 }
-export function hasEligibleConjureGuild(guildsArray, useConjureServerWidgetOffers) {
-  const _location = useConjureServerWidgetOffers;
+export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplication) {
+  const _location = useIsOwnedConjureApplication;
   return guildsArray.some((guildId) =>
     ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: _location }),
   );

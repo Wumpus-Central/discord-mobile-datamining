@@ -2,8 +2,8 @@
 import applyDefault from "../../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
+import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
 import ChannelInfoActionCreators from "../../channel/ChannelInfoActionCreators.tsx";
 import ChatUpdatesQueueDefault from "../../chat/native/ChatUpdatesQueue.tsx";
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(10382).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(8949).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
@@ -47,7 +47,7 @@ export function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
   items = [arg0];
   const memo = noop.useMemo(() => {
-    const set = new Set();
+    set = new Set();
     const item = closure_0.forEach((applicationId) => {
       if (tmp) {
         set.add(applicationId.applicationId);

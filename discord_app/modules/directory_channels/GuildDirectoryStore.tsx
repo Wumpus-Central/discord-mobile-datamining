@@ -149,7 +149,7 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
         obj3.delete(guildId);
       }
       const _Set = Set;
-      const set = new Set(dependencyMap4[channelId]);
+      set = new Set(dependencyMap4[channelId]);
       dependencyMap4[channelId] = set;
       dependencyMap[channelId] = merged;
       const _Object = Object;
@@ -264,7 +264,7 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
   },
   GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: function handleFetchAdminEntries(channelId) {
     const entries = channelId.entries;
-    const set = new Set();
+    set = new Set();
     const item = entries.forEach((item) => {
       set.add(GuildDirectoryUtils.guildDirectoryEntryFromServer(item).guildId);
     });

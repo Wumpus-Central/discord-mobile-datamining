@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import useHasEnhancedRoleColorsDefault from "../../../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import useMessageAuthorDefault from "../../../messages/useMessageAuthor.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
+import useHasEnhancedRoleColorsDefault from "../../../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import renderMessageMarkupDefault from "../../../messages/renderMessageMarkup.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -24,11 +24,11 @@ function MessageContent(arg0) {
   let roleStyle;
   const tmp = closure_13();
   items = [message.author.id];
-  const subscribeGuildMembers = message(12387).useSubscribeGuildMembers(
+  const subscribeGuildMembers = message(12286).useSubscribeGuildMembers(
     { [thread.guild_id]: items },
     "ThreadBrowserRowSubtext",
   );
-  let obj = message(12387);
+  let obj = message(12286);
   const items1 = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items1, () => {
     let author = UserStore.getUser(message.author.id);
@@ -44,9 +44,9 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
   let tmp4 = useMessageAuthorDefault(message);
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-  const timestampString = message(8518).getTimestampString(extractTimestampResult);
-  const obj5 = message(8518);
-  const timestampAccessibilityLabel = message(8518).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(8044).getTimestampString(extractTimestampResult);
+  const obj5 = message(8044);
+  const timestampAccessibilityLabel = message(8044).getTimestampAccessibilityLabel(extractTimestampResult);
   roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   const obj7 = {
     user: stateFromStores,
@@ -93,7 +93,7 @@ function MessageContent(arg0) {
       );
     },
   });
-  obj7.children = closure_9(message(5504).Text, obj8);
+  obj7.children = closure_9(message(5508).Text, obj8);
   return closure_9(SubstringRow, obj7);
 }
 function SubstringRow(arg0) {
@@ -179,7 +179,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let items = [,];
 ({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = fn(1071).MessageTypes);
-const createStyles = fn(4913);
+const createStyles = fn(4917);
 let obj = {
   row: { flexDirection: "row" },
   subtextContent: { lineHeight: 18, flexShrink: 1 },
@@ -307,7 +307,7 @@ export function ThreadSubtext(thread) {
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
   const obj = id(504);
-  const lastMessageTimestamp = id(8518).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(8044).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -316,13 +316,13 @@ export function ThreadSubtext(thread) {
       }
     }
   }
-  const obj2 = id(8518);
-  const timestampString = id(8518).getTimestampString(lastMessageTimestamp);
-  const tmpResult = id(8518);
-  const tmpResult2 = id(8518);
+  const obj2 = id(8044);
+  const timestampString = id(8044).getTimestampString(lastMessageTimestamp);
+  const tmpResult = id(8044);
+  const tmpResult2 = id(8044);
   return closure_9(closure_14, {
     thread,
     timestamp: timestampString,
-    accessibilityLabel: id(8518).getTimestampAccessibilityLabel(lastMessageTimestamp),
+    accessibilityLabel: id(8044).getTimestampAccessibilityLabel(lastMessageTimestamp),
   });
 }
