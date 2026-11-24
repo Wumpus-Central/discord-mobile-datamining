@@ -1,18 +1,21 @@
 // === Module 15565: ? ===
 
 // Module 15565
-import _mod15556 from "module_15556" /* 15556 */;
-import _mod15564 from "module_15564" /* 15564 */;
+import _mod15563 from "module_15563" /* 15563 */;
 import _mod15566 from "module_15566" /* 15566 */;
-import _mod15567 from "module_15567" /* 15567 */;
+import _mod15568 from "module_15568" /* 15568 */;
 
+let fn = Object;
+let closure_3 = _mod15566("".split);
+if (_mod15563(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod15568(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
+    }
+    return tmp2;
+  };
+}
 
-export default _mod15556 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod15566("Symbol");
-  let tmpResultResult = _mod15564(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod15567(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod15567;
-  }
-  return tmpResultResult;
-});
+export default fn;

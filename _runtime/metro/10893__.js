@@ -1,7 +1,70 @@
 // === Module 10893: ? ===
 
 // Module 10893
-import registerAsset from "module_1118" /* 1118 */;
+import _mod10890 from "module_10890" /* 10890 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
+const UKTimeUnitAgoFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class UKTimeUnitAgoFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(UKTimeUnitAgoFormatParser, _mod10890.AbstractParserWithLeftBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + UKTimeUnitAgoFormatParser(10888).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = UKTimeUnitAgoFormatParser(10888).parseDuration(arg1[1]);
+      const ParsingComponents = UKTimeUnitAgoFormatParser(10737).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitAgoFormatParser(10736).reverseDuration(UKTimeUnitAgoFormatParser(10888).parseDuration(arg1[1])));
+    }
+  }
+];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "44d2aa5379438547523c3d419e9ade52", name: "MusicSlashIcon", type: "png" });
+export default _createClass(UKTimeUnitAgoFormatParser, items);

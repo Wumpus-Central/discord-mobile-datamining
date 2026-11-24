@@ -1,18 +1,14 @@
 // === Module 7879: ? ===
 
 // Module 7879
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 7873 */;
-import extractPropsDefault from "extractProps" /* 7880 */;
-import _modDef7888 from "module_7888" /* 7888 */;
-import _modDef7889 from "module_7889" /* 7889 */;
+import _modDef7852 from "module_7852" /* 7852 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const G = fn;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,86 +28,38 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class G {
+class FeTurbulence {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, G);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(G);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp5 = globalThis;
+    tmp = c2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(matrix);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(G, _modDef7889);
+_inherits(FeTurbulence, _modDef7852);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const propsAndStylesResult = G(7880).propsAndStyles(props);
-    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
-    const obj = G(7880);
-    const extractFontResult = G(7887).extractFont(propsAndStylesResult);
-    if (typeof hasProps === "function") {
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        let flag = true;
-        if (flag) {
-          tmp5.font = extractFontResult;
-        }
-        const obj3 = {
-          ref(arg0) {
-                return self.refMethod(arg0);
-              }
-        };
-        const merged = Object.assign(tmp5);
-        obj3.children = props.children;
-        return jsx(_modDef7888, {
-          ref(arg0) {
-                return self.refMethod(arg0);
-              }
-        });
-      }
-      flag = false;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-    const obj2 = G(7887);
+    const result = FeTurbulence(7829).warnUnimplementedFilter();
+    return null;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(G, items);
-importDefaultResultResult.displayName = "G";
-function hasProps(arg0) {
-
-}
+const items = [entry];
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

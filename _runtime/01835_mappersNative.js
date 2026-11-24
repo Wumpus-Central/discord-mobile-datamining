@@ -45,7 +45,7 @@ function createMapperRegistry() {
         }
       }
     });
-    const set = new Set();
+    set = new Set();
     items = [];
     const item1 = map.forEach((item) => {
       if (!set.has(item)) {

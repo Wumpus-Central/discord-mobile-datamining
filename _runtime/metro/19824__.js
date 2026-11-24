@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "f8d71a087b50ca9ab07431463764cd8d", name: "ic_sync_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 181, height: 141, scales: [2, 3], hash: "ed03b4a3566d0ff2258e5577eb7c05bd", name: "empty_server_settings_emoji_dark", type: "png" });

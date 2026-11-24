@@ -2,14 +2,14 @@
 
 // Module 5155
 import _mod19 from "module_19" /* 19 */;
-import BottomSheetContext from "BottomSheetContext" /* 5156 */;
+import _mod5156 from "module_5156" /* 5156 */;
 
 const useContext = _mod19.useContext;
 
 export () => {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  const tmp = useContext(_mod5156.BottomSheetContext);
   if (null === tmp) {
-    throw "'BottomSheetModalContext' cannot be null!";
+    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
   } else {
     return tmp;
   }

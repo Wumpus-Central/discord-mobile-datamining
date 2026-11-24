@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 414.5, height: 200, scales: [2, 3], hash: "98918a2680690cf1174a4749a18c1a4a", name: "pending_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 292, height: 182, scales: [2, 3], hash: "f94bdada98ce42ab7be865282d2b8eba", name: "webhook_empty_dark", type: "png" });

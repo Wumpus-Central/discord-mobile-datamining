@@ -1,19 +1,7 @@
 // === Module 19055: ? ===
 
 // Module 19055
-import baseFlatten from "baseFlatten" /* 5735 */;
-import baseRest from "baseRest" /* 7272 */;
-import _mod19056 from "module_19056" /* 19056 */;
-import baseDifference from "baseDifference" /* 19057 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default baseRest((arg0, arg1) => {
-  if (_mod19056(arg0)) {
-    const tmpResult = baseDifference;
-    let tmpResultResult = tmpResult(arg0, baseFlatten(arg1, 1, _mod19056, true));
-    const tmpResult2 = baseFlatten;
-  } else {
-    tmpResultResult = [];
-  }
-  return tmpResultResult;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 414.5, height: 200, scales: [2, 3], hash: "98918a2680690cf1174a4749a18c1a4a", name: "pending_dark", type: "png" });

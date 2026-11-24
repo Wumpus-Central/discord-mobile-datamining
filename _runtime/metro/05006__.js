@@ -1,11 +1,5 @@
 // === Module 5006: ? ===
 
 // Module 5006
-import _mod19 from "module_19" /* 19 */;
 
-const constants = _mod19.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
-
-export (arg0) => {
-  const H = constants.H;
-  return H.useMemoCache(arg0);
-}
+export default { uiViewClassName: "RiveView", supportsRawText: false, bubblingEventTypes: {}, directEventTypes: {}, validAttributes: { artboardName: true, stateMachineName: true, autoPlay: true, file: true, alignment: true, fit: true, layoutScaleFactor: true, dataBind: true, onError: true, hybridRef: true } };

@@ -1,16 +1,7 @@
 // === Module 8641: ? ===
 
 // Module 8641
+import registerAsset from "module_1118" /* 1118 */;
 
-export function debounce(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return function() {
-    const self = this;
-    closure_0 = [...arguments];
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      closure_0.apply(self, closure_0);
-    }, self);
-  };
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "eb011b89d6ca95998a19fc9752810bf1", name: "MinecraftNeutralIcon-tertiary", type: "png" });

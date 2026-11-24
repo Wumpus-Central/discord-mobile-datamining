@@ -39,7 +39,7 @@ function deepEqual(obj, obj2) {
                   return false;
                 } else {
                   const _Set = Set;
-                  const set = new Set(keys1);
+                  set = new Set(keys1);
                   for (const item10030 of keys) {
                     if (set.has(item10030)) {
                       if (deepEqual(arg0[item10030], arg1[item10030])) {

@@ -173,7 +173,7 @@ export (arg0) => {
     name,
     setup(client) {
       dependencyMap = client;
-      dependencyMap2 = function maybeEndActiveSpan() {
+      const dependencyMap2 = function maybeEndActiveSpan() {
         let tmp = obj;
         if (dependencyMap[_sentry_idleSpan]) {
           tmp = !_mod681.spanToJSON(obj).timestamp;
@@ -278,7 +278,7 @@ export (arg0) => {
                   }
                   obj4.propagationSpanId = spanId1;
                   const result1 = currentScope.setPropagationContext(obj4);
-                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "r" });
+                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "Array" });
                   const obj5 = { op: "navigation" };
                   const merged1 = Object.assign(arg0);
                   obj5.parentSpan = null;
@@ -557,12 +557,12 @@ export function startBrowserTracingNavigationSpan(client, name, arg2) {
   }
   return client[_sentry_idleSpan];
 }
-export function startBrowserTracingPageLoadSpan(f120950, tmp2Result, arg2) {
-  f120950.emit("startPageLoadSpan", tmp2Result, arg2);
+export function startBrowserTracingPageLoadSpan(f121138, tmp2Result, arg2) {
+  f121138.emit("startPageLoadSpan", tmp2Result, arg2);
   const currentScope = _mod681.getCurrentScope();
   currentScope.setTransactionName(tmp2Result.name);
-  if (f120950[_sentry_idleSpan]) {
-    f120950.emit("afterStartPageLoadSpan", tmp3);
+  if (f121138[_sentry_idleSpan]) {
+    f121138.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f120950[_sentry_idleSpan];
+  return f121138[_sentry_idleSpan];
 }

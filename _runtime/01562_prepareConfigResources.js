@@ -213,7 +213,7 @@ function getExplicitParamNames(parse) {
     obj = {};
   }
   const entries = Object.entries(obj);
-  let set;
+  set = undefined;
   const mapped = entries.map((item) => {
     [tmp] = item;
     return tmp;
@@ -559,7 +559,7 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
   }
   items1 = [];
   const mapped1 = items.map((segment) => segment.segment);
-  const set = new Set();
+  set = new Set();
   const entries = items.entries();
   while (tmp9 !== undefined) {
     let tmp12 = _slicedToArray(tmp10, 2);
@@ -748,7 +748,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
 }
 function parseQueryParams(arr, parse) {
   closure_0 = parse;
-  let set = pathParamNames;
+  set = pathParamNames;
   if (pathParamNames === undefined) {
     const _Set = Set;
     set = new Set();

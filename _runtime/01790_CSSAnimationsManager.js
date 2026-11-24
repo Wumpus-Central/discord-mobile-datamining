@@ -86,7 +86,7 @@ let items = [
     key: "registerKeyframesUsage",
     value: function registerKeyframesUsage(processAnimationsResult) {
       const self = this;
-      const set = new Set();
+      set = new Set();
       const item = processAnimationsResult.forEach((keyframesRule) => {
         keyframesRule = keyframesRule.keyframesRule;
         const cssKeyframesRegistry = CSSAnimationsManager(1661).cssKeyframesRegistry;

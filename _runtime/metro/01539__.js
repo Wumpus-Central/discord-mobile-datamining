@@ -301,7 +301,7 @@ export function createPathConfigForStaticNavigation(screen, initialRouteName, ar
       if (screens1 == null) {
         screens1 = {};
       }
-      const set = new Set(Object.keys(screens1));
+      set = new Set(Object.keys(screens1));
       let groups1 = screen.config.groups;
       if (groups1 == null) {
         groups1 = {};

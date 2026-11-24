@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "924c5a5eda5a5885b3a2345095a2f59c", name: "img_account_sync_tiktok_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/emoji_terms", scales: [1], hash: "1086eb3325cf4e456ef54af2f7df401e", name: "emoji-terms-sv-SE", type: "jsona" });

@@ -1,7 +1,12 @@
 // === Module 10561: ? ===
 
 // Module 10561
-import registerAsset from "module_1118" /* 1118 */;
+import _mod10560 from "module_10560" /* 10560 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 48, height: 48, scales: [2, 3], hash: "8011f85c511bc539d06f3c7f5cbb3598", name: "feedback-modal-sad-desaturated_darker", type: "png" });
+export function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod10560.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+}

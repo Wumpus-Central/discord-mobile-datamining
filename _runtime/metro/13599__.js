@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 215.5, height: 135, scales: [2, 3], hash: "fad7ba73a3f13e1d6de72f833c30efc1", name: "header-art-onboarding", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 88, height: 80, scales: [2, 3], hash: "d719145f0510a722efd9724a4e3cf026", name: "verify-email", type: "png" });

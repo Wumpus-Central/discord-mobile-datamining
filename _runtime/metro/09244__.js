@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/billing/native/images", width: 223, height: 126, scales: [2, 3], hash: "06b6cfc90c8de0a27298c16b4f578563", name: "blocked-purchases-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "337f717407aa04f32bdedf504de7310b", name: "emoji", type: "png" });

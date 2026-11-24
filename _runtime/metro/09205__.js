@@ -1,21 +1,7 @@
 // === Module 9205: ? ===
 
 // Module 9205
-import _mod19 from "module_19" /* 19 */;
-import _modDef9206 from "module_9206" /* 9206 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
 
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef9206(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
-  }
-  return tmp.current;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "fdbdffcc03357c67352ab2f9dff83bf6", name: "img_what_you_lose_profile_tier1_light", type: "png" });

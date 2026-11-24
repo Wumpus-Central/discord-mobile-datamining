@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 141, height: 96, scales: [2, 3], hash: "417f63594df34390f8816db66b0c9b6a", name: "img_outbound_promotion_error", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "cc65a5f47aada2d48ca57f930a5ac833", name: "camera", type: "png" });

@@ -624,7 +624,7 @@ items[18] = {
   key: "on",
   value: function on(arg0, arg1) {
     closure_0 = arg1;
-    let set = this._hooks[arg0];
+    set = this._hooks[arg0];
     if (!set) {
       const _Set = Set;
       set = new Set();

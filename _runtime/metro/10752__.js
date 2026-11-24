@@ -1,94 +1,179 @@
 // === Module 10752: ? ===
 
 // Module 10752
-const obj = { v: "4.8.0", meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" }, fr: 60, ip: 3, op: 102, w: 1280, h: 720, nm: "FrameEffect_02-3_Out", ddd: 0, assets: null, layers: null, markers: [] };
-const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }, ];
-const obj2 = { id: "comp_0", layers: null };
-const obj3 = { ddd: 0, ind: 3, ty: 2, nm: "smile", refId: "image_0", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [19.875, 20.125, 0], ix: 2 }, a: { a: 0, k: [17.25, 17.25, 0], ix: 1 }, s: { a: 0, k: [108.7, 108.7, 100], ix: 6 } }, ao: 0, ip: 0, op: 914, st: 0, bm: 0 };
-const items1 = [obj3];
-obj2.layers = items1;
-items[1] = obj2;
-obj.assets = items;
-const obj5 = { ddd: 0, ind: 1, ty: 4, nm: "Shape Layer 2", sr: 1, ks: null, ao: 0, shapes: [], ip: 0, op: 51, st: -50, bm: 0 };
-const obj6 = { o: { a: 0, k: 0, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: { a: 0, k: [130.88, 130.88, 100], ix: 6 } };
-const obj7 = { a: 1, k: null, ix: 2 };
-const items2 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 0, s: [784, 720, 0], to: [-73.6, 0, 0], ti: [73.6, 0, 0] }, { t: 54, s: [342.4, 720, 0] }];
-obj7.k = items2;
-obj6.p = obj7;
-obj5.ks = obj6;
-const items3 = [obj5, , , , , , , , , ];
-const obj8 = { ddd: 0, ind: 2, ty: 0, nm: "particle", parent: 1, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 1, op: 51, st: -11, bm: 0 };
-const obj9 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj10 = { a: 1, k: null, ix: 2 };
-const items4 = [{ i: { x: 0.575, y: 1 }, o: { x: 0.699, y: 0 }, t: 0, s: [465.988, -410, 0], to: [-138.328, 0, 0], ti: [138.328, 0, 0] }, { t: 45, s: [-363.982, -410, 0] }];
-obj10.k = items4;
-obj9.p = obj10;
-obj8.ks = obj9;
-items3[1] = obj8;
-const obj11 = { ddd: 0, ind: 3, ty: 0, nm: "particle", parent: 1, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 1, op: 51, st: -8, bm: 0 };
-const obj12 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj13 = { a: 1, k: null, ix: 2 };
-const items5 = [{ i: { x: 0.575, y: 1 }, o: { x: 0.699, y: 0 }, t: 3, s: [465.988, -272, 0], to: [-138.328, 0, 0], ti: [138.328, 0, 0] }, { t: 48, s: [-363.982, -272, 0] }];
-obj13.k = items5;
-obj12.p = obj13;
-obj11.ks = obj12;
-items3[2] = obj11;
-const obj14 = { ddd: 0, ind: 4, ty: 0, nm: "particle", parent: 1, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 1, op: 51, st: -5, bm: 0 };
-const obj15 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj16 = { a: 1, k: null, ix: 2 };
-const items6 = [{ i: { x: 0.575, y: 1 }, o: { x: 0.699, y: 0 }, t: 6, s: [465.988, -136, 0], to: [-138.328, 0, 0], ti: [138.328, 0, 0] }, { t: 51, s: [-363.982, -136, 0] }];
-obj16.k = items6;
-obj15.p = obj16;
-obj14.ks = obj15;
-items3[3] = obj14;
-const obj17 = { ddd: 0, ind: 5, ty: 0, nm: "particle", parent: 1, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 1, op: 51, st: -2, bm: 0 };
-const obj18 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj19 = { a: 1, k: null, ix: 2 };
-const items7 = [{ i: { x: 0.575, y: 1 }, o: { x: 0.699, y: 0 }, t: 9, s: [465.988, 0, 0], to: [-138.328, 0, 0], ti: [138.328, 0, 0] }, { t: 54, s: [-363.982, 0, 0] }];
-obj19.k = items7;
-obj18.p = obj19;
-obj17.ks = obj18;
-items3[4] = obj17;
-const obj20 = { ddd: 0, ind: 6, ty: 4, nm: "Shape Layer 1", sr: 1, ks: null, ao: 0, shapes: [], ip: 50, op: 104, st: 50, bm: 0 };
-const obj21 = { o: { a: 0, k: 0, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: { a: 0, k: [130.88, 130.88, 100], ix: 6 } };
-const obj22 = { a: 1, k: null, ix: 2 };
-const items8 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 50, s: [342.4, 720, 0], to: [73.6, 0, 0], ti: [-73.6, 0, 0] }, { t: 104, s: [784, 720, 0] }];
-obj22.k = items8;
-obj21.p = obj22;
-obj20.ks = obj21;
-items3[5] = obj20;
-const obj23 = { ddd: 0, ind: 7, ty: 0, nm: "particle", parent: 6, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 50, op: 104, st: 39, bm: 0 };
-const obj24 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj25 = { a: 1, k: null, ix: 2 };
-const items9 = [{ i: { x: 0.301, y: 1 }, o: { x: 0.425, y: 0 }, t: 50, s: [-363.982, -410, 0], to: [138.328, 0, 0], ti: [-138.328, 0, 0] }, { t: 95, s: [465.988, -410, 0] }];
-obj25.k = items9;
-obj24.p = obj25;
-obj23.ks = obj24;
-items3[6] = obj23;
-const obj26 = { ddd: 0, ind: 8, ty: 0, nm: "particle", parent: 6, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 50, op: 104, st: 42, bm: 0 };
-const obj27 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj28 = { a: 1, k: null, ix: 2 };
-const items10 = [{ i: { x: 0.301, y: 1 }, o: { x: 0.425, y: 0 }, t: 53, s: [-363.982, -272, 0], to: [138.328, 0, 0], ti: [-138.328, 0, 0] }, { t: 98, s: [465.988, -272, 0] }];
-obj28.k = items10;
-obj27.p = obj28;
-obj26.ks = obj27;
-items3[7] = obj26;
-const obj29 = { ddd: 0, ind: 9, ty: 0, nm: "particle", parent: 6, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 50, op: 104, st: 45, bm: 0 };
-const obj30 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj31 = { a: 1, k: null, ix: 2 };
-const items11 = [{ i: { x: 0.301, y: 1 }, o: { x: 0.425, y: 0 }, t: 56, s: [-363.982, -136, 0], to: [138.328, 0, 0], ti: [-138.328, 0, 0] }, { t: 101, s: [465.988, -136, 0] }];
-obj31.k = items11;
-obj30.p = obj31;
-obj29.ks = obj30;
-items3[8] = obj29;
-const obj32 = { ddd: 0, ind: 10, ty: 0, nm: "particle", parent: 6, refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 50, op: 104, st: 48, bm: 0 };
-const obj33 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: { a: 0, k: [341.7, 341.7, 100], ix: 6 } };
-const obj34 = { a: 1, k: null, ix: 2 };
-const items12 = [{ i: { x: 0.301, y: 1 }, o: { x: 0.425, y: 0 }, t: 59, s: [-363.982, 0, 0], to: [138.328, 0, 0], ti: [-138.328, 0, 0] }, { t: 104, s: [465.988, 0, 0] }];
-obj34.k = items12;
-obj33.p = obj34;
-obj32.ks = obj33;
-items3[9] = obj32;
-obj.layers = items3;
+import Filter from "Filter" /* 10753 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-export default obj;
+const AbstractMergeDateRangeRefiner = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class AbstractMergeDateRangeRefiner {
+  constructor() {
+    self = this;
+    tmp = c2(this, AbstractMergeDateRangeRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractMergeDateRangeRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(AbstractMergeDateRangeRefiner, Filter.MergingRefiner);
+const entry = {
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, end, end2) {
+    end = end.end;
+    let tmp = !end;
+    if (!end) {
+      tmp = !end2.end;
+    }
+    if (tmp) {
+      const self = this;
+      tmp = null != str.match(this.patternBetween());
+    }
+    return tmp;
+  }
+};
+let items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, start2) {
+      closure_0 = start;
+      let first = start2;
+      start = start.start;
+      let result = start.isOnlyWeekdayComponent();
+      if (!result) {
+        start2 = start2.start;
+        result = start2.isOnlyWeekdayComponent();
+      }
+      if (!result) {
+        let start3 = start2.start;
+        const certainComponents = start3.getCertainComponents();
+        const item = certainComponents.forEach((item) => {
+          const start = closure_0.start;
+          if (!start.isCertain(item)) {
+            const start2 = closure_0.start;
+            const start3 = first.start;
+            start2.imply(item, start3.get(item));
+          }
+        });
+        const start4 = start.start;
+        const certainComponents1 = start4.getCertainComponents();
+        const item1 = certainComponents1.forEach((item) => {
+          const start = first.start;
+          if (!start.isCertain(item)) {
+            const start2 = first.start;
+            const start3 = closure_0.start;
+            start2.imply(item, start3.get(item));
+          }
+        });
+      }
+      const start5 = start.start;
+      const start6 = start2.start;
+      let tmp5 = start2;
+      let obj = start;
+      if (dateResult > start6.date()) {
+        const start18 = start.start;
+        const dateResult1 = start18.date();
+        const start19 = start2.start;
+        const dateResult2 = start19.date();
+        const start20 = start2.start;
+        if (start20.isOnlyWeekdayComponent()) {
+          if (AbstractMergeDateRangeRefiner(10736).addDuration(dateResult2, { day: 7 }) > dateResult1) {
+            const addDurationResult = AbstractMergeDateRangeRefiner(10736).addDuration(dateResult2, { day: 7 });
+            const start15 = start2.start;
+            start15.imply("day", addDurationResult.getDate());
+            const start16 = start2.start;
+            start16.imply("month", addDurationResult.getMonth() + 1);
+            const start17 = start2.start;
+            start17.imply("year", addDurationResult.getFullYear());
+            tmp5 = start2;
+            obj = start;
+          }
+        }
+        const start7 = start.start;
+        if (start7.isOnlyWeekdayComponent()) {
+          if (AbstractMergeDateRangeRefiner(10736).addDuration(dateResult1, { day: -7 }) < dateResult2) {
+            const addDurationResult1 = AbstractMergeDateRangeRefiner(10736).addDuration(dateResult1, { day: -7 });
+            const start12 = start.start;
+            start12.imply("day", addDurationResult1.getDate());
+            const start13 = start.start;
+            start13.imply("month", addDurationResult1.getMonth() + 1);
+            const start14 = start.start;
+            start14.imply("year", addDurationResult1.getFullYear());
+            tmp5 = start2;
+            obj = start;
+          }
+        }
+        const start8 = start2.start;
+        if (start8.isDateWithUnknownYear()) {
+          if (AbstractMergeDateRangeRefiner(10736).addDuration(dateResult2, { year: 1 }) > dateResult1) {
+            const start11 = start2.start;
+            start11.imply("year", AbstractMergeDateRangeRefiner(10736).addDuration(dateResult2, { year: 1 }).getFullYear());
+            tmp5 = start2;
+            obj = start;
+            const addDurationResult2 = AbstractMergeDateRangeRefiner(10736).addDuration(dateResult2, { year: 1 });
+          }
+        }
+        const start9 = start.start;
+        if (start9.isDateWithUnknownYear()) {
+          if (AbstractMergeDateRangeRefiner(10736).addDuration(dateResult1, { year: -1 }) < dateResult2) {
+            const start10 = start.start;
+            start10.imply("year", AbstractMergeDateRangeRefiner(10736).addDuration(dateResult1, { year: -1 }).getFullYear());
+            tmp5 = start2;
+            obj = start;
+            const addDurationResult3 = AbstractMergeDateRangeRefiner(10736).addDuration(dateResult1, { year: -1 });
+          }
+        }
+        items = [start, start2];
+        first = items[0];
+        closure_0 = tmp15;
+        tmp5 = first;
+        obj = tmp15;
+      }
+      const cloneResult = obj.clone();
+      cloneResult.start = obj.start;
+      cloneResult.end = tmp5.start;
+      cloneResult.index = Math.min(obj.index, tmp5.index);
+      if (obj.index < tmp5.index) {
+        cloneResult.text = obj.text + arg0 + tmp5.text;
+      } else {
+        cloneResult.text = tmp5.text + arg0 + obj.text;
+      }
+      return cloneResult;
+    }
+  }
+];
+
+export default _createClass(AbstractMergeDateRangeRefiner, items);

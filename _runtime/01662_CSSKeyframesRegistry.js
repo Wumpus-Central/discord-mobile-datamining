@@ -63,7 +63,7 @@ let items = [
         if (value) {
           const _Set2 = Set;
           items = [arg1];
-          const set = new Set(items);
+          set = new Set(items);
           value.usedBy[compoundComponentName] = set;
         } else {
           const nameToKeyframes_2 = self.nameToKeyframes_;

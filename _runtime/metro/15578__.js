@@ -1,24 +1,34 @@
 // === Module 15578: ? ===
 
 // Module 15578
-import _mod15561 from "module_15561" /* 15561 */;
+import _mod15559 from "module_15559" /* 15559 */;
+import _mod15563 from "module_15563" /* 15563 */;
 import _mod15579 from "module_15579" /* 15579 */;
 
-
-export default (arg0, arg1, arg2) => {
-  const arr = _mod15579(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod15561(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod15561(arg2, tmp3);
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod15563(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod15559.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod15579;
       }
-      tmp6 = tmp8;
+      if (tmp2Result) {
+        tmp2Result = _mod15579 < 41;
+      }
+      tmp5 = tmp2Result;
     }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+    return tmp5;
+  });
+}
+
+export default prop;

@@ -1,13 +1,21 @@
 // === Module 15597: ? ===
 
 // Module 15597
-import _mod15545 from "module_15545" /* 15545 */;
-import _mod15554 from "module_15554" /* 15554 */;
-import all from "module_15564" /* 15564 */;
-
-let closure_0 = _mod15545(Function.toString);
-if (!all(_mod15554.inspectSource)) {
-  _mod15554.inspectSource = (arg0) => closure_0(arg0);
+let propertyIsEnumerable = {}.propertyIsEnumerable;
+if (!getOwnPropertyDescriptor) {
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
+  }
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
 }
-
-export default _mod15554.inspectSource;

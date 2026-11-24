@@ -1,86 +1,10 @@
 // === Module 7893: ? ===
 
 // Module 7893
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7889 from "module_7889" /* 7889 */;
-import _modDef7894 from "module_7894" /* 7894 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import _mod26 from "module_26" /* 26 */;
+import module_65 from "module_65" /* 65 */;
 
-const Circle = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Circle {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, Circle);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Circle);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(Circle, _modDef7889);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ cx, cy, r } = props);
-    const merged = Object.assign(Circle(7880).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.r = r;
-    const obj2 = Circle(7880);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef7894, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(Circle, items);
-importDefaultResultResult.displayName = "Circle";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGMarker", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, refX: true, refY: true, markerHeight: true, markerWidth: true, markerUnits: true, orient: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true } };
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGMarker", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

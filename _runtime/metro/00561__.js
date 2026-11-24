@@ -2,7 +2,7 @@
 
 // Module 561
 function createStoreImpl(fn) {
-  const set = new Set();
+  set = new Set();
   function setState(fn, arg1) {
     let tmp = fn;
     if (typeof fn === "function") {
@@ -49,7 +49,7 @@ function createStoreImpl(fn) {
 export (fn) => {
   if (fn) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     function setState(fn, arg1) {
       let tmp = fn;
       if (typeof fn === "function") {

@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3d5f9f8f212b24a0f18f5afb706f5f80", name: "UserClockIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 160, height: 82, scales: [2, 3], hash: "0d2c2c590995b34f0429dc331d39457b", name: "subscribe_confirm", type: "png" });

@@ -1,12 +1,17 @@
 // === Module 15594: ? ===
 
 // Module 15594
-import _mod15541 from "module_15541" /* 15541 */;
-import _mod15575 from "module_15575" /* 15575 */;
-import _mod15592 from "module_15592" /* 15592 */;
+import _mod15563 from "module_15563" /* 15563 */;
+import element from "element" /* 15595 */;
+import getOwnPropertyDescriptor from "module_15562" /* 15562 */;
 
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod15563(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
 
-export default _mod15541 ? ((arg0, arg1, arg2) => _mod15592.f(arg0, arg1, _mod15575(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default tmp2;

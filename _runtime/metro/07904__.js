@@ -1,12 +1,15 @@
 // === Module 7904: ? ===
 
 // Module 7904
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7837 from "module_7837" /* 7837 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
+const RadialGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,43 +29,65 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FilterPrimitive {
+const jsx = fn(21).jsx;
+class RadialGradient {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FilterPrimitive);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FilterPrimitive);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = c2(this, RadialGradient);
+    tmp2 = closure_4;
+    obj = closure_4(RadialGradient);
+    tmp3 = closure_3;
+    if (closure_6()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.root = null;
-    tmp3Result.refMethod = (root) => {
-      closure_0.root = root;
-    };
-    tmp3Result.setNativeProps = (arg0) => {
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(arg0);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FilterPrimitive;
-_inherits(FilterPrimitive, fn(19).Component);
-const importDefaultResultResult = _createClass(FilterPrimitive);
-importDefaultResultResult.defaultPrimitiveProps = {};
+_inherits(RadialGradient, _modDef7837);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ rx, ry, r, cx, cy, fx } = props);
+    if (undefined === fx) {
+      fx = cx;
+    }
+    let fy = props.fy;
+    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
+    if (undefined === fy) {
+      fy = cy;
+    }
+    obj.fy = fy;
+    if (!rx) {
+      rx = r;
+    }
+    obj.rx = rx;
+    if (!ry) {
+      ry = r;
+    }
+    obj.ry = ry;
+    obj.cx = cx;
+    obj.cy = cy;
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(RadialGradient(7890)(props, this));
+    return jsx(RadialGradient(7905), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(RadialGradient, items);
+importDefaultResultResult.displayName = "RadialGradient";
+importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
 
 export default importDefaultResultResult;

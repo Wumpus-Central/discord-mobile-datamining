@@ -2453,8 +2453,8 @@ let fn = () => {
         if (!hasOwnProperty2Result) {
           continue;
         } else {
-          tmp18 = f82993;
-          call = f82993.call;
+          tmp18 = f83112;
+          call = f83112.call;
           tmp19 = closure_82;
           if (typeof call === "unknown") {
             tmp18Result = tmp18(key10033);
@@ -3207,7 +3207,7 @@ let fn = () => {
   }
   const re13 = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
   const re14 = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-  dependencyMap2 = {};
+  let dependencyMap2 = {};
   let _pf = {};
   dependencyMap2 = { D: "date", dates: "date", date: "date", d: "day", days: "day", day: "day", e: "weekday", weekdays: "weekday", weekday: "weekday", E: "isoWeekday", isoweekdays: "isoWeekday", isoweekday: "isoWeekday", DDD: "dayOfYear", dayofyears: "dayOfYear", dayofyear: "dayOfYear", h: "hour", hours: "hour", hour: "hour", ms: "millisecond", milliseconds: "millisecond", millisecond: "millisecond", m: "minute", minutes: "minute", minute: "minute", M: "month", months: "month", month: "month", Q: "quarter", quarters: "quarter", quarter: "quarter", s: "second", seconds: "second", second: "second", gg: "weekYear", weekyears: "weekYear", weekyear: "weekYear", GG: "isoWeekYear", isoweekyears: "isoWeekYear", isoweekyear: "isoWeekYear", w: "week", weeks: "week", week: "week", W: "isoWeek", isoweeks: "isoWeek", isoweek: "isoWeek", y: "year", years: "year", year: "year" };
   closure_19 = { date: 9, day: 11, weekday: 11, isoWeekday: 11, dayOfYear: 4, hour: 13, millisecond: 16, minute: 14, month: 8, quarter: 7, second: 15, weekYear: 1, isoWeekYear: 1, week: 5, isoWeek: 5, year: 1 };
@@ -3217,7 +3217,7 @@ let fn = () => {
   const re23 = /Z|[+-]\d\d:?\d\d/gi;
   const re24 = /Z|[+-]\d\d(?::?\d\d)?/gi;
   let obj2 = {};
-  dependencyMap3 = {};
+  const dependencyMap3 = {};
   c26 = 0;
   c27 = 1;
   c28 = 2;

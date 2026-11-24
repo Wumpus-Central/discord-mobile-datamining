@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 40, scales: [1, 2, 3], hash: "55227139f1f67d25c138599e308898b1", name: "ic_upload_image_40px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8b4b2bddd719de3088e180cf9d96ecec", name: "RetryIcon", type: "png" });

@@ -1,16 +1,8 @@
 // === Module 15556: ? ===
 
 // Module 15556
-import prop_mod from "module_15557" /* 15557 */;
+import _mod15625 from "module_15625" /* 15625 */;
+import module_15557 from "module_15557" /* 15557 */;
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
 
-export default prop;
+export default _mod15625.Object.assign;

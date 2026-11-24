@@ -42,7 +42,7 @@ function flattenIssuePath(path) {
   return mapped.join(".");
 }
 function formatIssueMessage(originalException) {
-  const set = new Set();
+  set = new Set();
   while (tmp !== undefined) {
     let arr = flattenIssuePath(tmp2.path);
     if (arr.length > 0) {

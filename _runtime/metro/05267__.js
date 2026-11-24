@@ -1,19 +1,20 @@
 // === Module 5267: ? ===
 
 // Module 5267
-import ComposedGestureName from "ComposedGestureName" /* 5235 */;
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5244 */;
-import _mod5261 from "module_5261" /* 5261 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+let useMemo = _mod19.useMemo;
 
-export function useFlingGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5261.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+export function useGestureEventHandler(arg0, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = arg0;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
+  closure_3 = tmp;
+  items = [arg0, memoizedGestureCallbacks, , , , ];
+  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(() => (arg0) => {
+    closure_0(closure_1[1]).eventHandler(closure_1_0, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
+  }, items);
 }

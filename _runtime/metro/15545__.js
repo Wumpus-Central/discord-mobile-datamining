@@ -1,27 +1,56 @@
 // === Module 15545: ? ===
 
 // Module 15545
-import module_15546_mod from "module_15546" /* 15546 */;
+import _mod15462 from "module_15462" /* 15462 */;
+import currencies2 from "currencies" /* 15546 */;
 
-const call = prototype.call;
-let module_15546 = module_15546_mod;
-if (module_15546) {
-  const bind = prototype.bind;
-  module_15546 = bind.bind(call, call);
-}
-if (!module_15546) {
-  module_15546 = (arg0) => {
-    closure_0 = arg0;
-    return () => {
-      const apply = call.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
-      } else {
-        applyArgumentsResult = apply(closure_0, arguments);
+require = arg1;
+const dependencyMap = arg6;
+function isSupportedCurrency(arr3, locale) {
+  let str = locale;
+  if (undefined === locale) {
+    str = "en";
+  }
+  try {
+    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
+    const memoizedNumberFormat = _mod15462.createMemoizedNumberFormat(str, obj);
+    const str2 = memoizedNumberFormat.format(123);
+    if (str2.substring(0, 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
+        return true;
       }
-      return applyArgumentsResult;
-    };
-  };
+    }
+    return false;
+  } catch (err) {
+  }
 }
 
-export default module_15546;
+export function getSupportedCurrencies(locale) {
+  items = [];
+  const currencies = currencies2.currencies;
+  for (let num = 0; num < currencies.length; num = num + 1) {
+    let arr3 = currencies[num];
+    if (3 === arr3.length) {
+      if (isSupportedCurrency(arr3, locale)) {
+        let arr = items.push(arr3);
+      }
+    } else if (5 === arr3.length) {
+      if ("~" === arr3[3]) {
+        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
+        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
+        if (index <= index1) {
+          do {
+            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            if (isSupportedCurrency(sum, locale)) {
+              let arr2 = items.push(sum);
+            }
+            index = index + 1;
+          } while (index <= index1);
+        }
+      }
+    }
+  }
+  return items;
+}

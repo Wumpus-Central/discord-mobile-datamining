@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "a3f3002b04ef160e95cf684a02c6531a", name: "img_account_sync_riot_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/emoji_terms", scales: [1], hash: "783ce28283671323cb2b86ea08558e8a", name: "emoji-terms-el", type: "jsona" });

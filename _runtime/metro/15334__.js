@@ -1,7 +1,24 @@
 // === Module 15334: ? ===
 
 // Module 15334
-import _mod15324 from "module_15324" /* 15324 */;
+if (typeof process === "object") {
+  const _process3 = process;
+  if (process.env) {
+    const _process = process;
+    if (process.env.NODE_DEBUG) {
+      const _process2 = process;
+      if (obj.test(process.env.NODE_DEBUG)) {
+        let fn = () => {
+          items = ["SEMVER"];
+          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
+          return console.error.apply(items);
+        };
+      }
+      module.exports = fn;
+      obj = /\bsemver\b/i;
+    }
+  }
+}
+fn = () => {
 
-
-export default (arg0, arg1, arg2) => _mod15324(arg0, arg1, arg2) >= 0;
+};

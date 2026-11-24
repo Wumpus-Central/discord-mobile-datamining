@@ -1,7 +1,21 @@
 // === Module 7236: ? ===
 
 // Module 7236
-import registerAsset from "module_1118" /* 1118 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
+import GestureHandlerRefContext from "GestureHandlerRefContext" /* 7237 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
+const jsx = fn(21).jsx;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "14a4fdad987e2761599ba055042fdafa", name: "EyeSlashIcon", type: "png" });
+export function PanGestureHandler(arg0) {
+  const ref = noop.useRef(null);
+  const obj = { value: ref, children: null };
+  const obj2 = {};
+  const merged = Object.assign(arg0);
+  obj2.ref = ref;
+  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
+  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
+}
+export const GestureHandlerRootView = fn(5177).GestureHandlerRootView;
+export const GestureState = fn(5177).State;

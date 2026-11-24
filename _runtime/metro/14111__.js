@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 420, height: 112, scales: [2, 3], hash: "e2e6d0edbd6c916cde4ea4f22a6f794c", name: "subscription_placeholder_pattern_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cad1976e6067251c70a97ab450e89981", name: "PinUprightSlashIcon", type: "png" });

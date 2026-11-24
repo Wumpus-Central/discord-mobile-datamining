@@ -1,23 +1,27 @@
 // === Module 15566: ? ===
 
 // Module 15566
-import _mod15538 from "module_15538" /* 15538 */;
-import _mod15564 from "module_15564" /* 15564 */;
+import module_15567_mod from "module_15567" /* 15567 */;
 
+const call = prototype.call;
+let module_15567 = module_15567_mod;
+if (module_15567) {
+  const bind = prototype.bind;
+  module_15567 = bind.bind(call, call);
+}
+if (!module_15567) {
+  module_15567 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod15538[arg0];
-    let tmp8;
-    if (_mod15564(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod15538[arg0];
-    if (tmp3) {
-      tmp3 = _mod15538[arg0][arg1];
-    }
-  }
-  return tmp3;
-};
+export default module_15567;

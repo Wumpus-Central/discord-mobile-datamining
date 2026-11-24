@@ -11,7 +11,7 @@ let c2 = forResult;
 
 export const SENTRY_BUFFER_FULL_ERROR = forResult;
 export function makePromiseBuffer() {
-  const set = new Set();
+  set = new Set();
   const obj = {};
   Object.defineProperty(obj, "$", { get: () => Array.from(set), set: undefined });
   obj.add = function add(fn) {

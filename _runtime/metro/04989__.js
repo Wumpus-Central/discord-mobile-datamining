@@ -1,13 +1,57 @@
 // === Module 4989: ? ===
 
 // Module 4989
+import installWorkletsSupport_mod from "installWorkletsSupport" /* 4990 */;
+
 const require = globalThis.__r;
 
-const obj = { name: "react-native-nitro-modules", version: "0.37.1", description: "Fast, type-safe native modules for React Native with statically compiled JSI bindings.", main: "lib/commonjs/index", module: "lib/module/index", types: "lib/typescript/index.d.ts", "react-native": "src/index", source: "src/index", files: ["src", "!src/__tests__", "react-native.config.js", "lib", "android/build.gradle", "android/gradle.properties", "android/fix-prefab.gradle", "android/CMakeLists.txt", "android/src/", "ios/", "cpp/", "app.plugin.js", "*.podspec", "nitro_pod_utils.rb", "README.md"], keywords: ["react-native", "nitro", "ios", "android", "visionOS", "tvOS", "macOS", "cpp", "framework", "react", "swift", "native", "modules", "fast", "jsi", "turbo", "scaffold", "template", "views"], repository: { type: "git", url: "git+https://github.com/mrousavy/nitro.git" }, author: "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy)", license: "MIT", bugs: { url: "https://github.com/mrousavy/nitro/issues" }, homepage: "https://nitro.margelo.com", publishConfig: { registry: "https://registry.npmjs.org/" }, scripts: { "write-native-version": "version=$(node -p \"require('./package.json').version\") && sed -i '' \"s/#define NITRO_VERSION \\\".*\\\"/#define NITRO_VERSION \\\"$version\\\"/\" ./cpp/utils/NitroDefines.hpp", postversion: "bun run write-native-version", build: "rm -rf lib && bun typecheck && bob build", typecheck: "tsc --noEmit", lint: "eslint \"**/*.{js,ts,tsx}\" --fix", "lint-ci": "eslint \"**/*.{js,ts,tsx}\" -f @jamesacarr/github-actions --max-warnings 0", test: "jest", clean: "rm -rf android/build node_modules/**/android/build lib", release: "release-it" }, devDependencies: { "@types/jest": "*", "@types/react": "^19.2.15", jest: "*", "@react-native/jest-preset": "0.85.3", react: "19.2.3", "react-native": "0.85.3", "react-native-builder-bob": "^0.41.0", "react-native-worklets": "^0.9.1" }, peerDependencies: { react: "*", "react-native": "*" }, codegenConfig: { name: "NitroModulesSpec", type: "modules", jsSrcsDir: "./src", android: { javaPackageName: "com.margelo.nitro" } }, jest: { preset: "@react-native/jest-preset", modulePathIgnorePatterns: ["<rootDir>/example/node_modules", "<rootDir>/lib/"] }, "release-it": { npm: { publish: true }, git: false, github: { release: false }, hooks: { "before:init": "bun typecheck && bun lint", "after:bump": "bun run build" } }, "react-native-builder-bob": null };
-const obj2 = { source: "src", output: "lib", targets: null };
-const items = ["typescript", { project: "tsconfig.build.json", tsc: "../../node_modules/typescript/bin/tsc" }];
-const items1 = ["commonjs", "module", items];
-obj2.targets = items1;
-obj["react-native-builder-bob"] = obj2;
-
-export default obj;
+let installWorkletsSupport = installWorkletsSupport_mod;
+installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
+for (const key10017 in require("module_4995")) {
+  arg5[key10017] = require("module_4995")[key10017];
+  continue;
+}
+for (const key10021 in require("module_4996")) {
+  arg5[key10021] = require("module_4996")[key10021];
+  continue;
+}
+for (const key10025 in require("module_4997")) {
+  arg5[key10025] = require("module_4997")[key10025];
+  continue;
+}
+for (const key10029 in require("module_4998")) {
+  arg5[key10029] = require("module_4998")[key10029];
+  continue;
+}
+for (const key10033 in require("module_4999")) {
+  arg5[key10033] = require("module_4999")[key10033];
+  continue;
+}
+for (const key10037 in require("module_5000")) {
+  arg5[key10037] = require("module_5000")[key10037];
+  continue;
+}
+for (const key10041 in require("module_4991")) {
+  arg5[key10041] = require("module_4991")[key10041];
+  continue;
+}
+for (const key10045 in require("module_5001")) {
+  arg5[key10045] = require("module_5001")[key10045];
+  continue;
+}
+for (const key10049 in require("module_5002")) {
+  arg5[key10049] = require("module_5002")[key10049];
+  continue;
+}
+for (const key10053 in require("module_5003")) {
+  arg5[key10053] = require("module_5003")[key10053];
+  continue;
+}
+for (const key10057 in require("module_5004")) {
+  arg5[key10057] = require("module_5004")[key10057];
+  continue;
+}
+for (const key10061 in require("module_5005")) {
+  arg5[key10061] = require("module_5005")[key10061];
+  continue;
+}

@@ -141,7 +141,7 @@ export function addChildSpanToSpan(parentSpan, sentrySpan) {
   } else {
     const _Set = Set;
     items = [sentrySpan];
-    const set = new Set(items);
+    set = new Set(items);
     const result1 = _mod686.addNonEnumerableProperty(parentSpan, _sentryChildSpans, set);
     const tmp3Result = _mod686;
   }
@@ -176,7 +176,7 @@ export function getRootSpan(activeSpan) {
   return activeSpan[_sentryRootSpan] || activeSpan;
 }
 export function getSpanDescendants(activeSpan) {
-  const set = new Set();
+  set = new Set();
   function addSpanChildren(activeSpan) {
     if (!set.has(activeSpan)) {
       if (spanIsSampled(activeSpan)) {

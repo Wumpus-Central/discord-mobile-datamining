@@ -2,7 +2,7 @@
 
 // Module 7917
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7904 from "module_7904" /* 7904 */;
+import _modDef7837 from "module_7837" /* 7837 */;
 import _modDef7918 from "module_7918" /* 7918 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeOffset = fn;
+const Use = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeOffset {
+class Use {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
+    tmp = closure_3(this, Use);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
+    obj = hasOwnProperty(Use);
     tmp3 = closure_4;
     if (metroImportDefault()) {
       tmp7 = globalThis;
@@ -52,32 +52,46 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeOffset, _modDef7904);
+_inherits(Use, _modDef7837);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const merged = Object.assign(this.props);
+    const props = this.props;
+    let str = props.href;
+    ({ children, x, y, width, height } = props);
+    if (undefined === str) {
+      str = props.xlinkHref;
+    }
+    let match = str;
+    if (str) {
+      match = str.match(Use(7829).idPattern);
+    }
+    let tmp4 = match;
+    if (match) {
+      tmp4 = match[1];
+    }
+    if (!tmp4) {
+      const _console = console;
+      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
+    }
+    const size = { href: tmp4, x, y, width, height };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged1 = Object.assign(FeOffset(7903).extractFilter(this.props));
-    const obj2 = FeOffset(7903);
-    const merged2 = Object.assign(FeOffset(7903).extractIn(this.props));
-    return <tmp ref={function ref(arg0) {
+    const merged = Object.assign(Use(7828).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = children;
+    return <tmp7 ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(Use, items);
+importDefaultResultResult.displayName = "Use";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
 export default importDefaultResultResult;

@@ -1,26 +1,96 @@
 // === Module 10744: ? ===
 
 // Module 10744
-const obj = { v: "4.8.0", meta: { g: "LottieFiles AE 3.0.2", a: "", k: "", d: "", tc: "" }, fr: 60, ip: 2, op: 81, w: 1280, h: 720, nm: "FrameEffect_10-1_Out", ddd: 0, assets: null, layers: null, markers: [] };
-const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }, ];
-const obj2 = { id: "comp_0", layers: null };
-const obj3 = { ddd: 0, ind: 3, ty: 2, nm: "smile", refId: "image_0", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [19.875, 20.125, 0], ix: 2 }, a: { a: 0, k: [17.25, 17.25, 0], ix: 1 }, s: { a: 0, k: [108.7, 108.7, 100], ix: 6 } }, ao: 0, ip: 0, op: 914, st: 0, bm: 0 };
-const items1 = [obj3];
-obj2.layers = items1;
-items[1] = obj2;
-obj.assets = items;
-const obj5 = { ddd: 0, ind: 1, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 3, op: 80, st: -2, bm: 0 };
-const obj6 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj7 = { a: 1, k: null, ix: 2 };
-const items2 = [{ i: { x: 0.487, y: 1 }, o: { x: 0, y: 0 }, t: 2, s: [640, 883.838, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { i: { x: 0.667, y: 1 }, o: { x: 0.333, y: 0 }, t: 16, s: [640, 296, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { i: { x: 0.667, y: 1 }, o: { x: 0.333, y: 0 }, t: 28, s: [640, 392, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { i: { x: 0.667, y: 1 }, o: { x: 0.333, y: 0 }, t: 40, s: [640, 347.2, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { i: { x: 0.667, y: 0.667 }, o: { x: 0.167, y: 0.167 }, t: 51, s: [640, 360, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { i: { x: 0.397, y: 1 }, o: { x: 0.442, y: 0 }, t: 61, s: [640, 360, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { i: { x: 0.667, y: 1 }, o: { x: 0.641, y: 0 }, t: 69, s: [640, 433.6, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { t: 81, s: [640, -156.8, 0] }];
-obj7.k = items2;
-obj6.p = obj7;
-const obj8 = { a: 1, k: null, ix: 6 };
-const items3 = [{ i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] }, t: 9, s: [543.68, 704, 100] }, { i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] }, t: 19, s: [634.72, 532.16, 100] }, { i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] }, t: 25, s: [571.68, 617.6, 100] }, { i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] }, t: 31, s: [603.84, 561.76, 100] }, { i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] }, t: 38, s: [581.44, 604.16, 100] }, { i: { x: [0.833, 0.833, 0.833], y: [1, 1, 1] }, o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] }, t: 43, s: [592, 592, 100] }, { i: { x: [0.833, 0.833, 0.833], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0, 0, 0] }, t: 61, s: [592, 592, 100] }, { i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0, 0, 0] }, t: 67, s: [552.32, 624.32, 100] }, { i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0, 0, 0] }, t: 71, s: [634.72, 532.16, 100] }, { t: 74, s: [560, 704, 100] }];
-obj8.k = items3;
-obj6.s = obj8;
-obj5.ks = obj6;
-const items4 = [obj5];
-obj.layers = items4;
+import _mod10733 from "module_10733" /* 10733 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10734 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10741 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-export default obj;
+const ENMonthNameParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const regExp = new RegExp("((?:in)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10733.MONTH_DICTIONARY) + ")\\s*(?:(?:,|-|of)?\\s*(" + _mod10733.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class ENMonthNameParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(10733).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
+        }
+      }
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index + str2.length, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const start2 = parsingResult.start;
+      start2.addTag("parser/ENMonthNameParser");
+      const tmp10 = ENMonthNameParser(10733).MONTH_DICTIONARY[formatted];
+      const start3 = parsingResult.start;
+      start3.assign("month", tmp10);
+      if (index[3]) {
+        const start5 = parsingResult.start;
+        start5.assign("year", ENMonthNameParser(10733).parseYear(index[3]));
+      } else {
+        const start4 = parsingResult.start;
+        start4.imply("year", ENMonthNameParser(10735).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
+      }
+      return parsingResult;
+    }
+  }
+];
+
+export default _createClass(ENMonthNameParser, items);

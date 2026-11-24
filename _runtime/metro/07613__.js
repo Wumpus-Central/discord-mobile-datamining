@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [1, 2, 3], hash: "9a9bbdc70f61ec2f6dad7a457855d73e", name: "ic_expand_more_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3badf2b48a53beb45ce4acb0a2b90dbd", name: "MoreHorizontalIcon", type: "png" });

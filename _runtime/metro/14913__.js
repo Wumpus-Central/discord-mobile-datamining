@@ -1,12 +1,7 @@
 // === Module 14913: ? ===
 
 // Module 14913
-import _mod14927 from "module_14927" /* 14927 */;
-import assign from "assign" /* 14914 */;
-import Deflate from "Deflate" /* 14915 */;
-import Inflate from "Inflate" /* 14923 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14927);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b3429e38ab32663de7a271eafbda6e13", name: "ChannelListMagnifyingGlassIcon", type: "png" });

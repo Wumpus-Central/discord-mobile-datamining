@@ -1,54 +1,110 @@
 // === Module 10762: ? ===
 
 // Module 10762
-const obj = { v: "4.8.0", meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" }, fr: 60, ip: 11, op: 87, w: 1280, h: 720, nm: "FrameEffect_09-2_Out", ddd: 0, assets: null, layers: null, markers: [] };
-const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }, ];
-const obj2 = { id: "comp_0", layers: null };
-const obj3 = { ddd: 0, ind: 3, ty: 2, nm: "smile", refId: "image_0", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [19.875, 20.125, 0], ix: 2 }, a: { a: 0, k: [17.25, 17.25, 0], ix: 1 }, s: { a: 0, k: [108.7, 108.7, 100], ix: 6 } }, ao: 0, ip: 0, op: 914, st: 0, bm: 0 };
-const items1 = [obj3];
-obj2.layers = items1;
-items[1] = obj2;
-obj.assets = items;
-const obj5 = { ddd: 0, ind: 2, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 12, op: 103, st: 10, bm: 0 };
-const obj6 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: { a: 0, k: [651, 651, 100], ix: 6 } };
-const obj7 = { a: 1, k: null, ix: 2 };
-const items2 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 24, s: [984.8, 956, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { t: 62, s: [984.8, -240.8, 0] }];
-obj7.k = items2;
-obj6.p = obj7;
-obj5.ks = obj6;
-const items3 = [obj5, , , , ];
-const obj8 = { ddd: 0, ind: 3, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 8, op: 102, st: 6, bm: 0 };
-const obj9 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: { a: 0, k: [512, 512, 100], ix: 6 } };
-const obj10 = { a: 1, k: null, ix: 2 };
-const items4 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 8, s: [549.6, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { t: 53, s: [549.6, -236.8, 0] }];
-obj10.k = items4;
-obj9.p = obj10;
-obj8.ks = obj9;
-items3[1] = obj8;
-const obj11 = { ddd: 0, ind: 4, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 19, op: 103, st: 17, bm: 0 };
-const obj12 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: { a: 0, k: [552, 552, 100], ix: 6 } };
-const obj13 = { a: 1, k: null, ix: 2 };
-const items5 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 19, s: [313.6, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { t: 73, s: [313.6, -236.8, 0] }];
-obj13.k = items5;
-obj12.p = obj13;
-obj11.ks = obj12;
-items3[2] = obj11;
-const obj14 = { ddd: 0, ind: 5, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 26, op: 103, st: 24, bm: 0 };
-const obj15 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: { a: 0, k: [472, 472, 100], ix: 6 } };
-const obj16 = { a: 1, k: null, ix: 2 };
-const items6 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 45, s: [1065.6, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { t: 82, s: [1065.6, -236.8, 0] }];
-obj16.k = items6;
-obj15.p = obj16;
-obj14.ks = obj15;
-items3[3] = obj14;
-const obj17 = { ddd: 0, ind: 6, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 17, op: 118, st: 15, bm: 0 };
-const obj18 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: null, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: { a: 0, k: [352, 352, 100], ix: 6 } };
-const obj19 = { a: 1, k: null, ix: 2 };
-const items7 = [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 17, s: [704, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] }, { t: 85, s: [704, -236.8, 0] }];
-obj19.k = items7;
-obj18.p = obj19;
-obj17.ks = obj18;
-items3[4] = obj17;
-obj.layers = items3;
+import _mod10733 from "module_10733" /* 10733 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10734 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10741 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-export default obj;
+const ENRelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const regExp = new RegExp("(this|last|past|next|after\\s*this)\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10733.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
+class ENRelativeDateFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp3 = ENRelativeDateFormatParser(10733).TIME_UNIT_DICTIONARY[str3];
+      if ("next" != formatted) {
+        if (!formatted.startsWith("after")) {
+          if ("last" != formatted) {
+            if ("past" != formatted) {
+              const parsingComponents = createParsingComponents.createParsingComponents();
+              const _Date = Date;
+              const instant = createParsingComponents.reference.instant;
+              const date = new Date(instant.getTime());
+              if (str3.match(/week/i)) {
+                date.setDate(date.getDate() - date.getDay());
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
+              } else if (str3.match(/month/i)) {
+                date.setDate(1);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.assign("year", date.getFullYear());
+                parsingComponents.assign("month", date.getMonth() + 1);
+              } else if (str3.match(/year/i)) {
+                date.setDate(1);
+                date.setMonth(0);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.assign("year", date.getFullYear());
+              }
+              return parsingComponents;
+            }
+          }
+          const obj4 = {};
+          obj4[tmp3] = -1;
+          const ParsingComponents = ENRelativeDateFormatParser(10737).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
+        }
+      }
+      const ParsingComponents2 = ENRelativeDateFormatParser(10737).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+    }
+  }
+];
+
+export default _createClass(ENRelativeDateFormatParser, items);

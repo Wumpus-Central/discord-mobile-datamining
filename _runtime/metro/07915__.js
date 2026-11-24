@@ -2,15 +2,19 @@
 
 // Module 7915
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7904 from "module_7904" /* 7904 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 7821 */;
+import extractFontDefault from "extractFont" /* 7835 */;
+import _modDef7837 from "module_7837" /* 7837 */;
+import _modDef7912 from "module_7912" /* 7912 */;
 import _modDef7916 from "module_7916" /* 7916 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeGaussianBlur = fn;
+const TextPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,55 +34,93 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let closure_3 = ["children", "xlinkHref", "href", "startOffset", "method", "spacing", "side", "alignmentBaseline", "midLine"];
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeGaussianBlur {
+class TextPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, TextPath);
+    items1 = [...items];
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(TextPath);
+    tmp3 = closure_6;
+    if (closure_9()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const merged = Object.assign(matrix, TextPath(7829).pickNotNil(extractFontDefault(matrix, true)));
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(matrix);
+      }
+      const obj = TextPath(7829);
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeGaussianBlur, _modDef7904);
+_inherits(TextPath, _modDef7837);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(FeGaussianBlur(7903).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(7903);
-    const merged1 = Object.assign(FeGaussianBlur(7903).extractIn(this.props));
-    const obj3 = FeGaussianBlur(7903);
-    const merged2 = Object.assign(FeGaussianBlur(7903).extractFeGaussianBlur(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const props = this.props;
+    ({ children, href } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
+    }
+    const startOffset = props.startOffset;
+    let num = 0;
+    if (undefined !== startOffset) {
+      num = startOffset;
+    }
+    ({ method, spacing, side, alignmentBaseline, midLine } = props);
+    let match = href;
+    if (href) {
+      match = href.match(TextPath(7829).idPattern);
+    }
+    let tmp5 = match;
+    if (match) {
+      tmp5 = match[1];
+    }
+    if (tmp5) {
+      const withoutXYResult = TextPath(7828).withoutXY(self, tmp);
+      const _Object = Object;
+      const obj3 = { children };
+      const obj4 = { href: tmp5, startOffset: num, method, spacing, side, alignmentBaseline, midLine };
+      const merged = Object.assign(withoutXYResult, extractFontDefault(obj3, true), obj4);
+      withoutXYResult.ref = self.refMethod;
+      const obj5 = {};
+      const obj2 = TextPath(7828);
+      const merged1 = Object.assign(withoutXYResult);
+      return jsx(_modDef7916, {});
+    } else {
+      const _console = console;
+      console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
+      const obj = { ref: self.refMethod, children };
+      return jsx(_modDef7912, { ref: self.refMethod, children });
+    }
+    tmp = _objectWithoutProperties(props, closure_3);
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+let items = [entry];
+const importDefaultResultResult = _createClass(TextPath, items);
+importDefaultResultResult.displayName = "TextPath";
 
 export default importDefaultResultResult;

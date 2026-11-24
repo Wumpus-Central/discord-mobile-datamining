@@ -1,7 +1,23 @@
 // === Module 7250: ? ===
 
 // Module 7250
-import registerAsset from "module_1118" /* 1118 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "2f67acde4c60441cfd2d6684d11b6d76", name: "ic_close_circle_24px", type: "png" });
+export function getInvertedMultiplier(gestureDirection, arg1) {
+  if ("vertical" === gestureDirection) {
+    return 1;
+  } else if ("vertical-inverted" === gestureDirection) {
+    return -1;
+  } else if ("horizontal" === gestureDirection) {
+    let num2 = 1;
+    if (arg1) {
+      num2 = -1;
+    }
+    return num2;
+  } else if ("horizontal-inverted" === gestureDirection) {
+    let num = -1;
+    if (arg1) {
+      num = 1;
+    }
+    return num;
+  }
+}

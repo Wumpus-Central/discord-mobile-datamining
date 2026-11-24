@@ -1,12 +1,21 @@
 // === Module 5186: ? ===
 
 // Module 5186
-import animatedComponentDefault from "animatedComponent" /* 5187 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import Animated from "Animated" /* 5187 */;
+import ScrollView from "ScrollView" /* 5282 */;
+import _modDef5284 from "module_5284" /* 5284 */;
+import Touchable from "Touchable" /* 5297 */;
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
 
-export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export const BaseButton = Animated.BaseButton;
+export const BorderlessButton = Animated.BorderlessButton;
+export const PureNativeButton = Animated.PureNativeButton;
+export const RawButton = Animated.RawButton;
+export const RectButton = Animated.RectButton;
+export const FlatList = ScrollView.FlatList;
+export const RefreshControl = ScrollView.RefreshControl;
+export const ScrollView = ScrollView.ScrollView;
+export const Switch = ScrollView.Switch;
+export const TextInput = ScrollView.TextInput;
+export const Pressable = _modDef5284;
+export const Touchable = Touchable.Touchable;

@@ -369,7 +369,7 @@ let items = [
           self.__callListeners(self.__getValue());
         } else {
           const _Set = Set;
-          const set = new Set();
+          set = new Set();
           function findAnimatedStyles(update) {
             if (typeof update.update === "function") {
               set.add(update);
@@ -399,7 +399,7 @@ let items = [
 
 export default _createClass(AnimatedValue, items);
 export function flushValue(self) {
-  const set = new Set();
+  set = new Set();
   function findAnimatedStyles(update) {
     if (typeof update.update === "function") {
       set.add(update);

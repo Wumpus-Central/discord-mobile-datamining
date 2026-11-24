@@ -1,10 +1,7 @@
 // === Module 19056: ? ===
 
 // Module 19056
-import _mod518 from "module_518" /* 518 */;
-import _mod535 from "module_535" /* 535 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default function isArrayLikeObject(arg0) {
-  return _mod535(arg0) && _mod518(arg0);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 414, height: 200, scales: [2, 3], hash: "f00fcaea4a34903a201c81fe65a7bcce", name: "pending_darker", type: "png" });

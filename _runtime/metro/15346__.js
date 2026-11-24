@@ -1,18 +1,7 @@
 // === Module 15346: ? ===
 
 // Module 15346
-import _mod15339 from "module_15339" /* 15339 */;
+import _mod15345 from "module_15345" /* 15345 */;
 
 
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod15339(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
-  } catch (err) {
-    return null;
-  }
-};
+export default (arg0, arg1, arg2) => _mod15345(arg1, arg0, arg2);

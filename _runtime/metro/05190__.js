@@ -1,13 +1,12 @@
 // === Module 5190: ? ===
 
 // Module 5190
-import _mod17 from "module_17" /* 17 */;
-import _mod19 from "module_19" /* 19 */;
-import _modDef5191 from "module_5191" /* 5191 */;
+import animatedComponentDefault from "animatedComponent" /* 5191 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const use = _mod19.use;
-const Platform = _mod17.Platform;
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
 
-export function useEnsureGestureHandlerRootView() {
-  use(_modDef5191);
-}
+export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

@@ -28,7 +28,7 @@ export function useOnAction(router) {
   });
   items = [actionListeners, beforeRemoveListeners, emitter, flushUpdates, getState, context1, key, onAction, onDispatchAction, onRouteFocus, router, setState];
   const callback = setState.useCallback((target) => {
-    let set = arg1;
+    set = arg1;
     if (arg1 === undefined) {
       const _Set = Set;
       set = new Set();

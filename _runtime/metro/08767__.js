@@ -1,7 +1,42 @@
 // === Module 8767: ? ===
 
 // Module 8767
-import registerAsset from "module_1118" /* 1118 */;
+import colorPropType from "colorPropType" /* 8751 */;
+import _mod8758 from "module_8758" /* 8758 */;
+import emptyFunction_mod from "module_4958" /* 4958 */;
+import "module_4958";
 
+const obj = {};
+const module_8758 = Object.assign(_mod8758);
+obj.color = colorPropType;
+obj.fontFamily = emptyFunction.string;
+obj.fontSize = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
+let emptyFunction = emptyFunction_mod;
+obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
+let emptyFunction = emptyFunction_mod;
+obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
+let emptyFunction = emptyFunction_mod;
+const size = { width: emptyFunction.number, height: emptyFunction.number };
+obj.textShadowOffset = emptyFunction.shape(size);
+obj.textShadowRadius = emptyFunction.number;
+obj.textShadowColor = colorPropType;
+obj.letterSpacing = emptyFunction.number;
+obj.lineHeight = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
+let emptyFunction = emptyFunction_mod;
+obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
+obj.includeFontPadding = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
+let emptyFunction = emptyFunction_mod;
+obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
+obj.textDecorationColor = colorPropType;
+let emptyFunction = emptyFunction_mod;
+obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
+let emptyFunction = emptyFunction_mod;
+obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cf48a47923589f64877ce012e03ba342", name: "SettingsInfoIcon", type: "png" });
+export default obj;

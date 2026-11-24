@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs", scales: [1], hash: "abb367604ff11a4dde180a721067445e", name: "bg.messages.abb367604ff11a4dde180a721067445e.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conjure/intl", scales: [1], hash: "0a98ff238f27a4e5be93896c6d1d069d", name: "ConjureUntranslated.compiled.messages", type: "jsona" });
