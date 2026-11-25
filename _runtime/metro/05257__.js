@@ -1,14 +1,9 @@
 // === Module 5257: ? ===
 
 // Module 5257
-import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 5206 */;
+import _mod19 from "module_19" /* 19 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
+const context = _mod19.createContext(null);
 
-export function getModuleId() {
-  if (moduleId == null) {
-    moduleId = RNGestureHandlerModuleDefault.getModuleId();
-  }
-  return moduleId;
-}
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

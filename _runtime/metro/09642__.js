@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26998a89da8a094ca27d79afeba3b61f", name: "FoodIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon", width: 102, height: 102, scales: [2, 3], hash: "6fc713ff4969740a35633ad9d71eaf93", name: "HexagonIcon", type: "png" });

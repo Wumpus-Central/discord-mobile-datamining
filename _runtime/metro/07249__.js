@@ -1,17 +1,7 @@
 // === Module 7249: ? ===
 
 // Module 7249
-import _mod7250 from "module_7250" /* 7250 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function getDistanceForDirection(layout, gestureDirection, arg2) {
-  const invertedMultiplier = _mod7250.getInvertedMultiplier(gestureDirection, arg2);
-  if ("vertical" !== gestureDirection) {
-    if ("vertical-inverted" !== gestureDirection) {
-      return layout.width * invertedMultiplier;
-    }
-  }
-  return layout.height * invertedMultiplier;
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db11ea9da81d79144310eac53428fbe9", name: "CircleErrorIcon-primary", type: "png" });

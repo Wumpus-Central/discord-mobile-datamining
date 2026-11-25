@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "137c8d60debe14e8345280ef0c17818d", name: "LightbulbIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/AngryIcon", width: 60, height: 60, scales: [2, 3], hash: "f576bb59fd8aa7b768b785da00a17a1a", name: "AngryIcon", type: "png" });

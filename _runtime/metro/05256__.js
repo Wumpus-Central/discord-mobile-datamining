@@ -1,11 +1,10 @@
 // === Module 5256: ? ===
 
 // Module 5256
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 
-({ useEffect, useRef } = noop);
-new Map();
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export function useDetectorAttachmentGuard(tmp8Result5) {
-
-}
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

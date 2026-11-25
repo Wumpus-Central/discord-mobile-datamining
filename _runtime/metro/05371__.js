@@ -1,27 +1,19 @@
 // === Module 5371: ? ===
 
 // Module 5371
-import _mod19 from "module_19" /* 19 */;
-import value2 from "value2" /* 5150 */;
+import ComposedGestureName from "ComposedGestureName" /* 5334 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5343 */;
+import _mod5360 from "module_5360" /* 5360 */;
 
-const useMemo = _mod19.useMemo;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export (arg0) => {
-  const easing = arg0;
-  items = [, , ];
-  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
-  return useMemo(() => {
-    let ANIMATION_EASING = easing.easing;
-    if (!ANIMATION_EASING) {
-      ANIMATION_EASING = value2.ANIMATION_EASING;
-    }
-    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = easing.duration;
-    if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = value2.ANIMATION_DURATION;
-    }
-    obj.duration = ANIMATION_DURATION;
-    obj.reduceMotion = easing.reduceMotion;
-    return obj;
-  }, items);
+export function useManualGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5360.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 }

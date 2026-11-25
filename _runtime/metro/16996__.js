@@ -1,13 +1,7 @@
 // === Module 16996: ? ===
 
 // Module 16996
-import _mod17001 from "module_17001" /* 17001 */;
-import module_8719 from "module_8719" /* 8719 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export const getYoutubeMeta = require("module_16997").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8719(_mod17001).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "02e75e392ab5d5a8ed5ab4f8fcae9c77", name: "fi", type: "png" });

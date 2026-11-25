@@ -1006,8 +1006,8 @@ export default {
       }
     };
   },
-  event(dependencyMap, useNativeDriver) {
-    const animatedEvent = new AnimatedEvent.AnimatedEvent(dependencyMap, useNativeDriver);
+  event(_argMapping, useNativeDriver) {
+    const animatedEvent = new AnimatedEvent.AnimatedEvent(_argMapping, useNativeDriver);
     let __getHandlerResult = animatedEvent;
     if (!animatedEvent.__isNative) {
       __getHandlerResult = animatedEvent.__getHandler();

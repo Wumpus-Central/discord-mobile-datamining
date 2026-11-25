@@ -114,7 +114,7 @@ export default forwardRef((bottomOffset, arg1) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -566,7 +566,7 @@ export default forwardRef((bottomOffset, arg1) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -607,7 +607,7 @@ export default forwardRef((bottomOffset, arg1) => {
             return pnpm_indexTsx12;
           })(items))();
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         c3 = tmp;

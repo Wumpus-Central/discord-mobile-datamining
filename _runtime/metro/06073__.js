@@ -1,7 +1,17 @@
 // === Module 6073: ? ===
 
 // Module 6073
-import registerAsset from "module_1118" /* 1118 */;
+import _modDef6048 from "module_6048" /* 6048 */;
+import noop from "module_19" /* 19 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "a9a658fd475f7a20d9e2c83953494ec4", name: "img_bungie_dark", type: "svg" });
+export default function useTransitionProgress() {
+  const context = noop.useContext(_modDef6048);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+};

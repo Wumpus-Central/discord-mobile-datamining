@@ -29,27 +29,28 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-let items = [{ code: "(function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};})" }];
+let items = [{ code: "(function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};})" }];
 [tmp4] = items;
-function changeEventCalculator(force, force2) {
-  if (undefined === force2) {
-    const obj2 = { forceChange: force.force };
-    let obj = obj2;
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
   } else {
-    obj = { forceChange: force.force - force2.force };
+    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
   }
-  const merged = Object.assign(force);
+  const merged = Object.assign(arg0);
   const merged1 = Object.assign(obj);
   return {};
 }
-changeEventCalculator.__workletHash = 14930773822007;
+changeEventCalculator.__workletHash = 8313798372423;
 changeEventCalculator.__initData = tmp4;
-class ForceTouchGesture {
+class HoverGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, ForceTouchGesture);
+    tmp = closure_0(this, HoverGesture);
     tmp2 = c2;
-    obj = c2(ForceTouchGesture);
+    obj = c2(HoverGesture);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -60,35 +61,21 @@ class ForceTouchGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    tmp3Result.handlerName = "HoverGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = ForceTouchGesture;
-_inherits(ForceTouchGesture, fn(5197).ContinousBaseGesture);
+_classCallCheck = HoverGesture;
+_inherits(HoverGesture, fn(5292).ContinousBaseGesture);
 const entry = {
-  key: "minForce",
-  value: function minForce(minForce) {
-    this.config.minForce = minForce;
+  key: "effect",
+  value: function effect(hoverEffect) {
+    this.config.hoverEffect = hoverEffect;
     return this;
   }
 };
 const items1 = [
   entry,
-  {
-    key: "maxForce",
-    value: function maxForce(maxForce) {
-      this.config.maxForce = maxForce;
-      return this;
-    }
-  },
-  {
-    key: "feedbackOnActivation",
-    value: function feedbackOnActivation(feedbackOnActivation) {
-      this.config.feedbackOnActivation = feedbackOnActivation;
-      return this;
-    }
-  },
   {
     key: "onChange",
     value: function onChange(arg0) {
@@ -104,4 +91,5 @@ const items1 = [
   }
 ];
 
-export const ForceTouchGesture = _createClass(ForceTouchGesture, items1);
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = _createClass(HoverGesture, items1);

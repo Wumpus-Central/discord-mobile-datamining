@@ -1,7 +1,37 @@
 // === Module 8468: ? ===
 
 // Module 8468
-import registerAsset from "module_1118" /* 1118 */;
+import _mod8469 from "module_8469" /* 8469 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "08fd133b0b292a14ea2a09a50dd4618e", name: "CalendarIcon", type: "png" });
+export () => {
+  try {
+    return hasOwnProperty("RNDatePicker");
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8469.getInstallationErrorMessage());
+    }
+  }
+}
+export () => {
+  try {
+    if (React4) {
+      RNDatePicker = React4.get("RNDatePicker");
+    } else {
+      RNDatePicker = RNDatePicker.RNDatePicker;
+    }
+    return RNDatePicker;
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8469.getInstallationErrorMessage());
+    }
+  }
+}

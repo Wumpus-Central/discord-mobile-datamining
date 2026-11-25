@@ -1,7 +1,17 @@
 // === Module 9242: ? ===
 
 // Module 9242
-import registerAsset from "module_1118" /* 1118 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300.5, height: 175, scales: [2, 3], hash: "cd214b5502d42e0d86b5bf4c01260ed5", name: "grey_server_boosts", type: "png" });
+for (const key10013 in require("enhancedFetch")) {
+  arg5[key10013] = require("enhancedFetch")[key10013];
+  continue;
+}
+for (const key10017 in require("fillProductsWithAdditionalData")) {
+  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
+  continue;
+}
+for (const key10021 in require("RNIapIos")) {
+  arg5[key10021] = require("RNIapIos")[key10021];
+  continue;
+}

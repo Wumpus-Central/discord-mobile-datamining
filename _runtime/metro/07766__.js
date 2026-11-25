@@ -1,14 +1,7 @@
 // === Module 7766: ? ===
 
 // Module 7766
-const re0 = /[|\\{}()[\]^$+*?.-]/g;
+import registerAsset from "module_1118" /* 1118 */;
 
-export default (str) => {
-  if (typeof str !== "string") {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Expected a string");
-    throw typeError;
-  } else {
-    return str.replace(re0, "\\$&");
-  }
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 234, height: 147.5, scales: [2, 3], hash: "251353afd104effe8e007def09df8df2", name: "crunchyroll_link_intro", type: "png" });

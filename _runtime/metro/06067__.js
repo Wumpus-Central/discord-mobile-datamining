@@ -1,7 +1,20 @@
 // === Module 6067: ? ===
 
 // Module 6067
-import registerAsset from "module_1118" /* 1118 */;
+import _modDef6068 from "module_6068" /* 6068 */;
+import noop from "module_19" /* 19 */;
 
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "5e997bb5d78793341cb727497a38fe6f", name: "img_account_sync_bluesky_light_and_dark", type: "svg" });
+export function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef6068, {});
+}

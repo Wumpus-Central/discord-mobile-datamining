@@ -1,7 +1,9 @@
 // === Module 7967: ? ===
 
 // Module 7967
-import registerAsset from "module_1118" /* 1118 */;
+import module_65 from "module_65" /* 65 */;
 
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeFlood", validAttributes: { x: true, y: true, width: true, height: true, result: true, floodColor: true, floodOpacity: true } };
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "72af9903f630d67fa106808d11ca96fb", name: "speaker", type: "png" });
+export default module_65.get("RNSVGFeFlood", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

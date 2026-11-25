@@ -1,8 +1,11 @@
 // === Module 5379: ? ===
 
 // Module 5379
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const jsx = fn(21).jsx;
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export default function _default(simultaneousWith) {
+  const merged = Object.assign(simultaneousWith);
+  return jsx(importDefault(null != simultaneousWith.simultaneousWith || null != simultaneousWith.requireToFail || null != simultaneousWith.block ? 5380 : 5391), {});
+};

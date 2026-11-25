@@ -1,7 +1,29 @@
 // === Module 7793: ? ===
 
 // Module 7793
-import registerAsset from "module_1118" /* 1118 */;
+import _mod518 from "module_518" /* 518 */;
+import _mod521 from "module_521" /* 521 */;
+import _mod543 from "module_543" /* 543 */;
+import eq from "eq" /* 615 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "48354bca4647923912a0392de88da6fa", name: "IdCardIcon", type: "png" });
+export default function isIterateeCall(arg0, num, arg2) {
+  if (_mod521(arg2)) {
+    if (typeof num === "number") {
+      let tmp5 = _mod518(arg2) && _mod543(num, arg2.length);
+      const tmp4 = _mod518(arg2) && _mod543(num, arg2.length);
+    } else {
+      tmp5 = typeof num === "string";
+      if (typeof num === "string") {
+        tmp5 = num in arg2;
+      }
+    }
+    let tmp6 = tmp5;
+    if (tmp6) {
+      tmp6 = eq(arg2[num], arg0);
+    }
+    return tmp6;
+  } else {
+    return false;
+  }
+};

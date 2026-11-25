@@ -1,7 +1,11 @@
 // === Module 6060: ? ===
 
 // Module 6060
-import registerAsset from "module_1118" /* 1118 */;
+import noop from "module_19" /* 19 */;
 
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => duration(React, { children: children.children }));
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "8ba3e8ee2991f198308400197cdb28bc", name: "img_account_sync_youtube_white", type: "svg" });
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

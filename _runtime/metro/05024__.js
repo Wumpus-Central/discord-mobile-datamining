@@ -1,30 +1,98 @@
 // === Module 5024: ? ===
 
 // Module 5024
-import c from "c" /* 5009 */;
-import _mod5022 from "module_5022" /* 5022 */;
-import _slicedToArray from "module_32" /* 32 */;
-
-require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
-}
-
-export function useRiveString(LVL, instance) {
-  const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5022.useRiveProperty(instance, LVL, getStringProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
+function createStoreImpl(fn) {
+  set = new Set();
+  function setState(fn, arg1) {
+    let tmp = fn;
+    if (typeof fn === "function") {
+      tmp = fn(merged);
+    }
+    if (!Object.is(tmp, merged)) {
+      let tmp2 = arg1;
+      if (null == arg1) {
+        let tmp5 = typeof tmp !== "object";
+        if (typeof tmp === "object") {
+          tmp5 = null === tmp;
+        }
+        tmp2 = tmp5;
       }
-      return tmp6;
+      merged = tmp;
+      if (!tmp2) {
+        const _Object = Object;
+        merged = Object.assign({}, merged, tmp);
+      }
+      const item = set.forEach((fn) => fn(closure_0, merged));
     }
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
+  function getState() {
+    return closure_0;
+  }
+  const store = {
+    setState,
+    getState,
+    getInitialState() {
+      return closure_2;
+    },
+    subscribe(arg0) {
+      closure_0 = arg0;
+      set.add(arg0);
+      return () => set.delete(closure_0);
+    }
+  };
+  const tmp2 = fn(setState, getState, store);
+  closure_0 = tmp2;
+  closure_2 = tmp2;
+  return store;
+}
+
+export (fn) => {
+  if (fn) {
+    const _Set = Set;
+    set = new Set();
+    function setState(fn, arg1) {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(merged);
+      }
+      if (!Object.is(tmp, merged)) {
+        let tmp2 = arg1;
+        if (null == arg1) {
+          let tmp5 = typeof tmp !== "object";
+          if (typeof tmp === "object") {
+            tmp5 = null === tmp;
+          }
+          tmp2 = tmp5;
+        }
+        merged = tmp;
+        if (!tmp2) {
+          const _Object = Object;
+          merged = Object.assign({}, merged, tmp);
+        }
+        const item = set.forEach((fn) => fn(closure_0, merged));
+      }
+    }
+    function getState() {
+      return closure_0;
+    }
+    const store = {
+      setState,
+      getState,
+      getInitialState() {
+          return closure_2;
+        },
+      subscribe(arg0) {
+          closure_0 = arg0;
+          set.add(arg0);
+          return () => set.delete(closure_0);
+        }
+    };
+    const tmp7 = fn(setState, getState, store);
+    closure_0 = tmp7;
+    closure_2 = tmp7;
+    let tmp = store;
+  } else {
+    tmp = createStoreImpl;
+  }
+  return tmp;
 }

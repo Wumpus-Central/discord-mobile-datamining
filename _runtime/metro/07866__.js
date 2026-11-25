@@ -1,9 +1,8 @@
 // === Module 7866: ? ===
 
 // Module 7866
-import module_65 from "module_65" /* 65 */;
+import _mod17 from "module_17" /* 17 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeOffset", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true } };
+const StyleSheet = _mod17.StyleSheet;
 
-export default module_65.get("RNSVGFeOffset", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, loadingOrErrorView: { position: "absolute", flex: 1, justifyContent: "center", alignItems: "center", height: "100%", width: "100%", backgroundColor: "white" }, loadingProgressBar: { height: 20 }, errorText: { fontSize: 14, textAlign: "center", marginBottom: 2 }, errorTextTitle: { fontSize: 15, fontWeight: "500", marginBottom: 10 }, webView: { backgroundColor: "#ffffff" } });

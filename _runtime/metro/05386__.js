@@ -1,33 +1,11 @@
 // === Module 5386: ? ===
 
 // Module 5386
-import _mod17 from "module_17" /* 17 */;
+import _mod5387 from "module_5387" /* 5387 */;
+import _mod5389 from "module_5389" /* 5389 */;
+import _mod5390 from "module_5390" /* 5390 */;
 
-const Platform = _mod17.Platform;
 
-export function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
-      }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
-    }
-  }
-}
+export const useCompetingGestures = _mod5387.useCompetingGestures;
+export const useExclusiveGestures = _mod5389.useExclusiveGestures;
+export const useSimultaneousGestures = _mod5390.useSimultaneousGestures;

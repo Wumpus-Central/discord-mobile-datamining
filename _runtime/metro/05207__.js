@@ -1,8 +1,10 @@
 // === Module 5207: ? ===
 
 // Module 5207
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export const PortalStateContext = context;
+export const PortalDispatchContext = createContext(null);

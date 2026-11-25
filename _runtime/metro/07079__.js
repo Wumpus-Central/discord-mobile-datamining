@@ -1,18 +1,7 @@
 // === Module 7079: ? ===
 
 // Module 7079
-import Link from "Link" /* 1501 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-require = fn;
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
 
-export function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2007c026f7f9ad4b2d38f1d4bc513524", name: "VoiceNormalSpoilerIcon", type: "png" });

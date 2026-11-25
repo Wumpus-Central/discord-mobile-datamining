@@ -1,7 +1,16 @@
 // === Module 9008: ? ===
 
 // Module 9008
-import registerAsset from "module_1118" /* 1118 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 134, height: 100, scales: [2, 3], hash: "216dd506f9a84ac881f2bef990d5a382", name: "img_wumpus_nitro", type: "png" });
+export function debounce(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return function() {
+    const self = this;
+    closure_0 = [...arguments];
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      closure_0.apply(self, closure_0);
+    }, self);
+  };
+}

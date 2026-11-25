@@ -65,7 +65,7 @@ export (enabled) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ export (enabled) => {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp14) {
         v3 = tmp;
@@ -212,7 +212,7 @@ export (enabled) => {
     }
   }, items13);
   const obj10 = { value: tmp11, children: null };
-  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "transaction", onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: "Notifications Tab", children: "%" };
+  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: 3, onKeyboardMoveInteractive: true, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: null, children: "left" };
   let tmp34 = closure_12;
   let tmp35 = closure_12;
   if (!closure_12) {

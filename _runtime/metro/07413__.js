@@ -1,10 +1,7 @@
 // === Module 7413: ? ===
 
 // Module 7413
-import _mod7415 from "module_7415" /* 7415 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export const useClipboard = require("module_7414").useClipboard;
-export default _mod7415.Clipboard;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "cbc537237b49016109266eb9159316cf", name: "ic_close_16px", type: "png" });

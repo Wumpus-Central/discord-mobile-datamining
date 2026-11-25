@@ -127,7 +127,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                   let obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -178,8 +178,8 @@ export function instrumentOpenAiClient(arg0, arg1) {
                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                       obj9.attributes = closure_129_1;
                       obj5.startSpanManual(obj9, (() => {
-                        closure_0 = closure_2(/* F141557 */ function() { ... });
-                        return /* F141558 */ function() { ... };
+                        closure_0 = closure_2(/* F141997 */ function() { ... });
+                        return /* F141998 */ function() { ... };
                       })());
                       let obj7 = str(tmp2[2]);
                     }
@@ -191,8 +191,8 @@ export function instrumentOpenAiClient(arg0, arg1) {
                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                     obj10.attributes = closure_129_1;
                     obj2.startSpan(obj10, (() => {
-                      closure_0 = closure_2(/* F141559 */ function() { ... });
-                      return /* F141560 */ function() { ... };
+                      closure_0 = closure_2(/* F141999 */ function() { ... });
+                      return /* F142000 */ function() { ... };
                     })());
                     let obj4 = str(tmp2[2]);
                   }
@@ -250,7 +250,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                   let obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "HermesInternal", done: null };
+                                  return { value: "HermesInternal", done: "HermesInternal" };
                                 }
                               } else {
                                 try {
@@ -300,7 +300,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                       let obj5 = str(tmp2[5]);
                                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                                       obj9.attributes = closure_129_1;
-                                      obj5.startSpanManual(obj9, (/* F140094 */ function() { ... })());
+                                      obj5.startSpanManual(obj9, (/* F140520 */ function() { ... })());
                                       let obj7 = str(tmp2[2]);
                                     }
                                     let obj = str(tmp2[2]);
@@ -310,7 +310,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                     let obj2 = str(tmp2[5]);
                                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                                     obj10.attributes = closure_129_1;
-                                    obj2.startSpan(obj10, (/* F140095 */ function() { ... })());
+                                    obj2.startSpan(obj10, (/* F140521 */ function() { ... })());
                                     let obj4 = str(tmp2[2]);
                                   }
                                 } catch (tmp40) {
@@ -356,7 +356,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                             closure_0 = [...arguments];
                                             c3 = 0;
                                             c4 = 0;
-                                            const iter = (/* F135183 */ function*() { ... })();
+                                            const iter = (/* F135598 */ function*() { ... })();
                                             iter.next();
                                             return iter;
                                           });
@@ -390,7 +390,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                                           closure_1 = methodPath;
                                                           closure_2 = self;
                                                           closure_3 = closure_1_1;
-                                                          closure_2_2(/* F120915 */ function() { ... });
+                                                          closure_2_2(/* F121306 */ function() { ... });
                                                           function instrumentedMethod() { ... }
                                                         }
                                                         return instrumentedMethod;

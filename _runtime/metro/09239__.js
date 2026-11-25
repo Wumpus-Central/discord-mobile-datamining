@@ -1,7 +1,33 @@
 // === Module 9239: ? ===
 
 // Module 9239
-import registerAsset from "module_1118" /* 1118 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300.5, height: 175, scales: [2, 3], hash: "c407143bbf75b6a7311c87db68c9cbca", name: "custom_profile", type: "png" });
+for (const key10013 in require("module_9240")) {
+  arg5[key10013] = require("module_9240")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("module_9254")) {
+  arg5[key10025] = require("module_9254")[key10025];
+  continue;
+}
+for (const key10029 in require("module_9255")) {
+  arg5[key10029] = require("module_9255")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("module_9256")) {
+  arg5[key10037] = require("module_9256")[key10037];
+  continue;
+}

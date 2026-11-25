@@ -1,17 +1,19 @@
 // === Module 5372: ? ===
 
 // Module 5372
-import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent" /* 5373 */;
-import BottomSheetSectionListDefault from "BottomSheetSectionList" /* 5380 */;
-import BottomSheetFlatListDefault from "BottomSheetFlatList" /* 5381 */;
-import BottomSheetScrollViewDefault from "BottomSheetScrollView" /* 5382 */;
-import BottomSheetVirtualizedListDefault from "BottomSheetVirtualizedList" /* 5383 */;
-import _modDef5384 from "module_5384" /* 5384 */;
+import ComposedGestureName from "ComposedGestureName" /* 5334 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5343 */;
+import _mod5360 from "module_5360" /* 5360 */;
 
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const createBottomSheetScrollableComponent = createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;
-export const BottomSheetSectionList = BottomSheetSectionListDefault;
-export const BottomSheetFlatList = BottomSheetFlatListDefault;
-export const BottomSheetScrollView = BottomSheetScrollViewDefault;
-export const BottomSheetVirtualizedList = BottomSheetVirtualizedListDefault;
-export const BottomSheetFlashList = _modDef5384;
+export function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5360.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+}

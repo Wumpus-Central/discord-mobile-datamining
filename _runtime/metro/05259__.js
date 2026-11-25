@@ -1,13 +1,17 @@
 // === Module 5259: ? ===
 
 // Module 5259
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 5255 */;
 
-const use = noop.use;
-const context = noop.createContext(null);
+const useContext = _mod19.useContext;
 
-export const InterceptingDetectorMode = { DEFAULT: 0, [0]: "DEFAULT", ANIMATED: 1, [1]: "ANIMATED", REANIMATED: 2, [2]: "REANIMATED" };
-export const InterceptingDetectorContext = context;
-export function useInterceptingDetectorContext() {
-  return use(context);
+export function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
 }

@@ -1,26 +1,36 @@
 // === Module 5799: ? ===
 
 // Module 5799
-import _mod514 from "module_514" /* 514 */;
-import _mod523 from "module_523" /* 523 */;
-import baseIsArguments from "baseIsArguments" /* 533 */;
+import _mod518 from "module_518" /* 518 */;
+import _mod531 from "module_531" /* 531 */;
+import baseIteratee from "baseIteratee" /* 583 */;
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
 
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function createFind(arg0) {
+  closure_0 = arg0;
+  return (arg0, arg1, arg2) => {
+    const ObjectResult = Object(arg0);
+    closure_0 = ObjectResult;
+    let fn = arg1;
+    let tmp5 = arg0;
+    if (!_mod518(arg0)) {
+      const tmp6 = baseIteratee(arg1, 3);
+      closure_1 = tmp6;
+      tmp5 = _mod531(arg0);
+      fn = function u(arg0) {
+        return closure_1(ObjectResult[arg0], arg0, ObjectResult);
+      };
+      const tmp4 = tmp6;
     }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
+    const tmp7 = closure_0(tmp5, fn, arg2);
+    let tmp8;
+    if (tmp7 > -1) {
+      let tmp9 = tmp7;
+      if (tmp4) {
+        tmp9 = tmp5[tmp7];
+      }
+      tmp8 = ObjectResult[tmp9];
     }
-    tmp3 = tmp5;
-  }
-  return tmp3;
+    return tmp8;
+  };
 };
