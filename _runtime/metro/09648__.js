@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 240,
+  height: 152,
   scales: [2, 3],
-  hash: "ab7bfd0490af9a9d0729fca1ff2529c0",
-  name: "HeartIcon",
+  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
+  name: "img_guild_cap_upsell_dark",
   type: "png",
 });

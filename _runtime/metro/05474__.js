@@ -1,12 +1,6 @@
 // _runtime/metro/05474__.js
-import _modDef5475 from "05475__.js";
+import _mod17 from "00017__.js";
 
-const require = globalThis.__r;
+const StyleSheet = _mod17.StyleSheet;
 
-for (const key10016 in require("05475__.js")) {
-  arg5[key10016] = require("05475__.js")[key10016];
-  continue;
-}
-
-export default _modDef5475;
-export const LinearGradient = _modDef5475;
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

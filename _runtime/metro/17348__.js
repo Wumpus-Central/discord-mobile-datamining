@@ -1,15 +1,13 @@
 // _runtime/metro/17348__.js
-import _mod636 from "00636__.js";
-import _mod653 from "00653__.js";
-import noop_mod from "17349__.js";
+import registerAsset from "01118__.js";
 
-if (_mod636) {
-  const _module = _mod653;
-  const items = [, -0];
-  const tmp5 = new _mod636(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new _mod636(arg0);
-  }
-  module.exports = noop;
-}
-let noop = noop_mod;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d6f5a76861191f4dd121da59ef71950f",
+  name: "ArrowSmallUpIcon",
+  type: "png",
+});

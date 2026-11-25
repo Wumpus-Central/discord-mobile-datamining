@@ -1,13 +1,9 @@
 // _runtime/metro/06068__.js
-import registerAsset from "01118__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "2d01fd6a79903d212a518ef988c2dc7f",
-  name: "img_account_sync_bluesky_white",
-  type: "svg",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSafeAreaView", validAttributes: { edges: true, insetType: true } };
+
+export default module_65.get("RNSSafeAreaView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

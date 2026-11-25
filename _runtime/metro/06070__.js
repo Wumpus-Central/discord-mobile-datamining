@@ -1,13 +1,9 @@
 // _runtime/metro/06070__.js
-import registerAsset from "01118__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
-  scales: [1],
-  hash: "141e24b0bc4cfc4d58d1cb3b5e32f1dc",
-  name: "img_bungie_dark",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
+
+export default module_65.get("RNSScreenFooter", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

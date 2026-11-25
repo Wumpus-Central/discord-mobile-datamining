@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_sidebar",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ff39eeadf9f2f52f7094ca9f3833e97b",
-  name: "img_guild_folder",
+  hash: "87e5a62f5dcc855456ad06c47b7b25a5",
+  name: "ExperimentalWebBadgeIcon-primary",
   type: "png",
 });

@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 128,
-  height: 128,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "665fb7ab43f458f1e2e4d5c788dac4b4",
-  name: "img_meta_quest_white",
+  hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d",
+  name: "img_account_sync_steam_light",
   type: "png",
 });

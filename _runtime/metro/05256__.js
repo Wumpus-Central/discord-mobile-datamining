@@ -1,7 +1,8 @@
 // _runtime/metro/05256__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
 
-({ useEffect, useRef } = noop);
-new Map();
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export function useDetectorAttachmentGuard(tmp8Result5) {}
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

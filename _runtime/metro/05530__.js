@@ -1,132 +1,54 @@
 // _runtime/metro/05530__.js
+import _slicedToArray from "05485__.js";
 
-export default {
-  ">:(": "angry",
-  ">:-(": "angry",
-  ">=(": "angry",
-  ">=-(": "angry",
-  ':")': "blush",
-  ':-")': "blush",
-  '=")': "blush",
-  '=-")': "blush",
-  "</3": "broken_heart",
-  "<\\3": "broken_heart",
-  ":-\\": "confused",
-  ":-/": "confused",
-  "=-\\": "confused",
-  "=-/": "confused",
-  ":'(": "cry",
-  ":'-(": "cry",
-  ":,(": "cry",
-  ":,-(": "cry",
-  "='(": "cry",
-  "='-(": "cry",
-  "=,(": "cry",
-  "=,-(": "cry",
-  ":(": "slight_frown",
-  ":-(": "slight_frown",
-  "=(": "slight_frown",
-  "=-(": "slight_frown",
-  "<3": "heart",
-  "♡": "heart",
-  "]:(": "imp",
-  "]:-(": "imp",
-  "]=(": "imp",
-  "]=-(": "imp",
-  "o:)": "innocent",
-  "O:)": "innocent",
-  "o:-)": "innocent",
-  "O:-)": "innocent",
-  "0:)": "innocent",
-  "0:-)": "innocent",
-  "o=)": "innocent",
-  "O=)": "innocent",
-  "o=-)": "innocent",
-  "O=-)": "innocent",
-  "0=)": "innocent",
-  "0=-)": "innocent",
-  ":'D": "joy",
-  ":'-D": "joy",
-  ":,D": "joy",
-  ":,-D": "joy",
-  "='D": "joy",
-  "='-D": "joy",
-  "=,D": "joy",
-  "=,-D": "joy",
-  ":*": "kissing",
-  ":-*": "kissing",
-  "=*": "kissing",
-  "=-*": "kissing",
-  "x-)": "laughing",
-  "X-)": "laughing",
-  ":|": "neutral_face",
-  ":-|": "neutral_face",
-  "=|": "neutral_face",
-  "=-|": "neutral_face",
-  ":o": "open_mouth",
-  ":-o": "open_mouth",
-  ":O": "open_mouth",
-  ":-O": "open_mouth",
-  "=o": "open_mouth",
-  "=-o": "open_mouth",
-  "=O": "open_mouth",
-  "=-O": "open_mouth",
-  ":@": "rage",
-  ":-@": "rage",
-  "=@": "rage",
-  "=-@": "rage",
-  ":D": "smile",
-  ":-D": "smile",
-  "=D": "smile",
-  "=-D": "smile",
-  ":')": "smiling_face_with_tear",
-  ":'-)": "smiling_face_with_tear",
-  ":,)": "smiling_face_with_tear",
-  ":,-)": "smiling_face_with_tear",
-  "=')": "smiling_face_with_tear",
-  "='-)": "smiling_face_with_tear",
-  "=,)": "smiling_face_with_tear",
-  "=,-)": "smiling_face_with_tear",
-  ":)": "slight_smile",
-  ":-)": "slight_smile",
-  "=)": "slight_smile",
-  "=-)": "slight_smile",
-  "]:)": "smiling_imp",
-  "]:-)": "smiling_imp",
-  "]=)": "smiling_imp",
-  "]=-)": "smiling_imp",
-  ":,'(": "sob",
-  ":,'-(": "sob",
-  ";(": "sob",
-  ";-(": "sob",
-  "=,'(": "sob",
-  "=,'-(": "sob",
-  ":P": "stuck_out_tongue",
-  ":-P": "stuck_out_tongue",
-  "=P": "stuck_out_tongue",
-  "=-P": "stuck_out_tongue",
-  "8-)": "sunglasses",
-  "B-)": "sunglasses",
-  ",:(": "sweat",
-  ",:-(": "sweat",
-  ",=(": "sweat",
-  ",=-(": "sweat",
-  ",:)": "sweat_smile",
-  ",:-)": "sweat_smile",
-  ",=)": "sweat_smile",
-  ",=-)": "sweat_smile",
-  ":s": "unamused",
-  ":-S": "unamused",
-  ":z": "unamused",
-  ":-Z": "unamused",
-  ":$": "unamused",
-  ":-$": "unamused",
-  "=s": "unamused",
-  "=-S": "unamused",
-  "=z": "unamused",
-  "=-Z": "unamused",
-  "=$": "unamused",
-  "=-$": "unamused",
-  ";)": "wink",
-  ";-)": "wink",
-};
+const noop = fn(19);
+({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
+
+export function useUnmountAwareTimeout() {
+  const first = _slicedToArray(
+    closure_4(() => new Set()),
+    1,
+  )[0];
+  items = [first];
+  closure_3(
+    () => () => {
+      const item = set.forEach((item) => closure_1_0.clearTimeout(item));
+      set.clear();
+    },
+    items,
+  );
+  const obj = { setTimeout: null };
+  const items1 = [first];
+  obj.setTimeout = closure_2((arg0, arg1) => {
+    const timerId = first.setTimeout(() => {
+      first.delete(timerId);
+      closure_0();
+    }, arg1);
+    arg0.add(timerId);
+  }, items1);
+  return obj;
+}
+export function useUnmountAwareAnimationFrame() {
+  const first = _slicedToArray(
+    closure_4(() => new Set()),
+    1,
+  )[0];
+  items = [first];
+  closure_3(
+    () => () => {
+      const item = set.forEach((item) => cancelAnimationFrame(item));
+      set.clear();
+    },
+    items,
+  );
+  const obj = { requestAnimationFrame: null };
+  const items1 = [first];
+  obj.requestAnimationFrame = closure_2((arg0) => {
+    const animationFrame = first.requestAnimationFrame((arg0) => {
+      first.delete(animationFrame);
+      closure_0(arg0);
+    });
+    arg0.add(animationFrame);
+  }, items1);
+  return obj;
+}

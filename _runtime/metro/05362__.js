@@ -1,16 +1,33 @@
 // _runtime/metro/05362__.js
-import _mod17 from "00017__.js";
-import value2 from "../05150_value2.js";
+import _mod19 from "00019__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
-};
-obj.indicator = size;
+let useMemo = _mod19.useMemo;
 
-export const styles = StyleSheet.create(obj);
+export function useGestureEventHandler(arg0, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = arg0;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "top" }), []);
+  closure_3 = tmp;
+  items = [arg0, memoizedGestureCallbacks, , , ,];
+  ({
+    changeEventCalculator: arr[2],
+    dispatchesAnimatedEvents: arr[3],
+    fillInDefaultValues: arr[4],
+  } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(
+    () => (arg0) => {
+      closure_0(closure_1[1]).eventHandler(
+        closure_1_0,
+        arg0,
+        memoizedGestureCallbacks,
+        disableReanimated.changeEventCalculator,
+        closure_1_3,
+        disableReanimated.dispatchesAnimatedEvents,
+        disableReanimated.fillInDefaultValues,
+      );
+    },
+    items,
+  );
+}

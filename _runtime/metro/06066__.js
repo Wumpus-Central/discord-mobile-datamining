@@ -1,13 +1,9 @@
 // _runtime/metro/06066__.js
-import registerAsset from "01118__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "f42a65d76bbabdff3fd54cfb0d130cfb",
-  name: "img_account_sync_bluesky_white",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
+
+export default module_65.get("RNSScreenContentWrapper", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

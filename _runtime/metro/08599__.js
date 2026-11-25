@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/images/native/icons/voice_calls",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ec67305879cbfc8d1c27dd7c85d614f6",
-  name: "ic_community_guild_badge_dark_24px",
+  hash: "6ac82e47fbd4ea8331f749e0f8f68b4b",
+  name: "voice_bar_bluetooth",
   type: "png",
 });

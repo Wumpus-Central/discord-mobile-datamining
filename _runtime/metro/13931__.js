@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 375,
+  height: 301,
   scales: [2, 3],
-  hash: "6fb23e8fddb36af1d7c8748104537e96",
-  name: "VideoDenyIcon",
+  hash: "66755272db25a38d2c195d1bf5a25e70",
+  name: "img_top_pattern_light",
   type: "png",
 });

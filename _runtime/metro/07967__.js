@@ -1,13 +1,7 @@
 // _runtime/metro/07967__.js
-import registerAsset from "01118__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "72af9903f630d67fa106808d11ca96fb",
-  name: "speaker",
-  type: "png",
-});
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeFlood", validAttributes: { x: true, y: true, width: true, height: true, result: true, floodColor: true, floodOpacity: true } };
+
+export default module_65.get("RNSVGFeFlood", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

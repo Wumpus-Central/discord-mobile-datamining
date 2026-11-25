@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 45.5,
+  height: 8.5,
   scales: [2, 3],
-  hash: "6745fd4fca483fd68a467a63f7379a27",
-  name: "ic_volume_mute",
+  hash: "8d16389f341b45c184ca21d1deb5fd2e",
+  name: "img_logo_discord",
   type: "png",
 });

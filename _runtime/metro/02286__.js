@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZHM=",
+  httpServerLocation: "/assets/modules/download_apps",
   scales: [1],
-  hash: "4ad03035c95c0b954ad32174c50faa5f",
-  name: "fr.messages.4ad03035c95c0b954ad32174c50faa5f.compiled.messages",
+  hash: "be9275894c73751881c1dcb597f10f76",
+  name: "MetaQuestAppUpsell.compiled.messages",
   type: "jsona",
 });

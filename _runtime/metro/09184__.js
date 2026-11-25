@@ -1,13 +1,19 @@
 // _runtime/metro/09184__.js
-import registerAsset from "01118__.js";
+import _mod19 from "00019__.js";
+import _modDef9185 from "09185__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
-  scales: [2, 3],
-  hash: "6a44051f0a6b82f14b7f681cb1af8576",
-  name: "img_classic_mobile",
-  type: "png",
-});
+const useRef = _mod19.useRef;
+let closure_3 = [];
+
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef9185(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
+}

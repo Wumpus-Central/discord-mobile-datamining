@@ -1,13 +1,13 @@
 // _runtime/metro/06061__.js
-import registerAsset from "01118__.js";
+import _mod17 from "00017__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "72952773756d8776abb1f02e0c8ab235",
-  name: "img_account_sync_battlenet_light_and_dark",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { nativeContainerBackgroundColor: _mod26.colorAttribute };
+
+export default module_65.get("RNSScreenStack", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

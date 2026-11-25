@@ -107,8 +107,8 @@ function pnpm_decayTs3(arg0, arg1) {
       initialVelocity: 0,
       current: "dispatch",
       lastTimestamp: null,
-      startTimestamp: "VOICE",
-      reduceMotion: "RequestToStreamStore",
+      startTimestamp: "User Profile Activity Card",
+      reduceMotion: null,
     };
     let num = obj.velocity;
     if (num == null) {

@@ -1,11 +1,31 @@
 // _runtime/metro/05503__.js
 import _mod5504 from "05504__.js";
+import _slicedToArray from "05485__.js";
 
-const require = globalThis.__r;
+require = fn;
+const noop = fn(19);
+({ useState: c3, useCallback: closure_4 } = noop);
 
-for (const key10016 in require("05507__.js")) {
-  arg5[key10016] = require("05507__.js")[key10016];
-  continue;
+export function useLayoutState(arg0) {
+  const tmp = _slicedToArray(React3(arg0), 2);
+  closure_0 = tmp[1];
+  const recyclerViewContext = _mod5504.useRecyclerViewContext();
+  items = [tmp[0]];
+  const items1 = [recyclerViewContext];
+  items[1] = React4((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_0((arg0) => {
+      let tmpResult = closure_0;
+      if (typeof closure_0 === "function") {
+        tmpResult = tmp(arg0);
+      }
+      return tmpResult;
+    });
+    if (!arg1) {
+      if (recyclerViewContext != null) {
+        recyclerViewContext.layout();
+      }
+    }
+  }, items1);
+  return items;
 }
-
-export default _mod5504.LottieView;

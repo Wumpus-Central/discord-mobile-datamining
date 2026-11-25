@@ -1,13 +1,9 @@
 // _runtime/metro/06053__.js
-import registerAsset from "01118__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "d9ea4c0baebc914200caf39582084fac",
-  name: "img_account_sync_twitch_light_and_dark",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStackHeaderSubview", validAttributes: { type: true, hidesSharedBackground: true, synchronousShadowStateUpdatesEnabled: true } };
+
+export default module_65.get("RNSScreenStackHeaderSubview", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,31 +1,76 @@
 // _runtime/metro/05408__.js
-import _mod5409 from "05409__.js";
-import _slicedToArray from "05390__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
-
-export function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod5409.useRecyclerViewContext();
-  items = [tmp[0]];
-  const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_0((arg0) => {
-      let tmpResult = closure_0;
-      if (typeof closure_0 === "function") {
-        tmpResult = tmp(arg0);
-      }
-      return tmpResult;
-    });
-    if (!arg1) {
-      if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
-      }
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }, items1);
-  return items;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class LongPressGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, LongPressGesture);
+    tmp2 = c2;
+    obj = c2(LongPressGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
+    return tmp3Result;
+  }
+}
+_classCallCheck = LongPressGesture;
+_inherits(LongPressGesture, fn(5292).BaseGesture);
+const entry = {
+  key: "minDuration",
+  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+    return this;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    },
+  },
+  {
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
+      return this;
+    },
+  },
+];
+
+export const LongPressGesture = _createClass(LongPressGesture, items);

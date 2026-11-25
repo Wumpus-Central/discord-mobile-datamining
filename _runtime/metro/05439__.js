@@ -1,159 +1,80 @@
 // _runtime/metro/05439__.js
-import _mod19 from "00019__.js";
 import jsxProd from "../react/00021_jsxProd.js";
-import CompatView from "../05440_CompatView.js";
-import _mod5441 from "05441__.js";
-import CompatScroller from "../05442_CompatScroller.js";
+import value2 from "../05245_value2.js";
+import _mod5440 from "05440__.js";
+import noop_mod from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 
-const noop = _mod19;
-
-({ Animated: c2, RefreshControl: c3 } = get_ActivityIndicator);
-const useMemo = _mod19.useMemo;
+let noop = noop_mod;
+({ useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-
-export function useSecondaryProps(ListHeaderComponent) {
-  ListHeaderComponent = ListHeaderComponent.ListHeaderComponent;
-  const ListHeaderComponentStyle = ListHeaderComponent.ListHeaderComponentStyle;
-  const ListFooterComponent = ListHeaderComponent.ListFooterComponent;
-  const ListFooterComponentStyle = ListHeaderComponent.ListFooterComponentStyle;
-  const ListEmptyComponent = ListHeaderComponent.ListEmptyComponent;
-  const ListEmptyComponentStyle = ListHeaderComponent.ListEmptyComponentStyle;
-  const renderScrollComponent = ListHeaderComponent.renderScrollComponent;
-  const refreshing = ListHeaderComponent.refreshing;
-  const progressViewOffset = ListHeaderComponent.progressViewOffset;
-  const onRefresh = ListHeaderComponent.onRefresh;
-  const data = ListHeaderComponent.data;
-  const refreshControl = ListHeaderComponent.refreshControl;
-  const stickyHeaderConfig = ListHeaderComponent.stickyHeaderConfig;
-  let invertedTransformStyle;
-  if (ListHeaderComponent.inverted) {
-    invertedTransformStyle = ListHeaderComponent(ListHeaderComponentStyle[3]).getInvertedTransformStyle(tmp);
-    let obj = ListHeaderComponent(ListHeaderComponentStyle[3]);
+const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
+  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
+  if (topInset === undefined) {
+    topInset = 0;
   }
-  items = [onRefresh, refreshing, progressViewOffset, refreshControl];
-  const items1 = [ListHeaderComponent, ListHeaderComponentStyle, invertedTransformStyle];
-  const items2 = [ListFooterComponent, ListFooterComponentStyle, invertedTransformStyle];
-  const tmp6 = ListEmptyComponentStyle(() => {
-    let tmp = refreshControl;
-    if (!refreshControl) {
-      let tmp3;
-      if (onRefresh) {
-        const obj = { refreshing: null, progressViewOffset: null, onRefresh: null };
-        const _Boolean = Boolean;
-        obj.refreshing = Boolean(refreshing);
-        obj.progressViewOffset = progressViewOffset;
-        obj.onRefresh = tmp2;
-        tmp3 = <React3 refreshing={null} progressViewOffset={null} onRefresh={null} />;
-      }
-      tmp = tmp3;
+  let num = bottomInset.bottomInset;
+  if (num === undefined) {
+    num = 0;
+  }
+  let flag = bottomInset.shouldCalculateHeight;
+  if (flag === undefined) {
+    flag = true;
+  }
+  const detached = bottomInset.detached;
+  const style = bottomInset.style;
+  const tmp = num(null);
+  const ref = tmp;
+  items = [style, detached, topInset, num];
+  const tmp2 = topInset(() => {
+    items = [style, _mod5440.styles.container];
+    const rect = { top: topInset, bottom: num, overflow: null };
+    let str = "hidden";
+    if (detached) {
+      str = "visible";
     }
-    return tmp;
+    rect.overflow = str;
+    items[2] = rect;
+    return items;
   }, items);
-  const items3 = [ListEmptyComponent, data, invertedTransformStyle, ListEmptyComponentStyle];
-  let tmp7 = ListEmptyComponentStyle(() => {
-    let tmp2 = null;
-    if (ListHeaderComponent) {
-      const obj = { style: null, children: null };
-      items = [ListHeaderComponentStyle, invertedTransformStyle];
-      obj.style = items;
-      obj.children = _mod5441.getValidComponent(tmp);
-      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
-    }
-    return tmp2;
-  }, items1);
-  let backdropComponent;
-  const tmp8 = ListEmptyComponentStyle(() => {
-    let tmp2 = null;
-    if (ListFooterComponent) {
-      const obj = { style: null, children: null };
-      items = [ListFooterComponentStyle, invertedTransformStyle];
-      obj.style = items;
-      obj.children = _mod5441.getValidComponent(tmp);
-      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
-    }
-    return tmp2;
-  }, items2);
-  if (stickyHeaderConfig != null) {
-    backdropComponent = stickyHeaderConfig.backdropComponent;
-  }
-  const items4 = [backdropComponent, invertedTransformStyle];
-  let obj2 = {
-    refreshControl: tmp6,
-    renderHeader: tmp7,
-    renderFooter: tmp8,
-    renderEmpty: ListEmptyComponentStyle(() => {
-      if (ListEmptyComponent) {
-        const validComponent = _mod5441.getValidComponent(tmp);
-        if (invertedTransformStyle) {
-          const obj2 = { style: null, children: null };
-          items = [ListEmptyComponentStyle, tmp5];
-          obj2.style = items;
-          obj2.children = validComponent;
-          let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
-        } else {
-          tmp7 = validComponent;
-        }
-        return tmp7;
-      }
-      return null;
-    }, items3),
-    CompatScrollView: null,
-    renderStickyHeaderBackdrop: null,
-  };
-  const items5 = [renderScrollComponent];
-  const tmp9 = ListEmptyComponentStyle(() => {
-    if (ListEmptyComponent) {
-      const validComponent = _mod5441.getValidComponent(tmp);
-      if (invertedTransformStyle) {
-        const obj2 = { style: null, children: null };
-        items = [ListEmptyComponentStyle, tmp5];
-        obj2.style = items;
-        obj2.children = validComponent;
-        let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
-      } else {
-        tmp7 = validComponent;
-      }
-      return tmp7;
-    }
-    return null;
-  }, items3);
-  obj2.CompatScrollView = ListEmptyComponentStyle(() => {
-    if (typeof renderScrollComponent === "function") {
-      if (!tmpResult.isComponentClass(renderScrollComponent)) {
-        let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj.ref = ref;
-          return renderScrollComponent(obj);
+  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
+  let stableCallback;
+  if (flag) {
+    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
+      const height = nativeEvent.nativeEvent.layout.height;
+      height.value = height;
+      const current = ref.current;
+      if (current != null) {
+        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
+          if (value.value) {
+            num = arg5;
+            let num2 = arg5;
+            if (arg5 == null) {
+              num2 = 0;
+            }
+            const rect = { top: num2, left: 0, right: 0, bottom: null };
+            if (num == null) {
+              num = 0;
+            }
+            let num3 = currentHeight.currentHeight;
+            const sum = num + height;
+            if (num3 == null) {
+              num3 = 0;
+            }
+            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
+            tmp.value = rect;
+          }
         });
-        CompatAnimatedScroller.displayName = "CustomScrollView";
       }
-      return React2.createAnimatedComponent(CompatAnimatedScroller);
-    }
-    CompatAnimatedScroller = CompatScroller.CompatAnimatedScroller;
-    if (renderScrollComponent) {
-      CompatAnimatedScroller = renderScrollComponent;
-    }
-  }, items5);
-  obj2.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
-    let backdropComponent;
-    if (stickyHeaderConfig != null) {
-      backdropComponent = stickyHeaderConfig.backdropComponent;
-    }
-    let tmp4Result = null;
-    if (backdropComponent) {
-      const obj = { style: null, children: null };
-      items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
-      obj.style = items;
-      let backdropComponent1;
-      if (stickyHeaderConfig != null) {
-        backdropComponent1 = stickyHeaderConfig.backdropComponent;
-      }
-      obj.children = _mod5441.getValidComponent(backdropComponent1);
-      tmp4Result = jsx(CompatView.CompatView, { style: null, children: null });
-    }
-    return tmp4Result;
-  }, items4);
-  return obj2;
-}
+    });
+  }
+  obj2.onLayout = stableCallback;
+  obj2.style = tmp2;
+  obj2.children = bottomInset.children;
+  return ref(style, obj2);
+});
+memoResult.displayName = "BottomSheetHostingContainer";
+
+export const BottomSheetHostingContainer = memoResult;

@@ -1,13 +1,10 @@
 // _runtime/metro/09183__.js
-import registerAsset from "01118__.js";
+import _slicedToArray from "00032__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 33,
-  scales: [2, 3],
-  hash: "fffb876f7b3f447f47b0591850317fff",
-  name: "img_tier_0_resubscribe_mobile",
-  type: "png",
-});
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
+
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return duration(() => closure_0({}), []);
+}

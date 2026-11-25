@@ -1,7 +1,13 @@
 // _runtime/metro/15350__.js
-import _mod15348 from "15348__.js";
+import registerAsset from "01118__.js";
 
-export default (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.sort((arg0, arg1) => _mod15348(arg1, arg0, closure_0));
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/nitro_icons",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "e31ee2ef368806b54cff2e8c81e8cd97",
+  name: "img_nitro_icon_filled",
+  type: "png",
+});

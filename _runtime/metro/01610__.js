@@ -24,7 +24,7 @@ export function useThenable(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -74,7 +74,7 @@ export function useThenable(arg0) {
               noop(items2);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp28) {
           closure_2 = tmp28;

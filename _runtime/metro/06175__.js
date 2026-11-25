@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "85e85e0480cc3ad94f292bfe35b1a958",
-  name: "img_amazon_music",
-  type: "svg",
+  hash: "25ba997e1d3e8344c193637ad6eeccd3",
+  name: "img_account_sync_league_of_legends_white",
+  type: "png",
 });

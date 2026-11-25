@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_onboarding_home/images",
-  width: 223,
-  height: 145.5,
+  httpServerLocation: "/assets/modules/icymi/native/images",
+  width: 24.5,
+  height: 24,
   scales: [2, 3],
-  hash: "fa8d8980f41bbcb7aeb9d5dc519482cb",
-  name: "mobile-empty-state",
+  hash: "17237a5c49ea745b655cbec7c093406d",
+  name: "emoji-positive",
   type: "png",
 });

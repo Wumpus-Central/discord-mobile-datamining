@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_viewer/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 106,
+  height: 26,
   scales: [2, 3],
-  hash: "87391322b2483c883b3f5fd1ac4080a9",
-  name: "ic_eye",
+  hash: "cb40a06625eace58731dea1b5da68381",
+  name: "img_logo_nitro_dark",
   type: "png",
 });

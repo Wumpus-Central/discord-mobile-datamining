@@ -1,17 +1,19 @@
 // _runtime/metro/05418__.js
-import _mod5403 from "05403__.js";
-import _mod5419 from "05419__.js";
+import _modDef5415 from "05415__.js";
+import noop from "00019__.js";
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    _mod5403;
-    return fn;
+const jsx = fn(21).jsx;
+
+export default function _default(delayLongPress) {
+  let num = delayLongPress.delayLongPress;
+  if (num === undefined) {
+    num = 600;
   }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
-  } else {
-    return _mod5419(arg0);
+  let extraButtonProps = delayLongPress.extraButtonProps;
+  if (extraButtonProps === undefined) {
+    extraButtonProps = { rippleColor: "transparent", exclusive: true };
   }
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(_modDef5415, { delayLongPress: num, extraButtonProps });
 }

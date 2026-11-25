@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 160,
-  height: 160,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "abf5b4249ea38c96687799aa130b2321",
-  name: "img_no_results_darker",
+  hash: "fce86bae946901aed4dd9d012c5d05d2",
+  name: "BellSlashIcon",
   type: "png",
 });

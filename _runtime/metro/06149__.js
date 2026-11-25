@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "924c5a5eda5a5885b3a2345095a2f59c",
-  name: "img_account_sync_tiktok_light",
+  hash: "e9fce92f06bbfad622591815c7f5f9ac",
+  name: "img_account_sync_twitch_white",
   type: "png",
 });

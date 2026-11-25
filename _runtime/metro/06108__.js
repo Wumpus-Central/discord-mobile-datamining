@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "3aff35dbf63c31bb9e5c01dc80563b2f",
-  name: "img_account_sync_spotify_white",
-  type: "svg",
+  scales: [2, 3],
+  hash: "dc61f45d0cc4d873f94fb631a2db066a",
+  name: "CircleCheckIcon",
+  type: "png",
 });

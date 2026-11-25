@@ -1,33 +1,18 @@
 // _runtime/metro/05281__.js
-import _mod17 from "00017__.js";
+import Animated from "../05282_Animated.js";
+import ScrollView from "../05377_ScrollView.js";
+import _modDef5379 from "05379__.js";
+import Touchable from "../05392_Touchable.js";
 
-const Platform = _mod17.Platform;
-
-export function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
-}
-export function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
-}
+export const BaseButton = Animated.BaseButton;
+export const BorderlessButton = Animated.BorderlessButton;
+export const PureNativeButton = Animated.PureNativeButton;
+export const RawButton = Animated.RawButton;
+export const RectButton = Animated.RectButton;
+export const FlatList = ScrollView.FlatList;
+export const RefreshControl = ScrollView.RefreshControl;
+export const ScrollView = ScrollView.ScrollView;
+export const Switch = ScrollView.Switch;
+export const TextInput = ScrollView.TextInput;
+export const Pressable = _modDef5379;
+export const Touchable = Touchable.Touchable;

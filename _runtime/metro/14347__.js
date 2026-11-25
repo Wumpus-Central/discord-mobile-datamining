@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/images",
-  width: 608,
-  height: 608,
+  httpServerLocation: "/assets/images/native/auto_moderation",
+  width: 12,
+  height: 12,
   scales: [2, 3],
-  hash: "6936c050862daceed7175a327466cd4a",
-  name: "quests_embed_mobile_missing",
+  hash: "78a34aca822219efd275dbb2e470061d",
+  name: "ic_closed_lock",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 270,
-  height: 134,
+  httpServerLocation: "/assets/modules/media_channel/native/images",
+  width: 49,
+  height: 50,
   scales: [2, 3],
-  hash: "05b73f8565eab54ae61e59eb9ff991a8",
-  name: "img_premium_embed_background_dark",
+  hash: "83d9ad6473cb40e1d6825c7dbdb7f70f",
+  name: "ic_media_post_share_prompt",
   type: "png",
 });

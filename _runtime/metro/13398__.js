@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "18fb368a457a812267e823f947169b18",
-  name: "BoostTier1Icon",
+  hash: "cde816791540f65e5c599ecf6c251745",
+  name: "ChatXIcon",
   type: "png",
 });

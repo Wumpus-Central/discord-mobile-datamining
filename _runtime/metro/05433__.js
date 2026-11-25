@@ -1,36 +1,47 @@
 // _runtime/metro/05433__.js
-function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
-  try {
-    const iter = arg0[arg5](arg6);
-    value = iter.value;
-    if (iter.done) {
-      fn(value);
-    } else {
-      const resolved = Promise.resolve(value);
-      resolved.then(arg3, arg4);
-    }
-  } catch (tmp13) {
-    fn2(tmp13);
-  }
-}
+import noop from "00019__.js";
 
-export default function _asyncToGenerator(arg0) {
-  closure_0 = arg0;
-  return function () {
-    const self = this;
-    closure_1 = arguments;
-    return new Promise((arg0, arg1) => {
-      _self = arg0;
-      closure_1 = arg1;
-      function _next(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+const require = globalThis.__r;
+
+({ useEffect: c2, useRef: c3 } = noop);
+
+export (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
+  }
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("01653__.js").makeMutable(obj2);
+        let obj = require("01653__.js");
+      } else {
+        mutable = require("01653__.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("01653__.js");
       }
-      function _throw(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
-      }
-      const applyResult = _self.apply(self, closure_1);
-      closure_2 = applyResult;
-      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
-    });
-  };
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
 }

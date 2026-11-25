@@ -1,18 +1,15 @@
 // _runtime/metro/05259__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import BottomSheetContext from "../05255_BottomSheetContext.js";
 
-const use = noop.use;
-const context = noop.createContext(null);
+const useContext = _mod19.useContext;
 
-export const InterceptingDetectorMode = {
-  DEFAULT: 0,
-  [0]: "DEFAULT",
-  ANIMATED: 1,
-  [1]: "ANIMATED",
-  REANIMATED: 2,
-  [2]: "REANIMATED",
-};
-export const InterceptingDetectorContext = context;
-export function useInterceptingDetectorContext() {
-  return use(context);
+export function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
 }

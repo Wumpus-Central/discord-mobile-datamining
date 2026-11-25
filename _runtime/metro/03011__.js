@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hY3Rpdml0eV9wcml2YWN5",
+  httpServerLocation: "/assets/modules/premium/nitro_sounds",
   scales: [1],
-  hash: "218d5cd6f5e4a0940be018edf2f70f62",
-  name: "lt.messages.218d5cd6f5e4a0940be018edf2f70f62.compiled.messages",
+  hash: "62261e37527847d0abcbf6dc84e3c3cd",
+  name: "NitroSounds.compiled.messages",
   type: "jsona",
 });

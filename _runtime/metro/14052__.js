@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "36a084fbace40e0af86aab037df7e8b7",
-  name: "PlaystationNeutralIcon",
+  hash: "6fc18e0c40f0ce37259a8a45cc634c66",
+  name: "WindowLaunchIcon",
   type: "png",
 });

@@ -365,7 +365,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "Path", type: "context", listener: true };
+          obj = { fired: false, wrapFn: "a", target: "Path", type: "context", listener: "nl-SR" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -392,7 +392,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "Path", type: "context", listener: true };
+          obj = { fired: false, wrapFn: "a", target: "Path", type: "context", listener: "nl-SR" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

@@ -1,32 +1,10 @@
 // _runtime/metro/10872__.js
-import now from "../10758_now.js";
-import _mod10865 from "10865__.js";
+import assignSimilarDate from "../10839_assignSimilarDate.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
 let self = this;
-const RUCasualTimeParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
+const ForwardDateRefiner = require;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -42,7 +20,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function c(arg0) {
+      fn = function t(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -89,82 +67,150 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_9 = fn(now);
-    class RUCasualTimeParser {
+    let closure_6 = fn(assignSimilarDate);
+    class ForwardDateRefiner {
       constructor() {
-        self = this;
-        tmp = c2(this, RUCasualTimeParser);
-        tmp2 = closure_4;
-        obj = closure_4(RUCasualTimeParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+        tmp = closure_3(this, ForwardDateRefiner);
+        return;
       }
     }
-    _inherits(RUCasualTimeParser, _mod10865.AbstractParserWithLeftRightBoundaryChecking);
     const entry = {
-      key: "innerPatternString",
-      value: function innerPatternString(arg0) {
-        return "(\u0441\u0435\u0439\u0447\u0430\u0441|\u043F\u0440\u043E\u0448\u043B\u044B\u043C\\s*\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u043F\u0440\u043E\u0448\u043B\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u0435\u0433\u043E\u0434\u043D\u044F\\s*\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u0438\u043C \u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u0434\u0435\u043D\u044C|\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u0432\u0435\u0447\u0435\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u043D\u043E\u0447\u044C)";
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-        refDate = refDate.refDate;
-        const str2 = arg1[0].toLowerCase();
-        let parsingComponents = refDate.createParsingComponents();
-        if ("\u0441\u0435\u0439\u0447\u0430\u0441" === str2) {
-          return closure_9.now(refDate.reference);
-        } else {
-          if ("\u0432\u0435\u0447\u0435\u0440\u043E\u043C" !== str2) {
-            if ("\u0432\u0435\u0447\u0435\u0440\u0430" !== str2) {
-              if (!str2.endsWith("\u0443\u0442\u0440\u043E\u043C")) {
-                if (!str2.endsWith("\u0443\u0442\u0440\u0430")) {
-                  if (str2.match(/в\s*полдень/)) {
-                    return closure_9.noon(refDate.reference);
-                  } else if (str2.match(/прошлой\s*ночью/)) {
-                    return closure_9.lastNight(refDate.reference);
-                  } else if (str2.match(/прошлым\s*вечером/)) {
-                    return closure_9.yesterdayEvening(refDate.reference);
-                  } else {
-                    if (str2.match(/следующей\s*ночью/)) {
-                      let num2 = 2;
-                      if (refDate.getHours() < 22) {
-                        num2 = 1;
-                      }
-                      const _Date = Date;
-                      const date = new Date(refDate.getTime());
-                      date.setDate(date.getDate() + num2);
-                      RUCasualTimeParser(10740).assignSimilarDate(parsingComponents, date);
-                      parsingComponents.imply("hour", 0);
+      key: "refine",
+      value: function refine(option, arr) {
+        const self = this;
+        if (option.option.forwardDate) {
+          const item = arr.forEach((start) => {
+            option = start;
+            const reference = option.reference;
+            const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+            start = start.start;
+            if (start.isOnlyTime()) {
+              const start2 = start.start;
+              if (obj.reference.instant > start2.date()) {
+                const reference2 = obj.reference;
+                const dateWithAdjustedTimezone1 = reference2.getDateWithAdjustedTimezone();
+                const _Date = Date;
+                const date = new Date(dateWithAdjustedTimezone1);
+                date.setDate(date.getDate() + 1);
+                closure_1_6.implySimilarDate(start.start, date);
+                obj.debug(() => {
+                  console.log(
+                    "" +
+                      self.constructor.name +
+                      " adjusted " +
+                      closure_0 +
+                      " time from the ref date (" +
+                      dateWithAdjustedTimezone1 +
+                      ") to the following day (" +
+                      date +
+                      ")",
+                  );
+                });
+                let end2 = start.end;
+                if (end2) {
+                  const end = start.end;
+                  end2 = end.isOnlyTime();
+                }
+                if (end2) {
+                  closure_1_6.implySimilarDate(start.end, date);
+                  ({ start: start3, end: end3 } = start);
+                  if (dateResult > end3.date()) {
+                    date.setDate(date.getDate() + 1);
+                    closure_1_6.implySimilarDate(start.end, date);
+                  }
+                  dateResult = start3.date();
+                }
+              }
+            }
+            const start4 = start.start;
+            let tmp5 = dateWithAdjustedTimezone;
+            if (start4.isOnlyWeekdayComponent()) {
+              const start5 = start.start;
+              tmp5 = dateWithAdjustedTimezone;
+              if (dateWithAdjustedTimezone > start5.date()) {
+                const start11 = start.start;
+                value = start11.get("weekday");
+                const diff = value - dateWithAdjustedTimezone.getDay();
+                let sum = diff;
+                if (diff <= 0) {
+                  sum = diff + 7;
+                }
+                const obj2 = { day: sum };
+                const addDurationResult = option(self[3]).addDuration(dateWithAdjustedTimezone, obj2);
+                option(self[2]).implySimilarDate(start.start, addDurationResult);
+                obj.debug(() => {
+                  console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.start + ")");
+                });
+                tmp5 = addDurationResult;
+                if (start.end) {
+                  const end4 = start.end;
+                  tmp5 = addDurationResult;
+                  if (end4.isOnlyWeekdayComponent()) {
+                    const end5 = start.end;
+                    const value2 = end5.get("weekday");
+                    const diff1 = value2 - addDurationResult.getDay();
+                    let sum1 = diff1;
+                    if (diff1 <= 0) {
+                      sum1 = diff1 + 7;
                     }
-                    if (str2.match(/в\s*полночь/)) {
-                      parsingComponents = closure_9.midnight(refDate.reference);
-                    }
-                    return parsingComponents;
+                    const obj3 = { day: sum1 };
+                    const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj3);
+                    tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
+                    obj.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
+                    });
+                    tmp5 = addDurationResult1;
                   }
                 }
               }
-              return closure_9.morning(refDate.reference);
             }
-          }
-          return closure_9.evening(refDate.reference);
+            const start6 = start.start;
+            if (start6.isDateWithUnknownYear()) {
+              const start7 = start.start;
+              if (tmp5 > start7.date()) {
+                const start12 = start.start;
+                let num3 = 0;
+                if (tmp5 > start12.date()) {
+                  while (true) {
+                    ({ start: start8, start: start9 } = start);
+                    let implyResult = start8.imply("year", start9.get("year") + 1);
+                    let obj6 = option;
+                    let debugResult3 = option.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " year (" + start.start + ")");
+                    });
+                    let end6 = start.end;
+                    if (end6) {
+                      let end7 = start.end;
+                      end6 = !end7.isCertain("year");
+                    }
+                    if (end6) {
+                      ({ end: end8, end: end9 } = start);
+                      let implyResult1 = end8.imply("year", end9.get("year") + 1);
+                      let debugResult4 = obj6.debug(() => {
+                        console.log("" + self.constructor.name + " adjusted " + start + " month (" + start.start + ")");
+                      });
+                    }
+                    let sum2 = num3 + 1;
+                    if (sum2 >= 3) {
+                      break;
+                    } else {
+                      let start10 = start.start;
+                      num3 = sum2;
+                      if (tmp5 <= start10.date()) {
+                        break;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          });
         }
+        return arr;
       },
     };
-    items[1] = entry1;
-    exports.default = _createClass(RUCasualTimeParser, items);
+    let items = [entry];
+    exports.default = _createClass(ForwardDateRefiner, items);
   } else {
     const _Object2 = Object;
   }

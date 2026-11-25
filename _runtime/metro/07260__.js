@@ -1,13 +1,13 @@
 // _runtime/metro/07260__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01118__.js";
 
-const Platform = _mod17.Platform;
-
-export function getShadowStyle(color) {
-  let shadowColor = color.color;
-  ({ offset, radius, opacity } = color);
-  if (shadowColor === undefined) {
-    shadowColor = "#000";
-  }
-  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "1b06201c0ce237bba30c4db64f994263",
+  name: "EyeIcon",
+  type: "png",
+});

@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "816d3367ed7ad398b85a9db798abd14c",
-  name: "ReactionIcon",
-  type: "png",
+  httpServerLocation: "/assets/modules/premium/roadblocks/images",
+  width: 552,
+  height: 336,
+  scales: [1],
+  hash: "b268e078b582bb90a27bb6e89edb55ca",
+  name: "client_themes_upsell",
+  type: "webp",
 });

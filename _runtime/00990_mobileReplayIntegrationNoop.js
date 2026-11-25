@@ -167,7 +167,7 @@ export () => {
                     const obj = { value, done: true };
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {

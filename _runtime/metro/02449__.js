@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==",
+  httpServerLocation: "/assets/modules/orb_void",
   scales: [1],
-  hash: "6cf8dbae0ba557a795e2916ae9a6ddf6",
-  name: "fr.messages.6cf8dbae0ba557a795e2916ae9a6ddf6.compiled.messages",
+  hash: "e46a82b8db51ab2a5f7188089eaa6e6e",
+  name: "OrbVoid.compiled.messages",
   type: "jsona",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 184,
-  height: 17,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 91,
+  height: 90,
   scales: [2, 3],
-  hash: "dc6e9b555a9114d9845b29b8de00cc4e",
-  name: "server_boost_logo_dark",
+  hash: "055143aab1e4ce106d248b3615fa3d2c",
+  name: "img_bundle_banner",
   type: "png",
 });

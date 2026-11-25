@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f5152f59510615cd9a196a52f24801ee",
-  name: "ThreadIcon",
+  hash: "c067e39c354eb66a1a53a1812a241a73",
+  name: "ClipboardListIcon",
   type: "png",
 });

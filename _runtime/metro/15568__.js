@@ -1,7 +1,11 @@
 // _runtime/metro/15568__.js
-import _mod15566 from "15566__.js";
+import registerAsset from "01118__.js";
 
-let closure_0 = _mod15566({}.toString);
-let closure_1 = _mod15566("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "7d664909402c9573a1643fc4e3c5e083",
+  name: "llm-pilot.compiled.messages",
+  type: "jsona",
+});

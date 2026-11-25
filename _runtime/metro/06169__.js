@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 500,
-  height: 500,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "537a5a5a0fd47a14c531a6a53114ce50",
-  name: "img_account_sync_crunchyroll_white",
+  hash: "a9a658fd475f7a20d9e2c83953494ec4",
+  name: "img_bungie_white",
   type: "svg",
 });

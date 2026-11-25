@@ -1,19 +1,13 @@
 // _runtime/metro/09085__.js
-import _mod19 from "00019__.js";
-import _modDef9086 from "09086__.js";
+import registerAsset from "01118__.js";
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
-
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef9086(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
-  }
-  return tmp.current;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 397,
+  height: 97,
+  scales: [2, 3],
+  hash: "a6c610e7cf3af335e6671966e6802c47",
+  name: "img_clouds_header_tier_0",
+  type: "png",
+});

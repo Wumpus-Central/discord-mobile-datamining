@@ -1,13 +1,9 @@
 // _runtime/metro/06057__.js
-import registerAsset from "01118__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "344ee148b183cbe058428a0b2e53672e",
-  name: "img_account_sync_youtube_light_and_dark",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContainer", validAttributes: {} };
+
+export default module_65.get("RNSScreenContainer", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,13 +1,18 @@
 // _runtime/metro/06067__.js
-import registerAsset from "01118__.js";
+import _modDef6068 from "06068__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "5e997bb5d78793341cb727497a38fe6f",
-  name: "img_account_sync_bluesky_light_and_dark",
-  type: "svg",
-});
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
+
+export function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef6068, {});
+}

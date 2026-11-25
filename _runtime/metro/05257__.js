@@ -1,12 +1,7 @@
 // _runtime/metro/05257__.js
-import RNGestureHandlerModuleDefault from "../05206_RNGestureHandlerModule.js";
+import _mod19 from "00019__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
+const context = _mod19.createContext(null);
 
-export function getModuleId() {
-  if (moduleId == null) {
-    moduleId = RNGestureHandlerModuleDefault.getModuleId();
-  }
-  return moduleId;
-}
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

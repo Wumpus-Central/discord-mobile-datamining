@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e42f1b42dc7bf4b285d5f4924a46e5c4",
-  name: "TicketIcon",
+  hash: "e2f2314b317d679f7a97eb76ebf6b124",
+  name: "UnsendIcon",
   type: "png",
 });

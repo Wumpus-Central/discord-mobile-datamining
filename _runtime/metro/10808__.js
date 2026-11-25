@@ -1,61 +1,13 @@
 // _runtime/metro/10808__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import registerAsset from "01118__.js";
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
-  "i",
-);
-class JPSlashDateFormatParser {
-  constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
-  }
-}
-const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10804).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10804).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10804).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10735).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply(
-                  "year",
-                  JPSlashDateFormatParser(10735).findYearClosestToRef(
-                    createParsingComponents.reference.instant,
-                    parsed1,
-                    parsed,
-                  ),
-                );
-              }
-              return parsingComponents;
-            }
-          }
-          return null;
-        }
-      }
-      return null;
-    },
-  },
-];
-
-export default _createClass(JPSlashDateFormatParser, items);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/perks",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e1a87d01a93be51b22f843cb3d1f52e8",
+  name: "img_nitro_sticker_yellow_24px",
+  type: "png",
+});

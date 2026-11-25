@@ -1,3 +1,13 @@
 // _runtime/metro/10334__.js
+import registerAsset from "01118__.js";
 
-export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "623eff85d27fd4ffd7a4c28c327682e8",
+  name: "SpeedometerIcon",
+  type: "png",
+});

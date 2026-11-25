@@ -1,6 +1,8 @@
 // _runtime/metro/05207__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export const PortalStateContext = context;
+export const PortalDispatchContext = createContext(null);

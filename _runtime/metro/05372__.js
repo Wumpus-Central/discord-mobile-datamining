@@ -1,15 +1,17 @@
 // _runtime/metro/05372__.js
-import createBottomSheetScrollableComponent from "../05373_createBottomSheetScrollableComponent.js";
-import BottomSheetSectionListDefault from "../05380_BottomSheetSectionList.js";
-import BottomSheetFlatListDefault from "../05381_BottomSheetFlatList.js";
-import BottomSheetScrollViewDefault from "../05382_BottomSheetScrollView.js";
-import BottomSheetVirtualizedListDefault from "../05383_BottomSheetVirtualizedList.js";
-import _modDef5384 from "05384__.js";
+import ComposedGestureName from "../05334_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05343_resolveInternalConfigProps.js";
+import _mod5360 from "05360__.js";
 
-export const createBottomSheetScrollableComponent =
-  createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;
-export const BottomSheetSectionList = BottomSheetSectionListDefault;
-export const BottomSheetFlatList = BottomSheetFlatListDefault;
-export const BottomSheetScrollView = BottomSheetScrollViewDefault;
-export const BottomSheetVirtualizedList = BottomSheetVirtualizedListDefault;
-export const BottomSheetFlashList = _modDef5384;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5360.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+}

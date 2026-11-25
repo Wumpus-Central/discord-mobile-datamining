@@ -1,13 +1,13 @@
 // _runtime/metro/09087__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01118__.js";
 
-const useRef = _mod19.useRef;
-let closure_1 = {};
-
-export default function useLazyValue(fn) {
-  const tmp = useRef(closure_1);
-  if (tmp.current === closure_1) {
-    tmp.current = fn();
-  }
-  return tmp.current;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 77.5,
+  height: 30,
+  scales: [2, 3],
+  hash: "eb98ab037be2f7c5d6e15b4152c0f9cb",
+  name: "img_logo_nitro_basic_stacked",
+  type: "png",
+});

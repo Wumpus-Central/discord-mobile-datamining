@@ -1,66 +1,50 @@
 // _runtime/metro/05437__.js
-import _mod5435 from "05435__.js";
-import _slicedToArray from "05390__.js";
+import _mod1653 from "01653__.js";
+import value2 from "../05245_value2.js";
+import _mod5249 from "05249__.js";
+import BottomSheetContext from "../05255_BottomSheetContext.js";
+import noop from "00019__.js";
 
 require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: closure_6 } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f87794();
-    }
-  });
-}
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 
-export (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f87794 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod5435.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f87794 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f87794 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
-        }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
-      }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f87794();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod5249.useGestureEventsHandlersDefault;
   }
+  const sharedValue = _mod1653.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod5249.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod5249.useGestureHandler(
+    value2.GESTURE_SOURCE.CONTENT,
+    animatedContentGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const gestureHandler1 = _mod5249.useGestureHandler(
+    value2.GESTURE_SOURCE.HANDLE,
+    animatedHandleGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(
+    () => ({
+      contentPanGestureHandler: gestureHandler,
+      handlePanGestureHandler: gestureHandler1,
+      animatedGestureSource: sharedValue,
+    }),
+    items,
+  );
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
 }
-export { useOnLoad };

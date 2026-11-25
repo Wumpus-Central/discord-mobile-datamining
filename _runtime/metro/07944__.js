@@ -1,13 +1,60 @@
 // _runtime/metro/07944__.js
-import registerAsset from "01118__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0da6e85b52f6338da38daa05a2b6d1cc",
-  name: "ic_mic_24px",
-  type: "png",
-});
+const Defs = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const jsx = fn(21).jsx;
+class Defs {
+  constructor() {
+    self = this;
+    tmp = c2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
+    if (closure_6()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Defs, fn(19).Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    return jsx(Defs(7945), { children: this.props.children });
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
+
+export default importDefaultResultResult;

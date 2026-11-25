@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 244,
-  height: 119,
-  scales: [1, 2, 3],
-  hash: "fef47f26495822d9e37d120cd2650e58",
-  name: "family_center_activity_banner_image_teen",
+  httpServerLocation: "/assets/images/native",
+  width: 288,
+  height: 128,
+  scales: [2, 3],
+  hash: "eadd5a45fc81983d8eab2051527e663f",
+  name: "img_security",
   type: "png",
 });

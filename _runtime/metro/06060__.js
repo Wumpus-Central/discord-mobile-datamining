@@ -1,13 +1,9 @@
 // _runtime/metro/06060__.js
-import registerAsset from "01118__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "8ba3e8ee2991f198308400197cdb28bc",
-  name: "img_account_sync_youtube_white",
-  type: "svg",
-});
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => duration(React, { children: children.children }));
+
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

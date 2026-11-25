@@ -1,14 +1,13 @@
 // _runtime/metro/10831__.js
-import repeatedTimeunitPattern from "../10734_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10741_AbstractParserWithWordBoundaryChecking.js";
-import _mod10828 from "10828__.js";
+import _mod10832 from "10832__.js";
+import AbstractParserWithWordBoundaryChecking from "../10840_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLMonthNameParser = require;
+const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,60 +27,76 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10828.MONTH_DICTIONARY) +
-    ")\\s*(?:[,-]?\\s*(" +
-    _mod10828.YEAR_PATTERN +
-    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
+  "(?:(?:within|in|for)\\s*)?(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod10832.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
   "i",
 );
-class NLMonthNameParser {
-  constructor() {
+const regExp1 = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod10832.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+const regExp2 = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod10832.TIME_UNITS_NO_ABBR_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitWithinFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, NLMonthNameParser);
+    tmp = c2(this, ENTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLMonthNameParser);
+    obj = closure_4(ENTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(NLMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  value: function innerPattern(option) {
+    if (this.strictMode) {
+      let tmp2 = regExp2;
+    } else {
+      tmp2 = option.option.forwardDate ? regExp : regExp1;
+    }
+    return tmp2;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      parsingComponents.imply("day", 1);
-      const tmp4 = NLMonthNameParser(10828).MONTH_DICTIONARY[arg1[1].toLowerCase(arg1[1])];
-      parsingComponents.assign("month", tmp4);
-      if (arg1[2]) {
-        parsingComponents.assign("year", NLMonthNameParser(10828).parseYear(arg1[2]));
+    value: function innerExtract(reference, arg1) {
+      if (str.match(/^for\s*the\s*\w+/)) {
+        return null;
       } else {
-        parsingComponents.imply(
-          "year",
-          NLMonthNameParser(10735).findYearClosestToRef(createParsingComponents.refDate, 1, tmp4),
-        );
+        const parseDurationResult = ENTimeUnitWithinFormatParser(10832).parseDuration(arg1[1]);
+        let relativeFromReference = null;
+        if (parseDurationResult) {
+          const ParsingComponents = ENTimeUnitWithinFormatParser(10836).ParsingComponents;
+          relativeFromReference = ParsingComponents.createRelativeFromReference(
+            reference.reference,
+            parseDurationResult,
+          );
+        }
+        return relativeFromReference;
       }
-      return parsingComponents;
+      str = arg1[0];
     },
   },
 ];
 
-export default _createClass(NLMonthNameParser, items);
+export default _createClass(ENTimeUnitWithinFormatParser, items);

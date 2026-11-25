@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/icons/voice_calls",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "cc54bd683628b7a915bf80d8d6517c1e",
-  name: "mail",
+  hash: "897ada03fe806525383ec1a77806ad61",
+  name: "screenshare_end",
   type: "png",
 });

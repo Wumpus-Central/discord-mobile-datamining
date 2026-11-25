@@ -1,13 +1,35 @@
 // _runtime/metro/08468__.js
-import registerAsset from "01118__.js";
+import _mod8469 from "08469__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "08fd133b0b292a14ea2a09a50dd4618e",
-  name: "CalendarIcon",
-  type: "png",
-});
+({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
+
+export () => {
+  try {
+    return hasOwnProperty("RNDatePicker");
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8469.getInstallationErrorMessage());
+    }
+  }
+}
+export () => {
+  try {
+    if (React4) {
+      RNDatePicker = React4.get("RNDatePicker");
+    } else {
+      RNDatePicker = RNDatePicker.RNDatePicker;
+    }
+    return RNDatePicker;
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8469.getInstallationErrorMessage());
+    }
+  }
+}

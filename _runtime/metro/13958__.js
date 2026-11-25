@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b7967e1c069a1d25ab22d1157c869621",
-  name: "MoreVerticalIcon",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "e64e51684091ac2de27992b084fed7fd",
+  name: "img_wumpus_nitro_tier_0",
   type: "png",
 });

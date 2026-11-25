@@ -1,11 +1,4 @@
 // _runtime/metro/05053__.js
-import registerAsset from "01118__.js";
+import _mod5054 from "05054__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
-  scales: [1],
-  hash: "5c039726051aeed924751dff0e50eba8",
-  name: "CheckpointCharacter",
-  type: "riv",
-});
+export default _mod5054();

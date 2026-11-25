@@ -1,7 +1,21 @@
 // _runtime/metro/07866__.js
-import 00065__ from "00065__.js";
+import _mod17 from "00017__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeOffset", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true } };
+const StyleSheet = _mod17.StyleSheet;
 
-export default module_65.get("RNSVGFeOffset", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default StyleSheet.create({
+  container: { flex: 1, overflow: "hidden" },
+  loadingOrErrorView: {
+    position: "absolute",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    width: "100%",
+    backgroundColor: "white",
+  },
+  loadingProgressBar: { height: 20 },
+  errorText: { fontSize: 14, textAlign: "center", marginBottom: 2 },
+  errorTextTitle: { fontSize: 15, fontWeight: "500", marginBottom: 10 },
+  webView: { backgroundColor: "#ffffff" },
+});

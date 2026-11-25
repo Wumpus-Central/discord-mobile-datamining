@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/user_settings/authorized_apps",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2F1dGhvcml6ZWRfYXBwcw==",
   scales: [1],
-  hash: "b27b5e2364cb4eac2a151a2002e9548a",
-  name: "AuthorizedApps.compiled.messages",
+  hash: "530ff612d9cc42a79daa0ad5dbc345b1",
+  name: "pl.messages.530ff612d9cc42a79daa0ad5dbc345b1.compiled.messages",
   type: "jsona",
 });
