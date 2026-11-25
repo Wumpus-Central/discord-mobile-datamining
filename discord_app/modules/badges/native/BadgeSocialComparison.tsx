@@ -140,9 +140,9 @@ function EligibleBadgeSocialComparison(arg0) {
         }
       }
       tmp11 =
-        badge_id === tmp2(6012).BadgeId.GAME_VARIETY ||
-        badge_id === tmp2(6012).BadgeId.STREAMING ||
-        badge_id === tmp2(6012).BadgeId.GAME_TIME;
+        badge_id === tmp2(6107).BadgeId.GAME_VARIETY ||
+        badge_id === tmp2(6107).BadgeId.STREAMING ||
+        badge_id === tmp2(6107).BadgeId.GAME_TIME;
     }
   }
   return tmp13Result;
@@ -150,7 +150,7 @@ function EligibleBadgeSocialComparison(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   wrapper: { marginBottom: -nativeDefault.space.PX_12 },
   comparison: null,

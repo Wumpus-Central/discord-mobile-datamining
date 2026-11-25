@@ -7,20 +7,20 @@ import useFontScale from "../../screen/native/useFontScale.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileApplicationWidgetSkeletons = TextSkeleton(14479);
-const ApplicationWidgetMarkupUtils = TextSkeleton(14480);
+const UserProfileApplicationWidgetSkeletons = TextSkeleton(14602);
+const ApplicationWidgetMarkupUtils = TextSkeleton(14603);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let obj2 = {
   fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   fieldIcon: { width: 16, height: 16 },
 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_8 = createStyles.createStyles((paddingTop) => ({ text: { paddingTop, marginTop: -paddingTop } }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");

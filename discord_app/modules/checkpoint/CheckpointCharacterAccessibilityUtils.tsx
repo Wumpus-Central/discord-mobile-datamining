@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/CheckpointCharacterAccessibilityUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef3442 from "Checkpoint2026.messages.js";
+import _modDef3494 from "Checkpoint2026.messages.js";
 import CheckpointCharacterTraits from "CheckpointCharacterTraits.tsx";
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils.tsx";
 import CheckpointTraitOptionNames from "CheckpointTraitOptionNames.tsx";
@@ -31,7 +31,7 @@ export function getCheckpointCharacterAccessibilityLabel(character) {
         const obj = { category: CheckpointCustomizationUtils.getCustomizationOptionName(item), name: null };
         const intl2 = util.intl;
         obj.name = intl2.string(undefined);
-        items.push(intl.formatToPlainString(_modDef3442["Z+HdIo"], obj));
+        items.push(intl.formatToPlainString(_modDef3494["Z+HdIo"], obj));
         const tmpResult = CheckpointCustomizationUtils;
       }
     } else {
@@ -51,5 +51,5 @@ export function getCheckpointCharacterAccessibilityLabel(character) {
   let obj = { traits: null };
   const listFormat = new Intl.ListFormat(require("util").intl.currentLocale, { type: "conjunction" });
   obj.traits = listFormat.format(items);
-  return intl.formatToPlainString(items(3442).mQNR4x, obj);
+  return intl.formatToPlainString(items(3494).mQNR4x, obj);
 }

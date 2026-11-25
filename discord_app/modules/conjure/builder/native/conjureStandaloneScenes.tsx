@@ -11,8 +11,8 @@ const map = new Map();
 let result = size.fileFinishedImporting("modules/conjure/builder/native/conjureStandaloneScenes.tsx");
 
 export const ConjureScreenScenes = { PROJECTS: "PROJECTS", CHAT: "CHAT", DEBUG: "DEBUG" };
-export function pushServerProjectScreen(guildId, arg1, project_list) {
-  const CHANNELResult = Routes.CHANNEL(guildId, StaticChannelRoute.CONJURE_PROJECT, arg1);
+export function pushServerProjectScreen(arg0, arg1, project_list) {
+  const CHANNELResult = Routes.CHANNEL(arg0, StaticChannelRoute.CONJURE_PROJECT, arg1);
   if (null != project_list) {
     const result = map.set(CHANNELResult, project_list);
   } else {
@@ -26,8 +26,8 @@ export function takeServerProjectEntryPoint(guildId, projectId) {
   map.delete(CHANNELResult);
   return value;
 }
-export function projectOpener(guildId, arg1) {
-  closure_0 = guildId;
+export function projectOpener(arg0, arg1) {
+  closure_0 = arg0;
   closure_1 = arg1;
   return (arg0, arg1) => {
     if (arg1 === closure_0) {

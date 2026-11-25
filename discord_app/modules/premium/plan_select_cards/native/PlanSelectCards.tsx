@@ -75,8 +75,8 @@ function PlanSelectCard(onLayout) {
   ({ applicationId: importDefault, onPaymentSuccess: dependencyMap, onPaymentDismiss: View } = onLayout);
   const tmp = closure_11();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  const theme = premiumType(4978).useThemeContext().theme;
-  premiumType(4939);
+  const theme = premiumType(5073).useThemeContext().theme;
+  premiumType(5034);
   if (premiumType === PremiumTypes.TIER_2) {
     const obj2 = { variant: "expressive", iconColor: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
     let obj4 = obj2;
@@ -95,11 +95,11 @@ function PlanSelectCard(onLayout) {
       backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
       style: tmp.gradient,
     };
-    items = [closure_6(tmp4(7756).ExpressiveGradient, obj7)];
+    items = [closure_6(tmp4(7855).ExpressiveGradient, obj7)];
     const obj8 = {
       style: tmp.wumpus,
       pointerEvents: "none",
-      children: closure_6(tmp4(13753).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
+      children: closure_6(tmp4(13876).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
     };
     items[1] = closure_6(View, obj8);
     obj6.children = items;
@@ -109,9 +109,9 @@ function PlanSelectCard(onLayout) {
   const obj9 = { spacing: nativeDefault.space.PX_4, children: null };
   const intl = tmp4(1112).intl;
   const t = tmp4(1112).t;
-  const obj = premiumType(4978);
+  const obj = premiumType(5073);
   const items2 = [
-    closure_6(premiumType(5508).Heading, {
+    closure_6(premiumType(5603).Heading, {
       variant: "nitro-md",
       color: "text-strong",
       children: intl.string(premiumType === PremiumTypes.TIER_2 ? t.lG6a5x : t["t9uG/o"]),
@@ -119,7 +119,7 @@ function PlanSelectCard(onLayout) {
     closure_6(PlanSelectCardPrices, { premiumType }),
   ];
   obj9.children = items2;
-  items1[1] = closure_7(premiumType(5989).Stack, obj9);
+  items1[1] = closure_7(premiumType(6084).Stack, obj9);
   items1[2] = closure_6(View, { style: tmp.divider });
   items1[3] = closure_6(PlanSelectCardPerks, { premiumType });
   const obj12 = { style: tmp.cta, children: null };
@@ -127,7 +127,7 @@ function PlanSelectCard(onLayout) {
   const t2 = tmp4(1112).t;
   const obj13 = {
     text: intl2.string(premiumType === PremiumTypes.TIER_2 ? t2["8x0jKT"] : t2.cM8bbx),
-    icon: closure_6(premiumType(9496).NitroWheelIcon, { size: "md", color: obj4.iconColor }),
+    icon: closure_6(premiumType(9595).NitroWheelIcon, { size: "md", color: obj4.iconColor }),
     variant: obj4.variant,
     size: "lg",
     grow: true,
@@ -142,7 +142,7 @@ function PlanSelectCard(onLayout) {
       });
     },
   };
-  obj12.children = closure_6(premiumType(5515).Button, obj13);
+  obj12.children = closure_6(premiumType(5610).Button, obj13);
   items1[4] = closure_6(View, obj12);
   obj5.children = items1;
   return closure_7(View, obj5);
@@ -170,7 +170,7 @@ const dependencyMap = {
     yearly: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
   },
 };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj4 = {
   container: { width: "100%", gap: nativeDefault.space.PX_12 },
   card: null,

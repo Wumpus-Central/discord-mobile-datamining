@@ -26,7 +26,7 @@ function Emoji(guildEmoji) {
   );
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { gridEmojiFastImage: null, gridEmojiText: null, emojiGridRowContainer: null, emojiGridContainer: null };
 let size = { height: 40, width: 40, borderRadius: nativeDefault.radii.sm };
 obj2.gridEmojiFastImage = size;
@@ -51,7 +51,7 @@ export function EmojiGrid(numberToShow) {
     num2 = 5;
   }
   let obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(9616).useSharedMessageEmojiStyles());
+  const merged = Object.assign(doNotDisplayEmojiIds(9715).useSharedMessageEmojiStyles());
   const merged1 = Object.assign(closure_4());
   let emojis;
   if (expressionSourceGuild != null) {
@@ -63,14 +63,14 @@ export function EmojiGrid(numberToShow) {
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(9616);
+  const obj2 = doNotDisplayEmojiIds(9715);
   const tmp = doNotDisplayEmojiIds;
-  const arr4 = obj(9632)(substr1, num2);
-  return jsx(tmp(5989).Stack, {
+  const arr4 = obj(9731)(substr1, num2);
+  return jsx(tmp(6084).Stack, {
     spacing: 8,
     align: "center",
     style: obj.emojiGridContainer,
-    children: obj(9632)(substr1, num2).map((arr, index) => {
+    children: obj(9731)(substr1, num2).map((arr, index) => {
       obj = {
         direction: "horizontal",
         spacing: 32,

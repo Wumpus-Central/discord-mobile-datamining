@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 },
   container: { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 },
@@ -69,7 +69,7 @@ export default function GetStartedScreen(modalSessionId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -83,10 +83,10 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6702).trackAgeVerificationModalClicked(
+              const result = v3(6797).trackAgeVerificationModalClicked(
                 c0,
-                v3(6702).AgeVerificationModalVersion.RETRY,
-                v3(6702).AgeVerificationModalCta.GET_STARTED,
+                v3(6797).AgeVerificationModalVersion.RETRY,
+                v3(6797).AgeVerificationModalCta.GET_STARTED,
               );
               v1 = 1;
               c0 = 1;
@@ -102,7 +102,7 @@ export default function GetStartedScreen(modalSessionId) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           c0 = tmp;

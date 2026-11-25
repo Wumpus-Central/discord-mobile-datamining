@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 },
   spinnerContainer: { padding: 32 },
@@ -62,7 +62,7 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6018).TableRow, obj2);
+      return closure_7(joinRequest(6113).TableRow, obj2);
     }
   }
 });
@@ -76,16 +76,16 @@ export default noop.memo(function GuildSettingsModalMemberApplications(guildId) 
   let onEndReached;
   let tmp = closure_10();
   dependencyMap = tmp;
-  let obj = guildId(18271);
+  let obj = guildId(18383);
   const tmp2 = applicationStatus;
   const guildJoinRequests = obj.useSortedMemberApplications({
     guildId,
     applicationStatus,
-    sortOrder: guildId(4953).GuildJoinRequestSortOrders.TIMESTAMP_DESC,
+    sortOrder: guildId(5048).GuildJoinRequestSortOrders.TIMESTAMP_DESC,
   }).guildJoinRequests;
-  let obj2 = { guildId, applicationStatus, sortOrder: guildId(4953).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
-  const fetchNextPage = guildId(18272).usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
-  const obj3 = guildId(18272);
+  let obj2 = { guildId, applicationStatus, sortOrder: guildId(5048).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
+  const fetchNextPage = guildId(18384).usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
+  const obj3 = guildId(18384);
   items = [onEndReached];
   const items1 = [guildId, applicationStatus];
   const stateFromStores = guildId(504).useStateFromStores(
@@ -121,13 +121,13 @@ export default noop.memo(function GuildSettingsModalMemberApplications(guildId) 
       return closure_7(stateFromStores, obj5);
     }
   }
-  if (guildId(4953).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+  if (guildId(5048).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
     const intl2 = tmp4(1112).intl;
     let stringResult = intl2.string(tmp4(1112).t["/wqiSv"]);
-  } else if (tmp4(4953).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
+  } else if (tmp4(5048).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
     const intl = tmp4(1112).intl;
     stringResult = intl.string(tmp4(1112).t.bv82GS);
-  } else if (tmp4(4953).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  } else if (tmp4(5048).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     const intl3 = tmp4(1112).intl;
     stringResult = intl3.string(tmp4(1112).t["7YSJ6f"]);
   }
@@ -154,14 +154,14 @@ export default noop.memo(function GuildSettingsModalMemberApplications(guildId) 
       }
       return tmp;
     };
-    let tmp13Result = closure_7(tmp4(7356).FlashList, obj8);
+    let tmp13Result = closure_7(tmp4(7451).FlashList, obj8);
   } else {
-    const obj10 = { Illustration: tmp4(11449).NoResults, body: stringResult };
+    const obj10 = { Illustration: tmp4(11548).NoResults, body: stringResult };
     tmp13Result = closure_7(tmp4(1186).EmptyState, obj10);
   }
   const obj11 = { children: null };
   obj7.children = tmp13Result;
-  const items5 = [closure_7(stateFromStores, obj7), closure_7(guildId(5491).NavScrim, {})];
+  const items5 = [closure_7(stateFromStores, obj7), closure_7(guildId(5586).NavScrim, {})];
   obj11.children = items5;
   return closure_8(closure_9, obj11);
 });

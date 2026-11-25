@@ -121,4 +121,5 @@ export const DispatchErrorCodes = {
   DISK_FULL: 2080,
   [2080]: "DISK_FULL",
 };
+export const MAX_POST_MESSAGE_STRING_LENGTH = 1048576;
 export const TransportTypes = { IPC: "ipc", WEBSOCKET: "ws", HTTP: "http", POST_MESSAGE: "post_message" };

@@ -30,20 +30,20 @@ export function getFrameIntentForSurface(type) {
     return obj3.INLINE;
   }
 }
-export function makeFrameId(arg0, type) {
+export function makeFrameId(applicationId, type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     const _HermesInternal4 = HermesInternal;
-    return "main:" + arg0;
+    return "main:" + applicationId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL === type) {
     const _HermesInternal3 = HermesInternal;
-    return "app-channel:" + arg0 + ":" + type.channelId;
+    return "app-channel:" + applicationId + ":" + type.channelId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL === type) {
     const _HermesInternal2 = HermesInternal;
-    return "voice-channel:" + arg0 + ":" + type.channelId;
+    return "voice-channel:" + applicationId + ":" + type.channelId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY === type) {
     const _HermesInternal = HermesInternal;
-    return "overlay:" + arg0;
+    return "overlay:" + applicationId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL === type) {
     _modDef38(false, "A Frame cannot be launched at an INTERACTION_MODAL surface");
   }

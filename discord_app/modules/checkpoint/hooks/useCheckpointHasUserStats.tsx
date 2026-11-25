@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import CheckpointStore from "../CheckpointStore.tsx";
 
 require = fn;
-const CheckpointFetchStates = fn(12407).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12571).CheckpointFetchStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useCheckpointHasUserStats.tsx");
 

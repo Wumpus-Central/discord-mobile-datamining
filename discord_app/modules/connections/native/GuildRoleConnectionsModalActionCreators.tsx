@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/connections/native/GuildRoleC
 export function openGuildRoleConnectionsModal(guildId) {
   const onClose = guildId.onClose;
   ModalActionCreatorsDefault.pushLazy(
-    onClose(2119)(11904, dependencyMap.paths),
+    onClose(2119)(12003, dependencyMap.paths),
     {
       guildId: guildId.guildId,
       onClose: function handleClose() {
@@ -29,7 +29,7 @@ export function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
 export function openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.openLazy(
-    asyncRequireImpl(11895, dependencyMap.paths),
+    asyncRequireImpl(11994, dependencyMap.paths),
     "GuildRoleConnectionsConnectAccountsActionSheet-" + verificationRole.id,
     { role: verificationRole, guildId },
   );

@@ -9,8 +9,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 function CheckpointProfileEntrypointRow(source) {
   source = source.source;
-  const checkpointQAMode = source(6643).useCheckpointQAMode("CheckpointProfileEntrypoint");
-  const obj = source(6643);
+  const checkpointQAMode = source(6738).useCheckpointQAMode("CheckpointProfileEntrypoint");
+  const obj = source(6738);
   items = [CheckpointStore];
   const stateFromStores = source(504).useStateFromStores(items, () => isFetching.isFetching);
   const obj3 = {
@@ -24,14 +24,14 @@ function CheckpointProfileEntrypointRow(source) {
     end: true,
   };
   const intl = source(1112).intl;
-  obj3.label = intl.string(checkpointQAMode(3442)["8hclXY"]);
+  obj3.label = intl.string(checkpointQAMode(3494)["8hclXY"]);
   const intl2 = source(1112).intl;
-  obj3.subLabel = intl2.string(checkpointQAMode(3442).BFc4lY);
+  obj3.subLabel = intl2.string(checkpointQAMode(3494).BFc4lY);
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {
-    const obj4 = { IconComponent: tmp(13943).ExperimentalCheckpointIcon };
-    tmp5Result = jsx(tmp(6018).TableRow.Icon, { IconComponent: tmp(13943).ExperimentalCheckpointIcon });
+    const obj4 = { IconComponent: tmp(14066).ExperimentalCheckpointIcon };
+    tmp5Result = jsx(tmp(6113).TableRow.Icon, { IconComponent: tmp(14066).ExperimentalCheckpointIcon });
   }
   obj3.icon = tmp5Result;
   obj3.onPress = function onPress() {
@@ -41,14 +41,14 @@ function CheckpointProfileEntrypointRow(source) {
   if ("off" !== checkpointQAMode) {
     fn = () => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14874, dependencyMap.paths),
+        asyncRequireImpl(14996, dependencyMap.paths),
         "CheckpointTestingActionSheet",
         { mode: checkpointQAMode },
       );
     };
   }
   obj3.onLongPress = fn;
-  return jsx(source(6018).TableRow, {
+  return jsx(source(6113).TableRow, {
     label: null,
     subLabel: null,
     icon: null,

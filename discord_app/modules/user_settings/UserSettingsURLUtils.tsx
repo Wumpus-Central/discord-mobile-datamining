@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import keysSorter from "../../../_runtime/05656_keysSorter.js";
+import keysSorter from "../../../_runtime/05751_keysSorter.js";
 import UserSettingsKeys from "UserSettingsKeys.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 

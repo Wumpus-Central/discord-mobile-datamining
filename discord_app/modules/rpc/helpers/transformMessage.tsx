@@ -27,17 +27,17 @@ function recurseReplaceContentTree(type) {
 function transformComponent(type) {
   type = type.type;
   if (Server.ComponentType.ACTION_ROW === type) {
-    const obj13 = { type: null, components: null };
-    ({ type: obj19.type, components: components3 } = type);
+    const obj16 = { type: null, components: null };
+    ({ type: obj22.type, components: components3 } = type);
     let found;
     if (components3 != null) {
-      const mapped = components3.map(transformComponent);
+      let mapped = components3.map(transformComponent);
       found = mapped.filter(GlobalUtils.isNotNullish);
     }
-    obj13.components = found;
-    return obj13;
+    obj16.components = found;
+    return obj16;
   } else if (Server.ComponentType.BUTTON === type) {
-    const obj15 = {
+    const obj18 = {
       type: null,
       custom_id: null,
       disabled: null,
@@ -48,26 +48,26 @@ function transformComponent(type) {
       sku_id: null,
     };
     ({
-      type: obj17.type,
-      customId: obj17.custom_id,
-      disabled: obj17.disabled,
-      style: obj17.style,
-      label: obj17.label,
-      url: obj17.url,
-      emoji,
+      type: obj20.type,
+      customId: obj20.custom_id,
+      disabled: obj20.disabled,
+      style: obj20.style,
+      label: obj20.label,
+      url: obj20.url,
+      emoji: emoji2,
     } = type);
-    let tmp23;
-    if (null != emoji) {
-      ({ id: obj18.id, name: obj18.name, animated: obj18.animated } = emoji);
-      tmp23 = { id: null, name: null, animated: null };
-      const obj35 = { id: null, name: null, animated: null };
+    let tmp26;
+    if (null != emoji2) {
+      ({ id: obj21.id, name: obj21.name, animated: obj21.animated } = emoji2);
+      tmp26 = { id: null, name: null, animated: null };
+      const obj41 = { id: null, name: null, animated: null };
     }
-    obj15.emoji = tmp23;
-    obj15.sku_id = type.skuId;
-    return obj15;
+    obj18.emoji = tmp26;
+    obj18.sku_id = type.skuId;
+    return obj18;
   } else if (Server.ComponentType.STRING_SELECT === type) {
-    const obj36 = { type: type.type };
-    const obj37 = {
+    const obj42 = { type: type.type };
+    const obj43 = {
       custom_id: null,
       disabled: null,
       required: null,
@@ -76,16 +76,16 @@ function transformComponent(type) {
       max_values: null,
     };
     ({
-      customId: obj16.custom_id,
-      disabled: obj16.disabled,
-      required: obj16.required,
-      placeholder: obj16.placeholder,
-      minValues: obj16.min_values,
-      maxValues: obj16.max_values,
+      customId: obj19.custom_id,
+      disabled: obj19.disabled,
+      required: obj19.required,
+      placeholder: obj19.placeholder,
+      minValues: obj19.min_values,
+      maxValues: obj19.max_values,
     } = type);
-    const merged = Object.assign(obj37);
+    const merged = Object.assign(obj43);
     const options = type.options;
-    obj36.options = options.map((label) => {
+    obj42.options = options.map((label) => {
       const obj = {
         label: label.label,
         value: label.value,
@@ -103,14 +103,14 @@ function transformComponent(type) {
       obj.emoji = tmp;
       return obj;
     });
-    return obj36;
+    return obj42;
   } else {
     if (Server.ComponentType.USER_SELECT !== type) {
       if (Server.ComponentType.ROLE_SELECT !== type) {
         if (Server.ComponentType.MENTIONABLE_SELECT !== type) {
           if (Server.ComponentType.CHANNEL_SELECT === type) {
-            const obj38 = { type: type.type };
-            const obj39 = {
+            const obj44 = { type: type.type };
+            const obj45 = {
               custom_id: null,
               disabled: null,
               required: null,
@@ -119,34 +119,99 @@ function transformComponent(type) {
               max_values: null,
             };
             ({
-              customId: obj12.custom_id,
-              disabled: obj12.disabled,
-              required: obj12.required,
-              placeholder: obj12.placeholder,
-              minValues: obj12.min_values,
-              maxValues: obj12.max_values,
+              customId: obj15.custom_id,
+              disabled: obj15.disabled,
+              required: obj15.required,
+              placeholder: obj15.placeholder,
+              minValues: obj15.min_values,
+              maxValues: obj15.max_values,
             } = type);
-            const merged1 = Object.assign(obj39);
-            ({ channelTypes: obj11.channel_types, defaultValues: obj11.default_values } = type);
-            return obj38;
+            const merged1 = Object.assign(obj45);
+            ({ channelTypes: obj14.channel_types, defaultValues: obj14.default_values } = type);
+            return obj44;
           } else if (Server.ComponentType.SECTION === type) {
-            const obj40 = { type: null, components: null, accessory: null };
-            ({ type: obj10.type, components: components2 } = type);
-            let found1;
-            if (components2 != null) {
-              const mapped1 = components2.map(transformComponent);
-              found1 = mapped1.filter(GlobalUtils.isNotNullish);
+            const tmp12 = transformComponent(type.accessory);
+            let tmp14 = null;
+            if (null != tmp12) {
+              const obj46 = { type: null, components: null, accessory: null };
+              ({ type: obj13.type, components: components2 } = type);
+              let found1;
+              if (components2 != null) {
+                const mapped1 = components2.map(transformComponent);
+                found1 = mapped1.filter(GlobalUtils.isNotNullish);
+              }
+              obj46.components = found1;
+              obj46.accessory = tmp12;
+              tmp14 = obj46;
             }
-            obj40.components = found1;
-            obj40.accessory = transformComponent(type.accessory);
-            return obj40;
+            return tmp14;
           } else if (Server.ComponentType.TEXT_DISPLAY === type) {
-            ({ type: obj9.type, content: obj9.content } = type);
+            ({ type: obj12.type, content: obj12.content } = type);
             return { type: null, content: null };
           } else if (Server.ComponentType.THUMBNAIL === type) {
-            const obj42 = { type: null, media: null, description: null, spoiler: null };
-            ({ type: obj7.type, media } = type);
+            const obj48 = { type: null, media: null, description: null, spoiler: null };
+            ({ type: obj10.type, media } = type);
             const size = {
+              url: null,
+              proxy_url: null,
+              loading_state: null,
+              height: null,
+              width: null,
+              placeholder: null,
+              placeholder_version: null,
+              content_type: null,
+              original_content_type: null,
+              flags: null,
+            };
+            ({
+              url: obj11.url,
+              proxyUrl: obj11.proxy_url,
+              loadingState: obj11.loading_state,
+              height: obj11.height,
+              width: obj11.width,
+              placeholder: obj11.placeholder,
+              placeholderVersion: obj11.placeholder_version,
+              contentType: obj11.content_type,
+              originalContentType: obj11.original_content_type,
+              flags: obj11.flags,
+            } = media);
+            obj48.media = size;
+            ({ description: obj10.description, spoiler: spoiler2 } = type);
+            if (spoiler2 == null) {
+              spoiler2 = false;
+            }
+            obj48.spoiler = spoiler2;
+            return obj48;
+          } else if (Server.ComponentType.MEDIA_GALLERY === type) {
+            const obj49 = { type: null, items: null };
+            ({ type: obj9.type, items } = type);
+            obj49.items = items.map((description) => {
+              const obj = { media: null, description: description.description, spoiler: null };
+              const media = description.media;
+              obj.media = {
+                url: media.url,
+                proxy_url: media.proxyUrl,
+                loading_state: media.loadingState,
+                height: media.height,
+                width: media.width,
+                placeholder: media.placeholder,
+                placeholder_version: media.placeholderVersion,
+                content_type: media.contentType,
+                original_content_type: media.originalContentType,
+                flags: media.flags,
+              };
+              let flag = description.spoiler;
+              if (flag == null) {
+                flag = false;
+              }
+              obj.spoiler = flag;
+              return obj;
+            });
+            return obj49;
+          } else if (Server.ComponentType.FILE === type) {
+            const obj50 = { type: null, file: null, name: null, size: null, spoiler: null };
+            ({ type: obj7.type, file } = type);
+            const size1 = {
               url: null,
               proxy_url: null,
               loading_state: null,
@@ -169,89 +234,73 @@ function transformComponent(type) {
               contentType: obj8.content_type,
               originalContentType: obj8.original_content_type,
               flags: obj8.flags,
-            } = media);
-            obj42.media = size;
-            ({ description: obj7.description, spoiler: spoiler2 } = type);
-            if (spoiler2 == null) {
-              spoiler2 = false;
-            }
-            obj42.spoiler = spoiler2;
-            return obj42;
-          } else if (Server.ComponentType.MEDIA_GALLERY === type) {
-            const obj43 = { type: null, items: null };
-            ({ type: obj6.type, items } = type);
-            obj43.items = items.map((description) => {
-              const obj = { media: null, description: description.description, spoiler: null };
-              const media = description.media;
-              obj.media = {
-                url: media.url,
-                proxy_url: media.proxyUrl,
-                loading_state: media.loadingState,
-                height: media.height,
-                width: media.width,
-                placeholder: media.placeholder,
-                placeholder_version: media.placeholderVersion,
-                content_type: media.contentType,
-                original_content_type: media.originalContentType,
-                flags: media.flags,
-              };
-              let flag = description.spoiler;
-              if (flag == null) {
-                flag = false;
-              }
-              obj.spoiler = flag;
-              return obj;
-            });
-            return obj43;
-          } else if (Server.ComponentType.FILE === type) {
-            const obj44 = { type: null, file: null, name: null, size: null, spoiler: null };
-            ({ type: obj4.type, file } = type);
-            const size1 = {
-              url: null,
-              proxy_url: null,
-              loading_state: null,
-              height: null,
-              width: null,
-              placeholder: null,
-              placeholder_version: null,
-              content_type: null,
-              original_content_type: null,
-              flags: null,
-            };
-            ({
-              url: obj5.url,
-              proxyUrl: obj5.proxy_url,
-              loadingState: obj5.loading_state,
-              height: obj5.height,
-              width: obj5.width,
-              placeholder: obj5.placeholder,
-              placeholderVersion: obj5.placeholder_version,
-              contentType: obj5.content_type,
-              originalContentType: obj5.original_content_type,
-              flags: obj5.flags,
             } = file);
-            obj44.file = size1;
-            ({ name: obj4.name, size: obj4.size, spoiler } = type);
+            obj50.file = size1;
+            ({ name: obj7.name, size: obj7.size, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            obj44.spoiler = spoiler;
-            return obj44;
+            obj50.spoiler = spoiler;
+            return obj50;
           } else if (Server.ComponentType.SEPARATOR === type) {
-            ({ type: obj3.type, divider: obj3.divider, spacing: obj3.spacing } = type);
+            ({ type: obj6.type, divider: obj6.divider, spacing: obj6.spacing } = type);
             return { type: null, divider: null, spacing: null };
           } else if (Server.ComponentType.CONTENT_INVENTORY_ENTRY === type) {
-            ({ type: obj2.type, contentInventoryEntry: obj2.content_inventory_entry } = type);
+            ({ type: obj5.type, contentInventoryEntry: obj5.content_inventory_entry } = type);
             return { type: null, content_inventory_entry: null };
           } else if (Server.ComponentType.CONTAINER === type) {
-            let obj = { type: null, accent_color: null, spoiler: null, components: null };
-            ({ type: obj.type, accentColor: obj.accent_color, spoiler: obj.spoiler, components } = type);
+            const obj53 = { type: null, accent_color: null, spoiler: null, components: null };
+            ({ type: obj4.type, accentColor: obj4.accent_color, spoiler: obj4.spoiler, components } = type);
             let found2;
             if (components != null) {
               const mapped2 = components.map(transformComponent);
               found2 = mapped2.filter(GlobalUtils.isNotNullish);
             }
-            obj.components = found2;
+            obj53.components = found2;
+            return obj53;
+          } else if (Server.ComponentType.OVERFLOW_MENU === type) {
+            const obj54 = { type: null, groups: null };
+            ({ type: obj3.type, groups } = type);
+            obj54.groups = groups.map((label) => {
+              const obj = { label: label.label, components: null };
+              const components = label.components;
+              let found;
+              if (components != null) {
+                const mapped = components.map(transformComponent);
+                found = mapped.filter(GlobalUtils.isNotNullish);
+              }
+              obj.components = found;
+              return obj;
+            });
+            return obj54;
+          } else if (Server.ComponentType.MENU_ACTION_ITEM === type) {
+            let obj = {
+              type: null,
+              custom_id: null,
+              disabled: null,
+              style: null,
+              label: null,
+              description: null,
+              url: null,
+              emoji: null,
+            };
+            ({
+              type: obj.type,
+              customId: obj.custom_id,
+              disabled: obj.disabled,
+              style: obj.style,
+              label: obj.label,
+              description: obj.description,
+              url: obj.url,
+              emoji,
+            } = type);
+            let tmp5;
+            if (null != emoji) {
+              ({ id: obj2.id, name: obj2.name, animated: obj2.animated } = emoji);
+              tmp5 = { id: null, name: null, animated: null };
+              const obj55 = { id: null, name: null, animated: null };
+            }
+            obj.emoji = tmp5;
             return obj;
           } else {
             if (Server.ComponentType.TEXT_INPUT !== type) {
@@ -272,8 +321,8 @@ function transformComponent(type) {
         }
       }
     }
-    const obj47 = { type: type.type };
-    const obj48 = {
+    const obj56 = { type: type.type };
+    const obj57 = {
       custom_id: null,
       disabled: null,
       required: null,
@@ -282,16 +331,16 @@ function transformComponent(type) {
       max_values: null,
     };
     ({
-      customId: obj14.custom_id,
-      disabled: obj14.disabled,
-      required: obj14.required,
-      placeholder: obj14.placeholder,
-      minValues: obj14.min_values,
-      maxValues: obj14.max_values,
+      customId: obj17.custom_id,
+      disabled: obj17.disabled,
+      required: obj17.required,
+      placeholder: obj17.placeholder,
+      minValues: obj17.min_values,
+      maxValues: obj17.max_values,
     } = type);
-    const merged2 = Object.assign(obj48);
-    obj47.default_values = type.defaultValues;
-    return obj47;
+    const merged2 = Object.assign(obj57);
+    obj56.default_values = type.defaultValues;
+    return obj56;
   }
 }
 function transformEmbed(type) {

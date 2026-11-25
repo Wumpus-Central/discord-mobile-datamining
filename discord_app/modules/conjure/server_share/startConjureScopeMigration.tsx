@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/server_share/startConjureScopeMigration.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import openConjureProjectInBuilderDefault from "../projects/openConjureProjectInBuilder.native.tsx";
 import conjureSendToProject from "../connection/conjureSendToProject.tsx";
@@ -19,7 +19,7 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -125,7 +125,7 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
   }
 };
 const logger = new fn(4).Logger("startConjureScopeMigration");
-let obj = { added: _modDef4192.YXmrDJ, removed: _modDef4192.OYaecm };
+let obj = { added: _modDef4244.YXmrDJ, removed: _modDef4244.OYaecm };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/startConjureScopeMigration.tsx");
 

@@ -50,7 +50,7 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
                   c3 = 1;
                   dependencyMap = 2;
                   c4 = 1;
-                  const obj6 = { value: tmp3(11313).requestConjureInstallConsent(tmp3, closure_1), done: false };
+                  const obj6 = { value: tmp3(11412).requestConjureInstallConsent(tmp3, closure_1), done: false };
                   return obj6;
                 }
               }
@@ -87,10 +87,10 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
             c3 = 0;
             closure_128_4(false);
             if (obj.conjurePreviewBotAdded(closure_128_0)) {
-              const result = tmp3(14573).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
-              const obj2 = tmp3(14573);
+              const result = tmp3(14695).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
+              const obj2 = tmp3(14695);
             }
-            obj = tmp3(14573);
+            obj = tmp3(14695);
           }
           c3 = 0;
           closure_128_4(false);

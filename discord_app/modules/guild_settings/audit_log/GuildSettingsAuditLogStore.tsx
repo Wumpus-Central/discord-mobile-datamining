@@ -9,9 +9,9 @@ import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtil
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(19796).AuditLogChange;
-let closure_4 = fn(4770).isGuildSelectableChannelType;
-const hasAnyPermission = fn(4824).hasAnyPermission;
+const AuditLogChange = fn(19897).AuditLogChange;
+let closure_4 = fn(4865).isGuildSelectableChannelType;
+const hasAnyPermission = fn(4919).hasAnyPermission;
 const Constants = fn(1071);
 const AuditLogActions = Constants.AuditLogActions;
 ({

@@ -7,7 +7,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import KeyboardChatScrollView from "../../../../_runtime/01642_KeyboardChatScrollView.js";
 import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import useKeyboardType from "useKeyboardType.tsx";
-import Portal from "../../../../_runtime/05109_Portal.js";
+import Portal from "../../../../_runtime/05204_Portal.js";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ const _modDef1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",

@@ -33,7 +33,7 @@ let closure_6 = async function _openConjureNativeImages(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_6 = async function _openConjureNativeImages(arg0) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -171,7 +171,7 @@ let closure_6 = async function _openConjureNativeImages(arg0) {
       } else if (1 === tmp7) {
         c5 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
@@ -196,7 +196,7 @@ let closure_6 = async function _openConjureNativeImages(arg0) {
         obj6.initialIndex = Math.max(0, closure_131_1);
         closure_132_0(closure_132_1[3]).openMediaModal(obj6);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp18) {
       if (tmp4 === c5) {

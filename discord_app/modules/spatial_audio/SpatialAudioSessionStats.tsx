@@ -38,7 +38,7 @@ let closure_20 = async function _readNativeStats() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -148,8 +148,8 @@ function takeSnapshot(isSpatial, arg1) {
     OFF_UNSUPPORTED = obj.OFF_UNSUPPORTED;
   }
 }
-const React6 = fn(5872).SpatialAudioOverrideSource;
-const Constants = fn(5729);
+const React6 = fn(5967).SpatialAudioOverrideSource;
+const Constants = fn(5824);
 ({ DEFAULT_DEVICE_ID: closure_10, Features: closure_11, SpatialAudioStatus: closure_12 } = Constants);
 let obj = {
   OFF_UNSUPPORTED: "off_unsupported",
@@ -173,7 +173,7 @@ let closure_14 = {
   [obj.FAILED_INIT]: "duration_failed_init_ms",
   [obj.FAILED_HRTF]: "duration_failed_hrtf_ms",
 };
-const dependencyMap = Object.values(fn(5908).OutputDeviceClass);
+const dependencyMap = Object.values(fn(6003).OutputDeviceClass);
 let closure_16 = {
   mixUs: "mix_us",
   positioningUs: "positioning_us",

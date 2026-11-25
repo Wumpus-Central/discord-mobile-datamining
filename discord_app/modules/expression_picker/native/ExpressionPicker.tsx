@@ -19,7 +19,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   expressionPickerContainer: {
     flex: 1,

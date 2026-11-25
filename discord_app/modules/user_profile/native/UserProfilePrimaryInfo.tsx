@@ -459,7 +459,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9279), obj);
+  return closure_15(first(9378), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -928,17 +928,17 @@ function GuildTag(primaryGuildOverride) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const getBadgeName = fn(6011).getBadgeName;
-const Constants = fn(7431);
+const getBadgeName = fn(6106).getBadgeName;
+const Constants = fn(7526);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const GuildTagBadgeSize = fn(8438).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(6259).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8537).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(6354).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 let closure_19 = PX_6 + 4;
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -1034,7 +1034,7 @@ const dependencyMap2 = {
     guildTagHorizontalPadding: 6,
   },
 };
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_23 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {

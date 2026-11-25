@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import _mod4832 from "../../../../_runtime/metro/04832__.js";
+import _mod4927 from "../../../../_runtime/metro/04927__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
 import VoicePanelUIDefault from "VoicePanelUI.tsx";
@@ -44,9 +44,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 
 export default noop.memo(function VoicePanelContainer() {
-  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4832.shallow);
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4927.shallow);
   return jsx(native.TransitionGroup, {
-    items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4832.shallow),
+    items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4927.shallow),
     getItemKey: getChannelKey,
     renderItem: renderVoicePanel,
   });

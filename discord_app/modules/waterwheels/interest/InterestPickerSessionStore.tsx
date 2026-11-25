@@ -2,12 +2,54 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 
+let picks = [];
 let c1 = false;
 let c2 = false;
 let id = null;
-const Store = initializeDefault.Store;
-class InterestPickerSessionStore extends Store {}
+const PersistedStore = initializeDefault.PersistedStore;
+class InterestPickerSessionStore extends PersistedStore {}
 const prototype = InterestPickerSessionStore.prototype;
+prototype["initialize"] = function initialize(ownerId) {
+  ownerId = undefined;
+  if (ownerId != null) {
+    ownerId = ownerId.ownerId;
+  }
+  if (null != ownerId) {
+    picks = ownerId.picks;
+    if (picks == null) {
+      picks = [];
+    }
+    items = picks;
+  } else {
+    items = [];
+  }
+  closure_0 = items;
+  let ownerId1;
+  if (ownerId != null) {
+    ownerId1 = ownerId.ownerId;
+  }
+  let tmp3 = null != ownerId1;
+  if (tmp3) {
+    let flag = ownerId.pickerSeen;
+    if (flag == null) {
+      flag = false;
+    }
+    tmp3 = flag;
+  }
+  c1 = tmp3;
+  let ownerId2;
+  if (ownerId != null) {
+    ownerId2 = ownerId.ownerId;
+  }
+  if (ownerId2 == null) {
+    ownerId2 = null;
+  }
+  id = ownerId2;
+  c2 = false;
+};
+prototype["getState"] = function getState() {
+  return { picks, pickerSeen, ownerId: id };
+};
 prototype["getPicks"] = function getPicks() {
   items = [...closure_0];
   return items;
@@ -15,7 +57,7 @@ prototype["getPicks"] = function getPicks() {
 prototype["hasSeenPicker"] = function hasSeenPicker() {
   let tmp = c1;
   if (!c1) {
-    tmp = length.length > 0;
+    tmp = picks.length > 0;
   }
   return tmp;
 };
@@ -23,6 +65,7 @@ prototype["isPickerOpen"] = function isPickerOpen() {
   return c2;
 };
 InterestPickerSessionStore.displayName = "InterestPickerSessionStore";
+InterestPickerSessionStore.persistKey = "InterestPickerSessionStore";
 const interestPickerSessionStore = new InterestPickerSessionStore(DispatcherDefault, {
   WATERWHEELS_INTEREST_PICKER_SET_PICKS: function handleSetPicks(gameIds) {
     items = [...gameIds.gameIds];

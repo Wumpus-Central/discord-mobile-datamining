@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(8949).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(4829).getUserCommunicationDisabledVersion;
-const Changeset = fn(8083).Changeset;
+let closure_6 = fn(9048).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(4924).getUserCommunicationDisabledVersion;
+const Changeset = fn(8182).Changeset;
 const Constants = fn(1071);
 ({
   ActivityActionTypes: closure_11,
@@ -169,7 +169,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[19]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[16]).scrollTo(ref.current, tmp26, obj8);
@@ -1538,6 +1538,7 @@ class MessagesRenderer {
       onTapTimeoutIcon: first2.handleTapTimeoutIcon,
       onTapButtonActionComponent: first2.handleTapButtonActionComponent,
       onTapSelectActionComponent: first2.handleTapSelectActionComponent,
+      onTapComponent: first2.handleTapComponent,
       onTapWelcomeReply: first2.handleTapWelcomeReply,
       onTapInviteToSpeak: first2.handleTapInviteToSpeak,
       onTapAutoModerationActions: first2.handleTapAutoModerationActions,

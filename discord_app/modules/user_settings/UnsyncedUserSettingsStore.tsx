@@ -94,6 +94,12 @@ Object.defineProperty(prototype, "expressionPickerWidth", {
   },
   set: undefined,
 });
+Object.defineProperty(prototype, "expressionPickerHeight", {
+  get: function expressionPickerHeight() {
+    return closure_15.expressionPickerHeight;
+  },
+  set: undefined,
+});
 Object.defineProperty(prototype, "messageRequestSidebarWidth", {
   get: function messageRequestSidebarWidth() {
     let messageRequestSidebarWidth = closure_15.messageRequestSidebarWidth;

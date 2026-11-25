@@ -32,7 +32,7 @@ const obj = {
   "zh-CN": null,
   hi: null,
 };
-fn(6766);
+fn(6861);
 obj.bg = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -43,7 +43,7 @@ obj.bg = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6767);
+fn(6862);
 obj.cs = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -54,7 +54,7 @@ obj.cs = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6768);
+fn(6863);
 obj.da = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -65,7 +65,7 @@ obj.da = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6769);
+fn(6864);
 obj.de = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -76,7 +76,7 @@ obj.de = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6770);
+fn(6865);
 obj.el = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -87,7 +87,7 @@ obj.el = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6771);
+fn(6866);
 obj["en-US"] = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -98,7 +98,7 @@ obj["en-US"] = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6772);
+fn(6867);
 obj["es-ES"] = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -109,7 +109,7 @@ obj["es-ES"] = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6773);
+fn(6868);
 obj["es-419"] = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -120,7 +120,7 @@ obj["es-419"] = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6774);
+fn(6869);
 obj.fi = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -131,7 +131,7 @@ obj.fi = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6775);
+fn(6870);
 obj.fr = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -142,7 +142,7 @@ obj.fr = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6776);
+fn(6871);
 obj.hr = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -153,7 +153,7 @@ obj.hr = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6777);
+fn(6872);
 obj.hu = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -164,7 +164,7 @@ obj.hu = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6778);
+fn(6873);
 obj.it = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -175,7 +175,7 @@ obj.it = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6779);
+fn(6874);
 obj.ja = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -186,7 +186,7 @@ obj.ja = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6780);
+fn(6875);
 obj.ko = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -197,7 +197,7 @@ obj.ko = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6781);
+fn(6876);
 obj.lt = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -208,7 +208,7 @@ obj.lt = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6782);
+fn(6877);
 obj.nl = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -219,7 +219,7 @@ obj.nl = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6783);
+fn(6878);
 obj.no = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -230,7 +230,7 @@ obj.no = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6784);
+fn(6879);
 obj.pl = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -241,7 +241,7 @@ obj.pl = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6785);
+fn(6880);
 obj["pt-BR"] = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -252,7 +252,7 @@ obj["pt-BR"] = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6786);
+fn(6881);
 obj.ro = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -263,7 +263,7 @@ obj.ro = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6787);
+fn(6882);
 obj.ru = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -274,7 +274,7 @@ obj.ru = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6788);
+fn(6883);
 obj["sv-SE"] = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -285,7 +285,7 @@ obj["sv-SE"] = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6789);
+fn(6884);
 obj.th = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -296,7 +296,7 @@ obj.th = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6790);
+fn(6885);
 obj.tr = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -307,7 +307,7 @@ obj.tr = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6791);
+fn(6886);
 obj.uk = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -318,7 +318,7 @@ obj.uk = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6792);
+fn(6887);
 obj.vi = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -329,7 +329,7 @@ obj.vi = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-fn(6793);
+fn(6888);
 obj["zh-CN"] = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);
@@ -340,7 +340,7 @@ obj["zh-CN"] = asyncGeneratorStep(async () => {
   value.default = closure_0;
   return value;
 });
-const registerAsset = fn(6794);
+const registerAsset = fn(6889);
 obj.hi = asyncGeneratorStep(async () => {
   value = {};
   await closure_0(value[1]).loadJsonAsset(registerAsset);

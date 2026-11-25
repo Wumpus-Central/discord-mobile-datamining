@@ -8,10 +8,10 @@ const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(5997).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6042).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(6092).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6137).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");

@@ -201,7 +201,7 @@ export function useConjureSettingsServers(projectId, flag) {
           }
           if (name == null) {
             const intl = projectId(1112).intl;
-            name = intl.string(stateFromStores(4192)["6bhivN"]);
+            name = intl.string(stateFromStores(4244)["6bhivN"]);
           }
           obj.name = name;
           return obj;

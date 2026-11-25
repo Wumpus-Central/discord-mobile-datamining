@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,8 +13,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1653.createAnimatedComponent(fn(5508).Text);
-const createICYMIStyles = fn(18132);
+let closure_9 = module_1653.createAnimatedComponent(fn(5603).Text);
+const createICYMIStyles = fn(18244);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -68,7 +68,7 @@ export default function ExploreServersRow(visible) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -83,14 +83,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(8782).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(8782);
+            v1(8881).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(8881);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(8782).feedItemActioned(obj4);
-            const obj6 = v1(8782);
+            v1(8881).feedItemActioned(obj4);
+            const obj6 = v1(8881);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18149).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18261).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -109,7 +109,7 @@ export default function ExploreServersRow(visible) {
             }, 500);
           }, 100);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp8) {
         dependencyMap = tmp;

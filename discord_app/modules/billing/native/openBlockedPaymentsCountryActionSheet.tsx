@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/billing/native/openBlockedPay
 export default function openBlockedPaymentsCountryActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9164, dependencyMap.paths),
+    asyncRequireImpl(9263, dependencyMap.paths),
     "BlockedPaymentsCountryActionSheet",
   );
 }

@@ -1,6 +1,7 @@
 // discord_app/modules/user_profile/native/useUserProfileEmbedUsers.tsx
 import UserProfileEmbedUsers from "UserProfileEmbedUsers.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -24,8 +25,9 @@ export default function useUserProfileEmbedUsers(arg0, arg1, arg2) {
     UserStore,
     UserProfileStore,
     GuildMemberStore,
-    memo,
+    ChannelStore,
     RelationshipStore,
+    memo,
   ];
   const items2 = [memo, arg1, arg2];
   return require("initialize").useStateFromStores(

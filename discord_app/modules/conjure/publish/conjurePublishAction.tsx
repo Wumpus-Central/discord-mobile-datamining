@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
 import ConjurePublishTypes from "ConjurePublishTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -55,7 +55,7 @@ function resolveConjurePublishAction(input) {
         str3 = "";
       }
       const obj5 = { server: str3 };
-      formatResult = intl.format(_modDef4192.N4NkyR, obj5);
+      formatResult = intl.format(_modDef4244.N4NkyR, obj5);
     }
   }
   const obj7 = {
@@ -82,50 +82,64 @@ function resolveConjurePublishAction(input) {
     prop1 = integrationStatus.bot_permissions_changed;
   }
   obj7.botPermissionsChanged = true === prop1;
-  const result = conjurePreviewModes.requiresPermissionReview(obj7);
-  let str4 = "publish";
-  if (result) {
-    str4 = "consent_then_publish";
-  }
+  let result = conjurePreviewModes.requiresPermissionReview(obj7);
   const obj8 = {
-    intent: str4,
-    isUpdate: "live_outdated" === tmp.publishState && !tmp9,
+    label: null,
+    intent: null,
+    permissionsChanged: null,
+    isUpdate: null,
     upToDate: null,
     disabledReason: null,
     confirmReason: null,
     missingSurface: null,
   };
-  let tmp23 = "live_current" === tmp.publishState;
-  if (!tmp23) {
-    tmp23 = "live_auto_synced" === tmp.publishState;
+  const intl2 = util.intl;
+  obj8.label = intl2.string(_modDef4244["120EFN"]);
+  let str4 = "publish";
+  if (result) {
+    str4 = "consent_then_publish";
   }
-  if (tmp23) {
-    tmp23 = !tmp9;
+  obj8.intent = str4;
+  if (result) {
+    let prop2;
+    if (integrationStatus != null) {
+      prop2 = integrationStatus.bot_permissions_changed;
+    }
+    result = true === prop2;
   }
-  obj8.upToDate = tmp23;
+  obj8.permissionsChanged = result;
+  obj8.isUpdate = "live_outdated" === tmp.publishState && !tmp9;
+  let tmp25 = "live_current" === tmp.publishState;
+  if (!tmp25) {
+    tmp25 = "live_auto_synced" === tmp.publishState;
+  }
+  if (tmp25) {
+    tmp25 = !tmp9;
+  }
+  obj8.upToDate = tmp25;
   obj8.disabledReason = formatResult;
-  let tmp24 = null;
+  let tmp26 = null;
   if (null == formatResult) {
     let str6 = input.guildName;
     let formatResult1 = null;
     if ("guild" === input.installScope) {
       formatResult1 = null;
-      if (tmp26) {
+      if (tmp28) {
         formatResult1 = null;
-        if (false === tmp25) {
-          const intl2 = util.intl;
+        if (false === tmp27) {
+          const intl3 = util.intl;
           if (str6 == null) {
             str6 = "";
           }
           const obj9 = { server: str6 };
-          formatResult1 = intl2.format(_modDef4192.eHYXFg, obj9);
+          formatResult1 = intl3.format(_modDef4244.eHYXFg, obj9);
         }
       }
     }
-    tmp24 = formatResult1;
+    tmp26 = formatResult1;
   }
-  obj8.confirmReason = tmp24;
-  let tmp29 = null;
+  obj8.confirmReason = tmp26;
+  let tmp30 = null;
   if (tmp9) {
     let str9 = "bot";
     if ("activity" === tmp.surface) {
@@ -134,29 +148,10 @@ function resolveConjurePublishAction(input) {
         str9 = "channel";
       }
     }
-    tmp29 = str9;
+    tmp30 = str9;
   }
-  obj8.missingSurface = tmp29;
-  if (result) {
-    let prop2;
-    if (integrationStatus != null) {
-      prop2 = integrationStatus.bot_permissions_changed;
-    }
-    if (true === prop2) {
-      const obj10 = {};
-      const merged2 = Object.assign(obj8);
-      const intl4 = util.intl;
-      obj10.label = intl4.string(_modDef4192["tUeY/h"]);
-      obj10.action = "review_permissions";
-      let obj11 = obj10;
-    }
-    return obj11;
-  }
-  obj11 = {};
-  const merged3 = Object.assign(obj8);
-  const intl3 = util.intl;
-  obj11.label = intl3.string(_modDef4192["120EFN"]);
-  obj11.action = "publish";
+  obj8.missingSurface = tmp30;
+  return obj8;
 }
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
 
@@ -176,16 +171,16 @@ export function conjurePublishButtonState(memo, canPublish) {
             let str2 = "action_needed";
             if (tmp2.upToDate) {
               str2 = "action_needed";
-              if ("publish" === tmp3) {
+              if (!tmp3) {
                 str2 = "action_needed";
                 if (!canPublish.awaitingApproval) {
                   str2 = "action_needed";
                   if (!canPublish.ownerInstallMissing) {
-                    let str4 = "up_to_date";
+                    let str3 = "up_to_date";
                     if ("live_auto_synced" === publishState) {
-                      str4 = "auto_synced";
+                      str3 = "auto_synced";
                     }
-                    str2 = str4;
+                    str2 = str3;
                   }
                 }
               }

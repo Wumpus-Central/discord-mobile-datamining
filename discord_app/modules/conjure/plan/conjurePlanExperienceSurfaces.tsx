@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanExperienceSurfaces.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import slugConjureChannelNameDefault from "../shared/slugConjureChannelName.tsx";
 import conjurePlanDesign from "conjurePlanDesign.tsx";
@@ -13,7 +13,7 @@ export function conjurePlanExperiencePlacement(proposal, experience) {
     return null;
   } else {
     const intl = util.intl;
-    closure_0 = intl.string(_modDef4192["6/3tGY"]);
+    closure_0 = intl.string(_modDef4244["6/3tGY"]);
     const surfaces3 = experience.surfaces;
     items = [];
     if (!surfaces3.includes(ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL)) {

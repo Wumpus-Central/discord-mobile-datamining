@@ -7,7 +7,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11770);
+const GameOrganizationInviteConstants = fn(11869);
 ({
   GameOrganizationInviteAcceptFailureReason: closure_6,
   GameOrganizationInviteAcceptStatus: metroImportDefault,

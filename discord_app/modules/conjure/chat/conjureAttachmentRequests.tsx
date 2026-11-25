@@ -31,7 +31,7 @@ let closure_4 = async function _importAttachmentFromUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ let closure_7 = async function _deleteStagedAttachment(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_7 = async function _deleteStagedAttachment(arg0) {
         closure_130_0 = value;
         if (closure_130_0.ok) {
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -233,7 +233,7 @@ let closure_9 = async function _getAttachmentUrl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -323,7 +323,7 @@ let closure_10 = async function _isAttachmentAvailable(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

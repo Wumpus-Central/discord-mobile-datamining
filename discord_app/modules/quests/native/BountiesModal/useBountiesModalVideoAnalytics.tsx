@@ -103,7 +103,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -125,7 +125,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               closure_129_3 = undefined;
               let impressionId;
               closure_129_5 = undefined;
-              VIDEO_MODAL_MOBILE = closure_0(6750).QuestContent.VIDEO_MODAL_MOBILE;
+              VIDEO_MODAL_MOBILE = closure_0(6845).QuestContent.VIDEO_MODAL_MOBILE;
               ({ bountyId: closure_129_2, sourceQuestContent: closure_129_3 } = ref.current);
               c4 = 1;
               const current = ref.current;
@@ -138,7 +138,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(8232).getQuestLogger();
+            const questLogger = closure_0(8331).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -153,15 +153,15 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             closure_129_5 = value;
             const obj8 = {
               adContentId: closure_129_2,
-              adCreativeType: closure_0(6752).AdCreativeType.BOUNTY,
+              adCreativeType: closure_0(6847).AdCreativeType.BOUNTY,
               event: constants.QUEST_CONTENT_ENGAGED_VIEWED,
               properties: null,
               sourceQuestContent: null,
             };
             const obj10 = {};
-            const obj9 = closure_0(8241);
-            const merged = Object.assign(closure_0(8251).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(8107)());
+            const obj9 = closure_0(8340);
+            const merged = Object.assign(closure_0(8350).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(8206)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;
@@ -189,7 +189,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp35) {
           closure_3 = tmp35;

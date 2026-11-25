@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/useConjureProjectCreator.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../utils/UserUtils.tsx";
 import conjureMessageAuthors from "../chat/conjureMessageAuthors.tsx";
 import ListUtils from "../../../utils/ListUtils.tsx";
@@ -108,12 +108,12 @@ export default function useConjureProjectCreator(project) {
       if (0 === mapped.length) {
         intl = intl(1112).intl;
         obj2 = { creator: name };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef4192.t5RWBS, obj2);
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef4244.t5RWBS, obj2);
       } else {
         const intl2 = intl(1112).intl;
-        const obj4 = { creator: name, collaborators: intl(12232).getListSummaryLabel(mapped) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef4192["b5uCe/"], obj4);
-        const intlResult = intl(12232);
+        const obj4 = { creator: name, collaborators: intl(12331).getListSummaryLabel(mapped) };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef4244["b5uCe/"], obj4);
+        const intlResult = intl(12331);
       }
       obj.label = formatToPlainStringResult;
     }
@@ -123,11 +123,11 @@ export function getConjureProjectCreatorLabel(creator, names) {
   if (0 === names.length) {
     const intl2 = util.intl;
     const obj3 = { creator };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4192.t5RWBS, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4244.t5RWBS, obj3);
   } else {
     const intl = util.intl;
     const obj = { creator, collaborators: ListUtils.getListSummaryLabel(names) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4192["b5uCe/"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4244["b5uCe/"], obj);
   }
   return formatToPlainStringResult;
 }

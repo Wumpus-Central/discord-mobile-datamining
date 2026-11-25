@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/modal/FavoritesGuildCleanupModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3804 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3856 from "../../intl/FavoritesGuild.messages.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import Modal from "../../../../design/components/Modal/native/Modal.native.tsx";
@@ -15,7 +15,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1628)().bottom);
-  const tmp4 = loading(17699)(closeCleanup);
+  const tmp4 = loading(17810)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
@@ -28,30 +28,30 @@ function CleanupScreen() {
   const obj3 = { spacing: loading(575).space.PX_16, children: null };
   const obj4 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
   let intl = require("util").intl;
-  obj4.title = intl.string(loading(3804).IY55rr);
+  obj4.title = intl.string(loading(3856).IY55rr);
   obj4.value = tmp4.autoAdd;
   obj4.onChange = function onChange(arg0) {
     return closure_0.setAutoAdd(arg0);
   };
   const obj5 = { label: null, subLabel: null, value: null, disabled: null };
   let intl2 = require("util").intl;
-  obj5.label = intl2.string(loading(3804).z6aUMH);
+  obj5.label = intl2.string(loading(3856).z6aUMH);
   const intl3 = require("util").intl;
-  obj5.subLabel = intl3.string(loading(3804)["5pZtcn"]);
+  obj5.subLabel = intl3.string(loading(3856)["5pZtcn"]);
   obj5.value = value3;
   obj5.disabled = loading;
   items = [closure_12(require("TableRadioRow").TableRadioRow, obj5), ,];
   const obj6 = { label: null, subLabel: null, value: null, disabled: null };
   const intl4 = require("util").intl;
-  obj6.label = intl4.string(loading(3804).MOBbbf);
+  obj6.label = intl4.string(loading(3856).MOBbbf);
   const intl5 = require("util").intl;
-  obj6.subLabel = intl5.string(loading(3804)["4wUEWy"]);
+  obj6.subLabel = intl5.string(loading(3856)["4wUEWy"]);
   obj6.value = value2;
   obj6.disabled = loading;
   items[1] = closure_12(require("TableRadioRow").TableRadioRow, obj6);
   const obj7 = { label: null, value: null, disabled: null };
   const intl6 = require("util").intl;
-  obj7.label = intl6.string(loading(3804)["uJRN0+"]);
+  obj7.label = intl6.string(loading(3856)["uJRN0+"]);
   obj7.value = value;
   obj7.disabled = loading;
   items[2] = closure_12(require("TableRadioRow").TableRadioRow, obj7);
@@ -59,26 +59,26 @@ function CleanupScreen() {
   const items1 = [closure_13(require("TableRadioGroup").TableRadioGroup, obj4), , ,];
   const obj9 = { title: null, description: null, hasIcons: false, value: null, onChange: null, children: null };
   const intl7 = require("util").intl;
-  obj9.title = intl7.string(loading(3804).THUVKS);
+  obj9.title = intl7.string(loading(3856).THUVKS);
   const intl8 = require("util").intl;
-  obj9.description = intl8.string(loading(3804)["89dcNP"]);
+  obj9.description = intl8.string(loading(3856)["89dcNP"]);
   ({ pruneTiming: obj8.value, setPruneTiming: obj8.onChange } = tmp4);
   const items2 = [
     closure_8.map((days) => {
       if (days === closure_2_11) {
         const intl2 = util.intl;
-        let stringResult = intl2.string(_modDef3804.EIVQqq);
+        let stringResult = intl2.string(_modDef3856.EIVQqq);
       } else {
         const intl = util.intl;
         const obj = { days };
-        stringResult = intl.formatToPlainString(_modDef3804.ankeKO, obj);
+        stringResult = intl.formatToPlainString(_modDef3856.ankeKO, obj);
       }
       return application_id(TableRadioRow.TableRadioRow, { label: stringResult, value: days, disabled: loading }, days);
     }),
   ];
   const obj10 = { label: null, value: null, disabled: null };
   const intl9 = require("util").intl;
-  obj10.label = intl9.string(loading(3804).LxrV05);
+  obj10.label = intl9.string(loading(3856).LxrV05);
   obj10.value = require("useFavoritesCleanup").FAVORITES_PRUNE_NEVER;
   obj10.disabled = loading;
   items2[1] = closure_12(require("TableRadioRow").TableRadioRow, obj10);
@@ -86,14 +86,14 @@ function CleanupScreen() {
   items1[1] = closure_13(require("TableRadioGroup").TableRadioGroup, obj9);
   const obj11 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
   const intl10 = require("util").intl;
-  obj11.title = intl10.string(loading(3804).YFhloA);
+  obj11.title = intl10.string(loading(3856).YFhloA);
   obj11.value = tmp4.scope;
   obj11.onChange = function onChange(arg0) {
     return closure_0.setScope(arg0);
   };
   const obj12 = { label: null, value: null, disabled: null };
   const intl11 = require("util").intl;
-  obj12.label = intl11.string(loading(3804).fDT7MF);
+  obj12.label = intl11.string(loading(3856).fDT7MF);
   obj12.value = value5;
   let tmp9 = loading;
   if (!loading) {
@@ -103,7 +103,7 @@ function CleanupScreen() {
   const items3 = [closure_12(require("TableRadioRow").TableRadioRow, obj12)];
   const obj13 = { label: null, value: null, disabled: null };
   const intl12 = tmp6(1112).intl;
-  obj13.label = intl12.string(loading(3804)["gOUr+P"]);
+  obj13.label = intl12.string(loading(3856)["gOUr+P"]);
   obj13.value = value4;
   let tmp10 = loading;
   if (!loading) {
@@ -122,8 +122,8 @@ function CleanupScreen() {
       children: null,
     };
     const intl13 = tmp6(1112).intl;
-    obj14.children = intl13.string(tmp(3804).toOYQw);
-    tmp7Result = closure_12(tmp6(5508).Text, obj14);
+    obj14.children = intl13.string(tmp(3856).toOYQw);
+    tmp7Result = closure_12(tmp6(5603).Text, obj14);
   }
   items1[3] = tmp7Result;
   obj3.children = items1;
@@ -146,7 +146,7 @@ function CleanupScreen() {
   return closure_13(require("Stack/Stack").Stack, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const FavoritesConstants = fn(4779);
+const FavoritesConstants = fn(4874);
 ({
   FAVORITES_AUTO_ADD_THREADS_NEVER: hasOwnProperty,
   FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_6,
@@ -158,7 +158,7 @@ const FavoritesConstants = fn(4779);
 } = FavoritesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -180,7 +180,7 @@ export default function FavoritesGuildCleanupModal() {
     const obj = { cleanup: null };
     const obj2 = { title: null, headerLeft: null, render: null };
     const intl = require("util").intl;
-    obj2.title = intl.string(_modDef3804.hklnjs);
+    obj2.title = intl.string(_modDef3856.hklnjs);
     obj2.headerLeft = require("NavigatorHeader").getHeaderCloseButton(closeCleanup);
     obj2.render = function render() {
       return closure_1_12(closure_1_16, {});

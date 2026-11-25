@@ -6,7 +6,7 @@ import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx"
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6808).isProjectOwner;
+const isProjectOwner = fn(6903).isProjectOwner;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useCanShareConjureProject.tsx");
 

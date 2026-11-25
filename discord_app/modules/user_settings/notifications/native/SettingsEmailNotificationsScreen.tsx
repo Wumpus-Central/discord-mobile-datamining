@@ -1,15 +1,16 @@
 // discord_app/modules/user_settings/notifications/native/SettingsEmailNotificationsScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import EmailSettingsActionCreators from "../EmailSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmailSettingsStore from "../EmailSettingsStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(9414).MobileUserSettings;
+const MobileUserSettings = fn(9513).MobileUserSettings;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { notice: { padding: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
@@ -42,7 +43,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function SettingsEmailNotificationsScreen() {
-  let tmp = closure_6();
+  const tmp = closure_6();
   isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(
     stateFromStores[6],
   ).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
@@ -68,44 +69,57 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
   }, items2);
   const items3 = [isDeclarativeSettingsUIAvailable, enabled];
   const memo = noop.useMemo(() => {
-    const tmp = isDeclarativeSettingsUIAvailable ? obj5 : obj4;
-    const obj2 = { settings: tmp.categories, subLabel: null };
+    const tmp2 = isDeclarativeSettingsUIAvailable ? obj5 : obj4;
+    let tmp4 = dependencyMap;
     let stringResult;
-    if (enabled) {
+    if (isDeclarativeSettingsUIAvailable) {
       const intl = util.intl;
-      stringResult = intl.string(util.t.WViBDk);
+      stringResult = intl.string(_modDef3206.dpeWco);
     }
-    const obj3 = { sections: null };
-    obj2.subLabel = stringResult;
-    items = [obj2];
-    obj4 = { settings: null };
-    const items1 = [tmp.unsubscribeFromAllMarketing];
-    obj4.settings = items1;
-    items[1] = obj4;
-    obj3.sections = items;
-    return SettingBuilders.createList(obj3);
+    const obj2 = { label: stringResult, settings: tmp2.categories, subLabel: null };
+    if (!enabled) {
+      const obj3 = { sections: null };
+      obj2.subLabel = undefined;
+      items = [obj2];
+      obj4 = { settings: null };
+      const items1 = [tmp2.unsubscribeFromAllMarketing];
+      obj4.settings = items1;
+      items[1] = obj4;
+      obj3.sections = items;
+      return obj.createList(obj3);
+    } else {
+      const intl2 = util.intl;
+      if (isDeclarativeSettingsUIAvailable) {
+        tmp4 = _modDef3206;
+        let WViBDk = tmp4.aPtRHt;
+      } else {
+        WViBDk = util.t.WViBDk;
+      }
+      intl2.string(WViBDk);
+    }
+    obj = SettingBuilders;
   }, items3);
   if (isDeclarativeSettingsUIAvailable) {
     if (!stateFromStores) {
       if (stateFromStores1) {
-        let tmp10Result = jsx(tmp2(tmp3[12]).SceneLoadingIndicator, {});
+        let tmp10Result = jsx(tmp2(tmp3[13]).SceneLoadingIndicator, {});
       } else {
         obj5 = { style: tmp.notice, children: null };
         const obj6 = { type: "warning", role: "status", message: null, action: null };
         let intl = tmp2(tmp3[11]).intl;
-        obj6.message = intl.string(tmp5(tmp3[15]).Nu2TMI);
+        obj6.message = intl.string(tmp5(tmp3[12]).Nu2TMI);
         const obj7 = { text: null, onPress: null };
-        const intl2 = tmp2(tmp3[11]).intl;
+        let intl2 = tmp2(tmp3[11]).intl;
         obj7.text = intl2.string(tmp2(tmp3[11]).t["5911Lb"]);
         obj7.onPress = tmp2(tmp3[9]).fetchEmailSettings;
         obj6.action = obj7;
-        obj5.children = jsx(tmp2(tmp3[14]).InlineNotice, {
+        obj5.children = jsx(tmp2(tmp3[15]).InlineNotice, {
           type: "warning",
           role: "status",
           message: null,
           action: null,
         });
-        tmp10Result = jsx(tmp2(tmp3[13]).Stack, { style: tmp.notice, children: null });
+        tmp10Result = jsx(tmp2(tmp3[14]).Stack, { style: tmp.notice, children: null });
       }
     }
     return tmp10Result;

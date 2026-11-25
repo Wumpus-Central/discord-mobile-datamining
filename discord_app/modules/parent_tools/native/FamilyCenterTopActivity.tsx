@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   section: { flex: 1 },
@@ -64,7 +64,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16232, dependencyMap.paths), "FamilyCenterTopUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16353, dependencyMap.paths), "FamilyCenterTopUsers", {
       topUserActivities: stateFromStores,
     });
   }, items2);

@@ -27,7 +27,7 @@ export default function LocalSvg(asset) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ export default function LocalSvg(asset) {
               tmp5(closure_128_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp16) {
           c3 = tmp;
@@ -88,5 +88,5 @@ export default function LocalSvg(asset) {
     };
   }, items);
   const merged1 = Object.assign(merged);
-  return jsx(asset(7813).SvgXml, { xml: tmp2[0] });
+  return jsx(asset(7912).SvgXml, { xml: tmp2[0] });
 }

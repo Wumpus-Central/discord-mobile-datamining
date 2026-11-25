@@ -20,8 +20,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const SceneLoadingIndicator = Text(7269);
-const Form = Text(7947);
+const SceneLoadingIndicator = Text(7364);
+const Form = Text(8046);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -132,7 +132,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5926).showConfirmModal(obj2);
+        guildId(6021).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -175,7 +175,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12154);
+                const obj2 = guildTemplate(12253);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -208,7 +208,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(5666).APIError(closure_128_0);
+              const aPIError = new handleSave(5761).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -378,7 +378,7 @@ function CopyRow(children) {
       color: ICON_FEEDBACK_CRITICAL,
       secondaryColor: tmp10(575).colors.WHITE,
     }),
-    metroImportDefault(tmp4(5508).Text, { variant: "body-sm/normal", children: children.label }),
+    metroImportDefault(tmp4(5603).Text, { variant: "body-sm/normal", children: children.label }),
   ];
   obj.children = items;
   return React5(View, obj);
@@ -386,7 +386,7 @@ function CopyRow(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   container: { flex: 1 },
   containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
@@ -494,7 +494,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19922)(guildTemplate.code);
+  const tmp3 = guildTemplate(20027)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

@@ -171,7 +171,7 @@ let closure_12 = async function _fetchConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -247,7 +247,7 @@ let closure_13 = async function _hydrateSelectedConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -284,7 +284,7 @@ let closure_13 = async function _hydrateSelectedConversation(arg0) {
       const obj5 = { includeReactions: true, includeMessageReferences: true, cacheType: closure_131_2 };
       closure_132_14(closure_131_0, closure_131_1, obj5);
       c6 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp14) {
       c6 = tmp;
       throw tmp14;
@@ -317,7 +317,7 @@ let closure_15 = async function _fetchConversationMessages() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -350,7 +350,7 @@ let closure_15 = async function _fetchConversationMessages() {
               }
               if (isFullyHydratedResult) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               if ("preview" === cacheType) {
@@ -360,7 +360,7 @@ let closure_15 = async function _fetchConversationMessages() {
               }
               if (null != hydratedMessages) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
             if ("preview" === cacheType) {
@@ -444,7 +444,7 @@ let closure_15 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(5541).FETCH_LIMIT;
+const FETCH_LIMIT = fn(5636).FETCH_LIMIT;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -498,8 +498,8 @@ export function setSelectedConversation(channelId, id, arg2) {
 export function clearConversationSelection(channelId, conversationId) {
   DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId });
 }
-export function requestConversationFocus() {
-  DispatcherDefault.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
+export function requestConversationFocus(messageId) {
+  DispatcherDefault.dispatch({ type: "CONVERSATION_FOCUS_REQUEST", messageId });
 }
 export function setConversationFeedbackRating(channelId, conversationId, down) {
   DispatcherDefault.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down });

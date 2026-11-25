@@ -13,15 +13,15 @@ const View = fn(17).View;
 const Constants = fn(1071);
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_9 = createStyles.createStyles({
   imageContainer: { width: "100%", height: "100%" },
   image: { width: "100%", height: "100%" },
 });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11996);
-  heroMediaDimensions = heroMediaDimensions(12870).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(12095);
+  heroMediaDimensions = heroMediaDimensions(12994).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({

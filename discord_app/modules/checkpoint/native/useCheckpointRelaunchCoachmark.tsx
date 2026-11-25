@@ -3,11 +3,11 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointRelaunchCoachmark.tsx");
 
-export const useIsCheckpointRelaunchCoachmarkEligible = fn(17982).useIsCheckpointRelaunchCoachmarkEligible;
+export const useIsCheckpointRelaunchCoachmarkEligible = fn(18094).useIsCheckpointRelaunchCoachmarkEligible;
 export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;
@@ -24,15 +24,15 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
       onButtonPress: null,
     };
     const intl = visibleContent(1112).intl;
-    obj.title = intl.string(markAsDismissed(3442).gY1STb);
+    obj.title = intl.string(markAsDismissed(3494).gY1STb);
     const intl2 = visibleContent(1112).intl;
-    obj.description = intl2.string(markAsDismissed(3442)["Vlu+rH"]);
-    obj.visible = closure_0 === visibleContent(4750).DismissibleContent.BUILD_A_BEAR_RELAUNCH_COACHMARK;
+    obj.description = intl2.string(markAsDismissed(3494)["Vlu+rH"]);
+    obj.visible = closure_0 === visibleContent(4845).DismissibleContent.BUILD_A_BEAR_RELAUNCH_COACHMARK;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);
     };
     const intl3 = visibleContent(1112).intl;
-    obj.buttonLabel = intl3.string(markAsDismissed(3442).e3fPDg);
+    obj.buttonLabel = intl3.string(markAsDismissed(3494).e3fPDg);
     closure_0 = asyncGeneratorStep(async () => {
       if (c2 === 2) {
         c2 = 3;
@@ -44,7 +44,7 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -61,7 +61,7 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
               v1 = 1;
               c2 = 1;
               const obj5 = {
-                value: tmp4(12412).openCheckpoint(tmp4(17982).CHECKPOINT_RELAUNCH_COACHMARK_SOURCE),
+                value: tmp4(12576).openCheckpoint(tmp4(18094).CHECKPOINT_RELAUNCH_COACHMARK_SOURCE),
                 done: false,
               };
               return obj5;
@@ -78,7 +78,7 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
               v1(constants.TAKE_ACTION);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           c2 = tmp;

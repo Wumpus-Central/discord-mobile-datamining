@@ -225,7 +225,8 @@ function getTrackUserProfileProperties(dependencyMap) {
 }
 function trackUserProfileAction(dependencyMap) {
   const applicationId = dependencyMap.applicationId;
-  ({ guildId, channelId, messageId, roleId, widgetType, analyticsLocations, action, section } = dependencyMap);
+  ({ guildId, channelId, messageId, roleId, widgetType, analyticsLocations, action, section, hasUnreadIndicator } =
+    dependencyMap);
   const obj2 = {};
   const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
@@ -279,10 +280,11 @@ function trackUserProfileAction(dependencyMap) {
   obj2.source_message_id = messageId;
   obj2.source_role_id = roleId;
   obj2.widget_type = widgetType;
+  obj2.has_unread_indicator = hasUnreadIndicator;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(6263).FetchState;
-const constants = fn(6011).TrackUserProfileProperties;
+const FetchState = fn(6358).FetchState;
+const constants = fn(6106).TrackUserProfileProperties;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const StatusTypes = fn(1082).StatusTypes;
 const size = fn(2);

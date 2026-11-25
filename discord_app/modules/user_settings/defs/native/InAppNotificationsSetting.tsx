@@ -2,7 +2,7 @@
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef3154 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FocusModeUtils from "../../../notifications/FocusModeUtils.tsx";
@@ -55,16 +55,17 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3154.sH5mu9);
+  return intl.string(_modDef3206.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
   const intl = util.intl;
   const string = intl.string;
+  const tmp2 = _modDef3206;
   if (focusModeEnabled) {
-    let stringResult = string(util.t.cIRG0s);
+    let stringResult = string(tmp2.Zt0MV8);
   } else {
-    stringResult = string(_modDef3154["T/zMdV"]);
+    stringResult = string(tmp2["0r15Ud"]);
   }
   return stringResult;
 };

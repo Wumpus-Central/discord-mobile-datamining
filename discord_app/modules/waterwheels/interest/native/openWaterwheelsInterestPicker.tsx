@@ -15,7 +15,7 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -41,8 +41,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_129_2 = undefined;
           closure_129_3 = function releaseOpenFlag() {
             if (dependencyMap === c6) {
-              const result = closure_0(17870).setInterestPickerOpen(false);
-              const obj = closure_0(17870);
+              const result = closure_0(17982).setInterestPickerOpen(false);
+              const obj = closure_0(17982);
             }
           };
           closure_129_4 = function cleanup() {
@@ -52,8 +52,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_129_5 = function handleAccountChange() {
             if (!assert.isValid()) {
               if (dependencyMap === c6) {
-                const result = closure_0(17870).setInterestPickerOpen(false);
-                const obj = closure_0(17870);
+                const result = closure_0(17982).setInterestPickerOpen(false);
+                const obj = closure_0(17982);
               }
               c4.removeChangeListener(closure_1_5);
               assert.dispose();

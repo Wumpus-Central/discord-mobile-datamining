@@ -8,10 +8,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(7431).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7526).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1082).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -56,13 +56,13 @@ export default function UserProfileNameplateEditButton(user) {
   }
   obj3.guildValue = nameplate2;
   obj3.guildId = guildId;
-  const profilePreviewValue = user(6249).getProfilePreviewValue(obj3);
-  const obj2 = user(6249);
+  const profilePreviewValue = user(6344).getProfilePreviewValue(obj3);
+  const obj2 = user(6344);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchNameplate = user(15941).useFetchNameplate(skuId);
+  const fetchNameplate = user(16062).useFetchNameplate(skuId);
   ({ nameplateProduct, nameplateData, nameplateRecord, isFetching } = fetchNameplate);
   if (null != guildId) {
     let nameplate3;
@@ -99,7 +99,7 @@ export default function UserProfileNameplateEditButton(user) {
     obj4.buttonText = intl5.string(tmp3(1112).t.MKDeyL);
     obj4.onPress = NOOP;
     obj4.leading = <closure_4 animating size="large" />;
-    return jsx(tmp3(15910).UserProfileEditFormButton, {
+    return jsx(tmp3(16031).UserProfileEditFormButton, {
       label: null,
       buttonText: null,
       onPress: null,
@@ -138,15 +138,15 @@ export default function UserProfileNameplateEditButton(user) {
         if (null != nameplateProduct) {
           const obj8 = { style: tmp.previewContainer, children: null };
           const obj9 = { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true };
-          obj8.children = jsx(guildId(9338), { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true });
+          obj8.children = jsx(guildId(9437), { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true });
           let tmp15Result = <closure_5 style={tmp.previewContainer}>{null}</closure_5>;
         }
         obj6.leading = tmp15Result;
-        return jsx(tmp3(15910).UserProfileEditFormButton, obj6);
+        return jsx(tmp3(16031).UserProfileEditFormButton, obj6);
       }
     }
-    const obj10 = { source: guildId(14293), style: tmp.noneIcon };
-    tmp15Result = jsx(tmp3(1186).Icon, { source: guildId(14293), style: tmp.noneIcon });
+    const obj10 = { source: guildId(14416), style: tmp.noneIcon };
+    tmp15Result = jsx(tmp3(1186).Icon, { source: guildId(14416), style: tmp.noneIcon });
   }
-  const tmp3Result = user(15941);
+  const tmp3Result = user(16062);
 }

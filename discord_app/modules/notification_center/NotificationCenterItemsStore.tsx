@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(5649).isGuildEventEnded;
+const isGuildEventEnded = fn(5744).isGuildEventEnded;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 let obj = {
   loading: false,
@@ -214,7 +214,7 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Promise",
-  notifCenterActive: "board",
+  notifCenterActive: "mage",
   notifCenterTabFocused: null,
 };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -398,7 +398,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "board",
+      notifCenterActive: "mage",
       notifCenterTabFocused: null,
     };
     if (flag) {
@@ -540,7 +540,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "board",
+      notifCenterActive: "mage",
       notifCenterTabFocused: null,
     };
     if (flag) {
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6824);
+        obj = id(6919);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,7 +711,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "board",
+      notifCenterActive: "mage",
       notifCenterTabFocused: null,
     };
     if (flag) {

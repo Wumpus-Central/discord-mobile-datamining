@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/PremiumGiftingConstants.tsx
 import PremiumConstants from "../PremiumConstants.tsx";
-import _modDef2888 from "PremiumGifting.messages.js";
+import _modDef2910 from "PremiumGifting.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({
@@ -20,16 +20,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingConstants.tsx");
 
 export const GIFT_STYLE_DESCRIPTIONS = {
-  [SNOWGLOBE]: _modDef2888.M6cPwB,
-  [BOX]: _modDef2888.B9XqQk,
-  [CUP]: _modDef2888["6dCq/u"],
-  [STANDARD_BOX]: _modDef2888.GzPel1,
-  [CAKE]: _modDef2888.AJ4iir,
-  [CHEST]: _modDef2888.P5keo3,
-  [COFFEE]: _modDef2888.w84vET,
-  [SEASONAL_STANDARD_BOX]: _modDef2888["vd1fu/"],
-  [SEASONAL_CAKE]: _modDef2888.aubYGR,
-  [SEASONAL_CHEST]: _modDef2888.vjxYqU,
-  [SEASONAL_COFFEE]: _modDef2888.bHuJLa,
-  [NITROWEEN_STANDARD]: _modDef2888["+HMF8k"],
+  [SNOWGLOBE]: _modDef2910.M6cPwB,
+  [BOX]: _modDef2910.B9XqQk,
+  [CUP]: _modDef2910["6dCq/u"],
+  [STANDARD_BOX]: _modDef2910.GzPel1,
+  [CAKE]: _modDef2910.AJ4iir,
+  [CHEST]: _modDef2910.P5keo3,
+  [COFFEE]: _modDef2910.w84vET,
+  [SEASONAL_STANDARD_BOX]: _modDef2910["vd1fu/"],
+  [SEASONAL_CAKE]: _modDef2910.aubYGR,
+  [SEASONAL_CHEST]: _modDef2910.vjxYqU,
+  [SEASONAL_COFFEE]: _modDef2910.bHuJLa,
+  [NITROWEEN_STANDARD]: _modDef2910["+HMF8k"],
 };

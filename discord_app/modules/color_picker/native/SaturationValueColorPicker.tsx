@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../_runtime/05177_LegacyBaseButton.js";
-import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
+import LegacyBaseButton from "../../../../_runtime/05272_LegacyBaseButton.js";
+import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
 import ColorPickerUtils from "ColorPickerUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -73,7 +73,7 @@ function ColorBox(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { justifyContent: "center", alignItems: "center", position: "relative" },
   selector: null,

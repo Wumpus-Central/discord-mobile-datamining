@@ -343,7 +343,7 @@ function isCurrentReactionType(count_details) {
   }
   return tmp;
 }
-let MessageRecord = fn(4860);
+let MessageRecord = fn(4955);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1071);

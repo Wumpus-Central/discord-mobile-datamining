@@ -2,12 +2,12 @@
 import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef10278 from "../../../../../_runtime/metro/10278__.js";
-import _modDef10279 from "../../../../../_runtime/metro/10279__.js";
+import _modDef10377 from "../../../../../_runtime/metro/10377__.js";
+import _modDef10378 from "../../../../../_runtime/metro/10378__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,9 +19,9 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef10278;
+    let tmp2Result = _modDef10377;
   } else {
-    tmp2Result = _modDef10279;
+    tmp2Result = _modDef10378;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -58,7 +58,7 @@ function SystemProcessingSubLabel() {
   return tmp3;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9414).MobileUserSettings;
+const MobileUserSettings = fn(9513).MobileUserSettings;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
@@ -66,7 +66,7 @@ let closure_11 =
   "" +
   HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
   "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_12 = createStyles.createStyles({
   krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
   logo: { marginRight: 8, height: 30, width: 67 },

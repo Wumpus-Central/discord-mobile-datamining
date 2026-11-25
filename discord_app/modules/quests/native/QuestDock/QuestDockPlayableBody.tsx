@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6745).QuestDockMode;
+const QuestDockMode = fn(6840).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");
@@ -32,30 +32,30 @@ export default noop.memo(function QuestDockPlayableBody() {
       closure_3 = tmp3;
       closure_4 = tmp19;
       const tmp25 = getQuestImpressionId();
-      recordPlayableLaunchResult(9716).captureAdUserAction({
-        type: recordPlayableLaunchResult(9720).AdUserActionType.CLICK_INTERNAL,
-        adCreativeType: recordPlayableLaunchResult(6752).AdCreativeType.PLAYABLE,
+      recordPlayableLaunchResult(9815).captureAdUserAction({
+        type: recordPlayableLaunchResult(9819).AdUserActionType.CLICK_INTERNAL,
+        adCreativeType: recordPlayableLaunchResult(6847).AdCreativeType.PLAYABLE,
         adCreativeId: questDockPlayable.id,
-        questContentCTA: recordPlayableLaunchResult(8251).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
-        surfaceId: recordPlayableLaunchResult(6748).QuestContent.QUEST_BAR_MOBILE,
-        sourceQuestContent: recordPlayableLaunchResult(6748).QuestContent.QUEST_BAR_MOBILE,
+        questContentCTA: recordPlayableLaunchResult(8350).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+        surfaceId: recordPlayableLaunchResult(6843).QuestContent.QUEST_BAR_MOBILE,
+        sourceQuestContent: recordPlayableLaunchResult(6843).QuestContent.QUEST_BAR_MOBILE,
         impressionId: tmp25,
       });
-      recordPlayableLaunchResult = recordPlayableLaunchResult(16638).recordPlayableLaunch(questDockPlayable, tmp25);
+      recordPlayableLaunchResult = recordPlayableLaunchResult(16759).recordPlayableLaunch(questDockPlayable, tmp25);
       closure_132_0 = recordPlayableLaunchResult;
       constants = 1;
       setRestingQuestDockMode(constants.COLLAPSED);
-      const tmp52 = recordPlayableLaunchResult(16638);
+      const tmp52 = recordPlayableLaunchResult(16759);
       const completePlayableLaunch = tmp52.completePlayableLaunch;
-      yield completePlayableLaunch(12142).launch({
+      yield completePlayableLaunch(12241).launch({
         applicationId: questDockPlayable.applicationId,
         analyticsLocations,
       });
       if (1 === tmp7) {
         constants = 0;
-        const result = recordPlayableLaunchResult(16638).completePlayableLaunch(closure_132_0, false);
+        const result = recordPlayableLaunchResult(16759).completePlayableLaunch(closure_132_0, false);
         c7 = 3;
-        recordPlayableLaunchResult(16638);
+        recordPlayableLaunchResult(16759);
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;

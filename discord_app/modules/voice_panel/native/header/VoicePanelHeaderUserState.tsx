@@ -65,9 +65,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = module_1653.createAnimatedComponent(fn(8348).BackgroundBlurView);
+let closure_6 = module_1653.createAnimatedComponent(fn(8447).BackgroundBlurView);
 let closure_7 = { duration: 100 };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;

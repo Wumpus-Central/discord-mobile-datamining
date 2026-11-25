@@ -6,11 +6,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(5671);
+const Constants = fn(5766);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_AUTHENTICATED_SCOPE];
-const CONTEXT_MENU_ICON_NAMES = fn(15701);
+const CONTEXT_MENU_ICON_NAMES = fn(15822);
 const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1071).RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {
   scope: obj,
   handler() {
@@ -23,16 +23,16 @@ const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1071).RPCEvents.ACTIV
         const obj = { participants: [] };
         let obj2 = obj;
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4838).getEmbeddedActivityLocationGuildId(
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4933).getEmbeddedActivityLocationGuildId(
           currentEmbeddedActivity.location,
         );
-        const obj4 = embeddedActivityLocationGuildId(4838);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4838).getEmbeddedActivityLocationChannelId(
+        const obj4 = embeddedActivityLocationGuildId(4933);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4933).getEmbeddedActivityLocationChannelId(
           currentEmbeddedActivity.location,
         );
         obj2 = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4838);
+        const obj5 = embeddedActivityLocationGuildId(4933);
         obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

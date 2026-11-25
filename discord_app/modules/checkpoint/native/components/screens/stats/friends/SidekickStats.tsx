@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import _modDef3442 from "../../../../../Checkpoint2026.messages.js";
+import _modDef3494 from "../../../../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../../../../CheckpointConstants.tsx";
 import ChatIcon from "../../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import MicrophoneIcon from "../../../../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
@@ -44,10 +44,10 @@ export default function SidekickStats(sidekick) {
   const intl = util.intl;
   const obj3 = { duration: null };
   const intl2 = util.intl;
-  obj3.duration = intl2.formatToPlainString(_modDef3442.x7PkHm, { minutes: rounded1 });
+  obj3.duration = intl2.formatToPlainString(_modDef3494.x7PkHm, { minutes: rounded1 });
   const obj4 = { style: tmp.stats, children: null };
   const obj5 = { accessible: true, accessibilityLabel: null, style: null, children: null };
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3442.lw35aH, obj3);
+  const formatToPlainStringResult = intl.formatToPlainString(_modDef3494.lw35aH, obj3);
   obj5.accessibilityLabel = CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel("messages", rounded);
   obj5.style = tmp.stat;
   items = [

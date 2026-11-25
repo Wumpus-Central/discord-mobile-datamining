@@ -1,7 +1,7 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import inlineStyles from "../../../../../_runtime/07813_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07912_inlineStyles.js";
 import showLongPressForumPostActionSheetDefault from "../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../threads/native/components/showThreadLongPressActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -219,14 +219,14 @@ function ThreadChannel(channel) {
   tmp8Result = tmp8(obj[24]);
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(5997);
+const RedesignChannelListConstants = fn(6092);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1071).Permissions;
-const UnreadSetting = fn(6042).UnreadSetting;
+const UnreadSetting = fn(6137).UnreadSetting;
 let closure_16 = fn(1111).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   container: {
     marginVertical: CHANNEL_MARGIN_VERTICAL,

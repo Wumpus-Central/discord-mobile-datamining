@@ -6,13 +6,13 @@ import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCen
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11815);
+const SettingBuilders = fn(11914);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["+uI23H"]);
   },
-  parent: fn(9414).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(9513).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const parentalControlledExplicitContentSettings =
       useParentalControlSettings.useParentalControlledExplicitContentSettings();
@@ -31,7 +31,7 @@ const pressable = SettingBuilders.createPressable({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       const intl = selectedTeenId(1112).intl;
-      const obj = selectedTeenId(16155);
+      const obj = selectedTeenId(16276);
       const stringResult = intl.string(selectedTeenId(1112).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl2 = selectedTeenId(1112).intl;
@@ -44,8 +44,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       items = [selectedTeenId(1195).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(16161).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(16161);
+      const result = selectedTeenId(16282).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(16282);
     }
   },
   unsearchable: true,

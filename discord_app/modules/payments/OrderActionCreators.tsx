@@ -2,7 +2,7 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import util from "../../intl/index.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef2439 from "../checkout/messages/Checkout.messages.js";
+import _modDef2450 from "../checkout/messages/Checkout.messages.js";
 import OrderSigningErrors from "OrderSigningErrors.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import BillingError_mod from "../../errors/BillingError.tsx";
@@ -93,7 +93,7 @@ function getOrderSigningConstraintsError(status) {
   }
   return tmp;
 }
-let closure_12 = async function _signOrder(arg0) {
+let closure_13 = async function _signOrder(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -104,7 +104,7 @@ let closure_12 = async function _signOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -165,14 +165,14 @@ let closure_12 = async function _signOrder(arg0) {
             context: null,
             rejectWithError: true,
           };
-          let tmp63;
+          let tmp62;
           if (null != closure_130_2) {
             if ("" !== closure_130_2) {
               const obj5 = { load_id: closure_130_2 };
-              tmp63 = obj5;
+              tmp62 = obj5;
             }
           }
-          request.context = tmp63;
+          request.context = tmp62;
           c6 = 3;
           c7 = 1;
           const obj6 = { value: HTTP.post(request), done: false };
@@ -183,14 +183,14 @@ let closure_12 = async function _signOrder(arg0) {
         closure_130_7 = closure_4;
         if (closure_130_7 instanceof closure_131_0(closure_131_2[8]).HTTPResponseError) {
           if (409 === closure_130_7.status) {
-            if (closure_131_10(closure_130_7.body)) {
+            if (closure_131_11(closure_130_7.body)) {
               throw new closure_131_9(closure_130_7.body);
             }
           }
         }
-        const tmp33 = closure_131_11(closure_130_7);
-        closure_1 = tmp33;
-        if (tmp33 == null) {
+        const tmp32 = closure_131_12(closure_130_7);
+        closure_1 = tmp32;
+        if (tmp32 == null) {
           closure_1 = closure_130_7;
         }
         throw closure_1;
@@ -206,27 +206,25 @@ let closure_12 = async function _signOrder(arg0) {
         closure_130_5 = value;
         c5 = 0;
         if (null == closure_130_5.body) {
-          const _Error = Error;
-          const error = new Error("Invalid sign order response");
-          throw error;
+          throw new closure_131_10();
         } else {
           c7 = 3;
           obj = { value: closure_130_5.body, done: true };
           return obj;
         }
       }
-    } catch (tmp68) {
-      closure_4 = tmp68;
+    } catch (tmp67) {
+      closure_4 = tmp67;
       if (tmp4 === c5) {
         c7 = tmp2;
-        throw tmp68;
+        throw tmp67;
       } else {
         c6 = tmp;
       }
     }
   }
 };
-let closure_13 = async function _getOrder(arg0) {
+let closure_14 = async function _getOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -237,7 +235,7 @@ let closure_13 = async function _getOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -256,24 +254,22 @@ let closure_13 = async function _getOrder(arg0) {
           closure_129_0 = closure_0;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj6 = { url: Endpoints.ORDER_GET(closure_0), rejectWithError: true };
+          const obj4 = { url: Endpoints.ORDER_GET(closure_0), rejectWithError: true };
           c5 = 2;
           c6 = 1;
-          const obj7 = { value: HTTP.get(obj6), done: false };
-          return obj7;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const obj8 = { error: closure_129_1, orderId: closure_129_0 };
-        closure_130_6.error("failed to fetch order", obj8);
-        if (!obj4.isExpectedHttpClientError(closure_129_1)) {
-          const obj9 = { tags: { source: "OrderActionCreators_getOrder" }, extra: null };
-          const obj10 = { orderId: closure_129_0 };
-          obj9.extra = obj10;
-          const result = closure_130_0(closure_130_2[9]).captureBillingException(closure_129_1, obj9);
-          const obj5 = closure_130_0(closure_130_2[9]);
-        }
+        const obj6 = { error: closure_129_1, orderId: closure_129_0 };
+        closure_130_6.error("failed to fetch order", obj6);
+        const ClientBillingError = closure_130_0(closure_130_2[9]).ClientBillingError;
+        const obj7 = { site: "order_fetch", extra: null };
+        const obj8 = { orderId: closure_129_0 };
+        obj7.extra = obj8;
+        ClientBillingError.report(obj7, closure_129_1);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -282,8 +278,8 @@ let closure_13 = async function _getOrder(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         let body = value.body;
         if (!body) {
@@ -294,11 +290,11 @@ let closure_13 = async function _getOrder(arg0) {
         obj = { value: body, done: true };
         return obj;
       }
-    } catch (tmp31) {
-      closure_3 = tmp31;
+    } catch (tmp26) {
+      closure_3 = tmp26;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp31;
+        throw tmp26;
       } else {
         c5 = tmp;
       }
@@ -307,7 +303,7 @@ let closure_13 = async function _getOrder(arg0) {
 };
 function fetchOrderEntitlements() {
   const self = this;
-  const apply = closure_15.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -315,7 +311,7 @@ function fetchOrderEntitlements() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _fetchOrderEntitlements(arg0) {
+let closure_16 = async function _fetchOrderEntitlements(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -326,7 +322,7 @@ let closure_15 = async function _fetchOrderEntitlements(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -384,7 +380,7 @@ let closure_15 = async function _fetchOrderEntitlements(arg0) {
     }
   }
 };
-let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
+let closure_18 = async function _fetchOrderEntitlementsWithRetry(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -395,7 +391,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -442,7 +438,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -479,7 +475,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                     } else {
                       c2 = 2;
                       c3 = 1;
-                      const obj6 = { value: closure_1_14(closure_129_0), done: false };
+                      const obj6 = { value: closure_1_15(closure_129_0), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -492,7 +488,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   } else {
                     closure_129_1 = value;
                     c3 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -500,9 +496,9 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                 }
               }
             };
-            closure_2 = closure_136_16;
-            closure_2 = closure_136_16;
-            length = closure_136_16[Symbol.iterator]();
+            closure_2 = closure_136_17;
+            closure_2 = closure_136_17;
+            length = closure_136_17[Symbol.iterator]();
             if (length !== undefined) {
               c9 = 1;
               closure_135_3 = tmp35;
@@ -606,12 +602,12 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     }
   }
 };
-const ConstraintReasonCode = fn(7473).ConstraintReasonCode;
+const ConstraintReasonCode = fn(7568).ConstraintReasonCode;
 const Endpoints = fn(1071).Endpoints;
 let closure_6 = new LoggerDefault("OrderActionCreators");
 let obj = {
-  [SPENDING_LIMIT_REACHED]: fn(5668).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED,
-  [SPENDING_LIMIT_WILL_EXCEED]: fn(5668).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED,
+  [SPENDING_LIMIT_REACHED]: fn(5763).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED,
+  [SPENDING_LIMIT_WILL_EXCEED]: fn(5763).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED,
 };
 ({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = ConstraintReasonCode);
 let BillingError = BillingError_mod;
@@ -689,20 +685,29 @@ class OrderSigningOrderChangedError extends OrderSigningFailedWithConstraintsErr
 }
 let BillingError = BillingError_mod;
 const prototype = function OrderProcessingPendingError() {
-  return new tmp("Order signed but entitlements not yet visible after polling", new.target);
+  const tmp2 = new tmp("Order signed but entitlements not yet visible after polling", new.target);
+  tmp2.name = "OrderProcessingPending";
+  return tmp2;
 }.prototype;
 class prototype extends tmp4 {}
-let closure_16 = [250, 500, 1000, 1500, 2500, 4250];
+const prototype2 = function InvalidOrderResponseError() {
+  const tmp2 = new tmp("Invalid order response", new.target);
+  tmp2.name = "InvalidOrderResponse";
+  return tmp2;
+}.prototype;
+class prototype2 extends Error {}
+let closure_17 = [250, 500, 1000, 1500, 2500, 4250];
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
 
 export { OrderSigningFailedWithConstraintsError };
 export { OrderSigningOrderChangedError };
 export const OrderProcessingPendingError = prototype;
+export const InvalidOrderResponseError = prototype2;
 export { getOrderSigningConstraintsError };
 export function signOrder() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -712,7 +717,7 @@ export function signOrder() {
 }
 export function getOrder() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -723,7 +728,7 @@ export function getOrder() {
 export { fetchOrderEntitlements };
 export function fetchOrderEntitlementsWithRetry() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

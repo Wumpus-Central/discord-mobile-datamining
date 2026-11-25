@@ -34,7 +34,7 @@ let closure_16 = async function _executeCommand(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -759,7 +759,7 @@ let closure_17 = async function _retryCommandMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(9929).createNonce();
-      let obj2 = onMessageSuccess(9929);
+      nonce = onMessageSuccess(10028).createNonce();
+      let obj2 = onMessageSuccess(10028);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(6274).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(6369).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(6664).MessageDataType.COMMAND, message };
-    message(6664).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(6759).MessageDataType.COMMAND, message };
+    message(6759).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(6664);
+    const obj6 = message(6759);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -972,7 +972,7 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1174,7 +1174,7 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -1259,7 +1259,7 @@ let closure_24 = async function _stageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1290,14 +1290,14 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1112).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8689);
-            obj2.maxSize = closure_0(7991).sizeString(dependencyMap);
+            const obj = closure_2(8787);
+            obj2.maxSize = closure_0(8090).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1112).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(7991);
+            const obj3 = closure_0(8090);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
@@ -1402,7 +1402,7 @@ const Constants = fn(1071);
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(4922).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(5017).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Link from "../../../../../_runtime/01501_Link.js";
-import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import useConjureWandStatusDefault from "useConjureWandStatus.tsx";
 import YouScreenNavIconDefault from "../../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx";
@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { dot: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -44,7 +44,7 @@ export default noop.memo(function ConjureYouScreenButton() {
   obj2.icon = tmp7Result;
   obj2.accessibilityLabel = accessibilityLabel;
   const intl = util.intl;
-  obj2.label = intl.string(_modDef4192.uk6jhJ);
+  obj2.label = intl.string(_modDef4244.uk6jhJ);
   obj2.onPress = openConjureProjectsSheetDefault;
   obj2.showRedDot = hasBadge;
   obj2.dotStyle = tmp.dot;

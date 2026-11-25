@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   frame: {
     width: "100%",
@@ -75,7 +75,7 @@ export default function ConjureSharedProjectCover(onPress) {
       const intl = util.intl;
       const string = intl.string;
       if ("launch" === action) {
-        v1cF7L4 = tmp10(4192)["1cF7L4"];
+        v1cF7L4 = tmp10(4244)["1cF7L4"];
         let stringResult = string(v1cF7L4);
       } else {
         stringResult = string(util.t["3xjX0U"]);

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef14634 from "../../../../../_runtime/metro/14634__.js";
+import _modDef14756 from "../../../../../_runtime/metro/14756__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,12 +13,12 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   wrapper: {
     alignSelf: "center",
     marginTop: 50,
-    marginBottom: fn(14601).VISIBILITY_OFFSET,
+    marginBottom: fn(14723).VISIBILITY_OFFSET,
     maxWidth: 800,
     paddingHorizontal: 16,
     width: "100%",
@@ -37,7 +37,7 @@ let obj2 = {
 let obj3 = {
   alignSelf: "center",
   marginTop: 50,
-  marginBottom: fn(14601).VISIBILITY_OFFSET,
+  marginBottom: fn(14723).VISIBILITY_OFFSET,
   maxWidth: 800,
   paddingHorizontal: 16,
   width: "100%",
@@ -210,14 +210,14 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       items1 = [
-        closure_1_7(closure_0(5508).Text, {
+        closure_1_7(closure_0(5603).Text, {
           color: str,
           style: closure_0.question,
           variant: "body-md/normal",
           children: getQuestion.getQuestion(),
         }),
       ];
-      const obj4 = { source: _modDef14634, style: null };
+      const obj4 = { source: _modDef14756, style: null };
       const items2 = [closure_0.questionIcon];
       let questionIconExpanded = tmp;
       if (tmp) {
@@ -227,7 +227,7 @@ export default function GuildBoostingMarketingFaq() {
       obj4.style = items2;
       items1[1] = closure_1_7(closure_0(1186).Icon, obj4);
       obj2.children = items1;
-      const items3 = [closure_1_8(closure_0(6026).PressableOpacity, obj2)];
+      const items3 = [closure_1_8(closure_0(6121).PressableOpacity, obj2)];
       if (tmp) {
         const obj5 = {
           style: tmp4.answer,
@@ -235,7 +235,7 @@ export default function GuildBoostingMarketingFaq() {
           variant: "body-sm/normal",
           children: getQuestion.getAnswer(),
         };
-        tmp = closure_1_7(tmp5(5508).Text, obj5);
+        tmp = closure_1_7(tmp5(5603).Text, obj5);
       }
       items3[1] = tmp;
       obj.children = items3;

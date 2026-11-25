@@ -7,6 +7,7 @@ import ConversationPreviewStore from "ConversationPreviewStore.tsx";
 let c2 = null;
 let closure_3 = 0;
 let closure_4 = 0;
+let closure_5 = null;
 const Store = initializeDefault.Store;
 class SelectedConversationStore extends Store {}
 const prototype = SelectedConversationStore.prototype;
@@ -97,13 +98,16 @@ prototype["isConversationFetchPending"] = function isConversationFetchPending(ar
     }
   }
 };
-prototype["consumeFocusRequest"] = function consumeFocusRequest() {
-  let flag = closure_3 !== closure_4;
-  if (flag) {
-    closure_4 = closure_3;
-    flag = true;
+prototype["getFocusRequest"] = function getFocusRequest() {
+  let tmp = null;
+  if (closure_3 !== closure_4) {
+    tmp = closure_5;
   }
-  return flag;
+  return tmp;
+};
+prototype["consumeFocusRequest"] = function consumeFocusRequest() {
+  closure_4 = closure_3;
+  return this.getFocusRequest();
 };
 SelectedConversationStore.displayName = "SelectedConversationStore";
 const selectedConversationStore = new SelectedConversationStore(DispatcherDefault, {
@@ -124,6 +128,7 @@ const selectedConversationStore = new SelectedConversationStore(DispatcherDefaul
       }
       if (tmp3) {
         _null = null;
+        closure_4 = closure_3;
       }
       tmp2 = tmp3;
     }
@@ -133,6 +138,7 @@ const selectedConversationStore = new SelectedConversationStore(DispatcherDefaul
     if (null != _null) {
       if (_null.channelId !== tmp) {
         _null = null;
+        closure_4 = closure_3;
       }
     }
     return false;
@@ -146,13 +152,20 @@ const selectedConversationStore = new SelectedConversationStore(DispatcherDefaul
       return false;
     } else {
       _null = null;
+      closure_4 = closure_3;
     }
   },
-  CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest() {
+  CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest(messageId) {
+    messageId = messageId.messageId;
     closure_3 = closure_3 + 1;
+    if (messageId == null) {
+      messageId = null;
+    }
+    closure_5 = { messageId };
   },
   LOGOUT: function handleLogout() {
     c2 = null;
+    closure_4 = closure_3;
   },
 });
 const size = fn(2);

@@ -9,21 +9,21 @@ import ChevronSmallRightIcon2 from "../../../../design/components/Icon/native/re
 import SlayerStorefrontUtils from "../../../slayer_storefront/SlayerStorefrontUtils.tsx";
 import ChevronSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import SlayerStorefrontItemCardDefault from "../../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
-import _modDef11439 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef11538 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import GiftCodeActionCreatorsDefault from "../../../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../../../utils/SubscriptionUtils.tsx";
-import _modDef13858 from "../../../../../_runtime/metro/13858__.js";
+import _modDef13981 from "../../../../../_runtime/metro/13981__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
-import _modDef13862 from "../../../../../_runtime/metro/13862__.js";
-import _modDef13863 from "../../../../../_runtime/metro/13863__.js";
-import _modDef13864 from "../../../../../_runtime/metro/13864__.js";
-import _modDef13865 from "../../../../../_runtime/metro/13865__.js";
-import _modDef13866 from "../../../../../_runtime/metro/13866__.js";
-import _modDef13867 from "../../../../../_runtime/metro/13867__.js";
-import _modDef13868 from "../../../../../_runtime/metro/13868__.js";
-import _modDef13869 from "../../../../../_runtime/metro/13869__.js";
-import _modDef13870 from "../../../../../_runtime/metro/13870__.js";
-import _modDef13871 from "../../../../../_runtime/metro/13871__.js";
+import _modDef13985 from "../../../../../_runtime/metro/13985__.js";
+import _modDef13986 from "../../../../../_runtime/metro/13986__.js";
+import _modDef13987 from "../../../../../_runtime/metro/13987__.js";
+import _modDef13988 from "../../../../../_runtime/metro/13988__.js";
+import _modDef13989 from "../../../../../_runtime/metro/13989__.js";
+import _modDef13990 from "../../../../../_runtime/metro/13990__.js";
+import _modDef13991 from "../../../../../_runtime/metro/13991__.js";
+import _modDef13992 from "../../../../../_runtime/metro/13992__.js";
+import _modDef13993 from "../../../../../_runtime/metro/13993__.js";
+import _modDef13994 from "../../../../../_runtime/metro/13994__.js";
 import getOneTimeGiftCodesDefault from "../getOneTimeGiftCodes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -44,7 +44,7 @@ const PremiumConstants = fn(1388);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   giftGroupCard: { overflow: "hidden", marginTop: 8 },
   giftGroupCardRefresh: {
@@ -258,35 +258,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef13862;
+    return _modDef13985;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef13863;
+    return _modDef13986;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef13864;
+    return _modDef13987;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef13865;
+    return _modDef13988;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef13866;
+    return _modDef13989;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef13867;
+    return _modDef13990;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef13868;
+    return _modDef13991;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef13869;
+    return _modDef13992;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef11439 };
+    const obj = { uri: _modDef11538 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef13870;
+    return _modDef13993;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef13871;
+    return _modDef13994;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef13858;
+    return _modDef13981;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -366,7 +366,7 @@ prototype["render"] = function render() {
     closure_14(closure_4, obj4);
   }
 };
-EntitlementGiftGroupCard.contextType = fn(4978).ThemeContext;
+EntitlementGiftGroupCard.contextType = fn(5073).ThemeContext;
 let items = [AuthenticationStore, SKUStore, ApplicationStore, GiftCodeStore, SubscriptionPlanStore];
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);

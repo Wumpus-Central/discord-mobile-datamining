@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef7382 from "../../../../../_runtime/metro/07382__.js";
+import _modDef7477 from "../../../../../_runtime/metro/07477__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const _modDef1653 = _mod1653;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
   children: { marginLeft: 12 },
@@ -87,7 +87,7 @@ export default function StageSectionHeader(children) {
   items3[1] = tmp8Result;
   const obj6 = { style: tmp.collapseButton, children: null };
   const obj7 = { style: animatedStyle, children: null };
-  obj7.children = timestampProducer(native.Icon, { source: _modDef7382, style: tmp.collapseIcon });
+  obj7.children = timestampProducer(native.Icon, { source: _modDef7477, style: tmp.collapseIcon });
   obj6.children = timestampProducer(_modDef1653.View, obj7);
   items3[2] = timestampProducer(React4, obj6);
   obj3.children = items3;

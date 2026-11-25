@@ -5,7 +5,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import util from "../../../../intl/index.native.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import _modDef2168 from "../../../../../_runtime/metro/02168__.js";
-import _mod4832 from "../../../../../_runtime/metro/04832__.js";
+import _mod4927 from "../../../../../_runtime/metro/04927__.js";
 import UserSettingsAccountActionCreators from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import HarvesterUtils from "../../../harvester/HarvesterUtils.tsx";
@@ -18,7 +18,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 function useIsHarvestRequestDisabled() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4832.shallow);
+  let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4927.shallow);
   let tmp6 = null == stateFromStores;
   if (!tmp6) {
     if (!harvestDisabledResult) {
@@ -41,13 +41,13 @@ const route = SettingBuilders.createRoute({
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useTrailing: function useHarvestRequestSettingTrailing() {
     let tmp = null;
-    if (closure_7((isRequesting) => isRequesting.isRequesting, _mod4832.shallow)) {
+    if (closure_7((isRequesting) => isRequesting.isRequesting, _mod4927.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;
   },
   useDescription: function useRequestYourDataSettingDescription() {
-    const tmp3 = closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4832.shallow);
+    const tmp3 = closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4927.shallow);
     const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
       return null;
@@ -71,7 +71,7 @@ const route = SettingBuilders.createRoute({
   usePreNavigationAction() {
     items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-    let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4832.shallow);
+    let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4927.shallow);
     let tmp6 = null == stateFromStores;
     if (!tmp6) {
       if (!harvestDisabledResult) {

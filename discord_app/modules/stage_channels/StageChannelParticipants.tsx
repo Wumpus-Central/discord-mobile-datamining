@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(5728).getComparator;
+const getComparator = fn(5823).getComparator;
 const StageChannelParticipantNamedIndex = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",

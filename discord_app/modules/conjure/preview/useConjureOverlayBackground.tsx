@@ -55,7 +55,7 @@ export default function useConjureOverlayBackground(projectId, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ export default function useConjureOverlayBackground(projectId, arg1) {
               v0(closure_130_0);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp22) {
           if (tmp4 === v0) {

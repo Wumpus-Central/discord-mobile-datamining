@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12743).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12907).WAVEFORM_WAVE_MAX_VALUE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   container: { flexDirection: "row", alignItems: "center" },
   slot: { flex: 1, marginHorizontal: 1, alignItems: "center", justifyContent: "center" },

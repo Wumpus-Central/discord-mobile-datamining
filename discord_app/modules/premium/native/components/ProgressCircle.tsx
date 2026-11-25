@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/components/ProgressCircle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../_runtime/07813_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07912_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createLegacyClassComponentStyles({
   progressCircle: { alignItems: "center", justifyContent: "center" },
   circle: { position: "absolute", width: "100%", height: "100%" },
@@ -59,7 +59,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return hasOwnProperty(View, obj);
 };
-ProgressCircle.contextType = fn(4978).ThemeContext;
+ProgressCircle.contextType = fn(5073).ThemeContext;
 ProgressCircle.defaultProps = { size: 20, strokeWidth: 0.9, color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");

@@ -39,12 +39,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: "ox",
+    showPip: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "default"
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "response" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "sfixed32" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

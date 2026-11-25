@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(8878).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(8977).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" },

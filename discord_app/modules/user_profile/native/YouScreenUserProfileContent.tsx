@@ -333,11 +333,11 @@ function YouScreenPrimaryInfoSection(arg0) {
   return colors(View, obj6);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(4758).useIsContentShown;
-const UserProfileSections = fn(6011).UserProfileSections;
-let UserProfileThemeTypes = fn(7431).UserProfileThemeTypes;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
-let closure_12 = fn(15878).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(4853).useIsContentShown;
+const UserProfileSections = fn(6106).UserProfileSections;
+let UserProfileThemeTypes = fn(7526).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
+let closure_12 = fn(15999).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);
@@ -461,12 +461,12 @@ export default function YouScreenUserProfileContent(user) {
   activeProfileTabSection = profileSectionTabs.activeProfileTabSection;
   setActiveProfileTabSection = profileSectionTabs.setActiveProfileTabSection;
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
-  isVisible = tmp28;
-  let str;
+  isVisible = tmp29;
+  let WIDGETS;
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
   if (activeProfileTabSection === customStatusActivity.WIDGETS) {
     if (isMobileWidgetEditingEnabled) {
-      str = "board";
+      WIDGETS = tmp28.WIDGETS;
     }
   }
   const items5 = [customStatusActivity, tmp17];
@@ -698,7 +698,7 @@ export default function YouScreenUserProfileContent(user) {
     orbWalletEntryRowRef: ref2,
     isMainTabActive: activeProfileTabSection === customStatusActivity.MAIN,
     navigateToProfileCustomization,
-    initialEditingTab: str,
+    initialEditingTab: WIDGETS,
     primaryInfoProps: null,
   };
   const obj21 = {
@@ -728,7 +728,7 @@ export default function YouScreenUserProfileContent(user) {
     statusStyle: { backgroundColor: statusBackground },
     animate: flag,
   };
-  const tmp42 = num;
+  const tmp44 = num;
   const tmp4Result11 = user(navigateToPremium[44]);
   obj22.status = user(navigateToPremium[74]).getStatusLabel(stateFromStores);
   const tmp4Result12 = user(navigateToPremium[74]);
@@ -740,16 +740,16 @@ export default function YouScreenUserProfileContent(user) {
     intl2.string(user(navigateToPremium[26]).t.C6COaT);
   obj21.themeType = UserProfileThemeTypes.YOU_SCREEN;
   obj20.primaryInfoProps = obj21;
-  items13[2] = ref2(tmp42, obj20);
+  items13[2] = ref2(tmp44, obj20);
   const obj23 = { style: { flex: 1 }, ref, onLayout, children: null };
   const obj24 = { style: tmp3.profileTablist, children: null };
   const obj25 = { state: segmentedControlState, variant: null };
-  let str2;
+  let str;
   if (null != primaryColor) {
-    str2 = "overlay";
+    str = "overlay";
   }
   const obj26 = { zIndex: 1, children: null };
-  obj25.variant = str2;
+  obj25.variant = str;
   obj24.children = ref2(user(navigateToPremium[75]).Tabs, obj25);
   const items15 = [
     ref2(closure_5, obj24),

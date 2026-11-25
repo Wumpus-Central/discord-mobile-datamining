@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/native/components/screens/CheckpointCharacterUnavailableScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3442 from "../../../Checkpoint2026.messages.js";
+import _modDef3494 from "../../../Checkpoint2026.messages.js";
 import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen.tsx";
 import CheckpointTextDefault from "../CheckpointText.tsx";
 import useCheckpointHasUserStatsDefault from "../../../hooks/useCheckpointHasUserStats.tsx";
@@ -16,7 +16,7 @@ export default function CheckpointCharacterUnavailableScreen() {
   const tmp3 = useCheckpointHasUserStatsDefault();
   const tmp5 = CheckpointUnavailableScreenDefault;
   const intl = util.intl;
-  const tmp9 = _modDef3442;
+  const tmp9 = _modDef3494;
   const tmp7 = CheckpointTextDefault;
   const children = [
     React3(tmp7, {
@@ -29,7 +29,7 @@ export default function CheckpointCharacterUnavailableScreen() {
   if (!tmp3) {
     const obj2 = { variant: "heading-lg/medium", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(_modDef3442["2GRr6H"]);
+    obj2.children = intl2.string(_modDef3494["2GRr6H"]);
     tmp6Result = React3(CheckpointTextDefault, obj2);
     const tmpResult = CheckpointTextDefault;
   }

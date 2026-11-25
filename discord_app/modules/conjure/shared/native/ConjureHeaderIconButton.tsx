@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_7 = createStyles.createStyles((width) => {
   const obj = {
     button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" },
@@ -104,6 +104,6 @@ export default function ConjureHeaderIconButton(ref) {
     tmp3Result = closure_5(View, obj5);
   }
   obj.children = tmp3Result;
-  return closure_5(badgeSize(6026).PressableOpacity, obj);
+  return closure_5(badgeSize(6121).PressableOpacity, obj);
 }
 export const CONJURE_HEADER_BADGE_SIZE = 8;

@@ -67,7 +67,7 @@ function createTab(routeTabForLocation, arg1) {
     items[HermesBuiltin.arraySpread(mapped, 0)] = routeTabForLocation;
     let substr1 = items.slice(-11);
   } else {
-    handleChannelSelect(11382);
+    handleChannelSelect(11481);
     substr1 = mapped;
   }
   const obj2 = { id: null };
@@ -93,8 +93,8 @@ function navigateTo(routeTabForLocation1) {
       const found = tabs.find((id) => id.id === id);
       let tmp5 = null != found;
       if (tmp5) {
-        tmp5 = !handleChannelSelect(11382).isSameTabLocation(found, routeTabForLocation1);
-        const obj = handleChannelSelect(11382);
+        tmp5 = !handleChannelSelect(11481).isSameTabLocation(found, routeTabForLocation1);
+        const obj = handleChannelSelect(11481);
       }
       if (tmp5) {
         let hasItem = null != id;
@@ -204,7 +204,7 @@ function initializeTabs() {
   if (c17) {
     if (0 === tabs.length) {
       const _window2 = window;
-      let routeTabForLocation = routeTabForLocation1(11382).getRouteTabForLocation(window.location);
+      let routeTabForLocation = routeTabForLocation1(11481).getRouteTabForLocation(window.location);
       if (null == routeTabForLocation) {
         const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
         let tmp40 = null;
@@ -231,7 +231,7 @@ function initializeTabs() {
         flag3 = true;
       }
       let tmp32 = flag3;
-      const obj7 = routeTabForLocation1(11382);
+      const obj7 = routeTabForLocation1(11481);
     } else {
       tmp32 = trimToMaxTabs();
     }
@@ -240,7 +240,7 @@ function initializeTabs() {
     c17 = true;
     const tmp2 = trimToMaxTabs();
     const _window = window;
-    routeTabForLocation1 = routeTabForLocation1(11382).getRouteTabForLocation(window.location);
+    routeTabForLocation1 = routeTabForLocation1(11481).getRouteTabForLocation(window.location);
     if (null == routeTabForLocation1) {
       const currentlySelectedChannelId1 = SelectedChannelStore.getCurrentlySelectedChannelId();
       let tmp10 = null;
@@ -260,8 +260,8 @@ function initializeTabs() {
     }
     if (routeTabForLocation1 == null) {
       const obj4 = { pathname: DefaultRouteStore.defaultRoute };
-      routeTabForLocation1 = tmp3(11382).getRouteTabForLocation(obj4);
-      const tmp3Result = tmp3(11382);
+      routeTabForLocation1 = tmp3(11481).getRouteTabForLocation(obj4);
+      const tmp3Result = tmp3(11481);
     }
     let flag2 = false;
     if (null != routeTabForLocation1) {
@@ -328,7 +328,7 @@ function initializeTabs() {
           });
           flag2 = true;
         }
-        tmp3Result2 = tmp3(11382);
+        tmp3Result2 = tmp3(11481);
       }
     }
     if (!flag2) {
@@ -421,7 +421,7 @@ function handleChannelDelete(channel) {
   }
 }
 const Routes = fn(1071).Routes;
-const isStaticChannelRoute = fn(4773).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
 let tabs = [];
 let c12 = null;
 let c13 = null;

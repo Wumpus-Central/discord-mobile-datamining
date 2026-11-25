@@ -1,6 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AndroidNotificationSoundsSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingsNotificationUtils from "../../notifications/native/SettingsNotificationUtils.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
@@ -8,14 +9,14 @@ import AndroidNotificationSettingsStore from "../../notifications/native/stores/
 import SettingBuilders_mod from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-({ useAndroidNotificationSoundsEnabled: c2, setAndroidNotificationSoundsEnabled } = AndroidNotificationSettingsStore);
+({ useAndroidNotificationSoundsEnabled: c3, setAndroidNotificationSoundsEnabled } = AndroidNotificationSettingsStore);
 let obj = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["1CWknJ"]);
   },
   useValue: function useAndroidNotificationSoundsSettingValue() {
-    let flag = React2();
+    let flag = React3();
     if (flag == null) {
       flag = false;
     }
@@ -28,7 +29,7 @@ const obj2 = {};
 const merged = Object.assign(obj);
 obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
 obj2.usePredicate = function usePredicate() {
-  const tmp = React2();
+  const tmp = React3();
   const isIOSResult = PlatformUtils.isIOS();
   let tmp5 = !isIOSResult;
   if (!isIOSResult) {
@@ -47,9 +48,13 @@ const toggle = SettingBuilders.createToggle(obj2);
 let SettingBuilders = SettingBuilders_mod;
 const obj3 = {};
 const merged1 = Object.assign(obj);
+obj3.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(_modDef3206["8klfHo"]);
+};
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {
-  const tmp = React2();
+  const tmp = React3();
   const isIOSResult = PlatformUtils.isIOS();
   let isDeclarativeSettingsUIAvailable = !isIOSResult;
   if (!isIOSResult) {

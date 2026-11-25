@@ -11,7 +11,7 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import shared from "../../../design/shared.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
@@ -21,7 +21,7 @@ import useIsEligibleSenderForReferralProgram from "../referral_program/hooks/use
 import usePromotionMarketingSurface from "../hooks/usePromotionMarketingSurface.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import ReferralProgramUtils from "../referral_program/ReferralProgramUtils.tsx";
-import _modDef16316 from "../../../../_runtime/metro/16316__.js";
+import _modDef16437 from "../../../../_runtime/metro/16437__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,7 +57,7 @@ function OfferBadge(componentId) {
   useTrackImpressionDefault(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj3 = { style: tmp.acked, children: null };
-    const obj4 = { source: _modDef16316, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj4 = { source: _modDef16437, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     items = [React5(native.Icon, obj4)];
     const obj5 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
@@ -75,10 +75,10 @@ function OfferBadge(componentId) {
 }
 const View = fn(17).View;
 let closure_6 = fn(1388).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(8985).Gradients;
+const Gradients = fn(9084).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   tag: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round },
   badge: null,
@@ -301,7 +301,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
           const obj11 = {
-            source: _modDef16316,
+            source: _modDef16437,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
             style: tmp.icon,

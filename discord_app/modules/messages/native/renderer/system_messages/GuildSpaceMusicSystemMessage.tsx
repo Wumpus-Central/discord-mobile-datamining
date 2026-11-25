@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import _modDef10169 from "../../../../../../_runtime/metro/10169__.js";
+import _modDef10268 from "../../../../../../_runtime/metro/10268__.js";
 import PopularMusicSystemMessageTypes from "../../../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
 import PopularMusicSystemMessageCopy from "../../../../guild_space/popular_music/PopularMusicSystemMessageCopy.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
@@ -14,7 +14,7 @@ import GuildMemberRequesterStore from "../../../../../stores/GuildMemberRequeste
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_MUTED });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -65,7 +65,7 @@ export function createGuildSpaceMusicSystemMessage(message) {
             const obj5 = { content: null, iconUrl: null, iconTintColor: null };
             obj2.usernameOnClick = obj6;
             obj5.content = intl.formatToParts(mobileMusicSystemMessage.message, obj2);
-            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef10169);
+            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef10268);
             obj5.iconTintColor = tmp15.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(message));
             return obj5;

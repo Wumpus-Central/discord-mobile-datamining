@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureRemovedItems.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -96,7 +96,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   box: {
     padding: nativeDefault.space.PX_12,
@@ -118,7 +118,7 @@ export default function ConjureRemovedItems(items) {
   const obj = { spacing: 8, children: null };
   const obj2 = { variant: "body-md/semibold", color: "text-strong", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef4192["+E2PqP"]);
+  obj2.children = intl.string(_modDef4244["+E2PqP"]);
   items = [timestampProducer(Text_Text.Text, obj2)];
   items[1] = timestampProducer(ItemsBox, {
     items: items.items,
@@ -130,14 +130,14 @@ export default function ConjureRemovedItems(items) {
   obj.children = items;
   return metroImportDefault(Stack_Stack.Stack, obj);
 }
-export function formatWithAppTag(HmNT_r, targetAppName) {
+export function formatWithAppTag(x6FvsZ, targetAppName) {
   const intl = util.intl;
   const obj = { app: null };
   const obj2 = { children: null };
   items = [targetAppName, " ", timestampProducer(BotTagDefault, {})];
   obj2.children = items;
   obj.app = metroImportDefault(noop.Fragment, obj2, "app");
-  return intl.format(HmNT_r, obj);
+  return intl.format(x6FvsZ, obj);
 }
 export function ConjureRemoveEverythingField(checked) {
   checked = checked.checked;
@@ -146,7 +146,7 @@ export function ConjureRemoveEverythingField(checked) {
   const obj2 = { hasIcons: false, children: null };
   const obj3 = { label: null, checked: null, onPress: null };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef4192.gKA9tU);
+  obj3.label = intl.string(_modDef4244.gKA9tU);
   obj3.checked = checked;
   obj3.onPress = onChange;
   obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);

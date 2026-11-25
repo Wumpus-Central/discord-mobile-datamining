@@ -15,7 +15,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -59,12 +59,12 @@ let closure_6 = async function _sendShareMessage(arg0) {
               originalUri: uri.uri,
               mimeType: uri.mimeType,
               filename: uri.name,
-              platform: closure_0(7986).UploadPlatform.REACT_NATIVE,
+              platform: closure_0(8085).UploadPlatform.REACT_NATIVE,
               width: uri.width,
               height: uri.height,
               preTranscodeSourceSize: uri.originalSize,
             };
-            const cloudUpload = new closure_0(7984).CloudUpload(size, guildId.id);
+            const cloudUpload = new closure_0(8083).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -87,10 +87,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
               const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
               closure_1_6.reject(obj);
               const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-              guildId(9921).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-              const obj3 = guildId(9921);
+              guildId(10020).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+              const obj3 = guildId(10020);
               const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-              guildId(8038).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+              guildId(8137).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
             },
           };
           c4 = 2;
@@ -117,8 +117,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(7976).DraftType;
-const MessageSendLocation = fn(4922).MessageSendLocation;
+const DraftType = fn(8075).DraftType;
+const MessageSendLocation = fn(5017).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 

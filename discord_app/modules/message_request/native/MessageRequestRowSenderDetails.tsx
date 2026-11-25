@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = {
   avatar: {
     borderRadius: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.NORMAL] / 2,
@@ -57,7 +57,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(19044).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(19155).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -108,26 +108,26 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = intl.string(otherUser(1112).t["30mdIx"]);
   }
   obj9.children = stringResult;
-  const items2 = [closure_5(otherUser(5508).Text, obj9)];
+  const items2 = [closure_5(otherUser(5603).Text, obj9)];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "body-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", otherUser(4973).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(5068).getUserTag(otherUser)];
     obj10.children = items3;
-    tmp9Result = closure_6(otherUser(5508).Text, obj10);
-    const tmp2Result = otherUser(4973);
+    tmp9Result = closure_6(otherUser(5603).Text, obj10);
+    const tmp2Result = otherUser(5068);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;
   const items4 = [
-    closure_6(otherUser(5508).Text, obj8),
-    closure_5(otherUser(5508).Text, {
+    closure_6(otherUser(5603).Text, obj8),
+    closure_5(otherUser(5603).Text, {
       style: tmp.timestampSeparator,
       variant: "body-xs/medium",
       color: "text-muted",
       children: "\u00B7",
     }),
-    closure_5(otherUser(5508).Text, {
+    closure_5(otherUser(5603).Text, {
       variant: "body-xs/semibold",
       color: "text-muted",
       children: messageRequestRelativeTimestampText,

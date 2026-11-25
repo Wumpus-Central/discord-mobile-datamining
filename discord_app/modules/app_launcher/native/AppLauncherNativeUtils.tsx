@@ -20,7 +20,7 @@ const AppLauncherNativeConstants = fn(1499);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: metroImportDefault, AppLauncherRouteName: closure_8 } =
   AppLauncherNativeConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const BuiltInSectionId = fn(6947).BuiltInSectionId;
+const BuiltInSectionId = fn(7042).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 

@@ -7,16 +7,17 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(10066).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
+let closure_4 = fn(10165).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
 let ComponentActions = fn(1071).ComponentActions;
-const TransportTypes = fn(5671).TransportTypes;
+const Constants = fn(5766);
+({ MAX_POST_MESSAGE_STRING_LENGTH: closure_6, TransportTypes: metroImportDefault } = Constants);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
+let result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
 
 export default function createWebViewController(id, contextSource) {
   _require = id;
   ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap, shellBridgeSecret } = contextSource);
-  function postMessageToWebView(arg0, arg1) {
+  function postMessageToWebView() {
     const self = this;
     const apply = closure_5.apply;
     if (typeof apply === "unknown") {
@@ -28,7 +29,7 @@ export default function createWebViewController(id, contextSource) {
   }
   ComponentActions = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10067)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10166)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;
@@ -65,7 +66,7 @@ export default function createWebViewController(id, contextSource) {
   closure_6 = require("createEmbeddedAppShimMessageHandler").createEmbeddedAppShimMessageHandler(
     id,
     shellBridgeSecret,
-    function (arg0) {
+    function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -77,28 +78,31 @@ export default function createWebViewController(id, contextSource) {
     },
   );
   closure_7 = webViewProxy.addOnMessageListener((data) => {
-    try {
-      const _JSON = JSON;
-      const parsed = JSON.parse(data.data);
-      if (!closure_6.handleMessage(parsed)) {
-        const tmp8 = closure_1_1();
-        let tmp10 = typeof tmp5 === "object";
-        if (typeof tmp5 === "object") {
-          tmp10 = null != tmp8;
-        }
-        if (tmp10) {
-          const obj2 = { type: TransportTypes.POST_MESSAGE, origin: tmp8, iframeId };
-          WebViewPostMessageTransportDefault.handleMessage(tmp5, obj2, postMessageToWebView);
+    const tmp3 = closure_1_1();
+    if (null != tmp3) {
+      const obj2 = { type: constants.POST_MESSAGE, origin: tmp3, iframeId };
+      if (typeof data.data === "string") {
+        if (data.data.length > timestampProducer) {
+          const result = WebViewPostMessageTransportDefault.rejectOversizedMessage(obj2, postMessageToWebView);
         }
       }
-    } catch (tmp18) {
-      const _SyntaxError = SyntaxError;
-      if (tmp18 instanceof SyntaxError) {
-        if (tmp2.data === closure_4) {
-          dependencyMap();
+      try {
+        const _JSON = JSON;
+        const parsed = JSON.parse(data.data);
+        if (!closure_6.handleMessage(parsed)) {
+          if (typeof tmp6 === "object") {
+            WebViewPostMessageTransportDefault.handleMessage(tmp6, obj2, postMessageToWebView);
+          }
         }
-      } else {
-        throw tmp18;
+      } catch (tmp9) {
+        const _SyntaxError = SyntaxError;
+        if (tmp9 instanceof SyntaxError) {
+          if (tmp2.data === closure_4) {
+            dependencyMap();
+          }
+        } else {
+          throw tmp9;
+        }
       }
     }
   });

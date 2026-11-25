@@ -34,7 +34,7 @@ const radio = SettingBuilders.createRadio({
         mappedActivityValue: obj3.mappedActivityValue,
       } = profileToActivityUpsell);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16187, dependencyMap.paths),
+        asyncRequireImpl(16308, dependencyMap.paths),
         "ProfileToActivityPrivacyUpsellActionSheet",
         { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null },
       );

@@ -9,14 +9,11 @@ function resolveBotPermissionsTip(publish) {
     if (publish != null) {
       state = publish.state;
     }
-    let tmp2 = "action_needed" === state;
-    if (tmp2) {
-      tmp2 = "review_permissions" === publish.action;
-    }
     str = null;
     if (tmp2) {
       str = "hint";
     }
+    tmp2 = "action_needed" === state && publish.permissionsChanged;
   }
   return str;
 }
@@ -27,11 +24,7 @@ export function isBotPermissionsReviewPending(state) {
   if (state != null) {
     state = state.state;
   }
-  let tmp2 = "action_needed" === state;
-  if (tmp2) {
-    tmp2 = "review_permissions" === state.action;
-  }
-  return tmp2;
+  return "action_needed" === state && state.permissionsChanged;
 }
 export { resolveBotPermissionsTip };
 export const CONJURE_BOT_PERMISSIONS_TIP_BASE = {

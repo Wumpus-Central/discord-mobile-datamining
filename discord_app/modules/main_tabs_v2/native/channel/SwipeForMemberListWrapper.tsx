@@ -26,16 +26,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(8876);
+const ChannelDetailsStore = fn(8975);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } =
   ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(8864).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(8963).ONYX_BORDER_WIDTH;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   memberListPreview: null,
   content: null,
@@ -363,12 +363,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11660));
+  const context = obj.useContext(tmp2(11759));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11660).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(11759).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -542,12 +542,12 @@ export default function _default(channelId) {
       position: translateX,
       openAt: 0,
       closedAt: maxWidth,
-      resolveOpenName: tmp12(17564).getBaseScreenName,
-      resolveClosedName: tmp12(17564).getBaseScreenName,
+      resolveOpenName: tmp12(17675).getBaseScreenName,
+      resolveClosedName: tmp12(17675).getBaseScreenName,
       onCoveringChange: callback2,
     };
-    tmp63 = navigation(tmp2(17567), obj4);
-    const tmp2Result = tmp2(17567);
+    tmp63 = navigation(tmp2(17678), obj4);
+    const tmp2Result = tmp2(17678);
   }
   const items30 = [tmp63];
   let obj5 = { gesture: memo2, children: null };

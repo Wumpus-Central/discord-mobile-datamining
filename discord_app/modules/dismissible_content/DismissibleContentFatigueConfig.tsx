@@ -81,7 +81,6 @@ const items = [
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER,
   dismissible_content.DismissibleContent.GAME_SHOP_NEW_BADGE,
   dismissible_content.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
-  dismissible_content.DismissibleContent.MOBILE_SHOP_BROWSE_ALL_NITRO_UPSELL,
   dismissible_content.DismissibleContent.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA,

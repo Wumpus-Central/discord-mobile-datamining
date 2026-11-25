@@ -19,13 +19,13 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp5Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp(16681).getChannelIconComponentOrDefault(stateFromStores);
-    const tmpResult = tmp(16681);
+    let TextIcon = tmp(16802).getChannelIconComponentOrDefault(stateFromStores);
+    const tmpResult = tmp(16802);
   } else {
-    TextIcon = tmp(7020).TextIcon;
+    TextIcon = tmp(7115).TextIcon;
   }
   let obj2 = {
-    icon: jsx(channelId(6018).TableRow.Icon, { IconComponent: TextIcon }),
+    icon: jsx(channelId(6113).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,
@@ -34,7 +34,7 @@ export default function FormChannelPicker(channelId) {
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp(1112).intl;
     obj3.children = intl.string(tmp(1112).t.r2ptsz);
-    tmp5Result = jsx(tmp(5508).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    tmp5Result = jsx(tmp(5603).Text, { variant: "body-md/medium", color: "text-muted", children: null });
   }
   obj2.label = tmp5Result;
   obj2.onPress = function handleSelectChannel() {
@@ -46,10 +46,10 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(20074, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(20179, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
-  return jsx(channelId(6018).TableRow, {
-    icon: jsx(channelId(6018).TableRow.Icon, { IconComponent: TextIcon }),
+  return jsx(channelId(6113).TableRow, {
+    icon: jsx(channelId(6113).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,

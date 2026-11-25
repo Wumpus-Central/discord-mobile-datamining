@@ -98,7 +98,7 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
   const tmp2 = obj5;
   const result1 = obj5(1394).parseServerDisplayNameStyles(display_name_styles);
   const obj2 = obj5(1394);
-  const result2 = obj5(4837).parseServerMemberGamingLeaderboardData(member_gaming_leaderboard_data);
+  const result2 = obj5(4932).parseServerMemberGamingLeaderboardData(member_gaming_leaderboard_data);
   let isEqualResult = null != member && member.nick === nick && member.avatar === avatar;
   if (isEqualResult) {
     isEqualResult = applyDefault.isEqual(member.roles, roles);
@@ -184,17 +184,17 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
     });
     const dispatchResult = DispatcherDefault.dispatch(obj5);
   }
-  const obj3 = obj5(4837);
+  const obj3 = obj5(4932);
 }
 function dispatchPresence(arg0) {
   importDefaultResult31.add(arg0);
 }
 let closure_4 = ["newly_created"];
-let closure_6 = fn(4770).createChannelRecordFromServer;
-const ChannelLoader = fn(4766).ChannelLoader;
+let closure_6 = fn(4865).createChannelRecordFromServer;
+const ChannelLoader = fn(4861).ChannelLoader;
 let closure_16 = new LoggerDefault("ConnectionStore");
 let ActionBatcher = ActionBatcher_mod;
-const importDefaultResult4 = new ActionBatcher(fn(14931).socket, (arg0, id) => {
+const importDefaultResult4 = new ActionBatcher(fn(15053).socket, (arg0, id) => {
   let tmp = arg0;
   if (arg0 == null) {
     const obj = { type: "CHANNEL_UPDATES", channels: [] };
@@ -222,7 +222,7 @@ const importDefaultResult4 = new ActionBatcher(fn(14931).socket, (arg0, id) => {
   return tmp;
 }, (arg0) => "CHANNEL_UPDATE" !== arg0);
 let ActionBatcher = ActionBatcher_mod;
-const importDefaultResult11 = new ActionBatcher(fn(14931).socket, (arg0, guildId) => {
+const importDefaultResult11 = new ActionBatcher(fn(15053).socket, (arg0, guildId) => {
   let tmp = arg0;
   if (null == arg0) {
     const obj = { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] };
@@ -236,7 +236,7 @@ const importDefaultResult11 = new ActionBatcher(fn(14931).socket, (arg0, guildId
   return tmp;
 }, (arg0) => "SOUNDBOARD_SOUNDS" !== arg0);
 let ActionBatcher = ActionBatcher_mod;
-const importDefaultResult21 = new ActionBatcher(fn(14931).socket, (arg0, arg1) => {
+const importDefaultResult21 = new ActionBatcher(fn(15053).socket, (arg0, arg1) => {
   let tmp = arg0;
   if (arg0 == null) {
     const obj = { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] };
@@ -247,7 +247,7 @@ const importDefaultResult21 = new ActionBatcher(fn(14931).socket, (arg0, arg1) =
   return tmp;
 }, (arg0) => "GUILD_MEMBERS_CHUNK" !== arg0);
 let ActionBatcher = ActionBatcher_mod;
-const importDefaultResult31 = new ActionBatcher(fn(14931).socket, (arg0, arg1) => {
+const importDefaultResult31 = new ActionBatcher(fn(15053).socket, (arg0, arg1) => {
   let tmp = arg0;
   if (null == arg0) {
     const obj = { type: "PRESENCE_UPDATES", updates: [] };
@@ -277,7 +277,7 @@ let result = definePreloadableDispatch(["INITIAL_GUILD"], (data_mode) => {
   initialGuild.measure(() => {
     const Emitter = initializeDefault.Emitter;
     Emitter.batched(() => {
-      const hydrateInitialGuildResult = ReadyPayloadUtilsAll.hydrateInitialGuild(closure_1_0, closure_0(14931).socket.identifyStartTime);
+      const hydrateInitialGuildResult = ReadyPayloadUtilsAll.hydrateInitialGuild(closure_1_0, closure_0(15053).socket.identifyStartTime);
       let obj4 = hydrateInitialGuildResult;
       if (null != currentUser.getCurrentUser()) {
         const obj2 = { type: "GUILD_CREATE", guild: hydrateInitialGuildResult };
@@ -326,8 +326,8 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
     Emitter.batched(() => {
       const hydrateReadySupplemental = closure_1_1(9).hydrateReadySupplemental;
       const measureResult = hydrateReadySupplemental.measure(() => {
-        obj = closure_2_2(14975);
-        return obj.hydrateReadySupplementalPayload(obj, closure_2_0(14931).socket.identifyStartTime);
+        obj = closure_2_2(15097);
+        return obj.hydrateReadySupplementalPayload(obj, closure_2_0(15053).socket.identifyStartTime);
       });
       let guilds = measureResult.guilds;
       const found = guilds.filter((unavailable) => true !== unavailable.unavailable);
@@ -346,7 +346,7 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
           const tmp2Result = closure_1(items[40])(activities, hidden_activities);
           obj = { user: activities.user, status: activities.status, clientStatus: activities.client_status, activities: null, hiddenActivities: tmp2Result.hiddenActivities, guildId: id, processedAtTimestamp: activities.processed_at_timestamp };
           const activities1 = tmp2Result.activities;
-          obj.activities = activities1.map(/* F107035 */ function() { ... });
+          obj.activities = activities1.map(/* F107452 */ function() { ... });
           return obj;
         });
       });
@@ -443,7 +443,7 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
         obj = { error, action: obj.type };
         result = socket.resetSocketOnDispatchError(obj);
       });
-      const localVoiceState = closure_1_0(14931).localVoiceState;
+      const localVoiceState = closure_1_0(15053).localVoiceState;
       localVoiceState.update();
       const dispatchResult = closure_1_1(572).dispatch(obj);
     });
@@ -514,7 +514,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
       const Emitter = initializeDefault.Emitter;
       Emitter.batched(() => {
         const hydrateReady = closure_1_1(9).hydrateReady;
-        const measureResult = hydrateReady.measure(() => closure_2_2(14975).hydrateReadyPayloadPrioritized(pinotReadyAction, user(14931).socket.identifyStartTime, closure_1));
+        const measureResult = hydrateReady.measure(() => closure_2_2(15097).hydrateReadyPayloadPrioritized(pinotReadyAction, user(15053).socket.identifyStartTime, closure_1));
         const private_channels = measureResult.private_channels;
         let pinotReadyAction = private_channels.map((item) => closure_1_6(item));
         let guilds = pinotReadyAction.guilds;
@@ -536,10 +536,10 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
         }
         let result1;
         if (null != prop) {
-          result1 = user(14976).b64ToDeclarativeSettingsProto(pinotReadyAction.notification_settings.declarative_settings_proto);
-          let obj2 = user(14976);
+          result1 = user(15098).b64ToDeclarativeSettingsProto(pinotReadyAction.notification_settings.declarative_settings_proto);
+          let obj2 = user(15098);
         }
-        closure_1_1(8125)("AllGatewayConnectionStores", () => pinotReadyAction(geoRestrictedGuilds[20]));
+        closure_1_1(8224)("AllGatewayConnectionStores", () => pinotReadyAction(geoRestrictedGuilds[20]));
         const dispatchReady = closure_1_1(9).dispatchReady;
         dispatchReady.measure(() => {
           let obj = { type: "CONNECTION_OPEN", sessionId: user.session_id, authSessionIdHash: user.auth_session_id_hash, staticAuthSessionId: user.static_client_session_id, user: user.user, users: user.users, guilds, initialPrivateChannels: pinotReadyAction, unavailableGuilds, readState: user.read_state, userGuildSettings: user.user_guild_settings, tutorial: user.tutorial, relationships: null, gameRelationships: null, friendSuggestionCount: null, analyticsToken: null, experiments: null, connectedAccounts: null, guildExperiments: null, apexExperiments: null, requiredAction: null, consents: null, sessions: null, pendingPayments: null, countryCode: null, guildJoinRequests: null, userSettingsProto: null, apiCodeVersion: null, auth: null, notificationSettings: null, geoRestrictedGuilds: null, explicitContentScanVersion: null, failedStates: null, linkedUsers: null, regionalFeatureConfig: null, qosToken: null };
@@ -568,7 +568,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
             if (activities == null) {
               activities = [];
             }
-            obj.activities = activities.map(/* F107035 */ function() { ... });
+            obj.activities = activities.map(/* F107452 */ function() { ... });
             let hidden_activities = sessionId.hidden_activities;
             if (hidden_activities == null) {
               hidden_activities = [];
@@ -632,8 +632,8 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           });
           const dispatchResult1 = closure_1_1(572).dispatch(obj4);
         }
-        pinotReadyAction = user(15078).getPinotReadyAction(pinotReadyAction);
-        const obj7 = user(15078);
+        pinotReadyAction = user(15200).getPinotReadyAction(pinotReadyAction);
+        const obj7 = user(15200);
         const tmpResult4 = closure_1_1(572);
         closure_1_1(572).dispatch(pinotReadyAction).catch((error) => {
           logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -641,9 +641,9 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           obj = { error, action: obj.type };
           result = socket.resetSocketOnDispatchError(obj);
         });
-        const localPresenceState = user(14931).localPresenceState;
+        const localPresenceState = user(15053).localPresenceState;
         localPresenceState.update();
-        const localVoiceState = user(14931).localVoiceState;
+        const localVoiceState = user(15053).localVoiceState;
         localVoiceState.update();
         const dispatchResult2 = closure_1_1(572).dispatch(pinotReadyAction);
       });
@@ -667,9 +667,9 @@ defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) =>
   DispatcherDefault.dispatch({ type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE", experimentName: experimentName.experiment_name });
 });
 defineSimpleDispatch(["RESUMED"], () => {
-  const localPresenceState = obj(14931).localPresenceState;
+  const localPresenceState = obj(15053).localPresenceState;
   localPresenceState.forceUpdate();
-  const localVoiceState = obj(14931).localVoiceState;
+  const localVoiceState = obj(15053).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
   DispatcherDefault.dispatch(obj).catch((error) => {
@@ -1317,8 +1317,8 @@ defineSimpleDispatch(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "
   const obj2 = obj(2105);
   obj.displayNameStyles = obj(1394).parseServerDisplayNameStyles(guildId.display_name_styles);
   const obj3 = obj(1394);
-  obj.gamingLeaderboardData = obj(4837).parseServerMemberGamingLeaderboardData(guildId.member_gaming_leaderboard_data);
-  const obj4 = obj(4837);
+  obj.gamingLeaderboardData = obj(4932).parseServerMemberGamingLeaderboardData(guildId.member_gaming_leaderboard_data);
+  const obj4 = obj(4932);
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;
@@ -1785,11 +1785,11 @@ defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
   });
 });
 defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
-  obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: obj(11567).savedMessageCreateObjectToClient(body), messages: null };
-  const obj2 = obj(11567);
+  obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: obj(11666).savedMessageCreateObjectToClient(body), messages: null };
+  const obj2 = obj(11666);
   items = [body];
-  obj.messages = obj(11567).getSavedMessagesRawMessages(items);
-  const obj3 = obj(11567);
+  obj.messages = obj(11666).getSavedMessagesRawMessages(items);
+  const obj3 = obj(11666);
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;
@@ -1798,8 +1798,8 @@ defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
   });
 });
 defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
-  obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: obj(11567).savedMessageDeleteObjectToClient(channelId) };
-  const obj2 = obj(11567);
+  obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: obj(11666).savedMessageDeleteObjectToClient(channelId) };
+  const obj2 = obj(11666);
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;
@@ -1835,9 +1835,9 @@ defineSimpleDispatch(["WEBHOOKS_UPDATE"], (guildId) => {
   });
 });
 defineSimpleDispatch(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (type, type2) => {
-  let hasItem = type.type !== obj(5499).ReactionTypes.SOUND;
+  let hasItem = type.type !== obj(5594).ReactionTypes.SOUND;
   if (hasItem) {
-    const SUPPORTED_REACTION_TYPES = tmp(5499).SUPPORTED_REACTION_TYPES;
+    const SUPPORTED_REACTION_TYPES = tmp(5594).SUPPORTED_REACTION_TYPES;
     hasItem = SUPPORTED_REACTION_TYPES.has(type.type);
   }
   if (hasItem) {
@@ -1858,7 +1858,7 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (cha
   if ("MESSAGE_POLL_VOTE_ADD" === arg1) {
     str = "MESSAGE_REACTION_ADD";
   }
-  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: { id: channelId.answer_id, name: "" }, reactionType: obj(5499).ReactionTypes.VOTE };
+  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: { id: channelId.answer_id, name: "" }, reactionType: obj(5594).ReactionTypes.VOTE };
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;
@@ -2330,9 +2330,9 @@ defineSimpleDispatch(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (choices) =>
   });
 });
 defineSimpleDispatch(["INTERACTION_MODAL_CREATE"], (id) => {
-  obj = { type: "INTERACTION_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, components: obj(6269).transformComponents(id.components), nonce: null, resolved: null };
+  obj = { type: "INTERACTION_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, components: obj(6364).transformComponents(id.components), nonce: null, resolved: null };
   ({ nonce: obj.nonce, resolved: obj.resolved } = id);
-  const obj2 = obj(6269);
+  const obj2 = obj(6364);
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;
@@ -2744,8 +2744,8 @@ defineSimpleDispatch(["NOTIFICATION_SETTINGS_UPDATE"], (flags) => {
   }
   let result;
   if (null != prop) {
-    result = obj2(14976).b64ToDeclarativeSettingsProto(flags.declarative_settings_proto);
-    const obj = obj2(14976);
+    result = obj2(15098).b64ToDeclarativeSettingsProto(flags.declarative_settings_proto);
+    const obj = obj2(15098);
   }
   obj2 = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: { flags: flags.flags, declarativeSettings: result } };
   DispatcherDefault.dispatch(obj2).catch((error) => {
@@ -2902,8 +2902,8 @@ defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (intera
   });
 });
 defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
-  obj = { type, room: obj(8286).serverGuildRoomToClient(body) };
-  const obj2 = obj(8286);
+  obj = { type, room: obj(8385).serverGuildRoomToClient(body) };
+  const obj2 = obj(8385);
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;
@@ -2921,8 +2921,8 @@ defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
   });
 });
 defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
-  obj = { type, room: obj(8286).serverGuildRoomToClient(body) };
-  const obj2 = obj(8286);
+  obj = { type, room: obj(8385).serverGuildRoomToClient(body) };
+  const obj2 = obj(8385);
   DispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = pinotReadyAction(closure_3[13]).socket;

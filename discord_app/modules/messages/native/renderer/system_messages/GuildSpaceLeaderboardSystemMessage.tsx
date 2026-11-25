@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import GuildLeaderboardTypes from "../../../../guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
-import _modDef8659 from "../../../../../../_runtime/metro/08659__.js";
+import _modDef8758 from "../../../../../../_runtime/metro/08758__.js";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import GuildLeaderboardSystemMessageCopy from "../../../../guild_space/gaming_leaderboard/GuildLeaderboardSystemMessageCopy.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
@@ -13,7 +13,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_MUTED });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -116,7 +116,7 @@ export function createGuildSpaceLeaderboardSystemMessage(theme) {
           obj4.previousUsernameOnClick = tmp22Result2Result;
           obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
           const tmp22Result3 = formatUsernameOnClickDefault;
-          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8659);
+          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8758);
           obj7.iconTintColor = tmp13.iconTintColor;
           const merged1 = Object.assign(createCommonMessageDefault(theme));
           return obj7;

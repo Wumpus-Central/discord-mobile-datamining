@@ -3,9 +3,9 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef10341 from "../../../../../_runtime/metro/10341__.js";
+import _modDef10440 from "../../../../../_runtime/metro/10440__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod17589 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod17700 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -30,12 +30,12 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return metroImportDefault(_mod17589.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod17700.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return React5(View, obj3);
   } else {
     const obj6 = {
-      source: _modDef10341,
+      source: _modDef10440,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
       buttonText: null,

@@ -76,7 +76,7 @@ const View = fn(17).View;
 const Fonts = fn(1071).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { alignItems: "center", justifyContent: "center", padding: 16 },
   title: null,

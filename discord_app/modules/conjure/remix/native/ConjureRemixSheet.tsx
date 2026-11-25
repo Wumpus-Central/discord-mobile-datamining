@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureRemixSheet = "ConjureRemixSheet";
 const ConjureRemixServerSheet = "ConjureRemixServerSheet";
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     list: { gap: nativeDefault.space.PX_24, paddingBottom: arg0 + nativeDefault.space.PX_24 },
@@ -141,7 +141,7 @@ export default function ConjureRemixSheet(project) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

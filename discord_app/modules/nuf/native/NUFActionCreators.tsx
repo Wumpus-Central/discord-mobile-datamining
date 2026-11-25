@@ -26,7 +26,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -93,16 +93,16 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(13496);
+const ContactSyncModalStore = fn(13619);
 ({
   setAllowEmail: closure_4,
   setAllowSync: hasOwnProperty,
   setName: closure_6,
   useContactSyncModalStore: metroImportDefault,
 } = ContactSyncModalStore);
-let closure_10 = fn(13525).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(13648).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1071).PlatformTypes;
-let closure_12 = fn(7209).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_12 = fn(7304).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 

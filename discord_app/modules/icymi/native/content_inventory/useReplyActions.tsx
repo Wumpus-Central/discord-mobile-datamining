@@ -13,9 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7976).DraftType;
+const DraftType = fn(8075).DraftType;
 const EmojiIntention = fn(1389).EmojiIntention;
-const MessageSendLocation = fn(4922).MessageSendLocation;
+const MessageSendLocation = fn(5017).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -78,7 +78,7 @@ export function useReplyActions(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -275,7 +275,7 @@ export function useReplyActions(content) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18185, dependencyMap.paths),
+          asyncRequireImpl(18297, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

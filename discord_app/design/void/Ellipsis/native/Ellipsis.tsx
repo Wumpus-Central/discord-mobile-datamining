@@ -134,7 +134,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c7 = 233.33333333333334;
 let c8 = 116.66666666666667;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 },
   typingIndicatorDot: null,

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
-import _modDef3542 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3594 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
@@ -71,7 +71,7 @@ function ManualOrAutomatedReviewBanner() {
   _require = closure_24();
   const obj = { type: "critical", message: null, role: "alert", action: null };
   const intl = require("util").intl;
-  obj.message = intl.format(_modDef3542.vPoM8y, {
+  obj.message = intl.format(_modDef3594.vPoM8y, {
     manualReviewHook(children, arg1) {
       return state(
         Text_Text.Text,
@@ -183,12 +183,12 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7753).AgeCheckStatus;
+const AgeCheckStatus = fn(7852).AgeCheckStatus;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -235,7 +235,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16075, dependencyMap.paths),
+          asyncRequireImpl(16196, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

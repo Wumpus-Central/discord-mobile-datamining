@@ -50,15 +50,15 @@ function GameTag(removeButtonRef) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(6011).TrackUserProfileEditActions;
+let closure_7 = fn(6106).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let xs = "xs";
-xs = fn(7167).ICON_SIZE.xs;
+xs = fn(7262).ICON_SIZE.xs;
 const PX_4 = nativeDefault.space.PX_4;
 let c13 = "body-sm/normal";
 const hitSlop = Math.max((44 - xs) / 2, 0);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   tags: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 },
   tag: null,

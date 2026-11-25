@@ -70,7 +70,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(4951).joinRequestFromServer;
+const joinRequestFromServer = fn(5046).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};
@@ -83,15 +83,15 @@ let closure_10 = {
     return "guild-" + guildId + "-" + status;
   },
 };
-const secondaryIndexMap = new fn(4844).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4939).SecondaryIndexMap(
   guildJoinRequestsIndex,
   (joinRequestId) => "" + joinRequestId.joinRequestId,
 );
-const secondaryIndexMap1 = new fn(4844).SecondaryIndexMap(
+const secondaryIndexMap1 = new fn(4939).SecondaryIndexMap(
   guildJoinRequestsIndex,
   (joinRequestId) => "" + joinRequestId.joinRequestId,
 );
-const secondaryIndexMap2 = new fn(4844).SecondaryIndexMap(
+const secondaryIndexMap2 = new fn(4939).SecondaryIndexMap(
   guildJoinRequestsIndex,
   (actionedAt) => "" + actionedAt.actionedAt,
 );

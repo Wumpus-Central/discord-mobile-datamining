@@ -32,7 +32,7 @@ const Constants = fn(1071);
 ({ MarketingURLs: closure_10, UserRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   contentContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -82,7 +82,7 @@ export default function NewTermsModal() {
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(7071).useNavigatorBackPressHandler(memo(5984).BackPressHandler.minimize);
+  memo(7166).useNavigatorBackPressHandler(memo(6079).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -95,7 +95,7 @@ export default function NewTermsModal() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -127,7 +127,7 @@ export default function NewTermsModal() {
             closure_128_0 = value;
             closure_129_1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -138,7 +138,7 @@ export default function NewTermsModal() {
     [],
   );
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(7071);
+  let obj = memo(7166);
   obj2.type = memo(1263).ImpressionTypes.VIEW;
   obj2.name = memo(1263).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
@@ -156,36 +156,36 @@ export default function NewTermsModal() {
     const obj7 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/semibold", children: null };
     const intl = tmp6(1112).intl;
     obj7.children = intl.string(tmp6(1112).t["7glvXu"]);
-    const items1 = [closure_12(tmp6(5508).Text, obj7), , , , , ,];
+    const items1 = [closure_12(tmp6(5603).Text, obj7), , , , , ,];
     const obj8 = { variant: "body-md/normal", style: tmp.description, children: null };
     const intl2 = tmp6(1112).intl;
     const obj9 = { url: constants.TERMS_SUMMARY };
     obj8.children = intl2.format(tmp6(1112).t.CN0Hvb, obj9);
-    items1[1] = closure_12(tmp6(5508).Text, obj8);
+    items1[1] = closure_12(tmp6(5603).Text, obj8);
     const obj10 = { variant: "body-md/normal", children: null };
     const intl3 = tmp6(1112).intl;
     const obj11 = { url: constants.TERMS };
     obj10.children = intl3.format(tmp6(1112).t.iw0hFi, obj11);
-    items1[2] = closure_12(tmp6(5508).Text, obj10);
+    items1[2] = closure_12(tmp6(5603).Text, obj10);
     const obj12 = { variant: "body-md/normal", children: null };
     const intl4 = tmp6(1112).intl;
     const obj13 = { url: constants.PAID_TERMS };
     obj12.children = intl4.format(tmp6(1112).t["36klnD"], obj13);
-    items1[3] = closure_12(tmp6(5508).Text, obj12);
+    items1[3] = closure_12(tmp6(5603).Text, obj12);
     const obj14 = { variant: "body-md/normal", children: null };
     const intl5 = tmp6(1112).intl;
     const obj15 = { url: constants.PRIVACY };
     obj14.children = intl5.format(tmp6(1112).t.TquFBF, obj15);
-    items1[4] = closure_12(tmp6(5508).Text, obj14);
+    items1[4] = closure_12(tmp6(5603).Text, obj14);
     const obj16 = { variant: "body-md/normal", children: null };
     const intl6 = tmp6(1112).intl;
     const obj17 = { url: constants.GUIDELINES };
     obj16.children = intl6.format(tmp6(1112).t.ia96Tb, obj17);
-    items1[5] = closure_12(tmp6(5508).Text, obj16);
+    items1[5] = closure_12(tmp6(5603).Text, obj16);
     const obj18 = { variant: "body-md/normal", style: tmp.agreementDescription, children: null };
     const intl7 = tmp6(1112).intl;
     obj18.children = intl7.string(tmp6(1112).t["+USXQE"]);
-    items1[6] = closure_12(tmp6(5508).Text, obj18);
+    items1[6] = closure_12(tmp6(5603).Text, obj18);
     obj6.children = items1;
     const items2 = [closure_13(closure_8, obj6), ,];
     const obj19 = { style: tmp.stickyFooter, children: null };
@@ -200,7 +200,7 @@ export default function NewTermsModal() {
     };
     const intl8 = tmp6(1112).intl;
     obj20.text = intl8.string(tmp6(1112).t["+TBKL1"]);
-    obj19.children = closure_12(tmp6(5515).Button, obj20);
+    obj19.children = closure_12(tmp6(5610).Button, obj20);
     items2[1] = closure_12(closure_6, obj19);
     const obj21 = {
       style: null,
@@ -214,15 +214,15 @@ export default function NewTermsModal() {
     const obj41 = { top };
     items3[1] = obj41;
     obj21.style = items3;
-    obj21.source = tmp2(8484);
+    obj21.source = tmp2(8583);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
     const intl9 = tmp6(1112).intl;
     obj21.accessibilityLabel = intl9.string(tmp6(1112).t["UKOtz+"]);
-    items2[2] = closure_12(tmp2(12324), obj21);
+    items2[2] = closure_12(tmp2(12490), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(12324);
+    const tmp2Result = tmp2(12490);
   }
   return tmp10;
 }

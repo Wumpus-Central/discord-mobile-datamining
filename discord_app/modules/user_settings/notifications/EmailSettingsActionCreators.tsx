@@ -17,7 +17,7 @@ let closure_7 = async function _fetchEmailSettings() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -188,7 +188,7 @@ let closure_10 = async function _updateMarketingEmailSettings() {
   }
   return value;
 };
-const MarketingEmailCategories = fn(16940).MarketingEmailCategories;
+const MarketingEmailCategories = fn(17061).MarketingEmailCategories;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/notifications/EmailSettingsActionCreators.tsx");

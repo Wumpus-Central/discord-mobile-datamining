@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CopyIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5618 from "../../../../../../../_runtime/metro/05618__.js";
+import _mod5713 from "../../../../../../../_runtime/metro/05713__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ export function CopyIcon(tmp6Result2) {
   const merged = Object.assign(tmp6Result2, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
   return jsx(BaseIconImage.BaseIconImage, {
-    source: _mod5618,
+    source: _mod5713,
     color: INTERACTIVE_ICON_DEFAULT,
     style: tmp6Result2.style,
   });

@@ -9,7 +9,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const PremiumTypes = fn(1388).PremiumTypes;
-const Features = fn(5729).Features;
+const Features = fn(5824).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 

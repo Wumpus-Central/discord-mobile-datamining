@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/HeartIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13540 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-1x.png.js";
-import _modDef13541 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-2x.png.js";
-import _modDef13542 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-3x.png.js";
+import _modDef13663 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-1x.png.js";
+import _modDef13664 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-2x.png.js";
+import _modDef13665 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13540 }, 3: null };
-const obj2 = { uri: _modDef13540 };
-obj[2] = { uri: _modDef13541 };
-const obj3 = { uri: _modDef13541 };
-obj[3] = { uri: _modDef13542 };
+let obj = { 1: null, 2: { uri: _modDef13663 }, 3: null };
+const obj2 = { uri: _modDef13663 };
+obj[2] = { uri: _modDef13664 };
+const obj3 = { uri: _modDef13664 };
+obj[3] = { uri: _modDef13665 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 
@@ -28,7 +28,7 @@ export function HeartIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7135).getAssetSource(obj);
+  obj.source = num(7230).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

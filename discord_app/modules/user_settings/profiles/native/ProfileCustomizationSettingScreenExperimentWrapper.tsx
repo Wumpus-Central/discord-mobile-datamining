@@ -15,8 +15,8 @@ export default function ProfileCustomizationSettingScreenExperimentWrapper() {
       UserProfileMobileEditingRefreshExperiment.useIsUserProfileEditingRefreshEnabled(
         "ProfileCustomizationSettingScreenExperimentWrapper",
       )
-        ? 15858
-        : 15875,
+        ? 15979
+        : 15996,
     ),
     {},
   );

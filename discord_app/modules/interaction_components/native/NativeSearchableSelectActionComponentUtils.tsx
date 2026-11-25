@@ -5,8 +5,8 @@ import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
 import InteractionComponentTypes from "../InteractionComponentTypes.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import RoleIconUtils from "../../guild_boosting/RoleIconUtils.tsx";
-import _modDef8416 from "../../../../_runtime/metro/08416__.js";
-import _modDef8695 from "../../../../_runtime/metro/08695__.js";
+import _modDef8515 from "../../../../_runtime/metro/08515__.js";
+import _modDef8794 from "../../../../_runtime/metro/08794__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -55,7 +55,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8416).uri;
+            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8515).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult10 = utils_ColorUtils;
@@ -101,7 +101,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8695;
+          let channelIconWithGuild = _modDef8794;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -119,7 +119,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
 }
 export function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8695;
+    let channelIconWithGuild = _modDef8794;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

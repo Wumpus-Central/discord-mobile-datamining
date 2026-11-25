@@ -1,15 +1,16 @@
 // discord_app/modules/interaction_components/native/renderComponents.tsx
 import Server from "../../../flow/Server.tsx";
+import ActionRowLayoutComponentDefault from "layouts/ActionRowLayoutComponent.tsx";
 import StringSelectActionComponentDefault from "actions/StringSelectActionComponent.tsx";
+import TextInputActionComponentDefault from "actions/TextInputActionComponent.tsx";
 import SearchableSelectActionComponentDefault from "actions/SearchableSelectActionComponent.tsx";
 import TextDisplayComponentDefault from "display/TextDisplayComponent.tsx";
-import ActionRowLayoutComponentDefault from "layouts/ActionRowLayoutComponent.tsx";
-import TextInputActionComponentDefault from "actions/TextInputActionComponent.tsx";
 import LabelLayoutComponentDefault from "layouts/LabelLayoutComponent.tsx";
 import FileUploadActionComponentDefault from "actions/FileUploadActionComponent.tsx";
 import RadioGroupActionComponentDefault from "actions/RadioGroupActionComponent.tsx";
 import CheckboxGroupActionComponentDefault from "actions/CheckboxGroupActionComponent.tsx";
 import CheckboxActionComponentDefault from "actions/CheckboxActionComponent.tsx";
+import MenuActionItemComponentDefault from "actions/MenuActionItemComponent.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -58,16 +59,20 @@ function renderComponent(component, key) {
               const merged7 = Object.assign(component);
               return jsx(CheckboxGroupActionComponentDefault, {}, key);
             } else if (Server.ComponentType.CHECKBOX === type) {
-              const obj = {};
+              const obj10 = {};
               const merged8 = Object.assign(component);
               return jsx(CheckboxActionComponentDefault, {}, key);
+            } else if (Server.ComponentType.MENU_ACTION_ITEM === type) {
+              const obj = {};
+              const merged9 = Object.assign(component);
+              return jsx(MenuActionItemComponentDefault, {}, key);
             }
           }
         }
       }
     }
-    const obj10 = {};
-    const merged9 = Object.assign(component);
+    const obj11 = {};
+    const merged10 = Object.assign(component);
     return jsx(SearchableSelectActionComponentDefault, {}, key);
   }
 }

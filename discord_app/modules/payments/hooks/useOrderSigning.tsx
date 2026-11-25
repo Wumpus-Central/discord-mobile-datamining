@@ -1,15 +1,29 @@
 // discord_app/modules/payments/hooks/useOrderSigning.tsx
-import BillingUtils from "../../../utils/BillingUtils.tsx";
 import BillingErrorDefault from "../../../errors/BillingError.tsx";
+import ClientBillingError2 from "../../billing/errors/ClientBillingError.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: closure_6 } = noop);
-const OrderStatus = fn(5634).OrderStatus;
+const OrderStatus = fn(5729).OrderStatus;
+const prototype = function OrderSigningFailedError(arg0) {
+  const tmp2 = new tmp(concat(arg0), concat);
+  tmp2.name = "OrderSigningFailed";
+  return tmp2;
+}.prototype;
+class prototype extends Error {
+}
+const prototype2 = function UnexpectedOrderStatusError(arg0) {
+  const tmp2 = new tmp(concat(arg0), concat);
+  tmp2.name = "UnexpectedOrderStatus";
+  return tmp2;
+}.prototype;
+class prototype2 extends Error {
+}
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
+const result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
 export function useOrderSigning(order) {
   order = order.order;
@@ -30,29 +44,19 @@ export function useOrderSigning(order) {
   }, items);
   closure_5 = tmp2;
   const items1 = [errorSource, tmp2];
-  let tmp3 = closure_5((error, extra, arg2) => {
-    let tmp3 = error;
-    if (!(error instanceof BillingErrorDefault)) {
-      tmp3 = new BillingErrorDefault(error);
-    }
-    if (!obj.isExpectedHttpClientError(error)) {
-      const _Error = Error;
-      let tmp9 = tmp3;
-      if (error instanceof Error) {
-        tmp9 = error;
-      }
-      const obj2 = { tags: null, extra: null };
-      const obj3 = { source: errorSource };
-      obj2.tags = obj3;
-      obj2.extra = extra;
-      const result = BillingUtils.captureBillingException(tmp9, obj2);
-      const tmp7Result = BillingUtils;
+  const tmp3 = closure_5((arg0, extra, arg2) => {
+    const ClientBillingError = ClientBillingError2.ClientBillingError;
+    const obj = { site: "order_sign", tags: { flow: errorSource }, extra };
+    ClientBillingError.report(obj, arg0);
+    let tmp4 = arg0;
+    if (!(arg0 instanceof BillingErrorDefault)) {
+      tmp4 = new BillingErrorDefault(arg0);
     }
     if (null != arg2) {
-      tmp3 = new BillingErrorDefault(arg2);
+      tmp4 = new BillingErrorDefault(arg2);
     }
-    closure_5(tmp3);
-    return tmp3;
+    closure_5(tmp4);
+    return tmp4;
   }, items1);
   closure_6 = tmp3;
   let obj = { error: tmp[0], signOrder: null, reportError: tmp3 };
@@ -68,7 +72,7 @@ export function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -110,7 +114,7 @@ export function useOrderSigning(order) {
             const obj6 = { value, done: true };
             return obj6;
           } else if (null == closure_130_0) {
-            const tmp95 = new errorSource(tmp4[4])("Order not created yet");
+            const tmp95 = new errorSource(tmp4[5])("Order not created yet");
             closure_130_5(tmp95);
             c6 = 3;
             const obj7 = { value: { type: "failed" }, done: true };
@@ -187,15 +191,9 @@ export function useOrderSigning(order) {
                   const obj17 = { value: { type: "failed" }, done: true };
                   return obj17;
                 } else if (null != closure_129_5.error) {
-                  const _Error2 = Error;
-                  const _HermesInternal2 = HermesInternal;
-                  const error = new Error("Order signing failed with error: " + closure_129_5.error.code);
-                  throw error;
+                  throw new prototype(closure_129_5.error.code);
                 } else {
-                  const _Error = Error;
-                  const _HermesInternal = HermesInternal;
-                  const error1 = new Error("Unexpected order status: " + closure_129_5.status);
-                  throw error1;
+                  throw new prototype2(closure_129_5.status);
                 }
                 const obj19 = order(tmp4[9]);
               }

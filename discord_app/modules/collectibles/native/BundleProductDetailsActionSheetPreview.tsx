@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05177_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05272_LegacyBaseButton.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1073).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   previewContainer: {
     paddingTop: nativeDefault.space.PX_16,

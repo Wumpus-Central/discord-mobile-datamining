@@ -15,10 +15,10 @@ let closure_8 = {
   user: "a",
   profile: "Path",
   wishlistId: "context",
-  wishlist: true,
-  updatedAt: "/assets/modules/main_tabs_v2/native/images",
-  storedUpdatedAt: 24,
-  fetching: 24,
+  wishlist: "nl-SR",
+  updatedAt: "nl",
+  storedUpdatedAt: false,
+  fetching: null,
   error: null,
 };
 const size = fn(2);

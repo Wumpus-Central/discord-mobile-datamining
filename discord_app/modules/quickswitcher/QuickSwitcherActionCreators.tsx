@@ -346,7 +346,7 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -387,7 +387,7 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
           const obj = closure_130_1(closure_130_2[16]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp20) {
       c4 = tmp;
@@ -395,8 +395,8 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6744).InAppNavigationType;
-const ChannelRecordBase = fn(4770).ChannelRecordBase;
+const InAppNavigationType = fn(6839).InAppNavigationType;
+const ChannelRecordBase = fn(4865).ChannelRecordBase;
 const Constants = fn(1071);
 ({
   Layers,
@@ -407,26 +407,26 @@ const Constants = fn(1071);
   AnalyticsPages: closure_17,
   Routes: closure_18,
 } = Constants);
-const isStaticChannelRoute = fn(4773).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let obj = {};
-obj[fn(8806).AutocompleterQuerySymbols.USER] = fn(8806).AutocompleterResultTypes.USER;
-obj[fn(8806).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(8806).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(8806).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(8806).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(8806).AutocompleterQuerySymbols.GUILD] = fn(8806).AutocompleterResultTypes.GUILD;
-obj[fn(8806).AutocompleterQuerySymbols.GAME_PROFILE] = fn(8806).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(8905).AutocompleterQuerySymbols.USER] = fn(8905).AutocompleterResultTypes.USER;
+obj[fn(8905).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(8905).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(8905).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(8905).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(8905).AutocompleterQuerySymbols.GUILD] = fn(8905).AutocompleterResultTypes.GUILD;
+obj[fn(8905).AutocompleterQuerySymbols.GAME_PROFILE] = fn(8905).AutocompleterResultTypes.GAME_PROFILE;
 let closure_21 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(8806).AutocompleterQuerySymbols.USER +
+    fn(8905).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(8806).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(8905).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(8806).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(8905).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(8806).AutocompleterQuerySymbols.GUILD +
+    fn(8905).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(8806).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(8905).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 let items = [, ,];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
@@ -525,7 +525,7 @@ export function switchToResultInNewTab(type) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -545,7 +545,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7714).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7813).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -557,11 +557,11 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(11384);
+                      const obj = tmp5(11483);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } catch (tmp21) {
                     c3 = tmp;
@@ -580,7 +580,7 @@ export function switchToResultInNewTab(type) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -600,7 +600,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7714).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7813).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -612,11 +612,11 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(11384);
+                      const obj = tmp5(11483);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } catch (tmp21) {
                     c3 = tmp;

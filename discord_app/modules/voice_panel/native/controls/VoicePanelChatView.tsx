@@ -4,7 +4,7 @@ import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
-import _modDef10618 from "../../../../../_runtime/metro/10618__.js";
+import _modDef10717 from "../../../../../_runtime/metro/10717__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import ChatFloatingNavButtonDefault from "../../../chat_input/native/ChatFloatingNavButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,12 +13,12 @@ const _modDef1653 = _mod1653;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11633).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11732).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1071);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE },
   gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 },
@@ -56,7 +56,7 @@ const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10618;
+  obj.icon = _modDef10717;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 });

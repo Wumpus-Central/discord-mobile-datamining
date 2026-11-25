@@ -66,7 +66,7 @@ export default function GiftPurchaseButton(style) {
       const premiumTypeFromPlanId = planId(2173).getPremiumTypeFromPlanId(closure_129_0);
       const premiumType = premiumTypeFromPlanId.premiumType;
       const planInterval = premiumTypeFromPlanId.planInterval;
-      planId(10968).openGiftModal({
+      planId(11067).openGiftModal({
         recipientUserId: closure_129_2,
         premiumType,
         planInterval,
@@ -80,7 +80,7 @@ export default function GiftPurchaseButton(style) {
       obj7.title = intl.string(planId(1112).t.R0RpRX);
       const intl2 = planId(1112).intl;
       obj7.body = intl2.string(planId(1112).t.CKsXk3);
-      tmp3(5921).show(obj7);
+      tmp3(6016).show(obj7);
     }),
     items3,
   );

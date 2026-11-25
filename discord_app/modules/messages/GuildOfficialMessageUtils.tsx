@@ -51,7 +51,7 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(4922).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(5017).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1071);
 ({
   ChannelTypes: closure_6,

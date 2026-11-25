@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef18569 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-1x.png.js";
-import _modDef18570 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
-import _modDef18571 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-3x.png.js";
+import _modDef18680 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-1x.png.js";
+import _modDef18681 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
+import _modDef18682 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18569 }, 3: null };
-const obj2 = { uri: _modDef18569 };
-obj[2] = { uri: _modDef18570 };
-const obj3 = { uri: _modDef18570 };
-obj[3] = { uri: _modDef18571 };
+let obj = { 1: null, 2: { uri: _modDef18680 }, 3: null };
+const obj2 = { uri: _modDef18680 };
+obj[2] = { uri: _modDef18681 };
+const obj3 = { uri: _modDef18681 };
+obj[3] = { uri: _modDef18682 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx",
@@ -30,7 +30,7 @@ export function CaterpillarIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7135).getAssetSource(obj);
+  obj.source = num(7230).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

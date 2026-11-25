@@ -13,10 +13,10 @@ import apply from "../../../../_runtime/00012_apply.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9868);
+const ChannelCallConstants = fn(9967);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5567).ParticipantTypes;
-const timeout = new fn(4761).Timeout();
+const ParticipantTypes = fn(5662).ParticipantTypes;
+const timeout = new fn(4856).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -29,22 +29,22 @@ let size = {
   x: "Array",
   y: "s",
   width: "channel_id",
-  height: "channel_id",
-  screenOrientation: fn(8769).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: "<string:822083853>",
-  isInitialized: "isArray",
-  isVisible: "<string:1071644672>",
+  height: "paddingBottom",
+  screenOrientation: fn(8868).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: "<string:1202590843>",
+  isInitialized: "<string:1068792545>",
+  isVisible: "answerCall",
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
   width: "channel_id",
-  height: "channel_id",
-  screenOrientation: fn(8769).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: "<string:822083853>",
-  isInitialized: "isArray",
-  isVisible: "<string:1071644672>",
+  height: "paddingBottom",
+  screenOrientation: fn(8868).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: "<string:1202590843>",
+  isInitialized: "<string:1068792545>",
+  isVisible: "answerCall",
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;

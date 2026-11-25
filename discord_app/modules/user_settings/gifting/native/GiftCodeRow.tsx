@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1071).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   giftCodeRow: { paddingHorizontal: 16 },
   giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -195,7 +195,7 @@ prototype["render"] = function render() {
   }
   const obj5 = require("GiftCodeUtils");
 };
-GiftCodeRow.contextType = fn(4978).ThemeContext;
+GiftCodeRow.contextType = fn(5073).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/gifting/native/GiftCodeRow.tsx");
 

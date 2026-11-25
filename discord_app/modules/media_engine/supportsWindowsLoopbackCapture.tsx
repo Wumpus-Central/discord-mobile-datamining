@@ -1,7 +1,7 @@
 // discord_app/modules/media_engine/supportsWindowsLoopbackCapture.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import _modDef15329 from "../../../_runtime/metro/15329__.js";
+import _modDef15451 from "../../../_runtime/metro/15451__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/media_engine/supportsWindowsLoopbackCapture.tsx");
@@ -14,7 +14,7 @@ export default function supportsWindowsLoopbackCapture() {
     if (tmp4 != null) {
       release = tmp4.os.release;
     }
-    isWindowsResult = _modDef15329.satisfies(release, ">=10.0.15063");
+    isWindowsResult = _modDef15451.satisfies(release, ">=10.0.15063");
   }
   return isWindowsResult;
 }

@@ -1,7 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileEmbedCard.tsx
+import UserSettings from "../../user_settings/UserSettings.tsx";
 import useDisplayProfile from "../hooks/useDisplayProfile.tsx";
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
@@ -10,46 +12,78 @@ function readUserProfileEmbedCard(code, guild_id, id) {
   const user = UserStore.getUser(code);
   if (null == user) {
     const isFetchingProfileResult = UserProfileStore.isFetchingProfile(code, guild_id);
-    let tmp5 = !isFetchingProfileResult;
+    let tmp11 = !isFetchingProfileResult;
     if (!isFetchingProfileResult) {
-      tmp5 = null != UserProfileStore.getUserProfile(code);
+      tmp11 = null != UserProfileStore.getUserProfile(code);
     }
-    return tmp5 ? closure_6 : closure_5;
+    return tmp11 ? closure_7 : closure_6;
   } else {
     const displayProfile = useDisplayProfile.getDisplayProfile(code, guild_id);
     let guildId = guild_id;
     if (null != displayProfile) {
       guildId = displayProfile.guildId;
     }
-    const obj = { type: "card", title: null, username: null, pronouns: null, avatarUri: null };
-    obj.title = NicknameUtilsDefault.getName(guildId, id, user);
-    obj.username = user.username;
-    let str;
-    if (displayProfile != null) {
-      str = displayProfile.pronouns;
+    const name = NicknameUtilsDefault.getName(guildId, id, user);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(user.getAvatarSource(guildId));
+    const isBlockedResult = RelationshipStore.isBlocked(code);
+    const tmp12Result = renderer_EmbedUtils;
+    if (isBlockedResult) {
+      if (!isIgnoredResult) {
+        let str = "ignore";
+        if (isBlockedResult) {
+          str = "block";
+        }
+        let tmp8 = str;
+      } else {
+        const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
+        tmp8 = null;
+      }
+    } else {
+      tmp8 = null;
     }
-    if (str == null) {
-      str = "";
+    if (null != tmp8) {
+      const obj = { type: "restricted", speedBumpType: tmp8, displayName: name, avatarUri: assetUriForEmbed };
+      let obj3 = obj;
+    } else {
+      obj3 = { type: "card", title: name, username: user.username, pronouns: null, avatarUri: null, isPrivate: null };
+      let str2;
+      if (displayProfile != null) {
+        str2 = displayProfile.pronouns;
+      }
+      if (str2 == null) {
+        str2 = "";
+      }
+      obj3.pronouns = str2;
+      obj3.avatarUri = assetUriForEmbed;
+      let _private;
+      if (displayProfile != null) {
+        _private = displayProfile.private;
+      }
+      obj3.isPrivate = true === _private;
     }
-    obj.pronouns = str;
-    obj.avatarUri = renderer_EmbedUtils.getAssetUriForEmbed(user.getAvatarSource(guildId));
-    return obj;
+    return obj3;
   }
 }
-let closure_5 = { type: "loading" };
-let closure_6 = { type: "hidden" };
+let closure_6 = { type: "loading" };
+let closure_7 = { type: "hidden" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEmbedCard.tsx");
 
 export { readUserProfileEmbedCard };
 export function userProfileEmbedCardKey(nextResult, guild_id, id) {
   const tmp = readUserProfileEmbedCard(nextResult, guild_id, id);
-  if ("card" !== tmp.type) {
-    let type = tmp.type;
+  if ("restricted" === tmp.type) {
+    items = [, , ,];
+    ({ type: arr2[0], speedBumpType: arr2[1], displayName: arr2[2], avatarUri: arr2[3] } = tmp);
+    let type = items.join("\0");
+  } else if ("card" !== tmp.type) {
+    type = tmp.type;
   } else {
-    items = [, , , ,];
+    const items1 = [, , , , ,];
     ({ type: arr[0], title: arr[1], username: arr[2], pronouns: arr[3], avatarUri: arr[4] } = tmp);
-    type = items.join("\0");
+    const _String = String;
+    items1[5] = String(tmp.isPrivate);
+    type = items1.join("\0");
   }
   return type;
 }

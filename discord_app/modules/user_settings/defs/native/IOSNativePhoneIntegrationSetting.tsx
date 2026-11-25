@@ -1,6 +1,7 @@
 // discord_app/modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
@@ -36,6 +37,10 @@ const toggle = SettingBuilders.createToggle(obj2);
 let SettingBuilders = SettingBuilders_mod;
 const obj3 = {};
 const merged1 = Object.assign(obj);
+obj3.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(_modDef3206["eled/j"]);
+};
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {
   let enabled = CallKitMetricCollectionExperimentDefault.useConfig({

@@ -7,7 +7,7 @@ import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import errors_V6OrEarlierAPIErrorDefault from "../errors/V6OrEarlierAPIError.tsx";
 import InviteCodeUtils from "../modules/instant_invite/InviteCodeUtils.tsx";
 import InviteTargetTypes from "../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
-import _modDef5679 from "../../_runtime/metro/05679__.js";
+import _modDef5774 from "../../_runtime/metro/05774__.js";
 import AgeGateModalActionCreators from "../modules/age_gate/AgeGateModalActionCreators.tsx";
 import GuildActionCreatorsDefault from "GuildActionCreators.tsx";
 import showNSFWGuildJoinGate from "../modules/age_gate/showNSFWGuildJoinGate.native.tsx";
@@ -444,7 +444,7 @@ let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -478,7 +478,7 @@ let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp12) {
       c1 = tmp;
       throw tmp12;
@@ -494,16 +494,16 @@ function trackInviteServerClicked(id3, accept, items1) {
   obj2.location_stack = tmp;
   AnalyticsUtilsDefault.track(constants3.INVITE_SERVER_CLICKED, obj2);
 }
-fn(5721).addPostConnectionCallback;
-let closure_7 = fn(5649).isGuildScheduledEventActive;
-const ChannelRecord = fn(4770);
+fn(5816).addPostConnectionCallback;
+let closure_7 = fn(5744).isGuildScheduledEventActive;
+const ChannelRecord = fn(4865);
 ({ isGuildTextChannelType: closure_8, isGuildVocalChannelOrVocalThreadType: closure_9, createChannelRecord: closure_10, ChannelRecordBase: closure_11, getAccessPermissions: closure_12 } = ChannelRecord);
 const Constants = fn(1071);
 ({ Endpoints: closure_24, ChannelTypes: closure_25, Routes: closure_26, ME: closure_27, RPCCommands: closure_28, GuildFeatures: closure_29, AnalyticEvents: closure_30, UserFlags: closure_31, Permissions: closure_32, AbortCodes: items } = Constants);
 const AgeGateSource = fn(1096).AgeGateSource;
-const StaticChannelRoute = fn(4773).StaticChannelRoute;
-const StreamTypes = fn(6688).StreamTypes;
-const STAGE_INVITE_STATE_KEY = fn(6674).STAGE_INVITE_STATE_KEY;
+const StaticChannelRoute = fn(4868).StaticChannelRoute;
+const StreamTypes = fn(6783).StreamTypes;
+const STAGE_INVITE_STATE_KEY = fn(6769).STAGE_INVITE_STATE_KEY;
 let invite = "invite";
 let c39 = null;
 const size = fn(2);
@@ -540,12 +540,12 @@ export default {
                     closure_2 = closure_1_2;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F91446 */ function() { ... });
+                      let nextPromise = resolved.then(/* F91806 */ function() { ... });
                     } else {
                       let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
                       closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
-                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F91447 */ function() { ... });
+                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F91807 */ function() { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
                     }
                     return nextPromise;
@@ -617,7 +617,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(572).dispatch(obj2);
       const tmpResult = tmp(572);
-      nextPromise = tmp(14527)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(14650)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -630,7 +630,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(14527)(code, arg1, arg2);
+      const promise = tmp(14650)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -682,7 +682,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -723,7 +723,7 @@ export default {
             closure_128_1 = _location;
             const obj8 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: closure_129_0 };
             tmp3(572).dispatch(obj8);
-            const tmp30 = new tmp3(5667)(closure_128_1);
+            const tmp30 = new tmp3(5762)(closure_128_1);
             throw tmp30;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -789,7 +789,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -899,7 +899,7 @@ export default {
   fetchFriendMembers(arg0) {
     closure_0 = arg0;
     return (async () => {
-      await tmp3(6009).get({
+      await tmp3(6104).get({
         url: closure_1_24.INVITE_FRIEND_MEMBERS(code),
         trackedActionData: {
           event: code(1263).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
@@ -948,7 +948,7 @@ export default {
     const code = invite.code;
     const channel = invite.channel;
     const obj2 = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const obj = channel(6009);
+    const obj = channel(6104);
     obj2.trackedActionData = { event: code(1263).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
     const obj3 = { event: code(1263).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
     obj2.rejectWithError = code(1284).rejectWithMigratedError();
@@ -1025,7 +1025,7 @@ export default {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -1848,27 +1848,27 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(14530).onOpenHubInvite(flags);
-        const obj6 = obj(14530);
+        obj(14653).onOpenHubInvite(flags);
+        const obj6 = obj(14653);
       }
     }
     let num = flags.flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = dMFromUserId(1404).hasFlag(num, dMFromUserId(7700).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = dMFromUserId(1404).hasFlag(num, dMFromUserId(7799).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp6(1404).hasFlag(num, tmp6(7700).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      hasFlagResult = tmp6(1404).hasFlag(num, tmp6(7799).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp6Result = tmp6(1404);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(14531).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(14531);
+            const result1 = tmp6(14654).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(14654);
           }
-          tmp6Result3 = tmp6(14531);
+          tmp6Result3 = tmp6(14654);
         }
       }
     }
@@ -2274,21 +2274,21 @@ export default {
       targetChannelId = result.targetChannelId;
     }
     DispatcherDefault.dispatch({ type: "INVITE_APP_OPENING", code });
-    if (null != _modDef5679.ua) {
-      const formatted = _modDef5679.ua.toLowerCase();
+    if (null != _modDef5774.ua) {
+      const formatted = _modDef5774.ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         const obj6 = { type: "INVITE_APP_NOT_OPENED", code };
         DispatcherDefault.dispatch(obj6);
         const tmp7Result = DispatcherDefault;
       }
     }
-    const os = _modDef5679.os;
+    const os = _modDef5774.os;
     let family;
     if (os != null) {
       family = os.family;
     }
     if ("Android" !== family) {
-      const os2 = _modDef5679.os;
+      const os2 = _modDef5774.os;
       let family1;
       if (os2 != null) {
         family1 = os2.family;
@@ -2332,9 +2332,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(14533).generateAttemptId();
+    const attemptId = tmp18(14656).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(14533);
+    const tmp18Result = tmp18(14656);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }

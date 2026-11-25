@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelNameHeader.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
-import _modDef4128 from "../../../../../game_invite_channels/GameInviteChannels.messages.js";
+import _modDef4180 from "../../../../../game_invite_channels/GameInviteChannels.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import transitionToChannel from "../../../../../routing/transitionToChannel.tsx";
 import showUserProfileActionSheetDefault from "../../../../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -120,16 +120,16 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(5508).Text, obj2);
+        tmp8 = closure_12(tmp(5603).Text, obj2);
       }
     }
     return tmp8;
   } else if (channel.isGameInvitesChannel()) {
     const intl = tmp(1112).intl;
-    let stringResult = intl.string(_modDef4128["D+2/QP"]);
+    let stringResult = intl.string(_modDef4180["D+2/QP"]);
   } else {
-    stringResult = tmp(6675).channelTypeString(channel);
-    const tmpResult = tmp(6675);
+    stringResult = tmp(6770).channelTypeString(channel);
+    const tmpResult = tmp(6770);
   }
   let obj = channel(504);
 }
@@ -258,7 +258,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6253)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6348)().analyticsLocations;
   items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -270,7 +270,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(6026).PressableOpacity, obj);
+  return closure_12(channel(6121).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -285,7 +285,7 @@ const Constants = fn(1071);
 ({ Permissions: closure_10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" },

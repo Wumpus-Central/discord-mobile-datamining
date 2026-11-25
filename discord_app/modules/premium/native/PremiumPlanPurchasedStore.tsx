@@ -95,7 +95,7 @@ export function reset() {
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
       onPaymentSuccess: "r",
-      onPaymentDismiss: "__d",
+      onPaymentDismiss: "sa",
     });
   });
 }

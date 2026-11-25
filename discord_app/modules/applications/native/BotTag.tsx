@@ -137,7 +137,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1363).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   tag: {
     paddingLeft: 4,

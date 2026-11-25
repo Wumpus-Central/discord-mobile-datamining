@@ -174,7 +174,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13171, dependencyMap.paths),
+      asyncRequireImpl(13294, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -230,12 +230,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   animatedContainer: {
     borderTopWidth: 1,

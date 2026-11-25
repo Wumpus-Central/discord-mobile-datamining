@@ -23,7 +23,7 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ const Constants = fn(1071);
 } = Constants);
 const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
@@ -148,7 +148,7 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
+    label: "CALL_CREATE",
     expandedChildren: null,
     children: null,
   };
@@ -167,7 +167,7 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
+    label: "CALL_CREATE",
     expandedChildren: null,
     children: null,
   });

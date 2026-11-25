@@ -9,6 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_6 = fn(1081).ProfileCustomizationSubsection;
+const UserProfileSections = fn(6106).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useProfileSelection.tsx");
 
@@ -25,7 +26,10 @@ export default function useProfileSelection() {
     handleSelectGuild: noop.useCallback((id) => {
       closure_0(true);
       GuildIdentityActionCreators.setCurrentGuild(id.id);
-      ProfileCustomizationNavigationStore.setState({ subsection: constants.GUILD, editingTab: "main" });
+      ProfileCustomizationNavigationStore.setState({
+        subsection: constants.GUILD,
+        editingTab: UserProfileSections.MAIN,
+      });
     }, []),
   };
   items = [SortedGuildStore];

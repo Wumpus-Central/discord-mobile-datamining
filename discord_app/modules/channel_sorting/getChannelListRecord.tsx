@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 
 require = fn;
-let GuildChannelStore = fn(4847);
+let GuildChannelStore = fn(4942);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const ChannelTypes = fn(1071).ChannelTypes;

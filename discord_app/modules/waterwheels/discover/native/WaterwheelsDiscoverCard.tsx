@@ -1,7 +1,7 @@
 // discord_app/modules/waterwheels/discover/native/WaterwheelsDiscoverCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2643 from "../../Waterwheels.messages.js";
+import _modDef2654 from "../../Waterwheels.messages.js";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -27,11 +27,11 @@ function ServerIdentity(server) {
     flag = false;
   }
   const onAction = server.onAction;
-  const fontScale = server(5523).useFontScale();
+  const fontScale = server(5618).useFontScale();
   const tmp4 = closure_17();
   const guildId = server.guildId;
   closure_129_0 = guildId;
-  let obj = server(5523);
+  let obj = server(5618);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = server(504).useStateFromStores(
@@ -51,8 +51,8 @@ function ServerIdentity(server) {
     const obj3 = { id: null, name: null, icon: null, features: null };
     ({ guildId: obj5.id, name: obj5.name } = server);
     obj3.features = set;
-    result = tmp(4780).constructFromPartialGuildRecord(obj3);
-    const tmpResult = tmp(4780);
+    result = tmp(4875).constructFromPartialGuildRecord(obj3);
+    const tmpResult = tmp(4875);
   }
   const obj2 = server(504);
   if (null != server.iconUrl) {
@@ -66,9 +66,9 @@ function ServerIdentity(server) {
     obj4.style = items2;
     const obj6 = { uri: server.iconUrl };
     obj4.source = obj6;
-    let tmp14Result4 = closure_11(onAction(5604), obj4);
+    let tmp14Result4 = closure_11(onAction(5699), obj4);
     let tmp14 = closure_11;
-    const tmp19 = onAction(5604);
+    const tmp19 = onAction(5699);
   } else {
     tmp14 = closure_11;
     const items3 = [tmp4.icon];
@@ -84,7 +84,7 @@ function ServerIdentity(server) {
   const items4 = [tmp14Result4];
   const obj8 = { style: tmp4.identityCopy, children: null };
   const obj9 = { style: tmp4.nameRow, children: null };
-  const tmpResult2 = server(5508);
+  const tmpResult2 = server(5603);
   if (flag) {
     const obj10 = {
       variant: "body-sm/semibold",
@@ -108,14 +108,14 @@ function ServerIdentity(server) {
   let tmp14Result5 = null;
   if (null != result) {
     const obj12 = { guild: result, style: tmp4.badge };
-    tmp14Result5 = tmp14(onAction(8594), obj12);
+    tmp14Result5 = tmp14(onAction(8693), obj12);
   }
-  const tmp25 = stateFromStores === server(8791).WaterwheelsActionType.OPEN_GUILD;
+  const tmp25 = stateFromStores === server(8890).WaterwheelsActionType.OPEN_GUILD;
   items5[1] = tmp14Result5;
   let tmp14Result6 = null;
   if (tmp25) {
     const obj13 = { size: "xxs", color: onAction(575).colors.ICON_MUTED };
-    tmp14Result6 = tmp14(tmp(7432).ChevronSmallRightIcon, obj13);
+    tmp14Result6 = tmp14(tmp(7527).ChevronSmallRightIcon, obj13);
   }
   items5[2] = tmp14Result6;
   obj9.children = items5;
@@ -126,7 +126,7 @@ function ServerIdentity(server) {
   const obj17 = { variant: "body-xs/medium", color: "text-subtle", style: tmp4.metaText, children: null };
   const intl = tmp(1112).intl;
   obj17.children = intl.format(server(1112).t["LC+S+m"], { membersOnline: server.online });
-  items7[1] = tmp14(server(5508).Text, obj17);
+  items7[1] = tmp14(server(5603).Text, obj17);
   obj15.children = items7;
   const items8 = [closure_12(closure_7, obj15)];
   let tmp12Result = null;
@@ -141,7 +141,7 @@ function ServerIdentity(server) {
     const intl2 = tmp(1112).intl;
     const obj22 = { count: server.members };
     obj21.children = intl2.format(tmp(1112).t.zRl6XR, obj22);
-    items10[1] = tmp14(tmp(5508).Text, obj21);
+    items10[1] = tmp14(tmp(5603).Text, obj21);
     obj19.children = items10;
     tmp12Result = closure_12(closure_7, obj19);
   }
@@ -292,7 +292,7 @@ function ServerRowCard(server) {
     const obj8 = { size: "sm", color: nativeDefault.colors.ICON_MUTED, accessible: false };
     obj7.icon = closure_1_11(ServerIcon.ServerIcon, obj8);
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef2643["2iP+h2"]);
+    obj7.text = intl3.string(_modDef2654["2iP+h2"]);
     tmp14 = closure_1_11(WaterwheelsSectionLabelDefault, obj7);
   }
   const items2 = [tmp14];
@@ -305,7 +305,7 @@ function ServerRowCard(server) {
     children: null,
   };
   const intl4 = util.intl;
-  obj10.accessibilityHint = intl4.string(_modDef2643.nkweXX);
+  obj10.accessibilityHint = intl4.string(_modDef2654.nkweXX);
   obj10.onPress = function openProfile() {
     onProfileOpen(server);
   };
@@ -350,7 +350,7 @@ function ServerRowCard(server) {
   const items8 = [
     tmp23(Text_Text.Text, {
       variant: "body-md/medium",
-      color: "text-strong",
+      color: "text-default",
       lineClamp: 1,
       style: tmp.name,
       children: server.name,
@@ -364,31 +364,38 @@ function ServerRowCard(server) {
   items8[1] = tmp23Result;
   obj19.children = items8;
   const items9 = [application_id(metroImportDefault, obj19)];
-  const obj22 = { style: tmp.meta, children: null };
+  const obj22 = { style: null, children: null };
+  const items10 = [,];
+  ({ meta: arr11[0], serverMeta: arr11[1] } = tmp);
+  obj22.style = items10;
   const obj23 = { style: tmp.metaItem, children: null };
-  const items10 = [tmp23(metroImportDefault, { style: tmp.dot })];
-  const obj25 = { variant: "body-xs/medium", color: "text-subtle", style: tmp.metaText, children: null };
+  const obj24 = { style: null };
+  const items11 = [,];
+  ({ dot: arr12[0], serverOnlineDot: arr12[1] } = tmp);
+  obj24.style = items11;
+  const items12 = [tmp23(metroImportDefault, obj24)];
+  const obj25 = { variant: "body-xs/normal", color: "text-subtle", style: tmp.metaText, children: null };
   const intl5 = util.intl;
   obj25.children = intl5.format(util.t["LC+S+m"], { membersOnline: server.online });
-  items10[1] = tmp23(Text_Text.Text, obj25);
-  obj23.children = items10;
-  const items11 = [application_id(metroImportDefault, obj23)];
+  items12[1] = tmp23(Text_Text.Text, obj25);
+  obj23.children = items12;
+  const items13 = [application_id(metroImportDefault, obj23)];
   const obj27 = { style: tmp.metaItem, children: null };
   const obj28 = { style: null };
-  const items12 = [,];
-  ({ dot: arr13[0], mutedDot: arr13[1] } = tmp);
-  obj28.style = items12;
-  const items13 = [tmp23(metroImportDefault, obj28)];
-  const obj29 = { variant: "body-xs/medium", color: "text-subtle", style: tmp.metaText, children: null };
+  const items14 = [,];
+  ({ dot: arr15[0], serverOfflineDot: arr15[1] } = tmp);
+  obj28.style = items14;
+  const items15 = [tmp23(metroImportDefault, obj28)];
+  const obj29 = { variant: "body-xs/normal", color: "text-subtle", style: tmp.metaText, children: null };
   const intl6 = util.intl;
   obj29.children = intl6.format(util.t.zRl6XR, { count: server.members });
-  items13[1] = tmp23(Text_Text.Text, obj29);
-  obj27.children = items13;
-  items11[1] = application_id(metroImportDefault, obj27);
-  obj22.children = items11;
+  items15[1] = tmp23(Text_Text.Text, obj29);
+  obj27.children = items15;
+  items13[1] = application_id(metroImportDefault, obj27);
+  obj22.children = items13;
   items9[1] = application_id(metroImportDefault, obj22);
   obj18.children = items9;
-  const items14 = [application_id(metroImportDefault, obj18)];
+  const items16 = [application_id(metroImportDefault, obj18)];
   let tmp23Result3 = null;
   if (null != server.description) {
     tmp23Result3 = null;
@@ -397,20 +404,20 @@ function ServerRowCard(server) {
       tmp23Result3 = tmp23(Text_Text.Text, obj31);
     }
   }
-  items14[1] = tmp23Result3;
-  obj17.children = items14;
+  items16[1] = tmp23Result3;
+  obj17.children = items16;
   items7[1] = application_id(metroImportDefault, obj17);
   obj13.children = items7;
   items3[1] = application_id(metroImportDefault, obj13);
   obj10.children = items3;
-  const items15 = [
+  const items17 = [
     application_id(hasOwnProperty, obj10),
     tmp23(metroImportDefault, {
       style: tmp.serverContent,
       children: tmp23(ServerActionButton, { server, variant: "secondary", grow: true, joiningGuildIds, onAction }),
     }),
   ];
-  obj9.children = items15;
+  obj9.children = items17;
   items2[1] = application_id(metroImportDefault, obj9);
   obj6.children = items2;
   return application_id(metroImportDefault, obj6);
@@ -540,7 +547,7 @@ function GamePoster(game) {
   if (null != game.l30Rank) {
     const intl = tmp2(1112).intl;
     const obj2 = { rank: game.l30Rank };
-    formatToPlainStringResult = intl.formatToPlainString(onAction(2643).mnK52O, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(onAction(2654).mnK52O, obj2);
   }
   const items2 = [game.name, formatToPlainStringResult, game.description];
   const found = items2.filter((item) => null != item);
@@ -553,13 +560,13 @@ function GamePoster(game) {
     children: null,
   };
   const intl2 = tmp2(1112).intl;
-  obj3.accessibilityHint = intl2.string(onAction(2643).xH6QTw);
+  obj3.accessibilityHint = intl2.string(onAction(2654).xH6QTw);
   obj3.onPress = function onPress() {
     const obj = { type: WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME, value: { game_id: game.gameId } };
     return onAction(obj, "identity");
   };
   const items3 = [
-    closure_11(game(17860).GameCoverFromURLs, {
+    closure_11(game(17972).GameCoverFromURLs, {
       gameId: game.gameId,
       name: game.name,
       coverUrl: game.coverUrl,
@@ -582,8 +589,8 @@ function GamePoster(game) {
     const obj8 = { rank: game.l30Rank };
     obj7.text = intl3.formatToPlainString(tmp2(1112).t.UA6RoE, obj8);
     obj6.type = obj7;
-    obj6.icon = tmp2(14128).FireIcon;
-    obj5.children = closure_11(tmp2(6033).Badge, obj6);
+    obj6.icon = tmp2(14251).FireIcon;
+    obj5.children = closure_11(tmp2(6128).Badge, obj6);
     tmp9Result = closure_11(closure_7, obj5);
   }
   items3[1] = tmp9Result;
@@ -690,7 +697,7 @@ const PX_40 = nativeDefault.space.PX_40;
 const PX_64 = nativeDefault.space.PX_64;
 const PX_16 = nativeDefault.space.PX_16;
 const colors = ["rgba(0,0,0,0.65)", "rgba(0,0,0,0.85)"];
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let obj2 = {
   row: {
     paddingTop: nativeDefault.space.PX_16,
@@ -712,6 +719,9 @@ let obj2 = {
   serverIconOverlap: null,
   serverCopy: null,
   serverTitle: null,
+  serverMeta: null,
+  serverOnlineDot: null,
+  serverOfflineDot: null,
   badge: null,
   identity: null,
   identityCompact: null,
@@ -772,18 +782,18 @@ let obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.serverProfile = { paddingVertical: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12 };
 let obj6 = { paddingVertical: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12 };
 obj2.serverCard = {
-  borderRadius: nativeDefault.radii.xl,
+  borderRadius: nativeDefault.radii.lg,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   overflow: "hidden",
 };
 obj2.serverBanner = { height: 111, width: "100%" };
 let obj7 = {
-  borderRadius: nativeDefault.radii.xl,
+  borderRadius: nativeDefault.radii.lg,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   overflow: "hidden",
 };
 obj2.serverContent = {
@@ -802,7 +812,7 @@ const size1 = {
   height: nativeDefault.space.PX_48,
   borderRadius: nativeDefault.radii.md,
   borderWidth: 4,
-  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
 obj2.serverIcon = size1;
@@ -811,14 +821,20 @@ let obj9 = { paddingTop: nativeDefault.space.PX_12 };
 obj2.serverCopy = { gap: nativeDefault.space.PX_12 };
 let obj10 = { gap: nativeDefault.space.PX_12 };
 obj2.serverTitle = { gap: nativeDefault.space.PX_4 };
+let obj11 = { gap: nativeDefault.space.PX_4 };
+obj2.serverMeta = { gap: nativeDefault.space.PX_12 };
+let obj12 = { gap: nativeDefault.space.PX_12 };
+obj2.serverOnlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+let obj13 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+obj2.serverOfflineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
 const size2 = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16, marginRight: 0 };
 obj2.badge = size2;
 obj2.identity = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, minWidth: 0 };
-let obj11 = { gap: nativeDefault.space.PX_4 };
+let obj14 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
 obj2.identityCompact = { gap: nativeDefault.space.PX_8 };
-let obj12 = { gap: nativeDefault.space.PX_8 };
+let obj15 = { gap: nativeDefault.space.PX_8 };
 obj2.identityCopy = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
-let obj13 = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
+let obj16 = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
 obj2.nameRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, minWidth: 0 };
 obj2.name = { flexShrink: 1 };
 const size3 = {
@@ -834,9 +850,9 @@ const size4 = {
   borderRadius: nativeDefault.radii.sm,
 };
 obj2.iconCompact = size4;
-let obj14 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, minWidth: 0 };
+let obj17 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, minWidth: 0 };
 obj2.meta = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let obj15 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj18 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.metaItem = {
   flexDirection: "row",
   maxWidth: "100%",
@@ -853,7 +869,7 @@ const size5 = {
   backgroundColor: nativeDefault.colors.ICON_STATUS_ONLINE,
 };
 obj2.dot = size5;
-let obj16 = {
+let obj19 = {
   flexDirection: "row",
   maxWidth: "100%",
   flexShrink: 1,
@@ -861,19 +877,19 @@ let obj16 = {
   gap: nativeDefault.space.PX_4,
 };
 obj2.mutedDot = { backgroundColor: nativeDefault.colors.ICON_STATUS_OFFLINE };
-let obj17 = { backgroundColor: nativeDefault.colors.ICON_STATUS_OFFLINE };
+let obj20 = { backgroundColor: nativeDefault.colors.ICON_STATUS_OFFLINE };
 obj2.hero = {
   borderRadius: nativeDefault.radii.xl,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-let obj18 = {
+let obj21 = {
   borderRadius: nativeDefault.radii.xl,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
 obj2.heroBody = { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12 };
-let obj19 = { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12 };
+let obj22 = { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12 };
 obj2.heroArt = {
   minHeight: 184,
   borderRadius: nativeDefault.radii.lg,
@@ -883,7 +899,7 @@ obj2.heroArt = {
   padding: nativeDefault.space.PX_12,
 };
 obj2.heroImage = StyleSheet.absoluteFillObject;
-let obj20 = {
+let obj23 = {
   minHeight: 184,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
@@ -892,9 +908,9 @@ let obj20 = {
   padding: nativeDefault.space.PX_12,
 };
 obj2.heroTop = { flexDirection: "row", alignItems: "flex-end", gap: nativeDefault.space.PX_12 };
-let obj21 = { flexDirection: "row", alignItems: "flex-end", gap: nativeDefault.space.PX_12 };
+let obj24 = { flexDirection: "row", alignItems: "flex-end", gap: nativeDefault.space.PX_12 };
 obj2.heroTitle = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
-let obj22 = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
+let obj25 = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
 obj2.heroRank = { flexDirection: "row", minHeight: 20, marginBottom: nativeDefault.space.PX_4 };
 const size6 = {
   width: 72,
@@ -903,7 +919,7 @@ const size6 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
 obj2.cover = size6;
-let obj23 = { flexDirection: "row", minHeight: 20, marginBottom: nativeDefault.space.PX_4 };
+const obj26 = { flexDirection: "row", minHeight: 20, marginBottom: nativeDefault.space.PX_4 };
 obj2.heroCta = {
   flexDirection: "row",
   alignItems: "center",
@@ -912,7 +928,7 @@ obj2.heroCta = {
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   paddingTop: nativeDefault.space.PX_12,
 };
-let obj24 = {
+let obj27 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
@@ -931,7 +947,7 @@ obj2.heroServer = {
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_17 = createStyles.createStyles(obj2);
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_18 = createStyles.createStyles((arg0, arg1) => {
   let num = 180;
   if (arg1) {

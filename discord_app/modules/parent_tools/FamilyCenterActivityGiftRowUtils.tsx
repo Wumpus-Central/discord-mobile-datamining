@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef2168 from "../../../_runtime/metro/02168__.js";
-import _modDef2824 from "FamilyCenter.messages.js";
+import _modDef2846 from "FamilyCenter.messages.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -32,12 +32,12 @@ export function getGiftSubtext(claimed) {
     if (null != gifterName) {
       const intl = util.intl;
       const obj2 = { price: formatPriceResult, username: gifterName };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef2824["o44n/1"], obj2);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef2846["o44n/1"], obj2);
     }
     items = [formatToPlainStringResult];
     const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    const tmp11 = _modDef2824;
+    const tmp11 = _modDef2846;
     if (claimed.claimed) {
       if (claimedAt == null) {
         claimedAt = offeredAt;

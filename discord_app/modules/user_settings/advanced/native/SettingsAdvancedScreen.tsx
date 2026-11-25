@@ -5,7 +5,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(9414).MobileUserSettings;
+const MobileUserSettings = fn(9513).MobileUserSettings;
 const MarketingURLs = fn(1071).MarketingURLs;
 const jsx = fn(21).jsx;
 const size = fn(2);

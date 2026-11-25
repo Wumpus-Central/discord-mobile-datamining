@@ -141,6 +141,10 @@ export const ComponentType = {
   [22]: "CHECKBOX_GROUP",
   CHECKBOX: 23,
   [23]: "CHECKBOX",
+  OVERFLOW_MENU: 25,
+  [25]: "OVERFLOW_MENU",
+  MENU_ACTION_ITEM: 26,
+  [26]: "MENU_ACTION_ITEM",
 };
 export const ButtonStyle = {
   PRIMARY: 1,
@@ -156,6 +160,7 @@ export const ButtonStyle = {
   PREMIUM: 6,
   [6]: "PREMIUM",
 };
+export const MenuActionItemStyle = { DEFAULT: 1, [1]: "DEFAULT", DANGER: 2, [2]: "DANGER", LINK: 3, [3]: "LINK" };
 export const TextInputComponentStyle = { SMALL: 1, [1]: "SMALL", PARAGRAPH: 2, [2]: "PARAGRAPH" };
 export const SeparatorSpacingSize = { SMALL: 1, [1]: "SMALL", LARGE: 2, [2]: "LARGE" };
 export const InvoiceDiscountTypes = {

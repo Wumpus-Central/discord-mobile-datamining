@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
-import _modDef3442 from "../../../Checkpoint2026.messages.js";
+import _modDef3494 from "../../../Checkpoint2026.messages.js";
 import CheckpointScreenDefault from "../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../CheckpointText.tsx";
 import useCheckpointHasUserStatsDefault from "../../../hooks/useCheckpointHasUserStats.tsx";
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6270);
+const CheckpointConstants = fn(6365);
 ({
   CHECKPOINT_CONTROL_SIZE: metroImportDefault,
   CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: closure_8,
@@ -25,7 +25,7 @@ const CheckpointConstants = fn(6270);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: {
     flexGrow: 1,
@@ -162,7 +162,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12642), obj8);
+    tmp20Result = closure_11(tmp2(12806), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;
@@ -173,7 +173,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   obj9.style = items8;
   const tmp2Result = CheckpointScreenDefault;
   const intl = tmp9(1112).intl;
-  const tmp2Result5 = _modDef3442;
+  const tmp2Result5 = _modDef3494;
   const tmp2Result4 = CheckpointTextDefault;
   const items9 = [
     closure_11(tmp2Result4, {
@@ -185,9 +185,9 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   if (!tmp8) {
     const obj11 = { variant: "heading-lg/medium", children: null };
     const intl2 = tmp9(1112).intl;
-    obj11.children = intl2.string(tmp2(3442)["2GRr6H"]);
-    tmp20Result2 = closure_11(tmp2(12426), obj11);
-    const tmp2Result6 = tmp2(12426);
+    obj11.children = intl2.string(tmp2(3494)["2GRr6H"]);
+    tmp20Result2 = closure_11(tmp2(12590), obj11);
+    const tmp2Result6 = tmp2(12590);
   }
   items9[1] = tmp20Result2;
   obj9.children = items9;

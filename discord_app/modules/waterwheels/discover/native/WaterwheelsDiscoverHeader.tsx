@@ -1,6 +1,7 @@
 // discord_app/modules/waterwheels/discover/native/WaterwheelsDiscoverHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2643 from "../../Waterwheels.messages.js";
+import _modDef2654 from "../../Waterwheels.messages.js";
+import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useGameRecordsDefault from "../../../games/hooks/useGameRecords.tsx";
 import openWaterwheelsInterestPickerDefault from "../../interest/native/openWaterwheelsInterestPicker.tsx";
 import InterestGameCoverDefault from "../../interest/native/InterestGameCover.tsx";
@@ -9,18 +10,19 @@ import InterestPickerSessionStore from "../../interest/InterestPickerSessionStor
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
 function openPicker() {
+  const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
   openWaterwheelsInterestPickerDefault(true);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(17861);
+const InterestGamePickerConstants = fn(17973);
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   header: {
     height: nativeDefault.space.PX_64,
@@ -79,7 +81,7 @@ let obj5 = {
 obj2.overflow = { marginLeft: nativeDefault.space.PX_4 };
 let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
-const result = size.fileFinishedImporting("modules/waterwheels/discover/native/WaterwheelsDiscoverHeader.tsx");
+let result = size.fileFinishedImporting("modules/waterwheels/discover/native/WaterwheelsDiscoverHeader.tsx");
 
 export default function WaterwheelsDiscoverHeader() {
   const tmp = closure_9();
@@ -103,17 +105,17 @@ export default function WaterwheelsDiscoverHeader() {
     children: null,
   };
   const intl = require("util").intl;
-  obj5.children = intl.string(_modDef2643.v010oN);
+  obj5.children = intl.string(_modDef2654.v010oN);
   items1[1] = closure_7(require("Text/Text").Heading, obj5);
   obj3.children = items1;
   const items2 = [closure_8(closure_4, obj3)];
   if (0 === stateFromStoresArray.length) {
     const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
     const intl3 = tmp2(1112).intl;
-    obj6.text = intl3.string(_modDef2643.SCFT8N);
-    obj6.icon = closure_7(tmp2(7623).GameControllerIcon, { size: "sm" });
+    obj6.text = intl3.string(_modDef2654.SCFT8N);
+    obj6.icon = closure_7(tmp2(7722).GameControllerIcon, { size: "sm" });
     obj6.onPress = openPicker;
-    let tmp8Result = closure_7(tmp2(5515).Button, obj6);
+    let tmp8Result = closure_7(tmp2(5610).Button, obj6);
   } else {
     const obj7 = {
       style: tmp.picks,
@@ -124,11 +126,11 @@ export default function WaterwheelsDiscoverHeader() {
       children: null,
     };
     const intl4 = tmp2(1112).intl;
-    obj7.accessibilityLabel = intl4.string(_modDef2643["788GGP"]);
+    obj7.accessibilityLabel = intl4.string(_modDef2654["788GGP"]);
     const obj8 = { text: null };
     const intl5 = tmp2(1112).intl;
     const obj9 = { count: stateFromStoresArray.length };
-    const items3 = [intl5.formatToPlainString(_modDef2643.tQPcpe, obj9)];
+    const items3 = [intl5.formatToPlainString(_modDef2654.tQPcpe, obj9)];
     HermesBuiltin.arraySpread(
       substr.map((name) => name.name),
       1,
@@ -164,8 +166,8 @@ export default function WaterwheelsDiscoverHeader() {
       const obj11 = { variant: "body-sm/semibold", color: "text-strong", style: tmp.overflow, children: null };
       const intl2 = tmp2(1112).intl;
       const obj12 = { count: diff };
-      obj11.children = intl2.formatToPlainString(_modDef2643["OxfP+s"], obj12);
-      tmp8Result2 = closure_7(tmp2(5508).Text, obj11);
+      obj11.children = intl2.formatToPlainString(_modDef2654["OxfP+s"], obj12);
+      tmp8Result2 = closure_7(tmp2(5603).Text, obj11);
     }
     items4[1] = tmp8Result2;
     obj10.children = items4;

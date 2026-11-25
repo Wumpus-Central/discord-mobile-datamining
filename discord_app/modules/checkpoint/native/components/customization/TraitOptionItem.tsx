@@ -4,7 +4,7 @@ import useA11yRolesNative from "../../../../../../discord_common/js/packages/des
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointCharacterAssets from "../../../CheckpointCharacterAssets.tsx";
-import inlineStyles from "../../../../../../_runtime/07813_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07912_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import CheckpointConstants from "../../../CheckpointConstants.tsx";

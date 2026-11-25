@@ -231,7 +231,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -298,7 +298,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "Array" };
+              let obj10 = { uploadToken: "top" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -385,7 +385,7 @@ let closure_19 = async function _inspectConjurePreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -464,7 +464,7 @@ let closure_20 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -631,14 +631,14 @@ let closure_20 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const isLaunched = fn(6811).isLaunched;
-const LocalNotificationTypes = fn(7595).LocalNotificationTypes;
-let items = [fn(5655).OAuth2Scopes.BOT, fn(5655).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const isLaunched = fn(6906).isLaunched;
+const LocalNotificationTypes = fn(7694).LocalNotificationTypes;
+let items = [fn(5750).OAuth2Scopes.BOT, fn(5750).OAuth2Scopes.APPLICATIONS_COMMANDS];
 const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(14562);
+const conjurePreviewControlLease = fn(14684);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -741,7 +741,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(14568);
+const conjurePreviewOperationSurfaces = fn(14690);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -750,14 +750,14 @@ let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
   }
   let tmp3 = null;
   if (null != prop) {
-    const conjureBuilderPreviewFrame = iframeId(7551).getConjureBuilderPreviewFrame(prop);
+    const conjureBuilderPreviewFrame = iframeId(7646).getConjureBuilderPreviewFrame(prop);
     let tmp7 = null;
     if (null != conjureBuilderPreviewFrame) {
       const obj3 = { applicationId: prop, launched: isLaunched(conjureBuilderPreviewFrame) };
       tmp7 = obj3;
     }
     tmp3 = tmp7;
-    const obj2 = iframeId(7551);
+    const obj2 = iframeId(7646);
   }
   let launched;
   if (tmp3 != null) {
@@ -778,13 +778,13 @@ let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
     }
     let tmp12 = null;
     if (null != prop1) {
-      const conjureBuilderPreviewFrame1 = iframeId(7551).getConjureBuilderPreviewFrame(prop1);
+      const conjureBuilderPreviewFrame1 = iframeId(7646).getConjureBuilderPreviewFrame(prop1);
       iframeId = null;
       if (isLaunched(conjureBuilderPreviewFrame1)) {
         iframeId = conjureBuilderPreviewFrame1.data.iframeId;
       }
       tmp12 = iframeId;
-      const obj5 = iframeId(7551);
+      const obj5 = iframeId(7646);
     }
     iframeId = tmp12;
     const obj6 = {
@@ -803,10 +803,11 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/conjure/shared/ConjurePlatformUtils.native.tsx");
 
 export default {
-  openConjureAppInstallModal(application) {
-    application = application.application;
+  openConjureAppInstallModal(arg0) {
+    ({ application, onClose: require } = arg0);
+    c1 = false;
     let oauth2InstallParams;
-    ({ applicationId, guildId, onClose } = application);
+    ({ applicationId, guildId } = arg0);
     if (application != null) {
       const integrationTypesConfig = application.integrationTypesConfig;
       if (integrationTypesConfig != null) {
@@ -842,13 +843,28 @@ export default {
       deserializeResult = deserializer.deserialize(oauth2InstallParams.permissions);
     }
     obj.permissions = deserializeResult;
-    obj.callback = function callback() {
+    obj.callback = function callback(arg0) {
+      if (!c1) {
+        c1 = true;
+        if (_require != null) {
+          tmp2(true !== tmp);
+        }
+      }
       return true;
     };
-    obj.dismissOAuthModal = onClose;
+    obj.dismissOAuthModal = function dismissOAuthModal() {
+      const timerId = setTimeout(() => {
+        if (!c1) {
+          c1 = true;
+          if (closure_1_0 != null) {
+            tmp(false);
+          }
+        }
+      }, 1000);
+    };
     if (ActionSheetStore.isOpen()) {
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp16 = asyncRequireImpl(7596, dependencyMap.paths);
+      const tmp16 = asyncRequireImpl(7695, dependencyMap.paths);
       const obj2 = {};
       const merged = Object.assign(obj);
       obj2.sheetKey = ConjureAppInstallSheet;

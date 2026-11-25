@@ -6,7 +6,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(8156);
+const GuildPowerupsConstants = fn(8255);
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
   GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,

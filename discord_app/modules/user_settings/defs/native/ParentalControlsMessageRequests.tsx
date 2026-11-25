@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2824 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2846 from "../../../parent_tools/FamilyCenter.messages.js";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
@@ -11,7 +11,7 @@ import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSetti
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11815);
+const SettingBuilders = fn(11914);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -19,9 +19,9 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2824["7aYkh1"]);
+    return intl.string(_modDef2846["7aYkh1"]);
   },
-  parent: fn(9414).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(9513).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

@@ -81,7 +81,7 @@ function BenefitsCarousel(cardWidth) {
   };
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   const tmp9 = closure_5;
-  const prop = cardWidth(12202).GAME_ORGANIZATION_BENEFITS;
+  const prop = cardWidth(12301).GAME_ORGANIZATION_BENEFITS;
   obj2.children = prop.map((key, index) => {
     const obj = { cardWidth, text: null, Illustration: null, isLast: null };
     const intl = util.intl;
@@ -94,17 +94,17 @@ function BenefitsCarousel(cardWidth) {
     obj.isLast = index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1;
     return timestampProducer(BenefitCard, obj, key.key);
   });
-  obj.children = closure_6(displayNoun(9553), obj2);
+  obj.children = closure_6(displayNoun(9652), obj2);
   const children = [closure_6(closure_5, obj)];
   let tmp10Result = null;
-  if (cardWidth(12202).GAME_ORGANIZATION_BENEFITS.length > 1) {
+  if (cardWidth(12301).GAME_ORGANIZATION_BENEFITS.length > 1) {
     tmp10Result = null;
     if (tmp6 > 0) {
       tmp10Result = null;
       if (tmp7[0] > tmp6) {
         const obj3 = {
           containerStyle: tmp2.pagination,
-          numberOfItems: tmp13(12202).GAME_ORGANIZATION_BENEFITS.length,
+          numberOfItems: tmp13(12301).GAME_ORGANIZATION_BENEFITS.length,
           currentIndex: tmp4,
         };
         tmp10Result = closure_6(tmp13(1186).CarouselPagination, obj3);
@@ -119,7 +119,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_10 = createStyles.createStyles((width) => {
   const obj = {
     carouselContainer: { marginHorizontal: -PX_16 },

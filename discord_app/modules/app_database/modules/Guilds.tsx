@@ -10,7 +10,7 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
-const updateJoinedAt = fn(4784).updateJoinedAt;
+const updateJoinedAt = fn(4879).updateJoinedAt;
 let closure_9 = new LoggerDefault("Guilds");
 class Guilds {
   constructor() {
@@ -96,10 +96,10 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
           filterRoleDeletesResult = obj.fromServerArray(tmp2.id, tmp2.roles);
           tmp7 = importAll;
         }
-        let tmp7Result = tmp7(4780);
-        let tmp7Result3 = tmp7(4780);
+        let tmp7Result = tmp7(4875);
+        let tmp7Result3 = tmp7(4875);
         let fromBackgroundSyncResult = tmp7Result3.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result4 = tmp7(4825);
+        let tmp7Result4 = tmp7(4920);
         let result = tmp7Result4.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, GuildMemberStore.getSelfMember(tmp2.id)), arg1);
       }

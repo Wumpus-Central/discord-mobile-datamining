@@ -238,7 +238,11 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj8 = { logoUrl, buttonColor: "Array", categoryName: 35 };
+  const obj8 = {
+    logoUrl,
+    buttonColor: "Array",
+    categoryName: 1018840830874056800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+  };
   let name;
   if (category != null) {
     name = category.name;
@@ -435,7 +439,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, UserSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   border: null,

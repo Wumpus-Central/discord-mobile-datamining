@@ -4,9 +4,9 @@ import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner.tsx"
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
-let closure_3 = fn(8949).useBestActiveChatInputContainerHeight;
+let closure_3 = fn(9048).useBestActiveChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: null };
 const rect = {
   opacity: 1,

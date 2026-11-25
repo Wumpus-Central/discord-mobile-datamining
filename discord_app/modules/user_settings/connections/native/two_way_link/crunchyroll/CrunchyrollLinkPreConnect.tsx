@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import _modDef7670 from "../../../../../../../_runtime/metro/07670__.js";
+import _modDef7769 from "../../../../../../../_runtime/metro/07769__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(7663).CrunchyrollLinkModalScenes;
+let closure_4 = fn(7762).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1071).PlatformTypes;
-const redirectDestination = fn(7669).CRUNCHYROLL_LINK_DEST_ORIGIN;
+const redirectDestination = fn(7768).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles({ image: { width: 152, height: 123 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -29,7 +29,7 @@ export default function CrunchyrollLinkPreConnect() {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,
-    img: _modDef7670,
+    img: _modDef7769,
     imgStyle: tmp.image,
     title: null,
     body: null,
@@ -40,11 +40,11 @@ export default function CrunchyrollLinkPreConnect() {
   const intl2 = navigation(1112).intl;
   obj2.body = intl2.string(navigation(1112).t.oS4NEH);
   obj2.redirectDestination = redirectDestination;
-  return jsx(navigation(7631).TwoWayLinkPreConnect, {
+  return jsx(navigation(7730).TwoWayLinkPreConnect, {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,
-    img: _modDef7670,
+    img: _modDef7769,
     imgStyle: tmp.image,
     title: null,
     body: null,

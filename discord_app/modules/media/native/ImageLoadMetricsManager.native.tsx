@@ -18,7 +18,7 @@ let closure_9 = ApexExperiment.createApexExperiment({
   name: "2026-10-mobile-image-load-metrics",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: { 0: { enabled: false }, 1: { enabled: false }, 2: { enabled: true } },
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
 class ImageLoadMetricsManager extends tmp4 {
   constructor() {

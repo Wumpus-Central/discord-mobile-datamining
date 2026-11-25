@@ -6,17 +6,17 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let items = [fn(4750).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-const SettingBuilders = fn(11815);
+let items = [fn(4845).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
+const SettingBuilders = fn(11914);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(16767).AccessibilityIcon,
+  IconComponent: fn(16888).AccessibilityIcon,
   useTrailing() {
     [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = _slicedToArray(first(9420).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(9519).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

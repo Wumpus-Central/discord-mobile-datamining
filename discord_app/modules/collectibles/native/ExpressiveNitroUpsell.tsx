@@ -4,7 +4,7 @@ import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../_runtime/05472_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1073).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   nitroUpsellPill: {
     alignSelf: "stretch",
@@ -69,19 +69,19 @@ export default function _default(onTrackPress) {
   const tmp = closure_9();
   importDefault = tmp;
   let tmp4 = _modDef671;
-  let obj = onTrackPress(5481);
-  const tmp4Result = tmp4(onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START));
+  let obj = onTrackPress(5576);
+  const tmp4Result = tmp4(onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START));
   const alphaResult = tmp4(
-    onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START),
+    onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START),
   ).alpha(0.4);
-  const hexResult = tmp4(onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START))
+  const hexResult = tmp4(onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START))
     .alpha(0.4)
     .hex();
   const tmp7 = _modDef671;
-  const obj4 = onTrackPress(5481);
-  const tmp7Result = tmp7(onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END));
+  const obj4 = onTrackPress(5576);
+  const tmp7Result = tmp7(onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END));
   items = [onTrackPress];
-  const alphaResult1 = tmp7(onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END)).alpha(
+  const alphaResult1 = tmp7(onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END)).alpha(
     0.4,
   );
   const items1 = [tmp.strikedPrice];
@@ -97,8 +97,8 @@ export default function _default(onTrackPress) {
     obj2.title = intl.string(util.t.XcOMLu);
     const intl2 = util.intl;
     obj2.description = intl2.string(util.t.JhE8nA);
-    obj.openLazy(asyncRequireImpl(11155, dependencyMap.paths), "ShopNitroUpsellPromoSheet", obj2, "stack");
-    const tmp4 = asyncRequireImpl(11155, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11254, dependencyMap.paths), "ShopNitroUpsellPromoSheet", obj2, "stack");
+    const tmp4 = asyncRequireImpl(11254, dependencyMap.paths);
   }, items);
   const callback1 = noop.useCallback(
     (children, id) =>
@@ -122,12 +122,12 @@ export default function _default(onTrackPress) {
   const obj3 = { style: tmp.nitroUpsellGradient, colors: null, start, end, pointerEvents: "none" };
   const items2 = [
     hexResult,
-    tmp7(onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END)).alpha(0.4).hex(),
+    tmp7(onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END)).alpha(0.4).hex(),
   ];
   obj3.colors = items2;
   const items3 = [closure_7(LinearGradientDefault, obj3), ,];
   const items4 = [tmp.nitroUpsellSavings];
-  const hexResult1 = tmp7(onTrackPress(5481).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END))
+  const hexResult1 = tmp7(onTrackPress(5576).useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END))
     .alpha(0.4)
     .hex();
   let androidTextPadding;
@@ -143,11 +143,11 @@ export default function _default(onTrackPress) {
     defaultPriceHook: callback1,
     premiumPriceHook: callback2,
   });
-  items3[1] = closure_7(onTrackPress(5508).Text, obj5);
+  items3[1] = closure_7(onTrackPress(5603).Text, obj5);
   const obj6 = { style: tmp.nitroUpsellCta, children: null };
   obj9 = onTrackPress(1378);
   const items5 = [
-    closure_7(onTrackPress(9496).NitroWheelIcon, {
+    closure_7(onTrackPress(9595).NitroWheelIcon, {
       color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
       size: "sm",
       style: tmp.nitroUpsellIcon,
@@ -167,9 +167,9 @@ export default function _default(onTrackPress) {
   };
   let intl2 = tmp5(1112).intl;
   obj8.children = intl2.string(onTrackPress(1112).t["8x0jKT"]);
-  items5[1] = closure_7(onTrackPress(5508).Text, obj8);
+  items5[1] = closure_7(onTrackPress(5603).Text, obj8);
   tmp5Result = onTrackPress(1378);
-  items5[2] = closure_7(onTrackPress(7432).ChevronSmallRightIcon, {
+  items5[2] = closure_7(onTrackPress(7527).ChevronSmallRightIcon, {
     color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
     size: "xs",
     style: tmp.nitroUpsellChevron,

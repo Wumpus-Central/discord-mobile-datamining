@@ -7,7 +7,7 @@ import CheckpointStore from "../../../../CheckpointStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointTransitionConstants = fn(12431);
+const CheckpointTransitionConstants = fn(12595);
 ({
   CHECKPOINT_FRIENDS_CONTENT_FADE_OUT: closure_8,
   CHECKPOINT_SIDEKICK_CONTENT_FADE_IN: closure_9,
@@ -16,7 +16,7 @@ const CheckpointTransitionConstants = fn(12431);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,
@@ -41,7 +41,7 @@ obj2.wideContainer = {
   alignItems: "center",
   alignSelf: "center",
   width: "100%",
-  maxWidth: fn(12647).CHECKPOINT_WIDE_MAX_WIDTH,
+  maxWidth: fn(12811).CHECKPOINT_WIDE_MAX_WIDTH,
 };
 obj2.wideScenePane = {
   width: "50%",
@@ -50,7 +50,7 @@ obj2.wideScenePane = {
   justifyContent: "center",
   paddingRight: PX_32,
 };
-obj2.wideCopy = { width: "50%", paddingLeft: PX_32, paddingVertical: fn(6270).CHECKPOINT_NAV_HEIGHT };
+obj2.wideCopy = { width: "50%", paddingLeft: PX_32, paddingVertical: fn(6365).CHECKPOINT_NAV_HEIGHT };
 obj2.wideTransition = { position: "absolute", top: 0, left: PX_32, right: 0, bottom: 0, justifyContent: "center" };
 let closure_15 = createStyles.createStyles(obj2);
 let size = fn(2);

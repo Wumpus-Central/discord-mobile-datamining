@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/native/ConjureClarificationEntityPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4192 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -263,7 +263,7 @@ function GuildEntityPicker(value) {
                             let obj = { content: null, key: null, stackingBehavior: "stack" };
                             obj4.selectedChannel = found;
                             const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef4192["jtBVV+"]);
+                            obj4.noChannelOptionLabel = intl.string(_modDef4244["jtBVV+"]);
                             obj4.onSelect = function onSelect(stateFromStores1) {
                               if (null == stateFromStores1) {
                                 items = [];

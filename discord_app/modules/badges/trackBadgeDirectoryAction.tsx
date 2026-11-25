@@ -3,11 +3,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import BadgeDirectoryStore from "BadgeDirectoryStore.tsx";
 
-const AnalyticEvents = fn(1071).AnalyticEvents;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/badges/trackBadgeDirectoryAction.tsx");
-
-export default function trackBadgeDirectoryAction(arg0) {
+function trackBadgeDirectoryAction(arg0) {
   ({ badge, displayedUserId } = arg0);
   ({ actionName, isSociallyNavigated, hasUnreadIndicator, source, surface } = arg0);
   const currentUser = UserStore.getCurrentUser();
@@ -91,4 +87,30 @@ export default function trackBadgeDirectoryAction(arg0) {
   obj2.surface = surface;
   obj2.source = source;
   AnalyticsUtilsDefault.track(AnalyticEvents.BADGE_DIRECTORY_ACTION, obj2);
+}
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/badges/trackBadgeDirectoryAction.tsx");
+
+export default trackBadgeDirectoryAction;
+export function trackOwnBadgeDirectoryOpened(link) {
+  const currentUser = UserStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  trackBadgeDirectoryAction({
+    actionName: "badge_directory_opened",
+    displayedUserId: id,
+    isSociallyNavigated: false,
+    hasUnreadIndicator: false,
+    source: link,
+  });
+  const obj = {
+    actionName: "badge_directory_opened",
+    displayedUserId: id,
+    isSociallyNavigated: false,
+    hasUnreadIndicator: false,
+    source: link,
+  };
 }

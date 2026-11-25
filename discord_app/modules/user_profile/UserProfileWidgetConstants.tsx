@@ -4,41 +4,41 @@ import ApplicationStore from "../applications/ApplicationStore.tsx";
 
 require = fn;
 const items = [
-  fn(6044).WidgetType.CLIPS_GALLERY,
-  fn(6044).WidgetType.APPLICATION,
-  fn(6044).WidgetType.FAVORITE_GAMES,
-  fn(6044).WidgetType.PLAYED_GAMES,
-  fn(6044).WidgetType.CURRENT_GAMES,
-  fn(6044).WidgetType.WANT_TO_PLAY_GAMES,
+  fn(6139).WidgetType.CLIPS_GALLERY,
+  fn(6139).WidgetType.APPLICATION,
+  fn(6139).WidgetType.FAVORITE_GAMES,
+  fn(6139).WidgetType.PLAYED_GAMES,
+  fn(6139).WidgetType.CURRENT_GAMES,
+  fn(6139).WidgetType.WANT_TO_PLAY_GAMES,
 ];
-const items1 = [fn(6044).WidgetType.FAVORITE_GAMES];
+const items1 = [fn(6139).WidgetType.FAVORITE_GAMES];
 const items2 = [
-  fn(6044).WidgetType.CURRENT_GAMES,
-  fn(6044).WidgetType.FAVORITE_GAMES,
-  fn(6044).WidgetType.CLIPS_GALLERY,
+  fn(6139).WidgetType.CURRENT_GAMES,
+  fn(6139).WidgetType.FAVORITE_GAMES,
+  fn(6139).WidgetType.CLIPS_GALLERY,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
 
 export const WIDGET_SORT_ORDER = items;
 export const WIDGET_TITLES_BY_TYPE = {
-  [fn(6044).WidgetType.FAVORITE_GAMES]: () => {
+  [fn(6139).WidgetType.FAVORITE_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.Rpf6Ak);
   },
-  [fn(6044).WidgetType.CURRENT_GAMES]: () => {
+  [fn(6139).WidgetType.CURRENT_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.zs6NsE);
   },
-  [fn(6044).WidgetType.WANT_TO_PLAY_GAMES]: () => {
+  [fn(6139).WidgetType.WANT_TO_PLAY_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.I509Dl);
   },
-  [fn(6044).WidgetType.PLAYED_GAMES]: () => {
+  [fn(6139).WidgetType.PLAYED_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.QTq6Pf);
   },
-  [fn(6044).WidgetType.APPLICATION]: (applicationId) => {
+  [fn(6139).WidgetType.APPLICATION]: (applicationId) => {
     const application = ApplicationStore.getApplication(applicationId.applicationId);
     let str;
     if (application != null) {
@@ -49,7 +49,7 @@ export const WIDGET_TITLES_BY_TYPE = {
     }
     return str;
   },
-  [fn(6044).WidgetType.CLIPS_GALLERY]: () => {
+  [fn(6139).WidgetType.CLIPS_GALLERY]: () => {
     const intl = util.intl;
     return intl.string(util.t.zY8Ghg);
   },

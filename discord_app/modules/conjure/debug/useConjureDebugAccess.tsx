@@ -4,6 +4,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/debug/useConjureDebugAccess.tsx");
 
+export function canOpenConjureDebugPane() {
+  const DeveloperMode = UserSettings.DeveloperMode;
+  return DeveloperMode.getSetting() || false;
+}
 export function useConjureDebugPaneEnabled() {
   const DeveloperMode = UserSettings.DeveloperMode;
   return DeveloperMode.useSetting() || false;

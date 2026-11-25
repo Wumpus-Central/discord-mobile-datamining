@@ -328,13 +328,13 @@ class ChatInputAppCommandManager {
     return null;
   }
 }
-const ChannelAutocompleteConstants = fn(6948);
+const ChannelAutocompleteConstants = fn(7043);
 ({
   extractGameMentionIds: closure_11,
   GAME_MENTION_RAW_RE_GLOBAL: closure_12,
   GAME_MENTION_SENTINEL: map1,
 } = ChannelAutocompleteConstants);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   commandOption: {
     backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,

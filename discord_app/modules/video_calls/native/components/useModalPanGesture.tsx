@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/useModalPanGesture.tsx
 import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import _mod1706 from "../../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../../_runtime/05177_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

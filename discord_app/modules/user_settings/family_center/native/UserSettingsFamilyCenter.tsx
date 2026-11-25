@@ -3,7 +3,7 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef2824 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2846 from "../../../parent_tools/FamilyCenter.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -30,7 +30,7 @@ function FamilyCenterLoading() {
 function FamilyCenterLoadError() {
   const tmp = closure_18();
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2824.nGX8Co);
+  const stringResult = intl.string(_modDef2846.nGX8Co);
   require = stringResult;
   items = [stringResult];
   const effect = noop.useEffect(() => {
@@ -230,7 +230,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const AgeGateSource = fn(1096).AgeGateSource;
-const FamilyCenterConstants = fn(8072);
+const FamilyCenterConstants = fn(8171);
 ({
   FamilyCenterPageLocationAnalyticsIds: closure_10,
   FamilyCenterSubPageAnalyticsIds: closure_11,
@@ -240,7 +240,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [,];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { display: "flex", flex: 1 },
   segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },

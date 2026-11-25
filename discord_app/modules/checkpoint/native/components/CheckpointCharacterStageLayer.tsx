@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointTransitionConstants = fn(12431);
+const CheckpointTransitionConstants = fn(12595);
 ({
   CHECKPOINT_CHARACTER_STAGE_FADE: metroImportDefault,
   CHECKPOINT_CHARACTER_STAGE_HIDE: closure_8,

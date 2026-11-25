@@ -2,8 +2,8 @@
 import _mod17 from "../../../../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import _modDef3410 from "../../../../../Checkpoint.messages.js";
-import _modDef3442 from "../../../../../Checkpoint2026.messages.js";
+import _modDef3462 from "../../../../../Checkpoint.messages.js";
+import _modDef3494 from "../../../../../Checkpoint2026.messages.js";
 import FriendsIcon from "../../../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import CheckpointConstants from "../../../../../CheckpointConstants.tsx";
 import CheckpointTextDefault from "../../../CheckpointText.tsx";
@@ -38,12 +38,12 @@ export default function FriendsHeader(title) {
   const intl = util.intl;
   const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp2 = CheckpointTextDefault;
-  obj5.children = intl.string(_modDef3410.ZQakPR).toLocaleUpperCase();
+  obj5.children = intl.string(_modDef3462.ZQakPR).toLocaleUpperCase();
   items[1] = hasOwnProperty(tmp2, obj5);
   obj3.children = items;
   const items1 = [timestampProducer(View, obj3)];
   const obj6 = { accessibilityLabel: titleAccessibilityLabel, children: null };
-  const stringResult = intl.string(_modDef3410.ZQakPR);
+  const stringResult = intl.string(_modDef3462.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = hasOwnProperty(CheckpointDisplayTextDefault, obj6);
   obj2.children = items1;
@@ -58,25 +58,25 @@ export function getSquadTitleAccessibilityLabel(items7) {
   const found = items7.filter((item) => "" !== item.trim());
   if (0 === found.length) {
     const intl = util.intl;
-    let stringResult = intl.string(_modDef3410.OzY5Ns);
+    let stringResult = intl.string(_modDef3462.OzY5Ns);
   } else {
     const intl2 = util.intl;
     const obj = { names: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
     obj.names = listFormat.format(found);
-    stringResult = intl2.formatToPlainString(_modDef3442.XB99KC, obj);
+    stringResult = intl2.formatToPlainString(_modDef3494.XB99KC, obj);
   }
   return stringResult;
 }
 export function getSidekickTitleAccessibilityLabel(name) {
   if ("" === name.trim()) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef3410["+uwOHt"]);
+    let stringResult = intl2.string(_modDef3462["+uwOHt"]);
   } else {
     const intl = util.intl;
     const obj = { name };
-    stringResult = intl.formatToPlainString(_modDef3442.xRtlbW, obj);
+    stringResult = intl.formatToPlainString(_modDef3494.xRtlbW, obj);
   }
   return stringResult;
 }

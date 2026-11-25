@@ -34,7 +34,7 @@ export default function RoleIconActionSheet(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -158,7 +158,7 @@ export default function RoleIconActionSheet(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -180,18 +180,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(19893).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(19893);
+                  closure_0(19998).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(19998);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(19893);
+                const tmp22 = closure_0(19998);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(19897).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(20002).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -199,8 +199,8 @@ export default function RoleIconActionSheet(arg0) {
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1112).intl;
-              closure_0(5598).presentError(intl.string(closure_0(1112).t.R0RpRX));
-              const obj2 = closure_0(5598);
+              closure_0(5693).presentError(intl.string(closure_0(1112).t.R0RpRX));
+              const obj2 = closure_0(5693);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -234,7 +234,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(9396).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(9495).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

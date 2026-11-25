@@ -15,7 +15,7 @@ let closure_10 = async function _openCheckpoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -107,8 +107,8 @@ let closure_10 = async function _openCheckpoint(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(12407).CheckpointFetchStates;
-const CheckpointModalConstants = fn(12413);
+const CheckpointFetchStates = fn(12571).CheckpointFetchStates;
+const CheckpointModalConstants = fn(12577);
 ({ CHECKPOINT_MODAL_KEY: metroImportDefault, CHECKPOINT_UNAVAILABLE_MODAL_KEY: closure_8 } = CheckpointModalConstants);
 const AppStates = fn(1071).AppStates;
 const size = fn(2);

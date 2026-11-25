@@ -10,7 +10,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const isGuildEventEnded = fn(5649).isGuildEventEnded;
+const isGuildEventEnded = fn(5744).isGuildEventEnded;
 const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);

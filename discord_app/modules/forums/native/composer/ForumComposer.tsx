@@ -131,7 +131,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(10932).TagIcon;
+      obj6.IconComponent = tmp2(11031).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -161,12 +161,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1626).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1626).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11552, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11651, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7618).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7717).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10641).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10740).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -178,9 +178,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1112).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1112).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9563).ReactionIcon;
+      obj7.IconComponent = tmp2(9662).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7618).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7717).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -198,13 +198,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(7011).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(7106).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5515).Button, obj9);
+    obj8.children = closure_29(tmp2(5610).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -218,9 +218,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11550).KeyboardIcon;
+      let ImageIcon = tmp2(11649).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(7027).ImageIcon;
+      ImageIcon = tmp2(7122).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -232,7 +232,7 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7618).HeaderActionButton, obj11);
+    closure_29(tmp2(7717).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -244,12 +244,12 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(7976).DraftType;
-const SlowmodeType = fn(8209).SlowmodeType;
+const DraftType = fn(8075).DraftType;
+const SlowmodeType = fn(8308).SlowmodeType;
 let Constants = fn(1071);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(4773).ChannelFlags;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ChannelFlags = fn(4868).ChannelFlags;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 let closure_27 = fn(1111).OpenThreadAnalyticsLocations;
 Constants = fn(1082);
@@ -257,7 +257,7 @@ Constants = fn(1082);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -617,7 +617,7 @@ export default function ForumComposer(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -770,7 +770,7 @@ export default function ForumComposer(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

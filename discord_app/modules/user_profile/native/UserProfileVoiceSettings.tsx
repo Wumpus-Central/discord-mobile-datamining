@@ -281,8 +281,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_15();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(6255).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(6255);
+  const trackUserProfileAction = channel(6350).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(6350);
   items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -315,9 +315,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(8516).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(8615).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10360).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10459).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -325,11 +325,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_13(tmp2(7430).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_13(tmp2(7430).UserProfileCardRows, obj6);
+    obj6.children = closure_13(tmp2(7525).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_13(tmp2(7525).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_13(trackUserProfileAction(7430), obj4);
-    const tmp6Result = trackUserProfileAction(7430);
+    closure_13(trackUserProfileAction(7525), obj4);
+    const tmp6Result = trackUserProfileAction(7525);
   }
   return tmp8;
 }
@@ -337,10 +337,10 @@ const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, VideoToggleState: closure_10 } = Constants);
 const Permissions = fn(1082).Permissions;
-const maxValue = fn(5729).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const maxValue = fn(5824).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_15 = createStyles.createStyles({
   card: { paddingBottom: 0 },
   cardTitle: { marginBottom: 0 },

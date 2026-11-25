@@ -18,7 +18,7 @@ require = fn;
 let closure_5 = fn(1073).CollectiblesMobileShopScreen;
 let closure_6 = fn(1624).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,
@@ -188,13 +188,13 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   const tmp2Result = PremiumUtilsDefault;
   let result = require("CollectiblesUtils").isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp4(6197).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result8 = tmp4(6197);
+    result = tmp4(6292).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result8 = tmp4(6292);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    result1 = tmp4(6197).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result9 = tmp4(6197);
+    result1 = tmp4(6292).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result9 = tmp4(6292);
   }
   let tmp30 = null == selectedSkuId;
   if (!tmp30) {

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish_eval/conjurePublishEval.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePublishEvalTypes from "ConjurePublishEvalTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -33,7 +33,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
           };
           closure_133_1(closure_133_2[11]).dispatch(obj14);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp32) {
         c7 = tmp;
@@ -120,7 +120,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
   })();
 };
 let closure_12 = { quality: null, metExpectations: null, speed: null };
-let obj = { quality: _modDef4192["N94/JU"], metExpectations: _modDef4192["7mnit0"], speed: _modDef4192["J/xftE"] };
+let obj = { quality: _modDef4244["N94/JU"], metExpectations: _modDef4244["7mnit0"], speed: _modDef4244["J/xftE"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_eval/conjurePublishEval.tsx");
 
@@ -243,7 +243,7 @@ export function conjurePublishEvalScoreLabel(dimension, score) {
   obj = { score, dimension: null };
   const intl2 = util.intl;
   obj.dimension = intl2.string(obj[dimension]);
-  return intl.formatToPlainString(_modDef4192.fML8aJ, obj);
+  return intl.formatToPlainString(_modDef4244.fML8aJ, obj);
 }
 export function useConjurePublishEvalForm(pending) {
   _require = pending;
@@ -302,7 +302,7 @@ export function useConjurePublishEvalForm(pending) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

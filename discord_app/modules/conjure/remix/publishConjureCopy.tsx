@@ -54,7 +54,7 @@ let closure_7 = async function _publishConjureCopy(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -117,6 +117,10 @@ let closure_7 = async function _publishConjureCopy(arg0) {
           c8 = 3;
           const obj6 = { value, done: true };
           return obj6;
+        } else if ("approved" !== value) {
+          c5 = 0;
+          c8 = 3;
+          return { value: null, done: true };
         } else {
           c5 = 0;
           if (closure_132_6(closure_131_0)) {

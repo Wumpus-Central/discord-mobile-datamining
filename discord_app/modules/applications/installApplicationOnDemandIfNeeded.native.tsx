@@ -15,7 +15,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -116,9 +116,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5102).dismissKeyboard();
-          let obj = closure_1_0(5102);
-          closure_1_0(9970).openOAuth2Modal({
+          closure_1_0(5197).dismissKeyboard();
+          let obj = closure_1_0(5197);
+          closure_1_0(10069).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

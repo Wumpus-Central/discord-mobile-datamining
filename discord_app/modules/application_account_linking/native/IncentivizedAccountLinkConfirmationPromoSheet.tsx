@@ -8,7 +8,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ illustration: { width: 150, height: 150 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -22,7 +22,7 @@ export default function IncentivizedAccountLinkConfirmationPromoSheet(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, resizeMode: "contain", style: null, enableAnimation: null };
   const obj3 = { uri: null };
-  obj3.uri = importDefault(stateFromStores ? 17360 : 17361);
+  obj3.uri = importDefault(stateFromStores ? 17471 : 17472);
   obj2.source = obj3;
   obj2.style = tmp.illustration;
   obj2.enableAnimation = !stateFromStores;

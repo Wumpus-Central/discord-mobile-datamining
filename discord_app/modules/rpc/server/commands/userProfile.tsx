@@ -27,7 +27,7 @@ let closure_6 = async function _openUserProfileForSocket(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -107,9 +107,9 @@ let closure_6 = async function _openUserProfileForSocket(arg0) {
 const RPCCommands = fn(1071).RPCCommands;
 let closure_4 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15701);
+const CONTEXT_MENU_ICON_NAMES = fn(15822);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
-  scope: fn(5671).RPC_EMBEDDED_APP_SCOPE,
+  scope: fn(5766).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {
     return openUserProfileForSocket(socket.socket, socket.args.user_id);
   },

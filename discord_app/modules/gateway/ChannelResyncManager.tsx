@@ -136,7 +136,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -298,7 +298,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -325,7 +325,7 @@ let closure_25 = async function _getResyncGuilds() {
   );
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4773).ChannelFlags;
+const ChannelFlags = fn(4868).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

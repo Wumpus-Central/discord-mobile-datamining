@@ -1,13 +1,13 @@
 // discord_app/modules/group_dm/native/GroupDMNitroCapCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef10404 from "../../../../_runtime/metro/10404__.js";
+import _modDef10503 from "../../../../_runtime/metro/10503__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11954).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+let closure_6 = fn(12053).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapCoachmark.tsx");
@@ -18,16 +18,16 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11952).useGroupDMNitroAudience();
-  const obj2 = channelId(11952);
-  channelId(9420);
+  const groupDMNitroAudience = channelId(12051).useGroupDMNitroAudience();
+  const obj2 = channelId(12051);
+  channelId(9519);
   if (obj3.useConfig({ location: _location }).enabled) {
     if ("entitled" === groupDMNitroAudience) {
-      items = [tmp2(4750).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
+      items = [tmp2(4845).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
     }
     const tmp9 = _slicedToArray(tmp6([]), 2);
     dependencyMap = tmp10;
-    const tmp11 = tmp9[0] === tmp2(4750).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
+    const tmp11 = tmp9[0] === tmp2(4845).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
     _slicedToArray = tmp11;
     const items1 = [tmp11, tmp9[1], channelId, _location];
     const memo = noop.useMemo(() => {
@@ -53,14 +53,14 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(util.t.yZOtoD);
-      obj.buttonIcon = _modDef10404;
+      obj.buttonIcon = _modDef10503;
       obj.onButtonPress = function onButtonPress() {
-        _location(11951)(channelId, closure_1_1);
+        _location(12050)(channelId, closure_1_1);
         dependencyMap(constants.TAKE_ACTION);
       };
       return obj;
     }, items1);
-    const coachmark = tmp2(9427).useCoachmark(ref, memo);
+    const coachmark = tmp2(9526).useCoachmark(ref, memo);
     const obj4 = { ref, collapsable: false, children: channelId.children };
     return (
       <View ref={ref} collapsable={false}>
@@ -68,5 +68,5 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       </View>
     );
   }
-  obj3 = _location(11955);
+  obj3 = _location(12054);
 }

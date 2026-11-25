@@ -1,23 +1,17 @@
 // discord_app/modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx
-import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../../../flow/Server.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
-let obj2 = {
+const createStyles = fn(5012);
+let closure_6 = createStyles.createStyles({
   selectionOptionItemWithDescription: { minHeight: 64 },
   selectionOptionItemDescription: { marginTop: 2 },
-  emojiWrapper: { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" },
-  textEmoji: { fontSize: 16, color: "#000000" },
-  fastImageEmoji: { width: 24, height: 24 },
-};
-let closure_6 = createStyles.createStyles(obj2);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx",
@@ -32,10 +26,10 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8691);
+  let obj = selectionActionComponent(8790);
   let tmp3 = first(
     noop.useState(
-      new Set(selectionActionComponent(8691).getInitialStringSelectOptions(selectionActionComponent, containerId)),
+      new Set(selectionActionComponent(8790).getInitialStringSelectOptions(selectionActionComponent, containerId)),
     ),
     2,
   );
@@ -93,21 +87,8 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     renderIcon(emoji) {
       let tmp = null;
       if (null != emoji.emoji) {
-        const obj = {
-          src: emoji.emoji.src,
-          name: emoji.emoji.name,
-          style: null,
-          textEmojiStyle: null,
-          fastImageStyle: null,
-        };
-        ({ emojiWrapper: obj.style, textEmoji: obj.textEmojiStyle, fastImageEmoji: obj.fastImageStyle } = closure_2);
-        tmp = jsx(EmojiDefault, {
-          src: emoji.emoji.src,
-          name: emoji.emoji.name,
-          style: null,
-          textEmojiStyle: null,
-          fastImageStyle: null,
-        });
+        const obj = { emoji: emoji.emoji };
+        tmp = memo(onSubmit(closure_2[8]), obj);
       }
       return tmp;
     },
@@ -144,7 +125,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null,
   };
-  set = new Set(selectionActionComponent(8691).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  set = new Set(selectionActionComponent(8790).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -159,13 +140,13 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     return callback(items);
   };
   obj2.itemAccessibilityLabel = function accessibilityLabel(emoji) {
-    const intl = selectionActionComponent(closure_2[11]).intl;
+    const intl = selectionActionComponent(closure_2[10]).intl;
     emoji = emoji.emoji;
     let name;
     if (emoji != null) {
       name = emoji.name;
     }
-    return intl.formatToPlainString(selectionActionComponent(closure_2[11]).t.ZbrH2f, {
+    return intl.formatToPlainString(selectionActionComponent(closure_2[10]).t.ZbrH2f, {
       emojiName: name,
       optionName: emoji.label,
       optionDescription: emoji.description,
@@ -173,5 +154,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12254), obj2);
+  return tmp9(onSubmit(12353), obj2);
 }

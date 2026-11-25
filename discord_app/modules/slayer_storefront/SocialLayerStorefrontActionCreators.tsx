@@ -30,7 +30,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -280,7 +280,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -448,7 +448,7 @@ let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -561,7 +561,7 @@ let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -775,7 +775,7 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

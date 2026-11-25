@@ -11,15 +11,15 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = fn(5649).isGuildScheduledEventActive;
-const GuildScheduledEventsConstants = fn(4772);
+let closure_8 = fn(5744).isGuildScheduledEventActive;
+const GuildScheduledEventsConstants = fn(4867);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } =
   GuildScheduledEventsConstants);
 const Constants = fn(1071);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_16 = createStyles.createStyles({
   channelSelection: { marginTop: 16 },
   error: { paddingVertical: 8 },
@@ -124,7 +124,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1112).t.q91szp));
               throw error1;
             }
-            obj = guild(8339);
+            obj = guild(8438);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {

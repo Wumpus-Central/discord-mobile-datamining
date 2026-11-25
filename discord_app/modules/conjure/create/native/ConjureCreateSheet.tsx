@@ -14,11 +14,11 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(7563).sendUserMessage;
+const sendUserMessage = fn(7662).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -87,7 +87,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -180,7 +180,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -219,7 +219,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp10) {
         c2 = tmp;
         throw tmp10;
@@ -252,7 +252,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -397,7 +397,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -415,19 +415,19 @@ export default function ConjureCreateSheet(guildId) {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
               if (!first) {
-                tmp3(5131).hideActionSheet(callback1);
+                tmp3(5226).hideActionSheet(callback1);
                 dependencyMap = 1;
-                const obj7 = tmp3(5131);
+                const obj7 = tmp3(5226);
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: guildId(18430).pickConjureArchive(), done: false };
+                const obj6 = { value: guildId(18543).pickConjureArchive(), done: false };
                 return obj6;
               }
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             const intl = guildId(1112).intl;
-            guildId(5598).presentError(intl.string(tmp3(4192)["Q+l4Hv"]));
+            guildId(5693).presentError(intl.string(tmp3(4244)["Q+l4Hv"]));
             c4 = 3;
             const obj9 = { value: undefined, done: true };
             return obj9;
@@ -444,12 +444,12 @@ export default function ConjureCreateSheet(guildId) {
               closure_128_0 = value;
               dependencyMap = 0;
               if (null != closure_128_0) {
-                closure_128_1 = guildId(18430).describeConjureArchiveRejection(closure_128_0);
+                closure_128_1 = guildId(18543).describeConjureArchiveRejection(closure_128_0);
                 if (null != closure_128_1) {
-                  guildId(5598).presentError(closure_128_1);
-                  const obj2 = guildId(5598);
+                  guildId(5693).presentError(closure_128_1);
+                  const obj2 = guildId(5693);
                 }
-                const obj12 = guildId(18430);
+                const obj12 = guildId(18543);
               }
               c3 = 3;
               c4 = 1;

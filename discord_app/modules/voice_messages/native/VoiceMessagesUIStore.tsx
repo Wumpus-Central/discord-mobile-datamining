@@ -63,9 +63,9 @@ export function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5518);
+    obj = waveformVersion(5613);
     const result = arg0 / closure_3;
-    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5519).Reanimated3DefaultSpringConfig));
+    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5614).Reanimated3DefaultSpringConfig));
   }
   items = [arg0, waveformVersion];
   waveform.push(items);

@@ -14,9 +14,9 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 const HTTPUtils = obj(1284);
-const AppAnalyticsUtils = obj(5887);
-const useStageSpeakingForCurrentUser = obj(6728);
-const StageChannelUtils = obj(7708);
+const AppAnalyticsUtils = obj(5982);
+const useStageSpeakingForCurrentUser = obj(6823);
+const StageChannelUtils = obj(7807);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -83,7 +83,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
               return obj6;
             } else {
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } else if (arg0 === 1) {
@@ -147,7 +147,7 @@ let closure_13 = async function _editStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -167,7 +167,7 @@ let closure_13 = async function _editStage(arg0) {
           return obj5;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -202,7 +202,7 @@ let closure_14 = async function _endStage(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ let closure_14 = async function _endStage(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp8) {
         c1 = tmp;
@@ -241,7 +241,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1071);
 ({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(7707).SafetyToastType;
+const SafetyToastType = fn(7806).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 

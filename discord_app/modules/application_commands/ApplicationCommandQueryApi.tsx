@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9906);
+let ApplicationCommandIndexStore = fn(10005);
 ({
   useContextIndexState: closure_6,
   useDiscoveryState: metroImportDefault,
@@ -60,10 +60,10 @@ let ApplicationCommandIndexStore = fn(9906);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(6947).BuiltInSectionId;
+const BuiltInSectionId = fn(7042).BuiltInSectionId;
 const NOOP = fn(1071).NOOP;
 let items = [fn(2117).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(5569).ApplicationCommandSectionType.APPLICATION, name: "" };
+let section = { id: "placeholder-section", type: fn(5664).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "Path" };
+    return { command: "Array", application: "analyticsLocations" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

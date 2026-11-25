@@ -8,7 +8,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildVerificationStore from "../../../stores/GuildVerificationStore.tsx";
 
 require = fn;
-const Constants = fn(7595);
+const Constants = fn(7694);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: closure_6 } = Constants);
 const VerificationLevels = fn(1071).VerificationLevels;
 const set = new Set();
@@ -38,11 +38,11 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
               set.add(userInfo);
             }
           }
-          const result = closure_1_1(10136).cancelLocalNotifications(userInfo);
-          const obj = closure_1_1(10136);
-          const result1 = closure_1_1(10136).cancelLocalNotifications(userInfo);
+          const result = closure_1_1(10235).cancelLocalNotifications(userInfo);
+          const obj = closure_1_1(10235);
+          const result1 = closure_1_1(10235).cancelLocalNotifications(userInfo);
           set.delete(userInfo);
-          const obj2 = closure_1_1(10136);
+          const obj2 = closure_1_1(10235);
         }
       });
     });

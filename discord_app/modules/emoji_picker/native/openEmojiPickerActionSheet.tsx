@@ -15,7 +15,7 @@ export function openEmojiPickerActionSheet(arg0, stack) {
     EmojiInteractionPoint.EmojiPickerActionSheetOpened,
   );
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9398, dependencyMap.paths),
+    asyncRequireImpl(9497, dependencyMap.paths),
     EmojiPickerActionSheet,
     arg0,
     stack,

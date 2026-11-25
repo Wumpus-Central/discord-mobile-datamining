@@ -48,8 +48,8 @@ function UserResult(user) {
     obj2.recipientIds = items;
     ChannelActionCreatorsDefault.openPrivateChannel(obj2);
   }, items);
-  const fontScale = user(5523).useFontScale();
-  const obj = user(5523);
+  const fontScale = user(5618).useFontScale();
+  const obj = user(5618);
   const items1 = [LocaleStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
@@ -72,8 +72,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(6824).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(6824);
+    relativeTimestamp = tmp6(6919).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(6919);
   }
   let str = "text-muted";
   if (unread) {
@@ -99,8 +99,8 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "9fa15bfa930ac7d15224a1ec649e8bef",
-    style: "ro.messages.9fa15bfa930ac7d15224a1ec649e8bef.compiled.messages",
+    streaming: "ea43656f3dba9f9d24b3533b9444b72d",
+    style: "fr.messages.ea43656f3dba9f9d24b3533b9444b72d.compiled.messages",
     size: "jsona",
     animate: "ConjureAppPictureInPicture",
     typing: null,
@@ -152,9 +152,9 @@ function UserResult(user) {
         message: lastMessage,
         color: str,
         muted: flag,
-        layout: tmp6(5578).ChannelListLayoutTypes.COMPACT,
+        layout: tmp6(5673).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10494).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(10593).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -168,7 +168,7 @@ function UserResult(user) {
   items5[2] = renderChannelContentDefault(obj8);
   obj10.children = items5;
   obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-  return tmp2Result5(closure_12(user(6026).PressableHighlight, obj5));
+  return tmp2Result5(closure_12(user(6121).PressableHighlight, obj5));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(16757)(channel, { unread });
+  obj4.lastMessage = channel(16878)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;
@@ -194,10 +194,10 @@ function UserResultWithChannel(arg0) {
   return closure_12(UserResult, obj4);
 }
 const StatusTypes = fn(1071).StatusTypes;
-const UnreadSetting = fn(6042).UnreadSetting;
+const UnreadSetting = fn(6137).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   pressable: { flex: 1 },
   pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },

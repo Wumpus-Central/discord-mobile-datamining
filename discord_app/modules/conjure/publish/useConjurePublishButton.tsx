@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/useConjurePublishButton.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import useConjurePublishActionDefault from "useConjurePublishAction.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -40,7 +40,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
   obj.variant = str3;
   if (tmp5) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef4192.kAfbEN);
+    let stringResult = intl2.string(_modDef4244.kAfbEN);
   } else {
     stringResult = undefined;
     if (tmp4 != null) {
@@ -48,7 +48,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
     }
     if (stringResult == null) {
       const intl = util.intl;
-      stringResult = intl.string(_modDef4192["120EFN"]);
+      stringResult = intl.string(_modDef4244["120EFN"]);
     }
   }
   obj.text = stringResult;
@@ -64,7 +64,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, platform) {
   let stringResult1 = null;
   if ("auto_synced" === str) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef4192.W4LzCY);
+    stringResult1 = intl3.string(_modDef4244.W4LzCY);
   }
   obj.hint = stringResult1;
   let tmp11 = null != tmp4;

@@ -1,7 +1,7 @@
 // discord_app/modules/pinot/native/useAttachPinotMemberCoachmark.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3510 from "../Pinot.messages.js";
+import _modDef3562 from "../Pinot.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ExperimentalWebIcon from "../../../design/components/Icon/native/redesign/generated/ExperimentalWebIcon.tsx";
 import PinotAnalytics from "../PinotAnalytics.tsx";
@@ -18,7 +18,7 @@ function renderWebIcon() {
 }
 const Constants = fn(1071);
 ({ HelpdeskArticles: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -55,10 +55,10 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
       onButtonPress: null,
     };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3510.MrT2mn);
+    obj.title = intl.string(_modDef3562.MrT2mn);
     let obj2 = { children: null };
     const intl2 = util.intl;
-    items = [intl2.string(_modDef3510.x9NGts), "\n"];
+    items = [intl2.string(_modDef3562.x9NGts), "\n"];
     let obj3 = {
       variant: "body-sm/medium",
       color: "text-link",
@@ -75,7 +75,7 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
       children: null,
     };
     const intl3 = util.intl;
-    obj3.children = intl3.string(_modDef3510.eJZ8MS);
+    obj3.children = intl3.string(_modDef3562.eJZ8MS);
     items[2] = metroImportDefault(Text_Text.Text, obj3);
     obj2.children = items;
     obj.description = React6(React5, obj2);

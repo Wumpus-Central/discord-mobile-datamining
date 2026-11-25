@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnCustomStatusUpdateSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2994 from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import _modDef3046 from "../../../activity_privacy/ActivityPrivacy.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import NotifyFriendsOnCustomStatusUpdateUtils from "../../../notifications/custom_status/NotifyFriendsOnCustomStatusUpdateUtils.tsx";
@@ -11,11 +11,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2994.AOUyrx);
+    return intl.string(_modDef3046.AOUyrx);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2994.bZ094C);
+    return intl.string(_modDef3046.bZ094C);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyFriendsOnCustomStatusUpdate.useSetting,

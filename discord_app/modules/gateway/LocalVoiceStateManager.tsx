@@ -17,7 +17,7 @@ import StateManager from "../../lib/StateManager.tsx";
 require = fn;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6688).StreamTypes;
+const StreamTypes = fn(6783).StreamTypes;
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);

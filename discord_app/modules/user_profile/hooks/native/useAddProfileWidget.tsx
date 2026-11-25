@@ -8,13 +8,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_5 = fn(6011).TrackUserProfileEditActions;
+const Constants = fn(6106);
+({ TrackUserProfileEditActions: hasOwnProperty, UserProfileSections: closure_6 } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useAddProfileWidget.tsx");
 
 export default function useAddProfileWidget() {
-  const tmp = useOpenProfileSettingsDefault({ initialTab: "board" });
+  const tmp = useOpenProfileSettingsDefault({ initialTab: constants2.WIDGETS });
   closure_0 = tmp;
   items = [tmp];
   return noop.useCallback((getProfileEditAnalyticsOptions) => {

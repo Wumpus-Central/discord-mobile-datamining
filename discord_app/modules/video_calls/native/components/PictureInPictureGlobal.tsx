@@ -23,12 +23,12 @@ const _modDef1653 = _mod1653;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(8949).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9048).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1071).PictureInPicturePositions;
-const ParticipantTypes = fn(5567).ParticipantTypes;
+const ParticipantTypes = fn(5662).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,

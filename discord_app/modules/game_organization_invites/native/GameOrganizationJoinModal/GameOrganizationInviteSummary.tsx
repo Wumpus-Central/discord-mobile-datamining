@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationInviteSummary.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2639 from "../../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2650 from "../../GameOrganizationInvitesUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -36,7 +36,7 @@ export default function GameOrganizationInviteSummary(invite) {
     React3(Text_Text.Text, {
       variant: "body-md/medium",
       color: "text-subtle",
-      children: intl.formatToPlainString(_modDef2639["jKi+kc"], { displayNoun: str }),
+      children: intl.formatToPlainString(_modDef2650["jKi+kc"], { displayNoun: str }),
     }),
     ,
   ];
@@ -45,7 +45,7 @@ export default function GameOrganizationInviteSummary(invite) {
   if (displayNoun == null) {
     displayNoun = "other";
   }
-  obj5.children = intl2.format(_modDef2639.gptW7Y, {
+  obj5.children = intl2.format(_modDef2650.gptW7Y, {
     displayNoun,
     orgName: organization.name,
     gameName: invite.application.name,
@@ -68,7 +68,7 @@ export default function GameOrganizationInviteSummary(invite) {
     const obj9 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
     const intl3 = util.intl;
     const obj10 = { count: memberCount, max: maxMembers };
-    obj9.children = intl3.formatToPlainString(_modDef2639.VuENGl, obj10);
+    obj9.children = intl3.formatToPlainString(_modDef2650.VuENGl, obj10);
     items2[1] = React3(Text_Text.Text, obj9);
     obj7.children = items2;
     tmp2Result = React4(Stack_Stack.Stack, obj7);

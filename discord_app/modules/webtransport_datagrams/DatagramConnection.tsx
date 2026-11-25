@@ -49,7 +49,7 @@ prototype["connect"] = function connect() {
     self.started = true;
     self.state = Connecting.Connecting;
     let rtc = self.rtc;
-    rtc.on(self(5834).RTCConnectionEvent.WebTransportAck, self.webTransportAck);
+    rtc.on(self(5929).RTCConnectionEvent.WebTransportAck, self.webTransportAck);
     const _setTimeout = setTimeout;
     self.connectTimeout = setTimeout(() => {
       if (self.state === Connecting.Connecting) {

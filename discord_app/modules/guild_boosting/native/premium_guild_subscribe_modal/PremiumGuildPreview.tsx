@@ -6,14 +6,14 @@ import shared from "../../../../design/shared.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
-import _modDef14639 from "../../../../../_runtime/metro/14639__.js";
-import _modDef14640 from "../../../../../_runtime/metro/14640__.js";
-import _modDef14641 from "../../../../../_runtime/metro/14641__.js";
-import _modDef14642 from "../../../../../_runtime/metro/14642__.js";
-import _modDef14643 from "../../../../../_runtime/metro/14643__.js";
-import _modDef14644 from "../../../../../_runtime/metro/14644__.js";
-import _modDef14645 from "../../../../../_runtime/metro/14645__.js";
-import _modDef14646 from "../../../../../_runtime/metro/14646__.js";
+import _modDef14761 from "../../../../../_runtime/metro/14761__.js";
+import _modDef14762 from "../../../../../_runtime/metro/14762__.js";
+import _modDef14763 from "../../../../../_runtime/metro/14763__.js";
+import _modDef14764 from "../../../../../_runtime/metro/14764__.js";
+import _modDef14765 from "../../../../../_runtime/metro/14765__.js";
+import _modDef14766 from "../../../../../_runtime/metro/14766__.js";
+import _modDef14767 from "../../../../../_runtime/metro/14767__.js";
+import _modDef14768 from "../../../../../_runtime/metro/14768__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 
@@ -26,32 +26,32 @@ function PremiumGuildTierPill(arg0) {
   const obj = { style: tmp.tierPill, children: null };
   const obj2 = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp5Result8 = _modDef14640;
-    const tmp5Result = _modDef14639;
+    let tmp5Result8 = _modDef14762;
+    const tmp5Result = _modDef14761;
     if (obj5.isThemeDark(theme)) {
       tmp5Result8 = tmp5Result;
     }
     let tmp9 = tmp5Result8;
     obj5 = shared;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp5Result10 = _modDef14642;
-    const tmp5Result9 = _modDef14641;
+    let tmp5Result10 = _modDef14764;
+    const tmp5Result9 = _modDef14763;
     if (obj4.isThemeDark(theme)) {
       tmp5Result10 = tmp5Result9;
     }
     tmp9 = tmp5Result10;
     obj4 = shared;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp5Result12 = _modDef14644;
-    const tmp5Result11 = _modDef14643;
+    let tmp5Result12 = _modDef14766;
+    const tmp5Result11 = _modDef14765;
     if (obj3.isThemeDark(theme)) {
       tmp5Result12 = tmp5Result11;
     }
     tmp9 = tmp5Result12;
     obj3 = shared;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5Result14 = _modDef14646;
-    const tmp5Result13 = _modDef14645;
+    let tmp5Result14 = _modDef14768;
+    const tmp5Result13 = _modDef14767;
     if (obj8.isThemeDark(theme)) {
       tmp5Result14 = tmp5Result13;
     }
@@ -70,7 +70,7 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1071).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   guild: {
     padding: 16,
@@ -90,8 +90,8 @@ let obj3 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6742).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6742).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6837).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6837).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = {
   marginTop: 8,
   padding: 4,
@@ -111,7 +111,7 @@ let obj5 = {
   borderRadius: 11,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6742).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6837).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(

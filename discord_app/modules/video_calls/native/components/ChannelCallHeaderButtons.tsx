@@ -5,8 +5,8 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
-import _modDef10408 from "../../../../../_runtime/metro/10408__.js";
-import _modDef10409 from "../../../../../_runtime/metro/10409__.js";
+import _modDef10507 from "../../../../../_runtime/metro/10507__.js";
+import _modDef10508 from "../../../../../_runtime/metro/10508__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
@@ -28,7 +28,7 @@ export function CameraButton() {
     const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-    obj2.source = _modDef10408;
+    obj2.source = _modDef10507;
     obj2.onPress = function handleCamera() {
       const keys = Object.keys(closure_1_1);
       const found = keys.find((item) => item !== closure_1_0);
@@ -54,7 +54,7 @@ export function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1112).intl;
       obj.accessibilityLabel = intl.string(channel(1112).t.HK4JIu);
-      obj.source = _modDef10409;
+      obj.source = _modDef10508;
       obj.onPress = function onPress() {
         return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };

@@ -4,13 +4,13 @@ import DateUtils from "../../../../../utils/DateUtils.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import _modDef9484 from "../../../../../../_runtime/metro/09484__.js";
+import _modDef9583 from "../../../../../../_runtime/metro/09583__.js";
 import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
-import _modDef14199 from "../../../../../../_runtime/metro/14199__.js";
+import _modDef14322 from "../../../../../../_runtime/metro/14322__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 const result = createStyles.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
@@ -19,7 +19,7 @@ const result = createStyles.experimental_createToken((theme) => {
   }
   return str;
 });
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_4 = createStyles.createNativeStyleProperties({
   timestampColor: nativeDefault.colors.TEXT_MUTED,
   highlightColor: result,
@@ -50,8 +50,8 @@ export default function createCommonMessage(reactions) {
   obj.dark = shared.isThemeDark(theme);
   obj.highlightColor = tmp.highlightColor;
   obj.reactions = reactions.reactions;
-  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14199);
-  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9484);
+  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14322);
+  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9583);
   obj.accessibilityActions = MessageAccessibilityActions.createMessageAccessibilityActions(message, channel);
   return obj;
 }

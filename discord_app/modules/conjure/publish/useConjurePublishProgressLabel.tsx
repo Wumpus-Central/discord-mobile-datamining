@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjurePublishProgressLabel.tsx
-import _modDef4192 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
@@ -8,14 +8,14 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {
-  preparing: _modDef4192.GQeas1,
-  approval: _modDef4192["TkHHD+"],
-  approved_by_grant: _modDef4192["9+kNt8"],
-  setup: _modDef4192["F+AxgM"],
-  build: _modDef4192.oQeMIy,
-  deploy: _modDef4192.LqZvZ2,
-  discord: _modDef4192.LFcGAT,
-  activating: _modDef4192.ff1Fq1,
+  preparing: _modDef4244.GQeas1,
+  approval: _modDef4244["TkHHD+"],
+  approved_by_grant: _modDef4244["9+kNt8"],
+  setup: _modDef4244["F+AxgM"],
+  build: _modDef4244.oQeMIy,
+  deploy: _modDef4244.LqZvZ2,
+  discord: _modDef4244.LFcGAT,
+  activating: _modDef4244.ff1Fq1,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishProgressLabel.tsx");
@@ -52,9 +52,9 @@ export default function useConjurePublishProgressLabel(arg0) {
     const obj2 = { action: null, detail: null };
     const intl2 = tmp(1112).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(11338).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
-    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(4192)["ndkR+x"], obj2);
-    const tmpResult = tmp(11338);
+    obj2.detail = tmp(11437).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(4244)["ndkR+x"], obj2);
+    const tmpResult = tmp(11437);
   }
   return formatToPlainStringResult;
 }

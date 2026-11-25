@@ -22,7 +22,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1071).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   nitroWheel: { marginLeft: nativeDefault.space.PX_8 },
   sublabel: null,

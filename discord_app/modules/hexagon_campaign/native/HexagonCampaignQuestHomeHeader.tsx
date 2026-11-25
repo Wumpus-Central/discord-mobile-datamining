@@ -10,11 +10,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(4942).HEXAGON_CAMPAIGN_AD_CONTENT_ID;
+let closure_6 = fn(5037).HEXAGON_CAMPAIGN_AD_CONTENT_ID;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { width: "100%", maxWidth: 448, alignSelf: "center", marginBottom: nativeDefault.space.PX_40 },
   banner: { width: "100%", aspectRatio: 1 },
@@ -89,12 +89,12 @@ let result = size.fileFinishedImporting("modules/hexagon_campaign/native/Hexagon
 
 export default function HexagonCampaignQuestHomeHeader() {
   const tmp = closure_10();
-  let obj = isHexagonCampaignQuestHomeHeaderEnabled(4978);
+  let obj = isHexagonCampaignQuestHomeHeaderEnabled(5073);
   isHexagonCampaignQuestHomeHeaderEnabled = isHexagonCampaignQuestHomeHeaderEnabled(
-    4948,
+    5043,
   ).useIsHexagonCampaignQuestHomeHeaderEnabled("HexagonCampaignQuestHomeHeader");
-  let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(4948);
-  token = isHexagonCampaignQuestHomeHeaderEnabled(5481).useToken(token(575).colors.BACKGROUND_BASE_LOWEST);
+  let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5043);
+  token = isHexagonCampaignQuestHomeHeaderEnabled(5576).useToken(token(575).colors.BACKGROUND_BASE_LOWEST);
   items = [token];
   const items1 = [isHexagonCampaignQuestHomeHeaderEnabled];
   const memo = noop.useMemo(() => {
@@ -126,84 +126,84 @@ export default function HexagonCampaignQuestHomeHeader() {
   if (isHexagonCampaignQuestHomeHeaderEnabled) {
     let obj4 = { style: tmp.container, children: null };
     const obj5 = { style: tmp.banner, children: null };
-    const obj6 = { source: tmp5(16449), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
-    const items2 = [closure_8(tmp5(5604), obj6), , ,];
+    const obj6 = { source: tmp5(16570), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
+    const items2 = [closure_8(tmp5(5699), obj6), , ,];
     const obj7 = {
       colors: memo,
       locations: [0.716, 0.823, 1],
       style: absoluteFill.absoluteFill,
       pointerEvents: "none",
     };
-    items2[1] = closure_8(tmp5(5472), obj7);
+    items2[1] = closure_8(tmp5(5567), obj7);
     const obj8 = { source: null, style: null, resizeMode: "contain", accessible: false };
-    const tmp5Result = tmp5(5604);
-    obj8.source = tmp5(16450);
+    const tmp5Result = tmp5(5699);
+    obj8.source = tmp5(16571);
     obj8.style = tmp.logo;
-    items2[2] = closure_8(tmp5(5604), obj8);
+    items2[2] = closure_8(tmp5(5699), obj8);
     const obj9 = { style: tmp.sponsoredTag, children: null };
     const obj10 = { variant: "body-sm/semibold", color: "text-overlay-light", children: null };
     const intl = tmp2(1112).intl;
     obj10.children = intl.string(tmp2(1112).t.OJjFi5);
-    obj9.children = closure_8(tmp2(5508).Text, obj10);
+    obj9.children = closure_8(tmp2(5603).Text, obj10);
     items2[3] = closure_8(closure_5, obj9);
     obj5.children = items2;
     const items3 = [closure_9(closure_5, obj5)];
     const obj11 = { style: tmp.cardShadow, children: null };
     const obj12 = { style: tmp.card, children: null };
-    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16451).BundleAbstractUI, { accessible: false }) };
+    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16572).BundleAbstractUI, { accessible: false }) };
     const items4 = [closure_8(closure_5, obj13)];
     const obj14 = { direction: "vertical", spacing: tmp5(575).space.PX_12, style: tmp.cardContent, children: null };
     const obj15 = { direction: "vertical", spacing: tmp5(575).space.PX_8, children: null };
     const obj16 = { direction: "vertical", spacing: tmp5(575).space.PX_4, children: null };
     const obj17 = { variant: "body-lg/semibold", color: "text-strong", children: null };
     const intl2 = tmp2(1112).intl;
-    obj17.children = intl2.string(tmp5(4599)["fShp/D"]);
-    const items5 = [closure_8(tmp2(5508).Heading, obj17)];
+    obj17.children = intl2.string(tmp5(4662)["fShp/D"]);
+    const items5 = [closure_8(tmp2(5603).Heading, obj17)];
     const obj18 = { variant: "body-sm/medium", color: "text-default", style: tmp.cardBody, children: null };
     const intl3 = tmp2(1112).intl;
-    obj18.children = intl3.string(tmp5(4599).XLqMej);
-    items5[1] = closure_8(tmp2(5508).Text, obj18);
+    obj18.children = intl3.string(tmp5(4662).XLqMej);
+    items5[1] = closure_8(tmp2(5603).Text, obj18);
     obj16.children = items5;
-    const items6 = [closure_9(tmp2(5989).Stack, obj16)];
+    const items6 = [closure_9(tmp2(6084).Stack, obj16)];
     const obj19 = { variant: "body-xs/medium", color: "text-subtle", children: null };
     const intl4 = tmp2(1112).intl;
     const obj20 = {
       learnMoreHook(children, arg1) {
         return closure_1_8(
-          isHexagonCampaignQuestHomeHeaderEnabled(5508).Text,
+          isHexagonCampaignQuestHomeHeaderEnabled(5603).Text,
           {
             variant: "body-xs/medium",
             color: "text-link",
             accessibilityRole: "link",
-            onPress: isHexagonCampaignQuestHomeHeaderEnabled(15915).openHexagonCampaignLearnMore,
+            onPress: isHexagonCampaignQuestHomeHeaderEnabled(16036).openHexagonCampaignLearnMore,
             children,
           },
           arg1,
         );
       },
     };
-    obj19.children = intl4.format(tmp5(4599).uL0TOA, obj20);
-    items6[1] = closure_8(tmp2(5508).Text, obj19);
+    obj19.children = intl4.format(tmp5(4662).uL0TOA, obj20);
+    items6[1] = closure_8(tmp2(5603).Text, obj19);
     obj15.children = items6;
-    const items7 = [closure_9(tmp2(5989).Stack, obj15)];
-    const tmp5Result2 = tmp5(5604);
+    const items7 = [closure_9(tmp2(6084).Stack, obj15)];
+    const tmp5Result2 = tmp5(5699);
     let str = "primary-overlay";
     if (tmp2Result.isThemeLight(obj.useThemeContext().theme)) {
       str = "primary";
     }
     const obj21 = { variant: str, text: null, onPress: null, grow: true };
     const intl5 = tmp2(1112).intl;
-    obj21.text = intl5.string(tmp5(4599)["KX1/jp"]);
+    obj21.text = intl5.string(tmp5(4662)["KX1/jp"]);
     obj21.onPress = tmp9;
-    items7[1] = closure_8(tmp2(5515).Button, obj21);
+    items7[1] = closure_8(tmp2(5610).Button, obj21);
     obj14.children = items7;
-    items4[1] = closure_9(tmp2(5989).Stack, obj14);
+    items4[1] = closure_9(tmp2(6084).Stack, obj14);
     obj12.children = items4;
     obj11.children = closure_9(closure_5, obj12);
     items3[1] = closure_8(closure_5, obj11);
     obj4.children = items3;
     tmp11Result = closure_9(closure_5, obj4);
-    tmp2Result = tmp2(4924);
+    tmp2Result = tmp2(5019);
   }
   return tmp11Result;
 }

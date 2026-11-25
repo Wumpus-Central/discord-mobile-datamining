@@ -27,7 +27,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -75,11 +75,11 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
@@ -117,7 +117,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj11 = { openChannel: true, navigationReplace: closure_131_0(closure_131_2[11]).isGuildsOnTopOfTabs() };
         tmp20(CHANNELResult, obj11);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp34) {
         closure_4 = tmp34;
         if (tmp4 === c5) {
@@ -130,7 +130,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const ChannelRecord = fn(4770);
+const ChannelRecord = fn(4865);
 ({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: closure_6 } = ChannelRecord);
 const Constants = fn(1071);
 ({ ChannelTypes: closure_9, Routes: closure_10 } = Constants);

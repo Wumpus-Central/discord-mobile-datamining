@@ -1,5 +1,6 @@
 // discord_app/modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx
 import util from "../../../../intl/index.native.tsx";
+import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
@@ -24,6 +25,11 @@ const toggle = SettingBuilders.createToggle({
 let SettingBuilders = SettingBuilders_mod;
 const obj2 = {};
 const merged = Object.assign(toggle);
+obj2.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(_modDef3206.KEDd8y);
+};
+obj2.useDescription = undefined;
 obj2.parent = MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY;
 const toggle1 = SettingBuilders.createToggle(obj2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");

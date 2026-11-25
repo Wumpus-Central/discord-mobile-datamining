@@ -38,14 +38,10 @@ export default function useOpenProfileSettings() {
     } else {
       USER_PROFILE = constants.USER_PROFILE;
     }
-    const obj2 = { subsection: USER_PROFILE, scrollPosition, editingTab: null };
-    let str = initialTab;
-    if (initialTab == null) {
-      str = "main";
-    }
-    obj2.editingTab = str;
-    ProfileCustomizationNavigationStore.setState(obj2);
-    openUserSettings.openUserSettings({ screen: UserSettingsSections.PROFILE_CUSTOMIZATION, params: { initialTab } });
+    ProfileCustomizationNavigationStore.setState({ subsection: USER_PROFILE, scrollPosition });
     const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION, params: { initialTab } };
+    openUserSettings.openUserSettings(obj3);
+    const obj2 = { subsection: USER_PROFILE, scrollPosition };
+    const obj4 = { initialTab };
   }, items);
 }

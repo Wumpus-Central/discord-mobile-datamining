@@ -117,7 +117,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12838).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12962).getAppLauncherIconSource(app.section.application);
     let obj = {
       style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
       disabled,
@@ -149,22 +149,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5604), obj2);
+      tmp3 = closure_11(onAppSelected(5699), obj2);
     }
     items = [tmp3];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12847).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12971).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(6026).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(6121).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12840).FrecencySectionSelection;
+let FrecencySectionSelection = fn(12964).FrecencySectionSelection;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = {
   container: { marginBottom: nativeDefault.space.PX_16 },
   headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },

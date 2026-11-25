@@ -10,13 +10,13 @@ import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import UserPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
-import _modDef5608 from "../../../../../../_runtime/metro/05608__.js";
+import _modDef5703 from "../../../../../../_runtime/metro/05703__.js";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import FakePlaceholderPrivateChannel from "../../../../channel/FakePlaceholderPrivateChannel.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
-import _modDef10404 from "../../../../../../_runtime/metro/10404__.js";
+import _modDef10503 from "../../../../../../_runtime/metro/10503__.js";
 import GroupPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import ChatViewDefault from "../../../../chat/native/ChatView.tsx";
@@ -96,7 +96,7 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -259,14 +259,14 @@ function ChatPreview(channelId) {
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
   obj4.portal = channelId(1378).isAndroid();
-  items2[1] = closure_17(channelId(18449).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(18560).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
 }
 const View = fn(17).View;
-const PrivateChannelRecord = fn(4770).PrivateChannelRecord;
-const UserRowModes = fn(8803).UserRowModes;
+const PrivateChannelRecord = fn(4865).PrivateChannelRecord;
+const UserRowModes = fn(8902).UserRowModes;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_12,
@@ -277,8 +277,8 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = module_1653.createAnimatedComponent(fn(5508).Text);
-const createStyles = fn(4917);
+let closure_19 = module_1653.createAnimatedComponent(fn(5603).Text);
+const createStyles = fn(5012);
 let obj = {
   container: { flex: 1 },
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -352,7 +352,7 @@ export default function NewMessageScreen(navigation) {
   const effect = obj.useEffect(() => {
     function handleChannelCreate(channel) {
       channel = channel.channel;
-      if (channel.id !== handleChannelCreate(7453).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+      if (channel.id !== handleChannelCreate(7548).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (isPrivateChannelMatch(handleChannelCreate, channel)) {
             dependencyMap(findLocalMatchingPrivateChannelId(handleChannelCreate));
@@ -364,7 +364,7 @@ export default function NewMessageScreen(navigation) {
       const channel = arg0;
       dependencyMap((arg0) => {
         let tmp = arg0;
-        if (arg0 !== handleChannelCreate(7453).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (arg0 !== handleChannelCreate(7548).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp3 = null;
           if (arg0 !== channel.channel.id) {
             tmp3 = arg0;
@@ -399,7 +399,7 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -506,9 +506,9 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
           obj2.channel = {
-            id: navigation(7453).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
+            id: navigation(7548).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "analyticsLocations",
+            parent_id: "isArray",
           };
           obj.dispatch(obj2);
         };
@@ -548,8 +548,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11952).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11952);
+    enabled = tmp13(12051).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(12051);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -593,7 +593,7 @@ export default function NewMessageScreen(navigation) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -693,7 +693,7 @@ export default function NewMessageScreen(navigation) {
     if (!tmp10) {
       if (selectedUserIds.length > 0) {
         if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(7453).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(7548).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         let obj3 = { channelId: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, navigateToChannel, tagListInputRef: ref };
         tmp31Result = closure_17(ChatPreview, obj3, tmp29);
@@ -714,7 +714,7 @@ export default function NewMessageScreen(navigation) {
     if (constants) {
       if (stateFromStores1) {
         const obj = {
-          icon: _modDef10404,
+          icon: _modDef10503,
           IconComponent: GroupPlusIcon.GroupPlusIcon,
           label: null,
           iconVariant: "default",
@@ -728,7 +728,7 @@ export default function NewMessageScreen(navigation) {
         items.push(obj);
       }
       const obj2 = {
-        icon: _modDef5608,
+        icon: _modDef5703,
         IconComponent: UserPlusIcon.UserPlusIcon,
         label: null,
         iconVariant: "default",
@@ -746,7 +746,7 @@ export default function NewMessageScreen(navigation) {
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
     const obj = {
-      icon: _modDef5608,
+      icon: _modDef5703,
       IconComponent: UserPlusIcon.UserPlusIcon,
       label: null,
       iconVariant: "default",

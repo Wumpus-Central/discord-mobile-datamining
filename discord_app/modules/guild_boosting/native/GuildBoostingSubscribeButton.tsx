@@ -19,7 +19,7 @@ let closure_14 = async function _handleBoostPress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ let closure_14 = async function _handleBoostPress() {
         } else {
           closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c5 = tmp;
@@ -72,7 +72,7 @@ let closure_14 = async function _handleBoostPress() {
   })();
 };
 let View = fn(17).View;
-let closure_7 = fn(6740).PremiumGuildSubscribeModalScenes;
+let closure_7 = fn(6835).PremiumGuildSubscribeModalScenes;
 const Constants = fn(1071);
 ({
   AnalyticsObjects: closure_8,
